@@ -12,6 +12,10 @@ public class WebsiteConfiguration extends TeaModel {
     @NameInMap("IndexDocument")
     public WebsiteConfigurationIndexDocument indexDocument;
 
+    // description
+    @NameInMap("RoutingRules")
+    public WebsiteConfigurationRoutingRules routingRules;
+
     public static WebsiteConfiguration build(java.util.Map<String, ?> map) throws Exception {
         WebsiteConfiguration self = new WebsiteConfiguration();
         return TeaModel.build(map, self);
@@ -31,6 +35,14 @@ public class WebsiteConfiguration extends TeaModel {
     }
     public WebsiteConfigurationIndexDocument getIndexDocument() {
         return this.indexDocument;
+    }
+
+    public WebsiteConfiguration setRoutingRules(WebsiteConfigurationRoutingRules routingRules) {
+        this.routingRules = routingRules;
+        return this;
+    }
+    public WebsiteConfigurationRoutingRules getRoutingRules() {
+        return this.routingRules;
     }
 
     public static class WebsiteConfigurationErrorDocument extends TeaModel {
@@ -70,6 +82,14 @@ public class WebsiteConfiguration extends TeaModel {
         @NameInMap("Suffix")
         public String suffix;
 
+        // description
+        @NameInMap("SupportSubDir")
+        public Boolean supportSubDir;
+
+        // description
+        @NameInMap("Type")
+        public String type;
+
         public static WebsiteConfigurationIndexDocument build(java.util.Map<String, ?> map) throws Exception {
             WebsiteConfigurationIndexDocument self = new WebsiteConfigurationIndexDocument();
             return TeaModel.build(map, self);
@@ -81,6 +101,42 @@ public class WebsiteConfiguration extends TeaModel {
         }
         public String getSuffix() {
             return this.suffix;
+        }
+
+        public WebsiteConfigurationIndexDocument setSupportSubDir(Boolean supportSubDir) {
+            this.supportSubDir = supportSubDir;
+            return this;
+        }
+        public Boolean getSupportSubDir() {
+            return this.supportSubDir;
+        }
+
+        public WebsiteConfigurationIndexDocument setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class WebsiteConfigurationRoutingRules extends TeaModel {
+        // description
+        @NameInMap("RoutingRule")
+        public java.util.List<RoutingRule> routingRules;
+
+        public static WebsiteConfigurationRoutingRules build(java.util.Map<String, ?> map) throws Exception {
+            WebsiteConfigurationRoutingRules self = new WebsiteConfigurationRoutingRules();
+            return TeaModel.build(map, self);
+        }
+
+        public WebsiteConfigurationRoutingRules setRoutingRules(java.util.List<RoutingRule> routingRules) {
+            this.routingRules = routingRules;
+            return this;
+        }
+        public java.util.List<RoutingRule> getRoutingRules() {
+            return this.routingRules;
         }
 
     }

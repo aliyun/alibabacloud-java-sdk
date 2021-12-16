@@ -13,6 +13,10 @@ public class LiveChannelTarget extends TeaModel {
     public Long fragDuration;
 
     // description
+    @NameInMap("PlaylistName")
+    public String playlistName;
+
+    // description
     @NameInMap("Type")
     public String type;
 
@@ -35,6 +39,14 @@ public class LiveChannelTarget extends TeaModel {
     }
     public Long getFragDuration() {
         return this.fragDuration;
+    }
+
+    public LiveChannelTarget setPlaylistName(String playlistName) {
+        this.playlistName = playlistName;
+        return this;
+    }
+    public String getPlaylistName() {
+        return this.playlistName;
     }
 
     public LiveChannelTarget setType(String type) {

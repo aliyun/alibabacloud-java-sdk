@@ -22,6 +22,9 @@ public class ListPartsResponseBody extends TeaModel {
     @NameInMap("Part")
     public java.util.List<Part> part;
 
+    @NameInMap("PartNumberMarker")
+    public Long partNumberMarker;
+
     @NameInMap("UploadId")
     public String uploadId;
 
@@ -76,6 +79,14 @@ public class ListPartsResponseBody extends TeaModel {
     }
     public java.util.List<Part> getPart() {
         return this.part;
+    }
+
+    public ListPartsResponseBody setPartNumberMarker(Long partNumberMarker) {
+        this.partNumberMarker = partNumberMarker;
+        return this;
+    }
+    public Long getPartNumberMarker() {
+        return this.partNumberMarker;
     }
 
     public ListPartsResponseBody setUploadId(String uploadId) {

@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class GetBucketReplicationProgressResponseBody extends TeaModel {
     @NameInMap("Rule")
-    public ReplicationRuleProgress rule;
+    public ReplicationProgressRule rule;
 
     public static GetBucketReplicationProgressResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetBucketReplicationProgressResponseBody self = new GetBucketReplicationProgressResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetBucketReplicationProgressResponseBody setRule(ReplicationRuleProgress rule) {
+    public GetBucketReplicationProgressResponseBody setRule(ReplicationProgressRule rule) {
         this.rule = rule;
         return this;
     }
-    public ReplicationRuleProgress getRule() {
+    public ReplicationProgressRule getRule() {
         return this.rule;
     }
 

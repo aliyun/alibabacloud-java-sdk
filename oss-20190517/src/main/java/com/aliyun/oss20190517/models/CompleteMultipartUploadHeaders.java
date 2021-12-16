@@ -8,10 +8,10 @@ public class CompleteMultipartUploadHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     @NameInMap("x-oss-complete-all")
-    public String xOssCompleteAll;
+    public String completeAll;
 
     @NameInMap("x-oss-forbid-overwrite")
-    public String xOssForbidOverwrite;
+    public String forbidOverwrite;
 
     public static CompleteMultipartUploadHeaders build(java.util.Map<String, ?> map) throws Exception {
         CompleteMultipartUploadHeaders self = new CompleteMultipartUploadHeaders();
@@ -26,20 +26,20 @@ public class CompleteMultipartUploadHeaders extends TeaModel {
         return this.commonHeaders;
     }
 
-    public CompleteMultipartUploadHeaders setXOssCompleteAll(String xOssCompleteAll) {
-        this.xOssCompleteAll = xOssCompleteAll;
+    public CompleteMultipartUploadHeaders setCompleteAll(String completeAll) {
+        this.completeAll = completeAll;
         return this;
     }
-    public String getXOssCompleteAll() {
-        return this.xOssCompleteAll;
+    public String getCompleteAll() {
+        return this.completeAll;
     }
 
-    public CompleteMultipartUploadHeaders setXOssForbidOverwrite(String xOssForbidOverwrite) {
-        this.xOssForbidOverwrite = xOssForbidOverwrite;
+    public CompleteMultipartUploadHeaders setForbidOverwrite(String forbidOverwrite) {
+        this.forbidOverwrite = forbidOverwrite;
         return this;
     }
-    public String getXOssForbidOverwrite() {
-        return this.xOssForbidOverwrite;
+    public String getForbidOverwrite() {
+        return this.forbidOverwrite;
     }
 
 }

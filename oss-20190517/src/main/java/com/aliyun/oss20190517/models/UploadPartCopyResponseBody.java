@@ -3,21 +3,19 @@ package com.aliyun.oss20190517.models;
 
 import com.aliyun.tea.*;
 
-public class CopyPartResult extends TeaModel {
-    // A short description of ETag
+public class UploadPartCopyResponseBody extends TeaModel {
     @NameInMap("ETag")
     public String ETag;
 
-    // A short description of LastModified
     @NameInMap("LastModified")
     public String lastModified;
 
-    public static CopyPartResult build(java.util.Map<String, ?> map) throws Exception {
-        CopyPartResult self = new CopyPartResult();
+    public static UploadPartCopyResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UploadPartCopyResponseBody self = new UploadPartCopyResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CopyPartResult setETag(String ETag) {
+    public UploadPartCopyResponseBody setETag(String ETag) {
         this.ETag = ETag;
         return this;
     }
@@ -25,7 +23,7 @@ public class CopyPartResult extends TeaModel {
         return this.ETag;
     }
 
-    public CopyPartResult setLastModified(String lastModified) {
+    public UploadPartCopyResponseBody setLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
     }

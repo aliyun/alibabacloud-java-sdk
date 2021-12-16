@@ -8,7 +8,7 @@ public class PutSymlinkHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     @NameInMap("x-oss-forbid-overwrite")
-    public String xOssForbidOverwrite;
+    public String forbidOverwrite;
 
     @NameInMap("x-oss-object-acl")
     public String acl;
@@ -32,12 +32,12 @@ public class PutSymlinkHeaders extends TeaModel {
         return this.commonHeaders;
     }
 
-    public PutSymlinkHeaders setXOssForbidOverwrite(String xOssForbidOverwrite) {
-        this.xOssForbidOverwrite = xOssForbidOverwrite;
+    public PutSymlinkHeaders setForbidOverwrite(String forbidOverwrite) {
+        this.forbidOverwrite = forbidOverwrite;
         return this;
     }
-    public String getXOssForbidOverwrite() {
-        return this.xOssForbidOverwrite;
+    public String getForbidOverwrite() {
+        return this.forbidOverwrite;
     }
 
     public PutSymlinkHeaders setAcl(String acl) {

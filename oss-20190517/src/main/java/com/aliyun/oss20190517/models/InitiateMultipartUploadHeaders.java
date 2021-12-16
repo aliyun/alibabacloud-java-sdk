@@ -7,23 +7,35 @@ public class InitiateMultipartUploadHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    @NameInMap("Cache-Control")
+    public String cacheControl;
+
+    @NameInMap("Content-Disposition")
+    public String contentDisposition;
+
+    @NameInMap("Content-Encoding")
+    public String contentEncoding;
+
+    @NameInMap("Expires")
+    public String expires;
+
     @NameInMap("x-oss-forbid-overwrite")
-    public String xOssForbidOverwrite;
+    public String forbidOverwrite;
 
     @NameInMap("x-oss-server-side-data-encryption")
-    public String xOssServerSideDataEncryption;
+    public String sseDataEncryption;
 
     @NameInMap("x-oss-server-side-encryption")
-    public String xOssServerSideEncryption;
+    public String serverSideEncryption;
 
     @NameInMap("x-oss-server-side-encryption-key-id")
-    public String xOssServerSideEncryptionKeyId;
+    public String sseKeyId;
 
     @NameInMap("x-oss-storage-class")
-    public String xOssStorageClass;
+    public String storageClass;
 
     @NameInMap("x-oss-tagging")
-    public String xOssTagging;
+    public String tagging;
 
     public static InitiateMultipartUploadHeaders build(java.util.Map<String, ?> map) throws Exception {
         InitiateMultipartUploadHeaders self = new InitiateMultipartUploadHeaders();
@@ -38,52 +50,84 @@ public class InitiateMultipartUploadHeaders extends TeaModel {
         return this.commonHeaders;
     }
 
-    public InitiateMultipartUploadHeaders setXOssForbidOverwrite(String xOssForbidOverwrite) {
-        this.xOssForbidOverwrite = xOssForbidOverwrite;
+    public InitiateMultipartUploadHeaders setCacheControl(String cacheControl) {
+        this.cacheControl = cacheControl;
         return this;
     }
-    public String getXOssForbidOverwrite() {
-        return this.xOssForbidOverwrite;
+    public String getCacheControl() {
+        return this.cacheControl;
     }
 
-    public InitiateMultipartUploadHeaders setXOssServerSideDataEncryption(String xOssServerSideDataEncryption) {
-        this.xOssServerSideDataEncryption = xOssServerSideDataEncryption;
+    public InitiateMultipartUploadHeaders setContentDisposition(String contentDisposition) {
+        this.contentDisposition = contentDisposition;
         return this;
     }
-    public String getXOssServerSideDataEncryption() {
-        return this.xOssServerSideDataEncryption;
+    public String getContentDisposition() {
+        return this.contentDisposition;
     }
 
-    public InitiateMultipartUploadHeaders setXOssServerSideEncryption(String xOssServerSideEncryption) {
-        this.xOssServerSideEncryption = xOssServerSideEncryption;
+    public InitiateMultipartUploadHeaders setContentEncoding(String contentEncoding) {
+        this.contentEncoding = contentEncoding;
         return this;
     }
-    public String getXOssServerSideEncryption() {
-        return this.xOssServerSideEncryption;
+    public String getContentEncoding() {
+        return this.contentEncoding;
     }
 
-    public InitiateMultipartUploadHeaders setXOssServerSideEncryptionKeyId(String xOssServerSideEncryptionKeyId) {
-        this.xOssServerSideEncryptionKeyId = xOssServerSideEncryptionKeyId;
+    public InitiateMultipartUploadHeaders setExpires(String expires) {
+        this.expires = expires;
         return this;
     }
-    public String getXOssServerSideEncryptionKeyId() {
-        return this.xOssServerSideEncryptionKeyId;
+    public String getExpires() {
+        return this.expires;
     }
 
-    public InitiateMultipartUploadHeaders setXOssStorageClass(String xOssStorageClass) {
-        this.xOssStorageClass = xOssStorageClass;
+    public InitiateMultipartUploadHeaders setForbidOverwrite(String forbidOverwrite) {
+        this.forbidOverwrite = forbidOverwrite;
         return this;
     }
-    public String getXOssStorageClass() {
-        return this.xOssStorageClass;
+    public String getForbidOverwrite() {
+        return this.forbidOverwrite;
     }
 
-    public InitiateMultipartUploadHeaders setXOssTagging(String xOssTagging) {
-        this.xOssTagging = xOssTagging;
+    public InitiateMultipartUploadHeaders setSseDataEncryption(String sseDataEncryption) {
+        this.sseDataEncryption = sseDataEncryption;
         return this;
     }
-    public String getXOssTagging() {
-        return this.xOssTagging;
+    public String getSseDataEncryption() {
+        return this.sseDataEncryption;
+    }
+
+    public InitiateMultipartUploadHeaders setServerSideEncryption(String serverSideEncryption) {
+        this.serverSideEncryption = serverSideEncryption;
+        return this;
+    }
+    public String getServerSideEncryption() {
+        return this.serverSideEncryption;
+    }
+
+    public InitiateMultipartUploadHeaders setSseKeyId(String sseKeyId) {
+        this.sseKeyId = sseKeyId;
+        return this;
+    }
+    public String getSseKeyId() {
+        return this.sseKeyId;
+    }
+
+    public InitiateMultipartUploadHeaders setStorageClass(String storageClass) {
+        this.storageClass = storageClass;
+        return this;
+    }
+    public String getStorageClass() {
+        return this.storageClass;
+    }
+
+    public InitiateMultipartUploadHeaders setTagging(String tagging) {
+        this.tagging = tagging;
+        return this;
+    }
+    public String getTagging() {
+        return this.tagging;
     }
 
 }

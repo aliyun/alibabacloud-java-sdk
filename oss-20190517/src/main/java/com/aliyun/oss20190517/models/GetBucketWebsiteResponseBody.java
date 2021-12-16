@@ -10,6 +10,9 @@ public class GetBucketWebsiteResponseBody extends TeaModel {
     @NameInMap("IndexDocument")
     public GetBucketWebsiteResponseBodyIndexDocument indexDocument;
 
+    @NameInMap("RoutingRules")
+    public GetBucketWebsiteResponseBodyRoutingRules routingRules;
+
     public static GetBucketWebsiteResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetBucketWebsiteResponseBody self = new GetBucketWebsiteResponseBody();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class GetBucketWebsiteResponseBody extends TeaModel {
     }
     public GetBucketWebsiteResponseBodyIndexDocument getIndexDocument() {
         return this.indexDocument;
+    }
+
+    public GetBucketWebsiteResponseBody setRoutingRules(GetBucketWebsiteResponseBodyRoutingRules routingRules) {
+        this.routingRules = routingRules;
+        return this;
+    }
+    public GetBucketWebsiteResponseBodyRoutingRules getRoutingRules() {
+        return this.routingRules;
     }
 
     public static class GetBucketWebsiteResponseBodyErrorDocument extends TeaModel {
@@ -76,6 +87,25 @@ public class GetBucketWebsiteResponseBody extends TeaModel {
         }
         public String getSuffix() {
             return this.suffix;
+        }
+
+    }
+
+    public static class GetBucketWebsiteResponseBodyRoutingRules extends TeaModel {
+        @NameInMap("RoutingRule")
+        public java.util.List<RoutingRule> routingRules;
+
+        public static GetBucketWebsiteResponseBodyRoutingRules build(java.util.Map<String, ?> map) throws Exception {
+            GetBucketWebsiteResponseBodyRoutingRules self = new GetBucketWebsiteResponseBodyRoutingRules();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBucketWebsiteResponseBodyRoutingRules setRoutingRules(java.util.List<RoutingRule> routingRules) {
+            this.routingRules = routingRules;
+            return this;
+        }
+        public java.util.List<RoutingRule> getRoutingRules() {
+            return this.routingRules;
         }
 
     }

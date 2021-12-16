@@ -10,7 +10,7 @@ public class UploadPartCopyResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CopyPartResult body;
+    public UploadPartCopyResponseBody body;
 
     public static UploadPartCopyResponse build(java.util.Map<String, ?> map) throws Exception {
         UploadPartCopyResponse self = new UploadPartCopyResponse();
@@ -25,11 +25,11 @@ public class UploadPartCopyResponse extends TeaModel {
         return this.headers;
     }
 
-    public UploadPartCopyResponse setBody(CopyPartResult body) {
+    public UploadPartCopyResponse setBody(UploadPartCopyResponseBody body) {
         this.body = body;
         return this;
     }
-    public CopyPartResult getBody() {
+    public UploadPartCopyResponseBody getBody() {
         return this.body;
     }
 

@@ -26,7 +26,7 @@ public class ListMultipartUploadsResponseBody extends TeaModel {
     public String nextUploadMarker;
 
     @NameInMap("Upload")
-    public java.util.List<Upload> upload;
+    public java.util.List<Upload> uploads;
 
     @NameInMap("UploadIdMarker")
     public String uploadIdMarker;
@@ -92,12 +92,12 @@ public class ListMultipartUploadsResponseBody extends TeaModel {
         return this.nextUploadMarker;
     }
 
-    public ListMultipartUploadsResponseBody setUpload(java.util.List<Upload> upload) {
-        this.upload = upload;
+    public ListMultipartUploadsResponseBody setUploads(java.util.List<Upload> uploads) {
+        this.uploads = uploads;
         return this;
     }
-    public java.util.List<Upload> getUpload() {
-        return this.upload;
+    public java.util.List<Upload> getUploads() {
+        return this.uploads;
     }
 
     public ListMultipartUploadsResponseBody setUploadIdMarker(String uploadIdMarker) {

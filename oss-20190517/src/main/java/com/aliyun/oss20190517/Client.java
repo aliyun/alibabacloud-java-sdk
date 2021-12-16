@@ -106,8 +106,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders = headers.commonHeaders;
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(headers.cacheControl)) {
+            realHeaders.put("Cache-Control", com.aliyun.teautil.Common.toJSONString(headers.cacheControl));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.contentDisposition)) {
+            realHeaders.put("Content-Disposition", com.aliyun.teautil.Common.toJSONString(headers.contentDisposition));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.contentEncoding)) {
+            realHeaders.put("Content-Encoding", com.aliyun.teautil.Common.toJSONString(headers.contentEncoding));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.contentMD5)) {
+            realHeaders.put("Content-MD5", com.aliyun.teautil.Common.toJSONString(headers.contentMD5));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.expires)) {
+            realHeaders.put("Expires", com.aliyun.teautil.Common.toJSONString(headers.expires));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.metaData)) {
+            realHeaders.put("x-oss-meta-*", com.aliyun.teautil.Common.toJSONString(headers.metaData));
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(headers.acl)) {
             realHeaders.put("x-oss-object-acl", com.aliyun.teautil.Common.toJSONString(headers.acl));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.serverSideEncryption)) {
+            realHeaders.put("x-oss-server-side-encryption", com.aliyun.teautil.Common.toJSONString(headers.serverSideEncryption));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.storageClass)) {
@@ -199,12 +227,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders = headers.commonHeaders;
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xOssCompleteAll)) {
-            realHeaders.put("x-oss-complete-all", com.aliyun.teautil.Common.toJSONString(headers.xOssCompleteAll));
+        if (!com.aliyun.teautil.Common.isUnset(headers.completeAll)) {
+            realHeaders.put("x-oss-complete-all", com.aliyun.teautil.Common.toJSONString(headers.completeAll));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xOssForbidOverwrite)) {
-            realHeaders.put("x-oss-forbid-overwrite", com.aliyun.teautil.Common.toJSONString(headers.xOssForbidOverwrite));
+        if (!com.aliyun.teautil.Common.isUnset(headers.forbidOverwrite)) {
+            realHeaders.put("x-oss-forbid-overwrite", com.aliyun.teautil.Common.toJSONString(headers.forbidOverwrite));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -242,12 +270,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders = headers.commonHeaders;
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.sourceBucket)) {
-            realHeaders.put("source-bucket", com.aliyun.teautil.Common.toJSONString(headers.sourceBucket));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.sourceKey)) {
-            realHeaders.put("source-key", com.aliyun.teautil.Common.toJSONString(headers.sourceKey));
+        if (!com.aliyun.teautil.Common.isUnset(headers.copySource)) {
+            realHeaders.put("x-oss-copy-source", com.aliyun.teautil.Common.toJSONString(headers.copySource));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.copySourceIfMatch)) {
@@ -268,6 +292,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(headers.forbidOverwrite)) {
             realHeaders.put("x-oss-forbid-overwrite", com.aliyun.teautil.Common.toJSONString(headers.forbidOverwrite));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.metaData)) {
+            realHeaders.put("x-oss-meta-*", com.aliyun.teautil.Common.toJSONString(headers.metaData));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.metadataDirective)) {
@@ -292,6 +320,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(headers.tagging)) {
             realHeaders.put("x-oss-tagging", com.aliyun.teautil.Common.toJSONString(headers.tagging));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xOssTaggingDirective)) {
+            realHeaders.put("x-oss-tagging-directive", com.aliyun.teautil.Common.toJSONString(headers.xOssTaggingDirective));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -508,18 +540,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketPolicyResponse());
     }
 
-    public DeleteBucketReplicationResponse deleteBucketReplication(String bucket) throws Exception {
+    public DeleteBucketReplicationResponse deleteBucketReplication(String bucket, DeleteBucketReplicationRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteBucketReplicationWithOptions(bucket, headers, runtime);
+        return this.deleteBucketReplicationWithOptions(bucket, request, headers, runtime);
     }
 
-    public DeleteBucketReplicationResponse deleteBucketReplicationWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteBucketReplicationResponse deleteBucketReplicationWithOptions(String bucket, DeleteBucketReplicationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.body))) {
+            body.put("body", request.body);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteBucketReplication"),
@@ -689,19 +728,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteObjectResponse());
     }
 
-    public DeleteObjectTaggingResponse deleteObjectTagging(String bucket, String key) throws Exception {
+    public DeleteObjectTaggingResponse deleteObjectTagging(String bucket, String key, DeleteObjectTaggingRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteObjectTaggingWithOptions(bucket, key, headers, runtime);
+        return this.deleteObjectTaggingWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public DeleteObjectTaggingResponse deleteObjectTaggingWithOptions(String bucket, String key, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteObjectTaggingResponse deleteObjectTaggingWithOptions(String bucket, String key, DeleteObjectTaggingRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
         key = com.aliyun.openapiutil.Client.getEncodeParam(key);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("versionId", request.versionId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteObjectTagging"),
@@ -966,7 +1012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetBucketLifecycle"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/?lifecycle "),
+            new TeaPair("pathname", "/?lifecycle"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1243,7 +1289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetBucketTransferAcceleration"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/?transferAcceleration "),
+            new TeaPair("pathname", "/?transferAcceleration"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1298,7 +1344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/?website"),
-            new TeaPair("method", "POST"),
+            new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
@@ -1537,19 +1583,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetObjectAclResponse());
     }
 
-    public GetObjectMetaResponse getObjectMeta(String bucket, String key) throws Exception {
+    public GetObjectMetaResponse getObjectMeta(String bucket, String key, GetObjectMetaRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getObjectMetaWithOptions(bucket, key, headers, runtime);
+        return this.getObjectMetaWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public GetObjectMetaResponse getObjectMetaWithOptions(String bucket, String key, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetObjectMetaResponse getObjectMetaWithOptions(String bucket, String key, GetObjectMetaRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
         key = com.aliyun.openapiutil.Client.getEncodeParam(key);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("versionId", request.versionId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetObjectMeta"),
@@ -1565,19 +1618,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetObjectMetaResponse());
     }
 
-    public GetObjectTaggingResponse getObjectTagging(String bucket, String key) throws Exception {
+    public GetObjectTaggingResponse getObjectTagging(String bucket, String key, GetObjectTaggingRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getObjectTaggingWithOptions(bucket, key, headers, runtime);
+        return this.getObjectTaggingWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public GetObjectTaggingResponse getObjectTaggingWithOptions(String bucket, String key, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetObjectTaggingResponse getObjectTaggingWithOptions(String bucket, String key, GetObjectTaggingRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
         key = com.aliyun.openapiutil.Client.getEncodeParam(key);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("versionId", request.versionId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetObjectTagging"),
@@ -1622,7 +1682,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetService"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/ "),
+            new TeaPair("pathname", "/"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1632,19 +1692,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetServiceResponse());
     }
 
-    public GetSymlinkResponse getSymlink(String bucket, String key) throws Exception {
+    public GetSymlinkResponse getSymlink(String bucket, String key, GetSymlinkRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getSymlinkWithOptions(bucket, key, headers, runtime);
+        return this.getSymlinkWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public GetSymlinkResponse getSymlinkWithOptions(String bucket, String key, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetSymlinkResponse getSymlinkWithOptions(String bucket, String key, GetSymlinkRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
         key = com.aliyun.openapiutil.Client.getEncodeParam(key);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("versionId", request.versionId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetSymlink"),
@@ -1699,16 +1766,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetVodPlaylistResponse());
     }
 
-    public HeadObjectResponse headObject(String bucket, String key) throws Exception {
+    public HeadObjectResponse headObject(String bucket, String key, HeadObjectRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         HeadObjectHeaders headers = new HeadObjectHeaders();
-        return this.headObjectWithOptions(bucket, key, headers, runtime);
+        return this.headObjectWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public HeadObjectResponse headObjectWithOptions(String bucket, String key, HeadObjectHeaders headers, RuntimeOptions runtime) throws Exception {
+    public HeadObjectResponse headObjectWithOptions(String bucket, String key, HeadObjectRequest request, HeadObjectHeaders headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
         key = com.aliyun.openapiutil.Client.getEncodeParam(key);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("versionId", request.versionId);
+        }
+
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -1732,7 +1805,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", realHeaders)
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "HeadObject"),
@@ -1803,28 +1877,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders = headers.commonHeaders;
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xOssForbidOverwrite)) {
-            realHeaders.put("x-oss-forbid-overwrite", com.aliyun.teautil.Common.toJSONString(headers.xOssForbidOverwrite));
+        if (!com.aliyun.teautil.Common.isUnset(headers.cacheControl)) {
+            realHeaders.put("Cache-Control", com.aliyun.teautil.Common.toJSONString(headers.cacheControl));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xOssServerSideDataEncryption)) {
-            realHeaders.put("x-oss-server-side-data-encryption", com.aliyun.teautil.Common.toJSONString(headers.xOssServerSideDataEncryption));
+        if (!com.aliyun.teautil.Common.isUnset(headers.contentDisposition)) {
+            realHeaders.put("Content-Disposition", com.aliyun.teautil.Common.toJSONString(headers.contentDisposition));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xOssServerSideEncryption)) {
-            realHeaders.put("x-oss-server-side-encryption", com.aliyun.teautil.Common.toJSONString(headers.xOssServerSideEncryption));
+        if (!com.aliyun.teautil.Common.isUnset(headers.contentEncoding)) {
+            realHeaders.put("Content-Encoding", com.aliyun.teautil.Common.toJSONString(headers.contentEncoding));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xOssServerSideEncryptionKeyId)) {
-            realHeaders.put("x-oss-server-side-encryption-key-id", com.aliyun.teautil.Common.toJSONString(headers.xOssServerSideEncryptionKeyId));
+        if (!com.aliyun.teautil.Common.isUnset(headers.expires)) {
+            realHeaders.put("Expires", com.aliyun.teautil.Common.toJSONString(headers.expires));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xOssStorageClass)) {
-            realHeaders.put("x-oss-storage-class", com.aliyun.teautil.Common.toJSONString(headers.xOssStorageClass));
+        if (!com.aliyun.teautil.Common.isUnset(headers.forbidOverwrite)) {
+            realHeaders.put("x-oss-forbid-overwrite", com.aliyun.teautil.Common.toJSONString(headers.forbidOverwrite));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xOssTagging)) {
-            realHeaders.put("x-oss-tagging", com.aliyun.teautil.Common.toJSONString(headers.xOssTagging));
+        if (!com.aliyun.teautil.Common.isUnset(headers.sseDataEncryption)) {
+            realHeaders.put("x-oss-server-side-data-encryption", com.aliyun.teautil.Common.toJSONString(headers.sseDataEncryption));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.serverSideEncryption)) {
+            realHeaders.put("x-oss-server-side-encryption", com.aliyun.teautil.Common.toJSONString(headers.serverSideEncryption));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.sseKeyId)) {
+            realHeaders.put("x-oss-server-side-encryption-key-id", com.aliyun.teautil.Common.toJSONString(headers.sseKeyId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.storageClass)) {
+            realHeaders.put("x-oss-storage-class", com.aliyun.teautil.Common.toJSONString(headers.storageClass));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.tagging)) {
+            realHeaders.put("x-oss-tagging", com.aliyun.teautil.Common.toJSONString(headers.tagging));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1909,7 +1999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListBuckets"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/ "),
+            new TeaPair("pathname", "/"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1961,14 +2051,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListLiveChannelResponse());
     }
 
-    public ListMultipartUploadsResponse listMultipartUploads(ListMultipartUploadsRequest request) throws Exception {
+    public ListMultipartUploadsResponse listMultipartUploads(String bucket, ListMultipartUploadsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listMultipartUploadsWithOptions(request, headers, runtime);
+        return this.listMultipartUploadsWithOptions(bucket, request, headers, runtime);
     }
 
-    public ListMultipartUploadsResponse listMultipartUploadsWithOptions(ListMultipartUploadsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListMultipartUploadsResponse listMultipartUploadsWithOptions(String bucket, ListMultipartUploadsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("bucket", bucket);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.delimiter)) {
             query.put("delimiter", request.delimiter);
@@ -1995,6 +2087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2180,14 +2273,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listPartsWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public ListPartsResponse listPartsWithOptions(String bucket, String key, ListPartsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListPartsResponse listPartsWithOptions(String bucket, String key, ListPartsRequest tmpReq, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
         key = com.aliyun.openapiutil.Client.getEncodeParam(key);
+        ListPartsShrinkRequest request = new ListPartsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.encodingType)) {
+            request.encodingTypeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.encodingType, "encoding-type", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.encodingType)) {
-            query.put("encoding-type", request.encodingType);
+        if (!com.aliyun.teautil.Common.isUnset(request.encodingTypeShrink)) {
+            query.put("encoding-type", request.encodingTypeShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxParts)) {
@@ -2544,7 +2643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "PutBucketLifecycle"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/?lifecycle "),
+            new TeaPair("pathname", "/?lifecycle"),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2777,7 +2876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "PutBucketTransferAcceleration"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/?transferAcceleration "),
+            new TeaPair("pathname", "/?transferAcceleration"),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2945,8 +3044,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("x-oss-forbid-overwrite", com.aliyun.teautil.Common.toJSONString(headers.forbidOverwrite));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.userMetadata)) {
-            realHeaders.put("x-oss-meta-*", com.aliyun.teautil.Common.toJSONString(headers.userMetadata));
+        if (!com.aliyun.teautil.Common.isUnset(headers.metaData)) {
+            realHeaders.put("x-oss-meta-*", com.aliyun.teautil.Common.toJSONString(headers.metaData));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.acl)) {
@@ -2957,8 +3056,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("x-oss-server-side-data-encryption", com.aliyun.teautil.Common.toJSONString(headers.sseDataEncryption));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.sse)) {
-            realHeaders.put("x-oss-server-side-encryption", com.aliyun.teautil.Common.toJSONString(headers.sse));
+        if (!com.aliyun.teautil.Common.isUnset(headers.serverSideEncryption)) {
+            realHeaders.put("x-oss-server-side-encryption", com.aliyun.teautil.Common.toJSONString(headers.serverSideEncryption));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.sseKeyId)) {
@@ -3093,8 +3192,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders = headers.commonHeaders;
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xOssForbidOverwrite)) {
-            realHeaders.put("x-oss-forbid-overwrite", com.aliyun.teautil.Common.toJSONString(headers.xOssForbidOverwrite));
+        if (!com.aliyun.teautil.Common.isUnset(headers.forbidOverwrite)) {
+            realHeaders.put("x-oss-forbid-overwrite", com.aliyun.teautil.Common.toJSONString(headers.forbidOverwrite));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.acl)) {
@@ -3138,6 +3237,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
         key = com.aliyun.openapiutil.Client.getEncodeParam(key);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("versionId", request.versionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.body))) {
             body.put("body", request.body);
@@ -3146,6 +3250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -3263,32 +3368,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders = headers.commonHeaders;
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.sourceBucket)) {
-            realHeaders.put("source-bucket", com.aliyun.teautil.Common.toJSONString(headers.sourceBucket));
+        if (!com.aliyun.teautil.Common.isUnset(headers.copySource)) {
+            realHeaders.put("x-oss-copy-source", com.aliyun.teautil.Common.toJSONString(headers.copySource));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.sourceKey)) {
-            realHeaders.put("source-key", com.aliyun.teautil.Common.toJSONString(headers.sourceKey));
+        if (!com.aliyun.teautil.Common.isUnset(headers.copySourceIfMatch)) {
+            realHeaders.put("x-oss-copy-source-if-match", com.aliyun.teautil.Common.toJSONString(headers.copySourceIfMatch));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xOssCopySourceIfMatch)) {
-            realHeaders.put("x-oss-copy-source-if-match", com.aliyun.teautil.Common.toJSONString(headers.xOssCopySourceIfMatch));
+        if (!com.aliyun.teautil.Common.isUnset(headers.copySourceIfModifiedSince)) {
+            realHeaders.put("x-oss-copy-source-if-modified-since", com.aliyun.teautil.Common.toJSONString(headers.copySourceIfModifiedSince));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xOssCopySourceIfModifiedSince)) {
-            realHeaders.put("x-oss-copy-source-if-modified-since", com.aliyun.teautil.Common.toJSONString(headers.xOssCopySourceIfModifiedSince));
+        if (!com.aliyun.teautil.Common.isUnset(headers.copySourceIfNoneMatch)) {
+            realHeaders.put("x-oss-copy-source-if-none-match", com.aliyun.teautil.Common.toJSONString(headers.copySourceIfNoneMatch));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xOssCopySourceIfNoneMatch)) {
-            realHeaders.put("x-oss-copy-source-if-none-match", com.aliyun.teautil.Common.toJSONString(headers.xOssCopySourceIfNoneMatch));
+        if (!com.aliyun.teautil.Common.isUnset(headers.copySourceIfUnmodifiedSince)) {
+            realHeaders.put("x-oss-copy-source-if-unmodified-since", com.aliyun.teautil.Common.toJSONString(headers.copySourceIfUnmodifiedSince));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xOssCopySourceIfUnmodifiedSince)) {
-            realHeaders.put("x-oss-copy-source-if-unmodified-since", com.aliyun.teautil.Common.toJSONString(headers.xOssCopySourceIfUnmodifiedSince));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xOssCopySourceRange)) {
-            realHeaders.put("x-oss-copy-source-range", com.aliyun.teautil.Common.toJSONString(headers.xOssCopySourceRange));
+        if (!com.aliyun.teautil.Common.isUnset(headers.copySourceRange)) {
+            realHeaders.put("x-oss-copy-source-range", com.aliyun.teautil.Common.toJSONString(headers.copySourceRange));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

@@ -7,26 +7,23 @@ public class UploadPartCopyHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    @NameInMap("source-bucket")
-    public String sourceBucket;
-
-    @NameInMap("source-key")
-    public String sourceKey;
+    @NameInMap("x-oss-copy-source")
+    public String copySource;
 
     @NameInMap("x-oss-copy-source-if-match")
-    public String xOssCopySourceIfMatch;
+    public String copySourceIfMatch;
 
     @NameInMap("x-oss-copy-source-if-modified-since")
-    public String xOssCopySourceIfModifiedSince;
+    public String copySourceIfModifiedSince;
 
     @NameInMap("x-oss-copy-source-if-none-match")
-    public String xOssCopySourceIfNoneMatch;
+    public String copySourceIfNoneMatch;
 
     @NameInMap("x-oss-copy-source-if-unmodified-since")
-    public String xOssCopySourceIfUnmodifiedSince;
+    public String copySourceIfUnmodifiedSince;
 
     @NameInMap("x-oss-copy-source-range")
-    public String xOssCopySourceRange;
+    public String copySourceRange;
 
     public static UploadPartCopyHeaders build(java.util.Map<String, ?> map) throws Exception {
         UploadPartCopyHeaders self = new UploadPartCopyHeaders();
@@ -41,60 +38,52 @@ public class UploadPartCopyHeaders extends TeaModel {
         return this.commonHeaders;
     }
 
-    public UploadPartCopyHeaders setSourceBucket(String sourceBucket) {
-        this.sourceBucket = sourceBucket;
+    public UploadPartCopyHeaders setCopySource(String copySource) {
+        this.copySource = copySource;
         return this;
     }
-    public String getSourceBucket() {
-        return this.sourceBucket;
+    public String getCopySource() {
+        return this.copySource;
     }
 
-    public UploadPartCopyHeaders setSourceKey(String sourceKey) {
-        this.sourceKey = sourceKey;
+    public UploadPartCopyHeaders setCopySourceIfMatch(String copySourceIfMatch) {
+        this.copySourceIfMatch = copySourceIfMatch;
         return this;
     }
-    public String getSourceKey() {
-        return this.sourceKey;
+    public String getCopySourceIfMatch() {
+        return this.copySourceIfMatch;
     }
 
-    public UploadPartCopyHeaders setXOssCopySourceIfMatch(String xOssCopySourceIfMatch) {
-        this.xOssCopySourceIfMatch = xOssCopySourceIfMatch;
+    public UploadPartCopyHeaders setCopySourceIfModifiedSince(String copySourceIfModifiedSince) {
+        this.copySourceIfModifiedSince = copySourceIfModifiedSince;
         return this;
     }
-    public String getXOssCopySourceIfMatch() {
-        return this.xOssCopySourceIfMatch;
+    public String getCopySourceIfModifiedSince() {
+        return this.copySourceIfModifiedSince;
     }
 
-    public UploadPartCopyHeaders setXOssCopySourceIfModifiedSince(String xOssCopySourceIfModifiedSince) {
-        this.xOssCopySourceIfModifiedSince = xOssCopySourceIfModifiedSince;
+    public UploadPartCopyHeaders setCopySourceIfNoneMatch(String copySourceIfNoneMatch) {
+        this.copySourceIfNoneMatch = copySourceIfNoneMatch;
         return this;
     }
-    public String getXOssCopySourceIfModifiedSince() {
-        return this.xOssCopySourceIfModifiedSince;
+    public String getCopySourceIfNoneMatch() {
+        return this.copySourceIfNoneMatch;
     }
 
-    public UploadPartCopyHeaders setXOssCopySourceIfNoneMatch(String xOssCopySourceIfNoneMatch) {
-        this.xOssCopySourceIfNoneMatch = xOssCopySourceIfNoneMatch;
+    public UploadPartCopyHeaders setCopySourceIfUnmodifiedSince(String copySourceIfUnmodifiedSince) {
+        this.copySourceIfUnmodifiedSince = copySourceIfUnmodifiedSince;
         return this;
     }
-    public String getXOssCopySourceIfNoneMatch() {
-        return this.xOssCopySourceIfNoneMatch;
+    public String getCopySourceIfUnmodifiedSince() {
+        return this.copySourceIfUnmodifiedSince;
     }
 
-    public UploadPartCopyHeaders setXOssCopySourceIfUnmodifiedSince(String xOssCopySourceIfUnmodifiedSince) {
-        this.xOssCopySourceIfUnmodifiedSince = xOssCopySourceIfUnmodifiedSince;
+    public UploadPartCopyHeaders setCopySourceRange(String copySourceRange) {
+        this.copySourceRange = copySourceRange;
         return this;
     }
-    public String getXOssCopySourceIfUnmodifiedSince() {
-        return this.xOssCopySourceIfUnmodifiedSince;
-    }
-
-    public UploadPartCopyHeaders setXOssCopySourceRange(String xOssCopySourceRange) {
-        this.xOssCopySourceRange = xOssCopySourceRange;
-        return this;
-    }
-    public String getXOssCopySourceRange() {
-        return this.xOssCopySourceRange;
+    public String getCopySourceRange() {
+        return this.copySourceRange;
     }
 
 }

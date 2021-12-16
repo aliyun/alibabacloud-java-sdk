@@ -12,6 +12,9 @@ public class ListObjectVersionsResponseBody extends TeaModel {
     @NameInMap("DeleteMarker")
     public java.util.List<DeleteMarkerEntry> deleteMarkers;
 
+    @NameInMap("Delimiter")
+    public String delimiter;
+
     @NameInMap("EncodingType")
     public String encodingType;
 
@@ -30,6 +33,12 @@ public class ListObjectVersionsResponseBody extends TeaModel {
     // The bucket name
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("NextKeyMarker")
+    public String nextKeyMarker;
+
+    @NameInMap("NextVersionIdMarker")
+    public String nextVersionIdMarker;
 
     // The prefix that the names of returned objects must contain
     @NameInMap("Prefix")
@@ -62,6 +71,14 @@ public class ListObjectVersionsResponseBody extends TeaModel {
     }
     public java.util.List<DeleteMarkerEntry> getDeleteMarkers() {
         return this.deleteMarkers;
+    }
+
+    public ListObjectVersionsResponseBody setDelimiter(String delimiter) {
+        this.delimiter = delimiter;
+        return this;
+    }
+    public String getDelimiter() {
+        return this.delimiter;
     }
 
     public ListObjectVersionsResponseBody setEncodingType(String encodingType) {
@@ -102,6 +119,22 @@ public class ListObjectVersionsResponseBody extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ListObjectVersionsResponseBody setNextKeyMarker(String nextKeyMarker) {
+        this.nextKeyMarker = nextKeyMarker;
+        return this;
+    }
+    public String getNextKeyMarker() {
+        return this.nextKeyMarker;
+    }
+
+    public ListObjectVersionsResponseBody setNextVersionIdMarker(String nextVersionIdMarker) {
+        this.nextVersionIdMarker = nextVersionIdMarker;
+        return this;
+    }
+    public String getNextVersionIdMarker() {
+        return this.nextVersionIdMarker;
     }
 
     public ListObjectVersionsResponseBody setPrefix(String prefix) {

@@ -29,6 +29,10 @@ public class ReplicationRule extends TeaModel {
     @NameInMap("SourceSelectionCriteria")
     public ReplicationSourceSelectionCriteria sourceSelectionCriteria;
 
+    // A short description of action
+    @NameInMap("Status")
+    public String status;
+
     // A short description of SyncRole
     @NameInMap("SyncRole")
     public String syncRole;
@@ -92,6 +96,14 @@ public class ReplicationRule extends TeaModel {
     }
     public ReplicationSourceSelectionCriteria getSourceSelectionCriteria() {
         return this.sourceSelectionCriteria;
+    }
+
+    public ReplicationRule setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public ReplicationRule setSyncRole(String syncRole) {

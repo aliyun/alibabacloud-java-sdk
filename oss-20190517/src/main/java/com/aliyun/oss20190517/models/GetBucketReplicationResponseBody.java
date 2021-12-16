@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetBucketReplicationResponseBody extends TeaModel {
     @NameInMap("Rule")
-    public java.util.List<ReplicationRule> rule;
+    public java.util.List<ReplicationRule> rules;
 
     public static GetBucketReplicationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetBucketReplicationResponseBody self = new GetBucketReplicationResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetBucketReplicationResponseBody setRule(java.util.List<ReplicationRule> rule) {
-        this.rule = rule;
+    public GetBucketReplicationResponseBody setRules(java.util.List<ReplicationRule> rules) {
+        this.rules = rules;
         return this;
     }
-    public java.util.List<ReplicationRule> getRule() {
-        return this.rule;
+    public java.util.List<ReplicationRule> getRules() {
+        return this.rules;
     }
 
 }
