@@ -7,20 +7,20 @@ public class ReadyForServiceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ReadyForServiceResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
 
-    @NameInMap("Data")
-    public ReadyForServiceResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ReadyForServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ReadyForServiceResponseBody self = new ReadyForServiceResponseBody();
@@ -33,6 +33,14 @@ public class ReadyForServiceResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ReadyForServiceResponseBody setData(ReadyForServiceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ReadyForServiceResponseBodyData getData() {
+        return this.data;
     }
 
     public ReadyForServiceResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,14 +59,6 @@ public class ReadyForServiceResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ReadyForServiceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ReadyForServiceResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
@@ -67,88 +67,48 @@ public class ReadyForServiceResponseBody extends TeaModel {
         return this.params;
     }
 
-    public ReadyForServiceResponseBody setData(ReadyForServiceResponseBodyData data) {
-        this.data = data;
+    public ReadyForServiceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public ReadyForServiceResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ReadyForServiceResponseBodyData extends TeaModel {
-        @NameInMap("Extension")
-        public String extension;
-
-        @NameInMap("WorkMode")
-        public String workMode;
+        @NameInMap("BreakCode")
+        public String breakCode;
 
         @NameInMap("DeviceId")
         public String deviceId;
 
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("BreakCode")
-        public String breakCode;
+        @NameInMap("Extension")
+        public String extension;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("JobId")
+        public String jobId;
+
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
-
-        @NameInMap("UserState")
-        public String userState;
 
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserState")
+        public String userState;
+
+        @NameInMap("WorkMode")
+        public String workMode;
+
         public static ReadyForServiceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ReadyForServiceResponseBodyData self = new ReadyForServiceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ReadyForServiceResponseBodyData setExtension(String extension) {
-            this.extension = extension;
-            return this;
-        }
-        public String getExtension() {
-            return this.extension;
-        }
-
-        public ReadyForServiceResponseBodyData setWorkMode(String workMode) {
-            this.workMode = workMode;
-            return this;
-        }
-        public String getWorkMode() {
-            return this.workMode;
-        }
-
-        public ReadyForServiceResponseBodyData setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
-        }
-
-        public ReadyForServiceResponseBodyData setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public ReadyForServiceResponseBodyData setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public ReadyForServiceResponseBodyData setBreakCode(String breakCode) {
@@ -159,12 +119,36 @@ public class ReadyForServiceResponseBody extends TeaModel {
             return this.breakCode;
         }
 
+        public ReadyForServiceResponseBodyData setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
+        public ReadyForServiceResponseBodyData setExtension(String extension) {
+            this.extension = extension;
+            return this;
+        }
+        public String getExtension() {
+            return this.extension;
+        }
+
         public ReadyForServiceResponseBodyData setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ReadyForServiceResponseBodyData setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
         }
 
         public ReadyForServiceResponseBodyData setOutboundScenario(Boolean outboundScenario) {
@@ -175,6 +159,22 @@ public class ReadyForServiceResponseBody extends TeaModel {
             return this.outboundScenario;
         }
 
+        public ReadyForServiceResponseBodyData setSignedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
+            this.signedSkillGroupIdList = signedSkillGroupIdList;
+            return this;
+        }
+        public java.util.List<String> getSignedSkillGroupIdList() {
+            return this.signedSkillGroupIdList;
+        }
+
+        public ReadyForServiceResponseBodyData setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
         public ReadyForServiceResponseBodyData setUserState(String userState) {
             this.userState = userState;
             return this;
@@ -183,12 +183,12 @@ public class ReadyForServiceResponseBody extends TeaModel {
             return this.userState;
         }
 
-        public ReadyForServiceResponseBodyData setSignedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
-            this.signedSkillGroupIdList = signedSkillGroupIdList;
+        public ReadyForServiceResponseBodyData setWorkMode(String workMode) {
+            this.workMode = workMode;
             return this;
         }
-        public java.util.List<String> getSignedSkillGroupIdList() {
-            return this.signedSkillGroupIdList;
+        public String getWorkMode() {
+            return this.workMode;
         }
 
     }

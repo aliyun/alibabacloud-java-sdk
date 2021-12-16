@@ -4,6 +4,9 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class UpdateConfigItemsRequest extends TeaModel {
+    @NameInMap("ConfigItems")
+    public String configItems;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,12 +16,17 @@ public class UpdateConfigItemsRequest extends TeaModel {
     @NameInMap("ObjectType")
     public String objectType;
 
-    @NameInMap("ConfigItems")
-    public String configItems;
-
     public static UpdateConfigItemsRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateConfigItemsRequest self = new UpdateConfigItemsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateConfigItemsRequest setConfigItems(String configItems) {
+        this.configItems = configItems;
+        return this;
+    }
+    public String getConfigItems() {
+        return this.configItems;
     }
 
     public UpdateConfigItemsRequest setInstanceId(String instanceId) {
@@ -43,14 +51,6 @@ public class UpdateConfigItemsRequest extends TeaModel {
     }
     public String getObjectType() {
         return this.objectType;
-    }
-
-    public UpdateConfigItemsRequest setConfigItems(String configItems) {
-        this.configItems = configItems;
-        return this;
-    }
-    public String getConfigItems() {
-        return this.configItems;
     }
 
 }

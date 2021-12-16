@@ -4,18 +4,26 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class PollUserStatusRequest extends TeaModel {
+    @NameInMap("DeviceId")
+    public String deviceId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("UserId")
     public String userId;
 
-    @NameInMap("DeviceId")
-    public String deviceId;
-
     public static PollUserStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         PollUserStatusRequest self = new PollUserStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PollUserStatusRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
     }
 
     public PollUserStatusRequest setInstanceId(String instanceId) {
@@ -32,14 +40,6 @@ public class PollUserStatusRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public PollUserStatusRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-        return this;
-    }
-    public String getDeviceId() {
-        return this.deviceId;
     }
 
 }

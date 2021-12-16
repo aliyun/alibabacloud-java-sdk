@@ -13,11 +13,11 @@ public class ModifySkillLevelsOfUserResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ModifySkillLevelsOfUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifySkillLevelsOfUserResponseBody self = new ModifySkillLevelsOfUserResponseBody();
@@ -48,20 +48,20 @@ public class ModifySkillLevelsOfUserResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ModifySkillLevelsOfUserResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ModifySkillLevelsOfUserResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
     }
     public java.util.List<String> getParams() {
         return this.params;
+    }
+
+    public ModifySkillLevelsOfUserResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

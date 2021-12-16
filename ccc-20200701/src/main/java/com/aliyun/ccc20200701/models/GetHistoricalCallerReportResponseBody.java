@@ -7,6 +7,9 @@ public class GetHistoricalCallerReportResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetHistoricalCallerReportResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class GetHistoricalCallerReportResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetHistoricalCallerReportResponseBodyData data;
 
     public static GetHistoricalCallerReportResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetHistoricalCallerReportResponseBody self = new GetHistoricalCallerReportResponseBody();
@@ -30,6 +30,14 @@ public class GetHistoricalCallerReportResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetHistoricalCallerReportResponseBody setData(GetHistoricalCallerReportResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetHistoricalCallerReportResponseBodyData getData() {
+        return this.data;
     }
 
     public GetHistoricalCallerReportResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -54,14 +62,6 @@ public class GetHistoricalCallerReportResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetHistoricalCallerReportResponseBody setData(GetHistoricalCallerReportResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetHistoricalCallerReportResponseBodyData getData() {
-        return this.data;
     }
 
     public static class GetHistoricalCallerReportResponseBodyData extends TeaModel {

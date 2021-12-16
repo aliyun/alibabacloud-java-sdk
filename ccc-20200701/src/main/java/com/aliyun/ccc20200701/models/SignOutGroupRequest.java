@@ -4,18 +4,26 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class SignOutGroupRequest extends TeaModel {
+    @NameInMap("DeviceId")
+    public String deviceId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("UserId")
     public String userId;
 
-    @NameInMap("DeviceId")
-    public String deviceId;
-
     public static SignOutGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         SignOutGroupRequest self = new SignOutGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SignOutGroupRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
     }
 
     public SignOutGroupRequest setInstanceId(String instanceId) {
@@ -32,14 +40,6 @@ public class SignOutGroupRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public SignOutGroupRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-        return this;
-    }
-    public String getDeviceId() {
-        return this.deviceId;
     }
 
 }

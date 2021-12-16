@@ -7,6 +7,9 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ListBriefSkillGroupsResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ListBriefSkillGroupsResponseBodyData data;
 
     public static ListBriefSkillGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListBriefSkillGroupsResponseBody self = new ListBriefSkillGroupsResponseBody();
@@ -30,6 +30,14 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListBriefSkillGroupsResponseBody setData(ListBriefSkillGroupsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListBriefSkillGroupsResponseBodyData getData() {
+        return this.data;
     }
 
     public ListBriefSkillGroupsResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,20 +64,15 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListBriefSkillGroupsResponseBody setData(ListBriefSkillGroupsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListBriefSkillGroupsResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListBriefSkillGroupsResponseBodyDataList extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("DisplayName")
         public String displayName;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         @NameInMap("PhoneNumberCount")
         public Integer phoneNumberCount;
@@ -83,12 +86,17 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
         @NameInMap("UserCount")
         public Integer userCount;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
-
         public static ListBriefSkillGroupsResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListBriefSkillGroupsResponseBodyDataList self = new ListBriefSkillGroupsResponseBodyDataList();
             return TeaModel.build(map, self);
+        }
+
+        public ListBriefSkillGroupsResponseBodyDataList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public ListBriefSkillGroupsResponseBodyDataList setDisplayName(String displayName) {
@@ -99,12 +107,12 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
             return this.displayName;
         }
 
-        public ListBriefSkillGroupsResponseBodyDataList setDescription(String description) {
-            this.description = description;
+        public ListBriefSkillGroupsResponseBodyDataList setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public ListBriefSkillGroupsResponseBodyDataList setPhoneNumberCount(Integer phoneNumberCount) {
@@ -139,17 +147,12 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
             return this.userCount;
         }
 
-        public ListBriefSkillGroupsResponseBodyDataList setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
     }
 
     public static class ListBriefSkillGroupsResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public java.util.List<ListBriefSkillGroupsResponseBodyDataList> list;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -159,12 +162,17 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("List")
-        public java.util.List<ListBriefSkillGroupsResponseBodyDataList> list;
-
         public static ListBriefSkillGroupsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListBriefSkillGroupsResponseBodyData self = new ListBriefSkillGroupsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListBriefSkillGroupsResponseBodyData setList(java.util.List<ListBriefSkillGroupsResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListBriefSkillGroupsResponseBodyDataList> getList() {
+            return this.list;
         }
 
         public ListBriefSkillGroupsResponseBodyData setPageNumber(Integer pageNumber) {
@@ -189,14 +197,6 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListBriefSkillGroupsResponseBodyData setList(java.util.List<ListBriefSkillGroupsResponseBodyDataList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<ListBriefSkillGroupsResponseBodyDataList> getList() {
-            return this.list;
         }
 
     }

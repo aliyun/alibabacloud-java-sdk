@@ -7,6 +7,9 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public java.util.List<ListAgentStateLogsResponseBodyData> data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public java.util.List<ListAgentStateLogsResponseBodyData> data;
 
     public static ListAgentStateLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAgentStateLogsResponseBody self = new ListAgentStateLogsResponseBody();
@@ -30,6 +30,14 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListAgentStateLogsResponseBody setData(java.util.List<ListAgentStateLogsResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListAgentStateLogsResponseBodyData> getData() {
+        return this.data;
     }
 
     public ListAgentStateLogsResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,46 +64,22 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListAgentStateLogsResponseBody setData(java.util.List<ListAgentStateLogsResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListAgentStateLogsResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class ListAgentStateLogsResponseBodyData extends TeaModel {
-        @NameInMap("StartTime")
-        public Long startTime;
-
-        @NameInMap("StateCode")
-        public String stateCode;
-
         @NameInMap("Duration")
         public Long duration;
+
+        @NameInMap("StartTime")
+        public Long startTime;
 
         @NameInMap("State")
         public String state;
 
+        @NameInMap("StateCode")
+        public String stateCode;
+
         public static ListAgentStateLogsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAgentStateLogsResponseBodyData self = new ListAgentStateLogsResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListAgentStateLogsResponseBodyData setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
-        }
-
-        public ListAgentStateLogsResponseBodyData setStateCode(String stateCode) {
-            this.stateCode = stateCode;
-            return this;
-        }
-        public String getStateCode() {
-            return this.stateCode;
         }
 
         public ListAgentStateLogsResponseBodyData setDuration(Long duration) {
@@ -106,12 +90,28 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
             return this.duration;
         }
 
+        public ListAgentStateLogsResponseBodyData setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
         public ListAgentStateLogsResponseBodyData setState(String state) {
             this.state = state;
             return this;
         }
         public String getState() {
             return this.state;
+        }
+
+        public ListAgentStateLogsResponseBodyData setStateCode(String stateCode) {
+            this.stateCode = stateCode;
+            return this;
+        }
+        public String getStateCode() {
+            return this.stateCode;
         }
 
     }

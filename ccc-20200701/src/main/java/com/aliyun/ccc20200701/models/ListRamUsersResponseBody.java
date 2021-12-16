@@ -7,20 +7,20 @@ public class ListRamUsersResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ListRamUsersResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
 
-    @NameInMap("Data")
-    public ListRamUsersResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListRamUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRamUsersResponseBody self = new ListRamUsersResponseBody();
@@ -33,6 +33,14 @@ public class ListRamUsersResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListRamUsersResponseBody setData(ListRamUsersResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListRamUsersResponseBodyData getData() {
+        return this.data;
     }
 
     public ListRamUsersResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,14 +59,6 @@ public class ListRamUsersResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ListRamUsersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListRamUsersResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
@@ -67,15 +67,18 @@ public class ListRamUsersResponseBody extends TeaModel {
         return this.params;
     }
 
-    public ListRamUsersResponseBody setData(ListRamUsersResponseBodyData data) {
-        this.data = data;
+    public ListRamUsersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public ListRamUsersResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListRamUsersResponseBodyDataList extends TeaModel {
+        @NameInMap("AliyunUid")
+        public Long aliyunUid;
+
         @NameInMap("DisplayName")
         public String displayName;
 
@@ -88,9 +91,6 @@ public class ListRamUsersResponseBody extends TeaModel {
         @NameInMap("Mobile")
         public String mobile;
 
-        @NameInMap("AliyunUid")
-        public Long aliyunUid;
-
         @NameInMap("Primary")
         public Boolean primary;
 
@@ -100,6 +100,14 @@ public class ListRamUsersResponseBody extends TeaModel {
         public static ListRamUsersResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListRamUsersResponseBodyDataList self = new ListRamUsersResponseBodyDataList();
             return TeaModel.build(map, self);
+        }
+
+        public ListRamUsersResponseBodyDataList setAliyunUid(Long aliyunUid) {
+            this.aliyunUid = aliyunUid;
+            return this;
+        }
+        public Long getAliyunUid() {
+            return this.aliyunUid;
         }
 
         public ListRamUsersResponseBodyDataList setDisplayName(String displayName) {
@@ -134,14 +142,6 @@ public class ListRamUsersResponseBody extends TeaModel {
             return this.mobile;
         }
 
-        public ListRamUsersResponseBodyDataList setAliyunUid(Long aliyunUid) {
-            this.aliyunUid = aliyunUid;
-            return this;
-        }
-        public Long getAliyunUid() {
-            return this.aliyunUid;
-        }
-
         public ListRamUsersResponseBodyDataList setPrimary(Boolean primary) {
             this.primary = primary;
             return this;
@@ -161,6 +161,9 @@ public class ListRamUsersResponseBody extends TeaModel {
     }
 
     public static class ListRamUsersResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public java.util.List<ListRamUsersResponseBodyDataList> list;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -170,12 +173,17 @@ public class ListRamUsersResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("List")
-        public java.util.List<ListRamUsersResponseBodyDataList> list;
-
         public static ListRamUsersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListRamUsersResponseBodyData self = new ListRamUsersResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListRamUsersResponseBodyData setList(java.util.List<ListRamUsersResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListRamUsersResponseBodyDataList> getList() {
+            return this.list;
         }
 
         public ListRamUsersResponseBodyData setPageNumber(Integer pageNumber) {
@@ -200,14 +208,6 @@ public class ListRamUsersResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListRamUsersResponseBodyData setList(java.util.List<ListRamUsersResponseBodyDataList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<ListRamUsersResponseBodyDataList> getList() {
-            return this.list;
         }
 
     }

@@ -4,35 +4,27 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class SaveRTCStatsV2Request extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("CallId")
     public String callId;
 
     @NameInMap("GeneralInfo")
     public String generalInfo;
 
-    @NameInMap("SenderReport")
-    public String senderReport;
+    @NameInMap("GoogAddress")
+    public String googAddress;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("ReceiverReport")
     public String receiverReport;
 
-    @NameInMap("GoogAddress")
-    public String googAddress;
+    @NameInMap("SenderReport")
+    public String senderReport;
 
     public static SaveRTCStatsV2Request build(java.util.Map<String, ?> map) throws Exception {
         SaveRTCStatsV2Request self = new SaveRTCStatsV2Request();
         return TeaModel.build(map, self);
-    }
-
-    public SaveRTCStatsV2Request setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public SaveRTCStatsV2Request setCallId(String callId) {
@@ -51,12 +43,20 @@ public class SaveRTCStatsV2Request extends TeaModel {
         return this.generalInfo;
     }
 
-    public SaveRTCStatsV2Request setSenderReport(String senderReport) {
-        this.senderReport = senderReport;
+    public SaveRTCStatsV2Request setGoogAddress(String googAddress) {
+        this.googAddress = googAddress;
         return this;
     }
-    public String getSenderReport() {
-        return this.senderReport;
+    public String getGoogAddress() {
+        return this.googAddress;
+    }
+
+    public SaveRTCStatsV2Request setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public SaveRTCStatsV2Request setReceiverReport(String receiverReport) {
@@ -67,12 +67,12 @@ public class SaveRTCStatsV2Request extends TeaModel {
         return this.receiverReport;
     }
 
-    public SaveRTCStatsV2Request setGoogAddress(String googAddress) {
-        this.googAddress = googAddress;
+    public SaveRTCStatsV2Request setSenderReport(String senderReport) {
+        this.senderReport = senderReport;
         return this;
     }
-    public String getGoogAddress() {
-        return this.googAddress;
+    public String getSenderReport() {
+        return this.senderReport;
     }
 
 }

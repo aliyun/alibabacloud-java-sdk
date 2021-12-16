@@ -4,23 +4,23 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class CreateUserRequest extends TeaModel {
+    @NameInMap("DisplayName")
+    public String displayName;
+
+    @NameInMap("Email")
+    public String email;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("LoginName")
     public String loginName;
 
-    @NameInMap("DisplayName")
-    public String displayName;
-
     @NameInMap("Mobile")
     public String mobile;
 
-    @NameInMap("Email")
-    public String email;
-
-    @NameInMap("WorkMode")
-    public String workMode;
+    @NameInMap("ResetPassword")
+    public Boolean resetPassword;
 
     @NameInMap("RoleId")
     public String roleId;
@@ -28,12 +28,28 @@ public class CreateUserRequest extends TeaModel {
     @NameInMap("SkillLevelList")
     public String skillLevelList;
 
-    @NameInMap("ResetPassword")
-    public Boolean resetPassword;
+    @NameInMap("WorkMode")
+    public String workMode;
 
     public static CreateUserRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUserRequest self = new CreateUserRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateUserRequest setDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    public String getDisplayName() {
+        return this.displayName;
+    }
+
+    public CreateUserRequest setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    public String getEmail() {
+        return this.email;
     }
 
     public CreateUserRequest setInstanceId(String instanceId) {
@@ -52,14 +68,6 @@ public class CreateUserRequest extends TeaModel {
         return this.loginName;
     }
 
-    public CreateUserRequest setDisplayName(String displayName) {
-        this.displayName = displayName;
-        return this;
-    }
-    public String getDisplayName() {
-        return this.displayName;
-    }
-
     public CreateUserRequest setMobile(String mobile) {
         this.mobile = mobile;
         return this;
@@ -68,20 +76,12 @@ public class CreateUserRequest extends TeaModel {
         return this.mobile;
     }
 
-    public CreateUserRequest setEmail(String email) {
-        this.email = email;
+    public CreateUserRequest setResetPassword(Boolean resetPassword) {
+        this.resetPassword = resetPassword;
         return this;
     }
-    public String getEmail() {
-        return this.email;
-    }
-
-    public CreateUserRequest setWorkMode(String workMode) {
-        this.workMode = workMode;
-        return this;
-    }
-    public String getWorkMode() {
-        return this.workMode;
+    public Boolean getResetPassword() {
+        return this.resetPassword;
     }
 
     public CreateUserRequest setRoleId(String roleId) {
@@ -100,12 +100,12 @@ public class CreateUserRequest extends TeaModel {
         return this.skillLevelList;
     }
 
-    public CreateUserRequest setResetPassword(Boolean resetPassword) {
-        this.resetPassword = resetPassword;
+    public CreateUserRequest setWorkMode(String workMode) {
+        this.workMode = workMode;
         return this;
     }
-    public Boolean getResetPassword() {
-        return this.resetPassword;
+    public String getWorkMode() {
+        return this.workMode;
     }
 
 }

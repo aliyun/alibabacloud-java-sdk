@@ -4,14 +4,14 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListPhoneNumbersResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("Data")
+    public ListPhoneNumbersResponseBodyData data;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
@@ -22,28 +22,12 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Data")
-    public ListPhoneNumbersResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListPhoneNumbersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPhoneNumbersResponseBody self = new ListPhoneNumbersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListPhoneNumbersResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ListPhoneNumbersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListPhoneNumbersResponseBody setCode(String code) {
@@ -52,6 +36,22 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListPhoneNumbersResponseBody setData(ListPhoneNumbersResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListPhoneNumbersResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListPhoneNumbersResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListPhoneNumbersResponseBody setMessage(String message) {
@@ -78,12 +78,12 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public ListPhoneNumbersResponseBody setData(ListPhoneNumbersResponseBodyData data) {
-        this.data = data;
+    public ListPhoneNumbersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public ListPhoneNumbersResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListPhoneNumbersResponseBodyDataListSkillGroups extends TeaModel {
@@ -142,41 +142,41 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         @NameInMap("Active")
         public Boolean active;
 
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("Tags")
-        public String tags;
-
         @NameInMap("City")
         public String city;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("Usage")
-        public String usage;
+        @NameInMap("ContactFlowId")
+        public String contactFlowId;
 
         @NameInMap("ContactFlowName")
         public String contactFlowName;
 
-        @NameInMap("Provider")
-        public String provider;
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         @NameInMap("Number")
         public String number;
 
-        @NameInMap("ContactFlowId")
-        public String contactFlowId;
+        @NameInMap("Provider")
+        public String provider;
 
         @NameInMap("Province")
         public String province;
 
         @NameInMap("SkillGroups")
         public java.util.List<ListPhoneNumbersResponseBodyDataListSkillGroups> skillGroups;
+
+        @NameInMap("Tags")
+        public String tags;
+
+        @NameInMap("Usage")
+        public String usage;
+
+        @NameInMap("UserId")
+        public String userId;
 
         public static ListPhoneNumbersResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListPhoneNumbersResponseBodyDataList self = new ListPhoneNumbersResponseBodyDataList();
@@ -191,30 +191,6 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             return this.active;
         }
 
-        public ListPhoneNumbersResponseBodyDataList setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public ListPhoneNumbersResponseBodyDataList setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public ListPhoneNumbersResponseBodyDataList setTags(String tags) {
-            this.tags = tags;
-            return this;
-        }
-        public String getTags() {
-            return this.tags;
-        }
-
         public ListPhoneNumbersResponseBodyDataList setCity(String city) {
             this.city = city;
             return this;
@@ -223,20 +199,12 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             return this.city;
         }
 
-        public ListPhoneNumbersResponseBodyDataList setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public ListPhoneNumbersResponseBodyDataList setContactFlowId(String contactFlowId) {
+            this.contactFlowId = contactFlowId;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public ListPhoneNumbersResponseBodyDataList setUsage(String usage) {
-            this.usage = usage;
-            return this;
-        }
-        public String getUsage() {
-            return this.usage;
+        public String getContactFlowId() {
+            return this.contactFlowId;
         }
 
         public ListPhoneNumbersResponseBodyDataList setContactFlowName(String contactFlowName) {
@@ -247,12 +215,20 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             return this.contactFlowName;
         }
 
-        public ListPhoneNumbersResponseBodyDataList setProvider(String provider) {
-            this.provider = provider;
+        public ListPhoneNumbersResponseBodyDataList setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getProvider() {
-            return this.provider;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListPhoneNumbersResponseBodyDataList setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public ListPhoneNumbersResponseBodyDataList setNumber(String number) {
@@ -263,12 +239,12 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             return this.number;
         }
 
-        public ListPhoneNumbersResponseBodyDataList setContactFlowId(String contactFlowId) {
-            this.contactFlowId = contactFlowId;
+        public ListPhoneNumbersResponseBodyDataList setProvider(String provider) {
+            this.provider = provider;
             return this;
         }
-        public String getContactFlowId() {
-            return this.contactFlowId;
+        public String getProvider() {
+            return this.provider;
         }
 
         public ListPhoneNumbersResponseBodyDataList setProvince(String province) {
@@ -287,9 +263,36 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             return this.skillGroups;
         }
 
+        public ListPhoneNumbersResponseBodyDataList setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
+        }
+
+        public ListPhoneNumbersResponseBodyDataList setUsage(String usage) {
+            this.usage = usage;
+            return this;
+        }
+        public String getUsage() {
+            return this.usage;
+        }
+
+        public ListPhoneNumbersResponseBodyDataList setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
     }
 
     public static class ListPhoneNumbersResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public java.util.List<ListPhoneNumbersResponseBodyDataList> list;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -299,12 +302,17 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("List")
-        public java.util.List<ListPhoneNumbersResponseBodyDataList> list;
-
         public static ListPhoneNumbersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListPhoneNumbersResponseBodyData self = new ListPhoneNumbersResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListPhoneNumbersResponseBodyData setList(java.util.List<ListPhoneNumbersResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListPhoneNumbersResponseBodyDataList> getList() {
+            return this.list;
         }
 
         public ListPhoneNumbersResponseBodyData setPageNumber(Integer pageNumber) {
@@ -329,14 +337,6 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListPhoneNumbersResponseBodyData setList(java.util.List<ListPhoneNumbersResponseBodyDataList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<ListPhoneNumbersResponseBodyDataList> getList() {
-            return this.list;
         }
 
     }

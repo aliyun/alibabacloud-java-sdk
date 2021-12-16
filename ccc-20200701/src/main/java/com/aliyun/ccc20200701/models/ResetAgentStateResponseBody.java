@@ -7,20 +7,20 @@ public class ResetAgentStateResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ResetAgentStateResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
 
-    @NameInMap("Data")
-    public ResetAgentStateResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ResetAgentStateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ResetAgentStateResponseBody self = new ResetAgentStateResponseBody();
@@ -33,6 +33,14 @@ public class ResetAgentStateResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ResetAgentStateResponseBody setData(ResetAgentStateResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ResetAgentStateResponseBodyData getData() {
+        return this.data;
     }
 
     public ResetAgentStateResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,14 +59,6 @@ public class ResetAgentStateResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ResetAgentStateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ResetAgentStateResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
@@ -67,88 +67,48 @@ public class ResetAgentStateResponseBody extends TeaModel {
         return this.params;
     }
 
-    public ResetAgentStateResponseBody setData(ResetAgentStateResponseBodyData data) {
-        this.data = data;
+    public ResetAgentStateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public ResetAgentStateResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ResetAgentStateResponseBodyData extends TeaModel {
-        @NameInMap("Extension")
-        public String extension;
-
-        @NameInMap("WorkMode")
-        public String workMode;
+        @NameInMap("BreakCode")
+        public String breakCode;
 
         @NameInMap("DeviceId")
         public String deviceId;
 
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("BreakCode")
-        public String breakCode;
+        @NameInMap("Extension")
+        public String extension;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("JobId")
+        public String jobId;
+
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
-
-        @NameInMap("UserState")
-        public String userState;
 
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserState")
+        public String userState;
+
+        @NameInMap("WorkMode")
+        public String workMode;
+
         public static ResetAgentStateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ResetAgentStateResponseBodyData self = new ResetAgentStateResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ResetAgentStateResponseBodyData setExtension(String extension) {
-            this.extension = extension;
-            return this;
-        }
-        public String getExtension() {
-            return this.extension;
-        }
-
-        public ResetAgentStateResponseBodyData setWorkMode(String workMode) {
-            this.workMode = workMode;
-            return this;
-        }
-        public String getWorkMode() {
-            return this.workMode;
-        }
-
-        public ResetAgentStateResponseBodyData setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
-        }
-
-        public ResetAgentStateResponseBodyData setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public ResetAgentStateResponseBodyData setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public ResetAgentStateResponseBodyData setBreakCode(String breakCode) {
@@ -159,12 +119,36 @@ public class ResetAgentStateResponseBody extends TeaModel {
             return this.breakCode;
         }
 
+        public ResetAgentStateResponseBodyData setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
+        public ResetAgentStateResponseBodyData setExtension(String extension) {
+            this.extension = extension;
+            return this;
+        }
+        public String getExtension() {
+            return this.extension;
+        }
+
         public ResetAgentStateResponseBodyData setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ResetAgentStateResponseBodyData setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
         }
 
         public ResetAgentStateResponseBodyData setOutboundScenario(Boolean outboundScenario) {
@@ -175,6 +159,22 @@ public class ResetAgentStateResponseBody extends TeaModel {
             return this.outboundScenario;
         }
 
+        public ResetAgentStateResponseBodyData setSignedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
+            this.signedSkillGroupIdList = signedSkillGroupIdList;
+            return this;
+        }
+        public java.util.List<String> getSignedSkillGroupIdList() {
+            return this.signedSkillGroupIdList;
+        }
+
+        public ResetAgentStateResponseBodyData setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
         public ResetAgentStateResponseBodyData setUserState(String userState) {
             this.userState = userState;
             return this;
@@ -183,12 +183,12 @@ public class ResetAgentStateResponseBody extends TeaModel {
             return this.userState;
         }
 
-        public ResetAgentStateResponseBodyData setSignedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
-            this.signedSkillGroupIdList = signedSkillGroupIdList;
+        public ResetAgentStateResponseBodyData setWorkMode(String workMode) {
+            this.workMode = workMode;
             return this;
         }
-        public java.util.List<String> getSignedSkillGroupIdList() {
-            return this.signedSkillGroupIdList;
+        public String getWorkMode() {
+            return this.workMode;
         }
 
     }

@@ -13,11 +13,11 @@ public class UpdateConfigItemsResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UpdateConfigItemsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateConfigItemsResponseBody self = new UpdateConfigItemsResponseBody();
@@ -48,20 +48,20 @@ public class UpdateConfigItemsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public UpdateConfigItemsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public UpdateConfigItemsResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
     }
     public java.util.List<String> getParams() {
         return this.params;
+    }
+
+    public UpdateConfigItemsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

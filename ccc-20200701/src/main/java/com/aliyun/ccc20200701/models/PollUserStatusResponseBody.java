@@ -7,20 +7,20 @@ public class PollUserStatusResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public PollUserStatusResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
 
-    @NameInMap("Data")
-    public PollUserStatusResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static PollUserStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PollUserStatusResponseBody self = new PollUserStatusResponseBody();
@@ -33,6 +33,14 @@ public class PollUserStatusResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public PollUserStatusResponseBody setData(PollUserStatusResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public PollUserStatusResponseBodyData getData() {
+        return this.data;
     }
 
     public PollUserStatusResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,14 +59,6 @@ public class PollUserStatusResponseBody extends TeaModel {
         return this.message;
     }
 
-    public PollUserStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public PollUserStatusResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
@@ -67,32 +67,50 @@ public class PollUserStatusResponseBody extends TeaModel {
         return this.params;
     }
 
-    public PollUserStatusResponseBody setData(PollUserStatusResponseBodyData data) {
-        this.data = data;
+    public PollUserStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public PollUserStatusResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class PollUserStatusResponseBodyDataCallContextChannelContexts extends TeaModel {
-        @NameInMap("Index")
-        public Integer index;
+        @NameInMap("AssociatedData")
+        public java.util.Map<String, ?> associatedData;
 
-        @NameInMap("ReleaseInitiator")
-        public String releaseInitiator;
+        @NameInMap("CallType")
+        public String callType;
+
+        @NameInMap("ChannelFlags")
+        public String channelFlags;
+
+        @NameInMap("ChannelId")
+        public String channelId;
 
         @NameInMap("ChannelState")
         public String channelState;
 
+        @NameInMap("ChannelVariables")
+        public String channelVariables;
+
         @NameInMap("Destination")
         public String destination;
 
-        @NameInMap("UserId")
-        public String userId;
+        @NameInMap("Index")
+        public Integer index;
 
-        @NameInMap("ChannelFlags")
-        public String channelFlags;
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("Originator")
+        public String originator;
+
+        @NameInMap("ReleaseInitiator")
+        public String releaseInitiator;
+
+        @NameInMap("ReleaseReason")
+        public String releaseReason;
 
         @NameInMap("SkillGroupId")
         public String skillGroupId;
@@ -100,49 +118,47 @@ public class PollUserStatusResponseBody extends TeaModel {
         @NameInMap("Timestamp")
         public Long timestamp;
 
-        @NameInMap("AssociatedData")
-        public java.util.Map<String, ?> associatedData;
-
-        @NameInMap("ReleaseReason")
-        public String releaseReason;
-
-        @NameInMap("CallType")
-        public String callType;
-
-        @NameInMap("ChannelVariables")
-        public String channelVariables;
-
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("ChannelId")
-        public String channelId;
-
         @NameInMap("UserExtension")
         public String userExtension;
 
-        @NameInMap("Originator")
-        public String originator;
+        @NameInMap("UserId")
+        public String userId;
 
         public static PollUserStatusResponseBodyDataCallContextChannelContexts build(java.util.Map<String, ?> map) throws Exception {
             PollUserStatusResponseBodyDataCallContextChannelContexts self = new PollUserStatusResponseBodyDataCallContextChannelContexts();
             return TeaModel.build(map, self);
         }
 
-        public PollUserStatusResponseBodyDataCallContextChannelContexts setIndex(Integer index) {
-            this.index = index;
+        public PollUserStatusResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
+            this.associatedData = associatedData;
             return this;
         }
-        public Integer getIndex() {
-            return this.index;
+        public java.util.Map<String, ?> getAssociatedData() {
+            return this.associatedData;
         }
 
-        public PollUserStatusResponseBodyDataCallContextChannelContexts setReleaseInitiator(String releaseInitiator) {
-            this.releaseInitiator = releaseInitiator;
+        public PollUserStatusResponseBodyDataCallContextChannelContexts setCallType(String callType) {
+            this.callType = callType;
             return this;
         }
-        public String getReleaseInitiator() {
-            return this.releaseInitiator;
+        public String getCallType() {
+            return this.callType;
+        }
+
+        public PollUserStatusResponseBodyDataCallContextChannelContexts setChannelFlags(String channelFlags) {
+            this.channelFlags = channelFlags;
+            return this;
+        }
+        public String getChannelFlags() {
+            return this.channelFlags;
+        }
+
+        public PollUserStatusResponseBodyDataCallContextChannelContexts setChannelId(String channelId) {
+            this.channelId = channelId;
+            return this;
+        }
+        public String getChannelId() {
+            return this.channelId;
         }
 
         public PollUserStatusResponseBodyDataCallContextChannelContexts setChannelState(String channelState) {
@@ -153,6 +169,14 @@ public class PollUserStatusResponseBody extends TeaModel {
             return this.channelState;
         }
 
+        public PollUserStatusResponseBodyDataCallContextChannelContexts setChannelVariables(String channelVariables) {
+            this.channelVariables = channelVariables;
+            return this;
+        }
+        public String getChannelVariables() {
+            return this.channelVariables;
+        }
+
         public PollUserStatusResponseBodyDataCallContextChannelContexts setDestination(String destination) {
             this.destination = destination;
             return this;
@@ -161,20 +185,44 @@ public class PollUserStatusResponseBody extends TeaModel {
             return this.destination;
         }
 
-        public PollUserStatusResponseBodyDataCallContextChannelContexts setUserId(String userId) {
-            this.userId = userId;
+        public PollUserStatusResponseBodyDataCallContextChannelContexts setIndex(Integer index) {
+            this.index = index;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public Integer getIndex() {
+            return this.index;
         }
 
-        public PollUserStatusResponseBodyDataCallContextChannelContexts setChannelFlags(String channelFlags) {
-            this.channelFlags = channelFlags;
+        public PollUserStatusResponseBodyDataCallContextChannelContexts setJobId(String jobId) {
+            this.jobId = jobId;
             return this;
         }
-        public String getChannelFlags() {
-            return this.channelFlags;
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public PollUserStatusResponseBodyDataCallContextChannelContexts setOriginator(String originator) {
+            this.originator = originator;
+            return this;
+        }
+        public String getOriginator() {
+            return this.originator;
+        }
+
+        public PollUserStatusResponseBodyDataCallContextChannelContexts setReleaseInitiator(String releaseInitiator) {
+            this.releaseInitiator = releaseInitiator;
+            return this;
+        }
+        public String getReleaseInitiator() {
+            return this.releaseInitiator;
+        }
+
+        public PollUserStatusResponseBodyDataCallContextChannelContexts setReleaseReason(String releaseReason) {
+            this.releaseReason = releaseReason;
+            return this;
+        }
+        public String getReleaseReason() {
+            return this.releaseReason;
         }
 
         public PollUserStatusResponseBodyDataCallContextChannelContexts setSkillGroupId(String skillGroupId) {
@@ -193,54 +241,6 @@ public class PollUserStatusResponseBody extends TeaModel {
             return this.timestamp;
         }
 
-        public PollUserStatusResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
-            this.associatedData = associatedData;
-            return this;
-        }
-        public java.util.Map<String, ?> getAssociatedData() {
-            return this.associatedData;
-        }
-
-        public PollUserStatusResponseBodyDataCallContextChannelContexts setReleaseReason(String releaseReason) {
-            this.releaseReason = releaseReason;
-            return this;
-        }
-        public String getReleaseReason() {
-            return this.releaseReason;
-        }
-
-        public PollUserStatusResponseBodyDataCallContextChannelContexts setCallType(String callType) {
-            this.callType = callType;
-            return this;
-        }
-        public String getCallType() {
-            return this.callType;
-        }
-
-        public PollUserStatusResponseBodyDataCallContextChannelContexts setChannelVariables(String channelVariables) {
-            this.channelVariables = channelVariables;
-            return this;
-        }
-        public String getChannelVariables() {
-            return this.channelVariables;
-        }
-
-        public PollUserStatusResponseBodyDataCallContextChannelContexts setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public PollUserStatusResponseBodyDataCallContextChannelContexts setChannelId(String channelId) {
-            this.channelId = channelId;
-            return this;
-        }
-        public String getChannelId() {
-            return this.channelId;
-        }
-
         public PollUserStatusResponseBodyDataCallContextChannelContexts setUserExtension(String userExtension) {
             this.userExtension = userExtension;
             return this;
@@ -249,12 +249,12 @@ public class PollUserStatusResponseBody extends TeaModel {
             return this.userExtension;
         }
 
-        public PollUserStatusResponseBodyDataCallContextChannelContexts setOriginator(String originator) {
-            this.originator = originator;
+        public PollUserStatusResponseBodyDataCallContextChannelContexts setUserId(String userId) {
+            this.userId = userId;
             return this;
         }
-        public String getOriginator() {
-            return this.originator;
+        public String getUserId() {
+            return this.userId;
         }
 
     }
@@ -263,14 +263,14 @@ public class PollUserStatusResponseBody extends TeaModel {
         @NameInMap("CallType")
         public String callType;
 
+        @NameInMap("ChannelContexts")
+        public java.util.List<PollUserStatusResponseBodyDataCallContextChannelContexts> channelContexts;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("JobId")
         public String jobId;
-
-        @NameInMap("ChannelContexts")
-        public java.util.List<PollUserStatusResponseBodyDataCallContextChannelContexts> channelContexts;
 
         public static PollUserStatusResponseBodyDataCallContext build(java.util.Map<String, ?> map) throws Exception {
             PollUserStatusResponseBodyDataCallContext self = new PollUserStatusResponseBodyDataCallContext();
@@ -283,6 +283,14 @@ public class PollUserStatusResponseBody extends TeaModel {
         }
         public String getCallType() {
             return this.callType;
+        }
+
+        public PollUserStatusResponseBodyDataCallContext setChannelContexts(java.util.List<PollUserStatusResponseBodyDataCallContextChannelContexts> channelContexts) {
+            this.channelContexts = channelContexts;
+            return this;
+        }
+        public java.util.List<PollUserStatusResponseBodyDataCallContextChannelContexts> getChannelContexts() {
+            return this.channelContexts;
         }
 
         public PollUserStatusResponseBodyDataCallContext setInstanceId(String instanceId) {
@@ -301,59 +309,67 @@ public class PollUserStatusResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public PollUserStatusResponseBodyDataCallContext setChannelContexts(java.util.List<PollUserStatusResponseBodyDataCallContextChannelContexts> channelContexts) {
-            this.channelContexts = channelContexts;
-            return this;
-        }
-        public java.util.List<PollUserStatusResponseBodyDataCallContextChannelContexts> getChannelContexts() {
-            return this.channelContexts;
-        }
-
     }
 
     public static class PollUserStatusResponseBodyDataUserContext extends TeaModel {
+        @NameInMap("BreakCode")
+        public String breakCode;
+
+        @NameInMap("DeviceId")
+        public String deviceId;
+
         @NameInMap("Extension")
         public String extension;
 
         @NameInMap("Heartbeat")
         public Long heartbeat;
 
-        @NameInMap("WorkMode")
-        public String workMode;
-
-        @NameInMap("DeviceId")
-        public String deviceId;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("Reserved")
-        public Long reserved;
-
-        @NameInMap("BreakCode")
-        public String breakCode;
-
         @NameInMap("InstanceId")
         public String instanceId;
-
-        @NameInMap("OutboundScenario")
-        public Boolean outboundScenario;
-
-        @NameInMap("Mobile")
-        public String mobile;
 
         @NameInMap("JobId")
         public String jobId;
 
-        @NameInMap("UserState")
-        public String userState;
+        @NameInMap("Mobile")
+        public String mobile;
+
+        @NameInMap("OutboundScenario")
+        public Boolean outboundScenario;
+
+        @NameInMap("Reserved")
+        public Long reserved;
 
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserState")
+        public String userState;
+
+        @NameInMap("WorkMode")
+        public String workMode;
+
         public static PollUserStatusResponseBodyDataUserContext build(java.util.Map<String, ?> map) throws Exception {
             PollUserStatusResponseBodyDataUserContext self = new PollUserStatusResponseBodyDataUserContext();
             return TeaModel.build(map, self);
+        }
+
+        public PollUserStatusResponseBodyDataUserContext setBreakCode(String breakCode) {
+            this.breakCode = breakCode;
+            return this;
+        }
+        public String getBreakCode() {
+            return this.breakCode;
+        }
+
+        public PollUserStatusResponseBodyDataUserContext setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
         }
 
         public PollUserStatusResponseBodyDataUserContext setExtension(String extension) {
@@ -372,68 +388,12 @@ public class PollUserStatusResponseBody extends TeaModel {
             return this.heartbeat;
         }
 
-        public PollUserStatusResponseBodyDataUserContext setWorkMode(String workMode) {
-            this.workMode = workMode;
-            return this;
-        }
-        public String getWorkMode() {
-            return this.workMode;
-        }
-
-        public PollUserStatusResponseBodyDataUserContext setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
-        }
-
-        public PollUserStatusResponseBodyDataUserContext setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public PollUserStatusResponseBodyDataUserContext setReserved(Long reserved) {
-            this.reserved = reserved;
-            return this;
-        }
-        public Long getReserved() {
-            return this.reserved;
-        }
-
-        public PollUserStatusResponseBodyDataUserContext setBreakCode(String breakCode) {
-            this.breakCode = breakCode;
-            return this;
-        }
-        public String getBreakCode() {
-            return this.breakCode;
-        }
-
         public PollUserStatusResponseBodyDataUserContext setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
-        }
-
-        public PollUserStatusResponseBodyDataUserContext setOutboundScenario(Boolean outboundScenario) {
-            this.outboundScenario = outboundScenario;
-            return this;
-        }
-        public Boolean getOutboundScenario() {
-            return this.outboundScenario;
-        }
-
-        public PollUserStatusResponseBodyDataUserContext setMobile(String mobile) {
-            this.mobile = mobile;
-            return this;
-        }
-        public String getMobile() {
-            return this.mobile;
         }
 
         public PollUserStatusResponseBodyDataUserContext setJobId(String jobId) {
@@ -444,12 +404,28 @@ public class PollUserStatusResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public PollUserStatusResponseBodyDataUserContext setUserState(String userState) {
-            this.userState = userState;
+        public PollUserStatusResponseBodyDataUserContext setMobile(String mobile) {
+            this.mobile = mobile;
             return this;
         }
-        public String getUserState() {
-            return this.userState;
+        public String getMobile() {
+            return this.mobile;
+        }
+
+        public PollUserStatusResponseBodyDataUserContext setOutboundScenario(Boolean outboundScenario) {
+            this.outboundScenario = outboundScenario;
+            return this;
+        }
+        public Boolean getOutboundScenario() {
+            return this.outboundScenario;
+        }
+
+        public PollUserStatusResponseBodyDataUserContext setReserved(Long reserved) {
+            this.reserved = reserved;
+            return this;
+        }
+        public Long getReserved() {
+            return this.reserved;
         }
 
         public PollUserStatusResponseBodyDataUserContext setSignedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
@@ -460,14 +436,38 @@ public class PollUserStatusResponseBody extends TeaModel {
             return this.signedSkillGroupIdList;
         }
 
+        public PollUserStatusResponseBodyDataUserContext setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public PollUserStatusResponseBodyDataUserContext setUserState(String userState) {
+            this.userState = userState;
+            return this;
+        }
+        public String getUserState() {
+            return this.userState;
+        }
+
+        public PollUserStatusResponseBodyDataUserContext setWorkMode(String workMode) {
+            this.workMode = workMode;
+            return this;
+        }
+        public String getWorkMode() {
+            return this.workMode;
+        }
+
     }
 
     public static class PollUserStatusResponseBodyData extends TeaModel {
-        @NameInMap("ContextId")
-        public Long contextId;
-
         @NameInMap("CallContext")
         public PollUserStatusResponseBodyDataCallContext callContext;
+
+        @NameInMap("ContextId")
+        public Long contextId;
 
         @NameInMap("UserContext")
         public PollUserStatusResponseBodyDataUserContext userContext;
@@ -477,20 +477,20 @@ public class PollUserStatusResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public PollUserStatusResponseBodyData setContextId(Long contextId) {
-            this.contextId = contextId;
-            return this;
-        }
-        public Long getContextId() {
-            return this.contextId;
-        }
-
         public PollUserStatusResponseBodyData setCallContext(PollUserStatusResponseBodyDataCallContext callContext) {
             this.callContext = callContext;
             return this;
         }
         public PollUserStatusResponseBodyDataCallContext getCallContext() {
             return this.callContext;
+        }
+
+        public PollUserStatusResponseBodyData setContextId(Long contextId) {
+            this.contextId = contextId;
+            return this;
+        }
+        public Long getContextId() {
+            return this.contextId;
         }
 
         public PollUserStatusResponseBodyData setUserContext(PollUserStatusResponseBodyDataUserContext userContext) {

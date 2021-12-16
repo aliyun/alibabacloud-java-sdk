@@ -4,46 +4,36 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class StartPredictiveCallRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("Callee")
+    public String callee;
 
     @NameInMap("Caller")
     public String caller;
 
-    @NameInMap("Callee")
-    public String callee;
-
-    @NameInMap("TimeoutSeconds")
-    public Integer timeoutSeconds;
-
     @NameInMap("ContactFlowId")
     public String contactFlowId;
-
-    @NameInMap("Tags")
-    public String tags;
 
     @NameInMap("ContactFlowVariables")
     public String contactFlowVariables;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("MaskedCallee")
+    public String maskedCallee;
+
+    @NameInMap("SkillGroupId")
+    public String skillGroupId;
+
+    @NameInMap("Tags")
+    public String tags;
+
+    @NameInMap("TimeoutSeconds")
+    public Integer timeoutSeconds;
+
     public static StartPredictiveCallRequest build(java.util.Map<String, ?> map) throws Exception {
         StartPredictiveCallRequest self = new StartPredictiveCallRequest();
         return TeaModel.build(map, self);
-    }
-
-    public StartPredictiveCallRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public StartPredictiveCallRequest setCaller(String caller) {
-        this.caller = caller;
-        return this;
-    }
-    public String getCaller() {
-        return this.caller;
     }
 
     public StartPredictiveCallRequest setCallee(String callee) {
@@ -54,12 +44,12 @@ public class StartPredictiveCallRequest extends TeaModel {
         return this.callee;
     }
 
-    public StartPredictiveCallRequest setTimeoutSeconds(Integer timeoutSeconds) {
-        this.timeoutSeconds = timeoutSeconds;
+    public StartPredictiveCallRequest setCaller(String caller) {
+        this.caller = caller;
         return this;
     }
-    public Integer getTimeoutSeconds() {
-        return this.timeoutSeconds;
+    public String getCaller() {
+        return this.caller;
     }
 
     public StartPredictiveCallRequest setContactFlowId(String contactFlowId) {
@@ -70,6 +60,38 @@ public class StartPredictiveCallRequest extends TeaModel {
         return this.contactFlowId;
     }
 
+    public StartPredictiveCallRequest setContactFlowVariables(String contactFlowVariables) {
+        this.contactFlowVariables = contactFlowVariables;
+        return this;
+    }
+    public String getContactFlowVariables() {
+        return this.contactFlowVariables;
+    }
+
+    public StartPredictiveCallRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public StartPredictiveCallRequest setMaskedCallee(String maskedCallee) {
+        this.maskedCallee = maskedCallee;
+        return this;
+    }
+    public String getMaskedCallee() {
+        return this.maskedCallee;
+    }
+
+    public StartPredictiveCallRequest setSkillGroupId(String skillGroupId) {
+        this.skillGroupId = skillGroupId;
+        return this;
+    }
+    public String getSkillGroupId() {
+        return this.skillGroupId;
+    }
+
     public StartPredictiveCallRequest setTags(String tags) {
         this.tags = tags;
         return this;
@@ -78,12 +100,12 @@ public class StartPredictiveCallRequest extends TeaModel {
         return this.tags;
     }
 
-    public StartPredictiveCallRequest setContactFlowVariables(String contactFlowVariables) {
-        this.contactFlowVariables = contactFlowVariables;
+    public StartPredictiveCallRequest setTimeoutSeconds(Integer timeoutSeconds) {
+        this.timeoutSeconds = timeoutSeconds;
         return this;
     }
-    public String getContactFlowVariables() {
-        return this.contactFlowVariables;
+    public Integer getTimeoutSeconds() {
+        return this.timeoutSeconds;
     }
 
 }

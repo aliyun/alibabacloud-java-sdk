@@ -7,11 +7,11 @@ public class AddPersonalNumbersToUserRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("UserId")
-    public String userId;
-
     @NameInMap("NumberList")
     public String numberList;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static AddPersonalNumbersToUserRequest build(java.util.Map<String, ?> map) throws Exception {
         AddPersonalNumbersToUserRequest self = new AddPersonalNumbersToUserRequest();
@@ -26,20 +26,20 @@ public class AddPersonalNumbersToUserRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public AddPersonalNumbersToUserRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
     public AddPersonalNumbersToUserRequest setNumberList(String numberList) {
         this.numberList = numberList;
         return this;
     }
     public String getNumberList() {
         return this.numberList;
+    }
+
+    public AddPersonalNumbersToUserRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

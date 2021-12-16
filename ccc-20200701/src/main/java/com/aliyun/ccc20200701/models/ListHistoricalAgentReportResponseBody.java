@@ -7,6 +7,9 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ListHistoricalAgentReportResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ListHistoricalAgentReportResponseBodyData data;
 
     public static ListHistoricalAgentReportResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListHistoricalAgentReportResponseBody self = new ListHistoricalAgentReportResponseBody();
@@ -30,6 +30,14 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListHistoricalAgentReportResponseBody setData(ListHistoricalAgentReportResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListHistoricalAgentReportResponseBodyData getData() {
+        return this.data;
     }
 
     public ListHistoricalAgentReportResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,285 +64,85 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListHistoricalAgentReportResponseBody setData(ListHistoricalAgentReportResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListHistoricalAgentReportResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListHistoricalAgentReportResponseBodyDataListInbound extends TeaModel {
+        @NameInMap("AverageHoldTime")
+        public Float averageHoldTime;
+
         @NameInMap("AverageRingTime")
         public Float averageRingTime;
-
-        @NameInMap("CallsHandled")
-        public Long callsHandled;
-
-        @NameInMap("TotalWorkTime")
-        public Long totalWorkTime;
-
-        @NameInMap("CallsAttendedTransferOut")
-        public Long callsAttendedTransferOut;
-
-        @NameInMap("MaxWorkTime")
-        public Long maxWorkTime;
-
-        @NameInMap("TotalHoldTime")
-        public Long totalHoldTime;
-
-        @NameInMap("AverageWorkTime")
-        public Float averageWorkTime;
-
-        @NameInMap("CallsBlindTransferIn")
-        public Long callsBlindTransferIn;
-
-        @NameInMap("SatisfactionIndex")
-        public Float satisfactionIndex;
-
-        @NameInMap("CallsRinged")
-        public Long callsRinged;
-
-        @NameInMap("CallsAttendedTransferIn")
-        public Long callsAttendedTransferIn;
-
-        @NameInMap("CallsBlindTransferOut")
-        public Long callsBlindTransferOut;
-
-        @NameInMap("TotalRingTime")
-        public Long totalRingTime;
-
-        @NameInMap("MaxTalkTime")
-        public Long maxTalkTime;
-
-        @NameInMap("MaxRingTime")
-        public Long maxRingTime;
-
-        @NameInMap("TotalTalkTime")
-        public Long totalTalkTime;
-
-        @NameInMap("CallsOffered")
-        public Long callsOffered;
-
-        @NameInMap("MaxHoldTime")
-        public Long maxHoldTime;
 
         @NameInMap("AverageTalkTime")
         public Float averageTalkTime;
 
-        @NameInMap("SatisfactionRate")
-        public Float satisfactionRate;
+        @NameInMap("AverageWorkTime")
+        public Float averageWorkTime;
+
+        @NameInMap("CallsAttendedTransferIn")
+        public Long callsAttendedTransferIn;
+
+        @NameInMap("CallsAttendedTransferOut")
+        public Long callsAttendedTransferOut;
+
+        @NameInMap("CallsBlindTransferIn")
+        public Long callsBlindTransferIn;
+
+        @NameInMap("CallsBlindTransferOut")
+        public Long callsBlindTransferOut;
+
+        @NameInMap("CallsHandled")
+        public Long callsHandled;
 
         @NameInMap("CallsHold")
         public Long callsHold;
 
-        @NameInMap("SatisfactionSurveysOffered")
-        public Long satisfactionSurveysOffered;
+        @NameInMap("CallsOffered")
+        public Long callsOffered;
+
+        @NameInMap("CallsRinged")
+        public Long callsRinged;
 
         @NameInMap("HandleRate")
         public Float handleRate;
 
+        @NameInMap("MaxHoldTime")
+        public Long maxHoldTime;
+
+        @NameInMap("MaxRingTime")
+        public Long maxRingTime;
+
+        @NameInMap("MaxTalkTime")
+        public Long maxTalkTime;
+
+        @NameInMap("MaxWorkTime")
+        public Long maxWorkTime;
+
+        @NameInMap("SatisfactionIndex")
+        public Float satisfactionIndex;
+
+        @NameInMap("SatisfactionRate")
+        public Float satisfactionRate;
+
+        @NameInMap("SatisfactionSurveysOffered")
+        public Long satisfactionSurveysOffered;
+
         @NameInMap("SatisfactionSurveysResponded")
         public Long satisfactionSurveysResponded;
 
-        @NameInMap("AverageHoldTime")
-        public Float averageHoldTime;
+        @NameInMap("TotalHoldTime")
+        public Long totalHoldTime;
+
+        @NameInMap("TotalRingTime")
+        public Long totalRingTime;
+
+        @NameInMap("TotalTalkTime")
+        public Long totalTalkTime;
+
+        @NameInMap("TotalWorkTime")
+        public Long totalWorkTime;
 
         public static ListHistoricalAgentReportResponseBodyDataListInbound build(java.util.Map<String, ?> map) throws Exception {
             ListHistoricalAgentReportResponseBodyDataListInbound self = new ListHistoricalAgentReportResponseBodyDataListInbound();
             return TeaModel.build(map, self);
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setAverageRingTime(Float averageRingTime) {
-            this.averageRingTime = averageRingTime;
-            return this;
-        }
-        public Float getAverageRingTime() {
-            return this.averageRingTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setCallsHandled(Long callsHandled) {
-            this.callsHandled = callsHandled;
-            return this;
-        }
-        public Long getCallsHandled() {
-            return this.callsHandled;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setTotalWorkTime(Long totalWorkTime) {
-            this.totalWorkTime = totalWorkTime;
-            return this;
-        }
-        public Long getTotalWorkTime() {
-            return this.totalWorkTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setCallsAttendedTransferOut(Long callsAttendedTransferOut) {
-            this.callsAttendedTransferOut = callsAttendedTransferOut;
-            return this;
-        }
-        public Long getCallsAttendedTransferOut() {
-            return this.callsAttendedTransferOut;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setMaxWorkTime(Long maxWorkTime) {
-            this.maxWorkTime = maxWorkTime;
-            return this;
-        }
-        public Long getMaxWorkTime() {
-            return this.maxWorkTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setTotalHoldTime(Long totalHoldTime) {
-            this.totalHoldTime = totalHoldTime;
-            return this;
-        }
-        public Long getTotalHoldTime() {
-            return this.totalHoldTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setAverageWorkTime(Float averageWorkTime) {
-            this.averageWorkTime = averageWorkTime;
-            return this;
-        }
-        public Float getAverageWorkTime() {
-            return this.averageWorkTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setCallsBlindTransferIn(Long callsBlindTransferIn) {
-            this.callsBlindTransferIn = callsBlindTransferIn;
-            return this;
-        }
-        public Long getCallsBlindTransferIn() {
-            return this.callsBlindTransferIn;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setSatisfactionIndex(Float satisfactionIndex) {
-            this.satisfactionIndex = satisfactionIndex;
-            return this;
-        }
-        public Float getSatisfactionIndex() {
-            return this.satisfactionIndex;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setCallsRinged(Long callsRinged) {
-            this.callsRinged = callsRinged;
-            return this;
-        }
-        public Long getCallsRinged() {
-            return this.callsRinged;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setCallsAttendedTransferIn(Long callsAttendedTransferIn) {
-            this.callsAttendedTransferIn = callsAttendedTransferIn;
-            return this;
-        }
-        public Long getCallsAttendedTransferIn() {
-            return this.callsAttendedTransferIn;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setCallsBlindTransferOut(Long callsBlindTransferOut) {
-            this.callsBlindTransferOut = callsBlindTransferOut;
-            return this;
-        }
-        public Long getCallsBlindTransferOut() {
-            return this.callsBlindTransferOut;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setTotalRingTime(Long totalRingTime) {
-            this.totalRingTime = totalRingTime;
-            return this;
-        }
-        public Long getTotalRingTime() {
-            return this.totalRingTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setMaxTalkTime(Long maxTalkTime) {
-            this.maxTalkTime = maxTalkTime;
-            return this;
-        }
-        public Long getMaxTalkTime() {
-            return this.maxTalkTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setMaxRingTime(Long maxRingTime) {
-            this.maxRingTime = maxRingTime;
-            return this;
-        }
-        public Long getMaxRingTime() {
-            return this.maxRingTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setTotalTalkTime(Long totalTalkTime) {
-            this.totalTalkTime = totalTalkTime;
-            return this;
-        }
-        public Long getTotalTalkTime() {
-            return this.totalTalkTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setCallsOffered(Long callsOffered) {
-            this.callsOffered = callsOffered;
-            return this;
-        }
-        public Long getCallsOffered() {
-            return this.callsOffered;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setMaxHoldTime(Long maxHoldTime) {
-            this.maxHoldTime = maxHoldTime;
-            return this;
-        }
-        public Long getMaxHoldTime() {
-            return this.maxHoldTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setAverageTalkTime(Float averageTalkTime) {
-            this.averageTalkTime = averageTalkTime;
-            return this;
-        }
-        public Float getAverageTalkTime() {
-            return this.averageTalkTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setSatisfactionRate(Float satisfactionRate) {
-            this.satisfactionRate = satisfactionRate;
-            return this;
-        }
-        public Float getSatisfactionRate() {
-            return this.satisfactionRate;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setCallsHold(Long callsHold) {
-            this.callsHold = callsHold;
-            return this;
-        }
-        public Long getCallsHold() {
-            return this.callsHold;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setSatisfactionSurveysOffered(Long satisfactionSurveysOffered) {
-            this.satisfactionSurveysOffered = satisfactionSurveysOffered;
-            return this;
-        }
-        public Long getSatisfactionSurveysOffered() {
-            return this.satisfactionSurveysOffered;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setHandleRate(Float handleRate) {
-            this.handleRate = handleRate;
-            return this;
-        }
-        public Float getHandleRate() {
-            return this.handleRate;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListInbound setSatisfactionSurveysResponded(Long satisfactionSurveysResponded) {
-            this.satisfactionSurveysResponded = satisfactionSurveysResponded;
-            return this;
-        }
-        public Long getSatisfactionSurveysResponded() {
-            return this.satisfactionSurveysResponded;
         }
 
         public ListHistoricalAgentReportResponseBodyDataListInbound setAverageHoldTime(Float averageHoldTime) {
@@ -345,99 +153,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return this.averageHoldTime;
         }
 
-    }
-
-    public static class ListHistoricalAgentReportResponseBodyDataListOutbound extends TeaModel {
-        @NameInMap("AverageRingTime")
-        public Float averageRingTime;
-
-        @NameInMap("CallsDialed")
-        public Long callsDialed;
-
-        @NameInMap("CallsAnswered")
-        public Long callsAnswered;
-
-        @NameInMap("TotalWorkTime")
-        public Long totalWorkTime;
-
-        @NameInMap("CallsAttendedTransferOut")
-        public Long callsAttendedTransferOut;
-
-        @NameInMap("MaxWorkTime")
-        public Long maxWorkTime;
-
-        @NameInMap("TotalDialingTime")
-        public Long totalDialingTime;
-
-        @NameInMap("TotalHoldTime")
-        public Long totalHoldTime;
-
-        @NameInMap("AverageWorkTime")
-        public Float averageWorkTime;
-
-        @NameInMap("CallsBlindTransferIn")
-        public Long callsBlindTransferIn;
-
-        @NameInMap("SatisfactionIndex")
-        public Float satisfactionIndex;
-
-        @NameInMap("CallsRinged")
-        public Long callsRinged;
-
-        @NameInMap("CallsAttendedTransferIn")
-        public Long callsAttendedTransferIn;
-
-        @NameInMap("CallsBlindTransferOut")
-        public Long callsBlindTransferOut;
-
-        @NameInMap("TotalRingTime")
-        public Long totalRingTime;
-
-        @NameInMap("MaxTalkTime")
-        public Long maxTalkTime;
-
-        @NameInMap("MaxRingTime")
-        public Long maxRingTime;
-
-        @NameInMap("TotalTalkTime")
-        public Long totalTalkTime;
-
-        @NameInMap("MaxDialingTime")
-        public Long maxDialingTime;
-
-        @NameInMap("AnswerRate")
-        public Float answerRate;
-
-        @NameInMap("MaxHoldTime")
-        public Long maxHoldTime;
-
-        @NameInMap("AverageTalkTime")
-        public Float averageTalkTime;
-
-        @NameInMap("SatisfactionRate")
-        public Float satisfactionRate;
-
-        @NameInMap("CallsHold")
-        public Long callsHold;
-
-        @NameInMap("SatisfactionSurveysOffered")
-        public Long satisfactionSurveysOffered;
-
-        @NameInMap("SatisfactionSurveysResponded")
-        public Long satisfactionSurveysResponded;
-
-        @NameInMap("AverageHoldTime")
-        public Float averageHoldTime;
-
-        @NameInMap("AverageDialingTime")
-        public Float averageDialingTime;
-
-        public static ListHistoricalAgentReportResponseBodyDataListOutbound build(java.util.Map<String, ?> map) throws Exception {
-            ListHistoricalAgentReportResponseBodyDataListOutbound self = new ListHistoricalAgentReportResponseBodyDataListOutbound();
-            return TeaModel.build(map, self);
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setAverageRingTime(Float averageRingTime) {
+        public ListHistoricalAgentReportResponseBodyDataListInbound setAverageRingTime(Float averageRingTime) {
             this.averageRingTime = averageRingTime;
             return this;
         }
@@ -445,63 +161,15 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return this.averageRingTime;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setCallsDialed(Long callsDialed) {
-            this.callsDialed = callsDialed;
+        public ListHistoricalAgentReportResponseBodyDataListInbound setAverageTalkTime(Float averageTalkTime) {
+            this.averageTalkTime = averageTalkTime;
             return this;
         }
-        public Long getCallsDialed() {
-            return this.callsDialed;
+        public Float getAverageTalkTime() {
+            return this.averageTalkTime;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setCallsAnswered(Long callsAnswered) {
-            this.callsAnswered = callsAnswered;
-            return this;
-        }
-        public Long getCallsAnswered() {
-            return this.callsAnswered;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setTotalWorkTime(Long totalWorkTime) {
-            this.totalWorkTime = totalWorkTime;
-            return this;
-        }
-        public Long getTotalWorkTime() {
-            return this.totalWorkTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setCallsAttendedTransferOut(Long callsAttendedTransferOut) {
-            this.callsAttendedTransferOut = callsAttendedTransferOut;
-            return this;
-        }
-        public Long getCallsAttendedTransferOut() {
-            return this.callsAttendedTransferOut;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setMaxWorkTime(Long maxWorkTime) {
-            this.maxWorkTime = maxWorkTime;
-            return this;
-        }
-        public Long getMaxWorkTime() {
-            return this.maxWorkTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setTotalDialingTime(Long totalDialingTime) {
-            this.totalDialingTime = totalDialingTime;
-            return this;
-        }
-        public Long getTotalDialingTime() {
-            return this.totalDialingTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setTotalHoldTime(Long totalHoldTime) {
-            this.totalHoldTime = totalHoldTime;
-            return this;
-        }
-        public Long getTotalHoldTime() {
-            return this.totalHoldTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setAverageWorkTime(Float averageWorkTime) {
+        public ListHistoricalAgentReportResponseBodyDataListInbound setAverageWorkTime(Float averageWorkTime) {
             this.averageWorkTime = averageWorkTime;
             return this;
         }
@@ -509,31 +177,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return this.averageWorkTime;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setCallsBlindTransferIn(Long callsBlindTransferIn) {
-            this.callsBlindTransferIn = callsBlindTransferIn;
-            return this;
-        }
-        public Long getCallsBlindTransferIn() {
-            return this.callsBlindTransferIn;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setSatisfactionIndex(Float satisfactionIndex) {
-            this.satisfactionIndex = satisfactionIndex;
-            return this;
-        }
-        public Float getSatisfactionIndex() {
-            return this.satisfactionIndex;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setCallsRinged(Long callsRinged) {
-            this.callsRinged = callsRinged;
-            return this;
-        }
-        public Long getCallsRinged() {
-            return this.callsRinged;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setCallsAttendedTransferIn(Long callsAttendedTransferIn) {
+        public ListHistoricalAgentReportResponseBodyDataListInbound setCallsAttendedTransferIn(Long callsAttendedTransferIn) {
             this.callsAttendedTransferIn = callsAttendedTransferIn;
             return this;
         }
@@ -541,7 +185,23 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return this.callsAttendedTransferIn;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setCallsBlindTransferOut(Long callsBlindTransferOut) {
+        public ListHistoricalAgentReportResponseBodyDataListInbound setCallsAttendedTransferOut(Long callsAttendedTransferOut) {
+            this.callsAttendedTransferOut = callsAttendedTransferOut;
+            return this;
+        }
+        public Long getCallsAttendedTransferOut() {
+            return this.callsAttendedTransferOut;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListInbound setCallsBlindTransferIn(Long callsBlindTransferIn) {
+            this.callsBlindTransferIn = callsBlindTransferIn;
+            return this;
+        }
+        public Long getCallsBlindTransferIn() {
+            return this.callsBlindTransferIn;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListInbound setCallsBlindTransferOut(Long callsBlindTransferOut) {
             this.callsBlindTransferOut = callsBlindTransferOut;
             return this;
         }
@@ -549,23 +209,55 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return this.callsBlindTransferOut;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setTotalRingTime(Long totalRingTime) {
-            this.totalRingTime = totalRingTime;
+        public ListHistoricalAgentReportResponseBodyDataListInbound setCallsHandled(Long callsHandled) {
+            this.callsHandled = callsHandled;
             return this;
         }
-        public Long getTotalRingTime() {
-            return this.totalRingTime;
+        public Long getCallsHandled() {
+            return this.callsHandled;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setMaxTalkTime(Long maxTalkTime) {
-            this.maxTalkTime = maxTalkTime;
+        public ListHistoricalAgentReportResponseBodyDataListInbound setCallsHold(Long callsHold) {
+            this.callsHold = callsHold;
             return this;
         }
-        public Long getMaxTalkTime() {
-            return this.maxTalkTime;
+        public Long getCallsHold() {
+            return this.callsHold;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setMaxRingTime(Long maxRingTime) {
+        public ListHistoricalAgentReportResponseBodyDataListInbound setCallsOffered(Long callsOffered) {
+            this.callsOffered = callsOffered;
+            return this;
+        }
+        public Long getCallsOffered() {
+            return this.callsOffered;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListInbound setCallsRinged(Long callsRinged) {
+            this.callsRinged = callsRinged;
+            return this;
+        }
+        public Long getCallsRinged() {
+            return this.callsRinged;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListInbound setHandleRate(Float handleRate) {
+            this.handleRate = handleRate;
+            return this;
+        }
+        public Float getHandleRate() {
+            return this.handleRate;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListInbound setMaxHoldTime(Long maxHoldTime) {
+            this.maxHoldTime = maxHoldTime;
+            return this;
+        }
+        public Long getMaxHoldTime() {
+            return this.maxHoldTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListInbound setMaxRingTime(Long maxRingTime) {
             this.maxRingTime = maxRingTime;
             return this;
         }
@@ -573,7 +265,71 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return this.maxRingTime;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setTotalTalkTime(Long totalTalkTime) {
+        public ListHistoricalAgentReportResponseBodyDataListInbound setMaxTalkTime(Long maxTalkTime) {
+            this.maxTalkTime = maxTalkTime;
+            return this;
+        }
+        public Long getMaxTalkTime() {
+            return this.maxTalkTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListInbound setMaxWorkTime(Long maxWorkTime) {
+            this.maxWorkTime = maxWorkTime;
+            return this;
+        }
+        public Long getMaxWorkTime() {
+            return this.maxWorkTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListInbound setSatisfactionIndex(Float satisfactionIndex) {
+            this.satisfactionIndex = satisfactionIndex;
+            return this;
+        }
+        public Float getSatisfactionIndex() {
+            return this.satisfactionIndex;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListInbound setSatisfactionRate(Float satisfactionRate) {
+            this.satisfactionRate = satisfactionRate;
+            return this;
+        }
+        public Float getSatisfactionRate() {
+            return this.satisfactionRate;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListInbound setSatisfactionSurveysOffered(Long satisfactionSurveysOffered) {
+            this.satisfactionSurveysOffered = satisfactionSurveysOffered;
+            return this;
+        }
+        public Long getSatisfactionSurveysOffered() {
+            return this.satisfactionSurveysOffered;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListInbound setSatisfactionSurveysResponded(Long satisfactionSurveysResponded) {
+            this.satisfactionSurveysResponded = satisfactionSurveysResponded;
+            return this;
+        }
+        public Long getSatisfactionSurveysResponded() {
+            return this.satisfactionSurveysResponded;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListInbound setTotalHoldTime(Long totalHoldTime) {
+            this.totalHoldTime = totalHoldTime;
+            return this;
+        }
+        public Long getTotalHoldTime() {
+            return this.totalHoldTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListInbound setTotalRingTime(Long totalRingTime) {
+            this.totalRingTime = totalRingTime;
+            return this;
+        }
+        public Long getTotalRingTime() {
+            return this.totalRingTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListInbound setTotalTalkTime(Long totalTalkTime) {
             this.totalTalkTime = totalTalkTime;
             return this;
         }
@@ -581,12 +337,104 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return this.totalTalkTime;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setMaxDialingTime(Long maxDialingTime) {
-            this.maxDialingTime = maxDialingTime;
+        public ListHistoricalAgentReportResponseBodyDataListInbound setTotalWorkTime(Long totalWorkTime) {
+            this.totalWorkTime = totalWorkTime;
             return this;
         }
-        public Long getMaxDialingTime() {
-            return this.maxDialingTime;
+        public Long getTotalWorkTime() {
+            return this.totalWorkTime;
+        }
+
+    }
+
+    public static class ListHistoricalAgentReportResponseBodyDataListOutbound extends TeaModel {
+        @NameInMap("AnswerRate")
+        public Float answerRate;
+
+        @NameInMap("AverageDialingTime")
+        public Float averageDialingTime;
+
+        @NameInMap("AverageHoldTime")
+        public Float averageHoldTime;
+
+        @NameInMap("AverageRingTime")
+        public Float averageRingTime;
+
+        @NameInMap("AverageTalkTime")
+        public Float averageTalkTime;
+
+        @NameInMap("AverageWorkTime")
+        public Float averageWorkTime;
+
+        @NameInMap("CallsAnswered")
+        public Long callsAnswered;
+
+        @NameInMap("CallsAttendedTransferIn")
+        public Long callsAttendedTransferIn;
+
+        @NameInMap("CallsAttendedTransferOut")
+        public Long callsAttendedTransferOut;
+
+        @NameInMap("CallsBlindTransferIn")
+        public Long callsBlindTransferIn;
+
+        @NameInMap("CallsBlindTransferOut")
+        public Long callsBlindTransferOut;
+
+        @NameInMap("CallsDialed")
+        public Long callsDialed;
+
+        @NameInMap("CallsHold")
+        public Long callsHold;
+
+        @NameInMap("CallsRinged")
+        public Long callsRinged;
+
+        @NameInMap("MaxDialingTime")
+        public Long maxDialingTime;
+
+        @NameInMap("MaxHoldTime")
+        public Long maxHoldTime;
+
+        @NameInMap("MaxRingTime")
+        public Long maxRingTime;
+
+        @NameInMap("MaxTalkTime")
+        public Long maxTalkTime;
+
+        @NameInMap("MaxWorkTime")
+        public Long maxWorkTime;
+
+        @NameInMap("SatisfactionIndex")
+        public Float satisfactionIndex;
+
+        @NameInMap("SatisfactionRate")
+        public Float satisfactionRate;
+
+        @NameInMap("SatisfactionSurveysOffered")
+        public Long satisfactionSurveysOffered;
+
+        @NameInMap("SatisfactionSurveysResponded")
+        public Long satisfactionSurveysResponded;
+
+        @NameInMap("TotalDialingTime")
+        public Long totalDialingTime;
+
+        @NameInMap("TotalHoldTime")
+        public Long totalHoldTime;
+
+        @NameInMap("TotalRingTime")
+        public Long totalRingTime;
+
+        @NameInMap("TotalTalkTime")
+        public Long totalTalkTime;
+
+        @NameInMap("TotalWorkTime")
+        public Long totalWorkTime;
+
+        public static ListHistoricalAgentReportResponseBodyDataListOutbound build(java.util.Map<String, ?> map) throws Exception {
+            ListHistoricalAgentReportResponseBodyDataListOutbound self = new ListHistoricalAgentReportResponseBodyDataListOutbound();
+            return TeaModel.build(map, self);
         }
 
         public ListHistoricalAgentReportResponseBodyDataListOutbound setAnswerRate(Float answerRate) {
@@ -597,12 +445,28 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return this.answerRate;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setMaxHoldTime(Long maxHoldTime) {
-            this.maxHoldTime = maxHoldTime;
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setAverageDialingTime(Float averageDialingTime) {
+            this.averageDialingTime = averageDialingTime;
             return this;
         }
-        public Long getMaxHoldTime() {
-            return this.maxHoldTime;
+        public Float getAverageDialingTime() {
+            return this.averageDialingTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setAverageHoldTime(Float averageHoldTime) {
+            this.averageHoldTime = averageHoldTime;
+            return this;
+        }
+        public Float getAverageHoldTime() {
+            return this.averageHoldTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setAverageRingTime(Float averageRingTime) {
+            this.averageRingTime = averageRingTime;
+            return this;
+        }
+        public Float getAverageRingTime() {
+            return this.averageRingTime;
         }
 
         public ListHistoricalAgentReportResponseBodyDataListOutbound setAverageTalkTime(Float averageTalkTime) {
@@ -613,12 +477,60 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return this.averageTalkTime;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setSatisfactionRate(Float satisfactionRate) {
-            this.satisfactionRate = satisfactionRate;
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setAverageWorkTime(Float averageWorkTime) {
+            this.averageWorkTime = averageWorkTime;
             return this;
         }
-        public Float getSatisfactionRate() {
-            return this.satisfactionRate;
+        public Float getAverageWorkTime() {
+            return this.averageWorkTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setCallsAnswered(Long callsAnswered) {
+            this.callsAnswered = callsAnswered;
+            return this;
+        }
+        public Long getCallsAnswered() {
+            return this.callsAnswered;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setCallsAttendedTransferIn(Long callsAttendedTransferIn) {
+            this.callsAttendedTransferIn = callsAttendedTransferIn;
+            return this;
+        }
+        public Long getCallsAttendedTransferIn() {
+            return this.callsAttendedTransferIn;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setCallsAttendedTransferOut(Long callsAttendedTransferOut) {
+            this.callsAttendedTransferOut = callsAttendedTransferOut;
+            return this;
+        }
+        public Long getCallsAttendedTransferOut() {
+            return this.callsAttendedTransferOut;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setCallsBlindTransferIn(Long callsBlindTransferIn) {
+            this.callsBlindTransferIn = callsBlindTransferIn;
+            return this;
+        }
+        public Long getCallsBlindTransferIn() {
+            return this.callsBlindTransferIn;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setCallsBlindTransferOut(Long callsBlindTransferOut) {
+            this.callsBlindTransferOut = callsBlindTransferOut;
+            return this;
+        }
+        public Long getCallsBlindTransferOut() {
+            return this.callsBlindTransferOut;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setCallsDialed(Long callsDialed) {
+            this.callsDialed = callsDialed;
+            return this;
+        }
+        public Long getCallsDialed() {
+            return this.callsDialed;
         }
 
         public ListHistoricalAgentReportResponseBodyDataListOutbound setCallsHold(Long callsHold) {
@@ -627,6 +539,70 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         }
         public Long getCallsHold() {
             return this.callsHold;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setCallsRinged(Long callsRinged) {
+            this.callsRinged = callsRinged;
+            return this;
+        }
+        public Long getCallsRinged() {
+            return this.callsRinged;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setMaxDialingTime(Long maxDialingTime) {
+            this.maxDialingTime = maxDialingTime;
+            return this;
+        }
+        public Long getMaxDialingTime() {
+            return this.maxDialingTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setMaxHoldTime(Long maxHoldTime) {
+            this.maxHoldTime = maxHoldTime;
+            return this;
+        }
+        public Long getMaxHoldTime() {
+            return this.maxHoldTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setMaxRingTime(Long maxRingTime) {
+            this.maxRingTime = maxRingTime;
+            return this;
+        }
+        public Long getMaxRingTime() {
+            return this.maxRingTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setMaxTalkTime(Long maxTalkTime) {
+            this.maxTalkTime = maxTalkTime;
+            return this;
+        }
+        public Long getMaxTalkTime() {
+            return this.maxTalkTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setMaxWorkTime(Long maxWorkTime) {
+            this.maxWorkTime = maxWorkTime;
+            return this;
+        }
+        public Long getMaxWorkTime() {
+            return this.maxWorkTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setSatisfactionIndex(Float satisfactionIndex) {
+            this.satisfactionIndex = satisfactionIndex;
+            return this;
+        }
+        public Float getSatisfactionIndex() {
+            return this.satisfactionIndex;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setSatisfactionRate(Float satisfactionRate) {
+            this.satisfactionRate = satisfactionRate;
+            return this;
+        }
+        public Float getSatisfactionRate() {
+            return this.satisfactionRate;
         }
 
         public ListHistoricalAgentReportResponseBodyDataListOutbound setSatisfactionSurveysOffered(Long satisfactionSurveysOffered) {
@@ -645,97 +621,31 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return this.satisfactionSurveysResponded;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setAverageHoldTime(Float averageHoldTime) {
-            this.averageHoldTime = averageHoldTime;
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setTotalDialingTime(Long totalDialingTime) {
+            this.totalDialingTime = totalDialingTime;
             return this;
         }
-        public Float getAverageHoldTime() {
-            return this.averageHoldTime;
+        public Long getTotalDialingTime() {
+            return this.totalDialingTime;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOutbound setAverageDialingTime(Float averageDialingTime) {
-            this.averageDialingTime = averageDialingTime;
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setTotalHoldTime(Long totalHoldTime) {
+            this.totalHoldTime = totalHoldTime;
             return this;
         }
-        public Float getAverageDialingTime() {
-            return this.averageDialingTime;
+        public Long getTotalHoldTime() {
+            return this.totalHoldTime;
         }
 
-    }
-
-    public static class ListHistoricalAgentReportResponseBodyDataListOverall extends TeaModel {
-        @NameInMap("TotalTalkTime")
-        public Long totalTalkTime;
-
-        @NameInMap("TotalLoggedInTime")
-        public Long totalLoggedInTime;
-
-        @NameInMap("OccupancyRate")
-        public Float occupancyRate;
-
-        @NameInMap("TotalWorkTime")
-        public Long totalWorkTime;
-
-        @NameInMap("MaxHoldTime")
-        public Long maxHoldTime;
-
-        @NameInMap("MaxWorkTime")
-        public Long maxWorkTime;
-
-        @NameInMap("AverageBreakTime")
-        public Float averageBreakTime;
-
-        @NameInMap("TotalHoldTime")
-        public Long totalHoldTime;
-
-        @NameInMap("SatisfactionRate")
-        public Float satisfactionRate;
-
-        @NameInMap("MaxBreakTime")
-        public Long maxBreakTime;
-
-        @NameInMap("AverageWorkTime")
-        public Float averageWorkTime;
-
-        @NameInMap("AverageTalkTime")
-        public Float averageTalkTime;
-
-        @NameInMap("SatisfactionIndex")
-        public Float satisfactionIndex;
-
-        @NameInMap("SatisfactionSurveysOffered")
-        public Long satisfactionSurveysOffered;
-
-        @NameInMap("SatisfactionSurveysResponded")
-        public Long satisfactionSurveysResponded;
-
-        @NameInMap("MaxReadyTime")
-        public Long maxReadyTime;
-
-        @NameInMap("AverageReadyTime")
-        public Float averageReadyTime;
-
-        @NameInMap("AverageHoldTime")
-        public Float averageHoldTime;
-
-        @NameInMap("TotalReadyTime")
-        public Long totalReadyTime;
-
-        @NameInMap("TotalBreakTime")
-        public Long totalBreakTime;
-
-        @NameInMap("MaxTalkTime")
-        public Long maxTalkTime;
-
-        @NameInMap("TotalCalls")
-        public Long totalCalls;
-
-        public static ListHistoricalAgentReportResponseBodyDataListOverall build(java.util.Map<String, ?> map) throws Exception {
-            ListHistoricalAgentReportResponseBodyDataListOverall self = new ListHistoricalAgentReportResponseBodyDataListOverall();
-            return TeaModel.build(map, self);
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setTotalRingTime(Long totalRingTime) {
+            this.totalRingTime = totalRingTime;
+            return this;
+        }
+        public Long getTotalRingTime() {
+            return this.totalRingTime;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOverall setTotalTalkTime(Long totalTalkTime) {
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setTotalTalkTime(Long totalTalkTime) {
             this.totalTalkTime = totalTalkTime;
             return this;
         }
@@ -743,23 +653,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return this.totalTalkTime;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOverall setTotalLoggedInTime(Long totalLoggedInTime) {
-            this.totalLoggedInTime = totalLoggedInTime;
-            return this;
-        }
-        public Long getTotalLoggedInTime() {
-            return this.totalLoggedInTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOverall setOccupancyRate(Float occupancyRate) {
-            this.occupancyRate = occupancyRate;
-            return this;
-        }
-        public Float getOccupancyRate() {
-            return this.occupancyRate;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOverall setTotalWorkTime(Long totalWorkTime) {
+        public ListHistoricalAgentReportResponseBodyDataListOutbound setTotalWorkTime(Long totalWorkTime) {
             this.totalWorkTime = totalWorkTime;
             return this;
         }
@@ -767,20 +661,78 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return this.totalWorkTime;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOverall setMaxHoldTime(Long maxHoldTime) {
-            this.maxHoldTime = maxHoldTime;
-            return this;
-        }
-        public Long getMaxHoldTime() {
-            return this.maxHoldTime;
-        }
+    }
 
-        public ListHistoricalAgentReportResponseBodyDataListOverall setMaxWorkTime(Long maxWorkTime) {
-            this.maxWorkTime = maxWorkTime;
-            return this;
-        }
-        public Long getMaxWorkTime() {
-            return this.maxWorkTime;
+    public static class ListHistoricalAgentReportResponseBodyDataListOverall extends TeaModel {
+        @NameInMap("AverageBreakTime")
+        public Float averageBreakTime;
+
+        @NameInMap("AverageHoldTime")
+        public Float averageHoldTime;
+
+        @NameInMap("AverageReadyTime")
+        public Float averageReadyTime;
+
+        @NameInMap("AverageTalkTime")
+        public Float averageTalkTime;
+
+        @NameInMap("AverageWorkTime")
+        public Float averageWorkTime;
+
+        @NameInMap("MaxBreakTime")
+        public Long maxBreakTime;
+
+        @NameInMap("MaxHoldTime")
+        public Long maxHoldTime;
+
+        @NameInMap("MaxReadyTime")
+        public Long maxReadyTime;
+
+        @NameInMap("MaxTalkTime")
+        public Long maxTalkTime;
+
+        @NameInMap("MaxWorkTime")
+        public Long maxWorkTime;
+
+        @NameInMap("OccupancyRate")
+        public Float occupancyRate;
+
+        @NameInMap("SatisfactionIndex")
+        public Float satisfactionIndex;
+
+        @NameInMap("SatisfactionRate")
+        public Float satisfactionRate;
+
+        @NameInMap("SatisfactionSurveysOffered")
+        public Long satisfactionSurveysOffered;
+
+        @NameInMap("SatisfactionSurveysResponded")
+        public Long satisfactionSurveysResponded;
+
+        @NameInMap("TotalBreakTime")
+        public Long totalBreakTime;
+
+        @NameInMap("TotalCalls")
+        public Long totalCalls;
+
+        @NameInMap("TotalHoldTime")
+        public Long totalHoldTime;
+
+        @NameInMap("TotalLoggedInTime")
+        public Long totalLoggedInTime;
+
+        @NameInMap("TotalReadyTime")
+        public Long totalReadyTime;
+
+        @NameInMap("TotalTalkTime")
+        public Long totalTalkTime;
+
+        @NameInMap("TotalWorkTime")
+        public Long totalWorkTime;
+
+        public static ListHistoricalAgentReportResponseBodyDataListOverall build(java.util.Map<String, ?> map) throws Exception {
+            ListHistoricalAgentReportResponseBodyDataListOverall self = new ListHistoricalAgentReportResponseBodyDataListOverall();
+            return TeaModel.build(map, self);
         }
 
         public ListHistoricalAgentReportResponseBodyDataListOverall setAverageBreakTime(Float averageBreakTime) {
@@ -791,36 +743,20 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return this.averageBreakTime;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOverall setTotalHoldTime(Long totalHoldTime) {
-            this.totalHoldTime = totalHoldTime;
+        public ListHistoricalAgentReportResponseBodyDataListOverall setAverageHoldTime(Float averageHoldTime) {
+            this.averageHoldTime = averageHoldTime;
             return this;
         }
-        public Long getTotalHoldTime() {
-            return this.totalHoldTime;
+        public Float getAverageHoldTime() {
+            return this.averageHoldTime;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOverall setSatisfactionRate(Float satisfactionRate) {
-            this.satisfactionRate = satisfactionRate;
+        public ListHistoricalAgentReportResponseBodyDataListOverall setAverageReadyTime(Float averageReadyTime) {
+            this.averageReadyTime = averageReadyTime;
             return this;
         }
-        public Float getSatisfactionRate() {
-            return this.satisfactionRate;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOverall setMaxBreakTime(Long maxBreakTime) {
-            this.maxBreakTime = maxBreakTime;
-            return this;
-        }
-        public Long getMaxBreakTime() {
-            return this.maxBreakTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOverall setAverageWorkTime(Float averageWorkTime) {
-            this.averageWorkTime = averageWorkTime;
-            return this;
-        }
-        public Float getAverageWorkTime() {
-            return this.averageWorkTime;
+        public Float getAverageReadyTime() {
+            return this.averageReadyTime;
         }
 
         public ListHistoricalAgentReportResponseBodyDataListOverall setAverageTalkTime(Float averageTalkTime) {
@@ -831,12 +767,76 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return this.averageTalkTime;
         }
 
+        public ListHistoricalAgentReportResponseBodyDataListOverall setAverageWorkTime(Float averageWorkTime) {
+            this.averageWorkTime = averageWorkTime;
+            return this;
+        }
+        public Float getAverageWorkTime() {
+            return this.averageWorkTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setMaxBreakTime(Long maxBreakTime) {
+            this.maxBreakTime = maxBreakTime;
+            return this;
+        }
+        public Long getMaxBreakTime() {
+            return this.maxBreakTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setMaxHoldTime(Long maxHoldTime) {
+            this.maxHoldTime = maxHoldTime;
+            return this;
+        }
+        public Long getMaxHoldTime() {
+            return this.maxHoldTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setMaxReadyTime(Long maxReadyTime) {
+            this.maxReadyTime = maxReadyTime;
+            return this;
+        }
+        public Long getMaxReadyTime() {
+            return this.maxReadyTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setMaxTalkTime(Long maxTalkTime) {
+            this.maxTalkTime = maxTalkTime;
+            return this;
+        }
+        public Long getMaxTalkTime() {
+            return this.maxTalkTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setMaxWorkTime(Long maxWorkTime) {
+            this.maxWorkTime = maxWorkTime;
+            return this;
+        }
+        public Long getMaxWorkTime() {
+            return this.maxWorkTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setOccupancyRate(Float occupancyRate) {
+            this.occupancyRate = occupancyRate;
+            return this;
+        }
+        public Float getOccupancyRate() {
+            return this.occupancyRate;
+        }
+
         public ListHistoricalAgentReportResponseBodyDataListOverall setSatisfactionIndex(Float satisfactionIndex) {
             this.satisfactionIndex = satisfactionIndex;
             return this;
         }
         public Float getSatisfactionIndex() {
             return this.satisfactionIndex;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setSatisfactionRate(Float satisfactionRate) {
+            this.satisfactionRate = satisfactionRate;
+            return this;
+        }
+        public Float getSatisfactionRate() {
+            return this.satisfactionRate;
         }
 
         public ListHistoricalAgentReportResponseBodyDataListOverall setSatisfactionSurveysOffered(Long satisfactionSurveysOffered) {
@@ -855,52 +855,12 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return this.satisfactionSurveysResponded;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataListOverall setMaxReadyTime(Long maxReadyTime) {
-            this.maxReadyTime = maxReadyTime;
-            return this;
-        }
-        public Long getMaxReadyTime() {
-            return this.maxReadyTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOverall setAverageReadyTime(Float averageReadyTime) {
-            this.averageReadyTime = averageReadyTime;
-            return this;
-        }
-        public Float getAverageReadyTime() {
-            return this.averageReadyTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOverall setAverageHoldTime(Float averageHoldTime) {
-            this.averageHoldTime = averageHoldTime;
-            return this;
-        }
-        public Float getAverageHoldTime() {
-            return this.averageHoldTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOverall setTotalReadyTime(Long totalReadyTime) {
-            this.totalReadyTime = totalReadyTime;
-            return this;
-        }
-        public Long getTotalReadyTime() {
-            return this.totalReadyTime;
-        }
-
         public ListHistoricalAgentReportResponseBodyDataListOverall setTotalBreakTime(Long totalBreakTime) {
             this.totalBreakTime = totalBreakTime;
             return this;
         }
         public Long getTotalBreakTime() {
             return this.totalBreakTime;
-        }
-
-        public ListHistoricalAgentReportResponseBodyDataListOverall setMaxTalkTime(Long maxTalkTime) {
-            this.maxTalkTime = maxTalkTime;
-            return this;
-        }
-        public Long getMaxTalkTime() {
-            return this.maxTalkTime;
         }
 
         public ListHistoricalAgentReportResponseBodyDataListOverall setTotalCalls(Long totalCalls) {
@@ -911,14 +871,57 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return this.totalCalls;
         }
 
+        public ListHistoricalAgentReportResponseBodyDataListOverall setTotalHoldTime(Long totalHoldTime) {
+            this.totalHoldTime = totalHoldTime;
+            return this;
+        }
+        public Long getTotalHoldTime() {
+            return this.totalHoldTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setTotalLoggedInTime(Long totalLoggedInTime) {
+            this.totalLoggedInTime = totalLoggedInTime;
+            return this;
+        }
+        public Long getTotalLoggedInTime() {
+            return this.totalLoggedInTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setTotalReadyTime(Long totalReadyTime) {
+            this.totalReadyTime = totalReadyTime;
+            return this;
+        }
+        public Long getTotalReadyTime() {
+            return this.totalReadyTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setTotalTalkTime(Long totalTalkTime) {
+            this.totalTalkTime = totalTalkTime;
+            return this;
+        }
+        public Long getTotalTalkTime() {
+            return this.totalTalkTime;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataListOverall setTotalWorkTime(Long totalWorkTime) {
+            this.totalWorkTime = totalWorkTime;
+            return this;
+        }
+        public Long getTotalWorkTime() {
+            return this.totalWorkTime;
+        }
+
     }
 
     public static class ListHistoricalAgentReportResponseBodyDataList extends TeaModel {
+        @NameInMap("AgentId")
+        public String agentId;
+
         @NameInMap("AgentName")
         public String agentName;
 
-        @NameInMap("AgentId")
-        public String agentId;
+        @NameInMap("DisplayId")
+        public String displayId;
 
         @NameInMap("Inbound")
         public ListHistoricalAgentReportResponseBodyDataListInbound inbound;
@@ -934,6 +937,14 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListHistoricalAgentReportResponseBodyDataList setAgentId(String agentId) {
+            this.agentId = agentId;
+            return this;
+        }
+        public String getAgentId() {
+            return this.agentId;
+        }
+
         public ListHistoricalAgentReportResponseBodyDataList setAgentName(String agentName) {
             this.agentName = agentName;
             return this;
@@ -942,12 +953,12 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             return this.agentName;
         }
 
-        public ListHistoricalAgentReportResponseBodyDataList setAgentId(String agentId) {
-            this.agentId = agentId;
+        public ListHistoricalAgentReportResponseBodyDataList setDisplayId(String displayId) {
+            this.displayId = displayId;
             return this;
         }
-        public String getAgentId() {
-            return this.agentId;
+        public String getDisplayId() {
+            return this.displayId;
         }
 
         public ListHistoricalAgentReportResponseBodyDataList setInbound(ListHistoricalAgentReportResponseBodyDataListInbound inbound) {
@@ -977,6 +988,9 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
     }
 
     public static class ListHistoricalAgentReportResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public java.util.List<ListHistoricalAgentReportResponseBodyDataList> list;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -986,12 +1000,17 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("List")
-        public java.util.List<ListHistoricalAgentReportResponseBodyDataList> list;
-
         public static ListHistoricalAgentReportResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListHistoricalAgentReportResponseBodyData self = new ListHistoricalAgentReportResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListHistoricalAgentReportResponseBodyData setList(java.util.List<ListHistoricalAgentReportResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListHistoricalAgentReportResponseBodyDataList> getList() {
+            return this.list;
         }
 
         public ListHistoricalAgentReportResponseBodyData setPageNumber(Integer pageNumber) {
@@ -1016,14 +1035,6 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListHistoricalAgentReportResponseBodyData setList(java.util.List<ListHistoricalAgentReportResponseBodyDataList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<ListHistoricalAgentReportResponseBodyDataList> getList() {
-            return this.list;
         }
 
     }

@@ -7,20 +7,20 @@ public class BargeInCallResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public BargeInCallResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
 
-    @NameInMap("Data")
-    public BargeInCallResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static BargeInCallResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BargeInCallResponseBody self = new BargeInCallResponseBody();
@@ -33,6 +33,14 @@ public class BargeInCallResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public BargeInCallResponseBody setData(BargeInCallResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public BargeInCallResponseBodyData getData() {
+        return this.data;
     }
 
     public BargeInCallResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,14 +59,6 @@ public class BargeInCallResponseBody extends TeaModel {
         return this.message;
     }
 
-    public BargeInCallResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public BargeInCallResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
@@ -67,20 +67,26 @@ public class BargeInCallResponseBody extends TeaModel {
         return this.params;
     }
 
-    public BargeInCallResponseBody setData(BargeInCallResponseBodyData data) {
-        this.data = data;
+    public BargeInCallResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public BargeInCallResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class BargeInCallResponseBodyDataCallContextChannelContexts extends TeaModel {
-        @NameInMap("Index")
-        public Integer index;
+        @NameInMap("AssociatedData")
+        public java.util.Map<String, ?> associatedData;
 
-        @NameInMap("ReleaseInitiator")
-        public String releaseInitiator;
+        @NameInMap("CallType")
+        public String callType;
+
+        @NameInMap("ChannelFlags")
+        public String channelFlags;
+
+        @NameInMap("ChannelId")
+        public String channelId;
 
         @NameInMap("ChannelState")
         public String channelState;
@@ -88,11 +94,20 @@ public class BargeInCallResponseBody extends TeaModel {
         @NameInMap("Destination")
         public String destination;
 
-        @NameInMap("UserId")
-        public String userId;
+        @NameInMap("Index")
+        public Integer index;
 
-        @NameInMap("ChannelFlags")
-        public String channelFlags;
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("Originator")
+        public String originator;
+
+        @NameInMap("ReleaseInitiator")
+        public String releaseInitiator;
+
+        @NameInMap("ReleaseReason")
+        public String releaseReason;
 
         @NameInMap("SkillGroupId")
         public String skillGroupId;
@@ -100,46 +115,47 @@ public class BargeInCallResponseBody extends TeaModel {
         @NameInMap("Timestamp")
         public Long timestamp;
 
-        @NameInMap("AssociatedData")
-        public java.util.Map<String, ?> associatedData;
-
-        @NameInMap("ReleaseReason")
-        public String releaseReason;
-
-        @NameInMap("CallType")
-        public String callType;
-
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("ChannelId")
-        public String channelId;
-
         @NameInMap("UserExtension")
         public String userExtension;
 
-        @NameInMap("Originator")
-        public String originator;
+        @NameInMap("UserId")
+        public String userId;
 
         public static BargeInCallResponseBodyDataCallContextChannelContexts build(java.util.Map<String, ?> map) throws Exception {
             BargeInCallResponseBodyDataCallContextChannelContexts self = new BargeInCallResponseBodyDataCallContextChannelContexts();
             return TeaModel.build(map, self);
         }
 
-        public BargeInCallResponseBodyDataCallContextChannelContexts setIndex(Integer index) {
-            this.index = index;
+        public BargeInCallResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
+            this.associatedData = associatedData;
             return this;
         }
-        public Integer getIndex() {
-            return this.index;
+        public java.util.Map<String, ?> getAssociatedData() {
+            return this.associatedData;
         }
 
-        public BargeInCallResponseBodyDataCallContextChannelContexts setReleaseInitiator(String releaseInitiator) {
-            this.releaseInitiator = releaseInitiator;
+        public BargeInCallResponseBodyDataCallContextChannelContexts setCallType(String callType) {
+            this.callType = callType;
             return this;
         }
-        public String getReleaseInitiator() {
-            return this.releaseInitiator;
+        public String getCallType() {
+            return this.callType;
+        }
+
+        public BargeInCallResponseBodyDataCallContextChannelContexts setChannelFlags(String channelFlags) {
+            this.channelFlags = channelFlags;
+            return this;
+        }
+        public String getChannelFlags() {
+            return this.channelFlags;
+        }
+
+        public BargeInCallResponseBodyDataCallContextChannelContexts setChannelId(String channelId) {
+            this.channelId = channelId;
+            return this;
+        }
+        public String getChannelId() {
+            return this.channelId;
         }
 
         public BargeInCallResponseBodyDataCallContextChannelContexts setChannelState(String channelState) {
@@ -158,20 +174,44 @@ public class BargeInCallResponseBody extends TeaModel {
             return this.destination;
         }
 
-        public BargeInCallResponseBodyDataCallContextChannelContexts setUserId(String userId) {
-            this.userId = userId;
+        public BargeInCallResponseBodyDataCallContextChannelContexts setIndex(Integer index) {
+            this.index = index;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public Integer getIndex() {
+            return this.index;
         }
 
-        public BargeInCallResponseBodyDataCallContextChannelContexts setChannelFlags(String channelFlags) {
-            this.channelFlags = channelFlags;
+        public BargeInCallResponseBodyDataCallContextChannelContexts setJobId(String jobId) {
+            this.jobId = jobId;
             return this;
         }
-        public String getChannelFlags() {
-            return this.channelFlags;
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public BargeInCallResponseBodyDataCallContextChannelContexts setOriginator(String originator) {
+            this.originator = originator;
+            return this;
+        }
+        public String getOriginator() {
+            return this.originator;
+        }
+
+        public BargeInCallResponseBodyDataCallContextChannelContexts setReleaseInitiator(String releaseInitiator) {
+            this.releaseInitiator = releaseInitiator;
+            return this;
+        }
+        public String getReleaseInitiator() {
+            return this.releaseInitiator;
+        }
+
+        public BargeInCallResponseBodyDataCallContextChannelContexts setReleaseReason(String releaseReason) {
+            this.releaseReason = releaseReason;
+            return this;
+        }
+        public String getReleaseReason() {
+            return this.releaseReason;
         }
 
         public BargeInCallResponseBodyDataCallContextChannelContexts setSkillGroupId(String skillGroupId) {
@@ -190,46 +230,6 @@ public class BargeInCallResponseBody extends TeaModel {
             return this.timestamp;
         }
 
-        public BargeInCallResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
-            this.associatedData = associatedData;
-            return this;
-        }
-        public java.util.Map<String, ?> getAssociatedData() {
-            return this.associatedData;
-        }
-
-        public BargeInCallResponseBodyDataCallContextChannelContexts setReleaseReason(String releaseReason) {
-            this.releaseReason = releaseReason;
-            return this;
-        }
-        public String getReleaseReason() {
-            return this.releaseReason;
-        }
-
-        public BargeInCallResponseBodyDataCallContextChannelContexts setCallType(String callType) {
-            this.callType = callType;
-            return this;
-        }
-        public String getCallType() {
-            return this.callType;
-        }
-
-        public BargeInCallResponseBodyDataCallContextChannelContexts setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public BargeInCallResponseBodyDataCallContextChannelContexts setChannelId(String channelId) {
-            this.channelId = channelId;
-            return this;
-        }
-        public String getChannelId() {
-            return this.channelId;
-        }
-
         public BargeInCallResponseBodyDataCallContextChannelContexts setUserExtension(String userExtension) {
             this.userExtension = userExtension;
             return this;
@@ -238,12 +238,12 @@ public class BargeInCallResponseBody extends TeaModel {
             return this.userExtension;
         }
 
-        public BargeInCallResponseBodyDataCallContextChannelContexts setOriginator(String originator) {
-            this.originator = originator;
+        public BargeInCallResponseBodyDataCallContextChannelContexts setUserId(String userId) {
+            this.userId = userId;
             return this;
         }
-        public String getOriginator() {
-            return this.originator;
+        public String getUserId() {
+            return this.userId;
         }
 
     }
@@ -252,14 +252,14 @@ public class BargeInCallResponseBody extends TeaModel {
         @NameInMap("CallType")
         public String callType;
 
+        @NameInMap("ChannelContexts")
+        public java.util.List<BargeInCallResponseBodyDataCallContextChannelContexts> channelContexts;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("JobId")
         public String jobId;
-
-        @NameInMap("ChannelContexts")
-        public java.util.List<BargeInCallResponseBodyDataCallContextChannelContexts> channelContexts;
 
         public static BargeInCallResponseBodyDataCallContext build(java.util.Map<String, ?> map) throws Exception {
             BargeInCallResponseBodyDataCallContext self = new BargeInCallResponseBodyDataCallContext();
@@ -272,6 +272,14 @@ public class BargeInCallResponseBody extends TeaModel {
         }
         public String getCallType() {
             return this.callType;
+        }
+
+        public BargeInCallResponseBodyDataCallContext setChannelContexts(java.util.List<BargeInCallResponseBodyDataCallContextChannelContexts> channelContexts) {
+            this.channelContexts = channelContexts;
+            return this;
+        }
+        public java.util.List<BargeInCallResponseBodyDataCallContextChannelContexts> getChannelContexts() {
+            return this.channelContexts;
         }
 
         public BargeInCallResponseBodyDataCallContext setInstanceId(String instanceId) {
@@ -290,59 +298,67 @@ public class BargeInCallResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public BargeInCallResponseBodyDataCallContext setChannelContexts(java.util.List<BargeInCallResponseBodyDataCallContextChannelContexts> channelContexts) {
-            this.channelContexts = channelContexts;
-            return this;
-        }
-        public java.util.List<BargeInCallResponseBodyDataCallContextChannelContexts> getChannelContexts() {
-            return this.channelContexts;
-        }
-
     }
 
     public static class BargeInCallResponseBodyDataUserContext extends TeaModel {
+        @NameInMap("BreakCode")
+        public String breakCode;
+
+        @NameInMap("DeviceId")
+        public String deviceId;
+
         @NameInMap("Extension")
         public String extension;
 
         @NameInMap("Heartbeat")
         public Long heartbeat;
 
-        @NameInMap("WorkMode")
-        public String workMode;
-
-        @NameInMap("DeviceId")
-        public String deviceId;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("Reserved")
-        public Long reserved;
-
-        @NameInMap("BreakCode")
-        public String breakCode;
-
         @NameInMap("InstanceId")
         public String instanceId;
-
-        @NameInMap("OutboundScenario")
-        public Boolean outboundScenario;
-
-        @NameInMap("Mobile")
-        public String mobile;
 
         @NameInMap("JobId")
         public String jobId;
 
-        @NameInMap("UserState")
-        public String userState;
+        @NameInMap("Mobile")
+        public String mobile;
+
+        @NameInMap("OutboundScenario")
+        public Boolean outboundScenario;
+
+        @NameInMap("Reserved")
+        public Long reserved;
 
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserState")
+        public String userState;
+
+        @NameInMap("WorkMode")
+        public String workMode;
+
         public static BargeInCallResponseBodyDataUserContext build(java.util.Map<String, ?> map) throws Exception {
             BargeInCallResponseBodyDataUserContext self = new BargeInCallResponseBodyDataUserContext();
             return TeaModel.build(map, self);
+        }
+
+        public BargeInCallResponseBodyDataUserContext setBreakCode(String breakCode) {
+            this.breakCode = breakCode;
+            return this;
+        }
+        public String getBreakCode() {
+            return this.breakCode;
+        }
+
+        public BargeInCallResponseBodyDataUserContext setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
         }
 
         public BargeInCallResponseBodyDataUserContext setExtension(String extension) {
@@ -361,68 +377,12 @@ public class BargeInCallResponseBody extends TeaModel {
             return this.heartbeat;
         }
 
-        public BargeInCallResponseBodyDataUserContext setWorkMode(String workMode) {
-            this.workMode = workMode;
-            return this;
-        }
-        public String getWorkMode() {
-            return this.workMode;
-        }
-
-        public BargeInCallResponseBodyDataUserContext setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
-        }
-
-        public BargeInCallResponseBodyDataUserContext setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public BargeInCallResponseBodyDataUserContext setReserved(Long reserved) {
-            this.reserved = reserved;
-            return this;
-        }
-        public Long getReserved() {
-            return this.reserved;
-        }
-
-        public BargeInCallResponseBodyDataUserContext setBreakCode(String breakCode) {
-            this.breakCode = breakCode;
-            return this;
-        }
-        public String getBreakCode() {
-            return this.breakCode;
-        }
-
         public BargeInCallResponseBodyDataUserContext setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
-        }
-
-        public BargeInCallResponseBodyDataUserContext setOutboundScenario(Boolean outboundScenario) {
-            this.outboundScenario = outboundScenario;
-            return this;
-        }
-        public Boolean getOutboundScenario() {
-            return this.outboundScenario;
-        }
-
-        public BargeInCallResponseBodyDataUserContext setMobile(String mobile) {
-            this.mobile = mobile;
-            return this;
-        }
-        public String getMobile() {
-            return this.mobile;
         }
 
         public BargeInCallResponseBodyDataUserContext setJobId(String jobId) {
@@ -433,12 +393,28 @@ public class BargeInCallResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public BargeInCallResponseBodyDataUserContext setUserState(String userState) {
-            this.userState = userState;
+        public BargeInCallResponseBodyDataUserContext setMobile(String mobile) {
+            this.mobile = mobile;
             return this;
         }
-        public String getUserState() {
-            return this.userState;
+        public String getMobile() {
+            return this.mobile;
+        }
+
+        public BargeInCallResponseBodyDataUserContext setOutboundScenario(Boolean outboundScenario) {
+            this.outboundScenario = outboundScenario;
+            return this;
+        }
+        public Boolean getOutboundScenario() {
+            return this.outboundScenario;
+        }
+
+        public BargeInCallResponseBodyDataUserContext setReserved(Long reserved) {
+            this.reserved = reserved;
+            return this;
+        }
+        public Long getReserved() {
+            return this.reserved;
         }
 
         public BargeInCallResponseBodyDataUserContext setSignedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
@@ -447,6 +423,30 @@ public class BargeInCallResponseBody extends TeaModel {
         }
         public java.util.List<String> getSignedSkillGroupIdList() {
             return this.signedSkillGroupIdList;
+        }
+
+        public BargeInCallResponseBodyDataUserContext setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public BargeInCallResponseBodyDataUserContext setUserState(String userState) {
+            this.userState = userState;
+            return this;
+        }
+        public String getUserState() {
+            return this.userState;
+        }
+
+        public BargeInCallResponseBodyDataUserContext setWorkMode(String workMode) {
+            this.workMode = workMode;
+            return this;
+        }
+        public String getWorkMode() {
+            return this.workMode;
         }
 
     }

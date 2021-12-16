@@ -4,8 +4,14 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListRealtimeAgentStatesRequest extends TeaModel {
-    @NameInMap("SkillGroupId")
-    public String skillGroupId;
+    @NameInMap("AgentIdList")
+    public String agentIdList;
+
+    @NameInMap("AgentName")
+    public String agentName;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,29 +19,39 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("AgentIdList")
-    public String agentIdList;
+    @NameInMap("SkillGroupId")
+    public String skillGroupId;
 
     @NameInMap("StateList")
     public String stateList;
-
-    @NameInMap("AgentName")
-    public String agentName;
 
     public static ListRealtimeAgentStatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRealtimeAgentStatesRequest self = new ListRealtimeAgentStatesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListRealtimeAgentStatesRequest setSkillGroupId(String skillGroupId) {
-        this.skillGroupId = skillGroupId;
+    public ListRealtimeAgentStatesRequest setAgentIdList(String agentIdList) {
+        this.agentIdList = agentIdList;
         return this;
     }
-    public String getSkillGroupId() {
-        return this.skillGroupId;
+    public String getAgentIdList() {
+        return this.agentIdList;
+    }
+
+    public ListRealtimeAgentStatesRequest setAgentName(String agentName) {
+        this.agentName = agentName;
+        return this;
+    }
+    public String getAgentName() {
+        return this.agentName;
+    }
+
+    public ListRealtimeAgentStatesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListRealtimeAgentStatesRequest setPageNumber(Integer pageNumber) {
@@ -54,20 +70,12 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListRealtimeAgentStatesRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public ListRealtimeAgentStatesRequest setSkillGroupId(String skillGroupId) {
+        this.skillGroupId = skillGroupId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ListRealtimeAgentStatesRequest setAgentIdList(String agentIdList) {
-        this.agentIdList = agentIdList;
-        return this;
-    }
-    public String getAgentIdList() {
-        return this.agentIdList;
+    public String getSkillGroupId() {
+        return this.skillGroupId;
     }
 
     public ListRealtimeAgentStatesRequest setStateList(String stateList) {
@@ -76,14 +84,6 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     }
     public String getStateList() {
         return this.stateList;
-    }
-
-    public ListRealtimeAgentStatesRequest setAgentName(String agentName) {
-        this.agentName = agentName;
-        return this;
-    }
-    public String getAgentName() {
-        return this.agentName;
     }
 
 }

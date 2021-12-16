@@ -7,6 +7,9 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public java.util.List<PickOutboundNumbersResponseBodyData> data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public java.util.List<PickOutboundNumbersResponseBodyData> data;
 
     public static PickOutboundNumbersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PickOutboundNumbersResponseBody self = new PickOutboundNumbersResponseBody();
@@ -30,6 +30,14 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public PickOutboundNumbersResponseBody setData(java.util.List<PickOutboundNumbersResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<PickOutboundNumbersResponseBodyData> getData() {
+        return this.data;
     }
 
     public PickOutboundNumbersResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,20 +64,12 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public PickOutboundNumbersResponseBody setData(java.util.List<PickOutboundNumbersResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<PickOutboundNumbersResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class PickOutboundNumbersResponseBodyDataCallee extends TeaModel {
-        @NameInMap("Number")
-        public String number;
-
         @NameInMap("City")
         public String city;
+
+        @NameInMap("Number")
+        public String number;
 
         @NameInMap("Province")
         public String province;
@@ -79,20 +79,20 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public PickOutboundNumbersResponseBodyDataCallee setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
-        }
-
         public PickOutboundNumbersResponseBodyDataCallee setCity(String city) {
             this.city = city;
             return this;
         }
         public String getCity() {
             return this.city;
+        }
+
+        public PickOutboundNumbersResponseBodyDataCallee setNumber(String number) {
+            this.number = number;
+            return this;
+        }
+        public String getNumber() {
+            return this.number;
         }
 
         public PickOutboundNumbersResponseBodyDataCallee setProvince(String province) {
@@ -106,11 +106,11 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
     }
 
     public static class PickOutboundNumbersResponseBodyDataCaller extends TeaModel {
-        @NameInMap("Number")
-        public String number;
-
         @NameInMap("City")
         public String city;
+
+        @NameInMap("Number")
+        public String number;
 
         @NameInMap("Province")
         public String province;
@@ -120,20 +120,20 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public PickOutboundNumbersResponseBodyDataCaller setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
-        }
-
         public PickOutboundNumbersResponseBodyDataCaller setCity(String city) {
             this.city = city;
             return this;
         }
         public String getCity() {
             return this.city;
+        }
+
+        public PickOutboundNumbersResponseBodyDataCaller setNumber(String number) {
+            this.number = number;
+            return this;
+        }
+        public String getNumber() {
+            return this.number;
         }
 
         public PickOutboundNumbersResponseBodyDataCaller setProvince(String province) {

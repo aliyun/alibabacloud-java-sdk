@@ -7,11 +7,11 @@ public class ResetUserPasswordRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("UserId")
-    public String userId;
-
     @NameInMap("Password")
     public String password;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static ResetUserPasswordRequest build(java.util.Map<String, ?> map) throws Exception {
         ResetUserPasswordRequest self = new ResetUserPasswordRequest();
@@ -26,20 +26,20 @@ public class ResetUserPasswordRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ResetUserPasswordRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
     public ResetUserPasswordRequest setPassword(String password) {
         this.password = password;
         return this;
     }
     public String getPassword() {
         return this.password;
+    }
+
+    public ResetUserPasswordRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

@@ -7,6 +7,9 @@ public class GetMonoRecordingResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetMonoRecordingResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class GetMonoRecordingResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetMonoRecordingResponseBodyData data;
 
     public static GetMonoRecordingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMonoRecordingResponseBody self = new GetMonoRecordingResponseBody();
@@ -30,6 +30,14 @@ public class GetMonoRecordingResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetMonoRecordingResponseBody setData(GetMonoRecordingResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetMonoRecordingResponseBodyData getData() {
+        return this.data;
     }
 
     public GetMonoRecordingResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,32 +64,16 @@ public class GetMonoRecordingResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetMonoRecordingResponseBody setData(GetMonoRecordingResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetMonoRecordingResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetMonoRecordingResponseBodyData extends TeaModel {
-        @NameInMap("FileUrl")
-        public String fileUrl;
-
         @NameInMap("FileName")
         public String fileName;
+
+        @NameInMap("FileUrl")
+        public String fileUrl;
 
         public static GetMonoRecordingResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMonoRecordingResponseBodyData self = new GetMonoRecordingResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetMonoRecordingResponseBodyData setFileUrl(String fileUrl) {
-            this.fileUrl = fileUrl;
-            return this;
-        }
-        public String getFileUrl() {
-            return this.fileUrl;
         }
 
         public GetMonoRecordingResponseBodyData setFileName(String fileName) {
@@ -90,6 +82,14 @@ public class GetMonoRecordingResponseBody extends TeaModel {
         }
         public String getFileName() {
             return this.fileName;
+        }
+
+        public GetMonoRecordingResponseBodyData setFileUrl(String fileUrl) {
+            this.fileUrl = fileUrl;
+            return this;
+        }
+        public String getFileUrl() {
+            return this.fileUrl;
         }
 
     }

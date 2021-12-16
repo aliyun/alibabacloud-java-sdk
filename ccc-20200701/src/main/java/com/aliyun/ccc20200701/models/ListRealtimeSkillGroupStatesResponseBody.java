@@ -7,6 +7,9 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ListRealtimeSkillGroupStatesResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ListRealtimeSkillGroupStatesResponseBodyData data;
 
     public static ListRealtimeSkillGroupStatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRealtimeSkillGroupStatesResponseBody self = new ListRealtimeSkillGroupStatesResponseBody();
@@ -30,6 +30,14 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListRealtimeSkillGroupStatesResponseBody setData(ListRealtimeSkillGroupStatesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListRealtimeSkillGroupStatesResponseBodyData getData() {
+        return this.data;
     }
 
     public ListRealtimeSkillGroupStatesResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,80 +64,40 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListRealtimeSkillGroupStatesResponseBody setData(ListRealtimeSkillGroupStatesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListRealtimeSkillGroupStatesResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListRealtimeSkillGroupStatesResponseBodyDataList extends TeaModel {
-        @NameInMap("WorkingAgents")
-        public Long workingAgents;
-
-        @NameInMap("LongestWaitingTime")
-        public Long longestWaitingTime;
-
-        @NameInMap("LoggedInAgents")
-        public Long loggedInAgents;
-
-        @NameInMap("WaitingCalls")
-        public Long waitingCalls;
-
         @NameInMap("BreakingAgents")
         public Long breakingAgents;
-
-        @NameInMap("TalkingAgents")
-        public Long talkingAgents;
-
-        @NameInMap("SkillGroupName")
-        public String skillGroupName;
-
-        @NameInMap("SkillGroupId")
-        public String skillGroupId;
-
-        @NameInMap("ReadyAgents")
-        public Long readyAgents;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("LoggedInAgents")
+        public Long loggedInAgents;
+
+        @NameInMap("LongestWaitingTime")
+        public Long longestWaitingTime;
+
+        @NameInMap("ReadyAgents")
+        public Long readyAgents;
+
+        @NameInMap("SkillGroupId")
+        public String skillGroupId;
+
+        @NameInMap("SkillGroupName")
+        public String skillGroupName;
+
+        @NameInMap("TalkingAgents")
+        public Long talkingAgents;
+
+        @NameInMap("WaitingCalls")
+        public Long waitingCalls;
+
+        @NameInMap("WorkingAgents")
+        public Long workingAgents;
+
         public static ListRealtimeSkillGroupStatesResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListRealtimeSkillGroupStatesResponseBodyDataList self = new ListRealtimeSkillGroupStatesResponseBodyDataList();
             return TeaModel.build(map, self);
-        }
-
-        public ListRealtimeSkillGroupStatesResponseBodyDataList setWorkingAgents(Long workingAgents) {
-            this.workingAgents = workingAgents;
-            return this;
-        }
-        public Long getWorkingAgents() {
-            return this.workingAgents;
-        }
-
-        public ListRealtimeSkillGroupStatesResponseBodyDataList setLongestWaitingTime(Long longestWaitingTime) {
-            this.longestWaitingTime = longestWaitingTime;
-            return this;
-        }
-        public Long getLongestWaitingTime() {
-            return this.longestWaitingTime;
-        }
-
-        public ListRealtimeSkillGroupStatesResponseBodyDataList setLoggedInAgents(Long loggedInAgents) {
-            this.loggedInAgents = loggedInAgents;
-            return this;
-        }
-        public Long getLoggedInAgents() {
-            return this.loggedInAgents;
-        }
-
-        public ListRealtimeSkillGroupStatesResponseBodyDataList setWaitingCalls(Long waitingCalls) {
-            this.waitingCalls = waitingCalls;
-            return this;
-        }
-        public Long getWaitingCalls() {
-            return this.waitingCalls;
         }
 
         public ListRealtimeSkillGroupStatesResponseBodyDataList setBreakingAgents(Long breakingAgents) {
@@ -140,28 +108,28 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
             return this.breakingAgents;
         }
 
-        public ListRealtimeSkillGroupStatesResponseBodyDataList setTalkingAgents(Long talkingAgents) {
-            this.talkingAgents = talkingAgents;
+        public ListRealtimeSkillGroupStatesResponseBodyDataList setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public Long getTalkingAgents() {
-            return this.talkingAgents;
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
-        public ListRealtimeSkillGroupStatesResponseBodyDataList setSkillGroupName(String skillGroupName) {
-            this.skillGroupName = skillGroupName;
+        public ListRealtimeSkillGroupStatesResponseBodyDataList setLoggedInAgents(Long loggedInAgents) {
+            this.loggedInAgents = loggedInAgents;
             return this;
         }
-        public String getSkillGroupName() {
-            return this.skillGroupName;
+        public Long getLoggedInAgents() {
+            return this.loggedInAgents;
         }
 
-        public ListRealtimeSkillGroupStatesResponseBodyDataList setSkillGroupId(String skillGroupId) {
-            this.skillGroupId = skillGroupId;
+        public ListRealtimeSkillGroupStatesResponseBodyDataList setLongestWaitingTime(Long longestWaitingTime) {
+            this.longestWaitingTime = longestWaitingTime;
             return this;
         }
-        public String getSkillGroupId() {
-            return this.skillGroupId;
+        public Long getLongestWaitingTime() {
+            return this.longestWaitingTime;
         }
 
         public ListRealtimeSkillGroupStatesResponseBodyDataList setReadyAgents(Long readyAgents) {
@@ -172,17 +140,52 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
             return this.readyAgents;
         }
 
-        public ListRealtimeSkillGroupStatesResponseBodyDataList setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public ListRealtimeSkillGroupStatesResponseBodyDataList setSkillGroupId(String skillGroupId) {
+            this.skillGroupId = skillGroupId;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
+        public String getSkillGroupId() {
+            return this.skillGroupId;
+        }
+
+        public ListRealtimeSkillGroupStatesResponseBodyDataList setSkillGroupName(String skillGroupName) {
+            this.skillGroupName = skillGroupName;
+            return this;
+        }
+        public String getSkillGroupName() {
+            return this.skillGroupName;
+        }
+
+        public ListRealtimeSkillGroupStatesResponseBodyDataList setTalkingAgents(Long talkingAgents) {
+            this.talkingAgents = talkingAgents;
+            return this;
+        }
+        public Long getTalkingAgents() {
+            return this.talkingAgents;
+        }
+
+        public ListRealtimeSkillGroupStatesResponseBodyDataList setWaitingCalls(Long waitingCalls) {
+            this.waitingCalls = waitingCalls;
+            return this;
+        }
+        public Long getWaitingCalls() {
+            return this.waitingCalls;
+        }
+
+        public ListRealtimeSkillGroupStatesResponseBodyDataList setWorkingAgents(Long workingAgents) {
+            this.workingAgents = workingAgents;
+            return this;
+        }
+        public Long getWorkingAgents() {
+            return this.workingAgents;
         }
 
     }
 
     public static class ListRealtimeSkillGroupStatesResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public java.util.List<ListRealtimeSkillGroupStatesResponseBodyDataList> list;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -192,12 +195,17 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("List")
-        public java.util.List<ListRealtimeSkillGroupStatesResponseBodyDataList> list;
-
         public static ListRealtimeSkillGroupStatesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListRealtimeSkillGroupStatesResponseBodyData self = new ListRealtimeSkillGroupStatesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListRealtimeSkillGroupStatesResponseBodyData setList(java.util.List<ListRealtimeSkillGroupStatesResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListRealtimeSkillGroupStatesResponseBodyDataList> getList() {
+            return this.list;
         }
 
         public ListRealtimeSkillGroupStatesResponseBodyData setPageNumber(Integer pageNumber) {
@@ -222,14 +230,6 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListRealtimeSkillGroupStatesResponseBodyData setList(java.util.List<ListRealtimeSkillGroupStatesResponseBodyDataList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<ListRealtimeSkillGroupStatesResponseBodyDataList> getList() {
-            return this.list;
         }
 
     }

@@ -7,20 +7,20 @@ public class ListUsersResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ListUsersResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
 
-    @NameInMap("Data")
-    public ListUsersResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListUsersResponseBody self = new ListUsersResponseBody();
@@ -33,6 +33,14 @@ public class ListUsersResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListUsersResponseBody setData(ListUsersResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListUsersResponseBodyData getData() {
+        return this.data;
     }
 
     public ListUsersResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,14 +59,6 @@ public class ListUsersResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ListUsersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListUsersResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
@@ -67,41 +67,33 @@ public class ListUsersResponseBody extends TeaModel {
         return this.params;
     }
 
-    public ListUsersResponseBody setData(ListUsersResponseBodyData data) {
-        this.data = data;
+    public ListUsersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public ListUsersResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListUsersResponseBodyDataListPersonalOutboundNumberList extends TeaModel {
-        @NameInMap("Number")
-        public String number;
-
         @NameInMap("Active")
         public Boolean active;
 
         @NameInMap("City")
         public String city;
 
-        @NameInMap("Usage")
-        public String usage;
+        @NameInMap("Number")
+        public String number;
 
         @NameInMap("Province")
         public String province;
 
+        @NameInMap("Usage")
+        public String usage;
+
         public static ListUsersResponseBodyDataListPersonalOutboundNumberList build(java.util.Map<String, ?> map) throws Exception {
             ListUsersResponseBodyDataListPersonalOutboundNumberList self = new ListUsersResponseBodyDataListPersonalOutboundNumberList();
             return TeaModel.build(map, self);
-        }
-
-        public ListUsersResponseBodyDataListPersonalOutboundNumberList setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
         }
 
         public ListUsersResponseBodyDataListPersonalOutboundNumberList setActive(Boolean active) {
@@ -120,12 +112,12 @@ public class ListUsersResponseBody extends TeaModel {
             return this.city;
         }
 
-        public ListUsersResponseBodyDataListPersonalOutboundNumberList setUsage(String usage) {
-            this.usage = usage;
+        public ListUsersResponseBodyDataListPersonalOutboundNumberList setNumber(String number) {
+            this.number = number;
             return this;
         }
-        public String getUsage() {
-            return this.usage;
+        public String getNumber() {
+            return this.number;
         }
 
         public ListUsersResponseBodyDataListPersonalOutboundNumberList setProvince(String province) {
@@ -136,29 +128,29 @@ public class ListUsersResponseBody extends TeaModel {
             return this.province;
         }
 
+        public ListUsersResponseBodyDataListPersonalOutboundNumberList setUsage(String usage) {
+            this.usage = usage;
+            return this;
+        }
+        public String getUsage() {
+            return this.usage;
+        }
+
     }
 
     public static class ListUsersResponseBodyDataListSkillLevelList extends TeaModel {
-        @NameInMap("SkillLevel")
-        public Integer skillLevel;
-
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
         @NameInMap("SkillGroupName")
         public String skillGroupName;
 
+        @NameInMap("SkillLevel")
+        public Integer skillLevel;
+
         public static ListUsersResponseBodyDataListSkillLevelList build(java.util.Map<String, ?> map) throws Exception {
             ListUsersResponseBodyDataListSkillLevelList self = new ListUsersResponseBodyDataListSkillLevelList();
             return TeaModel.build(map, self);
-        }
-
-        public ListUsersResponseBodyDataListSkillLevelList setSkillLevel(Integer skillLevel) {
-            this.skillLevel = skillLevel;
-            return this;
-        }
-        public Integer getSkillLevel() {
-            return this.skillLevel;
         }
 
         public ListUsersResponseBodyDataListSkillLevelList setSkillGroupId(String skillGroupId) {
@@ -177,45 +169,64 @@ public class ListUsersResponseBody extends TeaModel {
             return this.skillGroupName;
         }
 
+        public ListUsersResponseBodyDataListSkillLevelList setSkillLevel(Integer skillLevel) {
+            this.skillLevel = skillLevel;
+            return this;
+        }
+        public Integer getSkillLevel() {
+            return this.skillLevel;
+        }
+
     }
 
     public static class ListUsersResponseBodyDataList extends TeaModel {
+        @NameInMap("DisplayId")
+        public String displayId;
+
         @NameInMap("DisplayName")
         public String displayName;
-
-        @NameInMap("LoginName")
-        public String loginName;
 
         @NameInMap("Email")
         public String email;
 
-        @NameInMap("WorkMode")
-        public String workMode;
+        @NameInMap("LoginName")
+        public String loginName;
 
         @NameInMap("Mobile")
         public String mobile;
 
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("RoleName")
-        public String roleName;
-
-        @NameInMap("RoleId")
-        public String roleId;
+        @NameInMap("PersonalOutboundNumberList")
+        public java.util.List<ListUsersResponseBodyDataListPersonalOutboundNumberList> personalOutboundNumberList;
 
         @NameInMap("PrimaryAccount")
         public Boolean primaryAccount;
 
-        @NameInMap("PersonalOutboundNumberList")
-        public java.util.List<ListUsersResponseBodyDataListPersonalOutboundNumberList> personalOutboundNumberList;
+        @NameInMap("RoleId")
+        public String roleId;
+
+        @NameInMap("RoleName")
+        public String roleName;
 
         @NameInMap("SkillLevelList")
         public java.util.List<ListUsersResponseBodyDataListSkillLevelList> skillLevelList;
 
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("WorkMode")
+        public String workMode;
+
         public static ListUsersResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListUsersResponseBodyDataList self = new ListUsersResponseBodyDataList();
             return TeaModel.build(map, self);
+        }
+
+        public ListUsersResponseBodyDataList setDisplayId(String displayId) {
+            this.displayId = displayId;
+            return this;
+        }
+        public String getDisplayId() {
+            return this.displayId;
         }
 
         public ListUsersResponseBodyDataList setDisplayName(String displayName) {
@@ -226,14 +237,6 @@ public class ListUsersResponseBody extends TeaModel {
             return this.displayName;
         }
 
-        public ListUsersResponseBodyDataList setLoginName(String loginName) {
-            this.loginName = loginName;
-            return this;
-        }
-        public String getLoginName() {
-            return this.loginName;
-        }
-
         public ListUsersResponseBodyDataList setEmail(String email) {
             this.email = email;
             return this;
@@ -242,12 +245,12 @@ public class ListUsersResponseBody extends TeaModel {
             return this.email;
         }
 
-        public ListUsersResponseBodyDataList setWorkMode(String workMode) {
-            this.workMode = workMode;
+        public ListUsersResponseBodyDataList setLoginName(String loginName) {
+            this.loginName = loginName;
             return this;
         }
-        public String getWorkMode() {
-            return this.workMode;
+        public String getLoginName() {
+            return this.loginName;
         }
 
         public ListUsersResponseBodyDataList setMobile(String mobile) {
@@ -258,28 +261,12 @@ public class ListUsersResponseBody extends TeaModel {
             return this.mobile;
         }
 
-        public ListUsersResponseBodyDataList setUserId(String userId) {
-            this.userId = userId;
+        public ListUsersResponseBodyDataList setPersonalOutboundNumberList(java.util.List<ListUsersResponseBodyDataListPersonalOutboundNumberList> personalOutboundNumberList) {
+            this.personalOutboundNumberList = personalOutboundNumberList;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public ListUsersResponseBodyDataList setRoleName(String roleName) {
-            this.roleName = roleName;
-            return this;
-        }
-        public String getRoleName() {
-            return this.roleName;
-        }
-
-        public ListUsersResponseBodyDataList setRoleId(String roleId) {
-            this.roleId = roleId;
-            return this;
-        }
-        public String getRoleId() {
-            return this.roleId;
+        public java.util.List<ListUsersResponseBodyDataListPersonalOutboundNumberList> getPersonalOutboundNumberList() {
+            return this.personalOutboundNumberList;
         }
 
         public ListUsersResponseBodyDataList setPrimaryAccount(Boolean primaryAccount) {
@@ -290,12 +277,20 @@ public class ListUsersResponseBody extends TeaModel {
             return this.primaryAccount;
         }
 
-        public ListUsersResponseBodyDataList setPersonalOutboundNumberList(java.util.List<ListUsersResponseBodyDataListPersonalOutboundNumberList> personalOutboundNumberList) {
-            this.personalOutboundNumberList = personalOutboundNumberList;
+        public ListUsersResponseBodyDataList setRoleId(String roleId) {
+            this.roleId = roleId;
             return this;
         }
-        public java.util.List<ListUsersResponseBodyDataListPersonalOutboundNumberList> getPersonalOutboundNumberList() {
-            return this.personalOutboundNumberList;
+        public String getRoleId() {
+            return this.roleId;
+        }
+
+        public ListUsersResponseBodyDataList setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
         }
 
         public ListUsersResponseBodyDataList setSkillLevelList(java.util.List<ListUsersResponseBodyDataListSkillLevelList> skillLevelList) {
@@ -306,9 +301,28 @@ public class ListUsersResponseBody extends TeaModel {
             return this.skillLevelList;
         }
 
+        public ListUsersResponseBodyDataList setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public ListUsersResponseBodyDataList setWorkMode(String workMode) {
+            this.workMode = workMode;
+            return this;
+        }
+        public String getWorkMode() {
+            return this.workMode;
+        }
+
     }
 
     public static class ListUsersResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public java.util.List<ListUsersResponseBodyDataList> list;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -318,12 +332,17 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("List")
-        public java.util.List<ListUsersResponseBodyDataList> list;
-
         public static ListUsersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListUsersResponseBodyData self = new ListUsersResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListUsersResponseBodyData setList(java.util.List<ListUsersResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListUsersResponseBodyDataList> getList() {
+            return this.list;
         }
 
         public ListUsersResponseBodyData setPageNumber(Integer pageNumber) {
@@ -348,14 +367,6 @@ public class ListUsersResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListUsersResponseBodyData setList(java.util.List<ListUsersResponseBodyDataList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<ListUsersResponseBodyDataList> getList() {
-            return this.list;
         }
 
     }

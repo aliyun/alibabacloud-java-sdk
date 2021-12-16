@@ -4,11 +4,14 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListPhoneNumbersOfSkillGroupRequest extends TeaModel {
+    @NameInMap("Active")
+    public Boolean active;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("SkillGroupId")
-    public String skillGroupId;
+    @NameInMap("IsMember")
+    public Boolean isMember;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -16,18 +19,23 @@ public class ListPhoneNumbersOfSkillGroupRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("IsMember")
-    public Boolean isMember;
-
     @NameInMap("SearchPattern")
     public String searchPattern;
 
-    @NameInMap("Active")
-    public Boolean active;
+    @NameInMap("SkillGroupId")
+    public String skillGroupId;
 
     public static ListPhoneNumbersOfSkillGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPhoneNumbersOfSkillGroupRequest self = new ListPhoneNumbersOfSkillGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListPhoneNumbersOfSkillGroupRequest setActive(Boolean active) {
+        this.active = active;
+        return this;
+    }
+    public Boolean getActive() {
+        return this.active;
     }
 
     public ListPhoneNumbersOfSkillGroupRequest setInstanceId(String instanceId) {
@@ -38,12 +46,12 @@ public class ListPhoneNumbersOfSkillGroupRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListPhoneNumbersOfSkillGroupRequest setSkillGroupId(String skillGroupId) {
-        this.skillGroupId = skillGroupId;
+    public ListPhoneNumbersOfSkillGroupRequest setIsMember(Boolean isMember) {
+        this.isMember = isMember;
         return this;
     }
-    public String getSkillGroupId() {
-        return this.skillGroupId;
+    public Boolean getIsMember() {
+        return this.isMember;
     }
 
     public ListPhoneNumbersOfSkillGroupRequest setPageNumber(Integer pageNumber) {
@@ -62,14 +70,6 @@ public class ListPhoneNumbersOfSkillGroupRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListPhoneNumbersOfSkillGroupRequest setIsMember(Boolean isMember) {
-        this.isMember = isMember;
-        return this;
-    }
-    public Boolean getIsMember() {
-        return this.isMember;
-    }
-
     public ListPhoneNumbersOfSkillGroupRequest setSearchPattern(String searchPattern) {
         this.searchPattern = searchPattern;
         return this;
@@ -78,12 +78,12 @@ public class ListPhoneNumbersOfSkillGroupRequest extends TeaModel {
         return this.searchPattern;
     }
 
-    public ListPhoneNumbersOfSkillGroupRequest setActive(Boolean active) {
-        this.active = active;
+    public ListPhoneNumbersOfSkillGroupRequest setSkillGroupId(String skillGroupId) {
+        this.skillGroupId = skillGroupId;
         return this;
     }
-    public Boolean getActive() {
-        return this.active;
+    public String getSkillGroupId() {
+        return this.skillGroupId;
     }
 
 }

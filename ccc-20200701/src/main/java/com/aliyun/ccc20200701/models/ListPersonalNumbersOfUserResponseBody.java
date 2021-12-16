@@ -7,6 +7,9 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ListPersonalNumbersOfUserResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ListPersonalNumbersOfUserResponseBodyData data;
 
     public static ListPersonalNumbersOfUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPersonalNumbersOfUserResponseBody self = new ListPersonalNumbersOfUserResponseBody();
@@ -30,6 +30,14 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListPersonalNumbersOfUserResponseBody setData(ListPersonalNumbersOfUserResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListPersonalNumbersOfUserResponseBodyData getData() {
+        return this.data;
     }
 
     public ListPersonalNumbersOfUserResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,29 +64,21 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListPersonalNumbersOfUserResponseBody setData(ListPersonalNumbersOfUserResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListPersonalNumbersOfUserResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListPersonalNumbersOfUserResponseBodyDataList extends TeaModel {
         @NameInMap("Active")
         public Boolean active;
 
-        @NameInMap("Number")
-        public String number;
-
         @NameInMap("City")
         public String city;
+
+        @NameInMap("ContactFlowId")
+        public String contactFlowId;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("ContactFlowId")
-        public String contactFlowId;
+        @NameInMap("Number")
+        public String number;
 
         @NameInMap("Province")
         public String province;
@@ -96,20 +96,20 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
             return this.active;
         }
 
-        public ListPersonalNumbersOfUserResponseBodyDataList setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
-        }
-
         public ListPersonalNumbersOfUserResponseBodyDataList setCity(String city) {
             this.city = city;
             return this;
         }
         public String getCity() {
             return this.city;
+        }
+
+        public ListPersonalNumbersOfUserResponseBodyDataList setContactFlowId(String contactFlowId) {
+            this.contactFlowId = contactFlowId;
+            return this;
+        }
+        public String getContactFlowId() {
+            return this.contactFlowId;
         }
 
         public ListPersonalNumbersOfUserResponseBodyDataList setInstanceId(String instanceId) {
@@ -120,12 +120,12 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ListPersonalNumbersOfUserResponseBodyDataList setContactFlowId(String contactFlowId) {
-            this.contactFlowId = contactFlowId;
+        public ListPersonalNumbersOfUserResponseBodyDataList setNumber(String number) {
+            this.number = number;
             return this;
         }
-        public String getContactFlowId() {
-            return this.contactFlowId;
+        public String getNumber() {
+            return this.number;
         }
 
         public ListPersonalNumbersOfUserResponseBodyDataList setProvince(String province) {
@@ -139,6 +139,9 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
     }
 
     public static class ListPersonalNumbersOfUserResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public java.util.List<ListPersonalNumbersOfUserResponseBodyDataList> list;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -148,12 +151,17 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("List")
-        public java.util.List<ListPersonalNumbersOfUserResponseBodyDataList> list;
-
         public static ListPersonalNumbersOfUserResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListPersonalNumbersOfUserResponseBodyData self = new ListPersonalNumbersOfUserResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListPersonalNumbersOfUserResponseBodyData setList(java.util.List<ListPersonalNumbersOfUserResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListPersonalNumbersOfUserResponseBodyDataList> getList() {
+            return this.list;
         }
 
         public ListPersonalNumbersOfUserResponseBodyData setPageNumber(Integer pageNumber) {
@@ -178,14 +186,6 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListPersonalNumbersOfUserResponseBodyData setList(java.util.List<ListPersonalNumbersOfUserResponseBodyDataList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<ListPersonalNumbersOfUserResponseBodyDataList> getList() {
-            return this.list;
         }
 
     }

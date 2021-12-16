@@ -7,6 +7,9 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ListHistoricalSkillGroupReportResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ListHistoricalSkillGroupReportResponseBodyData data;
 
     public static ListHistoricalSkillGroupReportResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListHistoricalSkillGroupReportResponseBody self = new ListHistoricalSkillGroupReportResponseBody();
@@ -30,6 +30,14 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListHistoricalSkillGroupReportResponseBody setData(ListHistoricalSkillGroupReportResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListHistoricalSkillGroupReportResponseBodyData getData() {
+        return this.data;
     }
 
     public ListHistoricalSkillGroupReportResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,361 +64,145 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListHistoricalSkillGroupReportResponseBody setData(ListHistoricalSkillGroupReportResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListHistoricalSkillGroupReportResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListHistoricalSkillGroupReportResponseBodyDataListInbound extends TeaModel {
-        @NameInMap("AverageRingTime")
-        public Float averageRingTime;
-
-        @NameInMap("CallsOverflow")
-        public Long callsOverflow;
-
-        @NameInMap("CallsAbandonedInRing")
-        public Long callsAbandonedInRing;
-
-        @NameInMap("CallsHandled")
-        public Long callsHandled;
-
-        @NameInMap("TotalWorkTime")
-        public Long totalWorkTime;
-
-        @NameInMap("TotalAbandonedInRingTime")
-        public Long totalAbandonedInRingTime;
-
-        @NameInMap("MaxWorkTime")
-        public Long maxWorkTime;
-
-        @NameInMap("CallsAttendedTransferOut")
-        public Long callsAttendedTransferOut;
-
-        @NameInMap("AverageWaitTime")
-        public Float averageWaitTime;
-
-        @NameInMap("TotalHoldTime")
-        public Long totalHoldTime;
-
-        @NameInMap("MaxAbandonTime")
-        public Long maxAbandonTime;
-
-        @NameInMap("AverageWorkTime")
-        public Float averageWorkTime;
-
-        @NameInMap("CallsQueued")
-        public Long callsQueued;
-
-        @NameInMap("CallsBlindTransferIn")
-        public Long callsBlindTransferIn;
-
-        @NameInMap("SatisfactionIndex")
-        public Float satisfactionIndex;
-
-        @NameInMap("AverageAbandonedInRingTime")
-        public Float averageAbandonedInRingTime;
+        @NameInMap("AbandonRate")
+        public Float abandonRate;
 
         @NameInMap("AverageAbandonTime")
         public Float averageAbandonTime;
 
-        @NameInMap("CallsRinged")
-        public Long callsRinged;
-
-        @NameInMap("CallsBlindTransferOut")
-        public Long callsBlindTransferOut;
-
-        @NameInMap("CallsAttendedTransferIn")
-        public Long callsAttendedTransferIn;
-
-        @NameInMap("CallsAbandoned")
-        public Long callsAbandoned;
-
-        @NameInMap("MaxAbandonedInQueueTime")
-        public Long maxAbandonedInQueueTime;
-
-        @NameInMap("TotalWaitTime")
-        public Long totalWaitTime;
-
-        @NameInMap("TotalRingTime")
-        public Long totalRingTime;
-
-        @NameInMap("MaxTalkTime")
-        public Long maxTalkTime;
-
-        @NameInMap("MaxRingTime")
-        public Long maxRingTime;
-
-        @NameInMap("AbandonRate")
-        public Float abandonRate;
-
-        @NameInMap("TotalTalkTime")
-        public Long totalTalkTime;
-
-        @NameInMap("TotalAbandonTime")
-        public Long totalAbandonTime;
-
-        @NameInMap("CallsOffered")
-        public Long callsOffered;
-
-        @NameInMap("MaxAbandonedInRingTime")
-        public Long maxAbandonedInRingTime;
-
-        @NameInMap("MaxWaitTime")
-        public Long maxWaitTime;
-
         @NameInMap("AverageAbandonedInQueueTime")
         public Float averageAbandonedInQueueTime;
 
-        @NameInMap("ServiceLevel20")
-        public Float serviceLevel20;
-
-        @NameInMap("MaxHoldTime")
-        public Long maxHoldTime;
-
-        @NameInMap("SatisfactionRate")
-        public Float satisfactionRate;
-
-        @NameInMap("AverageTalkTime")
-        public Float averageTalkTime;
-
-        @NameInMap("CallsHold")
-        public Long callsHold;
-
-        @NameInMap("SatisfactionSurveysOffered")
-        public Long satisfactionSurveysOffered;
-
-        @NameInMap("HandleRate")
-        public Float handleRate;
-
-        @NameInMap("CallsTimeout")
-        public Long callsTimeout;
-
-        @NameInMap("SatisfactionSurveysResponded")
-        public Long satisfactionSurveysResponded;
+        @NameInMap("AverageAbandonedInRingTime")
+        public Float averageAbandonedInRingTime;
 
         @NameInMap("AverageHoldTime")
         public Float averageHoldTime;
 
-        @NameInMap("TotalAbandonedInQueueTime")
-        public Long totalAbandonedInQueueTime;
+        @NameInMap("AverageRingTime")
+        public Float averageRingTime;
+
+        @NameInMap("AverageTalkTime")
+        public Float averageTalkTime;
+
+        @NameInMap("AverageWaitTime")
+        public Float averageWaitTime;
+
+        @NameInMap("AverageWorkTime")
+        public Float averageWorkTime;
+
+        @NameInMap("CallsAbandoned")
+        public Long callsAbandoned;
 
         @NameInMap("CallsAbandonedInQueue")
         public Long callsAbandonedInQueue;
 
+        @NameInMap("CallsAbandonedInRing")
+        public Long callsAbandonedInRing;
+
+        @NameInMap("CallsAttendedTransferIn")
+        public Long callsAttendedTransferIn;
+
+        @NameInMap("CallsAttendedTransferOut")
+        public Long callsAttendedTransferOut;
+
+        @NameInMap("CallsBlindTransferIn")
+        public Long callsBlindTransferIn;
+
+        @NameInMap("CallsBlindTransferOut")
+        public Long callsBlindTransferOut;
+
+        @NameInMap("CallsHandled")
+        public Long callsHandled;
+
+        @NameInMap("CallsHold")
+        public Long callsHold;
+
+        @NameInMap("CallsOffered")
+        public Long callsOffered;
+
+        @NameInMap("CallsOverflow")
+        public Long callsOverflow;
+
+        @NameInMap("CallsQueued")
+        public Long callsQueued;
+
+        @NameInMap("CallsRinged")
+        public Long callsRinged;
+
+        @NameInMap("CallsTimeout")
+        public Long callsTimeout;
+
+        @NameInMap("HandleRate")
+        public Float handleRate;
+
+        @NameInMap("MaxAbandonTime")
+        public Long maxAbandonTime;
+
+        @NameInMap("MaxAbandonedInQueueTime")
+        public Long maxAbandonedInQueueTime;
+
+        @NameInMap("MaxAbandonedInRingTime")
+        public Long maxAbandonedInRingTime;
+
+        @NameInMap("MaxHoldTime")
+        public Long maxHoldTime;
+
+        @NameInMap("MaxRingTime")
+        public Long maxRingTime;
+
+        @NameInMap("MaxTalkTime")
+        public Long maxTalkTime;
+
+        @NameInMap("MaxWaitTime")
+        public Long maxWaitTime;
+
+        @NameInMap("MaxWorkTime")
+        public Long maxWorkTime;
+
+        @NameInMap("SatisfactionIndex")
+        public Float satisfactionIndex;
+
+        @NameInMap("SatisfactionRate")
+        public Float satisfactionRate;
+
+        @NameInMap("SatisfactionSurveysOffered")
+        public Long satisfactionSurveysOffered;
+
+        @NameInMap("SatisfactionSurveysResponded")
+        public Long satisfactionSurveysResponded;
+
+        @NameInMap("ServiceLevel20")
+        public Float serviceLevel20;
+
+        @NameInMap("TotalAbandonTime")
+        public Long totalAbandonTime;
+
+        @NameInMap("TotalAbandonedInQueueTime")
+        public Long totalAbandonedInQueueTime;
+
+        @NameInMap("TotalAbandonedInRingTime")
+        public Long totalAbandonedInRingTime;
+
+        @NameInMap("TotalHoldTime")
+        public Long totalHoldTime;
+
+        @NameInMap("TotalRingTime")
+        public Long totalRingTime;
+
+        @NameInMap("TotalTalkTime")
+        public Long totalTalkTime;
+
+        @NameInMap("TotalWaitTime")
+        public Long totalWaitTime;
+
+        @NameInMap("TotalWorkTime")
+        public Long totalWorkTime;
+
         public static ListHistoricalSkillGroupReportResponseBodyDataListInbound build(java.util.Map<String, ?> map) throws Exception {
             ListHistoricalSkillGroupReportResponseBodyDataListInbound self = new ListHistoricalSkillGroupReportResponseBodyDataListInbound();
             return TeaModel.build(map, self);
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageRingTime(Float averageRingTime) {
-            this.averageRingTime = averageRingTime;
-            return this;
-        }
-        public Float getAverageRingTime() {
-            return this.averageRingTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsOverflow(Long callsOverflow) {
-            this.callsOverflow = callsOverflow;
-            return this;
-        }
-        public Long getCallsOverflow() {
-            return this.callsOverflow;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsAbandonedInRing(Long callsAbandonedInRing) {
-            this.callsAbandonedInRing = callsAbandonedInRing;
-            return this;
-        }
-        public Long getCallsAbandonedInRing() {
-            return this.callsAbandonedInRing;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsHandled(Long callsHandled) {
-            this.callsHandled = callsHandled;
-            return this;
-        }
-        public Long getCallsHandled() {
-            return this.callsHandled;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalWorkTime(Long totalWorkTime) {
-            this.totalWorkTime = totalWorkTime;
-            return this;
-        }
-        public Long getTotalWorkTime() {
-            return this.totalWorkTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalAbandonedInRingTime(Long totalAbandonedInRingTime) {
-            this.totalAbandonedInRingTime = totalAbandonedInRingTime;
-            return this;
-        }
-        public Long getTotalAbandonedInRingTime() {
-            return this.totalAbandonedInRingTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setMaxWorkTime(Long maxWorkTime) {
-            this.maxWorkTime = maxWorkTime;
-            return this;
-        }
-        public Long getMaxWorkTime() {
-            return this.maxWorkTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsAttendedTransferOut(Long callsAttendedTransferOut) {
-            this.callsAttendedTransferOut = callsAttendedTransferOut;
-            return this;
-        }
-        public Long getCallsAttendedTransferOut() {
-            return this.callsAttendedTransferOut;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageWaitTime(Float averageWaitTime) {
-            this.averageWaitTime = averageWaitTime;
-            return this;
-        }
-        public Float getAverageWaitTime() {
-            return this.averageWaitTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalHoldTime(Long totalHoldTime) {
-            this.totalHoldTime = totalHoldTime;
-            return this;
-        }
-        public Long getTotalHoldTime() {
-            return this.totalHoldTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setMaxAbandonTime(Long maxAbandonTime) {
-            this.maxAbandonTime = maxAbandonTime;
-            return this;
-        }
-        public Long getMaxAbandonTime() {
-            return this.maxAbandonTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageWorkTime(Float averageWorkTime) {
-            this.averageWorkTime = averageWorkTime;
-            return this;
-        }
-        public Float getAverageWorkTime() {
-            return this.averageWorkTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsQueued(Long callsQueued) {
-            this.callsQueued = callsQueued;
-            return this;
-        }
-        public Long getCallsQueued() {
-            return this.callsQueued;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsBlindTransferIn(Long callsBlindTransferIn) {
-            this.callsBlindTransferIn = callsBlindTransferIn;
-            return this;
-        }
-        public Long getCallsBlindTransferIn() {
-            return this.callsBlindTransferIn;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setSatisfactionIndex(Float satisfactionIndex) {
-            this.satisfactionIndex = satisfactionIndex;
-            return this;
-        }
-        public Float getSatisfactionIndex() {
-            return this.satisfactionIndex;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageAbandonedInRingTime(Float averageAbandonedInRingTime) {
-            this.averageAbandonedInRingTime = averageAbandonedInRingTime;
-            return this;
-        }
-        public Float getAverageAbandonedInRingTime() {
-            return this.averageAbandonedInRingTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageAbandonTime(Float averageAbandonTime) {
-            this.averageAbandonTime = averageAbandonTime;
-            return this;
-        }
-        public Float getAverageAbandonTime() {
-            return this.averageAbandonTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsRinged(Long callsRinged) {
-            this.callsRinged = callsRinged;
-            return this;
-        }
-        public Long getCallsRinged() {
-            return this.callsRinged;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsBlindTransferOut(Long callsBlindTransferOut) {
-            this.callsBlindTransferOut = callsBlindTransferOut;
-            return this;
-        }
-        public Long getCallsBlindTransferOut() {
-            return this.callsBlindTransferOut;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsAttendedTransferIn(Long callsAttendedTransferIn) {
-            this.callsAttendedTransferIn = callsAttendedTransferIn;
-            return this;
-        }
-        public Long getCallsAttendedTransferIn() {
-            return this.callsAttendedTransferIn;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsAbandoned(Long callsAbandoned) {
-            this.callsAbandoned = callsAbandoned;
-            return this;
-        }
-        public Long getCallsAbandoned() {
-            return this.callsAbandoned;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setMaxAbandonedInQueueTime(Long maxAbandonedInQueueTime) {
-            this.maxAbandonedInQueueTime = maxAbandonedInQueueTime;
-            return this;
-        }
-        public Long getMaxAbandonedInQueueTime() {
-            return this.maxAbandonedInQueueTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalWaitTime(Long totalWaitTime) {
-            this.totalWaitTime = totalWaitTime;
-            return this;
-        }
-        public Long getTotalWaitTime() {
-            return this.totalWaitTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalRingTime(Long totalRingTime) {
-            this.totalRingTime = totalRingTime;
-            return this;
-        }
-        public Long getTotalRingTime() {
-            return this.totalRingTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setMaxTalkTime(Long maxTalkTime) {
-            this.maxTalkTime = maxTalkTime;
-            return this;
-        }
-        public Long getMaxTalkTime() {
-            return this.maxTalkTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setMaxRingTime(Long maxRingTime) {
-            this.maxRingTime = maxRingTime;
-            return this;
-        }
-        public Long getMaxRingTime() {
-            return this.maxRingTime;
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAbandonRate(Float abandonRate) {
@@ -421,44 +213,12 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.abandonRate;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalTalkTime(Long totalTalkTime) {
-            this.totalTalkTime = totalTalkTime;
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageAbandonTime(Float averageAbandonTime) {
+            this.averageAbandonTime = averageAbandonTime;
             return this;
         }
-        public Long getTotalTalkTime() {
-            return this.totalTalkTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalAbandonTime(Long totalAbandonTime) {
-            this.totalAbandonTime = totalAbandonTime;
-            return this;
-        }
-        public Long getTotalAbandonTime() {
-            return this.totalAbandonTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsOffered(Long callsOffered) {
-            this.callsOffered = callsOffered;
-            return this;
-        }
-        public Long getCallsOffered() {
-            return this.callsOffered;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setMaxAbandonedInRingTime(Long maxAbandonedInRingTime) {
-            this.maxAbandonedInRingTime = maxAbandonedInRingTime;
-            return this;
-        }
-        public Long getMaxAbandonedInRingTime() {
-            return this.maxAbandonedInRingTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setMaxWaitTime(Long maxWaitTime) {
-            this.maxWaitTime = maxWaitTime;
-            return this;
-        }
-        public Long getMaxWaitTime() {
-            return this.maxWaitTime;
+        public Float getAverageAbandonTime() {
+            return this.averageAbandonTime;
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageAbandonedInQueueTime(Float averageAbandonedInQueueTime) {
@@ -469,76 +229,12 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.averageAbandonedInQueueTime;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setServiceLevel20(Float serviceLevel20) {
-            this.serviceLevel20 = serviceLevel20;
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageAbandonedInRingTime(Float averageAbandonedInRingTime) {
+            this.averageAbandonedInRingTime = averageAbandonedInRingTime;
             return this;
         }
-        public Float getServiceLevel20() {
-            return this.serviceLevel20;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setMaxHoldTime(Long maxHoldTime) {
-            this.maxHoldTime = maxHoldTime;
-            return this;
-        }
-        public Long getMaxHoldTime() {
-            return this.maxHoldTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setSatisfactionRate(Float satisfactionRate) {
-            this.satisfactionRate = satisfactionRate;
-            return this;
-        }
-        public Float getSatisfactionRate() {
-            return this.satisfactionRate;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageTalkTime(Float averageTalkTime) {
-            this.averageTalkTime = averageTalkTime;
-            return this;
-        }
-        public Float getAverageTalkTime() {
-            return this.averageTalkTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsHold(Long callsHold) {
-            this.callsHold = callsHold;
-            return this;
-        }
-        public Long getCallsHold() {
-            return this.callsHold;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setSatisfactionSurveysOffered(Long satisfactionSurveysOffered) {
-            this.satisfactionSurveysOffered = satisfactionSurveysOffered;
-            return this;
-        }
-        public Long getSatisfactionSurveysOffered() {
-            return this.satisfactionSurveysOffered;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setHandleRate(Float handleRate) {
-            this.handleRate = handleRate;
-            return this;
-        }
-        public Float getHandleRate() {
-            return this.handleRate;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsTimeout(Long callsTimeout) {
-            this.callsTimeout = callsTimeout;
-            return this;
-        }
-        public Long getCallsTimeout() {
-            return this.callsTimeout;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setSatisfactionSurveysResponded(Long satisfactionSurveysResponded) {
-            this.satisfactionSurveysResponded = satisfactionSurveysResponded;
-            return this;
-        }
-        public Long getSatisfactionSurveysResponded() {
-            return this.satisfactionSurveysResponded;
+        public Float getAverageAbandonedInRingTime() {
+            return this.averageAbandonedInRingTime;
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageHoldTime(Float averageHoldTime) {
@@ -549,12 +245,44 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.averageHoldTime;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalAbandonedInQueueTime(Long totalAbandonedInQueueTime) {
-            this.totalAbandonedInQueueTime = totalAbandonedInQueueTime;
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageRingTime(Float averageRingTime) {
+            this.averageRingTime = averageRingTime;
             return this;
         }
-        public Long getTotalAbandonedInQueueTime() {
-            return this.totalAbandonedInQueueTime;
+        public Float getAverageRingTime() {
+            return this.averageRingTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageTalkTime(Float averageTalkTime) {
+            this.averageTalkTime = averageTalkTime;
+            return this;
+        }
+        public Float getAverageTalkTime() {
+            return this.averageTalkTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageWaitTime(Float averageWaitTime) {
+            this.averageWaitTime = averageWaitTime;
+            return this;
+        }
+        public Float getAverageWaitTime() {
+            return this.averageWaitTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageWorkTime(Float averageWorkTime) {
+            this.averageWorkTime = averageWorkTime;
+            return this;
+        }
+        public Float getAverageWorkTime() {
+            return this.averageWorkTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsAbandoned(Long callsAbandoned) {
+            this.callsAbandoned = callsAbandoned;
+            return this;
+        }
+        public Long getCallsAbandoned() {
+            return this.callsAbandoned;
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsAbandonedInQueue(Long callsAbandonedInQueue) {
@@ -565,195 +293,15 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.callsAbandonedInQueue;
         }
 
-    }
-
-    public static class ListHistoricalSkillGroupReportResponseBodyDataListOutbound extends TeaModel {
-        @NameInMap("AverageRingTime")
-        public Float averageRingTime;
-
-        @NameInMap("CallsDialed")
-        public Long callsDialed;
-
-        @NameInMap("CallsAnswered")
-        public Long callsAnswered;
-
-        @NameInMap("TotalWorkTime")
-        public Long totalWorkTime;
-
-        @NameInMap("CallsAttendedTransferOut")
-        public Long callsAttendedTransferOut;
-
-        @NameInMap("MaxWorkTime")
-        public Long maxWorkTime;
-
-        @NameInMap("TotalDialingTime")
-        public Long totalDialingTime;
-
-        @NameInMap("TotalHoldTime")
-        public Long totalHoldTime;
-
-        @NameInMap("AverageWorkTime")
-        public Float averageWorkTime;
-
-        @NameInMap("CallsBlindTransferIn")
-        public Long callsBlindTransferIn;
-
-        @NameInMap("SatisfactionIndex")
-        public Float satisfactionIndex;
-
-        @NameInMap("CallsRinged")
-        public Long callsRinged;
-
-        @NameInMap("CallsAttendedTransferIn")
-        public Long callsAttendedTransferIn;
-
-        @NameInMap("CallsBlindTransferOut")
-        public Long callsBlindTransferOut;
-
-        @NameInMap("TotalRingTime")
-        public Long totalRingTime;
-
-        @NameInMap("MaxTalkTime")
-        public Long maxTalkTime;
-
-        @NameInMap("MaxRingTime")
-        public Long maxRingTime;
-
-        @NameInMap("TotalTalkTime")
-        public Long totalTalkTime;
-
-        @NameInMap("MaxDialingTime")
-        public Long maxDialingTime;
-
-        @NameInMap("AnswerRate")
-        public Float answerRate;
-
-        @NameInMap("MaxHoldTime")
-        public Long maxHoldTime;
-
-        @NameInMap("AverageTalkTime")
-        public Float averageTalkTime;
-
-        @NameInMap("SatisfactionRate")
-        public Float satisfactionRate;
-
-        @NameInMap("CallsHold")
-        public Long callsHold;
-
-        @NameInMap("SatisfactionSurveysOffered")
-        public Long satisfactionSurveysOffered;
-
-        @NameInMap("SatisfactionSurveysResponded")
-        public Long satisfactionSurveysResponded;
-
-        @NameInMap("AverageHoldTime")
-        public Float averageHoldTime;
-
-        @NameInMap("AverageDialingTime")
-        public Float averageDialingTime;
-
-        public static ListHistoricalSkillGroupReportResponseBodyDataListOutbound build(java.util.Map<String, ?> map) throws Exception {
-            ListHistoricalSkillGroupReportResponseBodyDataListOutbound self = new ListHistoricalSkillGroupReportResponseBodyDataListOutbound();
-            return TeaModel.build(map, self);
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setAverageRingTime(Float averageRingTime) {
-            this.averageRingTime = averageRingTime;
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsAbandonedInRing(Long callsAbandonedInRing) {
+            this.callsAbandonedInRing = callsAbandonedInRing;
             return this;
         }
-        public Float getAverageRingTime() {
-            return this.averageRingTime;
+        public Long getCallsAbandonedInRing() {
+            return this.callsAbandonedInRing;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setCallsDialed(Long callsDialed) {
-            this.callsDialed = callsDialed;
-            return this;
-        }
-        public Long getCallsDialed() {
-            return this.callsDialed;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setCallsAnswered(Long callsAnswered) {
-            this.callsAnswered = callsAnswered;
-            return this;
-        }
-        public Long getCallsAnswered() {
-            return this.callsAnswered;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setTotalWorkTime(Long totalWorkTime) {
-            this.totalWorkTime = totalWorkTime;
-            return this;
-        }
-        public Long getTotalWorkTime() {
-            return this.totalWorkTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setCallsAttendedTransferOut(Long callsAttendedTransferOut) {
-            this.callsAttendedTransferOut = callsAttendedTransferOut;
-            return this;
-        }
-        public Long getCallsAttendedTransferOut() {
-            return this.callsAttendedTransferOut;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setMaxWorkTime(Long maxWorkTime) {
-            this.maxWorkTime = maxWorkTime;
-            return this;
-        }
-        public Long getMaxWorkTime() {
-            return this.maxWorkTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setTotalDialingTime(Long totalDialingTime) {
-            this.totalDialingTime = totalDialingTime;
-            return this;
-        }
-        public Long getTotalDialingTime() {
-            return this.totalDialingTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setTotalHoldTime(Long totalHoldTime) {
-            this.totalHoldTime = totalHoldTime;
-            return this;
-        }
-        public Long getTotalHoldTime() {
-            return this.totalHoldTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setAverageWorkTime(Float averageWorkTime) {
-            this.averageWorkTime = averageWorkTime;
-            return this;
-        }
-        public Float getAverageWorkTime() {
-            return this.averageWorkTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setCallsBlindTransferIn(Long callsBlindTransferIn) {
-            this.callsBlindTransferIn = callsBlindTransferIn;
-            return this;
-        }
-        public Long getCallsBlindTransferIn() {
-            return this.callsBlindTransferIn;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setSatisfactionIndex(Float satisfactionIndex) {
-            this.satisfactionIndex = satisfactionIndex;
-            return this;
-        }
-        public Float getSatisfactionIndex() {
-            return this.satisfactionIndex;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setCallsRinged(Long callsRinged) {
-            this.callsRinged = callsRinged;
-            return this;
-        }
-        public Long getCallsRinged() {
-            return this.callsRinged;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setCallsAttendedTransferIn(Long callsAttendedTransferIn) {
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsAttendedTransferIn(Long callsAttendedTransferIn) {
             this.callsAttendedTransferIn = callsAttendedTransferIn;
             return this;
         }
@@ -761,7 +309,23 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.callsAttendedTransferIn;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setCallsBlindTransferOut(Long callsBlindTransferOut) {
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsAttendedTransferOut(Long callsAttendedTransferOut) {
+            this.callsAttendedTransferOut = callsAttendedTransferOut;
+            return this;
+        }
+        public Long getCallsAttendedTransferOut() {
+            return this.callsAttendedTransferOut;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsBlindTransferIn(Long callsBlindTransferIn) {
+            this.callsBlindTransferIn = callsBlindTransferIn;
+            return this;
+        }
+        public Long getCallsBlindTransferIn() {
+            return this.callsBlindTransferIn;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsBlindTransferOut(Long callsBlindTransferOut) {
             this.callsBlindTransferOut = callsBlindTransferOut;
             return this;
         }
@@ -769,23 +333,103 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.callsBlindTransferOut;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setTotalRingTime(Long totalRingTime) {
-            this.totalRingTime = totalRingTime;
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsHandled(Long callsHandled) {
+            this.callsHandled = callsHandled;
             return this;
         }
-        public Long getTotalRingTime() {
-            return this.totalRingTime;
+        public Long getCallsHandled() {
+            return this.callsHandled;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setMaxTalkTime(Long maxTalkTime) {
-            this.maxTalkTime = maxTalkTime;
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsHold(Long callsHold) {
+            this.callsHold = callsHold;
             return this;
         }
-        public Long getMaxTalkTime() {
-            return this.maxTalkTime;
+        public Long getCallsHold() {
+            return this.callsHold;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setMaxRingTime(Long maxRingTime) {
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsOffered(Long callsOffered) {
+            this.callsOffered = callsOffered;
+            return this;
+        }
+        public Long getCallsOffered() {
+            return this.callsOffered;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsOverflow(Long callsOverflow) {
+            this.callsOverflow = callsOverflow;
+            return this;
+        }
+        public Long getCallsOverflow() {
+            return this.callsOverflow;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsQueued(Long callsQueued) {
+            this.callsQueued = callsQueued;
+            return this;
+        }
+        public Long getCallsQueued() {
+            return this.callsQueued;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsRinged(Long callsRinged) {
+            this.callsRinged = callsRinged;
+            return this;
+        }
+        public Long getCallsRinged() {
+            return this.callsRinged;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsTimeout(Long callsTimeout) {
+            this.callsTimeout = callsTimeout;
+            return this;
+        }
+        public Long getCallsTimeout() {
+            return this.callsTimeout;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setHandleRate(Float handleRate) {
+            this.handleRate = handleRate;
+            return this;
+        }
+        public Float getHandleRate() {
+            return this.handleRate;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setMaxAbandonTime(Long maxAbandonTime) {
+            this.maxAbandonTime = maxAbandonTime;
+            return this;
+        }
+        public Long getMaxAbandonTime() {
+            return this.maxAbandonTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setMaxAbandonedInQueueTime(Long maxAbandonedInQueueTime) {
+            this.maxAbandonedInQueueTime = maxAbandonedInQueueTime;
+            return this;
+        }
+        public Long getMaxAbandonedInQueueTime() {
+            return this.maxAbandonedInQueueTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setMaxAbandonedInRingTime(Long maxAbandonedInRingTime) {
+            this.maxAbandonedInRingTime = maxAbandonedInRingTime;
+            return this;
+        }
+        public Long getMaxAbandonedInRingTime() {
+            return this.maxAbandonedInRingTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setMaxHoldTime(Long maxHoldTime) {
+            this.maxHoldTime = maxHoldTime;
+            return this;
+        }
+        public Long getMaxHoldTime() {
+            return this.maxHoldTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setMaxRingTime(Long maxRingTime) {
             this.maxRingTime = maxRingTime;
             return this;
         }
@@ -793,7 +437,111 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.maxRingTime;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setTotalTalkTime(Long totalTalkTime) {
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setMaxTalkTime(Long maxTalkTime) {
+            this.maxTalkTime = maxTalkTime;
+            return this;
+        }
+        public Long getMaxTalkTime() {
+            return this.maxTalkTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setMaxWaitTime(Long maxWaitTime) {
+            this.maxWaitTime = maxWaitTime;
+            return this;
+        }
+        public Long getMaxWaitTime() {
+            return this.maxWaitTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setMaxWorkTime(Long maxWorkTime) {
+            this.maxWorkTime = maxWorkTime;
+            return this;
+        }
+        public Long getMaxWorkTime() {
+            return this.maxWorkTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setSatisfactionIndex(Float satisfactionIndex) {
+            this.satisfactionIndex = satisfactionIndex;
+            return this;
+        }
+        public Float getSatisfactionIndex() {
+            return this.satisfactionIndex;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setSatisfactionRate(Float satisfactionRate) {
+            this.satisfactionRate = satisfactionRate;
+            return this;
+        }
+        public Float getSatisfactionRate() {
+            return this.satisfactionRate;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setSatisfactionSurveysOffered(Long satisfactionSurveysOffered) {
+            this.satisfactionSurveysOffered = satisfactionSurveysOffered;
+            return this;
+        }
+        public Long getSatisfactionSurveysOffered() {
+            return this.satisfactionSurveysOffered;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setSatisfactionSurveysResponded(Long satisfactionSurveysResponded) {
+            this.satisfactionSurveysResponded = satisfactionSurveysResponded;
+            return this;
+        }
+        public Long getSatisfactionSurveysResponded() {
+            return this.satisfactionSurveysResponded;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setServiceLevel20(Float serviceLevel20) {
+            this.serviceLevel20 = serviceLevel20;
+            return this;
+        }
+        public Float getServiceLevel20() {
+            return this.serviceLevel20;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalAbandonTime(Long totalAbandonTime) {
+            this.totalAbandonTime = totalAbandonTime;
+            return this;
+        }
+        public Long getTotalAbandonTime() {
+            return this.totalAbandonTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalAbandonedInQueueTime(Long totalAbandonedInQueueTime) {
+            this.totalAbandonedInQueueTime = totalAbandonedInQueueTime;
+            return this;
+        }
+        public Long getTotalAbandonedInQueueTime() {
+            return this.totalAbandonedInQueueTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalAbandonedInRingTime(Long totalAbandonedInRingTime) {
+            this.totalAbandonedInRingTime = totalAbandonedInRingTime;
+            return this;
+        }
+        public Long getTotalAbandonedInRingTime() {
+            return this.totalAbandonedInRingTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalHoldTime(Long totalHoldTime) {
+            this.totalHoldTime = totalHoldTime;
+            return this;
+        }
+        public Long getTotalHoldTime() {
+            return this.totalHoldTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalRingTime(Long totalRingTime) {
+            this.totalRingTime = totalRingTime;
+            return this;
+        }
+        public Long getTotalRingTime() {
+            return this.totalRingTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalTalkTime(Long totalTalkTime) {
             this.totalTalkTime = totalTalkTime;
             return this;
         }
@@ -801,12 +549,112 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.totalTalkTime;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setMaxDialingTime(Long maxDialingTime) {
-            this.maxDialingTime = maxDialingTime;
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalWaitTime(Long totalWaitTime) {
+            this.totalWaitTime = totalWaitTime;
             return this;
         }
-        public Long getMaxDialingTime() {
-            return this.maxDialingTime;
+        public Long getTotalWaitTime() {
+            return this.totalWaitTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalWorkTime(Long totalWorkTime) {
+            this.totalWorkTime = totalWorkTime;
+            return this;
+        }
+        public Long getTotalWorkTime() {
+            return this.totalWorkTime;
+        }
+
+    }
+
+    public static class ListHistoricalSkillGroupReportResponseBodyDataListOutbound extends TeaModel {
+        @NameInMap("AnswerRate")
+        public Float answerRate;
+
+        @NameInMap("AverageDialingTime")
+        public Float averageDialingTime;
+
+        @NameInMap("AverageHoldTime")
+        public Float averageHoldTime;
+
+        @NameInMap("AverageRingTime")
+        public Float averageRingTime;
+
+        @NameInMap("AverageTalkTime")
+        public Float averageTalkTime;
+
+        @NameInMap("AverageWorkTime")
+        public Float averageWorkTime;
+
+        @NameInMap("CallsAnswered")
+        public Long callsAnswered;
+
+        @NameInMap("CallsAttendedTransferIn")
+        public Long callsAttendedTransferIn;
+
+        @NameInMap("CallsAttendedTransferOut")
+        public Long callsAttendedTransferOut;
+
+        @NameInMap("CallsBlindTransferIn")
+        public Long callsBlindTransferIn;
+
+        @NameInMap("CallsBlindTransferOut")
+        public Long callsBlindTransferOut;
+
+        @NameInMap("CallsDialed")
+        public Long callsDialed;
+
+        @NameInMap("CallsHold")
+        public Long callsHold;
+
+        @NameInMap("CallsRinged")
+        public Long callsRinged;
+
+        @NameInMap("MaxDialingTime")
+        public Long maxDialingTime;
+
+        @NameInMap("MaxHoldTime")
+        public Long maxHoldTime;
+
+        @NameInMap("MaxRingTime")
+        public Long maxRingTime;
+
+        @NameInMap("MaxTalkTime")
+        public Long maxTalkTime;
+
+        @NameInMap("MaxWorkTime")
+        public Long maxWorkTime;
+
+        @NameInMap("SatisfactionIndex")
+        public Float satisfactionIndex;
+
+        @NameInMap("SatisfactionRate")
+        public Float satisfactionRate;
+
+        @NameInMap("SatisfactionSurveysOffered")
+        public Long satisfactionSurveysOffered;
+
+        @NameInMap("SatisfactionSurveysResponded")
+        public Long satisfactionSurveysResponded;
+
+        @NameInMap("TotalDialingTime")
+        public Long totalDialingTime;
+
+        @NameInMap("TotalHoldTime")
+        public Long totalHoldTime;
+
+        @NameInMap("TotalRingTime")
+        public Long totalRingTime;
+
+        @NameInMap("TotalTalkTime")
+        public Long totalTalkTime;
+
+        @NameInMap("TotalWorkTime")
+        public Long totalWorkTime;
+
+        public static ListHistoricalSkillGroupReportResponseBodyDataListOutbound build(java.util.Map<String, ?> map) throws Exception {
+            ListHistoricalSkillGroupReportResponseBodyDataListOutbound self = new ListHistoricalSkillGroupReportResponseBodyDataListOutbound();
+            return TeaModel.build(map, self);
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setAnswerRate(Float answerRate) {
@@ -817,12 +665,28 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.answerRate;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setMaxHoldTime(Long maxHoldTime) {
-            this.maxHoldTime = maxHoldTime;
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setAverageDialingTime(Float averageDialingTime) {
+            this.averageDialingTime = averageDialingTime;
             return this;
         }
-        public Long getMaxHoldTime() {
-            return this.maxHoldTime;
+        public Float getAverageDialingTime() {
+            return this.averageDialingTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setAverageHoldTime(Float averageHoldTime) {
+            this.averageHoldTime = averageHoldTime;
+            return this;
+        }
+        public Float getAverageHoldTime() {
+            return this.averageHoldTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setAverageRingTime(Float averageRingTime) {
+            this.averageRingTime = averageRingTime;
+            return this;
+        }
+        public Float getAverageRingTime() {
+            return this.averageRingTime;
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setAverageTalkTime(Float averageTalkTime) {
@@ -833,12 +697,60 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.averageTalkTime;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setSatisfactionRate(Float satisfactionRate) {
-            this.satisfactionRate = satisfactionRate;
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setAverageWorkTime(Float averageWorkTime) {
+            this.averageWorkTime = averageWorkTime;
             return this;
         }
-        public Float getSatisfactionRate() {
-            return this.satisfactionRate;
+        public Float getAverageWorkTime() {
+            return this.averageWorkTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setCallsAnswered(Long callsAnswered) {
+            this.callsAnswered = callsAnswered;
+            return this;
+        }
+        public Long getCallsAnswered() {
+            return this.callsAnswered;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setCallsAttendedTransferIn(Long callsAttendedTransferIn) {
+            this.callsAttendedTransferIn = callsAttendedTransferIn;
+            return this;
+        }
+        public Long getCallsAttendedTransferIn() {
+            return this.callsAttendedTransferIn;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setCallsAttendedTransferOut(Long callsAttendedTransferOut) {
+            this.callsAttendedTransferOut = callsAttendedTransferOut;
+            return this;
+        }
+        public Long getCallsAttendedTransferOut() {
+            return this.callsAttendedTransferOut;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setCallsBlindTransferIn(Long callsBlindTransferIn) {
+            this.callsBlindTransferIn = callsBlindTransferIn;
+            return this;
+        }
+        public Long getCallsBlindTransferIn() {
+            return this.callsBlindTransferIn;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setCallsBlindTransferOut(Long callsBlindTransferOut) {
+            this.callsBlindTransferOut = callsBlindTransferOut;
+            return this;
+        }
+        public Long getCallsBlindTransferOut() {
+            return this.callsBlindTransferOut;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setCallsDialed(Long callsDialed) {
+            this.callsDialed = callsDialed;
+            return this;
+        }
+        public Long getCallsDialed() {
+            return this.callsDialed;
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setCallsHold(Long callsHold) {
@@ -847,6 +759,70 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         }
         public Long getCallsHold() {
             return this.callsHold;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setCallsRinged(Long callsRinged) {
+            this.callsRinged = callsRinged;
+            return this;
+        }
+        public Long getCallsRinged() {
+            return this.callsRinged;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setMaxDialingTime(Long maxDialingTime) {
+            this.maxDialingTime = maxDialingTime;
+            return this;
+        }
+        public Long getMaxDialingTime() {
+            return this.maxDialingTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setMaxHoldTime(Long maxHoldTime) {
+            this.maxHoldTime = maxHoldTime;
+            return this;
+        }
+        public Long getMaxHoldTime() {
+            return this.maxHoldTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setMaxRingTime(Long maxRingTime) {
+            this.maxRingTime = maxRingTime;
+            return this;
+        }
+        public Long getMaxRingTime() {
+            return this.maxRingTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setMaxTalkTime(Long maxTalkTime) {
+            this.maxTalkTime = maxTalkTime;
+            return this;
+        }
+        public Long getMaxTalkTime() {
+            return this.maxTalkTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setMaxWorkTime(Long maxWorkTime) {
+            this.maxWorkTime = maxWorkTime;
+            return this;
+        }
+        public Long getMaxWorkTime() {
+            return this.maxWorkTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setSatisfactionIndex(Float satisfactionIndex) {
+            this.satisfactionIndex = satisfactionIndex;
+            return this;
+        }
+        public Float getSatisfactionIndex() {
+            return this.satisfactionIndex;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setSatisfactionRate(Float satisfactionRate) {
+            this.satisfactionRate = satisfactionRate;
+            return this;
+        }
+        public Float getSatisfactionRate() {
+            return this.satisfactionRate;
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setSatisfactionSurveysOffered(Long satisfactionSurveysOffered) {
@@ -865,97 +841,31 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.satisfactionSurveysResponded;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setAverageHoldTime(Float averageHoldTime) {
-            this.averageHoldTime = averageHoldTime;
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setTotalDialingTime(Long totalDialingTime) {
+            this.totalDialingTime = totalDialingTime;
             return this;
         }
-        public Float getAverageHoldTime() {
-            return this.averageHoldTime;
+        public Long getTotalDialingTime() {
+            return this.totalDialingTime;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setAverageDialingTime(Float averageDialingTime) {
-            this.averageDialingTime = averageDialingTime;
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setTotalHoldTime(Long totalHoldTime) {
+            this.totalHoldTime = totalHoldTime;
             return this;
         }
-        public Float getAverageDialingTime() {
-            return this.averageDialingTime;
+        public Long getTotalHoldTime() {
+            return this.totalHoldTime;
         }
 
-    }
-
-    public static class ListHistoricalSkillGroupReportResponseBodyDataListOverall extends TeaModel {
-        @NameInMap("TotalTalkTime")
-        public Long totalTalkTime;
-
-        @NameInMap("TotalLoggedInTime")
-        public Long totalLoggedInTime;
-
-        @NameInMap("OccupancyRate")
-        public Float occupancyRate;
-
-        @NameInMap("TotalWorkTime")
-        public Long totalWorkTime;
-
-        @NameInMap("MaxHoldTime")
-        public Long maxHoldTime;
-
-        @NameInMap("MaxWorkTime")
-        public Long maxWorkTime;
-
-        @NameInMap("AverageBreakTime")
-        public Float averageBreakTime;
-
-        @NameInMap("TotalHoldTime")
-        public Long totalHoldTime;
-
-        @NameInMap("SatisfactionRate")
-        public Float satisfactionRate;
-
-        @NameInMap("MaxBreakTime")
-        public Long maxBreakTime;
-
-        @NameInMap("AverageWorkTime")
-        public Float averageWorkTime;
-
-        @NameInMap("AverageTalkTime")
-        public Float averageTalkTime;
-
-        @NameInMap("SatisfactionIndex")
-        public Float satisfactionIndex;
-
-        @NameInMap("SatisfactionSurveysOffered")
-        public Long satisfactionSurveysOffered;
-
-        @NameInMap("SatisfactionSurveysResponded")
-        public Long satisfactionSurveysResponded;
-
-        @NameInMap("MaxReadyTime")
-        public Long maxReadyTime;
-
-        @NameInMap("AverageReadyTime")
-        public Float averageReadyTime;
-
-        @NameInMap("AverageHoldTime")
-        public Float averageHoldTime;
-
-        @NameInMap("TotalReadyTime")
-        public Long totalReadyTime;
-
-        @NameInMap("TotalBreakTime")
-        public Long totalBreakTime;
-
-        @NameInMap("MaxTalkTime")
-        public Long maxTalkTime;
-
-        @NameInMap("TotalCalls")
-        public Long totalCalls;
-
-        public static ListHistoricalSkillGroupReportResponseBodyDataListOverall build(java.util.Map<String, ?> map) throws Exception {
-            ListHistoricalSkillGroupReportResponseBodyDataListOverall self = new ListHistoricalSkillGroupReportResponseBodyDataListOverall();
-            return TeaModel.build(map, self);
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setTotalRingTime(Long totalRingTime) {
+            this.totalRingTime = totalRingTime;
+            return this;
+        }
+        public Long getTotalRingTime() {
+            return this.totalRingTime;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setTotalTalkTime(Long totalTalkTime) {
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setTotalTalkTime(Long totalTalkTime) {
             this.totalTalkTime = totalTalkTime;
             return this;
         }
@@ -963,23 +873,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.totalTalkTime;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setTotalLoggedInTime(Long totalLoggedInTime) {
-            this.totalLoggedInTime = totalLoggedInTime;
-            return this;
-        }
-        public Long getTotalLoggedInTime() {
-            return this.totalLoggedInTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setOccupancyRate(Float occupancyRate) {
-            this.occupancyRate = occupancyRate;
-            return this;
-        }
-        public Float getOccupancyRate() {
-            return this.occupancyRate;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setTotalWorkTime(Long totalWorkTime) {
+        public ListHistoricalSkillGroupReportResponseBodyDataListOutbound setTotalWorkTime(Long totalWorkTime) {
             this.totalWorkTime = totalWorkTime;
             return this;
         }
@@ -987,20 +881,78 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.totalWorkTime;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setMaxHoldTime(Long maxHoldTime) {
-            this.maxHoldTime = maxHoldTime;
-            return this;
-        }
-        public Long getMaxHoldTime() {
-            return this.maxHoldTime;
-        }
+    }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setMaxWorkTime(Long maxWorkTime) {
-            this.maxWorkTime = maxWorkTime;
-            return this;
-        }
-        public Long getMaxWorkTime() {
-            return this.maxWorkTime;
+    public static class ListHistoricalSkillGroupReportResponseBodyDataListOverall extends TeaModel {
+        @NameInMap("AverageBreakTime")
+        public Float averageBreakTime;
+
+        @NameInMap("AverageHoldTime")
+        public Float averageHoldTime;
+
+        @NameInMap("AverageReadyTime")
+        public Float averageReadyTime;
+
+        @NameInMap("AverageTalkTime")
+        public Float averageTalkTime;
+
+        @NameInMap("AverageWorkTime")
+        public Float averageWorkTime;
+
+        @NameInMap("MaxBreakTime")
+        public Long maxBreakTime;
+
+        @NameInMap("MaxHoldTime")
+        public Long maxHoldTime;
+
+        @NameInMap("MaxReadyTime")
+        public Long maxReadyTime;
+
+        @NameInMap("MaxTalkTime")
+        public Long maxTalkTime;
+
+        @NameInMap("MaxWorkTime")
+        public Long maxWorkTime;
+
+        @NameInMap("OccupancyRate")
+        public Float occupancyRate;
+
+        @NameInMap("SatisfactionIndex")
+        public Float satisfactionIndex;
+
+        @NameInMap("SatisfactionRate")
+        public Float satisfactionRate;
+
+        @NameInMap("SatisfactionSurveysOffered")
+        public Long satisfactionSurveysOffered;
+
+        @NameInMap("SatisfactionSurveysResponded")
+        public Long satisfactionSurveysResponded;
+
+        @NameInMap("TotalBreakTime")
+        public Long totalBreakTime;
+
+        @NameInMap("TotalCalls")
+        public Long totalCalls;
+
+        @NameInMap("TotalHoldTime")
+        public Long totalHoldTime;
+
+        @NameInMap("TotalLoggedInTime")
+        public Long totalLoggedInTime;
+
+        @NameInMap("TotalReadyTime")
+        public Long totalReadyTime;
+
+        @NameInMap("TotalTalkTime")
+        public Long totalTalkTime;
+
+        @NameInMap("TotalWorkTime")
+        public Long totalWorkTime;
+
+        public static ListHistoricalSkillGroupReportResponseBodyDataListOverall build(java.util.Map<String, ?> map) throws Exception {
+            ListHistoricalSkillGroupReportResponseBodyDataListOverall self = new ListHistoricalSkillGroupReportResponseBodyDataListOverall();
+            return TeaModel.build(map, self);
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataListOverall setAverageBreakTime(Float averageBreakTime) {
@@ -1011,36 +963,20 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.averageBreakTime;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setTotalHoldTime(Long totalHoldTime) {
-            this.totalHoldTime = totalHoldTime;
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setAverageHoldTime(Float averageHoldTime) {
+            this.averageHoldTime = averageHoldTime;
             return this;
         }
-        public Long getTotalHoldTime() {
-            return this.totalHoldTime;
+        public Float getAverageHoldTime() {
+            return this.averageHoldTime;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setSatisfactionRate(Float satisfactionRate) {
-            this.satisfactionRate = satisfactionRate;
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setAverageReadyTime(Float averageReadyTime) {
+            this.averageReadyTime = averageReadyTime;
             return this;
         }
-        public Float getSatisfactionRate() {
-            return this.satisfactionRate;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setMaxBreakTime(Long maxBreakTime) {
-            this.maxBreakTime = maxBreakTime;
-            return this;
-        }
-        public Long getMaxBreakTime() {
-            return this.maxBreakTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setAverageWorkTime(Float averageWorkTime) {
-            this.averageWorkTime = averageWorkTime;
-            return this;
-        }
-        public Float getAverageWorkTime() {
-            return this.averageWorkTime;
+        public Float getAverageReadyTime() {
+            return this.averageReadyTime;
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataListOverall setAverageTalkTime(Float averageTalkTime) {
@@ -1051,12 +987,76 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.averageTalkTime;
         }
 
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setAverageWorkTime(Float averageWorkTime) {
+            this.averageWorkTime = averageWorkTime;
+            return this;
+        }
+        public Float getAverageWorkTime() {
+            return this.averageWorkTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setMaxBreakTime(Long maxBreakTime) {
+            this.maxBreakTime = maxBreakTime;
+            return this;
+        }
+        public Long getMaxBreakTime() {
+            return this.maxBreakTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setMaxHoldTime(Long maxHoldTime) {
+            this.maxHoldTime = maxHoldTime;
+            return this;
+        }
+        public Long getMaxHoldTime() {
+            return this.maxHoldTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setMaxReadyTime(Long maxReadyTime) {
+            this.maxReadyTime = maxReadyTime;
+            return this;
+        }
+        public Long getMaxReadyTime() {
+            return this.maxReadyTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setMaxTalkTime(Long maxTalkTime) {
+            this.maxTalkTime = maxTalkTime;
+            return this;
+        }
+        public Long getMaxTalkTime() {
+            return this.maxTalkTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setMaxWorkTime(Long maxWorkTime) {
+            this.maxWorkTime = maxWorkTime;
+            return this;
+        }
+        public Long getMaxWorkTime() {
+            return this.maxWorkTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setOccupancyRate(Float occupancyRate) {
+            this.occupancyRate = occupancyRate;
+            return this;
+        }
+        public Float getOccupancyRate() {
+            return this.occupancyRate;
+        }
+
         public ListHistoricalSkillGroupReportResponseBodyDataListOverall setSatisfactionIndex(Float satisfactionIndex) {
             this.satisfactionIndex = satisfactionIndex;
             return this;
         }
         public Float getSatisfactionIndex() {
             return this.satisfactionIndex;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setSatisfactionRate(Float satisfactionRate) {
+            this.satisfactionRate = satisfactionRate;
+            return this;
+        }
+        public Float getSatisfactionRate() {
+            return this.satisfactionRate;
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataListOverall setSatisfactionSurveysOffered(Long satisfactionSurveysOffered) {
@@ -1075,52 +1075,12 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.satisfactionSurveysResponded;
         }
 
-        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setMaxReadyTime(Long maxReadyTime) {
-            this.maxReadyTime = maxReadyTime;
-            return this;
-        }
-        public Long getMaxReadyTime() {
-            return this.maxReadyTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setAverageReadyTime(Float averageReadyTime) {
-            this.averageReadyTime = averageReadyTime;
-            return this;
-        }
-        public Float getAverageReadyTime() {
-            return this.averageReadyTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setAverageHoldTime(Float averageHoldTime) {
-            this.averageHoldTime = averageHoldTime;
-            return this;
-        }
-        public Float getAverageHoldTime() {
-            return this.averageHoldTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setTotalReadyTime(Long totalReadyTime) {
-            this.totalReadyTime = totalReadyTime;
-            return this;
-        }
-        public Long getTotalReadyTime() {
-            return this.totalReadyTime;
-        }
-
         public ListHistoricalSkillGroupReportResponseBodyDataListOverall setTotalBreakTime(Long totalBreakTime) {
             this.totalBreakTime = totalBreakTime;
             return this;
         }
         public Long getTotalBreakTime() {
             return this.totalBreakTime;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setMaxTalkTime(Long maxTalkTime) {
-            this.maxTalkTime = maxTalkTime;
-            return this;
-        }
-        public Long getMaxTalkTime() {
-            return this.maxTalkTime;
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataListOverall setTotalCalls(Long totalCalls) {
@@ -1131,15 +1091,49 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.totalCalls;
         }
 
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setTotalHoldTime(Long totalHoldTime) {
+            this.totalHoldTime = totalHoldTime;
+            return this;
+        }
+        public Long getTotalHoldTime() {
+            return this.totalHoldTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setTotalLoggedInTime(Long totalLoggedInTime) {
+            this.totalLoggedInTime = totalLoggedInTime;
+            return this;
+        }
+        public Long getTotalLoggedInTime() {
+            return this.totalLoggedInTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setTotalReadyTime(Long totalReadyTime) {
+            this.totalReadyTime = totalReadyTime;
+            return this;
+        }
+        public Long getTotalReadyTime() {
+            return this.totalReadyTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setTotalTalkTime(Long totalTalkTime) {
+            this.totalTalkTime = totalTalkTime;
+            return this;
+        }
+        public Long getTotalTalkTime() {
+            return this.totalTalkTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setTotalWorkTime(Long totalWorkTime) {
+            this.totalWorkTime = totalWorkTime;
+            return this;
+        }
+        public Long getTotalWorkTime() {
+            return this.totalWorkTime;
+        }
+
     }
 
     public static class ListHistoricalSkillGroupReportResponseBodyDataList extends TeaModel {
-        @NameInMap("SkillGroupName")
-        public String skillGroupName;
-
-        @NameInMap("SkillGroupId")
-        public String skillGroupId;
-
         @NameInMap("Inbound")
         public ListHistoricalSkillGroupReportResponseBodyDataListInbound inbound;
 
@@ -1149,25 +1143,15 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         @NameInMap("Overall")
         public ListHistoricalSkillGroupReportResponseBodyDataListOverall overall;
 
+        @NameInMap("SkillGroupId")
+        public String skillGroupId;
+
+        @NameInMap("SkillGroupName")
+        public String skillGroupName;
+
         public static ListHistoricalSkillGroupReportResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListHistoricalSkillGroupReportResponseBodyDataList self = new ListHistoricalSkillGroupReportResponseBodyDataList();
             return TeaModel.build(map, self);
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataList setSkillGroupName(String skillGroupName) {
-            this.skillGroupName = skillGroupName;
-            return this;
-        }
-        public String getSkillGroupName() {
-            return this.skillGroupName;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyDataList setSkillGroupId(String skillGroupId) {
-            this.skillGroupId = skillGroupId;
-            return this;
-        }
-        public String getSkillGroupId() {
-            return this.skillGroupId;
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataList setInbound(ListHistoricalSkillGroupReportResponseBodyDataListInbound inbound) {
@@ -1194,9 +1178,28 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.overall;
         }
 
+        public ListHistoricalSkillGroupReportResponseBodyDataList setSkillGroupId(String skillGroupId) {
+            this.skillGroupId = skillGroupId;
+            return this;
+        }
+        public String getSkillGroupId() {
+            return this.skillGroupId;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataList setSkillGroupName(String skillGroupName) {
+            this.skillGroupName = skillGroupName;
+            return this;
+        }
+        public String getSkillGroupName() {
+            return this.skillGroupName;
+        }
+
     }
 
     public static class ListHistoricalSkillGroupReportResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public java.util.List<ListHistoricalSkillGroupReportResponseBodyDataList> list;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -1206,12 +1209,17 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("List")
-        public java.util.List<ListHistoricalSkillGroupReportResponseBodyDataList> list;
-
         public static ListHistoricalSkillGroupReportResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListHistoricalSkillGroupReportResponseBodyData self = new ListHistoricalSkillGroupReportResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyData setList(java.util.List<ListHistoricalSkillGroupReportResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListHistoricalSkillGroupReportResponseBodyDataList> getList() {
+            return this.list;
         }
 
         public ListHistoricalSkillGroupReportResponseBodyData setPageNumber(Integer pageNumber) {
@@ -1236,14 +1244,6 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListHistoricalSkillGroupReportResponseBodyData setList(java.util.List<ListHistoricalSkillGroupReportResponseBodyDataList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<ListHistoricalSkillGroupReportResponseBodyDataList> getList() {
-            return this.list;
         }
 
     }

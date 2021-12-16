@@ -7,20 +7,20 @@ public class TakeBreakResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public TakeBreakResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
 
-    @NameInMap("Data")
-    public TakeBreakResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static TakeBreakResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TakeBreakResponseBody self = new TakeBreakResponseBody();
@@ -33,6 +33,14 @@ public class TakeBreakResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public TakeBreakResponseBody setData(TakeBreakResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public TakeBreakResponseBodyData getData() {
+        return this.data;
     }
 
     public TakeBreakResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,14 +59,6 @@ public class TakeBreakResponseBody extends TeaModel {
         return this.message;
     }
 
-    public TakeBreakResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public TakeBreakResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
@@ -67,57 +67,73 @@ public class TakeBreakResponseBody extends TeaModel {
         return this.params;
     }
 
-    public TakeBreakResponseBody setData(TakeBreakResponseBodyData data) {
-        this.data = data;
+    public TakeBreakResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public TakeBreakResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class TakeBreakResponseBodyData extends TeaModel {
+        @NameInMap("BreakCode")
+        public String breakCode;
+
+        @NameInMap("DeviceId")
+        public String deviceId;
+
         @NameInMap("Extension")
         public String extension;
 
         @NameInMap("Heartbeat")
         public Long heartbeat;
 
-        @NameInMap("WorkMode")
-        public String workMode;
-
-        @NameInMap("DeviceId")
-        public String deviceId;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("Reserved")
-        public Long reserved;
-
-        @NameInMap("BreakCode")
-        public String breakCode;
-
         @NameInMap("InstanceId")
         public String instanceId;
-
-        @NameInMap("OutboundScenario")
-        public Boolean outboundScenario;
-
-        @NameInMap("Mobile")
-        public String mobile;
 
         @NameInMap("JobId")
         public String jobId;
 
-        @NameInMap("UserState")
-        public String userState;
+        @NameInMap("Mobile")
+        public String mobile;
+
+        @NameInMap("OutboundScenario")
+        public Boolean outboundScenario;
+
+        @NameInMap("Reserved")
+        public Long reserved;
 
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserState")
+        public String userState;
+
+        @NameInMap("WorkMode")
+        public String workMode;
+
         public static TakeBreakResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             TakeBreakResponseBodyData self = new TakeBreakResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public TakeBreakResponseBodyData setBreakCode(String breakCode) {
+            this.breakCode = breakCode;
+            return this;
+        }
+        public String getBreakCode() {
+            return this.breakCode;
+        }
+
+        public TakeBreakResponseBodyData setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
         }
 
         public TakeBreakResponseBodyData setExtension(String extension) {
@@ -136,68 +152,12 @@ public class TakeBreakResponseBody extends TeaModel {
             return this.heartbeat;
         }
 
-        public TakeBreakResponseBodyData setWorkMode(String workMode) {
-            this.workMode = workMode;
-            return this;
-        }
-        public String getWorkMode() {
-            return this.workMode;
-        }
-
-        public TakeBreakResponseBodyData setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
-        }
-
-        public TakeBreakResponseBodyData setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public TakeBreakResponseBodyData setReserved(Long reserved) {
-            this.reserved = reserved;
-            return this;
-        }
-        public Long getReserved() {
-            return this.reserved;
-        }
-
-        public TakeBreakResponseBodyData setBreakCode(String breakCode) {
-            this.breakCode = breakCode;
-            return this;
-        }
-        public String getBreakCode() {
-            return this.breakCode;
-        }
-
         public TakeBreakResponseBodyData setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
-        }
-
-        public TakeBreakResponseBodyData setOutboundScenario(Boolean outboundScenario) {
-            this.outboundScenario = outboundScenario;
-            return this;
-        }
-        public Boolean getOutboundScenario() {
-            return this.outboundScenario;
-        }
-
-        public TakeBreakResponseBodyData setMobile(String mobile) {
-            this.mobile = mobile;
-            return this;
-        }
-        public String getMobile() {
-            return this.mobile;
         }
 
         public TakeBreakResponseBodyData setJobId(String jobId) {
@@ -208,12 +168,28 @@ public class TakeBreakResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public TakeBreakResponseBodyData setUserState(String userState) {
-            this.userState = userState;
+        public TakeBreakResponseBodyData setMobile(String mobile) {
+            this.mobile = mobile;
             return this;
         }
-        public String getUserState() {
-            return this.userState;
+        public String getMobile() {
+            return this.mobile;
+        }
+
+        public TakeBreakResponseBodyData setOutboundScenario(Boolean outboundScenario) {
+            this.outboundScenario = outboundScenario;
+            return this;
+        }
+        public Boolean getOutboundScenario() {
+            return this.outboundScenario;
+        }
+
+        public TakeBreakResponseBodyData setReserved(Long reserved) {
+            this.reserved = reserved;
+            return this;
+        }
+        public Long getReserved() {
+            return this.reserved;
         }
 
         public TakeBreakResponseBodyData setSignedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
@@ -222,6 +198,30 @@ public class TakeBreakResponseBody extends TeaModel {
         }
         public java.util.List<String> getSignedSkillGroupIdList() {
             return this.signedSkillGroupIdList;
+        }
+
+        public TakeBreakResponseBodyData setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public TakeBreakResponseBodyData setUserState(String userState) {
+            this.userState = userState;
+            return this;
+        }
+        public String getUserState() {
+            return this.userState;
+        }
+
+        public TakeBreakResponseBodyData setWorkMode(String workMode) {
+            this.workMode = workMode;
+            return this;
+        }
+        public String getWorkMode() {
+            return this.workMode;
         }
 
     }

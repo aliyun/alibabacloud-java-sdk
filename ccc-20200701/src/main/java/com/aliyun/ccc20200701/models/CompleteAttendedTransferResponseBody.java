@@ -7,20 +7,20 @@ public class CompleteAttendedTransferResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public CompleteAttendedTransferResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
 
-    @NameInMap("Data")
-    public CompleteAttendedTransferResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CompleteAttendedTransferResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CompleteAttendedTransferResponseBody self = new CompleteAttendedTransferResponseBody();
@@ -33,6 +33,14 @@ public class CompleteAttendedTransferResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CompleteAttendedTransferResponseBody setData(CompleteAttendedTransferResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CompleteAttendedTransferResponseBodyData getData() {
+        return this.data;
     }
 
     public CompleteAttendedTransferResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,14 +59,6 @@ public class CompleteAttendedTransferResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CompleteAttendedTransferResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CompleteAttendedTransferResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
@@ -67,20 +67,26 @@ public class CompleteAttendedTransferResponseBody extends TeaModel {
         return this.params;
     }
 
-    public CompleteAttendedTransferResponseBody setData(CompleteAttendedTransferResponseBodyData data) {
-        this.data = data;
+    public CompleteAttendedTransferResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public CompleteAttendedTransferResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class CompleteAttendedTransferResponseBodyDataCallContextChannelContexts extends TeaModel {
-        @NameInMap("Index")
-        public Integer index;
+        @NameInMap("AssociatedData")
+        public java.util.Map<String, ?> associatedData;
 
-        @NameInMap("ReleaseInitiator")
-        public String releaseInitiator;
+        @NameInMap("CallType")
+        public String callType;
+
+        @NameInMap("ChannelFlags")
+        public String channelFlags;
+
+        @NameInMap("ChannelId")
+        public String channelId;
 
         @NameInMap("ChannelState")
         public String channelState;
@@ -88,11 +94,20 @@ public class CompleteAttendedTransferResponseBody extends TeaModel {
         @NameInMap("Destination")
         public String destination;
 
-        @NameInMap("UserId")
-        public String userId;
+        @NameInMap("Index")
+        public Integer index;
 
-        @NameInMap("ChannelFlags")
-        public String channelFlags;
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("Originator")
+        public String originator;
+
+        @NameInMap("ReleaseInitiator")
+        public String releaseInitiator;
+
+        @NameInMap("ReleaseReason")
+        public String releaseReason;
 
         @NameInMap("SkillGroupId")
         public String skillGroupId;
@@ -100,46 +115,47 @@ public class CompleteAttendedTransferResponseBody extends TeaModel {
         @NameInMap("Timestamp")
         public Long timestamp;
 
-        @NameInMap("AssociatedData")
-        public java.util.Map<String, ?> associatedData;
-
-        @NameInMap("ReleaseReason")
-        public String releaseReason;
-
-        @NameInMap("CallType")
-        public String callType;
-
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("ChannelId")
-        public String channelId;
-
         @NameInMap("UserExtension")
         public String userExtension;
 
-        @NameInMap("Originator")
-        public String originator;
+        @NameInMap("UserId")
+        public String userId;
 
         public static CompleteAttendedTransferResponseBodyDataCallContextChannelContexts build(java.util.Map<String, ?> map) throws Exception {
             CompleteAttendedTransferResponseBodyDataCallContextChannelContexts self = new CompleteAttendedTransferResponseBodyDataCallContextChannelContexts();
             return TeaModel.build(map, self);
         }
 
-        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setIndex(Integer index) {
-            this.index = index;
+        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
+            this.associatedData = associatedData;
             return this;
         }
-        public Integer getIndex() {
-            return this.index;
+        public java.util.Map<String, ?> getAssociatedData() {
+            return this.associatedData;
         }
 
-        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setReleaseInitiator(String releaseInitiator) {
-            this.releaseInitiator = releaseInitiator;
+        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setCallType(String callType) {
+            this.callType = callType;
             return this;
         }
-        public String getReleaseInitiator() {
-            return this.releaseInitiator;
+        public String getCallType() {
+            return this.callType;
+        }
+
+        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setChannelFlags(String channelFlags) {
+            this.channelFlags = channelFlags;
+            return this;
+        }
+        public String getChannelFlags() {
+            return this.channelFlags;
+        }
+
+        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setChannelId(String channelId) {
+            this.channelId = channelId;
+            return this;
+        }
+        public String getChannelId() {
+            return this.channelId;
         }
 
         public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setChannelState(String channelState) {
@@ -158,20 +174,44 @@ public class CompleteAttendedTransferResponseBody extends TeaModel {
             return this.destination;
         }
 
-        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setUserId(String userId) {
-            this.userId = userId;
+        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setIndex(Integer index) {
+            this.index = index;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public Integer getIndex() {
+            return this.index;
         }
 
-        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setChannelFlags(String channelFlags) {
-            this.channelFlags = channelFlags;
+        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setJobId(String jobId) {
+            this.jobId = jobId;
             return this;
         }
-        public String getChannelFlags() {
-            return this.channelFlags;
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setOriginator(String originator) {
+            this.originator = originator;
+            return this;
+        }
+        public String getOriginator() {
+            return this.originator;
+        }
+
+        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setReleaseInitiator(String releaseInitiator) {
+            this.releaseInitiator = releaseInitiator;
+            return this;
+        }
+        public String getReleaseInitiator() {
+            return this.releaseInitiator;
+        }
+
+        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setReleaseReason(String releaseReason) {
+            this.releaseReason = releaseReason;
+            return this;
+        }
+        public String getReleaseReason() {
+            return this.releaseReason;
         }
 
         public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setSkillGroupId(String skillGroupId) {
@@ -190,46 +230,6 @@ public class CompleteAttendedTransferResponseBody extends TeaModel {
             return this.timestamp;
         }
 
-        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
-            this.associatedData = associatedData;
-            return this;
-        }
-        public java.util.Map<String, ?> getAssociatedData() {
-            return this.associatedData;
-        }
-
-        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setReleaseReason(String releaseReason) {
-            this.releaseReason = releaseReason;
-            return this;
-        }
-        public String getReleaseReason() {
-            return this.releaseReason;
-        }
-
-        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setCallType(String callType) {
-            this.callType = callType;
-            return this;
-        }
-        public String getCallType() {
-            return this.callType;
-        }
-
-        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setChannelId(String channelId) {
-            this.channelId = channelId;
-            return this;
-        }
-        public String getChannelId() {
-            return this.channelId;
-        }
-
         public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setUserExtension(String userExtension) {
             this.userExtension = userExtension;
             return this;
@@ -238,12 +238,12 @@ public class CompleteAttendedTransferResponseBody extends TeaModel {
             return this.userExtension;
         }
 
-        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setOriginator(String originator) {
-            this.originator = originator;
+        public CompleteAttendedTransferResponseBodyDataCallContextChannelContexts setUserId(String userId) {
+            this.userId = userId;
             return this;
         }
-        public String getOriginator() {
-            return this.originator;
+        public String getUserId() {
+            return this.userId;
         }
 
     }
@@ -252,14 +252,14 @@ public class CompleteAttendedTransferResponseBody extends TeaModel {
         @NameInMap("CallType")
         public String callType;
 
+        @NameInMap("ChannelContexts")
+        public java.util.List<CompleteAttendedTransferResponseBodyDataCallContextChannelContexts> channelContexts;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("JobId")
         public String jobId;
-
-        @NameInMap("ChannelContexts")
-        public java.util.List<CompleteAttendedTransferResponseBodyDataCallContextChannelContexts> channelContexts;
 
         public static CompleteAttendedTransferResponseBodyDataCallContext build(java.util.Map<String, ?> map) throws Exception {
             CompleteAttendedTransferResponseBodyDataCallContext self = new CompleteAttendedTransferResponseBodyDataCallContext();
@@ -272,6 +272,14 @@ public class CompleteAttendedTransferResponseBody extends TeaModel {
         }
         public String getCallType() {
             return this.callType;
+        }
+
+        public CompleteAttendedTransferResponseBodyDataCallContext setChannelContexts(java.util.List<CompleteAttendedTransferResponseBodyDataCallContextChannelContexts> channelContexts) {
+            this.channelContexts = channelContexts;
+            return this;
+        }
+        public java.util.List<CompleteAttendedTransferResponseBodyDataCallContextChannelContexts> getChannelContexts() {
+            return this.channelContexts;
         }
 
         public CompleteAttendedTransferResponseBodyDataCallContext setInstanceId(String instanceId) {
@@ -290,59 +298,67 @@ public class CompleteAttendedTransferResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public CompleteAttendedTransferResponseBodyDataCallContext setChannelContexts(java.util.List<CompleteAttendedTransferResponseBodyDataCallContextChannelContexts> channelContexts) {
-            this.channelContexts = channelContexts;
-            return this;
-        }
-        public java.util.List<CompleteAttendedTransferResponseBodyDataCallContextChannelContexts> getChannelContexts() {
-            return this.channelContexts;
-        }
-
     }
 
     public static class CompleteAttendedTransferResponseBodyDataUserContext extends TeaModel {
+        @NameInMap("BreakCode")
+        public String breakCode;
+
+        @NameInMap("DeviceId")
+        public String deviceId;
+
         @NameInMap("Extension")
         public String extension;
 
         @NameInMap("Heartbeat")
         public Long heartbeat;
 
-        @NameInMap("WorkMode")
-        public String workMode;
-
-        @NameInMap("DeviceId")
-        public String deviceId;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("Reserved")
-        public Long reserved;
-
-        @NameInMap("BreakCode")
-        public String breakCode;
-
         @NameInMap("InstanceId")
         public String instanceId;
-
-        @NameInMap("OutboundScenario")
-        public Boolean outboundScenario;
-
-        @NameInMap("Mobile")
-        public String mobile;
 
         @NameInMap("JobId")
         public String jobId;
 
-        @NameInMap("UserState")
-        public String userState;
+        @NameInMap("Mobile")
+        public String mobile;
+
+        @NameInMap("OutboundScenario")
+        public Boolean outboundScenario;
+
+        @NameInMap("Reserved")
+        public Long reserved;
 
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserState")
+        public String userState;
+
+        @NameInMap("WorkMode")
+        public String workMode;
+
         public static CompleteAttendedTransferResponseBodyDataUserContext build(java.util.Map<String, ?> map) throws Exception {
             CompleteAttendedTransferResponseBodyDataUserContext self = new CompleteAttendedTransferResponseBodyDataUserContext();
             return TeaModel.build(map, self);
+        }
+
+        public CompleteAttendedTransferResponseBodyDataUserContext setBreakCode(String breakCode) {
+            this.breakCode = breakCode;
+            return this;
+        }
+        public String getBreakCode() {
+            return this.breakCode;
+        }
+
+        public CompleteAttendedTransferResponseBodyDataUserContext setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
         }
 
         public CompleteAttendedTransferResponseBodyDataUserContext setExtension(String extension) {
@@ -361,68 +377,12 @@ public class CompleteAttendedTransferResponseBody extends TeaModel {
             return this.heartbeat;
         }
 
-        public CompleteAttendedTransferResponseBodyDataUserContext setWorkMode(String workMode) {
-            this.workMode = workMode;
-            return this;
-        }
-        public String getWorkMode() {
-            return this.workMode;
-        }
-
-        public CompleteAttendedTransferResponseBodyDataUserContext setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
-        }
-
-        public CompleteAttendedTransferResponseBodyDataUserContext setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public CompleteAttendedTransferResponseBodyDataUserContext setReserved(Long reserved) {
-            this.reserved = reserved;
-            return this;
-        }
-        public Long getReserved() {
-            return this.reserved;
-        }
-
-        public CompleteAttendedTransferResponseBodyDataUserContext setBreakCode(String breakCode) {
-            this.breakCode = breakCode;
-            return this;
-        }
-        public String getBreakCode() {
-            return this.breakCode;
-        }
-
         public CompleteAttendedTransferResponseBodyDataUserContext setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
-        }
-
-        public CompleteAttendedTransferResponseBodyDataUserContext setOutboundScenario(Boolean outboundScenario) {
-            this.outboundScenario = outboundScenario;
-            return this;
-        }
-        public Boolean getOutboundScenario() {
-            return this.outboundScenario;
-        }
-
-        public CompleteAttendedTransferResponseBodyDataUserContext setMobile(String mobile) {
-            this.mobile = mobile;
-            return this;
-        }
-        public String getMobile() {
-            return this.mobile;
         }
 
         public CompleteAttendedTransferResponseBodyDataUserContext setJobId(String jobId) {
@@ -433,12 +393,28 @@ public class CompleteAttendedTransferResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public CompleteAttendedTransferResponseBodyDataUserContext setUserState(String userState) {
-            this.userState = userState;
+        public CompleteAttendedTransferResponseBodyDataUserContext setMobile(String mobile) {
+            this.mobile = mobile;
             return this;
         }
-        public String getUserState() {
-            return this.userState;
+        public String getMobile() {
+            return this.mobile;
+        }
+
+        public CompleteAttendedTransferResponseBodyDataUserContext setOutboundScenario(Boolean outboundScenario) {
+            this.outboundScenario = outboundScenario;
+            return this;
+        }
+        public Boolean getOutboundScenario() {
+            return this.outboundScenario;
+        }
+
+        public CompleteAttendedTransferResponseBodyDataUserContext setReserved(Long reserved) {
+            this.reserved = reserved;
+            return this;
+        }
+        public Long getReserved() {
+            return this.reserved;
         }
 
         public CompleteAttendedTransferResponseBodyDataUserContext setSignedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
@@ -449,14 +425,38 @@ public class CompleteAttendedTransferResponseBody extends TeaModel {
             return this.signedSkillGroupIdList;
         }
 
+        public CompleteAttendedTransferResponseBodyDataUserContext setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public CompleteAttendedTransferResponseBodyDataUserContext setUserState(String userState) {
+            this.userState = userState;
+            return this;
+        }
+        public String getUserState() {
+            return this.userState;
+        }
+
+        public CompleteAttendedTransferResponseBodyDataUserContext setWorkMode(String workMode) {
+            this.workMode = workMode;
+            return this;
+        }
+        public String getWorkMode() {
+            return this.workMode;
+        }
+
     }
 
     public static class CompleteAttendedTransferResponseBodyData extends TeaModel {
-        @NameInMap("ContextId")
-        public Long contextId;
-
         @NameInMap("CallContext")
         public CompleteAttendedTransferResponseBodyDataCallContext callContext;
+
+        @NameInMap("ContextId")
+        public Long contextId;
 
         @NameInMap("UserContext")
         public CompleteAttendedTransferResponseBodyDataUserContext userContext;
@@ -466,20 +466,20 @@ public class CompleteAttendedTransferResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CompleteAttendedTransferResponseBodyData setContextId(Long contextId) {
-            this.contextId = contextId;
-            return this;
-        }
-        public Long getContextId() {
-            return this.contextId;
-        }
-
         public CompleteAttendedTransferResponseBodyData setCallContext(CompleteAttendedTransferResponseBodyDataCallContext callContext) {
             this.callContext = callContext;
             return this;
         }
         public CompleteAttendedTransferResponseBodyDataCallContext getCallContext() {
             return this.callContext;
+        }
+
+        public CompleteAttendedTransferResponseBodyData setContextId(Long contextId) {
+            this.contextId = contextId;
+            return this;
+        }
+        public Long getContextId() {
+            return this.contextId;
         }
 
         public CompleteAttendedTransferResponseBodyData setUserContext(CompleteAttendedTransferResponseBodyDataUserContext userContext) {

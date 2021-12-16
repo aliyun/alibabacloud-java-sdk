@@ -7,6 +7,9 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ListUserLevelsOfSkillGroupResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ListUserLevelsOfSkillGroupResponseBodyData data;
 
     public static ListUserLevelsOfSkillGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListUserLevelsOfSkillGroupResponseBody self = new ListUserLevelsOfSkillGroupResponseBody();
@@ -30,6 +30,14 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListUserLevelsOfSkillGroupResponseBody setData(ListUserLevelsOfSkillGroupResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListUserLevelsOfSkillGroupResponseBodyData getData() {
+        return this.data;
     }
 
     public ListUserLevelsOfSkillGroupResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,26 +64,18 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListUserLevelsOfSkillGroupResponseBody setData(ListUserLevelsOfSkillGroupResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListUserLevelsOfSkillGroupResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListUserLevelsOfSkillGroupResponseBodyDataList extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
-        @NameInMap("SkillLevel")
-        public Integer skillLevel;
-
         @NameInMap("LoginName")
         public String loginName;
 
-        @NameInMap("UserId")
-        public String userId;
+        @NameInMap("RoleId")
+        public String roleId;
+
+        @NameInMap("RoleName")
+        public String roleName;
 
         @NameInMap("SkillGroupId")
         public String skillGroupId;
@@ -83,11 +83,11 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         @NameInMap("SkillGroupName")
         public String skillGroupName;
 
-        @NameInMap("RoleName")
-        public String roleName;
+        @NameInMap("SkillLevel")
+        public Integer skillLevel;
 
-        @NameInMap("RoleId")
-        public String roleId;
+        @NameInMap("UserId")
+        public String userId;
 
         public static ListUserLevelsOfSkillGroupResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListUserLevelsOfSkillGroupResponseBodyDataList self = new ListUserLevelsOfSkillGroupResponseBodyDataList();
@@ -102,14 +102,6 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             return this.displayName;
         }
 
-        public ListUserLevelsOfSkillGroupResponseBodyDataList setSkillLevel(Integer skillLevel) {
-            this.skillLevel = skillLevel;
-            return this;
-        }
-        public Integer getSkillLevel() {
-            return this.skillLevel;
-        }
-
         public ListUserLevelsOfSkillGroupResponseBodyDataList setLoginName(String loginName) {
             this.loginName = loginName;
             return this;
@@ -118,12 +110,20 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             return this.loginName;
         }
 
-        public ListUserLevelsOfSkillGroupResponseBodyDataList setUserId(String userId) {
-            this.userId = userId;
+        public ListUserLevelsOfSkillGroupResponseBodyDataList setRoleId(String roleId) {
+            this.roleId = roleId;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public String getRoleId() {
+            return this.roleId;
+        }
+
+        public ListUserLevelsOfSkillGroupResponseBodyDataList setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
         }
 
         public ListUserLevelsOfSkillGroupResponseBodyDataList setSkillGroupId(String skillGroupId) {
@@ -142,25 +142,28 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             return this.skillGroupName;
         }
 
-        public ListUserLevelsOfSkillGroupResponseBodyDataList setRoleName(String roleName) {
-            this.roleName = roleName;
+        public ListUserLevelsOfSkillGroupResponseBodyDataList setSkillLevel(Integer skillLevel) {
+            this.skillLevel = skillLevel;
             return this;
         }
-        public String getRoleName() {
-            return this.roleName;
+        public Integer getSkillLevel() {
+            return this.skillLevel;
         }
 
-        public ListUserLevelsOfSkillGroupResponseBodyDataList setRoleId(String roleId) {
-            this.roleId = roleId;
+        public ListUserLevelsOfSkillGroupResponseBodyDataList setUserId(String userId) {
+            this.userId = userId;
             return this;
         }
-        public String getRoleId() {
-            return this.roleId;
+        public String getUserId() {
+            return this.userId;
         }
 
     }
 
     public static class ListUserLevelsOfSkillGroupResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public java.util.List<ListUserLevelsOfSkillGroupResponseBodyDataList> list;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -170,12 +173,17 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("List")
-        public java.util.List<ListUserLevelsOfSkillGroupResponseBodyDataList> list;
-
         public static ListUserLevelsOfSkillGroupResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListUserLevelsOfSkillGroupResponseBodyData self = new ListUserLevelsOfSkillGroupResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListUserLevelsOfSkillGroupResponseBodyData setList(java.util.List<ListUserLevelsOfSkillGroupResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListUserLevelsOfSkillGroupResponseBodyDataList> getList() {
+            return this.list;
         }
 
         public ListUserLevelsOfSkillGroupResponseBodyData setPageNumber(Integer pageNumber) {
@@ -200,14 +208,6 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListUserLevelsOfSkillGroupResponseBodyData setList(java.util.List<ListUserLevelsOfSkillGroupResponseBodyDataList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<ListUserLevelsOfSkillGroupResponseBodyDataList> getList() {
-            return this.list;
         }
 
     }

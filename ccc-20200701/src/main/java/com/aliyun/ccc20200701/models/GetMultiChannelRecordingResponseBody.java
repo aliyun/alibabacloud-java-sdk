@@ -7,6 +7,9 @@ public class GetMultiChannelRecordingResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetMultiChannelRecordingResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class GetMultiChannelRecordingResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetMultiChannelRecordingResponseBodyData data;
 
     public static GetMultiChannelRecordingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMultiChannelRecordingResponseBody self = new GetMultiChannelRecordingResponseBody();
@@ -30,6 +30,14 @@ public class GetMultiChannelRecordingResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetMultiChannelRecordingResponseBody setData(GetMultiChannelRecordingResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetMultiChannelRecordingResponseBodyData getData() {
+        return this.data;
     }
 
     public GetMultiChannelRecordingResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,32 +64,16 @@ public class GetMultiChannelRecordingResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetMultiChannelRecordingResponseBody setData(GetMultiChannelRecordingResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetMultiChannelRecordingResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetMultiChannelRecordingResponseBodyData extends TeaModel {
-        @NameInMap("FileUrl")
-        public String fileUrl;
-
         @NameInMap("FileName")
         public String fileName;
+
+        @NameInMap("FileUrl")
+        public String fileUrl;
 
         public static GetMultiChannelRecordingResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMultiChannelRecordingResponseBodyData self = new GetMultiChannelRecordingResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetMultiChannelRecordingResponseBodyData setFileUrl(String fileUrl) {
-            this.fileUrl = fileUrl;
-            return this;
-        }
-        public String getFileUrl() {
-            return this.fileUrl;
         }
 
         public GetMultiChannelRecordingResponseBodyData setFileName(String fileName) {
@@ -90,6 +82,14 @@ public class GetMultiChannelRecordingResponseBody extends TeaModel {
         }
         public String getFileName() {
             return this.fileName;
+        }
+
+        public GetMultiChannelRecordingResponseBodyData setFileUrl(String fileUrl) {
+            this.fileUrl = fileUrl;
+            return this;
+        }
+        public String getFileUrl() {
+            return this.fileUrl;
         }
 
     }

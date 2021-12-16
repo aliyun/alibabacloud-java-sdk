@@ -7,14 +7,14 @@ public class AssignUsersRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("RamIdList")
+    public String ramIdList;
+
     @NameInMap("RoleId")
     public String roleId;
 
     @NameInMap("SkillLevelList")
     public String skillLevelList;
-
-    @NameInMap("RamIdList")
-    public String ramIdList;
 
     @NameInMap("WorkMode")
     public String workMode;
@@ -32,6 +32,14 @@ public class AssignUsersRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public AssignUsersRequest setRamIdList(String ramIdList) {
+        this.ramIdList = ramIdList;
+        return this;
+    }
+    public String getRamIdList() {
+        return this.ramIdList;
+    }
+
     public AssignUsersRequest setRoleId(String roleId) {
         this.roleId = roleId;
         return this;
@@ -46,14 +54,6 @@ public class AssignUsersRequest extends TeaModel {
     }
     public String getSkillLevelList() {
         return this.skillLevelList;
-    }
-
-    public AssignUsersRequest setRamIdList(String ramIdList) {
-        this.ramIdList = ramIdList;
-        return this;
-    }
-    public String getRamIdList() {
-        return this.ramIdList;
     }
 
     public AssignUsersRequest setWorkMode(String workMode) {

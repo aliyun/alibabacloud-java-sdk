@@ -4,62 +4,33 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class MakeCallRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("UserId")
-    public String userId;
-
-    @NameInMap("DeviceId")
-    public String deviceId;
+    @NameInMap("Callee")
+    public String callee;
 
     @NameInMap("Caller")
     public String caller;
 
-    @NameInMap("Callee")
-    public String callee;
+    @NameInMap("DeviceId")
+    public String deviceId;
 
-    @NameInMap("TimeoutSeconds")
-    public Integer timeoutSeconds;
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("MaskedCallee")
+    public String maskedCallee;
 
     @NameInMap("Tags")
     public String tags;
 
+    @NameInMap("TimeoutSeconds")
+    public Integer timeoutSeconds;
+
+    @NameInMap("UserId")
+    public String userId;
+
     public static MakeCallRequest build(java.util.Map<String, ?> map) throws Exception {
         MakeCallRequest self = new MakeCallRequest();
         return TeaModel.build(map, self);
-    }
-
-    public MakeCallRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public MakeCallRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
-    public MakeCallRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-        return this;
-    }
-    public String getDeviceId() {
-        return this.deviceId;
-    }
-
-    public MakeCallRequest setCaller(String caller) {
-        this.caller = caller;
-        return this;
-    }
-    public String getCaller() {
-        return this.caller;
     }
 
     public MakeCallRequest setCallee(String callee) {
@@ -70,12 +41,36 @@ public class MakeCallRequest extends TeaModel {
         return this.callee;
     }
 
-    public MakeCallRequest setTimeoutSeconds(Integer timeoutSeconds) {
-        this.timeoutSeconds = timeoutSeconds;
+    public MakeCallRequest setCaller(String caller) {
+        this.caller = caller;
         return this;
     }
-    public Integer getTimeoutSeconds() {
-        return this.timeoutSeconds;
+    public String getCaller() {
+        return this.caller;
+    }
+
+    public MakeCallRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
+    }
+
+    public MakeCallRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public MakeCallRequest setMaskedCallee(String maskedCallee) {
+        this.maskedCallee = maskedCallee;
+        return this;
+    }
+    public String getMaskedCallee() {
+        return this.maskedCallee;
     }
 
     public MakeCallRequest setTags(String tags) {
@@ -84,6 +79,22 @@ public class MakeCallRequest extends TeaModel {
     }
     public String getTags() {
         return this.tags;
+    }
+
+    public MakeCallRequest setTimeoutSeconds(Integer timeoutSeconds) {
+        this.timeoutSeconds = timeoutSeconds;
+        return this;
+    }
+    public Integer getTimeoutSeconds() {
+        return this.timeoutSeconds;
+    }
+
+    public MakeCallRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

@@ -7,20 +7,20 @@ public class InterceptCallResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public InterceptCallResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
 
-    @NameInMap("Data")
-    public InterceptCallResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static InterceptCallResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InterceptCallResponseBody self = new InterceptCallResponseBody();
@@ -33,6 +33,14 @@ public class InterceptCallResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public InterceptCallResponseBody setData(InterceptCallResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public InterceptCallResponseBodyData getData() {
+        return this.data;
     }
 
     public InterceptCallResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,14 +59,6 @@ public class InterceptCallResponseBody extends TeaModel {
         return this.message;
     }
 
-    public InterceptCallResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public InterceptCallResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
@@ -67,20 +67,26 @@ public class InterceptCallResponseBody extends TeaModel {
         return this.params;
     }
 
-    public InterceptCallResponseBody setData(InterceptCallResponseBodyData data) {
-        this.data = data;
+    public InterceptCallResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public InterceptCallResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class InterceptCallResponseBodyDataCallContextChannelContexts extends TeaModel {
-        @NameInMap("Index")
-        public Integer index;
+        @NameInMap("AssociatedData")
+        public java.util.Map<String, ?> associatedData;
 
-        @NameInMap("ReleaseInitiator")
-        public String releaseInitiator;
+        @NameInMap("CallType")
+        public String callType;
+
+        @NameInMap("ChannelFlags")
+        public String channelFlags;
+
+        @NameInMap("ChannelId")
+        public String channelId;
 
         @NameInMap("ChannelState")
         public String channelState;
@@ -88,11 +94,20 @@ public class InterceptCallResponseBody extends TeaModel {
         @NameInMap("Destination")
         public String destination;
 
-        @NameInMap("UserId")
-        public String userId;
+        @NameInMap("Index")
+        public Integer index;
 
-        @NameInMap("ChannelFlags")
-        public String channelFlags;
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("Originator")
+        public String originator;
+
+        @NameInMap("ReleaseInitiator")
+        public String releaseInitiator;
+
+        @NameInMap("ReleaseReason")
+        public String releaseReason;
 
         @NameInMap("SkillGroupId")
         public String skillGroupId;
@@ -100,46 +115,47 @@ public class InterceptCallResponseBody extends TeaModel {
         @NameInMap("Timestamp")
         public Long timestamp;
 
-        @NameInMap("AssociatedData")
-        public java.util.Map<String, ?> associatedData;
-
-        @NameInMap("ReleaseReason")
-        public String releaseReason;
-
-        @NameInMap("CallType")
-        public String callType;
-
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("ChannelId")
-        public String channelId;
-
         @NameInMap("UserExtension")
         public String userExtension;
 
-        @NameInMap("Originator")
-        public String originator;
+        @NameInMap("UserId")
+        public String userId;
 
         public static InterceptCallResponseBodyDataCallContextChannelContexts build(java.util.Map<String, ?> map) throws Exception {
             InterceptCallResponseBodyDataCallContextChannelContexts self = new InterceptCallResponseBodyDataCallContextChannelContexts();
             return TeaModel.build(map, self);
         }
 
-        public InterceptCallResponseBodyDataCallContextChannelContexts setIndex(Integer index) {
-            this.index = index;
+        public InterceptCallResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
+            this.associatedData = associatedData;
             return this;
         }
-        public Integer getIndex() {
-            return this.index;
+        public java.util.Map<String, ?> getAssociatedData() {
+            return this.associatedData;
         }
 
-        public InterceptCallResponseBodyDataCallContextChannelContexts setReleaseInitiator(String releaseInitiator) {
-            this.releaseInitiator = releaseInitiator;
+        public InterceptCallResponseBodyDataCallContextChannelContexts setCallType(String callType) {
+            this.callType = callType;
             return this;
         }
-        public String getReleaseInitiator() {
-            return this.releaseInitiator;
+        public String getCallType() {
+            return this.callType;
+        }
+
+        public InterceptCallResponseBodyDataCallContextChannelContexts setChannelFlags(String channelFlags) {
+            this.channelFlags = channelFlags;
+            return this;
+        }
+        public String getChannelFlags() {
+            return this.channelFlags;
+        }
+
+        public InterceptCallResponseBodyDataCallContextChannelContexts setChannelId(String channelId) {
+            this.channelId = channelId;
+            return this;
+        }
+        public String getChannelId() {
+            return this.channelId;
         }
 
         public InterceptCallResponseBodyDataCallContextChannelContexts setChannelState(String channelState) {
@@ -158,20 +174,44 @@ public class InterceptCallResponseBody extends TeaModel {
             return this.destination;
         }
 
-        public InterceptCallResponseBodyDataCallContextChannelContexts setUserId(String userId) {
-            this.userId = userId;
+        public InterceptCallResponseBodyDataCallContextChannelContexts setIndex(Integer index) {
+            this.index = index;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public Integer getIndex() {
+            return this.index;
         }
 
-        public InterceptCallResponseBodyDataCallContextChannelContexts setChannelFlags(String channelFlags) {
-            this.channelFlags = channelFlags;
+        public InterceptCallResponseBodyDataCallContextChannelContexts setJobId(String jobId) {
+            this.jobId = jobId;
             return this;
         }
-        public String getChannelFlags() {
-            return this.channelFlags;
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public InterceptCallResponseBodyDataCallContextChannelContexts setOriginator(String originator) {
+            this.originator = originator;
+            return this;
+        }
+        public String getOriginator() {
+            return this.originator;
+        }
+
+        public InterceptCallResponseBodyDataCallContextChannelContexts setReleaseInitiator(String releaseInitiator) {
+            this.releaseInitiator = releaseInitiator;
+            return this;
+        }
+        public String getReleaseInitiator() {
+            return this.releaseInitiator;
+        }
+
+        public InterceptCallResponseBodyDataCallContextChannelContexts setReleaseReason(String releaseReason) {
+            this.releaseReason = releaseReason;
+            return this;
+        }
+        public String getReleaseReason() {
+            return this.releaseReason;
         }
 
         public InterceptCallResponseBodyDataCallContextChannelContexts setSkillGroupId(String skillGroupId) {
@@ -190,46 +230,6 @@ public class InterceptCallResponseBody extends TeaModel {
             return this.timestamp;
         }
 
-        public InterceptCallResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
-            this.associatedData = associatedData;
-            return this;
-        }
-        public java.util.Map<String, ?> getAssociatedData() {
-            return this.associatedData;
-        }
-
-        public InterceptCallResponseBodyDataCallContextChannelContexts setReleaseReason(String releaseReason) {
-            this.releaseReason = releaseReason;
-            return this;
-        }
-        public String getReleaseReason() {
-            return this.releaseReason;
-        }
-
-        public InterceptCallResponseBodyDataCallContextChannelContexts setCallType(String callType) {
-            this.callType = callType;
-            return this;
-        }
-        public String getCallType() {
-            return this.callType;
-        }
-
-        public InterceptCallResponseBodyDataCallContextChannelContexts setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public InterceptCallResponseBodyDataCallContextChannelContexts setChannelId(String channelId) {
-            this.channelId = channelId;
-            return this;
-        }
-        public String getChannelId() {
-            return this.channelId;
-        }
-
         public InterceptCallResponseBodyDataCallContextChannelContexts setUserExtension(String userExtension) {
             this.userExtension = userExtension;
             return this;
@@ -238,12 +238,12 @@ public class InterceptCallResponseBody extends TeaModel {
             return this.userExtension;
         }
 
-        public InterceptCallResponseBodyDataCallContextChannelContexts setOriginator(String originator) {
-            this.originator = originator;
+        public InterceptCallResponseBodyDataCallContextChannelContexts setUserId(String userId) {
+            this.userId = userId;
             return this;
         }
-        public String getOriginator() {
-            return this.originator;
+        public String getUserId() {
+            return this.userId;
         }
 
     }
@@ -252,14 +252,14 @@ public class InterceptCallResponseBody extends TeaModel {
         @NameInMap("CallType")
         public String callType;
 
+        @NameInMap("ChannelContexts")
+        public java.util.List<InterceptCallResponseBodyDataCallContextChannelContexts> channelContexts;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("JobId")
         public String jobId;
-
-        @NameInMap("ChannelContexts")
-        public java.util.List<InterceptCallResponseBodyDataCallContextChannelContexts> channelContexts;
 
         public static InterceptCallResponseBodyDataCallContext build(java.util.Map<String, ?> map) throws Exception {
             InterceptCallResponseBodyDataCallContext self = new InterceptCallResponseBodyDataCallContext();
@@ -272,6 +272,14 @@ public class InterceptCallResponseBody extends TeaModel {
         }
         public String getCallType() {
             return this.callType;
+        }
+
+        public InterceptCallResponseBodyDataCallContext setChannelContexts(java.util.List<InterceptCallResponseBodyDataCallContextChannelContexts> channelContexts) {
+            this.channelContexts = channelContexts;
+            return this;
+        }
+        public java.util.List<InterceptCallResponseBodyDataCallContextChannelContexts> getChannelContexts() {
+            return this.channelContexts;
         }
 
         public InterceptCallResponseBodyDataCallContext setInstanceId(String instanceId) {
@@ -290,59 +298,67 @@ public class InterceptCallResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public InterceptCallResponseBodyDataCallContext setChannelContexts(java.util.List<InterceptCallResponseBodyDataCallContextChannelContexts> channelContexts) {
-            this.channelContexts = channelContexts;
-            return this;
-        }
-        public java.util.List<InterceptCallResponseBodyDataCallContextChannelContexts> getChannelContexts() {
-            return this.channelContexts;
-        }
-
     }
 
     public static class InterceptCallResponseBodyDataUserContext extends TeaModel {
+        @NameInMap("BreakCode")
+        public String breakCode;
+
+        @NameInMap("DeviceId")
+        public String deviceId;
+
         @NameInMap("Extension")
         public String extension;
 
         @NameInMap("Heartbeat")
         public Long heartbeat;
 
-        @NameInMap("WorkMode")
-        public String workMode;
-
-        @NameInMap("DeviceId")
-        public String deviceId;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("Reserved")
-        public Long reserved;
-
-        @NameInMap("BreakCode")
-        public String breakCode;
-
         @NameInMap("InstanceId")
         public String instanceId;
-
-        @NameInMap("OutboundScenario")
-        public Boolean outboundScenario;
-
-        @NameInMap("Mobile")
-        public String mobile;
 
         @NameInMap("JobId")
         public String jobId;
 
-        @NameInMap("UserState")
-        public String userState;
+        @NameInMap("Mobile")
+        public String mobile;
+
+        @NameInMap("OutboundScenario")
+        public Boolean outboundScenario;
+
+        @NameInMap("Reserved")
+        public Long reserved;
 
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserState")
+        public String userState;
+
+        @NameInMap("WorkMode")
+        public String workMode;
+
         public static InterceptCallResponseBodyDataUserContext build(java.util.Map<String, ?> map) throws Exception {
             InterceptCallResponseBodyDataUserContext self = new InterceptCallResponseBodyDataUserContext();
             return TeaModel.build(map, self);
+        }
+
+        public InterceptCallResponseBodyDataUserContext setBreakCode(String breakCode) {
+            this.breakCode = breakCode;
+            return this;
+        }
+        public String getBreakCode() {
+            return this.breakCode;
+        }
+
+        public InterceptCallResponseBodyDataUserContext setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
         }
 
         public InterceptCallResponseBodyDataUserContext setExtension(String extension) {
@@ -361,68 +377,12 @@ public class InterceptCallResponseBody extends TeaModel {
             return this.heartbeat;
         }
 
-        public InterceptCallResponseBodyDataUserContext setWorkMode(String workMode) {
-            this.workMode = workMode;
-            return this;
-        }
-        public String getWorkMode() {
-            return this.workMode;
-        }
-
-        public InterceptCallResponseBodyDataUserContext setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
-        }
-
-        public InterceptCallResponseBodyDataUserContext setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public InterceptCallResponseBodyDataUserContext setReserved(Long reserved) {
-            this.reserved = reserved;
-            return this;
-        }
-        public Long getReserved() {
-            return this.reserved;
-        }
-
-        public InterceptCallResponseBodyDataUserContext setBreakCode(String breakCode) {
-            this.breakCode = breakCode;
-            return this;
-        }
-        public String getBreakCode() {
-            return this.breakCode;
-        }
-
         public InterceptCallResponseBodyDataUserContext setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
-        }
-
-        public InterceptCallResponseBodyDataUserContext setOutboundScenario(Boolean outboundScenario) {
-            this.outboundScenario = outboundScenario;
-            return this;
-        }
-        public Boolean getOutboundScenario() {
-            return this.outboundScenario;
-        }
-
-        public InterceptCallResponseBodyDataUserContext setMobile(String mobile) {
-            this.mobile = mobile;
-            return this;
-        }
-        public String getMobile() {
-            return this.mobile;
         }
 
         public InterceptCallResponseBodyDataUserContext setJobId(String jobId) {
@@ -433,12 +393,28 @@ public class InterceptCallResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public InterceptCallResponseBodyDataUserContext setUserState(String userState) {
-            this.userState = userState;
+        public InterceptCallResponseBodyDataUserContext setMobile(String mobile) {
+            this.mobile = mobile;
             return this;
         }
-        public String getUserState() {
-            return this.userState;
+        public String getMobile() {
+            return this.mobile;
+        }
+
+        public InterceptCallResponseBodyDataUserContext setOutboundScenario(Boolean outboundScenario) {
+            this.outboundScenario = outboundScenario;
+            return this;
+        }
+        public Boolean getOutboundScenario() {
+            return this.outboundScenario;
+        }
+
+        public InterceptCallResponseBodyDataUserContext setReserved(Long reserved) {
+            this.reserved = reserved;
+            return this;
+        }
+        public Long getReserved() {
+            return this.reserved;
         }
 
         public InterceptCallResponseBodyDataUserContext setSignedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
@@ -447,6 +423,30 @@ public class InterceptCallResponseBody extends TeaModel {
         }
         public java.util.List<String> getSignedSkillGroupIdList() {
             return this.signedSkillGroupIdList;
+        }
+
+        public InterceptCallResponseBodyDataUserContext setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public InterceptCallResponseBodyDataUserContext setUserState(String userState) {
+            this.userState = userState;
+            return this;
+        }
+        public String getUserState() {
+            return this.userState;
+        }
+
+        public InterceptCallResponseBodyDataUserContext setWorkMode(String workMode) {
+            this.workMode = workMode;
+            return this;
+        }
+        public String getWorkMode() {
+            return this.workMode;
         }
 
     }

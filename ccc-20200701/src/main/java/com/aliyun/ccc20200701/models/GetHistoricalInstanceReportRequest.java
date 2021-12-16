@@ -4,18 +4,26 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetHistoricalInstanceReportRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public Long endTime;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("StartTime")
     public Long startTime;
 
-    @NameInMap("EndTime")
-    public Long endTime;
-
     public static GetHistoricalInstanceReportRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHistoricalInstanceReportRequest self = new GetHistoricalInstanceReportRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetHistoricalInstanceReportRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public GetHistoricalInstanceReportRequest setInstanceId(String instanceId) {
@@ -32,14 +40,6 @@ public class GetHistoricalInstanceReportRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
-    }
-
-    public GetHistoricalInstanceReportRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
     }
 
 }

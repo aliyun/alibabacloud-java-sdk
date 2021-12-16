@@ -4,18 +4,26 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetUserRequest extends TeaModel {
+    @NameInMap("Extension")
+    public String extension;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("UserId")
     public String userId;
 
-    @NameInMap("Extension")
-    public String extension;
-
     public static GetUserRequest build(java.util.Map<String, ?> map) throws Exception {
         GetUserRequest self = new GetUserRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetUserRequest setExtension(String extension) {
+        this.extension = extension;
+        return this;
+    }
+    public String getExtension() {
+        return this.extension;
     }
 
     public GetUserRequest setInstanceId(String instanceId) {
@@ -32,14 +40,6 @@ public class GetUserRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public GetUserRequest setExtension(String extension) {
-        this.extension = extension;
-        return this;
-    }
-    public String getExtension() {
-        return this.extension;
     }
 
 }

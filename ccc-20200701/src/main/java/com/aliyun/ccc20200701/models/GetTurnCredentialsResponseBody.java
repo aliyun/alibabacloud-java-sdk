@@ -7,20 +7,20 @@ public class GetTurnCredentialsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetTurnCredentialsResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
 
-    @NameInMap("Data")
-    public GetTurnCredentialsResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetTurnCredentialsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTurnCredentialsResponseBody self = new GetTurnCredentialsResponseBody();
@@ -33,6 +33,14 @@ public class GetTurnCredentialsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetTurnCredentialsResponseBody setData(GetTurnCredentialsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetTurnCredentialsResponseBodyData getData() {
+        return this.data;
     }
 
     public GetTurnCredentialsResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,14 +59,6 @@ public class GetTurnCredentialsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetTurnCredentialsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public GetTurnCredentialsResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
@@ -67,32 +67,24 @@ public class GetTurnCredentialsResponseBody extends TeaModel {
         return this.params;
     }
 
-    public GetTurnCredentialsResponseBody setData(GetTurnCredentialsResponseBodyData data) {
-        this.data = data;
+    public GetTurnCredentialsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public GetTurnCredentialsResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GetTurnCredentialsResponseBodyData extends TeaModel {
-        @NameInMap("UserName")
-        public String userName;
-
         @NameInMap("Password")
         public String password;
+
+        @NameInMap("UserName")
+        public String userName;
 
         public static GetTurnCredentialsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetTurnCredentialsResponseBodyData self = new GetTurnCredentialsResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetTurnCredentialsResponseBodyData setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
         }
 
         public GetTurnCredentialsResponseBodyData setPassword(String password) {
@@ -101,6 +93,14 @@ public class GetTurnCredentialsResponseBody extends TeaModel {
         }
         public String getPassword() {
             return this.password;
+        }
+
+        public GetTurnCredentialsResponseBodyData setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
     }

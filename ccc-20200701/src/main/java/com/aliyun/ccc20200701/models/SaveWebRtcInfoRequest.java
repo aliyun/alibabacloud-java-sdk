@@ -4,32 +4,24 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class SaveWebRtcInfoRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("CallId")
     public String callId;
-
-    @NameInMap("JobId")
-    public String jobId;
-
-    @NameInMap("ContentType")
-    public String contentType;
 
     @NameInMap("Content")
     public String content;
 
+    @NameInMap("ContentType")
+    public String contentType;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("JobId")
+    public String jobId;
+
     public static SaveWebRtcInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveWebRtcInfoRequest self = new SaveWebRtcInfoRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SaveWebRtcInfoRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public SaveWebRtcInfoRequest setCallId(String callId) {
@@ -40,12 +32,12 @@ public class SaveWebRtcInfoRequest extends TeaModel {
         return this.callId;
     }
 
-    public SaveWebRtcInfoRequest setJobId(String jobId) {
-        this.jobId = jobId;
+    public SaveWebRtcInfoRequest setContent(String content) {
+        this.content = content;
         return this;
     }
-    public String getJobId() {
-        return this.jobId;
+    public String getContent() {
+        return this.content;
     }
 
     public SaveWebRtcInfoRequest setContentType(String contentType) {
@@ -56,12 +48,20 @@ public class SaveWebRtcInfoRequest extends TeaModel {
         return this.contentType;
     }
 
-    public SaveWebRtcInfoRequest setContent(String content) {
-        this.content = content;
+    public SaveWebRtcInfoRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getContent() {
-        return this.content;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public SaveWebRtcInfoRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
 }

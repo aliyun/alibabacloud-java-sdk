@@ -4,14 +4,14 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ChangeWorkModeRequest extends TeaModel {
+    @NameInMap("DeviceId")
+    public String deviceId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("UserId")
     public String userId;
-
-    @NameInMap("DeviceId")
-    public String deviceId;
 
     @NameInMap("WorkMode")
     public String workMode;
@@ -19,6 +19,14 @@ public class ChangeWorkModeRequest extends TeaModel {
     public static ChangeWorkModeRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeWorkModeRequest self = new ChangeWorkModeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ChangeWorkModeRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
     }
 
     public ChangeWorkModeRequest setInstanceId(String instanceId) {
@@ -35,14 +43,6 @@ public class ChangeWorkModeRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public ChangeWorkModeRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-        return this;
-    }
-    public String getDeviceId() {
-        return this.deviceId;
     }
 
     public ChangeWorkModeRequest setWorkMode(String workMode) {

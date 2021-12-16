@@ -7,6 +7,9 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ListRecentCallDetailRecordsResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ListRecentCallDetailRecordsResponseBodyData data;
 
     public static ListRecentCallDetailRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRecentCallDetailRecordsResponseBody self = new ListRecentCallDetailRecordsResponseBody();
@@ -30,6 +30,14 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListRecentCallDetailRecordsResponseBody setData(ListRecentCallDetailRecordsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListRecentCallDetailRecordsResponseBodyData getData() {
+        return this.data;
     }
 
     public ListRecentCallDetailRecordsResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,35 +64,27 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListRecentCallDetailRecordsResponseBody setData(ListRecentCallDetailRecordsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListRecentCallDetailRecordsResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListRecentCallDetailRecordsResponseBodyDataList extends TeaModel {
-        @NameInMap("StartTime")
-        public Long startTime;
-
-        @NameInMap("ContactDisposition")
-        public String contactDisposition;
-
-        @NameInMap("ContactType")
-        public String contactType;
-
         @NameInMap("AgentIds")
         public String agentIds;
-
-        @NameInMap("ContactId")
-        public String contactId;
 
         @NameInMap("CallDuration")
         public String callDuration;
 
+        @NameInMap("CalledNumber")
+        public String calledNumber;
+
         @NameInMap("CallingNumber")
         public String callingNumber;
+
+        @NameInMap("ContactDisposition")
+        public String contactDisposition;
+
+        @NameInMap("ContactId")
+        public String contactId;
+
+        @NameInMap("ContactType")
+        public String contactType;
 
         @NameInMap("Duration")
         public Long duration;
@@ -92,39 +92,15 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("CalledNumber")
-        public String calledNumber;
-
         @NameInMap("SkillGroupIds")
         public String skillGroupIds;
+
+        @NameInMap("StartTime")
+        public Long startTime;
 
         public static ListRecentCallDetailRecordsResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListRecentCallDetailRecordsResponseBodyDataList self = new ListRecentCallDetailRecordsResponseBodyDataList();
             return TeaModel.build(map, self);
-        }
-
-        public ListRecentCallDetailRecordsResponseBodyDataList setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
-        }
-
-        public ListRecentCallDetailRecordsResponseBodyDataList setContactDisposition(String contactDisposition) {
-            this.contactDisposition = contactDisposition;
-            return this;
-        }
-        public String getContactDisposition() {
-            return this.contactDisposition;
-        }
-
-        public ListRecentCallDetailRecordsResponseBodyDataList setContactType(String contactType) {
-            this.contactType = contactType;
-            return this;
-        }
-        public String getContactType() {
-            return this.contactType;
         }
 
         public ListRecentCallDetailRecordsResponseBodyDataList setAgentIds(String agentIds) {
@@ -135,14 +111,6 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             return this.agentIds;
         }
 
-        public ListRecentCallDetailRecordsResponseBodyDataList setContactId(String contactId) {
-            this.contactId = contactId;
-            return this;
-        }
-        public String getContactId() {
-            return this.contactId;
-        }
-
         public ListRecentCallDetailRecordsResponseBodyDataList setCallDuration(String callDuration) {
             this.callDuration = callDuration;
             return this;
@@ -151,12 +119,44 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             return this.callDuration;
         }
 
+        public ListRecentCallDetailRecordsResponseBodyDataList setCalledNumber(String calledNumber) {
+            this.calledNumber = calledNumber;
+            return this;
+        }
+        public String getCalledNumber() {
+            return this.calledNumber;
+        }
+
         public ListRecentCallDetailRecordsResponseBodyDataList setCallingNumber(String callingNumber) {
             this.callingNumber = callingNumber;
             return this;
         }
         public String getCallingNumber() {
             return this.callingNumber;
+        }
+
+        public ListRecentCallDetailRecordsResponseBodyDataList setContactDisposition(String contactDisposition) {
+            this.contactDisposition = contactDisposition;
+            return this;
+        }
+        public String getContactDisposition() {
+            return this.contactDisposition;
+        }
+
+        public ListRecentCallDetailRecordsResponseBodyDataList setContactId(String contactId) {
+            this.contactId = contactId;
+            return this;
+        }
+        public String getContactId() {
+            return this.contactId;
+        }
+
+        public ListRecentCallDetailRecordsResponseBodyDataList setContactType(String contactType) {
+            this.contactType = contactType;
+            return this;
+        }
+        public String getContactType() {
+            return this.contactType;
         }
 
         public ListRecentCallDetailRecordsResponseBodyDataList setDuration(Long duration) {
@@ -175,14 +175,6 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ListRecentCallDetailRecordsResponseBodyDataList setCalledNumber(String calledNumber) {
-            this.calledNumber = calledNumber;
-            return this;
-        }
-        public String getCalledNumber() {
-            return this.calledNumber;
-        }
-
         public ListRecentCallDetailRecordsResponseBodyDataList setSkillGroupIds(String skillGroupIds) {
             this.skillGroupIds = skillGroupIds;
             return this;
@@ -191,9 +183,20 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             return this.skillGroupIds;
         }
 
+        public ListRecentCallDetailRecordsResponseBodyDataList setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
     }
 
     public static class ListRecentCallDetailRecordsResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public java.util.List<ListRecentCallDetailRecordsResponseBodyDataList> list;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -203,12 +206,17 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("List")
-        public java.util.List<ListRecentCallDetailRecordsResponseBodyDataList> list;
-
         public static ListRecentCallDetailRecordsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListRecentCallDetailRecordsResponseBodyData self = new ListRecentCallDetailRecordsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListRecentCallDetailRecordsResponseBodyData setList(java.util.List<ListRecentCallDetailRecordsResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListRecentCallDetailRecordsResponseBodyDataList> getList() {
+            return this.list;
         }
 
         public ListRecentCallDetailRecordsResponseBodyData setPageNumber(Integer pageNumber) {
@@ -233,14 +241,6 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListRecentCallDetailRecordsResponseBodyData setList(java.util.List<ListRecentCallDetailRecordsResponseBodyDataList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<ListRecentCallDetailRecordsResponseBodyDataList> getList() {
-            return this.list;
         }
 
     }
