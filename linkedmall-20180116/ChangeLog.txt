@@ -1,3 +1,7 @@
+2021-12-17 Version: 1.0.9
+- Add QueryBizItemListWithCache.
+- Add totalQuantity to QueryInventoryOfItemsInBizItemGroup.
+
 2021-12-13 Version: 1.0.8
 - Add TotalSoldQuantity to QueryInventoryOfItemsInBizItemGroup.
 
