@@ -20,6 +20,10 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    // 运行时。
+    @NameInMap("runtime")
+    public String runtime;
+
     public static DescribeKubernetesVersionMetadataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeKubernetesVersionMetadataRequest self = new DescribeKubernetesVersionMetadataRequest();
         return TeaModel.build(map, self);
@@ -55,6 +59,14 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public DescribeKubernetesVersionMetadataRequest setRuntime(String runtime) {
+        this.runtime = runtime;
+        return this;
+    }
+    public String getRuntime() {
+        return this.runtime;
     }
 
 }

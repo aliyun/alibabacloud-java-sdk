@@ -302,6 +302,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("labels")
         public java.util.List<Tag> labels;
 
+        // 自定义节点名称
+        @NameInMap("node_name_mode")
+        public String nodeNameMode;
+
         // 容器运行时。
         @NameInMap("runtime")
         public String runtime;
@@ -345,6 +349,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public java.util.List<Tag> getLabels() {
             return this.labels;
+        }
+
+        public CreateClusterNodePoolRequestKubernetesConfig setNodeNameMode(String nodeNameMode) {
+            this.nodeNameMode = nodeNameMode;
+            return this;
+        }
+        public String getNodeNameMode() {
+            return this.nodeNameMode;
         }
 
         public CreateClusterNodePoolRequestKubernetesConfig setRuntime(String runtime) {
@@ -606,6 +618,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("data_disks")
         public java.util.List<DataDisk> dataDisks;
 
+        // 部署集ID。
+        @NameInMap("deploymentset_id")
+        public String deploymentsetId;
+
         // 自定义镜像。
         @NameInMap("image_id")
         public String imageId;
@@ -749,6 +765,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public java.util.List<DataDisk> getDataDisks() {
             return this.dataDisks;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setDeploymentsetId(String deploymentsetId) {
+            this.deploymentsetId = deploymentsetId;
+            return this;
+        }
+        public String getDeploymentsetId() {
+            return this.deploymentsetId;
         }
 
         public CreateClusterNodePoolRequestScalingGroup setImageId(String imageId) {

@@ -880,54 +880,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTriggerResponse());
     }
 
-    public DeleteAlertContactResponse deleteAlertContact() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteAlertContactWithOptions(headers, runtime);
-    }
-
-    public DeleteAlertContactResponse deleteAlertContactWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteAlertContact"),
-            new TeaPair("version", "2015-12-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/alert/contacts"),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAlertContactResponse());
-    }
-
-    public DeleteAlertContactGroupResponse deleteAlertContactGroup() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteAlertContactGroupWithOptions(headers, runtime);
-    }
-
-    public DeleteAlertContactGroupResponse deleteAlertContactGroupWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteAlertContactGroup"),
-            new TeaPair("version", "2015-12-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/alert/contact_groups"),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAlertContactGroupResponse());
-    }
-
     public DeleteClusterResponse deleteCluster(String ClusterId, DeleteClusterRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2026,6 +1978,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
             query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runtime)) {
+            query.put("runtime", request.runtime);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -3345,31 +3301,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ScaleOutClusterResponse());
     }
 
-    public StartAlertResponse startAlert(String ClusterId) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.startAlertWithOptions(ClusterId, headers, runtime);
-    }
-
-    public StartAlertResponse startAlertWithOptions(String ClusterId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "StartAlert"),
-            new TeaPair("version", "2015-12-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/alert/" + ClusterId + "/alert_rule/start"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StartAlertResponse());
-    }
-
     public StartWorkflowResponse startWorkflow(StartWorkflowRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3471,31 +3402,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartWorkflowResponse());
-    }
-
-    public StopAlertResponse stopAlert(String ClusterId) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.stopAlertWithOptions(ClusterId, headers, runtime);
-    }
-
-    public StopAlertResponse stopAlertWithOptions(String ClusterId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "StopAlert"),
-            new TeaPair("version", "2015-12-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/alert/" + ClusterId + "/alert_rule/stop"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StopAlertResponse());
     }
 
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
@@ -3613,31 +3519,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
-    }
-
-    public UpdateContactGroupForAlertResponse updateContactGroupForAlert(String ClusterId) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateContactGroupForAlertWithOptions(ClusterId, headers, runtime);
-    }
-
-    public UpdateContactGroupForAlertResponse updateContactGroupForAlertWithOptions(String ClusterId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateContactGroupForAlert"),
-            new TeaPair("version", "2015-12-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/alert/" + ClusterId + "/alert_rule/contact_groups"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateContactGroupForAlertResponse());
     }
 
     public UpdateK8sClusterUserConfigExpireResponse updateK8sClusterUserConfigExpire(String ClusterId) throws Exception {
