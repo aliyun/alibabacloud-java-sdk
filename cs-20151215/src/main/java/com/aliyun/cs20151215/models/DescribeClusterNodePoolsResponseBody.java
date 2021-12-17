@@ -194,6 +194,10 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("labels")
         public java.util.List<Tag> labels;
 
+        // 自定义节点名称
+        @NameInMap("node_name_mode")
+        public String nodeNameMode;
+
         // 容器运行时	
         @NameInMap("runtime")
         public String runtime;
@@ -237,6 +241,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
         public java.util.List<Tag> getLabels() {
             return this.labels;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsKubernetesConfig setNodeNameMode(String nodeNameMode) {
+            this.nodeNameMode = nodeNameMode;
+            return this;
+        }
+        public String getNodeNameMode() {
+            return this.nodeNameMode;
         }
 
         public DescribeClusterNodePoolsResponseBodyNodepoolsKubernetesConfig setRuntime(String runtime) {
@@ -526,6 +538,10 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("data_disks")
         public java.util.List<DataDisk> dataDisks;
 
+        // 部署集ID。
+        @NameInMap("deploymentset_id")
+        public String deploymentsetId;
+
         // 镜像ID	
         @NameInMap("image_id")
         public String imageId;
@@ -673,6 +689,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
         public java.util.List<DataDisk> getDataDisks() {
             return this.dataDisks;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setDeploymentsetId(String deploymentsetId) {
+            this.deploymentsetId = deploymentsetId;
+            return this;
+        }
+        public String getDeploymentsetId() {
+            return this.deploymentsetId;
         }
 
         public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setImageId(String imageId) {
