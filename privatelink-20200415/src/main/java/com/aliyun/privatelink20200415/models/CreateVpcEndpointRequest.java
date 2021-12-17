@@ -19,6 +19,9 @@ public class CreateVpcEndpointRequest extends TeaModel {
     @NameInMap("EndpointType")
     public String endpointType;
 
+    @NameInMap("ProtectedEnabled")
+    public Boolean protectedEnabled;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -83,6 +86,14 @@ public class CreateVpcEndpointRequest extends TeaModel {
     }
     public String getEndpointType() {
         return this.endpointType;
+    }
+
+    public CreateVpcEndpointRequest setProtectedEnabled(Boolean protectedEnabled) {
+        this.protectedEnabled = protectedEnabled;
+        return this;
+    }
+    public Boolean getProtectedEnabled() {
+        return this.protectedEnabled;
     }
 
     public CreateVpcEndpointRequest setRegionId(String regionId) {
