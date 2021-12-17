@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>umeng_finplus20211130</artifactId>
-  <version>1.8.0</version>
+  <version>1.8.1</version>
   <packaging>jar</packaging>
   <name>umeng_finplus20211130</name>
   <description>Alibaba Cloud umeng-finplus (20211130) SDK for Java
@@ -46,12 +46,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.1.6</version>
+      <version>0.2.0</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.13</version>
+      <version>0.1.14</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

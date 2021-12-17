@@ -99,6 +99,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAvailableDataSetListResponse());
     }
 
+    public GetComputeResultResponse getComputeResult(GetComputeResultRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getComputeResultWithOptions(request, headers, runtime);
+    }
+
+    public GetComputeResultResponse getComputeResultWithOptions(GetComputeResultRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bcId)) {
+            query.put("bcId", request.bcId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetComputeResult"),
+            new TeaPair("version", "2021-11-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/batch_compute/getComputeTaskResult"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetComputeResultResponse());
+    }
+
     public GetDataSetStatusResponse getDataSetStatus(GetDataSetStatusRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
