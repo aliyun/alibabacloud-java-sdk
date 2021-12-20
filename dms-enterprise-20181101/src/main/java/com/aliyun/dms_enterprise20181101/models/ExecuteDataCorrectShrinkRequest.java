@@ -10,6 +10,9 @@ public class ExecuteDataCorrectShrinkRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Tid")
     public String tid;
 
@@ -32,6 +35,14 @@ public class ExecuteDataCorrectShrinkRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public ExecuteDataCorrectShrinkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ExecuteDataCorrectShrinkRequest setTid(String tid) {

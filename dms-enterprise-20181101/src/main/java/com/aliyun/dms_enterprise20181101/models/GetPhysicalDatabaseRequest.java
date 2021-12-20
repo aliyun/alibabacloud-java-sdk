@@ -7,6 +7,9 @@ public class GetPhysicalDatabaseRequest extends TeaModel {
     @NameInMap("DbId")
     public Long dbId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Tid")
     public Long tid;
 
@@ -21,6 +24,14 @@ public class GetPhysicalDatabaseRequest extends TeaModel {
     }
     public Long getDbId() {
         return this.dbId;
+    }
+
+    public GetPhysicalDatabaseRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetPhysicalDatabaseRequest setTid(Long tid) {

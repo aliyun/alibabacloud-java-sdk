@@ -13,6 +13,9 @@ public class UpdateUserRequest extends TeaModel {
     @NameInMap("Mobile")
     public String mobile;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RoleNames")
     public String roleNames;
 
@@ -52,6 +55,14 @@ public class UpdateUserRequest extends TeaModel {
     }
     public String getMobile() {
         return this.mobile;
+    }
+
+    public UpdateUserRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UpdateUserRequest setRoleNames(String roleNames) {

@@ -13,6 +13,9 @@ public class ListLogicTablesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ReturnGuid")
     public Boolean returnGuid;
 
@@ -49,6 +52,14 @@ public class ListLogicTablesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListLogicTablesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListLogicTablesRequest setReturnGuid(Boolean returnGuid) {

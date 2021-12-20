@@ -13,6 +13,9 @@ public class ListSensitiveColumnsDetailRequest extends TeaModel {
     @NameInMap("Logic")
     public Boolean logic;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SchemaName")
     public String schemaName;
 
@@ -49,6 +52,14 @@ public class ListSensitiveColumnsDetailRequest extends TeaModel {
     }
     public Boolean getLogic() {
         return this.logic;
+    }
+
+    public ListSensitiveColumnsDetailRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListSensitiveColumnsDetailRequest setSchemaName(String schemaName) {

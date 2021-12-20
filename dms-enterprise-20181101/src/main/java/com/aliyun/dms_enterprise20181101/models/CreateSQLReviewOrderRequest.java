@@ -10,6 +10,9 @@ public class CreateSQLReviewOrderRequest extends TeaModel {
     @NameInMap("Param")
     public CreateSQLReviewOrderRequestParam param;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RelatedUserList")
     public java.util.List<Long> relatedUserList;
 
@@ -35,6 +38,14 @@ public class CreateSQLReviewOrderRequest extends TeaModel {
     }
     public CreateSQLReviewOrderRequestParam getParam() {
         return this.param;
+    }
+
+    public CreateSQLReviewOrderRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateSQLReviewOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {

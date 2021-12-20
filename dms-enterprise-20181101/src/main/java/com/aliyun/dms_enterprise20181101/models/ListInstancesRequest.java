@@ -25,6 +25,9 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SearchKey")
     public String searchKey;
 
@@ -90,6 +93,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListInstancesRequest setSearchKey(String searchKey) {

@@ -7,6 +7,9 @@ public class GetDBTaskSQLJobLogRequest extends TeaModel {
     @NameInMap("JobId")
     public Long jobId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Tid")
     public Long tid;
 
@@ -21,6 +24,14 @@ public class GetDBTaskSQLJobLogRequest extends TeaModel {
     }
     public Long getJobId() {
         return this.jobId;
+    }
+
+    public GetDBTaskSQLJobLogRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetDBTaskSQLJobLogRequest setTid(Long tid) {

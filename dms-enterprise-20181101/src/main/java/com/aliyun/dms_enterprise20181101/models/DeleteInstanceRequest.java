@@ -10,6 +10,9 @@ public class DeleteInstanceRequest extends TeaModel {
     @NameInMap("Port")
     public Integer port;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Sid")
     public String sid;
 
@@ -35,6 +38,14 @@ public class DeleteInstanceRequest extends TeaModel {
     }
     public Integer getPort() {
         return this.port;
+    }
+
+    public DeleteInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteInstanceRequest setSid(String sid) {

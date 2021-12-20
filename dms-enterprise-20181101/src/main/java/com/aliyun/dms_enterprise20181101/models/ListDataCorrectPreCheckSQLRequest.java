@@ -16,6 +16,9 @@ public class ListDataCorrectPreCheckSQLRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Tid")
     public Long tid;
 
@@ -54,6 +57,14 @@ public class ListDataCorrectPreCheckSQLRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListDataCorrectPreCheckSQLRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListDataCorrectPreCheckSQLRequest setTid(Long tid) {

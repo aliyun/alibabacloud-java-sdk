@@ -7,6 +7,9 @@ public class GetSQLReviewCheckResultStatusRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Tid")
     public Long tid;
 
@@ -21,6 +24,14 @@ public class GetSQLReviewCheckResultStatusRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public GetSQLReviewCheckResultStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetSQLReviewCheckResultStatusRequest setTid(Long tid) {

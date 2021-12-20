@@ -7,6 +7,9 @@ public class RetryDataCorrectPreCheckRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Tid")
     public Long tid;
 
@@ -21,6 +24,14 @@ public class RetryDataCorrectPreCheckRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public RetryDataCorrectPreCheckRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public RetryDataCorrectPreCheckRequest setTid(Long tid) {

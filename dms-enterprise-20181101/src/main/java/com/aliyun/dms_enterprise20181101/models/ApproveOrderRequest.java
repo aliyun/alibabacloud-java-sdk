@@ -10,6 +10,9 @@ public class ApproveOrderRequest extends TeaModel {
     @NameInMap("Comment")
     public String comment;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Tid")
     public Long tid;
 
@@ -35,6 +38,14 @@ public class ApproveOrderRequest extends TeaModel {
     }
     public String getComment() {
         return this.comment;
+    }
+
+    public ApproveOrderRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ApproveOrderRequest setTid(Long tid) {

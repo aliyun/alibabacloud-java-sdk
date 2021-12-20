@@ -10,6 +10,9 @@ public class CreateLogicDatabaseShrinkRequest extends TeaModel {
     @NameInMap("DatabaseIds")
     public String databaseIdsShrink;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Tid")
     public Long tid;
 
@@ -32,6 +35,14 @@ public class CreateLogicDatabaseShrinkRequest extends TeaModel {
     }
     public String getDatabaseIdsShrink() {
         return this.databaseIdsShrink;
+    }
+
+    public CreateLogicDatabaseShrinkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateLogicDatabaseShrinkRequest setTid(Long tid) {

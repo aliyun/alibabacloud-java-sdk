@@ -13,6 +13,9 @@ public class ListInstanceUserPermissionsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Tid")
     public Long tid;
 
@@ -46,6 +49,14 @@ public class ListInstanceUserPermissionsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListInstanceUserPermissionsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListInstanceUserPermissionsRequest setTid(Long tid) {

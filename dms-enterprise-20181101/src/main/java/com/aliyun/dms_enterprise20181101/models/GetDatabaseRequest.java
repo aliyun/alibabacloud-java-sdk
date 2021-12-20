@@ -10,6 +10,9 @@ public class GetDatabaseRequest extends TeaModel {
     @NameInMap("Port")
     public Integer port;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SchemaName")
     public String schemaName;
 
@@ -38,6 +41,14 @@ public class GetDatabaseRequest extends TeaModel {
     }
     public Integer getPort() {
         return this.port;
+    }
+
+    public GetDatabaseRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetDatabaseRequest setSchemaName(String schemaName) {

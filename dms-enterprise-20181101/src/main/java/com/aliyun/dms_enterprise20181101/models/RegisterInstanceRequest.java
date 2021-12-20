@@ -52,6 +52,9 @@ public class RegisterInstanceRequest extends TeaModel {
     @NameInMap("QueryTimeout")
     public Integer queryTimeout;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SafeRule")
     public String safeRule;
 
@@ -201,6 +204,14 @@ public class RegisterInstanceRequest extends TeaModel {
     }
     public Integer getQueryTimeout() {
         return this.queryTimeout;
+    }
+
+    public RegisterInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public RegisterInstanceRequest setSafeRule(String safeRule) {

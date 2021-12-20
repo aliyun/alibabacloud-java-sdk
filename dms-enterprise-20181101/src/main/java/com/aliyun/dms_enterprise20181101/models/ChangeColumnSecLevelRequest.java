@@ -17,6 +17,9 @@ public class ChangeColumnSecLevelRequest extends TeaModel {
     @NameInMap("NewLevel")
     public String newLevel;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SchemaName")
     public String schemaName;
 
@@ -61,6 +64,14 @@ public class ChangeColumnSecLevelRequest extends TeaModel {
     }
     public String getNewLevel() {
         return this.newLevel;
+    }
+
+    public ChangeColumnSecLevelRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ChangeColumnSecLevelRequest setSchemaName(String schemaName) {
