@@ -7,6 +7,12 @@ public class UploadStreamByURLResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SourceURL")
+    public String sourceURL;
+
+    @NameInMap("StreamFileURL")
+    public String streamFileURL;
+
     @NameInMap("StreamJobId")
     public String streamJobId;
 
@@ -21,6 +27,22 @@ public class UploadStreamByURLResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UploadStreamByURLResponseBody setSourceURL(String sourceURL) {
+        this.sourceURL = sourceURL;
+        return this;
+    }
+    public String getSourceURL() {
+        return this.sourceURL;
+    }
+
+    public UploadStreamByURLResponseBody setStreamFileURL(String streamFileURL) {
+        this.streamFileURL = streamFileURL;
+        return this;
+    }
+    public String getStreamFileURL() {
+        return this.streamFileURL;
     }
 
     public UploadStreamByURLResponseBody setStreamJobId(String streamJobId) {
