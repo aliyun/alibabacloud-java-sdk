@@ -7,6 +7,7 @@ import com.aliyun.teautil.*;
 import com.aliyun.teautil.models.*;
 import com.aliyun.teaopenapi.*;
 import com.aliyun.teaopenapi.models.*;
+import com.aliyun.openapiutil.*;
 import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
@@ -33,10 +34,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeHuYaRecordByDomainResponse describeHuYaRecordByDomainWithOptions(DescribeHuYaRecordByDomainRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("BusinessType", request.businessType);
+        query.put("Domain", request.domain);
+        query.put("EndTime", request.endTime);
+        query.put("StartTime", request.startTime);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeHuYaRecordByDomain", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeHuYaRecordByDomainResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeHuYaRecordByDomain"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHuYaRecordByDomainResponse());
     }
 
     public DescribeHuYaRecordByDomainResponse describeHuYaRecordByDomain(DescribeHuYaRecordByDomainRequest request) throws Exception {
@@ -46,10 +63,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeHuYaScreenshotByDomainResponse describeHuYaScreenshotByDomainWithOptions(DescribeHuYaScreenshotByDomainRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("BusinessType", request.businessType);
+        query.put("Domain", request.domain);
+        query.put("EndTime", request.endTime);
+        query.put("StartTime", request.startTime);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeHuYaScreenshotByDomain", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeHuYaScreenshotByDomainResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeHuYaScreenshotByDomain"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHuYaScreenshotByDomainResponse());
     }
 
     public DescribeHuYaScreenshotByDomainResponse describeHuYaScreenshotByDomain(DescribeHuYaScreenshotByDomainRequest request) throws Exception {
@@ -59,10 +92,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeHuYaTranscodeByDomainResponse describeHuYaTranscodeByDomainWithOptions(DescribeHuYaTranscodeByDomainRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("BusinessType", request.businessType);
+        query.put("Domain", request.domain);
+        query.put("EndTime", request.endTime);
+        query.put("StartTime", request.startTime);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeHuYaTranscodeByDomain", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeHuYaTranscodeByDomainResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeHuYaTranscodeByDomain"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHuYaTranscodeByDomainResponse());
     }
 
     public DescribeHuYaTranscodeByDomainResponse describeHuYaTranscodeByDomain(DescribeHuYaTranscodeByDomainRequest request) throws Exception {
@@ -72,10 +121,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeMeterBypassRtUsageByTaskProfileResponse describeMeterBypassRtUsageByTaskProfileWithOptions(DescribeMeterBypassRtUsageByTaskProfileRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("EndTs", request.endTs);
+        query.put("Interval", request.interval);
+        query.put("ServiceArea", request.serviceArea);
+        query.put("StartTs", request.startTs);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeMeterBypassRtUsageByTaskProfile", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMeterBypassRtUsageByTaskProfileResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterBypassRtUsageByTaskProfile"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterBypassRtUsageByTaskProfileResponse());
     }
 
     public DescribeMeterBypassRtUsageByTaskProfileResponse describeMeterBypassRtUsageByTaskProfile(DescribeMeterBypassRtUsageByTaskProfileRequest request) throws Exception {
@@ -85,10 +151,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeMeterBypassUsageByTaskProfileResponse describeMeterBypassUsageByTaskProfileWithOptions(DescribeMeterBypassUsageByTaskProfileRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("EndTime", request.endTime);
+        query.put("Interval", request.interval);
+        query.put("ServiceArea", request.serviceArea);
+        query.put("StartTime", request.startTime);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeMeterBypassUsageByTaskProfile", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMeterBypassUsageByTaskProfileResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterBypassUsageByTaskProfile"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterBypassUsageByTaskProfileResponse());
     }
 
     public DescribeMeterBypassUsageByTaskProfileResponse describeMeterBypassUsageByTaskProfile(DescribeMeterBypassUsageByTaskProfileRequest request) throws Exception {
@@ -98,10 +181,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeMeterMpuTranscodeRtUsageByTaskProfileResponse describeMeterMpuTranscodeRtUsageByTaskProfileWithOptions(DescribeMeterMpuTranscodeRtUsageByTaskProfileRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("EndTs", request.endTs);
+        query.put("Interval", request.interval);
+        query.put("ServiceArea", request.serviceArea);
+        query.put("StartTs", request.startTs);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeMeterMpuTranscodeRtUsageByTaskProfile", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMeterMpuTranscodeRtUsageByTaskProfileResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterMpuTranscodeRtUsageByTaskProfile"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterMpuTranscodeRtUsageByTaskProfileResponse());
     }
 
     public DescribeMeterMpuTranscodeRtUsageByTaskProfileResponse describeMeterMpuTranscodeRtUsageByTaskProfile(DescribeMeterMpuTranscodeRtUsageByTaskProfileRequest request) throws Exception {
@@ -111,10 +211,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeMeterRecordRtUsageByTaskProfileResponse describeMeterRecordRtUsageByTaskProfileWithOptions(DescribeMeterRecordRtUsageByTaskProfileRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("EndTs", request.endTs);
+        query.put("Interval", request.interval);
+        query.put("ServiceArea", request.serviceArea);
+        query.put("StartTs", request.startTs);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeMeterRecordRtUsageByTaskProfile", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMeterRecordRtUsageByTaskProfileResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterRecordRtUsageByTaskProfile"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterRecordRtUsageByTaskProfileResponse());
     }
 
     public DescribeMeterRecordRtUsageByTaskProfileResponse describeMeterRecordRtUsageByTaskProfile(DescribeMeterRecordRtUsageByTaskProfileRequest request) throws Exception {
@@ -124,10 +241,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeMeterRecordUsageByTaskProfileResponse describeMeterRecordUsageByTaskProfileWithOptions(DescribeMeterRecordUsageByTaskProfileRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("EndTs", request.endTs);
+        query.put("Interval", request.interval);
+        query.put("ServiceArea", request.serviceArea);
+        query.put("StartTs", request.startTs);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeMeterRecordUsageByTaskProfile", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMeterRecordUsageByTaskProfileResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterRecordUsageByTaskProfile"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterRecordUsageByTaskProfileResponse());
     }
 
     public DescribeMeterRecordUsageByTaskProfileResponse describeMeterRecordUsageByTaskProfile(DescribeMeterRecordUsageByTaskProfileRequest request) throws Exception {
@@ -137,10 +271,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeMeterRtcApproxPeakRateResponse describeMeterRtcApproxPeakRateWithOptions(DescribeMeterRtcApproxPeakRateRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("EndTs", request.endTs);
+        query.put("Interval", request.interval);
+        query.put("ServiceArea", request.serviceArea);
+        query.put("StartTs", request.startTs);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeMeterRtcApproxPeakRate", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMeterRtcApproxPeakRateResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterRtcApproxPeakRate"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterRtcApproxPeakRateResponse());
     }
 
     public DescribeMeterRtcApproxPeakRateResponse describeMeterRtcApproxPeakRate(DescribeMeterRtcApproxPeakRateRequest request) throws Exception {
@@ -150,10 +301,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeMeterRtcBandWidthUsageResponse describeMeterRtcBandWidthUsageWithOptions(DescribeMeterRtcBandWidthUsageRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("EndTs", request.endTs);
+        query.put("Interval", request.interval);
+        query.put("ServiceArea", request.serviceArea);
+        query.put("StartTs", request.startTs);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeMeterRtcBandWidthUsage", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMeterRtcBandWidthUsageResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterRtcBandWidthUsage"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterRtcBandWidthUsageResponse());
     }
 
     public DescribeMeterRtcBandWidthUsageResponse describeMeterRtcBandWidthUsage(DescribeMeterRtcBandWidthUsageRequest request) throws Exception {
@@ -163,10 +331,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeMeterRtcChannelCntDataResponse describeMeterRtcChannelCntDataWithOptions(DescribeMeterRtcChannelCntDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("EndTs", request.endTs);
+        query.put("Interval", request.interval);
+        query.put("ServiceArea", request.serviceArea);
+        query.put("StartTs", request.startTs);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeMeterRtcChannelCntData", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMeterRtcChannelCntDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterRtcChannelCntData"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterRtcChannelCntDataResponse());
     }
 
     public DescribeMeterRtcChannelCntDataResponse describeMeterRtcChannelCntData(DescribeMeterRtcChannelCntDataRequest request) throws Exception {
@@ -176,10 +361,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeMeterRtcDurationResponse describeMeterRtcDurationWithOptions(DescribeMeterRtcDurationRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("EndTs", request.endTs);
+        query.put("Interval", request.interval);
+        query.put("ServiceArea", request.serviceArea);
+        query.put("StartTs", request.startTs);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeMeterRtcDuration", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMeterRtcDurationResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterRtcDuration"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterRtcDurationResponse());
     }
 
     public DescribeMeterRtcDurationResponse describeMeterRtcDuration(DescribeMeterRtcDurationRequest request) throws Exception {
@@ -189,10 +391,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeMeterRtcDurationByAppIdResponse describeMeterRtcDurationByAppIdWithOptions(DescribeMeterRtcDurationByAppIdRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("EndTs", request.endTs);
+        query.put("Interval", request.interval);
+        query.put("ServiceArea", request.serviceArea);
+        query.put("StartTs", request.startTs);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeMeterRtcDurationByAppId", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMeterRtcDurationByAppIdResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterRtcDurationByAppId"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterRtcDurationByAppIdResponse());
     }
 
     public DescribeMeterRtcDurationByAppIdResponse describeMeterRtcDurationByAppId(DescribeMeterRtcDurationByAppIdRequest request) throws Exception {
@@ -202,10 +421,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeMeterRtcFlowUsageResponse describeMeterRtcFlowUsageWithOptions(DescribeMeterRtcFlowUsageRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("EndTs", request.endTs);
+        query.put("Interval", request.interval);
+        query.put("ServiceArea", request.serviceArea);
+        query.put("StartTs", request.startTs);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeMeterRtcFlowUsage", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMeterRtcFlowUsageResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterRtcFlowUsage"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterRtcFlowUsageResponse());
     }
 
     public DescribeMeterRtcFlowUsageResponse describeMeterRtcFlowUsage(DescribeMeterRtcFlowUsageRequest request) throws Exception {
@@ -215,10 +451,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeMeterRtcPeakChannelCntDataResponse describeMeterRtcPeakChannelCntDataWithOptions(DescribeMeterRtcPeakChannelCntDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("EndTs", request.endTs);
+        query.put("Interval", request.interval);
+        query.put("ServiceArea", request.serviceArea);
+        query.put("StartTs", request.startTs);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeMeterRtcPeakChannelCntData", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMeterRtcPeakChannelCntDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterRtcPeakChannelCntData"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterRtcPeakChannelCntDataResponse());
     }
 
     public DescribeMeterRtcPeakChannelCntDataResponse describeMeterRtcPeakChannelCntData(DescribeMeterRtcPeakChannelCntDataRequest request) throws Exception {
@@ -228,10 +481,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeMeterRtcPeakUserCntDataResponse describeMeterRtcPeakUserCntDataWithOptions(DescribeMeterRtcPeakUserCntDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("EndTs", request.endTs);
+        query.put("Interval", request.interval);
+        query.put("ServiceArea", request.serviceArea);
+        query.put("StartTs", request.startTs);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeMeterRtcPeakUserCntData", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMeterRtcPeakUserCntDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterRtcPeakUserCntData"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterRtcPeakUserCntDataResponse());
     }
 
     public DescribeMeterRtcPeakUserCntDataResponse describeMeterRtcPeakUserCntData(DescribeMeterRtcPeakUserCntDataRequest request) throws Exception {
@@ -241,10 +511,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeMeterRtcRtBandWidthUsageResponse describeMeterRtcRtBandWidthUsageWithOptions(DescribeMeterRtcRtBandWidthUsageRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("EndTs", request.endTs);
+        query.put("Interval", request.interval);
+        query.put("ServiceArea", request.serviceArea);
+        query.put("StartTs", request.startTs);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeMeterRtcRtBandWidthUsage", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMeterRtcRtBandWidthUsageResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterRtcRtBandWidthUsage"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterRtcRtBandWidthUsageResponse());
     }
 
     public DescribeMeterRtcRtBandWidthUsageResponse describeMeterRtcRtBandWidthUsage(DescribeMeterRtcRtBandWidthUsageRequest request) throws Exception {
@@ -254,10 +541,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeMeterRtcRtFlowUsageResponse describeMeterRtcRtFlowUsageWithOptions(DescribeMeterRtcRtFlowUsageRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("EndTs", request.endTs);
+        query.put("Interval", request.interval);
+        query.put("ServiceArea", request.serviceArea);
+        query.put("StartTs", request.startTs);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeMeterRtcRtFlowUsage", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMeterRtcRtFlowUsageResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterRtcRtFlowUsage"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterRtcRtFlowUsageResponse());
     }
 
     public DescribeMeterRtcRtFlowUsageResponse describeMeterRtcRtFlowUsage(DescribeMeterRtcRtFlowUsageRequest request) throws Exception {
@@ -267,10 +571,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeMeterRtcUserCntDataResponse describeMeterRtcUserCntDataWithOptions(DescribeMeterRtcUserCntDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("EndTs", request.endTs);
+        query.put("Interval", request.interval);
+        query.put("ServiceArea", request.serviceArea);
+        query.put("StartTs", request.startTs);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeMeterRtcUserCntData", "2021-04-25", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMeterRtcUserCntDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterRtcUserCntData"),
+            new TeaPair("version", "2021-04-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterRtcUserCntDataResponse());
     }
 
     public DescribeMeterRtcUserCntDataResponse describeMeterRtcUserCntData(DescribeMeterRtcUserCntDataRequest request) throws Exception {

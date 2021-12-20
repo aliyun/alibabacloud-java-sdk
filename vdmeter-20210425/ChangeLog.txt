@@ -1,3 +1,6 @@
+2021-12-20 Version: 1.0.0
+- JavaSdk.
+
 2021-11-18 Version: 1.8.121
 - HuyaRecordPythonSdk.
 
