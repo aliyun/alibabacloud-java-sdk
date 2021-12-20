@@ -4,9 +4,6 @@ package com.aliyun.iotcc20210513.models;
 import com.aliyun.tea.*;
 
 public class ListConnectionPoolsRequest extends TeaModel {
-    @NameInMap("IoTCloudConnectorId")
-    public String ioTCloudConnectorId;
-
     @NameInMap("ConnectionPoolIds")
     public java.util.List<String> connectionPoolIds;
 
@@ -16,11 +13,14 @@ public class ListConnectionPoolsRequest extends TeaModel {
     @NameInMap("ConnectionPoolStatus")
     public java.util.List<String> connectionPoolStatus;
 
-    @NameInMap("NextToken")
-    public String nextToken;
+    @NameInMap("IoTCloudConnectorId")
+    public String ioTCloudConnectorId;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -28,14 +28,6 @@ public class ListConnectionPoolsRequest extends TeaModel {
     public static ListConnectionPoolsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListConnectionPoolsRequest self = new ListConnectionPoolsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListConnectionPoolsRequest setIoTCloudConnectorId(String ioTCloudConnectorId) {
-        this.ioTCloudConnectorId = ioTCloudConnectorId;
-        return this;
-    }
-    public String getIoTCloudConnectorId() {
-        return this.ioTCloudConnectorId;
     }
 
     public ListConnectionPoolsRequest setConnectionPoolIds(java.util.List<String> connectionPoolIds) {
@@ -62,12 +54,12 @@ public class ListConnectionPoolsRequest extends TeaModel {
         return this.connectionPoolStatus;
     }
 
-    public ListConnectionPoolsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public ListConnectionPoolsRequest setIoTCloudConnectorId(String ioTCloudConnectorId) {
+        this.ioTCloudConnectorId = ioTCloudConnectorId;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public String getIoTCloudConnectorId() {
+        return this.ioTCloudConnectorId;
     }
 
     public ListConnectionPoolsRequest setMaxResults(Integer maxResults) {
@@ -76,6 +68,14 @@ public class ListConnectionPoolsRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListConnectionPoolsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListConnectionPoolsRequest setRegionId(String regionId) {

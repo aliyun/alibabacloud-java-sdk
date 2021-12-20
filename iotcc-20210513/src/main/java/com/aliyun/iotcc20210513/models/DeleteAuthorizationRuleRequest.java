@@ -4,9 +4,6 @@ package com.aliyun.iotcc20210513.models;
 import com.aliyun.tea.*;
 
 public class DeleteAuthorizationRuleRequest extends TeaModel {
-    @NameInMap("IoTCloudConnectorId")
-    public String ioTCloudConnectorId;
-
     @NameInMap("AuthorizationRuleId")
     public String authorizationRuleId;
 
@@ -16,20 +13,15 @@ public class DeleteAuthorizationRuleRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("IoTCloudConnectorId")
+    public String ioTCloudConnectorId;
+
     @NameInMap("RegionId")
     public String regionId;
 
     public static DeleteAuthorizationRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAuthorizationRuleRequest self = new DeleteAuthorizationRuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteAuthorizationRuleRequest setIoTCloudConnectorId(String ioTCloudConnectorId) {
-        this.ioTCloudConnectorId = ioTCloudConnectorId;
-        return this;
-    }
-    public String getIoTCloudConnectorId() {
-        return this.ioTCloudConnectorId;
     }
 
     public DeleteAuthorizationRuleRequest setAuthorizationRuleId(String authorizationRuleId) {
@@ -54,6 +46,14 @@ public class DeleteAuthorizationRuleRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public DeleteAuthorizationRuleRequest setIoTCloudConnectorId(String ioTCloudConnectorId) {
+        this.ioTCloudConnectorId = ioTCloudConnectorId;
+        return this;
+    }
+    public String getIoTCloudConnectorId() {
+        return this.ioTCloudConnectorId;
     }
 
     public DeleteAuthorizationRuleRequest setRegionId(String regionId) {

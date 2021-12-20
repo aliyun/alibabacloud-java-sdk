@@ -4,20 +4,20 @@ package com.aliyun.iotcc20210513.models;
 import com.aliyun.tea.*;
 
 public class EnableIoTCloudConnectorAccessLogRequest extends TeaModel {
-    @NameInMap("IoTCloudConnectorId")
-    public String ioTCloudConnectorId;
+    @NameInMap("AccessLogSlsLogStore")
+    public String accessLogSlsLogStore;
 
     @NameInMap("AccessLogSlsProject")
     public String accessLogSlsProject;
-
-    @NameInMap("AccessLogSlsLogStore")
-    public String accessLogSlsLogStore;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("DryRun")
     public Boolean dryRun;
+
+    @NameInMap("IoTCloudConnectorId")
+    public String ioTCloudConnectorId;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -27,12 +27,12 @@ public class EnableIoTCloudConnectorAccessLogRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public EnableIoTCloudConnectorAccessLogRequest setIoTCloudConnectorId(String ioTCloudConnectorId) {
-        this.ioTCloudConnectorId = ioTCloudConnectorId;
+    public EnableIoTCloudConnectorAccessLogRequest setAccessLogSlsLogStore(String accessLogSlsLogStore) {
+        this.accessLogSlsLogStore = accessLogSlsLogStore;
         return this;
     }
-    public String getIoTCloudConnectorId() {
-        return this.ioTCloudConnectorId;
+    public String getAccessLogSlsLogStore() {
+        return this.accessLogSlsLogStore;
     }
 
     public EnableIoTCloudConnectorAccessLogRequest setAccessLogSlsProject(String accessLogSlsProject) {
@@ -41,14 +41,6 @@ public class EnableIoTCloudConnectorAccessLogRequest extends TeaModel {
     }
     public String getAccessLogSlsProject() {
         return this.accessLogSlsProject;
-    }
-
-    public EnableIoTCloudConnectorAccessLogRequest setAccessLogSlsLogStore(String accessLogSlsLogStore) {
-        this.accessLogSlsLogStore = accessLogSlsLogStore;
-        return this;
-    }
-    public String getAccessLogSlsLogStore() {
-        return this.accessLogSlsLogStore;
     }
 
     public EnableIoTCloudConnectorAccessLogRequest setClientToken(String clientToken) {
@@ -65,6 +57,14 @@ public class EnableIoTCloudConnectorAccessLogRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public EnableIoTCloudConnectorAccessLogRequest setIoTCloudConnectorId(String ioTCloudConnectorId) {
+        this.ioTCloudConnectorId = ioTCloudConnectorId;
+        return this;
+    }
+    public String getIoTCloudConnectorId() {
+        return this.ioTCloudConnectorId;
     }
 
     public EnableIoTCloudConnectorAccessLogRequest setRegionId(String regionId) {

@@ -1,0 +1,34 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.iotcc20210513.models;
+
+import com.aliyun.tea.*;
+
+public class ListRegionsRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    public static ListRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListRegionsRequest self = new ListRegionsRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public ListRegionsRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
+    public ListRegionsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+}
