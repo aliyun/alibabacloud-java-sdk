@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.adp20210720.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteEnvironmentProductVersionResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteEnvironmentProductVersionResponseBody body;
+
+    public static DeleteEnvironmentProductVersionResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteEnvironmentProductVersionResponse self = new DeleteEnvironmentProductVersionResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DeleteEnvironmentProductVersionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteEnvironmentProductVersionResponse setBody(DeleteEnvironmentProductVersionResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteEnvironmentProductVersionResponseBody getBody() {
+        return this.body;
+    }
+
+}

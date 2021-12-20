@@ -4,7 +4,7 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class GetWorkflowStatusRequest extends TeaModel {
-    // ENUM:["CreateCluster","DeleteCluster","Pack","Deploy"]
+    // ENUM:["CreateCluster","DeleteCluster","Pack","Deploy","UnbindProductVersion"]
     @NameInMap("workflowType")
     public String workflowType;
 

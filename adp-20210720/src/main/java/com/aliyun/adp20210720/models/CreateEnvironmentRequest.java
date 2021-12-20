@@ -23,6 +23,9 @@ public class CreateEnvironmentRequest extends TeaModel {
     @NameInMap("type")
     public String type;
 
+    @NameInMap("vendorConfig")
+    public String vendorConfig;
+
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -77,6 +80,14 @@ public class CreateEnvironmentRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public CreateEnvironmentRequest setVendorConfig(String vendorConfig) {
+        this.vendorConfig = vendorConfig;
+        return this;
+    }
+    public String getVendorConfig() {
+        return this.vendorConfig;
     }
 
     public CreateEnvironmentRequest setVendorType(String vendorType) {

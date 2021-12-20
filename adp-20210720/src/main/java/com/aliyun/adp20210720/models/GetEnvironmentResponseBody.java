@@ -82,6 +82,12 @@ public class GetEnvironmentResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        @NameInMap("foundationVersion")
+        public String foundationVersion;
+
+        @NameInMap("foundationVersionUID")
+        public String foundationVersionUID;
+
         @NameInMap("instanceList")
         public java.util.List<InstanceInfo> instanceList;
 
@@ -145,6 +151,22 @@ public class GetEnvironmentResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetEnvironmentResponseBodyData setFoundationVersion(String foundationVersion) {
+            this.foundationVersion = foundationVersion;
+            return this;
+        }
+        public String getFoundationVersion() {
+            return this.foundationVersion;
+        }
+
+        public GetEnvironmentResponseBodyData setFoundationVersionUID(String foundationVersionUID) {
+            this.foundationVersionUID = foundationVersionUID;
+            return this;
+        }
+        public String getFoundationVersionUID() {
+            return this.foundationVersionUID;
         }
 
         public GetEnvironmentResponseBodyData setInstanceList(java.util.List<InstanceInfo> instanceList) {

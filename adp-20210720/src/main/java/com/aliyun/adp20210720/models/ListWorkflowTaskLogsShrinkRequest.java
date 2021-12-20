@@ -3,9 +3,9 @@ package com.aliyun.adp20210720.models;
 
 import com.aliyun.tea.*;
 
-public class ListWorkflowTaskLogsRequest extends TeaModel {
+public class ListWorkflowTaskLogsShrinkRequest extends TeaModel {
     @NameInMap("filterValues")
-    public java.util.List<String> filterValues;
+    public String filterValuesShrink;
 
     // log 的顺序，positive 代表最新的数据在最后，reverse 代表最新的数据在最前
     @NameInMap("orderType")
@@ -25,20 +25,20 @@ public class ListWorkflowTaskLogsRequest extends TeaModel {
     @NameInMap("xuid")
     public String xuid;
 
-    public static ListWorkflowTaskLogsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListWorkflowTaskLogsRequest self = new ListWorkflowTaskLogsRequest();
+    public static ListWorkflowTaskLogsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListWorkflowTaskLogsShrinkRequest self = new ListWorkflowTaskLogsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListWorkflowTaskLogsRequest setFilterValues(java.util.List<String> filterValues) {
-        this.filterValues = filterValues;
+    public ListWorkflowTaskLogsShrinkRequest setFilterValuesShrink(String filterValuesShrink) {
+        this.filterValuesShrink = filterValuesShrink;
         return this;
     }
-    public java.util.List<String> getFilterValues() {
-        return this.filterValues;
+    public String getFilterValuesShrink() {
+        return this.filterValuesShrink;
     }
 
-    public ListWorkflowTaskLogsRequest setOrderType(String orderType) {
+    public ListWorkflowTaskLogsShrinkRequest setOrderType(String orderType) {
         this.orderType = orderType;
         return this;
     }
@@ -46,7 +46,7 @@ public class ListWorkflowTaskLogsRequest extends TeaModel {
         return this.orderType;
     }
 
-    public ListWorkflowTaskLogsRequest setPageNum(Long pageNum) {
+    public ListWorkflowTaskLogsShrinkRequest setPageNum(Long pageNum) {
         this.pageNum = pageNum;
         return this;
     }
@@ -54,7 +54,7 @@ public class ListWorkflowTaskLogsRequest extends TeaModel {
         return this.pageNum;
     }
 
-    public ListWorkflowTaskLogsRequest setPageSize(Long pageSize) {
+    public ListWorkflowTaskLogsShrinkRequest setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -62,7 +62,7 @@ public class ListWorkflowTaskLogsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListWorkflowTaskLogsRequest setWorkflowType(String workflowType) {
+    public ListWorkflowTaskLogsShrinkRequest setWorkflowType(String workflowType) {
         this.workflowType = workflowType;
         return this;
     }
@@ -70,7 +70,7 @@ public class ListWorkflowTaskLogsRequest extends TeaModel {
         return this.workflowType;
     }
 
-    public ListWorkflowTaskLogsRequest setXuid(String xuid) {
+    public ListWorkflowTaskLogsShrinkRequest setXuid(String xuid) {
         this.xuid = xuid;
         return this;
     }
