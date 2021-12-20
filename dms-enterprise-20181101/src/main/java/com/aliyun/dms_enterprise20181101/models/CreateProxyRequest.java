@@ -10,6 +10,9 @@ public class CreateProxyRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Tid")
     public Long tid;
 
@@ -35,6 +38,14 @@ public class CreateProxyRequest extends TeaModel {
     }
     public String getPassword() {
         return this.password;
+    }
+
+    public CreateProxyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateProxyRequest setTid(Long tid) {

@@ -13,6 +13,9 @@ public class ListDBTaskSQLJobDetailRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Tid")
     public Long tid;
 
@@ -43,6 +46,14 @@ public class ListDBTaskSQLJobDetailRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListDBTaskSQLJobDetailRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListDBTaskSQLJobDetailRequest setTid(Long tid) {

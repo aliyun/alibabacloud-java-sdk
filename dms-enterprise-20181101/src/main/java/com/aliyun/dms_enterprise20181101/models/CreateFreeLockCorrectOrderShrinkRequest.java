@@ -13,6 +13,9 @@ public class CreateFreeLockCorrectOrderShrinkRequest extends TeaModel {
     @NameInMap("Param")
     public String paramShrink;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RelatedUserList")
     public String relatedUserListShrink;
 
@@ -46,6 +49,14 @@ public class CreateFreeLockCorrectOrderShrinkRequest extends TeaModel {
     }
     public String getParamShrink() {
         return this.paramShrink;
+    }
+
+    public CreateFreeLockCorrectOrderShrinkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateFreeLockCorrectOrderShrinkRequest setRelatedUserListShrink(String relatedUserListShrink) {

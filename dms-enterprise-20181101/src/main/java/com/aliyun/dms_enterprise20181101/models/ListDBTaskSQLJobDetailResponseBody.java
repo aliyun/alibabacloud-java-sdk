@@ -77,11 +77,17 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
     }
 
     public static class ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList extends TeaModel {
+        @NameInMap("AffectRows")
+        public Long affectRows;
+
         @NameInMap("CurrentSql")
         public String currentSql;
 
         @NameInMap("DbId")
         public Long dbId;
+
+        @NameInMap("EndTime")
+        public String endTime;
 
         @NameInMap("ExecuteCount")
         public Long executeCount;
@@ -104,12 +110,26 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         @NameInMap("SqlType")
         public String sqlType;
 
+        @NameInMap("StartTime")
+        public String startTime;
+
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("TimeDelay")
+        public Long timeDelay;
 
         public static ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList build(java.util.Map<String, ?> map) throws Exception {
             ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList self = new ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList();
             return TeaModel.build(map, self);
+        }
+
+        public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setAffectRows(Long affectRows) {
+            this.affectRows = affectRows;
+            return this;
+        }
+        public Long getAffectRows() {
+            return this.affectRows;
         }
 
         public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setCurrentSql(String currentSql) {
@@ -126,6 +146,14 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         }
         public Long getDbId() {
             return this.dbId;
+        }
+
+        public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setExecuteCount(Long executeCount) {
@@ -184,12 +212,28 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             return this.sqlType;
         }
 
+        public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
         public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setTimeDelay(Long timeDelay) {
+            this.timeDelay = timeDelay;
+            return this;
+        }
+        public Long getTimeDelay() {
+            return this.timeDelay;
         }
 
     }

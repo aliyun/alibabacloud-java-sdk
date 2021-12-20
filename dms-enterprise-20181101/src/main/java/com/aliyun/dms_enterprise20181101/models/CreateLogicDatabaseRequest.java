@@ -10,6 +10,9 @@ public class CreateLogicDatabaseRequest extends TeaModel {
     @NameInMap("DatabaseIds")
     public java.util.List<Long> databaseIds;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Tid")
     public Long tid;
 
@@ -32,6 +35,14 @@ public class CreateLogicDatabaseRequest extends TeaModel {
     }
     public java.util.List<Long> getDatabaseIds() {
         return this.databaseIds;
+    }
+
+    public CreateLogicDatabaseRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateLogicDatabaseRequest setTid(Long tid) {

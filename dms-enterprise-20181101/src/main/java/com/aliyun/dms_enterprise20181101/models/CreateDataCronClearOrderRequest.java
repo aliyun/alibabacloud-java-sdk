@@ -13,6 +13,9 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
     @NameInMap("Param")
     public CreateDataCronClearOrderRequestParam param;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RelatedUserList")
     public java.util.List<Long> relatedUserList;
 
@@ -46,6 +49,14 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
     }
     public CreateDataCronClearOrderRequestParam getParam() {
         return this.param;
+    }
+
+    public CreateDataCronClearOrderRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateDataCronClearOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {

@@ -10,6 +10,9 @@ public class SyncDatabaseMetaRequest extends TeaModel {
     @NameInMap("Logic")
     public Boolean logic;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Tid")
     public Long tid;
 
@@ -32,6 +35,14 @@ public class SyncDatabaseMetaRequest extends TeaModel {
     }
     public Boolean getLogic() {
         return this.logic;
+    }
+
+    public SyncDatabaseMetaRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SyncDatabaseMetaRequest setTid(Long tid) {

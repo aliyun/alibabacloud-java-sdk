@@ -22,6 +22,9 @@ public class ListOrdersRequest extends TeaModel {
     @NameInMap("PluginType")
     public String pluginType;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SearchContent")
     public String searchContent;
 
@@ -85,6 +88,14 @@ public class ListOrdersRequest extends TeaModel {
     }
     public String getPluginType() {
         return this.pluginType;
+    }
+
+    public ListOrdersRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListOrdersRequest setSearchContent(String searchContent) {

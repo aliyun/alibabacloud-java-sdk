@@ -19,6 +19,9 @@ public class RevokeUserPermissionRequest extends TeaModel {
     @NameInMap("PermTypes")
     public String permTypes;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("TableId")
     public String tableId;
 
@@ -77,6 +80,14 @@ public class RevokeUserPermissionRequest extends TeaModel {
     }
     public String getPermTypes() {
         return this.permTypes;
+    }
+
+    public RevokeUserPermissionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public RevokeUserPermissionRequest setTableId(String tableId) {

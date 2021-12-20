@@ -7,6 +7,9 @@ public class ListColumnsRequest extends TeaModel {
     @NameInMap("Logic")
     public Boolean logic;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("TableId")
     public String tableId;
 
@@ -24,6 +27,14 @@ public class ListColumnsRequest extends TeaModel {
     }
     public Boolean getLogic() {
         return this.logic;
+    }
+
+    public ListColumnsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListColumnsRequest setTableId(String tableId) {

@@ -7,6 +7,9 @@ public class InspectProxyAccessSecretRequest extends TeaModel {
     @NameInMap("ProxyAccessId")
     public Long proxyAccessId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Tid")
     public Long tid;
 
@@ -21,6 +24,14 @@ public class InspectProxyAccessSecretRequest extends TeaModel {
     }
     public Long getProxyAccessId() {
         return this.proxyAccessId;
+    }
+
+    public InspectProxyAccessSecretRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public InspectProxyAccessSecretRequest setTid(Long tid) {

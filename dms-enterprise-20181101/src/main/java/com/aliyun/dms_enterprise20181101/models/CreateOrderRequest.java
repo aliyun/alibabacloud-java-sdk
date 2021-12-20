@@ -16,6 +16,9 @@ public class CreateOrderRequest extends TeaModel {
     @NameInMap("PluginType")
     public String pluginType;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RelatedUserList")
     public String relatedUserList;
 
@@ -57,6 +60,14 @@ public class CreateOrderRequest extends TeaModel {
     }
     public String getPluginType() {
         return this.pluginType;
+    }
+
+    public CreateOrderRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateOrderRequest setRelatedUserList(String relatedUserList) {

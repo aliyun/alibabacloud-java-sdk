@@ -10,6 +10,9 @@ public class GetDataCorrectBackupFilesRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Tid")
     public Long tid;
 
@@ -32,6 +35,14 @@ public class GetDataCorrectBackupFilesRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public GetDataCorrectBackupFilesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetDataCorrectBackupFilesRequest setTid(Long tid) {

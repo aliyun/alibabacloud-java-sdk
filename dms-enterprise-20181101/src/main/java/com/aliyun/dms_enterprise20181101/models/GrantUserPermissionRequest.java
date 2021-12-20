@@ -22,6 +22,9 @@ public class GrantUserPermissionRequest extends TeaModel {
     @NameInMap("PermTypes")
     public String permTypes;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("TableId")
     public String tableId;
 
@@ -85,6 +88,14 @@ public class GrantUserPermissionRequest extends TeaModel {
     }
     public String getPermTypes() {
         return this.permTypes;
+    }
+
+    public GrantUserPermissionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GrantUserPermissionRequest setTableId(String tableId) {

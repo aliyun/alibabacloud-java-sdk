@@ -114,6 +114,9 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
     }
 
     public static class ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase extends TeaModel {
+        @NameInMap("Alias")
+        public String alias;
+
         @NameInMap("DatabaseId")
         public String databaseId;
 
@@ -141,6 +144,14 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         public static ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase build(java.util.Map<String, ?> map) throws Exception {
             ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase self = new ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase();
             return TeaModel.build(map, self);
+        }
+
+        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase setAlias(String alias) {
+            this.alias = alias;
+            return this;
+        }
+        public String getAlias() {
+            return this.alias;
         }
 
         public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase setDatabaseId(String databaseId) {

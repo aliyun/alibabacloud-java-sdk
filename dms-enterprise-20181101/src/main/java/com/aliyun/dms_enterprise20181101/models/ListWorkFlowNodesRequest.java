@@ -4,6 +4,9 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListWorkFlowNodesRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SearchName")
     public String searchName;
 
@@ -13,6 +16,14 @@ public class ListWorkFlowNodesRequest extends TeaModel {
     public static ListWorkFlowNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListWorkFlowNodesRequest self = new ListWorkFlowNodesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListWorkFlowNodesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListWorkFlowNodesRequest setSearchName(String searchName) {
