@@ -151,12 +151,45 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
     }
 
+    public static class GetTemplateScratchResponseBodyTemplateScratchStackProvision extends TeaModel {
+        @NameInMap("Creatable")
+        public Boolean creatable;
+
+        @NameInMap("Importable")
+        public Boolean importable;
+
+        public static GetTemplateScratchResponseBodyTemplateScratchStackProvision build(java.util.Map<String, ?> map) throws Exception {
+            GetTemplateScratchResponseBodyTemplateScratchStackProvision self = new GetTemplateScratchResponseBodyTemplateScratchStackProvision();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTemplateScratchResponseBodyTemplateScratchStackProvision setCreatable(Boolean creatable) {
+            this.creatable = creatable;
+            return this;
+        }
+        public Boolean getCreatable() {
+            return this.creatable;
+        }
+
+        public GetTemplateScratchResponseBodyTemplateScratchStackProvision setImportable(Boolean importable) {
+            this.importable = importable;
+            return this;
+        }
+        public Boolean getImportable() {
+            return this.importable;
+        }
+
+    }
+
     public static class GetTemplateScratchResponseBodyTemplateScratchStacks extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("StackId")
         public String stackId;
+
+        @NameInMap("UsageType")
+        public String usageType;
 
         public static GetTemplateScratchResponseBodyTemplateScratchStacks build(java.util.Map<String, ?> map) throws Exception {
             GetTemplateScratchResponseBodyTemplateScratchStacks self = new GetTemplateScratchResponseBodyTemplateScratchStacks();
@@ -177,6 +210,14 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         }
         public String getStackId() {
             return this.stackId;
+        }
+
+        public GetTemplateScratchResponseBodyTemplateScratchStacks setUsageType(String usageType) {
+            this.usageType = usageType;
+            return this;
+        }
+        public String getUsageType() {
+            return this.usageType;
         }
 
     }
@@ -205,6 +246,9 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
         @NameInMap("SourceTag")
         public GetTemplateScratchResponseBodyTemplateScratchSourceTag sourceTag;
+
+        @NameInMap("StackProvision")
+        public GetTemplateScratchResponseBodyTemplateScratchStackProvision stackProvision;
 
         @NameInMap("Stacks")
         public java.util.List<GetTemplateScratchResponseBodyTemplateScratchStacks> stacks;
@@ -294,6 +338,14 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         }
         public GetTemplateScratchResponseBodyTemplateScratchSourceTag getSourceTag() {
             return this.sourceTag;
+        }
+
+        public GetTemplateScratchResponseBodyTemplateScratch setStackProvision(GetTemplateScratchResponseBodyTemplateScratchStackProvision stackProvision) {
+            this.stackProvision = stackProvision;
+            return this;
+        }
+        public GetTemplateScratchResponseBodyTemplateScratchStackProvision getStackProvision() {
+            return this.stackProvision;
         }
 
         public GetTemplateScratchResponseBodyTemplateScratch setStacks(java.util.List<GetTemplateScratchResponseBodyTemplateScratchStacks> stacks) {

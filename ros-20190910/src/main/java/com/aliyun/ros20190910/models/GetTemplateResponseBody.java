@@ -203,6 +203,9 @@ public class GetTemplateResponseBody extends TeaModel {
         @NameInMap("ShareOption")
         public String shareOption;
 
+        @NameInMap("ShareSource")
+        public String shareSource;
+
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
@@ -228,6 +231,14 @@ public class GetTemplateResponseBody extends TeaModel {
         }
         public String getShareOption() {
             return this.shareOption;
+        }
+
+        public GetTemplateResponseBodyPermissions setShareSource(String shareSource) {
+            this.shareSource = shareSource;
+            return this;
+        }
+        public String getShareSource() {
+            return this.shareSource;
         }
 
         public GetTemplateResponseBodyPermissions setTemplateVersion(String templateVersion) {

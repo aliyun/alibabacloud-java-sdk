@@ -55,6 +55,9 @@ public class CreateStackRequest extends TeaModel {
     @NameInMap("TemplateScratchId")
     public String templateScratchId;
 
+    @NameInMap("TemplateScratchRegionId")
+    public String templateScratchRegionId;
+
     @NameInMap("TemplateURL")
     public String templateURL;
 
@@ -203,6 +206,14 @@ public class CreateStackRequest extends TeaModel {
     }
     public String getTemplateScratchId() {
         return this.templateScratchId;
+    }
+
+    public CreateStackRequest setTemplateScratchRegionId(String templateScratchRegionId) {
+        this.templateScratchRegionId = templateScratchRegionId;
+        return this;
+    }
+    public String getTemplateScratchRegionId() {
+        return this.templateScratchRegionId;
     }
 
     public CreateStackRequest setTemplateURL(String templateURL) {

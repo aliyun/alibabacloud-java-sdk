@@ -22,6 +22,9 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     @NameInMap("TemplateScratchId")
     public String templateScratchId;
 
+    @NameInMap("TemplateScratchRegionId")
+    public String templateScratchRegionId;
+
     @NameInMap("TemplateURL")
     public String templateURL;
 
@@ -79,6 +82,14 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     }
     public String getTemplateScratchId() {
         return this.templateScratchId;
+    }
+
+    public GetTemplateEstimateCostRequest setTemplateScratchRegionId(String templateScratchRegionId) {
+        this.templateScratchRegionId = templateScratchRegionId;
+        return this;
+    }
+    public String getTemplateScratchRegionId() {
+        return this.templateScratchRegionId;
     }
 
     public GetTemplateEstimateCostRequest setTemplateURL(String templateURL) {

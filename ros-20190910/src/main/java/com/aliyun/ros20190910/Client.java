@@ -167,6 +167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("TemplateBody", request.templateBody);
         query.put("TemplateId", request.templateId);
         query.put("TemplateScratchId", request.templateScratchId);
+        query.put("TemplateScratchRegionId", request.templateScratchRegionId);
         query.put("TemplateURL", request.templateURL);
         query.put("TemplateVersion", request.templateVersion);
         query.put("TimeoutInMinutes", request.timeoutInMinutes);
@@ -1146,6 +1147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("TemplateBody", request.templateBody);
         query.put("TemplateId", request.templateId);
         query.put("TemplateScratchId", request.templateScratchId);
+        query.put("TemplateScratchRegionId", request.templateScratchRegionId);
         query.put("TemplateURL", request.templateURL);
         query.put("TemplateVersion", request.templateVersion);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1820,6 +1822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("TemplateBody", request.templateBody);
         query.put("TemplateId", request.templateId);
         query.put("TemplateScratchId", request.templateScratchId);
+        query.put("TemplateScratchRegionId", request.templateScratchRegionId);
         query.put("TemplateURL", request.templateURL);
         query.put("TemplateVersion", request.templateVersion);
         query.put("TimeoutInMinutes", request.timeoutInMinutes);
