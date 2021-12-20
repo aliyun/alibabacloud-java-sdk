@@ -110,6 +110,10 @@ public class SaveEnvRequest extends TeaModel {
         @NameInMap("Files")
         public java.util.List<SaveEnvRequestEnvFiles> files;
 
+        // jmeter插件的环境标签
+        @NameInMap("JmeterPluginLabel")
+        public String jmeterPluginLabel;
+
         // jmeter属性
         @NameInMap("Properties")
         public java.util.List<SaveEnvRequestEnvProperties> properties;
@@ -141,6 +145,14 @@ public class SaveEnvRequest extends TeaModel {
         }
         public java.util.List<SaveEnvRequestEnvFiles> getFiles() {
             return this.files;
+        }
+
+        public SaveEnvRequestEnv setJmeterPluginLabel(String jmeterPluginLabel) {
+            this.jmeterPluginLabel = jmeterPluginLabel;
+            return this;
+        }
+        public String getJmeterPluginLabel() {
+            return this.jmeterPluginLabel;
         }
 
         public SaveEnvRequestEnv setProperties(java.util.List<SaveEnvRequestEnvProperties> properties) {
