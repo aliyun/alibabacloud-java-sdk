@@ -7,6 +7,9 @@ public class ListEnvironmentsRequest extends TeaModel {
     @NameInMap("clusterUID")
     public String clusterUID;
 
+    @NameInMap("foundationType")
+    public String foundationType;
+
     @NameInMap("fuzzy")
     public String fuzzy;
 
@@ -22,6 +25,9 @@ public class ListEnvironmentsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    @NameInMap("type")
+    public String type;
+
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -36,6 +42,14 @@ public class ListEnvironmentsRequest extends TeaModel {
     }
     public String getClusterUID() {
         return this.clusterUID;
+    }
+
+    public ListEnvironmentsRequest setFoundationType(String foundationType) {
+        this.foundationType = foundationType;
+        return this;
+    }
+    public String getFoundationType() {
+        return this.foundationType;
     }
 
     public ListEnvironmentsRequest setFuzzy(String fuzzy) {
@@ -76,6 +90,14 @@ public class ListEnvironmentsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListEnvironmentsRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public ListEnvironmentsRequest setVendorType(String vendorType) {

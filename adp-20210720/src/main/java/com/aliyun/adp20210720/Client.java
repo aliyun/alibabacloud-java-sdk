@@ -201,6 +201,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddProductVersionConfigResponse());
     }
 
+    public AuthorizeProductVersionResponse authorizeProductVersion(String uid, AuthorizeProductVersionRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.authorizeProductVersionWithOptions(uid, request, headers, runtime);
+    }
+
+    public AuthorizeProductVersionResponse authorizeProductVersionWithOptions(String uid, AuthorizeProductVersionRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        uid = com.aliyun.openapiutil.Client.getEncodeParam(uid);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.grantee)) {
+            body.put("grantee", request.grantee);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AuthorizeProductVersion"),
+            new TeaPair("version", "2021-07-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/product-versions/" + uid + "/authorizations"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AuthorizeProductVersionResponse());
+    }
+
     public CreateEnvironmentResponse createEnvironment(CreateEnvironmentRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         CreateEnvironmentHeaders headers = new CreateEnvironmentHeaders();
@@ -234,6 +266,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("type", request.type);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vendorConfig)) {
+            body.put("vendorConfig", request.vendorConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vendorType)) {
             body.put("vendorType", request.vendorType);
         }
@@ -263,6 +299,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEnvironmentResponse());
+    }
+
+    public CreateFoundationReferenceResponse createFoundationReference(CreateFoundationReferenceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createFoundationReferenceWithOptions(request, headers, runtime);
+    }
+
+    public CreateFoundationReferenceResponse createFoundationReferenceWithOptions(CreateFoundationReferenceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterConfig)) {
+            body.put("clusterConfig", request.clusterConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.foundationVersionUID)) {
+            body.put("foundationVersionUID", request.foundationVersionUID);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFoundationReference"),
+            new TeaPair("version", "2021-07-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/foundation-references"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFoundationReferenceResponse());
     }
 
     public CreateProductResponse createProduct(CreateProductRequest request) throws Exception {
@@ -485,6 +556,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEnvironmentNodeResponse());
     }
 
+    public DeleteEnvironmentProductVersionResponse deleteEnvironmentProductVersion(String uid, String productVersionUID) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteEnvironmentProductVersionWithOptions(uid, productVersionUID, headers, runtime);
+    }
+
+    public DeleteEnvironmentProductVersionResponse deleteEnvironmentProductVersionWithOptions(String uid, String productVersionUID, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        uid = com.aliyun.openapiutil.Client.getEncodeParam(uid);
+        productVersionUID = com.aliyun.openapiutil.Client.getEncodeParam(productVersionUID);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteEnvironmentProductVersion"),
+            new TeaPair("version", "2021-07-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/environments/" + uid + "/product-versions/" + productVersionUID + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEnvironmentProductVersionResponse());
+    }
+
     public DeleteProductResponse deleteProduct(String uid) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -587,7 +684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteProductVersion"),
             new TeaPair("version", "2021-07-20"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/products/" + uid + "/versions"),
+            new TeaPair("pathname", "/api/v2/product-versions/" + uid + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -758,6 +855,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetEnvironmentNodeResponse());
+    }
+
+    public GetFoundationComponentReferenceResponse getFoundationComponentReference(String componentReferenceUID, String uid) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getFoundationComponentReferenceWithOptions(componentReferenceUID, uid, headers, runtime);
+    }
+
+    public GetFoundationComponentReferenceResponse getFoundationComponentReferenceWithOptions(String componentReferenceUID, String uid, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        componentReferenceUID = com.aliyun.openapiutil.Client.getEncodeParam(componentReferenceUID);
+        uid = com.aliyun.openapiutil.Client.getEncodeParam(uid);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFoundationComponentReference"),
+            new TeaPair("version", "2021-07-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/foundation-references/" + uid + "/components/" + componentReferenceUID + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFoundationComponentReferenceResponse());
     }
 
     public GetFoundationVersionResponse getFoundationVersion(String uid) throws Exception {
@@ -1137,7 +1260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request._public)) {
-            query.put("_public", request._public);
+            query.put("public", request._public);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1232,6 +1355,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("clusterUID", request.clusterUID);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.foundationType)) {
+            query.put("foundationType", request.foundationType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fuzzy)) {
             query.put("fuzzy", request.fuzzy);
         }
@@ -1250,6 +1377,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vendorType)) {
@@ -1550,6 +1681,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductInstanceConfigsResponse());
     }
 
+    public ListProductInstancesResponse listProductInstances(ListProductInstancesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listProductInstancesWithOptions(request, headers, runtime);
+    }
+
+    public ListProductInstancesResponse listProductInstancesWithOptions(ListProductInstancesRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.envUID)) {
+            query.put("envUID", request.envUID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("pageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productVersionUID)) {
+            query.put("productVersionUID", request.productVersionUID);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProductInstances"),
+            new TeaPair("version", "2021-07-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/product-instances"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductInstancesResponse());
+    }
+
     public ListProductVersionConfigsResponse listProductVersionConfigs(String uid, ListProductVersionConfigsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1708,11 +1882,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listWorkflowTaskLogsWithOptions(stepName, taskName, request, headers, runtime);
     }
 
-    public ListWorkflowTaskLogsResponse listWorkflowTaskLogsWithOptions(String stepName, String taskName, ListWorkflowTaskLogsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListWorkflowTaskLogsResponse listWorkflowTaskLogsWithOptions(String stepName, String taskName, ListWorkflowTaskLogsRequest tmpReq, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
         stepName = com.aliyun.openapiutil.Client.getEncodeParam(stepName);
         taskName = com.aliyun.openapiutil.Client.getEncodeParam(taskName);
+        ListWorkflowTaskLogsShrinkRequest request = new ListWorkflowTaskLogsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filterValues)) {
+            request.filterValuesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filterValues, "filterValues", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterValuesShrink)) {
+            query.put("filterValues", request.filterValuesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
             query.put("orderType", request.orderType);
         }
@@ -1862,6 +2046,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PutProductInstanceConfigResponse());
     }
 
+    public SetEnvironmentFoundationReferenceResponse setEnvironmentFoundationReference(String uid, String foundationReferenceUID) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.setEnvironmentFoundationReferenceWithOptions(uid, foundationReferenceUID, headers, runtime);
+    }
+
+    public SetEnvironmentFoundationReferenceResponse setEnvironmentFoundationReferenceWithOptions(String uid, String foundationReferenceUID, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        uid = com.aliyun.openapiutil.Client.getEncodeParam(uid);
+        foundationReferenceUID = com.aliyun.openapiutil.Client.getEncodeParam(foundationReferenceUID);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetEnvironmentFoundationReference"),
+            new TeaPair("version", "2021-07-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/environments/" + uid + "/foundation-references/" + foundationReferenceUID + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetEnvironmentFoundationReferenceResponse());
+    }
+
     public UpdateEnvironmentResponse updateEnvironment(String uid, UpdateEnvironmentRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1993,6 +2203,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateEnvironmentProductVersionResponse());
+    }
+
+    public UpdateFoundationComponentReferenceResponse updateFoundationComponentReference(String uid, String componentReferenceUID, UpdateFoundationComponentReferenceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateFoundationComponentReferenceWithOptions(uid, componentReferenceUID, request, headers, runtime);
+    }
+
+    public UpdateFoundationComponentReferenceResponse updateFoundationComponentReferenceWithOptions(String uid, String componentReferenceUID, UpdateFoundationComponentReferenceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        uid = com.aliyun.openapiutil.Client.getEncodeParam(uid);
+        componentReferenceUID = com.aliyun.openapiutil.Client.getEncodeParam(componentReferenceUID);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.componentOrchestrationValues)) {
+            body.put("componentOrchestrationValues", request.componentOrchestrationValues);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            body.put("enable", request.enable);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateFoundationComponentReference"),
+            new TeaPair("version", "2021-07-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/foundation-references/" + uid + "/components/" + componentReferenceUID + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFoundationComponentReferenceResponse());
     }
 
     public UpdateProductResponse updateProduct(String uid, UpdateProductRequest request) throws Exception {
