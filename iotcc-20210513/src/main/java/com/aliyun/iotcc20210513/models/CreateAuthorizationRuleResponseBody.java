@@ -4,23 +4,15 @@ package com.aliyun.iotcc20210513.models;
 import com.aliyun.tea.*;
 
 public class CreateAuthorizationRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AuthorizationRuleId")
     public String authorizationRuleId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateAuthorizationRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateAuthorizationRuleResponseBody self = new CreateAuthorizationRuleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateAuthorizationRuleResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateAuthorizationRuleResponseBody setAuthorizationRuleId(String authorizationRuleId) {
@@ -29,6 +21,14 @@ public class CreateAuthorizationRuleResponseBody extends TeaModel {
     }
     public String getAuthorizationRuleId() {
         return this.authorizationRuleId;
+    }
+
+    public CreateAuthorizationRuleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

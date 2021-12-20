@@ -4,26 +4,26 @@ package com.aliyun.iotcc20210513.models;
 import com.aliyun.tea.*;
 
 public class ListIoTCloudConnectorAvailableZonesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("AvailableZoneList")
+    public java.util.List<String> availableZoneList;
 
     @NameInMap("IoTCloudConnectorId")
     public String ioTCloudConnectorId;
 
-    @NameInMap("AvailableZoneList")
-    public java.util.List<String> availableZoneList;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListIoTCloudConnectorAvailableZonesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListIoTCloudConnectorAvailableZonesResponseBody self = new ListIoTCloudConnectorAvailableZonesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListIoTCloudConnectorAvailableZonesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ListIoTCloudConnectorAvailableZonesResponseBody setAvailableZoneList(java.util.List<String> availableZoneList) {
+        this.availableZoneList = availableZoneList;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<String> getAvailableZoneList() {
+        return this.availableZoneList;
     }
 
     public ListIoTCloudConnectorAvailableZonesResponseBody setIoTCloudConnectorId(String ioTCloudConnectorId) {
@@ -34,12 +34,12 @@ public class ListIoTCloudConnectorAvailableZonesResponseBody extends TeaModel {
         return this.ioTCloudConnectorId;
     }
 
-    public ListIoTCloudConnectorAvailableZonesResponseBody setAvailableZoneList(java.util.List<String> availableZoneList) {
-        this.availableZoneList = availableZoneList;
+    public ListIoTCloudConnectorAvailableZonesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<String> getAvailableZoneList() {
-        return this.availableZoneList;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -4,14 +4,14 @@ package com.aliyun.iotcc20210513.models;
 import com.aliyun.tea.*;
 
 public class DeleteIoTCloudConnectorRequest extends TeaModel {
-    @NameInMap("IoTCloudConnectorId")
-    public String ioTCloudConnectorId;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("DryRun")
     public Boolean dryRun;
+
+    @NameInMap("IoTCloudConnectorId")
+    public String ioTCloudConnectorId;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -19,14 +19,6 @@ public class DeleteIoTCloudConnectorRequest extends TeaModel {
     public static DeleteIoTCloudConnectorRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteIoTCloudConnectorRequest self = new DeleteIoTCloudConnectorRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteIoTCloudConnectorRequest setIoTCloudConnectorId(String ioTCloudConnectorId) {
-        this.ioTCloudConnectorId = ioTCloudConnectorId;
-        return this;
-    }
-    public String getIoTCloudConnectorId() {
-        return this.ioTCloudConnectorId;
     }
 
     public DeleteIoTCloudConnectorRequest setClientToken(String clientToken) {
@@ -43,6 +35,14 @@ public class DeleteIoTCloudConnectorRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public DeleteIoTCloudConnectorRequest setIoTCloudConnectorId(String ioTCloudConnectorId) {
+        this.ioTCloudConnectorId = ioTCloudConnectorId;
+        return this;
+    }
+    public String getIoTCloudConnectorId() {
+        return this.ioTCloudConnectorId;
     }
 
     public DeleteIoTCloudConnectorRequest setRegionId(String regionId) {

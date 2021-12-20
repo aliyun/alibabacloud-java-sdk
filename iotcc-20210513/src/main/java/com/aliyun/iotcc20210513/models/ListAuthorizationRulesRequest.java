@@ -4,29 +4,32 @@ package com.aliyun.iotcc20210513.models;
 import com.aliyun.tea.*;
 
 public class ListAuthorizationRulesRequest extends TeaModel {
-    @NameInMap("IoTCloudConnectorId")
-    public String ioTCloudConnectorId;
-
     @NameInMap("AuthorizationRuleIds")
     public java.util.List<String> authorizationRuleIds;
-
-    @NameInMap("DestinationType")
-    public java.util.List<String> destinationType;
-
-    @NameInMap("AuthorizationRuleStatus")
-    public java.util.List<String> authorizationRuleStatus;
 
     @NameInMap("AuthorizationRuleName")
     public java.util.List<String> authorizationRuleName;
 
-    @NameInMap("Policy")
-    public java.util.List<String> policy;
+    @NameInMap("AuthorizationRuleStatus")
+    public java.util.List<String> authorizationRuleStatus;
+
+    @NameInMap("Destination")
+    public java.util.List<String> destination;
+
+    @NameInMap("DestinationType")
+    public java.util.List<String> destinationType;
+
+    @NameInMap("IoTCloudConnectorId")
+    public String ioTCloudConnectorId;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
+    @NameInMap("Policy")
+    public java.util.List<String> policy;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -34,14 +37,6 @@ public class ListAuthorizationRulesRequest extends TeaModel {
     public static ListAuthorizationRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAuthorizationRulesRequest self = new ListAuthorizationRulesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListAuthorizationRulesRequest setIoTCloudConnectorId(String ioTCloudConnectorId) {
-        this.ioTCloudConnectorId = ioTCloudConnectorId;
-        return this;
-    }
-    public String getIoTCloudConnectorId() {
-        return this.ioTCloudConnectorId;
     }
 
     public ListAuthorizationRulesRequest setAuthorizationRuleIds(java.util.List<String> authorizationRuleIds) {
@@ -52,12 +47,12 @@ public class ListAuthorizationRulesRequest extends TeaModel {
         return this.authorizationRuleIds;
     }
 
-    public ListAuthorizationRulesRequest setDestinationType(java.util.List<String> destinationType) {
-        this.destinationType = destinationType;
+    public ListAuthorizationRulesRequest setAuthorizationRuleName(java.util.List<String> authorizationRuleName) {
+        this.authorizationRuleName = authorizationRuleName;
         return this;
     }
-    public java.util.List<String> getDestinationType() {
-        return this.destinationType;
+    public java.util.List<String> getAuthorizationRuleName() {
+        return this.authorizationRuleName;
     }
 
     public ListAuthorizationRulesRequest setAuthorizationRuleStatus(java.util.List<String> authorizationRuleStatus) {
@@ -68,20 +63,36 @@ public class ListAuthorizationRulesRequest extends TeaModel {
         return this.authorizationRuleStatus;
     }
 
-    public ListAuthorizationRulesRequest setAuthorizationRuleName(java.util.List<String> authorizationRuleName) {
-        this.authorizationRuleName = authorizationRuleName;
+    public ListAuthorizationRulesRequest setDestination(java.util.List<String> destination) {
+        this.destination = destination;
         return this;
     }
-    public java.util.List<String> getAuthorizationRuleName() {
-        return this.authorizationRuleName;
+    public java.util.List<String> getDestination() {
+        return this.destination;
     }
 
-    public ListAuthorizationRulesRequest setPolicy(java.util.List<String> policy) {
-        this.policy = policy;
+    public ListAuthorizationRulesRequest setDestinationType(java.util.List<String> destinationType) {
+        this.destinationType = destinationType;
         return this;
     }
-    public java.util.List<String> getPolicy() {
-        return this.policy;
+    public java.util.List<String> getDestinationType() {
+        return this.destinationType;
+    }
+
+    public ListAuthorizationRulesRequest setIoTCloudConnectorId(String ioTCloudConnectorId) {
+        this.ioTCloudConnectorId = ioTCloudConnectorId;
+        return this;
+    }
+    public String getIoTCloudConnectorId() {
+        return this.ioTCloudConnectorId;
+    }
+
+    public ListAuthorizationRulesRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListAuthorizationRulesRequest setNextToken(String nextToken) {
@@ -92,12 +103,12 @@ public class ListAuthorizationRulesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListAuthorizationRulesRequest setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public ListAuthorizationRulesRequest setPolicy(java.util.List<String> policy) {
+        this.policy = policy;
         return this;
     }
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public java.util.List<String> getPolicy() {
+        return this.policy;
     }
 
     public ListAuthorizationRulesRequest setRegionId(String regionId) {
