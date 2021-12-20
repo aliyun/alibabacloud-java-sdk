@@ -108,6 +108,10 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
         @NameInMap("HasReport")
         public Boolean hasReport;
 
+        // 压测计划持续时间，单位s
+        @NameInMap("HoldFor")
+        public Integer holdFor;
+
         // 是否是调试
         @NameInMap("IsDebugging")
         public Boolean isDebugging;
@@ -127,6 +131,10 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
         // 当前所处阶段
         @NameInMap("StageName")
         public String stageName;
+
+        // 压测计划开始时间戳，单位ms
+        @NameInMap("StartTimeTS")
+        public Long startTimeTS;
 
         // 状态
         @NameInMap("Status")
@@ -181,6 +189,14 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             return this.hasReport;
         }
 
+        public GetJMeterSceneRunningDataResponseBodyRunningData setHoldFor(Integer holdFor) {
+            this.holdFor = holdFor;
+            return this;
+        }
+        public Integer getHoldFor() {
+            return this.holdFor;
+        }
+
         public GetJMeterSceneRunningDataResponseBodyRunningData setIsDebugging(Boolean isDebugging) {
             this.isDebugging = isDebugging;
             return this;
@@ -219,6 +235,14 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
         }
         public String getStageName() {
             return this.stageName;
+        }
+
+        public GetJMeterSceneRunningDataResponseBodyRunningData setStartTimeTS(Long startTimeTS) {
+            this.startTimeTS = startTimeTS;
+            return this;
+        }
+        public Long getStartTimeTS() {
+            return this.startTimeTS;
         }
 
         public GetJMeterSceneRunningDataResponseBodyRunningData setStatus(String status) {

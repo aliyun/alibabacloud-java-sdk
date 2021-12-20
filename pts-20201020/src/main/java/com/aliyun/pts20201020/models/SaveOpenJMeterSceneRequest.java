@@ -221,10 +221,6 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
         @NameInMap("JMeterProperties")
         public java.util.List<SaveOpenJMeterSceneRequestOpenJMeterSceneJMeterProperties> JMeterProperties;
 
-        // jmeter插件的环境标签
-        @NameInMap("JmeterPluginLabel")
-        public String jmeterPluginLabel;
-
         // 预热时间
         @NameInMap("RampUp")
         public Integer rampUp;
@@ -340,14 +336,6 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
         }
         public java.util.List<SaveOpenJMeterSceneRequestOpenJMeterSceneJMeterProperties> getJMeterProperties() {
             return this.JMeterProperties;
-        }
-
-        public SaveOpenJMeterSceneRequestOpenJMeterScene setJmeterPluginLabel(String jmeterPluginLabel) {
-            this.jmeterPluginLabel = jmeterPluginLabel;
-            return this;
-        }
-        public String getJmeterPluginLabel() {
-            return this.jmeterPluginLabel;
         }
 
         public SaveOpenJMeterSceneRequestOpenJMeterScene setRampUp(Integer rampUp) {
