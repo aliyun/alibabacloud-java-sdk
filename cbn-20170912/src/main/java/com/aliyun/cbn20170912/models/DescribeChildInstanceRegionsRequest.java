@@ -10,14 +10,14 @@ public class DescribeChildInstanceRegionsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ProductType")
+    public String productType;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("ProductType")
-    public String productType;
 
     public static DescribeChildInstanceRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeChildInstanceRegionsRequest self = new DescribeChildInstanceRegionsRequest();
@@ -40,6 +40,14 @@ public class DescribeChildInstanceRegionsRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeChildInstanceRegionsRequest setProductType(String productType) {
+        this.productType = productType;
+        return this;
+    }
+    public String getProductType() {
+        return this.productType;
+    }
+
     public DescribeChildInstanceRegionsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -54,14 +62,6 @@ public class DescribeChildInstanceRegionsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeChildInstanceRegionsRequest setProductType(String productType) {
-        this.productType = productType;
-        return this;
-    }
-    public String getProductType() {
-        return this.productType;
     }
 
 }

@@ -4,11 +4,23 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ModifyCenAttributeRequest extends TeaModel {
+    @NameInMap("CenId")
+    public String cenId;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ProtectionLevel")
+    public String protectionLevel;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,21 +28,33 @@ public class ModifyCenAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CenId")
-    public String cenId;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("ProtectionLevel")
-    public String protectionLevel;
-
     public static ModifyCenAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCenAttributeRequest self = new ModifyCenAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyCenAttributeRequest setCenId(String cenId) {
+        this.cenId = cenId;
+        return this;
+    }
+    public String getCenId() {
+        return this.cenId;
+    }
+
+    public ModifyCenAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyCenAttributeRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ModifyCenAttributeRequest setOwnerAccount(String ownerAccount) {
@@ -49,6 +73,14 @@ public class ModifyCenAttributeRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifyCenAttributeRequest setProtectionLevel(String protectionLevel) {
+        this.protectionLevel = protectionLevel;
+        return this;
+    }
+    public String getProtectionLevel() {
+        return this.protectionLevel;
+    }
+
     public ModifyCenAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -63,38 +95,6 @@ public class ModifyCenAttributeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyCenAttributeRequest setCenId(String cenId) {
-        this.cenId = cenId;
-        return this;
-    }
-    public String getCenId() {
-        return this.cenId;
-    }
-
-    public ModifyCenAttributeRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public ModifyCenAttributeRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public ModifyCenAttributeRequest setProtectionLevel(String protectionLevel) {
-        this.protectionLevel = protectionLevel;
-        return this;
-    }
-    public String getProtectionLevel() {
-        return this.protectionLevel;
     }
 
 }

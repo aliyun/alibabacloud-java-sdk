@@ -4,24 +4,32 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteConflictResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("RouteConflicts")
+    public DescribeRouteConflictResponseBodyRouteConflicts routeConflicts;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("RouteConflicts")
-    public DescribeRouteConflictResponseBodyRouteConflicts routeConflicts;
-
     public static DescribeRouteConflictResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRouteConflictResponseBody self = new DescribeRouteConflictResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRouteConflictResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeRouteConflictResponseBody setPageSize(Integer pageSize) {
@@ -40,12 +48,12 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeRouteConflictResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeRouteConflictResponseBody setRouteConflicts(DescribeRouteConflictResponseBodyRouteConflicts routeConflicts) {
+        this.routeConflicts = routeConflicts;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public DescribeRouteConflictResponseBodyRouteConflicts getRouteConflicts() {
+        return this.routeConflicts;
     }
 
     public DescribeRouteConflictResponseBody setTotalCount(Integer totalCount) {
@@ -56,18 +64,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeRouteConflictResponseBody setRouteConflicts(DescribeRouteConflictResponseBodyRouteConflicts routeConflicts) {
-        this.routeConflicts = routeConflicts;
-        return this;
-    }
-    public DescribeRouteConflictResponseBodyRouteConflicts getRouteConflicts() {
-        return this.routeConflicts;
-    }
-
     public static class DescribeRouteConflictResponseBodyRouteConflictsRouteConflict extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
@@ -80,17 +77,12 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("Status")
+        public String status;
+
         public static DescribeRouteConflictResponseBodyRouteConflictsRouteConflict build(java.util.Map<String, ?> map) throws Exception {
             DescribeRouteConflictResponseBodyRouteConflictsRouteConflict self = new DescribeRouteConflictResponseBodyRouteConflictsRouteConflict();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRouteConflictResponseBodyRouteConflictsRouteConflict setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeRouteConflictResponseBodyRouteConflictsRouteConflict setDestinationCidrBlock(String destinationCidrBlock) {
@@ -123,6 +115,14 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeRouteConflictResponseBodyRouteConflictsRouteConflict setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

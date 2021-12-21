@@ -4,29 +4,14 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenVbrHealthCheckRequest extends TeaModel {
+    @NameInMap("CenId")
+    public String cenId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("CenId")
-    public String cenId;
-
-    @NameInMap("VbrInstanceRegionId")
-    public String vbrInstanceRegionId;
-
-    @NameInMap("VbrInstanceId")
-    public String vbrInstanceId;
-
-    @NameInMap("VbrInstanceOwnerId")
-    public Long vbrInstanceOwnerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -34,9 +19,32 @@ public class DescribeCenVbrHealthCheckRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("VbrInstanceId")
+    public String vbrInstanceId;
+
+    @NameInMap("VbrInstanceOwnerId")
+    public Long vbrInstanceOwnerId;
+
+    @NameInMap("VbrInstanceRegionId")
+    public String vbrInstanceRegionId;
+
     public static DescribeCenVbrHealthCheckRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenVbrHealthCheckRequest self = new DescribeCenVbrHealthCheckRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCenVbrHealthCheckRequest setCenId(String cenId) {
+        this.cenId = cenId;
+        return this;
+    }
+    public String getCenId() {
+        return this.cenId;
     }
 
     public DescribeCenVbrHealthCheckRequest setOwnerAccount(String ownerAccount) {
@@ -55,6 +63,22 @@ public class DescribeCenVbrHealthCheckRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeCenVbrHealthCheckRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeCenVbrHealthCheckRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeCenVbrHealthCheckRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -69,22 +93,6 @@ public class DescribeCenVbrHealthCheckRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeCenVbrHealthCheckRequest setCenId(String cenId) {
-        this.cenId = cenId;
-        return this;
-    }
-    public String getCenId() {
-        return this.cenId;
-    }
-
-    public DescribeCenVbrHealthCheckRequest setVbrInstanceRegionId(String vbrInstanceRegionId) {
-        this.vbrInstanceRegionId = vbrInstanceRegionId;
-        return this;
-    }
-    public String getVbrInstanceRegionId() {
-        return this.vbrInstanceRegionId;
     }
 
     public DescribeCenVbrHealthCheckRequest setVbrInstanceId(String vbrInstanceId) {
@@ -103,20 +111,12 @@ public class DescribeCenVbrHealthCheckRequest extends TeaModel {
         return this.vbrInstanceOwnerId;
     }
 
-    public DescribeCenVbrHealthCheckRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeCenVbrHealthCheckRequest setVbrInstanceRegionId(String vbrInstanceRegionId) {
+        this.vbrInstanceRegionId = vbrInstanceRegionId;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeCenVbrHealthCheckRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getVbrInstanceRegionId() {
+        return this.vbrInstanceRegionId;
     }
 
 }

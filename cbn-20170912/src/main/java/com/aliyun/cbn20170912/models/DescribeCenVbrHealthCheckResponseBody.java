@@ -4,14 +4,14 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -22,6 +22,14 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
     public static DescribeCenVbrHealthCheckResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenVbrHealthCheckResponseBody self = new DescribeCenVbrHealthCheckResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCenVbrHealthCheckResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeCenVbrHealthCheckResponseBody setPageSize(Integer pageSize) {
@@ -38,14 +46,6 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeCenVbrHealthCheckResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
     public DescribeCenVbrHealthCheckResponseBody setTotalCount(Integer totalCount) {
@@ -65,8 +65,23 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
     }
 
     public static class DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck extends TeaModel {
+        @NameInMap("CenId")
+        public String cenId;
+
+        @NameInMap("HealthCheckInterval")
+        public Integer healthCheckInterval;
+
+        @NameInMap("HealthCheckOnly")
+        public Boolean healthCheckOnly;
+
+        @NameInMap("HealthCheckSourceIp")
+        public String healthCheckSourceIp;
+
         @NameInMap("HealthCheckTargetIp")
         public String healthCheckTargetIp;
+
+        @NameInMap("HealthyThreshold")
+        public Integer healthyThreshold;
 
         @NameInMap("VbrInstanceId")
         public String vbrInstanceId;
@@ -74,21 +89,41 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         @NameInMap("VbrInstanceRegionId")
         public String vbrInstanceRegionId;
 
-        @NameInMap("CenId")
-        public String cenId;
-
-        @NameInMap("HealthyThreshold")
-        public Integer healthyThreshold;
-
-        @NameInMap("HealthCheckInterval")
-        public Integer healthCheckInterval;
-
-        @NameInMap("HealthCheckSourceIp")
-        public String healthCheckSourceIp;
-
         public static DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck build(java.util.Map<String, ?> map) throws Exception {
             DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck self = new DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck setCenId(String cenId) {
+            this.cenId = cenId;
+            return this;
+        }
+        public String getCenId() {
+            return this.cenId;
+        }
+
+        public DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck setHealthCheckInterval(Integer healthCheckInterval) {
+            this.healthCheckInterval = healthCheckInterval;
+            return this;
+        }
+        public Integer getHealthCheckInterval() {
+            return this.healthCheckInterval;
+        }
+
+        public DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck setHealthCheckOnly(Boolean healthCheckOnly) {
+            this.healthCheckOnly = healthCheckOnly;
+            return this;
+        }
+        public Boolean getHealthCheckOnly() {
+            return this.healthCheckOnly;
+        }
+
+        public DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck setHealthCheckSourceIp(String healthCheckSourceIp) {
+            this.healthCheckSourceIp = healthCheckSourceIp;
+            return this;
+        }
+        public String getHealthCheckSourceIp() {
+            return this.healthCheckSourceIp;
         }
 
         public DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck setHealthCheckTargetIp(String healthCheckTargetIp) {
@@ -97,6 +132,14 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         }
         public String getHealthCheckTargetIp() {
             return this.healthCheckTargetIp;
+        }
+
+        public DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck setHealthyThreshold(Integer healthyThreshold) {
+            this.healthyThreshold = healthyThreshold;
+            return this;
+        }
+        public Integer getHealthyThreshold() {
+            return this.healthyThreshold;
         }
 
         public DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck setVbrInstanceId(String vbrInstanceId) {
@@ -113,38 +156,6 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         }
         public String getVbrInstanceRegionId() {
             return this.vbrInstanceRegionId;
-        }
-
-        public DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck setCenId(String cenId) {
-            this.cenId = cenId;
-            return this;
-        }
-        public String getCenId() {
-            return this.cenId;
-        }
-
-        public DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck setHealthyThreshold(Integer healthyThreshold) {
-            this.healthyThreshold = healthyThreshold;
-            return this;
-        }
-        public Integer getHealthyThreshold() {
-            return this.healthyThreshold;
-        }
-
-        public DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck setHealthCheckInterval(Integer healthCheckInterval) {
-            this.healthCheckInterval = healthCheckInterval;
-            return this;
-        }
-        public Integer getHealthCheckInterval() {
-            return this.healthCheckInterval;
-        }
-
-        public DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck setHealthCheckSourceIp(String healthCheckSourceIp) {
-            this.healthCheckSourceIp = healthCheckSourceIp;
-            return this;
-        }
-        public String getHealthCheckSourceIp() {
-            return this.healthCheckSourceIp;
         }
 
     }

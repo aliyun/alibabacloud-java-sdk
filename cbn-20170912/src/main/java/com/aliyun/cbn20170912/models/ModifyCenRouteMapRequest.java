@@ -4,17 +4,8 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ModifyCenRouteMapRequest extends TeaModel {
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("AsPathMatchMode")
+    public String asPathMatchMode;
 
     @NameInMap("CenId")
     public String cenId;
@@ -22,23 +13,8 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     @NameInMap("CenRegionId")
     public String cenRegionId;
 
-    @NameInMap("RouteMapId")
-    public String routeMapId;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("MapResult")
-    public String mapResult;
-
-    @NameInMap("NextPriority")
-    public Integer nextPriority;
-
     @NameInMap("CidrMatchMode")
     public String cidrMatchMode;
-
-    @NameInMap("AsPathMatchMode")
-    public String asPathMatchMode;
 
     @NameInMap("CommunityMatchMode")
     public String communityMatchMode;
@@ -46,35 +22,8 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     @NameInMap("CommunityOperateMode")
     public String communityOperateMode;
 
-    @NameInMap("Preference")
-    public Integer preference;
-
-    @NameInMap("Priority")
-    public Integer priority;
-
-    @NameInMap("SourceInstanceIdsReverseMatch")
-    public Boolean sourceInstanceIdsReverseMatch;
-
-    @NameInMap("DestinationInstanceIdsReverseMatch")
-    public Boolean destinationInstanceIdsReverseMatch;
-
-    @NameInMap("SourceInstanceIds")
-    public java.util.List<String> sourceInstanceIds;
-
-    @NameInMap("DestinationInstanceIds")
-    public java.util.List<String> destinationInstanceIds;
-
-    @NameInMap("SourceRouteTableIds")
-    public java.util.List<String> sourceRouteTableIds;
-
-    @NameInMap("DestinationRouteTableIds")
-    public java.util.List<String> destinationRouteTableIds;
-
-    @NameInMap("SourceRegionIds")
-    public java.util.List<String> sourceRegionIds;
-
-    @NameInMap("SourceChildInstanceTypes")
-    public java.util.List<String> sourceChildInstanceTypes;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("DestinationChildInstanceTypes")
     public java.util.List<String> destinationChildInstanceTypes;
@@ -82,8 +31,17 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     @NameInMap("DestinationCidrBlocks")
     public java.util.List<String> destinationCidrBlocks;
 
-    @NameInMap("RouteTypes")
-    public java.util.List<String> routeTypes;
+    @NameInMap("DestinationInstanceIds")
+    public java.util.List<String> destinationInstanceIds;
+
+    @NameInMap("DestinationInstanceIdsReverseMatch")
+    public Boolean destinationInstanceIdsReverseMatch;
+
+    @NameInMap("DestinationRouteTableIds")
+    public java.util.List<String> destinationRouteTableIds;
+
+    @NameInMap("MapResult")
+    public String mapResult;
 
     @NameInMap("MatchAsns")
     public java.util.List<Integer> matchAsns;
@@ -91,47 +49,65 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     @NameInMap("MatchCommunitySet")
     public java.util.List<String> matchCommunitySet;
 
+    @NameInMap("NextPriority")
+    public Integer nextPriority;
+
     @NameInMap("OperateCommunitySet")
     public java.util.List<String> operateCommunitySet;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("Preference")
+    public Integer preference;
+
     @NameInMap("PrependAsPath")
-    public java.util.List<Integer> prependAsPath;
+    public java.util.List<Long> prependAsPath;
+
+    @NameInMap("Priority")
+    public Integer priority;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("RouteMapId")
+    public String routeMapId;
+
+    @NameInMap("RouteTypes")
+    public java.util.List<String> routeTypes;
+
+    @NameInMap("SourceChildInstanceTypes")
+    public java.util.List<String> sourceChildInstanceTypes;
+
+    @NameInMap("SourceInstanceIds")
+    public java.util.List<String> sourceInstanceIds;
+
+    @NameInMap("SourceInstanceIdsReverseMatch")
+    public Boolean sourceInstanceIdsReverseMatch;
+
+    @NameInMap("SourceRegionIds")
+    public java.util.List<String> sourceRegionIds;
+
+    @NameInMap("SourceRouteTableIds")
+    public java.util.List<String> sourceRouteTableIds;
 
     public static ModifyCenRouteMapRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCenRouteMapRequest self = new ModifyCenRouteMapRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyCenRouteMapRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyCenRouteMapRequest setAsPathMatchMode(String asPathMatchMode) {
+        this.asPathMatchMode = asPathMatchMode;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyCenRouteMapRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifyCenRouteMapRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyCenRouteMapRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getAsPathMatchMode() {
+        return this.asPathMatchMode;
     }
 
     public ModifyCenRouteMapRequest setCenId(String cenId) {
@@ -150,52 +126,12 @@ public class ModifyCenRouteMapRequest extends TeaModel {
         return this.cenRegionId;
     }
 
-    public ModifyCenRouteMapRequest setRouteMapId(String routeMapId) {
-        this.routeMapId = routeMapId;
-        return this;
-    }
-    public String getRouteMapId() {
-        return this.routeMapId;
-    }
-
-    public ModifyCenRouteMapRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public ModifyCenRouteMapRequest setMapResult(String mapResult) {
-        this.mapResult = mapResult;
-        return this;
-    }
-    public String getMapResult() {
-        return this.mapResult;
-    }
-
-    public ModifyCenRouteMapRequest setNextPriority(Integer nextPriority) {
-        this.nextPriority = nextPriority;
-        return this;
-    }
-    public Integer getNextPriority() {
-        return this.nextPriority;
-    }
-
     public ModifyCenRouteMapRequest setCidrMatchMode(String cidrMatchMode) {
         this.cidrMatchMode = cidrMatchMode;
         return this;
     }
     public String getCidrMatchMode() {
         return this.cidrMatchMode;
-    }
-
-    public ModifyCenRouteMapRequest setAsPathMatchMode(String asPathMatchMode) {
-        this.asPathMatchMode = asPathMatchMode;
-        return this;
-    }
-    public String getAsPathMatchMode() {
-        return this.asPathMatchMode;
     }
 
     public ModifyCenRouteMapRequest setCommunityMatchMode(String communityMatchMode) {
@@ -214,84 +150,12 @@ public class ModifyCenRouteMapRequest extends TeaModel {
         return this.communityOperateMode;
     }
 
-    public ModifyCenRouteMapRequest setPreference(Integer preference) {
-        this.preference = preference;
+    public ModifyCenRouteMapRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public Integer getPreference() {
-        return this.preference;
-    }
-
-    public ModifyCenRouteMapRequest setPriority(Integer priority) {
-        this.priority = priority;
-        return this;
-    }
-    public Integer getPriority() {
-        return this.priority;
-    }
-
-    public ModifyCenRouteMapRequest setSourceInstanceIdsReverseMatch(Boolean sourceInstanceIdsReverseMatch) {
-        this.sourceInstanceIdsReverseMatch = sourceInstanceIdsReverseMatch;
-        return this;
-    }
-    public Boolean getSourceInstanceIdsReverseMatch() {
-        return this.sourceInstanceIdsReverseMatch;
-    }
-
-    public ModifyCenRouteMapRequest setDestinationInstanceIdsReverseMatch(Boolean destinationInstanceIdsReverseMatch) {
-        this.destinationInstanceIdsReverseMatch = destinationInstanceIdsReverseMatch;
-        return this;
-    }
-    public Boolean getDestinationInstanceIdsReverseMatch() {
-        return this.destinationInstanceIdsReverseMatch;
-    }
-
-    public ModifyCenRouteMapRequest setSourceInstanceIds(java.util.List<String> sourceInstanceIds) {
-        this.sourceInstanceIds = sourceInstanceIds;
-        return this;
-    }
-    public java.util.List<String> getSourceInstanceIds() {
-        return this.sourceInstanceIds;
-    }
-
-    public ModifyCenRouteMapRequest setDestinationInstanceIds(java.util.List<String> destinationInstanceIds) {
-        this.destinationInstanceIds = destinationInstanceIds;
-        return this;
-    }
-    public java.util.List<String> getDestinationInstanceIds() {
-        return this.destinationInstanceIds;
-    }
-
-    public ModifyCenRouteMapRequest setSourceRouteTableIds(java.util.List<String> sourceRouteTableIds) {
-        this.sourceRouteTableIds = sourceRouteTableIds;
-        return this;
-    }
-    public java.util.List<String> getSourceRouteTableIds() {
-        return this.sourceRouteTableIds;
-    }
-
-    public ModifyCenRouteMapRequest setDestinationRouteTableIds(java.util.List<String> destinationRouteTableIds) {
-        this.destinationRouteTableIds = destinationRouteTableIds;
-        return this;
-    }
-    public java.util.List<String> getDestinationRouteTableIds() {
-        return this.destinationRouteTableIds;
-    }
-
-    public ModifyCenRouteMapRequest setSourceRegionIds(java.util.List<String> sourceRegionIds) {
-        this.sourceRegionIds = sourceRegionIds;
-        return this;
-    }
-    public java.util.List<String> getSourceRegionIds() {
-        return this.sourceRegionIds;
-    }
-
-    public ModifyCenRouteMapRequest setSourceChildInstanceTypes(java.util.List<String> sourceChildInstanceTypes) {
-        this.sourceChildInstanceTypes = sourceChildInstanceTypes;
-        return this;
-    }
-    public java.util.List<String> getSourceChildInstanceTypes() {
-        return this.sourceChildInstanceTypes;
+    public String getDescription() {
+        return this.description;
     }
 
     public ModifyCenRouteMapRequest setDestinationChildInstanceTypes(java.util.List<String> destinationChildInstanceTypes) {
@@ -310,12 +174,36 @@ public class ModifyCenRouteMapRequest extends TeaModel {
         return this.destinationCidrBlocks;
     }
 
-    public ModifyCenRouteMapRequest setRouteTypes(java.util.List<String> routeTypes) {
-        this.routeTypes = routeTypes;
+    public ModifyCenRouteMapRequest setDestinationInstanceIds(java.util.List<String> destinationInstanceIds) {
+        this.destinationInstanceIds = destinationInstanceIds;
         return this;
     }
-    public java.util.List<String> getRouteTypes() {
-        return this.routeTypes;
+    public java.util.List<String> getDestinationInstanceIds() {
+        return this.destinationInstanceIds;
+    }
+
+    public ModifyCenRouteMapRequest setDestinationInstanceIdsReverseMatch(Boolean destinationInstanceIdsReverseMatch) {
+        this.destinationInstanceIdsReverseMatch = destinationInstanceIdsReverseMatch;
+        return this;
+    }
+    public Boolean getDestinationInstanceIdsReverseMatch() {
+        return this.destinationInstanceIdsReverseMatch;
+    }
+
+    public ModifyCenRouteMapRequest setDestinationRouteTableIds(java.util.List<String> destinationRouteTableIds) {
+        this.destinationRouteTableIds = destinationRouteTableIds;
+        return this;
+    }
+    public java.util.List<String> getDestinationRouteTableIds() {
+        return this.destinationRouteTableIds;
+    }
+
+    public ModifyCenRouteMapRequest setMapResult(String mapResult) {
+        this.mapResult = mapResult;
+        return this;
+    }
+    public String getMapResult() {
+        return this.mapResult;
     }
 
     public ModifyCenRouteMapRequest setMatchAsns(java.util.List<Integer> matchAsns) {
@@ -334,6 +222,14 @@ public class ModifyCenRouteMapRequest extends TeaModel {
         return this.matchCommunitySet;
     }
 
+    public ModifyCenRouteMapRequest setNextPriority(Integer nextPriority) {
+        this.nextPriority = nextPriority;
+        return this;
+    }
+    public Integer getNextPriority() {
+        return this.nextPriority;
+    }
+
     public ModifyCenRouteMapRequest setOperateCommunitySet(java.util.List<String> operateCommunitySet) {
         this.operateCommunitySet = operateCommunitySet;
         return this;
@@ -342,12 +238,116 @@ public class ModifyCenRouteMapRequest extends TeaModel {
         return this.operateCommunitySet;
     }
 
-    public ModifyCenRouteMapRequest setPrependAsPath(java.util.List<Integer> prependAsPath) {
+    public ModifyCenRouteMapRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifyCenRouteMapRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyCenRouteMapRequest setPreference(Integer preference) {
+        this.preference = preference;
+        return this;
+    }
+    public Integer getPreference() {
+        return this.preference;
+    }
+
+    public ModifyCenRouteMapRequest setPrependAsPath(java.util.List<Long> prependAsPath) {
         this.prependAsPath = prependAsPath;
         return this;
     }
-    public java.util.List<Integer> getPrependAsPath() {
+    public java.util.List<Long> getPrependAsPath() {
         return this.prependAsPath;
+    }
+
+    public ModifyCenRouteMapRequest setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
+    }
+
+    public ModifyCenRouteMapRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyCenRouteMapRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyCenRouteMapRequest setRouteMapId(String routeMapId) {
+        this.routeMapId = routeMapId;
+        return this;
+    }
+    public String getRouteMapId() {
+        return this.routeMapId;
+    }
+
+    public ModifyCenRouteMapRequest setRouteTypes(java.util.List<String> routeTypes) {
+        this.routeTypes = routeTypes;
+        return this;
+    }
+    public java.util.List<String> getRouteTypes() {
+        return this.routeTypes;
+    }
+
+    public ModifyCenRouteMapRequest setSourceChildInstanceTypes(java.util.List<String> sourceChildInstanceTypes) {
+        this.sourceChildInstanceTypes = sourceChildInstanceTypes;
+        return this;
+    }
+    public java.util.List<String> getSourceChildInstanceTypes() {
+        return this.sourceChildInstanceTypes;
+    }
+
+    public ModifyCenRouteMapRequest setSourceInstanceIds(java.util.List<String> sourceInstanceIds) {
+        this.sourceInstanceIds = sourceInstanceIds;
+        return this;
+    }
+    public java.util.List<String> getSourceInstanceIds() {
+        return this.sourceInstanceIds;
+    }
+
+    public ModifyCenRouteMapRequest setSourceInstanceIdsReverseMatch(Boolean sourceInstanceIdsReverseMatch) {
+        this.sourceInstanceIdsReverseMatch = sourceInstanceIdsReverseMatch;
+        return this;
+    }
+    public Boolean getSourceInstanceIdsReverseMatch() {
+        return this.sourceInstanceIdsReverseMatch;
+    }
+
+    public ModifyCenRouteMapRequest setSourceRegionIds(java.util.List<String> sourceRegionIds) {
+        this.sourceRegionIds = sourceRegionIds;
+        return this;
+    }
+    public java.util.List<String> getSourceRegionIds() {
+        return this.sourceRegionIds;
+    }
+
+    public ModifyCenRouteMapRequest setSourceRouteTableIds(java.util.List<String> sourceRouteTableIds) {
+        this.sourceRouteTableIds = sourceRouteTableIds;
+        return this;
+    }
+    public java.util.List<String> getSourceRouteTableIds() {
+        return this.sourceRouteTableIds;
     }
 
 }

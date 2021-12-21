@@ -4,6 +4,12 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DeleteCenRouteMapRequest extends TeaModel {
+    @NameInMap("CenId")
+    public String cenId;
+
+    @NameInMap("CenRegionId")
+    public String cenRegionId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -16,18 +22,28 @@ public class DeleteCenRouteMapRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CenId")
-    public String cenId;
-
-    @NameInMap("CenRegionId")
-    public String cenRegionId;
-
     @NameInMap("RouteMapId")
     public String routeMapId;
 
     public static DeleteCenRouteMapRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCenRouteMapRequest self = new DeleteCenRouteMapRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteCenRouteMapRequest setCenId(String cenId) {
+        this.cenId = cenId;
+        return this;
+    }
+    public String getCenId() {
+        return this.cenId;
+    }
+
+    public DeleteCenRouteMapRequest setCenRegionId(String cenRegionId) {
+        this.cenRegionId = cenRegionId;
+        return this;
+    }
+    public String getCenRegionId() {
+        return this.cenRegionId;
     }
 
     public DeleteCenRouteMapRequest setOwnerAccount(String ownerAccount) {
@@ -60,22 +76,6 @@ public class DeleteCenRouteMapRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteCenRouteMapRequest setCenId(String cenId) {
-        this.cenId = cenId;
-        return this;
-    }
-    public String getCenId() {
-        return this.cenId;
-    }
-
-    public DeleteCenRouteMapRequest setCenRegionId(String cenRegionId) {
-        this.cenRegionId = cenRegionId;
-        return this;
-    }
-    public String getCenRegionId() {
-        return this.cenRegionId;
     }
 
     public DeleteCenRouteMapRequest setRouteMapId(String routeMapId) {

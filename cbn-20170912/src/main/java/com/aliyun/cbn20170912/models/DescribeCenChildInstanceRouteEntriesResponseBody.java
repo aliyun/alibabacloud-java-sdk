@@ -4,24 +4,40 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
+    @NameInMap("CenRouteEntries")
+    public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntries cenRouteEntries;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("CenRouteEntries")
-    public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntries cenRouteEntries;
 
     public static DescribeCenChildInstanceRouteEntriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenChildInstanceRouteEntriesResponseBody self = new DescribeCenChildInstanceRouteEntriesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCenChildInstanceRouteEntriesResponseBody setCenRouteEntries(DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntries cenRouteEntries) {
+        this.cenRouteEntries = cenRouteEntries;
+        return this;
+    }
+    public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntries getCenRouteEntries() {
+        return this.cenRouteEntries;
+    }
+
+    public DescribeCenChildInstanceRouteEntriesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeCenChildInstanceRouteEntriesResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCenChildInstanceRouteEntriesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeCenChildInstanceRouteEntriesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,32 +64,35 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeCenChildInstanceRouteEntriesResponseBody setCenRouteEntries(DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntries cenRouteEntries) {
-        this.cenRouteEntries = cenRouteEntries;
-        return this;
-    }
-    public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntries getCenRouteEntries() {
-        return this.cenRouteEntries;
+    public static class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths extends TeaModel {
+        @NameInMap("AsPath")
+        public java.util.List<String> asPath;
+
+        public static DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths self = new DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths setAsPath(java.util.List<String> asPath) {
+            this.asPath = asPath;
+            return this;
+        }
+        public java.util.List<String> getAsPath() {
+            return this.asPath;
+        }
+
     }
 
     public static class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord extends TeaModel {
-        @NameInMap("RouteMapId")
-        public String routeMapId;
-
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("RouteMapId")
+        public String routeMapId;
 
         public static DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord build(java.util.Map<String, ?> map) throws Exception {
             DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord self = new DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord setRouteMapId(String routeMapId) {
-            this.routeMapId = routeMapId;
-            return this;
-        }
-        public String getRouteMapId() {
-            return this.routeMapId;
         }
 
         public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord setRegionId(String regionId) {
@@ -90,6 +101,14 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord setRouteMapId(String routeMapId) {
+            this.routeMapId = routeMapId;
+            return this;
+        }
+        public String getRouteMapId() {
+            return this.routeMapId;
         }
 
     }
@@ -113,10 +132,26 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflictsConflict extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+    public static class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities extends TeaModel {
+        @NameInMap("Community")
+        public java.util.List<String> community;
 
+        public static DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities self = new DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities setCommunity(java.util.List<String> community) {
+            this.community = community;
+            return this;
+        }
+        public java.util.List<String> getCommunity() {
+            return this.community;
+        }
+
+    }
+
+    public static class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflictsConflict extends TeaModel {
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
@@ -129,17 +164,12 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("Status")
+        public String status;
+
         public static DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflictsConflict build(java.util.Map<String, ?> map) throws Exception {
             DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflictsConflict self = new DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflictsConflict();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflictsConflict setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflictsConflict setDestinationCidrBlock(String destinationCidrBlock) {
@@ -174,6 +204,14 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflictsConflict setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflicts extends TeaModel {
@@ -195,53 +233,27 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities extends TeaModel {
-        @NameInMap("Community")
-        public java.util.List<String> community;
-
-        public static DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities self = new DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities setCommunity(java.util.List<String> community) {
-            this.community = community;
-            return this;
-        }
-        public java.util.List<String> getCommunity() {
-            return this.community;
-        }
-
-    }
-
-    public static class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths extends TeaModel {
-        @NameInMap("AsPath")
-        public java.util.List<String> asPath;
-
-        public static DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths self = new DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths setAsPath(java.util.List<String> asPath) {
-            this.asPath = asPath;
-            return this;
-        }
-        public java.util.List<String> getAsPath() {
-            return this.asPath;
-        }
-
-    }
-
     public static class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("AsPaths")
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths asPaths;
 
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("CenRouteMapRecords")
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords cenRouteMapRecords;
 
-        @NameInMap("PublishStatus")
-        public String publishStatus;
+        @NameInMap("Communities")
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities communities;
+
+        @NameInMap("Conflicts")
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflicts conflicts;
+
+        @NameInMap("DestinationCidrBlock")
+        public String destinationCidrBlock;
+
+        @NameInMap("NextHopInstanceId")
+        public String nextHopInstanceId;
+
+        @NameInMap("NextHopRegionId")
+        public String nextHopRegionId;
 
         @NameInMap("NextHopType")
         public String nextHopType;
@@ -249,57 +261,77 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         @NameInMap("OperationalMode")
         public Boolean operationalMode;
 
-        @NameInMap("NextHopRegionId")
-        public String nextHopRegionId;
-
-        @NameInMap("NextHopInstanceId")
-        public String nextHopInstanceId;
-
-        @NameInMap("DestinationCidrBlock")
-        public String destinationCidrBlock;
+        @NameInMap("PublishStatus")
+        public String publishStatus;
 
         @NameInMap("RouteTableId")
         public String routeTableId;
 
-        @NameInMap("CenRouteMapRecords")
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords cenRouteMapRecords;
+        @NameInMap("Status")
+        public String status;
 
-        @NameInMap("Conflicts")
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflicts conflicts;
-
-        @NameInMap("Communities")
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities communities;
-
-        @NameInMap("AsPaths")
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths asPaths;
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry build(java.util.Map<String, ?> map) throws Exception {
             DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry self = new DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setStatus(String status) {
-            this.status = status;
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setAsPaths(DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths asPaths) {
+            this.asPaths = asPaths;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths getAsPaths() {
+            return this.asPaths;
         }
 
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setType(String type) {
-            this.type = type;
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setCenRouteMapRecords(DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords cenRouteMapRecords) {
+            this.cenRouteMapRecords = cenRouteMapRecords;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords getCenRouteMapRecords() {
+            return this.cenRouteMapRecords;
         }
 
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setPublishStatus(String publishStatus) {
-            this.publishStatus = publishStatus;
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setCommunities(DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities communities) {
+            this.communities = communities;
             return this;
         }
-        public String getPublishStatus() {
-            return this.publishStatus;
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities getCommunities() {
+            return this.communities;
+        }
+
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setConflicts(DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflicts conflicts) {
+            this.conflicts = conflicts;
+            return this;
+        }
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflicts getConflicts() {
+            return this.conflicts;
+        }
+
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setDestinationCidrBlock(String destinationCidrBlock) {
+            this.destinationCidrBlock = destinationCidrBlock;
+            return this;
+        }
+        public String getDestinationCidrBlock() {
+            return this.destinationCidrBlock;
+        }
+
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setNextHopInstanceId(String nextHopInstanceId) {
+            this.nextHopInstanceId = nextHopInstanceId;
+            return this;
+        }
+        public String getNextHopInstanceId() {
+            return this.nextHopInstanceId;
+        }
+
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setNextHopRegionId(String nextHopRegionId) {
+            this.nextHopRegionId = nextHopRegionId;
+            return this;
+        }
+        public String getNextHopRegionId() {
+            return this.nextHopRegionId;
         }
 
         public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setNextHopType(String nextHopType) {
@@ -318,28 +350,12 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             return this.operationalMode;
         }
 
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setNextHopRegionId(String nextHopRegionId) {
-            this.nextHopRegionId = nextHopRegionId;
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setPublishStatus(String publishStatus) {
+            this.publishStatus = publishStatus;
             return this;
         }
-        public String getNextHopRegionId() {
-            return this.nextHopRegionId;
-        }
-
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setNextHopInstanceId(String nextHopInstanceId) {
-            this.nextHopInstanceId = nextHopInstanceId;
-            return this;
-        }
-        public String getNextHopInstanceId() {
-            return this.nextHopInstanceId;
-        }
-
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setDestinationCidrBlock(String destinationCidrBlock) {
-            this.destinationCidrBlock = destinationCidrBlock;
-            return this;
-        }
-        public String getDestinationCidrBlock() {
-            return this.destinationCidrBlock;
+        public String getPublishStatus() {
+            return this.publishStatus;
         }
 
         public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setRouteTableId(String routeTableId) {
@@ -350,36 +366,20 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             return this.routeTableId;
         }
 
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setCenRouteMapRecords(DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords cenRouteMapRecords) {
-            this.cenRouteMapRecords = cenRouteMapRecords;
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords getCenRouteMapRecords() {
-            return this.cenRouteMapRecords;
+        public String getStatus() {
+            return this.status;
         }
 
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setConflicts(DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflicts conflicts) {
-            this.conflicts = conflicts;
+        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setType(String type) {
+            this.type = type;
             return this;
         }
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflicts getConflicts() {
-            return this.conflicts;
-        }
-
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setCommunities(DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities communities) {
-            this.communities = communities;
-            return this;
-        }
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities getCommunities() {
-            return this.communities;
-        }
-
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setAsPaths(DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths asPaths) {
-            this.asPaths = asPaths;
-            return this;
-        }
-        public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths getAsPaths() {
-            return this.asPaths;
+        public String getType() {
+            return this.type;
         }
 
     }

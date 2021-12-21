@@ -4,40 +4,24 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("RegionIds")
     public DescribeGeographicRegionMembershipResponseBodyRegionIds regionIds;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static DescribeGeographicRegionMembershipResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGeographicRegionMembershipResponseBody self = new DescribeGeographicRegionMembershipResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeGeographicRegionMembershipResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeGeographicRegionMembershipResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeGeographicRegionMembershipResponseBody setPageNumber(Integer pageNumber) {
@@ -48,12 +32,12 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeGeographicRegionMembershipResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeGeographicRegionMembershipResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeGeographicRegionMembershipResponseBody setRegionIds(DescribeGeographicRegionMembershipResponseBodyRegionIds regionIds) {
@@ -62,6 +46,22 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
     }
     public DescribeGeographicRegionMembershipResponseBodyRegionIds getRegionIds() {
         return this.regionIds;
+    }
+
+    public DescribeGeographicRegionMembershipResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeGeographicRegionMembershipResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId extends TeaModel {

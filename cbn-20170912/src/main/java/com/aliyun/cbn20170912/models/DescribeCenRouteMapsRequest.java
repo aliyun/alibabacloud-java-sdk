@@ -4,17 +4,17 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenRouteMapsRequest extends TeaModel {
+    @NameInMap("CenId")
+    public String cenId;
+
+    @NameInMap("CenRegionId")
+    public String cenRegionId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -22,14 +22,14 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CenId")
-    public String cenId;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("RouteMapId")
     public String routeMapId;
-
-    @NameInMap("CenRegionId")
-    public String cenRegionId;
 
     @NameInMap("TransmitDirection")
     public String transmitDirection;
@@ -37,6 +37,22 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     public static DescribeCenRouteMapsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenRouteMapsRequest self = new DescribeCenRouteMapsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCenRouteMapsRequest setCenId(String cenId) {
+        this.cenId = cenId;
+        return this;
+    }
+    public String getCenId() {
+        return this.cenId;
+    }
+
+    public DescribeCenRouteMapsRequest setCenRegionId(String cenRegionId) {
+        this.cenRegionId = cenRegionId;
+        return this;
+    }
+    public String getCenRegionId() {
+        return this.cenRegionId;
     }
 
     public DescribeCenRouteMapsRequest setOwnerAccount(String ownerAccount) {
@@ -55,22 +71,6 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeCenRouteMapsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeCenRouteMapsRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
     public DescribeCenRouteMapsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -87,12 +87,20 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeCenRouteMapsRequest setCenId(String cenId) {
-        this.cenId = cenId;
+    public DescribeCenRouteMapsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getCenId() {
-        return this.cenId;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeCenRouteMapsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeCenRouteMapsRequest setRouteMapId(String routeMapId) {
@@ -101,14 +109,6 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     }
     public String getRouteMapId() {
         return this.routeMapId;
-    }
-
-    public DescribeCenRouteMapsRequest setCenRegionId(String cenRegionId) {
-        this.cenRegionId = cenRegionId;
-        return this;
-    }
-    public String getCenRegionId() {
-        return this.cenRegionId;
     }
 
     public DescribeCenRouteMapsRequest setTransmitDirection(String transmitDirection) {

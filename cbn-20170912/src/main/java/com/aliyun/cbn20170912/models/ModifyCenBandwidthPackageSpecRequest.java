@@ -4,6 +4,12 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ModifyCenBandwidthPackageSpecRequest extends TeaModel {
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
+
+    @NameInMap("CenBandwidthPackageId")
+    public String cenBandwidthPackageId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -16,15 +22,25 @@ public class ModifyCenBandwidthPackageSpecRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CenBandwidthPackageId")
-    public String cenBandwidthPackageId;
-
-    @NameInMap("Bandwidth")
-    public Integer bandwidth;
-
     public static ModifyCenBandwidthPackageSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCenBandwidthPackageSpecRequest self = new ModifyCenBandwidthPackageSpecRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyCenBandwidthPackageSpecRequest setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Integer getBandwidth() {
+        return this.bandwidth;
+    }
+
+    public ModifyCenBandwidthPackageSpecRequest setCenBandwidthPackageId(String cenBandwidthPackageId) {
+        this.cenBandwidthPackageId = cenBandwidthPackageId;
+        return this;
+    }
+    public String getCenBandwidthPackageId() {
+        return this.cenBandwidthPackageId;
     }
 
     public ModifyCenBandwidthPackageSpecRequest setOwnerAccount(String ownerAccount) {
@@ -57,22 +73,6 @@ public class ModifyCenBandwidthPackageSpecRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyCenBandwidthPackageSpecRequest setCenBandwidthPackageId(String cenBandwidthPackageId) {
-        this.cenBandwidthPackageId = cenBandwidthPackageId;
-        return this;
-    }
-    public String getCenBandwidthPackageId() {
-        return this.cenBandwidthPackageId;
-    }
-
-    public ModifyCenBandwidthPackageSpecRequest setBandwidth(Integer bandwidth) {
-        this.bandwidth = bandwidth;
-        return this;
-    }
-    public Integer getBandwidth() {
-        return this.bandwidth;
     }
 
 }

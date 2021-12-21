@@ -4,11 +4,20 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeGrantRulesToCenRequest extends TeaModel {
+    @NameInMap("CenId")
+    public String cenId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ProductType")
+    public String productType;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,18 +25,17 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("CenId")
-    public String cenId;
-
-    @NameInMap("ProductType")
-    public String productType;
-
     public static DescribeGrantRulesToCenRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGrantRulesToCenRequest self = new DescribeGrantRulesToCenRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGrantRulesToCenRequest setCenId(String cenId) {
+        this.cenId = cenId;
+        return this;
+    }
+    public String getCenId() {
+        return this.cenId;
     }
 
     public DescribeGrantRulesToCenRequest setOwnerAccount(String ownerAccount) {
@@ -46,6 +54,22 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeGrantRulesToCenRequest setProductType(String productType) {
+        this.productType = productType;
+        return this;
+    }
+    public String getProductType() {
+        return this.productType;
+    }
+
+    public DescribeGrantRulesToCenRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeGrantRulesToCenRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -60,30 +84,6 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeGrantRulesToCenRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeGrantRulesToCenRequest setCenId(String cenId) {
-        this.cenId = cenId;
-        return this;
-    }
-    public String getCenId() {
-        return this.cenId;
-    }
-
-    public DescribeGrantRulesToCenRequest setProductType(String productType) {
-        this.productType = productType;
-        return this;
-    }
-    public String getProductType() {
-        return this.productType;
     }
 
 }

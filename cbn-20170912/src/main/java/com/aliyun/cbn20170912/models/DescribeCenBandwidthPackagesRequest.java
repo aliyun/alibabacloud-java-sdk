@@ -4,8 +4,14 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenBandwidthPackagesRequest extends TeaModel {
+    @NameInMap("Filter")
+    public java.util.List<DescribeCenBandwidthPackagesRequestFilter> filter;
+
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
+
+    @NameInMap("IsOrKey")
+    public Boolean isOrKey;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -13,27 +19,29 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("IsOrKey")
-    public Boolean isOrKey;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("Filter")
-    public java.util.List<DescribeCenBandwidthPackagesRequestFilter> filter;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribeCenBandwidthPackagesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenBandwidthPackagesRequest self = new DescribeCenBandwidthPackagesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCenBandwidthPackagesRequest setFilter(java.util.List<DescribeCenBandwidthPackagesRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribeCenBandwidthPackagesRequestFilter> getFilter() {
+        return this.filter;
     }
 
     public DescribeCenBandwidthPackagesRequest setIncludeReservationData(Boolean includeReservationData) {
@@ -42,6 +50,14 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     }
     public Boolean getIncludeReservationData() {
         return this.includeReservationData;
+    }
+
+    public DescribeCenBandwidthPackagesRequest setIsOrKey(Boolean isOrKey) {
+        this.isOrKey = isOrKey;
+        return this;
+    }
+    public Boolean getIsOrKey() {
+        return this.isOrKey;
     }
 
     public DescribeCenBandwidthPackagesRequest setOwnerAccount(String ownerAccount) {
@@ -60,22 +76,6 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeCenBandwidthPackagesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeCenBandwidthPackagesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
     public DescribeCenBandwidthPackagesRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -92,20 +92,20 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeCenBandwidthPackagesRequest setIsOrKey(Boolean isOrKey) {
-        this.isOrKey = isOrKey;
+    public DescribeCenBandwidthPackagesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public Boolean getIsOrKey() {
-        return this.isOrKey;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public DescribeCenBandwidthPackagesRequest setFilter(java.util.List<DescribeCenBandwidthPackagesRequestFilter> filter) {
-        this.filter = filter;
+    public DescribeCenBandwidthPackagesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public java.util.List<DescribeCenBandwidthPackagesRequestFilter> getFilter() {
-        return this.filter;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public static class DescribeCenBandwidthPackagesRequestFilter extends TeaModel {

@@ -4,6 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DeleteCenBandwidthPackageRequest extends TeaModel {
+    @NameInMap("CenBandwidthPackageId")
+    public String cenBandwidthPackageId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -16,12 +19,17 @@ public class DeleteCenBandwidthPackageRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CenBandwidthPackageId")
-    public String cenBandwidthPackageId;
-
     public static DeleteCenBandwidthPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCenBandwidthPackageRequest self = new DeleteCenBandwidthPackageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteCenBandwidthPackageRequest setCenBandwidthPackageId(String cenBandwidthPackageId) {
+        this.cenBandwidthPackageId = cenBandwidthPackageId;
+        return this;
+    }
+    public String getCenBandwidthPackageId() {
+        return this.cenBandwidthPackageId;
     }
 
     public DeleteCenBandwidthPackageRequest setOwnerAccount(String ownerAccount) {
@@ -54,14 +62,6 @@ public class DeleteCenBandwidthPackageRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteCenBandwidthPackageRequest setCenBandwidthPackageId(String cenBandwidthPackageId) {
-        this.cenBandwidthPackageId = cenBandwidthPackageId;
-        return this;
-    }
-    public String getCenBandwidthPackageId() {
-        return this.cenBandwidthPackageId;
     }
 
 }

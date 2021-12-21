@@ -4,24 +4,32 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteServicesInCenResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("RouteServiceEntries")
+    public DescribeRouteServicesInCenResponseBodyRouteServiceEntries routeServiceEntries;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("RouteServiceEntries")
-    public DescribeRouteServicesInCenResponseBodyRouteServiceEntries routeServiceEntries;
-
     public static DescribeRouteServicesInCenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRouteServicesInCenResponseBody self = new DescribeRouteServicesInCenResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRouteServicesInCenResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeRouteServicesInCenResponseBody setPageSize(Integer pageSize) {
@@ -40,12 +48,12 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeRouteServicesInCenResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeRouteServicesInCenResponseBody setRouteServiceEntries(DescribeRouteServicesInCenResponseBodyRouteServiceEntries routeServiceEntries) {
+        this.routeServiceEntries = routeServiceEntries;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public DescribeRouteServicesInCenResponseBodyRouteServiceEntries getRouteServiceEntries() {
+        return this.routeServiceEntries;
     }
 
     public DescribeRouteServicesInCenResponseBody setTotalCount(Integer totalCount) {
@@ -54,14 +62,6 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public DescribeRouteServicesInCenResponseBody setRouteServiceEntries(DescribeRouteServicesInCenResponseBodyRouteServiceEntries routeServiceEntries) {
-        this.routeServiceEntries = routeServiceEntries;
-        return this;
-    }
-    public DescribeRouteServicesInCenResponseBodyRouteServiceEntries getRouteServiceEntries() {
-        return this.routeServiceEntries;
     }
 
     public static class DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs extends TeaModel {
@@ -84,76 +84,33 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
     }
 
     public static class DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Host")
-        public String host;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("HostVpcId")
-        public String hostVpcId;
+        @NameInMap("AccessRegionId")
+        public String accessRegionId;
 
         @NameInMap("CenId")
         public String cenId;
 
-        @NameInMap("AccessRegionId")
-        public String accessRegionId;
+        @NameInMap("Cidrs")
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs cidrs;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Host")
+        public String host;
 
         @NameInMap("HostRegionId")
         public String hostRegionId;
 
-        @NameInMap("UpdateInterval")
-        public String updateInterval;
+        @NameInMap("HostVpcId")
+        public String hostVpcId;
 
-        @NameInMap("Cidrs")
-        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs cidrs;
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry build(java.util.Map<String, ?> map) throws Exception {
             DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry self = new DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setHost(String host) {
-            this.host = host;
-            return this;
-        }
-        public String getHost() {
-            return this.host;
-        }
-
-        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setHostVpcId(String hostVpcId) {
-            this.hostVpcId = hostVpcId;
-            return this;
-        }
-        public String getHostVpcId() {
-            return this.hostVpcId;
-        }
-
-        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setCenId(String cenId) {
-            this.cenId = cenId;
-            return this;
-        }
-        public String getCenId() {
-            return this.cenId;
         }
 
         public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setAccessRegionId(String accessRegionId) {
@@ -164,20 +121,12 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             return this.accessRegionId;
         }
 
-        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setHostRegionId(String hostRegionId) {
-            this.hostRegionId = hostRegionId;
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setCenId(String cenId) {
+            this.cenId = cenId;
             return this;
         }
-        public String getHostRegionId() {
-            return this.hostRegionId;
-        }
-
-        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setUpdateInterval(String updateInterval) {
-            this.updateInterval = updateInterval;
-            return this;
-        }
-        public String getUpdateInterval() {
-            return this.updateInterval;
+        public String getCenId() {
+            return this.cenId;
         }
 
         public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setCidrs(DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs cidrs) {
@@ -186,6 +135,46 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         }
         public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs getCidrs() {
             return this.cidrs;
+        }
+
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setHost(String host) {
+            this.host = host;
+            return this;
+        }
+        public String getHost() {
+            return this.host;
+        }
+
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setHostRegionId(String hostRegionId) {
+            this.hostRegionId = hostRegionId;
+            return this;
+        }
+        public String getHostRegionId() {
+            return this.hostRegionId;
+        }
+
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setHostVpcId(String hostVpcId) {
+            this.hostVpcId = hostVpcId;
+            return this;
+        }
+        public String getHostVpcId() {
+            return this.hostVpcId;
+        }
+
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

@@ -4,17 +4,14 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeGeographicRegionMembershipRequest extends TeaModel {
+    @NameInMap("GeographicRegionId")
+    public String geographicRegionId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -22,12 +19,23 @@ public class DescribeGeographicRegionMembershipRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("GeographicRegionId")
-    public String geographicRegionId;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribeGeographicRegionMembershipRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGeographicRegionMembershipRequest self = new DescribeGeographicRegionMembershipRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGeographicRegionMembershipRequest setGeographicRegionId(String geographicRegionId) {
+        this.geographicRegionId = geographicRegionId;
+        return this;
+    }
+    public String getGeographicRegionId() {
+        return this.geographicRegionId;
     }
 
     public DescribeGeographicRegionMembershipRequest setOwnerAccount(String ownerAccount) {
@@ -46,22 +54,6 @@ public class DescribeGeographicRegionMembershipRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeGeographicRegionMembershipRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeGeographicRegionMembershipRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
     public DescribeGeographicRegionMembershipRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -78,12 +70,20 @@ public class DescribeGeographicRegionMembershipRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeGeographicRegionMembershipRequest setGeographicRegionId(String geographicRegionId) {
-        this.geographicRegionId = geographicRegionId;
+    public DescribeGeographicRegionMembershipRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getGeographicRegionId() {
-        return this.geographicRegionId;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeGeographicRegionMembershipRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

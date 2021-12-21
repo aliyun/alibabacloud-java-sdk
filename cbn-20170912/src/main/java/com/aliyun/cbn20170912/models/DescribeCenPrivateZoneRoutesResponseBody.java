@@ -4,12 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PrivateZoneDnsServers")
-    public String privateZoneDnsServers;
-
     @NameInMap("CenId")
     public String cenId;
 
@@ -19,31 +13,21 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PrivateZoneDnsServers")
+    public String privateZoneDnsServers;
 
     @NameInMap("PrivateZoneInfos")
     public DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfos privateZoneInfos;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static DescribeCenPrivateZoneRoutesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenPrivateZoneRoutesResponseBody self = new DescribeCenPrivateZoneRoutesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCenPrivateZoneRoutesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeCenPrivateZoneRoutesResponseBody setPrivateZoneDnsServers(String privateZoneDnsServers) {
-        this.privateZoneDnsServers = privateZoneDnsServers;
-        return this;
-    }
-    public String getPrivateZoneDnsServers() {
-        return this.privateZoneDnsServers;
     }
 
     public DescribeCenPrivateZoneRoutesResponseBody setCenId(String cenId) {
@@ -70,12 +54,12 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeCenPrivateZoneRoutesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeCenPrivateZoneRoutesResponseBody setPrivateZoneDnsServers(String privateZoneDnsServers) {
+        this.privateZoneDnsServers = privateZoneDnsServers;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public String getPrivateZoneDnsServers() {
+        return this.privateZoneDnsServers;
     }
 
     public DescribeCenPrivateZoneRoutesResponseBody setPrivateZoneInfos(DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfos privateZoneInfos) {
@@ -86,10 +70,23 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         return this.privateZoneInfos;
     }
 
-    public static class DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfosPrivateZoneInfo extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+    public DescribeCenPrivateZoneRoutesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public DescribeCenPrivateZoneRoutesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfosPrivateZoneInfo extends TeaModel {
         @NameInMap("AccessRegionId")
         public String accessRegionId;
 
@@ -99,17 +96,12 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         @NameInMap("HostVpcId")
         public String hostVpcId;
 
+        @NameInMap("Status")
+        public String status;
+
         public static DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfosPrivateZoneInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfosPrivateZoneInfo self = new DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfosPrivateZoneInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfosPrivateZoneInfo setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfosPrivateZoneInfo setAccessRegionId(String accessRegionId) {
@@ -134,6 +126,14 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
         public String getHostVpcId() {
             return this.hostVpcId;
+        }
+
+        public DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfosPrivateZoneInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
