@@ -102,6 +102,9 @@ public class ListAllHotLineSkillGroupsResponseBody extends TeaModel {
         @NameInMap("AgentId")
         public Long agentId;
 
+        @NameInMap("DisplayName")
+        public String displayName;
+
         @NameInMap("Status")
         public Long status;
 
@@ -124,6 +127,14 @@ public class ListAllHotLineSkillGroupsResponseBody extends TeaModel {
         }
         public Long getAgentId() {
             return this.agentId;
+        }
+
+        public ListAllHotLineSkillGroupsResponseBodyDataSkillGroupAgentsAgents setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
         }
 
         public ListAllHotLineSkillGroupsResponseBodyDataSkillGroupAgentsAgents setStatus(Long status) {
