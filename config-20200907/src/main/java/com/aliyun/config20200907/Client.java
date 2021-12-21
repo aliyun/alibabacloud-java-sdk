@@ -42,8 +42,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("AggregatorId", request.aggregatorId);
         query.put("ConfigRuleIds", request.configRuleIds);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ActiveAggregateConfigRules"),
@@ -53,7 +52,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ActiveAggregateConfigRulesResponse());
@@ -71,8 +70,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("CompliancePackId", request.compliancePackId);
         query.put("ConfigRuleIds", request.configRuleIds);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "AttachAggregateConfigRuleToCompliancePack"),
@@ -82,7 +80,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachAggregateConfigRuleToCompliancePackResponse());
@@ -99,8 +97,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("CompliancePackId", request.compliancePackId);
         query.put("ConfigRuleIds", request.configRuleIds);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "AttachConfigRuleToCompliancePack"),
@@ -110,7 +107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachConfigRuleToCompliancePackResponse());
@@ -129,8 +126,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.configRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.configRules, "ConfigRules", "json");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
+            body.put("AggregatorId", request.aggregatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackName)) {
+            body.put("CompliancePackName", request.compliancePackName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackTemplateId)) {
+            body.put("CompliancePackTemplateId", request.compliancePackTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configRulesShrink)) {
+            body.put("ConfigRules", request.configRulesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskLevel)) {
+            body.put("RiskLevel", request.riskLevel);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateAggregateCompliancePack"),
@@ -163,8 +189,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourceTypesScopeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceTypesScope, "ResourceTypesScope", "simple");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
+            body.put("AggregatorId", request.aggregatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configRuleName)) {
+            body.put("ConfigRuleName", request.configRuleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configRuleTriggerTypes)) {
+            body.put("ConfigRuleTriggerTypes", request.configRuleTriggerTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceIdsScope)) {
+            body.put("ExcludeResourceIdsScope", request.excludeResourceIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputParametersShrink)) {
+            body.put("InputParameters", request.inputParametersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maximumExecutionFrequency)) {
+            body.put("MaximumExecutionFrequency", request.maximumExecutionFrequency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionIdsScope)) {
+            body.put("RegionIdsScope", request.regionIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupIdsScope)) {
+            body.put("ResourceGroupIdsScope", request.resourceGroupIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTypesScopeShrink)) {
+            body.put("ResourceTypesScope", request.resourceTypesScopeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskLevel)) {
+            body.put("RiskLevel", request.riskLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIdentifier)) {
+            body.put("SourceIdentifier", request.sourceIdentifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceOwner)) {
+            body.put("SourceOwner", request.sourceOwner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagKeyScope)) {
+            body.put("TagKeyScope", request.tagKeyScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagValueScope)) {
+            body.put("TagValueScope", request.tagValueScope);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateAggregateConfigRule"),
@@ -193,8 +284,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.aggregatorAccountsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.aggregatorAccounts, "AggregatorAccounts", "json");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorAccountsShrink)) {
+            body.put("AggregatorAccounts", request.aggregatorAccountsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorName)) {
+            body.put("AggregatorName", request.aggregatorName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorType)) {
+            body.put("AggregatorType", request.aggregatorType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateAggregator"),
@@ -223,8 +335,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.configRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.configRules, "ConfigRules", "json");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackName)) {
+            body.put("CompliancePackName", request.compliancePackName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackTemplateId)) {
+            body.put("CompliancePackTemplateId", request.compliancePackTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configRulesShrink)) {
+            body.put("ConfigRules", request.configRulesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskLevel)) {
+            body.put("RiskLevel", request.riskLevel);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateCompliancePack"),
@@ -257,8 +394,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourceTypesScopeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceTypesScope, "ResourceTypesScope", "simple");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configRuleName)) {
+            body.put("ConfigRuleName", request.configRuleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configRuleTriggerTypes)) {
+            body.put("ConfigRuleTriggerTypes", request.configRuleTriggerTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceIdsScope)) {
+            body.put("ExcludeResourceIdsScope", request.excludeResourceIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputParametersShrink)) {
+            body.put("InputParameters", request.inputParametersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maximumExecutionFrequency)) {
+            body.put("MaximumExecutionFrequency", request.maximumExecutionFrequency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionIdsScope)) {
+            body.put("RegionIdsScope", request.regionIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupIdsScope)) {
+            body.put("ResourceGroupIdsScope", request.resourceGroupIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTypesScopeShrink)) {
+            body.put("ResourceTypesScope", request.resourceTypesScopeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskLevel)) {
+            body.put("RiskLevel", request.riskLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIdentifier)) {
+            body.put("SourceIdentifier", request.sourceIdentifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceOwner)) {
+            body.put("SourceOwner", request.sourceOwner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagKeyScope)) {
+            body.put("TagKeyScope", request.tagKeyScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagValueScope)) {
+            body.put("TagValueScope", request.tagValueScope);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateConfigRule"),
@@ -285,8 +483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("AggregatorId", request.aggregatorId);
         query.put("ConfigRuleIds", request.configRuleIds);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeactiveAggregateConfigRules"),
@@ -296,7 +493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeactiveAggregateConfigRulesResponse());
@@ -312,8 +509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         query.put("ConfigRuleIds", request.configRuleIds);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeactiveConfigRules"),
@@ -323,7 +519,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeactiveConfigRulesResponse());
@@ -336,8 +532,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteAggregateCompliancePacksResponse deleteAggregateCompliancePacksWithOptions(DeleteAggregateCompliancePacksRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
+            body.put("AggregatorId", request.aggregatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackIds)) {
+            body.put("CompliancePackIds", request.compliancePackIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteRule)) {
+            body.put("DeleteRule", request.deleteRule);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteAggregateCompliancePacks"),
@@ -364,8 +577,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("AggregatorId", request.aggregatorId);
         query.put("ConfigRuleIds", request.configRuleIds);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteAggregateConfigRules"),
@@ -375,7 +587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAggregateConfigRulesResponse());
@@ -388,8 +600,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteAggregatorsResponse deleteAggregatorsWithOptions(DeleteAggregatorsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorIds)) {
+            body.put("AggregatorIds", request.aggregatorIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteAggregators"),
@@ -412,8 +633,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteCompliancePacksResponse deleteCompliancePacksWithOptions(DeleteCompliancePacksRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackIds)) {
+            body.put("CompliancePackIds", request.compliancePackIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteRule)) {
+            body.put("DeleteRule", request.deleteRule);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteCompliancePacks"),
@@ -441,8 +675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("CompliancePackId", request.compliancePackId);
         query.put("ConfigRuleIds", request.configRuleIds);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DetachAggregateConfigRuleToCompliancePack"),
@@ -452,7 +685,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetachAggregateConfigRuleToCompliancePackResponse());
@@ -469,8 +702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("CompliancePackId", request.compliancePackId);
         query.put("ConfigRuleIds", request.configRuleIds);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DetachConfigRuleToCompliancePack"),
@@ -480,7 +712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetachConfigRuleToCompliancePackResponse());
@@ -493,8 +725,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GenerateAggregateCompliancePackReportResponse generateAggregateCompliancePackReportWithOptions(GenerateAggregateCompliancePackReportRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
+            body.put("AggregatorId", request.aggregatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackId)) {
+            body.put("CompliancePackId", request.compliancePackId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GenerateAggregateCompliancePackReport"),
@@ -517,8 +762,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GenerateAggregateConfigRulesReportResponse generateAggregateConfigRulesReportWithOptions(GenerateAggregateConfigRulesReportRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
+            body.put("AggregatorId", request.aggregatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GenerateAggregateConfigRulesReport"),
@@ -541,8 +795,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GenerateCompliancePackReportResponse generateCompliancePackReportWithOptions(GenerateCompliancePackReportRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackId)) {
+            body.put("CompliancePackId", request.compliancePackId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GenerateCompliancePackReport"),
@@ -565,8 +828,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GenerateConfigRulesReportResponse generateConfigRulesReportWithOptions(GenerateConfigRulesReportRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GenerateConfigRulesReport"),
@@ -601,7 +869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregateAccountComplianceByPackResponse());
@@ -626,7 +894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregateCompliancePackResponse());
@@ -651,7 +919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregateCompliancePackReportResponse());
@@ -668,8 +936,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("AggregatorId", request.aggregatorId);
         query.put("ConfigRuleId", request.configRuleId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetAggregateConfigRule"),
@@ -679,7 +946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregateConfigRuleResponse());
@@ -704,7 +971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregateConfigRuleComplianceByPackResponse());
@@ -729,7 +996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregateConfigRuleSummaryByRiskLevelResponse());
@@ -754,7 +1021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregateConfigRulesReportResponse());
@@ -779,7 +1046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregateResourceComplianceByConfigRuleResponse());
@@ -804,7 +1071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregateResourceComplianceByPackResponse());
@@ -829,7 +1096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregateResourceComplianceTimelineResponse());
@@ -854,7 +1121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregateResourceConfigurationTimelineResponse());
@@ -879,7 +1146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregateResourceCountsGroupByRegionResponse());
@@ -904,7 +1171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregateResourceCountsGroupByResourceTypeResponse());
@@ -929,7 +1196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregatorResponse());
@@ -954,7 +1221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetCompliancePackResponse());
@@ -979,7 +1246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetCompliancePackReportResponse());
@@ -995,8 +1262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         query.put("ConfigRuleId", request.configRuleId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetConfigRule"),
@@ -1006,7 +1272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetConfigRuleResponse());
@@ -1031,7 +1297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetConfigRuleComplianceByPackResponse());
@@ -1052,7 +1318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetConfigRuleSummaryByRiskLevelResponse());
@@ -1073,7 +1339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetConfigRulesReportResponse());
@@ -1098,7 +1364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDiscoveredResourceCountsGroupByRegionResponse());
@@ -1123,7 +1389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDiscoveredResourceCountsGroupByResourceTypeResponse());
@@ -1148,7 +1414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceComplianceByConfigRuleResponse());
@@ -1173,7 +1439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceComplianceByPackResponse());
@@ -1198,7 +1464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceComplianceTimelineResponse());
@@ -1223,7 +1489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceConfigurationTimelineResponse());
@@ -1242,8 +1508,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resources, "Resources", "json");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
+            body.put("AggregatorId", request.aggregatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configRuleId)) {
+            body.put("ConfigRuleId", request.configRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
+            body.put("Reason", request.reason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourcesShrink)) {
+            body.put("Resources", request.resourcesShrink);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "IgnoreAggregateEvaluationResults"),
@@ -1272,8 +1555,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resources, "Resources", "json");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configRuleId)) {
+            body.put("ConfigRuleId", request.configRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
+            body.put("Reason", request.reason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourcesShrink)) {
+            body.put("Resources", request.resourcesShrink);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "IgnoreEvaluationResults"),
@@ -1308,7 +1604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListAggregateCompliancePacksResponse());
@@ -1333,7 +1629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListAggregateConfigRuleEvaluationResultsResponse());
@@ -1358,7 +1654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListAggregateConfigRulesResponse());
@@ -1383,7 +1679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListAggregateResourceEvaluationResultsResponse());
@@ -1408,7 +1704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListAggregatorsResponse());
@@ -1433,7 +1729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListCompliancePackTemplatesResponse());
@@ -1458,7 +1754,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListCompliancePacksResponse());
@@ -1483,7 +1779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListConfigRuleEvaluationResultsResponse());
@@ -1508,7 +1804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceEvaluationResultsResponse());
@@ -1527,8 +1823,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resources, "Resources", "json");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
+            body.put("AggregatorId", request.aggregatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configRuleId)) {
+            body.put("ConfigRuleId", request.configRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourcesShrink)) {
+            body.put("Resources", request.resourcesShrink);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RevertAggregateEvaluationResults"),
@@ -1557,8 +1866,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resources, "Resources", "json");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configRuleId)) {
+            body.put("ConfigRuleId", request.configRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourcesShrink)) {
+            body.put("Resources", request.resourcesShrink);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RevertEvaluationResults"),
@@ -1587,8 +1905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("ConfigRuleId", request.configRuleId);
         query.put("RevertEvaluation", request.revertEvaluation);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StartAggregateConfigRuleEvaluation"),
@@ -1598,7 +1915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartAggregateConfigRuleEvaluationResponse());
@@ -1617,8 +1934,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.configRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.configRules, "ConfigRules", "json");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
+            body.put("AggregatorId", request.aggregatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackId)) {
+            body.put("CompliancePackId", request.compliancePackId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackName)) {
+            body.put("CompliancePackName", request.compliancePackName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configRulesShrink)) {
+            body.put("ConfigRules", request.configRulesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskLevel)) {
+            body.put("RiskLevel", request.riskLevel);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateAggregateCompliancePack"),
@@ -1651,8 +1997,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourceTypesScopeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceTypesScope, "ResourceTypesScope", "simple");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
+            body.put("AggregatorId", request.aggregatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configRuleId)) {
+            body.put("ConfigRuleId", request.configRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configRuleName)) {
+            body.put("ConfigRuleName", request.configRuleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configRuleTriggerTypes)) {
+            body.put("ConfigRuleTriggerTypes", request.configRuleTriggerTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceIdsScope)) {
+            body.put("ExcludeResourceIdsScope", request.excludeResourceIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputParametersShrink)) {
+            body.put("InputParameters", request.inputParametersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maximumExecutionFrequency)) {
+            body.put("MaximumExecutionFrequency", request.maximumExecutionFrequency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionIdsScope)) {
+            body.put("RegionIdsScope", request.regionIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupIdsScope)) {
+            body.put("ResourceGroupIdsScope", request.resourceGroupIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTypesScopeShrink)) {
+            body.put("ResourceTypesScope", request.resourceTypesScopeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskLevel)) {
+            body.put("RiskLevel", request.riskLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagKeyScope)) {
+            body.put("TagKeyScope", request.tagKeyScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagValueScope)) {
+            body.put("TagValueScope", request.tagValueScope);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateAggregateConfigRule"),
@@ -1681,8 +2088,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.aggregatorAccountsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.aggregatorAccounts, "AggregatorAccounts", "json");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorAccountsShrink)) {
+            body.put("AggregatorAccounts", request.aggregatorAccountsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
+            body.put("AggregatorId", request.aggregatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorName)) {
+            body.put("AggregatorName", request.aggregatorName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateAggregator"),
@@ -1711,8 +2139,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.configRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.configRules, "ConfigRules", "json");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackId)) {
+            body.put("CompliancePackId", request.compliancePackId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackName)) {
+            body.put("CompliancePackName", request.compliancePackName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configRulesShrink)) {
+            body.put("ConfigRules", request.configRulesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskLevel)) {
+            body.put("RiskLevel", request.riskLevel);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateCompliancePack"),
@@ -1745,8 +2198,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourceTypesScopeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceTypesScope, "ResourceTypesScope", "simple");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configRuleId)) {
+            body.put("ConfigRuleId", request.configRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configRuleName)) {
+            body.put("ConfigRuleName", request.configRuleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configRuleTriggerTypes)) {
+            body.put("ConfigRuleTriggerTypes", request.configRuleTriggerTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceIdsScope)) {
+            body.put("ExcludeResourceIdsScope", request.excludeResourceIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputParametersShrink)) {
+            body.put("InputParameters", request.inputParametersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maximumExecutionFrequency)) {
+            body.put("MaximumExecutionFrequency", request.maximumExecutionFrequency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionIdsScope)) {
+            body.put("RegionIdsScope", request.regionIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupIdsScope)) {
+            body.put("ResourceGroupIdsScope", request.resourceGroupIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTypesScopeShrink)) {
+            body.put("ResourceTypesScope", request.resourceTypesScopeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskLevel)) {
+            body.put("RiskLevel", request.riskLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagKeyScope)) {
+            body.put("TagKeyScope", request.tagKeyScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagValueScope)) {
+            body.put("TagValueScope", request.tagValueScope);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateConfigRule"),
