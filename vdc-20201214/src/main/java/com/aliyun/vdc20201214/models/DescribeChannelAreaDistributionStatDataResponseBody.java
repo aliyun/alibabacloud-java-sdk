@@ -42,6 +42,10 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
         @NameInMap("CallUserCount")
         public Integer callUserCount;
 
+        // 优质传输率，用小数表示，例如0.9999表示优质传输率为99.99%。
+        @NameInMap("HighQualityTransmissionRate")
+        public String highQualityTransmissionRate;
+
         // 发布端人数。
         @NameInMap("PubUserCount")
         public Integer pubUserCount;
@@ -49,10 +53,6 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
         // 订阅端人数。
         @NameInMap("SubUserCount")
         public Integer subUserCount;
-
-        // 优质传输率，用小数表示，例如0.9999表示优质传输率为99.99%。
-        @NameInMap("HighQualityTransmissionRate")
-        public String highQualityTransmissionRate;
 
         public static DescribeChannelAreaDistributionStatDataResponseBodyAreaStatList build(java.util.Map<String, ?> map) throws Exception {
             DescribeChannelAreaDistributionStatDataResponseBodyAreaStatList self = new DescribeChannelAreaDistributionStatDataResponseBodyAreaStatList();
@@ -75,6 +75,14 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
             return this.callUserCount;
         }
 
+        public DescribeChannelAreaDistributionStatDataResponseBodyAreaStatList setHighQualityTransmissionRate(String highQualityTransmissionRate) {
+            this.highQualityTransmissionRate = highQualityTransmissionRate;
+            return this;
+        }
+        public String getHighQualityTransmissionRate() {
+            return this.highQualityTransmissionRate;
+        }
+
         public DescribeChannelAreaDistributionStatDataResponseBodyAreaStatList setPubUserCount(Integer pubUserCount) {
             this.pubUserCount = pubUserCount;
             return this;
@@ -89,14 +97,6 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
         }
         public Integer getSubUserCount() {
             return this.subUserCount;
-        }
-
-        public DescribeChannelAreaDistributionStatDataResponseBodyAreaStatList setHighQualityTransmissionRate(String highQualityTransmissionRate) {
-            this.highQualityTransmissionRate = highQualityTransmissionRate;
-            return this;
-        }
-        public String getHighQualityTransmissionRate() {
-            return this.highQualityTransmissionRate;
         }
 
     }

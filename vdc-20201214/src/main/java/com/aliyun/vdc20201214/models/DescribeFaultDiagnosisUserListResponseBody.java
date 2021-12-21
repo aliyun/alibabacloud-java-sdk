@@ -4,10 +4,6 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
-    // 异常用户明细列表。
-    @NameInMap("UserList")
-    public java.util.List<DescribeFaultDiagnosisUserListResponseBodyUserList> userList;
-
     // 页码。
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -16,25 +12,21 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 总数量。
-    @NameInMap("TotalCnt")
-    public Integer totalCnt;
-
     // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
+    // 总数量。
+    @NameInMap("TotalCnt")
+    public Integer totalCnt;
+
+    // 异常用户明细列表。
+    @NameInMap("UserList")
+    public java.util.List<DescribeFaultDiagnosisUserListResponseBodyUserList> userList;
+
     public static DescribeFaultDiagnosisUserListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFaultDiagnosisUserListResponseBody self = new DescribeFaultDiagnosisUserListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFaultDiagnosisUserListResponseBody setUserList(java.util.List<DescribeFaultDiagnosisUserListResponseBodyUserList> userList) {
-        this.userList = userList;
-        return this;
-    }
-    public java.util.List<DescribeFaultDiagnosisUserListResponseBodyUserList> getUserList() {
-        return this.userList;
     }
 
     public DescribeFaultDiagnosisUserListResponseBody setPageNo(Integer pageNo) {
@@ -53,6 +45,14 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeFaultDiagnosisUserListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeFaultDiagnosisUserListResponseBody setTotalCnt(Integer totalCnt) {
         this.totalCnt = totalCnt;
         return this;
@@ -61,12 +61,12 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         return this.totalCnt;
     }
 
-    public DescribeFaultDiagnosisUserListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeFaultDiagnosisUserListResponseBody setUserList(java.util.List<DescribeFaultDiagnosisUserListResponseBodyUserList> userList) {
+        this.userList = userList;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<DescribeFaultDiagnosisUserListResponseBodyUserList> getUserList() {
+        return this.userList;
     }
 
     public static class DescribeFaultDiagnosisUserListResponseBodyUserListFaultList extends TeaModel {
@@ -90,13 +90,13 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserListResponseBodyUserList extends TeaModel {
+        // 通信的创建时间戳，使用UNIX时间戳表示，单位：秒。
+        @NameInMap("ChannelCreatedTs")
+        public Long channelCreatedTs;
+
         // 频道ID。
         @NameInMap("ChannelId")
         public String channelId;
-
-        // 用户ID。
-        @NameInMap("UserId")
-        public String userId;
 
         // 用户首次进入通话时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("CreatedTs")
@@ -106,17 +106,25 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
-        // 通信的创建时间戳，使用UNIX时间戳表示，单位：秒。
-        @NameInMap("ChannelCreatedTs")
-        public Long channelCreatedTs;
-
         // 异常列表。
         @NameInMap("FaultList")
         public java.util.List<DescribeFaultDiagnosisUserListResponseBodyUserListFaultList> faultList;
 
+        // 用户ID。
+        @NameInMap("UserId")
+        public String userId;
+
         public static DescribeFaultDiagnosisUserListResponseBodyUserList build(java.util.Map<String, ?> map) throws Exception {
             DescribeFaultDiagnosisUserListResponseBodyUserList self = new DescribeFaultDiagnosisUserListResponseBodyUserList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeFaultDiagnosisUserListResponseBodyUserList setChannelCreatedTs(Long channelCreatedTs) {
+            this.channelCreatedTs = channelCreatedTs;
+            return this;
+        }
+        public Long getChannelCreatedTs() {
+            return this.channelCreatedTs;
         }
 
         public DescribeFaultDiagnosisUserListResponseBodyUserList setChannelId(String channelId) {
@@ -125,14 +133,6 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         }
         public String getChannelId() {
             return this.channelId;
-        }
-
-        public DescribeFaultDiagnosisUserListResponseBodyUserList setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public DescribeFaultDiagnosisUserListResponseBodyUserList setCreatedTs(Long createdTs) {
@@ -151,20 +151,20 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
             return this.destroyedTs;
         }
 
-        public DescribeFaultDiagnosisUserListResponseBodyUserList setChannelCreatedTs(Long channelCreatedTs) {
-            this.channelCreatedTs = channelCreatedTs;
-            return this;
-        }
-        public Long getChannelCreatedTs() {
-            return this.channelCreatedTs;
-        }
-
         public DescribeFaultDiagnosisUserListResponseBodyUserList setFaultList(java.util.List<DescribeFaultDiagnosisUserListResponseBodyUserListFaultList> faultList) {
             this.faultList = faultList;
             return this;
         }
         public java.util.List<DescribeFaultDiagnosisUserListResponseBodyUserListFaultList> getFaultList() {
             return this.faultList;
+        }
+
+        public DescribeFaultDiagnosisUserListResponseBodyUserList setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

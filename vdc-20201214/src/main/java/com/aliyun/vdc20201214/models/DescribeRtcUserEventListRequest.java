@@ -12,17 +12,17 @@ public class DescribeRtcUserEventListRequest extends TeaModel {
     @NameInMap("ChannelId")
     public String channelId;
 
-    // 用户ID
-    @NameInMap("Uid")
-    public String uid;
+    // 结束时间，UTC格式
+    @NameInMap("EndTime")
+    public String endTime;
 
     // 起始时间，UTC格式
     @NameInMap("StartTime")
     public String startTime;
 
-    // 结束时间，UTC格式
-    @NameInMap("EndTime")
-    public String endTime;
+    // 用户ID
+    @NameInMap("Uid")
+    public String uid;
 
     public static DescribeRtcUserEventListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRtcUserEventListRequest self = new DescribeRtcUserEventListRequest();
@@ -45,12 +45,12 @@ public class DescribeRtcUserEventListRequest extends TeaModel {
         return this.channelId;
     }
 
-    public DescribeRtcUserEventListRequest setUid(String uid) {
-        this.uid = uid;
+    public DescribeRtcUserEventListRequest setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getUid() {
-        return this.uid;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeRtcUserEventListRequest setStartTime(String startTime) {
@@ -61,12 +61,12 @@ public class DescribeRtcUserEventListRequest extends TeaModel {
         return this.startTime;
     }
 
-    public DescribeRtcUserEventListRequest setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeRtcUserEventListRequest setUid(String uid) {
+        this.uid = uid;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
+    public String getUid() {
+        return this.uid;
     }
 
 }

@@ -8,13 +8,13 @@ public class DescribeFaultDiagnosisFactorDistributionStatRequest extends TeaMode
     @NameInMap("AppId")
     public String appId;
 
-    // 查询的开始时间，使用UNIX时间戳表示，单位：秒。
-    @NameInMap("StartTs")
-    public Long startTs;
-
     // 查询的结束时间，使用UNIX时间戳表示，单位：秒。
     @NameInMap("EndTs")
     public Long endTs;
+
+    // 查询的开始时间，使用UNIX时间戳表示，单位：秒。
+    @NameInMap("StartTs")
+    public Long startTs;
 
     public static DescribeFaultDiagnosisFactorDistributionStatRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFaultDiagnosisFactorDistributionStatRequest self = new DescribeFaultDiagnosisFactorDistributionStatRequest();
@@ -29,20 +29,20 @@ public class DescribeFaultDiagnosisFactorDistributionStatRequest extends TeaMode
         return this.appId;
     }
 
-    public DescribeFaultDiagnosisFactorDistributionStatRequest setStartTs(Long startTs) {
-        this.startTs = startTs;
-        return this;
-    }
-    public Long getStartTs() {
-        return this.startTs;
-    }
-
     public DescribeFaultDiagnosisFactorDistributionStatRequest setEndTs(Long endTs) {
         this.endTs = endTs;
         return this;
     }
     public Long getEndTs() {
         return this.endTs;
+    }
+
+    public DescribeFaultDiagnosisFactorDistributionStatRequest setStartTs(Long startTs) {
+        this.startTs = startTs;
+        return this;
+    }
+    public Long getStartTs() {
+        return this.startTs;
     }
 
 }

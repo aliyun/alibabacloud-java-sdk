@@ -4,6 +4,10 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeCallListResponseBody extends TeaModel {
+    // 通信列表。
+    @NameInMap("CallList")
+    public java.util.List<DescribeCallListResponseBodyCallList> callList;
+
     // 页码。
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -12,21 +16,25 @@ public class DescribeCallListResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 总数量。
-    @NameInMap("TotalCnt")
-    public Integer totalCnt;
-
-    // 通信列表。
-    @NameInMap("CallList")
-    public java.util.List<DescribeCallListResponseBodyCallList> callList;
-
     // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
+    // 总数量。
+    @NameInMap("TotalCnt")
+    public Integer totalCnt;
+
     public static DescribeCallListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCallListResponseBody self = new DescribeCallListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCallListResponseBody setCallList(java.util.List<DescribeCallListResponseBodyCallList> callList) {
+        this.callList = callList;
+        return this;
+    }
+    public java.util.List<DescribeCallListResponseBodyCallList> getCallList() {
+        return this.callList;
     }
 
     public DescribeCallListResponseBody setPageNo(Integer pageNo) {
@@ -45,22 +53,6 @@ public class DescribeCallListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeCallListResponseBody setTotalCnt(Integer totalCnt) {
-        this.totalCnt = totalCnt;
-        return this;
-    }
-    public Integer getTotalCnt() {
-        return this.totalCnt;
-    }
-
-    public DescribeCallListResponseBody setCallList(java.util.List<DescribeCallListResponseBodyCallList> callList) {
-        this.callList = callList;
-        return this;
-    }
-    public java.util.List<DescribeCallListResponseBodyCallList> getCallList() {
-        return this.callList;
-    }
-
     public DescribeCallListResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -69,18 +61,30 @@ public class DescribeCallListResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeCallListResponseBody setTotalCnt(Integer totalCnt) {
+        this.totalCnt = totalCnt;
+        return this;
+    }
+    public Integer getTotalCnt() {
+        return this.totalCnt;
+    }
+
     public static class DescribeCallListResponseBodyCallList extends TeaModel {
         // App ID。
         @NameInMap("AppId")
         public String appId;
 
-        // 频道ID。
-        @NameInMap("ChannelId")
-        public String channelId;
+        // 通信体验差的用户数。
+        @NameInMap("BadExpUserCnt")
+        public Integer badExpUserCnt;
 
         // 通信状态，IN：进行中，OUT：已结束
         @NameInMap("CallStatus")
         public String callStatus;
+
+        // 频道ID。
+        @NameInMap("ChannelId")
+        public String channelId;
 
         // 通信的创建时间戳，使用UNIX时间戳表示，单位：秒。
         @NameInMap("CreatedTs")
@@ -98,10 +102,6 @@ public class DescribeCallListResponseBody extends TeaModel {
         @NameInMap("UserCnt")
         public Integer userCnt;
 
-        // 通信体验差的用户数。
-        @NameInMap("BadExpUserCnt")
-        public Integer badExpUserCnt;
-
         public static DescribeCallListResponseBodyCallList build(java.util.Map<String, ?> map) throws Exception {
             DescribeCallListResponseBodyCallList self = new DescribeCallListResponseBodyCallList();
             return TeaModel.build(map, self);
@@ -115,12 +115,12 @@ public class DescribeCallListResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public DescribeCallListResponseBodyCallList setChannelId(String channelId) {
-            this.channelId = channelId;
+        public DescribeCallListResponseBodyCallList setBadExpUserCnt(Integer badExpUserCnt) {
+            this.badExpUserCnt = badExpUserCnt;
             return this;
         }
-        public String getChannelId() {
-            return this.channelId;
+        public Integer getBadExpUserCnt() {
+            return this.badExpUserCnt;
         }
 
         public DescribeCallListResponseBodyCallList setCallStatus(String callStatus) {
@@ -129,6 +129,14 @@ public class DescribeCallListResponseBody extends TeaModel {
         }
         public String getCallStatus() {
             return this.callStatus;
+        }
+
+        public DescribeCallListResponseBodyCallList setChannelId(String channelId) {
+            this.channelId = channelId;
+            return this;
+        }
+        public String getChannelId() {
+            return this.channelId;
         }
 
         public DescribeCallListResponseBodyCallList setCreatedTs(Long createdTs) {
@@ -161,14 +169,6 @@ public class DescribeCallListResponseBody extends TeaModel {
         }
         public Integer getUserCnt() {
             return this.userCnt;
-        }
-
-        public DescribeCallListResponseBodyCallList setBadExpUserCnt(Integer badExpUserCnt) {
-            this.badExpUserCnt = badExpUserCnt;
-            return this;
-        }
-        public Integer getBadExpUserCnt() {
-            return this.badExpUserCnt;
         }
 
     }

@@ -12,21 +12,21 @@ public class DescribeRtcChannelMetricListRequest extends TeaModel {
     @NameInMap("ChannelId")
     public String channelId;
 
+    // 结束时间，UTC格式
+    @NameInMap("EndTime")
+    public String endTime;
+
     // 发布端用户ID
     @NameInMap("PubUid")
     public String pubUid;
-
-    // 接收端用户ID
-    @NameInMap("SubUid")
-    public String subUid;
 
     // 起始时间，UTC格式
     @NameInMap("StartTime")
     public String startTime;
 
-    // 结束时间，UTC格式
-    @NameInMap("EndTime")
-    public String endTime;
+    // 接收端用户ID
+    @NameInMap("SubUid")
+    public String subUid;
 
     public static DescribeRtcChannelMetricListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRtcChannelMetricListRequest self = new DescribeRtcChannelMetricListRequest();
@@ -49,20 +49,20 @@ public class DescribeRtcChannelMetricListRequest extends TeaModel {
         return this.channelId;
     }
 
+    public DescribeRtcChannelMetricListRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public DescribeRtcChannelMetricListRequest setPubUid(String pubUid) {
         this.pubUid = pubUid;
         return this;
     }
     public String getPubUid() {
         return this.pubUid;
-    }
-
-    public DescribeRtcChannelMetricListRequest setSubUid(String subUid) {
-        this.subUid = subUid;
-        return this;
-    }
-    public String getSubUid() {
-        return this.subUid;
     }
 
     public DescribeRtcChannelMetricListRequest setStartTime(String startTime) {
@@ -73,12 +73,12 @@ public class DescribeRtcChannelMetricListRequest extends TeaModel {
         return this.startTime;
     }
 
-    public DescribeRtcChannelMetricListRequest setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeRtcChannelMetricListRequest setSubUid(String subUid) {
+        this.subUid = subUid;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
+    public String getSubUid() {
+        return this.subUid;
     }
 
 }

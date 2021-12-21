@@ -38,17 +38,9 @@ public class DescribeAppFollowCallRuleListResponseBody extends TeaModel {
         @NameInMap("AppId")
         public String appId;
 
-        // 具体规则，JSON格式
-        @NameInMap("Rule")
-        public String rule;
-
         // 创建时间，秒级时间戳，如1614836732
         @NameInMap("CreatedTs")
         public Long createdTs;
-
-        // 修改时间，秒级时间戳，如1614836732
-        @NameInMap("ModifiedTs")
-        public Long modifiedTs;
 
         // 创建时间，待删除
         @NameInMap("GmtCreateTs")
@@ -57,6 +49,14 @@ public class DescribeAppFollowCallRuleListResponseBody extends TeaModel {
         // 修改时间，待删除
         @NameInMap("GmtModifiedTs")
         public Long gmtModifiedTs;
+
+        // 修改时间，秒级时间戳，如1614836732
+        @NameInMap("ModifiedTs")
+        public Long modifiedTs;
+
+        // 具体规则，JSON格式
+        @NameInMap("Rule")
+        public String rule;
 
         public static DescribeAppFollowCallRuleListResponseBodyAppFollowCallRuleList build(java.util.Map<String, ?> map) throws Exception {
             DescribeAppFollowCallRuleListResponseBodyAppFollowCallRuleList self = new DescribeAppFollowCallRuleListResponseBodyAppFollowCallRuleList();
@@ -71,28 +71,12 @@ public class DescribeAppFollowCallRuleListResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public DescribeAppFollowCallRuleListResponseBodyAppFollowCallRuleList setRule(String rule) {
-            this.rule = rule;
-            return this;
-        }
-        public String getRule() {
-            return this.rule;
-        }
-
         public DescribeAppFollowCallRuleListResponseBodyAppFollowCallRuleList setCreatedTs(Long createdTs) {
             this.createdTs = createdTs;
             return this;
         }
         public Long getCreatedTs() {
             return this.createdTs;
-        }
-
-        public DescribeAppFollowCallRuleListResponseBodyAppFollowCallRuleList setModifiedTs(Long modifiedTs) {
-            this.modifiedTs = modifiedTs;
-            return this;
-        }
-        public Long getModifiedTs() {
-            return this.modifiedTs;
         }
 
         public DescribeAppFollowCallRuleListResponseBodyAppFollowCallRuleList setGmtCreateTs(Long gmtCreateTs) {
@@ -109,6 +93,22 @@ public class DescribeAppFollowCallRuleListResponseBody extends TeaModel {
         }
         public Long getGmtModifiedTs() {
             return this.gmtModifiedTs;
+        }
+
+        public DescribeAppFollowCallRuleListResponseBodyAppFollowCallRuleList setModifiedTs(Long modifiedTs) {
+            this.modifiedTs = modifiedTs;
+            return this;
+        }
+        public Long getModifiedTs() {
+            return this.modifiedTs;
+        }
+
+        public DescribeAppFollowCallRuleListResponseBodyAppFollowCallRuleList setRule(String rule) {
+            this.rule = rule;
+            return this;
+        }
+        public String getRule() {
+            return this.rule;
         }
 
     }

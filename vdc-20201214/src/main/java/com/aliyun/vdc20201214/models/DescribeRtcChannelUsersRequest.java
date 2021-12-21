@@ -12,10 +12,6 @@ public class DescribeRtcChannelUsersRequest extends TeaModel {
     @NameInMap("ChannelId")
     public String channelId;
 
-    // 查询时间点日期，天粒度，UTC格式
-    @NameInMap("TimePoint")
-    public String timePoint;
-
     // 页号
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -23,6 +19,10 @@ public class DescribeRtcChannelUsersRequest extends TeaModel {
     // 显示数量
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    // 查询时间点日期，天粒度，UTC格式
+    @NameInMap("TimePoint")
+    public String timePoint;
 
     public static DescribeRtcChannelUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRtcChannelUsersRequest self = new DescribeRtcChannelUsersRequest();
@@ -45,14 +45,6 @@ public class DescribeRtcChannelUsersRequest extends TeaModel {
         return this.channelId;
     }
 
-    public DescribeRtcChannelUsersRequest setTimePoint(String timePoint) {
-        this.timePoint = timePoint;
-        return this;
-    }
-    public String getTimePoint() {
-        return this.timePoint;
-    }
-
     public DescribeRtcChannelUsersRequest setPageNo(Integer pageNo) {
         this.pageNo = pageNo;
         return this;
@@ -67,6 +59,14 @@ public class DescribeRtcChannelUsersRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeRtcChannelUsersRequest setTimePoint(String timePoint) {
+        this.timePoint = timePoint;
+        return this;
+    }
+    public String getTimePoint() {
+        return this.timePoint;
     }
 
 }

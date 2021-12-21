@@ -4,13 +4,13 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelJoinInfoResponseBody extends TeaModel {
-    // 入会慢时间阈值
-    @NameInMap("JoinSlowThreshold")
-    public Long joinSlowThreshold;
-
     // 在入会慢时间阈值内的入会成功率
     @NameInMap("JoinFastSuccessRate")
     public String joinFastSuccessRate;
+
+    // 入会慢时间阈值
+    @NameInMap("JoinSlowThreshold")
+    public Long joinSlowThreshold;
 
     // 请求ID
     @NameInMap("RequestId")
@@ -21,20 +21,20 @@ public class DescribeChannelJoinInfoResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeChannelJoinInfoResponseBody setJoinSlowThreshold(Long joinSlowThreshold) {
-        this.joinSlowThreshold = joinSlowThreshold;
-        return this;
-    }
-    public Long getJoinSlowThreshold() {
-        return this.joinSlowThreshold;
-    }
-
     public DescribeChannelJoinInfoResponseBody setJoinFastSuccessRate(String joinFastSuccessRate) {
         this.joinFastSuccessRate = joinFastSuccessRate;
         return this;
     }
     public String getJoinFastSuccessRate() {
         return this.joinFastSuccessRate;
+    }
+
+    public DescribeChannelJoinInfoResponseBody setJoinSlowThreshold(Long joinSlowThreshold) {
+        this.joinSlowThreshold = joinSlowThreshold;
+        return this;
+    }
+    public Long getJoinSlowThreshold() {
+        return this.joinSlowThreshold;
     }
 
     public DescribeChannelJoinInfoResponseBody setRequestId(String requestId) {

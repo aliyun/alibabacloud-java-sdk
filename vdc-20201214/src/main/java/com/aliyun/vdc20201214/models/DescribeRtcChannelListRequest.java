@@ -8,17 +8,13 @@ public class DescribeRtcChannelListRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // 起始时间，UTC格式
-    @NameInMap("StartTime")
-    public String startTime;
+    // ChannelId
+    @NameInMap("ChannelId")
+    public String channelId;
 
     // 结束时间，UTC格式
     @NameInMap("EndTime")
     public String endTime;
-
-    // ChannelId
-    @NameInMap("ChannelId")
-    public String channelId;
 
     // 页号
     @NameInMap("PageNo")
@@ -27,6 +23,10 @@ public class DescribeRtcChannelListRequest extends TeaModel {
     // 显示数量
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    // 起始时间，UTC格式
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeRtcChannelListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRtcChannelListRequest self = new DescribeRtcChannelListRequest();
@@ -41,12 +41,12 @@ public class DescribeRtcChannelListRequest extends TeaModel {
         return this.appId;
     }
 
-    public DescribeRtcChannelListRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeRtcChannelListRequest setChannelId(String channelId) {
+        this.channelId = channelId;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public String getChannelId() {
+        return this.channelId;
     }
 
     public DescribeRtcChannelListRequest setEndTime(String endTime) {
@@ -55,14 +55,6 @@ public class DescribeRtcChannelListRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeRtcChannelListRequest setChannelId(String channelId) {
-        this.channelId = channelId;
-        return this;
-    }
-    public String getChannelId() {
-        return this.channelId;
     }
 
     public DescribeRtcChannelListRequest setPageNo(Integer pageNo) {
@@ -79,6 +71,14 @@ public class DescribeRtcChannelListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeRtcChannelListRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

@@ -12,10 +12,6 @@ public class DescribeRtcChannelDetailsRequest extends TeaModel {
     @NameInMap("ChannelId")
     public String channelId;
 
-    // 起始时间，UTC格式
-    @NameInMap("StartTime")
-    public String startTime;
-
     // 结束时间，UTC时间
     @NameInMap("EndTime")
     public String endTime;
@@ -27,6 +23,10 @@ public class DescribeRtcChannelDetailsRequest extends TeaModel {
     // 显示数量
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    // 起始时间，UTC格式
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeRtcChannelDetailsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRtcChannelDetailsRequest self = new DescribeRtcChannelDetailsRequest();
@@ -47,14 +47,6 @@ public class DescribeRtcChannelDetailsRequest extends TeaModel {
     }
     public String getChannelId() {
         return this.channelId;
-    }
-
-    public DescribeRtcChannelDetailsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeRtcChannelDetailsRequest setEndTime(String endTime) {
@@ -79,6 +71,14 @@ public class DescribeRtcChannelDetailsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeRtcChannelDetailsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }
