@@ -4,40 +4,32 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class DescribePackageStateResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("IssuedCount")
+    public Long issuedCount;
 
     @NameInMap("ProductCode")
     public String productCode;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     @NameInMap("UsedCount")
     public Long usedCount;
-
-    @NameInMap("IssuedCount")
-    public Long issuedCount;
 
     public static DescribePackageStateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePackageStateResponseBody self = new DescribePackageStateResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribePackageStateResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
+    public DescribePackageStateResponseBody setIssuedCount(Long issuedCount) {
+        this.issuedCount = issuedCount;
         return this;
     }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribePackageStateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public Long getIssuedCount() {
+        return this.issuedCount;
     }
 
     public DescribePackageStateResponseBody setProductCode(String productCode) {
@@ -48,20 +40,28 @@ public class DescribePackageStateResponseBody extends TeaModel {
         return this.productCode;
     }
 
+    public DescribePackageStateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribePackageStateResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public DescribePackageStateResponseBody setUsedCount(Long usedCount) {
         this.usedCount = usedCount;
         return this;
     }
     public Long getUsedCount() {
         return this.usedCount;
-    }
-
-    public DescribePackageStateResponseBody setIssuedCount(Long issuedCount) {
-        this.issuedCount = issuedCount;
-        return this;
-    }
-    public Long getIssuedCount() {
-        return this.issuedCount;
     }
 
 }

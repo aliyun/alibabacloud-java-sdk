@@ -3,19 +3,19 @@ package com.aliyun.cas20200407.models;
 
 import com.aliyun.tea.*;
 
-public class CreateCertificateRequestResponseBody extends TeaModel {
+public class RenewCertificateOrderForPackageRequestResponseBody extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    public static CreateCertificateRequestResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateCertificateRequestResponseBody self = new CreateCertificateRequestResponseBody();
+    public static RenewCertificateOrderForPackageRequestResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        RenewCertificateOrderForPackageRequestResponseBody self = new RenewCertificateOrderForPackageRequestResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateCertificateRequestResponseBody setOrderId(Long orderId) {
+    public RenewCertificateOrderForPackageRequestResponseBody setOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
     }
@@ -23,7 +23,7 @@ public class CreateCertificateRequestResponseBody extends TeaModel {
         return this.orderId;
     }
 
-    public CreateCertificateRequestResponseBody setRequestId(String requestId) {
+    public RenewCertificateOrderForPackageRequestResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -7,6 +7,7 @@ import com.aliyun.teautil.*;
 import com.aliyun.teautil.models.*;
 import com.aliyun.teaopenapi.*;
 import com.aliyun.teaopenapi.models.*;
+import com.aliyun.openapiutil.*;
 import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
@@ -82,12 +83,115 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public CancelCertificateForPackageRequestResponse cancelCertificateForPackageRequestWithOptions(CancelCertificateForPackageRequestRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("OrderId", request.orderId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelCertificateForPackageRequest"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelCertificateForPackageRequestResponse());
+    }
+
+    public CancelCertificateForPackageRequestResponse cancelCertificateForPackageRequest(CancelCertificateForPackageRequestRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.cancelCertificateForPackageRequestWithOptions(request, runtime);
+    }
+
+    public CancelOrderRequestResponse cancelOrderRequestWithOptions(CancelOrderRequestRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("OrderId", request.orderId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelOrderRequest"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelOrderRequestResponse());
+    }
+
+    public CancelOrderRequestResponse cancelOrderRequest(CancelOrderRequestRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.cancelOrderRequestWithOptions(request, runtime);
+    }
+
+    public CreateCertificateForPackageRequestResponse createCertificateForPackageRequestWithOptions(CreateCertificateForPackageRequestRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("CompanyName", request.companyName);
+        query.put("Csr", request.csr);
+        query.put("Domain", request.domain);
+        query.put("Email", request.email);
+        query.put("Phone", request.phone);
+        query.put("ProductCode", request.productCode);
+        query.put("Username", request.username);
+        query.put("ValidateType", request.validateType);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCertificateForPackageRequest"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCertificateForPackageRequestResponse());
+    }
+
+    public CreateCertificateForPackageRequestResponse createCertificateForPackageRequest(CreateCertificateForPackageRequestRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createCertificateForPackageRequestWithOptions(request, runtime);
+    }
+
     public CreateCertificateRequestResponse createCertificateRequestWithOptions(CreateCertificateRequestRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("Domain", request.domain);
+        query.put("Email", request.email);
+        query.put("Phone", request.phone);
+        query.put("ProductCode", request.productCode);
+        query.put("Username", request.username);
+        query.put("ValidateType", request.validateType);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("CreateCertificateRequest", "2020-04-07", "HTTPS", "POST", "AK", "json", req, runtime), new CreateCertificateRequestResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCertificateRequest"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCertificateRequestResponse());
     }
 
     public CreateCertificateRequestResponse createCertificateRequest(CreateCertificateRequestRequest request) throws Exception {
@@ -97,10 +201,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateCertificateWithCsrRequestResponse createCertificateWithCsrRequestWithOptions(CreateCertificateWithCsrRequestRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("Csr", request.csr);
+        query.put("Email", request.email);
+        query.put("Phone", request.phone);
+        query.put("ProductCode", request.productCode);
+        query.put("Username", request.username);
+        query.put("ValidateType", request.validateType);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("CreateCertificateWithCsrRequest", "2020-04-07", "HTTPS", "POST", "AK", "json", req, runtime), new CreateCertificateWithCsrRequestResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCertificateWithCsrRequest"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCertificateWithCsrRequestResponse());
     }
 
     public CreateCertificateWithCsrRequestResponse createCertificateWithCsrRequest(CreateCertificateWithCsrRequestRequest request) throws Exception {
@@ -110,10 +232,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteCertificateRequestResponse deleteCertificateRequestWithOptions(DeleteCertificateRequestRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("OrderId", request.orderId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteCertificateRequest", "2020-04-07", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteCertificateRequestResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCertificateRequest"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCertificateRequestResponse());
     }
 
     public DeleteCertificateRequestResponse deleteCertificateRequest(DeleteCertificateRequestRequest request) throws Exception {
@@ -123,10 +258,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeCertificateStateResponse describeCertificateStateWithOptions(DescribeCertificateStateRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("OrderId", request.orderId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeCertificateState", "2020-04-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeCertificateStateResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCertificateState"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCertificateStateResponse());
     }
 
     public DescribeCertificateStateResponse describeCertificateState(DescribeCertificateStateRequest request) throws Exception {
@@ -136,14 +284,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribePackageStateResponse describePackageStateWithOptions(DescribePackageStateRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("ProductCode", request.productCode);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribePackageState", "2020-04-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribePackageStateResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePackageState"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePackageStateResponse());
     }
 
     public DescribePackageStateResponse describePackageState(DescribePackageStateRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describePackageStateWithOptions(request, runtime);
+    }
+
+    public RenewCertificateOrderForPackageRequestResponse renewCertificateOrderForPackageRequestWithOptions(RenewCertificateOrderForPackageRequestRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("Csr", request.csr);
+        query.put("OrderId", request.orderId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RenewCertificateOrderForPackageRequest"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RenewCertificateOrderForPackageRequestResponse());
+    }
+
+    public RenewCertificateOrderForPackageRequestResponse renewCertificateOrderForPackageRequest(RenewCertificateOrderForPackageRequestRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.renewCertificateOrderForPackageRequestWithOptions(request, runtime);
     }
 }
