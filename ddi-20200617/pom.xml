@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ddi20200617</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <packaging>jar</packaging>
   <name>ddi20200617</name>
   <description>Alibaba Cloud Ddi (20200617) SDK for Java
@@ -46,12 +46,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.0</version>
+      <version>0.2.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.13</version>
+      <version>0.1.14</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
