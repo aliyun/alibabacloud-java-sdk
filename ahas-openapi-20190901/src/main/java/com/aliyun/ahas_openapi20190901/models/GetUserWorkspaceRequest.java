@@ -4,23 +4,15 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class GetUserWorkspaceRequest extends TeaModel {
-    @NameInMap("Namespace")
-    public String namespace;
-
     @NameInMap("AhasRegionId")
     public String ahasRegionId;
+
+    @NameInMap("Namespace")
+    public String namespace;
 
     public static GetUserWorkspaceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetUserWorkspaceRequest self = new GetUserWorkspaceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetUserWorkspaceRequest setNamespace(String namespace) {
-        this.namespace = namespace;
-        return this;
-    }
-    public String getNamespace() {
-        return this.namespace;
     }
 
     public GetUserWorkspaceRequest setAhasRegionId(String ahasRegionId) {
@@ -29,6 +21,14 @@ public class GetUserWorkspaceRequest extends TeaModel {
     }
     public String getAhasRegionId() {
         return this.ahasRegionId;
+    }
+
+    public GetUserWorkspaceRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
 }

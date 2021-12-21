@@ -4,17 +4,17 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public static DescribeRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsResponseBody self = new DescribeRegionsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRegionsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeRegionsResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DescribeRegionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeRegionsResponseBody setRegions(java.util.List<DescribeRegionsResponseBodyRegions> regions) {
         this.regions = regions;
         return this;
@@ -48,12 +48,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.regions;
     }
 
-    public DescribeRegionsResponseBody setCode(String code) {
-        this.code = code;
+    public DescribeRegionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeRegionsResponseBody setSuccess(Boolean success) {

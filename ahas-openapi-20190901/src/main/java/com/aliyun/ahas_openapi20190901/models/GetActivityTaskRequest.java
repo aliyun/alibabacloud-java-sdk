@@ -4,37 +4,21 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class GetActivityTaskRequest extends TeaModel {
-    @NameInMap("ExperimentTaskId")
-    public String experimentTaskId;
-
-    @NameInMap("NameSpace")
-    public String nameSpace;
-
     @NameInMap("ActivityTaskId")
     public String activityTaskId;
 
     @NameInMap("AhasRegionId")
     public String ahasRegionId;
 
+    @NameInMap("ExperimentTaskId")
+    public String experimentTaskId;
+
+    @NameInMap("NameSpace")
+    public String nameSpace;
+
     public static GetActivityTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         GetActivityTaskRequest self = new GetActivityTaskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetActivityTaskRequest setExperimentTaskId(String experimentTaskId) {
-        this.experimentTaskId = experimentTaskId;
-        return this;
-    }
-    public String getExperimentTaskId() {
-        return this.experimentTaskId;
-    }
-
-    public GetActivityTaskRequest setNameSpace(String nameSpace) {
-        this.nameSpace = nameSpace;
-        return this;
-    }
-    public String getNameSpace() {
-        return this.nameSpace;
     }
 
     public GetActivityTaskRequest setActivityTaskId(String activityTaskId) {
@@ -51,6 +35,22 @@ public class GetActivityTaskRequest extends TeaModel {
     }
     public String getAhasRegionId() {
         return this.ahasRegionId;
+    }
+
+    public GetActivityTaskRequest setExperimentTaskId(String experimentTaskId) {
+        this.experimentTaskId = experimentTaskId;
+        return this;
+    }
+    public String getExperimentTaskId() {
+        return this.experimentTaskId;
+    }
+
+    public GetActivityTaskRequest setNameSpace(String nameSpace) {
+        this.nameSpace = nameSpace;
+        return this;
+    }
+    public String getNameSpace() {
+        return this.nameSpace;
     }
 
 }

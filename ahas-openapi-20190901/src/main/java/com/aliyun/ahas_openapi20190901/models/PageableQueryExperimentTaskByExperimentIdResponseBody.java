@@ -4,14 +4,17 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class PageableQueryExperimentTaskByExperimentIdResponseBody extends TeaModel {
-    @NameInMap("Pages")
-    public Integer pages;
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("ExperimentTasks")
     public java.util.List<PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks> experimentTasks;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
@@ -19,32 +22,37 @@ public class PageableQueryExperimentTaskByExperimentIdResponseBody extends TeaMo
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("Pages")
+    public Integer pages;
 
-    @NameInMap("Total")
-    public Integer total;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Total")
+    public Integer total;
 
     public static PageableQueryExperimentTaskByExperimentIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PageableQueryExperimentTaskByExperimentIdResponseBody self = new PageableQueryExperimentTaskByExperimentIdResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public PageableQueryExperimentTaskByExperimentIdResponseBody setPages(Integer pages) {
-        this.pages = pages;
+    public PageableQueryExperimentTaskByExperimentIdResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Integer getPages() {
-        return this.pages;
+    public String getCode() {
+        return this.code;
+    }
+
+    public PageableQueryExperimentTaskByExperimentIdResponseBody setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public PageableQueryExperimentTaskByExperimentIdResponseBody setExperimentTasks(java.util.List<PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks> experimentTasks) {
@@ -55,12 +63,12 @@ public class PageableQueryExperimentTaskByExperimentIdResponseBody extends TeaMo
         return this.experimentTasks;
     }
 
-    public PageableQueryExperimentTaskByExperimentIdResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public PageableQueryExperimentTaskByExperimentIdResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public PageableQueryExperimentTaskByExperimentIdResponseBody setMessage(String message) {
@@ -79,36 +87,20 @@ public class PageableQueryExperimentTaskByExperimentIdResponseBody extends TeaMo
         return this.pageSize;
     }
 
-    public PageableQueryExperimentTaskByExperimentIdResponseBody setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public PageableQueryExperimentTaskByExperimentIdResponseBody setPages(Integer pages) {
+        this.pages = pages;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public Integer getPages() {
+        return this.pages;
     }
 
-    public PageableQueryExperimentTaskByExperimentIdResponseBody setTotal(Integer total) {
-        this.total = total;
+    public PageableQueryExperimentTaskByExperimentIdResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getTotal() {
-        return this.total;
-    }
-
-    public PageableQueryExperimentTaskByExperimentIdResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public PageableQueryExperimentTaskByExperimentIdResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public PageableQueryExperimentTaskByExperimentIdResponseBody setSuccess(Boolean success) {
@@ -119,53 +111,12 @@ public class PageableQueryExperimentTaskByExperimentIdResponseBody extends TeaMo
         return this.success;
     }
 
-    public static class PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig extends TeaModel {
-        @NameInMap("FixedTime")
-        public String fixedTime;
-
-        @NameInMap("CronExpression")
-        public String cronExpression;
-
-        public static PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig build(java.util.Map<String, ?> map) throws Exception {
-            PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig self = new PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig setFixedTime(String fixedTime) {
-            this.fixedTime = fixedTime;
-            return this;
-        }
-        public String getFixedTime() {
-            return this.fixedTime;
-        }
-
-        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig setCronExpression(String cronExpression) {
-            this.cronExpression = cronExpression;
-            return this;
-        }
-        public String getCronExpression() {
-            return this.cronExpression;
-        }
-
+    public PageableQueryExperimentTaskByExperimentIdResponseBody setTotal(Integer total) {
+        this.total = total;
+        return this;
     }
-
-    public static class PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfo extends TeaModel {
-        @NameInMap("SchedulerConfig")
-        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig schedulerConfig;
-
-        public static PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfo build(java.util.Map<String, ?> map) throws Exception {
-            PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfo self = new PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfo setSchedulerConfig(PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig schedulerConfig) {
-            this.schedulerConfig = schedulerConfig;
-            return this;
-        }
-        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig getSchedulerConfig() {
-            return this.schedulerConfig;
-        }
-
+    public Integer getTotal() {
+        return this.total;
     }
 
     public static class PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksCreator extends TeaModel {
@@ -198,30 +149,67 @@ public class PageableQueryExperimentTaskByExperimentIdResponseBody extends TeaMo
 
     }
 
+    public static class PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig extends TeaModel {
+        @NameInMap("CronExpression")
+        public String cronExpression;
+
+        @NameInMap("FixedTime")
+        public String fixedTime;
+
+        public static PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig build(java.util.Map<String, ?> map) throws Exception {
+            PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig self = new PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig setCronExpression(String cronExpression) {
+            this.cronExpression = cronExpression;
+            return this;
+        }
+        public String getCronExpression() {
+            return this.cronExpression;
+        }
+
+        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig setFixedTime(String fixedTime) {
+            this.fixedTime = fixedTime;
+            return this;
+        }
+        public String getFixedTime() {
+            return this.fixedTime;
+        }
+
+    }
+
+    public static class PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfo extends TeaModel {
+        @NameInMap("SchedulerConfig")
+        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig schedulerConfig;
+
+        public static PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfo build(java.util.Map<String, ?> map) throws Exception {
+            PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfo self = new PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfo setSchedulerConfig(PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig schedulerConfig) {
+            this.schedulerConfig = schedulerConfig;
+            return this;
+        }
+        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfoSchedulerConfig getSchedulerConfig() {
+            return this.schedulerConfig;
+        }
+
+    }
+
     public static class PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks extends TeaModel {
-        @NameInMap("EndTime")
-        public Long endTime;
-
-        @NameInMap("StartTime")
-        public Long startTime;
-
-        @NameInMap("Result")
-        public String result;
-
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Creator")
+        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksCreator creator;
 
         @NameInMap("CurrentPhase")
         public String currentPhase;
 
+        @NameInMap("EndTime")
+        public Long endTime;
+
         @NameInMap("ExperimentId")
         public String experimentId;
-
-        @NameInMap("Message")
-        public String message;
-
-        @NameInMap("TaskId")
-        public String taskId;
 
         @NameInMap("ExperimentName")
         public String experimentName;
@@ -229,47 +217,35 @@ public class PageableQueryExperimentTaskByExperimentIdResponseBody extends TeaMo
         @NameInMap("ExtInfo")
         public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksExtInfo extInfo;
 
-        @NameInMap("Creator")
-        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksCreator creator;
+        @NameInMap("Message")
+        public String message;
 
         @NameInMap("Namespace")
         public String namespace;
+
+        @NameInMap("Result")
+        public String result;
+
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        @NameInMap("State")
+        public String state;
+
+        @NameInMap("TaskId")
+        public String taskId;
 
         public static PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks build(java.util.Map<String, ?> map) throws Exception {
             PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks self = new PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks();
             return TeaModel.build(map, self);
         }
 
-        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setEndTime(Long endTime) {
-            this.endTime = endTime;
+        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setCreator(PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksCreator creator) {
+            this.creator = creator;
             return this;
         }
-        public Long getEndTime() {
-            return this.endTime;
-        }
-
-        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
-        }
-
-        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setResult(String result) {
-            this.result = result;
-            return this;
-        }
-        public String getResult() {
-            return this.result;
-        }
-
-        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
+        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksCreator getCreator() {
+            return this.creator;
         }
 
         public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setCurrentPhase(String currentPhase) {
@@ -280,28 +256,20 @@ public class PageableQueryExperimentTaskByExperimentIdResponseBody extends TeaMo
             return this.currentPhase;
         }
 
+        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
         public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setExperimentId(String experimentId) {
             this.experimentId = experimentId;
             return this;
         }
         public String getExperimentId() {
             return this.experimentId;
-        }
-
-        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
-        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setTaskId(String taskId) {
-            this.taskId = taskId;
-            return this;
-        }
-        public String getTaskId() {
-            return this.taskId;
         }
 
         public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setExperimentName(String experimentName) {
@@ -320,12 +288,12 @@ public class PageableQueryExperimentTaskByExperimentIdResponseBody extends TeaMo
             return this.extInfo;
         }
 
-        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setCreator(PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksCreator creator) {
-            this.creator = creator;
+        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setMessage(String message) {
+            this.message = message;
             return this;
         }
-        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksCreator getCreator() {
-            return this.creator;
+        public String getMessage() {
+            return this.message;
         }
 
         public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setNamespace(String namespace) {
@@ -334,6 +302,38 @@ public class PageableQueryExperimentTaskByExperimentIdResponseBody extends TeaMo
         }
         public String getNamespace() {
             return this.namespace;
+        }
+
+        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setResult(String result) {
+            this.result = result;
+            return this;
+        }
+        public String getResult() {
+            return this.result;
+        }
+
+        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
+        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
         }
 
     }

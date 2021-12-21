@@ -4,11 +4,17 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class GetMetricsOfResourceRequest extends TeaModel {
-    @NameInMap("Namespace")
-    public String namespace;
+    @NameInMap("AhasRegionId")
+    public String ahasRegionId;
 
     @NameInMap("AppName")
     public String appName;
+
+    @NameInMap("EndTime")
+    public Long endTime;
+
+    @NameInMap("Namespace")
+    public String namespace;
 
     @NameInMap("Resource")
     public String resource;
@@ -16,23 +22,17 @@ public class GetMetricsOfResourceRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
-    @NameInMap("EndTime")
-    public Long endTime;
-
-    @NameInMap("AhasRegionId")
-    public String ahasRegionId;
-
     public static GetMetricsOfResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMetricsOfResourceRequest self = new GetMetricsOfResourceRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetMetricsOfResourceRequest setNamespace(String namespace) {
-        this.namespace = namespace;
+    public GetMetricsOfResourceRequest setAhasRegionId(String ahasRegionId) {
+        this.ahasRegionId = ahasRegionId;
         return this;
     }
-    public String getNamespace() {
-        return this.namespace;
+    public String getAhasRegionId() {
+        return this.ahasRegionId;
     }
 
     public GetMetricsOfResourceRequest setAppName(String appName) {
@@ -41,6 +41,22 @@ public class GetMetricsOfResourceRequest extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public GetMetricsOfResourceRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    public GetMetricsOfResourceRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public GetMetricsOfResourceRequest setResource(String resource) {
@@ -57,22 +73,6 @@ public class GetMetricsOfResourceRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
-    }
-
-    public GetMetricsOfResourceRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
-    }
-
-    public GetMetricsOfResourceRequest setAhasRegionId(String ahasRegionId) {
-        this.ahasRegionId = ahasRegionId;
-        return this;
-    }
-    public String getAhasRegionId() {
-        return this.ahasRegionId;
     }
 
 }

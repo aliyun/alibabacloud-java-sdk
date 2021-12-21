@@ -4,23 +4,23 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class UpdateExperimentRequest extends TeaModel {
+    @NameInMap("AhasRegionId")
+    public String ahasRegionId;
+
     @NameInMap("Definition")
     public String definition;
-
-    @NameInMap("Name")
-    public String name;
 
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("NameSpace")
-    public String nameSpace;
-
     @NameInMap("ExperimentId")
     public String experimentId;
 
-    @NameInMap("AhasRegionId")
-    public String ahasRegionId;
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("NameSpace")
+    public String nameSpace;
 
     @NameInMap("Tags")
     public java.util.List<String> tags;
@@ -28,6 +28,14 @@ public class UpdateExperimentRequest extends TeaModel {
     public static UpdateExperimentRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateExperimentRequest self = new UpdateExperimentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateExperimentRequest setAhasRegionId(String ahasRegionId) {
+        this.ahasRegionId = ahasRegionId;
+        return this;
+    }
+    public String getAhasRegionId() {
+        return this.ahasRegionId;
     }
 
     public UpdateExperimentRequest setDefinition(String definition) {
@@ -38,28 +46,12 @@ public class UpdateExperimentRequest extends TeaModel {
         return this.definition;
     }
 
-    public UpdateExperimentRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
     public UpdateExperimentRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public UpdateExperimentRequest setNameSpace(String nameSpace) {
-        this.nameSpace = nameSpace;
-        return this;
-    }
-    public String getNameSpace() {
-        return this.nameSpace;
     }
 
     public UpdateExperimentRequest setExperimentId(String experimentId) {
@@ -70,12 +62,20 @@ public class UpdateExperimentRequest extends TeaModel {
         return this.experimentId;
     }
 
-    public UpdateExperimentRequest setAhasRegionId(String ahasRegionId) {
-        this.ahasRegionId = ahasRegionId;
+    public UpdateExperimentRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getAhasRegionId() {
-        return this.ahasRegionId;
+    public String getName() {
+        return this.name;
+    }
+
+    public UpdateExperimentRequest setNameSpace(String nameSpace) {
+        this.nameSpace = nameSpace;
+        return this;
+    }
+    public String getNameSpace() {
+        return this.nameSpace;
     }
 
     public UpdateExperimentRequest setTags(java.util.List<String> tags) {

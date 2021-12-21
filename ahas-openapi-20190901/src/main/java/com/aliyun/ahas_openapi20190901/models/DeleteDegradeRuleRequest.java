@@ -4,23 +4,15 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class DeleteDegradeRuleRequest extends TeaModel {
-    @NameInMap("RuleId")
-    public Long ruleId;
-
     @NameInMap("AhasRegionId")
     public String ahasRegionId;
+
+    @NameInMap("RuleId")
+    public Long ruleId;
 
     public static DeleteDegradeRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDegradeRuleRequest self = new DeleteDegradeRuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteDegradeRuleRequest setRuleId(Long ruleId) {
-        this.ruleId = ruleId;
-        return this;
-    }
-    public Long getRuleId() {
-        return this.ruleId;
     }
 
     public DeleteDegradeRuleRequest setAhasRegionId(String ahasRegionId) {
@@ -29,6 +21,14 @@ public class DeleteDegradeRuleRequest extends TeaModel {
     }
     public String getAhasRegionId() {
         return this.ahasRegionId;
+    }
+
+    public DeleteDegradeRuleRequest setRuleId(Long ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public Long getRuleId() {
+        return this.ruleId;
     }
 
 }

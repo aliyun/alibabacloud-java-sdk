@@ -4,14 +4,14 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class ListHotParamRulesOfResourceRequest extends TeaModel {
-    @NameInMap("Namespace")
-    public String namespace;
+    @NameInMap("AhasRegionId")
+    public String ahasRegionId;
 
     @NameInMap("AppName")
     public String appName;
 
-    @NameInMap("Resource")
-    public String resource;
+    @NameInMap("Namespace")
+    public String namespace;
 
     @NameInMap("PageIndex")
     public Integer pageIndex;
@@ -19,20 +19,20 @@ public class ListHotParamRulesOfResourceRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("AhasRegionId")
-    public String ahasRegionId;
+    @NameInMap("Resource")
+    public String resource;
 
     public static ListHotParamRulesOfResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListHotParamRulesOfResourceRequest self = new ListHotParamRulesOfResourceRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListHotParamRulesOfResourceRequest setNamespace(String namespace) {
-        this.namespace = namespace;
+    public ListHotParamRulesOfResourceRequest setAhasRegionId(String ahasRegionId) {
+        this.ahasRegionId = ahasRegionId;
         return this;
     }
-    public String getNamespace() {
-        return this.namespace;
+    public String getAhasRegionId() {
+        return this.ahasRegionId;
     }
 
     public ListHotParamRulesOfResourceRequest setAppName(String appName) {
@@ -43,12 +43,12 @@ public class ListHotParamRulesOfResourceRequest extends TeaModel {
         return this.appName;
     }
 
-    public ListHotParamRulesOfResourceRequest setResource(String resource) {
-        this.resource = resource;
+    public ListHotParamRulesOfResourceRequest setNamespace(String namespace) {
+        this.namespace = namespace;
         return this;
     }
-    public String getResource() {
-        return this.resource;
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public ListHotParamRulesOfResourceRequest setPageIndex(Integer pageIndex) {
@@ -67,12 +67,12 @@ public class ListHotParamRulesOfResourceRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListHotParamRulesOfResourceRequest setAhasRegionId(String ahasRegionId) {
-        this.ahasRegionId = ahasRegionId;
+    public ListHotParamRulesOfResourceRequest setResource(String resource) {
+        this.resource = resource;
         return this;
     }
-    public String getAhasRegionId() {
-        return this.ahasRegionId;
+    public String getResource() {
+        return this.resource;
     }
 
 }

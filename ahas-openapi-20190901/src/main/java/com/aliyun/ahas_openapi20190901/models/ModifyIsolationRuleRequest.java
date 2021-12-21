@@ -4,14 +4,8 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyIsolationRuleRequest extends TeaModel {
-    @NameInMap("RuleId")
-    public Long ruleId;
-
-    @NameInMap("RelationStrategy")
-    public Integer relationStrategy;
-
-    @NameInMap("Threshold")
-    public Float threshold;
+    @NameInMap("AhasRegionId")
+    public String ahasRegionId;
 
     @NameInMap("LimitOrigin")
     public String limitOrigin;
@@ -19,36 +13,26 @@ public class ModifyIsolationRuleRequest extends TeaModel {
     @NameInMap("RefResource")
     public String refResource;
 
-    @NameInMap("AhasRegionId")
-    public String ahasRegionId;
+    @NameInMap("RelationStrategy")
+    public Integer relationStrategy;
+
+    @NameInMap("RuleId")
+    public Long ruleId;
+
+    @NameInMap("Threshold")
+    public Float threshold;
 
     public static ModifyIsolationRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyIsolationRuleRequest self = new ModifyIsolationRuleRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyIsolationRuleRequest setRuleId(Long ruleId) {
-        this.ruleId = ruleId;
+    public ModifyIsolationRuleRequest setAhasRegionId(String ahasRegionId) {
+        this.ahasRegionId = ahasRegionId;
         return this;
     }
-    public Long getRuleId() {
-        return this.ruleId;
-    }
-
-    public ModifyIsolationRuleRequest setRelationStrategy(Integer relationStrategy) {
-        this.relationStrategy = relationStrategy;
-        return this;
-    }
-    public Integer getRelationStrategy() {
-        return this.relationStrategy;
-    }
-
-    public ModifyIsolationRuleRequest setThreshold(Float threshold) {
-        this.threshold = threshold;
-        return this;
-    }
-    public Float getThreshold() {
-        return this.threshold;
+    public String getAhasRegionId() {
+        return this.ahasRegionId;
     }
 
     public ModifyIsolationRuleRequest setLimitOrigin(String limitOrigin) {
@@ -67,12 +51,28 @@ public class ModifyIsolationRuleRequest extends TeaModel {
         return this.refResource;
     }
 
-    public ModifyIsolationRuleRequest setAhasRegionId(String ahasRegionId) {
-        this.ahasRegionId = ahasRegionId;
+    public ModifyIsolationRuleRequest setRelationStrategy(Integer relationStrategy) {
+        this.relationStrategy = relationStrategy;
         return this;
     }
-    public String getAhasRegionId() {
-        return this.ahasRegionId;
+    public Integer getRelationStrategy() {
+        return this.relationStrategy;
+    }
+
+    public ModifyIsolationRuleRequest setRuleId(Long ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public Long getRuleId() {
+        return this.ruleId;
+    }
+
+    public ModifyIsolationRuleRequest setThreshold(Float threshold) {
+        this.threshold = threshold;
+        return this;
+    }
+    public Float getThreshold() {
+        return this.threshold;
     }
 
 }

@@ -4,14 +4,14 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class FinishExperimentTaskResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class FinishExperimentTaskResponseBody extends TeaModel {
     public static FinishExperimentTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         FinishExperimentTaskResponseBody self = new FinishExperimentTaskResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public FinishExperimentTaskResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public FinishExperimentTaskResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class FinishExperimentTaskResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public FinishExperimentTaskResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public FinishExperimentTaskResponseBody setSuccess(Boolean success) {

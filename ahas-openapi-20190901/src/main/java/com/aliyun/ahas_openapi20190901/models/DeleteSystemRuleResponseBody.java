@@ -4,17 +4,17 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class DeleteSystemRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public DeleteSystemRuleResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public DeleteSystemRuleResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class DeleteSystemRuleResponseBody extends TeaModel {
     public static DeleteSystemRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteSystemRuleResponseBody self = new DeleteSystemRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSystemRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DeleteSystemRuleResponseBody setData(DeleteSystemRuleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DeleteSystemRuleResponseBodyData getData() {
+        return this.data;
     }
 
     public DeleteSystemRuleResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class DeleteSystemRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteSystemRuleResponseBody setData(DeleteSystemRuleResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DeleteSystemRuleResponseBodyData getData() {
-        return this.data;
-    }
-
-    public DeleteSystemRuleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public DeleteSystemRuleResponseBody setSuccess(Boolean success) {

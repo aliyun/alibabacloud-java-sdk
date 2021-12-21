@@ -4,17 +4,17 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class ListIsolationRulesOfResourceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ListIsolationRulesOfResourceResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ListIsolationRulesOfResourceResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class ListIsolationRulesOfResourceResponseBody extends TeaModel {
     public static ListIsolationRulesOfResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListIsolationRulesOfResourceResponseBody self = new ListIsolationRulesOfResourceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListIsolationRulesOfResourceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListIsolationRulesOfResourceResponseBody setData(ListIsolationRulesOfResourceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListIsolationRulesOfResourceResponseBodyData getData() {
+        return this.data;
     }
 
     public ListIsolationRulesOfResourceResponseBody setMessage(String message) {
@@ -40,22 +56,6 @@ public class ListIsolationRulesOfResourceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListIsolationRulesOfResourceResponseBody setData(ListIsolationRulesOfResourceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListIsolationRulesOfResourceResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListIsolationRulesOfResourceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ListIsolationRulesOfResourceResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,36 +65,76 @@ public class ListIsolationRulesOfResourceResponseBody extends TeaModel {
     }
 
     public static class ListIsolationRulesOfResourceResponseBodyDataDatas extends TeaModel {
+        @NameInMap("AppName")
+        public String appName;
+
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        @NameInMap("LimitOrigin")
+        public String limitOrigin;
+
+        @NameInMap("Namespace")
+        public String namespace;
+
+        @NameInMap("RefResource")
+        public String refResource;
+
         @NameInMap("RelationStrategy")
         public Integer relationStrategy;
 
         @NameInMap("Resource")
         public String resource;
 
-        @NameInMap("AppName")
-        public String appName;
-
-        @NameInMap("RefResource")
-        public String refResource;
-
-        @NameInMap("Namespace")
-        public String namespace;
-
-        @NameInMap("LimitOrigin")
-        public String limitOrigin;
+        @NameInMap("RuleId")
+        public Long ruleId;
 
         @NameInMap("Threshold")
         public Float threshold;
 
-        @NameInMap("RuleId")
-        public Long ruleId;
-
-        @NameInMap("Enable")
-        public Boolean enable;
-
         public static ListIsolationRulesOfResourceResponseBodyDataDatas build(java.util.Map<String, ?> map) throws Exception {
             ListIsolationRulesOfResourceResponseBodyDataDatas self = new ListIsolationRulesOfResourceResponseBodyDataDatas();
             return TeaModel.build(map, self);
+        }
+
+        public ListIsolationRulesOfResourceResponseBodyDataDatas setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
+        }
+
+        public ListIsolationRulesOfResourceResponseBodyDataDatas setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public ListIsolationRulesOfResourceResponseBodyDataDatas setLimitOrigin(String limitOrigin) {
+            this.limitOrigin = limitOrigin;
+            return this;
+        }
+        public String getLimitOrigin() {
+            return this.limitOrigin;
+        }
+
+        public ListIsolationRulesOfResourceResponseBodyDataDatas setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public ListIsolationRulesOfResourceResponseBodyDataDatas setRefResource(String refResource) {
+            this.refResource = refResource;
+            return this;
+        }
+        public String getRefResource() {
+            return this.refResource;
         }
 
         public ListIsolationRulesOfResourceResponseBodyDataDatas setRelationStrategy(Integer relationStrategy) {
@@ -113,36 +153,12 @@ public class ListIsolationRulesOfResourceResponseBody extends TeaModel {
             return this.resource;
         }
 
-        public ListIsolationRulesOfResourceResponseBodyDataDatas setAppName(String appName) {
-            this.appName = appName;
+        public ListIsolationRulesOfResourceResponseBodyDataDatas setRuleId(Long ruleId) {
+            this.ruleId = ruleId;
             return this;
         }
-        public String getAppName() {
-            return this.appName;
-        }
-
-        public ListIsolationRulesOfResourceResponseBodyDataDatas setRefResource(String refResource) {
-            this.refResource = refResource;
-            return this;
-        }
-        public String getRefResource() {
-            return this.refResource;
-        }
-
-        public ListIsolationRulesOfResourceResponseBodyDataDatas setNamespace(String namespace) {
-            this.namespace = namespace;
-            return this;
-        }
-        public String getNamespace() {
-            return this.namespace;
-        }
-
-        public ListIsolationRulesOfResourceResponseBodyDataDatas setLimitOrigin(String limitOrigin) {
-            this.limitOrigin = limitOrigin;
-            return this;
-        }
-        public String getLimitOrigin() {
-            return this.limitOrigin;
+        public Long getRuleId() {
+            return this.ruleId;
         }
 
         public ListIsolationRulesOfResourceResponseBodyDataDatas setThreshold(Float threshold) {
@@ -153,33 +169,14 @@ public class ListIsolationRulesOfResourceResponseBody extends TeaModel {
             return this.threshold;
         }
 
-        public ListIsolationRulesOfResourceResponseBodyDataDatas setRuleId(Long ruleId) {
-            this.ruleId = ruleId;
-            return this;
-        }
-        public Long getRuleId() {
-            return this.ruleId;
-        }
-
-        public ListIsolationRulesOfResourceResponseBodyDataDatas setEnable(Boolean enable) {
-            this.enable = enable;
-            return this;
-        }
-        public Boolean getEnable() {
-            return this.enable;
-        }
-
     }
 
     public static class ListIsolationRulesOfResourceResponseBodyData extends TeaModel {
-        @NameInMap("PageIndex")
-        public Integer pageIndex;
-
         @NameInMap("Datas")
         public java.util.List<ListIsolationRulesOfResourceResponseBodyDataDatas> datas;
 
-        @NameInMap("TotalPage")
-        public Integer totalPage;
+        @NameInMap("PageIndex")
+        public Integer pageIndex;
 
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -187,17 +184,12 @@ public class ListIsolationRulesOfResourceResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        @NameInMap("TotalPage")
+        public Integer totalPage;
+
         public static ListIsolationRulesOfResourceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListIsolationRulesOfResourceResponseBodyData self = new ListIsolationRulesOfResourceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListIsolationRulesOfResourceResponseBodyData setPageIndex(Integer pageIndex) {
-            this.pageIndex = pageIndex;
-            return this;
-        }
-        public Integer getPageIndex() {
-            return this.pageIndex;
         }
 
         public ListIsolationRulesOfResourceResponseBodyData setDatas(java.util.List<ListIsolationRulesOfResourceResponseBodyDataDatas> datas) {
@@ -208,12 +200,12 @@ public class ListIsolationRulesOfResourceResponseBody extends TeaModel {
             return this.datas;
         }
 
-        public ListIsolationRulesOfResourceResponseBodyData setTotalPage(Integer totalPage) {
-            this.totalPage = totalPage;
+        public ListIsolationRulesOfResourceResponseBodyData setPageIndex(Integer pageIndex) {
+            this.pageIndex = pageIndex;
             return this;
         }
-        public Integer getTotalPage() {
-            return this.totalPage;
+        public Integer getPageIndex() {
+            return this.pageIndex;
         }
 
         public ListIsolationRulesOfResourceResponseBodyData setPageSize(Integer pageSize) {
@@ -230,6 +222,14 @@ public class ListIsolationRulesOfResourceResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
+        }
+
+        public ListIsolationRulesOfResourceResponseBodyData setTotalPage(Integer totalPage) {
+            this.totalPage = totalPage;
+            return this;
+        }
+        public Integer getTotalPage() {
+            return this.totalPage;
         }
 
     }

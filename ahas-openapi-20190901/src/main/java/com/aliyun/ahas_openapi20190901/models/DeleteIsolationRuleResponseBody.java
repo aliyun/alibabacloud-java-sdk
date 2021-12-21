@@ -4,17 +4,17 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class DeleteIsolationRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public DeleteIsolationRuleResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public DeleteIsolationRuleResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class DeleteIsolationRuleResponseBody extends TeaModel {
     public static DeleteIsolationRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteIsolationRuleResponseBody self = new DeleteIsolationRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteIsolationRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DeleteIsolationRuleResponseBody setData(DeleteIsolationRuleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DeleteIsolationRuleResponseBodyData getData() {
+        return this.data;
     }
 
     public DeleteIsolationRuleResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class DeleteIsolationRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteIsolationRuleResponseBody setData(DeleteIsolationRuleResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DeleteIsolationRuleResponseBodyData getData() {
-        return this.data;
-    }
-
-    public DeleteIsolationRuleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public DeleteIsolationRuleResponseBody setSuccess(Boolean success) {

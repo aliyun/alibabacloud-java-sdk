@@ -4,17 +4,17 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class DeleteHotParamRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public DeleteHotParamRuleResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public DeleteHotParamRuleResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class DeleteHotParamRuleResponseBody extends TeaModel {
     public static DeleteHotParamRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteHotParamRuleResponseBody self = new DeleteHotParamRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteHotParamRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DeleteHotParamRuleResponseBody setData(DeleteHotParamRuleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DeleteHotParamRuleResponseBodyData getData() {
+        return this.data;
     }
 
     public DeleteHotParamRuleResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class DeleteHotParamRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteHotParamRuleResponseBody setData(DeleteHotParamRuleResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DeleteHotParamRuleResponseBodyData getData() {
-        return this.data;
-    }
-
-    public DeleteHotParamRuleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public DeleteHotParamRuleResponseBody setSuccess(Boolean success) {

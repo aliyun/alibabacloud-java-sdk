@@ -4,27 +4,43 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class GetUserWorkspaceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("WorkspaceList")
     public java.util.List<GetUserWorkspaceResponseBodyWorkspaceList> workspaceList;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     public static GetUserWorkspaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetUserWorkspaceResponseBody self = new GetUserWorkspaceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetUserWorkspaceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetUserWorkspaceResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public GetUserWorkspaceResponseBody setMessage(String message) {
@@ -43,12 +59,12 @@ public class GetUserWorkspaceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetUserWorkspaceResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public GetUserWorkspaceResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public GetUserWorkspaceResponseBody setWorkspaceList(java.util.List<GetUserWorkspaceResponseBodyWorkspaceList> workspaceList) {
@@ -59,54 +75,22 @@ public class GetUserWorkspaceResponseBody extends TeaModel {
         return this.workspaceList;
     }
 
-    public GetUserWorkspaceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetUserWorkspaceResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static class GetUserWorkspaceResponseBodyWorkspaceList extends TeaModel {
-        @NameInMap("Type")
-        public Integer type;
-
-        @NameInMap("WorkspaceId")
-        public String workspaceId;
-
         @NameInMap("Description")
         public String description;
 
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Type")
+        public Integer type;
+
+        @NameInMap("WorkspaceId")
+        public String workspaceId;
+
         public static GetUserWorkspaceResponseBodyWorkspaceList build(java.util.Map<String, ?> map) throws Exception {
             GetUserWorkspaceResponseBodyWorkspaceList self = new GetUserWorkspaceResponseBodyWorkspaceList();
             return TeaModel.build(map, self);
-        }
-
-        public GetUserWorkspaceResponseBodyWorkspaceList setType(Integer type) {
-            this.type = type;
-            return this;
-        }
-        public Integer getType() {
-            return this.type;
-        }
-
-        public GetUserWorkspaceResponseBodyWorkspaceList setWorkspaceId(String workspaceId) {
-            this.workspaceId = workspaceId;
-            return this;
-        }
-        public String getWorkspaceId() {
-            return this.workspaceId;
         }
 
         public GetUserWorkspaceResponseBodyWorkspaceList setDescription(String description) {
@@ -123,6 +107,22 @@ public class GetUserWorkspaceResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetUserWorkspaceResponseBodyWorkspaceList setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
+        public GetUserWorkspaceResponseBodyWorkspaceList setWorkspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
+            return this;
+        }
+        public String getWorkspaceId() {
+            return this.workspaceId;
         }
 
     }

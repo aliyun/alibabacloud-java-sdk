@@ -4,53 +4,53 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateHotParamRuleRequest extends TeaModel {
-    @NameInMap("Namespace")
-    public String namespace;
+    @NameInMap("AhasRegionId")
+    public String ahasRegionId;
 
     @NameInMap("AppName")
     public String appName;
 
-    @NameInMap("MetricType")
-    public Integer metricType;
-
-    @NameInMap("Threshold")
-    public Float threshold;
-
-    @NameInMap("Enable")
-    public Boolean enable;
-
-    @NameInMap("Resource")
-    public String resource;
-
-    @NameInMap("ParamIdx")
-    public Integer paramIdx;
-
-    @NameInMap("StatDurationSec")
-    public Long statDurationSec;
+    @NameInMap("BurstCount")
+    public Integer burstCount;
 
     @NameInMap("ControlBehavior")
     public Integer controlBehavior;
 
-    @NameInMap("BurstCount")
-    public Integer burstCount;
+    @NameInMap("Enable")
+    public Boolean enable;
 
     @NameInMap("MaxQueueingTimeMs")
     public Integer maxQueueingTimeMs;
 
-    @NameInMap("AhasRegionId")
-    public String ahasRegionId;
+    @NameInMap("MetricType")
+    public Integer metricType;
+
+    @NameInMap("Namespace")
+    public String namespace;
+
+    @NameInMap("ParamIdx")
+    public Integer paramIdx;
+
+    @NameInMap("Resource")
+    public String resource;
+
+    @NameInMap("StatDurationSec")
+    public Long statDurationSec;
+
+    @NameInMap("Threshold")
+    public Float threshold;
 
     public static CreateHotParamRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateHotParamRuleRequest self = new CreateHotParamRuleRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateHotParamRuleRequest setNamespace(String namespace) {
-        this.namespace = namespace;
+    public CreateHotParamRuleRequest setAhasRegionId(String ahasRegionId) {
+        this.ahasRegionId = ahasRegionId;
         return this;
     }
-    public String getNamespace() {
-        return this.namespace;
+    public String getAhasRegionId() {
+        return this.ahasRegionId;
     }
 
     public CreateHotParamRuleRequest setAppName(String appName) {
@@ -61,52 +61,12 @@ public class CreateHotParamRuleRequest extends TeaModel {
         return this.appName;
     }
 
-    public CreateHotParamRuleRequest setMetricType(Integer metricType) {
-        this.metricType = metricType;
+    public CreateHotParamRuleRequest setBurstCount(Integer burstCount) {
+        this.burstCount = burstCount;
         return this;
     }
-    public Integer getMetricType() {
-        return this.metricType;
-    }
-
-    public CreateHotParamRuleRequest setThreshold(Float threshold) {
-        this.threshold = threshold;
-        return this;
-    }
-    public Float getThreshold() {
-        return this.threshold;
-    }
-
-    public CreateHotParamRuleRequest setEnable(Boolean enable) {
-        this.enable = enable;
-        return this;
-    }
-    public Boolean getEnable() {
-        return this.enable;
-    }
-
-    public CreateHotParamRuleRequest setResource(String resource) {
-        this.resource = resource;
-        return this;
-    }
-    public String getResource() {
-        return this.resource;
-    }
-
-    public CreateHotParamRuleRequest setParamIdx(Integer paramIdx) {
-        this.paramIdx = paramIdx;
-        return this;
-    }
-    public Integer getParamIdx() {
-        return this.paramIdx;
-    }
-
-    public CreateHotParamRuleRequest setStatDurationSec(Long statDurationSec) {
-        this.statDurationSec = statDurationSec;
-        return this;
-    }
-    public Long getStatDurationSec() {
-        return this.statDurationSec;
+    public Integer getBurstCount() {
+        return this.burstCount;
     }
 
     public CreateHotParamRuleRequest setControlBehavior(Integer controlBehavior) {
@@ -117,12 +77,12 @@ public class CreateHotParamRuleRequest extends TeaModel {
         return this.controlBehavior;
     }
 
-    public CreateHotParamRuleRequest setBurstCount(Integer burstCount) {
-        this.burstCount = burstCount;
+    public CreateHotParamRuleRequest setEnable(Boolean enable) {
+        this.enable = enable;
         return this;
     }
-    public Integer getBurstCount() {
-        return this.burstCount;
+    public Boolean getEnable() {
+        return this.enable;
     }
 
     public CreateHotParamRuleRequest setMaxQueueingTimeMs(Integer maxQueueingTimeMs) {
@@ -133,12 +93,52 @@ public class CreateHotParamRuleRequest extends TeaModel {
         return this.maxQueueingTimeMs;
     }
 
-    public CreateHotParamRuleRequest setAhasRegionId(String ahasRegionId) {
-        this.ahasRegionId = ahasRegionId;
+    public CreateHotParamRuleRequest setMetricType(Integer metricType) {
+        this.metricType = metricType;
         return this;
     }
-    public String getAhasRegionId() {
-        return this.ahasRegionId;
+    public Integer getMetricType() {
+        return this.metricType;
+    }
+
+    public CreateHotParamRuleRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    public CreateHotParamRuleRequest setParamIdx(Integer paramIdx) {
+        this.paramIdx = paramIdx;
+        return this;
+    }
+    public Integer getParamIdx() {
+        return this.paramIdx;
+    }
+
+    public CreateHotParamRuleRequest setResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    public String getResource() {
+        return this.resource;
+    }
+
+    public CreateHotParamRuleRequest setStatDurationSec(Long statDurationSec) {
+        this.statDurationSec = statDurationSec;
+        return this;
+    }
+    public Long getStatDurationSec() {
+        return this.statDurationSec;
+    }
+
+    public CreateHotParamRuleRequest setThreshold(Float threshold) {
+        this.threshold = threshold;
+        return this;
+    }
+    public Float getThreshold() {
+        return this.threshold;
     }
 
 }

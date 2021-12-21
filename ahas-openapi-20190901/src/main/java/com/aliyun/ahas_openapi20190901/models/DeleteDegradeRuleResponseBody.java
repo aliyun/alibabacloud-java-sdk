@@ -4,17 +4,17 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class DeleteDegradeRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public DeleteDegradeRuleResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public DeleteDegradeRuleResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class DeleteDegradeRuleResponseBody extends TeaModel {
     public static DeleteDegradeRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteDegradeRuleResponseBody self = new DeleteDegradeRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteDegradeRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DeleteDegradeRuleResponseBody setData(DeleteDegradeRuleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DeleteDegradeRuleResponseBodyData getData() {
+        return this.data;
     }
 
     public DeleteDegradeRuleResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class DeleteDegradeRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteDegradeRuleResponseBody setData(DeleteDegradeRuleResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DeleteDegradeRuleResponseBodyData getData() {
-        return this.data;
-    }
-
-    public DeleteDegradeRuleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public DeleteDegradeRuleResponseBody setSuccess(Boolean success) {

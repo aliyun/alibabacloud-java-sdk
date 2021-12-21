@@ -4,26 +4,26 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateHotParamItemsRequest extends TeaModel {
-    @NameInMap("RuleId")
-    public Long ruleId;
+    @NameInMap("AhasRegionId")
+    public String ahasRegionId;
 
     @NameInMap("Items")
     public String items;
 
-    @NameInMap("AhasRegionId")
-    public String ahasRegionId;
+    @NameInMap("RuleId")
+    public Long ruleId;
 
     public static CreateHotParamItemsRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateHotParamItemsRequest self = new CreateHotParamItemsRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateHotParamItemsRequest setRuleId(Long ruleId) {
-        this.ruleId = ruleId;
+    public CreateHotParamItemsRequest setAhasRegionId(String ahasRegionId) {
+        this.ahasRegionId = ahasRegionId;
         return this;
     }
-    public Long getRuleId() {
-        return this.ruleId;
+    public String getAhasRegionId() {
+        return this.ahasRegionId;
     }
 
     public CreateHotParamItemsRequest setItems(String items) {
@@ -34,12 +34,12 @@ public class CreateHotParamItemsRequest extends TeaModel {
         return this.items;
     }
 
-    public CreateHotParamItemsRequest setAhasRegionId(String ahasRegionId) {
-        this.ahasRegionId = ahasRegionId;
+    public CreateHotParamItemsRequest setRuleId(Long ruleId) {
+        this.ruleId = ruleId;
         return this;
     }
-    public String getAhasRegionId() {
-        return this.ahasRegionId;
+    public Long getRuleId() {
+        return this.ruleId;
     }
 
 }

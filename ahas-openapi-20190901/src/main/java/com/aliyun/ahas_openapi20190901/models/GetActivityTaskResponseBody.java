@@ -4,38 +4,38 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class GetActivityTaskResponseBody extends TeaModel {
-    @NameInMap("Hosts")
-    public java.util.List<GetActivityTaskResponseBodyHosts> hosts;
-
-    @NameInMap("Phase")
-    public String phase;
-
-    @NameInMap("EndTime")
-    public Long endTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ActivityId")
+    public String activityId;
 
     @NameInMap("ActivityName")
     public String activityName;
 
-    @NameInMap("State")
-    public String state;
-
-    @NameInMap("ActivityId")
-    public String activityId;
+    @NameInMap("EndTime")
+    public Long endTime;
 
     @NameInMap("ExperimentTaskId")
     public String experimentTaskId;
 
+    @NameInMap("Hosts")
+    public java.util.List<GetActivityTaskResponseBodyHosts> hosts;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
+
+    @NameInMap("Phase")
+    public String phase;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("RunResult")
+    public String runResult;
 
     @NameInMap("StartTime")
     public Long startTime;
 
-    @NameInMap("RunResult")
-    public String runResult;
+    @NameInMap("State")
+    public String state;
 
     @NameInMap("Success")
     public Boolean success;
@@ -43,54 +43,6 @@ public class GetActivityTaskResponseBody extends TeaModel {
     public static GetActivityTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetActivityTaskResponseBody self = new GetActivityTaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetActivityTaskResponseBody setHosts(java.util.List<GetActivityTaskResponseBodyHosts> hosts) {
-        this.hosts = hosts;
-        return this;
-    }
-    public java.util.List<GetActivityTaskResponseBodyHosts> getHosts() {
-        return this.hosts;
-    }
-
-    public GetActivityTaskResponseBody setPhase(String phase) {
-        this.phase = phase;
-        return this;
-    }
-    public String getPhase() {
-        return this.phase;
-    }
-
-    public GetActivityTaskResponseBody setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
-    }
-
-    public GetActivityTaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetActivityTaskResponseBody setActivityName(String activityName) {
-        this.activityName = activityName;
-        return this;
-    }
-    public String getActivityName() {
-        return this.activityName;
-    }
-
-    public GetActivityTaskResponseBody setState(String state) {
-        this.state = state;
-        return this;
-    }
-    public String getState() {
-        return this.state;
     }
 
     public GetActivityTaskResponseBody setActivityId(String activityId) {
@@ -101,12 +53,36 @@ public class GetActivityTaskResponseBody extends TeaModel {
         return this.activityId;
     }
 
+    public GetActivityTaskResponseBody setActivityName(String activityName) {
+        this.activityName = activityName;
+        return this;
+    }
+    public String getActivityName() {
+        return this.activityName;
+    }
+
+    public GetActivityTaskResponseBody setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
     public GetActivityTaskResponseBody setExperimentTaskId(String experimentTaskId) {
         this.experimentTaskId = experimentTaskId;
         return this;
     }
     public String getExperimentTaskId() {
         return this.experimentTaskId;
+    }
+
+    public GetActivityTaskResponseBody setHosts(java.util.List<GetActivityTaskResponseBodyHosts> hosts) {
+        this.hosts = hosts;
+        return this;
+    }
+    public java.util.List<GetActivityTaskResponseBodyHosts> getHosts() {
+        return this.hosts;
     }
 
     public GetActivityTaskResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -117,12 +93,20 @@ public class GetActivityTaskResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public GetActivityTaskResponseBody setStartTime(Long startTime) {
-        this.startTime = startTime;
+    public GetActivityTaskResponseBody setPhase(String phase) {
+        this.phase = phase;
         return this;
     }
-    public Long getStartTime() {
-        return this.startTime;
+    public String getPhase() {
+        return this.phase;
+    }
+
+    public GetActivityTaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetActivityTaskResponseBody setRunResult(String runResult) {
@@ -131,6 +115,22 @@ public class GetActivityTaskResponseBody extends TeaModel {
     }
     public String getRunResult() {
         return this.runResult;
+    }
+
+    public GetActivityTaskResponseBody setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    public GetActivityTaskResponseBody setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
     }
 
     public GetActivityTaskResponseBody setSuccess(Boolean success) {
@@ -142,17 +142,11 @@ public class GetActivityTaskResponseBody extends TeaModel {
     }
 
     public static class GetActivityTaskResponseBodyHosts extends TeaModel {
-        @NameInMap("HostIp")
-        public String hostIp;
+        @NameInMap("Data")
+        public String data;
 
         @NameInMap("EndTime")
         public Long endTime;
-
-        @NameInMap("StartTime")
-        public Long startTime;
-
-        @NameInMap("Data")
-        public String data;
 
         @NameInMap("ErrorMessage")
         public String errorMessage;
@@ -160,8 +154,14 @@ public class GetActivityTaskResponseBody extends TeaModel {
         @NameInMap("ExpId")
         public String expId;
 
+        @NameInMap("HostIp")
+        public String hostIp;
+
         @NameInMap("Result")
         public String result;
+
+        @NameInMap("StartTime")
+        public Long startTime;
 
         @NameInMap("State")
         public String state;
@@ -174,12 +174,12 @@ public class GetActivityTaskResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetActivityTaskResponseBodyHosts setHostIp(String hostIp) {
-            this.hostIp = hostIp;
+        public GetActivityTaskResponseBodyHosts setData(String data) {
+            this.data = data;
             return this;
         }
-        public String getHostIp() {
-            return this.hostIp;
+        public String getData() {
+            return this.data;
         }
 
         public GetActivityTaskResponseBodyHosts setEndTime(Long endTime) {
@@ -188,22 +188,6 @@ public class GetActivityTaskResponseBody extends TeaModel {
         }
         public Long getEndTime() {
             return this.endTime;
-        }
-
-        public GetActivityTaskResponseBodyHosts setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
-        }
-
-        public GetActivityTaskResponseBodyHosts setData(String data) {
-            this.data = data;
-            return this;
-        }
-        public String getData() {
-            return this.data;
         }
 
         public GetActivityTaskResponseBodyHosts setErrorMessage(String errorMessage) {
@@ -222,12 +206,28 @@ public class GetActivityTaskResponseBody extends TeaModel {
             return this.expId;
         }
 
+        public GetActivityTaskResponseBodyHosts setHostIp(String hostIp) {
+            this.hostIp = hostIp;
+            return this;
+        }
+        public String getHostIp() {
+            return this.hostIp;
+        }
+
         public GetActivityTaskResponseBodyHosts setResult(String result) {
             this.result = result;
             return this;
         }
         public String getResult() {
             return this.result;
+        }
+
+        public GetActivityTaskResponseBodyHosts setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
         }
 
         public GetActivityTaskResponseBodyHosts setState(String state) {

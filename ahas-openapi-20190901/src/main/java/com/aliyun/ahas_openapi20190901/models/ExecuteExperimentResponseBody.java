@@ -4,8 +4,8 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class ExecuteExperimentResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public String taskId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,23 +13,23 @@ public class ExecuteExperimentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TaskId")
+    public String taskId;
 
     public static ExecuteExperimentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ExecuteExperimentResponseBody self = new ExecuteExperimentResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ExecuteExperimentResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
+    public ExecuteExperimentResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getTaskId() {
-        return this.taskId;
+    public String getCode() {
+        return this.code;
     }
 
     public ExecuteExperimentResponseBody setMessage(String message) {
@@ -48,20 +48,20 @@ public class ExecuteExperimentResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ExecuteExperimentResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ExecuteExperimentResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public ExecuteExperimentResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

@@ -4,17 +4,17 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class GetLicenseKeyResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public String data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class GetLicenseKeyResponseBody extends TeaModel {
     public static GetLicenseKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetLicenseKeyResponseBody self = new GetLicenseKeyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetLicenseKeyResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetLicenseKeyResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public GetLicenseKeyResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class GetLicenseKeyResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetLicenseKeyResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public GetLicenseKeyResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public GetLicenseKeyResponseBody setSuccess(Boolean success) {
