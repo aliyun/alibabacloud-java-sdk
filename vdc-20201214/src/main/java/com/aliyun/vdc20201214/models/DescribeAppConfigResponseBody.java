@@ -4,25 +4,17 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppConfigResponseBody extends TeaModel {
-    // 阈值配置对象
-    @NameInMap("ThresholdConfig")
-    public DescribeAppConfigResponseBodyThresholdConfig thresholdConfig;
-
     // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
+    // 阈值配置对象
+    @NameInMap("ThresholdConfig")
+    public DescribeAppConfigResponseBodyThresholdConfig thresholdConfig;
+
     public static DescribeAppConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAppConfigResponseBody self = new DescribeAppConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAppConfigResponseBody setThresholdConfig(DescribeAppConfigResponseBodyThresholdConfig thresholdConfig) {
-        this.thresholdConfig = thresholdConfig;
-        return this;
-    }
-    public DescribeAppConfigResponseBodyThresholdConfig getThresholdConfig() {
-        return this.thresholdConfig;
     }
 
     public DescribeAppConfigResponseBody setRequestId(String requestId) {
@@ -31,6 +23,14 @@ public class DescribeAppConfigResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeAppConfigResponseBody setThresholdConfig(DescribeAppConfigResponseBodyThresholdConfig thresholdConfig) {
+        this.thresholdConfig = thresholdConfig;
+        return this;
+    }
+    public DescribeAppConfigResponseBodyThresholdConfig getThresholdConfig() {
+        return this.thresholdConfig;
     }
 
     public static class DescribeAppConfigResponseBodyThresholdConfig extends TeaModel {

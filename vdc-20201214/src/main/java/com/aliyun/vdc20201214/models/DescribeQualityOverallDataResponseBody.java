@@ -66,29 +66,29 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeQualityOverallDataResponseBodyQualityOverallData extends TeaModel {
-        // 概览数据类型，加入频道成功率： JOIN_CHANNEL_SUC_RATE 五秒加入频道成功率： JOIN_CHANNEL_SUC_FIVE_SEC_RATE  首次出声时间： AUDIO_SPEAK_OUT_DUR 首次出图时间： VIDEO_FIRST_PIC_DUR 音频卡顿率： AUDIO_STUCK_RATE 视频卡顿率： VIDEO_STUCK_RATE 音频延时： AUDIO_DELAY 视频延时： AUDIO_DELAY 音频优质传输率： AUDIO_HIGH_QUALITY_TRANSMISSION_RATE 视频优质传输率： VIDEO_HIGH_QUALITY_TRANSMISSION_RATE
-        @NameInMap("Type")
-        public String type;
+        // 平均值
+        @NameInMap("Average")
+        public String average;
 
         // 坐标点列表
         @NameInMap("Nodes")
         public java.util.List<DescribeQualityOverallDataResponseBodyQualityOverallDataNodes> nodes;
 
-        // 平均值
-        @NameInMap("Average")
-        public String average;
+        // 概览数据类型，加入频道成功率： JOIN_CHANNEL_SUC_RATE 五秒加入频道成功率： JOIN_CHANNEL_SUC_FIVE_SEC_RATE  首次出声时间： AUDIO_SPEAK_OUT_DUR 首次出图时间： VIDEO_FIRST_PIC_DUR 音频卡顿率： AUDIO_STUCK_RATE 视频卡顿率： VIDEO_STUCK_RATE 音频延时： AUDIO_DELAY 视频延时： AUDIO_DELAY 音频优质传输率： AUDIO_HIGH_QUALITY_TRANSMISSION_RATE 视频优质传输率： VIDEO_HIGH_QUALITY_TRANSMISSION_RATE
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeQualityOverallDataResponseBodyQualityOverallData build(java.util.Map<String, ?> map) throws Exception {
             DescribeQualityOverallDataResponseBodyQualityOverallData self = new DescribeQualityOverallDataResponseBodyQualityOverallData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeQualityOverallDataResponseBodyQualityOverallData setType(String type) {
-            this.type = type;
+        public DescribeQualityOverallDataResponseBodyQualityOverallData setAverage(String average) {
+            this.average = average;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getAverage() {
+            return this.average;
         }
 
         public DescribeQualityOverallDataResponseBodyQualityOverallData setNodes(java.util.List<DescribeQualityOverallDataResponseBodyQualityOverallDataNodes> nodes) {
@@ -99,12 +99,12 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
             return this.nodes;
         }
 
-        public DescribeQualityOverallDataResponseBodyQualityOverallData setAverage(String average) {
-            this.average = average;
+        public DescribeQualityOverallDataResponseBodyQualityOverallData setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getAverage() {
-            return this.average;
+        public String getType() {
+            return this.type;
         }
 
     }

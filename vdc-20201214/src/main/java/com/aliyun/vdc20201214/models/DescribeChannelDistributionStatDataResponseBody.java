@@ -4,25 +4,17 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelDistributionStatDataResponseBody extends TeaModel {
-    // 频道分布统计列表。
-    @NameInMap("StatList")
-    public java.util.List<DescribeChannelDistributionStatDataResponseBodyStatList> statList;
-
     // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
+    // 频道分布统计列表。
+    @NameInMap("StatList")
+    public java.util.List<DescribeChannelDistributionStatDataResponseBodyStatList> statList;
+
     public static DescribeChannelDistributionStatDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeChannelDistributionStatDataResponseBody self = new DescribeChannelDistributionStatDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeChannelDistributionStatDataResponseBody setStatList(java.util.List<DescribeChannelDistributionStatDataResponseBodyStatList> statList) {
-        this.statList = statList;
-        return this;
-    }
-    public java.util.List<DescribeChannelDistributionStatDataResponseBodyStatList> getStatList() {
-        return this.statList;
     }
 
     public DescribeChannelDistributionStatDataResponseBody setRequestId(String requestId) {
@@ -33,11 +25,15 @@ public class DescribeChannelDistributionStatDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class DescribeChannelDistributionStatDataResponseBodyStatList extends TeaModel {
-        // 统计维度。
-        @NameInMap("Name")
-        public String name;
+    public DescribeChannelDistributionStatDataResponseBody setStatList(java.util.List<DescribeChannelDistributionStatDataResponseBodyStatList> statList) {
+        this.statList = statList;
+        return this;
+    }
+    public java.util.List<DescribeChannelDistributionStatDataResponseBodyStatList> getStatList() {
+        return this.statList;
+    }
 
+    public static class DescribeChannelDistributionStatDataResponseBodyStatList extends TeaModel {
         // 通信人数。
         @NameInMap("CallUserCount")
         public Integer callUserCount;
@@ -46,17 +42,13 @@ public class DescribeChannelDistributionStatDataResponseBody extends TeaModel {
         @NameInMap("CallUserRatio")
         public String callUserRatio;
 
+        // 统计维度。
+        @NameInMap("Name")
+        public String name;
+
         public static DescribeChannelDistributionStatDataResponseBodyStatList build(java.util.Map<String, ?> map) throws Exception {
             DescribeChannelDistributionStatDataResponseBodyStatList self = new DescribeChannelDistributionStatDataResponseBodyStatList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeChannelDistributionStatDataResponseBodyStatList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public DescribeChannelDistributionStatDataResponseBodyStatList setCallUserCount(Integer callUserCount) {
@@ -73,6 +65,14 @@ public class DescribeChannelDistributionStatDataResponseBody extends TeaModel {
         }
         public String getCallUserRatio() {
             return this.callUserRatio;
+        }
+
+        public DescribeChannelDistributionStatDataResponseBodyStatList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

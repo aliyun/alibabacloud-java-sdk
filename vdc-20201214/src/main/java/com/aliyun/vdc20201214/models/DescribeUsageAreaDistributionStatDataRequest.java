@@ -4,9 +4,9 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsageAreaDistributionStatDataRequest extends TeaModel {
-    // 开始时间，秒级时间戳，如1609344000
-    @NameInMap("StartDate")
-    public String startDate;
+    // APP ID
+    @NameInMap("AppId")
+    public String appId;
 
     // 结束时间，秒级时间戳，如1609344000
     @NameInMap("EndDate")
@@ -16,21 +16,21 @@ public class DescribeUsageAreaDistributionStatDataRequest extends TeaModel {
     @NameInMap("ParentArea")
     public String parentArea;
 
-    // APP ID
-    @NameInMap("AppId")
-    public String appId;
+    // 开始时间，秒级时间戳，如1609344000
+    @NameInMap("StartDate")
+    public String startDate;
 
     public static DescribeUsageAreaDistributionStatDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUsageAreaDistributionStatDataRequest self = new DescribeUsageAreaDistributionStatDataRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeUsageAreaDistributionStatDataRequest setStartDate(String startDate) {
-        this.startDate = startDate;
+    public DescribeUsageAreaDistributionStatDataRequest setAppId(String appId) {
+        this.appId = appId;
         return this;
     }
-    public String getStartDate() {
-        return this.startDate;
+    public String getAppId() {
+        return this.appId;
     }
 
     public DescribeUsageAreaDistributionStatDataRequest setEndDate(String endDate) {
@@ -49,12 +49,12 @@ public class DescribeUsageAreaDistributionStatDataRequest extends TeaModel {
         return this.parentArea;
     }
 
-    public DescribeUsageAreaDistributionStatDataRequest setAppId(String appId) {
-        this.appId = appId;
+    public DescribeUsageAreaDistributionStatDataRequest setStartDate(String startDate) {
+        this.startDate = startDate;
         return this;
     }
-    public String getAppId() {
-        return this.appId;
+    public String getStartDate() {
+        return this.startDate;
     }
 
 }

@@ -78,25 +78,17 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
     }
 
     public static class DescribeEndPointEventListResponseBodyNodesEventDataItems extends TeaModel {
-        // 第一个事件发生的时间，使用UNIX时间戳表示，单位：秒。
-        @NameInMap("Ts")
-        public Long ts;
-
         // 事件列表。
         @NameInMap("EventList")
         public java.util.List<DescribeEndPointEventListResponseBodyNodesEventDataItemsEventList> eventList;
 
+        // 第一个事件发生的时间，使用UNIX时间戳表示，单位：秒。
+        @NameInMap("Ts")
+        public Long ts;
+
         public static DescribeEndPointEventListResponseBodyNodesEventDataItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeEndPointEventListResponseBodyNodesEventDataItems self = new DescribeEndPointEventListResponseBodyNodesEventDataItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeEndPointEventListResponseBodyNodesEventDataItems setTs(Long ts) {
-            this.ts = ts;
-            return this;
-        }
-        public Long getTs() {
-            return this.ts;
         }
 
         public DescribeEndPointEventListResponseBodyNodesEventDataItems setEventList(java.util.List<DescribeEndPointEventListResponseBodyNodesEventDataItemsEventList> eventList) {
@@ -107,28 +99,28 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
             return this.eventList;
         }
 
+        public DescribeEndPointEventListResponseBodyNodesEventDataItems setTs(Long ts) {
+            this.ts = ts;
+            return this;
+        }
+        public Long getTs() {
+            return this.ts;
+        }
+
     }
 
     public static class DescribeEndPointEventListResponseBodyNodes extends TeaModel {
-        // 用户ID
-        @NameInMap("UserId")
-        public String userId;
-
         // 事件数据列表
         @NameInMap("EventDataItems")
         public java.util.List<DescribeEndPointEventListResponseBodyNodesEventDataItems> eventDataItems;
 
+        // 用户ID
+        @NameInMap("UserId")
+        public String userId;
+
         public static DescribeEndPointEventListResponseBodyNodes build(java.util.Map<String, ?> map) throws Exception {
             DescribeEndPointEventListResponseBodyNodes self = new DescribeEndPointEventListResponseBodyNodes();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeEndPointEventListResponseBodyNodes setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public DescribeEndPointEventListResponseBodyNodes setEventDataItems(java.util.List<DescribeEndPointEventListResponseBodyNodesEventDataItems> eventDataItems) {
@@ -137,6 +129,14 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
         }
         public java.util.List<DescribeEndPointEventListResponseBodyNodesEventDataItems> getEventDataItems() {
             return this.eventDataItems;
+        }
+
+        public DescribeEndPointEventListResponseBodyNodes setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

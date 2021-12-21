@@ -4,6 +4,10 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelOverallDataResponseBody extends TeaModel {
+    // 通信基本信息。
+    @NameInMap("CallInfo")
+    public DescribeChannelOverallDataResponseBodyCallInfo callInfo;
+
     // 指标数据列表。
     @NameInMap("MetricDatas")
     public java.util.List<DescribeChannelOverallDataResponseBodyMetricDatas> metricDatas;
@@ -12,10 +16,6 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
     @NameInMap("OverallData")
     public DescribeChannelOverallDataResponseBodyOverallData overallData;
 
-    // 通信基本信息。
-    @NameInMap("CallInfo")
-    public DescribeChannelOverallDataResponseBodyCallInfo callInfo;
-
     // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
@@ -23,6 +23,14 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
     public static DescribeChannelOverallDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeChannelOverallDataResponseBody self = new DescribeChannelOverallDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeChannelOverallDataResponseBody setCallInfo(DescribeChannelOverallDataResponseBodyCallInfo callInfo) {
+        this.callInfo = callInfo;
+        return this;
+    }
+    public DescribeChannelOverallDataResponseBodyCallInfo getCallInfo() {
+        return this.callInfo;
     }
 
     public DescribeChannelOverallDataResponseBody setMetricDatas(java.util.List<DescribeChannelOverallDataResponseBodyMetricDatas> metricDatas) {
@@ -41,14 +49,6 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         return this.overallData;
     }
 
-    public DescribeChannelOverallDataResponseBody setCallInfo(DescribeChannelOverallDataResponseBodyCallInfo callInfo) {
-        this.callInfo = callInfo;
-        return this;
-    }
-    public DescribeChannelOverallDataResponseBodyCallInfo getCallInfo() {
-        return this.callInfo;
-    }
-
     public DescribeChannelOverallDataResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -57,7 +57,91 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeChannelOverallDataResponseBodyCallInfo extends TeaModel {
+        // 应用ID。
+        @NameInMap("AppId")
+        public String appId;
+
+        // 通信状态，取值：IN：进行中。OUT：已结束
+        @NameInMap("CallStatus")
+        public String callStatus;
+
+        // 频道ID。
+        @NameInMap("ChannelId")
+        public String channelId;
+
+        // 创建通信的时间戳，使用UNIX时间戳表示，单位：秒。
+        @NameInMap("CreatedTs")
+        public Long createdTs;
+
+        // 释放通信的时间戳，使用UNIX时间戳表示，单位：秒。
+        @NameInMap("DestroyedTs")
+        public Long destroyedTs;
+
+        // 通信时长，单位：秒。
+        @NameInMap("Duration")
+        public Long duration;
+
+        public static DescribeChannelOverallDataResponseBodyCallInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeChannelOverallDataResponseBodyCallInfo self = new DescribeChannelOverallDataResponseBodyCallInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeChannelOverallDataResponseBodyCallInfo setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public DescribeChannelOverallDataResponseBodyCallInfo setCallStatus(String callStatus) {
+            this.callStatus = callStatus;
+            return this;
+        }
+        public String getCallStatus() {
+            return this.callStatus;
+        }
+
+        public DescribeChannelOverallDataResponseBodyCallInfo setChannelId(String channelId) {
+            this.channelId = channelId;
+            return this;
+        }
+        public String getChannelId() {
+            return this.channelId;
+        }
+
+        public DescribeChannelOverallDataResponseBodyCallInfo setCreatedTs(Long createdTs) {
+            this.createdTs = createdTs;
+            return this;
+        }
+        public Long getCreatedTs() {
+            return this.createdTs;
+        }
+
+        public DescribeChannelOverallDataResponseBodyCallInfo setDestroyedTs(Long destroyedTs) {
+            this.destroyedTs = destroyedTs;
+            return this;
+        }
+        public Long getDestroyedTs() {
+            return this.destroyedTs;
+        }
+
+        public DescribeChannelOverallDataResponseBodyCallInfo setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
+        }
+
+    }
+
     public static class DescribeChannelOverallDataResponseBodyMetricDatasNodes extends TeaModel {
+        // 扩展数据
+        @NameInMap("Ext")
+        public java.util.Map<String, ?> ext;
+
         // 指标趋势图中x轴横坐标。
         @NameInMap("X")
         public String x;
@@ -66,13 +150,17 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         @NameInMap("Y")
         public String y;
 
-        // 扩展数据
-        @NameInMap("Ext")
-        public java.util.Map<String, ?> ext;
-
         public static DescribeChannelOverallDataResponseBodyMetricDatasNodes build(java.util.Map<String, ?> map) throws Exception {
             DescribeChannelOverallDataResponseBodyMetricDatasNodes self = new DescribeChannelOverallDataResponseBodyMetricDatasNodes();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeChannelOverallDataResponseBodyMetricDatasNodes setExt(java.util.Map<String, ?> ext) {
+            this.ext = ext;
+            return this;
+        }
+        public java.util.Map<String, ?> getExt() {
+            return this.ext;
         }
 
         public DescribeChannelOverallDataResponseBodyMetricDatasNodes setX(String x) {
@@ -91,36 +179,20 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             return this.y;
         }
 
-        public DescribeChannelOverallDataResponseBodyMetricDatasNodes setExt(java.util.Map<String, ?> ext) {
-            this.ext = ext;
-            return this;
-        }
-        public java.util.Map<String, ?> getExt() {
-            return this.ext;
-        }
-
     }
 
     public static class DescribeChannelOverallDataResponseBodyMetricDatas extends TeaModel {
-        // 指标类型，取值：CALL_QUALITY：通信质量。CONN_NUM：通信次数。
-        @NameInMap("Type")
-        public String type;
-
         // 指标趋势图坐标点列表。
         @NameInMap("Nodes")
         public java.util.List<DescribeChannelOverallDataResponseBodyMetricDatasNodes> nodes;
 
+        // 指标类型，取值：CALL_QUALITY：通信质量。CONN_NUM：通信次数。
+        @NameInMap("Type")
+        public String type;
+
         public static DescribeChannelOverallDataResponseBodyMetricDatas build(java.util.Map<String, ?> map) throws Exception {
             DescribeChannelOverallDataResponseBodyMetricDatas self = new DescribeChannelOverallDataResponseBodyMetricDatas();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeChannelOverallDataResponseBodyMetricDatas setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public DescribeChannelOverallDataResponseBodyMetricDatas setNodes(java.util.List<DescribeChannelOverallDataResponseBodyMetricDatasNodes> nodes) {
@@ -129,6 +201,14 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         }
         public java.util.List<DescribeChannelOverallDataResponseBodyMetricDatasNodes> getNodes() {
             return this.nodes;
+        }
+
+        public DescribeChannelOverallDataResponseBodyMetricDatas setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -197,86 +277,6 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         }
         public Float getTotalVideoVagueRate() {
             return this.totalVideoVagueRate;
-        }
-
-    }
-
-    public static class DescribeChannelOverallDataResponseBodyCallInfo extends TeaModel {
-        // 应用ID。
-        @NameInMap("AppId")
-        public String appId;
-
-        // 频道ID。
-        @NameInMap("ChannelId")
-        public String channelId;
-
-        // 通信状态，取值：IN：进行中。OUT：已结束
-        @NameInMap("CallStatus")
-        public String callStatus;
-
-        // 创建通信的时间戳，使用UNIX时间戳表示，单位：秒。
-        @NameInMap("CreatedTs")
-        public Long createdTs;
-
-        // 释放通信的时间戳，使用UNIX时间戳表示，单位：秒。
-        @NameInMap("DestroyedTs")
-        public Long destroyedTs;
-
-        // 通信时长，单位：秒。
-        @NameInMap("Duration")
-        public Long duration;
-
-        public static DescribeChannelOverallDataResponseBodyCallInfo build(java.util.Map<String, ?> map) throws Exception {
-            DescribeChannelOverallDataResponseBodyCallInfo self = new DescribeChannelOverallDataResponseBodyCallInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeChannelOverallDataResponseBodyCallInfo setAppId(String appId) {
-            this.appId = appId;
-            return this;
-        }
-        public String getAppId() {
-            return this.appId;
-        }
-
-        public DescribeChannelOverallDataResponseBodyCallInfo setChannelId(String channelId) {
-            this.channelId = channelId;
-            return this;
-        }
-        public String getChannelId() {
-            return this.channelId;
-        }
-
-        public DescribeChannelOverallDataResponseBodyCallInfo setCallStatus(String callStatus) {
-            this.callStatus = callStatus;
-            return this;
-        }
-        public String getCallStatus() {
-            return this.callStatus;
-        }
-
-        public DescribeChannelOverallDataResponseBodyCallInfo setCreatedTs(Long createdTs) {
-            this.createdTs = createdTs;
-            return this;
-        }
-        public Long getCreatedTs() {
-            return this.createdTs;
-        }
-
-        public DescribeChannelOverallDataResponseBodyCallInfo setDestroyedTs(Long destroyedTs) {
-            this.destroyedTs = destroyedTs;
-            return this;
-        }
-        public Long getDestroyedTs() {
-            return this.destroyedTs;
-        }
-
-        public DescribeChannelOverallDataResponseBodyCallInfo setDuration(Long duration) {
-            this.duration = duration;
-            return this;
-        }
-        public Long getDuration() {
-            return this.duration;
         }
 
     }

@@ -16,10 +16,6 @@ public class DescribeFaultDiagnosisUserDetailRequest extends TeaModel {
     @NameInMap("CreatedTs")
     public Long createdTs;
 
-    // 用户ID
-    @NameInMap("UserId")
-    public String userId;
-
     // 异常类型 JOIN_SLOW：进频道慢 AUDIO_STUCK：音频卡顿 VIDEO_STUCK：视频卡顿 VIDEO_VAGUE：视频模糊 HIGH_DELAY：通话延迟高 FIRST_FRAME_SLOW：接收首屏慢
     @NameInMap("FaultType")
     public String faultType;
@@ -27,6 +23,10 @@ public class DescribeFaultDiagnosisUserDetailRequest extends TeaModel {
     // 是否查询通话用户信息，为空默认是false
     @NameInMap("QueryCallUserInfo")
     public Boolean queryCallUserInfo;
+
+    // 用户ID
+    @NameInMap("UserId")
+    public String userId;
 
     public static DescribeFaultDiagnosisUserDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFaultDiagnosisUserDetailRequest self = new DescribeFaultDiagnosisUserDetailRequest();
@@ -57,14 +57,6 @@ public class DescribeFaultDiagnosisUserDetailRequest extends TeaModel {
         return this.createdTs;
     }
 
-    public DescribeFaultDiagnosisUserDetailRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
     public DescribeFaultDiagnosisUserDetailRequest setFaultType(String faultType) {
         this.faultType = faultType;
         return this;
@@ -79,6 +71,14 @@ public class DescribeFaultDiagnosisUserDetailRequest extends TeaModel {
     }
     public Boolean getQueryCallUserInfo() {
         return this.queryCallUserInfo;
+    }
+
+    public DescribeFaultDiagnosisUserDetailRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

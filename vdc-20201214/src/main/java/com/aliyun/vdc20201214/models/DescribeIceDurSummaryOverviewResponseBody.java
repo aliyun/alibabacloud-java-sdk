@@ -4,25 +4,17 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeIceDurSummaryOverviewResponseBody extends TeaModel {
-    // 请求ID
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 任务信息
     @NameInMap("JobInfoList")
     public java.util.List<DescribeIceDurSummaryOverviewResponseBodyJobInfoList> jobInfoList;
 
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeIceDurSummaryOverviewResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeIceDurSummaryOverviewResponseBody self = new DescribeIceDurSummaryOverviewResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeIceDurSummaryOverviewResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeIceDurSummaryOverviewResponseBody setJobInfoList(java.util.List<DescribeIceDurSummaryOverviewResponseBodyJobInfoList> jobInfoList) {
@@ -33,7 +25,19 @@ public class DescribeIceDurSummaryOverviewResponseBody extends TeaModel {
         return this.jobInfoList;
     }
 
+    public DescribeIceDurSummaryOverviewResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeIceDurSummaryOverviewResponseBodyJobInfoList extends TeaModel {
+        // 任务时长
+        @NameInMap("Duration")
+        public Long duration;
+
         // 作业类型
         @NameInMap("JobType")
         public String jobType;
@@ -42,13 +46,17 @@ public class DescribeIceDurSummaryOverviewResponseBody extends TeaModel {
         @NameInMap("TimeRange")
         public String timeRange;
 
-        // 任务时长
-        @NameInMap("Duration")
-        public Long duration;
-
         public static DescribeIceDurSummaryOverviewResponseBodyJobInfoList build(java.util.Map<String, ?> map) throws Exception {
             DescribeIceDurSummaryOverviewResponseBodyJobInfoList self = new DescribeIceDurSummaryOverviewResponseBodyJobInfoList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeIceDurSummaryOverviewResponseBodyJobInfoList setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
         }
 
         public DescribeIceDurSummaryOverviewResponseBodyJobInfoList setJobType(String jobType) {
@@ -65,14 +73,6 @@ public class DescribeIceDurSummaryOverviewResponseBody extends TeaModel {
         }
         public String getTimeRange() {
             return this.timeRange;
-        }
-
-        public DescribeIceDurSummaryOverviewResponseBodyJobInfoList setDuration(Long duration) {
-            this.duration = duration;
-            return this;
-        }
-        public Long getDuration() {
-            return this.duration;
         }
 
     }

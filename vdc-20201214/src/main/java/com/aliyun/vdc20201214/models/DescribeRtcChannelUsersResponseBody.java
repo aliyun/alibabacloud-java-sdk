@@ -12,6 +12,10 @@ public class DescribeRtcChannelUsersResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
+
     // 总数
     @NameInMap("TotalCnt")
     public Integer totalCnt;
@@ -19,10 +23,6 @@ public class DescribeRtcChannelUsersResponseBody extends TeaModel {
     // 用户列表
     @NameInMap("UserList")
     public DescribeRtcChannelUsersResponseBodyUserList userList;
-
-    // 请求ID
-    @NameInMap("RequestId")
-    public String requestId;
 
     public static DescribeRtcChannelUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRtcChannelUsersResponseBody self = new DescribeRtcChannelUsersResponseBody();
@@ -45,6 +45,14 @@ public class DescribeRtcChannelUsersResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeRtcChannelUsersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeRtcChannelUsersResponseBody setTotalCnt(Integer totalCnt) {
         this.totalCnt = totalCnt;
         return this;
@@ -61,90 +69,74 @@ public class DescribeRtcChannelUsersResponseBody extends TeaModel {
         return this.userList;
     }
 
-    public DescribeRtcChannelUsersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public static class DescribeRtcChannelUsersResponseBodyUserListUserList extends TeaModel {
-        // 用户ID
-        @NameInMap("UserId")
-        public String userId;
-
         // ChannelID
         @NameInMap("Channel")
         public String channel;
-
-        // 用户加入频道时间
-        @NameInMap("StartTime")
-        public String startTime;
 
         // 用户离开频道时间
         @NameInMap("EndTime")
         public String endTime;
 
-        // 服务大区
-        @NameInMap("ServiceArea")
-        public String serviceArea;
-
         // 用户地理位置
         @NameInMap("Location")
         public String location;
-
-        // 订阅音频时长(单位分钟)
-        @NameInMap("SubAudio")
-        public Integer subAudio;
 
         // 发布音频时长(单位分钟)
         @NameInMap("PubAudio")
         public Integer pubAudio;
 
-        // 订阅时360视频长(单位分钟)
-        @NameInMap("SubVideo360")
-        public Integer subVideo360;
-
-        // 发布360视频时长(单位分钟)
-        @NameInMap("PubVideo360")
-        public Integer pubVideo360;
-
-        // 订阅720视频时长(单位分钟)
-        @NameInMap("SubVideo720")
-        public Integer subVideo720;
-
-        // 发布720视频时长(单位分钟)
-        @NameInMap("PubVideo720")
-        public Integer pubVideo720;
-
-        // 订阅1080视频时长(单位分钟)
-        @NameInMap("SubVideo1080")
-        public Integer subVideo1080;
+        // 发布屏幕共享时长(单位分钟)
+        @NameInMap("PubContent")
+        public Integer pubContent;
 
         // 发布1080视频时长(单位分钟)
         @NameInMap("PubVideo1080")
         public Integer pubVideo1080;
 
+        // 发布360视频时长(单位分钟)
+        @NameInMap("PubVideo360")
+        public Integer pubVideo360;
+
+        // 发布720视频时长(单位分钟)
+        @NameInMap("PubVideo720")
+        public Integer pubVideo720;
+
+        // 服务大区
+        @NameInMap("ServiceArea")
+        public String serviceArea;
+
+        // 用户加入频道时间
+        @NameInMap("StartTime")
+        public String startTime;
+
+        // 订阅音频时长(单位分钟)
+        @NameInMap("SubAudio")
+        public Integer subAudio;
+
         // 订阅屏幕共享时长(单位分钟)
         @NameInMap("SubContent")
         public Integer subContent;
 
-        // 发布屏幕共享时长(单位分钟)
-        @NameInMap("PubContent")
-        public Integer pubContent;
+        // 订阅1080视频时长(单位分钟)
+        @NameInMap("SubVideo1080")
+        public Integer subVideo1080;
+
+        // 订阅时360视频长(单位分钟)
+        @NameInMap("SubVideo360")
+        public Integer subVideo360;
+
+        // 订阅720视频时长(单位分钟)
+        @NameInMap("SubVideo720")
+        public Integer subVideo720;
+
+        // 用户ID
+        @NameInMap("UserId")
+        public String userId;
 
         public static DescribeRtcChannelUsersResponseBodyUserListUserList build(java.util.Map<String, ?> map) throws Exception {
             DescribeRtcChannelUsersResponseBodyUserListUserList self = new DescribeRtcChannelUsersResponseBodyUserListUserList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRtcChannelUsersResponseBodyUserListUserList setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public DescribeRtcChannelUsersResponseBodyUserListUserList setChannel(String channel) {
@@ -155,28 +147,12 @@ public class DescribeRtcChannelUsersResponseBody extends TeaModel {
             return this.channel;
         }
 
-        public DescribeRtcChannelUsersResponseBodyUserListUserList setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
         public DescribeRtcChannelUsersResponseBodyUserListUserList setEndTime(String endTime) {
             this.endTime = endTime;
             return this;
         }
         public String getEndTime() {
             return this.endTime;
-        }
-
-        public DescribeRtcChannelUsersResponseBodyUserListUserList setServiceArea(String serviceArea) {
-            this.serviceArea = serviceArea;
-            return this;
-        }
-        public String getServiceArea() {
-            return this.serviceArea;
         }
 
         public DescribeRtcChannelUsersResponseBodyUserListUserList setLocation(String location) {
@@ -187,14 +163,6 @@ public class DescribeRtcChannelUsersResponseBody extends TeaModel {
             return this.location;
         }
 
-        public DescribeRtcChannelUsersResponseBodyUserListUserList setSubAudio(Integer subAudio) {
-            this.subAudio = subAudio;
-            return this;
-        }
-        public Integer getSubAudio() {
-            return this.subAudio;
-        }
-
         public DescribeRtcChannelUsersResponseBodyUserListUserList setPubAudio(Integer pubAudio) {
             this.pubAudio = pubAudio;
             return this;
@@ -203,44 +171,12 @@ public class DescribeRtcChannelUsersResponseBody extends TeaModel {
             return this.pubAudio;
         }
 
-        public DescribeRtcChannelUsersResponseBodyUserListUserList setSubVideo360(Integer subVideo360) {
-            this.subVideo360 = subVideo360;
+        public DescribeRtcChannelUsersResponseBodyUserListUserList setPubContent(Integer pubContent) {
+            this.pubContent = pubContent;
             return this;
         }
-        public Integer getSubVideo360() {
-            return this.subVideo360;
-        }
-
-        public DescribeRtcChannelUsersResponseBodyUserListUserList setPubVideo360(Integer pubVideo360) {
-            this.pubVideo360 = pubVideo360;
-            return this;
-        }
-        public Integer getPubVideo360() {
-            return this.pubVideo360;
-        }
-
-        public DescribeRtcChannelUsersResponseBodyUserListUserList setSubVideo720(Integer subVideo720) {
-            this.subVideo720 = subVideo720;
-            return this;
-        }
-        public Integer getSubVideo720() {
-            return this.subVideo720;
-        }
-
-        public DescribeRtcChannelUsersResponseBodyUserListUserList setPubVideo720(Integer pubVideo720) {
-            this.pubVideo720 = pubVideo720;
-            return this;
-        }
-        public Integer getPubVideo720() {
-            return this.pubVideo720;
-        }
-
-        public DescribeRtcChannelUsersResponseBodyUserListUserList setSubVideo1080(Integer subVideo1080) {
-            this.subVideo1080 = subVideo1080;
-            return this;
-        }
-        public Integer getSubVideo1080() {
-            return this.subVideo1080;
+        public Integer getPubContent() {
+            return this.pubContent;
         }
 
         public DescribeRtcChannelUsersResponseBodyUserListUserList setPubVideo1080(Integer pubVideo1080) {
@@ -251,6 +187,46 @@ public class DescribeRtcChannelUsersResponseBody extends TeaModel {
             return this.pubVideo1080;
         }
 
+        public DescribeRtcChannelUsersResponseBodyUserListUserList setPubVideo360(Integer pubVideo360) {
+            this.pubVideo360 = pubVideo360;
+            return this;
+        }
+        public Integer getPubVideo360() {
+            return this.pubVideo360;
+        }
+
+        public DescribeRtcChannelUsersResponseBodyUserListUserList setPubVideo720(Integer pubVideo720) {
+            this.pubVideo720 = pubVideo720;
+            return this;
+        }
+        public Integer getPubVideo720() {
+            return this.pubVideo720;
+        }
+
+        public DescribeRtcChannelUsersResponseBodyUserListUserList setServiceArea(String serviceArea) {
+            this.serviceArea = serviceArea;
+            return this;
+        }
+        public String getServiceArea() {
+            return this.serviceArea;
+        }
+
+        public DescribeRtcChannelUsersResponseBodyUserListUserList setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeRtcChannelUsersResponseBodyUserListUserList setSubAudio(Integer subAudio) {
+            this.subAudio = subAudio;
+            return this;
+        }
+        public Integer getSubAudio() {
+            return this.subAudio;
+        }
+
         public DescribeRtcChannelUsersResponseBodyUserListUserList setSubContent(Integer subContent) {
             this.subContent = subContent;
             return this;
@@ -259,12 +235,36 @@ public class DescribeRtcChannelUsersResponseBody extends TeaModel {
             return this.subContent;
         }
 
-        public DescribeRtcChannelUsersResponseBodyUserListUserList setPubContent(Integer pubContent) {
-            this.pubContent = pubContent;
+        public DescribeRtcChannelUsersResponseBodyUserListUserList setSubVideo1080(Integer subVideo1080) {
+            this.subVideo1080 = subVideo1080;
             return this;
         }
-        public Integer getPubContent() {
-            return this.pubContent;
+        public Integer getSubVideo1080() {
+            return this.subVideo1080;
+        }
+
+        public DescribeRtcChannelUsersResponseBodyUserListUserList setSubVideo360(Integer subVideo360) {
+            this.subVideo360 = subVideo360;
+            return this;
+        }
+        public Integer getSubVideo360() {
+            return this.subVideo360;
+        }
+
+        public DescribeRtcChannelUsersResponseBodyUserListUserList setSubVideo720(Integer subVideo720) {
+            this.subVideo720 = subVideo720;
+            return this;
+        }
+        public Integer getSubVideo720() {
+            return this.subVideo720;
+        }
+
+        public DescribeRtcChannelUsersResponseBodyUserListUserList setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

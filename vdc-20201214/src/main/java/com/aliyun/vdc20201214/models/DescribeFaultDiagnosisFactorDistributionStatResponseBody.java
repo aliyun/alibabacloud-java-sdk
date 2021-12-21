@@ -4,25 +4,17 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends TeaModel {
-    // 影响因素分布统计数据
-    @NameInMap("StatList")
-    public java.util.List<DescribeFaultDiagnosisFactorDistributionStatResponseBodyStatList> statList;
-
     // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
+    // 影响因素分布统计数据
+    @NameInMap("StatList")
+    public java.util.List<DescribeFaultDiagnosisFactorDistributionStatResponseBodyStatList> statList;
+
     public static DescribeFaultDiagnosisFactorDistributionStatResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFaultDiagnosisFactorDistributionStatResponseBody self = new DescribeFaultDiagnosisFactorDistributionStatResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFaultDiagnosisFactorDistributionStatResponseBody setStatList(java.util.List<DescribeFaultDiagnosisFactorDistributionStatResponseBodyStatList> statList) {
-        this.statList = statList;
-        return this;
-    }
-    public java.util.List<DescribeFaultDiagnosisFactorDistributionStatResponseBodyStatList> getStatList() {
-        return this.statList;
     }
 
     public DescribeFaultDiagnosisFactorDistributionStatResponseBody setRequestId(String requestId) {
@@ -31,6 +23,14 @@ public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends Te
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeFaultDiagnosisFactorDistributionStatResponseBody setStatList(java.util.List<DescribeFaultDiagnosisFactorDistributionStatResponseBodyStatList> statList) {
+        this.statList = statList;
+        return this;
+    }
+    public java.util.List<DescribeFaultDiagnosisFactorDistributionStatResponseBodyStatList> getStatList() {
+        return this.statList;
     }
 
     public static class DescribeFaultDiagnosisFactorDistributionStatResponseBodyStatList extends TeaModel {

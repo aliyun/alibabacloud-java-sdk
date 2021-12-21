@@ -46,6 +46,10 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelUserMetricsResponseBodyMetricDatasNodes extends TeaModel {
+        // 拓展属性
+        @NameInMap("Ext")
+        public java.util.Map<String, ?> ext;
+
         // 指标趋势图中x轴横坐标。
         @NameInMap("X")
         public String x;
@@ -54,13 +58,17 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         @NameInMap("Y")
         public String y;
 
-        // 拓展属性
-        @NameInMap("Ext")
-        public java.util.Map<String, ?> ext;
-
         public static DescribeChannelUserMetricsResponseBodyMetricDatasNodes build(java.util.Map<String, ?> map) throws Exception {
             DescribeChannelUserMetricsResponseBodyMetricDatasNodes self = new DescribeChannelUserMetricsResponseBodyMetricDatasNodes();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeChannelUserMetricsResponseBodyMetricDatasNodes setExt(java.util.Map<String, ?> ext) {
+            this.ext = ext;
+            return this;
+        }
+        public java.util.Map<String, ?> getExt() {
+            return this.ext;
         }
 
         public DescribeChannelUserMetricsResponseBodyMetricDatasNodes setX(String x) {
@@ -79,36 +87,20 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
             return this.y;
         }
 
-        public DescribeChannelUserMetricsResponseBodyMetricDatasNodes setExt(java.util.Map<String, ?> ext) {
-            this.ext = ext;
-            return this;
-        }
-        public java.util.Map<String, ?> getExt() {
-            return this.ext;
-        }
-
     }
 
     public static class DescribeChannelUserMetricsResponseBodyMetricDatas extends TeaModel {
-        // 指标类型，取值：ALL_NUM：累计用户数量。PUB_NUM：累计发布用户数量。SUB_NUM：累计订阅用户数量。JOIN_FAIL_NUM：累计加入频道异常用户数量。BAD_EXP_NUM：累计通信体验异常用户。
-        @NameInMap("Type")
-        public String type;
-
         // 指标趋势图坐标点列表。
         @NameInMap("Nodes")
         public java.util.List<DescribeChannelUserMetricsResponseBodyMetricDatasNodes> nodes;
 
+        // 指标类型，取值：ALL_NUM：累计用户数量。PUB_NUM：累计发布用户数量。SUB_NUM：累计订阅用户数量。JOIN_FAIL_NUM：累计加入频道异常用户数量。BAD_EXP_NUM：累计通信体验异常用户。
+        @NameInMap("Type")
+        public String type;
+
         public static DescribeChannelUserMetricsResponseBodyMetricDatas build(java.util.Map<String, ?> map) throws Exception {
             DescribeChannelUserMetricsResponseBodyMetricDatas self = new DescribeChannelUserMetricsResponseBodyMetricDatas();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeChannelUserMetricsResponseBodyMetricDatas setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public DescribeChannelUserMetricsResponseBodyMetricDatas setNodes(java.util.List<DescribeChannelUserMetricsResponseBodyMetricDatasNodes> nodes) {
@@ -119,12 +111,24 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
             return this.nodes;
         }
 
+        public DescribeChannelUserMetricsResponseBodyMetricDatas setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
     public static class DescribeChannelUserMetricsResponseBodyOverallData extends TeaModel {
-        // 累计用户数量。
-        @NameInMap("TotalUserNum")
-        public Long totalUserNum;
+        // 累计通信体验异常用户数量。
+        @NameInMap("TotalBadExpNum")
+        public Long totalBadExpNum;
+
+        // 累计加入频道异常用户数量。
+        @NameInMap("TotalJoinFailNum")
+        public Long totalJoinFailNum;
 
         // 累计发布端用户数量。
         @NameInMap("TotalPubUserNum")
@@ -134,25 +138,29 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         @NameInMap("TotalSubUserNum")
         public Long totalSubUserNum;
 
-        // 累计加入频道异常用户数量。
-        @NameInMap("TotalJoinFailNum")
-        public Long totalJoinFailNum;
-
-        // 累计通信体验异常用户数量。
-        @NameInMap("TotalBadExpNum")
-        public Long totalBadExpNum;
+        // 累计用户数量。
+        @NameInMap("TotalUserNum")
+        public Long totalUserNum;
 
         public static DescribeChannelUserMetricsResponseBodyOverallData build(java.util.Map<String, ?> map) throws Exception {
             DescribeChannelUserMetricsResponseBodyOverallData self = new DescribeChannelUserMetricsResponseBodyOverallData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeChannelUserMetricsResponseBodyOverallData setTotalUserNum(Long totalUserNum) {
-            this.totalUserNum = totalUserNum;
+        public DescribeChannelUserMetricsResponseBodyOverallData setTotalBadExpNum(Long totalBadExpNum) {
+            this.totalBadExpNum = totalBadExpNum;
             return this;
         }
-        public Long getTotalUserNum() {
-            return this.totalUserNum;
+        public Long getTotalBadExpNum() {
+            return this.totalBadExpNum;
+        }
+
+        public DescribeChannelUserMetricsResponseBodyOverallData setTotalJoinFailNum(Long totalJoinFailNum) {
+            this.totalJoinFailNum = totalJoinFailNum;
+            return this;
+        }
+        public Long getTotalJoinFailNum() {
+            return this.totalJoinFailNum;
         }
 
         public DescribeChannelUserMetricsResponseBodyOverallData setTotalPubUserNum(Long totalPubUserNum) {
@@ -171,20 +179,12 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
             return this.totalSubUserNum;
         }
 
-        public DescribeChannelUserMetricsResponseBodyOverallData setTotalJoinFailNum(Long totalJoinFailNum) {
-            this.totalJoinFailNum = totalJoinFailNum;
+        public DescribeChannelUserMetricsResponseBodyOverallData setTotalUserNum(Long totalUserNum) {
+            this.totalUserNum = totalUserNum;
             return this;
         }
-        public Long getTotalJoinFailNum() {
-            return this.totalJoinFailNum;
-        }
-
-        public DescribeChannelUserMetricsResponseBodyOverallData setTotalBadExpNum(Long totalBadExpNum) {
-            this.totalBadExpNum = totalBadExpNum;
-            return this;
-        }
-        public Long getTotalBadExpNum() {
-            return this.totalBadExpNum;
+        public Long getTotalUserNum() {
+            return this.totalUserNum;
         }
 
     }

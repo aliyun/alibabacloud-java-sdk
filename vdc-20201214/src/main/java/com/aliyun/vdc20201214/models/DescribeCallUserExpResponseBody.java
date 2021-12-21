@@ -34,25 +34,17 @@ public class DescribeCallUserExpResponseBody extends TeaModel {
     }
 
     public static class DescribeCallUserExpResponseBodyExpInfoList extends TeaModel {
-        // 用户ID
-        @NameInMap("UserId")
-        public String userId;
-
         // 用户体验：GOOD:优良, BAD:欠佳
         @NameInMap("CallExp")
         public String callExp;
 
+        // 用户ID
+        @NameInMap("UserId")
+        public String userId;
+
         public static DescribeCallUserExpResponseBodyExpInfoList build(java.util.Map<String, ?> map) throws Exception {
             DescribeCallUserExpResponseBodyExpInfoList self = new DescribeCallUserExpResponseBodyExpInfoList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCallUserExpResponseBodyExpInfoList setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public DescribeCallUserExpResponseBodyExpInfoList setCallExp(String callExp) {
@@ -61,6 +53,14 @@ public class DescribeCallUserExpResponseBody extends TeaModel {
         }
         public String getCallExp() {
             return this.callExp;
+        }
+
+        public DescribeCallUserExpResponseBodyExpInfoList setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

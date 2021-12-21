@@ -4,9 +4,9 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeRtcChannelListResponseBody extends TeaModel {
-    // 请求id
-    @NameInMap("RequestId")
-    public String requestId;
+    // 频道列表
+    @NameInMap("Channels")
+    public java.util.List<DescribeRtcChannelListResponseBodyChannels> channels;
 
     // 页号
     @NameInMap("PageNo")
@@ -16,25 +16,25 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // 请求id
+    @NameInMap("RequestId")
+    public String requestId;
+
     // 总条数
     @NameInMap("TotalCnt")
     public Integer totalCnt;
-
-    // 频道列表
-    @NameInMap("Channels")
-    public java.util.List<DescribeRtcChannelListResponseBodyChannels> channels;
 
     public static DescribeRtcChannelListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRtcChannelListResponseBody self = new DescribeRtcChannelListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRtcChannelListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeRtcChannelListResponseBody setChannels(java.util.List<DescribeRtcChannelListResponseBodyChannels> channels) {
+        this.channels = channels;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<DescribeRtcChannelListResponseBodyChannels> getChannels() {
+        return this.channels;
     }
 
     public DescribeRtcChannelListResponseBody setPageNo(Integer pageNo) {
@@ -53,6 +53,14 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeRtcChannelListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeRtcChannelListResponseBody setTotalCnt(Integer totalCnt) {
         this.totalCnt = totalCnt;
         return this;
@@ -61,22 +69,10 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
         return this.totalCnt;
     }
 
-    public DescribeRtcChannelListResponseBody setChannels(java.util.List<DescribeRtcChannelListResponseBodyChannels> channels) {
-        this.channels = channels;
-        return this;
-    }
-    public java.util.List<DescribeRtcChannelListResponseBodyChannels> getChannels() {
-        return this.channels;
-    }
-
     public static class DescribeRtcChannelListResponseBodyChannels extends TeaModel {
         // 频道ID
         @NameInMap("ChannelId")
         public String channelId;
-
-        // 频道开始时间，UTC格式
-        @NameInMap("StartTime")
-        public String startTime;
 
         // 频道结束时间，UTC时间
         @NameInMap("EndTime")
@@ -85,6 +81,10 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
         // 是否已经结束
         @NameInMap("Finished")
         public Boolean finished;
+
+        // 频道开始时间，UTC格式
+        @NameInMap("StartTime")
+        public String startTime;
 
         public static DescribeRtcChannelListResponseBodyChannels build(java.util.Map<String, ?> map) throws Exception {
             DescribeRtcChannelListResponseBodyChannels self = new DescribeRtcChannelListResponseBodyChannels();
@@ -97,14 +97,6 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
         }
         public String getChannelId() {
             return this.channelId;
-        }
-
-        public DescribeRtcChannelListResponseBodyChannels setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
         }
 
         public DescribeRtcChannelListResponseBodyChannels setEndTime(String endTime) {
@@ -121,6 +113,14 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
         }
         public Boolean getFinished() {
             return this.finished;
+        }
+
+        public DescribeRtcChannelListResponseBodyChannels setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }
