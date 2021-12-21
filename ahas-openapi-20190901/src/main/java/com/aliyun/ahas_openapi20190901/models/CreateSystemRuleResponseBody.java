@@ -4,17 +4,17 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateSystemRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public CreateSystemRuleResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public CreateSystemRuleResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class CreateSystemRuleResponseBody extends TeaModel {
     public static CreateSystemRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSystemRuleResponseBody self = new CreateSystemRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSystemRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateSystemRuleResponseBody setData(CreateSystemRuleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateSystemRuleResponseBodyData getData() {
+        return this.data;
     }
 
     public CreateSystemRuleResponseBody setMessage(String message) {
@@ -40,22 +56,6 @@ public class CreateSystemRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateSystemRuleResponseBody setData(CreateSystemRuleResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateSystemRuleResponseBodyData getData() {
-        return this.data;
-    }
-
-    public CreateSystemRuleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public CreateSystemRuleResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,21 +65,29 @@ public class CreateSystemRuleResponseBody extends TeaModel {
     }
 
     public static class CreateSystemRuleResponseBodyData extends TeaModel {
+        @NameInMap("Enable")
+        public Boolean enable;
+
         @NameInMap("MetricType")
         public Integer metricType;
-
-        @NameInMap("Threshold")
-        public Float threshold;
 
         @NameInMap("RuleId")
         public Long ruleId;
 
-        @NameInMap("Enable")
-        public Boolean enable;
+        @NameInMap("Threshold")
+        public Float threshold;
 
         public static CreateSystemRuleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateSystemRuleResponseBodyData self = new CreateSystemRuleResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CreateSystemRuleResponseBodyData setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
         }
 
         public CreateSystemRuleResponseBodyData setMetricType(Integer metricType) {
@@ -90,14 +98,6 @@ public class CreateSystemRuleResponseBody extends TeaModel {
             return this.metricType;
         }
 
-        public CreateSystemRuleResponseBodyData setThreshold(Float threshold) {
-            this.threshold = threshold;
-            return this;
-        }
-        public Float getThreshold() {
-            return this.threshold;
-        }
-
         public CreateSystemRuleResponseBodyData setRuleId(Long ruleId) {
             this.ruleId = ruleId;
             return this;
@@ -106,12 +106,12 @@ public class CreateSystemRuleResponseBody extends TeaModel {
             return this.ruleId;
         }
 
-        public CreateSystemRuleResponseBodyData setEnable(Boolean enable) {
-            this.enable = enable;
+        public CreateSystemRuleResponseBodyData setThreshold(Float threshold) {
+            this.threshold = threshold;
             return this;
         }
-        public Boolean getEnable() {
-            return this.enable;
+        public Float getThreshold() {
+            return this.threshold;
         }
 
     }

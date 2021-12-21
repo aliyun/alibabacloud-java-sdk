@@ -7,20 +7,20 @@ public class GetSentinelAppSumMetricRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    @NameInMap("Namespace")
-    public String namespace;
+    @NameInMap("AhasRegionId")
+    public String ahasRegionId;
 
     @NameInMap("AppName")
     public String appName;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("AhasRegionId")
-    public String ahasRegionId;
+    @NameInMap("Namespace")
+    public String namespace;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static GetSentinelAppSumMetricRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSentinelAppSumMetricRequest self = new GetSentinelAppSumMetricRequest();
@@ -35,12 +35,12 @@ public class GetSentinelAppSumMetricRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
-    public GetSentinelAppSumMetricRequest setNamespace(String namespace) {
-        this.namespace = namespace;
+    public GetSentinelAppSumMetricRequest setAhasRegionId(String ahasRegionId) {
+        this.ahasRegionId = ahasRegionId;
         return this;
     }
-    public String getNamespace() {
-        return this.namespace;
+    public String getAhasRegionId() {
+        return this.ahasRegionId;
     }
 
     public GetSentinelAppSumMetricRequest setAppName(String appName) {
@@ -51,14 +51,6 @@ public class GetSentinelAppSumMetricRequest extends TeaModel {
         return this.appName;
     }
 
-    public GetSentinelAppSumMetricRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public GetSentinelAppSumMetricRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -67,12 +59,20 @@ public class GetSentinelAppSumMetricRequest extends TeaModel {
         return this.endTime;
     }
 
-    public GetSentinelAppSumMetricRequest setAhasRegionId(String ahasRegionId) {
-        this.ahasRegionId = ahasRegionId;
+    public GetSentinelAppSumMetricRequest setNamespace(String namespace) {
+        this.namespace = namespace;
         return this;
     }
-    public String getAhasRegionId() {
-        return this.ahasRegionId;
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    public GetSentinelAppSumMetricRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

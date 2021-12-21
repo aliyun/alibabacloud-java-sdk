@@ -4,17 +4,17 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class ListSystemRulesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ListSystemRulesResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ListSystemRulesResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class ListSystemRulesResponseBody extends TeaModel {
     public static ListSystemRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSystemRulesResponseBody self = new ListSystemRulesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListSystemRulesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListSystemRulesResponseBody setData(ListSystemRulesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListSystemRulesResponseBodyData getData() {
+        return this.data;
     }
 
     public ListSystemRulesResponseBody setMessage(String message) {
@@ -40,22 +56,6 @@ public class ListSystemRulesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListSystemRulesResponseBody setData(ListSystemRulesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListSystemRulesResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListSystemRulesResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ListSystemRulesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -68,20 +68,20 @@ public class ListSystemRulesResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
-        @NameInMap("Namespace")
-        public String namespace;
+        @NameInMap("Enable")
+        public Boolean enable;
 
         @NameInMap("MetricType")
         public Integer metricType;
 
-        @NameInMap("Threshold")
-        public Float threshold;
-
-        @NameInMap("Enable")
-        public Boolean enable;
+        @NameInMap("Namespace")
+        public String namespace;
 
         @NameInMap("RuleId")
         public Long ruleId;
+
+        @NameInMap("Threshold")
+        public Float threshold;
 
         public static ListSystemRulesResponseBodyDataDatas build(java.util.Map<String, ?> map) throws Exception {
             ListSystemRulesResponseBodyDataDatas self = new ListSystemRulesResponseBodyDataDatas();
@@ -96,12 +96,12 @@ public class ListSystemRulesResponseBody extends TeaModel {
             return this.appName;
         }
 
-        public ListSystemRulesResponseBodyDataDatas setNamespace(String namespace) {
-            this.namespace = namespace;
+        public ListSystemRulesResponseBodyDataDatas setEnable(Boolean enable) {
+            this.enable = enable;
             return this;
         }
-        public String getNamespace() {
-            return this.namespace;
+        public Boolean getEnable() {
+            return this.enable;
         }
 
         public ListSystemRulesResponseBodyDataDatas setMetricType(Integer metricType) {
@@ -112,20 +112,12 @@ public class ListSystemRulesResponseBody extends TeaModel {
             return this.metricType;
         }
 
-        public ListSystemRulesResponseBodyDataDatas setThreshold(Float threshold) {
-            this.threshold = threshold;
+        public ListSystemRulesResponseBodyDataDatas setNamespace(String namespace) {
+            this.namespace = namespace;
             return this;
         }
-        public Float getThreshold() {
-            return this.threshold;
-        }
-
-        public ListSystemRulesResponseBodyDataDatas setEnable(Boolean enable) {
-            this.enable = enable;
-            return this;
-        }
-        public Boolean getEnable() {
-            return this.enable;
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public ListSystemRulesResponseBodyDataDatas setRuleId(Long ruleId) {
@@ -136,17 +128,22 @@ public class ListSystemRulesResponseBody extends TeaModel {
             return this.ruleId;
         }
 
+        public ListSystemRulesResponseBodyDataDatas setThreshold(Float threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public Float getThreshold() {
+            return this.threshold;
+        }
+
     }
 
     public static class ListSystemRulesResponseBodyData extends TeaModel {
-        @NameInMap("PageIndex")
-        public Integer pageIndex;
-
         @NameInMap("Datas")
         public java.util.List<ListSystemRulesResponseBodyDataDatas> datas;
 
-        @NameInMap("TotalPage")
-        public Integer totalPage;
+        @NameInMap("PageIndex")
+        public Integer pageIndex;
 
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -154,17 +151,12 @@ public class ListSystemRulesResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        @NameInMap("TotalPage")
+        public Integer totalPage;
+
         public static ListSystemRulesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListSystemRulesResponseBodyData self = new ListSystemRulesResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListSystemRulesResponseBodyData setPageIndex(Integer pageIndex) {
-            this.pageIndex = pageIndex;
-            return this;
-        }
-        public Integer getPageIndex() {
-            return this.pageIndex;
         }
 
         public ListSystemRulesResponseBodyData setDatas(java.util.List<ListSystemRulesResponseBodyDataDatas> datas) {
@@ -175,12 +167,12 @@ public class ListSystemRulesResponseBody extends TeaModel {
             return this.datas;
         }
 
-        public ListSystemRulesResponseBodyData setTotalPage(Integer totalPage) {
-            this.totalPage = totalPage;
+        public ListSystemRulesResponseBodyData setPageIndex(Integer pageIndex) {
+            this.pageIndex = pageIndex;
             return this;
         }
-        public Integer getTotalPage() {
-            return this.totalPage;
+        public Integer getPageIndex() {
+            return this.pageIndex;
         }
 
         public ListSystemRulesResponseBodyData setPageSize(Integer pageSize) {
@@ -197,6 +189,14 @@ public class ListSystemRulesResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
+        }
+
+        public ListSystemRulesResponseBodyData setTotalPage(Integer totalPage) {
+            this.totalPage = totalPage;
+            return this;
+        }
+        public Integer getTotalPage() {
+            return this.totalPage;
         }
 
     }

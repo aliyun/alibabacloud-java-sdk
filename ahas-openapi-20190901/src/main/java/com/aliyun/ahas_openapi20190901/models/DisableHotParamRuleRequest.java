@@ -4,23 +4,15 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class DisableHotParamRuleRequest extends TeaModel {
-    @NameInMap("RuleId")
-    public Long ruleId;
-
     @NameInMap("AhasRegionId")
     public String ahasRegionId;
+
+    @NameInMap("RuleId")
+    public Long ruleId;
 
     public static DisableHotParamRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DisableHotParamRuleRequest self = new DisableHotParamRuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DisableHotParamRuleRequest setRuleId(Long ruleId) {
-        this.ruleId = ruleId;
-        return this;
-    }
-    public Long getRuleId() {
-        return this.ruleId;
     }
 
     public DisableHotParamRuleRequest setAhasRegionId(String ahasRegionId) {
@@ -29,6 +21,14 @@ public class DisableHotParamRuleRequest extends TeaModel {
     }
     public String getAhasRegionId() {
         return this.ahasRegionId;
+    }
+
+    public DisableHotParamRuleRequest setRuleId(Long ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public Long getRuleId() {
+        return this.ruleId;
     }
 
 }

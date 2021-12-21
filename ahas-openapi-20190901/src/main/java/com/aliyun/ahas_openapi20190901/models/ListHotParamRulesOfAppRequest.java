@@ -4,11 +4,14 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class ListHotParamRulesOfAppRequest extends TeaModel {
-    @NameInMap("Namespace")
-    public String namespace;
+    @NameInMap("AhasRegionId")
+    public String ahasRegionId;
 
     @NameInMap("AppName")
     public String appName;
+
+    @NameInMap("Namespace")
+    public String namespace;
 
     @NameInMap("PageIndex")
     public Integer pageIndex;
@@ -16,20 +19,17 @@ public class ListHotParamRulesOfAppRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("AhasRegionId")
-    public String ahasRegionId;
-
     public static ListHotParamRulesOfAppRequest build(java.util.Map<String, ?> map) throws Exception {
         ListHotParamRulesOfAppRequest self = new ListHotParamRulesOfAppRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListHotParamRulesOfAppRequest setNamespace(String namespace) {
-        this.namespace = namespace;
+    public ListHotParamRulesOfAppRequest setAhasRegionId(String ahasRegionId) {
+        this.ahasRegionId = ahasRegionId;
         return this;
     }
-    public String getNamespace() {
-        return this.namespace;
+    public String getAhasRegionId() {
+        return this.ahasRegionId;
     }
 
     public ListHotParamRulesOfAppRequest setAppName(String appName) {
@@ -38,6 +38,14 @@ public class ListHotParamRulesOfAppRequest extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public ListHotParamRulesOfAppRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public ListHotParamRulesOfAppRequest setPageIndex(Integer pageIndex) {
@@ -54,14 +62,6 @@ public class ListHotParamRulesOfAppRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListHotParamRulesOfAppRequest setAhasRegionId(String ahasRegionId) {
-        this.ahasRegionId = ahasRegionId;
-        return this;
-    }
-    public String getAhasRegionId() {
-        return this.ahasRegionId;
     }
 
 }

@@ -4,14 +4,14 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class CheckExperimentRunnableResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class CheckExperimentRunnableResponseBody extends TeaModel {
     public static CheckExperimentRunnableResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CheckExperimentRunnableResponseBody self = new CheckExperimentRunnableResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CheckExperimentRunnableResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public CheckExperimentRunnableResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class CheckExperimentRunnableResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CheckExperimentRunnableResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public CheckExperimentRunnableResponseBody setSuccess(Boolean success) {

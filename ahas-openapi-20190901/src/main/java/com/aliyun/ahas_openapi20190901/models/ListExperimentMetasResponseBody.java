@@ -4,11 +4,14 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class ListExperimentMetasResponseBody extends TeaModel {
-    @NameInMap("Pages")
-    public Integer pages;
+    @NameInMap("Code")
+    public String code;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Content")
+    public java.util.List<ListExperimentMetasResponseBodyContent> content;
+
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("Message")
     public String message;
@@ -16,40 +19,45 @@ public class ListExperimentMetasResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("Pages")
+    public Integer pages;
 
-    @NameInMap("Content")
-    public java.util.List<ListExperimentMetasResponseBodyContent> content;
-
-    @NameInMap("Total")
-    public Integer total;
-
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Total")
+    public Integer total;
 
     public static ListExperimentMetasResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListExperimentMetasResponseBody self = new ListExperimentMetasResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListExperimentMetasResponseBody setPages(Integer pages) {
-        this.pages = pages;
+    public ListExperimentMetasResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Integer getPages() {
-        return this.pages;
+    public String getCode() {
+        return this.code;
     }
 
-    public ListExperimentMetasResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ListExperimentMetasResponseBody setContent(java.util.List<ListExperimentMetasResponseBodyContent> content) {
+        this.content = content;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<ListExperimentMetasResponseBodyContent> getContent() {
+        return this.content;
+    }
+
+    public ListExperimentMetasResponseBody setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public ListExperimentMetasResponseBody setMessage(String message) {
@@ -68,36 +76,20 @@ public class ListExperimentMetasResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public ListExperimentMetasResponseBody setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public ListExperimentMetasResponseBody setPages(Integer pages) {
+        this.pages = pages;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public Integer getPages() {
+        return this.pages;
     }
 
-    public ListExperimentMetasResponseBody setContent(java.util.List<ListExperimentMetasResponseBodyContent> content) {
-        this.content = content;
+    public ListExperimentMetasResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<ListExperimentMetasResponseBodyContent> getContent() {
-        return this.content;
-    }
-
-    public ListExperimentMetasResponseBody setTotal(Integer total) {
-        this.total = total;
-        return this;
-    }
-    public Integer getTotal() {
-        return this.total;
-    }
-
-    public ListExperimentMetasResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListExperimentMetasResponseBody setSuccess(Boolean success) {
@@ -108,33 +100,33 @@ public class ListExperimentMetasResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class ListExperimentMetasResponseBodyContent extends TeaModel {
-        @NameInMap("State")
-        public String state;
+    public ListExperimentMetasResponseBody setTotal(Integer total) {
+        this.total = total;
+        return this;
+    }
+    public Integer getTotal() {
+        return this.total;
+    }
 
+    public static class ListExperimentMetasResponseBodyContent extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
         @NameInMap("ExperimentId")
         public String experimentId;
 
-        @NameInMap("Tags")
-        public java.util.List<String> tags;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("State")
+        public String state;
+
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
 
         public static ListExperimentMetasResponseBodyContent build(java.util.Map<String, ?> map) throws Exception {
             ListExperimentMetasResponseBodyContent self = new ListExperimentMetasResponseBodyContent();
             return TeaModel.build(map, self);
-        }
-
-        public ListExperimentMetasResponseBodyContent setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
         }
 
         public ListExperimentMetasResponseBodyContent setCreateTime(Long createTime) {
@@ -153,20 +145,28 @@ public class ListExperimentMetasResponseBody extends TeaModel {
             return this.experimentId;
         }
 
-        public ListExperimentMetasResponseBodyContent setTags(java.util.List<String> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<String> getTags() {
-            return this.tags;
-        }
-
         public ListExperimentMetasResponseBodyContent setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListExperimentMetasResponseBodyContent setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
+        public ListExperimentMetasResponseBodyContent setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
     }

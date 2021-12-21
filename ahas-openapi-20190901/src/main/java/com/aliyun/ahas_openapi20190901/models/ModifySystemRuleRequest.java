@@ -4,26 +4,26 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifySystemRuleRequest extends TeaModel {
-    @NameInMap("Threshold")
-    public Float threshold;
+    @NameInMap("AhasRegionId")
+    public String ahasRegionId;
 
     @NameInMap("RuleId")
     public Long ruleId;
 
-    @NameInMap("AhasRegionId")
-    public String ahasRegionId;
+    @NameInMap("Threshold")
+    public Float threshold;
 
     public static ModifySystemRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySystemRuleRequest self = new ModifySystemRuleRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifySystemRuleRequest setThreshold(Float threshold) {
-        this.threshold = threshold;
+    public ModifySystemRuleRequest setAhasRegionId(String ahasRegionId) {
+        this.ahasRegionId = ahasRegionId;
         return this;
     }
-    public Float getThreshold() {
-        return this.threshold;
+    public String getAhasRegionId() {
+        return this.ahasRegionId;
     }
 
     public ModifySystemRuleRequest setRuleId(Long ruleId) {
@@ -34,12 +34,12 @@ public class ModifySystemRuleRequest extends TeaModel {
         return this.ruleId;
     }
 
-    public ModifySystemRuleRequest setAhasRegionId(String ahasRegionId) {
-        this.ahasRegionId = ahasRegionId;
+    public ModifySystemRuleRequest setThreshold(Float threshold) {
+        this.threshold = threshold;
         return this;
     }
-    public String getAhasRegionId() {
-        return this.ahasRegionId;
+    public Float getThreshold() {
+        return this.threshold;
     }
 
 }

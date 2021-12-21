@@ -3,7 +3,10 @@ package com.aliyun.ahas_openapi20190901.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateExperimentBasicInfoResponseBody extends TeaModel {
+public class GetUserApplicationGroupsResponseBody extends TeaModel {
+    @NameInMap("AppGroups")
+    public java.util.List<String> appGroups;
+
     @NameInMap("Code")
     public String code;
 
@@ -19,12 +22,20 @@ public class UpdateExperimentBasicInfoResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static UpdateExperimentBasicInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateExperimentBasicInfoResponseBody self = new UpdateExperimentBasicInfoResponseBody();
+    public static GetUserApplicationGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetUserApplicationGroupsResponseBody self = new GetUserApplicationGroupsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateExperimentBasicInfoResponseBody setCode(String code) {
+    public GetUserApplicationGroupsResponseBody setAppGroups(java.util.List<String> appGroups) {
+        this.appGroups = appGroups;
+        return this;
+    }
+    public java.util.List<String> getAppGroups() {
+        return this.appGroups;
+    }
+
+    public GetUserApplicationGroupsResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -32,7 +43,7 @@ public class UpdateExperimentBasicInfoResponseBody extends TeaModel {
         return this.code;
     }
 
-    public UpdateExperimentBasicInfoResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public GetUserApplicationGroupsResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -40,7 +51,7 @@ public class UpdateExperimentBasicInfoResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public UpdateExperimentBasicInfoResponseBody setMessage(String message) {
+    public GetUserApplicationGroupsResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -48,7 +59,7 @@ public class UpdateExperimentBasicInfoResponseBody extends TeaModel {
         return this.message;
     }
 
-    public UpdateExperimentBasicInfoResponseBody setRequestId(String requestId) {
+    public GetUserApplicationGroupsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +67,7 @@ public class UpdateExperimentBasicInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateExperimentBasicInfoResponseBody setSuccess(Boolean success) {
+    public GetUserApplicationGroupsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

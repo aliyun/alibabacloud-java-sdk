@@ -4,11 +4,8 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateExperimentResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("ExperimentId")
     public String experimentId;
@@ -16,8 +13,11 @@ public class CreateExperimentResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,20 +27,12 @@ public class CreateExperimentResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateExperimentResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateExperimentResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateExperimentResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public String getCode() {
+        return this.code;
     }
 
     public CreateExperimentResponseBody setExperimentId(String experimentId) {
@@ -59,12 +51,20 @@ public class CreateExperimentResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public CreateExperimentResponseBody setCode(String code) {
-        this.code = code;
+    public CreateExperimentResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public CreateExperimentResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateExperimentResponseBody setSuccess(Boolean success) {

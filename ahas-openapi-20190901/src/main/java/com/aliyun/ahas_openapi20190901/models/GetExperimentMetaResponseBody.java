@@ -4,23 +4,26 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class GetExperimentMetaResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("State")
-    public String state;
-
-    @NameInMap("ExperimentId")
-    public String experimentId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("CreateTime")
     public String createTime;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("ExperimentId")
+    public String experimentId;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("State")
+    public String state;
 
     @NameInMap("Success")
     public Boolean success;
@@ -28,44 +31,17 @@ public class GetExperimentMetaResponseBody extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
-    @NameInMap("Name")
-    public String name;
-
     public static GetExperimentMetaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetExperimentMetaResponseBody self = new GetExperimentMetaResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetExperimentMetaResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetExperimentMetaResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetExperimentMetaResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetExperimentMetaResponseBody setState(String state) {
-        this.state = state;
-        return this;
-    }
-    public String getState() {
-        return this.state;
-    }
-
-    public GetExperimentMetaResponseBody setExperimentId(String experimentId) {
-        this.experimentId = experimentId;
-        return this;
-    }
-    public String getExperimentId() {
-        return this.experimentId;
+    public String getCode() {
+        return this.code;
     }
 
     public GetExperimentMetaResponseBody setCreateTime(String createTime) {
@@ -76,12 +52,44 @@ public class GetExperimentMetaResponseBody extends TeaModel {
         return this.createTime;
     }
 
-    public GetExperimentMetaResponseBody setCode(String code) {
-        this.code = code;
+    public GetExperimentMetaResponseBody setExperimentId(String experimentId) {
+        this.experimentId = experimentId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getExperimentId() {
+        return this.experimentId;
+    }
+
+    public GetExperimentMetaResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public GetExperimentMetaResponseBody setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public GetExperimentMetaResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetExperimentMetaResponseBody setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
     }
 
     public GetExperimentMetaResponseBody setSuccess(Boolean success) {
@@ -98,14 +106,6 @@ public class GetExperimentMetaResponseBody extends TeaModel {
     }
     public java.util.List<String> getTags() {
         return this.tags;
-    }
-
-    public GetExperimentMetaResponseBody setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
 }

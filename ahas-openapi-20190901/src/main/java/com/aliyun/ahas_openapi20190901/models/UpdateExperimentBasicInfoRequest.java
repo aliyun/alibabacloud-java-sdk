@@ -4,20 +4,20 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class UpdateExperimentBasicInfoRequest extends TeaModel {
-    @NameInMap("ExperimentId")
-    public String experimentId;
-
-    @NameInMap("NameSpace")
-    public String nameSpace;
-
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("AhasRegionId")
+    public String ahasRegionId;
 
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("AhasRegionId")
-    public String ahasRegionId;
+    @NameInMap("ExperimentId")
+    public String experimentId;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("NameSpace")
+    public String nameSpace;
 
     @NameInMap("Tags")
     public java.util.List<String> tags;
@@ -27,28 +27,12 @@ public class UpdateExperimentBasicInfoRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateExperimentBasicInfoRequest setExperimentId(String experimentId) {
-        this.experimentId = experimentId;
+    public UpdateExperimentBasicInfoRequest setAhasRegionId(String ahasRegionId) {
+        this.ahasRegionId = ahasRegionId;
         return this;
     }
-    public String getExperimentId() {
-        return this.experimentId;
-    }
-
-    public UpdateExperimentBasicInfoRequest setNameSpace(String nameSpace) {
-        this.nameSpace = nameSpace;
-        return this;
-    }
-    public String getNameSpace() {
-        return this.nameSpace;
-    }
-
-    public UpdateExperimentBasicInfoRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
+    public String getAhasRegionId() {
+        return this.ahasRegionId;
     }
 
     public UpdateExperimentBasicInfoRequest setDescription(String description) {
@@ -59,12 +43,28 @@ public class UpdateExperimentBasicInfoRequest extends TeaModel {
         return this.description;
     }
 
-    public UpdateExperimentBasicInfoRequest setAhasRegionId(String ahasRegionId) {
-        this.ahasRegionId = ahasRegionId;
+    public UpdateExperimentBasicInfoRequest setExperimentId(String experimentId) {
+        this.experimentId = experimentId;
         return this;
     }
-    public String getAhasRegionId() {
-        return this.ahasRegionId;
+    public String getExperimentId() {
+        return this.experimentId;
+    }
+
+    public UpdateExperimentBasicInfoRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public UpdateExperimentBasicInfoRequest setNameSpace(String nameSpace) {
+        this.nameSpace = nameSpace;
+        return this;
+    }
+    public String getNameSpace() {
+        return this.nameSpace;
     }
 
     public UpdateExperimentBasicInfoRequest setTags(java.util.List<String> tags) {

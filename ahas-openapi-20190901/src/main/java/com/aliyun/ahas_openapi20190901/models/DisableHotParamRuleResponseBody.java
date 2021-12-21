@@ -7,6 +7,9 @@ public class DisableHotParamRuleResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public DisableHotParamRuleResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DisableHotParamRuleResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public DisableHotParamRuleResponseBodyData data;
 
     public static DisableHotParamRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DisableHotParamRuleResponseBody self = new DisableHotParamRuleResponseBody();
@@ -30,6 +30,14 @@ public class DisableHotParamRuleResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DisableHotParamRuleResponseBody setData(DisableHotParamRuleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DisableHotParamRuleResponseBodyData getData() {
+        return this.data;
     }
 
     public DisableHotParamRuleResponseBody setMessage(String message) {
@@ -56,27 +64,27 @@ public class DisableHotParamRuleResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DisableHotParamRuleResponseBody setData(DisableHotParamRuleResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DisableHotParamRuleResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class DisableHotParamRuleResponseBodyDataParamFlowItemList extends TeaModel {
+        @NameInMap("ItemType")
+        public String itemType;
+
         @NameInMap("ItemValue")
         public String itemValue;
 
         @NameInMap("Threshold")
         public Float threshold;
 
-        @NameInMap("ItemType")
-        public String itemType;
-
         public static DisableHotParamRuleResponseBodyDataParamFlowItemList build(java.util.Map<String, ?> map) throws Exception {
             DisableHotParamRuleResponseBodyDataParamFlowItemList self = new DisableHotParamRuleResponseBodyDataParamFlowItemList();
             return TeaModel.build(map, self);
+        }
+
+        public DisableHotParamRuleResponseBodyDataParamFlowItemList setItemType(String itemType) {
+            this.itemType = itemType;
+            return this;
+        }
+        public String getItemType() {
+            return this.itemType;
         }
 
         public DisableHotParamRuleResponseBodyDataParamFlowItemList setItemValue(String itemValue) {
@@ -95,40 +103,20 @@ public class DisableHotParamRuleResponseBody extends TeaModel {
             return this.threshold;
         }
 
-        public DisableHotParamRuleResponseBodyDataParamFlowItemList setItemType(String itemType) {
-            this.itemType = itemType;
-            return this;
-        }
-        public String getItemType() {
-            return this.itemType;
-        }
-
     }
 
     public static class DisableHotParamRuleResponseBodyData extends TeaModel {
-        @NameInMap("ParamIdx")
-        public Integer paramIdx;
-
-        @NameInMap("Namespace")
-        public String namespace;
-
-        @NameInMap("StatDurationSec")
-        public Long statDurationSec;
+        @NameInMap("AppName")
+        public String appName;
 
         @NameInMap("BurstCount")
         public Integer burstCount;
 
-        @NameInMap("RuleId")
-        public Long ruleId;
-
-        @NameInMap("AppName")
-        public String appName;
-
-        @NameInMap("Resource")
-        public String resource;
-
         @NameInMap("ControlBehavior")
         public Integer controlBehavior;
+
+        @NameInMap("Enable")
+        public Boolean enable;
 
         @NameInMap("MaxQueueingTimeMs")
         public Integer maxQueueingTimeMs;
@@ -136,58 +124,30 @@ public class DisableHotParamRuleResponseBody extends TeaModel {
         @NameInMap("MetricType")
         public Integer metricType;
 
-        @NameInMap("Threshold")
-        public Float threshold;
-
-        @NameInMap("Enable")
-        public Boolean enable;
+        @NameInMap("Namespace")
+        public String namespace;
 
         @NameInMap("ParamFlowItemList")
         public java.util.List<DisableHotParamRuleResponseBodyDataParamFlowItemList> paramFlowItemList;
 
+        @NameInMap("ParamIdx")
+        public Integer paramIdx;
+
+        @NameInMap("Resource")
+        public String resource;
+
+        @NameInMap("RuleId")
+        public Long ruleId;
+
+        @NameInMap("StatDurationSec")
+        public Long statDurationSec;
+
+        @NameInMap("Threshold")
+        public Float threshold;
+
         public static DisableHotParamRuleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DisableHotParamRuleResponseBodyData self = new DisableHotParamRuleResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DisableHotParamRuleResponseBodyData setParamIdx(Integer paramIdx) {
-            this.paramIdx = paramIdx;
-            return this;
-        }
-        public Integer getParamIdx() {
-            return this.paramIdx;
-        }
-
-        public DisableHotParamRuleResponseBodyData setNamespace(String namespace) {
-            this.namespace = namespace;
-            return this;
-        }
-        public String getNamespace() {
-            return this.namespace;
-        }
-
-        public DisableHotParamRuleResponseBodyData setStatDurationSec(Long statDurationSec) {
-            this.statDurationSec = statDurationSec;
-            return this;
-        }
-        public Long getStatDurationSec() {
-            return this.statDurationSec;
-        }
-
-        public DisableHotParamRuleResponseBodyData setBurstCount(Integer burstCount) {
-            this.burstCount = burstCount;
-            return this;
-        }
-        public Integer getBurstCount() {
-            return this.burstCount;
-        }
-
-        public DisableHotParamRuleResponseBodyData setRuleId(Long ruleId) {
-            this.ruleId = ruleId;
-            return this;
-        }
-        public Long getRuleId() {
-            return this.ruleId;
         }
 
         public DisableHotParamRuleResponseBodyData setAppName(String appName) {
@@ -198,12 +158,12 @@ public class DisableHotParamRuleResponseBody extends TeaModel {
             return this.appName;
         }
 
-        public DisableHotParamRuleResponseBodyData setResource(String resource) {
-            this.resource = resource;
+        public DisableHotParamRuleResponseBodyData setBurstCount(Integer burstCount) {
+            this.burstCount = burstCount;
             return this;
         }
-        public String getResource() {
-            return this.resource;
+        public Integer getBurstCount() {
+            return this.burstCount;
         }
 
         public DisableHotParamRuleResponseBodyData setControlBehavior(Integer controlBehavior) {
@@ -212,6 +172,14 @@ public class DisableHotParamRuleResponseBody extends TeaModel {
         }
         public Integer getControlBehavior() {
             return this.controlBehavior;
+        }
+
+        public DisableHotParamRuleResponseBodyData setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
         }
 
         public DisableHotParamRuleResponseBodyData setMaxQueueingTimeMs(Integer maxQueueingTimeMs) {
@@ -230,20 +198,12 @@ public class DisableHotParamRuleResponseBody extends TeaModel {
             return this.metricType;
         }
 
-        public DisableHotParamRuleResponseBodyData setThreshold(Float threshold) {
-            this.threshold = threshold;
+        public DisableHotParamRuleResponseBodyData setNamespace(String namespace) {
+            this.namespace = namespace;
             return this;
         }
-        public Float getThreshold() {
-            return this.threshold;
-        }
-
-        public DisableHotParamRuleResponseBodyData setEnable(Boolean enable) {
-            this.enable = enable;
-            return this;
-        }
-        public Boolean getEnable() {
-            return this.enable;
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public DisableHotParamRuleResponseBodyData setParamFlowItemList(java.util.List<DisableHotParamRuleResponseBodyDataParamFlowItemList> paramFlowItemList) {
@@ -252,6 +212,46 @@ public class DisableHotParamRuleResponseBody extends TeaModel {
         }
         public java.util.List<DisableHotParamRuleResponseBodyDataParamFlowItemList> getParamFlowItemList() {
             return this.paramFlowItemList;
+        }
+
+        public DisableHotParamRuleResponseBodyData setParamIdx(Integer paramIdx) {
+            this.paramIdx = paramIdx;
+            return this;
+        }
+        public Integer getParamIdx() {
+            return this.paramIdx;
+        }
+
+        public DisableHotParamRuleResponseBodyData setResource(String resource) {
+            this.resource = resource;
+            return this;
+        }
+        public String getResource() {
+            return this.resource;
+        }
+
+        public DisableHotParamRuleResponseBodyData setRuleId(Long ruleId) {
+            this.ruleId = ruleId;
+            return this;
+        }
+        public Long getRuleId() {
+            return this.ruleId;
+        }
+
+        public DisableHotParamRuleResponseBodyData setStatDurationSec(Long statDurationSec) {
+            this.statDurationSec = statDurationSec;
+            return this;
+        }
+        public Long getStatDurationSec() {
+            return this.statDurationSec;
+        }
+
+        public DisableHotParamRuleResponseBodyData setThreshold(Float threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public Float getThreshold() {
+            return this.threshold;
         }
 
     }
