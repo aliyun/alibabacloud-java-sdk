@@ -4,17 +4,14 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenInterRegionBandwidthLimitsRequest extends TeaModel {
+    @NameInMap("CenId")
+    public String cenId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -22,12 +19,23 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CenId")
-    public String cenId;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribeCenInterRegionBandwidthLimitsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenInterRegionBandwidthLimitsRequest self = new DescribeCenInterRegionBandwidthLimitsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCenInterRegionBandwidthLimitsRequest setCenId(String cenId) {
+        this.cenId = cenId;
+        return this;
+    }
+    public String getCenId() {
+        return this.cenId;
     }
 
     public DescribeCenInterRegionBandwidthLimitsRequest setOwnerAccount(String ownerAccount) {
@@ -46,22 +54,6 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeCenInterRegionBandwidthLimitsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeCenInterRegionBandwidthLimitsRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
     public DescribeCenInterRegionBandwidthLimitsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -78,12 +70,20 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeCenInterRegionBandwidthLimitsRequest setCenId(String cenId) {
-        this.cenId = cenId;
+    public DescribeCenInterRegionBandwidthLimitsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getCenId() {
-        return this.cenId;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeCenInterRegionBandwidthLimitsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

@@ -4,24 +4,40 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCensResponseBody extends TeaModel {
+    @NameInMap("Cens")
+    public DescribeCensResponseBodyCens cens;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Cens")
-    public DescribeCensResponseBodyCens cens;
 
     public static DescribeCensResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCensResponseBody self = new DescribeCensResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCensResponseBody setCens(DescribeCensResponseBodyCens cens) {
+        this.cens = cens;
+        return this;
+    }
+    public DescribeCensResponseBodyCens getCens() {
+        return this.cens;
+    }
+
+    public DescribeCensResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeCensResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class DescribeCensResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCensResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeCensResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,12 +64,23 @@ public class DescribeCensResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeCensResponseBody setCens(DescribeCensResponseBodyCens cens) {
-        this.cens = cens;
-        return this;
-    }
-    public DescribeCensResponseBodyCens getCens() {
-        return this.cens;
+    public static class DescribeCensResponseBodyCensCenCenBandwidthPackageIds extends TeaModel {
+        @NameInMap("CenBandwidthPackageId")
+        public java.util.List<String> cenBandwidthPackageId;
+
+        public static DescribeCensResponseBodyCensCenCenBandwidthPackageIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCensResponseBodyCensCenCenBandwidthPackageIds self = new DescribeCensResponseBodyCensCenCenBandwidthPackageIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCensResponseBodyCensCenCenBandwidthPackageIds setCenBandwidthPackageId(java.util.List<String> cenBandwidthPackageId) {
+            this.cenBandwidthPackageId = cenBandwidthPackageId;
+            return this;
+        }
+        public java.util.List<String> getCenBandwidthPackageId() {
+            return this.cenBandwidthPackageId;
+        }
+
     }
 
     public static class DescribeCensResponseBodyCensCenTagsTag extends TeaModel {
@@ -113,28 +132,12 @@ public class DescribeCensResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeCensResponseBodyCensCenCenBandwidthPackageIds extends TeaModel {
-        @NameInMap("CenBandwidthPackageId")
-        public java.util.List<String> cenBandwidthPackageId;
-
-        public static DescribeCensResponseBodyCensCenCenBandwidthPackageIds build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCensResponseBodyCensCenCenBandwidthPackageIds self = new DescribeCensResponseBodyCensCenCenBandwidthPackageIds();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeCensResponseBodyCensCenCenBandwidthPackageIds setCenBandwidthPackageId(java.util.List<String> cenBandwidthPackageId) {
-            this.cenBandwidthPackageId = cenBandwidthPackageId;
-            return this;
-        }
-        public java.util.List<String> getCenBandwidthPackageId() {
-            return this.cenBandwidthPackageId;
-        }
-
-    }
-
     public static class DescribeCensResponseBodyCensCen extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("CenBandwidthPackageIds")
+        public DescribeCensResponseBodyCensCenCenBandwidthPackageIds cenBandwidthPackageIds;
+
+        @NameInMap("CenId")
+        public String cenId;
 
         @NameInMap("CreationTime")
         public String creationTime;
@@ -142,32 +145,37 @@ public class DescribeCensResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("CenId")
-        public String cenId;
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("ProtectionLevel")
         public String protectionLevel;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("Tags")
         public DescribeCensResponseBodyCensCenTags tags;
-
-        @NameInMap("CenBandwidthPackageIds")
-        public DescribeCensResponseBodyCensCenCenBandwidthPackageIds cenBandwidthPackageIds;
 
         public static DescribeCensResponseBodyCensCen build(java.util.Map<String, ?> map) throws Exception {
             DescribeCensResponseBodyCensCen self = new DescribeCensResponseBodyCensCen();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCensResponseBodyCensCen setStatus(String status) {
-            this.status = status;
+        public DescribeCensResponseBodyCensCen setCenBandwidthPackageIds(DescribeCensResponseBodyCensCenCenBandwidthPackageIds cenBandwidthPackageIds) {
+            this.cenBandwidthPackageIds = cenBandwidthPackageIds;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public DescribeCensResponseBodyCensCenCenBandwidthPackageIds getCenBandwidthPackageIds() {
+            return this.cenBandwidthPackageIds;
+        }
+
+        public DescribeCensResponseBodyCensCen setCenId(String cenId) {
+            this.cenId = cenId;
+            return this;
+        }
+        public String getCenId() {
+            return this.cenId;
         }
 
         public DescribeCensResponseBodyCensCen setCreationTime(String creationTime) {
@@ -186,12 +194,12 @@ public class DescribeCensResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeCensResponseBodyCensCen setCenId(String cenId) {
-            this.cenId = cenId;
+        public DescribeCensResponseBodyCensCen setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getCenId() {
-            return this.cenId;
+        public String getName() {
+            return this.name;
         }
 
         public DescribeCensResponseBodyCensCen setProtectionLevel(String protectionLevel) {
@@ -202,12 +210,12 @@ public class DescribeCensResponseBody extends TeaModel {
             return this.protectionLevel;
         }
 
-        public DescribeCensResponseBodyCensCen setName(String name) {
-            this.name = name;
+        public DescribeCensResponseBodyCensCen setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeCensResponseBodyCensCen setTags(DescribeCensResponseBodyCensCenTags tags) {
@@ -216,14 +224,6 @@ public class DescribeCensResponseBody extends TeaModel {
         }
         public DescribeCensResponseBodyCensCenTags getTags() {
             return this.tags;
-        }
-
-        public DescribeCensResponseBodyCensCen setCenBandwidthPackageIds(DescribeCensResponseBodyCensCenCenBandwidthPackageIds cenBandwidthPackageIds) {
-            this.cenBandwidthPackageIds = cenBandwidthPackageIds;
-            return this;
-        }
-        public DescribeCensResponseBodyCensCenCenBandwidthPackageIds getCenBandwidthPackageIds() {
-            return this.cenBandwidthPackageIds;
         }
 
     }

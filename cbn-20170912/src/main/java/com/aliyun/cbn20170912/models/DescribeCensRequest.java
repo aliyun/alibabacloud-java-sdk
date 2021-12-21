@@ -4,17 +4,14 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCensRequest extends TeaModel {
+    @NameInMap("Filter")
+    public java.util.List<DescribeCensRequestFilter> filter;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -22,8 +19,11 @@ public class DescribeCensRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Filter")
-    public java.util.List<DescribeCensRequestFilter> filter;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("Tag")
     public java.util.List<DescribeCensRequestTag> tag;
@@ -31,6 +31,14 @@ public class DescribeCensRequest extends TeaModel {
     public static DescribeCensRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCensRequest self = new DescribeCensRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCensRequest setFilter(java.util.List<DescribeCensRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribeCensRequestFilter> getFilter() {
+        return this.filter;
     }
 
     public DescribeCensRequest setOwnerAccount(String ownerAccount) {
@@ -49,22 +57,6 @@ public class DescribeCensRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeCensRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeCensRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
     public DescribeCensRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -81,12 +73,20 @@ public class DescribeCensRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeCensRequest setFilter(java.util.List<DescribeCensRequestFilter> filter) {
-        this.filter = filter;
+    public DescribeCensRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public java.util.List<DescribeCensRequestFilter> getFilter() {
-        return this.filter;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeCensRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeCensRequest setTag(java.util.List<DescribeCensRequestTag> tag) {

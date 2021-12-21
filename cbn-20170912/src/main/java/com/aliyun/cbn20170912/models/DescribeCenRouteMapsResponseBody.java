@@ -4,24 +4,32 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenRouteMapsResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("RouteMaps")
+    public DescribeCenRouteMapsResponseBodyRouteMaps routeMaps;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("RouteMaps")
-    public DescribeCenRouteMapsResponseBodyRouteMaps routeMaps;
-
     public static DescribeCenRouteMapsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenRouteMapsResponseBody self = new DescribeCenRouteMapsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCenRouteMapsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeCenRouteMapsResponseBody setPageSize(Integer pageSize) {
@@ -40,12 +48,12 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCenRouteMapsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeCenRouteMapsResponseBody setRouteMaps(DescribeCenRouteMapsResponseBodyRouteMaps routeMaps) {
+        this.routeMaps = routeMaps;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public DescribeCenRouteMapsResponseBodyRouteMaps getRouteMaps() {
+        return this.routeMaps;
     }
 
     public DescribeCenRouteMapsResponseBody setTotalCount(Integer totalCount) {
@@ -56,86 +64,21 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeCenRouteMapsResponseBody setRouteMaps(DescribeCenRouteMapsResponseBodyRouteMaps routeMaps) {
-        this.routeMaps = routeMaps;
-        return this;
-    }
-    public DescribeCenRouteMapsResponseBodyRouteMaps getRouteMaps() {
-        return this.routeMaps;
-    }
+    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes extends TeaModel {
+        @NameInMap("DestinationChildInstanceType")
+        public java.util.List<String> destinationChildInstanceType;
 
-    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRegionIds extends TeaModel {
-        @NameInMap("SourceRegionId")
-        public java.util.List<String> sourceRegionId;
-
-        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRegionIds build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRegionIds self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRegionIds();
+        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRegionIds setSourceRegionId(java.util.List<String> sourceRegionId) {
-            this.sourceRegionId = sourceRegionId;
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes setDestinationChildInstanceType(java.util.List<String> destinationChildInstanceType) {
+            this.destinationChildInstanceType = destinationChildInstanceType;
             return this;
         }
-        public java.util.List<String> getSourceRegionId() {
-            return this.sourceRegionId;
-        }
-
-    }
-
-    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceChildInstanceTypes extends TeaModel {
-        @NameInMap("SourceChildInstanceType")
-        public java.util.List<String> sourceChildInstanceType;
-
-        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceChildInstanceTypes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceChildInstanceTypes self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceChildInstanceTypes();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceChildInstanceTypes setSourceChildInstanceType(java.util.List<String> sourceChildInstanceType) {
-            this.sourceChildInstanceType = sourceChildInstanceType;
-            return this;
-        }
-        public java.util.List<String> getSourceChildInstanceType() {
-            return this.sourceChildInstanceType;
-        }
-
-    }
-
-    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds extends TeaModel {
-        @NameInMap("DestinationRouteTableId")
-        public java.util.List<String> destinationRouteTableId;
-
-        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds setDestinationRouteTableId(java.util.List<String> destinationRouteTableId) {
-            this.destinationRouteTableId = destinationRouteTableId;
-            return this;
-        }
-        public java.util.List<String> getDestinationRouteTableId() {
-            return this.destinationRouteTableId;
-        }
-
-    }
-
-    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceInstanceIds extends TeaModel {
-        @NameInMap("SourceInstanceId")
-        public java.util.List<String> sourceInstanceId;
-
-        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceInstanceIds build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceInstanceIds self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceInstanceIds();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceInstanceIds setSourceInstanceId(java.util.List<String> sourceInstanceId) {
-            this.sourceInstanceId = sourceInstanceId;
-            return this;
-        }
-        public java.util.List<String> getSourceInstanceId() {
-            return this.sourceInstanceId;
+        public java.util.List<String> getDestinationChildInstanceType() {
+            return this.destinationChildInstanceType;
         }
 
     }
@@ -159,21 +102,59 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRouteTableIds extends TeaModel {
-        @NameInMap("SourceRouteTableId")
-        public java.util.List<String> sourceRouteTableId;
+    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds extends TeaModel {
+        @NameInMap("DestinationInstanceId")
+        public java.util.List<String> destinationInstanceId;
 
-        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRouteTableIds build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRouteTableIds self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRouteTableIds();
+        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRouteTableIds setSourceRouteTableId(java.util.List<String> sourceRouteTableId) {
-            this.sourceRouteTableId = sourceRouteTableId;
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds setDestinationInstanceId(java.util.List<String> destinationInstanceId) {
+            this.destinationInstanceId = destinationInstanceId;
             return this;
         }
-        public java.util.List<String> getSourceRouteTableId() {
-            return this.sourceRouteTableId;
+        public java.util.List<String> getDestinationInstanceId() {
+            return this.destinationInstanceId;
+        }
+
+    }
+
+    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds extends TeaModel {
+        @NameInMap("DestinationRouteTableId")
+        public java.util.List<String> destinationRouteTableId;
+
+        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds setDestinationRouteTableId(java.util.List<String> destinationRouteTableId) {
+            this.destinationRouteTableId = destinationRouteTableId;
+            return this;
+        }
+        public java.util.List<String> getDestinationRouteTableId() {
+            return this.destinationRouteTableId;
+        }
+
+    }
+
+    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns extends TeaModel {
+        @NameInMap("MatchAsn")
+        public java.util.List<String> matchAsn;
+
+        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns setMatchAsn(java.util.List<String> matchAsn) {
+            this.matchAsn = matchAsn;
+            return this;
+        }
+        public java.util.List<String> getMatchAsn() {
+            return this.matchAsn;
         }
 
     }
@@ -193,6 +174,25 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
         public java.util.List<String> getMatchCommunity() {
             return this.matchCommunity;
+        }
+
+    }
+
+    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet extends TeaModel {
+        @NameInMap("OperateCommunity")
+        public java.util.List<String> operateCommunity;
+
+        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet setOperateCommunity(java.util.List<String> operateCommunity) {
+            this.operateCommunity = operateCommunity;
+            return this;
+        }
+        public java.util.List<String> getOperateCommunity() {
+            return this.operateCommunity;
         }
 
     }
@@ -235,85 +235,163 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes extends TeaModel {
-        @NameInMap("DestinationChildInstanceType")
-        public java.util.List<String> destinationChildInstanceType;
+    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceChildInstanceTypes extends TeaModel {
+        @NameInMap("SourceChildInstanceType")
+        public java.util.List<String> sourceChildInstanceType;
 
-        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes();
+        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceChildInstanceTypes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceChildInstanceTypes self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceChildInstanceTypes();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes setDestinationChildInstanceType(java.util.List<String> destinationChildInstanceType) {
-            this.destinationChildInstanceType = destinationChildInstanceType;
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceChildInstanceTypes setSourceChildInstanceType(java.util.List<String> sourceChildInstanceType) {
+            this.sourceChildInstanceType = sourceChildInstanceType;
             return this;
         }
-        public java.util.List<String> getDestinationChildInstanceType() {
-            return this.destinationChildInstanceType;
+        public java.util.List<String> getSourceChildInstanceType() {
+            return this.sourceChildInstanceType;
         }
 
     }
 
-    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds extends TeaModel {
-        @NameInMap("DestinationInstanceId")
-        public java.util.List<String> destinationInstanceId;
+    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceInstanceIds extends TeaModel {
+        @NameInMap("SourceInstanceId")
+        public java.util.List<String> sourceInstanceId;
 
-        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds();
+        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceInstanceIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceInstanceIds self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceInstanceIds();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds setDestinationInstanceId(java.util.List<String> destinationInstanceId) {
-            this.destinationInstanceId = destinationInstanceId;
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceInstanceIds setSourceInstanceId(java.util.List<String> sourceInstanceId) {
+            this.sourceInstanceId = sourceInstanceId;
             return this;
         }
-        public java.util.List<String> getDestinationInstanceId() {
-            return this.destinationInstanceId;
+        public java.util.List<String> getSourceInstanceId() {
+            return this.sourceInstanceId;
         }
 
     }
 
-    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns extends TeaModel {
-        @NameInMap("MatchAsn")
-        public java.util.List<String> matchAsn;
+    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRegionIds extends TeaModel {
+        @NameInMap("SourceRegionId")
+        public java.util.List<String> sourceRegionId;
 
-        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns();
+        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRegionIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRegionIds self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRegionIds();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns setMatchAsn(java.util.List<String> matchAsn) {
-            this.matchAsn = matchAsn;
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRegionIds setSourceRegionId(java.util.List<String> sourceRegionId) {
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
-        public java.util.List<String> getMatchAsn() {
-            return this.matchAsn;
+        public java.util.List<String> getSourceRegionId() {
+            return this.sourceRegionId;
         }
 
     }
 
-    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet extends TeaModel {
-        @NameInMap("OperateCommunity")
-        public java.util.List<String> operateCommunity;
+    public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRouteTableIds extends TeaModel {
+        @NameInMap("SourceRouteTableId")
+        public java.util.List<String> sourceRouteTableId;
 
-        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet();
+        public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRouteTableIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRouteTableIds self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRouteTableIds();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet setOperateCommunity(java.util.List<String> operateCommunity) {
-            this.operateCommunity = operateCommunity;
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRouteTableIds setSourceRouteTableId(java.util.List<String> sourceRouteTableId) {
+            this.sourceRouteTableId = sourceRouteTableId;
             return this;
         }
-        public java.util.List<String> getOperateCommunity() {
-            return this.operateCommunity;
+        public java.util.List<String> getSourceRouteTableId() {
+            return this.sourceRouteTableId;
         }
 
     }
 
     public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMap extends TeaModel {
+        @NameInMap("AsPathMatchMode")
+        public String asPathMatchMode;
+
+        @NameInMap("CenId")
+        public String cenId;
+
+        @NameInMap("CenRegionId")
+        public String cenRegionId;
+
+        @NameInMap("CidrMatchMode")
+        public String cidrMatchMode;
+
+        @NameInMap("CommunityMatchMode")
+        public String communityMatchMode;
+
+        @NameInMap("CommunityOperateMode")
+        public String communityOperateMode;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("DestinationChildInstanceTypes")
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes destinationChildInstanceTypes;
+
+        @NameInMap("DestinationCidrBlocks")
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationCidrBlocks destinationCidrBlocks;
+
+        @NameInMap("DestinationInstanceIds")
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds destinationInstanceIds;
+
+        @NameInMap("DestinationInstanceIdsReverseMatch")
+        public Boolean destinationInstanceIdsReverseMatch;
+
+        @NameInMap("DestinationRouteTableIds")
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds destinationRouteTableIds;
+
+        @NameInMap("MapResult")
+        public String mapResult;
+
+        @NameInMap("MatchAsns")
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns matchAsns;
+
+        @NameInMap("MatchCommunitySet")
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchCommunitySet matchCommunitySet;
+
+        @NameInMap("NextPriority")
+        public Integer nextPriority;
+
+        @NameInMap("OperateCommunitySet")
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet operateCommunitySet;
+
+        @NameInMap("Preference")
+        public Integer preference;
+
+        @NameInMap("PrependAsPath")
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapPrependAsPath prependAsPath;
+
+        @NameInMap("Priority")
+        public Integer priority;
+
         @NameInMap("RouteMapId")
         public String routeMapId;
+
+        @NameInMap("RouteTypes")
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapRouteTypes routeTypes;
+
+        @NameInMap("SourceChildInstanceTypes")
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceChildInstanceTypes sourceChildInstanceTypes;
+
+        @NameInMap("SourceInstanceIds")
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceInstanceIds sourceInstanceIds;
+
+        @NameInMap("SourceInstanceIdsReverseMatch")
+        public Boolean sourceInstanceIdsReverseMatch;
+
+        @NameInMap("SourceRegionIds")
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRegionIds sourceRegionIds;
+
+        @NameInMap("SourceRouteTableIds")
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRouteTableIds sourceRouteTableIds;
 
         @NameInMap("Status")
         public String status;
@@ -321,87 +399,169 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         @NameInMap("TransmitDirection")
         public String transmitDirection;
 
-        @NameInMap("SourceInstanceIdsReverseMatch")
-        public Boolean sourceInstanceIdsReverseMatch;
-
-        @NameInMap("CenRegionId")
-        public String cenRegionId;
-
-        @NameInMap("CenId")
-        public String cenId;
-
-        @NameInMap("Priority")
-        public Integer priority;
-
-        @NameInMap("CommunityOperateMode")
-        public String communityOperateMode;
-
-        @NameInMap("MapResult")
-        public String mapResult;
-
-        @NameInMap("CommunityMatchMode")
-        public String communityMatchMode;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("AsPathMatchMode")
-        public String asPathMatchMode;
-
-        @NameInMap("Preference")
-        public Integer preference;
-
-        @NameInMap("DestinationInstanceIdsReverseMatch")
-        public Boolean destinationInstanceIdsReverseMatch;
-
-        @NameInMap("CidrMatchMode")
-        public String cidrMatchMode;
-
-        @NameInMap("NextPriority")
-        public Integer nextPriority;
-
-        @NameInMap("SourceRegionIds")
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRegionIds sourceRegionIds;
-
-        @NameInMap("SourceChildInstanceTypes")
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceChildInstanceTypes sourceChildInstanceTypes;
-
-        @NameInMap("DestinationRouteTableIds")
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds destinationRouteTableIds;
-
-        @NameInMap("SourceInstanceIds")
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceInstanceIds sourceInstanceIds;
-
-        @NameInMap("DestinationCidrBlocks")
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationCidrBlocks destinationCidrBlocks;
-
-        @NameInMap("SourceRouteTableIds")
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRouteTableIds sourceRouteTableIds;
-
-        @NameInMap("MatchCommunitySet")
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchCommunitySet matchCommunitySet;
-
-        @NameInMap("PrependAsPath")
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapPrependAsPath prependAsPath;
-
-        @NameInMap("RouteTypes")
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapRouteTypes routeTypes;
-
-        @NameInMap("DestinationChildInstanceTypes")
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes destinationChildInstanceTypes;
-
-        @NameInMap("DestinationInstanceIds")
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds destinationInstanceIds;
-
-        @NameInMap("MatchAsns")
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns matchAsns;
-
-        @NameInMap("OperateCommunitySet")
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet operateCommunitySet;
-
         public static DescribeCenRouteMapsResponseBodyRouteMapsRouteMap build(java.util.Map<String, ?> map) throws Exception {
             DescribeCenRouteMapsResponseBodyRouteMapsRouteMap self = new DescribeCenRouteMapsResponseBodyRouteMapsRouteMap();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setAsPathMatchMode(String asPathMatchMode) {
+            this.asPathMatchMode = asPathMatchMode;
+            return this;
+        }
+        public String getAsPathMatchMode() {
+            return this.asPathMatchMode;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setCenId(String cenId) {
+            this.cenId = cenId;
+            return this;
+        }
+        public String getCenId() {
+            return this.cenId;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setCenRegionId(String cenRegionId) {
+            this.cenRegionId = cenRegionId;
+            return this;
+        }
+        public String getCenRegionId() {
+            return this.cenRegionId;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setCidrMatchMode(String cidrMatchMode) {
+            this.cidrMatchMode = cidrMatchMode;
+            return this;
+        }
+        public String getCidrMatchMode() {
+            return this.cidrMatchMode;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setCommunityMatchMode(String communityMatchMode) {
+            this.communityMatchMode = communityMatchMode;
+            return this;
+        }
+        public String getCommunityMatchMode() {
+            return this.communityMatchMode;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setCommunityOperateMode(String communityOperateMode) {
+            this.communityOperateMode = communityOperateMode;
+            return this;
+        }
+        public String getCommunityOperateMode() {
+            return this.communityOperateMode;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setDestinationChildInstanceTypes(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes destinationChildInstanceTypes) {
+            this.destinationChildInstanceTypes = destinationChildInstanceTypes;
+            return this;
+        }
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes getDestinationChildInstanceTypes() {
+            return this.destinationChildInstanceTypes;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setDestinationCidrBlocks(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationCidrBlocks destinationCidrBlocks) {
+            this.destinationCidrBlocks = destinationCidrBlocks;
+            return this;
+        }
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationCidrBlocks getDestinationCidrBlocks() {
+            return this.destinationCidrBlocks;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setDestinationInstanceIds(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds destinationInstanceIds) {
+            this.destinationInstanceIds = destinationInstanceIds;
+            return this;
+        }
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds getDestinationInstanceIds() {
+            return this.destinationInstanceIds;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setDestinationInstanceIdsReverseMatch(Boolean destinationInstanceIdsReverseMatch) {
+            this.destinationInstanceIdsReverseMatch = destinationInstanceIdsReverseMatch;
+            return this;
+        }
+        public Boolean getDestinationInstanceIdsReverseMatch() {
+            return this.destinationInstanceIdsReverseMatch;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setDestinationRouteTableIds(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds destinationRouteTableIds) {
+            this.destinationRouteTableIds = destinationRouteTableIds;
+            return this;
+        }
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds getDestinationRouteTableIds() {
+            return this.destinationRouteTableIds;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setMapResult(String mapResult) {
+            this.mapResult = mapResult;
+            return this;
+        }
+        public String getMapResult() {
+            return this.mapResult;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setMatchAsns(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns matchAsns) {
+            this.matchAsns = matchAsns;
+            return this;
+        }
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns getMatchAsns() {
+            return this.matchAsns;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setMatchCommunitySet(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchCommunitySet matchCommunitySet) {
+            this.matchCommunitySet = matchCommunitySet;
+            return this;
+        }
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchCommunitySet getMatchCommunitySet() {
+            return this.matchCommunitySet;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setNextPriority(Integer nextPriority) {
+            this.nextPriority = nextPriority;
+            return this;
+        }
+        public Integer getNextPriority() {
+            return this.nextPriority;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setOperateCommunitySet(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet operateCommunitySet) {
+            this.operateCommunitySet = operateCommunitySet;
+            return this;
+        }
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet getOperateCommunitySet() {
+            return this.operateCommunitySet;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setPreference(Integer preference) {
+            this.preference = preference;
+            return this;
+        }
+        public Integer getPreference() {
+            return this.preference;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setPrependAsPath(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapPrependAsPath prependAsPath) {
+            this.prependAsPath = prependAsPath;
+            return this;
+        }
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapPrependAsPath getPrependAsPath() {
+            return this.prependAsPath;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
         }
 
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setRouteMapId(String routeMapId) {
@@ -410,6 +570,54 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
         public String getRouteMapId() {
             return this.routeMapId;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setRouteTypes(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapRouteTypes routeTypes) {
+            this.routeTypes = routeTypes;
+            return this;
+        }
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapRouteTypes getRouteTypes() {
+            return this.routeTypes;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setSourceChildInstanceTypes(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceChildInstanceTypes sourceChildInstanceTypes) {
+            this.sourceChildInstanceTypes = sourceChildInstanceTypes;
+            return this;
+        }
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceChildInstanceTypes getSourceChildInstanceTypes() {
+            return this.sourceChildInstanceTypes;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setSourceInstanceIds(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceInstanceIds sourceInstanceIds) {
+            this.sourceInstanceIds = sourceInstanceIds;
+            return this;
+        }
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceInstanceIds getSourceInstanceIds() {
+            return this.sourceInstanceIds;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setSourceInstanceIdsReverseMatch(Boolean sourceInstanceIdsReverseMatch) {
+            this.sourceInstanceIdsReverseMatch = sourceInstanceIdsReverseMatch;
+            return this;
+        }
+        public Boolean getSourceInstanceIdsReverseMatch() {
+            return this.sourceInstanceIdsReverseMatch;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setSourceRegionIds(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRegionIds sourceRegionIds) {
+            this.sourceRegionIds = sourceRegionIds;
+            return this;
+        }
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRegionIds getSourceRegionIds() {
+            return this.sourceRegionIds;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setSourceRouteTableIds(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRouteTableIds sourceRouteTableIds) {
+            this.sourceRouteTableIds = sourceRouteTableIds;
+            return this;
+        }
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRouteTableIds getSourceRouteTableIds() {
+            return this.sourceRouteTableIds;
         }
 
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setStatus(String status) {
@@ -426,214 +634,6 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
         public String getTransmitDirection() {
             return this.transmitDirection;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setSourceInstanceIdsReverseMatch(Boolean sourceInstanceIdsReverseMatch) {
-            this.sourceInstanceIdsReverseMatch = sourceInstanceIdsReverseMatch;
-            return this;
-        }
-        public Boolean getSourceInstanceIdsReverseMatch() {
-            return this.sourceInstanceIdsReverseMatch;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setCenRegionId(String cenRegionId) {
-            this.cenRegionId = cenRegionId;
-            return this;
-        }
-        public String getCenRegionId() {
-            return this.cenRegionId;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setCenId(String cenId) {
-            this.cenId = cenId;
-            return this;
-        }
-        public String getCenId() {
-            return this.cenId;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setPriority(Integer priority) {
-            this.priority = priority;
-            return this;
-        }
-        public Integer getPriority() {
-            return this.priority;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setCommunityOperateMode(String communityOperateMode) {
-            this.communityOperateMode = communityOperateMode;
-            return this;
-        }
-        public String getCommunityOperateMode() {
-            return this.communityOperateMode;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setMapResult(String mapResult) {
-            this.mapResult = mapResult;
-            return this;
-        }
-        public String getMapResult() {
-            return this.mapResult;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setCommunityMatchMode(String communityMatchMode) {
-            this.communityMatchMode = communityMatchMode;
-            return this;
-        }
-        public String getCommunityMatchMode() {
-            return this.communityMatchMode;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setAsPathMatchMode(String asPathMatchMode) {
-            this.asPathMatchMode = asPathMatchMode;
-            return this;
-        }
-        public String getAsPathMatchMode() {
-            return this.asPathMatchMode;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setPreference(Integer preference) {
-            this.preference = preference;
-            return this;
-        }
-        public Integer getPreference() {
-            return this.preference;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setDestinationInstanceIdsReverseMatch(Boolean destinationInstanceIdsReverseMatch) {
-            this.destinationInstanceIdsReverseMatch = destinationInstanceIdsReverseMatch;
-            return this;
-        }
-        public Boolean getDestinationInstanceIdsReverseMatch() {
-            return this.destinationInstanceIdsReverseMatch;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setCidrMatchMode(String cidrMatchMode) {
-            this.cidrMatchMode = cidrMatchMode;
-            return this;
-        }
-        public String getCidrMatchMode() {
-            return this.cidrMatchMode;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setNextPriority(Integer nextPriority) {
-            this.nextPriority = nextPriority;
-            return this;
-        }
-        public Integer getNextPriority() {
-            return this.nextPriority;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setSourceRegionIds(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRegionIds sourceRegionIds) {
-            this.sourceRegionIds = sourceRegionIds;
-            return this;
-        }
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRegionIds getSourceRegionIds() {
-            return this.sourceRegionIds;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setSourceChildInstanceTypes(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceChildInstanceTypes sourceChildInstanceTypes) {
-            this.sourceChildInstanceTypes = sourceChildInstanceTypes;
-            return this;
-        }
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceChildInstanceTypes getSourceChildInstanceTypes() {
-            return this.sourceChildInstanceTypes;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setDestinationRouteTableIds(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds destinationRouteTableIds) {
-            this.destinationRouteTableIds = destinationRouteTableIds;
-            return this;
-        }
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds getDestinationRouteTableIds() {
-            return this.destinationRouteTableIds;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setSourceInstanceIds(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceInstanceIds sourceInstanceIds) {
-            this.sourceInstanceIds = sourceInstanceIds;
-            return this;
-        }
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceInstanceIds getSourceInstanceIds() {
-            return this.sourceInstanceIds;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setDestinationCidrBlocks(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationCidrBlocks destinationCidrBlocks) {
-            this.destinationCidrBlocks = destinationCidrBlocks;
-            return this;
-        }
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationCidrBlocks getDestinationCidrBlocks() {
-            return this.destinationCidrBlocks;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setSourceRouteTableIds(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRouteTableIds sourceRouteTableIds) {
-            this.sourceRouteTableIds = sourceRouteTableIds;
-            return this;
-        }
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRouteTableIds getSourceRouteTableIds() {
-            return this.sourceRouteTableIds;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setMatchCommunitySet(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchCommunitySet matchCommunitySet) {
-            this.matchCommunitySet = matchCommunitySet;
-            return this;
-        }
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchCommunitySet getMatchCommunitySet() {
-            return this.matchCommunitySet;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setPrependAsPath(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapPrependAsPath prependAsPath) {
-            this.prependAsPath = prependAsPath;
-            return this;
-        }
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapPrependAsPath getPrependAsPath() {
-            return this.prependAsPath;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setRouteTypes(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapRouteTypes routeTypes) {
-            this.routeTypes = routeTypes;
-            return this;
-        }
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapRouteTypes getRouteTypes() {
-            return this.routeTypes;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setDestinationChildInstanceTypes(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes destinationChildInstanceTypes) {
-            this.destinationChildInstanceTypes = destinationChildInstanceTypes;
-            return this;
-        }
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes getDestinationChildInstanceTypes() {
-            return this.destinationChildInstanceTypes;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setDestinationInstanceIds(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds destinationInstanceIds) {
-            this.destinationInstanceIds = destinationInstanceIds;
-            return this;
-        }
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds getDestinationInstanceIds() {
-            return this.destinationInstanceIds;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setMatchAsns(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns matchAsns) {
-            this.matchAsns = matchAsns;
-            return this;
-        }
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns getMatchAsns() {
-            return this.matchAsns;
-        }
-
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setOperateCommunitySet(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet operateCommunitySet) {
-            this.operateCommunitySet = operateCommunitySet;
-            return this;
-        }
-        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet getOperateCommunitySet() {
-            return this.operateCommunitySet;
         }
 
     }

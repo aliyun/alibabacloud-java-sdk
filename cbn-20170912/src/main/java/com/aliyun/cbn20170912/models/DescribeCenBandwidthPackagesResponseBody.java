@@ -4,24 +4,40 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
+    @NameInMap("CenBandwidthPackages")
+    public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackages cenBandwidthPackages;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("CenBandwidthPackages")
-    public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackages cenBandwidthPackages;
 
     public static DescribeCenBandwidthPackagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenBandwidthPackagesResponseBody self = new DescribeCenBandwidthPackagesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCenBandwidthPackagesResponseBody setCenBandwidthPackages(DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackages cenBandwidthPackages) {
+        this.cenBandwidthPackages = cenBandwidthPackages;
+        return this;
+    }
+    public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackages getCenBandwidthPackages() {
+        return this.cenBandwidthPackages;
+    }
+
+    public DescribeCenBandwidthPackagesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeCenBandwidthPackagesResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCenBandwidthPackagesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeCenBandwidthPackagesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,26 +64,37 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeCenBandwidthPackagesResponseBody setCenBandwidthPackages(DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackages cenBandwidthPackages) {
-        this.cenBandwidthPackages = cenBandwidthPackages;
-        return this;
-    }
-    public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackages getCenBandwidthPackages() {
-        return this.cenBandwidthPackages;
+    public static class DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds extends TeaModel {
+        @NameInMap("CenId")
+        public java.util.List<String> cenId;
+
+        public static DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds self = new DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds setCenId(java.util.List<String> cenId) {
+            this.cenId = cenId;
+            return this;
+        }
+        public java.util.List<String> getCenId() {
+            return this.cenId;
+        }
+
     }
 
     public static class DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageOrginInterRegionBandwidthLimitsOrginInterRegionBandwidthLimit extends TeaModel {
         @NameInMap("BandwidthLimit")
         public String bandwidthLimit;
 
-        @NameInMap("OppositeRegionId")
-        public String oppositeRegionId;
-
         @NameInMap("GeographicSpanId")
         public String geographicSpanId;
 
         @NameInMap("LocalRegionId")
         public String localRegionId;
+
+        @NameInMap("OppositeRegionId")
+        public String oppositeRegionId;
 
         public static DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageOrginInterRegionBandwidthLimitsOrginInterRegionBandwidthLimit build(java.util.Map<String, ?> map) throws Exception {
             DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageOrginInterRegionBandwidthLimitsOrginInterRegionBandwidthLimit self = new DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageOrginInterRegionBandwidthLimitsOrginInterRegionBandwidthLimit();
@@ -88,14 +107,6 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         }
         public String getBandwidthLimit() {
             return this.bandwidthLimit;
-        }
-
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageOrginInterRegionBandwidthLimitsOrginInterRegionBandwidthLimit setOppositeRegionId(String oppositeRegionId) {
-            this.oppositeRegionId = oppositeRegionId;
-            return this;
-        }
-        public String getOppositeRegionId() {
-            return this.oppositeRegionId;
         }
 
         public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageOrginInterRegionBandwidthLimitsOrginInterRegionBandwidthLimit setGeographicSpanId(String geographicSpanId) {
@@ -112,6 +123,14 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         }
         public String getLocalRegionId() {
             return this.localRegionId;
+        }
+
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageOrginInterRegionBandwidthLimitsOrginInterRegionBandwidthLimit setOppositeRegionId(String oppositeRegionId) {
+            this.oppositeRegionId = oppositeRegionId;
+            return this;
+        }
+        public String getOppositeRegionId() {
+            return this.oppositeRegionId;
         }
 
     }
@@ -135,58 +154,24 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds extends TeaModel {
-        @NameInMap("CenId")
-        public java.util.List<String> cenId;
-
-        public static DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds self = new DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds setCenId(java.util.List<String> cenId) {
-            this.cenId = cenId;
-            return this;
-        }
-        public java.util.List<String> getCenId() {
-            return this.cenId;
-        }
-
-    }
-
     public static class DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage extends TeaModel {
-        @NameInMap("ReservationActiveTime")
-        public String reservationActiveTime;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        @NameInMap("ReservationOrderType")
-        public String reservationOrderType;
+        @NameInMap("Bandwidth")
+        public Long bandwidth;
 
         @NameInMap("BandwidthPackageChargeType")
         public String bandwidthPackageChargeType;
 
+        @NameInMap("BusinessStatus")
+        public String businessStatus;
+
         @NameInMap("CenBandwidthPackageId")
         public String cenBandwidthPackageId;
 
-        @NameInMap("ReservationInternetChargeType")
-        public String reservationInternetChargeType;
+        @NameInMap("CenIds")
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds cenIds;
 
-        @NameInMap("Ratio")
-        public String ratio;
-
-        @NameInMap("GeographicRegionAId")
-        public String geographicRegionAId;
-
-        @NameInMap("TypeFor95")
-        public String typeFor95;
-
-        @NameInMap("Bandwidth")
-        public Long bandwidth;
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("Description")
         public String description;
@@ -194,68 +179,53 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        @NameInMap("ReservationBandwidth")
-        public String reservationBandwidth;
-
-        @NameInMap("GeographicSpanId")
-        public String geographicSpanId;
+        @NameInMap("GeographicRegionAId")
+        public String geographicRegionAId;
 
         @NameInMap("GeographicRegionBId")
         public String geographicRegionBId;
 
-        @NameInMap("IsCrossBorder")
-        public Boolean isCrossBorder;
-
-        @NameInMap("BusinessStatus")
-        public String businessStatus;
-
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("GeographicSpanId")
+        public String geographicSpanId;
 
         @NameInMap("HasReservationData")
         public String hasReservationData;
 
+        @NameInMap("IsCrossBorder")
+        public Boolean isCrossBorder;
+
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("OrginInterRegionBandwidthLimits")
         public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageOrginInterRegionBandwidthLimits orginInterRegionBandwidthLimits;
 
-        @NameInMap("CenIds")
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds cenIds;
+        @NameInMap("ReservationActiveTime")
+        public String reservationActiveTime;
+
+        @NameInMap("ReservationBandwidth")
+        public String reservationBandwidth;
+
+        @NameInMap("ReservationInternetChargeType")
+        public String reservationInternetChargeType;
+
+        @NameInMap("ReservationOrderType")
+        public String reservationOrderType;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage build(java.util.Map<String, ?> map) throws Exception {
             DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage self = new DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setReservationActiveTime(String reservationActiveTime) {
-            this.reservationActiveTime = reservationActiveTime;
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setBandwidth(Long bandwidth) {
+            this.bandwidth = bandwidth;
             return this;
         }
-        public String getReservationActiveTime() {
-            return this.reservationActiveTime;
-        }
-
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setReservationOrderType(String reservationOrderType) {
-            this.reservationOrderType = reservationOrderType;
-            return this;
-        }
-        public String getReservationOrderType() {
-            return this.reservationOrderType;
+        public Long getBandwidth() {
+            return this.bandwidth;
         }
 
         public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setBandwidthPackageChargeType(String bandwidthPackageChargeType) {
@@ -266,6 +236,14 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             return this.bandwidthPackageChargeType;
         }
 
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setBusinessStatus(String businessStatus) {
+            this.businessStatus = businessStatus;
+            return this;
+        }
+        public String getBusinessStatus() {
+            return this.businessStatus;
+        }
+
         public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setCenBandwidthPackageId(String cenBandwidthPackageId) {
             this.cenBandwidthPackageId = cenBandwidthPackageId;
             return this;
@@ -274,44 +252,20 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             return this.cenBandwidthPackageId;
         }
 
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setReservationInternetChargeType(String reservationInternetChargeType) {
-            this.reservationInternetChargeType = reservationInternetChargeType;
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setCenIds(DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds cenIds) {
+            this.cenIds = cenIds;
             return this;
         }
-        public String getReservationInternetChargeType() {
-            return this.reservationInternetChargeType;
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds getCenIds() {
+            return this.cenIds;
         }
 
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setRatio(String ratio) {
-            this.ratio = ratio;
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public String getRatio() {
-            return this.ratio;
-        }
-
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setGeographicRegionAId(String geographicRegionAId) {
-            this.geographicRegionAId = geographicRegionAId;
-            return this;
-        }
-        public String getGeographicRegionAId() {
-            return this.geographicRegionAId;
-        }
-
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setTypeFor95(String typeFor95) {
-            this.typeFor95 = typeFor95;
-            return this;
-        }
-        public String getTypeFor95() {
-            return this.typeFor95;
-        }
-
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setBandwidth(Long bandwidth) {
-            this.bandwidth = bandwidth;
-            return this;
-        }
-        public Long getBandwidth() {
-            return this.bandwidth;
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setDescription(String description) {
@@ -330,20 +284,12 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setReservationBandwidth(String reservationBandwidth) {
-            this.reservationBandwidth = reservationBandwidth;
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setGeographicRegionAId(String geographicRegionAId) {
+            this.geographicRegionAId = geographicRegionAId;
             return this;
         }
-        public String getReservationBandwidth() {
-            return this.reservationBandwidth;
-        }
-
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setGeographicSpanId(String geographicSpanId) {
-            this.geographicSpanId = geographicSpanId;
-            return this;
-        }
-        public String getGeographicSpanId() {
-            return this.geographicSpanId;
+        public String getGeographicRegionAId() {
+            return this.geographicRegionAId;
         }
 
         public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setGeographicRegionBId(String geographicRegionBId) {
@@ -354,28 +300,12 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             return this.geographicRegionBId;
         }
 
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setIsCrossBorder(Boolean isCrossBorder) {
-            this.isCrossBorder = isCrossBorder;
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setGeographicSpanId(String geographicSpanId) {
+            this.geographicSpanId = geographicSpanId;
             return this;
         }
-        public Boolean getIsCrossBorder() {
-            return this.isCrossBorder;
-        }
-
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setBusinessStatus(String businessStatus) {
-            this.businessStatus = businessStatus;
-            return this;
-        }
-        public String getBusinessStatus() {
-            return this.businessStatus;
-        }
-
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
+        public String getGeographicSpanId() {
+            return this.geographicSpanId;
         }
 
         public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setHasReservationData(String hasReservationData) {
@@ -386,6 +316,22 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             return this.hasReservationData;
         }
 
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setIsCrossBorder(Boolean isCrossBorder) {
+            this.isCrossBorder = isCrossBorder;
+            return this;
+        }
+        public Boolean getIsCrossBorder() {
+            return this.isCrossBorder;
+        }
+
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setOrginInterRegionBandwidthLimits(DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageOrginInterRegionBandwidthLimits orginInterRegionBandwidthLimits) {
             this.orginInterRegionBandwidthLimits = orginInterRegionBandwidthLimits;
             return this;
@@ -394,12 +340,44 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             return this.orginInterRegionBandwidthLimits;
         }
 
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setCenIds(DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds cenIds) {
-            this.cenIds = cenIds;
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setReservationActiveTime(String reservationActiveTime) {
+            this.reservationActiveTime = reservationActiveTime;
             return this;
         }
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds getCenIds() {
-            return this.cenIds;
+        public String getReservationActiveTime() {
+            return this.reservationActiveTime;
+        }
+
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setReservationBandwidth(String reservationBandwidth) {
+            this.reservationBandwidth = reservationBandwidth;
+            return this;
+        }
+        public String getReservationBandwidth() {
+            return this.reservationBandwidth;
+        }
+
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setReservationInternetChargeType(String reservationInternetChargeType) {
+            this.reservationInternetChargeType = reservationInternetChargeType;
+            return this;
+        }
+        public String getReservationInternetChargeType() {
+            return this.reservationInternetChargeType;
+        }
+
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setReservationOrderType(String reservationOrderType) {
+            this.reservationOrderType = reservationOrderType;
+            return this;
+        }
+        public String getReservationOrderType() {
+            return this.reservationOrderType;
+        }
+
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

@@ -4,26 +4,11 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribePublishedRouteEntriesRequest extends TeaModel {
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("CenId")
     public String cenId;
 
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
-
-    @NameInMap("ChildInstanceType")
-    public String childInstanceType;
 
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
@@ -31,44 +16,27 @@ public class DescribePublishedRouteEntriesRequest extends TeaModel {
     @NameInMap("ChildInstanceRouteTableId")
     public String childInstanceRouteTableId;
 
+    @NameInMap("ChildInstanceType")
+    public String childInstanceType;
+
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribePublishedRouteEntriesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePublishedRouteEntriesRequest self = new DescribePublishedRouteEntriesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePublishedRouteEntriesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribePublishedRouteEntriesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribePublishedRouteEntriesRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribePublishedRouteEntriesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public DescribePublishedRouteEntriesRequest setCenId(String cenId) {
@@ -87,14 +55,6 @@ public class DescribePublishedRouteEntriesRequest extends TeaModel {
         return this.childInstanceId;
     }
 
-    public DescribePublishedRouteEntriesRequest setChildInstanceType(String childInstanceType) {
-        this.childInstanceType = childInstanceType;
-        return this;
-    }
-    public String getChildInstanceType() {
-        return this.childInstanceType;
-    }
-
     public DescribePublishedRouteEntriesRequest setChildInstanceRegionId(String childInstanceRegionId) {
         this.childInstanceRegionId = childInstanceRegionId;
         return this;
@@ -111,12 +71,52 @@ public class DescribePublishedRouteEntriesRequest extends TeaModel {
         return this.childInstanceRouteTableId;
     }
 
+    public DescribePublishedRouteEntriesRequest setChildInstanceType(String childInstanceType) {
+        this.childInstanceType = childInstanceType;
+        return this;
+    }
+    public String getChildInstanceType() {
+        return this.childInstanceType;
+    }
+
     public DescribePublishedRouteEntriesRequest setDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
     }
     public String getDestinationCidrBlock() {
         return this.destinationCidrBlock;
+    }
+
+    public DescribePublishedRouteEntriesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribePublishedRouteEntriesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribePublishedRouteEntriesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribePublishedRouteEntriesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

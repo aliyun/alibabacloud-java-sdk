@@ -4,23 +4,15 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DeleteFlowlogResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public String success;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public String success;
 
     public static DeleteFlowlogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteFlowlogResponseBody self = new DeleteFlowlogResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteFlowlogResponseBody setSuccess(String success) {
-        this.success = success;
-        return this;
-    }
-    public String getSuccess() {
-        return this.success;
     }
 
     public DeleteFlowlogResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class DeleteFlowlogResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DeleteFlowlogResponseBody setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
     }
 
 }

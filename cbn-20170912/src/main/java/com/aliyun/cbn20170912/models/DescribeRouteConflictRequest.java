@@ -4,29 +4,8 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteConflictRequest extends TeaModel {
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
-
-    @NameInMap("ChildInstanceType")
-    public String childInstanceType;
 
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
@@ -34,60 +13,33 @@ public class DescribeRouteConflictRequest extends TeaModel {
     @NameInMap("ChildInstanceRouteTableId")
     public String childInstanceRouteTableId;
 
+    @NameInMap("ChildInstanceType")
+    public String childInstanceType;
+
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribeRouteConflictRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRouteConflictRequest self = new DescribeRouteConflictRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRouteConflictRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeRouteConflictRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeRouteConflictRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeRouteConflictRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeRouteConflictRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeRouteConflictRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public DescribeRouteConflictRequest setChildInstanceId(String childInstanceId) {
@@ -96,14 +48,6 @@ public class DescribeRouteConflictRequest extends TeaModel {
     }
     public String getChildInstanceId() {
         return this.childInstanceId;
-    }
-
-    public DescribeRouteConflictRequest setChildInstanceType(String childInstanceType) {
-        this.childInstanceType = childInstanceType;
-        return this;
-    }
-    public String getChildInstanceType() {
-        return this.childInstanceType;
     }
 
     public DescribeRouteConflictRequest setChildInstanceRegionId(String childInstanceRegionId) {
@@ -122,12 +66,68 @@ public class DescribeRouteConflictRequest extends TeaModel {
         return this.childInstanceRouteTableId;
     }
 
+    public DescribeRouteConflictRequest setChildInstanceType(String childInstanceType) {
+        this.childInstanceType = childInstanceType;
+        return this;
+    }
+    public String getChildInstanceType() {
+        return this.childInstanceType;
+    }
+
     public DescribeRouteConflictRequest setDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
     }
     public String getDestinationCidrBlock() {
         return this.destinationCidrBlock;
+    }
+
+    public DescribeRouteConflictRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeRouteConflictRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeRouteConflictRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeRouteConflictRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeRouteConflictRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeRouteConflictRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

@@ -4,6 +4,15 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ModifyCenBandwidthPackageAttributeRequest extends TeaModel {
+    @NameInMap("CenBandwidthPackageId")
+    public String cenBandwidthPackageId;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -16,18 +25,33 @@ public class ModifyCenBandwidthPackageAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("CenBandwidthPackageId")
-    public String cenBandwidthPackageId;
-
     public static ModifyCenBandwidthPackageAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCenBandwidthPackageAttributeRequest self = new ModifyCenBandwidthPackageAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyCenBandwidthPackageAttributeRequest setCenBandwidthPackageId(String cenBandwidthPackageId) {
+        this.cenBandwidthPackageId = cenBandwidthPackageId;
+        return this;
+    }
+    public String getCenBandwidthPackageId() {
+        return this.cenBandwidthPackageId;
+    }
+
+    public ModifyCenBandwidthPackageAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyCenBandwidthPackageAttributeRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ModifyCenBandwidthPackageAttributeRequest setOwnerAccount(String ownerAccount) {
@@ -60,30 +84,6 @@ public class ModifyCenBandwidthPackageAttributeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyCenBandwidthPackageAttributeRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public ModifyCenBandwidthPackageAttributeRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public ModifyCenBandwidthPackageAttributeRequest setCenBandwidthPackageId(String cenBandwidthPackageId) {
-        this.cenBandwidthPackageId = cenBandwidthPackageId;
-        return this;
-    }
-    public String getCenBandwidthPackageId() {
-        return this.cenBandwidthPackageId;
     }
 
 }

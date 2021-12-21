@@ -4,6 +4,12 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class UnassociateCenBandwidthPackageRequest extends TeaModel {
+    @NameInMap("CenBandwidthPackageId")
+    public String cenBandwidthPackageId;
+
+    @NameInMap("CenId")
+    public String cenId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -16,15 +22,25 @@ public class UnassociateCenBandwidthPackageRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CenId")
-    public String cenId;
-
-    @NameInMap("CenBandwidthPackageId")
-    public String cenBandwidthPackageId;
-
     public static UnassociateCenBandwidthPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         UnassociateCenBandwidthPackageRequest self = new UnassociateCenBandwidthPackageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UnassociateCenBandwidthPackageRequest setCenBandwidthPackageId(String cenBandwidthPackageId) {
+        this.cenBandwidthPackageId = cenBandwidthPackageId;
+        return this;
+    }
+    public String getCenBandwidthPackageId() {
+        return this.cenBandwidthPackageId;
+    }
+
+    public UnassociateCenBandwidthPackageRequest setCenId(String cenId) {
+        this.cenId = cenId;
+        return this;
+    }
+    public String getCenId() {
+        return this.cenId;
     }
 
     public UnassociateCenBandwidthPackageRequest setOwnerAccount(String ownerAccount) {
@@ -57,22 +73,6 @@ public class UnassociateCenBandwidthPackageRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public UnassociateCenBandwidthPackageRequest setCenId(String cenId) {
-        this.cenId = cenId;
-        return this;
-    }
-    public String getCenId() {
-        return this.cenId;
-    }
-
-    public UnassociateCenBandwidthPackageRequest setCenBandwidthPackageId(String cenBandwidthPackageId) {
-        this.cenBandwidthPackageId = cenBandwidthPackageId;
-        return this;
-    }
-    public String getCenBandwidthPackageId() {
-        return this.cenBandwidthPackageId;
     }
 
 }

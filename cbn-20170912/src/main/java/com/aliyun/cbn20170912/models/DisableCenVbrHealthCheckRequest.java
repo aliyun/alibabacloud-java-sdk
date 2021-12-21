@@ -4,6 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DisableCenVbrHealthCheckRequest extends TeaModel {
+    @NameInMap("CenId")
+    public String cenId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -16,21 +19,26 @@ public class DisableCenVbrHealthCheckRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CenId")
-    public String cenId;
-
-    @NameInMap("VbrInstanceRegionId")
-    public String vbrInstanceRegionId;
-
     @NameInMap("VbrInstanceId")
     public String vbrInstanceId;
 
     @NameInMap("VbrInstanceOwnerId")
     public Long vbrInstanceOwnerId;
 
+    @NameInMap("VbrInstanceRegionId")
+    public String vbrInstanceRegionId;
+
     public static DisableCenVbrHealthCheckRequest build(java.util.Map<String, ?> map) throws Exception {
         DisableCenVbrHealthCheckRequest self = new DisableCenVbrHealthCheckRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DisableCenVbrHealthCheckRequest setCenId(String cenId) {
+        this.cenId = cenId;
+        return this;
+    }
+    public String getCenId() {
+        return this.cenId;
     }
 
     public DisableCenVbrHealthCheckRequest setOwnerAccount(String ownerAccount) {
@@ -65,22 +73,6 @@ public class DisableCenVbrHealthCheckRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DisableCenVbrHealthCheckRequest setCenId(String cenId) {
-        this.cenId = cenId;
-        return this;
-    }
-    public String getCenId() {
-        return this.cenId;
-    }
-
-    public DisableCenVbrHealthCheckRequest setVbrInstanceRegionId(String vbrInstanceRegionId) {
-        this.vbrInstanceRegionId = vbrInstanceRegionId;
-        return this;
-    }
-    public String getVbrInstanceRegionId() {
-        return this.vbrInstanceRegionId;
-    }
-
     public DisableCenVbrHealthCheckRequest setVbrInstanceId(String vbrInstanceId) {
         this.vbrInstanceId = vbrInstanceId;
         return this;
@@ -95,6 +87,14 @@ public class DisableCenVbrHealthCheckRequest extends TeaModel {
     }
     public Long getVbrInstanceOwnerId() {
         return this.vbrInstanceOwnerId;
+    }
+
+    public DisableCenVbrHealthCheckRequest setVbrInstanceRegionId(String vbrInstanceRegionId) {
+        this.vbrInstanceRegionId = vbrInstanceRegionId;
+        return this;
+    }
+    public String getVbrInstanceRegionId() {
+        return this.vbrInstanceRegionId;
     }
 
 }

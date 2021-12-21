@@ -4,6 +4,18 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class SetCenInterRegionBandwidthLimitRequest extends TeaModel {
+    @NameInMap("BandwidthLimit")
+    public Long bandwidthLimit;
+
+    @NameInMap("CenId")
+    public String cenId;
+
+    @NameInMap("LocalRegionId")
+    public String localRegionId;
+
+    @NameInMap("OppositeRegionId")
+    public String oppositeRegionId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -16,21 +28,41 @@ public class SetCenInterRegionBandwidthLimitRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CenId")
-    public String cenId;
-
-    @NameInMap("LocalRegionId")
-    public String localRegionId;
-
-    @NameInMap("OppositeRegionId")
-    public String oppositeRegionId;
-
-    @NameInMap("BandwidthLimit")
-    public Long bandwidthLimit;
-
     public static SetCenInterRegionBandwidthLimitRequest build(java.util.Map<String, ?> map) throws Exception {
         SetCenInterRegionBandwidthLimitRequest self = new SetCenInterRegionBandwidthLimitRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetCenInterRegionBandwidthLimitRequest setBandwidthLimit(Long bandwidthLimit) {
+        this.bandwidthLimit = bandwidthLimit;
+        return this;
+    }
+    public Long getBandwidthLimit() {
+        return this.bandwidthLimit;
+    }
+
+    public SetCenInterRegionBandwidthLimitRequest setCenId(String cenId) {
+        this.cenId = cenId;
+        return this;
+    }
+    public String getCenId() {
+        return this.cenId;
+    }
+
+    public SetCenInterRegionBandwidthLimitRequest setLocalRegionId(String localRegionId) {
+        this.localRegionId = localRegionId;
+        return this;
+    }
+    public String getLocalRegionId() {
+        return this.localRegionId;
+    }
+
+    public SetCenInterRegionBandwidthLimitRequest setOppositeRegionId(String oppositeRegionId) {
+        this.oppositeRegionId = oppositeRegionId;
+        return this;
+    }
+    public String getOppositeRegionId() {
+        return this.oppositeRegionId;
     }
 
     public SetCenInterRegionBandwidthLimitRequest setOwnerAccount(String ownerAccount) {
@@ -63,38 +95,6 @@ public class SetCenInterRegionBandwidthLimitRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public SetCenInterRegionBandwidthLimitRequest setCenId(String cenId) {
-        this.cenId = cenId;
-        return this;
-    }
-    public String getCenId() {
-        return this.cenId;
-    }
-
-    public SetCenInterRegionBandwidthLimitRequest setLocalRegionId(String localRegionId) {
-        this.localRegionId = localRegionId;
-        return this;
-    }
-    public String getLocalRegionId() {
-        return this.localRegionId;
-    }
-
-    public SetCenInterRegionBandwidthLimitRequest setOppositeRegionId(String oppositeRegionId) {
-        this.oppositeRegionId = oppositeRegionId;
-        return this;
-    }
-    public String getOppositeRegionId() {
-        return this.oppositeRegionId;
-    }
-
-    public SetCenInterRegionBandwidthLimitRequest setBandwidthLimit(Long bandwidthLimit) {
-        this.bandwidthLimit = bandwidthLimit;
-        return this;
-    }
-    public Long getBandwidthLimit() {
-        return this.bandwidthLimit;
     }
 
 }

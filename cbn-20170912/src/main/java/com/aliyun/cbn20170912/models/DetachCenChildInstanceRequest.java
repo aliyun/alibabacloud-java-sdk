@@ -4,6 +4,24 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DetachCenChildInstanceRequest extends TeaModel {
+    @NameInMap("CenId")
+    public String cenId;
+
+    @NameInMap("CenOwnerId")
+    public Long cenOwnerId;
+
+    @NameInMap("ChildInstanceId")
+    public String childInstanceId;
+
+    @NameInMap("ChildInstanceOwnerId")
+    public Long childInstanceOwnerId;
+
+    @NameInMap("ChildInstanceRegionId")
+    public String childInstanceRegionId;
+
+    @NameInMap("ChildInstanceType")
+    public String childInstanceType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -16,27 +34,57 @@ public class DetachCenChildInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CenId")
-    public String cenId;
-
-    @NameInMap("ChildInstanceId")
-    public String childInstanceId;
-
-    @NameInMap("ChildInstanceType")
-    public String childInstanceType;
-
-    @NameInMap("ChildInstanceRegionId")
-    public String childInstanceRegionId;
-
-    @NameInMap("ChildInstanceOwnerId")
-    public Long childInstanceOwnerId;
-
-    @NameInMap("CenOwnerId")
-    public Long cenOwnerId;
-
     public static DetachCenChildInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DetachCenChildInstanceRequest self = new DetachCenChildInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DetachCenChildInstanceRequest setCenId(String cenId) {
+        this.cenId = cenId;
+        return this;
+    }
+    public String getCenId() {
+        return this.cenId;
+    }
+
+    public DetachCenChildInstanceRequest setCenOwnerId(Long cenOwnerId) {
+        this.cenOwnerId = cenOwnerId;
+        return this;
+    }
+    public Long getCenOwnerId() {
+        return this.cenOwnerId;
+    }
+
+    public DetachCenChildInstanceRequest setChildInstanceId(String childInstanceId) {
+        this.childInstanceId = childInstanceId;
+        return this;
+    }
+    public String getChildInstanceId() {
+        return this.childInstanceId;
+    }
+
+    public DetachCenChildInstanceRequest setChildInstanceOwnerId(Long childInstanceOwnerId) {
+        this.childInstanceOwnerId = childInstanceOwnerId;
+        return this;
+    }
+    public Long getChildInstanceOwnerId() {
+        return this.childInstanceOwnerId;
+    }
+
+    public DetachCenChildInstanceRequest setChildInstanceRegionId(String childInstanceRegionId) {
+        this.childInstanceRegionId = childInstanceRegionId;
+        return this;
+    }
+    public String getChildInstanceRegionId() {
+        return this.childInstanceRegionId;
+    }
+
+    public DetachCenChildInstanceRequest setChildInstanceType(String childInstanceType) {
+        this.childInstanceType = childInstanceType;
+        return this;
+    }
+    public String getChildInstanceType() {
+        return this.childInstanceType;
     }
 
     public DetachCenChildInstanceRequest setOwnerAccount(String ownerAccount) {
@@ -69,54 +117,6 @@ public class DetachCenChildInstanceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DetachCenChildInstanceRequest setCenId(String cenId) {
-        this.cenId = cenId;
-        return this;
-    }
-    public String getCenId() {
-        return this.cenId;
-    }
-
-    public DetachCenChildInstanceRequest setChildInstanceId(String childInstanceId) {
-        this.childInstanceId = childInstanceId;
-        return this;
-    }
-    public String getChildInstanceId() {
-        return this.childInstanceId;
-    }
-
-    public DetachCenChildInstanceRequest setChildInstanceType(String childInstanceType) {
-        this.childInstanceType = childInstanceType;
-        return this;
-    }
-    public String getChildInstanceType() {
-        return this.childInstanceType;
-    }
-
-    public DetachCenChildInstanceRequest setChildInstanceRegionId(String childInstanceRegionId) {
-        this.childInstanceRegionId = childInstanceRegionId;
-        return this;
-    }
-    public String getChildInstanceRegionId() {
-        return this.childInstanceRegionId;
-    }
-
-    public DetachCenChildInstanceRequest setChildInstanceOwnerId(Long childInstanceOwnerId) {
-        this.childInstanceOwnerId = childInstanceOwnerId;
-        return this;
-    }
-    public Long getChildInstanceOwnerId() {
-        return this.childInstanceOwnerId;
-    }
-
-    public DetachCenChildInstanceRequest setCenOwnerId(Long cenOwnerId) {
-        this.cenOwnerId = cenOwnerId;
-        return this;
-    }
-    public Long getCenOwnerId() {
-        return this.cenOwnerId;
     }
 
 }

@@ -4,6 +4,24 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class EnableCenVbrHealthCheckRequest extends TeaModel {
+    @NameInMap("CenId")
+    public String cenId;
+
+    @NameInMap("HealthCheckInterval")
+    public Integer healthCheckInterval;
+
+    @NameInMap("HealthCheckOnly")
+    public Boolean healthCheckOnly;
+
+    @NameInMap("HealthCheckSourceIp")
+    public String healthCheckSourceIp;
+
+    @NameInMap("HealthCheckTargetIp")
+    public String healthCheckTargetIp;
+
+    @NameInMap("HealthyThreshold")
+    public Integer healthyThreshold;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -16,33 +34,66 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CenId")
-    public String cenId;
-
-    @NameInMap("VbrInstanceRegionId")
-    public String vbrInstanceRegionId;
-
     @NameInMap("VbrInstanceId")
     public String vbrInstanceId;
-
-    @NameInMap("HealthCheckSourceIp")
-    public String healthCheckSourceIp;
-
-    @NameInMap("HealthCheckTargetIp")
-    public String healthCheckTargetIp;
 
     @NameInMap("VbrInstanceOwnerId")
     public Long vbrInstanceOwnerId;
 
-    @NameInMap("HealthCheckInterval")
-    public Integer healthCheckInterval;
-
-    @NameInMap("HealthyThreshold")
-    public Integer healthyThreshold;
+    @NameInMap("VbrInstanceRegionId")
+    public String vbrInstanceRegionId;
 
     public static EnableCenVbrHealthCheckRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableCenVbrHealthCheckRequest self = new EnableCenVbrHealthCheckRequest();
         return TeaModel.build(map, self);
+    }
+
+    public EnableCenVbrHealthCheckRequest setCenId(String cenId) {
+        this.cenId = cenId;
+        return this;
+    }
+    public String getCenId() {
+        return this.cenId;
+    }
+
+    public EnableCenVbrHealthCheckRequest setHealthCheckInterval(Integer healthCheckInterval) {
+        this.healthCheckInterval = healthCheckInterval;
+        return this;
+    }
+    public Integer getHealthCheckInterval() {
+        return this.healthCheckInterval;
+    }
+
+    public EnableCenVbrHealthCheckRequest setHealthCheckOnly(Boolean healthCheckOnly) {
+        this.healthCheckOnly = healthCheckOnly;
+        return this;
+    }
+    public Boolean getHealthCheckOnly() {
+        return this.healthCheckOnly;
+    }
+
+    public EnableCenVbrHealthCheckRequest setHealthCheckSourceIp(String healthCheckSourceIp) {
+        this.healthCheckSourceIp = healthCheckSourceIp;
+        return this;
+    }
+    public String getHealthCheckSourceIp() {
+        return this.healthCheckSourceIp;
+    }
+
+    public EnableCenVbrHealthCheckRequest setHealthCheckTargetIp(String healthCheckTargetIp) {
+        this.healthCheckTargetIp = healthCheckTargetIp;
+        return this;
+    }
+    public String getHealthCheckTargetIp() {
+        return this.healthCheckTargetIp;
+    }
+
+    public EnableCenVbrHealthCheckRequest setHealthyThreshold(Integer healthyThreshold) {
+        this.healthyThreshold = healthyThreshold;
+        return this;
+    }
+    public Integer getHealthyThreshold() {
+        return this.healthyThreshold;
     }
 
     public EnableCenVbrHealthCheckRequest setOwnerAccount(String ownerAccount) {
@@ -77,44 +128,12 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public EnableCenVbrHealthCheckRequest setCenId(String cenId) {
-        this.cenId = cenId;
-        return this;
-    }
-    public String getCenId() {
-        return this.cenId;
-    }
-
-    public EnableCenVbrHealthCheckRequest setVbrInstanceRegionId(String vbrInstanceRegionId) {
-        this.vbrInstanceRegionId = vbrInstanceRegionId;
-        return this;
-    }
-    public String getVbrInstanceRegionId() {
-        return this.vbrInstanceRegionId;
-    }
-
     public EnableCenVbrHealthCheckRequest setVbrInstanceId(String vbrInstanceId) {
         this.vbrInstanceId = vbrInstanceId;
         return this;
     }
     public String getVbrInstanceId() {
         return this.vbrInstanceId;
-    }
-
-    public EnableCenVbrHealthCheckRequest setHealthCheckSourceIp(String healthCheckSourceIp) {
-        this.healthCheckSourceIp = healthCheckSourceIp;
-        return this;
-    }
-    public String getHealthCheckSourceIp() {
-        return this.healthCheckSourceIp;
-    }
-
-    public EnableCenVbrHealthCheckRequest setHealthCheckTargetIp(String healthCheckTargetIp) {
-        this.healthCheckTargetIp = healthCheckTargetIp;
-        return this;
-    }
-    public String getHealthCheckTargetIp() {
-        return this.healthCheckTargetIp;
     }
 
     public EnableCenVbrHealthCheckRequest setVbrInstanceOwnerId(Long vbrInstanceOwnerId) {
@@ -125,20 +144,12 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
         return this.vbrInstanceOwnerId;
     }
 
-    public EnableCenVbrHealthCheckRequest setHealthCheckInterval(Integer healthCheckInterval) {
-        this.healthCheckInterval = healthCheckInterval;
+    public EnableCenVbrHealthCheckRequest setVbrInstanceRegionId(String vbrInstanceRegionId) {
+        this.vbrInstanceRegionId = vbrInstanceRegionId;
         return this;
     }
-    public Integer getHealthCheckInterval() {
-        return this.healthCheckInterval;
-    }
-
-    public EnableCenVbrHealthCheckRequest setHealthyThreshold(Integer healthyThreshold) {
-        this.healthyThreshold = healthyThreshold;
-        return this;
-    }
-    public Integer getHealthyThreshold() {
-        return this.healthyThreshold;
+    public String getVbrInstanceRegionId() {
+        return this.vbrInstanceRegionId;
     }
 
 }

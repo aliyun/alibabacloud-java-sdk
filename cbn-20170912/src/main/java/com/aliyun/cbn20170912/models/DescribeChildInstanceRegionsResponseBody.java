@@ -4,23 +4,15 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Regions")
     public DescribeChildInstanceRegionsResponseBodyRegions regions;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeChildInstanceRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeChildInstanceRegionsResponseBody self = new DescribeChildInstanceRegionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeChildInstanceRegionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeChildInstanceRegionsResponseBody setRegions(DescribeChildInstanceRegionsResponseBodyRegions regions) {
@@ -29,6 +21,14 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
     }
     public DescribeChildInstanceRegionsResponseBodyRegions getRegions() {
         return this.regions;
+    }
+
+    public DescribeChildInstanceRegionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeChildInstanceRegionsResponseBodyRegionsRegion extends TeaModel {
