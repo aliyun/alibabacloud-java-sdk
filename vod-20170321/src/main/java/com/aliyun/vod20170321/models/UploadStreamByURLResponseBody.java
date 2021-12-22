@@ -4,14 +4,14 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UploadStreamByURLResponseBody extends TeaModel {
+    @NameInMap("FileURL")
+    public String fileURL;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SourceURL")
     public String sourceURL;
-
-    @NameInMap("StreamFileURL")
-    public String streamFileURL;
 
     @NameInMap("StreamJobId")
     public String streamJobId;
@@ -19,6 +19,14 @@ public class UploadStreamByURLResponseBody extends TeaModel {
     public static UploadStreamByURLResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UploadStreamByURLResponseBody self = new UploadStreamByURLResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UploadStreamByURLResponseBody setFileURL(String fileURL) {
+        this.fileURL = fileURL;
+        return this;
+    }
+    public String getFileURL() {
+        return this.fileURL;
     }
 
     public UploadStreamByURLResponseBody setRequestId(String requestId) {
@@ -35,14 +43,6 @@ public class UploadStreamByURLResponseBody extends TeaModel {
     }
     public String getSourceURL() {
         return this.sourceURL;
-    }
-
-    public UploadStreamByURLResponseBody setStreamFileURL(String streamFileURL) {
-        this.streamFileURL = streamFileURL;
-        return this;
-    }
-    public String getStreamFileURL() {
-        return this.streamFileURL;
     }
 
     public UploadStreamByURLResponseBody setStreamJobId(String streamJobId) {

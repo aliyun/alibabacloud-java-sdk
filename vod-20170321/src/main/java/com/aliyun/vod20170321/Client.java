@@ -1509,6 +1509,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeVodDomainSrcBpsDataWithOptions(request, runtime);
     }
 
+    public DescribeVodDomainSrcTrafficDataResponse describeVodDomainSrcTrafficDataWithOptions(DescribeVodDomainSrcTrafficDataRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("DomainName", request.domainName);
+        query.put("EndTime", request.endTime);
+        query.put("Interval", request.interval);
+        query.put("OwnerId", request.ownerId);
+        query.put("StartTime", request.startTime);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVodDomainSrcTrafficData"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVodDomainSrcTrafficDataResponse());
+    }
+
+    public DescribeVodDomainSrcTrafficDataResponse describeVodDomainSrcTrafficData(DescribeVodDomainSrcTrafficDataRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeVodDomainSrcTrafficDataWithOptions(request, runtime);
+    }
+
     public DescribeVodDomainTrafficDataResponse describeVodDomainTrafficDataWithOptions(DescribeVodDomainTrafficDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
