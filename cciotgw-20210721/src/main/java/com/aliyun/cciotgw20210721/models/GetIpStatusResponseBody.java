@@ -13,11 +13,11 @@ public class GetIpStatusResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public String success;
-
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("Success")
+    public String success;
 
     public static GetIpStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetIpStatusResponseBody self = new GetIpStatusResponseBody();
@@ -48,20 +48,20 @@ public class GetIpStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetIpStatusResponseBody setSuccess(String success) {
-        this.success = success;
-        return this;
-    }
-    public String getSuccess() {
-        return this.success;
-    }
-
     public GetIpStatusResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public GetIpStatusResponseBody setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
     }
 
 }

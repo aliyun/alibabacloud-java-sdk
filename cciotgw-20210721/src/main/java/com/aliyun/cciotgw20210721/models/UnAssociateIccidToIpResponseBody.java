@@ -3,12 +3,12 @@ package com.aliyun.cciotgw20210721.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyIpStatusResponseBody extends TeaModel {
+public class UnAssociateIccidToIpResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
     @NameInMap("ErrorIpList")
-    public java.util.List<ModifyIpStatusResponseBodyErrorIpList> errorIpList;
+    public java.util.List<UnAssociateIccidToIpResponseBodyErrorIpList> errorIpList;
 
     @NameInMap("Message")
     public String message;
@@ -19,12 +19,12 @@ public class ModifyIpStatusResponseBody extends TeaModel {
     @NameInMap("Success")
     public String success;
 
-    public static ModifyIpStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModifyIpStatusResponseBody self = new ModifyIpStatusResponseBody();
+    public static UnAssociateIccidToIpResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UnAssociateIccidToIpResponseBody self = new UnAssociateIccidToIpResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyIpStatusResponseBody setCode(String code) {
+    public UnAssociateIccidToIpResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -32,15 +32,15 @@ public class ModifyIpStatusResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ModifyIpStatusResponseBody setErrorIpList(java.util.List<ModifyIpStatusResponseBodyErrorIpList> errorIpList) {
+    public UnAssociateIccidToIpResponseBody setErrorIpList(java.util.List<UnAssociateIccidToIpResponseBodyErrorIpList> errorIpList) {
         this.errorIpList = errorIpList;
         return this;
     }
-    public java.util.List<ModifyIpStatusResponseBodyErrorIpList> getErrorIpList() {
+    public java.util.List<UnAssociateIccidToIpResponseBodyErrorIpList> getErrorIpList() {
         return this.errorIpList;
     }
 
-    public ModifyIpStatusResponseBody setMessage(String message) {
+    public UnAssociateIccidToIpResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -48,7 +48,7 @@ public class ModifyIpStatusResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ModifyIpStatusResponseBody setRequestId(String requestId) {
+    public UnAssociateIccidToIpResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +56,7 @@ public class ModifyIpStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModifyIpStatusResponseBody setSuccess(String success) {
+    public UnAssociateIccidToIpResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }
@@ -64,19 +64,19 @@ public class ModifyIpStatusResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class ModifyIpStatusResponseBodyErrorIpList extends TeaModel {
+    public static class UnAssociateIccidToIpResponseBodyErrorIpList extends TeaModel {
         @NameInMap("Cause")
         public String cause;
 
         @NameInMap("Ip")
         public String ip;
 
-        public static ModifyIpStatusResponseBodyErrorIpList build(java.util.Map<String, ?> map) throws Exception {
-            ModifyIpStatusResponseBodyErrorIpList self = new ModifyIpStatusResponseBodyErrorIpList();
+        public static UnAssociateIccidToIpResponseBodyErrorIpList build(java.util.Map<String, ?> map) throws Exception {
+            UnAssociateIccidToIpResponseBodyErrorIpList self = new UnAssociateIccidToIpResponseBodyErrorIpList();
             return TeaModel.build(map, self);
         }
 
-        public ModifyIpStatusResponseBodyErrorIpList setCause(String cause) {
+        public UnAssociateIccidToIpResponseBodyErrorIpList setCause(String cause) {
             this.cause = cause;
             return this;
         }
@@ -84,7 +84,7 @@ public class ModifyIpStatusResponseBody extends TeaModel {
             return this.cause;
         }
 
-        public ModifyIpStatusResponseBodyErrorIpList setIp(String ip) {
+        public UnAssociateIccidToIpResponseBodyErrorIpList setIp(String ip) {
             this.ip = ip;
             return this;
         }

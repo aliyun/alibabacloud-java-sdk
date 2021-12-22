@@ -13,14 +13,14 @@ public class QueryAsynTokenResultResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public String success;
-
     @NameInMap("Result")
     public String result;
 
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("Success")
+    public String success;
 
     public static QueryAsynTokenResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryAsynTokenResultResponseBody self = new QueryAsynTokenResultResponseBody();
@@ -51,14 +51,6 @@ public class QueryAsynTokenResultResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryAsynTokenResultResponseBody setSuccess(String success) {
-        this.success = success;
-        return this;
-    }
-    public String getSuccess() {
-        return this.success;
-    }
-
     public QueryAsynTokenResultResponseBody setResult(String result) {
         this.result = result;
         return this;
@@ -73,6 +65,14 @@ public class QueryAsynTokenResultResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public QueryAsynTokenResultResponseBody setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
     }
 
 }

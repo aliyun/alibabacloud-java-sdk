@@ -3,10 +3,7 @@ package com.aliyun.cciotgw20210721.models;
 
 import com.aliyun.tea.*;
 
-public class AllocateIpsResponseBody extends TeaModel {
-    @NameInMap("AsynToken")
-    public String asynToken;
-
+public class DeleteCloudConnectorGatewayPrivilegeResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
@@ -19,20 +16,12 @@ public class AllocateIpsResponseBody extends TeaModel {
     @NameInMap("Success")
     public String success;
 
-    public static AllocateIpsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        AllocateIpsResponseBody self = new AllocateIpsResponseBody();
+    public static DeleteCloudConnectorGatewayPrivilegeResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteCloudConnectorGatewayPrivilegeResponseBody self = new DeleteCloudConnectorGatewayPrivilegeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AllocateIpsResponseBody setAsynToken(String asynToken) {
-        this.asynToken = asynToken;
-        return this;
-    }
-    public String getAsynToken() {
-        return this.asynToken;
-    }
-
-    public AllocateIpsResponseBody setCode(String code) {
+    public DeleteCloudConnectorGatewayPrivilegeResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -40,7 +29,7 @@ public class AllocateIpsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public AllocateIpsResponseBody setMessage(String message) {
+    public DeleteCloudConnectorGatewayPrivilegeResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -48,7 +37,7 @@ public class AllocateIpsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public AllocateIpsResponseBody setRequestId(String requestId) {
+    public DeleteCloudConnectorGatewayPrivilegeResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +45,7 @@ public class AllocateIpsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AllocateIpsResponseBody setSuccess(String success) {
+    public DeleteCloudConnectorGatewayPrivilegeResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }

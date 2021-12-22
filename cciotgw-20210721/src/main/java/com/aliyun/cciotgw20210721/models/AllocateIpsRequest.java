@@ -4,15 +4,6 @@ package com.aliyun.cciotgw20210721.models;
 import com.aliyun.tea.*;
 
 public class AllocateIpsRequest extends TeaModel {
-    @NameInMap("Ips")
-    public java.util.List<String> ips;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Isp")
-    public String isp;
-
     @NameInMap("Apn")
     public String apn;
 
@@ -22,42 +13,24 @@ public class AllocateIpsRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("IpCount")
-    public Integer ipCount;
-
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    @NameInMap("AliUid")
-    public String aliUid;
+    @NameInMap("IpCount")
+    public Integer ipCount;
+
+    @NameInMap("Ips")
+    public java.util.List<String> ips;
+
+    @NameInMap("Isp")
+    public String isp;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static AllocateIpsRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateIpsRequest self = new AllocateIpsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AllocateIpsRequest setIps(java.util.List<String> ips) {
-        this.ips = ips;
-        return this;
-    }
-    public java.util.List<String> getIps() {
-        return this.ips;
-    }
-
-    public AllocateIpsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public AllocateIpsRequest setIsp(String isp) {
-        this.isp = isp;
-        return this;
-    }
-    public String getIsp() {
-        return this.isp;
     }
 
     public AllocateIpsRequest setApn(String apn) {
@@ -84,14 +57,6 @@ public class AllocateIpsRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public AllocateIpsRequest setIpCount(Integer ipCount) {
-        this.ipCount = ipCount;
-        return this;
-    }
-    public Integer getIpCount() {
-        return this.ipCount;
-    }
-
     public AllocateIpsRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -100,12 +65,36 @@ public class AllocateIpsRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public AllocateIpsRequest setAliUid(String aliUid) {
-        this.aliUid = aliUid;
+    public AllocateIpsRequest setIpCount(Integer ipCount) {
+        this.ipCount = ipCount;
         return this;
     }
-    public String getAliUid() {
-        return this.aliUid;
+    public Integer getIpCount() {
+        return this.ipCount;
+    }
+
+    public AllocateIpsRequest setIps(java.util.List<String> ips) {
+        this.ips = ips;
+        return this;
+    }
+    public java.util.List<String> getIps() {
+        return this.ips;
+    }
+
+    public AllocateIpsRequest setIsp(String isp) {
+        this.isp = isp;
+        return this;
+    }
+    public String getIsp() {
+        return this.isp;
+    }
+
+    public AllocateIpsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }
