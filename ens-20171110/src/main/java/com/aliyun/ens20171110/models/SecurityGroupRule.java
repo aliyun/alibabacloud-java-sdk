@@ -4,6 +4,14 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class SecurityGroupRule extends TeaModel {
+    // 描述
+    @NameInMap("Description")
+    public String description;
+
+    // 目标网段
+    @NameInMap("DestCidrIp")
+    public String destCidrIp;
+
     // 方向
     @NameInMap("Direction")
     public String direction;
@@ -12,29 +20,21 @@ public class SecurityGroupRule extends TeaModel {
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
-    // 目的端口
-    @NameInMap("PortRange")
-    public String portRange;
-
-    // 源端口
-    @NameInMap("SourcePortRange")
-    public String sourcePortRange;
-
     // 授权策略
     @NameInMap("Policy")
     public String policy;
 
-    // 目标网段
-    @NameInMap("DestCidrIp")
-    public String destCidrIp;
+    // 目的端口
+    @NameInMap("PortRange")
+    public String portRange;
 
     // 源网段
     @NameInMap("SourceCidrIp")
     public String sourceCidrIp;
 
-    // 描述
-    @NameInMap("Description")
-    public String description;
+    // 源端口
+    @NameInMap("SourcePortRange")
+    public String sourcePortRange;
 
     // 优先级
     @NameInMap("priority")
@@ -43,6 +43,22 @@ public class SecurityGroupRule extends TeaModel {
     public static SecurityGroupRule build(java.util.Map<String, ?> map) throws Exception {
         SecurityGroupRule self = new SecurityGroupRule();
         return TeaModel.build(map, self);
+    }
+
+    public SecurityGroupRule setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public SecurityGroupRule setDestCidrIp(String destCidrIp) {
+        this.destCidrIp = destCidrIp;
+        return this;
+    }
+    public String getDestCidrIp() {
+        return this.destCidrIp;
     }
 
     public SecurityGroupRule setDirection(String direction) {
@@ -61,22 +77,6 @@ public class SecurityGroupRule extends TeaModel {
         return this.ipProtocol;
     }
 
-    public SecurityGroupRule setPortRange(String portRange) {
-        this.portRange = portRange;
-        return this;
-    }
-    public String getPortRange() {
-        return this.portRange;
-    }
-
-    public SecurityGroupRule setSourcePortRange(String sourcePortRange) {
-        this.sourcePortRange = sourcePortRange;
-        return this;
-    }
-    public String getSourcePortRange() {
-        return this.sourcePortRange;
-    }
-
     public SecurityGroupRule setPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -85,12 +85,12 @@ public class SecurityGroupRule extends TeaModel {
         return this.policy;
     }
 
-    public SecurityGroupRule setDestCidrIp(String destCidrIp) {
-        this.destCidrIp = destCidrIp;
+    public SecurityGroupRule setPortRange(String portRange) {
+        this.portRange = portRange;
         return this;
     }
-    public String getDestCidrIp() {
-        return this.destCidrIp;
+    public String getPortRange() {
+        return this.portRange;
     }
 
     public SecurityGroupRule setSourceCidrIp(String sourceCidrIp) {
@@ -101,12 +101,12 @@ public class SecurityGroupRule extends TeaModel {
         return this.sourceCidrIp;
     }
 
-    public SecurityGroupRule setDescription(String description) {
-        this.description = description;
+    public SecurityGroupRule setSourcePortRange(String sourcePortRange) {
+        this.sourcePortRange = sourcePortRange;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getSourcePortRange() {
+        return this.sourcePortRange;
     }
 
     public SecurityGroupRule setPriority(Integer priority) {

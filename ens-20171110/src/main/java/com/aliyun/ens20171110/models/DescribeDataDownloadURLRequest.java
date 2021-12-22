@@ -13,11 +13,11 @@ public class DescribeDataDownloadURLRequest extends TeaModel {
     @NameInMap("DataVersion")
     public String dataVersion;
 
-    @NameInMap("ServerFilterStrategy")
-    public String serverFilterStrategy;
-
     @NameInMap("ExpireTimeout")
     public Long expireTimeout;
+
+    @NameInMap("ServerFilterStrategy")
+    public String serverFilterStrategy;
 
     public static DescribeDataDownloadURLRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataDownloadURLRequest self = new DescribeDataDownloadURLRequest();
@@ -48,20 +48,20 @@ public class DescribeDataDownloadURLRequest extends TeaModel {
         return this.dataVersion;
     }
 
-    public DescribeDataDownloadURLRequest setServerFilterStrategy(String serverFilterStrategy) {
-        this.serverFilterStrategy = serverFilterStrategy;
-        return this;
-    }
-    public String getServerFilterStrategy() {
-        return this.serverFilterStrategy;
-    }
-
     public DescribeDataDownloadURLRequest setExpireTimeout(Long expireTimeout) {
         this.expireTimeout = expireTimeout;
         return this;
     }
     public Long getExpireTimeout() {
         return this.expireTimeout;
+    }
+
+    public DescribeDataDownloadURLRequest setServerFilterStrategy(String serverFilterStrategy) {
+        this.serverFilterStrategy = serverFilterStrategy;
+        return this;
+    }
+    public String getServerFilterStrategy() {
+        return this.serverFilterStrategy;
     }
 
 }

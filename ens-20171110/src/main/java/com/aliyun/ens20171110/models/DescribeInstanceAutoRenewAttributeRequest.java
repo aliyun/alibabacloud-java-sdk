@@ -4,26 +4,18 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
-    @NameInMap("Version")
-    public String version;
-
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("Version")
+    public String version;
+
     public static DescribeInstanceAutoRenewAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceAutoRenewAttributeRequest self = new DescribeInstanceAutoRenewAttributeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceAutoRenewAttributeRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
     public DescribeInstanceAutoRenewAttributeRequest setInstanceIds(String instanceIds) {
@@ -40,6 +32,14 @@ public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeInstanceAutoRenewAttributeRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

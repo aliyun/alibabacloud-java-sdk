@@ -4,26 +4,18 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ReInitDiskRequest extends TeaModel {
-    @NameInMap("Version")
-    public String version;
-
     @NameInMap("DiskId")
     public String diskId;
 
     @NameInMap("ImageId")
     public String imageId;
 
+    @NameInMap("Version")
+    public String version;
+
     public static ReInitDiskRequest build(java.util.Map<String, ?> map) throws Exception {
         ReInitDiskRequest self = new ReInitDiskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ReInitDiskRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
     public ReInitDiskRequest setDiskId(String diskId) {
@@ -40,6 +32,14 @@ public class ReInitDiskRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public ReInitDiskRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

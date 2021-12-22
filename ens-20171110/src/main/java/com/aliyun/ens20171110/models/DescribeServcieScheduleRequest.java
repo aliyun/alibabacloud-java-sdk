@@ -7,11 +7,11 @@ public class DescribeServcieScheduleRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    @NameInMap("Uuid")
-    public String uuid;
-
     @NameInMap("PodConfigName")
     public String podConfigName;
+
+    @NameInMap("Uuid")
+    public String uuid;
 
     public static DescribeServcieScheduleRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeServcieScheduleRequest self = new DescribeServcieScheduleRequest();
@@ -26,20 +26,20 @@ public class DescribeServcieScheduleRequest extends TeaModel {
         return this.appId;
     }
 
-    public DescribeServcieScheduleRequest setUuid(String uuid) {
-        this.uuid = uuid;
-        return this;
-    }
-    public String getUuid() {
-        return this.uuid;
-    }
-
     public DescribeServcieScheduleRequest setPodConfigName(String podConfigName) {
         this.podConfigName = podConfigName;
         return this;
     }
     public String getPodConfigName() {
         return this.podConfigName;
+    }
+
+    public DescribeServcieScheduleRequest setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

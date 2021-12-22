@@ -4,18 +4,26 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifySecurityGroupAttributeRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
 
-    @NameInMap("Description")
-    public String description;
-
     public static ModifySecurityGroupAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySecurityGroupAttributeRequest self = new ModifySecurityGroupAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifySecurityGroupAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public ModifySecurityGroupAttributeRequest setSecurityGroupId(String securityGroupId) {
@@ -32,14 +40,6 @@ public class ModifySecurityGroupAttributeRequest extends TeaModel {
     }
     public String getSecurityGroupName() {
         return this.securityGroupName;
-    }
-
-    public ModifySecurityGroupAttributeRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
 }

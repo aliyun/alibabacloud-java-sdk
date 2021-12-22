@@ -8,9 +8,9 @@ public class AddDeviceInternetPortResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // RuleId
-    @NameInMap("RuleId")
-    public String ruleId;
+    // RuleIds
+    @NameInMap("RuleIds")
+    public java.util.List<String> ruleIds;
 
     public static AddDeviceInternetPortResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddDeviceInternetPortResponseBody self = new AddDeviceInternetPortResponseBody();
@@ -25,12 +25,12 @@ public class AddDeviceInternetPortResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AddDeviceInternetPortResponseBody setRuleId(String ruleId) {
-        this.ruleId = ruleId;
+    public AddDeviceInternetPortResponseBody setRuleIds(java.util.List<String> ruleIds) {
+        this.ruleIds = ruleIds;
         return this;
     }
-    public String getRuleId() {
-        return this.ruleId;
+    public java.util.List<String> getRuleIds() {
+        return this.ruleIds;
     }
 
 }

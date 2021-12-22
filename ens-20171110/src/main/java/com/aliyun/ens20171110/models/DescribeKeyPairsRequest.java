@@ -4,9 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeKeyPairsRequest extends TeaModel {
-    @NameInMap("Version")
-    public String version;
-
     @NameInMap("KeyPairName")
     public String keyPairName;
 
@@ -16,17 +13,12 @@ public class DescribeKeyPairsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("Version")
+    public String version;
+
     public static DescribeKeyPairsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeKeyPairsRequest self = new DescribeKeyPairsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeKeyPairsRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
     public DescribeKeyPairsRequest setKeyPairName(String keyPairName) {
@@ -51,6 +43,14 @@ public class DescribeKeyPairsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeKeyPairsRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

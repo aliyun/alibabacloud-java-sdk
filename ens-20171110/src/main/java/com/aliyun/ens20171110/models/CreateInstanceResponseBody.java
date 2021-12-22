@@ -4,26 +4,26 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public Integer code;
 
     @NameInMap("InstanceIds")
     public CreateInstanceResponseBodyInstanceIds instanceIds;
 
-    @NameInMap("Code")
-    public Integer code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceResponseBody self = new CreateInstanceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateInstanceResponseBody setCode(Integer code) {
+        this.code = code;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getCode() {
+        return this.code;
     }
 
     public CreateInstanceResponseBody setInstanceIds(CreateInstanceResponseBodyInstanceIds instanceIds) {
@@ -34,12 +34,12 @@ public class CreateInstanceResponseBody extends TeaModel {
         return this.instanceIds;
     }
 
-    public CreateInstanceResponseBody setCode(Integer code) {
-        this.code = code;
+    public CreateInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class CreateInstanceResponseBodyInstanceIds extends TeaModel {

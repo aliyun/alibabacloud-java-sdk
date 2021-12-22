@@ -4,9 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateImageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Integer code;
 
@@ -14,17 +11,12 @@ public class CreateImageResponseBody extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static CreateImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateImageResponseBody self = new CreateImageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateImageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateImageResponseBody setCode(Integer code) {
@@ -41,6 +33,14 @@ public class CreateImageResponseBody extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public CreateImageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

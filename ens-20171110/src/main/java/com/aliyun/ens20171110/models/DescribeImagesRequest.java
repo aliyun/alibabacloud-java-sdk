@@ -4,20 +4,11 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagesRequest extends TeaModel {
-    @NameInMap("product")
-    public String product;
-
-    @NameInMap("Version")
-    public String version;
-
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     @NameInMap("ImageId")
     public String imageId;
-
-    @NameInMap("Status")
-    public String status;
 
     @NameInMap("ImageName")
     public String imageName;
@@ -28,25 +19,18 @@ public class DescribeImagesRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("Status")
+    public String status;
+
+    @NameInMap("Version")
+    public String version;
+
+    @NameInMap("product")
+    public String product;
+
     public static DescribeImagesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImagesRequest self = new DescribeImagesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeImagesRequest setProduct(String product) {
-        this.product = product;
-        return this;
-    }
-    public String getProduct() {
-        return this.product;
-    }
-
-    public DescribeImagesRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
     public DescribeImagesRequest setEnsRegionId(String ensRegionId) {
@@ -63,14 +47,6 @@ public class DescribeImagesRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
-    }
-
-    public DescribeImagesRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
     }
 
     public DescribeImagesRequest setImageName(String imageName) {
@@ -95,6 +71,30 @@ public class DescribeImagesRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeImagesRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public DescribeImagesRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
+    }
+
+    public DescribeImagesRequest setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
     }
 
 }

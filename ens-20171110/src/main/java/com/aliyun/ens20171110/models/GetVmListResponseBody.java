@@ -8,20 +8,20 @@ public class GetVmListResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // 返回信息
-    @NameInMap("Msg")
-    public String msg;
-
     // 业务数据
     @NameInMap("Data")
     public String data;
 
     @NameInMap("Desc")
     public String desc;
+
+    // 返回信息
+    @NameInMap("Msg")
+    public String msg;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetVmListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetVmListResponseBody self = new GetVmListResponseBody();
@@ -34,22 +34,6 @@ public class GetVmListResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
-    }
-
-    public GetVmListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetVmListResponseBody setMsg(String msg) {
-        this.msg = msg;
-        return this;
-    }
-    public String getMsg() {
-        return this.msg;
     }
 
     public GetVmListResponseBody setData(String data) {
@@ -66,6 +50,22 @@ public class GetVmListResponseBody extends TeaModel {
     }
     public String getDesc() {
         return this.desc;
+    }
+
+    public GetVmListResponseBody setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+    public String getMsg() {
+        return this.msg;
+    }
+
+    public GetVmListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

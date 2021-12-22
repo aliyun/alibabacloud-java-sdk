@@ -4,10 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceInternetPortResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     // InstanceId
     @NameInMap("InstanceId")
     public String instanceId;
@@ -15,17 +11,13 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
     @NameInMap("NetworkInfo")
     public java.util.List<GetDeviceInternetPortResponseBodyNetworkInfo> networkInfo;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static GetDeviceInternetPortResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDeviceInternetPortResponseBody self = new GetDeviceInternetPortResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDeviceInternetPortResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetDeviceInternetPortResponseBody setInstanceId(String instanceId) {
@@ -44,13 +36,15 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
         return this.networkInfo;
     }
 
+    public GetDeviceInternetPortResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class GetDeviceInternetPortResponseBodyNetworkInfo extends TeaModel {
-        @NameInMap("InternalIp")
-        public String internalIp;
-
-        @NameInMap("InternalPort")
-        public String internalPort;
-
         @NameInMap("ExternalIp")
         public String externalIp;
 
@@ -60,28 +54,18 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
         @NameInMap("ISP")
         public String ISP;
 
+        @NameInMap("InternalIp")
+        public String internalIp;
+
+        @NameInMap("InternalPort")
+        public String internalPort;
+
         @NameInMap("Status")
         public String status;
 
         public static GetDeviceInternetPortResponseBodyNetworkInfo build(java.util.Map<String, ?> map) throws Exception {
             GetDeviceInternetPortResponseBodyNetworkInfo self = new GetDeviceInternetPortResponseBodyNetworkInfo();
             return TeaModel.build(map, self);
-        }
-
-        public GetDeviceInternetPortResponseBodyNetworkInfo setInternalIp(String internalIp) {
-            this.internalIp = internalIp;
-            return this;
-        }
-        public String getInternalIp() {
-            return this.internalIp;
-        }
-
-        public GetDeviceInternetPortResponseBodyNetworkInfo setInternalPort(String internalPort) {
-            this.internalPort = internalPort;
-            return this;
-        }
-        public String getInternalPort() {
-            return this.internalPort;
         }
 
         public GetDeviceInternetPortResponseBodyNetworkInfo setExternalIp(String externalIp) {
@@ -106,6 +90,22 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
         }
         public String getISP() {
             return this.ISP;
+        }
+
+        public GetDeviceInternetPortResponseBodyNetworkInfo setInternalIp(String internalIp) {
+            this.internalIp = internalIp;
+            return this;
+        }
+        public String getInternalIp() {
+            return this.internalIp;
+        }
+
+        public GetDeviceInternetPortResponseBodyNetworkInfo setInternalPort(String internalPort) {
+            this.internalPort = internalPort;
+            return this;
+        }
+        public String getInternalPort() {
+            return this.internalPort;
         }
 
         public GetDeviceInternetPortResponseBodyNetworkInfo setStatus(String status) {

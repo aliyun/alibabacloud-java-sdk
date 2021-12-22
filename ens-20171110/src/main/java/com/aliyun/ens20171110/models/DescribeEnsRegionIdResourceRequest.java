@@ -4,11 +4,11 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsRegionIdResourceRequest extends TeaModel {
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("Isp")
+    public String isp;
 
     @NameInMap("OrderByParams")
     public String orderByParams;
@@ -19,20 +19,12 @@ public class DescribeEnsRegionIdResourceRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    @NameInMap("Isp")
-    public String isp;
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeEnsRegionIdResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEnsRegionIdResourceRequest self = new DescribeEnsRegionIdResourceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeEnsRegionIdResourceRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeEnsRegionIdResourceRequest setEndTime(String endTime) {
@@ -41,6 +33,14 @@ public class DescribeEnsRegionIdResourceRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeEnsRegionIdResourceRequest setIsp(String isp) {
+        this.isp = isp;
+        return this;
+    }
+    public String getIsp() {
+        return this.isp;
     }
 
     public DescribeEnsRegionIdResourceRequest setOrderByParams(String orderByParams) {
@@ -67,12 +67,12 @@ public class DescribeEnsRegionIdResourceRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeEnsRegionIdResourceRequest setIsp(String isp) {
-        this.isp = isp;
+    public DescribeEnsRegionIdResourceRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getIsp() {
-        return this.isp;
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

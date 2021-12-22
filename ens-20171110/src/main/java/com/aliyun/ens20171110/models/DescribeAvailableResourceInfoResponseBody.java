@@ -4,11 +4,11 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Images")
     public DescribeAvailableResourceInfoResponseBodyImages images;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("SupportResources")
     public DescribeAvailableResourceInfoResponseBodySupportResources supportResources;
@@ -18,20 +18,20 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeAvailableResourceInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeAvailableResourceInfoResponseBody setImages(DescribeAvailableResourceInfoResponseBodyImages images) {
         this.images = images;
         return this;
     }
     public DescribeAvailableResourceInfoResponseBodyImages getImages() {
         return this.images;
+    }
+
+    public DescribeAvailableResourceInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeAvailableResourceInfoResponseBody setSupportResources(DescribeAvailableResourceInfoResponseBodySupportResources supportResources) {
@@ -43,26 +43,26 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceInfoResponseBodyImagesImage extends TeaModel {
-        @NameInMap("ImageSize")
-        public Integer imageSize;
+        @NameInMap("ImageId")
+        public String imageId;
 
         @NameInMap("ImageName")
         public String imageName;
 
-        @NameInMap("ImageId")
-        public String imageId;
+        @NameInMap("ImageSize")
+        public Integer imageSize;
 
         public static DescribeAvailableResourceInfoResponseBodyImagesImage build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableResourceInfoResponseBodyImagesImage self = new DescribeAvailableResourceInfoResponseBodyImagesImage();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableResourceInfoResponseBodyImagesImage setImageSize(Integer imageSize) {
-            this.imageSize = imageSize;
+        public DescribeAvailableResourceInfoResponseBodyImagesImage setImageId(String imageId) {
+            this.imageId = imageId;
             return this;
         }
-        public Integer getImageSize() {
-            return this.imageSize;
+        public String getImageId() {
+            return this.imageId;
         }
 
         public DescribeAvailableResourceInfoResponseBodyImagesImage setImageName(String imageName) {
@@ -73,12 +73,12 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             return this.imageName;
         }
 
-        public DescribeAvailableResourceInfoResponseBodyImagesImage setImageId(String imageId) {
-            this.imageId = imageId;
+        public DescribeAvailableResourceInfoResponseBodyImagesImage setImageSize(Integer imageSize) {
+            this.imageSize = imageSize;
             return this;
         }
-        public String getImageId() {
-            return this.imageId;
+        public Integer getImageSize() {
+            return this.imageSize;
         }
 
     }
@@ -141,14 +141,14 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtendsEnsRegionId extends TeaModel {
-        @NameInMap("EnsRegionId")
-        public String ensRegionId;
+        @NameInMap("Area")
+        public String area;
 
         @NameInMap("EnName")
         public String enName;
 
-        @NameInMap("Area")
-        public String area;
+        @NameInMap("EnsRegionId")
+        public String ensRegionId;
 
         @NameInMap("Name")
         public String name;
@@ -161,12 +161,12 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtendsEnsRegionId setEnsRegionId(String ensRegionId) {
-            this.ensRegionId = ensRegionId;
+        public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtendsEnsRegionId setArea(String area) {
+            this.area = area;
             return this;
         }
-        public String getEnsRegionId() {
-            return this.ensRegionId;
+        public String getArea() {
+            return this.area;
         }
 
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtendsEnsRegionId setEnName(String enName) {
@@ -177,12 +177,12 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             return this.enName;
         }
 
-        public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtendsEnsRegionId setArea(String area) {
-            this.area = area;
+        public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtendsEnsRegionId setEnsRegionId(String ensRegionId) {
+            this.ensRegionId = ensRegionId;
             return this;
         }
-        public String getArea() {
-            return this.area;
+        public String getEnsRegionId() {
+            return this.ensRegionId;
         }
 
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtendsEnsRegionId setName(String name) {
@@ -242,14 +242,14 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource extends TeaModel {
-        @NameInMap("DataDiskMaxSize")
-        public Integer dataDiskMaxSize;
-
         @NameInMap("BandwidthTypes")
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceBandwidthTypes bandwidthTypes;
 
-        @NameInMap("SystemDiskMinSize")
-        public Integer systemDiskMinSize;
+        @NameInMap("DataDiskMaxSize")
+        public Integer dataDiskMaxSize;
+
+        @NameInMap("DataDiskMinSize")
+        public Integer dataDiskMinSize;
 
         @NameInMap("EnsRegionIds")
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIds ensRegionIds;
@@ -263,20 +263,12 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         @NameInMap("SystemDiskMaxSize")
         public Integer systemDiskMaxSize;
 
-        @NameInMap("DataDiskMinSize")
-        public Integer dataDiskMinSize;
+        @NameInMap("SystemDiskMinSize")
+        public Integer systemDiskMinSize;
 
         public static DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource self = new DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource setDataDiskMaxSize(Integer dataDiskMaxSize) {
-            this.dataDiskMaxSize = dataDiskMaxSize;
-            return this;
-        }
-        public Integer getDataDiskMaxSize() {
-            return this.dataDiskMaxSize;
         }
 
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource setBandwidthTypes(DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceBandwidthTypes bandwidthTypes) {
@@ -287,12 +279,20 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             return this.bandwidthTypes;
         }
 
-        public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource setSystemDiskMinSize(Integer systemDiskMinSize) {
-            this.systemDiskMinSize = systemDiskMinSize;
+        public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource setDataDiskMaxSize(Integer dataDiskMaxSize) {
+            this.dataDiskMaxSize = dataDiskMaxSize;
             return this;
         }
-        public Integer getSystemDiskMinSize() {
-            return this.systemDiskMinSize;
+        public Integer getDataDiskMaxSize() {
+            return this.dataDiskMaxSize;
+        }
+
+        public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource setDataDiskMinSize(Integer dataDiskMinSize) {
+            this.dataDiskMinSize = dataDiskMinSize;
+            return this;
+        }
+        public Integer getDataDiskMinSize() {
+            return this.dataDiskMinSize;
         }
 
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource setEnsRegionIds(DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIds ensRegionIds) {
@@ -327,12 +327,12 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             return this.systemDiskMaxSize;
         }
 
-        public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource setDataDiskMinSize(Integer dataDiskMinSize) {
-            this.dataDiskMinSize = dataDiskMinSize;
+        public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource setSystemDiskMinSize(Integer systemDiskMinSize) {
+            this.systemDiskMinSize = systemDiskMinSize;
             return this;
         }
-        public Integer getDataDiskMinSize() {
-            return this.dataDiskMinSize;
+        public Integer getSystemDiskMinSize() {
+            return this.systemDiskMinSize;
         }
 
     }

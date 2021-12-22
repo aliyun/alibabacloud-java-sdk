@@ -4,24 +4,16 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class SetBackendServersResponseBody extends TeaModel {
+    @NameInMap("BackendServers")
+    public SetBackendServersResponseBodyBackendServers backendServers;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("BackendServers")
-    public SetBackendServersResponseBodyBackendServers backendServers;
-
     public static SetBackendServersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SetBackendServersResponseBody self = new SetBackendServersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SetBackendServersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SetBackendServersResponseBody setBackendServers(SetBackendServersResponseBodyBackendServers backendServers) {
@@ -32,49 +24,33 @@ public class SetBackendServersResponseBody extends TeaModel {
         return this.backendServers;
     }
 
+    public SetBackendServersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class SetBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
-        @NameInMap("ServerId")
-        public String serverId;
-
-        @NameInMap("Weight")
-        public Integer weight;
-
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("Ip")
         public String ip;
 
         @NameInMap("Port")
         public Integer port;
 
+        @NameInMap("ServerId")
+        public String serverId;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Weight")
+        public Integer weight;
+
         public static SetBackendServersResponseBodyBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
             SetBackendServersResponseBodyBackendServersBackendServer self = new SetBackendServersResponseBodyBackendServersBackendServer();
             return TeaModel.build(map, self);
-        }
-
-        public SetBackendServersResponseBodyBackendServersBackendServer setServerId(String serverId) {
-            this.serverId = serverId;
-            return this;
-        }
-        public String getServerId() {
-            return this.serverId;
-        }
-
-        public SetBackendServersResponseBodyBackendServersBackendServer setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
-        }
-
-        public SetBackendServersResponseBodyBackendServersBackendServer setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public SetBackendServersResponseBodyBackendServersBackendServer setIp(String ip) {
@@ -91,6 +67,30 @@ public class SetBackendServersResponseBody extends TeaModel {
         }
         public Integer getPort() {
             return this.port;
+        }
+
+        public SetBackendServersResponseBodyBackendServersBackendServer setServerId(String serverId) {
+            this.serverId = serverId;
+            return this;
+        }
+        public String getServerId() {
+            return this.serverId;
+        }
+
+        public SetBackendServersResponseBodyBackendServersBackendServer setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public SetBackendServersResponseBodyBackendServersBackendServer setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }

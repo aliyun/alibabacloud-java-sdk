@@ -10,11 +10,11 @@ public class ModifyEpnInstanceRequest extends TeaModel {
     @NameInMap("EPNInstanceName")
     public String EPNInstanceName;
 
-    @NameInMap("NetworkingModel")
-    public String networkingModel;
-
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
+
+    @NameInMap("NetworkingModel")
+    public String networkingModel;
 
     public static ModifyEpnInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyEpnInstanceRequest self = new ModifyEpnInstanceRequest();
@@ -37,20 +37,20 @@ public class ModifyEpnInstanceRequest extends TeaModel {
         return this.EPNInstanceName;
     }
 
-    public ModifyEpnInstanceRequest setNetworkingModel(String networkingModel) {
-        this.networkingModel = networkingModel;
-        return this;
-    }
-    public String getNetworkingModel() {
-        return this.networkingModel;
-    }
-
     public ModifyEpnInstanceRequest setInternetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
         this.internetMaxBandwidthOut = internetMaxBandwidthOut;
         return this;
     }
     public Integer getInternetMaxBandwidthOut() {
         return this.internetMaxBandwidthOut;
+    }
+
+    public ModifyEpnInstanceRequest setNetworkingModel(String networkingModel) {
+        this.networkingModel = networkingModel;
+        return this;
+    }
+    public String getNetworkingModel() {
+        return this.networkingModel;
     }
 
 }

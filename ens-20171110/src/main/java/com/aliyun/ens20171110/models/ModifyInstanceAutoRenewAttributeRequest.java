@@ -4,32 +4,24 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
-    @NameInMap("InstanceIds")
-    public String instanceIds;
-
     @NameInMap("AutoRenew")
     public String autoRenew;
 
     @NameInMap("Duration")
     public String duration;
 
-    @NameInMap("RenewalStatus")
-    public String renewalStatus;
+    @NameInMap("InstanceIds")
+    public String instanceIds;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    @NameInMap("RenewalStatus")
+    public String renewalStatus;
+
     public static ModifyInstanceAutoRenewAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceAutoRenewAttributeRequest self = new ModifyInstanceAutoRenewAttributeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyInstanceAutoRenewAttributeRequest setInstanceIds(String instanceIds) {
-        this.instanceIds = instanceIds;
-        return this;
-    }
-    public String getInstanceIds() {
-        return this.instanceIds;
     }
 
     public ModifyInstanceAutoRenewAttributeRequest setAutoRenew(String autoRenew) {
@@ -48,12 +40,12 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
         return this.duration;
     }
 
-    public ModifyInstanceAutoRenewAttributeRequest setRenewalStatus(String renewalStatus) {
-        this.renewalStatus = renewalStatus;
+    public ModifyInstanceAutoRenewAttributeRequest setInstanceIds(String instanceIds) {
+        this.instanceIds = instanceIds;
         return this;
     }
-    public String getRenewalStatus() {
-        return this.renewalStatus;
+    public String getInstanceIds() {
+        return this.instanceIds;
     }
 
     public ModifyInstanceAutoRenewAttributeRequest setOwnerId(String ownerId) {
@@ -62,6 +54,14 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     }
     public String getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyInstanceAutoRenewAttributeRequest setRenewalStatus(String renewalStatus) {
+        this.renewalStatus = renewalStatus;
+        return this;
+    }
+    public String getRenewalStatus() {
+        return this.renewalStatus;
     }
 
 }

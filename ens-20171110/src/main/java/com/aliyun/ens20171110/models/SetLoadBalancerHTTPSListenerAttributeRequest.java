@@ -4,29 +4,36 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
-    // 负载均衡实例的ID。
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
-
-    // 负载均衡实例前端使用的端口。  取值：1-65535。
-    @NameInMap("ListenerPort")
-    public Integer listenerPort;
-
     // 设置监听的描述信息。  长度限制为1-80个字符，允许包含字母、数字、“-”、“/”、“.”和“_”等字符。支持中文描述。
     @NameInMap("Description")
     public String description;
-
-    // 调度算法。取值：  wrr（默认值）：权重值越高的后端服务器，被轮询到的次数（概率）也越高。 wlc：除了根据每台后端服务器设定的权重值来进行轮询，同时还考虑后端服务器的实际负载（即连接数）。当权重值相同时，当前连接数越小的后端服务器被轮询到的次数（概率）也越高。 rr：按照访问顺序依次将外部请求依序分发到后端服务器。
-    @NameInMap("Scheduler")
-    public String scheduler;
 
     // 是否开启健康检查。  取值：on | off。
     @NameInMap("HealthCheck")
     public String healthCheck;
 
+    // 健康检查的后端服务器的端口。  取值： 1~65535。    说明 在HealthCheck值为on时才会有效。
+    @NameInMap("HealthCheckConnectPort")
+    public Integer healthCheckConnectPort;
+
     // 用于健康检查的域名，取值：  $_ip： 后端服务器的私网IP。当指定了IP或该参数未指定时，负载均衡会使用各后端服务器的私网IP当做健康检查使用的域名。是否要支持？ domain：域名长度为1-80字符，只能包含字母、数字、点号（.）和连字符（-）。   说明 在HealthCheck值为on时才会有效。
     @NameInMap("HealthCheckDomain")
     public String healthCheckDomain;
+
+    // 健康检查正常的HTTP状态码，多个状态码用逗号分隔。  默认值为http_2xx。  取值：http_2xx | http_3xx | http_4xx | http_5xx。   说明 在HealthCheck值为on时才会有效。
+    @NameInMap("HealthCheckHttpCode")
+    public String healthCheckHttpCode;
+
+    // 健康检查的时间间隔。  取值： 1~50（秒）。   说明 在HealthCheck值为on时才会有效。
+    @NameInMap("HealthCheckInterval")
+    public Integer healthCheckInterval;
+
+    @NameInMap("HealthCheckMethod")
+    public String healthCheckMethod;
+
+    // 接收来自运行状况检查的响应需要等待的时间。如果后端ECS在指定的时间内没有正确响应，则判定为健康检查失败。在HealthCheck值为on时才会有效。  取值：1~300（秒）。   说明 如果HealthCHeckTimeout的值小于HealthCheckInterval的值，则HealthCHeckTimeout无效，超时时间为HealthCheckInterval的值。
+    @NameInMap("HealthCheckTimeout")
+    public Integer healthCheckTimeout;
 
     // 用于健康检查的URI。  长度限制为1~80，只能使用字母、数字和”-/.%?#&amp;“这些字符。 URL不能只为”/“，但必须以”/“开头。    说明 在HealthCheck值为on时才会有效。
     @NameInMap("HealthCheckURI")
@@ -36,60 +43,37 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     @NameInMap("HealthyThreshold")
     public Integer healthyThreshold;
 
-    // 健康检查连续失败多少次后，将后端服务器的健康检查状态由success判定为fail。  取值：2~10。   说明 在HealthCheck值为on时才会有效。
-    @NameInMap("UnhealthyThreshold")
-    public Integer unhealthyThreshold;
-
-    // 接收来自运行状况检查的响应需要等待的时间。如果后端ECS在指定的时间内没有正确响应，则判定为健康检查失败。在HealthCheck值为on时才会有效。  取值：1~300（秒）。   说明 如果HealthCHeckTimeout的值小于HealthCheckInterval的值，则HealthCHeckTimeout无效，超时时间为HealthCheckInterval的值。
-    @NameInMap("HealthCheckTimeout")
-    public Integer healthCheckTimeout;
-
-    // 健康检查的后端服务器的端口。  取值： 1~65535。    说明 在HealthCheck值为on时才会有效。
-    @NameInMap("HealthCheckConnectPort")
-    public Integer healthCheckConnectPort;
-
-    // 健康检查的时间间隔。  取值： 1~50（秒）。   说明 在HealthCheck值为on时才会有效。
-    @NameInMap("HealthCheckInterval")
-    public Integer healthCheckInterval;
-
-    // 健康检查正常的HTTP状态码，多个状态码用逗号分隔。  默认值为http_2xx。  取值：http_2xx | http_3xx | http_4xx | http_5xx。   说明 在HealthCheck值为on时才会有效。
-    @NameInMap("HealthCheckHttpCode")
-    public String healthCheckHttpCode;
-
     // 指定连接空闲超时时间，取值范围为1~60秒，默认值为15秒。  在超时时间内一直没有访问请求，负载均衡会暂时中断当前连接，直到一下次请求来临时重新建立新的连接。
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
+
+    // 负载均衡实例前端使用的端口。  取值：1-65535。
+    @NameInMap("ListenerPort")
+    public Integer listenerPort;
+
+    // 负载均衡实例的ID。
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
 
     // 指定请求超时时间，取值范围为1~180秒，默认值为60秒。  在超时时间内后端服务器一直没有响应，负载均衡将放弃等待，给客户端返回 HTTP 504 错误码。
     @NameInMap("RequestTimeout")
     public Integer requestTimeout;
 
+    // 调度算法。取值：  wrr（默认值）：权重值越高的后端服务器，被轮询到的次数（概率）也越高。 wlc：除了根据每台后端服务器设定的权重值来进行轮询，同时还考虑后端服务器的实际负载（即连接数）。当权重值相同时，当前连接数越小的后端服务器被轮询到的次数（概率）也越高。 rr：按照访问顺序依次将外部请求依序分发到后端服务器。
+    @NameInMap("Scheduler")
+    public String scheduler;
+
     // 服务器证书的ID。
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
 
-    @NameInMap("HealthCheckMethod")
-    public String healthCheckMethod;
+    // 健康检查连续失败多少次后，将后端服务器的健康检查状态由success判定为fail。  取值：2~10。   说明 在HealthCheck值为on时才会有效。
+    @NameInMap("UnhealthyThreshold")
+    public Integer unhealthyThreshold;
 
     public static SetLoadBalancerHTTPSListenerAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         SetLoadBalancerHTTPSListenerAttributeRequest self = new SetLoadBalancerHTTPSListenerAttributeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setLoadBalancerId(String loadBalancerId) {
-        this.loadBalancerId = loadBalancerId;
-        return this;
-    }
-    public String getLoadBalancerId() {
-        return this.loadBalancerId;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setListenerPort(Integer listenerPort) {
-        this.listenerPort = listenerPort;
-        return this;
-    }
-    public Integer getListenerPort() {
-        return this.listenerPort;
     }
 
     public SetLoadBalancerHTTPSListenerAttributeRequest setDescription(String description) {
@@ -100,14 +84,6 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
         return this.description;
     }
 
-    public SetLoadBalancerHTTPSListenerAttributeRequest setScheduler(String scheduler) {
-        this.scheduler = scheduler;
-        return this;
-    }
-    public String getScheduler() {
-        return this.scheduler;
-    }
-
     public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheck(String healthCheck) {
         this.healthCheck = healthCheck;
         return this;
@@ -116,12 +92,52 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
         return this.healthCheck;
     }
 
+    public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheckConnectPort(Integer healthCheckConnectPort) {
+        this.healthCheckConnectPort = healthCheckConnectPort;
+        return this;
+    }
+    public Integer getHealthCheckConnectPort() {
+        return this.healthCheckConnectPort;
+    }
+
     public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheckDomain(String healthCheckDomain) {
         this.healthCheckDomain = healthCheckDomain;
         return this;
     }
     public String getHealthCheckDomain() {
         return this.healthCheckDomain;
+    }
+
+    public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheckHttpCode(String healthCheckHttpCode) {
+        this.healthCheckHttpCode = healthCheckHttpCode;
+        return this;
+    }
+    public String getHealthCheckHttpCode() {
+        return this.healthCheckHttpCode;
+    }
+
+    public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheckInterval(Integer healthCheckInterval) {
+        this.healthCheckInterval = healthCheckInterval;
+        return this;
+    }
+    public Integer getHealthCheckInterval() {
+        return this.healthCheckInterval;
+    }
+
+    public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheckMethod(String healthCheckMethod) {
+        this.healthCheckMethod = healthCheckMethod;
+        return this;
+    }
+    public String getHealthCheckMethod() {
+        return this.healthCheckMethod;
+    }
+
+    public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheckTimeout(Integer healthCheckTimeout) {
+        this.healthCheckTimeout = healthCheckTimeout;
+        return this;
+    }
+    public Integer getHealthCheckTimeout() {
+        return this.healthCheckTimeout;
     }
 
     public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheckURI(String healthCheckURI) {
@@ -140,52 +156,28 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
         return this.healthyThreshold;
     }
 
-    public SetLoadBalancerHTTPSListenerAttributeRequest setUnhealthyThreshold(Integer unhealthyThreshold) {
-        this.unhealthyThreshold = unhealthyThreshold;
-        return this;
-    }
-    public Integer getUnhealthyThreshold() {
-        return this.unhealthyThreshold;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheckTimeout(Integer healthCheckTimeout) {
-        this.healthCheckTimeout = healthCheckTimeout;
-        return this;
-    }
-    public Integer getHealthCheckTimeout() {
-        return this.healthCheckTimeout;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheckConnectPort(Integer healthCheckConnectPort) {
-        this.healthCheckConnectPort = healthCheckConnectPort;
-        return this;
-    }
-    public Integer getHealthCheckConnectPort() {
-        return this.healthCheckConnectPort;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheckInterval(Integer healthCheckInterval) {
-        this.healthCheckInterval = healthCheckInterval;
-        return this;
-    }
-    public Integer getHealthCheckInterval() {
-        return this.healthCheckInterval;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheckHttpCode(String healthCheckHttpCode) {
-        this.healthCheckHttpCode = healthCheckHttpCode;
-        return this;
-    }
-    public String getHealthCheckHttpCode() {
-        return this.healthCheckHttpCode;
-    }
-
     public SetLoadBalancerHTTPSListenerAttributeRequest setIdleTimeout(Integer idleTimeout) {
         this.idleTimeout = idleTimeout;
         return this;
     }
     public Integer getIdleTimeout() {
         return this.idleTimeout;
+    }
+
+    public SetLoadBalancerHTTPSListenerAttributeRequest setListenerPort(Integer listenerPort) {
+        this.listenerPort = listenerPort;
+        return this;
+    }
+    public Integer getListenerPort() {
+        return this.listenerPort;
+    }
+
+    public SetLoadBalancerHTTPSListenerAttributeRequest setLoadBalancerId(String loadBalancerId) {
+        this.loadBalancerId = loadBalancerId;
+        return this;
+    }
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
     }
 
     public SetLoadBalancerHTTPSListenerAttributeRequest setRequestTimeout(Integer requestTimeout) {
@@ -196,6 +188,14 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
         return this.requestTimeout;
     }
 
+    public SetLoadBalancerHTTPSListenerAttributeRequest setScheduler(String scheduler) {
+        this.scheduler = scheduler;
+        return this;
+    }
+    public String getScheduler() {
+        return this.scheduler;
+    }
+
     public SetLoadBalancerHTTPSListenerAttributeRequest setServerCertificateId(String serverCertificateId) {
         this.serverCertificateId = serverCertificateId;
         return this;
@@ -204,12 +204,12 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
         return this.serverCertificateId;
     }
 
-    public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheckMethod(String healthCheckMethod) {
-        this.healthCheckMethod = healthCheckMethod;
+    public SetLoadBalancerHTTPSListenerAttributeRequest setUnhealthyThreshold(Integer unhealthyThreshold) {
+        this.unhealthyThreshold = unhealthyThreshold;
         return this;
     }
-    public String getHealthCheckMethod() {
-        return this.healthCheckMethod;
+    public Integer getUnhealthyThreshold() {
+        return this.unhealthyThreshold;
     }
 
 }

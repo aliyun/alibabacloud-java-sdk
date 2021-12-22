@@ -4,37 +4,29 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateImageRequest extends TeaModel {
-    @NameInMap("product")
-    public String product;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("DeleteAfterImageUpload")
+    public String deleteAfterImageUpload;
 
     @NameInMap("ImageName")
     public String imageName;
 
-    @NameInMap("DeleteAfterImageUpload")
-    public String deleteAfterImageUpload;
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("product")
+    public String product;
 
     public static CreateImageRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateImageRequest self = new CreateImageRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateImageRequest setProduct(String product) {
-        this.product = product;
+    public CreateImageRequest setDeleteAfterImageUpload(String deleteAfterImageUpload) {
+        this.deleteAfterImageUpload = deleteAfterImageUpload;
         return this;
     }
-    public String getProduct() {
-        return this.product;
-    }
-
-    public CreateImageRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getDeleteAfterImageUpload() {
+        return this.deleteAfterImageUpload;
     }
 
     public CreateImageRequest setImageName(String imageName) {
@@ -45,12 +37,20 @@ public class CreateImageRequest extends TeaModel {
         return this.imageName;
     }
 
-    public CreateImageRequest setDeleteAfterImageUpload(String deleteAfterImageUpload) {
-        this.deleteAfterImageUpload = deleteAfterImageUpload;
+    public CreateImageRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getDeleteAfterImageUpload() {
-        return this.deleteAfterImageUpload;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public CreateImageRequest setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
     }
 
 }

@@ -4,47 +4,65 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
-    @NameInMap("SystemDisk")
-    public CreateInstanceRequestSystemDisk systemDisk;
-
     @NameInMap("DataDisk")
     public java.util.List<CreateInstanceRequestDataDisk> dataDisk;
 
-    @NameInMap("InstanceType")
-    public String instanceType;
-
-    @NameInMap("EnsRegionId")
-    public String ensRegionId;
-
-    @NameInMap("Password")
-    public String password;
-
-    @NameInMap("Period")
-    public String period;
-
-    @NameInMap("ImageId")
-    public String imageId;
-
-    @NameInMap("Quantity")
-    public String quantity;
-
-    @NameInMap("InternetChargeType")
-    public String internetChargeType;
-
-    @NameInMap("AutoRenewPeriod")
-    public String autoRenewPeriod;
+    @NameInMap("SystemDisk")
+    public CreateInstanceRequestSystemDisk systemDisk;
 
     @NameInMap("AutoRenew")
     public String autoRenew;
 
+    @NameInMap("AutoRenewPeriod")
+    public String autoRenewPeriod;
+
+    @NameInMap("EnsRegionId")
+    public String ensRegionId;
+
+    @NameInMap("HostName")
+    public String hostName;
+
+    @NameInMap("ImageId")
+    public String imageId;
+
+    @NameInMap("InstanceName")
+    public String instanceName;
+
+    @NameInMap("InstanceType")
+    public String instanceType;
+
+    @NameInMap("InternetChargeType")
+    public String internetChargeType;
+
     @NameInMap("IpType")
     public String ipType;
+
+    @NameInMap("KeyPairName")
+    public String keyPairName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("KeyPairName")
-    public String keyPairName;
+    @NameInMap("Password")
+    public String password;
+
+    @NameInMap("PaymentType")
+    public String paymentType;
+
+    @NameInMap("Period")
+    public String period;
+
+    @NameInMap("PrivateIpAddress")
+    public String privateIpAddress;
+
+    @NameInMap("PublicIpIdentification")
+    public Boolean publicIpIdentification;
+
+    @NameInMap("Quantity")
+    public String quantity;
+
+    @NameInMap("UniqueSuffix")
+    public Boolean uniqueSuffix;
 
     @NameInMap("UserData")
     public String userData;
@@ -52,32 +70,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    @NameInMap("PrivateIpAddress")
-    public String privateIpAddress;
-
-    @NameInMap("PaymentType")
-    public String paymentType;
-
-    @NameInMap("InstanceName")
-    public String instanceName;
-
-    @NameInMap("HostName")
-    public String hostName;
-
-    @NameInMap("UniqueSuffix")
-    public Boolean uniqueSuffix;
-
     public static CreateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceRequest self = new CreateInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateInstanceRequest setSystemDisk(CreateInstanceRequestSystemDisk systemDisk) {
-        this.systemDisk = systemDisk;
-        return this;
-    }
-    public CreateInstanceRequestSystemDisk getSystemDisk() {
-        return this.systemDisk;
     }
 
     public CreateInstanceRequest setDataDisk(java.util.List<CreateInstanceRequestDataDisk> dataDisk) {
@@ -88,68 +83,12 @@ public class CreateInstanceRequest extends TeaModel {
         return this.dataDisk;
     }
 
-    public CreateInstanceRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
+    public CreateInstanceRequest setSystemDisk(CreateInstanceRequestSystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
         return this;
     }
-    public String getInstanceType() {
-        return this.instanceType;
-    }
-
-    public CreateInstanceRequest setEnsRegionId(String ensRegionId) {
-        this.ensRegionId = ensRegionId;
-        return this;
-    }
-    public String getEnsRegionId() {
-        return this.ensRegionId;
-    }
-
-    public CreateInstanceRequest setPassword(String password) {
-        this.password = password;
-        return this;
-    }
-    public String getPassword() {
-        return this.password;
-    }
-
-    public CreateInstanceRequest setPeriod(String period) {
-        this.period = period;
-        return this;
-    }
-    public String getPeriod() {
-        return this.period;
-    }
-
-    public CreateInstanceRequest setImageId(String imageId) {
-        this.imageId = imageId;
-        return this;
-    }
-    public String getImageId() {
-        return this.imageId;
-    }
-
-    public CreateInstanceRequest setQuantity(String quantity) {
-        this.quantity = quantity;
-        return this;
-    }
-    public String getQuantity() {
-        return this.quantity;
-    }
-
-    public CreateInstanceRequest setInternetChargeType(String internetChargeType) {
-        this.internetChargeType = internetChargeType;
-        return this;
-    }
-    public String getInternetChargeType() {
-        return this.internetChargeType;
-    }
-
-    public CreateInstanceRequest setAutoRenewPeriod(String autoRenewPeriod) {
-        this.autoRenewPeriod = autoRenewPeriod;
-        return this;
-    }
-    public String getAutoRenewPeriod() {
-        return this.autoRenewPeriod;
+    public CreateInstanceRequestSystemDisk getSystemDisk() {
+        return this.systemDisk;
     }
 
     public CreateInstanceRequest setAutoRenew(String autoRenew) {
@@ -160,12 +99,76 @@ public class CreateInstanceRequest extends TeaModel {
         return this.autoRenew;
     }
 
+    public CreateInstanceRequest setAutoRenewPeriod(String autoRenewPeriod) {
+        this.autoRenewPeriod = autoRenewPeriod;
+        return this;
+    }
+    public String getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
+    }
+
+    public CreateInstanceRequest setEnsRegionId(String ensRegionId) {
+        this.ensRegionId = ensRegionId;
+        return this;
+    }
+    public String getEnsRegionId() {
+        return this.ensRegionId;
+    }
+
+    public CreateInstanceRequest setHostName(String hostName) {
+        this.hostName = hostName;
+        return this;
+    }
+    public String getHostName() {
+        return this.hostName;
+    }
+
+    public CreateInstanceRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public CreateInstanceRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    public CreateInstanceRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public CreateInstanceRequest setInternetChargeType(String internetChargeType) {
+        this.internetChargeType = internetChargeType;
+        return this;
+    }
+    public String getInternetChargeType() {
+        return this.internetChargeType;
+    }
+
     public CreateInstanceRequest setIpType(String ipType) {
         this.ipType = ipType;
         return this;
     }
     public String getIpType() {
         return this.ipType;
+    }
+
+    public CreateInstanceRequest setKeyPairName(String keyPairName) {
+        this.keyPairName = keyPairName;
+        return this;
+    }
+    public String getKeyPairName() {
+        return this.keyPairName;
     }
 
     public CreateInstanceRequest setOwnerId(Long ownerId) {
@@ -176,12 +179,60 @@ public class CreateInstanceRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateInstanceRequest setKeyPairName(String keyPairName) {
-        this.keyPairName = keyPairName;
+    public CreateInstanceRequest setPassword(String password) {
+        this.password = password;
         return this;
     }
-    public String getKeyPairName() {
-        return this.keyPairName;
+    public String getPassword() {
+        return this.password;
+    }
+
+    public CreateInstanceRequest setPaymentType(String paymentType) {
+        this.paymentType = paymentType;
+        return this;
+    }
+    public String getPaymentType() {
+        return this.paymentType;
+    }
+
+    public CreateInstanceRequest setPeriod(String period) {
+        this.period = period;
+        return this;
+    }
+    public String getPeriod() {
+        return this.period;
+    }
+
+    public CreateInstanceRequest setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
+    public CreateInstanceRequest setPublicIpIdentification(Boolean publicIpIdentification) {
+        this.publicIpIdentification = publicIpIdentification;
+        return this;
+    }
+    public Boolean getPublicIpIdentification() {
+        return this.publicIpIdentification;
+    }
+
+    public CreateInstanceRequest setQuantity(String quantity) {
+        this.quantity = quantity;
+        return this;
+    }
+    public String getQuantity() {
+        return this.quantity;
+    }
+
+    public CreateInstanceRequest setUniqueSuffix(Boolean uniqueSuffix) {
+        this.uniqueSuffix = uniqueSuffix;
+        return this;
+    }
+    public Boolean getUniqueSuffix() {
+        return this.uniqueSuffix;
     }
 
     public CreateInstanceRequest setUserData(String userData) {
@@ -200,44 +251,23 @@ public class CreateInstanceRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public CreateInstanceRequest setPrivateIpAddress(String privateIpAddress) {
-        this.privateIpAddress = privateIpAddress;
-        return this;
-    }
-    public String getPrivateIpAddress() {
-        return this.privateIpAddress;
-    }
+    public static class CreateInstanceRequestDataDisk extends TeaModel {
+        @NameInMap("Size")
+        public String size;
 
-    public CreateInstanceRequest setPaymentType(String paymentType) {
-        this.paymentType = paymentType;
-        return this;
-    }
-    public String getPaymentType() {
-        return this.paymentType;
-    }
+        public static CreateInstanceRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestDataDisk self = new CreateInstanceRequestDataDisk();
+            return TeaModel.build(map, self);
+        }
 
-    public CreateInstanceRequest setInstanceName(String instanceName) {
-        this.instanceName = instanceName;
-        return this;
-    }
-    public String getInstanceName() {
-        return this.instanceName;
-    }
+        public CreateInstanceRequestDataDisk setSize(String size) {
+            this.size = size;
+            return this;
+        }
+        public String getSize() {
+            return this.size;
+        }
 
-    public CreateInstanceRequest setHostName(String hostName) {
-        this.hostName = hostName;
-        return this;
-    }
-    public String getHostName() {
-        return this.hostName;
-    }
-
-    public CreateInstanceRequest setUniqueSuffix(Boolean uniqueSuffix) {
-        this.uniqueSuffix = uniqueSuffix;
-        return this;
-    }
-    public Boolean getUniqueSuffix() {
-        return this.uniqueSuffix;
     }
 
     public static class CreateInstanceRequestSystemDisk extends TeaModel {
@@ -250,25 +280,6 @@ public class CreateInstanceRequest extends TeaModel {
         }
 
         public CreateInstanceRequestSystemDisk setSize(String size) {
-            this.size = size;
-            return this;
-        }
-        public String getSize() {
-            return this.size;
-        }
-
-    }
-
-    public static class CreateInstanceRequestDataDisk extends TeaModel {
-        @NameInMap("Size")
-        public String size;
-
-        public static CreateInstanceRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
-            CreateInstanceRequestDataDisk self = new CreateInstanceRequestDataDisk();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateInstanceRequestDataDisk setSize(String size) {
             this.size = size;
             return this;
         }

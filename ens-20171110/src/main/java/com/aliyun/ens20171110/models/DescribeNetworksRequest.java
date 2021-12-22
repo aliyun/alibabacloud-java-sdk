@@ -4,11 +4,11 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworksRequest extends TeaModel {
-    @NameInMap("NetworkId")
-    public String networkId;
-
     @NameInMap("EnsRegionId")
     public String ensRegionId;
+
+    @NameInMap("NetworkId")
+    public String networkId;
 
     @NameInMap("NetworkName")
     public String networkName;
@@ -24,20 +24,20 @@ public class DescribeNetworksRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeNetworksRequest setNetworkId(String networkId) {
-        this.networkId = networkId;
-        return this;
-    }
-    public String getNetworkId() {
-        return this.networkId;
-    }
-
     public DescribeNetworksRequest setEnsRegionId(String ensRegionId) {
         this.ensRegionId = ensRegionId;
         return this;
     }
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    public DescribeNetworksRequest setNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    public String getNetworkId() {
+        return this.networkId;
     }
 
     public DescribeNetworksRequest setNetworkName(String networkName) {

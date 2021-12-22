@@ -4,8 +4,8 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserBandWidthDataRequest extends TeaModel {
-    @NameInMap("Version")
-    public String version;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("EnsRegionId")
     public String ensRegionId;
@@ -13,29 +13,29 @@ public class DescribeUserBandWidthDataRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
+    @NameInMap("Isp")
+    public String isp;
 
     @NameInMap("Period")
     public String period;
 
-    @NameInMap("Isp")
-    public String isp;
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("Version")
+    public String version;
 
     public static DescribeUserBandWidthDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserBandWidthDataRequest self = new DescribeUserBandWidthDataRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeUserBandWidthDataRequest setVersion(String version) {
-        this.version = version;
+    public DescribeUserBandWidthDataRequest setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getVersion() {
-        return this.version;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeUserBandWidthDataRequest setEnsRegionId(String ensRegionId) {
@@ -54,20 +54,12 @@ public class DescribeUserBandWidthDataRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeUserBandWidthDataRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeUserBandWidthDataRequest setIsp(String isp) {
+        this.isp = isp;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeUserBandWidthDataRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
+    public String getIsp() {
+        return this.isp;
     }
 
     public DescribeUserBandWidthDataRequest setPeriod(String period) {
@@ -78,12 +70,20 @@ public class DescribeUserBandWidthDataRequest extends TeaModel {
         return this.period;
     }
 
-    public DescribeUserBandWidthDataRequest setIsp(String isp) {
-        this.isp = isp;
+    public DescribeUserBandWidthDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getIsp() {
-        return this.isp;
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeUserBandWidthDataRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

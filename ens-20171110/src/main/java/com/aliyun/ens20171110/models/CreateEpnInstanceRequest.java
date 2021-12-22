@@ -4,32 +4,24 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateEpnInstanceRequest extends TeaModel {
-    @NameInMap("EPNInstanceType")
-    public String EPNInstanceType;
-
     @NameInMap("EPNInstanceName")
     public String EPNInstanceName;
+
+    @NameInMap("EPNInstanceType")
+    public String EPNInstanceType;
 
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
-    @NameInMap("NetworkingModel")
-    public String networkingModel;
-
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
+
+    @NameInMap("NetworkingModel")
+    public String networkingModel;
 
     public static CreateEpnInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEpnInstanceRequest self = new CreateEpnInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateEpnInstanceRequest setEPNInstanceType(String EPNInstanceType) {
-        this.EPNInstanceType = EPNInstanceType;
-        return this;
-    }
-    public String getEPNInstanceType() {
-        return this.EPNInstanceType;
     }
 
     public CreateEpnInstanceRequest setEPNInstanceName(String EPNInstanceName) {
@@ -40,6 +32,14 @@ public class CreateEpnInstanceRequest extends TeaModel {
         return this.EPNInstanceName;
     }
 
+    public CreateEpnInstanceRequest setEPNInstanceType(String EPNInstanceType) {
+        this.EPNInstanceType = EPNInstanceType;
+        return this;
+    }
+    public String getEPNInstanceType() {
+        return this.EPNInstanceType;
+    }
+
     public CreateEpnInstanceRequest setInternetChargeType(String internetChargeType) {
         this.internetChargeType = internetChargeType;
         return this;
@@ -48,20 +48,20 @@ public class CreateEpnInstanceRequest extends TeaModel {
         return this.internetChargeType;
     }
 
-    public CreateEpnInstanceRequest setNetworkingModel(String networkingModel) {
-        this.networkingModel = networkingModel;
-        return this;
-    }
-    public String getNetworkingModel() {
-        return this.networkingModel;
-    }
-
     public CreateEpnInstanceRequest setInternetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
         this.internetMaxBandwidthOut = internetMaxBandwidthOut;
         return this;
     }
     public Integer getInternetMaxBandwidthOut() {
         return this.internetMaxBandwidthOut;
+    }
+
+    public CreateEpnInstanceRequest setNetworkingModel(String networkingModel) {
+        this.networkingModel = networkingModel;
+        return this;
+    }
+    public String getNetworkingModel() {
+        return this.networkingModel;
     }
 
 }

@@ -4,24 +4,16 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsResourceUsageResponseBody extends TeaModel {
+    @NameInMap("EnsResourceUsage")
+    public java.util.List<DescribeEnsResourceUsageResponseBodyEnsResourceUsage> ensResourceUsage;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("EnsResourceUsage")
-    public java.util.List<DescribeEnsResourceUsageResponseBodyEnsResourceUsage> ensResourceUsage;
-
     public static DescribeEnsResourceUsageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEnsResourceUsageResponseBody self = new DescribeEnsResourceUsageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeEnsResourceUsageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeEnsResourceUsageResponseBody setEnsResourceUsage(java.util.List<DescribeEnsResourceUsageResponseBodyEnsResourceUsage> ensResourceUsage) {
@@ -32,18 +24,23 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
         return this.ensResourceUsage;
     }
 
-    public static class DescribeEnsResourceUsageResponseBodyEnsResourceUsage extends TeaModel {
-        @NameInMap("ServiceType")
-        public String serviceType;
+    public DescribeEnsResourceUsageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        @NameInMap("InstanceCount")
-        public Integer instanceCount;
+    public static class DescribeEnsResourceUsageResponseBodyEnsResourceUsage extends TeaModel {
+        @NameInMap("ComputeResourceCount")
+        public Integer computeResourceCount;
 
         @NameInMap("CpuSum")
         public Long cpuSum;
 
-        @NameInMap("GpuSum")
-        public Long gpuSum;
+        @NameInMap("DiskCount")
+        public Integer diskCount;
 
         @NameInMap("DownCount")
         public Integer downCount;
@@ -54,37 +51,32 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
         @NameInMap("ExpiringCount")
         public Integer expiringCount;
 
+        @NameInMap("GpuSum")
+        public Long gpuSum;
+
+        @NameInMap("InstanceCount")
+        public Integer instanceCount;
+
         @NameInMap("RunningCount")
         public Integer runningCount;
 
-        @NameInMap("DiskCount")
-        public Integer diskCount;
+        @NameInMap("ServiceType")
+        public String serviceType;
 
         @NameInMap("StorageSum")
         public Long storageSum;
-
-        @NameInMap("ComputeResourceCount")
-        public Integer computeResourceCount;
 
         public static DescribeEnsResourceUsageResponseBodyEnsResourceUsage build(java.util.Map<String, ?> map) throws Exception {
             DescribeEnsResourceUsageResponseBodyEnsResourceUsage self = new DescribeEnsResourceUsageResponseBodyEnsResourceUsage();
             return TeaModel.build(map, self);
         }
 
-        public DescribeEnsResourceUsageResponseBodyEnsResourceUsage setServiceType(String serviceType) {
-            this.serviceType = serviceType;
+        public DescribeEnsResourceUsageResponseBodyEnsResourceUsage setComputeResourceCount(Integer computeResourceCount) {
+            this.computeResourceCount = computeResourceCount;
             return this;
         }
-        public String getServiceType() {
-            return this.serviceType;
-        }
-
-        public DescribeEnsResourceUsageResponseBodyEnsResourceUsage setInstanceCount(Integer instanceCount) {
-            this.instanceCount = instanceCount;
-            return this;
-        }
-        public Integer getInstanceCount() {
-            return this.instanceCount;
+        public Integer getComputeResourceCount() {
+            return this.computeResourceCount;
         }
 
         public DescribeEnsResourceUsageResponseBodyEnsResourceUsage setCpuSum(Long cpuSum) {
@@ -95,12 +87,12 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             return this.cpuSum;
         }
 
-        public DescribeEnsResourceUsageResponseBodyEnsResourceUsage setGpuSum(Long gpuSum) {
-            this.gpuSum = gpuSum;
+        public DescribeEnsResourceUsageResponseBodyEnsResourceUsage setDiskCount(Integer diskCount) {
+            this.diskCount = diskCount;
             return this;
         }
-        public Long getGpuSum() {
-            return this.gpuSum;
+        public Integer getDiskCount() {
+            return this.diskCount;
         }
 
         public DescribeEnsResourceUsageResponseBodyEnsResourceUsage setDownCount(Integer downCount) {
@@ -127,6 +119,22 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             return this.expiringCount;
         }
 
+        public DescribeEnsResourceUsageResponseBodyEnsResourceUsage setGpuSum(Long gpuSum) {
+            this.gpuSum = gpuSum;
+            return this;
+        }
+        public Long getGpuSum() {
+            return this.gpuSum;
+        }
+
+        public DescribeEnsResourceUsageResponseBodyEnsResourceUsage setInstanceCount(Integer instanceCount) {
+            this.instanceCount = instanceCount;
+            return this;
+        }
+        public Integer getInstanceCount() {
+            return this.instanceCount;
+        }
+
         public DescribeEnsResourceUsageResponseBodyEnsResourceUsage setRunningCount(Integer runningCount) {
             this.runningCount = runningCount;
             return this;
@@ -135,12 +143,12 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             return this.runningCount;
         }
 
-        public DescribeEnsResourceUsageResponseBodyEnsResourceUsage setDiskCount(Integer diskCount) {
-            this.diskCount = diskCount;
+        public DescribeEnsResourceUsageResponseBodyEnsResourceUsage setServiceType(String serviceType) {
+            this.serviceType = serviceType;
             return this;
         }
-        public Integer getDiskCount() {
-            return this.diskCount;
+        public String getServiceType() {
+            return this.serviceType;
         }
 
         public DescribeEnsResourceUsageResponseBodyEnsResourceUsage setStorageSum(Long storageSum) {
@@ -149,14 +157,6 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
         }
         public Long getStorageSum() {
             return this.storageSum;
-        }
-
-        public DescribeEnsResourceUsageResponseBodyEnsResourceUsage setComputeResourceCount(Integer computeResourceCount) {
-            this.computeResourceCount = computeResourceCount;
-            return this;
-        }
-        public Integer getComputeResourceCount() {
-            return this.computeResourceCount;
         }
 
     }

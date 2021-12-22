@@ -8,13 +8,13 @@ public class DeleteDeviceInternetPortRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // RuleId
-    @NameInMap("RuleId")
-    public String ruleId;
-
     // NatType
     @NameInMap("NatType")
     public String natType;
+
+    // RuleId
+    @NameInMap("RuleId")
+    public String ruleId;
 
     public static DeleteDeviceInternetPortRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDeviceInternetPortRequest self = new DeleteDeviceInternetPortRequest();
@@ -29,20 +29,20 @@ public class DeleteDeviceInternetPortRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DeleteDeviceInternetPortRequest setRuleId(String ruleId) {
-        this.ruleId = ruleId;
-        return this;
-    }
-    public String getRuleId() {
-        return this.ruleId;
-    }
-
     public DeleteDeviceInternetPortRequest setNatType(String natType) {
         this.natType = natType;
         return this;
     }
     public String getNatType() {
         return this.natType;
+    }
+
+    public DeleteDeviceInternetPortRequest setRuleId(String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public String getRuleId() {
+        return this.ruleId;
     }
 
 }

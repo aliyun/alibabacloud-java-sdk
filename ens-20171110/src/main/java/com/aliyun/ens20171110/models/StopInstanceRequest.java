@@ -4,26 +4,26 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class StopInstanceRequest extends TeaModel {
-    @NameInMap("Version")
-    public String version;
+    @NameInMap("ForceStop")
+    public String forceStop;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("ForceStop")
-    public String forceStop;
+    @NameInMap("Version")
+    public String version;
 
     public static StopInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StopInstanceRequest self = new StopInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public StopInstanceRequest setVersion(String version) {
-        this.version = version;
+    public StopInstanceRequest setForceStop(String forceStop) {
+        this.forceStop = forceStop;
         return this;
     }
-    public String getVersion() {
-        return this.version;
+    public String getForceStop() {
+        return this.forceStop;
     }
 
     public StopInstanceRequest setInstanceId(String instanceId) {
@@ -34,12 +34,12 @@ public class StopInstanceRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public StopInstanceRequest setForceStop(String forceStop) {
-        this.forceStop = forceStop;
+    public StopInstanceRequest setVersion(String version) {
+        this.version = version;
         return this;
     }
-    public String getForceStop() {
-        return this.forceStop;
+    public String getVersion() {
+        return this.version;
     }
 
 }

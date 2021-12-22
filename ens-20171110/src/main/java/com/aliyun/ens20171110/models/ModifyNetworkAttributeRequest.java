@@ -4,18 +4,26 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifyNetworkAttributeRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("NetworkId")
     public String networkId;
 
     @NameInMap("NetworkName")
     public String networkName;
 
-    @NameInMap("Description")
-    public String description;
-
     public static ModifyNetworkAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNetworkAttributeRequest self = new ModifyNetworkAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyNetworkAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public ModifyNetworkAttributeRequest setNetworkId(String networkId) {
@@ -32,14 +40,6 @@ public class ModifyNetworkAttributeRequest extends TeaModel {
     }
     public String getNetworkName() {
         return this.networkName;
-    }
-
-    public ModifyNetworkAttributeRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
 }

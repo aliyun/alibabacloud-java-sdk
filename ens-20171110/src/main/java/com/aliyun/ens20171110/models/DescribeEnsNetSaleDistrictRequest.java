@@ -4,26 +4,26 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsNetSaleDistrictRequest extends TeaModel {
-    @NameInMap("Version")
-    public String version;
+    @NameInMap("NetDistrictCode")
+    public String netDistrictCode;
 
     @NameInMap("NetLevelCode")
     public String netLevelCode;
 
-    @NameInMap("NetDistrictCode")
-    public String netDistrictCode;
+    @NameInMap("Version")
+    public String version;
 
     public static DescribeEnsNetSaleDistrictRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEnsNetSaleDistrictRequest self = new DescribeEnsNetSaleDistrictRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeEnsNetSaleDistrictRequest setVersion(String version) {
-        this.version = version;
+    public DescribeEnsNetSaleDistrictRequest setNetDistrictCode(String netDistrictCode) {
+        this.netDistrictCode = netDistrictCode;
         return this;
     }
-    public String getVersion() {
-        return this.version;
+    public String getNetDistrictCode() {
+        return this.netDistrictCode;
     }
 
     public DescribeEnsNetSaleDistrictRequest setNetLevelCode(String netLevelCode) {
@@ -34,12 +34,12 @@ public class DescribeEnsNetSaleDistrictRequest extends TeaModel {
         return this.netLevelCode;
     }
 
-    public DescribeEnsNetSaleDistrictRequest setNetDistrictCode(String netDistrictCode) {
-        this.netDistrictCode = netDistrictCode;
+    public DescribeEnsNetSaleDistrictRequest setVersion(String version) {
+        this.version = version;
         return this;
     }
-    public String getNetDistrictCode() {
-        return this.netDistrictCode;
+    public String getVersion() {
+        return this.version;
     }
 
 }

@@ -4,37 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DistApplicationDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DistInstanceIds")
+    public DistApplicationDataResponseBodyDistInstanceIds distInstanceIds;
 
     @NameInMap("DistInstanceTotalCount")
     public Integer distInstanceTotalCount;
 
-    @NameInMap("DistInstanceIds")
-    public DistApplicationDataResponseBodyDistInstanceIds distInstanceIds;
-
     @NameInMap("DistResults")
     public DistApplicationDataResponseBodyDistResults distResults;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DistApplicationDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DistApplicationDataResponseBody self = new DistApplicationDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DistApplicationDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DistApplicationDataResponseBody setDistInstanceTotalCount(Integer distInstanceTotalCount) {
-        this.distInstanceTotalCount = distInstanceTotalCount;
-        return this;
-    }
-    public Integer getDistInstanceTotalCount() {
-        return this.distInstanceTotalCount;
     }
 
     public DistApplicationDataResponseBody setDistInstanceIds(DistApplicationDataResponseBodyDistInstanceIds distInstanceIds) {
@@ -45,12 +29,28 @@ public class DistApplicationDataResponseBody extends TeaModel {
         return this.distInstanceIds;
     }
 
+    public DistApplicationDataResponseBody setDistInstanceTotalCount(Integer distInstanceTotalCount) {
+        this.distInstanceTotalCount = distInstanceTotalCount;
+        return this;
+    }
+    public Integer getDistInstanceTotalCount() {
+        return this.distInstanceTotalCount;
+    }
+
     public DistApplicationDataResponseBody setDistResults(DistApplicationDataResponseBodyDistResults distResults) {
         this.distResults = distResults;
         return this;
     }
     public DistApplicationDataResponseBodyDistResults getDistResults() {
         return this.distResults;
+    }
+
+    public DistApplicationDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DistApplicationDataResponseBodyDistInstanceIds extends TeaModel {
@@ -73,21 +73,37 @@ public class DistApplicationDataResponseBody extends TeaModel {
     }
 
     public static class DistApplicationDataResponseBodyDistResultsDistResult extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("ResultCode")
+        public Integer resultCode;
+
         @NameInMap("ResultDescrip")
         public String resultDescrip;
 
         @NameInMap("Version")
         public String version;
 
-        @NameInMap("ResultCode")
-        public Integer resultCode;
-
-        @NameInMap("Name")
-        public String name;
-
         public static DistApplicationDataResponseBodyDistResultsDistResult build(java.util.Map<String, ?> map) throws Exception {
             DistApplicationDataResponseBodyDistResultsDistResult self = new DistApplicationDataResponseBodyDistResultsDistResult();
             return TeaModel.build(map, self);
+        }
+
+        public DistApplicationDataResponseBodyDistResultsDistResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DistApplicationDataResponseBodyDistResultsDistResult setResultCode(Integer resultCode) {
+            this.resultCode = resultCode;
+            return this;
+        }
+        public Integer getResultCode() {
+            return this.resultCode;
         }
 
         public DistApplicationDataResponseBodyDistResultsDistResult setResultDescrip(String resultDescrip) {
@@ -104,22 +120,6 @@ public class DistApplicationDataResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
-        }
-
-        public DistApplicationDataResponseBodyDistResultsDistResult setResultCode(Integer resultCode) {
-            this.resultCode = resultCode;
-            return this;
-        }
-        public Integer getResultCode() {
-            return this.resultCode;
-        }
-
-        public DistApplicationDataResponseBodyDistResultsDistResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
     }

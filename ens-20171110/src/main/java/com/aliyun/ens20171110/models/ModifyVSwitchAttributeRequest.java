@@ -4,18 +4,26 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifyVSwitchAttributeRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     @NameInMap("VSwitchName")
     public String vSwitchName;
 
-    @NameInMap("Description")
-    public String description;
-
     public static ModifyVSwitchAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyVSwitchAttributeRequest self = new ModifyVSwitchAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyVSwitchAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public ModifyVSwitchAttributeRequest setVSwitchId(String vSwitchId) {
@@ -32,14 +40,6 @@ public class ModifyVSwitchAttributeRequest extends TeaModel {
     }
     public String getVSwitchName() {
         return this.vSwitchName;
-    }
-
-    public ModifyVSwitchAttributeRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
 }

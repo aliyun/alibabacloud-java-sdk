@@ -10,11 +10,11 @@ public class RollbackApplicationRequest extends TeaModel {
     @NameInMap("FromAppVersion")
     public String fromAppVersion;
 
-    @NameInMap("ToAppVersion")
-    public String toAppVersion;
-
     @NameInMap("Timeout")
     public Integer timeout;
+
+    @NameInMap("ToAppVersion")
+    public String toAppVersion;
 
     public static RollbackApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         RollbackApplicationRequest self = new RollbackApplicationRequest();
@@ -37,20 +37,20 @@ public class RollbackApplicationRequest extends TeaModel {
         return this.fromAppVersion;
     }
 
-    public RollbackApplicationRequest setToAppVersion(String toAppVersion) {
-        this.toAppVersion = toAppVersion;
-        return this;
-    }
-    public String getToAppVersion() {
-        return this.toAppVersion;
-    }
-
     public RollbackApplicationRequest setTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     public Integer getTimeout() {
         return this.timeout;
+    }
+
+    public RollbackApplicationRequest setToAppVersion(String toAppVersion) {
+        this.toAppVersion = toAppVersion;
+        return this;
+    }
+    public String getToAppVersion() {
+        return this.toAppVersion;
     }
 
 }

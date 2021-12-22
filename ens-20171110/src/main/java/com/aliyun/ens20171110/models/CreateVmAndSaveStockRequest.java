@@ -7,17 +7,17 @@ public class CreateVmAndSaveStockRequest extends TeaModel {
     @NameInMap("AliUid")
     public Long aliUid;
 
-    @NameInMap("Tenant")
-    public String tenant;
-
-    @NameInMap("WorkloadUuid")
-    public String workloadUuid;
-
     @NameInMap("GroupUuid")
     public String groupUuid;
 
     @NameInMap("ResourceAttribute")
     public String resourceAttribute;
+
+    @NameInMap("Tenant")
+    public String tenant;
+
+    @NameInMap("WorkloadUuid")
+    public String workloadUuid;
 
     public static CreateVmAndSaveStockRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVmAndSaveStockRequest self = new CreateVmAndSaveStockRequest();
@@ -30,22 +30,6 @@ public class CreateVmAndSaveStockRequest extends TeaModel {
     }
     public Long getAliUid() {
         return this.aliUid;
-    }
-
-    public CreateVmAndSaveStockRequest setTenant(String tenant) {
-        this.tenant = tenant;
-        return this;
-    }
-    public String getTenant() {
-        return this.tenant;
-    }
-
-    public CreateVmAndSaveStockRequest setWorkloadUuid(String workloadUuid) {
-        this.workloadUuid = workloadUuid;
-        return this;
-    }
-    public String getWorkloadUuid() {
-        return this.workloadUuid;
     }
 
     public CreateVmAndSaveStockRequest setGroupUuid(String groupUuid) {
@@ -62,6 +46,22 @@ public class CreateVmAndSaveStockRequest extends TeaModel {
     }
     public String getResourceAttribute() {
         return this.resourceAttribute;
+    }
+
+    public CreateVmAndSaveStockRequest setTenant(String tenant) {
+        this.tenant = tenant;
+        return this;
+    }
+    public String getTenant() {
+        return this.tenant;
+    }
+
+    public CreateVmAndSaveStockRequest setWorkloadUuid(String workloadUuid) {
+        this.workloadUuid = workloadUuid;
+        return this;
+    }
+    public String getWorkloadUuid() {
+        return this.workloadUuid;
     }
 
 }

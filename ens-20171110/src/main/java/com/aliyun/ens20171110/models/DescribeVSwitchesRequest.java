@@ -4,20 +4,14 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
-    @NameInMap("Version")
-    public String version;
-
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
-
-    @NameInMap("VSwitchName")
-    public String vSwitchName;
-
     @NameInMap("NetworkId")
     public String networkId;
+
+    @NameInMap("OrderByParams")
+    public String orderByParams;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -25,20 +19,18 @@ public class DescribeVSwitchesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("OrderByParams")
-    public String orderByParams;
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
+    @NameInMap("VSwitchName")
+    public String vSwitchName;
+
+    @NameInMap("Version")
+    public String version;
 
     public static DescribeVSwitchesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVSwitchesRequest self = new DescribeVSwitchesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVSwitchesRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
     public DescribeVSwitchesRequest setEnsRegionId(String ensRegionId) {
@@ -49,28 +41,20 @@ public class DescribeVSwitchesRequest extends TeaModel {
         return this.ensRegionId;
     }
 
-    public DescribeVSwitchesRequest setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
-        return this;
-    }
-    public String getVSwitchId() {
-        return this.vSwitchId;
-    }
-
-    public DescribeVSwitchesRequest setVSwitchName(String vSwitchName) {
-        this.vSwitchName = vSwitchName;
-        return this;
-    }
-    public String getVSwitchName() {
-        return this.vSwitchName;
-    }
-
     public DescribeVSwitchesRequest setNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
     }
     public String getNetworkId() {
         return this.networkId;
+    }
+
+    public DescribeVSwitchesRequest setOrderByParams(String orderByParams) {
+        this.orderByParams = orderByParams;
+        return this;
+    }
+    public String getOrderByParams() {
+        return this.orderByParams;
     }
 
     public DescribeVSwitchesRequest setPageNumber(Integer pageNumber) {
@@ -89,12 +73,28 @@ public class DescribeVSwitchesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeVSwitchesRequest setOrderByParams(String orderByParams) {
-        this.orderByParams = orderByParams;
+    public DescribeVSwitchesRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
         return this;
     }
-    public String getOrderByParams() {
-        return this.orderByParams;
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    public DescribeVSwitchesRequest setVSwitchName(String vSwitchName) {
+        this.vSwitchName = vSwitchName;
+        return this;
+    }
+    public String getVSwitchName() {
+        return this.vSwitchName;
+    }
+
+    public DescribeVSwitchesRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

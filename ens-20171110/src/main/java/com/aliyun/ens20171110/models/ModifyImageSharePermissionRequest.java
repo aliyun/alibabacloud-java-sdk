@@ -4,11 +4,11 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifyImageSharePermissionRequest extends TeaModel {
-    @NameInMap("ImageId")
-    public String imageId;
-
     @NameInMap("AddAccounts")
     public String addAccounts;
+
+    @NameInMap("ImageId")
+    public String imageId;
 
     @NameInMap("RemoveAccounts")
     public String removeAccounts;
@@ -18,20 +18,20 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyImageSharePermissionRequest setImageId(String imageId) {
-        this.imageId = imageId;
-        return this;
-    }
-    public String getImageId() {
-        return this.imageId;
-    }
-
     public ModifyImageSharePermissionRequest setAddAccounts(String addAccounts) {
         this.addAccounts = addAccounts;
         return this;
     }
     public String getAddAccounts() {
         return this.addAccounts;
+    }
+
+    public ModifyImageSharePermissionRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
     }
 
     public ModifyImageSharePermissionRequest setRemoveAccounts(String removeAccounts) {

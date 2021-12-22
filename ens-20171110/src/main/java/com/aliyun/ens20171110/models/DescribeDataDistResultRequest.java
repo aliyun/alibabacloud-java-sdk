@@ -16,11 +16,11 @@ public class DescribeDataDistResultRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public String instanceIds;
 
-    @NameInMap("MinDate")
-    public String minDate;
-
     @NameInMap("MaxDate")
     public String maxDate;
+
+    @NameInMap("MinDate")
+    public String minDate;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -65,20 +65,20 @@ public class DescribeDataDistResultRequest extends TeaModel {
         return this.instanceIds;
     }
 
-    public DescribeDataDistResultRequest setMinDate(String minDate) {
-        this.minDate = minDate;
-        return this;
-    }
-    public String getMinDate() {
-        return this.minDate;
-    }
-
     public DescribeDataDistResultRequest setMaxDate(String maxDate) {
         this.maxDate = maxDate;
         return this;
     }
     public String getMaxDate() {
         return this.maxDate;
+    }
+
+    public DescribeDataDistResultRequest setMinDate(String minDate) {
+        this.minDate = minDate;
+        return this;
+    }
+    public String getMinDate() {
+        return this.minDate;
     }
 
     public DescribeDataDistResultRequest setPageNumber(Integer pageNumber) {
