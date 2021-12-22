@@ -7,14 +7,14 @@ public class ModifyEnsEipAddressAttributeRequest extends TeaModel {
     @NameInMap("AllocationId")
     public String allocationId;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
 
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("Bandwidth")
-    public Integer bandwidth;
+    @NameInMap("Name")
+    public String name;
 
     public static ModifyEnsEipAddressAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyEnsEipAddressAttributeRequest self = new ModifyEnsEipAddressAttributeRequest();
@@ -29,12 +29,12 @@ public class ModifyEnsEipAddressAttributeRequest extends TeaModel {
         return this.allocationId;
     }
 
-    public ModifyEnsEipAddressAttributeRequest setName(String name) {
-        this.name = name;
+    public ModifyEnsEipAddressAttributeRequest setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public Integer getBandwidth() {
+        return this.bandwidth;
     }
 
     public ModifyEnsEipAddressAttributeRequest setDescription(String description) {
@@ -45,12 +45,12 @@ public class ModifyEnsEipAddressAttributeRequest extends TeaModel {
         return this.description;
     }
 
-    public ModifyEnsEipAddressAttributeRequest setBandwidth(Integer bandwidth) {
-        this.bandwidth = bandwidth;
+    public ModifyEnsEipAddressAttributeRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public Integer getBandwidth() {
-        return this.bandwidth;
+    public String getName() {
+        return this.name;
     }
 
 }

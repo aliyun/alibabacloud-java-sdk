@@ -4,37 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataDownloadURLResponseBody extends TeaModel {
-    @NameInMap("Data")
-    public DescribeDataDownloadURLResponseBodyData data;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Long code;
+
+    @NameInMap("Data")
+    public DescribeDataDownloadURLResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeDataDownloadURLResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataDownloadURLResponseBody self = new DescribeDataDownloadURLResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDataDownloadURLResponseBody setData(DescribeDataDownloadURLResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeDataDownloadURLResponseBodyData getData() {
-        return this.data;
-    }
-
-    public DescribeDataDownloadURLResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDataDownloadURLResponseBody setCode(Long code) {
@@ -45,12 +29,28 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
         return this.code;
     }
 
+    public DescribeDataDownloadURLResponseBody setData(DescribeDataDownloadURLResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeDataDownloadURLResponseBodyData getData() {
+        return this.data;
+    }
+
     public DescribeDataDownloadURLResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public DescribeDataDownloadURLResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeDataDownloadURLResponseBodyDataServerList extends TeaModel {
@@ -84,18 +84,26 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
     }
 
     public static class DescribeDataDownloadURLResponseBodyData extends TeaModel {
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
         @NameInMap("ServerList")
         public java.util.List<DescribeDataDownloadURLResponseBodyDataServerList> serverList;
 
         @NameInMap("Url")
         public String url;
 
-        @NameInMap("ExpireTime")
-        public String expireTime;
-
         public static DescribeDataDownloadURLResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeDataDownloadURLResponseBodyData self = new DescribeDataDownloadURLResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDataDownloadURLResponseBodyData setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
         }
 
         public DescribeDataDownloadURLResponseBodyData setServerList(java.util.List<DescribeDataDownloadURLResponseBodyDataServerList> serverList) {
@@ -112,14 +120,6 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
         }
         public String getUrl() {
             return this.url;
-        }
-
-        public DescribeDataDownloadURLResponseBodyData setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
-            return this;
-        }
-        public String getExpireTime() {
-            return this.expireTime;
         }
 
     }

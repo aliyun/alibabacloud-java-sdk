@@ -4,37 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class AssociateEipAddressRequest extends TeaModel {
-    @NameInMap("Version")
-    public String version;
+    @NameInMap("Eip")
+    public String eip;
 
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
-    @NameInMap("Eip")
-    public String eip;
-
     @NameInMap("InstanceIdInternetIp")
     public String instanceIdInternetIp;
+
+    @NameInMap("Version")
+    public String version;
 
     public static AssociateEipAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         AssociateEipAddressRequest self = new AssociateEipAddressRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AssociateEipAddressRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
-    }
-
-    public AssociateEipAddressRequest setEnsRegionId(String ensRegionId) {
-        this.ensRegionId = ensRegionId;
-        return this;
-    }
-    public String getEnsRegionId() {
-        return this.ensRegionId;
     }
 
     public AssociateEipAddressRequest setEip(String eip) {
@@ -45,12 +29,28 @@ public class AssociateEipAddressRequest extends TeaModel {
         return this.eip;
     }
 
+    public AssociateEipAddressRequest setEnsRegionId(String ensRegionId) {
+        this.ensRegionId = ensRegionId;
+        return this;
+    }
+    public String getEnsRegionId() {
+        return this.ensRegionId;
+    }
+
     public AssociateEipAddressRequest setInstanceIdInternetIp(String instanceIdInternetIp) {
         this.instanceIdInternetIp = instanceIdInternetIp;
         return this;
     }
     public String getInstanceIdInternetIp() {
         return this.instanceIdInternetIp;
+    }
+
+    public AssociateEipAddressRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

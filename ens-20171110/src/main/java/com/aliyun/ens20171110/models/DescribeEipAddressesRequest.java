@@ -4,26 +4,26 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEipAddressesRequest extends TeaModel {
-    @NameInMap("Version")
-    public String version;
+    @NameInMap("Eips")
+    public String eips;
 
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
-    @NameInMap("Eips")
-    public String eips;
+    @NameInMap("Version")
+    public String version;
 
     public static DescribeEipAddressesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEipAddressesRequest self = new DescribeEipAddressesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeEipAddressesRequest setVersion(String version) {
-        this.version = version;
+    public DescribeEipAddressesRequest setEips(String eips) {
+        this.eips = eips;
         return this;
     }
-    public String getVersion() {
-        return this.version;
+    public String getEips() {
+        return this.eips;
     }
 
     public DescribeEipAddressesRequest setEnsRegionId(String ensRegionId) {
@@ -34,12 +34,12 @@ public class DescribeEipAddressesRequest extends TeaModel {
         return this.ensRegionId;
     }
 
-    public DescribeEipAddressesRequest setEips(String eips) {
-        this.eips = eips;
+    public DescribeEipAddressesRequest setVersion(String version) {
+        this.version = version;
         return this;
     }
-    public String getEips() {
-        return this.eips;
+    public String getVersion() {
+        return this.version;
     }
 
 }

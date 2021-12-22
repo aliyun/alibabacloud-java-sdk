@@ -4,26 +4,18 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateEnsServiceRequest extends TeaModel {
-    @NameInMap("Version")
-    public String version;
-
     @NameInMap("EnsServiceId")
     public String ensServiceId;
 
     @NameInMap("OrderType")
     public String orderType;
 
+    @NameInMap("Version")
+    public String version;
+
     public static CreateEnsServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEnsServiceRequest self = new CreateEnsServiceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateEnsServiceRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
     public CreateEnsServiceRequest setEnsServiceId(String ensServiceId) {
@@ -40,6 +32,14 @@ public class CreateEnsServiceRequest extends TeaModel {
     }
     public String getOrderType() {
         return this.orderType;
+    }
+
+    public CreateEnsServiceRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

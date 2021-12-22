@@ -7,14 +7,14 @@ public class DeleteVmResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    @NameInMap("Msg")
-    public String msg;
+    @NameInMap("Data")
+    public String data;
 
     @NameInMap("Desc")
     public String desc;
 
-    @NameInMap("Data")
-    public String data;
+    @NameInMap("Msg")
+    public String msg;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -32,12 +32,12 @@ public class DeleteVmResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeleteVmResponseBody setMsg(String msg) {
-        this.msg = msg;
+    public DeleteVmResponseBody setData(String data) {
+        this.data = data;
         return this;
     }
-    public String getMsg() {
-        return this.msg;
+    public String getData() {
+        return this.data;
     }
 
     public DeleteVmResponseBody setDesc(String desc) {
@@ -48,12 +48,12 @@ public class DeleteVmResponseBody extends TeaModel {
         return this.desc;
     }
 
-    public DeleteVmResponseBody setData(String data) {
-        this.data = data;
+    public DeleteVmResponseBody setMsg(String msg) {
+        this.msg = msg;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public String getMsg() {
+        return this.msg;
     }
 
     public DeleteVmResponseBody setRequestId(String requestId) {

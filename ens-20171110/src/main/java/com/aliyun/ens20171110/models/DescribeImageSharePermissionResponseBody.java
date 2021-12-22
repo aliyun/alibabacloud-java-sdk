@@ -4,8 +4,14 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageSharePermissionResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("Accounts")
+    public DescribeImageSharePermissionResponseBodyAccounts accounts;
+
+    @NameInMap("ImageId")
+    public String imageId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,26 +19,36 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("ImageId")
-    public String imageId;
-
-    @NameInMap("Accounts")
-    public DescribeImageSharePermissionResponseBodyAccounts accounts;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeImageSharePermissionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageSharePermissionResponseBody self = new DescribeImageSharePermissionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeImageSharePermissionResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeImageSharePermissionResponseBody setAccounts(DescribeImageSharePermissionResponseBodyAccounts accounts) {
+        this.accounts = accounts;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public DescribeImageSharePermissionResponseBodyAccounts getAccounts() {
+        return this.accounts;
+    }
+
+    public DescribeImageSharePermissionResponseBody setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public DescribeImageSharePermissionResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeImageSharePermissionResponseBody setPageSize(Integer pageSize) {
@@ -51,28 +67,12 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeImageSharePermissionResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeImageSharePermissionResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeImageSharePermissionResponseBody setImageId(String imageId) {
-        this.imageId = imageId;
-        return this;
-    }
-    public String getImageId() {
-        return this.imageId;
-    }
-
-    public DescribeImageSharePermissionResponseBody setAccounts(DescribeImageSharePermissionResponseBodyAccounts accounts) {
-        this.accounts = accounts;
-        return this;
-    }
-    public DescribeImageSharePermissionResponseBodyAccounts getAccounts() {
-        return this.accounts;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeImageSharePermissionResponseBodyAccounts extends TeaModel {

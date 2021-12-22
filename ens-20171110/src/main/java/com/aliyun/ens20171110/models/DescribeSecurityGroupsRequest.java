@@ -4,40 +4,24 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupsRequest extends TeaModel {
-    @NameInMap("Version")
-    public String version;
-
-    @NameInMap("SecurityGroupId")
-    public String securityGroupId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
+
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
+
+    @NameInMap("Version")
+    public String version;
 
     public static DescribeSecurityGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityGroupsRequest self = new DescribeSecurityGroupsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSecurityGroupsRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
-    }
-
-    public DescribeSecurityGroupsRequest setSecurityGroupId(String securityGroupId) {
-        this.securityGroupId = securityGroupId;
-        return this;
-    }
-    public String getSecurityGroupId() {
-        return this.securityGroupId;
     }
 
     public DescribeSecurityGroupsRequest setPageNumber(Integer pageNumber) {
@@ -56,12 +40,28 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeSecurityGroupsRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
     public DescribeSecurityGroupsRequest setSecurityGroupName(String securityGroupName) {
         this.securityGroupName = securityGroupName;
         return this;
     }
     public String getSecurityGroupName() {
         return this.securityGroupName;
+    }
+
+    public DescribeSecurityGroupsRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

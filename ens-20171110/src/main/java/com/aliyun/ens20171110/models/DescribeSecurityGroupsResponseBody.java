@@ -4,24 +4,32 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupsResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("SecurityGroups")
+    public DescribeSecurityGroupsResponseBodySecurityGroups securityGroups;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("SecurityGroups")
-    public DescribeSecurityGroupsResponseBodySecurityGroups securityGroups;
-
     public static DescribeSecurityGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityGroupsResponseBody self = new DescribeSecurityGroupsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSecurityGroupsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeSecurityGroupsResponseBody setPageSize(Integer pageSize) {
@@ -40,12 +48,12 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSecurityGroupsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeSecurityGroupsResponseBody setSecurityGroups(DescribeSecurityGroupsResponseBodySecurityGroups securityGroups) {
+        this.securityGroups = securityGroups;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public DescribeSecurityGroupsResponseBodySecurityGroups getSecurityGroups() {
+        return this.securityGroups;
     }
 
     public DescribeSecurityGroupsResponseBody setTotalCount(Integer totalCount) {
@@ -56,23 +64,15 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeSecurityGroupsResponseBody setSecurityGroups(DescribeSecurityGroupsResponseBodySecurityGroups securityGroups) {
-        this.securityGroups = securityGroups;
-        return this;
-    }
-    public DescribeSecurityGroupsResponseBodySecurityGroups getSecurityGroups() {
-        return this.securityGroups;
-    }
-
     public static class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("InstanceCount")
-        public Integer instanceCount;
-
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("InstanceCount")
+        public Integer instanceCount;
 
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
@@ -93,20 +93,20 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setInstanceCount(Integer instanceCount) {
-            this.instanceCount = instanceCount;
-            return this;
-        }
-        public Integer getInstanceCount() {
-            return this.instanceCount;
-        }
-
         public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setInstanceCount(Integer instanceCount) {
+            this.instanceCount = instanceCount;
+            return this;
+        }
+        public Integer getInstanceCount() {
+            return this.instanceCount;
         }
 
         public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setSecurityGroupId(String securityGroupId) {

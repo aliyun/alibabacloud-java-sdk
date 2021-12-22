@@ -4,26 +4,18 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ImportKeyPairRequest extends TeaModel {
-    @NameInMap("Version")
-    public String version;
-
     @NameInMap("KeyPairName")
     public String keyPairName;
 
     @NameInMap("PublicKeyBody")
     public String publicKeyBody;
 
+    @NameInMap("Version")
+    public String version;
+
     public static ImportKeyPairRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportKeyPairRequest self = new ImportKeyPairRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ImportKeyPairRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
     public ImportKeyPairRequest setKeyPairName(String keyPairName) {
@@ -40,6 +32,14 @@ public class ImportKeyPairRequest extends TeaModel {
     }
     public String getPublicKeyBody() {
         return this.publicKeyBody;
+    }
+
+    public ImportKeyPairRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

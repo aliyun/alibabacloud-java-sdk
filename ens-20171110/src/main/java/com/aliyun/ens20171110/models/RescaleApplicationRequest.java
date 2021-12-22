@@ -7,20 +7,20 @@ public class RescaleApplicationRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    @NameInMap("RescaleType")
-    public String rescaleType;
-
     @NameInMap("RescaleLevel")
     public String rescaleLevel;
+
+    @NameInMap("RescaleType")
+    public String rescaleType;
 
     @NameInMap("ResourceSelector")
     public String resourceSelector;
 
-    @NameInMap("ToAppVersion")
-    public String toAppVersion;
-
     @NameInMap("Timeout")
     public Integer timeout;
+
+    @NameInMap("ToAppVersion")
+    public String toAppVersion;
 
     public static RescaleApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         RescaleApplicationRequest self = new RescaleApplicationRequest();
@@ -35,20 +35,20 @@ public class RescaleApplicationRequest extends TeaModel {
         return this.appId;
     }
 
-    public RescaleApplicationRequest setRescaleType(String rescaleType) {
-        this.rescaleType = rescaleType;
-        return this;
-    }
-    public String getRescaleType() {
-        return this.rescaleType;
-    }
-
     public RescaleApplicationRequest setRescaleLevel(String rescaleLevel) {
         this.rescaleLevel = rescaleLevel;
         return this;
     }
     public String getRescaleLevel() {
         return this.rescaleLevel;
+    }
+
+    public RescaleApplicationRequest setRescaleType(String rescaleType) {
+        this.rescaleType = rescaleType;
+        return this;
+    }
+    public String getRescaleType() {
+        return this.rescaleType;
     }
 
     public RescaleApplicationRequest setResourceSelector(String resourceSelector) {
@@ -59,20 +59,20 @@ public class RescaleApplicationRequest extends TeaModel {
         return this.resourceSelector;
     }
 
-    public RescaleApplicationRequest setToAppVersion(String toAppVersion) {
-        this.toAppVersion = toAppVersion;
-        return this;
-    }
-    public String getToAppVersion() {
-        return this.toAppVersion;
-    }
-
     public RescaleApplicationRequest setTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     public Integer getTimeout() {
         return this.timeout;
+    }
+
+    public RescaleApplicationRequest setToAppVersion(String toAppVersion) {
+        this.toAppVersion = toAppVersion;
+        return this;
+    }
+    public String getToAppVersion() {
+        return this.toAppVersion;
     }
 
 }

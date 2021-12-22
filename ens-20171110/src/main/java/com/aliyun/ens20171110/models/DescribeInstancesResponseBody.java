@@ -7,20 +7,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("Instances")
+    public DescribeInstancesResponseBodyInstances instances;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Instances")
-    public DescribeInstancesResponseBodyInstances instances;
 
     public static DescribeInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesResponseBody self = new DescribeInstancesResponseBody();
@@ -35,12 +35,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeInstancesResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeInstancesResponseBody setInstances(DescribeInstancesResponseBodyInstances instances) {
+        this.instances = instances;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public DescribeInstancesResponseBodyInstances getInstances() {
+        return this.instances;
     }
 
     public DescribeInstancesResponseBody setPageNumber(Integer pageNumber) {
@@ -49,6 +49,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeInstancesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeInstancesResponseBody setRequestId(String requestId) {
@@ -67,45 +75,69 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeInstancesResponseBody setInstances(DescribeInstancesResponseBodyInstances instances) {
-        this.instances = instances;
-        return this;
-    }
-    public DescribeInstancesResponseBodyInstances getInstances() {
-        return this.instances;
-    }
-
     public static class DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("DiskId")
+        public String diskId;
+
+        @NameInMap("DiskName")
+        public String diskName;
+
+        @NameInMap("Size")
+        public Integer size;
+
         @NameInMap("device_type")
         public String deviceType;
 
         @NameInMap("disk_type")
         public String diskType;
 
-        @NameInMap("Size")
-        public Integer size;
-
-        @NameInMap("DiskName")
-        public String diskName;
-
-        @NameInMap("uuid")
-        public String uuid;
+        @NameInMap("name")
+        public String name;
 
         @NameInMap("storage")
         public Integer storage;
 
-        @NameInMap("DiskId")
-        public String diskId;
-
-        @NameInMap("Category")
-        public String category;
-
-        @NameInMap("name")
-        public String name;
+        @NameInMap("uuid")
+        public String uuid;
 
         public static DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk self = new DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setDiskId(String diskId) {
+            this.diskId = diskId;
+            return this;
+        }
+        public String getDiskId() {
+            return this.diskId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setDiskName(String diskName) {
+            this.diskName = diskName;
+            return this;
+        }
+        public String getDiskName() {
+            return this.diskName;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setDeviceType(String deviceType) {
@@ -124,28 +156,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.diskType;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setSize(Integer size) {
-            this.size = size;
+        public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setName(String name) {
+            this.name = name;
             return this;
         }
-        public Integer getSize() {
-            return this.size;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setDiskName(String diskName) {
-            this.diskName = diskName;
-            return this;
-        }
-        public String getDiskName() {
-            return this.diskName;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setUuid(String uuid) {
-            this.uuid = uuid;
-            return this;
-        }
-        public String getUuid() {
-            return this.uuid;
+        public String getName() {
+            return this.name;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setStorage(Integer storage) {
@@ -156,28 +172,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.storage;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setDiskId(String diskId) {
-            this.diskId = diskId;
+        public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setUuid(String uuid) {
+            this.uuid = uuid;
             return this;
         }
-        public String getDiskId() {
-            return this.diskId;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
+        public String getUuid() {
+            return this.uuid;
         }
 
     }
@@ -201,72 +201,91 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress extends TeaModel {
-        @NameInMap("Ip")
-        public String ip;
+    public static class DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress extends TeaModel {
+        @NameInMap("IpAddress")
+        public java.util.List<String> ipAddress;
 
-        @NameInMap("GateWay")
-        public String gateWay;
-
-        @NameInMap("Isp")
-        public String isp;
-
-        public static DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress self = new DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress();
+        public static DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress self = new DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress setIp(String ip) {
-            this.ip = ip;
+        public DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress setIpAddress(java.util.List<String> ipAddress) {
+            this.ipAddress = ipAddress;
             return this;
         }
-        public String getIp() {
-            return this.ip;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress setGateWay(String gateWay) {
-            this.gateWay = gateWay;
-            return this;
-        }
-        public String getGateWay() {
-            return this.gateWay;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress setIsp(String isp) {
-            this.isp = isp;
-            return this;
-        }
-        public String getIsp() {
-            return this.isp;
+        public java.util.List<String> getIpAddress() {
+            return this.ipAddress;
         }
 
     }
 
-    public static class DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses extends TeaModel {
-        @NameInMap("PublicIpAddress")
-        public java.util.List<DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress> publicIpAddress;
+    public static class DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress extends TeaModel {
+        @NameInMap("IpAddress")
+        public java.util.List<String> ipAddress;
 
-        public static DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses self = new DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses();
+        public static DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress self = new DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses setPublicIpAddress(java.util.List<DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress> publicIpAddress) {
-            this.publicIpAddress = publicIpAddress;
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress setIpAddress(java.util.List<String> ipAddress) {
+            this.ipAddress = ipAddress;
             return this;
         }
-        public java.util.List<DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress> getPublicIpAddress() {
-            return this.publicIpAddress;
+        public java.util.List<String> getIpAddress() {
+            return this.ipAddress;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes extends TeaModel {
+        @NameInMap("NetworkId")
+        public String networkId;
+
+        @NameInMap("PrivateIpAddress")
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress privateIpAddress;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes self = new DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes setNetworkId(String networkId) {
+            this.networkId = networkId;
+            return this;
+        }
+        public String getNetworkId() {
+            return this.networkId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes setPrivateIpAddress(DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress privateIpAddress) {
+            this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstancePrivateIpAddressesPrivateIpAddress extends TeaModel {
-        @NameInMap("Ip")
-        public String ip;
-
         @NameInMap("GateWay")
         public String gateWay;
+
+        @NameInMap("Ip")
+        public String ip;
 
         @NameInMap("Isp")
         public String isp;
@@ -276,20 +295,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesInstancePrivateIpAddressesPrivateIpAddress setIp(String ip) {
-            this.ip = ip;
-            return this;
-        }
-        public String getIp() {
-            return this.ip;
-        }
-
         public DescribeInstancesResponseBodyInstancesInstancePrivateIpAddressesPrivateIpAddress setGateWay(String gateWay) {
             this.gateWay = gateWay;
             return this;
         }
         public String getGateWay() {
             return this.gateWay;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstancePrivateIpAddressesPrivateIpAddress setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
         }
 
         public DescribeInstancesResponseBodyInstancesInstancePrivateIpAddressesPrivateIpAddress setIsp(String isp) {
@@ -321,44 +340,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds extends TeaModel {
-        @NameInMap("SecurityGroupId")
-        public java.util.List<String> securityGroupId;
-
-        public static DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds self = new DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds setSecurityGroupId(java.util.List<String> securityGroupId) {
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-        public java.util.List<String> getSecurityGroupId() {
-            return this.securityGroupId;
-        }
-
-    }
-
-    public static class DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress extends TeaModel {
-        @NameInMap("IpAddress")
-        public java.util.List<String> ipAddress;
-
-        public static DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress self = new DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress setIpAddress(java.util.List<String> ipAddress) {
-            this.ipAddress = ipAddress;
-            return this;
-        }
-        public java.util.List<String> getIpAddress() {
-            return this.ipAddress;
-        }
-
-    }
-
     public static class DescribeInstancesResponseBodyInstancesInstancePublicIpAddress extends TeaModel {
         @NameInMap("IpAddress")
         public java.util.List<String> ipAddress;
@@ -378,37 +359,148 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress extends TeaModel {
+        @NameInMap("GateWay")
+        public String gateWay;
+
+        @NameInMap("Ip")
+        public String ip;
+
+        @NameInMap("Isp")
+        public String isp;
+
+        public static DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress self = new DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress setGateWay(String gateWay) {
+            this.gateWay = gateWay;
+            return this;
+        }
+        public String getGateWay() {
+            return this.gateWay;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress setIsp(String isp) {
+            this.isp = isp;
+            return this;
+        }
+        public String getIsp() {
+            return this.isp;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses extends TeaModel {
+        @NameInMap("PublicIpAddress")
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress> publicIpAddress;
+
+        public static DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses self = new DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses setPublicIpAddress(java.util.List<DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress> publicIpAddress) {
+            this.publicIpAddress = publicIpAddress;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress> getPublicIpAddress() {
+            return this.publicIpAddress;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds extends TeaModel {
+        @NameInMap("SecurityGroupId")
+        public java.util.List<String> securityGroupId;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds self = new DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds setSecurityGroupId(java.util.List<String> securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+    }
+
     public static class DescribeInstancesResponseBodyInstancesInstanceSystemDisk extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("DiskId")
+        public String diskId;
+
+        @NameInMap("DiskName")
+        public String diskName;
+
+        @NameInMap("Size")
+        public Integer size;
+
         @NameInMap("device_type")
         public String deviceType;
 
         @NameInMap("disk_type")
         public String diskType;
 
-        @NameInMap("Size")
-        public Integer size;
-
-        @NameInMap("DiskName")
-        public String diskName;
-
-        @NameInMap("uuid")
-        public String uuid;
+        @NameInMap("name")
+        public String name;
 
         @NameInMap("storage")
         public Integer storage;
 
-        @NameInMap("DiskId")
-        public String diskId;
-
-        @NameInMap("Category")
-        public String category;
-
-        @NameInMap("name")
-        public String name;
+        @NameInMap("uuid")
+        public String uuid;
 
         public static DescribeInstancesResponseBodyInstancesInstanceSystemDisk build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesInstanceSystemDisk self = new DescribeInstancesResponseBodyInstancesInstanceSystemDisk();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceSystemDisk setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceSystemDisk setDiskId(String diskId) {
+            this.diskId = diskId;
+            return this;
+        }
+        public String getDiskId() {
+            return this.diskId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceSystemDisk setDiskName(String diskName) {
+            this.diskName = diskName;
+            return this;
+        }
+        public String getDiskName() {
+            return this.diskName;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceSystemDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceSystemDisk setDeviceType(String deviceType) {
@@ -427,28 +519,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.diskType;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstanceSystemDisk setSize(Integer size) {
-            this.size = size;
+        public DescribeInstancesResponseBodyInstancesInstanceSystemDisk setName(String name) {
+            this.name = name;
             return this;
         }
-        public Integer getSize() {
-            return this.size;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstanceSystemDisk setDiskName(String diskName) {
-            this.diskName = diskName;
-            return this;
-        }
-        public String getDiskName() {
-            return this.diskName;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstanceSystemDisk setUuid(String uuid) {
-            this.uuid = uuid;
-            return this;
-        }
-        public String getUuid() {
-            return this.uuid;
+        public String getName() {
+            return this.name;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceSystemDisk setStorage(Integer storage) {
@@ -459,110 +535,52 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.storage;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstanceSystemDisk setDiskId(String diskId) {
-            this.diskId = diskId;
+        public DescribeInstancesResponseBodyInstancesInstanceSystemDisk setUuid(String uuid) {
+            this.uuid = uuid;
             return this;
         }
-        public String getDiskId() {
-            return this.diskId;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstanceSystemDisk setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstanceSystemDisk setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-    }
-
-    public static class DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress extends TeaModel {
-        @NameInMap("IpAddress")
-        public java.util.List<String> ipAddress;
-
-        public static DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress self = new DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress setIpAddress(java.util.List<String> ipAddress) {
-            this.ipAddress = ipAddress;
-            return this;
-        }
-        public java.util.List<String> getIpAddress() {
-            return this.ipAddress;
-        }
-
-    }
-
-    public static class DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes extends TeaModel {
-        @NameInMap("NetworkId")
-        public String networkId;
-
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
-
-        @NameInMap("PrivateIpAddress")
-        public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress privateIpAddress;
-
-        public static DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes self = new DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes setNetworkId(String networkId) {
-            this.networkId = networkId;
-            return this;
-        }
-        public String getNetworkId() {
-            return this.networkId;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes setPrivateIpAddress(DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress privateIpAddress) {
-            this.privateIpAddress = privateIpAddress;
-            return this;
-        }
-        public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress getPrivateIpAddress() {
-            return this.privateIpAddress;
+        public String getUuid() {
+            return this.uuid;
         }
 
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstance extends TeaModel {
+        @NameInMap("Cpu")
+        public String cpu;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("DataDisk")
+        public DescribeInstancesResponseBodyInstancesInstanceDataDisk dataDisk;
 
-        @NameInMap("SpecName")
-        public String specName;
+        @NameInMap("Disk")
+        public Integer disk;
 
-        @NameInMap("InstanceResourceType")
-        public String instanceResourceType;
+        @NameInMap("EnsRegionId")
+        public String ensRegionId;
+
+        @NameInMap("ExpiredTime")
+        public String expiredTime;
 
         @NameInMap("HostName")
         public String hostName;
 
+        @NameInMap("ImageId")
+        public String imageId;
+
+        @NameInMap("InnerIpAddress")
+        public DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress innerIpAddress;
+
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("InstanceResourceType")
+        public String instanceResourceType;
 
         @NameInMap("InternetMaxBandwidthIn")
         public Integer internetMaxBandwidthIn;
@@ -570,57 +588,47 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("InternetMaxBandwidthOut")
         public Integer internetMaxBandwidthOut;
 
-        @NameInMap("EnsRegionId")
-        public String ensRegionId;
-
-        @NameInMap("Cpu")
-        public String cpu;
-
-        @NameInMap("ExpiredTime")
-        public String expiredTime;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
-
-        @NameInMap("Disk")
-        public Integer disk;
-
         @NameInMap("Memory")
         public Integer memory;
-
-        @NameInMap("OSName")
-        public String OSName;
-
-        @NameInMap("ImageId")
-        public String imageId;
-
-        @NameInMap("DataDisk")
-        public DescribeInstancesResponseBodyInstancesInstanceDataDisk dataDisk;
-
-        @NameInMap("PublicIpAddresses")
-        public DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses publicIpAddresses;
-
-        @NameInMap("PrivateIpAddresses")
-        public DescribeInstancesResponseBodyInstancesInstancePrivateIpAddresses privateIpAddresses;
-
-        @NameInMap("SecurityGroupIds")
-        public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds securityGroupIds;
-
-        @NameInMap("InnerIpAddress")
-        public DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress innerIpAddress;
-
-        @NameInMap("PublicIpAddress")
-        public DescribeInstancesResponseBodyInstancesInstancePublicIpAddress publicIpAddress;
-
-        @NameInMap("SystemDisk")
-        public DescribeInstancesResponseBodyInstancesInstanceSystemDisk systemDisk;
 
         @NameInMap("NetworkAttributes")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes networkAttributes;
 
+        @NameInMap("OSName")
+        public String OSName;
+
+        @NameInMap("PrivateIpAddresses")
+        public DescribeInstancesResponseBodyInstancesInstancePrivateIpAddresses privateIpAddresses;
+
+        @NameInMap("PublicIpAddress")
+        public DescribeInstancesResponseBodyInstancesInstancePublicIpAddress publicIpAddress;
+
+        @NameInMap("PublicIpAddresses")
+        public DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses publicIpAddresses;
+
+        @NameInMap("SecurityGroupIds")
+        public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds securityGroupIds;
+
+        @NameInMap("SpecName")
+        public String specName;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("SystemDisk")
+        public DescribeInstancesResponseBodyInstancesInstanceSystemDisk systemDisk;
+
         public static DescribeInstancesResponseBodyInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesInstance self = new DescribeInstancesResponseBodyInstancesInstance();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setCpu(String cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public String getCpu() {
+            return this.cpu;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setCreationTime(String creationTime) {
@@ -631,28 +639,36 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstance setStatus(String status) {
-            this.status = status;
+        public DescribeInstancesResponseBodyInstancesInstance setDataDisk(DescribeInstancesResponseBodyInstancesInstanceDataDisk dataDisk) {
+            this.dataDisk = dataDisk;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public DescribeInstancesResponseBodyInstancesInstanceDataDisk getDataDisk() {
+            return this.dataDisk;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstance setSpecName(String specName) {
-            this.specName = specName;
+        public DescribeInstancesResponseBodyInstancesInstance setDisk(Integer disk) {
+            this.disk = disk;
             return this;
         }
-        public String getSpecName() {
-            return this.specName;
+        public Integer getDisk() {
+            return this.disk;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstance setInstanceResourceType(String instanceResourceType) {
-            this.instanceResourceType = instanceResourceType;
+        public DescribeInstancesResponseBodyInstancesInstance setEnsRegionId(String ensRegionId) {
+            this.ensRegionId = ensRegionId;
             return this;
         }
-        public String getInstanceResourceType() {
-            return this.instanceResourceType;
+        public String getEnsRegionId() {
+            return this.ensRegionId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setExpiredTime(String expiredTime) {
+            this.expiredTime = expiredTime;
+            return this;
+        }
+        public String getExpiredTime() {
+            return this.expiredTime;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setHostName(String hostName) {
@@ -663,12 +679,44 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.hostName;
         }
 
+        public DescribeInstancesResponseBodyInstancesInstance setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setInnerIpAddress(DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress innerIpAddress) {
+            this.innerIpAddress = innerIpAddress;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress getInnerIpAddress() {
+            return this.innerIpAddress;
+        }
+
         public DescribeInstancesResponseBodyInstancesInstance setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setInstanceResourceType(String instanceResourceType) {
+            this.instanceResourceType = instanceResourceType;
+            return this;
+        }
+        public String getInstanceResourceType() {
+            return this.instanceResourceType;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setInternetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
@@ -687,52 +735,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.internetMaxBandwidthOut;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstance setEnsRegionId(String ensRegionId) {
-            this.ensRegionId = ensRegionId;
-            return this;
-        }
-        public String getEnsRegionId() {
-            return this.ensRegionId;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setCpu(String cpu) {
-            this.cpu = cpu;
-            return this;
-        }
-        public String getCpu() {
-            return this.cpu;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setExpiredTime(String expiredTime) {
-            this.expiredTime = expiredTime;
-            return this;
-        }
-        public String getExpiredTime() {
-            return this.expiredTime;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setDisk(Integer disk) {
-            this.disk = disk;
-            return this;
-        }
-        public Integer getDisk() {
-            return this.disk;
-        }
-
         public DescribeInstancesResponseBodyInstancesInstance setMemory(Integer memory) {
             this.memory = memory;
             return this;
         }
         public Integer getMemory() {
             return this.memory;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setNetworkAttributes(DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes networkAttributes) {
+            this.networkAttributes = networkAttributes;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes getNetworkAttributes() {
+            return this.networkAttributes;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setOSName(String OSName) {
@@ -743,52 +759,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.OSName;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstance setImageId(String imageId) {
-            this.imageId = imageId;
-            return this;
-        }
-        public String getImageId() {
-            return this.imageId;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setDataDisk(DescribeInstancesResponseBodyInstancesInstanceDataDisk dataDisk) {
-            this.dataDisk = dataDisk;
-            return this;
-        }
-        public DescribeInstancesResponseBodyInstancesInstanceDataDisk getDataDisk() {
-            return this.dataDisk;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setPublicIpAddresses(DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses publicIpAddresses) {
-            this.publicIpAddresses = publicIpAddresses;
-            return this;
-        }
-        public DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses getPublicIpAddresses() {
-            return this.publicIpAddresses;
-        }
-
         public DescribeInstancesResponseBodyInstancesInstance setPrivateIpAddresses(DescribeInstancesResponseBodyInstancesInstancePrivateIpAddresses privateIpAddresses) {
             this.privateIpAddresses = privateIpAddresses;
             return this;
         }
         public DescribeInstancesResponseBodyInstancesInstancePrivateIpAddresses getPrivateIpAddresses() {
             return this.privateIpAddresses;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setSecurityGroupIds(DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
-            return this;
-        }
-        public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds getSecurityGroupIds() {
-            return this.securityGroupIds;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setInnerIpAddress(DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress innerIpAddress) {
-            this.innerIpAddress = innerIpAddress;
-            return this;
-        }
-        public DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress getInnerIpAddress() {
-            return this.innerIpAddress;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setPublicIpAddress(DescribeInstancesResponseBodyInstancesInstancePublicIpAddress publicIpAddress) {
@@ -799,20 +775,44 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.publicIpAddress;
         }
 
+        public DescribeInstancesResponseBodyInstancesInstance setPublicIpAddresses(DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses publicIpAddresses) {
+            this.publicIpAddresses = publicIpAddresses;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses getPublicIpAddresses() {
+            return this.publicIpAddresses;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setSecurityGroupIds(DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setSpecName(String specName) {
+            this.specName = specName;
+            return this;
+        }
+        public String getSpecName() {
+            return this.specName;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
         public DescribeInstancesResponseBodyInstancesInstance setSystemDisk(DescribeInstancesResponseBodyInstancesInstanceSystemDisk systemDisk) {
             this.systemDisk = systemDisk;
             return this;
         }
         public DescribeInstancesResponseBodyInstancesInstanceSystemDisk getSystemDisk() {
             return this.systemDisk;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setNetworkAttributes(DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes networkAttributes) {
-            this.networkAttributes = networkAttributes;
-            return this;
-        }
-        public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes getNetworkAttributes() {
-            return this.networkAttributes;
         }
 
     }

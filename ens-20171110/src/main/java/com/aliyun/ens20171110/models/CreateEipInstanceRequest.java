@@ -4,13 +4,13 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateEipInstanceRequest extends TeaModel {
-    // ENS节点ID
-    @NameInMap("EnsRegionId")
-    public String ensRegionId;
-
     // EIP的带宽峰值
     @NameInMap("Bandwidth")
     public Long bandwidth;
+
+    // ENS节点ID
+    @NameInMap("EnsRegionId")
+    public String ensRegionId;
 
     // EIP的计费方式，取值：  PrePaid：包年包月。 PostPaid（默认值）：按量计费。 当InstanceChargeType取值为PostPaid时，InternetChargeType不能为PayByBandwidth
     @NameInMap("InstanceChargeType")
@@ -20,25 +20,17 @@ public class CreateEipInstanceRequest extends TeaModel {
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
-    // EIP实例名称。
-    @NameInMap("Name")
-    public String name;
-
     // 运营商信息
     @NameInMap("Isp")
     public String isp;
 
+    // EIP实例名称。
+    @NameInMap("Name")
+    public String name;
+
     public static CreateEipInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEipInstanceRequest self = new CreateEipInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateEipInstanceRequest setEnsRegionId(String ensRegionId) {
-        this.ensRegionId = ensRegionId;
-        return this;
-    }
-    public String getEnsRegionId() {
-        return this.ensRegionId;
     }
 
     public CreateEipInstanceRequest setBandwidth(Long bandwidth) {
@@ -47,6 +39,14 @@ public class CreateEipInstanceRequest extends TeaModel {
     }
     public Long getBandwidth() {
         return this.bandwidth;
+    }
+
+    public CreateEipInstanceRequest setEnsRegionId(String ensRegionId) {
+        this.ensRegionId = ensRegionId;
+        return this;
+    }
+    public String getEnsRegionId() {
+        return this.ensRegionId;
     }
 
     public CreateEipInstanceRequest setInstanceChargeType(String instanceChargeType) {
@@ -65,20 +65,20 @@ public class CreateEipInstanceRequest extends TeaModel {
         return this.internetChargeType;
     }
 
-    public CreateEipInstanceRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
     public CreateEipInstanceRequest setIsp(String isp) {
         this.isp = isp;
         return this;
     }
     public String getIsp() {
         return this.isp;
+    }
+
+    public CreateEipInstanceRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
 }

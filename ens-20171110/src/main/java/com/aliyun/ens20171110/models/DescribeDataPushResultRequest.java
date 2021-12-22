@@ -13,11 +13,11 @@ public class DescribeDataPushResultRequest extends TeaModel {
     @NameInMap("DataVersions")
     public String dataVersions;
 
-    @NameInMap("MinDate")
-    public String minDate;
-
     @NameInMap("MaxDate")
     public String maxDate;
+
+    @NameInMap("MinDate")
+    public String minDate;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -57,20 +57,20 @@ public class DescribeDataPushResultRequest extends TeaModel {
         return this.dataVersions;
     }
 
-    public DescribeDataPushResultRequest setMinDate(String minDate) {
-        this.minDate = minDate;
-        return this;
-    }
-    public String getMinDate() {
-        return this.minDate;
-    }
-
     public DescribeDataPushResultRequest setMaxDate(String maxDate) {
         this.maxDate = maxDate;
         return this;
     }
     public String getMaxDate() {
         return this.maxDate;
+    }
+
+    public DescribeDataPushResultRequest setMinDate(String minDate) {
+        this.minDate = minDate;
+        return this;
+    }
+    public String getMinDate() {
+        return this.minDate;
     }
 
     public DescribeDataPushResultRequest setPageNumber(Integer pageNumber) {

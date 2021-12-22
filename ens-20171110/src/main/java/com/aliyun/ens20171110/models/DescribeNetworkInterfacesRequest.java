@@ -4,17 +4,11 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacesRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
-
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
-    @NameInMap("PrimaryIpAddress")
-    public String primaryIpAddress;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("PageNumber")
     public String pageNumber;
@@ -22,25 +16,15 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("PrimaryIpAddress")
+    public String primaryIpAddress;
+
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
     public static DescribeNetworkInterfacesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworkInterfacesRequest self = new DescribeNetworkInterfacesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeNetworkInterfacesRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DescribeNetworkInterfacesRequest setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
-        return this;
-    }
-    public String getVSwitchId() {
-        return this.vSwitchId;
     }
 
     public DescribeNetworkInterfacesRequest setEnsRegionId(String ensRegionId) {
@@ -51,12 +35,12 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
         return this.ensRegionId;
     }
 
-    public DescribeNetworkInterfacesRequest setPrimaryIpAddress(String primaryIpAddress) {
-        this.primaryIpAddress = primaryIpAddress;
+    public DescribeNetworkInterfacesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getPrimaryIpAddress() {
-        return this.primaryIpAddress;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribeNetworkInterfacesRequest setPageNumber(String pageNumber) {
@@ -73,6 +57,22 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeNetworkInterfacesRequest setPrimaryIpAddress(String primaryIpAddress) {
+        this.primaryIpAddress = primaryIpAddress;
+        return this;
+    }
+    public String getPrimaryIpAddress() {
+        return this.primaryIpAddress;
+    }
+
+    public DescribeNetworkInterfacesRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
 }

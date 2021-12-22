@@ -4,12 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class RescaleDeviceServiceResponseBody extends TeaModel {
+    @NameInMap("DeviceIds")
+    public java.util.List<String> deviceIds;
+
+    @NameInMap("OrderId")
+    public String orderId;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("DeviceIds")
-    public java.util.List<String> deviceIds;
 
     @NameInMap("ResourceDetailInfos")
     public java.util.List<RescaleDeviceServiceResponseBodyResourceDetailInfos> resourceDetailInfos;
@@ -19,20 +22,28 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RescaleDeviceServiceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public RescaleDeviceServiceResponseBody setDeviceIds(java.util.List<String> deviceIds) {
         this.deviceIds = deviceIds;
         return this;
     }
     public java.util.List<String> getDeviceIds() {
         return this.deviceIds;
+    }
+
+    public RescaleDeviceServiceResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
+    }
+
+    public RescaleDeviceServiceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public RescaleDeviceServiceResponseBody setResourceDetailInfos(java.util.List<RescaleDeviceServiceResponseBodyResourceDetailInfos> resourceDetailInfos) {
@@ -44,41 +55,33 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
     }
 
     public static class RescaleDeviceServiceResponseBodyResourceDetailInfos extends TeaModel {
-        @NameInMap("RegionID")
-        public String regionID;
-
         @NameInMap("ID")
         public String ID;
 
         @NameInMap("IP")
         public String IP;
 
-        @NameInMap("Server")
-        public String server;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("ISP")
+        public String ISP;
 
         @NameInMap("Mac")
         public String mac;
 
-        @NameInMap("ISP")
-        public String ISP;
+        @NameInMap("RegionID")
+        public String regionID;
+
+        @NameInMap("Server")
+        public String server;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
 
         public static RescaleDeviceServiceResponseBodyResourceDetailInfos build(java.util.Map<String, ?> map) throws Exception {
             RescaleDeviceServiceResponseBodyResourceDetailInfos self = new RescaleDeviceServiceResponseBodyResourceDetailInfos();
             return TeaModel.build(map, self);
-        }
-
-        public RescaleDeviceServiceResponseBodyResourceDetailInfos setRegionID(String regionID) {
-            this.regionID = regionID;
-            return this;
-        }
-        public String getRegionID() {
-            return this.regionID;
         }
 
         public RescaleDeviceServiceResponseBodyResourceDetailInfos setID(String ID) {
@@ -97,28 +100,12 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             return this.IP;
         }
 
-        public RescaleDeviceServiceResponseBodyResourceDetailInfos setServer(String server) {
-            this.server = server;
+        public RescaleDeviceServiceResponseBodyResourceDetailInfos setISP(String ISP) {
+            this.ISP = ISP;
             return this;
         }
-        public String getServer() {
-            return this.server;
-        }
-
-        public RescaleDeviceServiceResponseBodyResourceDetailInfos setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public RescaleDeviceServiceResponseBodyResourceDetailInfos setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
+        public String getISP() {
+            return this.ISP;
         }
 
         public RescaleDeviceServiceResponseBodyResourceDetailInfos setMac(String mac) {
@@ -129,12 +116,36 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             return this.mac;
         }
 
-        public RescaleDeviceServiceResponseBodyResourceDetailInfos setISP(String ISP) {
-            this.ISP = ISP;
+        public RescaleDeviceServiceResponseBodyResourceDetailInfos setRegionID(String regionID) {
+            this.regionID = regionID;
             return this;
         }
-        public String getISP() {
-            return this.ISP;
+        public String getRegionID() {
+            return this.regionID;
+        }
+
+        public RescaleDeviceServiceResponseBodyResourceDetailInfos setServer(String server) {
+            this.server = server;
+            return this;
+        }
+        public String getServer() {
+            return this.server;
+        }
+
+        public RescaleDeviceServiceResponseBodyResourceDetailInfos setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public RescaleDeviceServiceResponseBodyResourceDetailInfos setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

@@ -4,24 +4,16 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class RemoveBackendServersResponseBody extends TeaModel {
+    @NameInMap("BackendServers")
+    public RemoveBackendServersResponseBodyBackendServers backendServers;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("BackendServers")
-    public RemoveBackendServersResponseBodyBackendServers backendServers;
-
     public static RemoveBackendServersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemoveBackendServersResponseBody self = new RemoveBackendServersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveBackendServersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RemoveBackendServersResponseBody setBackendServers(RemoveBackendServersResponseBodyBackendServers backendServers) {
@@ -32,49 +24,33 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         return this.backendServers;
     }
 
+    public RemoveBackendServersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class RemoveBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
-        @NameInMap("ServerId")
-        public String serverId;
-
-        @NameInMap("Weight")
-        public Integer weight;
-
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("Ip")
         public String ip;
 
         @NameInMap("Port")
         public Integer port;
 
+        @NameInMap("ServerId")
+        public String serverId;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Weight")
+        public Integer weight;
+
         public static RemoveBackendServersResponseBodyBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
             RemoveBackendServersResponseBodyBackendServersBackendServer self = new RemoveBackendServersResponseBodyBackendServersBackendServer();
             return TeaModel.build(map, self);
-        }
-
-        public RemoveBackendServersResponseBodyBackendServersBackendServer setServerId(String serverId) {
-            this.serverId = serverId;
-            return this;
-        }
-        public String getServerId() {
-            return this.serverId;
-        }
-
-        public RemoveBackendServersResponseBodyBackendServersBackendServer setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
-        }
-
-        public RemoveBackendServersResponseBodyBackendServersBackendServer setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public RemoveBackendServersResponseBodyBackendServersBackendServer setIp(String ip) {
@@ -91,6 +67,30 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         }
         public Integer getPort() {
             return this.port;
+        }
+
+        public RemoveBackendServersResponseBodyBackendServersBackendServer setServerId(String serverId) {
+            this.serverId = serverId;
+            return this;
+        }
+        public String getServerId() {
+            return this.serverId;
+        }
+
+        public RemoveBackendServersResponseBodyBackendServersBackendServer setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public RemoveBackendServersResponseBodyBackendServersBackendServer setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }

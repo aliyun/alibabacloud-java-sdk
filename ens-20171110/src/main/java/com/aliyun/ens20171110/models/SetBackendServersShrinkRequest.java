@@ -4,23 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class SetBackendServersShrinkRequest extends TeaModel {
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
-
     @NameInMap("BackendServers")
     public String backendServersShrink;
+
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
 
     public static SetBackendServersShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SetBackendServersShrinkRequest self = new SetBackendServersShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetBackendServersShrinkRequest setLoadBalancerId(String loadBalancerId) {
-        this.loadBalancerId = loadBalancerId;
-        return this;
-    }
-    public String getLoadBalancerId() {
-        return this.loadBalancerId;
     }
 
     public SetBackendServersShrinkRequest setBackendServersShrink(String backendServersShrink) {
@@ -29,6 +21,14 @@ public class SetBackendServersShrinkRequest extends TeaModel {
     }
     public String getBackendServersShrink() {
         return this.backendServersShrink;
+    }
+
+    public SetBackendServersShrinkRequest setLoadBalancerId(String loadBalancerId) {
+        this.loadBalancerId = loadBalancerId;
+        return this;
+    }
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
     }
 
 }

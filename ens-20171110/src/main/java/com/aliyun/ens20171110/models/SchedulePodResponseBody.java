@@ -4,33 +4,25 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class SchedulePodResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Long code;
-
-    @NameInMap("Msg")
-    public String msg;
-
-    @NameInMap("Desc")
-    public String desc;
 
     @NameInMap("Data")
     public String data;
 
+    @NameInMap("Desc")
+    public String desc;
+
+    @NameInMap("Msg")
+    public String msg;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static SchedulePodResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SchedulePodResponseBody self = new SchedulePodResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SchedulePodResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SchedulePodResponseBody setCode(Long code) {
@@ -41,12 +33,12 @@ public class SchedulePodResponseBody extends TeaModel {
         return this.code;
     }
 
-    public SchedulePodResponseBody setMsg(String msg) {
-        this.msg = msg;
+    public SchedulePodResponseBody setData(String data) {
+        this.data = data;
         return this;
     }
-    public String getMsg() {
-        return this.msg;
+    public String getData() {
+        return this.data;
     }
 
     public SchedulePodResponseBody setDesc(String desc) {
@@ -57,12 +49,20 @@ public class SchedulePodResponseBody extends TeaModel {
         return this.desc;
     }
 
-    public SchedulePodResponseBody setData(String data) {
-        this.data = data;
+    public SchedulePodResponseBody setMsg(String msg) {
+        this.msg = msg;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public String getMsg() {
+        return this.msg;
+    }
+
+    public SchedulePodResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

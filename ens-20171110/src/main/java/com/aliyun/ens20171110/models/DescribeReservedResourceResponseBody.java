@@ -4,45 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeReservedResourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public Integer code;
 
     @NameInMap("Images")
     public DescribeReservedResourceResponseBodyImages images;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("SupportResources")
     public DescribeReservedResourceResponseBodySupportResources supportResources;
-
-    @NameInMap("Code")
-    public Integer code;
 
     public static DescribeReservedResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeReservedResourceResponseBody self = new DescribeReservedResourceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeReservedResourceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeReservedResourceResponseBody setImages(DescribeReservedResourceResponseBodyImages images) {
-        this.images = images;
-        return this;
-    }
-    public DescribeReservedResourceResponseBodyImages getImages() {
-        return this.images;
-    }
-
-    public DescribeReservedResourceResponseBody setSupportResources(DescribeReservedResourceResponseBodySupportResources supportResources) {
-        this.supportResources = supportResources;
-        return this;
-    }
-    public DescribeReservedResourceResponseBodySupportResources getSupportResources() {
-        return this.supportResources;
     }
 
     public DescribeReservedResourceResponseBody setCode(Integer code) {
@@ -53,24 +29,40 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public static class DescribeReservedResourceResponseBodyImagesImage extends TeaModel {
-        @NameInMap("ImageName")
-        public String imageName;
+    public DescribeReservedResourceResponseBody setImages(DescribeReservedResourceResponseBodyImages images) {
+        this.images = images;
+        return this;
+    }
+    public DescribeReservedResourceResponseBodyImages getImages() {
+        return this.images;
+    }
 
+    public DescribeReservedResourceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeReservedResourceResponseBody setSupportResources(DescribeReservedResourceResponseBodySupportResources supportResources) {
+        this.supportResources = supportResources;
+        return this;
+    }
+    public DescribeReservedResourceResponseBodySupportResources getSupportResources() {
+        return this.supportResources;
+    }
+
+    public static class DescribeReservedResourceResponseBodyImagesImage extends TeaModel {
         @NameInMap("ImageId")
         public String imageId;
+
+        @NameInMap("ImageName")
+        public String imageName;
 
         public static DescribeReservedResourceResponseBodyImagesImage build(java.util.Map<String, ?> map) throws Exception {
             DescribeReservedResourceResponseBodyImagesImage self = new DescribeReservedResourceResponseBodyImagesImage();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeReservedResourceResponseBodyImagesImage setImageName(String imageName) {
-            this.imageName = imageName;
-            return this;
-        }
-        public String getImageName() {
-            return this.imageName;
         }
 
         public DescribeReservedResourceResponseBodyImagesImage setImageId(String imageId) {
@@ -79,6 +71,14 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
         }
         public String getImageId() {
             return this.imageId;
+        }
+
+        public DescribeReservedResourceResponseBodyImagesImage setImageName(String imageName) {
+            this.imageName = imageName;
+            return this;
+        }
+        public String getImageName() {
+            return this.imageName;
         }
 
     }
@@ -141,11 +141,14 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeReservedResourceResponseBodySupportResourcesSupportResource extends TeaModel {
+        @NameInMap("DataDiskSizes")
+        public DescribeReservedResourceResponseBodySupportResourcesSupportResourceDataDiskSizes dataDiskSizes;
+
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
-        @NameInMap("DataDiskSizes")
-        public DescribeReservedResourceResponseBodySupportResourcesSupportResourceDataDiskSizes dataDiskSizes;
+        @NameInMap("InstanceSpec")
+        public String instanceSpec;
 
         @NameInMap("SupportResourcesCount")
         public String supportResourcesCount;
@@ -153,12 +156,17 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
         @NameInMap("SystemDiskSizes")
         public DescribeReservedResourceResponseBodySupportResourcesSupportResourceSystemDiskSizes systemDiskSizes;
 
-        @NameInMap("InstanceSpec")
-        public String instanceSpec;
-
         public static DescribeReservedResourceResponseBodySupportResourcesSupportResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeReservedResourceResponseBodySupportResourcesSupportResource self = new DescribeReservedResourceResponseBodySupportResourcesSupportResource();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeReservedResourceResponseBodySupportResourcesSupportResource setDataDiskSizes(DescribeReservedResourceResponseBodySupportResourcesSupportResourceDataDiskSizes dataDiskSizes) {
+            this.dataDiskSizes = dataDiskSizes;
+            return this;
+        }
+        public DescribeReservedResourceResponseBodySupportResourcesSupportResourceDataDiskSizes getDataDiskSizes() {
+            return this.dataDiskSizes;
         }
 
         public DescribeReservedResourceResponseBodySupportResourcesSupportResource setEnsRegionId(String ensRegionId) {
@@ -169,12 +177,12 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
             return this.ensRegionId;
         }
 
-        public DescribeReservedResourceResponseBodySupportResourcesSupportResource setDataDiskSizes(DescribeReservedResourceResponseBodySupportResourcesSupportResourceDataDiskSizes dataDiskSizes) {
-            this.dataDiskSizes = dataDiskSizes;
+        public DescribeReservedResourceResponseBodySupportResourcesSupportResource setInstanceSpec(String instanceSpec) {
+            this.instanceSpec = instanceSpec;
             return this;
         }
-        public DescribeReservedResourceResponseBodySupportResourcesSupportResourceDataDiskSizes getDataDiskSizes() {
-            return this.dataDiskSizes;
+        public String getInstanceSpec() {
+            return this.instanceSpec;
         }
 
         public DescribeReservedResourceResponseBodySupportResourcesSupportResource setSupportResourcesCount(String supportResourcesCount) {
@@ -191,14 +199,6 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
         }
         public DescribeReservedResourceResponseBodySupportResourcesSupportResourceSystemDiskSizes getSystemDiskSizes() {
             return this.systemDiskSizes;
-        }
-
-        public DescribeReservedResourceResponseBodySupportResourcesSupportResource setInstanceSpec(String instanceSpec) {
-            this.instanceSpec = instanceSpec;
-            return this;
-        }
-        public String getInstanceSpec() {
-            return this.instanceSpec;
         }
 
     }

@@ -4,17 +4,20 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
-    @NameInMap("Version")
-    public String version;
-
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("EnsRegionIds")
     public String ensRegionIds;
+
+    @NameInMap("EnsServiceId")
+    public String ensServiceId;
+
+    @NameInMap("ImageId")
+    public String imageId;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("InstanceIds")
     public String instanceIds;
@@ -22,8 +25,14 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
-    @NameInMap("ImageId")
-    public String imageId;
+    @NameInMap("InstanceResourceType")
+    public String instanceResourceType;
+
+    @NameInMap("NetworkId")
+    public String networkId;
+
+    @NameInMap("OrderByParams")
+    public String orderByParams;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -31,41 +40,24 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    @NameInMap("Status")
-    public String status;
-
-    @NameInMap("OrderByParams")
-    public String orderByParams;
-
-    @NameInMap("EnsServiceId")
-    public String ensServiceId;
-
-    @NameInMap("InstanceResourceType")
-    public String instanceResourceType;
-
     @NameInMap("SearchKey")
     public String searchKey;
-
-    @NameInMap("NetworkId")
-    public String networkId;
-
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
 
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("Status")
+    public String status;
+
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
+    @NameInMap("Version")
+    public String version;
+
     public static DescribeInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesRequest self = new DescribeInstancesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstancesRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
     public DescribeInstancesRequest setEnsRegionId(String ensRegionId) {
@@ -76,20 +68,36 @@ public class DescribeInstancesRequest extends TeaModel {
         return this.ensRegionId;
     }
 
-    public DescribeInstancesRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public DescribeInstancesRequest setEnsRegionIds(String ensRegionIds) {
         this.ensRegionIds = ensRegionIds;
         return this;
     }
     public String getEnsRegionIds() {
         return this.ensRegionIds;
+    }
+
+    public DescribeInstancesRequest setEnsServiceId(String ensServiceId) {
+        this.ensServiceId = ensServiceId;
+        return this;
+    }
+    public String getEnsServiceId() {
+        return this.ensServiceId;
+    }
+
+    public DescribeInstancesRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public DescribeInstancesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribeInstancesRequest setInstanceIds(String instanceIds) {
@@ -108,12 +116,28 @@ public class DescribeInstancesRequest extends TeaModel {
         return this.instanceName;
     }
 
-    public DescribeInstancesRequest setImageId(String imageId) {
-        this.imageId = imageId;
+    public DescribeInstancesRequest setInstanceResourceType(String instanceResourceType) {
+        this.instanceResourceType = instanceResourceType;
         return this;
     }
-    public String getImageId() {
-        return this.imageId;
+    public String getInstanceResourceType() {
+        return this.instanceResourceType;
+    }
+
+    public DescribeInstancesRequest setNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    public String getNetworkId() {
+        return this.networkId;
+    }
+
+    public DescribeInstancesRequest setOrderByParams(String orderByParams) {
+        this.orderByParams = orderByParams;
+        return this;
+    }
+    public String getOrderByParams() {
+        return this.orderByParams;
     }
 
     public DescribeInstancesRequest setPageNumber(Integer pageNumber) {
@@ -132,38 +156,6 @@ public class DescribeInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeInstancesRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public DescribeInstancesRequest setOrderByParams(String orderByParams) {
-        this.orderByParams = orderByParams;
-        return this;
-    }
-    public String getOrderByParams() {
-        return this.orderByParams;
-    }
-
-    public DescribeInstancesRequest setEnsServiceId(String ensServiceId) {
-        this.ensServiceId = ensServiceId;
-        return this;
-    }
-    public String getEnsServiceId() {
-        return this.ensServiceId;
-    }
-
-    public DescribeInstancesRequest setInstanceResourceType(String instanceResourceType) {
-        this.instanceResourceType = instanceResourceType;
-        return this;
-    }
-    public String getInstanceResourceType() {
-        return this.instanceResourceType;
-    }
-
     public DescribeInstancesRequest setSearchKey(String searchKey) {
         this.searchKey = searchKey;
         return this;
@@ -172,12 +164,20 @@ public class DescribeInstancesRequest extends TeaModel {
         return this.searchKey;
     }
 
-    public DescribeInstancesRequest setNetworkId(String networkId) {
-        this.networkId = networkId;
+    public DescribeInstancesRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
         return this;
     }
-    public String getNetworkId() {
-        return this.networkId;
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public DescribeInstancesRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public DescribeInstancesRequest setVSwitchId(String vSwitchId) {
@@ -188,12 +188,12 @@ public class DescribeInstancesRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public DescribeInstancesRequest setSecurityGroupId(String securityGroupId) {
-        this.securityGroupId = securityGroupId;
+    public DescribeInstancesRequest setVersion(String version) {
+        this.version = version;
         return this;
     }
-    public String getSecurityGroupId() {
-        return this.securityGroupId;
+    public String getVersion() {
+        return this.version;
     }
 
 }

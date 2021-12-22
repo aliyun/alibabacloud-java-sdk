@@ -4,23 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ReleasePostPaidInstanceRequest extends TeaModel {
-    @NameInMap("Version")
-    public String version;
-
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("Version")
+    public String version;
 
     public static ReleasePostPaidInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleasePostPaidInstanceRequest self = new ReleasePostPaidInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ReleasePostPaidInstanceRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
     public ReleasePostPaidInstanceRequest setInstanceId(String instanceId) {
@@ -29,6 +21,14 @@ public class ReleasePostPaidInstanceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ReleasePostPaidInstanceRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

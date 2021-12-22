@@ -4,24 +4,17 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ListenerPort")
-    public Integer listenerPort;
-
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("BackendServerPort")
+    public Integer backendServerPort;
 
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
-    @NameInMap("Scheduler")
-    public String scheduler;
+    @NameInMap("Description")
+    public String description;
 
-    @NameInMap("PersistenceTimeout")
-    public Integer persistenceTimeout;
+    @NameInMap("EipTransmit")
+    public String eipTransmit;
 
     @NameInMap("EstablishedTimeout")
     public Integer establishedTimeout;
@@ -29,66 +22,60 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     @NameInMap("HealthCheck")
     public String healthCheck;
 
-    @NameInMap("HealthyThreshold")
-    public Integer healthyThreshold;
-
-    @NameInMap("UnhealthyThreshold")
-    public Integer unhealthyThreshold;
+    @NameInMap("HealthCheckConnectPort")
+    public Integer healthCheckConnectPort;
 
     @NameInMap("HealthCheckConnectTimeout")
     public Integer healthCheckConnectTimeout;
 
-    @NameInMap("HealthCheckInterval")
-    public Integer healthCheckInterval;
-
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("HealthCheckDomain")
+    public String healthCheckDomain;
 
     @NameInMap("HealthCheckHttpCode")
     public String healthCheckHttpCode;
 
-    @NameInMap("HealthCheckDomain")
-    public String healthCheckDomain;
-
-    @NameInMap("HealthCheckURI")
-    public String healthCheckURI;
+    @NameInMap("HealthCheckInterval")
+    public Integer healthCheckInterval;
 
     @NameInMap("HealthCheckType")
     public String healthCheckType;
 
-    @NameInMap("BackendServerPort")
-    public Integer backendServerPort;
+    @NameInMap("HealthCheckURI")
+    public String healthCheckURI;
 
-    @NameInMap("HealthCheckConnectPort")
-    public Integer healthCheckConnectPort;
+    @NameInMap("HealthyThreshold")
+    public Integer healthyThreshold;
+
+    @NameInMap("ListenerPort")
+    public Integer listenerPort;
+
+    @NameInMap("PersistenceTimeout")
+    public Integer persistenceTimeout;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Scheduler")
+    public String scheduler;
+
+    @NameInMap("Status")
+    public String status;
+
+    @NameInMap("UnhealthyThreshold")
+    public Integer unhealthyThreshold;
 
     public static DescribeLoadBalancerTCPListenerAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLoadBalancerTCPListenerAttributeResponseBody self = new DescribeLoadBalancerTCPListenerAttributeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLoadBalancerTCPListenerAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setBackendServerPort(Integer backendServerPort) {
+        this.backendServerPort = backendServerPort;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeLoadBalancerTCPListenerAttributeResponseBody setListenerPort(Integer listenerPort) {
-        this.listenerPort = listenerPort;
-        return this;
-    }
-    public Integer getListenerPort() {
-        return this.listenerPort;
-    }
-
-    public DescribeLoadBalancerTCPListenerAttributeResponseBody setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
+    public Integer getBackendServerPort() {
+        return this.backendServerPort;
     }
 
     public DescribeLoadBalancerTCPListenerAttributeResponseBody setBandwidth(Integer bandwidth) {
@@ -99,20 +86,20 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         return this.bandwidth;
     }
 
-    public DescribeLoadBalancerTCPListenerAttributeResponseBody setScheduler(String scheduler) {
-        this.scheduler = scheduler;
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getScheduler() {
-        return this.scheduler;
+    public String getDescription() {
+        return this.description;
     }
 
-    public DescribeLoadBalancerTCPListenerAttributeResponseBody setPersistenceTimeout(Integer persistenceTimeout) {
-        this.persistenceTimeout = persistenceTimeout;
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setEipTransmit(String eipTransmit) {
+        this.eipTransmit = eipTransmit;
         return this;
     }
-    public Integer getPersistenceTimeout() {
-        return this.persistenceTimeout;
+    public String getEipTransmit() {
+        return this.eipTransmit;
     }
 
     public DescribeLoadBalancerTCPListenerAttributeResponseBody setEstablishedTimeout(Integer establishedTimeout) {
@@ -131,20 +118,12 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         return this.healthCheck;
     }
 
-    public DescribeLoadBalancerTCPListenerAttributeResponseBody setHealthyThreshold(Integer healthyThreshold) {
-        this.healthyThreshold = healthyThreshold;
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setHealthCheckConnectPort(Integer healthCheckConnectPort) {
+        this.healthCheckConnectPort = healthCheckConnectPort;
         return this;
     }
-    public Integer getHealthyThreshold() {
-        return this.healthyThreshold;
-    }
-
-    public DescribeLoadBalancerTCPListenerAttributeResponseBody setUnhealthyThreshold(Integer unhealthyThreshold) {
-        this.unhealthyThreshold = unhealthyThreshold;
-        return this;
-    }
-    public Integer getUnhealthyThreshold() {
-        return this.unhealthyThreshold;
+    public Integer getHealthCheckConnectPort() {
+        return this.healthCheckConnectPort;
     }
 
     public DescribeLoadBalancerTCPListenerAttributeResponseBody setHealthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
@@ -155,20 +134,12 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         return this.healthCheckConnectTimeout;
     }
 
-    public DescribeLoadBalancerTCPListenerAttributeResponseBody setHealthCheckInterval(Integer healthCheckInterval) {
-        this.healthCheckInterval = healthCheckInterval;
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setHealthCheckDomain(String healthCheckDomain) {
+        this.healthCheckDomain = healthCheckDomain;
         return this;
     }
-    public Integer getHealthCheckInterval() {
-        return this.healthCheckInterval;
-    }
-
-    public DescribeLoadBalancerTCPListenerAttributeResponseBody setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
+    public String getHealthCheckDomain() {
+        return this.healthCheckDomain;
     }
 
     public DescribeLoadBalancerTCPListenerAttributeResponseBody setHealthCheckHttpCode(String healthCheckHttpCode) {
@@ -179,20 +150,12 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         return this.healthCheckHttpCode;
     }
 
-    public DescribeLoadBalancerTCPListenerAttributeResponseBody setHealthCheckDomain(String healthCheckDomain) {
-        this.healthCheckDomain = healthCheckDomain;
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setHealthCheckInterval(Integer healthCheckInterval) {
+        this.healthCheckInterval = healthCheckInterval;
         return this;
     }
-    public String getHealthCheckDomain() {
-        return this.healthCheckDomain;
-    }
-
-    public DescribeLoadBalancerTCPListenerAttributeResponseBody setHealthCheckURI(String healthCheckURI) {
-        this.healthCheckURI = healthCheckURI;
-        return this;
-    }
-    public String getHealthCheckURI() {
-        return this.healthCheckURI;
+    public Integer getHealthCheckInterval() {
+        return this.healthCheckInterval;
     }
 
     public DescribeLoadBalancerTCPListenerAttributeResponseBody setHealthCheckType(String healthCheckType) {
@@ -203,20 +166,68 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         return this.healthCheckType;
     }
 
-    public DescribeLoadBalancerTCPListenerAttributeResponseBody setBackendServerPort(Integer backendServerPort) {
-        this.backendServerPort = backendServerPort;
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setHealthCheckURI(String healthCheckURI) {
+        this.healthCheckURI = healthCheckURI;
         return this;
     }
-    public Integer getBackendServerPort() {
-        return this.backendServerPort;
+    public String getHealthCheckURI() {
+        return this.healthCheckURI;
     }
 
-    public DescribeLoadBalancerTCPListenerAttributeResponseBody setHealthCheckConnectPort(Integer healthCheckConnectPort) {
-        this.healthCheckConnectPort = healthCheckConnectPort;
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setHealthyThreshold(Integer healthyThreshold) {
+        this.healthyThreshold = healthyThreshold;
         return this;
     }
-    public Integer getHealthCheckConnectPort() {
-        return this.healthCheckConnectPort;
+    public Integer getHealthyThreshold() {
+        return this.healthyThreshold;
+    }
+
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setListenerPort(Integer listenerPort) {
+        this.listenerPort = listenerPort;
+        return this;
+    }
+    public Integer getListenerPort() {
+        return this.listenerPort;
+    }
+
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setPersistenceTimeout(Integer persistenceTimeout) {
+        this.persistenceTimeout = persistenceTimeout;
+        return this;
+    }
+    public Integer getPersistenceTimeout() {
+        return this.persistenceTimeout;
+    }
+
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setScheduler(String scheduler) {
+        this.scheduler = scheduler;
+        return this;
+    }
+    public String getScheduler() {
+        return this.scheduler;
+    }
+
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setUnhealthyThreshold(Integer unhealthyThreshold) {
+        this.unhealthyThreshold = unhealthyThreshold;
+        return this;
+    }
+    public Integer getUnhealthyThreshold() {
+        return this.unhealthyThreshold;
     }
 
 }

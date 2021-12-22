@@ -4,26 +4,26 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ExportMeasurementDataRequest extends TeaModel {
-    @NameInMap("Version")
-    public String version;
+    @NameInMap("EndDate")
+    public String endDate;
 
     @NameInMap("StartDate")
     public String startDate;
 
-    @NameInMap("EndDate")
-    public String endDate;
+    @NameInMap("Version")
+    public String version;
 
     public static ExportMeasurementDataRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportMeasurementDataRequest self = new ExportMeasurementDataRequest();
         return TeaModel.build(map, self);
     }
 
-    public ExportMeasurementDataRequest setVersion(String version) {
-        this.version = version;
+    public ExportMeasurementDataRequest setEndDate(String endDate) {
+        this.endDate = endDate;
         return this;
     }
-    public String getVersion() {
-        return this.version;
+    public String getEndDate() {
+        return this.endDate;
     }
 
     public ExportMeasurementDataRequest setStartDate(String startDate) {
@@ -34,12 +34,12 @@ public class ExportMeasurementDataRequest extends TeaModel {
         return this.startDate;
     }
 
-    public ExportMeasurementDataRequest setEndDate(String endDate) {
-        this.endDate = endDate;
+    public ExportMeasurementDataRequest setVersion(String version) {
+        this.version = version;
         return this;
     }
-    public String getEndDate() {
-        return this.endDate;
+    public String getVersion() {
+        return this.version;
     }
 
 }

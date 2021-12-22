@@ -4,10 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsEipAddressesResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("EipAddresses")
     public DescribeEnsEipAddressesResponseBodyEipAddresses eipAddresses;
 
@@ -17,20 +13,16 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     public static DescribeEnsEipAddressesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEnsEipAddressesResponseBody self = new DescribeEnsEipAddressesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeEnsEipAddressesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeEnsEipAddressesResponseBody setEipAddresses(DescribeEnsEipAddressesResponseBodyEipAddresses eipAddresses) {
@@ -57,6 +49,14 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeEnsEipAddressesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeEnsEipAddressesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -81,6 +81,9 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EnsRegionId")
+        public String ensRegionId;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -93,17 +96,14 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        @NameInMap("Isp")
+        public String isp;
+
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("EnsRegionId")
-        public String ensRegionId;
-
         @NameInMap("Status")
         public String status;
-
-        @NameInMap("Isp")
-        public String isp;
 
         public static DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress build(java.util.Map<String, ?> map) throws Exception {
             DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress self = new DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress();
@@ -150,6 +150,14 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setEnsRegionId(String ensRegionId) {
+            this.ensRegionId = ensRegionId;
+            return this;
+        }
+        public String getEnsRegionId() {
+            return this.ensRegionId;
+        }
+
         public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -182,6 +190,14 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             return this.ipAddress;
         }
 
+        public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setIsp(String isp) {
+            this.isp = isp;
+            return this;
+        }
+        public String getIsp() {
+            return this.isp;
+        }
+
         public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setName(String name) {
             this.name = name;
             return this;
@@ -190,28 +206,12 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setEnsRegionId(String ensRegionId) {
-            this.ensRegionId = ensRegionId;
-            return this;
-        }
-        public String getEnsRegionId() {
-            return this.ensRegionId;
-        }
-
         public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setIsp(String isp) {
-            this.isp = isp;
-            return this;
-        }
-        public String getIsp() {
-            return this.isp;
         }
 
     }

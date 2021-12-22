@@ -8,15 +8,15 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     @NameInMap("AllocationId")
     public String allocationId;
 
-    // 要查询的EIP的IP地址。  最多支持输入50个EIP的IP地址，IP地址之间用逗号（,）分隔。
-    @NameInMap("EipAddress")
-    public String eipAddress;
-
     @NameInMap("AssociatedInstanceId")
     public String associatedInstanceId;
 
     @NameInMap("AssociatedInstanceType")
     public String associatedInstanceType;
+
+    // 要查询的EIP的IP地址。  最多支持输入50个EIP的IP地址，IP地址之间用逗号（,）分隔。
+    @NameInMap("EipAddress")
+    public String eipAddress;
 
     // 列表的页码，默认值为1。
     @NameInMap("PageNumber")
@@ -39,14 +39,6 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
         return this.allocationId;
     }
 
-    public DescribeEnsEipAddressesRequest setEipAddress(String eipAddress) {
-        this.eipAddress = eipAddress;
-        return this;
-    }
-    public String getEipAddress() {
-        return this.eipAddress;
-    }
-
     public DescribeEnsEipAddressesRequest setAssociatedInstanceId(String associatedInstanceId) {
         this.associatedInstanceId = associatedInstanceId;
         return this;
@@ -61,6 +53,14 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     }
     public String getAssociatedInstanceType() {
         return this.associatedInstanceType;
+    }
+
+    public DescribeEnsEipAddressesRequest setEipAddress(String eipAddress) {
+        this.eipAddress = eipAddress;
+        return this;
+    }
+    public String getEipAddress() {
+        return this.eipAddress;
     }
 
     public DescribeEnsEipAddressesRequest setPageNumber(Integer pageNumber) {

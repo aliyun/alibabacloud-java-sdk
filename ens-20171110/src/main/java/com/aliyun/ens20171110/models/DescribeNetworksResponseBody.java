@@ -4,6 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworksResponseBody extends TeaModel {
+    @NameInMap("Networks")
+    public DescribeNetworksResponseBodyNetworks networks;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,18 +20,33 @@ public class DescribeNetworksResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Networks")
-    public DescribeNetworksResponseBodyNetworks networks;
-
     public static DescribeNetworksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworksResponseBody self = new DescribeNetworksResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeNetworksResponseBody setNetworks(DescribeNetworksResponseBodyNetworks networks) {
+        this.networks = networks;
+        return this;
+    }
+    public DescribeNetworksResponseBodyNetworks getNetworks() {
+        return this.networks;
+    }
+
+    public DescribeNetworksResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeNetworksResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeNetworksResponseBody setRequestId(String requestId) {
@@ -39,30 +63,6 @@ public class DescribeNetworksResponseBody extends TeaModel {
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public DescribeNetworksResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeNetworksResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeNetworksResponseBody setNetworks(DescribeNetworksResponseBodyNetworks networks) {
-        this.networks = networks;
-        return this;
-    }
-    public DescribeNetworksResponseBodyNetworks getNetworks() {
-        return this.networks;
     }
 
     public static class DescribeNetworksResponseBodyNetworksNetworkVSwitchIds extends TeaModel {
@@ -85,6 +85,15 @@ public class DescribeNetworksResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworksResponseBodyNetworksNetwork extends TeaModel {
+        @NameInMap("CidrBlock")
+        public String cidrBlock;
+
+        @NameInMap("CreatedTime")
+        public String createdTime;
+
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
@@ -94,17 +103,8 @@ public class DescribeNetworksResponseBody extends TeaModel {
         @NameInMap("NetworkName")
         public String networkName;
 
-        @NameInMap("CidrBlock")
-        public String cidrBlock;
-
         @NameInMap("Status")
         public String status;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("CreatedTime")
-        public String createdTime;
 
         @NameInMap("VSwitchIds")
         public DescribeNetworksResponseBodyNetworksNetworkVSwitchIds vSwitchIds;
@@ -112,6 +112,30 @@ public class DescribeNetworksResponseBody extends TeaModel {
         public static DescribeNetworksResponseBodyNetworksNetwork build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworksResponseBodyNetworksNetwork self = new DescribeNetworksResponseBodyNetworksNetwork();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetwork setCidrBlock(String cidrBlock) {
+            this.cidrBlock = cidrBlock;
+            return this;
+        }
+        public String getCidrBlock() {
+            return this.cidrBlock;
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetwork setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
+            return this;
+        }
+        public String getCreatedTime() {
+            return this.createdTime;
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetwork setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeNetworksResponseBodyNetworksNetwork setEnsRegionId(String ensRegionId) {
@@ -138,36 +162,12 @@ public class DescribeNetworksResponseBody extends TeaModel {
             return this.networkName;
         }
 
-        public DescribeNetworksResponseBodyNetworksNetwork setCidrBlock(String cidrBlock) {
-            this.cidrBlock = cidrBlock;
-            return this;
-        }
-        public String getCidrBlock() {
-            return this.cidrBlock;
-        }
-
         public DescribeNetworksResponseBodyNetworksNetwork setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public DescribeNetworksResponseBodyNetworksNetwork setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeNetworksResponseBodyNetworksNetwork setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
-            return this;
-        }
-        public String getCreatedTime() {
-            return this.createdTime;
         }
 
         public DescribeNetworksResponseBodyNetworksNetwork setVSwitchIds(DescribeNetworksResponseBodyNetworksNetworkVSwitchIds vSwitchIds) {

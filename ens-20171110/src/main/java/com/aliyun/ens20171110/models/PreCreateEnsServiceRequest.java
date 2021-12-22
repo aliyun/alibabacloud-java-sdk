@@ -4,8 +4,14 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class PreCreateEnsServiceRequest extends TeaModel {
-    @NameInMap("Version")
-    public String version;
+    @NameInMap("BandwidthType")
+    public String bandwidthType;
+
+    @NameInMap("BuyResourcesDetail")
+    public String buyResourcesDetail;
+
+    @NameInMap("DataDiskSize")
+    public String dataDiskSize;
 
     @NameInMap("EnsServiceName")
     public String ensServiceName;
@@ -13,53 +19,63 @@ public class PreCreateEnsServiceRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
-    @NameInMap("InstanceSpec")
-    public String instanceSpec;
-
-    @NameInMap("SystemDiskSize")
-    public String systemDiskSize;
-
-    @NameInMap("DataDiskSize")
-    public String dataDiskSize;
-
-    @NameInMap("BandwidthType")
-    public String bandwidthType;
-
     @NameInMap("InstanceBandwithdLimit")
     public String instanceBandwithdLimit;
 
-    @NameInMap("Password")
-    public String password;
+    @NameInMap("InstanceSpec")
+    public String instanceSpec;
 
     @NameInMap("KeyPairName")
     public String keyPairName;
 
-    @NameInMap("UserData")
-    public String userData;
-
     @NameInMap("NetLevel")
     public String netLevel;
 
-    @NameInMap("SchedulingStrategy")
-    public String schedulingStrategy;
+    @NameInMap("Password")
+    public String password;
 
     @NameInMap("SchedulingPriceStrategy")
     public String schedulingPriceStrategy;
 
-    @NameInMap("BuyResourcesDetail")
-    public String buyResourcesDetail;
+    @NameInMap("SchedulingStrategy")
+    public String schedulingStrategy;
+
+    @NameInMap("SystemDiskSize")
+    public String systemDiskSize;
+
+    @NameInMap("UserData")
+    public String userData;
+
+    @NameInMap("Version")
+    public String version;
 
     public static PreCreateEnsServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         PreCreateEnsServiceRequest self = new PreCreateEnsServiceRequest();
         return TeaModel.build(map, self);
     }
 
-    public PreCreateEnsServiceRequest setVersion(String version) {
-        this.version = version;
+    public PreCreateEnsServiceRequest setBandwidthType(String bandwidthType) {
+        this.bandwidthType = bandwidthType;
         return this;
     }
-    public String getVersion() {
-        return this.version;
+    public String getBandwidthType() {
+        return this.bandwidthType;
+    }
+
+    public PreCreateEnsServiceRequest setBuyResourcesDetail(String buyResourcesDetail) {
+        this.buyResourcesDetail = buyResourcesDetail;
+        return this;
+    }
+    public String getBuyResourcesDetail() {
+        return this.buyResourcesDetail;
+    }
+
+    public PreCreateEnsServiceRequest setDataDiskSize(String dataDiskSize) {
+        this.dataDiskSize = dataDiskSize;
+        return this;
+    }
+    public String getDataDiskSize() {
+        return this.dataDiskSize;
     }
 
     public PreCreateEnsServiceRequest setEnsServiceName(String ensServiceName) {
@@ -78,38 +94,6 @@ public class PreCreateEnsServiceRequest extends TeaModel {
         return this.imageId;
     }
 
-    public PreCreateEnsServiceRequest setInstanceSpec(String instanceSpec) {
-        this.instanceSpec = instanceSpec;
-        return this;
-    }
-    public String getInstanceSpec() {
-        return this.instanceSpec;
-    }
-
-    public PreCreateEnsServiceRequest setSystemDiskSize(String systemDiskSize) {
-        this.systemDiskSize = systemDiskSize;
-        return this;
-    }
-    public String getSystemDiskSize() {
-        return this.systemDiskSize;
-    }
-
-    public PreCreateEnsServiceRequest setDataDiskSize(String dataDiskSize) {
-        this.dataDiskSize = dataDiskSize;
-        return this;
-    }
-    public String getDataDiskSize() {
-        return this.dataDiskSize;
-    }
-
-    public PreCreateEnsServiceRequest setBandwidthType(String bandwidthType) {
-        this.bandwidthType = bandwidthType;
-        return this;
-    }
-    public String getBandwidthType() {
-        return this.bandwidthType;
-    }
-
     public PreCreateEnsServiceRequest setInstanceBandwithdLimit(String instanceBandwithdLimit) {
         this.instanceBandwithdLimit = instanceBandwithdLimit;
         return this;
@@ -118,12 +102,12 @@ public class PreCreateEnsServiceRequest extends TeaModel {
         return this.instanceBandwithdLimit;
     }
 
-    public PreCreateEnsServiceRequest setPassword(String password) {
-        this.password = password;
+    public PreCreateEnsServiceRequest setInstanceSpec(String instanceSpec) {
+        this.instanceSpec = instanceSpec;
         return this;
     }
-    public String getPassword() {
-        return this.password;
+    public String getInstanceSpec() {
+        return this.instanceSpec;
     }
 
     public PreCreateEnsServiceRequest setKeyPairName(String keyPairName) {
@@ -134,14 +118,6 @@ public class PreCreateEnsServiceRequest extends TeaModel {
         return this.keyPairName;
     }
 
-    public PreCreateEnsServiceRequest setUserData(String userData) {
-        this.userData = userData;
-        return this;
-    }
-    public String getUserData() {
-        return this.userData;
-    }
-
     public PreCreateEnsServiceRequest setNetLevel(String netLevel) {
         this.netLevel = netLevel;
         return this;
@@ -150,12 +126,12 @@ public class PreCreateEnsServiceRequest extends TeaModel {
         return this.netLevel;
     }
 
-    public PreCreateEnsServiceRequest setSchedulingStrategy(String schedulingStrategy) {
-        this.schedulingStrategy = schedulingStrategy;
+    public PreCreateEnsServiceRequest setPassword(String password) {
+        this.password = password;
         return this;
     }
-    public String getSchedulingStrategy() {
-        return this.schedulingStrategy;
+    public String getPassword() {
+        return this.password;
     }
 
     public PreCreateEnsServiceRequest setSchedulingPriceStrategy(String schedulingPriceStrategy) {
@@ -166,12 +142,36 @@ public class PreCreateEnsServiceRequest extends TeaModel {
         return this.schedulingPriceStrategy;
     }
 
-    public PreCreateEnsServiceRequest setBuyResourcesDetail(String buyResourcesDetail) {
-        this.buyResourcesDetail = buyResourcesDetail;
+    public PreCreateEnsServiceRequest setSchedulingStrategy(String schedulingStrategy) {
+        this.schedulingStrategy = schedulingStrategy;
         return this;
     }
-    public String getBuyResourcesDetail() {
-        return this.buyResourcesDetail;
+    public String getSchedulingStrategy() {
+        return this.schedulingStrategy;
+    }
+
+    public PreCreateEnsServiceRequest setSystemDiskSize(String systemDiskSize) {
+        this.systemDiskSize = systemDiskSize;
+        return this;
+    }
+    public String getSystemDiskSize() {
+        return this.systemDiskSize;
+    }
+
+    public PreCreateEnsServiceRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
+    }
+
+    public PreCreateEnsServiceRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

@@ -4,17 +4,23 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class RescaleDeviceServiceRequest extends TeaModel {
-    @NameInMap("RescaleType")
-    public String rescaleType;
+    @NameInMap("AppId")
+    public String appId;
+
+    @NameInMap("ImageId")
+    public String imageId;
+
+    @NameInMap("IpType")
+    public Integer ipType;
 
     @NameInMap("RescaleLevel")
     public String rescaleLevel;
 
-    @NameInMap("Timeout")
-    public Long timeout;
+    @NameInMap("RescaleType")
+    public String rescaleType;
 
-    @NameInMap("ServiceId")
-    public String serviceId;
+    @NameInMap("ResourceInfo")
+    public String resourceInfo;
 
     @NameInMap("ResourceSelector")
     public String resourceSelector;
@@ -22,23 +28,39 @@ public class RescaleDeviceServiceRequest extends TeaModel {
     @NameInMap("ResourceSpec")
     public String resourceSpec;
 
-    @NameInMap("IpType")
-    public Integer ipType;
+    @NameInMap("ServiceId")
+    public String serviceId;
 
-    @NameInMap("AppId")
-    public String appId;
+    @NameInMap("Timeout")
+    public Long timeout;
 
     public static RescaleDeviceServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         RescaleDeviceServiceRequest self = new RescaleDeviceServiceRequest();
         return TeaModel.build(map, self);
     }
 
-    public RescaleDeviceServiceRequest setRescaleType(String rescaleType) {
-        this.rescaleType = rescaleType;
+    public RescaleDeviceServiceRequest setAppId(String appId) {
+        this.appId = appId;
         return this;
     }
-    public String getRescaleType() {
-        return this.rescaleType;
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public RescaleDeviceServiceRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public RescaleDeviceServiceRequest setIpType(Integer ipType) {
+        this.ipType = ipType;
+        return this;
+    }
+    public Integer getIpType() {
+        return this.ipType;
     }
 
     public RescaleDeviceServiceRequest setRescaleLevel(String rescaleLevel) {
@@ -49,20 +71,20 @@ public class RescaleDeviceServiceRequest extends TeaModel {
         return this.rescaleLevel;
     }
 
-    public RescaleDeviceServiceRequest setTimeout(Long timeout) {
-        this.timeout = timeout;
+    public RescaleDeviceServiceRequest setRescaleType(String rescaleType) {
+        this.rescaleType = rescaleType;
         return this;
     }
-    public Long getTimeout() {
-        return this.timeout;
+    public String getRescaleType() {
+        return this.rescaleType;
     }
 
-    public RescaleDeviceServiceRequest setServiceId(String serviceId) {
-        this.serviceId = serviceId;
+    public RescaleDeviceServiceRequest setResourceInfo(String resourceInfo) {
+        this.resourceInfo = resourceInfo;
         return this;
     }
-    public String getServiceId() {
-        return this.serviceId;
+    public String getResourceInfo() {
+        return this.resourceInfo;
     }
 
     public RescaleDeviceServiceRequest setResourceSelector(String resourceSelector) {
@@ -81,20 +103,20 @@ public class RescaleDeviceServiceRequest extends TeaModel {
         return this.resourceSpec;
     }
 
-    public RescaleDeviceServiceRequest setIpType(Integer ipType) {
-        this.ipType = ipType;
+    public RescaleDeviceServiceRequest setServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
-    public Integer getIpType() {
-        return this.ipType;
+    public String getServiceId() {
+        return this.serviceId;
     }
 
-    public RescaleDeviceServiceRequest setAppId(String appId) {
-        this.appId = appId;
+    public RescaleDeviceServiceRequest setTimeout(Long timeout) {
+        this.timeout = timeout;
         return this;
     }
-    public String getAppId() {
-        return this.appId;
+    public Long getTimeout() {
+        return this.timeout;
     }
 
 }

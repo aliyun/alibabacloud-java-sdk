@@ -7,14 +7,11 @@ public class RunServiceScheduleRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    @NameInMap("Uuid")
-    public String uuid;
-
     @NameInMap("ClientIp")
     public String clientIp;
 
-    @NameInMap("ServiceAction")
-    public String serviceAction;
+    @NameInMap("Directorys")
+    public String directorys;
 
     @NameInMap("PodConfigName")
     public String podConfigName;
@@ -22,14 +19,17 @@ public class RunServiceScheduleRequest extends TeaModel {
     @NameInMap("PreLockedTimeout")
     public Integer preLockedTimeout;
 
-    @NameInMap("Directorys")
-    public String directorys;
+    @NameInMap("ScheduleStrategy")
+    public String scheduleStrategy;
+
+    @NameInMap("ServiceAction")
+    public String serviceAction;
 
     @NameInMap("ServiceCommands")
     public String serviceCommands;
 
-    @NameInMap("ScheduleStrategy")
-    public String scheduleStrategy;
+    @NameInMap("Uuid")
+    public String uuid;
 
     public static RunServiceScheduleRequest build(java.util.Map<String, ?> map) throws Exception {
         RunServiceScheduleRequest self = new RunServiceScheduleRequest();
@@ -44,14 +44,6 @@ public class RunServiceScheduleRequest extends TeaModel {
         return this.appId;
     }
 
-    public RunServiceScheduleRequest setUuid(String uuid) {
-        this.uuid = uuid;
-        return this;
-    }
-    public String getUuid() {
-        return this.uuid;
-    }
-
     public RunServiceScheduleRequest setClientIp(String clientIp) {
         this.clientIp = clientIp;
         return this;
@@ -60,12 +52,12 @@ public class RunServiceScheduleRequest extends TeaModel {
         return this.clientIp;
     }
 
-    public RunServiceScheduleRequest setServiceAction(String serviceAction) {
-        this.serviceAction = serviceAction;
+    public RunServiceScheduleRequest setDirectorys(String directorys) {
+        this.directorys = directorys;
         return this;
     }
-    public String getServiceAction() {
-        return this.serviceAction;
+    public String getDirectorys() {
+        return this.directorys;
     }
 
     public RunServiceScheduleRequest setPodConfigName(String podConfigName) {
@@ -84,12 +76,20 @@ public class RunServiceScheduleRequest extends TeaModel {
         return this.preLockedTimeout;
     }
 
-    public RunServiceScheduleRequest setDirectorys(String directorys) {
-        this.directorys = directorys;
+    public RunServiceScheduleRequest setScheduleStrategy(String scheduleStrategy) {
+        this.scheduleStrategy = scheduleStrategy;
         return this;
     }
-    public String getDirectorys() {
-        return this.directorys;
+    public String getScheduleStrategy() {
+        return this.scheduleStrategy;
+    }
+
+    public RunServiceScheduleRequest setServiceAction(String serviceAction) {
+        this.serviceAction = serviceAction;
+        return this;
+    }
+    public String getServiceAction() {
+        return this.serviceAction;
     }
 
     public RunServiceScheduleRequest setServiceCommands(String serviceCommands) {
@@ -100,12 +100,12 @@ public class RunServiceScheduleRequest extends TeaModel {
         return this.serviceCommands;
     }
 
-    public RunServiceScheduleRequest setScheduleStrategy(String scheduleStrategy) {
-        this.scheduleStrategy = scheduleStrategy;
+    public RunServiceScheduleRequest setUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
-    public String getScheduleStrategy() {
-        return this.scheduleStrategy;
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

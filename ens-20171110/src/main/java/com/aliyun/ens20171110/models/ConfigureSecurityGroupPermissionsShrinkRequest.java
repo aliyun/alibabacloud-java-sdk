@@ -4,26 +4,18 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ConfigureSecurityGroupPermissionsShrinkRequest extends TeaModel {
-    @NameInMap("SecurityGroupId")
-    public String securityGroupId;
-
     @NameInMap("AuthorizePermissions")
     public String authorizePermissionsShrink;
 
     @NameInMap("RevokePermissions")
     public String revokePermissionsShrink;
 
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
+
     public static ConfigureSecurityGroupPermissionsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigureSecurityGroupPermissionsShrinkRequest self = new ConfigureSecurityGroupPermissionsShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ConfigureSecurityGroupPermissionsShrinkRequest setSecurityGroupId(String securityGroupId) {
-        this.securityGroupId = securityGroupId;
-        return this;
-    }
-    public String getSecurityGroupId() {
-        return this.securityGroupId;
     }
 
     public ConfigureSecurityGroupPermissionsShrinkRequest setAuthorizePermissionsShrink(String authorizePermissionsShrink) {
@@ -40,6 +32,14 @@ public class ConfigureSecurityGroupPermissionsShrinkRequest extends TeaModel {
     }
     public String getRevokePermissionsShrink() {
         return this.revokePermissionsShrink;
+    }
+
+    public ConfigureSecurityGroupPermissionsShrinkRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
     }
 
 }
