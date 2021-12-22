@@ -10,14 +10,14 @@ public class ListResultTokenUrlResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("OssUrls")
+    public java.util.List<String> ossUrls;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public String success;
-
-    @NameInMap("OssUrls")
-    public java.util.List<String> ossUrls;
 
     public static ListResultTokenUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListResultTokenUrlResponseBody self = new ListResultTokenUrlResponseBody();
@@ -40,6 +40,14 @@ public class ListResultTokenUrlResponseBody extends TeaModel {
         return this.message;
     }
 
+    public ListResultTokenUrlResponseBody setOssUrls(java.util.List<String> ossUrls) {
+        this.ossUrls = ossUrls;
+        return this;
+    }
+    public java.util.List<String> getOssUrls() {
+        return this.ossUrls;
+    }
+
     public ListResultTokenUrlResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -54,14 +62,6 @@ public class ListResultTokenUrlResponseBody extends TeaModel {
     }
     public String getSuccess() {
         return this.success;
-    }
-
-    public ListResultTokenUrlResponseBody setOssUrls(java.util.List<String> ossUrls) {
-        this.ossUrls = ossUrls;
-        return this;
-    }
-    public java.util.List<String> getOssUrls() {
-        return this.ossUrls;
     }
 
 }

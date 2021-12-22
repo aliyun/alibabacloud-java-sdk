@@ -4,26 +4,26 @@ package com.aliyun.cciotgw20210721.models;
 import com.aliyun.tea.*;
 
 public class ListGreInterfacesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("GreInterfaceId")
+    public String greInterfaceId;
 
     @NameInMap("IoTCloudConnectorGatewayId")
     public String ioTCloudConnectorGatewayId;
 
-    @NameInMap("GreInterfaceId")
-    public String greInterfaceId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ListGreInterfacesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGreInterfacesRequest self = new ListGreInterfacesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListGreInterfacesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ListGreInterfacesRequest setGreInterfaceId(String greInterfaceId) {
+        this.greInterfaceId = greInterfaceId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getGreInterfaceId() {
+        return this.greInterfaceId;
     }
 
     public ListGreInterfacesRequest setIoTCloudConnectorGatewayId(String ioTCloudConnectorGatewayId) {
@@ -34,12 +34,12 @@ public class ListGreInterfacesRequest extends TeaModel {
         return this.ioTCloudConnectorGatewayId;
     }
 
-    public ListGreInterfacesRequest setGreInterfaceId(String greInterfaceId) {
-        this.greInterfaceId = greInterfaceId;
+    public ListGreInterfacesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getGreInterfaceId() {
-        return this.greInterfaceId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

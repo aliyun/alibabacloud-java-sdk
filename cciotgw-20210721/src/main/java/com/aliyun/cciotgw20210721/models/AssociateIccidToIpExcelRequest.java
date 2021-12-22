@@ -3,7 +3,7 @@ package com.aliyun.cciotgw20210721.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyIpStatusRequest extends TeaModel {
+public class AssociateIccidToIpExcelRequest extends TeaModel {
     @NameInMap("Apn")
     public String apn;
 
@@ -13,8 +13,8 @@ public class ModifyIpStatusRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("IpList")
-    public java.util.List<String> ipList;
+    @NameInMap("IccidIpsFileUrlList")
+    public java.util.List<String> iccidIpsFileUrlList;
 
     @NameInMap("Isp")
     public String isp;
@@ -22,15 +22,12 @@ public class ModifyIpStatusRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("Status")
-    public String status;
-
-    public static ModifyIpStatusRequest build(java.util.Map<String, ?> map) throws Exception {
-        ModifyIpStatusRequest self = new ModifyIpStatusRequest();
+    public static AssociateIccidToIpExcelRequest build(java.util.Map<String, ?> map) throws Exception {
+        AssociateIccidToIpExcelRequest self = new AssociateIccidToIpExcelRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyIpStatusRequest setApn(String apn) {
+    public AssociateIccidToIpExcelRequest setApn(String apn) {
         this.apn = apn;
         return this;
     }
@@ -38,7 +35,7 @@ public class ModifyIpStatusRequest extends TeaModel {
         return this.apn;
     }
 
-    public ModifyIpStatusRequest setCciotGwId(String cciotGwId) {
+    public AssociateIccidToIpExcelRequest setCciotGwId(String cciotGwId) {
         this.cciotGwId = cciotGwId;
         return this;
     }
@@ -46,7 +43,7 @@ public class ModifyIpStatusRequest extends TeaModel {
         return this.cciotGwId;
     }
 
-    public ModifyIpStatusRequest setClientToken(String clientToken) {
+    public AssociateIccidToIpExcelRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -54,15 +51,15 @@ public class ModifyIpStatusRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public ModifyIpStatusRequest setIpList(java.util.List<String> ipList) {
-        this.ipList = ipList;
+    public AssociateIccidToIpExcelRequest setIccidIpsFileUrlList(java.util.List<String> iccidIpsFileUrlList) {
+        this.iccidIpsFileUrlList = iccidIpsFileUrlList;
         return this;
     }
-    public java.util.List<String> getIpList() {
-        return this.ipList;
+    public java.util.List<String> getIccidIpsFileUrlList() {
+        return this.iccidIpsFileUrlList;
     }
 
-    public ModifyIpStatusRequest setIsp(String isp) {
+    public AssociateIccidToIpExcelRequest setIsp(String isp) {
         this.isp = isp;
         return this;
     }
@@ -70,20 +67,12 @@ public class ModifyIpStatusRequest extends TeaModel {
         return this.isp;
     }
 
-    public ModifyIpStatusRequest setRegionId(String regionId) {
+    public AssociateIccidToIpExcelRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public ModifyIpStatusRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
     }
 
 }

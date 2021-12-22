@@ -4,6 +4,9 @@ package com.aliyun.cciotgw20210721.models;
 import com.aliyun.tea.*;
 
 public class ListIoTCloudConnectorGatewaysResponseBody extends TeaModel {
+    @NameInMap("IoTCloudConnectorGateways")
+    public java.util.List<ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways> ioTCloudConnectorGateways;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -16,12 +19,17 @@ public class ListIoTCloudConnectorGatewaysResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("IoTCloudConnectorGateways")
-    public java.util.List<ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways> ioTCloudConnectorGateways;
-
     public static ListIoTCloudConnectorGatewaysResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListIoTCloudConnectorGatewaysResponseBody self = new ListIoTCloudConnectorGatewaysResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListIoTCloudConnectorGatewaysResponseBody setIoTCloudConnectorGateways(java.util.List<ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways> ioTCloudConnectorGateways) {
+        this.ioTCloudConnectorGateways = ioTCloudConnectorGateways;
+        return this;
+    }
+    public java.util.List<ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways> getIoTCloudConnectorGateways() {
+        return this.ioTCloudConnectorGateways;
     }
 
     public ListIoTCloudConnectorGatewaysResponseBody setPageNumber(Integer pageNumber) {
@@ -56,50 +64,42 @@ public class ListIoTCloudConnectorGatewaysResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListIoTCloudConnectorGatewaysResponseBody setIoTCloudConnectorGateways(java.util.List<ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways> ioTCloudConnectorGateways) {
-        this.ioTCloudConnectorGateways = ioTCloudConnectorGateways;
-        return this;
-    }
-    public java.util.List<ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways> getIoTCloudConnectorGateways() {
-        return this.ioTCloudConnectorGateways;
-    }
-
     public static class ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways extends TeaModel {
-        @NameInMap("Spec")
-        public String spec;
-
-        @NameInMap("ResourceUid")
-        public Long resourceUid;
+        @NameInMap("Apn")
+        public String apn;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("ScheduleFactor")
-        public java.util.Map<String, ?> scheduleFactor;
-
-        @NameInMap("Apn")
-        public String apn;
+        @NameInMap("FeatureList")
+        public java.util.List<String> featureList;
 
         @NameInMap("ForwardingUnitCount")
         public Integer forwardingUnitCount;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Isp")
-        public String isp;
+        @NameInMap("ForwardingUnitIds")
+        public java.util.List<String> forwardingUnitIds;
 
         @NameInMap("IoTCloudConnectorGatewayId")
         public String ioTCloudConnectorGatewayId;
 
-        @NameInMap("ForwardingUnitIds")
-        public java.util.List<String> forwardingUnitIds;
+        @NameInMap("Isp")
+        public String isp;
 
-        @NameInMap("FeatureList")
-        public java.util.List<String> featureList;
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("ResourceUid")
+        public Long resourceUid;
+
+        @NameInMap("ScheduleFactor")
+        public java.util.Map<String, ?> scheduleFactor;
+
+        @NameInMap("Spec")
+        public String spec;
+
+        @NameInMap("State")
+        public String state;
 
         @NameInMap("ZoneList")
         public java.util.List<String> zoneList;
@@ -107,46 +107,6 @@ public class ListIoTCloudConnectorGatewaysResponseBody extends TeaModel {
         public static ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways build(java.util.Map<String, ?> map) throws Exception {
             ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways self = new ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways();
             return TeaModel.build(map, self);
-        }
-
-        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setSpec(String spec) {
-            this.spec = spec;
-            return this;
-        }
-        public String getSpec() {
-            return this.spec;
-        }
-
-        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setResourceUid(Long resourceUid) {
-            this.resourceUid = resourceUid;
-            return this;
-        }
-        public Long getResourceUid() {
-            return this.resourceUid;
-        }
-
-        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
-        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setScheduleFactor(java.util.Map<String, ?> scheduleFactor) {
-            this.scheduleFactor = scheduleFactor;
-            return this;
-        }
-        public java.util.Map<String, ?> getScheduleFactor() {
-            return this.scheduleFactor;
         }
 
         public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setApn(String apn) {
@@ -157,36 +117,28 @@ public class ListIoTCloudConnectorGatewaysResponseBody extends TeaModel {
             return this.apn;
         }
 
+        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setFeatureList(java.util.List<String> featureList) {
+            this.featureList = featureList;
+            return this;
+        }
+        public java.util.List<String> getFeatureList() {
+            return this.featureList;
+        }
+
         public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setForwardingUnitCount(Integer forwardingUnitCount) {
             this.forwardingUnitCount = forwardingUnitCount;
             return this;
         }
         public Integer getForwardingUnitCount() {
             return this.forwardingUnitCount;
-        }
-
-        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setIsp(String isp) {
-            this.isp = isp;
-            return this;
-        }
-        public String getIsp() {
-            return this.isp;
-        }
-
-        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setIoTCloudConnectorGatewayId(String ioTCloudConnectorGatewayId) {
-            this.ioTCloudConnectorGatewayId = ioTCloudConnectorGatewayId;
-            return this;
-        }
-        public String getIoTCloudConnectorGatewayId() {
-            return this.ioTCloudConnectorGatewayId;
         }
 
         public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setForwardingUnitIds(java.util.List<String> forwardingUnitIds) {
@@ -197,12 +149,60 @@ public class ListIoTCloudConnectorGatewaysResponseBody extends TeaModel {
             return this.forwardingUnitIds;
         }
 
-        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setFeatureList(java.util.List<String> featureList) {
-            this.featureList = featureList;
+        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setIoTCloudConnectorGatewayId(String ioTCloudConnectorGatewayId) {
+            this.ioTCloudConnectorGatewayId = ioTCloudConnectorGatewayId;
             return this;
         }
-        public java.util.List<String> getFeatureList() {
-            return this.featureList;
+        public String getIoTCloudConnectorGatewayId() {
+            return this.ioTCloudConnectorGatewayId;
+        }
+
+        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setIsp(String isp) {
+            this.isp = isp;
+            return this;
+        }
+        public String getIsp() {
+            return this.isp;
+        }
+
+        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setResourceUid(Long resourceUid) {
+            this.resourceUid = resourceUid;
+            return this;
+        }
+        public Long getResourceUid() {
+            return this.resourceUid;
+        }
+
+        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setScheduleFactor(java.util.Map<String, ?> scheduleFactor) {
+            this.scheduleFactor = scheduleFactor;
+            return this;
+        }
+        public java.util.Map<String, ?> getScheduleFactor() {
+            return this.scheduleFactor;
+        }
+
+        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
+        public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
         public ListIoTCloudConnectorGatewaysResponseBodyIoTCloudConnectorGateways setZoneList(java.util.List<String> zoneList) {

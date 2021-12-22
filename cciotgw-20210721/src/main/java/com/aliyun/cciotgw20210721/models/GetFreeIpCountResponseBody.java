@@ -7,6 +7,9 @@ public class GetFreeIpCountResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Count")
+    public Integer count;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class GetFreeIpCountResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public String success;
-
-    @NameInMap("Count")
-    public Integer count;
 
     public static GetFreeIpCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetFreeIpCountResponseBody self = new GetFreeIpCountResponseBody();
@@ -30,6 +30,14 @@ public class GetFreeIpCountResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetFreeIpCountResponseBody setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
     }
 
     public GetFreeIpCountResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class GetFreeIpCountResponseBody extends TeaModel {
     }
     public String getSuccess() {
         return this.success;
-    }
-
-    public GetFreeIpCountResponseBody setCount(Integer count) {
-        this.count = count;
-        return this;
-    }
-    public Integer getCount() {
-        return this.count;
     }
 
 }

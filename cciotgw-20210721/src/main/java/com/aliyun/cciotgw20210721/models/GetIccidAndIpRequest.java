@@ -3,12 +3,18 @@ package com.aliyun.cciotgw20210721.models;
 
 import com.aliyun.tea.*;
 
-public class GetIpStatusRequest extends TeaModel {
+public class GetIccidAndIpRequest extends TeaModel {
     @NameInMap("Apn")
     public String apn;
 
     @NameInMap("CciotGwId")
     public String cciotGwId;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Iccid")
+    public String iccid;
 
     @NameInMap("Ip")
     public String ip;
@@ -19,12 +25,12 @@ public class GetIpStatusRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    public static GetIpStatusRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetIpStatusRequest self = new GetIpStatusRequest();
+    public static GetIccidAndIpRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetIccidAndIpRequest self = new GetIccidAndIpRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetIpStatusRequest setApn(String apn) {
+    public GetIccidAndIpRequest setApn(String apn) {
         this.apn = apn;
         return this;
     }
@@ -32,7 +38,7 @@ public class GetIpStatusRequest extends TeaModel {
         return this.apn;
     }
 
-    public GetIpStatusRequest setCciotGwId(String cciotGwId) {
+    public GetIccidAndIpRequest setCciotGwId(String cciotGwId) {
         this.cciotGwId = cciotGwId;
         return this;
     }
@@ -40,7 +46,23 @@ public class GetIpStatusRequest extends TeaModel {
         return this.cciotGwId;
     }
 
-    public GetIpStatusRequest setIp(String ip) {
+    public GetIccidAndIpRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public GetIccidAndIpRequest setIccid(String iccid) {
+        this.iccid = iccid;
+        return this;
+    }
+    public String getIccid() {
+        return this.iccid;
+    }
+
+    public GetIccidAndIpRequest setIp(String ip) {
         this.ip = ip;
         return this;
     }
@@ -48,7 +70,7 @@ public class GetIpStatusRequest extends TeaModel {
         return this.ip;
     }
 
-    public GetIpStatusRequest setIsp(String isp) {
+    public GetIccidAndIpRequest setIsp(String isp) {
         this.isp = isp;
         return this;
     }
@@ -56,7 +78,7 @@ public class GetIpStatusRequest extends TeaModel {
         return this.isp;
     }
 
-    public GetIpStatusRequest setRegionId(String regionId) {
+    public GetIccidAndIpRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
