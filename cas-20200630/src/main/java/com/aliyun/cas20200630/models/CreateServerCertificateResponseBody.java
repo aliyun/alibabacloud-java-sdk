@@ -4,6 +4,9 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateServerCertificateResponseBody extends TeaModel {
+    @NameInMap("CertificateChain")
+    public String certificateChain;
+
     @NameInMap("Identifier")
     public String identifier;
 
@@ -22,6 +25,14 @@ public class CreateServerCertificateResponseBody extends TeaModel {
     public static CreateServerCertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateServerCertificateResponseBody self = new CreateServerCertificateResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateServerCertificateResponseBody setCertificateChain(String certificateChain) {
+        this.certificateChain = certificateChain;
+        return this;
+    }
+    public String getCertificateChain() {
+        return this.certificateChain;
     }
 
     public CreateServerCertificateResponseBody setIdentifier(String identifier) {

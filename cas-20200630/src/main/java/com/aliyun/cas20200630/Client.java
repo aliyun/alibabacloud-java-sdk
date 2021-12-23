@@ -103,8 +103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("Sans", request.sans);
         query.put("State", request.state);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateCertificateWithExtension"),
@@ -114,7 +113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCertificateWithExtensionResponse());
@@ -137,8 +136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("SanType", request.sanType);
         query.put("SanValue", request.sanValue);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateClientCertificate"),
@@ -148,7 +146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateClientCertificateResponse());
@@ -170,8 +168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("SanType", request.sanType);
         query.put("SanValue", request.sanValue);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateClientCertificateWithCsr"),
@@ -181,7 +178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateClientCertificateWithCsrResponse());
@@ -197,8 +194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         query.put("Identifier", request.identifier);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateRevokeClientCertificate"),
@@ -208,7 +204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRevokeClientCertificateResponse());
@@ -231,8 +227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("State", request.state);
         query.put("Years", request.years);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateRootCACertificate"),
@@ -242,7 +237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRootCACertificateResponse());
@@ -264,8 +259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("Domain", request.domain);
         query.put("ParentIdentifier", request.parentIdentifier);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateServerCertificate"),
@@ -275,7 +269,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServerCertificateResponse());
@@ -296,8 +290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("Domain", request.domain);
         query.put("ParentIdentifier", request.parentIdentifier);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateServerCertificateWithCsr"),
@@ -307,7 +300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServerCertificateWithCsrResponse());
@@ -331,8 +324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("State", request.state);
         query.put("Years", request.years);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateSubCACertificate"),
@@ -342,7 +334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSubCACertificateResponse());
@@ -358,8 +350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         query.put("Identifier", request.identifier);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteClientCertificate"),
@@ -369,7 +360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteClientCertificateResponse());
@@ -385,8 +376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         query.put("Identifier", request.identifier);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeCACertificate"),
@@ -396,7 +386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCACertificateResponse());
@@ -417,7 +407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCACertificateCountResponse());
@@ -434,8 +424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("CurrentPage", request.currentPage);
         query.put("ShowSize", request.showSize);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeCACertificateList"),
@@ -445,7 +434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCACertificateListResponse());
@@ -462,8 +451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("EncryptedCode", request.encryptedCode);
         query.put("Identifier", request.identifier);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeCertificatePrivateKey"),
@@ -473,7 +461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCertificatePrivateKeyResponse());
@@ -489,8 +477,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         query.put("Identifier", request.identifier);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeClientCertificate"),
@@ -500,7 +487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClientCertificateResponse());
@@ -516,8 +503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         query.put("SerialNumber", request.serialNumber);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeClientCertificateForSerialNumber"),
@@ -527,7 +513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClientCertificateForSerialNumberResponse());
@@ -543,8 +529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         query.put("Identifier", request.identifier);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeClientCertificateStatus"),
@@ -554,7 +539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClientCertificateStatusResponse());
@@ -570,8 +555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         query.put("SerialNumber", request.serialNumber);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeClientCertificateStatusForSerialNumber"),
@@ -581,7 +565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClientCertificateStatusForSerialNumberResponse());
@@ -597,8 +581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         query.put("InstanceId", request.instanceId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetCAInstanceStatus"),
@@ -608,7 +591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetCAInstanceStatusResponse());
@@ -624,8 +607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         query.put("Identifier", request.identifier);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListCACertificateLog"),
@@ -635,7 +617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListCACertificateLogResponse());
@@ -652,8 +634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("CurrentPage", request.currentPage);
         query.put("ShowSize", request.showSize);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListClientCertificate"),
@@ -663,7 +644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListClientCertificateResponse());
@@ -680,8 +661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("CurrentPage", request.currentPage);
         query.put("ShowSize", request.showSize);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListRevokeCertificate"),
@@ -691,7 +671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListRevokeCertificateResponse());
@@ -708,8 +688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("Identifier", request.identifier);
         query.put("Status", request.status);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateCACertificateStatus"),
@@ -719,7 +698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCACertificateStatusResponse());
