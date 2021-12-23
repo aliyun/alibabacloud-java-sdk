@@ -3,21 +3,20 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class CreateOfficeConversionTaskResponseBody extends TeaModel {
-    // 请求 id
+public class ClusterFiguresResponseBody extends TeaModel {
+    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 任务 id
     @NameInMap("TaskId")
     public String taskId;
 
-    public static CreateOfficeConversionTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateOfficeConversionTaskResponseBody self = new CreateOfficeConversionTaskResponseBody();
+    public static ClusterFiguresResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ClusterFiguresResponseBody self = new ClusterFiguresResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateOfficeConversionTaskResponseBody setRequestId(String requestId) {
+    public ClusterFiguresResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -25,7 +24,7 @@ public class CreateOfficeConversionTaskResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateOfficeConversionTaskResponseBody setTaskId(String taskId) {
+    public ClusterFiguresResponseBody setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }

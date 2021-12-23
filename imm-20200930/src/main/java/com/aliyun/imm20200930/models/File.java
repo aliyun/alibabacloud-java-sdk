@@ -40,14 +40,6 @@ public class File extends TeaModel {
     @NameInMap("AudioDuration")
     public Float audioDuration;
 
-    // AudioEmbeddingsFloat32
-    @NameInMap("AudioEmbeddingsFloat32")
-    public java.util.List<Float> audioEmbeddingsFloat32;
-
-    // AudioEmbeddingsInt8
-    @NameInMap("AudioEmbeddingsInt8")
-    public java.util.List<Integer> audioEmbeddingsInt8;
-
     // AudioLanguage
     @NameInMap("AudioLanguage")
     public String audioLanguage;
@@ -112,14 +104,6 @@ public class File extends TeaModel {
     @NameInMap("DocumentContent")
     public String documentContent;
 
-    // DocumentEmbeddingsFloat32
-    @NameInMap("DocumentEmbeddingsFloat32")
-    public java.util.List<Float> documentEmbeddingsFloat32;
-
-    // DocumentEmbeddingsInt8
-    @NameInMap("DocumentEmbeddingsInt8")
-    public java.util.List<Integer> documentEmbeddingsInt8;
-
     // DocumentLanguage
     @NameInMap("DocumentLanguage")
     public String documentLanguage;
@@ -132,13 +116,13 @@ public class File extends TeaModel {
     @NameInMap("EXIF")
     public String EXIF;
 
-    // FaceCount
-    @NameInMap("FaceCount")
-    public Long faceCount;
+    // FigureCount
+    @NameInMap("FigureCount")
+    public Long figureCount;
 
-    // Faces
-    @NameInMap("Faces")
-    public java.util.List<Face> faces;
+    // Figures
+    @NameInMap("Figures")
+    public java.util.List<Figure> figures;
 
     // FileAccessTime
     @NameInMap("FileAccessTime")
@@ -159,14 +143,6 @@ public class File extends TeaModel {
     // Filename
     @NameInMap("Filename")
     public String filename;
-
-    // ImageEmbeddingsFloat32
-    @NameInMap("ImageEmbeddingsFloat32")
-    public java.util.List<Float> imageEmbeddingsFloat32;
-
-    // ImageEmbeddingsInt8
-    @NameInMap("ImageEmbeddingsInt8")
-    public java.util.List<Integer> imageEmbeddingsInt8;
 
     // ImageHeight
     @NameInMap("ImageHeight")
@@ -195,6 +171,10 @@ public class File extends TeaModel {
     @NameInMap("OCRContents")
     public java.util.List<OCRContents> OCRContents;
 
+    // OSSCRC64
+    @NameInMap("OSSCRC64")
+    public String OSSCRC64;
+
     // OSSDeleteMarker
     @NameInMap("OSSDeleteMarker")
     public String OSSDeleteMarker;
@@ -207,6 +187,10 @@ public class File extends TeaModel {
     @NameInMap("OSSObjectType")
     public String OSSObjectType;
 
+    // OSSStorageClass
+    @NameInMap("OSSStorageClass")
+    public String OSSStorageClass;
+
     // OSSTagging
     @NameInMap("OSSTagging")
     public java.util.Map<String, ?> OSSTagging;
@@ -214,6 +198,10 @@ public class File extends TeaModel {
     // OSSTaggingCount
     @NameInMap("OSSTaggingCount")
     public Long OSSTaggingCount;
+
+    // OSSURI
+    @NameInMap("OSSURI")
+    public String OSSURI;
 
     // OSSUserMeta
     @NameInMap("OSSUserMeta")
@@ -279,10 +267,6 @@ public class File extends TeaModel {
     @NameInMap("Size")
     public Long size;
 
-    // StorageClass
-    @NameInMap("StorageClass")
-    public String storageClass;
-
     // Subtitles
     @NameInMap("Subtitles")
     public java.util.List<SubtitleStream> subtitles;
@@ -314,14 +298,6 @@ public class File extends TeaModel {
     // VideoDuration
     @NameInMap("VideoDuration")
     public Float videoDuration;
-
-    // VideoEmbeddingsFloat32
-    @NameInMap("VideoEmbeddingsFloat32")
-    public java.util.List<Float> videoEmbeddingsFloat32;
-
-    // VideoEmbeddingsInt8
-    @NameInMap("VideoEmbeddingsInt8")
-    public java.util.List<Integer> videoEmbeddingsInt8;
 
     // VideoHeight
     @NameInMap("VideoHeight")
@@ -418,22 +394,6 @@ public class File extends TeaModel {
     }
     public Float getAudioDuration() {
         return this.audioDuration;
-    }
-
-    public File setAudioEmbeddingsFloat32(java.util.List<Float> audioEmbeddingsFloat32) {
-        this.audioEmbeddingsFloat32 = audioEmbeddingsFloat32;
-        return this;
-    }
-    public java.util.List<Float> getAudioEmbeddingsFloat32() {
-        return this.audioEmbeddingsFloat32;
-    }
-
-    public File setAudioEmbeddingsInt8(java.util.List<Integer> audioEmbeddingsInt8) {
-        this.audioEmbeddingsInt8 = audioEmbeddingsInt8;
-        return this;
-    }
-    public java.util.List<Integer> getAudioEmbeddingsInt8() {
-        return this.audioEmbeddingsInt8;
     }
 
     public File setAudioLanguage(String audioLanguage) {
@@ -564,22 +524,6 @@ public class File extends TeaModel {
         return this.documentContent;
     }
 
-    public File setDocumentEmbeddingsFloat32(java.util.List<Float> documentEmbeddingsFloat32) {
-        this.documentEmbeddingsFloat32 = documentEmbeddingsFloat32;
-        return this;
-    }
-    public java.util.List<Float> getDocumentEmbeddingsFloat32() {
-        return this.documentEmbeddingsFloat32;
-    }
-
-    public File setDocumentEmbeddingsInt8(java.util.List<Integer> documentEmbeddingsInt8) {
-        this.documentEmbeddingsInt8 = documentEmbeddingsInt8;
-        return this;
-    }
-    public java.util.List<Integer> getDocumentEmbeddingsInt8() {
-        return this.documentEmbeddingsInt8;
-    }
-
     public File setDocumentLanguage(String documentLanguage) {
         this.documentLanguage = documentLanguage;
         return this;
@@ -604,20 +548,20 @@ public class File extends TeaModel {
         return this.EXIF;
     }
 
-    public File setFaceCount(Long faceCount) {
-        this.faceCount = faceCount;
+    public File setFigureCount(Long figureCount) {
+        this.figureCount = figureCount;
         return this;
     }
-    public Long getFaceCount() {
-        return this.faceCount;
+    public Long getFigureCount() {
+        return this.figureCount;
     }
 
-    public File setFaces(java.util.List<Face> faces) {
-        this.faces = faces;
+    public File setFigures(java.util.List<Figure> figures) {
+        this.figures = figures;
         return this;
     }
-    public java.util.List<Face> getFaces() {
-        return this.faces;
+    public java.util.List<Figure> getFigures() {
+        return this.figures;
     }
 
     public File setFileAccessTime(String fileAccessTime) {
@@ -658,22 +602,6 @@ public class File extends TeaModel {
     }
     public String getFilename() {
         return this.filename;
-    }
-
-    public File setImageEmbeddingsFloat32(java.util.List<Float> imageEmbeddingsFloat32) {
-        this.imageEmbeddingsFloat32 = imageEmbeddingsFloat32;
-        return this;
-    }
-    public java.util.List<Float> getImageEmbeddingsFloat32() {
-        return this.imageEmbeddingsFloat32;
-    }
-
-    public File setImageEmbeddingsInt8(java.util.List<Integer> imageEmbeddingsInt8) {
-        this.imageEmbeddingsInt8 = imageEmbeddingsInt8;
-        return this;
-    }
-    public java.util.List<Integer> getImageEmbeddingsInt8() {
-        return this.imageEmbeddingsInt8;
     }
 
     public File setImageHeight(Long imageHeight) {
@@ -732,6 +660,14 @@ public class File extends TeaModel {
         return this.OCRContents;
     }
 
+    public File setOSSCRC64(String OSSCRC64) {
+        this.OSSCRC64 = OSSCRC64;
+        return this;
+    }
+    public String getOSSCRC64() {
+        return this.OSSCRC64;
+    }
+
     public File setOSSDeleteMarker(String OSSDeleteMarker) {
         this.OSSDeleteMarker = OSSDeleteMarker;
         return this;
@@ -756,6 +692,14 @@ public class File extends TeaModel {
         return this.OSSObjectType;
     }
 
+    public File setOSSStorageClass(String OSSStorageClass) {
+        this.OSSStorageClass = OSSStorageClass;
+        return this;
+    }
+    public String getOSSStorageClass() {
+        return this.OSSStorageClass;
+    }
+
     public File setOSSTagging(java.util.Map<String, ?> OSSTagging) {
         this.OSSTagging = OSSTagging;
         return this;
@@ -770,6 +714,14 @@ public class File extends TeaModel {
     }
     public Long getOSSTaggingCount() {
         return this.OSSTaggingCount;
+    }
+
+    public File setOSSURI(String OSSURI) {
+        this.OSSURI = OSSURI;
+        return this;
+    }
+    public String getOSSURI() {
+        return this.OSSURI;
     }
 
     public File setOSSUserMeta(java.util.Map<String, ?> OSSUserMeta) {
@@ -900,14 +852,6 @@ public class File extends TeaModel {
         return this.size;
     }
 
-    public File setStorageClass(String storageClass) {
-        this.storageClass = storageClass;
-        return this;
-    }
-    public String getStorageClass() {
-        return this.storageClass;
-    }
-
     public File setSubtitles(java.util.List<SubtitleStream> subtitles) {
         this.subtitles = subtitles;
         return this;
@@ -970,22 +914,6 @@ public class File extends TeaModel {
     }
     public Float getVideoDuration() {
         return this.videoDuration;
-    }
-
-    public File setVideoEmbeddingsFloat32(java.util.List<Float> videoEmbeddingsFloat32) {
-        this.videoEmbeddingsFloat32 = videoEmbeddingsFloat32;
-        return this;
-    }
-    public java.util.List<Float> getVideoEmbeddingsFloat32() {
-        return this.videoEmbeddingsFloat32;
-    }
-
-    public File setVideoEmbeddingsInt8(java.util.List<Integer> videoEmbeddingsInt8) {
-        this.videoEmbeddingsInt8 = videoEmbeddingsInt8;
-        return this;
-    }
-    public java.util.List<Integer> getVideoEmbeddingsInt8() {
-        return this.videoEmbeddingsInt8;
     }
 
     public File setVideoHeight(Long videoHeight) {

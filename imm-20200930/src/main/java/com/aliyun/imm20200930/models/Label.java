@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Label extends TeaModel {
+    // CentricScore
+    @NameInMap("CentricScore")
+    public Float centricScore;
+
     // LabelConfidence
     @NameInMap("LabelConfidence")
     public Float labelConfidence;
@@ -20,9 +24,21 @@ public class Label extends TeaModel {
     @NameInMap("Language")
     public String language;
 
+    // ParentLabelName
+    @NameInMap("ParentLabelName")
+    public String parentLabelName;
+
     public static Label build(java.util.Map<String, ?> map) throws Exception {
         Label self = new Label();
         return TeaModel.build(map, self);
+    }
+
+    public Label setCentricScore(Float centricScore) {
+        this.centricScore = centricScore;
+        return this;
+    }
+    public Float getCentricScore() {
+        return this.centricScore;
     }
 
     public Label setLabelConfidence(Float labelConfidence) {
@@ -55,6 +71,14 @@ public class Label extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
+    }
+
+    public Label setParentLabelName(String parentLabelName) {
+        this.parentLabelName = parentLabelName;
+        return this;
+    }
+    public String getParentLabelName() {
+        return this.parentLabelName;
     }
 
 }

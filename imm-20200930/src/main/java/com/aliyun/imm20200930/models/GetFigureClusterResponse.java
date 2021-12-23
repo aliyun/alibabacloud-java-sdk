@@ -3,21 +3,21 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class GetOfficeConversionTaskResponse extends TeaModel {
+public class GetFigureClusterResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetOfficeConversionTaskResponseBody body;
+    public GetFigureClusterResponseBody body;
 
-    public static GetOfficeConversionTaskResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetOfficeConversionTaskResponse self = new GetOfficeConversionTaskResponse();
+    public static GetFigureClusterResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetFigureClusterResponse self = new GetFigureClusterResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetOfficeConversionTaskResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetFigureClusterResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class GetOfficeConversionTaskResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetOfficeConversionTaskResponse setBody(GetOfficeConversionTaskResponseBody body) {
+    public GetFigureClusterResponse setBody(GetFigureClusterResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetOfficeConversionTaskResponseBody getBody() {
+    public GetFigureClusterResponseBody getBody() {
         return this.body;
     }
 
