@@ -3,10 +3,10 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class SimpleQueryResponseBody extends TeaModel {
+public class SemanticQueryResponseBody extends TeaModel {
     // 聚合字段的字段名
     @NameInMap("Aggregations")
-    public java.util.List<SimpleQueryResponseBodyAggregations> aggregations;
+    public java.util.List<SemanticQueryResponseBodyAggregations> aggregations;
 
     // 文件列表
     @NameInMap("Files")
@@ -20,20 +20,20 @@ public class SimpleQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static SimpleQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        SimpleQueryResponseBody self = new SimpleQueryResponseBody();
+    public static SemanticQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SemanticQueryResponseBody self = new SemanticQueryResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SimpleQueryResponseBody setAggregations(java.util.List<SimpleQueryResponseBodyAggregations> aggregations) {
+    public SemanticQueryResponseBody setAggregations(java.util.List<SemanticQueryResponseBodyAggregations> aggregations) {
         this.aggregations = aggregations;
         return this;
     }
-    public java.util.List<SimpleQueryResponseBodyAggregations> getAggregations() {
+    public java.util.List<SemanticQueryResponseBodyAggregations> getAggregations() {
         return this.aggregations;
     }
 
-    public SimpleQueryResponseBody setFiles(java.util.List<File> files) {
+    public SemanticQueryResponseBody setFiles(java.util.List<File> files) {
         this.files = files;
         return this;
     }
@@ -41,7 +41,7 @@ public class SimpleQueryResponseBody extends TeaModel {
         return this.files;
     }
 
-    public SimpleQueryResponseBody setNextToken(String nextToken) {
+    public SemanticQueryResponseBody setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -49,7 +49,7 @@ public class SimpleQueryResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public SimpleQueryResponseBody setRequestId(String requestId) {
+    public SemanticQueryResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -57,7 +57,7 @@ public class SimpleQueryResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class SimpleQueryResponseBodyAggregationsGroups extends TeaModel {
+    public static class SemanticQueryResponseBodyAggregationsGroups extends TeaModel {
         // 分组聚合的计数
         @NameInMap("Count")
         public Long count;
@@ -66,12 +66,12 @@ public class SimpleQueryResponseBody extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static SimpleQueryResponseBodyAggregationsGroups build(java.util.Map<String, ?> map) throws Exception {
-            SimpleQueryResponseBodyAggregationsGroups self = new SimpleQueryResponseBodyAggregationsGroups();
+        public static SemanticQueryResponseBodyAggregationsGroups build(java.util.Map<String, ?> map) throws Exception {
+            SemanticQueryResponseBodyAggregationsGroups self = new SemanticQueryResponseBodyAggregationsGroups();
             return TeaModel.build(map, self);
         }
 
-        public SimpleQueryResponseBodyAggregationsGroups setCount(Long count) {
+        public SemanticQueryResponseBodyAggregationsGroups setCount(Long count) {
             this.count = count;
             return this;
         }
@@ -79,7 +79,7 @@ public class SimpleQueryResponseBody extends TeaModel {
             return this.count;
         }
 
-        public SimpleQueryResponseBodyAggregationsGroups setValue(String value) {
+        public SemanticQueryResponseBodyAggregationsGroups setValue(String value) {
             this.value = value;
             return this;
         }
@@ -89,14 +89,14 @@ public class SimpleQueryResponseBody extends TeaModel {
 
     }
 
-    public static class SimpleQueryResponseBodyAggregations extends TeaModel {
+    public static class SemanticQueryResponseBodyAggregations extends TeaModel {
         // 聚合字段名
         @NameInMap("Field")
         public String field;
 
         // 分组聚合的结果
         @NameInMap("Groups")
-        public java.util.List<SimpleQueryResponseBodyAggregationsGroups> groups;
+        public java.util.List<SemanticQueryResponseBodyAggregationsGroups> groups;
 
         // 聚合字段的聚合操作符
         @NameInMap("Operation")
@@ -106,12 +106,12 @@ public class SimpleQueryResponseBody extends TeaModel {
         @NameInMap("Value")
         public Float value;
 
-        public static SimpleQueryResponseBodyAggregations build(java.util.Map<String, ?> map) throws Exception {
-            SimpleQueryResponseBodyAggregations self = new SimpleQueryResponseBodyAggregations();
+        public static SemanticQueryResponseBodyAggregations build(java.util.Map<String, ?> map) throws Exception {
+            SemanticQueryResponseBodyAggregations self = new SemanticQueryResponseBodyAggregations();
             return TeaModel.build(map, self);
         }
 
-        public SimpleQueryResponseBodyAggregations setField(String field) {
+        public SemanticQueryResponseBodyAggregations setField(String field) {
             this.field = field;
             return this;
         }
@@ -119,15 +119,15 @@ public class SimpleQueryResponseBody extends TeaModel {
             return this.field;
         }
 
-        public SimpleQueryResponseBodyAggregations setGroups(java.util.List<SimpleQueryResponseBodyAggregationsGroups> groups) {
+        public SemanticQueryResponseBodyAggregations setGroups(java.util.List<SemanticQueryResponseBodyAggregationsGroups> groups) {
             this.groups = groups;
             return this;
         }
-        public java.util.List<SimpleQueryResponseBodyAggregationsGroups> getGroups() {
+        public java.util.List<SemanticQueryResponseBodyAggregationsGroups> getGroups() {
             return this.groups;
         }
 
-        public SimpleQueryResponseBodyAggregations setOperation(String operation) {
+        public SemanticQueryResponseBodyAggregations setOperation(String operation) {
             this.operation = operation;
             return this;
         }
@@ -135,7 +135,7 @@ public class SimpleQueryResponseBody extends TeaModel {
             return this.operation;
         }
 
-        public SimpleQueryResponseBodyAggregations setValue(Float value) {
+        public SemanticQueryResponseBodyAggregations setValue(Float value) {
             this.value = value;
             return this;
         }

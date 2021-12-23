@@ -10,12 +10,6 @@ public class BatchUpdateFileMetaRequest extends TeaModel {
     @NameInMap("Files")
     public java.util.List<FileForReq> files;
 
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
-
-    @NameInMap("NotifyTopicName")
-    public String notifyTopicName;
-
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -38,22 +32,6 @@ public class BatchUpdateFileMetaRequest extends TeaModel {
     }
     public java.util.List<FileForReq> getFiles() {
         return this.files;
-    }
-
-    public BatchUpdateFileMetaRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
-    }
-
-    public BatchUpdateFileMetaRequest setNotifyTopicName(String notifyTopicName) {
-        this.notifyTopicName = notifyTopicName;
-        return this;
-    }
-    public String getNotifyTopicName() {
-        return this.notifyTopicName;
     }
 
     public BatchUpdateFileMetaRequest setProjectName(String projectName) {

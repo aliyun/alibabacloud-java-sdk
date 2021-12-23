@@ -7,12 +7,6 @@ public class BatchDeleteFileMetaShrinkRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
-
-    @NameInMap("NotifyTopicName")
-    public String notifyTopicName;
-
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -30,22 +24,6 @@ public class BatchDeleteFileMetaShrinkRequest extends TeaModel {
     }
     public String getDatasetName() {
         return this.datasetName;
-    }
-
-    public BatchDeleteFileMetaShrinkRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
-    }
-
-    public BatchDeleteFileMetaShrinkRequest setNotifyTopicName(String notifyTopicName) {
-        this.notifyTopicName = notifyTopicName;
-        return this;
-    }
-    public String getNotifyTopicName() {
-        return this.notifyTopicName;
     }
 
     public BatchDeleteFileMetaShrinkRequest setProjectName(String projectName) {

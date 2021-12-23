@@ -3,12 +3,12 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class ListOfficeConversionTaskRequest extends TeaModel {
-    // 最大结果数
+public class ListTasksRequest extends TeaModel {
+    // MaxResults
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // 下一条记录开始标记
+    // NextToken
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -16,12 +16,16 @@ public class ListOfficeConversionTaskRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
-    public static ListOfficeConversionTaskRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListOfficeConversionTaskRequest self = new ListOfficeConversionTaskRequest();
+    // TaskType
+    @NameInMap("TaskType")
+    public String taskType;
+
+    public static ListTasksRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListTasksRequest self = new ListTasksRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListOfficeConversionTaskRequest setMaxResults(Long maxResults) {
+    public ListTasksRequest setMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -29,7 +33,7 @@ public class ListOfficeConversionTaskRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListOfficeConversionTaskRequest setNextToken(String nextToken) {
+    public ListTasksRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -37,12 +41,20 @@ public class ListOfficeConversionTaskRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListOfficeConversionTaskRequest setProjectName(String projectName) {
+    public ListTasksRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public ListTasksRequest setTaskType(String taskType) {
+        this.taskType = taskType;
+        return this;
+    }
+    public String getTaskType() {
+        return this.taskType;
     }
 
 }

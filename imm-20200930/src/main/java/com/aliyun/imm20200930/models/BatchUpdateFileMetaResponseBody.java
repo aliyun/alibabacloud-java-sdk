@@ -4,8 +4,8 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class BatchUpdateFileMetaResponseBody extends TeaModel {
-    @NameInMap("EventId")
-    public String eventId;
+    @NameInMap("Files")
+    public java.util.List<BatchUpdateFileMetaResponseBodyFiles> files;
 
     // Id of the request
     @NameInMap("RequestId")
@@ -16,12 +16,12 @@ public class BatchUpdateFileMetaResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public BatchUpdateFileMetaResponseBody setEventId(String eventId) {
-        this.eventId = eventId;
+    public BatchUpdateFileMetaResponseBody setFiles(java.util.List<BatchUpdateFileMetaResponseBodyFiles> files) {
+        this.files = files;
         return this;
     }
-    public String getEventId() {
-        return this.eventId;
+    public java.util.List<BatchUpdateFileMetaResponseBodyFiles> getFiles() {
+        return this.files;
     }
 
     public BatchUpdateFileMetaResponseBody setRequestId(String requestId) {
@@ -30,6 +30,47 @@ public class BatchUpdateFileMetaResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class BatchUpdateFileMetaResponseBodyFiles extends TeaModel {
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("Success")
+        public Boolean success;
+
+        @NameInMap("URI")
+        public String URI;
+
+        public static BatchUpdateFileMetaResponseBodyFiles build(java.util.Map<String, ?> map) throws Exception {
+            BatchUpdateFileMetaResponseBodyFiles self = new BatchUpdateFileMetaResponseBodyFiles();
+            return TeaModel.build(map, self);
+        }
+
+        public BatchUpdateFileMetaResponseBodyFiles setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public BatchUpdateFileMetaResponseBodyFiles setSuccess(Boolean success) {
+            this.success = success;
+            return this;
+        }
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        public BatchUpdateFileMetaResponseBodyFiles setURI(String URI) {
+            this.URI = URI;
+            return this;
+        }
+        public String getURI() {
+            return this.URI;
+        }
+
     }
 
 }

@@ -10,12 +10,6 @@ public class UpdateFileMetaRequest extends TeaModel {
     @NameInMap("File")
     public FileForReq file;
 
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
-
-    @NameInMap("NotifyTopicName")
-    public String notifyTopicName;
-
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -38,22 +32,6 @@ public class UpdateFileMetaRequest extends TeaModel {
     }
     public FileForReq getFile() {
         return this.file;
-    }
-
-    public UpdateFileMetaRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
-    }
-
-    public UpdateFileMetaRequest setNotifyTopicName(String notifyTopicName) {
-        this.notifyTopicName = notifyTopicName;
-        return this;
-    }
-    public String getNotifyTopicName() {
-        return this.notifyTopicName;
     }
 
     public UpdateFileMetaRequest setProjectName(String projectName) {
