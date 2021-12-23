@@ -16,6 +16,9 @@ public class DeleteEditingProjectMaterialsRequest extends TeaModel {
     @NameInMap("ProjectId")
     public String projectId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DeleteEditingProjectMaterialsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteEditingProjectMaterialsRequest self = new DeleteEditingProjectMaterialsRequest();
         return TeaModel.build(map, self);
@@ -43,6 +46,14 @@ public class DeleteEditingProjectMaterialsRequest extends TeaModel {
     }
     public String getProjectId() {
         return this.projectId;
+    }
+
+    public DeleteEditingProjectMaterialsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

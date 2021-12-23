@@ -10,6 +10,9 @@ public class BatchGetMediaInfosRequest extends TeaModel {
     @NameInMap("MediaIds")
     public String mediaIds;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static BatchGetMediaInfosRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchGetMediaInfosRequest self = new BatchGetMediaInfosRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class BatchGetMediaInfosRequest extends TeaModel {
     }
     public String getMediaIds() {
         return this.mediaIds;
+    }
+
+    public BatchGetMediaInfosRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

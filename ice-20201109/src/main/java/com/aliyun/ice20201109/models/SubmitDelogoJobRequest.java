@@ -27,6 +27,9 @@ public class SubmitDelogoJobRequest extends TeaModel {
     @NameInMap("Overwrite")
     public Boolean overwrite;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Title")
     public String title;
 
@@ -84,6 +87,14 @@ public class SubmitDelogoJobRequest extends TeaModel {
     }
     public Boolean getOverwrite() {
         return this.overwrite;
+    }
+
+    public SubmitDelogoJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SubmitDelogoJobRequest setTitle(String title) {

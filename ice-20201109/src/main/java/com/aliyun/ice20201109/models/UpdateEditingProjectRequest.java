@@ -23,6 +23,9 @@ public class UpdateEditingProjectRequest extends TeaModel {
     @NameInMap("ProjectId")
     public String projectId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     // 模板Id
     @NameInMap("TemplateId")
     public String templateId;
@@ -78,6 +81,14 @@ public class UpdateEditingProjectRequest extends TeaModel {
     }
     public String getProjectId() {
         return this.projectId;
+    }
+
+    public UpdateEditingProjectRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UpdateEditingProjectRequest setTemplateId(String templateId) {

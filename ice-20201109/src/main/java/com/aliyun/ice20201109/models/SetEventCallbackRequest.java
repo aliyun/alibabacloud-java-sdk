@@ -10,6 +10,9 @@ public class SetEventCallbackRequest extends TeaModel {
     @NameInMap("EventTypeList")
     public String eventTypeList;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static SetEventCallbackRequest build(java.util.Map<String, ?> map) throws Exception {
         SetEventCallbackRequest self = new SetEventCallbackRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class SetEventCallbackRequest extends TeaModel {
     }
     public String getEventTypeList() {
         return this.eventTypeList;
+    }
+
+    public SetEventCallbackRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

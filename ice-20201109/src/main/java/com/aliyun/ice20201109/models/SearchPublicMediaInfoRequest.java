@@ -25,6 +25,9 @@ public class SearchPublicMediaInfoRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SortBy")
     public String sortBy;
 
@@ -87,6 +90,14 @@ public class SearchPublicMediaInfoRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public SearchPublicMediaInfoRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SearchPublicMediaInfoRequest setSortBy(String sortBy) {

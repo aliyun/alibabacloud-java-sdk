@@ -19,6 +19,9 @@ public class SubmitSubtitleProduceJobRequest extends TeaModel {
     @NameInMap("OutputConfig")
     public String outputConfig;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Title")
     public String title;
 
@@ -71,6 +74,14 @@ public class SubmitSubtitleProduceJobRequest extends TeaModel {
     }
     public String getOutputConfig() {
         return this.outputConfig;
+    }
+
+    public SubmitSubtitleProduceJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SubmitSubtitleProduceJobRequest setTitle(String title) {

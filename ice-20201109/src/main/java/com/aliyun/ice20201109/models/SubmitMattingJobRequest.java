@@ -27,6 +27,9 @@ public class SubmitMattingJobRequest extends TeaModel {
     @NameInMap("Overwrite")
     public String overwrite;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Title")
     public String title;
 
@@ -84,6 +87,14 @@ public class SubmitMattingJobRequest extends TeaModel {
     }
     public String getOverwrite() {
         return this.overwrite;
+    }
+
+    public SubmitMattingJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SubmitMattingJobRequest setTitle(String title) {

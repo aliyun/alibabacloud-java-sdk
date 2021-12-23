@@ -27,6 +27,9 @@ public class SubmitH2VJobRequest extends TeaModel {
     @NameInMap("Overwrite")
     public Boolean overwrite;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Title")
     public String title;
 
@@ -84,6 +87,14 @@ public class SubmitH2VJobRequest extends TeaModel {
     }
     public Boolean getOverwrite() {
         return this.overwrite;
+    }
+
+    public SubmitH2VJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SubmitH2VJobRequest setTitle(String title) {
