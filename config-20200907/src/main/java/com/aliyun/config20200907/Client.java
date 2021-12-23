@@ -126,6 +126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.configRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.configRules, "ConfigRules", "json");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
             body.put("AggregatorId", request.aggregatorId);
@@ -189,6 +190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourceTypesScopeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceTypesScope, "ResourceTypesScope", "simple");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
             body.put("AggregatorId", request.aggregatorId);
@@ -284,6 +286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.aggregatorAccountsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.aggregatorAccounts, "AggregatorAccounts", "json");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aggregatorAccountsShrink)) {
             body.put("AggregatorAccounts", request.aggregatorAccountsShrink);
@@ -335,6 +338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.configRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.configRules, "ConfigRules", "json");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
@@ -394,6 +398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourceTypesScopeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceTypesScope, "ResourceTypesScope", "simple");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
@@ -532,6 +537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteAggregateCompliancePacksResponse deleteAggregateCompliancePacksWithOptions(DeleteAggregateCompliancePacksRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
             body.put("AggregatorId", request.aggregatorId);
@@ -600,6 +606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteAggregatorsResponse deleteAggregatorsWithOptions(DeleteAggregatorsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aggregatorIds)) {
             body.put("AggregatorIds", request.aggregatorIds);
@@ -633,6 +640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteCompliancePacksResponse deleteCompliancePacksWithOptions(DeleteCompliancePacksRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
@@ -725,6 +733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GenerateAggregateCompliancePackReportResponse generateAggregateCompliancePackReportWithOptions(GenerateAggregateCompliancePackReportRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
             body.put("AggregatorId", request.aggregatorId);
@@ -762,6 +771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GenerateAggregateConfigRulesReportResponse generateAggregateConfigRulesReportWithOptions(GenerateAggregateConfigRulesReportRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
             body.put("AggregatorId", request.aggregatorId);
@@ -795,6 +805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GenerateCompliancePackReportResponse generateCompliancePackReportWithOptions(GenerateCompliancePackReportRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
@@ -828,6 +839,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GenerateConfigRulesReportResponse generateConfigRulesReportWithOptions(GenerateConfigRulesReportRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
@@ -1508,6 +1520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resources, "Resources", "json");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
             body.put("AggregatorId", request.aggregatorId);
@@ -1555,6 +1568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resources, "Resources", "json");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.configRuleId)) {
             body.put("ConfigRuleId", request.configRuleId);
@@ -1823,6 +1837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resources, "Resources", "json");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
             body.put("AggregatorId", request.aggregatorId);
@@ -1866,6 +1881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resources, "Resources", "json");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.configRuleId)) {
             body.put("ConfigRuleId", request.configRuleId);
@@ -1934,6 +1950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.configRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.configRules, "ConfigRules", "json");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
             body.put("AggregatorId", request.aggregatorId);
@@ -1997,6 +2014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourceTypesScopeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceTypesScope, "ResourceTypesScope", "simple");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
             body.put("AggregatorId", request.aggregatorId);
@@ -2088,6 +2106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.aggregatorAccountsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.aggregatorAccounts, "AggregatorAccounts", "json");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aggregatorAccountsShrink)) {
             body.put("AggregatorAccounts", request.aggregatorAccountsShrink);
@@ -2139,6 +2158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.configRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.configRules, "ConfigRules", "json");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
@@ -2198,6 +2218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourceTypesScopeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceTypesScope, "ResourceTypesScope", "simple");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
