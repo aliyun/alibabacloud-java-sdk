@@ -174,6 +174,80 @@ public class SetAutoScaleConfigRequest extends TeaModel {
         return this.spotStrategy;
     }
 
+    public static class SetAutoScaleConfigRequestQueuesDataDisks extends TeaModel {
+        @NameInMap("DataDiskCategory")
+        public String dataDiskCategory;
+
+        @NameInMap("DataDiskDeleteWithInstance")
+        public Boolean dataDiskDeleteWithInstance;
+
+        @NameInMap("DataDiskEncrypted")
+        public Boolean dataDiskEncrypted;
+
+        @NameInMap("DataDiskKMSKeyId")
+        public String dataDiskKMSKeyId;
+
+        @NameInMap("DataDiskPerformanceLevel")
+        public String dataDiskPerformanceLevel;
+
+        @NameInMap("DataDiskSize")
+        public Integer dataDiskSize;
+
+        public static SetAutoScaleConfigRequestQueuesDataDisks build(java.util.Map<String, ?> map) throws Exception {
+            SetAutoScaleConfigRequestQueuesDataDisks self = new SetAutoScaleConfigRequestQueuesDataDisks();
+            return TeaModel.build(map, self);
+        }
+
+        public SetAutoScaleConfigRequestQueuesDataDisks setDataDiskCategory(String dataDiskCategory) {
+            this.dataDiskCategory = dataDiskCategory;
+            return this;
+        }
+        public String getDataDiskCategory() {
+            return this.dataDiskCategory;
+        }
+
+        public SetAutoScaleConfigRequestQueuesDataDisks setDataDiskDeleteWithInstance(Boolean dataDiskDeleteWithInstance) {
+            this.dataDiskDeleteWithInstance = dataDiskDeleteWithInstance;
+            return this;
+        }
+        public Boolean getDataDiskDeleteWithInstance() {
+            return this.dataDiskDeleteWithInstance;
+        }
+
+        public SetAutoScaleConfigRequestQueuesDataDisks setDataDiskEncrypted(Boolean dataDiskEncrypted) {
+            this.dataDiskEncrypted = dataDiskEncrypted;
+            return this;
+        }
+        public Boolean getDataDiskEncrypted() {
+            return this.dataDiskEncrypted;
+        }
+
+        public SetAutoScaleConfigRequestQueuesDataDisks setDataDiskKMSKeyId(String dataDiskKMSKeyId) {
+            this.dataDiskKMSKeyId = dataDiskKMSKeyId;
+            return this;
+        }
+        public String getDataDiskKMSKeyId() {
+            return this.dataDiskKMSKeyId;
+        }
+
+        public SetAutoScaleConfigRequestQueuesDataDisks setDataDiskPerformanceLevel(String dataDiskPerformanceLevel) {
+            this.dataDiskPerformanceLevel = dataDiskPerformanceLevel;
+            return this;
+        }
+        public String getDataDiskPerformanceLevel() {
+            return this.dataDiskPerformanceLevel;
+        }
+
+        public SetAutoScaleConfigRequestQueuesDataDisks setDataDiskSize(Integer dataDiskSize) {
+            this.dataDiskSize = dataDiskSize;
+            return this;
+        }
+        public Integer getDataDiskSize() {
+            return this.dataDiskSize;
+        }
+
+    }
+
     public static class SetAutoScaleConfigRequestQueuesInstanceTypes extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
@@ -238,6 +312,9 @@ public class SetAutoScaleConfigRequest extends TeaModel {
     }
 
     public static class SetAutoScaleConfigRequestQueues extends TeaModel {
+        @NameInMap("DataDisks")
+        public java.util.List<SetAutoScaleConfigRequestQueuesDataDisks> dataDisks;
+
         @NameInMap("EnableAutoGrow")
         public Boolean enableAutoGrow;
 
@@ -286,6 +363,14 @@ public class SetAutoScaleConfigRequest extends TeaModel {
         public static SetAutoScaleConfigRequestQueues build(java.util.Map<String, ?> map) throws Exception {
             SetAutoScaleConfigRequestQueues self = new SetAutoScaleConfigRequestQueues();
             return TeaModel.build(map, self);
+        }
+
+        public SetAutoScaleConfigRequestQueues setDataDisks(java.util.List<SetAutoScaleConfigRequestQueuesDataDisks> dataDisks) {
+            this.dataDisks = dataDisks;
+            return this;
+        }
+        public java.util.List<SetAutoScaleConfigRequestQueuesDataDisks> getDataDisks() {
+            return this.dataDisks;
         }
 
         public SetAutoScaleConfigRequestQueues setEnableAutoGrow(Boolean enableAutoGrow) {

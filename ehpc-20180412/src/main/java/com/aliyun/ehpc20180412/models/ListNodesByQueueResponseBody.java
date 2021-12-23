@@ -195,6 +195,9 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
+        @NameInMap("StateInSched")
+        public String stateInSched;
+
         @NameInMap("Status")
         public String status;
 
@@ -347,6 +350,14 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         }
         public String getSpotStrategy() {
             return this.spotStrategy;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setStateInSched(String stateInSched) {
+            this.stateInSched = stateInSched;
+            return this;
+        }
+        public String getStateInSched() {
+            return this.stateInSched;
         }
 
         public ListNodesByQueueResponseBodyNodesNodeInfo setStatus(String status) {
