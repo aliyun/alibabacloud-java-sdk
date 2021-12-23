@@ -22,6 +22,9 @@ public class SubmitLiveEditingJobRequest extends TeaModel {
     @NameInMap("ProjectId")
     public String projectId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("UserData")
     public String userData;
 
@@ -76,6 +79,14 @@ public class SubmitLiveEditingJobRequest extends TeaModel {
     }
     public String getProjectId() {
         return this.projectId;
+    }
+
+    public SubmitLiveEditingJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SubmitLiveEditingJobRequest setUserData(String userData) {

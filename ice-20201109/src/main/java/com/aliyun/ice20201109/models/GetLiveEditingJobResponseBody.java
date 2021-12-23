@@ -4,10 +4,11 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetLiveEditingJobResponseBody extends TeaModel {
+    // 直播剪辑任务
     @NameInMap("LiveEditingJob")
     public GetLiveEditingJobResponseBodyLiveEditingJob liveEditingJob;
 
-    // Id of the request
+    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,12 +34,15 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
     }
 
     public static class GetLiveEditingJobResponseBodyLiveEditingJobLiveStreamConfig extends TeaModel {
+        // 播流所属应用名称
         @NameInMap("AppName")
         public String appName;
 
+        // 播流所属域名
         @NameInMap("DomainName")
         public String domainName;
 
+        // 播流所属流名
         @NameInMap("StreamName")
         public String streamName;
 
@@ -74,6 +78,7 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
     }
 
     public static class GetLiveEditingJobResponseBodyLiveEditingJobMediaProduceConfig extends TeaModel {
+        // 剪辑模式，默认Accurate
         @NameInMap("Mode")
         public String mode;
 
@@ -93,24 +98,31 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
     }
 
     public static class GetLiveEditingJobResponseBodyLiveEditingJobOutputMediaConfig extends TeaModel {
+        // 输出成品的码率，单位为Kbps。可以不填，默认值是多个素材的最高码率
         @NameInMap("Bitrate")
         public Long bitrate;
 
+        // 当 OutputMediaTarget 的目标为 vod-media 时，指定 fileName(包含文件后缀，不含路径）作为输出文件名
         @NameInMap("FileName")
         public String fileName;
 
+        // 输出成品的高。可以不填，默认值是多个素材的最大高
         @NameInMap("Height")
         public Integer height;
 
+        // 输出成片的文件地址
         @NameInMap("MediaURL")
         public String mediaURL;
 
+        // 当 OutputMediaTarget 的目标为 vod-media 时， 指定 storage location 来存储媒资到 VOD; storage location 是 VOD 中的文件存储位置， 不包含 http:// 的前缀， 如:  outin-xxxxxx.oss-cn-shanghai.aliyuncs.com
         @NameInMap("StorageLocation")
         public String storageLocation;
 
+        // 合成成片输出到vod，指定vod转码模板组。如不需要VOD转码，请填写 "VOD_NO_TRANSCODE".
         @NameInMap("VodTemplateGroupId")
         public String vodTemplateGroupId;
 
+        // 输出成品的宽。可以不填，默认值是多个素材的最大宽
         @NameInMap("Width")
         public Integer width;
 
@@ -178,48 +190,63 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
     }
 
     public static class GetLiveEditingJobResponseBodyLiveEditingJob extends TeaModel {
+        // 剪辑片段列表
         @NameInMap("Clips")
         public String clips;
 
+        // 剪辑合成作业错误码  注：作业失败时关注该字段
         @NameInMap("Code")
         public String code;
 
+        // 直播剪辑作业完成时间，格式为utc时间。  格式为："YYYY-MM-DD'T'hh:mm:ss'Z'"。
         @NameInMap("CompleteTime")
         public String completeTime;
 
+        // 直播剪辑作业创建时间，格式为utc时间。  格式为："YYYY-MM-DD'T'hh:mm:ss'Z'"。
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // 直播剪辑任务ID
         @NameInMap("JobId")
         public String jobId;
 
+        // 直播剪辑配置
         @NameInMap("LiveStreamConfig")
         public GetLiveEditingJobResponseBodyLiveEditingJobLiveStreamConfig liveStreamConfig;
 
+        // 输出成品的资源Id
         @NameInMap("MediaId")
         public String mediaId;
 
+        // 直播剪辑合成配置
         @NameInMap("MediaProduceConfig")
         public GetLiveEditingJobResponseBodyLiveEditingJobMediaProduceConfig mediaProduceConfig;
 
+        // 输出成品的资源文件URL
         @NameInMap("MediaURL")
         public String mediaURL;
 
+        // 剪辑合成作业错误信息  注：作业失败时关注该字段
         @NameInMap("Message")
         public String message;
 
+        // 直播剪辑作业修改时间，格式为utc时间。  格式为："YYYY-MM-DD'T'hh:mm:ss'Z'"。
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        // 输出成片的存储配置
         @NameInMap("OutputMediaConfig")
         public GetLiveEditingJobResponseBodyLiveEditingJobOutputMediaConfig outputMediaConfig;
 
+        // 直播剪辑工程ID
         @NameInMap("ProjectId")
         public String projectId;
 
+        // 直播剪辑作业状态，取值可能为如下值：  -Init （初始状态）  -Queuing（排队中）  -Processing（处理中）  -Success（成功）  -Failed（失败）
         @NameInMap("Status")
         public String status;
 
+        // 用户数据
         @NameInMap("UserData")
         public String userData;
 

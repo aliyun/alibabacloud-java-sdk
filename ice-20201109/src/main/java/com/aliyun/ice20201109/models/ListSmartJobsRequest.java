@@ -22,6 +22,9 @@ public class ListSmartJobsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SortBy")
     public String sortBy;
 
@@ -79,6 +82,14 @@ public class ListSmartJobsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListSmartJobsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListSmartJobsRequest setSortBy(String sortBy) {

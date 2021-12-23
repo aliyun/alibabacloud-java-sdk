@@ -32,6 +32,9 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     // 排序
     @NameInMap("SortBy")
     public String sortBy;
@@ -107,6 +110,14 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListMediaBasicInfosRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListMediaBasicInfosRequest setSortBy(String sortBy) {

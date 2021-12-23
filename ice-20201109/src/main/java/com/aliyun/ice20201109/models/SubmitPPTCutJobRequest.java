@@ -10,6 +10,9 @@ public class SubmitPPTCutJobRequest extends TeaModel {
     @NameInMap("InputFile")
     public String inputFile;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Title")
     public String title;
 
@@ -35,6 +38,14 @@ public class SubmitPPTCutJobRequest extends TeaModel {
     }
     public String getInputFile() {
         return this.inputFile;
+    }
+
+    public SubmitPPTCutJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SubmitPPTCutJobRequest setTitle(String title) {

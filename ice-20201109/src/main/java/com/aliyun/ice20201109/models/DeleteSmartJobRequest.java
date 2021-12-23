@@ -7,6 +7,9 @@ public class DeleteSmartJobRequest extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DeleteSmartJobRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSmartJobRequest self = new DeleteSmartJobRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DeleteSmartJobRequest extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public DeleteSmartJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

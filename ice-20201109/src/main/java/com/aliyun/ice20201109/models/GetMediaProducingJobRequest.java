@@ -7,6 +7,9 @@ public class GetMediaProducingJobRequest extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static GetMediaProducingJobRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMediaProducingJobRequest self = new GetMediaProducingJobRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class GetMediaProducingJobRequest extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public GetMediaProducingJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

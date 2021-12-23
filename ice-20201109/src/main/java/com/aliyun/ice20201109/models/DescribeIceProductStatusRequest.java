@@ -7,6 +7,9 @@ public class DescribeIceProductStatusRequest extends TeaModel {
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeIceProductStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeIceProductStatusRequest self = new DescribeIceProductStatusRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DescribeIceProductStatusRequest extends TeaModel {
     }
     public String getCommodityCode() {
         return this.commodityCode;
+    }
+
+    public DescribeIceProductStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -10,6 +10,9 @@ public class DescribeMaterialPackageInfoRequest extends TeaModel {
     @NameInMap("MaterialPackageType")
     public String materialPackageType;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Status")
     public String status;
 
@@ -32,6 +35,14 @@ public class DescribeMaterialPackageInfoRequest extends TeaModel {
     }
     public String getMaterialPackageType() {
         return this.materialPackageType;
+    }
+
+    public DescribeMaterialPackageInfoRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeMaterialPackageInfoRequest setStatus(String status) {

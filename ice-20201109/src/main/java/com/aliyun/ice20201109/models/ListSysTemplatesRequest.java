@@ -12,6 +12,9 @@ public class ListSysTemplatesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Type")
     public String type;
 
@@ -34,6 +37,14 @@ public class ListSysTemplatesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListSysTemplatesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListSysTemplatesRequest setType(String type) {

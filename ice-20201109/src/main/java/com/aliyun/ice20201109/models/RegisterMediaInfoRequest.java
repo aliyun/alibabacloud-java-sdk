@@ -44,6 +44,9 @@ public class RegisterMediaInfoRequest extends TeaModel {
     @NameInMap("Overwrite")
     public Boolean overwrite;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     // 注册媒资的配置
     @NameInMap("RegisterConfig")
     public String registerConfig;
@@ -139,6 +142,14 @@ public class RegisterMediaInfoRequest extends TeaModel {
     }
     public Boolean getOverwrite() {
         return this.overwrite;
+    }
+
+    public RegisterMediaInfoRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public RegisterMediaInfoRequest setRegisterConfig(String registerConfig) {

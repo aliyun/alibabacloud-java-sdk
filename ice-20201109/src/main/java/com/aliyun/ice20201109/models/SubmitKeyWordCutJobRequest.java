@@ -13,6 +13,9 @@ public class SubmitKeyWordCutJobRequest extends TeaModel {
     @NameInMap("Keyword")
     public String keyword;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Title")
     public String title;
 
@@ -46,6 +49,14 @@ public class SubmitKeyWordCutJobRequest extends TeaModel {
     }
     public String getKeyword() {
         return this.keyword;
+    }
+
+    public SubmitKeyWordCutJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SubmitKeyWordCutJobRequest setTitle(String title) {

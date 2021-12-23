@@ -10,6 +10,9 @@ public class UpdateSmartJobRequest extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static UpdateSmartJobRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSmartJobRequest self = new UpdateSmartJobRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class UpdateSmartJobRequest extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public UpdateSmartJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

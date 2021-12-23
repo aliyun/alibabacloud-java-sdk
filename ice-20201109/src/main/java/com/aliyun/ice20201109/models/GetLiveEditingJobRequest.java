@@ -4,6 +4,7 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetLiveEditingJobRequest extends TeaModel {
+    // 直播剪辑JobId
     @NameInMap("JobId")
     public String jobId;
 
