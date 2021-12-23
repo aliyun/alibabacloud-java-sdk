@@ -4,11 +4,11 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class UpdateSpaceRequest extends TeaModel {
-    @NameInMap("SpaceId")
-    public String spaceId;
-
     @NameInMap("Desc")
     public String desc;
+
+    @NameInMap("SpaceId")
+    public String spaceId;
 
     @NameInMap("Status")
     public String status;
@@ -18,20 +18,20 @@ public class UpdateSpaceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateSpaceRequest setSpaceId(String spaceId) {
-        this.spaceId = spaceId;
-        return this;
-    }
-    public String getSpaceId() {
-        return this.spaceId;
-    }
-
     public UpdateSpaceRequest setDesc(String desc) {
         this.desc = desc;
         return this;
     }
     public String getDesc() {
         return this.desc;
+    }
+
+    public UpdateSpaceRequest setSpaceId(String spaceId) {
+        this.spaceId = spaceId;
+        return this;
+    }
+    public String getSpaceId() {
+        return this.spaceId;
     }
 
     public UpdateSpaceRequest setStatus(String status) {

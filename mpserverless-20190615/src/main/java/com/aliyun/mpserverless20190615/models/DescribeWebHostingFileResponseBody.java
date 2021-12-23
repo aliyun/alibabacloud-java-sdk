@@ -4,23 +4,15 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebHostingFileResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DescribeWebHostingFileResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeWebHostingFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeWebHostingFileResponseBody self = new DescribeWebHostingFileResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeWebHostingFileResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeWebHostingFileResponseBody setData(DescribeWebHostingFileResponseBodyData data) {
@@ -31,21 +23,26 @@ public class DescribeWebHostingFileResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class DescribeWebHostingFileResponseBodyData extends TeaModel {
-        @NameInMap("FilePath")
-        public String filePath;
+    public DescribeWebHostingFileResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeWebHostingFileResponseBodyData extends TeaModel {
         @NameInMap("ContentType")
         public String contentType;
 
         @NameInMap("ETag")
         public String ETag;
 
-        @NameInMap("Size")
-        public Long size;
-
         @NameInMap("Exists")
         public Boolean exists;
+
+        @NameInMap("FilePath")
+        public String filePath;
 
         @NameInMap("LastModifiedTime")
         public Long lastModifiedTime;
@@ -53,17 +50,12 @@ public class DescribeWebHostingFileResponseBody extends TeaModel {
         @NameInMap("SignedUrl")
         public String signedUrl;
 
+        @NameInMap("Size")
+        public Long size;
+
         public static DescribeWebHostingFileResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeWebHostingFileResponseBodyData self = new DescribeWebHostingFileResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeWebHostingFileResponseBodyData setFilePath(String filePath) {
-            this.filePath = filePath;
-            return this;
-        }
-        public String getFilePath() {
-            return this.filePath;
         }
 
         public DescribeWebHostingFileResponseBodyData setContentType(String contentType) {
@@ -82,20 +74,20 @@ public class DescribeWebHostingFileResponseBody extends TeaModel {
             return this.ETag;
         }
 
-        public DescribeWebHostingFileResponseBodyData setSize(Long size) {
-            this.size = size;
-            return this;
-        }
-        public Long getSize() {
-            return this.size;
-        }
-
         public DescribeWebHostingFileResponseBodyData setExists(Boolean exists) {
             this.exists = exists;
             return this;
         }
         public Boolean getExists() {
             return this.exists;
+        }
+
+        public DescribeWebHostingFileResponseBodyData setFilePath(String filePath) {
+            this.filePath = filePath;
+            return this;
+        }
+        public String getFilePath() {
+            return this.filePath;
         }
 
         public DescribeWebHostingFileResponseBodyData setLastModifiedTime(Long lastModifiedTime) {
@@ -112,6 +104,14 @@ public class DescribeWebHostingFileResponseBody extends TeaModel {
         }
         public String getSignedUrl() {
             return this.signedUrl;
+        }
+
+        public DescribeWebHostingFileResponseBodyData setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
         }
 
     }

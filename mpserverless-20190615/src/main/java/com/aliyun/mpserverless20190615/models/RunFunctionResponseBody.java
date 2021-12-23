@@ -43,37 +43,21 @@ public class RunFunctionResponseBody extends TeaModel {
     }
 
     public static class RunFunctionResponseBodyRuntimeMeta extends TeaModel {
-        @NameInMap("InvocationDuration")
-        public Integer invocationDuration;
-
-        @NameInMap("RequestId")
-        public String requestId;
-
         @NameInMap("BillingDuration")
         public Integer billingDuration;
+
+        @NameInMap("InvocationDuration")
+        public Integer invocationDuration;
 
         @NameInMap("MaxMemoryUsage")
         public Integer maxMemoryUsage;
 
+        @NameInMap("RequestId")
+        public String requestId;
+
         public static RunFunctionResponseBodyRuntimeMeta build(java.util.Map<String, ?> map) throws Exception {
             RunFunctionResponseBodyRuntimeMeta self = new RunFunctionResponseBodyRuntimeMeta();
             return TeaModel.build(map, self);
-        }
-
-        public RunFunctionResponseBodyRuntimeMeta setInvocationDuration(Integer invocationDuration) {
-            this.invocationDuration = invocationDuration;
-            return this;
-        }
-        public Integer getInvocationDuration() {
-            return this.invocationDuration;
-        }
-
-        public RunFunctionResponseBodyRuntimeMeta setRequestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-        public String getRequestId() {
-            return this.requestId;
         }
 
         public RunFunctionResponseBodyRuntimeMeta setBillingDuration(Integer billingDuration) {
@@ -84,12 +68,28 @@ public class RunFunctionResponseBody extends TeaModel {
             return this.billingDuration;
         }
 
+        public RunFunctionResponseBodyRuntimeMeta setInvocationDuration(Integer invocationDuration) {
+            this.invocationDuration = invocationDuration;
+            return this;
+        }
+        public Integer getInvocationDuration() {
+            return this.invocationDuration;
+        }
+
         public RunFunctionResponseBodyRuntimeMeta setMaxMemoryUsage(Integer maxMemoryUsage) {
             this.maxMemoryUsage = maxMemoryUsage;
             return this;
         }
         public Integer getMaxMemoryUsage() {
             return this.maxMemoryUsage;
+        }
+
+        public RunFunctionResponseBodyRuntimeMeta setRequestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+        public String getRequestId() {
+            return this.requestId;
         }
 
     }

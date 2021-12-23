@@ -3,16 +3,16 @@ package com.aliyun.mpserverless20190615.models;
 
 import com.aliyun.tea.*;
 
-public class CheckSmsHasAuthorizedToMPSRequest extends TeaModel {
+public class DescribeResourceQuotaRequest extends TeaModel {
     @NameInMap("SpaceId")
     public String spaceId;
 
-    public static CheckSmsHasAuthorizedToMPSRequest build(java.util.Map<String, ?> map) throws Exception {
-        CheckSmsHasAuthorizedToMPSRequest self = new CheckSmsHasAuthorizedToMPSRequest();
+    public static DescribeResourceQuotaRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeResourceQuotaRequest self = new DescribeResourceQuotaRequest();
         return TeaModel.build(map, self);
     }
 
-    public CheckSmsHasAuthorizedToMPSRequest setSpaceId(String spaceId) {
+    public DescribeResourceQuotaRequest setSpaceId(String spaceId) {
         this.spaceId = spaceId;
         return this;
     }

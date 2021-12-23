@@ -4,26 +4,15 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class DescribeFCOpenStatusResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
-
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("IsAuthorized")
-    public Boolean isAuthorized;
+    @NameInMap("Status")
+    public String status;
 
     public static DescribeFCOpenStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFCOpenStatusResponseBody self = new DescribeFCOpenStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFCOpenStatusResponseBody setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
     }
 
     public DescribeFCOpenStatusResponseBody setRequestId(String requestId) {
@@ -34,12 +23,12 @@ public class DescribeFCOpenStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeFCOpenStatusResponseBody setIsAuthorized(Boolean isAuthorized) {
-        this.isAuthorized = isAuthorized;
+    public DescribeFCOpenStatusResponseBody setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public Boolean getIsAuthorized() {
-        return this.isAuthorized;
+    public String getStatus() {
+        return this.status;
     }
 
 }

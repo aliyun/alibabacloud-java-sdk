@@ -4,23 +4,15 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class GetWebHostingDomainVerificationContentResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public GetWebHostingDomainVerificationContentResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetWebHostingDomainVerificationContentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetWebHostingDomainVerificationContentResponseBody self = new GetWebHostingDomainVerificationContentResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetWebHostingDomainVerificationContentResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetWebHostingDomainVerificationContentResponseBody setData(GetWebHostingDomainVerificationContentResponseBodyData data) {
@@ -29,6 +21,14 @@ public class GetWebHostingDomainVerificationContentResponseBody extends TeaModel
     }
     public GetWebHostingDomainVerificationContentResponseBodyData getData() {
         return this.data;
+    }
+
+    public GetWebHostingDomainVerificationContentResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GetWebHostingDomainVerificationContentResponseBodyData extends TeaModel {

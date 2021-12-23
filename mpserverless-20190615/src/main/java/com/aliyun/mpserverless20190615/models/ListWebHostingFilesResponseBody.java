@@ -4,23 +4,15 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class ListWebHostingFilesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ListWebHostingFilesResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListWebHostingFilesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListWebHostingFilesResponseBody self = new ListWebHostingFilesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListWebHostingFilesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListWebHostingFilesResponseBody setData(ListWebHostingFilesResponseBodyData data) {
@@ -31,18 +23,23 @@ public class ListWebHostingFilesResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class ListWebHostingFilesResponseBodyDataWebHostingFiles extends TeaModel {
-        @NameInMap("FilePath")
-        public String filePath;
+    public ListWebHostingFilesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ListWebHostingFilesResponseBodyDataWebHostingFiles extends TeaModel {
         @NameInMap("ContentType")
         public String contentType;
 
         @NameInMap("ETag")
         public String ETag;
 
-        @NameInMap("Size")
-        public Long size;
+        @NameInMap("FilePath")
+        public String filePath;
 
         @NameInMap("LastModifiedTime")
         public Long lastModifiedTime;
@@ -50,17 +47,12 @@ public class ListWebHostingFilesResponseBody extends TeaModel {
         @NameInMap("SignedUrl")
         public String signedUrl;
 
+        @NameInMap("Size")
+        public Long size;
+
         public static ListWebHostingFilesResponseBodyDataWebHostingFiles build(java.util.Map<String, ?> map) throws Exception {
             ListWebHostingFilesResponseBodyDataWebHostingFiles self = new ListWebHostingFilesResponseBodyDataWebHostingFiles();
             return TeaModel.build(map, self);
-        }
-
-        public ListWebHostingFilesResponseBodyDataWebHostingFiles setFilePath(String filePath) {
-            this.filePath = filePath;
-            return this;
-        }
-        public String getFilePath() {
-            return this.filePath;
         }
 
         public ListWebHostingFilesResponseBodyDataWebHostingFiles setContentType(String contentType) {
@@ -79,12 +71,12 @@ public class ListWebHostingFilesResponseBody extends TeaModel {
             return this.ETag;
         }
 
-        public ListWebHostingFilesResponseBodyDataWebHostingFiles setSize(Long size) {
-            this.size = size;
+        public ListWebHostingFilesResponseBodyDataWebHostingFiles setFilePath(String filePath) {
+            this.filePath = filePath;
             return this;
         }
-        public Long getSize() {
-            return this.size;
+        public String getFilePath() {
+            return this.filePath;
         }
 
         public ListWebHostingFilesResponseBodyDataWebHostingFiles setLastModifiedTime(Long lastModifiedTime) {
@@ -103,14 +95,22 @@ public class ListWebHostingFilesResponseBody extends TeaModel {
             return this.signedUrl;
         }
 
+        public ListWebHostingFilesResponseBodyDataWebHostingFiles setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
+        }
+
     }
 
     public static class ListWebHostingFilesResponseBodyData extends TeaModel {
-        @NameInMap("NextMarker")
-        public String nextMarker;
-
         @NameInMap("Count")
         public Integer count;
+
+        @NameInMap("NextMarker")
+        public String nextMarker;
 
         @NameInMap("WebHostingFiles")
         public java.util.List<ListWebHostingFilesResponseBodyDataWebHostingFiles> webHostingFiles;
@@ -120,20 +120,20 @@ public class ListWebHostingFilesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListWebHostingFilesResponseBodyData setNextMarker(String nextMarker) {
-            this.nextMarker = nextMarker;
-            return this;
-        }
-        public String getNextMarker() {
-            return this.nextMarker;
-        }
-
         public ListWebHostingFilesResponseBodyData setCount(Integer count) {
             this.count = count;
             return this;
         }
         public Integer getCount() {
             return this.count;
+        }
+
+        public ListWebHostingFilesResponseBodyData setNextMarker(String nextMarker) {
+            this.nextMarker = nextMarker;
+            return this;
+        }
+        public String getNextMarker() {
+            return this.nextMarker;
         }
 
         public ListWebHostingFilesResponseBodyData setWebHostingFiles(java.util.List<ListWebHostingFilesResponseBodyDataWebHostingFiles> webHostingFiles) {

@@ -4,23 +4,15 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class CheckMpServerlessRoleExistsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Exists")
     public Boolean exists;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CheckMpServerlessRoleExistsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CheckMpServerlessRoleExistsResponseBody self = new CheckMpServerlessRoleExistsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CheckMpServerlessRoleExistsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CheckMpServerlessRoleExistsResponseBody setExists(Boolean exists) {
@@ -29,6 +21,14 @@ public class CheckMpServerlessRoleExistsResponseBody extends TeaModel {
     }
     public Boolean getExists() {
         return this.exists;
+    }
+
+    public CheckMpServerlessRoleExistsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

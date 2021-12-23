@@ -8,20 +8,20 @@ public class SaveWebHostingCustomDomainCorsConfigResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("Data")
+    public Boolean data;
 
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public Boolean data;
 
     public static SaveWebHostingCustomDomainCorsConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SaveWebHostingCustomDomainCorsConfigResponseBody self = new SaveWebHostingCustomDomainCorsConfigResponseBody();
@@ -36,12 +36,12 @@ public class SaveWebHostingCustomDomainCorsConfigResponseBody extends TeaModel {
         return this.code;
     }
 
-    public SaveWebHostingCustomDomainCorsConfigResponseBody setMessage(String message) {
-        this.message = message;
+    public SaveWebHostingCustomDomainCorsConfigResponseBody setData(Boolean data) {
+        this.data = data;
         return this;
     }
-    public String getMessage() {
-        return this.message;
+    public Boolean getData() {
+        return this.data;
     }
 
     public SaveWebHostingCustomDomainCorsConfigResponseBody setHttpStatusCode(String httpStatusCode) {
@@ -50,6 +50,14 @@ public class SaveWebHostingCustomDomainCorsConfigResponseBody extends TeaModel {
     }
     public String getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    public SaveWebHostingCustomDomainCorsConfigResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public SaveWebHostingCustomDomainCorsConfigResponseBody setRequestId(String requestId) {
@@ -66,14 +74,6 @@ public class SaveWebHostingCustomDomainCorsConfigResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public SaveWebHostingCustomDomainCorsConfigResponseBody setData(Boolean data) {
-        this.data = data;
-        return this;
-    }
-    public Boolean getData() {
-        return this.data;
     }
 
 }

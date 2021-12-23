@@ -4,23 +4,15 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class DeleteWebHostingCertificateRequest extends TeaModel {
-    @NameInMap("SpaceId")
-    public String spaceId;
-
     @NameInMap("Domain")
     public String domain;
+
+    @NameInMap("SpaceId")
+    public String spaceId;
 
     public static DeleteWebHostingCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteWebHostingCertificateRequest self = new DeleteWebHostingCertificateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteWebHostingCertificateRequest setSpaceId(String spaceId) {
-        this.spaceId = spaceId;
-        return this;
-    }
-    public String getSpaceId() {
-        return this.spaceId;
     }
 
     public DeleteWebHostingCertificateRequest setDomain(String domain) {
@@ -29,6 +21,14 @@ public class DeleteWebHostingCertificateRequest extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public DeleteWebHostingCertificateRequest setSpaceId(String spaceId) {
+        this.spaceId = spaceId;
+        return this;
+    }
+    public String getSpaceId() {
+        return this.spaceId;
     }
 
 }
