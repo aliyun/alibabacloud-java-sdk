@@ -13,6 +13,9 @@ public class DeleteImageRequest extends TeaModel {
     @NameInMap("ImageTag")
     public String imageTag;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Repository")
     public String repository;
 
@@ -43,6 +46,14 @@ public class DeleteImageRequest extends TeaModel {
     }
     public String getImageTag() {
         return this.imageTag;
+    }
+
+    public DeleteImageRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteImageRequest setRepository(String repository) {

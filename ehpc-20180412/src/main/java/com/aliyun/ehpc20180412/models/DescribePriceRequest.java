@@ -53,9 +53,75 @@ public class DescribePriceRequest extends TeaModel {
         return this.priceUnit;
     }
 
+    public static class DescribePriceRequestCommoditiesDataDisks extends TeaModel {
+        @NameInMap("category")
+        public String category;
+
+        @NameInMap("deleteWithInstance")
+        public Boolean deleteWithInstance;
+
+        @NameInMap("encrypted")
+        public Boolean encrypted;
+
+        @NameInMap("performanceLevel")
+        public String performanceLevel;
+
+        @NameInMap("size")
+        public Integer size;
+
+        public static DescribePriceRequestCommoditiesDataDisks build(java.util.Map<String, ?> map) throws Exception {
+            DescribePriceRequestCommoditiesDataDisks self = new DescribePriceRequestCommoditiesDataDisks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePriceRequestCommoditiesDataDisks setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribePriceRequestCommoditiesDataDisks setDeleteWithInstance(Boolean deleteWithInstance) {
+            this.deleteWithInstance = deleteWithInstance;
+            return this;
+        }
+        public Boolean getDeleteWithInstance() {
+            return this.deleteWithInstance;
+        }
+
+        public DescribePriceRequestCommoditiesDataDisks setEncrypted(Boolean encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        public DescribePriceRequestCommoditiesDataDisks setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public DescribePriceRequestCommoditiesDataDisks setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+    }
+
     public static class DescribePriceRequestCommodities extends TeaModel {
         @NameInMap("Amount")
         public Integer amount;
+
+        @NameInMap("DataDisks")
+        public java.util.List<DescribePriceRequestCommoditiesDataDisks> dataDisks;
 
         @NameInMap("InstanceType")
         public String instanceType;
@@ -95,6 +161,14 @@ public class DescribePriceRequest extends TeaModel {
         }
         public Integer getAmount() {
             return this.amount;
+        }
+
+        public DescribePriceRequestCommodities setDataDisks(java.util.List<DescribePriceRequestCommoditiesDataDisks> dataDisks) {
+            this.dataDisks = dataDisks;
+            return this;
+        }
+        public java.util.List<DescribePriceRequestCommoditiesDataDisks> getDataDisks() {
+            return this.dataDisks;
         }
 
         public DescribePriceRequestCommodities setInstanceType(String instanceType) {

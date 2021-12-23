@@ -181,6 +181,36 @@ public class DescribeClusterResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeClusterResponseBodyClusterInfoEcsInfoProxyMgr extends TeaModel {
+        @NameInMap("Count")
+        public Integer count;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        public static DescribeClusterResponseBodyClusterInfoEcsInfoProxyMgr build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterResponseBodyClusterInfoEcsInfoProxyMgr self = new DescribeClusterResponseBodyClusterInfoEcsInfoProxyMgr();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterResponseBodyClusterInfoEcsInfoProxyMgr setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+        public DescribeClusterResponseBodyClusterInfoEcsInfoProxyMgr setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+    }
+
     public static class DescribeClusterResponseBodyClusterInfoEcsInfo extends TeaModel {
         @NameInMap("Compute")
         public DescribeClusterResponseBodyClusterInfoEcsInfoCompute compute;
@@ -190,6 +220,9 @@ public class DescribeClusterResponseBody extends TeaModel {
 
         @NameInMap("Manager")
         public DescribeClusterResponseBodyClusterInfoEcsInfoManager manager;
+
+        @NameInMap("ProxyMgr")
+        public DescribeClusterResponseBodyClusterInfoEcsInfoProxyMgr proxyMgr;
 
         public static DescribeClusterResponseBodyClusterInfoEcsInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterResponseBodyClusterInfoEcsInfo self = new DescribeClusterResponseBodyClusterInfoEcsInfo();
@@ -218,6 +251,74 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
         public DescribeClusterResponseBodyClusterInfoEcsInfoManager getManager() {
             return this.manager;
+        }
+
+        public DescribeClusterResponseBodyClusterInfoEcsInfo setProxyMgr(DescribeClusterResponseBodyClusterInfoEcsInfoProxyMgr proxyMgr) {
+            this.proxyMgr = proxyMgr;
+            return this;
+        }
+        public DescribeClusterResponseBodyClusterInfoEcsInfoProxyMgr getProxyMgr() {
+            return this.proxyMgr;
+        }
+
+    }
+
+    public static class DescribeClusterResponseBodyClusterInfoOnPremiseInfoOnPremiseInfo extends TeaModel {
+        @NameInMap("HostName")
+        public String hostName;
+
+        @NameInMap("IP")
+        public String IP;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeClusterResponseBodyClusterInfoOnPremiseInfoOnPremiseInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterResponseBodyClusterInfoOnPremiseInfoOnPremiseInfo self = new DescribeClusterResponseBodyClusterInfoOnPremiseInfoOnPremiseInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterResponseBodyClusterInfoOnPremiseInfoOnPremiseInfo setHostName(String hostName) {
+            this.hostName = hostName;
+            return this;
+        }
+        public String getHostName() {
+            return this.hostName;
+        }
+
+        public DescribeClusterResponseBodyClusterInfoOnPremiseInfoOnPremiseInfo setIP(String IP) {
+            this.IP = IP;
+            return this;
+        }
+        public String getIP() {
+            return this.IP;
+        }
+
+        public DescribeClusterResponseBodyClusterInfoOnPremiseInfoOnPremiseInfo setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class DescribeClusterResponseBodyClusterInfoOnPremiseInfo extends TeaModel {
+        @NameInMap("OnPremiseInfo")
+        public java.util.List<DescribeClusterResponseBodyClusterInfoOnPremiseInfoOnPremiseInfo> onPremiseInfo;
+
+        public static DescribeClusterResponseBodyClusterInfoOnPremiseInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterResponseBodyClusterInfoOnPremiseInfo self = new DescribeClusterResponseBodyClusterInfoOnPremiseInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterResponseBodyClusterInfoOnPremiseInfo setOnPremiseInfo(java.util.List<DescribeClusterResponseBodyClusterInfoOnPremiseInfoOnPremiseInfo> onPremiseInfo) {
+            this.onPremiseInfo = onPremiseInfo;
+            return this;
+        }
+        public java.util.List<DescribeClusterResponseBodyClusterInfoOnPremiseInfoOnPremiseInfo> getOnPremiseInfo() {
+            return this.onPremiseInfo;
         }
 
     }
@@ -322,6 +423,9 @@ public class DescribeClusterResponseBody extends TeaModel {
 
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("OnPremiseInfo")
+        public DescribeClusterResponseBodyClusterInfoOnPremiseInfo onPremiseInfo;
 
         @NameInMap("OsTag")
         public String osTag;
@@ -504,6 +608,14 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeClusterResponseBodyClusterInfo setOnPremiseInfo(DescribeClusterResponseBodyClusterInfoOnPremiseInfo onPremiseInfo) {
+            this.onPremiseInfo = onPremiseInfo;
+            return this;
+        }
+        public DescribeClusterResponseBodyClusterInfoOnPremiseInfo getOnPremiseInfo() {
+            return this.onPremiseInfo;
         }
 
         public DescribeClusterResponseBodyClusterInfo setOsTag(String osTag) {

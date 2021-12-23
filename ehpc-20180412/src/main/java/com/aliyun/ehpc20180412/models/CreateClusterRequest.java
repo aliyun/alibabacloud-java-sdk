@@ -94,6 +94,12 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("PostInstallScript")
     public java.util.List<CreateClusterRequestPostInstallScript> postInstallScript;
 
+    @NameInMap("RamNodeTypes")
+    public java.util.List<String> ramNodeTypes;
+
+    @NameInMap("RamRoleName")
+    public String ramRoleName;
+
     @NameInMap("RemoteDirectory")
     public String remoteDirectory;
 
@@ -394,6 +400,22 @@ public class CreateClusterRequest extends TeaModel {
     }
     public java.util.List<CreateClusterRequestPostInstallScript> getPostInstallScript() {
         return this.postInstallScript;
+    }
+
+    public CreateClusterRequest setRamNodeTypes(java.util.List<String> ramNodeTypes) {
+        this.ramNodeTypes = ramNodeTypes;
+        return this;
+    }
+    public java.util.List<String> getRamNodeTypes() {
+        return this.ramNodeTypes;
+    }
+
+    public CreateClusterRequest setRamRoleName(String ramRoleName) {
+        this.ramRoleName = ramRoleName;
+        return this;
+    }
+    public String getRamRoleName() {
+        return this.ramRoleName;
     }
 
     public CreateClusterRequest setRemoteDirectory(String remoteDirectory) {

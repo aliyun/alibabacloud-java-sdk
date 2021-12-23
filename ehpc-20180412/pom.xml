@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ehpc20180412</artifactId>
-  <version>1.14.11</version>
+  <version>1.14.12</version>
   <packaging>jar</packaging>
   <name>ehpc20180412</name>
   <description>Alibaba Cloud Elastic High Performance Computing (20180412) SDK for Java
@@ -46,12 +46,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.1.5</version>
+      <version>0.2.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.13</version>
+      <version>0.1.14</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

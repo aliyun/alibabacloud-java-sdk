@@ -306,6 +306,9 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("EhpcVersion")
         public String ehpcVersion;
 
+        @NameInMap("HasPlugin")
+        public Boolean hasPlugin;
+
         @NameInMap("Id")
         public String id;
 
@@ -460,6 +463,14 @@ public class ListClustersResponseBody extends TeaModel {
         }
         public String getEhpcVersion() {
             return this.ehpcVersion;
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimple setHasPlugin(Boolean hasPlugin) {
+            this.hasPlugin = hasPlugin;
+            return this;
+        }
+        public Boolean getHasPlugin() {
+            return this.hasPlugin;
         }
 
         public ListClustersResponseBodyClustersClusterInfoSimple setId(String id) {

@@ -28,6 +28,9 @@ public class ModifyImageGatewayConfigRequest extends TeaModel {
     @NameInMap("PullUpdateTimeout")
     public Integer pullUpdateTimeout;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Repo")
     public java.util.List<ModifyImageGatewayConfigRequestRepo> repo;
 
@@ -98,6 +101,14 @@ public class ModifyImageGatewayConfigRequest extends TeaModel {
     }
     public Integer getPullUpdateTimeout() {
         return this.pullUpdateTimeout;
+    }
+
+    public ModifyImageGatewayConfigRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyImageGatewayConfigRequest setRepo(java.util.List<ModifyImageGatewayConfigRequestRepo> repo) {

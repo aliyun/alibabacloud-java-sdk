@@ -207,6 +207,99 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         return this.uid;
     }
 
+    public static class GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisksDataDisksInfo extends TeaModel {
+        @NameInMap("DataDiskCategory")
+        public String dataDiskCategory;
+
+        @NameInMap("DataDiskDeleteWithInstance")
+        public Boolean dataDiskDeleteWithInstance;
+
+        @NameInMap("DataDiskEncrypted")
+        public Boolean dataDiskEncrypted;
+
+        @NameInMap("DataDiskKMSKeyId")
+        public String dataDiskKMSKeyId;
+
+        @NameInMap("DataDiskPerformanceLevel")
+        public String dataDiskPerformanceLevel;
+
+        @NameInMap("DataDiskSize")
+        public Integer dataDiskSize;
+
+        public static GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisksDataDisksInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisksDataDisksInfo self = new GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisksDataDisksInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisksDataDisksInfo setDataDiskCategory(String dataDiskCategory) {
+            this.dataDiskCategory = dataDiskCategory;
+            return this;
+        }
+        public String getDataDiskCategory() {
+            return this.dataDiskCategory;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisksDataDisksInfo setDataDiskDeleteWithInstance(Boolean dataDiskDeleteWithInstance) {
+            this.dataDiskDeleteWithInstance = dataDiskDeleteWithInstance;
+            return this;
+        }
+        public Boolean getDataDiskDeleteWithInstance() {
+            return this.dataDiskDeleteWithInstance;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisksDataDisksInfo setDataDiskEncrypted(Boolean dataDiskEncrypted) {
+            this.dataDiskEncrypted = dataDiskEncrypted;
+            return this;
+        }
+        public Boolean getDataDiskEncrypted() {
+            return this.dataDiskEncrypted;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisksDataDisksInfo setDataDiskKMSKeyId(String dataDiskKMSKeyId) {
+            this.dataDiskKMSKeyId = dataDiskKMSKeyId;
+            return this;
+        }
+        public String getDataDiskKMSKeyId() {
+            return this.dataDiskKMSKeyId;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisksDataDisksInfo setDataDiskPerformanceLevel(String dataDiskPerformanceLevel) {
+            this.dataDiskPerformanceLevel = dataDiskPerformanceLevel;
+            return this;
+        }
+        public String getDataDiskPerformanceLevel() {
+            return this.dataDiskPerformanceLevel;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisksDataDisksInfo setDataDiskSize(Integer dataDiskSize) {
+            this.dataDiskSize = dataDiskSize;
+            return this;
+        }
+        public Integer getDataDiskSize() {
+            return this.dataDiskSize;
+        }
+
+    }
+
+    public static class GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisks extends TeaModel {
+        @NameInMap("DataDisksInfo")
+        public java.util.List<GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisksDataDisksInfo> dataDisksInfo;
+
+        public static GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisks build(java.util.Map<String, ?> map) throws Exception {
+            GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisks self = new GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisks();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisks setDataDisksInfo(java.util.List<GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisksDataDisksInfo> dataDisksInfo) {
+            this.dataDisksInfo = dataDisksInfo;
+            return this;
+        }
+        public java.util.List<GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisksDataDisksInfo> getDataDisksInfo() {
+            return this.dataDisksInfo;
+        }
+
+    }
+
     public static class GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypesInstanceTypeInfo extends TeaModel {
         @NameInMap("HostNamePrefix")
         public String hostNamePrefix;
@@ -301,6 +394,9 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
     }
 
     public static class GetAutoScaleConfigResponseBodyQueuesQueueInfo extends TeaModel {
+        @NameInMap("DataDisks")
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisks dataDisks;
+
         @NameInMap("EnableAutoGrow")
         public Boolean enableAutoGrow;
 
@@ -352,6 +448,14 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         public static GetAutoScaleConfigResponseBodyQueuesQueueInfo build(java.util.Map<String, ?> map) throws Exception {
             GetAutoScaleConfigResponseBodyQueuesQueueInfo self = new GetAutoScaleConfigResponseBodyQueuesQueueInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setDataDisks(GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisks dataDisks) {
+            this.dataDisks = dataDisks;
+            return this;
+        }
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisks getDataDisks() {
+            return this.dataDisks;
         }
 
         public GetAutoScaleConfigResponseBodyQueuesQueueInfo setEnableAutoGrow(Boolean enableAutoGrow) {

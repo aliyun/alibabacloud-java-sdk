@@ -77,6 +77,9 @@ public class ListClustersMetaResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("HasPlugin")
+        public Boolean hasPlugin;
+
         @NameInMap("Id")
         public String id;
 
@@ -136,6 +139,14 @@ public class ListClustersMetaResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setHasPlugin(Boolean hasPlugin) {
+            this.hasPlugin = hasPlugin;
+            return this;
+        }
+        public Boolean getHasPlugin() {
+            return this.hasPlugin;
         }
 
         public ListClustersMetaResponseBodyClustersClusterInfoSimple setId(String id) {
