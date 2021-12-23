@@ -1,3 +1,6 @@
+2021-12-23 Version: 2.1.0
+- Add Ner Ability.
+
 2021-12-07 Version: 2.0.0
 - Add Retailbot saas api,12-07.
 

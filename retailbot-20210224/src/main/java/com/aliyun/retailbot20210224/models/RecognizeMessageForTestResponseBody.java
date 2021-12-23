@@ -413,6 +413,181 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
 
     }
 
+    public static class RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValueUnit extends TeaModel {
+        // 单位唯一标识
+        @NameInMap("UnitKey")
+        public String unitKey;
+
+        // 单位中文名
+        @NameInMap("UnitName")
+        public String unitName;
+
+        public static RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValueUnit build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValueUnit self = new RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValueUnit();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValueUnit setUnitKey(String unitKey) {
+            this.unitKey = unitKey;
+            return this;
+        }
+        public String getUnitKey() {
+            return this.unitKey;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValueUnit setUnitName(String unitName) {
+            this.unitName = unitName;
+            return this;
+        }
+        public String getUnitName() {
+            return this.unitName;
+        }
+
+    }
+
+    public static class RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValue extends TeaModel {
+        // 数值部分
+        @NameInMap("Num")
+        public Double num;
+
+        // 单位部分
+        @NameInMap("Unit")
+        public RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValueUnit unit;
+
+        public static RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValue build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValue self = new RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValue();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValue setNum(Double num) {
+            this.num = num;
+            return this;
+        }
+        public Double getNum() {
+            return this.num;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValue setUnit(RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValueUnit unit) {
+            this.unit = unit;
+            return this;
+        }
+        public RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValueUnit getUnit() {
+            return this.unit;
+        }
+
+    }
+
+    public static class RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans extends TeaModel {
+        // 槽位结束下标
+        @NameInMap("End")
+        public Integer end;
+
+        // 槽位值
+        @NameInMap("NumericSlotValue")
+        public RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValue numericSlotValue;
+
+        // 槽位分值
+        @NameInMap("Score")
+        public Double score;
+
+        // 槽位key
+        @NameInMap("SlotKey")
+        public String slotKey;
+
+        // 槽位值
+        @NameInMap("SlotValue")
+        public String slotValue;
+
+        // 槽位来源
+        @NameInMap("Source")
+        public String source;
+
+        // 槽位起始下标
+        @NameInMap("Start")
+        public Integer start;
+
+        public static RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans self = new RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans setEnd(Integer end) {
+            this.end = end;
+            return this;
+        }
+        public Integer getEnd() {
+            return this.end;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans setNumericSlotValue(RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValue numericSlotValue) {
+            this.numericSlotValue = numericSlotValue;
+            return this;
+        }
+        public RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpansNumericSlotValue getNumericSlotValue() {
+            return this.numericSlotValue;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans setScore(Double score) {
+            this.score = score;
+            return this;
+        }
+        public Double getScore() {
+            return this.score;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans setSlotKey(String slotKey) {
+            this.slotKey = slotKey;
+            return this;
+        }
+        public String getSlotKey() {
+            return this.slotKey;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans setSlotValue(String slotValue) {
+            this.slotValue = slotValue;
+            return this;
+        }
+        public String getSlotValue() {
+            return this.slotValue;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans setStart(Integer start) {
+            this.start = start;
+            return this;
+        }
+        public Integer getStart() {
+            return this.start;
+        }
+
+    }
+
+    public static class RecognizeMessageForTestResponseBodyDataUnitSlots extends TeaModel {
+        @NameInMap("UnitSpans")
+        public java.util.List<RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans> unitSpans;
+
+        public static RecognizeMessageForTestResponseBodyDataUnitSlots build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeMessageForTestResponseBodyDataUnitSlots self = new RecognizeMessageForTestResponseBodyDataUnitSlots();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizeMessageForTestResponseBodyDataUnitSlots setUnitSpans(java.util.List<RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans> unitSpans) {
+            this.unitSpans = unitSpans;
+            return this;
+        }
+        public java.util.List<RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans> getUnitSpans() {
+            return this.unitSpans;
+        }
+
+    }
+
     public static class RecognizeMessageForTestResponseBodyData extends TeaModel {
         // 定位到的知识
         @NameInMap("Knowledges")
@@ -425,6 +600,10 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
         // 定位到的场景
         @NameInMap("Scene")
         public RecognizeMessageForTestResponseBodyDataScene scene;
+
+        // 识别到的槽位信息
+        @NameInMap("UnitSlots")
+        public RecognizeMessageForTestResponseBodyDataUnitSlots unitSlots;
 
         // 扩展的输出
         @NameInMap("extOutput")
@@ -457,6 +636,14 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
         }
         public RecognizeMessageForTestResponseBodyDataScene getScene() {
             return this.scene;
+        }
+
+        public RecognizeMessageForTestResponseBodyData setUnitSlots(RecognizeMessageForTestResponseBodyDataUnitSlots unitSlots) {
+            this.unitSlots = unitSlots;
+            return this;
+        }
+        public RecognizeMessageForTestResponseBodyDataUnitSlots getUnitSlots() {
+            return this.unitSlots;
         }
 
         public RecognizeMessageForTestResponseBodyData setExtOutput(java.util.Map<String, ?> extOutput) {
