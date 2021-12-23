@@ -7,15 +7,6 @@ public class DescribeSpaceClientConfigResponseBody extends TeaModel {
     @NameInMap("ApiKey")
     public String apiKey;
 
-    @NameInMap("SpaceId")
-    public String spaceId;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PrivateKey")
-    public String privateKey;
-
     @NameInMap("Endpoint")
     public String endpoint;
 
@@ -24,6 +15,15 @@ public class DescribeSpaceClientConfigResponseBody extends TeaModel {
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("PrivateKey")
+    public String privateKey;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("SpaceId")
+    public String spaceId;
 
     public static DescribeSpaceClientConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSpaceClientConfigResponseBody self = new DescribeSpaceClientConfigResponseBody();
@@ -36,30 +36,6 @@ public class DescribeSpaceClientConfigResponseBody extends TeaModel {
     }
     public String getApiKey() {
         return this.apiKey;
-    }
-
-    public DescribeSpaceClientConfigResponseBody setSpaceId(String spaceId) {
-        this.spaceId = spaceId;
-        return this;
-    }
-    public String getSpaceId() {
-        return this.spaceId;
-    }
-
-    public DescribeSpaceClientConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeSpaceClientConfigResponseBody setPrivateKey(String privateKey) {
-        this.privateKey = privateKey;
-        return this;
-    }
-    public String getPrivateKey() {
-        return this.privateKey;
     }
 
     public DescribeSpaceClientConfigResponseBody setEndpoint(String endpoint) {
@@ -84,6 +60,30 @@ public class DescribeSpaceClientConfigResponseBody extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public DescribeSpaceClientConfigResponseBody setPrivateKey(String privateKey) {
+        this.privateKey = privateKey;
+        return this;
+    }
+    public String getPrivateKey() {
+        return this.privateKey;
+    }
+
+    public DescribeSpaceClientConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeSpaceClientConfigResponseBody setSpaceId(String spaceId) {
+        this.spaceId = spaceId;
+        return this;
+    }
+    public String getSpaceId() {
+        return this.spaceId;
     }
 
 }

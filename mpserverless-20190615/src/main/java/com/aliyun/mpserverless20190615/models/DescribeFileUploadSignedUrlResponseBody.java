@@ -4,26 +4,26 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class DescribeFileUploadSignedUrlResponseBody extends TeaModel {
-    @NameInMap("SignUrl")
-    public String signUrl;
+    @NameInMap("Id")
+    public String id;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Id")
-    public String id;
+    @NameInMap("SignUrl")
+    public String signUrl;
 
     public static DescribeFileUploadSignedUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFileUploadSignedUrlResponseBody self = new DescribeFileUploadSignedUrlResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeFileUploadSignedUrlResponseBody setSignUrl(String signUrl) {
-        this.signUrl = signUrl;
+    public DescribeFileUploadSignedUrlResponseBody setId(String id) {
+        this.id = id;
         return this;
     }
-    public String getSignUrl() {
-        return this.signUrl;
+    public String getId() {
+        return this.id;
     }
 
     public DescribeFileUploadSignedUrlResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class DescribeFileUploadSignedUrlResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeFileUploadSignedUrlResponseBody setId(String id) {
-        this.id = id;
+    public DescribeFileUploadSignedUrlResponseBody setSignUrl(String signUrl) {
+        this.signUrl = signUrl;
         return this;
     }
-    public String getId() {
-        return this.id;
+    public String getSignUrl() {
+        return this.signUrl;
     }
 
 }

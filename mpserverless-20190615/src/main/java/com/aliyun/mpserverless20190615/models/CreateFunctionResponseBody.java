@@ -4,20 +4,20 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class CreateFunctionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CreatedAt")
     public String createdAt;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("Desc")
+    public String desc;
 
     @NameInMap("ModifiedAt")
     public String modifiedAt;
 
-    @NameInMap("Desc")
-    public String desc;
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Spec")
     public CreateFunctionResponseBodySpec spec;
@@ -25,14 +25,6 @@ public class CreateFunctionResponseBody extends TeaModel {
     public static CreateFunctionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateFunctionResponseBody self = new CreateFunctionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateFunctionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateFunctionResponseBody setCreatedAt(String createdAt) {
@@ -43,12 +35,12 @@ public class CreateFunctionResponseBody extends TeaModel {
         return this.createdAt;
     }
 
-    public CreateFunctionResponseBody setName(String name) {
-        this.name = name;
+    public CreateFunctionResponseBody setDesc(String desc) {
+        this.desc = desc;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getDesc() {
+        return this.desc;
     }
 
     public CreateFunctionResponseBody setModifiedAt(String modifiedAt) {
@@ -59,12 +51,20 @@ public class CreateFunctionResponseBody extends TeaModel {
         return this.modifiedAt;
     }
 
-    public CreateFunctionResponseBody setDesc(String desc) {
-        this.desc = desc;
+    public CreateFunctionResponseBody setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getDesc() {
-        return this.desc;
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateFunctionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateFunctionResponseBody setSpec(CreateFunctionResponseBodySpec spec) {
@@ -76,37 +76,21 @@ public class CreateFunctionResponseBody extends TeaModel {
     }
 
     public static class CreateFunctionResponseBodySpec extends TeaModel {
-        @NameInMap("Timeout")
-        public String timeout;
-
-        @NameInMap("Runtime")
-        public String runtime;
-
         @NameInMap("InstanceConcurrency")
         public String instanceConcurrency;
 
         @NameInMap("Memory")
         public String memory;
 
+        @NameInMap("Runtime")
+        public String runtime;
+
+        @NameInMap("Timeout")
+        public String timeout;
+
         public static CreateFunctionResponseBodySpec build(java.util.Map<String, ?> map) throws Exception {
             CreateFunctionResponseBodySpec self = new CreateFunctionResponseBodySpec();
             return TeaModel.build(map, self);
-        }
-
-        public CreateFunctionResponseBodySpec setTimeout(String timeout) {
-            this.timeout = timeout;
-            return this;
-        }
-        public String getTimeout() {
-            return this.timeout;
-        }
-
-        public CreateFunctionResponseBodySpec setRuntime(String runtime) {
-            this.runtime = runtime;
-            return this;
-        }
-        public String getRuntime() {
-            return this.runtime;
         }
 
         public CreateFunctionResponseBodySpec setInstanceConcurrency(String instanceConcurrency) {
@@ -123,6 +107,22 @@ public class CreateFunctionResponseBody extends TeaModel {
         }
         public String getMemory() {
             return this.memory;
+        }
+
+        public CreateFunctionResponseBodySpec setRuntime(String runtime) {
+            this.runtime = runtime;
+            return this;
+        }
+        public String getRuntime() {
+            return this.runtime;
+        }
+
+        public CreateFunctionResponseBodySpec setTimeout(String timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+        public String getTimeout() {
+            return this.timeout;
         }
 
     }

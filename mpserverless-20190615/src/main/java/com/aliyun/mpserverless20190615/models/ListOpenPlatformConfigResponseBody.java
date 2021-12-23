@@ -32,63 +32,39 @@ public class ListOpenPlatformConfigResponseBody extends TeaModel {
     }
 
     public static class ListOpenPlatformConfigResponseBodySecretList extends TeaModel {
-        @NameInMap("SpaceId")
-        public String spaceId;
-
-        @NameInMap("AppSecret")
-        public String appSecret;
-
-        @NameInMap("PublicCert")
-        public String publicCert;
-
         @NameInMap("AppCert")
         public String appCert;
-
-        @NameInMap("PrivateKey")
-        public String privateKey;
 
         @NameInMap("AppId")
         public String appId;
 
-        @NameInMap("RootCert")
-        public String rootCert;
-
-        @NameInMap("PublicKey")
-        public String publicKey;
+        @NameInMap("AppSecret")
+        public String appSecret;
 
         @NameInMap("Platform")
         public String platform;
 
+        @NameInMap("PrivateKey")
+        public String privateKey;
+
+        @NameInMap("PublicCert")
+        public String publicCert;
+
+        @NameInMap("PublicKey")
+        public String publicKey;
+
+        @NameInMap("RootCert")
+        public String rootCert;
+
         @NameInMap("SignMode")
         public String signMode;
+
+        @NameInMap("SpaceId")
+        public String spaceId;
 
         public static ListOpenPlatformConfigResponseBodySecretList build(java.util.Map<String, ?> map) throws Exception {
             ListOpenPlatformConfigResponseBodySecretList self = new ListOpenPlatformConfigResponseBodySecretList();
             return TeaModel.build(map, self);
-        }
-
-        public ListOpenPlatformConfigResponseBodySecretList setSpaceId(String spaceId) {
-            this.spaceId = spaceId;
-            return this;
-        }
-        public String getSpaceId() {
-            return this.spaceId;
-        }
-
-        public ListOpenPlatformConfigResponseBodySecretList setAppSecret(String appSecret) {
-            this.appSecret = appSecret;
-            return this;
-        }
-        public String getAppSecret() {
-            return this.appSecret;
-        }
-
-        public ListOpenPlatformConfigResponseBodySecretList setPublicCert(String publicCert) {
-            this.publicCert = publicCert;
-            return this;
-        }
-        public String getPublicCert() {
-            return this.publicCert;
         }
 
         public ListOpenPlatformConfigResponseBodySecretList setAppCert(String appCert) {
@@ -99,14 +75,6 @@ public class ListOpenPlatformConfigResponseBody extends TeaModel {
             return this.appCert;
         }
 
-        public ListOpenPlatformConfigResponseBodySecretList setPrivateKey(String privateKey) {
-            this.privateKey = privateKey;
-            return this;
-        }
-        public String getPrivateKey() {
-            return this.privateKey;
-        }
-
         public ListOpenPlatformConfigResponseBodySecretList setAppId(String appId) {
             this.appId = appId;
             return this;
@@ -115,20 +83,12 @@ public class ListOpenPlatformConfigResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public ListOpenPlatformConfigResponseBodySecretList setRootCert(String rootCert) {
-            this.rootCert = rootCert;
+        public ListOpenPlatformConfigResponseBodySecretList setAppSecret(String appSecret) {
+            this.appSecret = appSecret;
             return this;
         }
-        public String getRootCert() {
-            return this.rootCert;
-        }
-
-        public ListOpenPlatformConfigResponseBodySecretList setPublicKey(String publicKey) {
-            this.publicKey = publicKey;
-            return this;
-        }
-        public String getPublicKey() {
-            return this.publicKey;
+        public String getAppSecret() {
+            return this.appSecret;
         }
 
         public ListOpenPlatformConfigResponseBodySecretList setPlatform(String platform) {
@@ -139,12 +99,52 @@ public class ListOpenPlatformConfigResponseBody extends TeaModel {
             return this.platform;
         }
 
+        public ListOpenPlatformConfigResponseBodySecretList setPrivateKey(String privateKey) {
+            this.privateKey = privateKey;
+            return this;
+        }
+        public String getPrivateKey() {
+            return this.privateKey;
+        }
+
+        public ListOpenPlatformConfigResponseBodySecretList setPublicCert(String publicCert) {
+            this.publicCert = publicCert;
+            return this;
+        }
+        public String getPublicCert() {
+            return this.publicCert;
+        }
+
+        public ListOpenPlatformConfigResponseBodySecretList setPublicKey(String publicKey) {
+            this.publicKey = publicKey;
+            return this;
+        }
+        public String getPublicKey() {
+            return this.publicKey;
+        }
+
+        public ListOpenPlatformConfigResponseBodySecretList setRootCert(String rootCert) {
+            this.rootCert = rootCert;
+            return this;
+        }
+        public String getRootCert() {
+            return this.rootCert;
+        }
+
         public ListOpenPlatformConfigResponseBodySecretList setSignMode(String signMode) {
             this.signMode = signMode;
             return this;
         }
         public String getSignMode() {
             return this.signMode;
+        }
+
+        public ListOpenPlatformConfigResponseBodySecretList setSpaceId(String spaceId) {
+            this.spaceId = spaceId;
+            return this;
+        }
+        public String getSpaceId() {
+            return this.spaceId;
         }
 
     }

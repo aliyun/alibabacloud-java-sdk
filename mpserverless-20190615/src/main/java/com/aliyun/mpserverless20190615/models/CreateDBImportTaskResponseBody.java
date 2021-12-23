@@ -4,8 +4,8 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class CreateDBImportTaskResponseBody extends TeaModel {
-    @NameInMap("Host")
-    public String host;
+    @NameInMap("AccessKeyId")
+    public String accessKeyId;
 
     @NameInMap("ExpireTime")
     public String expireTime;
@@ -13,17 +13,17 @@ public class CreateDBImportTaskResponseBody extends TeaModel {
     @NameInMap("FileKey")
     public String fileKey;
 
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
+    @NameInMap("Host")
+    public String host;
 
-    @NameInMap("Signature")
-    public String signature;
+    @NameInMap("Policy")
+    public String policy;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Policy")
-    public String policy;
+    @NameInMap("Signature")
+    public String signature;
 
     @NameInMap("TaskId")
     public String taskId;
@@ -33,12 +33,12 @@ public class CreateDBImportTaskResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateDBImportTaskResponseBody setHost(String host) {
-        this.host = host;
+    public CreateDBImportTaskResponseBody setAccessKeyId(String accessKeyId) {
+        this.accessKeyId = accessKeyId;
         return this;
     }
-    public String getHost() {
-        return this.host;
+    public String getAccessKeyId() {
+        return this.accessKeyId;
     }
 
     public CreateDBImportTaskResponseBody setExpireTime(String expireTime) {
@@ -57,20 +57,20 @@ public class CreateDBImportTaskResponseBody extends TeaModel {
         return this.fileKey;
     }
 
-    public CreateDBImportTaskResponseBody setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
+    public CreateDBImportTaskResponseBody setHost(String host) {
+        this.host = host;
         return this;
     }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
+    public String getHost() {
+        return this.host;
     }
 
-    public CreateDBImportTaskResponseBody setSignature(String signature) {
-        this.signature = signature;
+    public CreateDBImportTaskResponseBody setPolicy(String policy) {
+        this.policy = policy;
         return this;
     }
-    public String getSignature() {
-        return this.signature;
+    public String getPolicy() {
+        return this.policy;
     }
 
     public CreateDBImportTaskResponseBody setRequestId(String requestId) {
@@ -81,12 +81,12 @@ public class CreateDBImportTaskResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateDBImportTaskResponseBody setPolicy(String policy) {
-        this.policy = policy;
+    public CreateDBImportTaskResponseBody setSignature(String signature) {
+        this.signature = signature;
         return this;
     }
-    public String getPolicy() {
-        return this.policy;
+    public String getSignature() {
+        return this.signature;
     }
 
     public CreateDBImportTaskResponseBody setTaskId(String taskId) {

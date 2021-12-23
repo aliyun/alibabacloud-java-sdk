@@ -10,9 +10,6 @@ public class QueryServiceStatusResponseBody extends TeaModel {
     @NameInMap("ServiceStatus")
     public String serviceStatus;
 
-    @NameInMap("Count")
-    public Integer count;
-
     public static QueryServiceStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryServiceStatusResponseBody self = new QueryServiceStatusResponseBody();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class QueryServiceStatusResponseBody extends TeaModel {
     }
     public String getServiceStatus() {
         return this.serviceStatus;
-    }
-
-    public QueryServiceStatusResponseBody setCount(Integer count) {
-        this.count = count;
-        return this;
-    }
-    public Integer getCount() {
-        return this.count;
     }
 
 }

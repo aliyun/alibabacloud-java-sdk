@@ -4,18 +4,26 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class RunDBCommandResponseBody extends TeaModel {
+    @NameInMap("AffectedDocs")
+    public Integer affectedDocs;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public String result;
 
-    @NameInMap("AffectedDocs")
-    public Integer affectedDocs;
-
     public static RunDBCommandResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RunDBCommandResponseBody self = new RunDBCommandResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RunDBCommandResponseBody setAffectedDocs(Integer affectedDocs) {
+        this.affectedDocs = affectedDocs;
+        return this;
+    }
+    public Integer getAffectedDocs() {
+        return this.affectedDocs;
     }
 
     public RunDBCommandResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class RunDBCommandResponseBody extends TeaModel {
     }
     public String getResult() {
         return this.result;
-    }
-
-    public RunDBCommandResponseBody setAffectedDocs(Integer affectedDocs) {
-        this.affectedDocs = affectedDocs;
-        return this;
-    }
-    public Integer getAffectedDocs() {
-        return this.affectedDocs;
     }
 
 }

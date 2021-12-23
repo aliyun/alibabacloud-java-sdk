@@ -4,8 +4,8 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class QueryDBRestoreTaskStatusResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("DetailMessage")
+    public String detailMessage;
 
     @NameInMap("FailedCount")
     public Long failedCount;
@@ -13,8 +13,8 @@ public class QueryDBRestoreTaskStatusResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DetailMessage")
-    public String detailMessage;
+    @NameInMap("Status")
+    public String status;
 
     @NameInMap("SuccessCount")
     public Long successCount;
@@ -24,12 +24,12 @@ public class QueryDBRestoreTaskStatusResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryDBRestoreTaskStatusResponseBody setStatus(String status) {
-        this.status = status;
+    public QueryDBRestoreTaskStatusResponseBody setDetailMessage(String detailMessage) {
+        this.detailMessage = detailMessage;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getDetailMessage() {
+        return this.detailMessage;
     }
 
     public QueryDBRestoreTaskStatusResponseBody setFailedCount(Long failedCount) {
@@ -48,12 +48,12 @@ public class QueryDBRestoreTaskStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryDBRestoreTaskStatusResponseBody setDetailMessage(String detailMessage) {
-        this.detailMessage = detailMessage;
+    public QueryDBRestoreTaskStatusResponseBody setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getDetailMessage() {
-        return this.detailMessage;
+    public String getStatus() {
+        return this.status;
     }
 
     public QueryDBRestoreTaskStatusResponseBody setSuccessCount(Long successCount) {

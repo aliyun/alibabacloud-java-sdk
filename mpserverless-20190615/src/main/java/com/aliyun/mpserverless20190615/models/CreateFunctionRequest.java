@@ -4,29 +4,21 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class CreateFunctionRequest extends TeaModel {
-    @NameInMap("Name")
-    public String name;
-
     @NameInMap("Desc")
     public String desc;
 
-    @NameInMap("SpaceId")
-    public String spaceId;
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("Runtime")
     public String runtime;
 
+    @NameInMap("SpaceId")
+    public String spaceId;
+
     public static CreateFunctionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFunctionRequest self = new CreateFunctionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateFunctionRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public CreateFunctionRequest setDesc(String desc) {
@@ -37,12 +29,12 @@ public class CreateFunctionRequest extends TeaModel {
         return this.desc;
     }
 
-    public CreateFunctionRequest setSpaceId(String spaceId) {
-        this.spaceId = spaceId;
+    public CreateFunctionRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getSpaceId() {
-        return this.spaceId;
+    public String getName() {
+        return this.name;
     }
 
     public CreateFunctionRequest setRuntime(String runtime) {
@@ -51,6 +43,14 @@ public class CreateFunctionRequest extends TeaModel {
     }
     public String getRuntime() {
         return this.runtime;
+    }
+
+    public CreateFunctionRequest setSpaceId(String spaceId) {
+        this.spaceId = spaceId;
+        return this;
+    }
+    public String getSpaceId() {
+        return this.spaceId;
     }
 
 }

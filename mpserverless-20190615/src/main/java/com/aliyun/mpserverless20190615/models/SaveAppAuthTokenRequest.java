@@ -4,37 +4,29 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class SaveAppAuthTokenRequest extends TeaModel {
-    @NameInMap("SpaceId")
-    public String spaceId;
-
-    @NameInMap("IsvAppId")
-    public String isvAppId;
+    @NameInMap("AppAuthToken")
+    public String appAuthToken;
 
     @NameInMap("AppId")
     public String appId;
 
-    @NameInMap("AppAuthToken")
-    public String appAuthToken;
+    @NameInMap("IsvAppId")
+    public String isvAppId;
+
+    @NameInMap("SpaceId")
+    public String spaceId;
 
     public static SaveAppAuthTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveAppAuthTokenRequest self = new SaveAppAuthTokenRequest();
         return TeaModel.build(map, self);
     }
 
-    public SaveAppAuthTokenRequest setSpaceId(String spaceId) {
-        this.spaceId = spaceId;
+    public SaveAppAuthTokenRequest setAppAuthToken(String appAuthToken) {
+        this.appAuthToken = appAuthToken;
         return this;
     }
-    public String getSpaceId() {
-        return this.spaceId;
-    }
-
-    public SaveAppAuthTokenRequest setIsvAppId(String isvAppId) {
-        this.isvAppId = isvAppId;
-        return this;
-    }
-    public String getIsvAppId() {
-        return this.isvAppId;
+    public String getAppAuthToken() {
+        return this.appAuthToken;
     }
 
     public SaveAppAuthTokenRequest setAppId(String appId) {
@@ -45,12 +37,20 @@ public class SaveAppAuthTokenRequest extends TeaModel {
         return this.appId;
     }
 
-    public SaveAppAuthTokenRequest setAppAuthToken(String appAuthToken) {
-        this.appAuthToken = appAuthToken;
+    public SaveAppAuthTokenRequest setIsvAppId(String isvAppId) {
+        this.isvAppId = isvAppId;
         return this;
     }
-    public String getAppAuthToken() {
-        return this.appAuthToken;
+    public String getIsvAppId() {
+        return this.isvAppId;
+    }
+
+    public SaveAppAuthTokenRequest setSpaceId(String spaceId) {
+        this.spaceId = spaceId;
+        return this;
+    }
+    public String getSpaceId() {
+        return this.spaceId;
     }
 
 }

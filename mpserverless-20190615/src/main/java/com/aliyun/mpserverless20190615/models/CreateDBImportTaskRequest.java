@@ -4,9 +4,6 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class CreateDBImportTaskRequest extends TeaModel {
-    @NameInMap("SpaceId")
-    public String spaceId;
-
     @NameInMap("Collection")
     public String collection;
 
@@ -16,17 +13,12 @@ public class CreateDBImportTaskRequest extends TeaModel {
     @NameInMap("Mode")
     public String mode;
 
+    @NameInMap("SpaceId")
+    public String spaceId;
+
     public static CreateDBImportTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBImportTaskRequest self = new CreateDBImportTaskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDBImportTaskRequest setSpaceId(String spaceId) {
-        this.spaceId = spaceId;
-        return this;
-    }
-    public String getSpaceId() {
-        return this.spaceId;
     }
 
     public CreateDBImportTaskRequest setCollection(String collection) {
@@ -51,6 +43,14 @@ public class CreateDBImportTaskRequest extends TeaModel {
     }
     public String getMode() {
         return this.mode;
+    }
+
+    public CreateDBImportTaskRequest setSpaceId(String spaceId) {
+        this.spaceId = spaceId;
+        return this;
+    }
+    public String getSpaceId() {
+        return this.spaceId;
     }
 
 }

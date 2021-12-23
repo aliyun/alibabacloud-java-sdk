@@ -4,8 +4,8 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class ListFileRequest extends TeaModel {
-    @NameInMap("SpaceId")
-    public String spaceId;
+    @NameInMap("Keyword")
+    public String keyword;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -13,20 +13,20 @@ public class ListFileRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Keyword")
-    public String keyword;
+    @NameInMap("SpaceId")
+    public String spaceId;
 
     public static ListFileRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFileRequest self = new ListFileRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListFileRequest setSpaceId(String spaceId) {
-        this.spaceId = spaceId;
+    public ListFileRequest setKeyword(String keyword) {
+        this.keyword = keyword;
         return this;
     }
-    public String getSpaceId() {
-        return this.spaceId;
+    public String getKeyword() {
+        return this.keyword;
     }
 
     public ListFileRequest setPageNum(Integer pageNum) {
@@ -45,12 +45,12 @@ public class ListFileRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListFileRequest setKeyword(String keyword) {
-        this.keyword = keyword;
+    public ListFileRequest setSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
-    public String getKeyword() {
-        return this.keyword;
+    public String getSpaceId() {
+        return this.spaceId;
     }
 
 }

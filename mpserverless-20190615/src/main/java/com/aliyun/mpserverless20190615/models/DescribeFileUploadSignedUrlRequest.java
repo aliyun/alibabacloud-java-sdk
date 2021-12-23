@@ -4,6 +4,9 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class DescribeFileUploadSignedUrlRequest extends TeaModel {
+    @NameInMap("ContentType")
+    public String contentType;
+
     @NameInMap("Filename")
     public String filename;
 
@@ -13,12 +16,17 @@ public class DescribeFileUploadSignedUrlRequest extends TeaModel {
     @NameInMap("SpaceId")
     public String spaceId;
 
-    @NameInMap("ContentType")
-    public String contentType;
-
     public static DescribeFileUploadSignedUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFileUploadSignedUrlRequest self = new DescribeFileUploadSignedUrlRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeFileUploadSignedUrlRequest setContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    public String getContentType() {
+        return this.contentType;
     }
 
     public DescribeFileUploadSignedUrlRequest setFilename(String filename) {
@@ -43,14 +51,6 @@ public class DescribeFileUploadSignedUrlRequest extends TeaModel {
     }
     public String getSpaceId() {
         return this.spaceId;
-    }
-
-    public DescribeFileUploadSignedUrlRequest setContentType(String contentType) {
-        this.contentType = contentType;
-        return this;
-    }
-    public String getContentType() {
-        return this.contentType;
     }
 
 }

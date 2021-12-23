@@ -4,14 +4,14 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class ListFunctionDeploymentRequest extends TeaModel {
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("PageNum")
     public Integer pageNum;
 
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("Name")
-    public String name;
 
     @NameInMap("SpaceId")
     public String spaceId;
@@ -22,6 +22,14 @@ public class ListFunctionDeploymentRequest extends TeaModel {
     public static ListFunctionDeploymentRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFunctionDeploymentRequest self = new ListFunctionDeploymentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListFunctionDeploymentRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListFunctionDeploymentRequest setPageNum(Integer pageNum) {
@@ -38,14 +46,6 @@ public class ListFunctionDeploymentRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListFunctionDeploymentRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public ListFunctionDeploymentRequest setSpaceId(String spaceId) {

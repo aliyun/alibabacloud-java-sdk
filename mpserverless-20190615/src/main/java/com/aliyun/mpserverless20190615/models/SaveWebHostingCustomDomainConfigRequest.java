@@ -4,26 +4,26 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class SaveWebHostingCustomDomainConfigRequest extends TeaModel {
-    @NameInMap("SpaceId")
-    public String spaceId;
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("ForceRedirectType")
     public String forceRedirectType;
 
-    @NameInMap("DomainName")
-    public String domainName;
+    @NameInMap("SpaceId")
+    public String spaceId;
 
     public static SaveWebHostingCustomDomainConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveWebHostingCustomDomainConfigRequest self = new SaveWebHostingCustomDomainConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public SaveWebHostingCustomDomainConfigRequest setSpaceId(String spaceId) {
-        this.spaceId = spaceId;
+    public SaveWebHostingCustomDomainConfigRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getSpaceId() {
-        return this.spaceId;
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public SaveWebHostingCustomDomainConfigRequest setForceRedirectType(String forceRedirectType) {
@@ -34,12 +34,12 @@ public class SaveWebHostingCustomDomainConfigRequest extends TeaModel {
         return this.forceRedirectType;
     }
 
-    public SaveWebHostingCustomDomainConfigRequest setDomainName(String domainName) {
-        this.domainName = domainName;
+    public SaveWebHostingCustomDomainConfigRequest setSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
+    public String getSpaceId() {
+        return this.spaceId;
     }
 
 }
