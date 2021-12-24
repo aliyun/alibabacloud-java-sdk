@@ -36,26 +36,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("GetOssUploadParam", "2021-10-27", "HTTPS", "GET", "AK", "json", req, runtime), new GetOssUploadParamResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetOssUploadParam"),
+            new TeaPair("version", "2021-10-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOssUploadParamResponse());
     }
 
     public GetOssUploadParamResponse getOssUploadParam(GetOssUploadParamRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getOssUploadParamWithOptions(request, runtime);
-    }
-
-    public GetOssUploadParam2Response getOssUploadParam2WithOptions(GetOssUploadParam2Request request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetOssUploadParam2", "2021-10-27", "HTTPS", "POST", "AK", "json", req, runtime), new GetOssUploadParam2Response());
-    }
-
-    public GetOssUploadParam2Response getOssUploadParam2(GetOssUploadParam2Request request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getOssUploadParam2WithOptions(request, runtime);
     }
 }

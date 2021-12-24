@@ -4,6 +4,10 @@ package com.aliyun.um_test20211027.models;
 import com.aliyun.tea.*;
 
 public class GetOssUploadParamResponseBody extends TeaModel {
+    // 请求唯一ID
+    @NameInMap("RequestId")
+    public String requestId;
+
     // code
     @NameInMap("code")
     public Long code;
@@ -27,6 +31,14 @@ public class GetOssUploadParamResponseBody extends TeaModel {
     public static GetOssUploadParamResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetOssUploadParamResponseBody self = new GetOssUploadParamResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetOssUploadParamResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetOssUploadParamResponseBody setCode(Long code) {
