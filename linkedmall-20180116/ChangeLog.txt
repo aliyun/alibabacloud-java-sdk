@@ -1,3 +1,6 @@
+2021-12-26 Version: 1.0.10
+- Add ModifySettleAccount.
+
 2021-12-17 Version: 1.0.9
 - Add QueryBizItemListWithCache.
 - Add totalQuantity to QueryInventoryOfItemsInBizItemGroup.
