@@ -7,14 +7,14 @@ public class DeleteTraceAppRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("Pid")
+    public String pid;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("Type")
     public String type;
-
-    @NameInMap("Pid")
-    public String pid;
 
     public static DeleteTraceAppRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteTraceAppRequest self = new DeleteTraceAppRequest();
@@ -27,6 +27,14 @@ public class DeleteTraceAppRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public DeleteTraceAppRequest setPid(String pid) {
+        this.pid = pid;
+        return this;
+    }
+    public String getPid() {
+        return this.pid;
     }
 
     public DeleteTraceAppRequest setRegionId(String regionId) {
@@ -43,14 +51,6 @@ public class DeleteTraceAppRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public DeleteTraceAppRequest setPid(String pid) {
-        this.pid = pid;
-        return this;
-    }
-    public String getPid() {
-        return this.pid;
     }
 
 }

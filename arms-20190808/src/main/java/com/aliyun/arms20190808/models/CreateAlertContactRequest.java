@@ -7,23 +7,20 @@ public class CreateAlertContactRequest extends TeaModel {
     @NameInMap("ContactName")
     public String contactName;
 
-    @NameInMap("PhoneNum")
-    public String phoneNum;
+    @NameInMap("DingRobotWebhookUrl")
+    public String dingRobotWebhookUrl;
 
     @NameInMap("Email")
     public String email;
 
-    @NameInMap("DingRobotWebhookUrl")
-    public String dingRobotWebhookUrl;
-
-    @NameInMap("SystemNoc")
-    public Boolean systemNoc;
+    @NameInMap("PhoneNum")
+    public String phoneNum;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ProxyUserId")
-    public String proxyUserId;
+    @NameInMap("SystemNoc")
+    public Boolean systemNoc;
 
     public static CreateAlertContactRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAlertContactRequest self = new CreateAlertContactRequest();
@@ -38,12 +35,12 @@ public class CreateAlertContactRequest extends TeaModel {
         return this.contactName;
     }
 
-    public CreateAlertContactRequest setPhoneNum(String phoneNum) {
-        this.phoneNum = phoneNum;
+    public CreateAlertContactRequest setDingRobotWebhookUrl(String dingRobotWebhookUrl) {
+        this.dingRobotWebhookUrl = dingRobotWebhookUrl;
         return this;
     }
-    public String getPhoneNum() {
-        return this.phoneNum;
+    public String getDingRobotWebhookUrl() {
+        return this.dingRobotWebhookUrl;
     }
 
     public CreateAlertContactRequest setEmail(String email) {
@@ -54,20 +51,12 @@ public class CreateAlertContactRequest extends TeaModel {
         return this.email;
     }
 
-    public CreateAlertContactRequest setDingRobotWebhookUrl(String dingRobotWebhookUrl) {
-        this.dingRobotWebhookUrl = dingRobotWebhookUrl;
+    public CreateAlertContactRequest setPhoneNum(String phoneNum) {
+        this.phoneNum = phoneNum;
         return this;
     }
-    public String getDingRobotWebhookUrl() {
-        return this.dingRobotWebhookUrl;
-    }
-
-    public CreateAlertContactRequest setSystemNoc(Boolean systemNoc) {
-        this.systemNoc = systemNoc;
-        return this;
-    }
-    public Boolean getSystemNoc() {
-        return this.systemNoc;
+    public String getPhoneNum() {
+        return this.phoneNum;
     }
 
     public CreateAlertContactRequest setRegionId(String regionId) {
@@ -78,12 +67,12 @@ public class CreateAlertContactRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateAlertContactRequest setProxyUserId(String proxyUserId) {
-        this.proxyUserId = proxyUserId;
+    public CreateAlertContactRequest setSystemNoc(Boolean systemNoc) {
+        this.systemNoc = systemNoc;
         return this;
     }
-    public String getProxyUserId() {
-        return this.proxyUserId;
+    public Boolean getSystemNoc() {
+        return this.systemNoc;
     }
 
 }

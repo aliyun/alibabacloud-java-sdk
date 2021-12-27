@@ -4,17 +4,17 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetAppApiByPageResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public GetAppApiByPageResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetAppApiByPageResponseBodyData data;
-
-    @NameInMap("Code")
-    public Integer code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class GetAppApiByPageResponseBody extends TeaModel {
     public static GetAppApiByPageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAppApiByPageResponseBody self = new GetAppApiByPageResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetAppApiByPageResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public GetAppApiByPageResponseBody setData(GetAppApiByPageResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetAppApiByPageResponseBodyData getData() {
+        return this.data;
     }
 
     public GetAppApiByPageResponseBody setMessage(String message) {
@@ -40,22 +56,6 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetAppApiByPageResponseBody setData(GetAppApiByPageResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetAppApiByPageResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetAppApiByPageResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public GetAppApiByPageResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -68,14 +68,14 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         @NameInMap("Items")
         public java.util.List<java.util.Map<String, ?>> items;
 
+        @NameInMap("Page")
+        public Integer page;
+
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("Total")
         public String total;
-
-        @NameInMap("Page")
-        public Integer page;
 
         public static GetAppApiByPageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAppApiByPageResponseBodyData self = new GetAppApiByPageResponseBodyData();
@@ -88,6 +88,14 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         }
         public java.util.List<java.util.Map<String, ?>> getItems() {
             return this.items;
+        }
+
+        public GetAppApiByPageResponseBodyData setPage(Integer page) {
+            this.page = page;
+            return this;
+        }
+        public Integer getPage() {
+            return this.page;
         }
 
         public GetAppApiByPageResponseBodyData setPageSize(Integer pageSize) {
@@ -104,14 +112,6 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         }
         public String getTotal() {
             return this.total;
-        }
-
-        public GetAppApiByPageResponseBodyData setPage(Integer page) {
-            this.page = page;
-            return this;
-        }
-        public Integer getPage() {
-            return this.page;
         }
 
     }

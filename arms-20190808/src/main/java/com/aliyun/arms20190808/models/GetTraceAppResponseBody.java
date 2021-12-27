@@ -32,95 +32,39 @@ public class GetTraceAppResponseBody extends TeaModel {
     }
 
     public static class GetTraceAppResponseBodyTraceApp extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("AppId")
+        public Long appId;
 
         @NameInMap("AppName")
         public String appName;
 
-        @NameInMap("UpdateTime")
-        public Long updateTime;
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
-        @NameInMap("Show")
-        public Boolean show;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
-
         @NameInMap("Pid")
         public String pid;
-
-        @NameInMap("AppId")
-        public Long appId;
-
-        @NameInMap("UserId")
-        public String userId;
 
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("Show")
+        public Boolean show;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
+        @NameInMap("UserId")
+        public String userId;
+
         public static GetTraceAppResponseBodyTraceApp build(java.util.Map<String, ?> map) throws Exception {
             GetTraceAppResponseBodyTraceApp self = new GetTraceAppResponseBodyTraceApp();
             return TeaModel.build(map, self);
-        }
-
-        public GetTraceAppResponseBodyTraceApp setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public GetTraceAppResponseBodyTraceApp setAppName(String appName) {
-            this.appName = appName;
-            return this;
-        }
-        public String getAppName() {
-            return this.appName;
-        }
-
-        public GetTraceAppResponseBodyTraceApp setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public GetTraceAppResponseBodyTraceApp setLabels(java.util.List<String> labels) {
-            this.labels = labels;
-            return this;
-        }
-        public java.util.List<String> getLabels() {
-            return this.labels;
-        }
-
-        public GetTraceAppResponseBodyTraceApp setShow(Boolean show) {
-            this.show = show;
-            return this;
-        }
-        public Boolean getShow() {
-            return this.show;
-        }
-
-        public GetTraceAppResponseBodyTraceApp setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
-        }
-
-        public GetTraceAppResponseBodyTraceApp setPid(String pid) {
-            this.pid = pid;
-            return this;
-        }
-        public String getPid() {
-            return this.pid;
         }
 
         public GetTraceAppResponseBodyTraceApp setAppId(Long appId) {
@@ -131,12 +75,36 @@ public class GetTraceAppResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public GetTraceAppResponseBodyTraceApp setUserId(String userId) {
-            this.userId = userId;
+        public GetTraceAppResponseBodyTraceApp setAppName(String appName) {
+            this.appName = appName;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public String getAppName() {
+            return this.appName;
+        }
+
+        public GetTraceAppResponseBodyTraceApp setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetTraceAppResponseBodyTraceApp setLabels(java.util.List<String> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.List<String> getLabels() {
+            return this.labels;
+        }
+
+        public GetTraceAppResponseBodyTraceApp setPid(String pid) {
+            this.pid = pid;
+            return this;
+        }
+        public String getPid() {
+            return this.pid;
         }
 
         public GetTraceAppResponseBodyTraceApp setRegionId(String regionId) {
@@ -145,6 +113,38 @@ public class GetTraceAppResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetTraceAppResponseBodyTraceApp setShow(Boolean show) {
+            this.show = show;
+            return this;
+        }
+        public Boolean getShow() {
+            return this.show;
+        }
+
+        public GetTraceAppResponseBodyTraceApp setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetTraceAppResponseBodyTraceApp setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public GetTraceAppResponseBodyTraceApp setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

@@ -32,8 +32,14 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
     }
 
     public static class SearchAlertContactGroupResponseBodyContactGroupsContacts extends TeaModel {
-        @NameInMap("UpdateTime")
-        public Long updateTime;
+        @NameInMap("ContactId")
+        public Long contactId;
+
+        @NameInMap("ContactName")
+        public String contactName;
+
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("DingRobot")
         public String dingRobot;
@@ -41,35 +47,45 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
         @NameInMap("Email")
         public String email;
 
-        @NameInMap("ContactId")
-        public Long contactId;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("ContactName")
-        public String contactName;
+        @NameInMap("Phone")
+        public String phone;
 
         @NameInMap("SystemNoc")
         public Boolean systemNoc;
 
-        @NameInMap("Phone")
-        public String phone;
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
+        @NameInMap("UserId")
+        public String userId;
 
         public static SearchAlertContactGroupResponseBodyContactGroupsContacts build(java.util.Map<String, ?> map) throws Exception {
             SearchAlertContactGroupResponseBodyContactGroupsContacts self = new SearchAlertContactGroupResponseBodyContactGroupsContacts();
             return TeaModel.build(map, self);
         }
 
-        public SearchAlertContactGroupResponseBodyContactGroupsContacts setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
+        public SearchAlertContactGroupResponseBodyContactGroupsContacts setContactId(Long contactId) {
+            this.contactId = contactId;
             return this;
         }
-        public Long getUpdateTime() {
-            return this.updateTime;
+        public Long getContactId() {
+            return this.contactId;
+        }
+
+        public SearchAlertContactGroupResponseBodyContactGroupsContacts setContactName(String contactName) {
+            this.contactName = contactName;
+            return this;
+        }
+        public String getContactName() {
+            return this.contactName;
+        }
+
+        public SearchAlertContactGroupResponseBodyContactGroupsContacts setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public SearchAlertContactGroupResponseBodyContactGroupsContacts setDingRobot(String dingRobot) {
@@ -88,36 +104,12 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             return this.email;
         }
 
-        public SearchAlertContactGroupResponseBodyContactGroupsContacts setContactId(Long contactId) {
-            this.contactId = contactId;
+        public SearchAlertContactGroupResponseBodyContactGroupsContacts setPhone(String phone) {
+            this.phone = phone;
             return this;
         }
-        public Long getContactId() {
-            return this.contactId;
-        }
-
-        public SearchAlertContactGroupResponseBodyContactGroupsContacts setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
-        }
-
-        public SearchAlertContactGroupResponseBodyContactGroupsContacts setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public SearchAlertContactGroupResponseBodyContactGroupsContacts setContactName(String contactName) {
-            this.contactName = contactName;
-            return this;
-        }
-        public String getContactName() {
-            return this.contactName;
+        public String getPhone() {
+            return this.phone;
         }
 
         public SearchAlertContactGroupResponseBodyContactGroupsContacts setSystemNoc(Boolean systemNoc) {
@@ -128,19 +120,27 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             return this.systemNoc;
         }
 
-        public SearchAlertContactGroupResponseBodyContactGroupsContacts setPhone(String phone) {
-            this.phone = phone;
+        public SearchAlertContactGroupResponseBodyContactGroupsContacts setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public String getPhone() {
-            return this.phone;
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public SearchAlertContactGroupResponseBodyContactGroupsContacts setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }
 
     public static class SearchAlertContactGroupResponseBodyContactGroups extends TeaModel {
-        @NameInMap("UpdateTime")
-        public Long updateTime;
+        @NameInMap("ContactGroupId")
+        public Long contactGroupId;
 
         @NameInMap("ContactGroupName")
         public String contactGroupName;
@@ -148,11 +148,11 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
         @NameInMap("Contacts")
         public java.util.List<SearchAlertContactGroupResponseBodyContactGroupsContacts> contacts;
 
-        @NameInMap("ContactGroupId")
-        public Long contactGroupId;
-
         @NameInMap("CreateTime")
         public Long createTime;
+
+        @NameInMap("UpdateTime")
+        public Long updateTime;
 
         @NameInMap("UserId")
         public String userId;
@@ -162,12 +162,12 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public SearchAlertContactGroupResponseBodyContactGroups setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
+        public SearchAlertContactGroupResponseBodyContactGroups setContactGroupId(Long contactGroupId) {
+            this.contactGroupId = contactGroupId;
             return this;
         }
-        public Long getUpdateTime() {
-            return this.updateTime;
+        public Long getContactGroupId() {
+            return this.contactGroupId;
         }
 
         public SearchAlertContactGroupResponseBodyContactGroups setContactGroupName(String contactGroupName) {
@@ -186,20 +186,20 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             return this.contacts;
         }
 
-        public SearchAlertContactGroupResponseBodyContactGroups setContactGroupId(Long contactGroupId) {
-            this.contactGroupId = contactGroupId;
-            return this;
-        }
-        public Long getContactGroupId() {
-            return this.contactGroupId;
-        }
-
         public SearchAlertContactGroupResponseBodyContactGroups setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public SearchAlertContactGroupResponseBodyContactGroups setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
         public SearchAlertContactGroupResponseBodyContactGroups setUserId(String userId) {

@@ -4,29 +4,17 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchTracesByPageRequest extends TeaModel {
-    @NameInMap("StartTime")
-    public Long startTime;
-
     @NameInMap("EndTime")
     public Long endTime;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ServiceName")
-    public String serviceName;
-
-    @NameInMap("OperationName")
-    public String operationName;
+    @NameInMap("ExclusionFilters")
+    public java.util.List<SearchTracesByPageRequestExclusionFilters> exclusionFilters;
 
     @NameInMap("MinDuration")
     public Long minDuration;
 
-    @NameInMap("Reverse")
-    public Boolean reverse;
-
-    @NameInMap("ServiceIp")
-    public String serviceIp;
+    @NameInMap("OperationName")
+    public String operationName;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -34,20 +22,24 @@ public class SearchTracesByPageRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("ExclusionFilters")
-    public java.util.List<SearchTracesByPageRequestExclusionFilters> exclusionFilters;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("Reverse")
+    public Boolean reverse;
+
+    @NameInMap("ServiceIp")
+    public String serviceIp;
+
+    @NameInMap("ServiceName")
+    public String serviceName;
+
+    @NameInMap("StartTime")
+    public Long startTime;
 
     public static SearchTracesByPageRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchTracesByPageRequest self = new SearchTracesByPageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SearchTracesByPageRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
     }
 
     public SearchTracesByPageRequest setEndTime(Long endTime) {
@@ -58,28 +50,12 @@ public class SearchTracesByPageRequest extends TeaModel {
         return this.endTime;
     }
 
-    public SearchTracesByPageRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public SearchTracesByPageRequest setExclusionFilters(java.util.List<SearchTracesByPageRequestExclusionFilters> exclusionFilters) {
+        this.exclusionFilters = exclusionFilters;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public SearchTracesByPageRequest setServiceName(String serviceName) {
-        this.serviceName = serviceName;
-        return this;
-    }
-    public String getServiceName() {
-        return this.serviceName;
-    }
-
-    public SearchTracesByPageRequest setOperationName(String operationName) {
-        this.operationName = operationName;
-        return this;
-    }
-    public String getOperationName() {
-        return this.operationName;
+    public java.util.List<SearchTracesByPageRequestExclusionFilters> getExclusionFilters() {
+        return this.exclusionFilters;
     }
 
     public SearchTracesByPageRequest setMinDuration(Long minDuration) {
@@ -90,20 +66,12 @@ public class SearchTracesByPageRequest extends TeaModel {
         return this.minDuration;
     }
 
-    public SearchTracesByPageRequest setReverse(Boolean reverse) {
-        this.reverse = reverse;
+    public SearchTracesByPageRequest setOperationName(String operationName) {
+        this.operationName = operationName;
         return this;
     }
-    public Boolean getReverse() {
-        return this.reverse;
-    }
-
-    public SearchTracesByPageRequest setServiceIp(String serviceIp) {
-        this.serviceIp = serviceIp;
-        return this;
-    }
-    public String getServiceIp() {
-        return this.serviceIp;
+    public String getOperationName() {
+        return this.operationName;
     }
 
     public SearchTracesByPageRequest setPageNumber(Integer pageNumber) {
@@ -122,12 +90,44 @@ public class SearchTracesByPageRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public SearchTracesByPageRequest setExclusionFilters(java.util.List<SearchTracesByPageRequestExclusionFilters> exclusionFilters) {
-        this.exclusionFilters = exclusionFilters;
+    public SearchTracesByPageRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public java.util.List<SearchTracesByPageRequestExclusionFilters> getExclusionFilters() {
-        return this.exclusionFilters;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public SearchTracesByPageRequest setReverse(Boolean reverse) {
+        this.reverse = reverse;
+        return this;
+    }
+    public Boolean getReverse() {
+        return this.reverse;
+    }
+
+    public SearchTracesByPageRequest setServiceIp(String serviceIp) {
+        this.serviceIp = serviceIp;
+        return this;
+    }
+    public String getServiceIp() {
+        return this.serviceIp;
+    }
+
+    public SearchTracesByPageRequest setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
+    public String getServiceName() {
+        return this.serviceName;
+    }
+
+    public SearchTracesByPageRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
     public static class SearchTracesByPageRequestExclusionFilters extends TeaModel {

@@ -4,8 +4,8 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetStackRequest extends TeaModel {
-    @NameInMap("TraceID")
-    public String traceID;
+    @NameInMap("Pid")
+    public String pid;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -13,20 +13,20 @@ public class GetStackRequest extends TeaModel {
     @NameInMap("RpcID")
     public String rpcID;
 
-    @NameInMap("Pid")
-    public String pid;
+    @NameInMap("TraceID")
+    public String traceID;
 
     public static GetStackRequest build(java.util.Map<String, ?> map) throws Exception {
         GetStackRequest self = new GetStackRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetStackRequest setTraceID(String traceID) {
-        this.traceID = traceID;
+    public GetStackRequest setPid(String pid) {
+        this.pid = pid;
         return this;
     }
-    public String getTraceID() {
-        return this.traceID;
+    public String getPid() {
+        return this.pid;
     }
 
     public GetStackRequest setRegionId(String regionId) {
@@ -45,12 +45,12 @@ public class GetStackRequest extends TeaModel {
         return this.rpcID;
     }
 
-    public GetStackRequest setPid(String pid) {
-        this.pid = pid;
+    public GetStackRequest setTraceID(String traceID) {
+        this.traceID = traceID;
         return this;
     }
-    public String getPid() {
-        return this.pid;
+    public String getTraceID() {
+        return this.traceID;
     }
 
 }

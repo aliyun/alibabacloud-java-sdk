@@ -4,33 +4,38 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertContactRequest extends TeaModel {
+    @NameInMap("ContactId")
+    public Long contactId;
+
     @NameInMap("ContactName")
     public String contactName;
-
-    @NameInMap("PhoneNum")
-    public String phoneNum;
-
-    @NameInMap("Email")
-    public String email;
 
     @NameInMap("DingRobotWebhookUrl")
     public String dingRobotWebhookUrl;
 
-    @NameInMap("SystemNoc")
-    public Boolean systemNoc;
+    @NameInMap("Email")
+    public String email;
+
+    @NameInMap("PhoneNum")
+    public String phoneNum;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ProxyUserId")
-    public String proxyUserId;
-
-    @NameInMap("ContactId")
-    public Long contactId;
+    @NameInMap("SystemNoc")
+    public Boolean systemNoc;
 
     public static UpdateAlertContactRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAlertContactRequest self = new UpdateAlertContactRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAlertContactRequest setContactId(Long contactId) {
+        this.contactId = contactId;
+        return this;
+    }
+    public Long getContactId() {
+        return this.contactId;
     }
 
     public UpdateAlertContactRequest setContactName(String contactName) {
@@ -41,12 +46,12 @@ public class UpdateAlertContactRequest extends TeaModel {
         return this.contactName;
     }
 
-    public UpdateAlertContactRequest setPhoneNum(String phoneNum) {
-        this.phoneNum = phoneNum;
+    public UpdateAlertContactRequest setDingRobotWebhookUrl(String dingRobotWebhookUrl) {
+        this.dingRobotWebhookUrl = dingRobotWebhookUrl;
         return this;
     }
-    public String getPhoneNum() {
-        return this.phoneNum;
+    public String getDingRobotWebhookUrl() {
+        return this.dingRobotWebhookUrl;
     }
 
     public UpdateAlertContactRequest setEmail(String email) {
@@ -57,20 +62,12 @@ public class UpdateAlertContactRequest extends TeaModel {
         return this.email;
     }
 
-    public UpdateAlertContactRequest setDingRobotWebhookUrl(String dingRobotWebhookUrl) {
-        this.dingRobotWebhookUrl = dingRobotWebhookUrl;
+    public UpdateAlertContactRequest setPhoneNum(String phoneNum) {
+        this.phoneNum = phoneNum;
         return this;
     }
-    public String getDingRobotWebhookUrl() {
-        return this.dingRobotWebhookUrl;
-    }
-
-    public UpdateAlertContactRequest setSystemNoc(Boolean systemNoc) {
-        this.systemNoc = systemNoc;
-        return this;
-    }
-    public Boolean getSystemNoc() {
-        return this.systemNoc;
+    public String getPhoneNum() {
+        return this.phoneNum;
     }
 
     public UpdateAlertContactRequest setRegionId(String regionId) {
@@ -81,20 +78,12 @@ public class UpdateAlertContactRequest extends TeaModel {
         return this.regionId;
     }
 
-    public UpdateAlertContactRequest setProxyUserId(String proxyUserId) {
-        this.proxyUserId = proxyUserId;
+    public UpdateAlertContactRequest setSystemNoc(Boolean systemNoc) {
+        this.systemNoc = systemNoc;
         return this;
     }
-    public String getProxyUserId() {
-        return this.proxyUserId;
-    }
-
-    public UpdateAlertContactRequest setContactId(Long contactId) {
-        this.contactId = contactId;
-        return this;
-    }
-    public Long getContactId() {
-        return this.contactId;
+    public Boolean getSystemNoc() {
+        return this.systemNoc;
     }
 
 }

@@ -7,9 +7,6 @@ public class DeleteAlertRulesRequest extends TeaModel {
     @NameInMap("AlertIds")
     public String alertIds;
 
-    @NameInMap("ProxyUserId")
-    public String proxyUserId;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -24,14 +21,6 @@ public class DeleteAlertRulesRequest extends TeaModel {
     }
     public String getAlertIds() {
         return this.alertIds;
-    }
-
-    public DeleteAlertRulesRequest setProxyUserId(String proxyUserId) {
-        this.proxyUserId = proxyUserId;
-        return this;
-    }
-    public String getProxyUserId() {
-        return this.proxyUserId;
     }
 
     public DeleteAlertRulesRequest setRegionId(String regionId) {

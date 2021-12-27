@@ -4,23 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeDispatchRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DispatchRule")
     public DescribeDispatchRuleResponseBodyDispatchRule dispatchRule;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDispatchRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDispatchRuleResponseBody self = new DescribeDispatchRuleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDispatchRuleResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDispatchRuleResponseBody setDispatchRule(DescribeDispatchRuleResponseBodyDispatchRule dispatchRule) {
@@ -31,15 +23,86 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         return this.dispatchRule;
     }
 
+    public DescribeDispatchRuleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class DescribeDispatchRuleResponseBodyDispatchRuleGroupRules extends TeaModel {
+        @NameInMap("GroupId")
+        public Long groupId;
+
+        @NameInMap("GroupInterval")
+        public Long groupInterval;
+
+        @NameInMap("GroupWaitTime")
+        public Long groupWaitTime;
+
+        @NameInMap("GroupingFields")
+        public java.util.List<String> groupingFields;
+
+        @NameInMap("RepeatInterval")
+        public Long repeatInterval;
+
+        public static DescribeDispatchRuleResponseBodyDispatchRuleGroupRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDispatchRuleResponseBodyDispatchRuleGroupRules self = new DescribeDispatchRuleResponseBodyDispatchRuleGroupRules();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDispatchRuleResponseBodyDispatchRuleGroupRules setGroupId(Long groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public Long getGroupId() {
+            return this.groupId;
+        }
+
+        public DescribeDispatchRuleResponseBodyDispatchRuleGroupRules setGroupInterval(Long groupInterval) {
+            this.groupInterval = groupInterval;
+            return this;
+        }
+        public Long getGroupInterval() {
+            return this.groupInterval;
+        }
+
+        public DescribeDispatchRuleResponseBodyDispatchRuleGroupRules setGroupWaitTime(Long groupWaitTime) {
+            this.groupWaitTime = groupWaitTime;
+            return this;
+        }
+        public Long getGroupWaitTime() {
+            return this.groupWaitTime;
+        }
+
+        public DescribeDispatchRuleResponseBodyDispatchRuleGroupRules setGroupingFields(java.util.List<String> groupingFields) {
+            this.groupingFields = groupingFields;
+            return this;
+        }
+        public java.util.List<String> getGroupingFields() {
+            return this.groupingFields;
+        }
+
+        public DescribeDispatchRuleResponseBodyDispatchRuleGroupRules setRepeatInterval(Long repeatInterval) {
+            this.repeatInterval = repeatInterval;
+            return this;
+        }
+        public Long getRepeatInterval() {
+            return this.repeatInterval;
+        }
+
+    }
+
     public static class DescribeDispatchRuleResponseBodyDispatchRuleLabelMatchExpressionGridLabelMatchExpressionGroupsLabelMatchExpressions extends TeaModel {
         @NameInMap("Key")
         public String key;
 
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("Operator")
         public String operator;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeDispatchRuleResponseBodyDispatchRuleLabelMatchExpressionGridLabelMatchExpressionGroupsLabelMatchExpressions build(java.util.Map<String, ?> map) throws Exception {
             DescribeDispatchRuleResponseBodyDispatchRuleLabelMatchExpressionGridLabelMatchExpressionGroupsLabelMatchExpressions self = new DescribeDispatchRuleResponseBodyDispatchRuleLabelMatchExpressionGridLabelMatchExpressionGroupsLabelMatchExpressions();
@@ -54,20 +117,20 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeDispatchRuleResponseBodyDispatchRuleLabelMatchExpressionGridLabelMatchExpressionGroupsLabelMatchExpressions setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
         public DescribeDispatchRuleResponseBodyDispatchRuleLabelMatchExpressionGridLabelMatchExpressionGroupsLabelMatchExpressions setOperator(String operator) {
             this.operator = operator;
             return this;
         }
         public String getOperator() {
             return this.operator;
+        }
+
+        public DescribeDispatchRuleResponseBodyDispatchRuleLabelMatchExpressionGridLabelMatchExpressionGroupsLabelMatchExpressions setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -110,71 +173,27 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDispatchRuleResponseBodyDispatchRuleGroupRules extends TeaModel {
-        @NameInMap("GroupingFields")
-        public java.util.List<String> groupingFields;
-
-        @NameInMap("GroupId")
-        public Long groupId;
-
-        @NameInMap("GroupInterval")
-        public Long groupInterval;
-
-        @NameInMap("GroupWaitTime")
-        public Long groupWaitTime;
-
-        public static DescribeDispatchRuleResponseBodyDispatchRuleGroupRules build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDispatchRuleResponseBodyDispatchRuleGroupRules self = new DescribeDispatchRuleResponseBodyDispatchRuleGroupRules();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDispatchRuleResponseBodyDispatchRuleGroupRules setGroupingFields(java.util.List<String> groupingFields) {
-            this.groupingFields = groupingFields;
-            return this;
-        }
-        public java.util.List<String> getGroupingFields() {
-            return this.groupingFields;
-        }
-
-        public DescribeDispatchRuleResponseBodyDispatchRuleGroupRules setGroupId(Long groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public Long getGroupId() {
-            return this.groupId;
-        }
-
-        public DescribeDispatchRuleResponseBodyDispatchRuleGroupRules setGroupInterval(Long groupInterval) {
-            this.groupInterval = groupInterval;
-            return this;
-        }
-        public Long getGroupInterval() {
-            return this.groupInterval;
-        }
-
-        public DescribeDispatchRuleResponseBodyDispatchRuleGroupRules setGroupWaitTime(Long groupWaitTime) {
-            this.groupWaitTime = groupWaitTime;
-            return this;
-        }
-        public Long getGroupWaitTime() {
-            return this.groupWaitTime;
-        }
-
-    }
-
     public static class DescribeDispatchRuleResponseBodyDispatchRuleNotifyRulesNotifyObjects extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("NotifyObjectId")
         public String notifyObjectId;
 
         @NameInMap("NotifyType")
         public String notifyType;
 
-        @NameInMap("Name")
-        public String name;
-
         public static DescribeDispatchRuleResponseBodyDispatchRuleNotifyRulesNotifyObjects build(java.util.Map<String, ?> map) throws Exception {
             DescribeDispatchRuleResponseBodyDispatchRuleNotifyRulesNotifyObjects self = new DescribeDispatchRuleResponseBodyDispatchRuleNotifyRulesNotifyObjects();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDispatchRuleResponseBodyDispatchRuleNotifyRulesNotifyObjects setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public DescribeDispatchRuleResponseBodyDispatchRuleNotifyRulesNotifyObjects setNotifyObjectId(String notifyObjectId) {
@@ -193,34 +212,18 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             return this.notifyType;
         }
 
-        public DescribeDispatchRuleResponseBodyDispatchRuleNotifyRulesNotifyObjects setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
     }
 
     public static class DescribeDispatchRuleResponseBodyDispatchRuleNotifyRules extends TeaModel {
-        @NameInMap("NotifyObjects")
-        public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleNotifyRulesNotifyObjects> notifyObjects;
-
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
+
+        @NameInMap("NotifyObjects")
+        public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleNotifyRulesNotifyObjects> notifyObjects;
 
         public static DescribeDispatchRuleResponseBodyDispatchRuleNotifyRules build(java.util.Map<String, ?> map) throws Exception {
             DescribeDispatchRuleResponseBodyDispatchRuleNotifyRules self = new DescribeDispatchRuleResponseBodyDispatchRuleNotifyRules();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDispatchRuleResponseBodyDispatchRuleNotifyRules setNotifyObjects(java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleNotifyRulesNotifyObjects> notifyObjects) {
-            this.notifyObjects = notifyObjects;
-            return this;
-        }
-        public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleNotifyRulesNotifyObjects> getNotifyObjects() {
-            return this.notifyObjects;
         }
 
         public DescribeDispatchRuleResponseBodyDispatchRuleNotifyRules setNotifyChannels(java.util.List<String> notifyChannels) {
@@ -231,11 +234,25 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             return this.notifyChannels;
         }
 
+        public DescribeDispatchRuleResponseBodyDispatchRuleNotifyRules setNotifyObjects(java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleNotifyRulesNotifyObjects> notifyObjects) {
+            this.notifyObjects = notifyObjects;
+            return this;
+        }
+        public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleNotifyRulesNotifyObjects> getNotifyObjects() {
+            return this.notifyObjects;
+        }
+
     }
 
     public static class DescribeDispatchRuleResponseBodyDispatchRule extends TeaModel {
-        @NameInMap("State")
-        public String state;
+        @NameInMap("DispatchType")
+        public String dispatchType;
+
+        @NameInMap("GroupRules")
+        public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleGroupRules> groupRules;
+
+        @NameInMap("IsRecover")
+        public Boolean isRecover;
 
         @NameInMap("LabelMatchExpressionGrid")
         public DescribeDispatchRuleResponseBodyDispatchRuleLabelMatchExpressionGrid labelMatchExpressionGrid;
@@ -243,26 +260,42 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("GroupRules")
-        public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleGroupRules> groupRules;
+        @NameInMap("NotifyRules")
+        public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleNotifyRules> notifyRules;
 
         @NameInMap("RuleId")
         public Long ruleId;
 
-        @NameInMap("NotifyRules")
-        public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleNotifyRules> notifyRules;
+        @NameInMap("State")
+        public String state;
 
         public static DescribeDispatchRuleResponseBodyDispatchRule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDispatchRuleResponseBodyDispatchRule self = new DescribeDispatchRuleResponseBodyDispatchRule();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDispatchRuleResponseBodyDispatchRule setState(String state) {
-            this.state = state;
+        public DescribeDispatchRuleResponseBodyDispatchRule setDispatchType(String dispatchType) {
+            this.dispatchType = dispatchType;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getDispatchType() {
+            return this.dispatchType;
+        }
+
+        public DescribeDispatchRuleResponseBodyDispatchRule setGroupRules(java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleGroupRules> groupRules) {
+            this.groupRules = groupRules;
+            return this;
+        }
+        public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleGroupRules> getGroupRules() {
+            return this.groupRules;
+        }
+
+        public DescribeDispatchRuleResponseBodyDispatchRule setIsRecover(Boolean isRecover) {
+            this.isRecover = isRecover;
+            return this;
+        }
+        public Boolean getIsRecover() {
+            return this.isRecover;
         }
 
         public DescribeDispatchRuleResponseBodyDispatchRule setLabelMatchExpressionGrid(DescribeDispatchRuleResponseBodyDispatchRuleLabelMatchExpressionGrid labelMatchExpressionGrid) {
@@ -281,12 +314,12 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeDispatchRuleResponseBodyDispatchRule setGroupRules(java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleGroupRules> groupRules) {
-            this.groupRules = groupRules;
+        public DescribeDispatchRuleResponseBodyDispatchRule setNotifyRules(java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleNotifyRules> notifyRules) {
+            this.notifyRules = notifyRules;
             return this;
         }
-        public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleGroupRules> getGroupRules() {
-            return this.groupRules;
+        public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleNotifyRules> getNotifyRules() {
+            return this.notifyRules;
         }
 
         public DescribeDispatchRuleResponseBodyDispatchRule setRuleId(Long ruleId) {
@@ -297,12 +330,12 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             return this.ruleId;
         }
 
-        public DescribeDispatchRuleResponseBodyDispatchRule setNotifyRules(java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleNotifyRules> notifyRules) {
-            this.notifyRules = notifyRules;
+        public DescribeDispatchRuleResponseBodyDispatchRule setState(String state) {
+            this.state = state;
             return this;
         }
-        public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleNotifyRules> getNotifyRules() {
-            return this.notifyRules;
+        public String getState() {
+            return this.state;
         }
 
     }

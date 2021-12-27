@@ -4,14 +4,8 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchAlertRulesRequest extends TeaModel {
-    @NameInMap("ProxyUserId")
-    public String proxyUserId;
-
-    @NameInMap("Title")
-    public String title;
-
-    @NameInMap("Type")
-    public String type;
+    @NameInMap("AppType")
+    public String appType;
 
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -19,42 +13,32 @@ public class SearchAlertRulesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Pid")
     public String pid;
 
-    @NameInMap("AppType")
-    public String appType;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("SystemRegionId")
+    public String systemRegionId;
+
+    @NameInMap("Title")
+    public String title;
+
+    @NameInMap("Type")
+    public String type;
 
     public static SearchAlertRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchAlertRulesRequest self = new SearchAlertRulesRequest();
         return TeaModel.build(map, self);
     }
 
-    public SearchAlertRulesRequest setProxyUserId(String proxyUserId) {
-        this.proxyUserId = proxyUserId;
+    public SearchAlertRulesRequest setAppType(String appType) {
+        this.appType = appType;
         return this;
     }
-    public String getProxyUserId() {
-        return this.proxyUserId;
-    }
-
-    public SearchAlertRulesRequest setTitle(String title) {
-        this.title = title;
-        return this;
-    }
-    public String getTitle() {
-        return this.title;
-    }
-
-    public SearchAlertRulesRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
+    public String getAppType() {
+        return this.appType;
     }
 
     public SearchAlertRulesRequest setCurrentPage(Integer currentPage) {
@@ -73,14 +57,6 @@ public class SearchAlertRulesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public SearchAlertRulesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public SearchAlertRulesRequest setPid(String pid) {
         this.pid = pid;
         return this;
@@ -89,12 +65,36 @@ public class SearchAlertRulesRequest extends TeaModel {
         return this.pid;
     }
 
-    public SearchAlertRulesRequest setAppType(String appType) {
-        this.appType = appType;
+    public SearchAlertRulesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAppType() {
-        return this.appType;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public SearchAlertRulesRequest setSystemRegionId(String systemRegionId) {
+        this.systemRegionId = systemRegionId;
+        return this;
+    }
+    public String getSystemRegionId() {
+        return this.systemRegionId;
+    }
+
+    public SearchAlertRulesRequest setTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    public String getTitle() {
+        return this.title;
+    }
+
+    public SearchAlertRulesRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

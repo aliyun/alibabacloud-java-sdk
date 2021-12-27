@@ -7,9 +7,6 @@ public class StartAlertRequest extends TeaModel {
     @NameInMap("AlertId")
     public String alertId;
 
-    @NameInMap("ProxyUserId")
-    public String proxyUserId;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -24,14 +21,6 @@ public class StartAlertRequest extends TeaModel {
     }
     public String getAlertId() {
         return this.alertId;
-    }
-
-    public StartAlertRequest setProxyUserId(String proxyUserId) {
-        this.proxyUserId = proxyUserId;
-        return this;
-    }
-    public String getProxyUserId() {
-        return this.proxyUserId;
     }
 
     public StartAlertRequest setRegionId(String regionId) {

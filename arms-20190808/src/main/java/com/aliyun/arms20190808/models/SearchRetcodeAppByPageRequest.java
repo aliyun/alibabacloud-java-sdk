@@ -4,9 +4,6 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchRetcodeAppByPageRequest extends TeaModel {
-    @NameInMap("RetcodeAppName")
-    public String retcodeAppName;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -16,17 +13,12 @@ public class SearchRetcodeAppByPageRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RetcodeAppName")
+    public String retcodeAppName;
+
     public static SearchRetcodeAppByPageRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchRetcodeAppByPageRequest self = new SearchRetcodeAppByPageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SearchRetcodeAppByPageRequest setRetcodeAppName(String retcodeAppName) {
-        this.retcodeAppName = retcodeAppName;
-        return this;
-    }
-    public String getRetcodeAppName() {
-        return this.retcodeAppName;
     }
 
     public SearchRetcodeAppByPageRequest setPageNumber(Integer pageNumber) {
@@ -51,6 +43,14 @@ public class SearchRetcodeAppByPageRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public SearchRetcodeAppByPageRequest setRetcodeAppName(String retcodeAppName) {
+        this.retcodeAppName = retcodeAppName;
+        return this;
+    }
+    public String getRetcodeAppName() {
+        return this.retcodeAppName;
     }
 
 }

@@ -4,18 +4,26 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateRetcodeAppRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RetcodeAppName")
     public String retcodeAppName;
 
     @NameInMap("RetcodeAppType")
     public String retcodeAppType;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static CreateRetcodeAppRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRetcodeAppRequest self = new CreateRetcodeAppRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRetcodeAppRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateRetcodeAppRequest setRetcodeAppName(String retcodeAppName) {
@@ -32,14 +40,6 @@ public class CreateRetcodeAppRequest extends TeaModel {
     }
     public String getRetcodeAppType() {
         return this.retcodeAppType;
-    }
-
-    public CreateRetcodeAppRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

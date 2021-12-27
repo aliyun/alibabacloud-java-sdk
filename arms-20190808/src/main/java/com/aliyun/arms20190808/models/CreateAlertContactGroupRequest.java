@@ -13,9 +13,6 @@ public class CreateAlertContactGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ProxyUserId")
-    public String proxyUserId;
-
     public static CreateAlertContactGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAlertContactGroupRequest self = new CreateAlertContactGroupRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class CreateAlertContactGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public CreateAlertContactGroupRequest setProxyUserId(String proxyUserId) {
-        this.proxyUserId = proxyUserId;
-        return this;
-    }
-    public String getProxyUserId() {
-        return this.proxyUserId;
     }
 
 }

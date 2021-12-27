@@ -32,65 +32,36 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
     }
 
     public static class SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("AppId")
+        public Long appId;
 
         @NameInMap("AppName")
         public String appName;
 
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
         @NameInMap("CreateTime")
         public Long createTime;
-
-        @NameInMap("AppId")
-        public Long appId;
 
         @NameInMap("Pid")
         public String pid;
 
-        @NameInMap("UserId")
-        public String userId;
-
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("RetcodeAppType")
+        public String retcodeAppType;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
+        @NameInMap("UserId")
+        public String userId;
 
         public static SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps build(java.util.Map<String, ?> map) throws Exception {
             SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps self = new SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps();
             return TeaModel.build(map, self);
-        }
-
-        public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setAppName(String appName) {
-            this.appName = appName;
-            return this;
-        }
-        public String getAppName() {
-            return this.appName;
-        }
-
-        public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
         }
 
         public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setAppId(Long appId) {
@@ -101,6 +72,22 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             return this.appId;
         }
 
+        public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
+        }
+
+        public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
         public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setPid(String pid) {
             this.pid = pid;
             return this;
@@ -109,20 +96,44 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             return this.pid;
         }
 
-        public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
         public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setRetcodeAppType(String retcodeAppType) {
+            this.retcodeAppType = retcodeAppType;
+            return this;
+        }
+        public String getRetcodeAppType() {
+            return this.retcodeAppType;
+        }
+
+        public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }
@@ -134,11 +145,11 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
         @NameInMap("RetcodeApps")
         public java.util.List<SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps> retcodeApps;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static SearchRetcodeAppByPageResponseBodyPageBean build(java.util.Map<String, ?> map) throws Exception {
             SearchRetcodeAppByPageResponseBodyPageBean self = new SearchRetcodeAppByPageResponseBodyPageBean();
@@ -161,20 +172,20 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public SearchRetcodeAppByPageResponseBodyPageBean setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
         public SearchRetcodeAppByPageResponseBodyPageBean setRetcodeApps(java.util.List<SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps> retcodeApps) {
             this.retcodeApps = retcodeApps;
             return this;
         }
         public java.util.List<SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps> getRetcodeApps() {
             return this.retcodeApps;
+        }
+
+        public SearchRetcodeAppByPageResponseBodyPageBean setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

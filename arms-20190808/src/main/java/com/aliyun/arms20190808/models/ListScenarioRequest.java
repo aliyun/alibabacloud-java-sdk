@@ -4,17 +4,17 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListScenarioRequest extends TeaModel {
+    @NameInMap("AppId")
+    public String appId;
+
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("Scenario")
     public String scenario;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("AppId")
-    public String appId;
 
     @NameInMap("Sign")
     public String sign;
@@ -22,6 +22,22 @@ public class ListScenarioRequest extends TeaModel {
     public static ListScenarioRequest build(java.util.Map<String, ?> map) throws Exception {
         ListScenarioRequest self = new ListScenarioRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListScenarioRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public ListScenarioRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListScenarioRequest setRegionId(String regionId) {
@@ -38,22 +54,6 @@ public class ListScenarioRequest extends TeaModel {
     }
     public String getScenario() {
         return this.scenario;
-    }
-
-    public ListScenarioRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public ListScenarioRequest setAppId(String appId) {
-        this.appId = appId;
-        return this;
-    }
-    public String getAppId() {
-        return this.appId;
     }
 
     public ListScenarioRequest setSign(String sign) {

@@ -4,29 +4,23 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ApplyScenarioRequest extends TeaModel {
+    @NameInMap("AppId")
+    public String appId;
+
+    @NameInMap("Config")
+    public java.util.Map<String, ?> config;
+
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("Scenario")
     public String scenario;
 
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("AppId")
-    public String appId;
-
     @NameInMap("Sign")
     public String sign;
-
-    @NameInMap("Config")
-    public java.util.Map<String, ?> config;
-
-    @NameInMap("SnTransfer")
-    public Boolean snTransfer;
-
-    @NameInMap("SnStat")
-    public Boolean snStat;
 
     @NameInMap("SnDump")
     public Boolean snDump;
@@ -34,12 +28,42 @@ public class ApplyScenarioRequest extends TeaModel {
     @NameInMap("SnForce")
     public Boolean snForce;
 
+    @NameInMap("SnStat")
+    public Boolean snStat;
+
+    @NameInMap("SnTransfer")
+    public Boolean snTransfer;
+
     @NameInMap("UpdateOption")
     public Boolean updateOption;
 
     public static ApplyScenarioRequest build(java.util.Map<String, ?> map) throws Exception {
         ApplyScenarioRequest self = new ApplyScenarioRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ApplyScenarioRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public ApplyScenarioRequest setConfig(java.util.Map<String, ?> config) {
+        this.config = config;
+        return this;
+    }
+    public java.util.Map<String, ?> getConfig() {
+        return this.config;
+    }
+
+    public ApplyScenarioRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ApplyScenarioRequest setRegionId(String regionId) {
@@ -58,52 +82,12 @@ public class ApplyScenarioRequest extends TeaModel {
         return this.scenario;
     }
 
-    public ApplyScenarioRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public ApplyScenarioRequest setAppId(String appId) {
-        this.appId = appId;
-        return this;
-    }
-    public String getAppId() {
-        return this.appId;
-    }
-
     public ApplyScenarioRequest setSign(String sign) {
         this.sign = sign;
         return this;
     }
     public String getSign() {
         return this.sign;
-    }
-
-    public ApplyScenarioRequest setConfig(java.util.Map<String, ?> config) {
-        this.config = config;
-        return this;
-    }
-    public java.util.Map<String, ?> getConfig() {
-        return this.config;
-    }
-
-    public ApplyScenarioRequest setSnTransfer(Boolean snTransfer) {
-        this.snTransfer = snTransfer;
-        return this;
-    }
-    public Boolean getSnTransfer() {
-        return this.snTransfer;
-    }
-
-    public ApplyScenarioRequest setSnStat(Boolean snStat) {
-        this.snStat = snStat;
-        return this;
-    }
-    public Boolean getSnStat() {
-        return this.snStat;
     }
 
     public ApplyScenarioRequest setSnDump(Boolean snDump) {
@@ -120,6 +104,22 @@ public class ApplyScenarioRequest extends TeaModel {
     }
     public Boolean getSnForce() {
         return this.snForce;
+    }
+
+    public ApplyScenarioRequest setSnStat(Boolean snStat) {
+        this.snStat = snStat;
+        return this;
+    }
+    public Boolean getSnStat() {
+        return this.snStat;
+    }
+
+    public ApplyScenarioRequest setSnTransfer(Boolean snTransfer) {
+        this.snTransfer = snTransfer;
+        return this;
+    }
+    public Boolean getSnTransfer() {
+        return this.snTransfer;
     }
 
     public ApplyScenarioRequest setUpdateOption(Boolean updateOption) {

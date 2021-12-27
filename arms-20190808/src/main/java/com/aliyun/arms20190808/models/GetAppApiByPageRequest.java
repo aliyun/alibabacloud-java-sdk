@@ -4,20 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetAppApiByPageRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("StartTime")
-    public Long startTime;
-
-    @NameInMap("EndTime")
-    public Long endTime;
-
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("EndTime")
+    public Long endTime;
 
     @NameInMap("IntervalMills")
     public Integer intervalMills;
@@ -25,33 +16,18 @@ public class GetAppApiByPageRequest extends TeaModel {
     @NameInMap("PId")
     public String PId;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("StartTime")
+    public Long startTime;
+
     public static GetAppApiByPageRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAppApiByPageRequest self = new GetAppApiByPageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetAppApiByPageRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public GetAppApiByPageRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
-    }
-
-    public GetAppApiByPageRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
     }
 
     public GetAppApiByPageRequest setCurrentPage(Integer currentPage) {
@@ -62,12 +38,12 @@ public class GetAppApiByPageRequest extends TeaModel {
         return this.currentPage;
     }
 
-    public GetAppApiByPageRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public GetAppApiByPageRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public GetAppApiByPageRequest setIntervalMills(Integer intervalMills) {
@@ -84,6 +60,30 @@ public class GetAppApiByPageRequest extends TeaModel {
     }
     public String getPId() {
         return this.PId;
+    }
+
+    public GetAppApiByPageRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public GetAppApiByPageRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public GetAppApiByPageRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

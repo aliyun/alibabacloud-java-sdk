@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertContactGroupRequest extends TeaModel {
+    @NameInMap("ContactGroupId")
+    public Long contactGroupId;
+
     @NameInMap("ContactGroupName")
     public String contactGroupName;
 
@@ -13,15 +16,17 @@ public class UpdateAlertContactGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ProxyUserId")
-    public String proxyUserId;
-
-    @NameInMap("ContactGroupId")
-    public Long contactGroupId;
-
     public static UpdateAlertContactGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAlertContactGroupRequest self = new UpdateAlertContactGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAlertContactGroupRequest setContactGroupId(Long contactGroupId) {
+        this.contactGroupId = contactGroupId;
+        return this;
+    }
+    public Long getContactGroupId() {
+        return this.contactGroupId;
     }
 
     public UpdateAlertContactGroupRequest setContactGroupName(String contactGroupName) {
@@ -46,22 +51,6 @@ public class UpdateAlertContactGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public UpdateAlertContactGroupRequest setProxyUserId(String proxyUserId) {
-        this.proxyUserId = proxyUserId;
-        return this;
-    }
-    public String getProxyUserId() {
-        return this.proxyUserId;
-    }
-
-    public UpdateAlertContactGroupRequest setContactGroupId(Long contactGroupId) {
-        this.contactGroupId = contactGroupId;
-        return this;
-    }
-    public Long getContactGroupId() {
-        return this.contactGroupId;
     }
 
 }
