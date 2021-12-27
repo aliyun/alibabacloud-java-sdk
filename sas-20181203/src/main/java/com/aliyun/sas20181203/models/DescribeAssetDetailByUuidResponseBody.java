@@ -47,6 +47,9 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         @NameInMap("ClientStatus")
         public String clientStatus;
 
+        @NameInMap("ClientVersion")
+        public String clientVersion;
+
         @NameInMap("Cpu")
         public Integer cpu;
 
@@ -58,6 +61,9 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
 
         @NameInMap("DiskInfoList")
         public java.util.List<String> diskInfoList;
+
+        @NameInMap("Flag")
+        public Integer flag;
 
         @NameInMap("GroupTrace")
         public String groupTrace;
@@ -91,6 +97,9 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
 
         @NameInMap("Mem")
         public Integer mem;
+
+        @NameInMap("Memory")
+        public Long memory;
 
         @NameInMap("Os")
         public String os;
@@ -167,6 +176,14 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
             return this.clientStatus;
         }
 
+        public DescribeAssetDetailByUuidResponseBodyAssetDetail setClientVersion(String clientVersion) {
+            this.clientVersion = clientVersion;
+            return this;
+        }
+        public String getClientVersion() {
+            return this.clientVersion;
+        }
+
         public DescribeAssetDetailByUuidResponseBodyAssetDetail setCpu(Integer cpu) {
             this.cpu = cpu;
             return this;
@@ -197,6 +214,14 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         }
         public java.util.List<String> getDiskInfoList() {
             return this.diskInfoList;
+        }
+
+        public DescribeAssetDetailByUuidResponseBodyAssetDetail setFlag(Integer flag) {
+            this.flag = flag;
+            return this;
+        }
+        public Integer getFlag() {
+            return this.flag;
         }
 
         public DescribeAssetDetailByUuidResponseBodyAssetDetail setGroupTrace(String groupTrace) {
@@ -285,6 +310,14 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         }
         public Integer getMem() {
             return this.mem;
+        }
+
+        public DescribeAssetDetailByUuidResponseBodyAssetDetail setMemory(Long memory) {
+            this.memory = memory;
+            return this;
+        }
+        public Long getMemory() {
+            return this.memory;
         }
 
         public DescribeAssetDetailByUuidResponseBodyAssetDetail setOs(String os) {

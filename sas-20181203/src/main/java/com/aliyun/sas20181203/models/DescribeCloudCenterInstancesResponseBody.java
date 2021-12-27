@@ -97,7 +97,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer flag;
 
         @NameInMap("GroupId")
-        public String groupId;
+        public Long groupId;
 
         @NameInMap("GroupTrace")
         public String groupTrace;
@@ -312,11 +312,11 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             return this.flag;
         }
 
-        public DescribeCloudCenterInstancesResponseBodyInstances setGroupId(String groupId) {
+        public DescribeCloudCenterInstancesResponseBodyInstances setGroupId(Long groupId) {
             this.groupId = groupId;
             return this;
         }
-        public String getGroupId() {
+        public Long getGroupId() {
             return this.groupId;
         }
 
