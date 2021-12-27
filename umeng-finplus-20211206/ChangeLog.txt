@@ -1,3 +1,6 @@
+2021-12-27 Version: 1.0.1
+- Add Market api.
+
 2021-12-07 Version: 1.0.0
 - Version1.
 
