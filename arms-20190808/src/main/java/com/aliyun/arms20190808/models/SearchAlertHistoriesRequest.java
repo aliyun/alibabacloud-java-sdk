@@ -4,9 +4,6 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchAlertHistoriesRequest extends TeaModel {
-    @NameInMap("ProxyUserId")
-    public String proxyUserId;
-
     @NameInMap("AlertId")
     public Long alertId;
 
@@ -15,6 +12,9 @@ public class SearchAlertHistoriesRequest extends TeaModel {
 
     @NameInMap("CurrentPage")
     public Integer currentPage;
+
+    @NameInMap("EndTime")
+    public Long endTime;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -25,20 +25,9 @@ public class SearchAlertHistoriesRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
-    @NameInMap("EndTime")
-    public Long endTime;
-
     public static SearchAlertHistoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchAlertHistoriesRequest self = new SearchAlertHistoriesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SearchAlertHistoriesRequest setProxyUserId(String proxyUserId) {
-        this.proxyUserId = proxyUserId;
-        return this;
-    }
-    public String getProxyUserId() {
-        return this.proxyUserId;
     }
 
     public SearchAlertHistoriesRequest setAlertId(Long alertId) {
@@ -65,6 +54,14 @@ public class SearchAlertHistoriesRequest extends TeaModel {
         return this.currentPage;
     }
 
+    public SearchAlertHistoriesRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
     public SearchAlertHistoriesRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -87,14 +84,6 @@ public class SearchAlertHistoriesRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
-    }
-
-    public SearchAlertHistoriesRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
     }
 
 }

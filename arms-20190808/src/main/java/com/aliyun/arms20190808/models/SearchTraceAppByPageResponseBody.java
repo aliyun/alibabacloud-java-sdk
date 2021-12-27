@@ -32,95 +32,39 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
     }
 
     public static class SearchTraceAppByPageResponseBodyPageBeanTraceApps extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("AppId")
+        public Long appId;
 
         @NameInMap("AppName")
         public String appName;
 
-        @NameInMap("UpdateTime")
-        public Long updateTime;
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
-        @NameInMap("Show")
-        public Boolean show;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
-
         @NameInMap("Pid")
         public String pid;
-
-        @NameInMap("AppId")
-        public Long appId;
-
-        @NameInMap("UserId")
-        public String userId;
 
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("Show")
+        public Boolean show;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
+        @NameInMap("UserId")
+        public String userId;
+
         public static SearchTraceAppByPageResponseBodyPageBeanTraceApps build(java.util.Map<String, ?> map) throws Exception {
             SearchTraceAppByPageResponseBodyPageBeanTraceApps self = new SearchTraceAppByPageResponseBodyPageBeanTraceApps();
             return TeaModel.build(map, self);
-        }
-
-        public SearchTraceAppByPageResponseBodyPageBeanTraceApps setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public SearchTraceAppByPageResponseBodyPageBeanTraceApps setAppName(String appName) {
-            this.appName = appName;
-            return this;
-        }
-        public String getAppName() {
-            return this.appName;
-        }
-
-        public SearchTraceAppByPageResponseBodyPageBeanTraceApps setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public SearchTraceAppByPageResponseBodyPageBeanTraceApps setLabels(java.util.List<String> labels) {
-            this.labels = labels;
-            return this;
-        }
-        public java.util.List<String> getLabels() {
-            return this.labels;
-        }
-
-        public SearchTraceAppByPageResponseBodyPageBeanTraceApps setShow(Boolean show) {
-            this.show = show;
-            return this;
-        }
-        public Boolean getShow() {
-            return this.show;
-        }
-
-        public SearchTraceAppByPageResponseBodyPageBeanTraceApps setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
-        }
-
-        public SearchTraceAppByPageResponseBodyPageBeanTraceApps setPid(String pid) {
-            this.pid = pid;
-            return this;
-        }
-        public String getPid() {
-            return this.pid;
         }
 
         public SearchTraceAppByPageResponseBodyPageBeanTraceApps setAppId(Long appId) {
@@ -131,12 +75,36 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public SearchTraceAppByPageResponseBodyPageBeanTraceApps setUserId(String userId) {
-            this.userId = userId;
+        public SearchTraceAppByPageResponseBodyPageBeanTraceApps setAppName(String appName) {
+            this.appName = appName;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public String getAppName() {
+            return this.appName;
+        }
+
+        public SearchTraceAppByPageResponseBodyPageBeanTraceApps setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public SearchTraceAppByPageResponseBodyPageBeanTraceApps setLabels(java.util.List<String> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.List<String> getLabels() {
+            return this.labels;
+        }
+
+        public SearchTraceAppByPageResponseBodyPageBeanTraceApps setPid(String pid) {
+            this.pid = pid;
+            return this;
+        }
+        public String getPid() {
+            return this.pid;
         }
 
         public SearchTraceAppByPageResponseBodyPageBeanTraceApps setRegionId(String regionId) {
@@ -145,6 +113,38 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public SearchTraceAppByPageResponseBodyPageBeanTraceApps setShow(Boolean show) {
+            this.show = show;
+            return this;
+        }
+        public Boolean getShow() {
+            return this.show;
+        }
+
+        public SearchTraceAppByPageResponseBodyPageBeanTraceApps setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public SearchTraceAppByPageResponseBodyPageBeanTraceApps setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public SearchTraceAppByPageResponseBodyPageBeanTraceApps setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

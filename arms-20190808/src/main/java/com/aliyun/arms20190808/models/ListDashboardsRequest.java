@@ -4,14 +4,26 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListDashboardsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("ClusterType")
     public String clusterType;
+
+    @NameInMap("DashboardName")
+    public String dashboardName;
+
+    @NameInMap("DatasourceType")
+    public String datasourceType;
+
+    @NameInMap("Product")
+    public String product;
+
+    @NameInMap("RecreateSwitch")
+    public Boolean recreateSwitch;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("Title")
     public String title;
@@ -19,14 +31,6 @@ public class ListDashboardsRequest extends TeaModel {
     public static ListDashboardsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDashboardsRequest self = new ListDashboardsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListDashboardsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListDashboardsRequest setClusterId(String clusterId) {
@@ -43,6 +47,46 @@ public class ListDashboardsRequest extends TeaModel {
     }
     public String getClusterType() {
         return this.clusterType;
+    }
+
+    public ListDashboardsRequest setDashboardName(String dashboardName) {
+        this.dashboardName = dashboardName;
+        return this;
+    }
+    public String getDashboardName() {
+        return this.dashboardName;
+    }
+
+    public ListDashboardsRequest setDatasourceType(String datasourceType) {
+        this.datasourceType = datasourceType;
+        return this;
+    }
+    public String getDatasourceType() {
+        return this.datasourceType;
+    }
+
+    public ListDashboardsRequest setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
+    }
+
+    public ListDashboardsRequest setRecreateSwitch(Boolean recreateSwitch) {
+        this.recreateSwitch = recreateSwitch;
+        return this;
+    }
+    public Boolean getRecreateSwitch() {
+        return this.recreateSwitch;
+    }
+
+    public ListDashboardsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListDashboardsRequest setTitle(String title) {

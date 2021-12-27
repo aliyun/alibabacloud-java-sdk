@@ -4,26 +4,18 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class AddIntegrationRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("Integration")
     public String integration;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static AddIntegrationRequest build(java.util.Map<String, ?> map) throws Exception {
         AddIntegrationRequest self = new AddIntegrationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddIntegrationRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public AddIntegrationRequest setClusterId(String clusterId) {
@@ -40,6 +32,14 @@ public class AddIntegrationRequest extends TeaModel {
     }
     public String getIntegration() {
         return this.integration;
+    }
+
+    public AddIntegrationRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

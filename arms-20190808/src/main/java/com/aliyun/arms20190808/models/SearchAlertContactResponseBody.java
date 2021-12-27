@@ -32,71 +32,42 @@ public class SearchAlertContactResponseBody extends TeaModel {
     }
 
     public static class SearchAlertContactResponseBodyPageBeanContacts extends TeaModel {
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
-        @NameInMap("DingRobot")
-        public String dingRobot;
-
-        @NameInMap("Webhook")
-        public String webhook;
-
-        @NameInMap("Email")
-        public String email;
-
         @NameInMap("ContactId")
         public Long contactId;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
-
-        @NameInMap("UserId")
-        public String userId;
 
         @NameInMap("ContactName")
         public String contactName;
 
-        @NameInMap("SystemNoc")
-        public Boolean systemNoc;
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        @NameInMap("DingRobot")
+        public String dingRobot;
+
+        @NameInMap("Email")
+        public String email;
 
         @NameInMap("Phone")
         public String phone;
 
+        @NameInMap("SystemNoc")
+        public Boolean systemNoc;
+
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("Webhook")
+        public String webhook;
+
         public static SearchAlertContactResponseBodyPageBeanContacts build(java.util.Map<String, ?> map) throws Exception {
             SearchAlertContactResponseBodyPageBeanContacts self = new SearchAlertContactResponseBodyPageBeanContacts();
             return TeaModel.build(map, self);
-        }
-
-        public SearchAlertContactResponseBodyPageBeanContacts setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public SearchAlertContactResponseBodyPageBeanContacts setDingRobot(String dingRobot) {
-            this.dingRobot = dingRobot;
-            return this;
-        }
-        public String getDingRobot() {
-            return this.dingRobot;
-        }
-
-        public SearchAlertContactResponseBodyPageBeanContacts setWebhook(String webhook) {
-            this.webhook = webhook;
-            return this;
-        }
-        public String getWebhook() {
-            return this.webhook;
-        }
-
-        public SearchAlertContactResponseBodyPageBeanContacts setEmail(String email) {
-            this.email = email;
-            return this;
-        }
-        public String getEmail() {
-            return this.email;
         }
 
         public SearchAlertContactResponseBodyPageBeanContacts setContactId(Long contactId) {
@@ -107,6 +78,22 @@ public class SearchAlertContactResponseBody extends TeaModel {
             return this.contactId;
         }
 
+        public SearchAlertContactResponseBodyPageBeanContacts setContactName(String contactName) {
+            this.contactName = contactName;
+            return this;
+        }
+        public String getContactName() {
+            return this.contactName;
+        }
+
+        public SearchAlertContactResponseBodyPageBeanContacts setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
         public SearchAlertContactResponseBodyPageBeanContacts setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
@@ -115,20 +102,28 @@ public class SearchAlertContactResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public SearchAlertContactResponseBodyPageBeanContacts setUserId(String userId) {
-            this.userId = userId;
+        public SearchAlertContactResponseBodyPageBeanContacts setDingRobot(String dingRobot) {
+            this.dingRobot = dingRobot;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public String getDingRobot() {
+            return this.dingRobot;
         }
 
-        public SearchAlertContactResponseBodyPageBeanContacts setContactName(String contactName) {
-            this.contactName = contactName;
+        public SearchAlertContactResponseBodyPageBeanContacts setEmail(String email) {
+            this.email = email;
             return this;
         }
-        public String getContactName() {
-            return this.contactName;
+        public String getEmail() {
+            return this.email;
+        }
+
+        public SearchAlertContactResponseBodyPageBeanContacts setPhone(String phone) {
+            this.phone = phone;
+            return this;
+        }
+        public String getPhone() {
+            return this.phone;
         }
 
         public SearchAlertContactResponseBodyPageBeanContacts setSystemNoc(Boolean systemNoc) {
@@ -139,12 +134,28 @@ public class SearchAlertContactResponseBody extends TeaModel {
             return this.systemNoc;
         }
 
-        public SearchAlertContactResponseBodyPageBeanContacts setPhone(String phone) {
-            this.phone = phone;
+        public SearchAlertContactResponseBodyPageBeanContacts setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public String getPhone() {
-            return this.phone;
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public SearchAlertContactResponseBodyPageBeanContacts setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public SearchAlertContactResponseBodyPageBeanContacts setWebhook(String webhook) {
+            this.webhook = webhook;
+            return this;
+        }
+        public String getWebhook() {
+            return this.webhook;
         }
 
     }

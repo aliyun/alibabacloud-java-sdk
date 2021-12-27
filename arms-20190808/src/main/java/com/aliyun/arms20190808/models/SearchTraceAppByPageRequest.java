@@ -4,9 +4,6 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchTraceAppByPageRequest extends TeaModel {
-    @NameInMap("TraceAppName")
-    public String traceAppName;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -16,17 +13,12 @@ public class SearchTraceAppByPageRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("TraceAppName")
+    public String traceAppName;
+
     public static SearchTraceAppByPageRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchTraceAppByPageRequest self = new SearchTraceAppByPageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SearchTraceAppByPageRequest setTraceAppName(String traceAppName) {
-        this.traceAppName = traceAppName;
-        return this;
-    }
-    public String getTraceAppName() {
-        return this.traceAppName;
     }
 
     public SearchTraceAppByPageRequest setPageNumber(Integer pageNumber) {
@@ -51,6 +43,14 @@ public class SearchTraceAppByPageRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public SearchTraceAppByPageRequest setTraceAppName(String traceAppName) {
+        this.traceAppName = traceAppName;
+        return this;
+    }
+    public String getTraceAppName() {
+        return this.traceAppName;
     }
 
 }

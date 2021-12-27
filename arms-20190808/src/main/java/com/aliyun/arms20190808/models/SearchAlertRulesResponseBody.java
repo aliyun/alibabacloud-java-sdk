@@ -38,11 +38,11 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         @NameInMap("AlarmContentTemplate")
         public String alarmContentTemplate;
 
-        @NameInMap("SubTitle")
-        public String subTitle;
-
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("SubTitle")
+        public String subTitle;
 
         public static SearchAlertRulesResponseBodyPageBeanAlertRulesAlarmContext build(java.util.Map<String, ?> map) throws Exception {
             SearchAlertRulesResponseBodyPageBeanAlertRulesAlarmContext self = new SearchAlertRulesResponseBodyPageBeanAlertRulesAlarmContext();
@@ -65,14 +65,6 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             return this.alarmContentTemplate;
         }
 
-        public SearchAlertRulesResponseBodyPageBeanAlertRulesAlarmContext setSubTitle(String subTitle) {
-            this.subTitle = subTitle;
-            return this;
-        }
-        public String getSubTitle() {
-            return this.subTitle;
-        }
-
         public SearchAlertRulesResponseBodyPageBeanAlertRulesAlarmContext setContent(String content) {
             this.content = content;
             return this;
@@ -81,69 +73,25 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             return this.content;
         }
 
-    }
-
-    public static class SearchAlertRulesResponseBodyPageBeanAlertRulesNotice extends TeaModel {
-        @NameInMap("EndTime")
-        public Long endTime;
-
-        @NameInMap("NoticeEndTime")
-        public Long noticeEndTime;
-
-        @NameInMap("StartTime")
-        public Long startTime;
-
-        @NameInMap("NoticeStartTime")
-        public Long noticeStartTime;
-
-        public static SearchAlertRulesResponseBodyPageBeanAlertRulesNotice build(java.util.Map<String, ?> map) throws Exception {
-            SearchAlertRulesResponseBodyPageBeanAlertRulesNotice self = new SearchAlertRulesResponseBodyPageBeanAlertRulesNotice();
-            return TeaModel.build(map, self);
-        }
-
-        public SearchAlertRulesResponseBodyPageBeanAlertRulesNotice setEndTime(Long endTime) {
-            this.endTime = endTime;
+        public SearchAlertRulesResponseBodyPageBeanAlertRulesAlarmContext setSubTitle(String subTitle) {
+            this.subTitle = subTitle;
             return this;
         }
-        public Long getEndTime() {
-            return this.endTime;
-        }
-
-        public SearchAlertRulesResponseBodyPageBeanAlertRulesNotice setNoticeEndTime(Long noticeEndTime) {
-            this.noticeEndTime = noticeEndTime;
-            return this;
-        }
-        public Long getNoticeEndTime() {
-            return this.noticeEndTime;
-        }
-
-        public SearchAlertRulesResponseBodyPageBeanAlertRulesNotice setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
-        }
-
-        public SearchAlertRulesResponseBodyPageBeanAlertRulesNotice setNoticeStartTime(Long noticeStartTime) {
-            this.noticeStartTime = noticeStartTime;
-            return this;
-        }
-        public Long getNoticeStartTime() {
-            return this.noticeStartTime;
+        public String getSubTitle() {
+            return this.subTitle;
         }
 
     }
 
     public static class SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRuleRules extends TeaModel {
-        @NameInMap("Measure")
-        public String measure;
-
-        @NameInMap("Value")
-        public Float value;
-
         @NameInMap("Aggregates")
         public String aggregates;
+
+        @NameInMap("Alias")
+        public String alias;
+
+        @NameInMap("Measure")
+        public String measure;
 
         @NameInMap("NValue")
         public Integer NValue;
@@ -151,28 +99,12 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         @NameInMap("Operator")
         public String operator;
 
-        @NameInMap("Alias")
-        public String alias;
+        @NameInMap("Value")
+        public Float value;
 
         public static SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRuleRules build(java.util.Map<String, ?> map) throws Exception {
             SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRuleRules self = new SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRuleRules();
             return TeaModel.build(map, self);
-        }
-
-        public SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRuleRules setMeasure(String measure) {
-            this.measure = measure;
-            return this;
-        }
-        public String getMeasure() {
-            return this.measure;
-        }
-
-        public SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRuleRules setValue(Float value) {
-            this.value = value;
-            return this;
-        }
-        public Float getValue() {
-            return this.value;
         }
 
         public SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRuleRules setAggregates(String aggregates) {
@@ -181,6 +113,22 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         }
         public String getAggregates() {
             return this.aggregates;
+        }
+
+        public SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRuleRules setAlias(String alias) {
+            this.alias = alias;
+            return this;
+        }
+        public String getAlias() {
+            return this.alias;
+        }
+
+        public SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRuleRules setMeasure(String measure) {
+            this.measure = measure;
+            return this;
+        }
+        public String getMeasure() {
+            return this.measure;
         }
 
         public SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRuleRules setNValue(Integer NValue) {
@@ -199,12 +147,12 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             return this.operator;
         }
 
-        public SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRuleRules setAlias(String alias) {
-            this.alias = alias;
+        public SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRuleRules setValue(Float value) {
+            this.value = value;
             return this;
         }
-        public String getAlias() {
-            return this.alias;
+        public Float getValue() {
+            return this.value;
         }
 
     }
@@ -281,32 +229,24 @@ public class SearchAlertRulesResponseBody extends TeaModel {
     }
 
     public static class SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("AppGroupId")
         public String appGroupId;
 
         @NameInMap("AppId")
         public String appId;
 
+        @NameInMap("Dimensions")
+        public java.util.List<SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParamDimensions> dimensions;
+
         @NameInMap("Pid")
         public String pid;
 
-        @NameInMap("Dimensions")
-        public java.util.List<SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParamDimensions> dimensions;
+        @NameInMap("Type")
+        public String type;
 
         public static SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam build(java.util.Map<String, ?> map) throws Exception {
             SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam self = new SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam();
             return TeaModel.build(map, self);
-        }
-
-        public SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam setAppGroupId(String appGroupId) {
@@ -325,14 +265,6 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam setPid(String pid) {
-            this.pid = pid;
-            return this;
-        }
-        public String getPid() {
-            return this.pid;
-        }
-
         public SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam setDimensions(java.util.List<SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParamDimensions> dimensions) {
             this.dimensions = dimensions;
             return this;
@@ -341,59 +273,133 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             return this.dimensions;
         }
 
+        public SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam setPid(String pid) {
+            this.pid = pid;
+            return this;
+        }
+        public String getPid() {
+            return this.pid;
+        }
+
+        public SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class SearchAlertRulesResponseBodyPageBeanAlertRulesNotice extends TeaModel {
+        @NameInMap("EndTime")
+        public Long endTime;
+
+        @NameInMap("NoticeEndTime")
+        public Long noticeEndTime;
+
+        @NameInMap("NoticeStartTime")
+        public Long noticeStartTime;
+
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        public static SearchAlertRulesResponseBodyPageBeanAlertRulesNotice build(java.util.Map<String, ?> map) throws Exception {
+            SearchAlertRulesResponseBodyPageBeanAlertRulesNotice self = new SearchAlertRulesResponseBodyPageBeanAlertRulesNotice();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchAlertRulesResponseBodyPageBeanAlertRulesNotice setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public SearchAlertRulesResponseBodyPageBeanAlertRulesNotice setNoticeEndTime(Long noticeEndTime) {
+            this.noticeEndTime = noticeEndTime;
+            return this;
+        }
+        public Long getNoticeEndTime() {
+            return this.noticeEndTime;
+        }
+
+        public SearchAlertRulesResponseBodyPageBeanAlertRulesNotice setNoticeStartTime(Long noticeStartTime) {
+            this.noticeStartTime = noticeStartTime;
+            return this;
+        }
+        public Long getNoticeStartTime() {
+            return this.noticeStartTime;
+        }
+
+        public SearchAlertRulesResponseBodyPageBeanAlertRulesNotice setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
     }
 
     public static class SearchAlertRulesResponseBodyPageBeanAlertRules extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("AlarmContext")
         public SearchAlertRulesResponseBodyPageBeanAlertRulesAlarmContext alarmContext;
-
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
-        @NameInMap("ContactGroupIdList")
-        public String contactGroupIdList;
-
-        @NameInMap("Notice")
-        public SearchAlertRulesResponseBodyPageBeanAlertRulesNotice notice;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
-
-        @NameInMap("AlertTitle")
-        public String alertTitle;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("AlertVersion")
-        public Integer alertVersion;
-
-        @NameInMap("AlertRule")
-        public SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRule alertRule;
-
-        @NameInMap("MetricParam")
-        public SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam metricParam;
-
-        @NameInMap("AlertType")
-        public Integer alertType;
-
-        @NameInMap("ContactGroupIds")
-        public String contactGroupIds;
-
-        @NameInMap("Config")
-        public String config;
-
-        @NameInMap("RegionId")
-        public String regionId;
 
         @NameInMap("AlertLevel")
         public String alertLevel;
 
+        @NameInMap("AlertRule")
+        public SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRule alertRule;
+
+        @NameInMap("AlertTitle")
+        public String alertTitle;
+
+        @NameInMap("AlertType")
+        public Integer alertType;
+
+        @NameInMap("AlertVersion")
+        public Integer alertVersion;
+
         @NameInMap("AlertWay")
         public java.util.List<String> alertWay;
+
+        @NameInMap("AlertWays")
+        public java.util.List<String> alertWays;
+
+        @NameInMap("Config")
+        public String config;
+
+        @NameInMap("ContactGroupIdList")
+        public String contactGroupIdList;
+
+        @NameInMap("ContactGroupIds")
+        public String contactGroupIds;
+
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        @NameInMap("HostByAlertManager")
+        public Boolean hostByAlertManager;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("MetricParam")
+        public SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam metricParam;
+
+        @NameInMap("Notice")
+        public SearchAlertRulesResponseBodyPageBeanAlertRulesNotice notice;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TaskId")
+        public Long taskId;
 
         @NameInMap("TaskStatus")
         public String taskStatus;
@@ -401,26 +407,15 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         @NameInMap("Title")
         public String title;
 
-        @NameInMap("TaskId")
-        public Long taskId;
+        @NameInMap("UpdateTime")
+        public Long updateTime;
 
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("AlertWays")
-        public java.util.List<String> alertWays;
+        @NameInMap("UserId")
+        public String userId;
 
         public static SearchAlertRulesResponseBodyPageBeanAlertRules build(java.util.Map<String, ?> map) throws Exception {
             SearchAlertRulesResponseBodyPageBeanAlertRules self = new SearchAlertRulesResponseBodyPageBeanAlertRules();
             return TeaModel.build(map, self);
-        }
-
-        public SearchAlertRulesResponseBodyPageBeanAlertRules setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public SearchAlertRulesResponseBodyPageBeanAlertRules setAlarmContext(SearchAlertRulesResponseBodyPageBeanAlertRulesAlarmContext alarmContext) {
@@ -431,60 +426,12 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             return this.alarmContext;
         }
 
-        public SearchAlertRulesResponseBodyPageBeanAlertRules setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
+        public SearchAlertRulesResponseBodyPageBeanAlertRules setAlertLevel(String alertLevel) {
+            this.alertLevel = alertLevel;
             return this;
         }
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public SearchAlertRulesResponseBodyPageBeanAlertRules setContactGroupIdList(String contactGroupIdList) {
-            this.contactGroupIdList = contactGroupIdList;
-            return this;
-        }
-        public String getContactGroupIdList() {
-            return this.contactGroupIdList;
-        }
-
-        public SearchAlertRulesResponseBodyPageBeanAlertRules setNotice(SearchAlertRulesResponseBodyPageBeanAlertRulesNotice notice) {
-            this.notice = notice;
-            return this;
-        }
-        public SearchAlertRulesResponseBodyPageBeanAlertRulesNotice getNotice() {
-            return this.notice;
-        }
-
-        public SearchAlertRulesResponseBodyPageBeanAlertRules setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
-        }
-
-        public SearchAlertRulesResponseBodyPageBeanAlertRules setAlertTitle(String alertTitle) {
-            this.alertTitle = alertTitle;
-            return this;
-        }
-        public String getAlertTitle() {
-            return this.alertTitle;
-        }
-
-        public SearchAlertRulesResponseBodyPageBeanAlertRules setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public SearchAlertRulesResponseBodyPageBeanAlertRules setAlertVersion(Integer alertVersion) {
-            this.alertVersion = alertVersion;
-            return this;
-        }
-        public Integer getAlertVersion() {
-            return this.alertVersion;
+        public String getAlertLevel() {
+            return this.alertLevel;
         }
 
         public SearchAlertRulesResponseBodyPageBeanAlertRules setAlertRule(SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRule alertRule) {
@@ -495,12 +442,12 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             return this.alertRule;
         }
 
-        public SearchAlertRulesResponseBodyPageBeanAlertRules setMetricParam(SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam metricParam) {
-            this.metricParam = metricParam;
+        public SearchAlertRulesResponseBodyPageBeanAlertRules setAlertTitle(String alertTitle) {
+            this.alertTitle = alertTitle;
             return this;
         }
-        public SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam getMetricParam() {
-            return this.metricParam;
+        public String getAlertTitle() {
+            return this.alertTitle;
         }
 
         public SearchAlertRulesResponseBodyPageBeanAlertRules setAlertType(Integer alertType) {
@@ -511,12 +458,28 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             return this.alertType;
         }
 
-        public SearchAlertRulesResponseBodyPageBeanAlertRules setContactGroupIds(String contactGroupIds) {
-            this.contactGroupIds = contactGroupIds;
+        public SearchAlertRulesResponseBodyPageBeanAlertRules setAlertVersion(Integer alertVersion) {
+            this.alertVersion = alertVersion;
             return this;
         }
-        public String getContactGroupIds() {
-            return this.contactGroupIds;
+        public Integer getAlertVersion() {
+            return this.alertVersion;
+        }
+
+        public SearchAlertRulesResponseBodyPageBeanAlertRules setAlertWay(java.util.List<String> alertWay) {
+            this.alertWay = alertWay;
+            return this;
+        }
+        public java.util.List<String> getAlertWay() {
+            return this.alertWay;
+        }
+
+        public SearchAlertRulesResponseBodyPageBeanAlertRules setAlertWays(java.util.List<String> alertWays) {
+            this.alertWays = alertWays;
+            return this;
+        }
+        public java.util.List<String> getAlertWays() {
+            return this.alertWays;
         }
 
         public SearchAlertRulesResponseBodyPageBeanAlertRules setConfig(String config) {
@@ -527,6 +490,62 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             return this.config;
         }
 
+        public SearchAlertRulesResponseBodyPageBeanAlertRules setContactGroupIdList(String contactGroupIdList) {
+            this.contactGroupIdList = contactGroupIdList;
+            return this;
+        }
+        public String getContactGroupIdList() {
+            return this.contactGroupIdList;
+        }
+
+        public SearchAlertRulesResponseBodyPageBeanAlertRules setContactGroupIds(String contactGroupIds) {
+            this.contactGroupIds = contactGroupIds;
+            return this;
+        }
+        public String getContactGroupIds() {
+            return this.contactGroupIds;
+        }
+
+        public SearchAlertRulesResponseBodyPageBeanAlertRules setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public SearchAlertRulesResponseBodyPageBeanAlertRules setHostByAlertManager(Boolean hostByAlertManager) {
+            this.hostByAlertManager = hostByAlertManager;
+            return this;
+        }
+        public Boolean getHostByAlertManager() {
+            return this.hostByAlertManager;
+        }
+
+        public SearchAlertRulesResponseBodyPageBeanAlertRules setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public SearchAlertRulesResponseBodyPageBeanAlertRules setMetricParam(SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam metricParam) {
+            this.metricParam = metricParam;
+            return this;
+        }
+        public SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam getMetricParam() {
+            return this.metricParam;
+        }
+
+        public SearchAlertRulesResponseBodyPageBeanAlertRules setNotice(SearchAlertRulesResponseBodyPageBeanAlertRulesNotice notice) {
+            this.notice = notice;
+            return this;
+        }
+        public SearchAlertRulesResponseBodyPageBeanAlertRulesNotice getNotice() {
+            return this.notice;
+        }
+
         public SearchAlertRulesResponseBodyPageBeanAlertRules setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -535,20 +554,20 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public SearchAlertRulesResponseBodyPageBeanAlertRules setAlertLevel(String alertLevel) {
-            this.alertLevel = alertLevel;
+        public SearchAlertRulesResponseBodyPageBeanAlertRules setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getAlertLevel() {
-            return this.alertLevel;
+        public String getStatus() {
+            return this.status;
         }
 
-        public SearchAlertRulesResponseBodyPageBeanAlertRules setAlertWay(java.util.List<String> alertWay) {
-            this.alertWay = alertWay;
+        public SearchAlertRulesResponseBodyPageBeanAlertRules setTaskId(Long taskId) {
+            this.taskId = taskId;
             return this;
         }
-        public java.util.List<String> getAlertWay() {
-            return this.alertWay;
+        public Long getTaskId() {
+            return this.taskId;
         }
 
         public SearchAlertRulesResponseBodyPageBeanAlertRules setTaskStatus(String taskStatus) {
@@ -567,28 +586,20 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             return this.title;
         }
 
-        public SearchAlertRulesResponseBodyPageBeanAlertRules setTaskId(Long taskId) {
-            this.taskId = taskId;
+        public SearchAlertRulesResponseBodyPageBeanAlertRules setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public Long getTaskId() {
-            return this.taskId;
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
-        public SearchAlertRulesResponseBodyPageBeanAlertRules setId(Long id) {
-            this.id = id;
+        public SearchAlertRulesResponseBodyPageBeanAlertRules setUserId(String userId) {
+            this.userId = userId;
             return this;
         }
-        public Long getId() {
-            return this.id;
-        }
-
-        public SearchAlertRulesResponseBodyPageBeanAlertRules setAlertWays(java.util.List<String> alertWays) {
-            this.alertWays = alertWays;
-            return this;
-        }
-        public java.util.List<String> getAlertWays() {
-            return this.alertWays;
+        public String getUserId() {
+            return this.userId;
         }
 
     }

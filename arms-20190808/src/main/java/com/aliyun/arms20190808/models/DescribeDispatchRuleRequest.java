@@ -10,9 +10,6 @@ public class DescribeDispatchRuleRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ProxyUserId")
-    public String proxyUserId;
-
     public static DescribeDispatchRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDispatchRuleRequest self = new DescribeDispatchRuleRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class DescribeDispatchRuleRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public DescribeDispatchRuleRequest setProxyUserId(String proxyUserId) {
-        this.proxyUserId = proxyUserId;
-        return this;
-    }
-    public String getProxyUserId() {
-        return this.proxyUserId;
     }
 
 }

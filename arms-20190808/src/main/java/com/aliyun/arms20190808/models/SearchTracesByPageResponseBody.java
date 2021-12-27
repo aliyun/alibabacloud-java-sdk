@@ -32,20 +32,20 @@ public class SearchTracesByPageResponseBody extends TeaModel {
     }
 
     public static class SearchTracesByPageResponseBodyPageBeanTraceInfos extends TeaModel {
+        @NameInMap("Duration")
+        public Long duration;
+
         @NameInMap("OperationName")
         public String operationName;
 
         @NameInMap("ServiceIp")
         public String serviceIp;
 
-        @NameInMap("Duration")
-        public Long duration;
+        @NameInMap("ServiceName")
+        public String serviceName;
 
         @NameInMap("Timestamp")
         public Long timestamp;
-
-        @NameInMap("ServiceName")
-        public String serviceName;
 
         @NameInMap("TraceID")
         public String traceID;
@@ -53,6 +53,14 @@ public class SearchTracesByPageResponseBody extends TeaModel {
         public static SearchTracesByPageResponseBodyPageBeanTraceInfos build(java.util.Map<String, ?> map) throws Exception {
             SearchTracesByPageResponseBodyPageBeanTraceInfos self = new SearchTracesByPageResponseBodyPageBeanTraceInfos();
             return TeaModel.build(map, self);
+        }
+
+        public SearchTracesByPageResponseBodyPageBeanTraceInfos setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
         }
 
         public SearchTracesByPageResponseBodyPageBeanTraceInfos setOperationName(String operationName) {
@@ -71,12 +79,12 @@ public class SearchTracesByPageResponseBody extends TeaModel {
             return this.serviceIp;
         }
 
-        public SearchTracesByPageResponseBodyPageBeanTraceInfos setDuration(Long duration) {
-            this.duration = duration;
+        public SearchTracesByPageResponseBodyPageBeanTraceInfos setServiceName(String serviceName) {
+            this.serviceName = serviceName;
             return this;
         }
-        public Long getDuration() {
-            return this.duration;
+        public String getServiceName() {
+            return this.serviceName;
         }
 
         public SearchTracesByPageResponseBodyPageBeanTraceInfos setTimestamp(Long timestamp) {
@@ -85,14 +93,6 @@ public class SearchTracesByPageResponseBody extends TeaModel {
         }
         public Long getTimestamp() {
             return this.timestamp;
-        }
-
-        public SearchTracesByPageResponseBodyPageBeanTraceInfos setServiceName(String serviceName) {
-            this.serviceName = serviceName;
-            return this;
-        }
-        public String getServiceName() {
-            return this.serviceName;
         }
 
         public SearchTracesByPageResponseBodyPageBeanTraceInfos setTraceID(String traceID) {
@@ -106,9 +106,6 @@ public class SearchTracesByPageResponseBody extends TeaModel {
     }
 
     public static class SearchTracesByPageResponseBodyPageBean extends TeaModel {
-        @NameInMap("TraceInfos")
-        public java.util.List<SearchTracesByPageResponseBodyPageBeanTraceInfos> traceInfos;
-
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -118,17 +115,12 @@ public class SearchTracesByPageResponseBody extends TeaModel {
         @NameInMap("Total")
         public Integer total;
 
+        @NameInMap("TraceInfos")
+        public java.util.List<SearchTracesByPageResponseBodyPageBeanTraceInfos> traceInfos;
+
         public static SearchTracesByPageResponseBodyPageBean build(java.util.Map<String, ?> map) throws Exception {
             SearchTracesByPageResponseBodyPageBean self = new SearchTracesByPageResponseBodyPageBean();
             return TeaModel.build(map, self);
-        }
-
-        public SearchTracesByPageResponseBodyPageBean setTraceInfos(java.util.List<SearchTracesByPageResponseBodyPageBeanTraceInfos> traceInfos) {
-            this.traceInfos = traceInfos;
-            return this;
-        }
-        public java.util.List<SearchTracesByPageResponseBodyPageBeanTraceInfos> getTraceInfos() {
-            return this.traceInfos;
         }
 
         public SearchTracesByPageResponseBodyPageBean setPageNumber(Integer pageNumber) {
@@ -153,6 +145,14 @@ public class SearchTracesByPageResponseBody extends TeaModel {
         }
         public Integer getTotal() {
             return this.total;
+        }
+
+        public SearchTracesByPageResponseBodyPageBean setTraceInfos(java.util.List<SearchTracesByPageResponseBodyPageBeanTraceInfos> traceInfos) {
+            this.traceInfos = traceInfos;
+            return this;
+        }
+        public java.util.List<SearchTracesByPageResponseBodyPageBeanTraceInfos> getTraceInfos() {
+            return this.traceInfos;
         }
 
     }

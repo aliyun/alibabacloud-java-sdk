@@ -32,20 +32,20 @@ public class SearchTracesResponseBody extends TeaModel {
     }
 
     public static class SearchTracesResponseBodyTraceInfos extends TeaModel {
+        @NameInMap("Duration")
+        public Long duration;
+
         @NameInMap("OperationName")
         public String operationName;
 
         @NameInMap("ServiceIp")
         public String serviceIp;
 
-        @NameInMap("Duration")
-        public Long duration;
+        @NameInMap("ServiceName")
+        public String serviceName;
 
         @NameInMap("Timestamp")
         public Long timestamp;
-
-        @NameInMap("ServiceName")
-        public String serviceName;
 
         @NameInMap("TraceID")
         public String traceID;
@@ -53,6 +53,14 @@ public class SearchTracesResponseBody extends TeaModel {
         public static SearchTracesResponseBodyTraceInfos build(java.util.Map<String, ?> map) throws Exception {
             SearchTracesResponseBodyTraceInfos self = new SearchTracesResponseBodyTraceInfos();
             return TeaModel.build(map, self);
+        }
+
+        public SearchTracesResponseBodyTraceInfos setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
         }
 
         public SearchTracesResponseBodyTraceInfos setOperationName(String operationName) {
@@ -71,12 +79,12 @@ public class SearchTracesResponseBody extends TeaModel {
             return this.serviceIp;
         }
 
-        public SearchTracesResponseBodyTraceInfos setDuration(Long duration) {
-            this.duration = duration;
+        public SearchTracesResponseBodyTraceInfos setServiceName(String serviceName) {
+            this.serviceName = serviceName;
             return this;
         }
-        public Long getDuration() {
-            return this.duration;
+        public String getServiceName() {
+            return this.serviceName;
         }
 
         public SearchTracesResponseBodyTraceInfos setTimestamp(Long timestamp) {
@@ -85,14 +93,6 @@ public class SearchTracesResponseBody extends TeaModel {
         }
         public Long getTimestamp() {
             return this.timestamp;
-        }
-
-        public SearchTracesResponseBodyTraceInfos setServiceName(String serviceName) {
-            this.serviceName = serviceName;
-            return this;
-        }
-        public String getServiceName() {
-            return this.serviceName;
         }
 
         public SearchTracesResponseBodyTraceInfos setTraceID(String traceID) {

@@ -32,23 +32,15 @@ public class GetStackResponseBody extends TeaModel {
     }
 
     public static class GetStackResponseBodyStackInfoExtInfo extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("Info")
         public String info;
+
+        @NameInMap("Type")
+        public String type;
 
         public static GetStackResponseBodyStackInfoExtInfo build(java.util.Map<String, ?> map) throws Exception {
             GetStackResponseBodyStackInfoExtInfo self = new GetStackResponseBodyStackInfoExtInfo();
             return TeaModel.build(map, self);
-        }
-
-        public GetStackResponseBodyStackInfoExtInfo setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public GetStackResponseBodyStackInfoExtInfo setInfo(String info) {
@@ -59,23 +51,31 @@ public class GetStackResponseBody extends TeaModel {
             return this.info;
         }
 
+        public GetStackResponseBodyStackInfoExtInfo setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
     public static class GetStackResponseBodyStackInfo extends TeaModel {
-        @NameInMap("StartTime")
-        public Long startTime;
+        @NameInMap("Api")
+        public String api;
+
+        @NameInMap("Duration")
+        public Long duration;
 
         @NameInMap("Exception")
         public String exception;
 
-        @NameInMap("Api")
-        public String api;
+        @NameInMap("ExtInfo")
+        public GetStackResponseBodyStackInfoExtInfo extInfo;
 
         @NameInMap("Line")
         public String line;
-
-        @NameInMap("Duration")
-        public Long duration;
 
         @NameInMap("RpcId")
         public String rpcId;
@@ -83,28 +83,12 @@ public class GetStackResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
-        @NameInMap("ExtInfo")
-        public GetStackResponseBodyStackInfoExtInfo extInfo;
+        @NameInMap("StartTime")
+        public Long startTime;
 
         public static GetStackResponseBodyStackInfo build(java.util.Map<String, ?> map) throws Exception {
             GetStackResponseBodyStackInfo self = new GetStackResponseBodyStackInfo();
             return TeaModel.build(map, self);
-        }
-
-        public GetStackResponseBodyStackInfo setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
-        }
-
-        public GetStackResponseBodyStackInfo setException(String exception) {
-            this.exception = exception;
-            return this;
-        }
-        public String getException() {
-            return this.exception;
         }
 
         public GetStackResponseBodyStackInfo setApi(String api) {
@@ -115,20 +99,36 @@ public class GetStackResponseBody extends TeaModel {
             return this.api;
         }
 
-        public GetStackResponseBodyStackInfo setLine(String line) {
-            this.line = line;
-            return this;
-        }
-        public String getLine() {
-            return this.line;
-        }
-
         public GetStackResponseBodyStackInfo setDuration(Long duration) {
             this.duration = duration;
             return this;
         }
         public Long getDuration() {
             return this.duration;
+        }
+
+        public GetStackResponseBodyStackInfo setException(String exception) {
+            this.exception = exception;
+            return this;
+        }
+        public String getException() {
+            return this.exception;
+        }
+
+        public GetStackResponseBodyStackInfo setExtInfo(GetStackResponseBodyStackInfoExtInfo extInfo) {
+            this.extInfo = extInfo;
+            return this;
+        }
+        public GetStackResponseBodyStackInfoExtInfo getExtInfo() {
+            return this.extInfo;
+        }
+
+        public GetStackResponseBodyStackInfo setLine(String line) {
+            this.line = line;
+            return this;
+        }
+        public String getLine() {
+            return this.line;
         }
 
         public GetStackResponseBodyStackInfo setRpcId(String rpcId) {
@@ -147,12 +147,12 @@ public class GetStackResponseBody extends TeaModel {
             return this.serviceName;
         }
 
-        public GetStackResponseBodyStackInfo setExtInfo(GetStackResponseBodyStackInfoExtInfo extInfo) {
-            this.extInfo = extInfo;
+        public GetStackResponseBodyStackInfo setStartTime(Long startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public GetStackResponseBodyStackInfoExtInfo getExtInfo() {
-            return this.extInfo;
+        public Long getStartTime() {
+            return this.startTime;
         }
 
     }

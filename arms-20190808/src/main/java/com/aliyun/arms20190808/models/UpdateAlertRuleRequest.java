@@ -4,8 +4,8 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertRuleRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AlertId")
+    public Long alertId;
 
     @NameInMap("ContactGroupIds")
     public String contactGroupIds;
@@ -13,26 +13,23 @@ public class UpdateAlertRuleRequest extends TeaModel {
     @NameInMap("IsAutoStart")
     public Boolean isAutoStart;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("TemplageAlertConfig")
     public String templageAlertConfig;
-
-    @NameInMap("ProxyUserId")
-    public String proxyUserId;
-
-    @NameInMap("AlertId")
-    public Long alertId;
 
     public static UpdateAlertRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAlertRuleRequest self = new UpdateAlertRuleRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateAlertRuleRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public UpdateAlertRuleRequest setAlertId(Long alertId) {
+        this.alertId = alertId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Long getAlertId() {
+        return this.alertId;
     }
 
     public UpdateAlertRuleRequest setContactGroupIds(String contactGroupIds) {
@@ -51,28 +48,20 @@ public class UpdateAlertRuleRequest extends TeaModel {
         return this.isAutoStart;
     }
 
+    public UpdateAlertRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public UpdateAlertRuleRequest setTemplageAlertConfig(String templageAlertConfig) {
         this.templageAlertConfig = templageAlertConfig;
         return this;
     }
     public String getTemplageAlertConfig() {
         return this.templageAlertConfig;
-    }
-
-    public UpdateAlertRuleRequest setProxyUserId(String proxyUserId) {
-        this.proxyUserId = proxyUserId;
-        return this;
-    }
-    public String getProxyUserId() {
-        return this.proxyUserId;
-    }
-
-    public UpdateAlertRuleRequest setAlertId(Long alertId) {
-        this.alertId = alertId;
-        return this;
-    }
-    public Long getAlertId() {
-        return this.alertId;
     }
 
 }

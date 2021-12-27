@@ -32,26 +32,21 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
     }
 
     public static class ListRetcodeAppsResponseBodyRetcodeApps extends TeaModel {
-        @NameInMap("AppName")
-        public String appName;
-
         @NameInMap("AppId")
         public Long appId;
+
+        @NameInMap("AppName")
+        public String appName;
 
         @NameInMap("Pid")
         public String pid;
 
+        @NameInMap("RetcodeAppType")
+        public String retcodeAppType;
+
         public static ListRetcodeAppsResponseBodyRetcodeApps build(java.util.Map<String, ?> map) throws Exception {
             ListRetcodeAppsResponseBodyRetcodeApps self = new ListRetcodeAppsResponseBodyRetcodeApps();
             return TeaModel.build(map, self);
-        }
-
-        public ListRetcodeAppsResponseBodyRetcodeApps setAppName(String appName) {
-            this.appName = appName;
-            return this;
-        }
-        public String getAppName() {
-            return this.appName;
         }
 
         public ListRetcodeAppsResponseBodyRetcodeApps setAppId(Long appId) {
@@ -62,12 +57,28 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             return this.appId;
         }
 
+        public ListRetcodeAppsResponseBodyRetcodeApps setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
+        }
+
         public ListRetcodeAppsResponseBodyRetcodeApps setPid(String pid) {
             this.pid = pid;
             return this;
         }
         public String getPid() {
             return this.pid;
+        }
+
+        public ListRetcodeAppsResponseBodyRetcodeApps setRetcodeAppType(String retcodeAppType) {
+            this.retcodeAppType = retcodeAppType;
+            return this;
+        }
+        public String getRetcodeAppType() {
+            return this.retcodeAppType;
         }
 
     }

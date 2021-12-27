@@ -31,36 +31,6 @@ public class GetTraceResponseBody extends TeaModel {
         return this.spans;
     }
 
-    public static class GetTraceResponseBodySpansTagEntryList extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static GetTraceResponseBodySpansTagEntryList build(java.util.Map<String, ?> map) throws Exception {
-            GetTraceResponseBodySpansTagEntryList self = new GetTraceResponseBodySpansTagEntryList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetTraceResponseBodySpansTagEntryList setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public GetTraceResponseBodySpansTagEntryList setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class GetTraceResponseBodySpansLogEventListTagEntryList extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -121,39 +91,78 @@ public class GetTraceResponseBody extends TeaModel {
 
     }
 
+    public static class GetTraceResponseBodySpansTagEntryList extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetTraceResponseBodySpansTagEntryList build(java.util.Map<String, ?> map) throws Exception {
+            GetTraceResponseBodySpansTagEntryList self = new GetTraceResponseBodySpansTagEntryList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTraceResponseBodySpansTagEntryList setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetTraceResponseBodySpansTagEntryList setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetTraceResponseBodySpans extends TeaModel {
-        @NameInMap("OperationName")
-        public String operationName;
-
-        @NameInMap("ResultCode")
-        public String resultCode;
-
-        @NameInMap("Timestamp")
-        public Long timestamp;
-
-        @NameInMap("RpcType")
-        public Integer rpcType;
-
-        @NameInMap("TagEntryList")
-        public java.util.List<GetTraceResponseBodySpansTagEntryList> tagEntryList;
-
-        @NameInMap("LogEventList")
-        public java.util.List<GetTraceResponseBodySpansLogEventList> logEventList;
-
-        @NameInMap("HaveStack")
-        public Boolean haveStack;
-
-        @NameInMap("ServiceIp")
-        public String serviceIp;
+        @NameInMap("Children")
+        public java.util.List<java.util.Map<String, ?>> children;
 
         @NameInMap("Duration")
         public Long duration;
 
+        @NameInMap("HaveStack")
+        public Boolean haveStack;
+
+        @NameInMap("LogEventList")
+        public java.util.List<GetTraceResponseBodySpansLogEventList> logEventList;
+
+        @NameInMap("OperationName")
+        public String operationName;
+
+        @NameInMap("ParentSpanId")
+        public String parentSpanId;
+
+        @NameInMap("ResultCode")
+        public String resultCode;
+
         @NameInMap("RpcId")
         public String rpcId;
 
+        @NameInMap("RpcType")
+        public Integer rpcType;
+
+        @NameInMap("ServiceIp")
+        public String serviceIp;
+
         @NameInMap("ServiceName")
         public String serviceName;
+
+        @NameInMap("SpanId")
+        public String spanId;
+
+        @NameInMap("TagEntryList")
+        public java.util.List<GetTraceResponseBodySpansTagEntryList> tagEntryList;
+
+        @NameInMap("Timestamp")
+        public Long timestamp;
 
         @NameInMap("TraceID")
         public String traceID;
@@ -163,68 +172,12 @@ public class GetTraceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetTraceResponseBodySpans setOperationName(String operationName) {
-            this.operationName = operationName;
+        public GetTraceResponseBodySpans setChildren(java.util.List<java.util.Map<String, ?>> children) {
+            this.children = children;
             return this;
         }
-        public String getOperationName() {
-            return this.operationName;
-        }
-
-        public GetTraceResponseBodySpans setResultCode(String resultCode) {
-            this.resultCode = resultCode;
-            return this;
-        }
-        public String getResultCode() {
-            return this.resultCode;
-        }
-
-        public GetTraceResponseBodySpans setTimestamp(Long timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public Long getTimestamp() {
-            return this.timestamp;
-        }
-
-        public GetTraceResponseBodySpans setRpcType(Integer rpcType) {
-            this.rpcType = rpcType;
-            return this;
-        }
-        public Integer getRpcType() {
-            return this.rpcType;
-        }
-
-        public GetTraceResponseBodySpans setTagEntryList(java.util.List<GetTraceResponseBodySpansTagEntryList> tagEntryList) {
-            this.tagEntryList = tagEntryList;
-            return this;
-        }
-        public java.util.List<GetTraceResponseBodySpansTagEntryList> getTagEntryList() {
-            return this.tagEntryList;
-        }
-
-        public GetTraceResponseBodySpans setLogEventList(java.util.List<GetTraceResponseBodySpansLogEventList> logEventList) {
-            this.logEventList = logEventList;
-            return this;
-        }
-        public java.util.List<GetTraceResponseBodySpansLogEventList> getLogEventList() {
-            return this.logEventList;
-        }
-
-        public GetTraceResponseBodySpans setHaveStack(Boolean haveStack) {
-            this.haveStack = haveStack;
-            return this;
-        }
-        public Boolean getHaveStack() {
-            return this.haveStack;
-        }
-
-        public GetTraceResponseBodySpans setServiceIp(String serviceIp) {
-            this.serviceIp = serviceIp;
-            return this;
-        }
-        public String getServiceIp() {
-            return this.serviceIp;
+        public java.util.List<java.util.Map<String, ?>> getChildren() {
+            return this.children;
         }
 
         public GetTraceResponseBodySpans setDuration(Long duration) {
@@ -235,6 +188,46 @@ public class GetTraceResponseBody extends TeaModel {
             return this.duration;
         }
 
+        public GetTraceResponseBodySpans setHaveStack(Boolean haveStack) {
+            this.haveStack = haveStack;
+            return this;
+        }
+        public Boolean getHaveStack() {
+            return this.haveStack;
+        }
+
+        public GetTraceResponseBodySpans setLogEventList(java.util.List<GetTraceResponseBodySpansLogEventList> logEventList) {
+            this.logEventList = logEventList;
+            return this;
+        }
+        public java.util.List<GetTraceResponseBodySpansLogEventList> getLogEventList() {
+            return this.logEventList;
+        }
+
+        public GetTraceResponseBodySpans setOperationName(String operationName) {
+            this.operationName = operationName;
+            return this;
+        }
+        public String getOperationName() {
+            return this.operationName;
+        }
+
+        public GetTraceResponseBodySpans setParentSpanId(String parentSpanId) {
+            this.parentSpanId = parentSpanId;
+            return this;
+        }
+        public String getParentSpanId() {
+            return this.parentSpanId;
+        }
+
+        public GetTraceResponseBodySpans setResultCode(String resultCode) {
+            this.resultCode = resultCode;
+            return this;
+        }
+        public String getResultCode() {
+            return this.resultCode;
+        }
+
         public GetTraceResponseBodySpans setRpcId(String rpcId) {
             this.rpcId = rpcId;
             return this;
@@ -243,12 +236,52 @@ public class GetTraceResponseBody extends TeaModel {
             return this.rpcId;
         }
 
+        public GetTraceResponseBodySpans setRpcType(Integer rpcType) {
+            this.rpcType = rpcType;
+            return this;
+        }
+        public Integer getRpcType() {
+            return this.rpcType;
+        }
+
+        public GetTraceResponseBodySpans setServiceIp(String serviceIp) {
+            this.serviceIp = serviceIp;
+            return this;
+        }
+        public String getServiceIp() {
+            return this.serviceIp;
+        }
+
         public GetTraceResponseBodySpans setServiceName(String serviceName) {
             this.serviceName = serviceName;
             return this;
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public GetTraceResponseBodySpans setSpanId(String spanId) {
+            this.spanId = spanId;
+            return this;
+        }
+        public String getSpanId() {
+            return this.spanId;
+        }
+
+        public GetTraceResponseBodySpans setTagEntryList(java.util.List<GetTraceResponseBodySpansTagEntryList> tagEntryList) {
+            this.tagEntryList = tagEntryList;
+            return this;
+        }
+        public java.util.List<GetTraceResponseBodySpansTagEntryList> getTagEntryList() {
+            return this.tagEntryList;
+        }
+
+        public GetTraceResponseBodySpans setTimestamp(Long timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Long getTimestamp() {
+            return this.timestamp;
         }
 
         public GetTraceResponseBodySpans setTraceID(String traceID) {

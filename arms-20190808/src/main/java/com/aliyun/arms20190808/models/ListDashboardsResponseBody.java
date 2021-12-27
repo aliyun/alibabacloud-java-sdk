@@ -32,52 +32,65 @@ public class ListDashboardsResponseBody extends TeaModel {
     }
 
     public static class ListDashboardsResponseBodyDashboardVos extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Time")
-        public String time;
+        @NameInMap("DashboardType")
+        public String dashboardType;
 
         @NameInMap("Exporter")
         public String exporter;
 
-        @NameInMap("IsArmsExporter")
-        public Boolean isArmsExporter;
+        @NameInMap("HttpUrl")
+        public String httpUrl;
 
-        @NameInMap("Url")
-        public String url;
-
-        @NameInMap("Tags")
-        public java.util.List<String> tags;
-
-        @NameInMap("Title")
-        public String title;
+        @NameInMap("HttpsUrl")
+        public String httpsUrl;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("IsArmsExporter")
+        public Boolean isArmsExporter;
+
+        @NameInMap("Kind")
+        public String kind;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("NeedUpdate")
+        public Boolean needUpdate;
+
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
+
+        @NameInMap("Time")
+        public String time;
+
+        @NameInMap("Title")
+        public String title;
+
+        @NameInMap("Type")
+        public String type;
+
         @NameInMap("Uid")
         public String uid;
+
+        @NameInMap("Url")
+        public String url;
+
+        @NameInMap("Version")
+        public String version;
 
         public static ListDashboardsResponseBodyDashboardVos build(java.util.Map<String, ?> map) throws Exception {
             ListDashboardsResponseBodyDashboardVos self = new ListDashboardsResponseBodyDashboardVos();
             return TeaModel.build(map, self);
         }
 
-        public ListDashboardsResponseBodyDashboardVos setType(String type) {
-            this.type = type;
+        public ListDashboardsResponseBodyDashboardVos setDashboardType(String dashboardType) {
+            this.dashboardType = dashboardType;
             return this;
         }
-        public String getType() {
-            return this.type;
-        }
-
-        public ListDashboardsResponseBodyDashboardVos setTime(String time) {
-            this.time = time;
-            return this;
-        }
-        public String getTime() {
-            return this.time;
+        public String getDashboardType() {
+            return this.dashboardType;
         }
 
         public ListDashboardsResponseBodyDashboardVos setExporter(String exporter) {
@@ -88,36 +101,20 @@ public class ListDashboardsResponseBody extends TeaModel {
             return this.exporter;
         }
 
-        public ListDashboardsResponseBodyDashboardVos setIsArmsExporter(Boolean isArmsExporter) {
-            this.isArmsExporter = isArmsExporter;
+        public ListDashboardsResponseBodyDashboardVos setHttpUrl(String httpUrl) {
+            this.httpUrl = httpUrl;
             return this;
         }
-        public Boolean getIsArmsExporter() {
-            return this.isArmsExporter;
+        public String getHttpUrl() {
+            return this.httpUrl;
         }
 
-        public ListDashboardsResponseBodyDashboardVos setUrl(String url) {
-            this.url = url;
+        public ListDashboardsResponseBodyDashboardVos setHttpsUrl(String httpsUrl) {
+            this.httpsUrl = httpsUrl;
             return this;
         }
-        public String getUrl() {
-            return this.url;
-        }
-
-        public ListDashboardsResponseBodyDashboardVos setTags(java.util.List<String> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<String> getTags() {
-            return this.tags;
-        }
-
-        public ListDashboardsResponseBodyDashboardVos setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
+        public String getHttpsUrl() {
+            return this.httpsUrl;
         }
 
         public ListDashboardsResponseBodyDashboardVos setId(String id) {
@@ -128,12 +125,92 @@ public class ListDashboardsResponseBody extends TeaModel {
             return this.id;
         }
 
+        public ListDashboardsResponseBodyDashboardVos setIsArmsExporter(Boolean isArmsExporter) {
+            this.isArmsExporter = isArmsExporter;
+            return this;
+        }
+        public Boolean getIsArmsExporter() {
+            return this.isArmsExporter;
+        }
+
+        public ListDashboardsResponseBodyDashboardVos setKind(String kind) {
+            this.kind = kind;
+            return this;
+        }
+        public String getKind() {
+            return this.kind;
+        }
+
+        public ListDashboardsResponseBodyDashboardVos setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListDashboardsResponseBodyDashboardVos setNeedUpdate(Boolean needUpdate) {
+            this.needUpdate = needUpdate;
+            return this;
+        }
+        public Boolean getNeedUpdate() {
+            return this.needUpdate;
+        }
+
+        public ListDashboardsResponseBodyDashboardVos setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        public ListDashboardsResponseBodyDashboardVos setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
+        }
+
+        public ListDashboardsResponseBodyDashboardVos setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public ListDashboardsResponseBodyDashboardVos setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
         public ListDashboardsResponseBodyDashboardVos setUid(String uid) {
             this.uid = uid;
             return this;
         }
         public String getUid() {
             return this.uid;
+        }
+
+        public ListDashboardsResponseBodyDashboardVos setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public ListDashboardsResponseBodyDashboardVos setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }

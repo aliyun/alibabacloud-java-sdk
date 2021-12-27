@@ -32,90 +32,42 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
     }
 
     public static class SearchAlertHistoriesResponseBodyPageBeanAlarmHistories extends TeaModel {
-        @NameInMap("AlarmTime")
-        public Long alarmTime;
-
-        @NameInMap("StrategyId")
-        public String strategyId;
+        @NameInMap("AlarmContent")
+        public String alarmContent;
 
         @NameInMap("AlarmResponseCode")
         public Integer alarmResponseCode;
 
-        @NameInMap("Emails")
-        public String emails;
-
-        @NameInMap("UserId")
-        public String userId;
-
         @NameInMap("AlarmSources")
         public String alarmSources;
 
-        @NameInMap("AlarmContent")
-        public String alarmContent;
-
-        @NameInMap("Phones")
-        public String phones;
+        @NameInMap("AlarmTime")
+        public Long alarmTime;
 
         @NameInMap("AlarmType")
         public Integer alarmType;
 
-        @NameInMap("Target")
-        public String target;
+        @NameInMap("Emails")
+        public String emails;
 
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("Phones")
+        public String phones;
+
+        @NameInMap("StrategyId")
+        public String strategyId;
+
+        @NameInMap("Target")
+        public String target;
+
+        @NameInMap("UserId")
+        public String userId;
+
         public static SearchAlertHistoriesResponseBodyPageBeanAlarmHistories build(java.util.Map<String, ?> map) throws Exception {
             SearchAlertHistoriesResponseBodyPageBeanAlarmHistories self = new SearchAlertHistoriesResponseBodyPageBeanAlarmHistories();
             return TeaModel.build(map, self);
-        }
-
-        public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setAlarmTime(Long alarmTime) {
-            this.alarmTime = alarmTime;
-            return this;
-        }
-        public Long getAlarmTime() {
-            return this.alarmTime;
-        }
-
-        public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setStrategyId(String strategyId) {
-            this.strategyId = strategyId;
-            return this;
-        }
-        public String getStrategyId() {
-            return this.strategyId;
-        }
-
-        public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setAlarmResponseCode(Integer alarmResponseCode) {
-            this.alarmResponseCode = alarmResponseCode;
-            return this;
-        }
-        public Integer getAlarmResponseCode() {
-            return this.alarmResponseCode;
-        }
-
-        public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setEmails(String emails) {
-            this.emails = emails;
-            return this;
-        }
-        public String getEmails() {
-            return this.emails;
-        }
-
-        public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setAlarmSources(String alarmSources) {
-            this.alarmSources = alarmSources;
-            return this;
-        }
-        public String getAlarmSources() {
-            return this.alarmSources;
         }
 
         public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setAlarmContent(String alarmContent) {
@@ -126,12 +78,28 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             return this.alarmContent;
         }
 
-        public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setPhones(String phones) {
-            this.phones = phones;
+        public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setAlarmResponseCode(Integer alarmResponseCode) {
+            this.alarmResponseCode = alarmResponseCode;
             return this;
         }
-        public String getPhones() {
-            return this.phones;
+        public Integer getAlarmResponseCode() {
+            return this.alarmResponseCode;
+        }
+
+        public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setAlarmSources(String alarmSources) {
+            this.alarmSources = alarmSources;
+            return this;
+        }
+        public String getAlarmSources() {
+            return this.alarmSources;
+        }
+
+        public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setAlarmTime(Long alarmTime) {
+            this.alarmTime = alarmTime;
+            return this;
+        }
+        public Long getAlarmTime() {
+            return this.alarmTime;
         }
 
         public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setAlarmType(Integer alarmType) {
@@ -142,12 +110,12 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             return this.alarmType;
         }
 
-        public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setTarget(String target) {
-            this.target = target;
+        public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setEmails(String emails) {
+            this.emails = emails;
             return this;
         }
-        public String getTarget() {
-            return this.target;
+        public String getEmails() {
+            return this.emails;
         }
 
         public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setId(Long id) {
@@ -156,6 +124,38 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setPhones(String phones) {
+            this.phones = phones;
+            return this;
+        }
+        public String getPhones() {
+            return this.phones;
+        }
+
+        public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setStrategyId(String strategyId) {
+            this.strategyId = strategyId;
+            return this;
+        }
+        public String getStrategyId() {
+            return this.strategyId;
+        }
+
+        public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setTarget(String target) {
+            this.target = target;
+            return this;
+        }
+        public String getTarget() {
+            return this.target;
+        }
+
+        public SearchAlertHistoriesResponseBodyPageBeanAlarmHistories setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

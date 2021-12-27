@@ -4,23 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListRetcodeAppsRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ListRetcodeAppsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRetcodeAppsRequest self = new ListRetcodeAppsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListRetcodeAppsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public ListRetcodeAppsRequest setRegionId(String regionId) {
@@ -29,6 +21,14 @@ public class ListRetcodeAppsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListRetcodeAppsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

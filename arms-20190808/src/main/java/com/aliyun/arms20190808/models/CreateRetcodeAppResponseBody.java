@@ -32,23 +32,15 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
     }
 
     public static class CreateRetcodeAppResponseBodyRetcodeAppDataBean extends TeaModel {
-        @NameInMap("Pid")
-        public String pid;
-
         @NameInMap("AppId")
         public Long appId;
+
+        @NameInMap("Pid")
+        public String pid;
 
         public static CreateRetcodeAppResponseBodyRetcodeAppDataBean build(java.util.Map<String, ?> map) throws Exception {
             CreateRetcodeAppResponseBodyRetcodeAppDataBean self = new CreateRetcodeAppResponseBodyRetcodeAppDataBean();
             return TeaModel.build(map, self);
-        }
-
-        public CreateRetcodeAppResponseBodyRetcodeAppDataBean setPid(String pid) {
-            this.pid = pid;
-            return this;
-        }
-        public String getPid() {
-            return this.pid;
         }
 
         public CreateRetcodeAppResponseBodyRetcodeAppDataBean setAppId(Long appId) {
@@ -57,6 +49,14 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         }
         public Long getAppId() {
             return this.appId;
+        }
+
+        public CreateRetcodeAppResponseBodyRetcodeAppDataBean setPid(String pid) {
+            this.pid = pid;
+            return this;
+        }
+        public String getPid() {
+            return this.pid;
         }
 
     }

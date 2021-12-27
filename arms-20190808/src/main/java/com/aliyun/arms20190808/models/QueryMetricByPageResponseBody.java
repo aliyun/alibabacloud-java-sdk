@@ -4,17 +4,17 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class QueryMetricByPageResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryMetricByPageResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public QueryMetricByPageResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class QueryMetricByPageResponseBody extends TeaModel {
     public static QueryMetricByPageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMetricByPageResponseBody self = new QueryMetricByPageResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMetricByPageResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryMetricByPageResponseBody setData(QueryMetricByPageResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryMetricByPageResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryMetricByPageResponseBody setMessage(String message) {
@@ -40,22 +56,6 @@ public class QueryMetricByPageResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryMetricByPageResponseBody setData(QueryMetricByPageResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryMetricByPageResponseBodyData getData() {
-        return this.data;
-    }
-
-    public QueryMetricByPageResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public QueryMetricByPageResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -68,14 +68,14 @@ public class QueryMetricByPageResponseBody extends TeaModel {
         @NameInMap("Items")
         public java.util.List<java.util.Map<String, ?>> items;
 
+        @NameInMap("Page")
+        public Integer page;
+
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("Total")
         public Integer total;
-
-        @NameInMap("Page")
-        public Integer page;
 
         public static QueryMetricByPageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryMetricByPageResponseBodyData self = new QueryMetricByPageResponseBodyData();
@@ -88,6 +88,14 @@ public class QueryMetricByPageResponseBody extends TeaModel {
         }
         public java.util.List<java.util.Map<String, ?>> getItems() {
             return this.items;
+        }
+
+        public QueryMetricByPageResponseBodyData setPage(Integer page) {
+            this.page = page;
+            return this;
+        }
+        public Integer getPage() {
+            return this.page;
         }
 
         public QueryMetricByPageResponseBodyData setPageSize(Integer pageSize) {
@@ -104,14 +112,6 @@ public class QueryMetricByPageResponseBody extends TeaModel {
         }
         public Integer getTotal() {
             return this.total;
-        }
-
-        public QueryMetricByPageResponseBodyData setPage(Integer page) {
-            this.page = page;
-            return this;
-        }
-        public Integer getPage() {
-            return this.page;
         }
 
     }

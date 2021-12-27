@@ -4,23 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class QueryDatasetResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public String data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryDatasetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDatasetResponseBody self = new QueryDatasetResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDatasetResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryDatasetResponseBody setData(String data) {
@@ -29,6 +21,14 @@ public class QueryDatasetResponseBody extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public QueryDatasetResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
