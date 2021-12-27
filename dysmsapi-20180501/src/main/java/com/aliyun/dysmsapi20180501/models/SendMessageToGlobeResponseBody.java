@@ -4,8 +4,11 @@ package com.aliyun.dysmsapi20180501.models;
 import com.aliyun.tea.*;
 
 public class SendMessageToGlobeResponseBody extends TeaModel {
-    @NameInMap("ResponseCode")
-    public String responseCode;
+    @NameInMap("From")
+    public String from;
+
+    @NameInMap("MessageId")
+    public String messageId;
 
     @NameInMap("NumberDetail")
     public SendMessageToGlobeResponseBodyNumberDetail numberDetail;
@@ -13,32 +16,37 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Segments")
-    public String segments;
+    @NameInMap("ResponseCode")
+    public String responseCode;
 
     @NameInMap("ResponseDescription")
     public String responseDescription;
 
-    @NameInMap("From")
-    public String from;
+    @NameInMap("Segments")
+    public String segments;
 
     @NameInMap("To")
     public String to;
-
-    @NameInMap("MessageId")
-    public String messageId;
 
     public static SendMessageToGlobeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SendMessageToGlobeResponseBody self = new SendMessageToGlobeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SendMessageToGlobeResponseBody setResponseCode(String responseCode) {
-        this.responseCode = responseCode;
+    public SendMessageToGlobeResponseBody setFrom(String from) {
+        this.from = from;
         return this;
     }
-    public String getResponseCode() {
-        return this.responseCode;
+    public String getFrom() {
+        return this.from;
+    }
+
+    public SendMessageToGlobeResponseBody setMessageId(String messageId) {
+        this.messageId = messageId;
+        return this;
+    }
+    public String getMessageId() {
+        return this.messageId;
     }
 
     public SendMessageToGlobeResponseBody setNumberDetail(SendMessageToGlobeResponseBodyNumberDetail numberDetail) {
@@ -57,12 +65,12 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SendMessageToGlobeResponseBody setSegments(String segments) {
-        this.segments = segments;
+    public SendMessageToGlobeResponseBody setResponseCode(String responseCode) {
+        this.responseCode = responseCode;
         return this;
     }
-    public String getSegments() {
-        return this.segments;
+    public String getResponseCode() {
+        return this.responseCode;
     }
 
     public SendMessageToGlobeResponseBody setResponseDescription(String responseDescription) {
@@ -73,12 +81,12 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
         return this.responseDescription;
     }
 
-    public SendMessageToGlobeResponseBody setFrom(String from) {
-        this.from = from;
+    public SendMessageToGlobeResponseBody setSegments(String segments) {
+        this.segments = segments;
         return this;
     }
-    public String getFrom() {
-        return this.from;
+    public String getSegments() {
+        return this.segments;
     }
 
     public SendMessageToGlobeResponseBody setTo(String to) {
@@ -89,23 +97,15 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
         return this.to;
     }
 
-    public SendMessageToGlobeResponseBody setMessageId(String messageId) {
-        this.messageId = messageId;
-        return this;
-    }
-    public String getMessageId() {
-        return this.messageId;
-    }
-
     public static class SendMessageToGlobeResponseBodyNumberDetail extends TeaModel {
         @NameInMap("Carrier")
         public String carrier;
 
-        @NameInMap("Region")
-        public String region;
-
         @NameInMap("Country")
         public String country;
+
+        @NameInMap("Region")
+        public String region;
 
         public static SendMessageToGlobeResponseBodyNumberDetail build(java.util.Map<String, ?> map) throws Exception {
             SendMessageToGlobeResponseBodyNumberDetail self = new SendMessageToGlobeResponseBodyNumberDetail();
@@ -120,20 +120,20 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
             return this.carrier;
         }
 
-        public SendMessageToGlobeResponseBodyNumberDetail setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
-        }
-
         public SendMessageToGlobeResponseBodyNumberDetail setCountry(String country) {
             this.country = country;
             return this;
         }
         public String getCountry() {
             return this.country;
+        }
+
+        public SendMessageToGlobeResponseBodyNumberDetail setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
     }

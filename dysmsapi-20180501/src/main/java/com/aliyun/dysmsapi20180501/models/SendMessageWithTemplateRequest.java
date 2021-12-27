@@ -4,11 +4,11 @@ package com.aliyun.dysmsapi20180501.models;
 import com.aliyun.tea.*;
 
 public class SendMessageWithTemplateRequest extends TeaModel {
-    @NameInMap("To")
-    public String to;
-
     @NameInMap("From")
     public String from;
+
+    @NameInMap("SmsUpExtendCode")
+    public String smsUpExtendCode;
 
     @NameInMap("TemplateCode")
     public String templateCode;
@@ -16,20 +16,12 @@ public class SendMessageWithTemplateRequest extends TeaModel {
     @NameInMap("TemplateParam")
     public String templateParam;
 
-    @NameInMap("SmsUpExtendCode")
-    public String smsUpExtendCode;
+    @NameInMap("To")
+    public String to;
 
     public static SendMessageWithTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         SendMessageWithTemplateRequest self = new SendMessageWithTemplateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SendMessageWithTemplateRequest setTo(String to) {
-        this.to = to;
-        return this;
-    }
-    public String getTo() {
-        return this.to;
     }
 
     public SendMessageWithTemplateRequest setFrom(String from) {
@@ -38,6 +30,14 @@ public class SendMessageWithTemplateRequest extends TeaModel {
     }
     public String getFrom() {
         return this.from;
+    }
+
+    public SendMessageWithTemplateRequest setSmsUpExtendCode(String smsUpExtendCode) {
+        this.smsUpExtendCode = smsUpExtendCode;
+        return this;
+    }
+    public String getSmsUpExtendCode() {
+        return this.smsUpExtendCode;
     }
 
     public SendMessageWithTemplateRequest setTemplateCode(String templateCode) {
@@ -56,12 +56,12 @@ public class SendMessageWithTemplateRequest extends TeaModel {
         return this.templateParam;
     }
 
-    public SendMessageWithTemplateRequest setSmsUpExtendCode(String smsUpExtendCode) {
-        this.smsUpExtendCode = smsUpExtendCode;
+    public SendMessageWithTemplateRequest setTo(String to) {
+        this.to = to;
         return this;
     }
-    public String getSmsUpExtendCode() {
-        return this.smsUpExtendCode;
+    public String getTo() {
+        return this.to;
     }
 
 }
