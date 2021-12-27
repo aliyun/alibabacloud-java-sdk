@@ -16,9 +16,6 @@ public class HandleSecurityEventsRequest extends TeaModel {
     @NameInMap("OperationParams")
     public String operationParams;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("SecurityEventIds")
     public java.util.List<String> securityEventIds;
 
@@ -60,14 +57,6 @@ public class HandleSecurityEventsRequest extends TeaModel {
     }
     public String getOperationParams() {
         return this.operationParams;
-    }
-
-    public HandleSecurityEventsRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public HandleSecurityEventsRequest setSecurityEventIds(java.util.List<String> securityEventIds) {

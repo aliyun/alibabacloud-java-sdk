@@ -13,6 +13,9 @@ public class DescribeSuspEventQuaraFilesRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("GroupingId")
+    public Long groupingId;
+
     @NameInMap("PageSize")
     public String pageSize;
 
@@ -52,6 +55,14 @@ public class DescribeSuspEventQuaraFilesRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeSuspEventQuaraFilesRequest setGroupingId(Long groupingId) {
+        this.groupingId = groupingId;
+        return this;
+    }
+    public Long getGroupingId() {
+        return this.groupingId;
     }
 
     public DescribeSuspEventQuaraFilesRequest setPageSize(String pageSize) {

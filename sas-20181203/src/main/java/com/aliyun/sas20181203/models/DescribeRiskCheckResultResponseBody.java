@@ -88,7 +88,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
 
     public static class DescribeRiskCheckResultResponseBodyListRiskItemResources extends TeaModel {
         @NameInMap("ContentResource")
-        public java.util.Map<String, ?> contentResource;
+        public String contentResource;
 
         @NameInMap("ResourceName")
         public String resourceName;
@@ -98,11 +98,11 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeRiskCheckResultResponseBodyListRiskItemResources setContentResource(java.util.Map<String, ?> contentResource) {
+        public DescribeRiskCheckResultResponseBodyListRiskItemResources setContentResource(String contentResource) {
             this.contentResource = contentResource;
             return this;
         }
-        public java.util.Map<String, ?> getContentResource() {
+        public String getContentResource() {
             return this.contentResource;
         }
 
