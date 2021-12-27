@@ -86,4 +86,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetCreditScoreResponse());
     }
+
+    public GetMarketScoreResponse getMarketScore(GetMarketScoreRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMarketScoreWithOptions(request, headers, runtime);
+    }
+
+    public GetMarketScoreResponse getMarketScoreWithOptions(GetMarketScoreRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientInfo)) {
+            query.put("ClientInfo", request.clientInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extendInfo)) {
+            query.put("ExtendInfo", request.extendInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idType)) {
+            query.put("IdType", request.idType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idValue)) {
+            query.put("IdValue", request.idValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reqId)) {
+            query.put("ReqId", request.reqId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sign)) {
+            query.put("Sign", request.sign);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMarketScore"),
+            new TeaPair("version", "2021-12-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/finplus/market"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMarketScoreResponse());
+    }
 }
