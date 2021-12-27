@@ -218,6 +218,9 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneLoadConfigApiLoadConfigList extends TeaModel {
+        @NameInMap("ApiId")
+        public String apiId;
+
         @NameInMap("RpsBegin")
         public Integer rpsBegin;
 
@@ -227,6 +230,14 @@ public class GetPtsSceneResponseBody extends TeaModel {
         public static GetPtsSceneResponseBodySceneLoadConfigApiLoadConfigList build(java.util.Map<String, ?> map) throws Exception {
             GetPtsSceneResponseBodySceneLoadConfigApiLoadConfigList self = new GetPtsSceneResponseBodySceneLoadConfigApiLoadConfigList();
             return TeaModel.build(map, self);
+        }
+
+        public GetPtsSceneResponseBodySceneLoadConfigApiLoadConfigList setApiId(String apiId) {
+            this.apiId = apiId;
+            return this;
+        }
+        public String getApiId() {
+            return this.apiId;
         }
 
         public GetPtsSceneResponseBodySceneLoadConfigApiLoadConfigList setRpsBegin(Integer rpsBegin) {
@@ -306,6 +317,9 @@ public class GetPtsSceneResponseBody extends TeaModel {
         @NameInMap("ConcurrencyLimit")
         public Integer concurrencyLimit;
 
+        @NameInMap("RelationId")
+        public String relationId;
+
         public static GetPtsSceneResponseBodySceneLoadConfigRelationLoadConfigList build(java.util.Map<String, ?> map) throws Exception {
             GetPtsSceneResponseBodySceneLoadConfigRelationLoadConfigList self = new GetPtsSceneResponseBodySceneLoadConfigRelationLoadConfigList();
             return TeaModel.build(map, self);
@@ -325,6 +339,14 @@ public class GetPtsSceneResponseBody extends TeaModel {
         }
         public Integer getConcurrencyLimit() {
             return this.concurrencyLimit;
+        }
+
+        public GetPtsSceneResponseBodySceneLoadConfigRelationLoadConfigList setRelationId(String relationId) {
+            this.relationId = relationId;
+            return this;
+        }
+        public String getRelationId() {
+            return this.relationId;
         }
 
     }
