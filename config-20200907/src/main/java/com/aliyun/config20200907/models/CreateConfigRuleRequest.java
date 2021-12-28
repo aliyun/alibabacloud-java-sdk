@@ -43,6 +43,9 @@ public class CreateConfigRuleRequest extends TeaModel {
     @NameInMap("SourceOwner")
     public String sourceOwner;
 
+    @NameInMap("TagKeyLogicScope")
+    public String tagKeyLogicScope;
+
     @NameInMap("TagKeyScope")
     public String tagKeyScope;
 
@@ -156,6 +159,14 @@ public class CreateConfigRuleRequest extends TeaModel {
     }
     public String getSourceOwner() {
         return this.sourceOwner;
+    }
+
+    public CreateConfigRuleRequest setTagKeyLogicScope(String tagKeyLogicScope) {
+        this.tagKeyLogicScope = tagKeyLogicScope;
+        return this;
+    }
+    public String getTagKeyLogicScope() {
+        return this.tagKeyLogicScope;
     }
 
     public CreateConfigRuleRequest setTagKeyScope(String tagKeyScope) {

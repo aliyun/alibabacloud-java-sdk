@@ -43,6 +43,9 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
+    @NameInMap("TagKeyLogicScope")
+    public String tagKeyLogicScope;
+
     @NameInMap("TagKeyScope")
     public String tagKeyScope;
 
@@ -156,6 +159,14 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     }
     public Integer getRiskLevel() {
         return this.riskLevel;
+    }
+
+    public UpdateAggregateConfigRuleShrinkRequest setTagKeyLogicScope(String tagKeyLogicScope) {
+        this.tagKeyLogicScope = tagKeyLogicScope;
+        return this;
+    }
+    public String getTagKeyLogicScope() {
+        return this.tagKeyLogicScope;
     }
 
     public UpdateAggregateConfigRuleShrinkRequest setTagKeyScope(String tagKeyScope) {
