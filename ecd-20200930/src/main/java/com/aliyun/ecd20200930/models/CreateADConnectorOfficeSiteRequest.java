@@ -4,78 +4,66 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateADConnectorOfficeSiteRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("CidrBlock")
-    public String cidrBlock;
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
 
     @NameInMap("CenId")
     public String cenId;
 
-    @NameInMap("Bandwidth")
-    public Integer bandwidth;
+    @NameInMap("CenOwnerId")
+    public Long cenOwnerId;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
-    @NameInMap("DomainUserName")
-    public String domainUserName;
-
-    @NameInMap("DomainPassword")
-    public String domainPassword;
-
-    @NameInMap("OfficeSiteName")
-    public String officeSiteName;
-
-    @NameInMap("EnableAdminAccess")
-    public Boolean enableAdminAccess;
+    @NameInMap("CidrBlock")
+    public String cidrBlock;
 
     @NameInMap("DesktopAccessType")
     public String desktopAccessType;
 
+    @NameInMap("DnsAddress")
+    public java.util.List<String> dnsAddress;
+
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("DomainPassword")
+    public String domainPassword;
+
+    @NameInMap("DomainUserName")
+    public String domainUserName;
+
+    @NameInMap("EnableAdminAccess")
+    public Boolean enableAdminAccess;
+
     @NameInMap("EnableInternetAccess")
     public Boolean enableInternetAccess;
-
-    @NameInMap("SubDomainName")
-    public String subDomainName;
 
     @NameInMap("MfaEnabled")
     public Boolean mfaEnabled;
 
-    @NameInMap("DnsAddress")
-    public java.util.List<String> dnsAddress;
+    @NameInMap("OfficeSiteName")
+    public String officeSiteName;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("Specification")
+    public Long specification;
 
     @NameInMap("SubDomainDnsAddress")
     public java.util.List<String> subDomainDnsAddress;
 
+    @NameInMap("SubDomainName")
+    public String subDomainName;
+
+    @NameInMap("Type")
+    public String type;
+
+    @NameInMap("VerifyCode")
+    public String verifyCode;
+
     public static CreateADConnectorOfficeSiteRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateADConnectorOfficeSiteRequest self = new CreateADConnectorOfficeSiteRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateADConnectorOfficeSiteRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateADConnectorOfficeSiteRequest setCidrBlock(String cidrBlock) {
-        this.cidrBlock = cidrBlock;
-        return this;
-    }
-    public String getCidrBlock() {
-        return this.cidrBlock;
-    }
-
-    public CreateADConnectorOfficeSiteRequest setCenId(String cenId) {
-        this.cenId = cenId;
-        return this;
-    }
-    public String getCenId() {
-        return this.cenId;
     }
 
     public CreateADConnectorOfficeSiteRequest setBandwidth(Integer bandwidth) {
@@ -86,44 +74,28 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
         return this.bandwidth;
     }
 
-    public CreateADConnectorOfficeSiteRequest setDomainName(String domainName) {
-        this.domainName = domainName;
+    public CreateADConnectorOfficeSiteRequest setCenId(String cenId) {
+        this.cenId = cenId;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
+    public String getCenId() {
+        return this.cenId;
     }
 
-    public CreateADConnectorOfficeSiteRequest setDomainUserName(String domainUserName) {
-        this.domainUserName = domainUserName;
+    public CreateADConnectorOfficeSiteRequest setCenOwnerId(Long cenOwnerId) {
+        this.cenOwnerId = cenOwnerId;
         return this;
     }
-    public String getDomainUserName() {
-        return this.domainUserName;
+    public Long getCenOwnerId() {
+        return this.cenOwnerId;
     }
 
-    public CreateADConnectorOfficeSiteRequest setDomainPassword(String domainPassword) {
-        this.domainPassword = domainPassword;
+    public CreateADConnectorOfficeSiteRequest setCidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
         return this;
     }
-    public String getDomainPassword() {
-        return this.domainPassword;
-    }
-
-    public CreateADConnectorOfficeSiteRequest setOfficeSiteName(String officeSiteName) {
-        this.officeSiteName = officeSiteName;
-        return this;
-    }
-    public String getOfficeSiteName() {
-        return this.officeSiteName;
-    }
-
-    public CreateADConnectorOfficeSiteRequest setEnableAdminAccess(Boolean enableAdminAccess) {
-        this.enableAdminAccess = enableAdminAccess;
-        return this;
-    }
-    public Boolean getEnableAdminAccess() {
-        return this.enableAdminAccess;
+    public String getCidrBlock() {
+        return this.cidrBlock;
     }
 
     public CreateADConnectorOfficeSiteRequest setDesktopAccessType(String desktopAccessType) {
@@ -134,20 +106,52 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
         return this.desktopAccessType;
     }
 
+    public CreateADConnectorOfficeSiteRequest setDnsAddress(java.util.List<String> dnsAddress) {
+        this.dnsAddress = dnsAddress;
+        return this;
+    }
+    public java.util.List<String> getDnsAddress() {
+        return this.dnsAddress;
+    }
+
+    public CreateADConnectorOfficeSiteRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public CreateADConnectorOfficeSiteRequest setDomainPassword(String domainPassword) {
+        this.domainPassword = domainPassword;
+        return this;
+    }
+    public String getDomainPassword() {
+        return this.domainPassword;
+    }
+
+    public CreateADConnectorOfficeSiteRequest setDomainUserName(String domainUserName) {
+        this.domainUserName = domainUserName;
+        return this;
+    }
+    public String getDomainUserName() {
+        return this.domainUserName;
+    }
+
+    public CreateADConnectorOfficeSiteRequest setEnableAdminAccess(Boolean enableAdminAccess) {
+        this.enableAdminAccess = enableAdminAccess;
+        return this;
+    }
+    public Boolean getEnableAdminAccess() {
+        return this.enableAdminAccess;
+    }
+
     public CreateADConnectorOfficeSiteRequest setEnableInternetAccess(Boolean enableInternetAccess) {
         this.enableInternetAccess = enableInternetAccess;
         return this;
     }
     public Boolean getEnableInternetAccess() {
         return this.enableInternetAccess;
-    }
-
-    public CreateADConnectorOfficeSiteRequest setSubDomainName(String subDomainName) {
-        this.subDomainName = subDomainName;
-        return this;
-    }
-    public String getSubDomainName() {
-        return this.subDomainName;
     }
 
     public CreateADConnectorOfficeSiteRequest setMfaEnabled(Boolean mfaEnabled) {
@@ -158,12 +162,28 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
         return this.mfaEnabled;
     }
 
-    public CreateADConnectorOfficeSiteRequest setDnsAddress(java.util.List<String> dnsAddress) {
-        this.dnsAddress = dnsAddress;
+    public CreateADConnectorOfficeSiteRequest setOfficeSiteName(String officeSiteName) {
+        this.officeSiteName = officeSiteName;
         return this;
     }
-    public java.util.List<String> getDnsAddress() {
-        return this.dnsAddress;
+    public String getOfficeSiteName() {
+        return this.officeSiteName;
+    }
+
+    public CreateADConnectorOfficeSiteRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateADConnectorOfficeSiteRequest setSpecification(Long specification) {
+        this.specification = specification;
+        return this;
+    }
+    public Long getSpecification() {
+        return this.specification;
     }
 
     public CreateADConnectorOfficeSiteRequest setSubDomainDnsAddress(java.util.List<String> subDomainDnsAddress) {
@@ -172,6 +192,30 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     }
     public java.util.List<String> getSubDomainDnsAddress() {
         return this.subDomainDnsAddress;
+    }
+
+    public CreateADConnectorOfficeSiteRequest setSubDomainName(String subDomainName) {
+        this.subDomainName = subDomainName;
+        return this;
+    }
+    public String getSubDomainName() {
+        return this.subDomainName;
+    }
+
+    public CreateADConnectorOfficeSiteRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
+    public CreateADConnectorOfficeSiteRequest setVerifyCode(String verifyCode) {
+        this.verifyCode = verifyCode;
+        return this;
+    }
+    public String getVerifyCode() {
+        return this.verifyCode;
     }
 
 }

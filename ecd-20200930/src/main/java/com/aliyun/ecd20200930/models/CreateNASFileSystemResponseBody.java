@@ -13,11 +13,11 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
     @NameInMap("MountTargetDomain")
     public String mountTargetDomain;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateNASFileSystemResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateNASFileSystemResponseBody self = new CreateNASFileSystemResponseBody();
@@ -48,20 +48,20 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         return this.mountTargetDomain;
     }
 
-    public CreateNASFileSystemResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateNASFileSystemResponseBody setOfficeSiteId(String officeSiteId) {
         this.officeSiteId = officeSiteId;
         return this;
     }
     public String getOfficeSiteId() {
         return this.officeSiteId;
+    }
+
+    public CreateNASFileSystemResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

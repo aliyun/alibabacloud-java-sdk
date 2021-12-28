@@ -4,26 +4,18 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RecreateDesktopGroupRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     @NameInMap("OwnBundleId")
     public String ownBundleId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static RecreateDesktopGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         RecreateDesktopGroupRequest self = new RecreateDesktopGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RecreateDesktopGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public RecreateDesktopGroupRequest setDesktopGroupId(String desktopGroupId) {
@@ -40,6 +32,14 @@ public class RecreateDesktopGroupRequest extends TeaModel {
     }
     public String getOwnBundleId() {
         return this.ownBundleId;
+    }
+
+    public RecreateDesktopGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

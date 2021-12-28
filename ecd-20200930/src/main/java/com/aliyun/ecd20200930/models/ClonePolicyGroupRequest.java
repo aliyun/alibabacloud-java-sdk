@@ -4,26 +4,26 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ClonePolicyGroupRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ClonePolicyGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ClonePolicyGroupRequest self = new ClonePolicyGroupRequest();
         return TeaModel.build(map, self);
     }
 
-    public ClonePolicyGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ClonePolicyGroupRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getName() {
+        return this.name;
     }
 
     public ClonePolicyGroupRequest setPolicyGroupId(String policyGroupId) {
@@ -34,12 +34,12 @@ public class ClonePolicyGroupRequest extends TeaModel {
         return this.policyGroupId;
     }
 
-    public ClonePolicyGroupRequest setName(String name) {
-        this.name = name;
+    public ClonePolicyGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

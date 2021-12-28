@@ -4,11 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeFrontVulPatchListRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("OperateType")
     public String operateType;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("Type")
     public String type;
@@ -21,20 +21,20 @@ public class DescribeFrontVulPatchListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeFrontVulPatchListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DescribeFrontVulPatchListRequest setOperateType(String operateType) {
         this.operateType = operateType;
         return this;
     }
     public String getOperateType() {
         return this.operateType;
+    }
+
+    public DescribeFrontVulPatchListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeFrontVulPatchListRequest setType(String type) {
@@ -57,11 +57,11 @@ public class DescribeFrontVulPatchListRequest extends TeaModel {
         @NameInMap("DesktopId")
         public String desktopId;
 
-        @NameInMap("Tag")
-        public String tag;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Tag")
+        public String tag;
 
         public static DescribeFrontVulPatchListRequestVulInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeFrontVulPatchListRequestVulInfo self = new DescribeFrontVulPatchListRequestVulInfo();
@@ -76,20 +76,20 @@ public class DescribeFrontVulPatchListRequest extends TeaModel {
             return this.desktopId;
         }
 
-        public DescribeFrontVulPatchListRequestVulInfo setTag(String tag) {
-            this.tag = tag;
-            return this;
-        }
-        public String getTag() {
-            return this.tag;
-        }
-
         public DescribeFrontVulPatchListRequestVulInfo setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeFrontVulPatchListRequestVulInfo setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
         }
 
     }

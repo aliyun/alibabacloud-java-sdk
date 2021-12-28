@@ -4,26 +4,18 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
-    @NameInMap("TaskStatus")
-    public String taskStatus;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SecurityEventOperationStatuses")
     public java.util.List<DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatuses> securityEventOperationStatuses;
 
+    @NameInMap("TaskStatus")
+    public String taskStatus;
+
     public static DescribeSecurityEventOperationStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityEventOperationStatusResponseBody self = new DescribeSecurityEventOperationStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSecurityEventOperationStatusResponseBody setTaskStatus(String taskStatus) {
-        this.taskStatus = taskStatus;
-        return this;
-    }
-    public String getTaskStatus() {
-        return this.taskStatus;
     }
 
     public DescribeSecurityEventOperationStatusResponseBody setRequestId(String requestId) {
@@ -42,27 +34,35 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
         return this.securityEventOperationStatuses;
     }
 
+    public DescribeSecurityEventOperationStatusResponseBody setTaskStatus(String taskStatus) {
+        this.taskStatus = taskStatus;
+        return this;
+    }
+    public String getTaskStatus() {
+        return this.taskStatus;
+    }
+
     public static class DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatuses extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("ErrorCode")
+        public String errorCode;
 
         @NameInMap("SecurityEventId")
         public Long securityEventId;
 
-        @NameInMap("ErrorCode")
-        public String errorCode;
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatuses build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatuses self = new DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatuses();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatuses setStatus(String status) {
-            this.status = status;
+        public DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatuses setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         public DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatuses setSecurityEventId(Long securityEventId) {
@@ -73,12 +73,12 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
             return this.securityEventId;
         }
 
-        public DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatuses setErrorCode(String errorCode) {
-            this.errorCode = errorCode;
+        public DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatuses setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getErrorCode() {
-            return this.errorCode;
+        public String getStatus() {
+            return this.status;
         }
 
     }

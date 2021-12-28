@@ -4,23 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class GetDesktopGroupDetailRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static GetDesktopGroupDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDesktopGroupDetailRequest self = new GetDesktopGroupDetailRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetDesktopGroupDetailRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetDesktopGroupDetailRequest setDesktopGroupId(String desktopGroupId) {
@@ -29,6 +21,14 @@ public class GetDesktopGroupDetailRequest extends TeaModel {
     }
     public String getDesktopGroupId() {
         return this.desktopGroupId;
+    }
+
+    public GetDesktopGroupDetailRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

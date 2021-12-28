@@ -32,11 +32,11 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityEventOperationsResponseBodySecurityEventOperations extends TeaModel {
-        @NameInMap("OperationParams")
-        public String operationParams;
-
         @NameInMap("OperationCode")
         public String operationCode;
+
+        @NameInMap("OperationParams")
+        public String operationParams;
 
         @NameInMap("UserCanOperate")
         public Boolean userCanOperate;
@@ -46,20 +46,20 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeSecurityEventOperationsResponseBodySecurityEventOperations setOperationParams(String operationParams) {
-            this.operationParams = operationParams;
-            return this;
-        }
-        public String getOperationParams() {
-            return this.operationParams;
-        }
-
         public DescribeSecurityEventOperationsResponseBodySecurityEventOperations setOperationCode(String operationCode) {
             this.operationCode = operationCode;
             return this;
         }
         public String getOperationCode() {
             return this.operationCode;
+        }
+
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperations setOperationParams(String operationParams) {
+            this.operationParams = operationParams;
+            return this;
+        }
+        public String getOperationParams() {
+            return this.operationParams;
         }
 
         public DescribeSecurityEventOperationsResponseBodySecurityEventOperations setUserCanOperate(Boolean userCanOperate) {

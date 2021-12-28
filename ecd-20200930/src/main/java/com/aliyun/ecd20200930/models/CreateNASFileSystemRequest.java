@@ -4,37 +4,32 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateNASFileSystemRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("OfficeSiteId")
-    public String officeSiteId;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("StorageType")
+    public String storageType;
 
     public static CreateNASFileSystemRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNASFileSystemRequest self = new CreateNASFileSystemRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateNASFileSystemRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateNASFileSystemRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateNASFileSystemRequest setOfficeSiteId(String officeSiteId) {
-        this.officeSiteId = officeSiteId;
-        return this;
-    }
-    public String getOfficeSiteId() {
-        return this.officeSiteId;
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateNASFileSystemRequest setName(String name) {
@@ -45,12 +40,28 @@ public class CreateNASFileSystemRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateNASFileSystemRequest setDescription(String description) {
-        this.description = description;
+    public CreateNASFileSystemRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
+    }
+
+    public CreateNASFileSystemRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateNASFileSystemRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
 }

@@ -4,17 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeInvocationsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("InvokeId")
-    public String invokeId;
-
     @NameInMap("CommandType")
     public String commandType;
 
-    @NameInMap("InvokeStatus")
-    public String invokeStatus;
+    @NameInMap("ContentEncoding")
+    public String contentEncoding;
 
     @NameInMap("DesktopId")
     public String desktopId;
@@ -22,8 +16,11 @@ public class DescribeInvocationsRequest extends TeaModel {
     @NameInMap("IncludeOutput")
     public Boolean includeOutput;
 
-    @NameInMap("ContentEncoding")
-    public String contentEncoding;
+    @NameInMap("InvokeId")
+    public String invokeId;
+
+    @NameInMap("InvokeStatus")
+    public String invokeStatus;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -31,25 +28,12 @@ public class DescribeInvocationsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeInvocationsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInvocationsRequest self = new DescribeInvocationsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInvocationsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeInvocationsRequest setInvokeId(String invokeId) {
-        this.invokeId = invokeId;
-        return this;
-    }
-    public String getInvokeId() {
-        return this.invokeId;
     }
 
     public DescribeInvocationsRequest setCommandType(String commandType) {
@@ -60,12 +44,12 @@ public class DescribeInvocationsRequest extends TeaModel {
         return this.commandType;
     }
 
-    public DescribeInvocationsRequest setInvokeStatus(String invokeStatus) {
-        this.invokeStatus = invokeStatus;
+    public DescribeInvocationsRequest setContentEncoding(String contentEncoding) {
+        this.contentEncoding = contentEncoding;
         return this;
     }
-    public String getInvokeStatus() {
-        return this.invokeStatus;
+    public String getContentEncoding() {
+        return this.contentEncoding;
     }
 
     public DescribeInvocationsRequest setDesktopId(String desktopId) {
@@ -84,12 +68,20 @@ public class DescribeInvocationsRequest extends TeaModel {
         return this.includeOutput;
     }
 
-    public DescribeInvocationsRequest setContentEncoding(String contentEncoding) {
-        this.contentEncoding = contentEncoding;
+    public DescribeInvocationsRequest setInvokeId(String invokeId) {
+        this.invokeId = invokeId;
         return this;
     }
-    public String getContentEncoding() {
-        return this.contentEncoding;
+    public String getInvokeId() {
+        return this.invokeId;
+    }
+
+    public DescribeInvocationsRequest setInvokeStatus(String invokeStatus) {
+        this.invokeStatus = invokeStatus;
+        return this;
+    }
+    public String getInvokeStatus() {
+        return this.invokeStatus;
     }
 
     public DescribeInvocationsRequest setMaxResults(Integer maxResults) {
@@ -106,6 +98,14 @@ public class DescribeInvocationsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeInvocationsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

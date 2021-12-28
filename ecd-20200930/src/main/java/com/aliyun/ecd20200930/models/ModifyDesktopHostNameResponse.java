@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ecd20200930.models;
+
+import com.aliyun.tea.*;
+
+public class ModifyDesktopHostNameResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ModifyDesktopHostNameResponseBody body;
+
+    public static ModifyDesktopHostNameResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyDesktopHostNameResponse self = new ModifyDesktopHostNameResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public ModifyDesktopHostNameResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ModifyDesktopHostNameResponse setBody(ModifyDesktopHostNameResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ModifyDesktopHostNameResponseBody getBody() {
+        return this.body;
+    }
+
+}

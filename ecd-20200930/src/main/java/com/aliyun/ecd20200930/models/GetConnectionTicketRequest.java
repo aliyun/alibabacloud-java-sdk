@@ -4,8 +4,20 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class GetConnectionTicketRequest extends TeaModel {
+    @NameInMap("DesktopId")
+    public String desktopId;
+
+    @NameInMap("EndUserId")
+    public String endUserId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Password")
+    public String password;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,27 +25,28 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("UserName")
-    public String userName;
-
-    @NameInMap("Password")
-    public String password;
-
     @NameInMap("TaskId")
     public String taskId;
-
-    @NameInMap("DesktopId")
-    public String desktopId;
 
     public static GetConnectionTicketRequest build(java.util.Map<String, ?> map) throws Exception {
         GetConnectionTicketRequest self = new GetConnectionTicketRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetConnectionTicketRequest setDesktopId(String desktopId) {
+        this.desktopId = desktopId;
+        return this;
+    }
+    public String getDesktopId() {
+        return this.desktopId;
+    }
+
+    public GetConnectionTicketRequest setEndUserId(String endUserId) {
+        this.endUserId = endUserId;
+        return this;
+    }
+    public String getEndUserId() {
+        return this.endUserId;
     }
 
     public GetConnectionTicketRequest setOwnerId(Long ownerId) {
@@ -42,6 +55,22 @@ public class GetConnectionTicketRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public GetConnectionTicketRequest setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    public String getPassword() {
+        return this.password;
+    }
+
+    public GetConnectionTicketRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetConnectionTicketRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -60,52 +89,12 @@ public class GetConnectionTicketRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public GetConnectionTicketRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public GetConnectionTicketRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public GetConnectionTicketRequest setUserName(String userName) {
-        this.userName = userName;
-        return this;
-    }
-    public String getUserName() {
-        return this.userName;
-    }
-
-    public GetConnectionTicketRequest setPassword(String password) {
-        this.password = password;
-        return this;
-    }
-    public String getPassword() {
-        return this.password;
-    }
-
     public GetConnectionTicketRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     public String getTaskId() {
         return this.taskId;
-    }
-
-    public GetConnectionTicketRequest setDesktopId(String desktopId) {
-        this.desktopId = desktopId;
-        return this;
-    }
-    public String getDesktopId() {
-        return this.desktopId;
     }
 
 }

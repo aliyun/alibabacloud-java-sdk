@@ -4,8 +4,8 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateImageRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("DesktopId")
     public String desktopId;
@@ -13,14 +13,14 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("ImageName")
     public String imageName;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("ImageResourceType")
+    public String imageResourceType;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("SnapshotId")
     public String snapshotId;
-
-    @NameInMap("ImageResourceType")
-    public String imageResourceType;
 
     @NameInMap("SnapshotIds")
     public java.util.List<String> snapshotIds;
@@ -30,12 +30,12 @@ public class CreateImageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateImageRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateImageRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateImageRequest setDesktopId(String desktopId) {
@@ -54,12 +54,20 @@ public class CreateImageRequest extends TeaModel {
         return this.imageName;
     }
 
-    public CreateImageRequest setDescription(String description) {
-        this.description = description;
+    public CreateImageRequest setImageResourceType(String imageResourceType) {
+        this.imageResourceType = imageResourceType;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getImageResourceType() {
+        return this.imageResourceType;
+    }
+
+    public CreateImageRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateImageRequest setSnapshotId(String snapshotId) {
@@ -68,14 +76,6 @@ public class CreateImageRequest extends TeaModel {
     }
     public String getSnapshotId() {
         return this.snapshotId;
-    }
-
-    public CreateImageRequest setImageResourceType(String imageResourceType) {
-        this.imageResourceType = imageResourceType;
-        return this;
-    }
-    public String getImageResourceType() {
-        return this.imageResourceType;
     }
 
     public CreateImageRequest setSnapshotIds(java.util.List<String> snapshotIds) {

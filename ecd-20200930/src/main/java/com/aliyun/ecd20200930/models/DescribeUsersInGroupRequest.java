@@ -4,11 +4,14 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsersInGroupRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ConnectState")
+    public Integer connectState;
 
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
+
+    @NameInMap("EndUserId")
+    public String endUserId;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -16,17 +19,20 @@ public class DescribeUsersInGroupRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeUsersInGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUsersInGroupRequest self = new DescribeUsersInGroupRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeUsersInGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeUsersInGroupRequest setConnectState(Integer connectState) {
+        this.connectState = connectState;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Integer getConnectState() {
+        return this.connectState;
     }
 
     public DescribeUsersInGroupRequest setDesktopGroupId(String desktopGroupId) {
@@ -35,6 +41,14 @@ public class DescribeUsersInGroupRequest extends TeaModel {
     }
     public String getDesktopGroupId() {
         return this.desktopGroupId;
+    }
+
+    public DescribeUsersInGroupRequest setEndUserId(String endUserId) {
+        this.endUserId = endUserId;
+        return this;
+    }
+    public String getEndUserId() {
+        return this.endUserId;
     }
 
     public DescribeUsersInGroupRequest setMaxResults(Integer maxResults) {
@@ -51,6 +65,14 @@ public class DescribeUsersInGroupRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeUsersInGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -4,26 +4,18 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class SetDirectorySsoStatusRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DirectoryId")
     public String directoryId;
 
     @NameInMap("EnableSso")
     public Boolean enableSso;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static SetDirectorySsoStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDirectorySsoStatusRequest self = new SetDirectorySsoStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetDirectorySsoStatusRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public SetDirectorySsoStatusRequest setDirectoryId(String directoryId) {
@@ -40,6 +32,14 @@ public class SetDirectorySsoStatusRequest extends TeaModel {
     }
     public Boolean getEnableSso() {
         return this.enableSso;
+    }
+
+    public SetDirectorySsoStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

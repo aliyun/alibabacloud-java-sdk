@@ -4,18 +4,26 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkPackagesResponseBody extends TeaModel {
+    @NameInMap("NetworkPackages")
+    public java.util.List<DescribeNetworkPackagesResponseBodyNetworkPackages> networkPackages;
+
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("NetworkPackages")
-    public java.util.List<DescribeNetworkPackagesResponseBodyNetworkPackages> networkPackages;
-
     public static DescribeNetworkPackagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworkPackagesResponseBody self = new DescribeNetworkPackagesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeNetworkPackagesResponseBody setNetworkPackages(java.util.List<DescribeNetworkPackagesResponseBodyNetworkPackages> networkPackages) {
+        this.networkPackages = networkPackages;
+        return this;
+    }
+    public java.util.List<DescribeNetworkPackagesResponseBodyNetworkPackages> getNetworkPackages() {
+        return this.networkPackages;
     }
 
     public DescribeNetworkPackagesResponseBody setNextToken(String nextToken) {
@@ -34,53 +42,37 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeNetworkPackagesResponseBody setNetworkPackages(java.util.List<DescribeNetworkPackagesResponseBodyNetworkPackages> networkPackages) {
-        this.networkPackages = networkPackages;
-        return this;
-    }
-    public java.util.List<DescribeNetworkPackagesResponseBodyNetworkPackages> getNetworkPackages() {
-        return this.networkPackages;
-    }
-
     public static class DescribeNetworkPackagesResponseBodyNetworkPackages extends TeaModel {
-        @NameInMap("NetworkPackageId")
-        public String networkPackageId;
-
         @NameInMap("Bandwidth")
         public Integer bandwidth;
-
-        @NameInMap("ExpiredTime")
-        public String expiredTime;
 
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("OfficeSiteId")
-        public String officeSiteId;
+        @NameInMap("EipAddresses")
+        public java.util.List<String> eipAddresses;
+
+        @NameInMap("ExpiredTime")
+        public String expiredTime;
 
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
+        @NameInMap("NetworkPackageId")
+        public String networkPackageId;
+
         @NameInMap("NetworkPackageStatus")
         public String networkPackageStatus;
+
+        @NameInMap("OfficeSiteId")
+        public String officeSiteId;
 
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
-        @NameInMap("EipAddresses")
-        public java.util.List<String> eipAddresses;
-
         public static DescribeNetworkPackagesResponseBodyNetworkPackages build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkPackagesResponseBodyNetworkPackages self = new DescribeNetworkPackagesResponseBodyNetworkPackages();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeNetworkPackagesResponseBodyNetworkPackages setNetworkPackageId(String networkPackageId) {
-            this.networkPackageId = networkPackageId;
-            return this;
-        }
-        public String getNetworkPackageId() {
-            return this.networkPackageId;
         }
 
         public DescribeNetworkPackagesResponseBodyNetworkPackages setBandwidth(Integer bandwidth) {
@@ -91,14 +83,6 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             return this.bandwidth;
         }
 
-        public DescribeNetworkPackagesResponseBodyNetworkPackages setExpiredTime(String expiredTime) {
-            this.expiredTime = expiredTime;
-            return this;
-        }
-        public String getExpiredTime() {
-            return this.expiredTime;
-        }
-
         public DescribeNetworkPackagesResponseBodyNetworkPackages setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
@@ -107,12 +91,20 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeNetworkPackagesResponseBodyNetworkPackages setOfficeSiteId(String officeSiteId) {
-            this.officeSiteId = officeSiteId;
+        public DescribeNetworkPackagesResponseBodyNetworkPackages setEipAddresses(java.util.List<String> eipAddresses) {
+            this.eipAddresses = eipAddresses;
             return this;
         }
-        public String getOfficeSiteId() {
-            return this.officeSiteId;
+        public java.util.List<String> getEipAddresses() {
+            return this.eipAddresses;
+        }
+
+        public DescribeNetworkPackagesResponseBodyNetworkPackages setExpiredTime(String expiredTime) {
+            this.expiredTime = expiredTime;
+            return this;
+        }
+        public String getExpiredTime() {
+            return this.expiredTime;
         }
 
         public DescribeNetworkPackagesResponseBodyNetworkPackages setInternetChargeType(String internetChargeType) {
@@ -123,6 +115,14 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             return this.internetChargeType;
         }
 
+        public DescribeNetworkPackagesResponseBodyNetworkPackages setNetworkPackageId(String networkPackageId) {
+            this.networkPackageId = networkPackageId;
+            return this;
+        }
+        public String getNetworkPackageId() {
+            return this.networkPackageId;
+        }
+
         public DescribeNetworkPackagesResponseBodyNetworkPackages setNetworkPackageStatus(String networkPackageStatus) {
             this.networkPackageStatus = networkPackageStatus;
             return this;
@@ -131,20 +131,20 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             return this.networkPackageStatus;
         }
 
+        public DescribeNetworkPackagesResponseBodyNetworkPackages setOfficeSiteId(String officeSiteId) {
+            this.officeSiteId = officeSiteId;
+            return this;
+        }
+        public String getOfficeSiteId() {
+            return this.officeSiteId;
+        }
+
         public DescribeNetworkPackagesResponseBodyNetworkPackages setOfficeSiteName(String officeSiteName) {
             this.officeSiteName = officeSiteName;
             return this;
         }
         public String getOfficeSiteName() {
             return this.officeSiteName;
-        }
-
-        public DescribeNetworkPackagesResponseBodyNetworkPackages setEipAddresses(java.util.List<String> eipAddresses) {
-            this.eipAddresses = eipAddresses;
-            return this;
-        }
-        public java.util.List<String> getEipAddresses() {
-            return this.eipAddresses;
         }
 
     }

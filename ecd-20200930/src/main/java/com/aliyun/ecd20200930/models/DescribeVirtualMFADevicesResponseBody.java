@@ -43,57 +43,33 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
     }
 
     public static class DescribeVirtualMFADevicesResponseBodyVirtualMFADevices extends TeaModel {
-        @NameInMap("SerialNumber")
-        public String serialNumber;
-
-        @NameInMap("GmtUnlock")
-        public String gmtUnlock;
-
-        @NameInMap("EndUserId")
-        public String endUserId;
-
         @NameInMap("ConsecutiveFails")
         public Integer consecutiveFails;
-
-        @NameInMap("OfficeSiteId")
-        public String officeSiteId;
-
-        @NameInMap("status")
-        public String status;
 
         @NameInMap("DirectoryId")
         public String directoryId;
 
+        @NameInMap("EndUserId")
+        public String endUserId;
+
         @NameInMap("GmtEnabled")
         public String gmtEnabled;
+
+        @NameInMap("GmtUnlock")
+        public String gmtUnlock;
+
+        @NameInMap("OfficeSiteId")
+        public String officeSiteId;
+
+        @NameInMap("SerialNumber")
+        public String serialNumber;
+
+        @NameInMap("status")
+        public String status;
 
         public static DescribeVirtualMFADevicesResponseBodyVirtualMFADevices build(java.util.Map<String, ?> map) throws Exception {
             DescribeVirtualMFADevicesResponseBodyVirtualMFADevices self = new DescribeVirtualMFADevicesResponseBodyVirtualMFADevices();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVirtualMFADevicesResponseBodyVirtualMFADevices setSerialNumber(String serialNumber) {
-            this.serialNumber = serialNumber;
-            return this;
-        }
-        public String getSerialNumber() {
-            return this.serialNumber;
-        }
-
-        public DescribeVirtualMFADevicesResponseBodyVirtualMFADevices setGmtUnlock(String gmtUnlock) {
-            this.gmtUnlock = gmtUnlock;
-            return this;
-        }
-        public String getGmtUnlock() {
-            return this.gmtUnlock;
-        }
-
-        public DescribeVirtualMFADevicesResponseBodyVirtualMFADevices setEndUserId(String endUserId) {
-            this.endUserId = endUserId;
-            return this;
-        }
-        public String getEndUserId() {
-            return this.endUserId;
         }
 
         public DescribeVirtualMFADevicesResponseBodyVirtualMFADevices setConsecutiveFails(Integer consecutiveFails) {
@@ -104,22 +80,6 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             return this.consecutiveFails;
         }
 
-        public DescribeVirtualMFADevicesResponseBodyVirtualMFADevices setOfficeSiteId(String officeSiteId) {
-            this.officeSiteId = officeSiteId;
-            return this;
-        }
-        public String getOfficeSiteId() {
-            return this.officeSiteId;
-        }
-
-        public DescribeVirtualMFADevicesResponseBodyVirtualMFADevices setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
         public DescribeVirtualMFADevicesResponseBodyVirtualMFADevices setDirectoryId(String directoryId) {
             this.directoryId = directoryId;
             return this;
@@ -128,12 +88,52 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             return this.directoryId;
         }
 
+        public DescribeVirtualMFADevicesResponseBodyVirtualMFADevices setEndUserId(String endUserId) {
+            this.endUserId = endUserId;
+            return this;
+        }
+        public String getEndUserId() {
+            return this.endUserId;
+        }
+
         public DescribeVirtualMFADevicesResponseBodyVirtualMFADevices setGmtEnabled(String gmtEnabled) {
             this.gmtEnabled = gmtEnabled;
             return this;
         }
         public String getGmtEnabled() {
             return this.gmtEnabled;
+        }
+
+        public DescribeVirtualMFADevicesResponseBodyVirtualMFADevices setGmtUnlock(String gmtUnlock) {
+            this.gmtUnlock = gmtUnlock;
+            return this;
+        }
+        public String getGmtUnlock() {
+            return this.gmtUnlock;
+        }
+
+        public DescribeVirtualMFADevicesResponseBodyVirtualMFADevices setOfficeSiteId(String officeSiteId) {
+            this.officeSiteId = officeSiteId;
+            return this;
+        }
+        public String getOfficeSiteId() {
+            return this.officeSiteId;
+        }
+
+        public DescribeVirtualMFADevicesResponseBodyVirtualMFADevices setSerialNumber(String serialNumber) {
+            this.serialNumber = serialNumber;
+            return this;
+        }
+        public String getSerialNumber() {
+            return this.serialNumber;
+        }
+
+        public DescribeVirtualMFADevicesResponseBodyVirtualMFADevices setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

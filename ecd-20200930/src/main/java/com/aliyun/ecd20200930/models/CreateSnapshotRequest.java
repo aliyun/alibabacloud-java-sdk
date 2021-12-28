@@ -4,17 +4,17 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateSnapshotRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("DesktopId")
     public String desktopId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SnapshotName")
     public String snapshotName;
-
-    @NameInMap("Description")
-    public String description;
 
     @NameInMap("SourceDiskType")
     public String sourceDiskType;
@@ -24,12 +24,12 @@ public class CreateSnapshotRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateSnapshotRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateSnapshotRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateSnapshotRequest setDesktopId(String desktopId) {
@@ -40,20 +40,20 @@ public class CreateSnapshotRequest extends TeaModel {
         return this.desktopId;
     }
 
+    public CreateSnapshotRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public CreateSnapshotRequest setSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
     }
     public String getSnapshotName() {
         return this.snapshotName;
-    }
-
-    public CreateSnapshotRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public CreateSnapshotRequest setSourceDiskType(String sourceDiskType) {

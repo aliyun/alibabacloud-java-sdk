@@ -4,37 +4,29 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateADConnectorDirectoryResponseBody extends TeaModel {
-    @NameInMap("TrustPassword")
-    public String trustPassword;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("AdConnectors")
+    public java.util.List<CreateADConnectorDirectoryResponseBodyAdConnectors> adConnectors;
 
     @NameInMap("DirectoryId")
     public String directoryId;
 
-    @NameInMap("AdConnectors")
-    public java.util.List<CreateADConnectorDirectoryResponseBodyAdConnectors> adConnectors;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TrustPassword")
+    public String trustPassword;
 
     public static CreateADConnectorDirectoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateADConnectorDirectoryResponseBody self = new CreateADConnectorDirectoryResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateADConnectorDirectoryResponseBody setTrustPassword(String trustPassword) {
-        this.trustPassword = trustPassword;
+    public CreateADConnectorDirectoryResponseBody setAdConnectors(java.util.List<CreateADConnectorDirectoryResponseBodyAdConnectors> adConnectors) {
+        this.adConnectors = adConnectors;
         return this;
     }
-    public String getTrustPassword() {
-        return this.trustPassword;
-    }
-
-    public CreateADConnectorDirectoryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<CreateADConnectorDirectoryResponseBodyAdConnectors> getAdConnectors() {
+        return this.adConnectors;
     }
 
     public CreateADConnectorDirectoryResponseBody setDirectoryId(String directoryId) {
@@ -45,12 +37,20 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
         return this.directoryId;
     }
 
-    public CreateADConnectorDirectoryResponseBody setAdConnectors(java.util.List<CreateADConnectorDirectoryResponseBodyAdConnectors> adConnectors) {
-        this.adConnectors = adConnectors;
+    public CreateADConnectorDirectoryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<CreateADConnectorDirectoryResponseBodyAdConnectors> getAdConnectors() {
-        return this.adConnectors;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateADConnectorDirectoryResponseBody setTrustPassword(String trustPassword) {
+        this.trustPassword = trustPassword;
+        return this;
+    }
+    public String getTrustPassword() {
+        return this.trustPassword;
     }
 
     public static class CreateADConnectorDirectoryResponseBodyAdConnectors extends TeaModel {

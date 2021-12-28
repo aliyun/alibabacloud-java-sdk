@@ -7,11 +7,11 @@ public class CreateNetworkPackageResponseBody extends TeaModel {
     @NameInMap("NetworkPackageId")
     public String networkPackageId;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OrderId")
     public String orderId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateNetworkPackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateNetworkPackageResponseBody self = new CreateNetworkPackageResponseBody();
@@ -26,20 +26,20 @@ public class CreateNetworkPackageResponseBody extends TeaModel {
         return this.networkPackageId;
     }
 
-    public CreateNetworkPackageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateNetworkPackageResponseBody setOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public CreateNetworkPackageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

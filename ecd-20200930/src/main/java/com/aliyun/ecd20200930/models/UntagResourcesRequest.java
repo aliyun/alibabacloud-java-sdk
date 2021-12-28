@@ -4,17 +4,17 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ResourceType")
-    public String resourceType;
-
     @NameInMap("All")
     public Boolean all;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
@@ -22,22 +22,6 @@ public class UntagResourcesRequest extends TeaModel {
     public static UntagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         UntagResourcesRequest self = new UntagResourcesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UntagResourcesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public UntagResourcesRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
     }
 
     public UntagResourcesRequest setAll(Boolean all) {
@@ -48,12 +32,28 @@ public class UntagResourcesRequest extends TeaModel {
         return this.all;
     }
 
+    public UntagResourcesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public UntagResourcesRequest setResourceId(java.util.List<String> resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     public java.util.List<String> getResourceId() {
         return this.resourceId;
+    }
+
+    public UntagResourcesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public UntagResourcesRequest setTagKey(java.util.List<String> tagKey) {

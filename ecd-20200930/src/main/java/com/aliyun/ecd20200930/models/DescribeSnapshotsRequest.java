@@ -4,14 +4,8 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DesktopId")
     public String desktopId;
-
-    @NameInMap("SnapshotId")
-    public String snapshotId;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -19,17 +13,15 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("SnapshotId")
+    public String snapshotId;
+
     public static DescribeSnapshotsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotsRequest self = new DescribeSnapshotsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSnapshotsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeSnapshotsRequest setDesktopId(String desktopId) {
@@ -38,14 +30,6 @@ public class DescribeSnapshotsRequest extends TeaModel {
     }
     public String getDesktopId() {
         return this.desktopId;
-    }
-
-    public DescribeSnapshotsRequest setSnapshotId(String snapshotId) {
-        this.snapshotId = snapshotId;
-        return this;
-    }
-    public String getSnapshotId() {
-        return this.snapshotId;
     }
 
     public DescribeSnapshotsRequest setMaxResults(Integer maxResults) {
@@ -62,6 +46,22 @@ public class DescribeSnapshotsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeSnapshotsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeSnapshotsRequest setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    public String getSnapshotId() {
+        return this.snapshotId;
     }
 
 }

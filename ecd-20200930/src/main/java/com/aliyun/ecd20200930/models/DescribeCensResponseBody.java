@@ -4,24 +4,40 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCensResponseBody extends TeaModel {
+    @NameInMap("Cens")
+    public java.util.List<DescribeCensResponseBodyCens> cens;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Cens")
-    public java.util.List<DescribeCensResponseBodyCens> cens;
 
     public static DescribeCensResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCensResponseBody self = new DescribeCensResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCensResponseBody setCens(java.util.List<DescribeCensResponseBodyCens> cens) {
+        this.cens = cens;
+        return this;
+    }
+    public java.util.List<DescribeCensResponseBodyCens> getCens() {
+        return this.cens;
+    }
+
+    public DescribeCensResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeCensResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class DescribeCensResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCensResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeCensResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,12 +64,23 @@ public class DescribeCensResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeCensResponseBody setCens(java.util.List<DescribeCensResponseBodyCens> cens) {
-        this.cens = cens;
-        return this;
-    }
-    public java.util.List<DescribeCensResponseBodyCens> getCens() {
-        return this.cens;
+    public static class DescribeCensResponseBodyCensPackageIds extends TeaModel {
+        @NameInMap("PackageId")
+        public String packageId;
+
+        public static DescribeCensResponseBodyCensPackageIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCensResponseBodyCensPackageIds self = new DescribeCensResponseBodyCensPackageIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCensResponseBodyCensPackageIds setPackageId(String packageId) {
+            this.packageId = packageId;
+            return this;
+        }
+        public String getPackageId() {
+            return this.packageId;
+        }
+
     }
 
     public static class DescribeCensResponseBodyCensTags extends TeaModel {
@@ -94,88 +113,37 @@ public class DescribeCensResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeCensResponseBodyCensPackageIds extends TeaModel {
-        @NameInMap("PackageId")
-        public String packageId;
-
-        public static DescribeCensResponseBodyCensPackageIds build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCensResponseBodyCensPackageIds self = new DescribeCensResponseBodyCensPackageIds();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeCensResponseBodyCensPackageIds setPackageId(String packageId) {
-            this.packageId = packageId;
-            return this;
-        }
-        public String getPackageId() {
-            return this.packageId;
-        }
-
-    }
-
     public static class DescribeCensResponseBodyCens extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("CenId")
+        public String cenId;
 
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("Ipv6Level")
-        public String ipv6Level;
-
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("CenId")
-        public String cenId;
-
-        @NameInMap("ProtectionLevel")
-        public String protectionLevel;
+        @NameInMap("Ipv6Level")
+        public String ipv6Level;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Tags")
-        public java.util.List<DescribeCensResponseBodyCensTags> tags;
-
         @NameInMap("PackageIds")
         public java.util.List<DescribeCensResponseBodyCensPackageIds> packageIds;
+
+        @NameInMap("ProtectionLevel")
+        public String protectionLevel;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeCensResponseBodyCensTags> tags;
 
         public static DescribeCensResponseBodyCens build(java.util.Map<String, ?> map) throws Exception {
             DescribeCensResponseBodyCens self = new DescribeCensResponseBodyCens();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCensResponseBodyCens setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeCensResponseBodyCens setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public DescribeCensResponseBodyCens setIpv6Level(String ipv6Level) {
-            this.ipv6Level = ipv6Level;
-            return this;
-        }
-        public String getIpv6Level() {
-            return this.ipv6Level;
-        }
-
-        public DescribeCensResponseBodyCens setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public DescribeCensResponseBodyCens setCenId(String cenId) {
@@ -186,12 +154,28 @@ public class DescribeCensResponseBody extends TeaModel {
             return this.cenId;
         }
 
-        public DescribeCensResponseBodyCens setProtectionLevel(String protectionLevel) {
-            this.protectionLevel = protectionLevel;
+        public DescribeCensResponseBodyCens setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public String getProtectionLevel() {
-            return this.protectionLevel;
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public DescribeCensResponseBodyCens setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeCensResponseBodyCens setIpv6Level(String ipv6Level) {
+            this.ipv6Level = ipv6Level;
+            return this;
+        }
+        public String getIpv6Level() {
+            return this.ipv6Level;
         }
 
         public DescribeCensResponseBodyCens setName(String name) {
@@ -202,20 +186,36 @@ public class DescribeCensResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeCensResponseBodyCens setTags(java.util.List<DescribeCensResponseBodyCensTags> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<DescribeCensResponseBodyCensTags> getTags() {
-            return this.tags;
-        }
-
         public DescribeCensResponseBodyCens setPackageIds(java.util.List<DescribeCensResponseBodyCensPackageIds> packageIds) {
             this.packageIds = packageIds;
             return this;
         }
         public java.util.List<DescribeCensResponseBodyCensPackageIds> getPackageIds() {
             return this.packageIds;
+        }
+
+        public DescribeCensResponseBodyCens setProtectionLevel(String protectionLevel) {
+            this.protectionLevel = protectionLevel;
+            return this;
+        }
+        public String getProtectionLevel() {
+            return this.protectionLevel;
+        }
+
+        public DescribeCensResponseBodyCens setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeCensResponseBodyCens setTags(java.util.List<DescribeCensResponseBodyCensTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeCensResponseBodyCensTags> getTags() {
+            return this.tags;
         }
 
     }

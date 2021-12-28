@@ -4,14 +4,8 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyBundleRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("BundleId")
     public String bundleId;
-
-    @NameInMap("ImageId")
-    public String imageId;
 
     @NameInMap("BundleName")
     public String bundleName;
@@ -19,17 +13,18 @@ public class ModifyBundleRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ImageId")
+    public String imageId;
+
+    @NameInMap("Language")
+    public String language;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static ModifyBundleRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBundleRequest self = new ModifyBundleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyBundleRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ModifyBundleRequest setBundleId(String bundleId) {
@@ -38,14 +33,6 @@ public class ModifyBundleRequest extends TeaModel {
     }
     public String getBundleId() {
         return this.bundleId;
-    }
-
-    public ModifyBundleRequest setImageId(String imageId) {
-        this.imageId = imageId;
-        return this;
-    }
-    public String getImageId() {
-        return this.imageId;
     }
 
     public ModifyBundleRequest setBundleName(String bundleName) {
@@ -62,6 +49,30 @@ public class ModifyBundleRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyBundleRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public ModifyBundleRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
+    }
+
+    public ModifyBundleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

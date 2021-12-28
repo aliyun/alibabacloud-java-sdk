@@ -4,17 +4,8 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RunCommandRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Type")
-    public String type;
-
     @NameInMap("CommandContent")
     public String commandContent;
-
-    @NameInMap("Timeout")
-    public Long timeout;
 
     @NameInMap("ContentEncoding")
     public String contentEncoding;
@@ -22,25 +13,18 @@ public class RunCommandRequest extends TeaModel {
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("Timeout")
+    public Long timeout;
+
+    @NameInMap("Type")
+    public String type;
+
     public static RunCommandRequest build(java.util.Map<String, ?> map) throws Exception {
         RunCommandRequest self = new RunCommandRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RunCommandRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public RunCommandRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
     public RunCommandRequest setCommandContent(String commandContent) {
@@ -49,14 +33,6 @@ public class RunCommandRequest extends TeaModel {
     }
     public String getCommandContent() {
         return this.commandContent;
-    }
-
-    public RunCommandRequest setTimeout(Long timeout) {
-        this.timeout = timeout;
-        return this;
-    }
-    public Long getTimeout() {
-        return this.timeout;
     }
 
     public RunCommandRequest setContentEncoding(String contentEncoding) {
@@ -73,6 +49,30 @@ public class RunCommandRequest extends TeaModel {
     }
     public java.util.List<String> getDesktopId() {
         return this.desktopId;
+    }
+
+    public RunCommandRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public RunCommandRequest setTimeout(Long timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    public Long getTimeout() {
+        return this.timeout;
+    }
+
+    public RunCommandRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }
