@@ -4,45 +4,33 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeExcpetionCountResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ExceptionIpCount")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer exceptionIpCount;
-
-    @NameInMap("ExpireTimeCount")
-    @Validation(required = true)
-    public Integer expireTimeCount;
+    public DescribeExcpetionCountResponseBody body;
 
     public static DescribeExcpetionCountResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeExcpetionCountResponse self = new DescribeExcpetionCountResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeExcpetionCountResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeExcpetionCountResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeExcpetionCountResponse setExceptionIpCount(Integer exceptionIpCount) {
-        this.exceptionIpCount = exceptionIpCount;
+    public DescribeExcpetionCountResponse setBody(DescribeExcpetionCountResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getExceptionIpCount() {
-        return this.exceptionIpCount;
-    }
-
-    public DescribeExcpetionCountResponse setExpireTimeCount(Integer expireTimeCount) {
-        this.expireTimeCount = expireTimeCount;
-        return this;
-    }
-    public Integer getExpireTimeCount() {
-        return this.expireTimeCount;
+    public DescribeExcpetionCountResponseBody getBody() {
+        return this.body;
     }
 
 }

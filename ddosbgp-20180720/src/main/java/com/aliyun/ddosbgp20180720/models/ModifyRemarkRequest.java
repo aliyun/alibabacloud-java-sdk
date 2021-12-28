@@ -5,18 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyRemarkRequest extends TeaModel {
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Remark")
-    @Validation(required = true)
     public String remark;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     public static ModifyRemarkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyRemarkRequest self = new ModifyRemarkRequest();
@@ -29,6 +27,14 @@ public class ModifyRemarkRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyRemarkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyRemarkRequest setRemark(String remark) {
@@ -45,14 +51,6 @@ public class ModifyRemarkRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public ModifyRemarkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

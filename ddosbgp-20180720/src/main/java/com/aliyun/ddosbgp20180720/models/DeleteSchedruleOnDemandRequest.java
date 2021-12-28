@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteSchedruleOnDemandRequest extends TeaModel {
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
-
-    @NameInMap("RuleName")
-    @Validation(required = true)
-    public String ruleName;
 
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("RuleName")
+    public String ruleName;
 
     public static DeleteSchedruleOnDemandRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSchedruleOnDemandRequest self = new DeleteSchedruleOnDemandRequest();
@@ -28,20 +26,20 @@ public class DeleteSchedruleOnDemandRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DeleteSchedruleOnDemandRequest setRuleName(String ruleName) {
-        this.ruleName = ruleName;
-        return this;
-    }
-    public String getRuleName() {
-        return this.ruleName;
-    }
-
     public DeleteSchedruleOnDemandRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DeleteSchedruleOnDemandRequest setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+    public String getRuleName() {
+        return this.ruleName;
     }
 
 }

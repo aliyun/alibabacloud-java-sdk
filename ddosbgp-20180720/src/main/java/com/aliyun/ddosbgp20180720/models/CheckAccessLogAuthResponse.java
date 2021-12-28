@@ -4,33 +4,33 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class CheckAccessLogAuthResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AccessLogAuth")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean accessLogAuth;
+    public CheckAccessLogAuthResponseBody body;
 
     public static CheckAccessLogAuthResponse build(java.util.Map<String, ?> map) throws Exception {
         CheckAccessLogAuthResponse self = new CheckAccessLogAuthResponse();
         return TeaModel.build(map, self);
     }
 
-    public CheckAccessLogAuthResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CheckAccessLogAuthResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CheckAccessLogAuthResponse setAccessLogAuth(Boolean accessLogAuth) {
-        this.accessLogAuth = accessLogAuth;
+    public CheckAccessLogAuthResponse setBody(CheckAccessLogAuthResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getAccessLogAuth() {
-        return this.accessLogAuth;
+    public CheckAccessLogAuthResponseBody getBody() {
+        return this.body;
     }
 
 }
