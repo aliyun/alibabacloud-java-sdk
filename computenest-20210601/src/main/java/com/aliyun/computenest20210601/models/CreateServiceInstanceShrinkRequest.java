@@ -4,8 +4,29 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceInstanceShrinkRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("EnableAccountOps")
+    public Boolean enableAccountOps;
+
+    @NameInMap("EnableInstanceOps")
+    public Boolean enableInstanceOps;
+
+    @NameInMap("OperationMetadata")
+    public CreateServiceInstanceShrinkRequestOperationMetadata operationMetadata;
+
+    @NameInMap("Parameters")
+    public String parametersShrink;
+
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("RequestTag")
+    public java.util.List<CreateServiceInstanceShrinkRequestRequestTag> requestTag;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ServiceId")
     public String serviceId;
@@ -13,30 +34,52 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
-    @NameInMap("Parameters")
-    public String parametersShrink;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("EnableInstanceOps")
-    public Boolean enableInstanceOps;
-
-    @NameInMap("EnableAccountOps")
-    public Boolean enableAccountOps;
-
     @NameInMap("TemplateName")
     public String templateName;
-
-    @NameInMap("OperationMetadata")
-    public CreateServiceInstanceShrinkRequestOperationMetadata operationMetadata;
-
-    @NameInMap("RequestTag")
-    public java.util.List<CreateServiceInstanceShrinkRequestRequestTag> requestTag;
 
     public static CreateServiceInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceInstanceShrinkRequest self = new CreateServiceInstanceShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateServiceInstanceShrinkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateServiceInstanceShrinkRequest setEnableAccountOps(Boolean enableAccountOps) {
+        this.enableAccountOps = enableAccountOps;
+        return this;
+    }
+    public Boolean getEnableAccountOps() {
+        return this.enableAccountOps;
+    }
+
+    public CreateServiceInstanceShrinkRequest setEnableInstanceOps(Boolean enableInstanceOps) {
+        this.enableInstanceOps = enableInstanceOps;
+        return this;
+    }
+    public Boolean getEnableInstanceOps() {
+        return this.enableInstanceOps;
+    }
+
+    public CreateServiceInstanceShrinkRequest setOperationMetadata(CreateServiceInstanceShrinkRequestOperationMetadata operationMetadata) {
+        this.operationMetadata = operationMetadata;
+        return this;
+    }
+    public CreateServiceInstanceShrinkRequestOperationMetadata getOperationMetadata() {
+        return this.operationMetadata;
+    }
+
+    public CreateServiceInstanceShrinkRequest setParametersShrink(String parametersShrink) {
+        this.parametersShrink = parametersShrink;
+        return this;
+    }
+    public String getParametersShrink() {
+        return this.parametersShrink;
     }
 
     public CreateServiceInstanceShrinkRequest setRegionId(String regionId) {
@@ -45,6 +88,22 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateServiceInstanceShrinkRequest setRequestTag(java.util.List<CreateServiceInstanceShrinkRequestRequestTag> requestTag) {
+        this.requestTag = requestTag;
+        return this;
+    }
+    public java.util.List<CreateServiceInstanceShrinkRequestRequestTag> getRequestTag() {
+        return this.requestTag;
+    }
+
+    public CreateServiceInstanceShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateServiceInstanceShrinkRequest setServiceId(String serviceId) {
@@ -63,38 +122,6 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         return this.serviceVersion;
     }
 
-    public CreateServiceInstanceShrinkRequest setParametersShrink(String parametersShrink) {
-        this.parametersShrink = parametersShrink;
-        return this;
-    }
-    public String getParametersShrink() {
-        return this.parametersShrink;
-    }
-
-    public CreateServiceInstanceShrinkRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreateServiceInstanceShrinkRequest setEnableInstanceOps(Boolean enableInstanceOps) {
-        this.enableInstanceOps = enableInstanceOps;
-        return this;
-    }
-    public Boolean getEnableInstanceOps() {
-        return this.enableInstanceOps;
-    }
-
-    public CreateServiceInstanceShrinkRequest setEnableAccountOps(Boolean enableAccountOps) {
-        this.enableAccountOps = enableAccountOps;
-        return this;
-    }
-    public Boolean getEnableAccountOps() {
-        return this.enableAccountOps;
-    }
-
     public CreateServiceInstanceShrinkRequest setTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -103,26 +130,7 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         return this.templateName;
     }
 
-    public CreateServiceInstanceShrinkRequest setOperationMetadata(CreateServiceInstanceShrinkRequestOperationMetadata operationMetadata) {
-        this.operationMetadata = operationMetadata;
-        return this;
-    }
-    public CreateServiceInstanceShrinkRequestOperationMetadata getOperationMetadata() {
-        return this.operationMetadata;
-    }
-
-    public CreateServiceInstanceShrinkRequest setRequestTag(java.util.List<CreateServiceInstanceShrinkRequestRequestTag> requestTag) {
-        this.requestTag = requestTag;
-        return this;
-    }
-    public java.util.List<CreateServiceInstanceShrinkRequestRequestTag> getRequestTag() {
-        return this.requestTag;
-    }
-
     public static class CreateServiceInstanceShrinkRequestOperationMetadata extends TeaModel {
-        @NameInMap("StartTime")
-        public String startTime;
-
         @NameInMap("EndTime")
         public String endTime;
 
@@ -132,17 +140,12 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         @NameInMap("ServiceInstanceId")
         public String serviceInstanceId;
 
+        @NameInMap("StartTime")
+        public String startTime;
+
         public static CreateServiceInstanceShrinkRequestOperationMetadata build(java.util.Map<String, ?> map) throws Exception {
             CreateServiceInstanceShrinkRequestOperationMetadata self = new CreateServiceInstanceShrinkRequestOperationMetadata();
             return TeaModel.build(map, self);
-        }
-
-        public CreateServiceInstanceShrinkRequestOperationMetadata setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
         }
 
         public CreateServiceInstanceShrinkRequestOperationMetadata setEndTime(String endTime) {
@@ -167,6 +170,14 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         }
         public String getServiceInstanceId() {
             return this.serviceInstanceId;
+        }
+
+        public CreateServiceInstanceShrinkRequestOperationMetadata setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }
