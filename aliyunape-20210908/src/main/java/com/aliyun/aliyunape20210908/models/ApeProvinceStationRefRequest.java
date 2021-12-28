@@ -20,6 +20,10 @@ public class ApeProvinceStationRefRequest extends TeaModel {
     @NameInMap("Cnty")
     public String cnty;
 
+    // country
+    @NameInMap("Country")
+    public String country;
+
     // offset
     @NameInMap("Offset")
     public Integer offset;
@@ -75,6 +79,14 @@ public class ApeProvinceStationRefRequest extends TeaModel {
     }
     public String getCnty() {
         return this.cnty;
+    }
+
+    public ApeProvinceStationRefRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
     }
 
     public ApeProvinceStationRefRequest setOffset(Integer offset) {
