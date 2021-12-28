@@ -4,23 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class AddClusterIntoServiceMeshRequest extends TeaModel {
-    @NameInMap("ServiceMeshId")
-    public String serviceMeshId;
-
     @NameInMap("ClusterId")
     public String clusterId;
+
+    @NameInMap("ServiceMeshId")
+    public String serviceMeshId;
 
     public static AddClusterIntoServiceMeshRequest build(java.util.Map<String, ?> map) throws Exception {
         AddClusterIntoServiceMeshRequest self = new AddClusterIntoServiceMeshRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddClusterIntoServiceMeshRequest setServiceMeshId(String serviceMeshId) {
-        this.serviceMeshId = serviceMeshId;
-        return this;
-    }
-    public String getServiceMeshId() {
-        return this.serviceMeshId;
     }
 
     public AddClusterIntoServiceMeshRequest setClusterId(String clusterId) {
@@ -29,6 +21,14 @@ public class AddClusterIntoServiceMeshRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public AddClusterIntoServiceMeshRequest setServiceMeshId(String serviceMeshId) {
+        this.serviceMeshId = serviceMeshId;
+        return this;
+    }
+    public String getServiceMeshId() {
+        return this.serviceMeshId;
     }
 
 }

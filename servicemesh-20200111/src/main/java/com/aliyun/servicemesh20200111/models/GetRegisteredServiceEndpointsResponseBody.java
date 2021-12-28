@@ -4,23 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
-    @NameInMap("ServiceEndpoints")
-    public java.util.List<GetRegisteredServiceEndpointsResponseBodyServiceEndpoints> serviceEndpoints;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("ServiceEndpoints")
+    public java.util.List<GetRegisteredServiceEndpointsResponseBodyServiceEndpoints> serviceEndpoints;
 
     public static GetRegisteredServiceEndpointsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRegisteredServiceEndpointsResponseBody self = new GetRegisteredServiceEndpointsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetRegisteredServiceEndpointsResponseBody setServiceEndpoints(java.util.List<GetRegisteredServiceEndpointsResponseBodyServiceEndpoints> serviceEndpoints) {
-        this.serviceEndpoints = serviceEndpoints;
-        return this;
-    }
-    public java.util.List<GetRegisteredServiceEndpointsResponseBodyServiceEndpoints> getServiceEndpoints() {
-        return this.serviceEndpoints;
     }
 
     public GetRegisteredServiceEndpointsResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetRegisteredServiceEndpointsResponseBody setServiceEndpoints(java.util.List<GetRegisteredServiceEndpointsResponseBodyServiceEndpoints> serviceEndpoints) {
+        this.serviceEndpoints = serviceEndpoints;
+        return this;
+    }
+    public java.util.List<GetRegisteredServiceEndpointsResponseBodyServiceEndpoints> getServiceEndpoints() {
+        return this.serviceEndpoints;
     }
 
     public static class GetRegisteredServiceEndpointsResponseBodyServiceEndpoints extends TeaModel {

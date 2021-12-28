@@ -4,23 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetVmAppMeshInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public String data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetVmAppMeshInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetVmAppMeshInfoResponseBody self = new GetVmAppMeshInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetVmAppMeshInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetVmAppMeshInfoResponseBody setData(String data) {
@@ -29,6 +21,14 @@ public class GetVmAppMeshInfoResponseBody extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public GetVmAppMeshInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

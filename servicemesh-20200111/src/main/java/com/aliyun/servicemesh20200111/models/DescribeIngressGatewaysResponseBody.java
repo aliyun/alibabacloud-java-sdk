@@ -4,23 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeIngressGatewaysResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("IngressGateways")
     public java.util.List<java.util.Map<String, ?>> ingressGateways;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeIngressGatewaysResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeIngressGatewaysResponseBody self = new DescribeIngressGatewaysResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeIngressGatewaysResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeIngressGatewaysResponseBody setIngressGateways(java.util.List<java.util.Map<String, ?>> ingressGateways) {
@@ -29,6 +21,14 @@ public class DescribeIngressGatewaysResponseBody extends TeaModel {
     }
     public java.util.List<java.util.Map<String, ?>> getIngressGateways() {
         return this.ingressGateways;
+    }
+
+    public DescribeIngressGatewaysResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

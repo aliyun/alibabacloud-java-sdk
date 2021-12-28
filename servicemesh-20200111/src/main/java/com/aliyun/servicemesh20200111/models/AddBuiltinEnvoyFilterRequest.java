@@ -4,11 +4,11 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class AddBuiltinEnvoyFilterRequest extends TeaModel {
-    @NameInMap("ServiceMeshId")
-    public String serviceMeshId;
-
     @NameInMap("Id")
     public String id;
+
+    @NameInMap("IstioVersion")
+    public String istioVersion;
 
     @NameInMap("Name")
     public String name;
@@ -16,20 +16,12 @@ public class AddBuiltinEnvoyFilterRequest extends TeaModel {
     @NameInMap("Parameters")
     public String parameters;
 
-    @NameInMap("IstioVersion")
-    public String istioVersion;
+    @NameInMap("ServiceMeshId")
+    public String serviceMeshId;
 
     public static AddBuiltinEnvoyFilterRequest build(java.util.Map<String, ?> map) throws Exception {
         AddBuiltinEnvoyFilterRequest self = new AddBuiltinEnvoyFilterRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddBuiltinEnvoyFilterRequest setServiceMeshId(String serviceMeshId) {
-        this.serviceMeshId = serviceMeshId;
-        return this;
-    }
-    public String getServiceMeshId() {
-        return this.serviceMeshId;
     }
 
     public AddBuiltinEnvoyFilterRequest setId(String id) {
@@ -38,6 +30,14 @@ public class AddBuiltinEnvoyFilterRequest extends TeaModel {
     }
     public String getId() {
         return this.id;
+    }
+
+    public AddBuiltinEnvoyFilterRequest setIstioVersion(String istioVersion) {
+        this.istioVersion = istioVersion;
+        return this;
+    }
+    public String getIstioVersion() {
+        return this.istioVersion;
     }
 
     public AddBuiltinEnvoyFilterRequest setName(String name) {
@@ -56,12 +56,12 @@ public class AddBuiltinEnvoyFilterRequest extends TeaModel {
         return this.parameters;
     }
 
-    public AddBuiltinEnvoyFilterRequest setIstioVersion(String istioVersion) {
-        this.istioVersion = istioVersion;
+    public AddBuiltinEnvoyFilterRequest setServiceMeshId(String serviceMeshId) {
+        this.serviceMeshId = serviceMeshId;
         return this;
     }
-    public String getIstioVersion() {
-        return this.istioVersion;
+    public String getServiceMeshId() {
+        return this.serviceMeshId;
     }
 
 }
