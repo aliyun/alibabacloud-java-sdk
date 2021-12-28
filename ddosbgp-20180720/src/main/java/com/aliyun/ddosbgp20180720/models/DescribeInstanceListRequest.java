@@ -4,25 +4,8 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceListRequest extends TeaModel {
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     @NameInMap("InstanceIdList")
     public String instanceIdList;
-
-    @NameInMap("Remark")
-    public String remark;
-
-    @NameInMap("PageNo")
-    @Validation(required = true)
-    public Integer pageNo;
-
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    public Integer pageSize;
-
-    @NameInMap("IpVersion")
-    public String ipVersion;
 
     @NameInMap("InstanceType")
     public String instanceType;
@@ -30,14 +13,29 @@ public class DescribeInstanceListRequest extends TeaModel {
     @NameInMap("Ip")
     public String ip;
 
+    @NameInMap("IpVersion")
+    public String ipVersion;
+
     @NameInMap("Orderby")
     public String orderby;
 
     @NameInMap("Orderdire")
     public String orderdire;
 
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("Remark")
+    public String remark;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("Tag")
     public java.util.List<DescribeInstanceListRequestTag> tag;
@@ -47,52 +45,12 @@ public class DescribeInstanceListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceListRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
     public DescribeInstanceListRequest setInstanceIdList(String instanceIdList) {
         this.instanceIdList = instanceIdList;
         return this;
     }
     public String getInstanceIdList() {
         return this.instanceIdList;
-    }
-
-    public DescribeInstanceListRequest setRemark(String remark) {
-        this.remark = remark;
-        return this;
-    }
-    public String getRemark() {
-        return this.remark;
-    }
-
-    public DescribeInstanceListRequest setPageNo(Integer pageNo) {
-        this.pageNo = pageNo;
-        return this;
-    }
-    public Integer getPageNo() {
-        return this.pageNo;
-    }
-
-    public DescribeInstanceListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeInstanceListRequest setIpVersion(String ipVersion) {
-        this.ipVersion = ipVersion;
-        return this;
-    }
-    public String getIpVersion() {
-        return this.ipVersion;
     }
 
     public DescribeInstanceListRequest setInstanceType(String instanceType) {
@@ -111,6 +69,14 @@ public class DescribeInstanceListRequest extends TeaModel {
         return this.ip;
     }
 
+    public DescribeInstanceListRequest setIpVersion(String ipVersion) {
+        this.ipVersion = ipVersion;
+        return this;
+    }
+    public String getIpVersion() {
+        return this.ipVersion;
+    }
+
     public DescribeInstanceListRequest setOrderby(String orderby) {
         this.orderby = orderby;
         return this;
@@ -127,12 +93,44 @@ public class DescribeInstanceListRequest extends TeaModel {
         return this.orderdire;
     }
 
+    public DescribeInstanceListRequest setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+        return this;
+    }
+    public Integer getPageNo() {
+        return this.pageNo;
+    }
+
+    public DescribeInstanceListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeInstanceListRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeInstanceListRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
+    }
+
+    public DescribeInstanceListRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeInstanceListRequest setTag(java.util.List<DescribeInstanceListRequestTag> tag) {

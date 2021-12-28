@@ -4,20 +4,17 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    public String regionId;
+    @NameInMap("ResourceId")
+    public java.util.List<String> resourceId;
 
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
-
-    @NameInMap("ResourceId")
-    @Validation(required = true)
-    public java.util.List<String> resourceId;
 
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -25,14 +22,6 @@ public class TagResourcesRequest extends TeaModel {
     public static TagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         TagResourcesRequest self = new TagResourcesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public TagResourcesRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public TagResourcesRequest setRegionId(String regionId) {
@@ -43,12 +32,12 @@ public class TagResourcesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public TagResourcesRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
+    public TagResourcesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
-    public String getResourceType() {
-        return this.resourceType;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public TagResourcesRequest setResourceId(java.util.List<String> resourceId) {
@@ -57,6 +46,14 @@ public class TagResourcesRequest extends TeaModel {
     }
     public java.util.List<String> getResourceId() {
         return this.resourceId;
+    }
+
+    public TagResourcesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public TagResourcesRequest setTag(java.util.List<TagResourcesRequestTag> tag) {

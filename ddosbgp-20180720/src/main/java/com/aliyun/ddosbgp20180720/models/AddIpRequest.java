@@ -4,13 +4,11 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class AddIpRequest extends TeaModel {
-    @NameInMap("IpList")
-    @Validation(required = true)
-    public String ipList;
-
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
+
+    @NameInMap("IpList")
+    public String ipList;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -23,20 +21,20 @@ public class AddIpRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AddIpRequest setIpList(String ipList) {
-        this.ipList = ipList;
-        return this;
-    }
-    public String getIpList() {
-        return this.ipList;
-    }
-
     public AddIpRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public AddIpRequest setIpList(String ipList) {
+        this.ipList = ipList;
+        return this;
+    }
+    public String getIpList() {
+        return this.ipList;
     }
 
     public AddIpRequest setRegionId(String regionId) {

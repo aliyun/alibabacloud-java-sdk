@@ -4,21 +4,33 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class SetInstanceModeOnDemandResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public SetInstanceModeOnDemandResponseBody body;
 
     public static SetInstanceModeOnDemandResponse build(java.util.Map<String, ?> map) throws Exception {
         SetInstanceModeOnDemandResponse self = new SetInstanceModeOnDemandResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetInstanceModeOnDemandResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SetInstanceModeOnDemandResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public SetInstanceModeOnDemandResponse setBody(SetInstanceModeOnDemandResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SetInstanceModeOnDemandResponseBody getBody() {
+        return this.body;
     }
 
 }

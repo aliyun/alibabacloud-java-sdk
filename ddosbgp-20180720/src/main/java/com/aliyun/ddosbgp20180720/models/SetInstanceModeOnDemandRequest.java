@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetInstanceModeOnDemandRequest extends TeaModel {
     @NameInMap("InstanceIdList")
-    @Validation(required = true)
     public java.util.List<String> instanceIdList;
 
     @NameInMap("Mode")
-    @Validation(required = true)
     public String mode;
 
     @NameInMap("RegionId")

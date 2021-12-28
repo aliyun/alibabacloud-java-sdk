@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeOnDemandInstanceStatusRequest extends TeaModel {
     @NameInMap("InstanceIdList")
-    @Validation(required = true)
     public java.util.List<String> instanceIdList;
 
     @NameInMap("RegionId")

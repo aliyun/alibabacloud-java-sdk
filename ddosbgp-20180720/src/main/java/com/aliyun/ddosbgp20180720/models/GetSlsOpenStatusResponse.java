@@ -4,33 +4,33 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class GetSlsOpenStatusResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SlsOpenStatus")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean slsOpenStatus;
+    public GetSlsOpenStatusResponseBody body;
 
     public static GetSlsOpenStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         GetSlsOpenStatusResponse self = new GetSlsOpenStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetSlsOpenStatusResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetSlsOpenStatusResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetSlsOpenStatusResponse setSlsOpenStatus(Boolean slsOpenStatus) {
-        this.slsOpenStatus = slsOpenStatus;
+    public GetSlsOpenStatusResponse setBody(GetSlsOpenStatusResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSlsOpenStatus() {
-        return this.slsOpenStatus;
+    public GetSlsOpenStatusResponseBody getBody() {
+        return this.body;
     }
 
 }
