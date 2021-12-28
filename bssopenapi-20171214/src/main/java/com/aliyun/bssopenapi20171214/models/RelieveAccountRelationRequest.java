@@ -10,6 +10,9 @@ public class RelieveAccountRelationRequest extends TeaModel {
     @NameInMap("ParentUserId")
     public Long parentUserId;
 
+    @NameInMap("RelationId")
+    public Long relationId;
+
     @NameInMap("RelationType")
     public String relationType;
 
@@ -35,6 +38,14 @@ public class RelieveAccountRelationRequest extends TeaModel {
     }
     public Long getParentUserId() {
         return this.parentUserId;
+    }
+
+    public RelieveAccountRelationRequest setRelationId(Long relationId) {
+        this.relationId = relationId;
+        return this;
+    }
+    public Long getRelationId() {
+        return this.relationId;
     }
 
     public RelieveAccountRelationRequest setRelationType(String relationType) {

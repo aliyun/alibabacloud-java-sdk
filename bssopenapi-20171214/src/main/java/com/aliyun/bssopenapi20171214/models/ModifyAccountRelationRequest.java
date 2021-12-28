@@ -16,6 +16,9 @@ public class ModifyAccountRelationRequest extends TeaModel {
     @NameInMap("PermissionCodes")
     public java.util.List<String> permissionCodes;
 
+    @NameInMap("RelationId")
+    public Long relationId;
+
     @NameInMap("RelationOperation")
     public String relationOperation;
 
@@ -63,6 +66,14 @@ public class ModifyAccountRelationRequest extends TeaModel {
     }
     public java.util.List<String> getPermissionCodes() {
         return this.permissionCodes;
+    }
+
+    public ModifyAccountRelationRequest setRelationId(Long relationId) {
+        this.relationId = relationId;
+        return this;
+    }
+    public Long getRelationId() {
+        return this.relationId;
     }
 
     public ModifyAccountRelationRequest setRelationOperation(String relationOperation) {

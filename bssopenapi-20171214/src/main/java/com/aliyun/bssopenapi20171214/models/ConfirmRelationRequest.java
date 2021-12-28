@@ -16,6 +16,9 @@ public class ConfirmRelationRequest extends TeaModel {
     @NameInMap("PermissionCodes")
     public java.util.List<String> permissionCodes;
 
+    @NameInMap("RelationId")
+    public Long relationId;
+
     @NameInMap("RelationType")
     public String relationType;
 
@@ -57,6 +60,14 @@ public class ConfirmRelationRequest extends TeaModel {
     }
     public java.util.List<String> getPermissionCodes() {
         return this.permissionCodes;
+    }
+
+    public ConfirmRelationRequest setRelationId(Long relationId) {
+        this.relationId = relationId;
+        return this;
+    }
+    public Long getRelationId() {
+        return this.relationId;
     }
 
     public ConfirmRelationRequest setRelationType(String relationType) {
