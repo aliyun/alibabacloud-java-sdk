@@ -7,14 +7,14 @@ public class TriggerNetworkRequest extends TeaModel {
     @NameInMap("actionType")
     public String actionType;
 
-    @NameInMap("clientToken")
-    public String clientToken;
-
     @NameInMap("networkType")
     public String networkType;
 
     @NameInMap("nodeType")
     public String nodeType;
+
+    @NameInMap("clientToken")
+    public String clientToken;
 
     public static TriggerNetworkRequest build(java.util.Map<String, ?> map) throws Exception {
         TriggerNetworkRequest self = new TriggerNetworkRequest();
@@ -27,14 +27,6 @@ public class TriggerNetworkRequest extends TeaModel {
     }
     public String getActionType() {
         return this.actionType;
-    }
-
-    public TriggerNetworkRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public TriggerNetworkRequest setNetworkType(String networkType) {
@@ -51,6 +43,14 @@ public class TriggerNetworkRequest extends TeaModel {
     }
     public String getNodeType() {
         return this.nodeType;
+    }
+
+    public TriggerNetworkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
 }
