@@ -478,6 +478,9 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         @NameInMap("Source")
         public GetAggregateConfigRuleResponseBodyConfigRuleSource source;
 
+        @NameInMap("TagKeyLogicScope")
+        public String tagKeyLogicScope;
+
         @NameInMap("TagKeyScope")
         public String tagKeyScope;
 
@@ -639,6 +642,14 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         }
         public GetAggregateConfigRuleResponseBodyConfigRuleSource getSource() {
             return this.source;
+        }
+
+        public GetAggregateConfigRuleResponseBodyConfigRule setTagKeyLogicScope(String tagKeyLogicScope) {
+            this.tagKeyLogicScope = tagKeyLogicScope;
+            return this;
+        }
+        public String getTagKeyLogicScope() {
+            return this.tagKeyLogicScope;
         }
 
         public GetAggregateConfigRuleResponseBodyConfigRule setTagKeyScope(String tagKeyScope) {

@@ -7,6 +7,9 @@ public class GenerateAggregateConfigRulesReportResponseBody extends TeaModel {
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    @NameInMap("ReportId")
+    public String reportId;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class GenerateAggregateConfigRulesReportResponseBody extends TeaModel {
     }
     public String getAggregatorId() {
         return this.aggregatorId;
+    }
+
+    public GenerateAggregateConfigRulesReportResponseBody setReportId(String reportId) {
+        this.reportId = reportId;
+        return this;
+    }
+    public String getReportId() {
+        return this.reportId;
     }
 
     public GenerateAggregateConfigRulesReportResponseBody setRequestId(String requestId) {

@@ -10,6 +10,9 @@ public class GenerateAggregateConfigRulesReportRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("ConfigRuleIds")
+    public String configRuleIds;
+
     public static GenerateAggregateConfigRulesReportRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateAggregateConfigRulesReportRequest self = new GenerateAggregateConfigRulesReportRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class GenerateAggregateConfigRulesReportRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public GenerateAggregateConfigRulesReportRequest setConfigRuleIds(String configRuleIds) {
+        this.configRuleIds = configRuleIds;
+        return this;
+    }
+    public String getConfigRuleIds() {
+        return this.configRuleIds;
     }
 
 }

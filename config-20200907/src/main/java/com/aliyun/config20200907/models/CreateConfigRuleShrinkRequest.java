@@ -43,6 +43,9 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     @NameInMap("SourceOwner")
     public String sourceOwner;
 
+    @NameInMap("TagKeyLogicScope")
+    public String tagKeyLogicScope;
+
     @NameInMap("TagKeyScope")
     public String tagKeyScope;
 
@@ -156,6 +159,14 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     }
     public String getSourceOwner() {
         return this.sourceOwner;
+    }
+
+    public CreateConfigRuleShrinkRequest setTagKeyLogicScope(String tagKeyLogicScope) {
+        this.tagKeyLogicScope = tagKeyLogicScope;
+        return this;
+    }
+    public String getTagKeyLogicScope() {
+        return this.tagKeyLogicScope;
     }
 
     public CreateConfigRuleShrinkRequest setTagKeyScope(String tagKeyScope) {

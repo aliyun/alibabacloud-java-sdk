@@ -38,6 +38,9 @@ public class GetConfigRulesReportResponseBody extends TeaModel {
         @NameInMap("ReportCreateTimestamp")
         public Long reportCreateTimestamp;
 
+        @NameInMap("ReportId")
+        public String reportId;
+
         @NameInMap("ReportStatus")
         public String reportStatus;
 
@@ -63,6 +66,14 @@ public class GetConfigRulesReportResponseBody extends TeaModel {
         }
         public Long getReportCreateTimestamp() {
             return this.reportCreateTimestamp;
+        }
+
+        public GetConfigRulesReportResponseBodyConfigRulesReport setReportId(String reportId) {
+            this.reportId = reportId;
+            return this;
+        }
+        public String getReportId() {
+            return this.reportId;
         }
 
         public GetConfigRulesReportResponseBodyConfigRulesReport setReportStatus(String reportStatus) {
