@@ -7,11 +7,11 @@ public class ModifyInstanceNameRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("InstanceName")
     public String instanceName;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ModifyInstanceNameRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceNameRequest self = new ModifyInstanceNameRequest();
@@ -26,20 +26,20 @@ public class ModifyInstanceNameRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ModifyInstanceNameRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public ModifyInstanceNameRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public ModifyInstanceNameRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

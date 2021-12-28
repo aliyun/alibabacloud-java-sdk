@@ -4,26 +4,26 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class ConvertPostPayOrderRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Duration")
+    public Integer duration;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Duration")
-    public Integer duration;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ConvertPostPayOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         ConvertPostPayOrderRequest self = new ConvertPostPayOrderRequest();
         return TeaModel.build(map, self);
     }
 
-    public ConvertPostPayOrderRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ConvertPostPayOrderRequest setDuration(Integer duration) {
+        this.duration = duration;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Integer getDuration() {
+        return this.duration;
     }
 
     public ConvertPostPayOrderRequest setInstanceId(String instanceId) {
@@ -34,12 +34,12 @@ public class ConvertPostPayOrderRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ConvertPostPayOrderRequest setDuration(Integer duration) {
-        this.duration = duration;
+    public ConvertPostPayOrderRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Integer getDuration() {
-        return this.duration;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

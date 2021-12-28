@@ -4,14 +4,14 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceListRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
 
     @NameInMap("OrderId")
     public String orderId;
 
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("Tag")
     public java.util.List<GetInstanceListRequestTag> tag;
@@ -21,12 +21,12 @@ public class GetInstanceListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetInstanceListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public GetInstanceListRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
     }
 
     public GetInstanceListRequest setOrderId(String orderId) {
@@ -37,12 +37,12 @@ public class GetInstanceListRequest extends TeaModel {
         return this.orderId;
     }
 
-    public GetInstanceListRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
+    public GetInstanceListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetInstanceListRequest setTag(java.util.List<GetInstanceListRequestTag> tag) {

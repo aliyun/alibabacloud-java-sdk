@@ -65,17 +65,17 @@ public class GetTopicStatusResponseBody extends TeaModel {
     }
 
     public static class GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable extends TeaModel {
-        @NameInMap("Partition")
-        public Integer partition;
-
-        @NameInMap("MinOffset")
-        public Long minOffset;
-
         @NameInMap("LastUpdateTimestamp")
         public Long lastUpdateTimestamp;
 
         @NameInMap("MaxOffset")
         public Long maxOffset;
+
+        @NameInMap("MinOffset")
+        public Long minOffset;
+
+        @NameInMap("Partition")
+        public Integer partition;
 
         @NameInMap("Topic")
         public String topic;
@@ -83,22 +83,6 @@ public class GetTopicStatusResponseBody extends TeaModel {
         public static GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable build(java.util.Map<String, ?> map) throws Exception {
             GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable self = new GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable();
             return TeaModel.build(map, self);
-        }
-
-        public GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable setPartition(Integer partition) {
-            this.partition = partition;
-            return this;
-        }
-        public Integer getPartition() {
-            return this.partition;
-        }
-
-        public GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable setMinOffset(Long minOffset) {
-            this.minOffset = minOffset;
-            return this;
-        }
-        public Long getMinOffset() {
-            return this.minOffset;
         }
 
         public GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable setLastUpdateTimestamp(Long lastUpdateTimestamp) {
@@ -115,6 +99,22 @@ public class GetTopicStatusResponseBody extends TeaModel {
         }
         public Long getMaxOffset() {
             return this.maxOffset;
+        }
+
+        public GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable setMinOffset(Long minOffset) {
+            this.minOffset = minOffset;
+            return this;
+        }
+        public Long getMinOffset() {
+            return this.minOffset;
+        }
+
+        public GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable setPartition(Integer partition) {
+            this.partition = partition;
+            return this;
+        }
+        public Integer getPartition() {
+            return this.partition;
         }
 
         public GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable setTopic(String topic) {
@@ -147,26 +147,18 @@ public class GetTopicStatusResponseBody extends TeaModel {
     }
 
     public static class GetTopicStatusResponseBodyTopicStatus extends TeaModel {
-        @NameInMap("TotalCount")
-        public Long totalCount;
-
         @NameInMap("LastTimeStamp")
         public Long lastTimeStamp;
 
         @NameInMap("OffsetTable")
         public GetTopicStatusResponseBodyTopicStatusOffsetTable offsetTable;
 
+        @NameInMap("TotalCount")
+        public Long totalCount;
+
         public static GetTopicStatusResponseBodyTopicStatus build(java.util.Map<String, ?> map) throws Exception {
             GetTopicStatusResponseBodyTopicStatus self = new GetTopicStatusResponseBodyTopicStatus();
             return TeaModel.build(map, self);
-        }
-
-        public GetTopicStatusResponseBodyTopicStatus setTotalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Long getTotalCount() {
-            return this.totalCount;
         }
 
         public GetTopicStatusResponseBodyTopicStatus setLastTimeStamp(Long lastTimeStamp) {
@@ -183,6 +175,14 @@ public class GetTopicStatusResponseBody extends TeaModel {
         }
         public GetTopicStatusResponseBodyTopicStatusOffsetTable getOffsetTable() {
             return this.offsetTable;
+        }
+
+        public GetTopicStatusResponseBodyTopicStatus setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }

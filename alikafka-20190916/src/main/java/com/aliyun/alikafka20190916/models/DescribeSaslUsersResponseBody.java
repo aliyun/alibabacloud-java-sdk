@@ -13,11 +13,11 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("SaslUserList")
     public DescribeSaslUsersResponseBodySaslUserList saslUserList;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DescribeSaslUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSaslUsersResponseBody self = new DescribeSaslUsersResponseBody();
@@ -48,14 +48,6 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSaslUsersResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public DescribeSaslUsersResponseBody setSaslUserList(DescribeSaslUsersResponseBodySaslUserList saslUserList) {
         this.saslUserList = saslUserList;
         return this;
@@ -64,12 +56,20 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         return this.saslUserList;
     }
 
-    public static class DescribeSaslUsersResponseBodySaslUserListSaslUserVO extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+    public DescribeSaslUsersResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
 
+    public static class DescribeSaslUsersResponseBodySaslUserListSaslUserVO extends TeaModel {
         @NameInMap("Password")
         public String password;
+
+        @NameInMap("Type")
+        public String type;
 
         @NameInMap("Username")
         public String username;
@@ -79,20 +79,20 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeSaslUsersResponseBodySaslUserListSaslUserVO setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
         public DescribeSaslUsersResponseBodySaslUserListSaslUserVO setPassword(String password) {
             this.password = password;
             return this;
         }
         public String getPassword() {
             return this.password;
+        }
+
+        public DescribeSaslUsersResponseBodySaslUserListSaslUserVO setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public DescribeSaslUsersResponseBodySaslUserListSaslUserVO setUsername(String username) {

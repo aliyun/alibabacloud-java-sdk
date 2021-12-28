@@ -10,14 +10,14 @@ public class ConvertPostPayOrderResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("OrderId")
+    public String orderId;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("OrderId")
-    public String orderId;
 
     public static ConvertPostPayOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ConvertPostPayOrderResponseBody self = new ConvertPostPayOrderResponseBody();
@@ -40,6 +40,14 @@ public class ConvertPostPayOrderResponseBody extends TeaModel {
         return this.message;
     }
 
+    public ConvertPostPayOrderResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
+    }
+
     public ConvertPostPayOrderResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -54,14 +62,6 @@ public class ConvertPostPayOrderResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public ConvertPostPayOrderResponseBody setOrderId(String orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public String getOrderId() {
-        return this.orderId;
     }
 
 }

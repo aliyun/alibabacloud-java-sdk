@@ -4,6 +4,9 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetAllowedIpListResponseBody extends TeaModel {
+    @NameInMap("AllowedList")
+    public GetAllowedIpListResponseBodyAllowedList allowedList;
+
     @NameInMap("Code")
     public Integer code;
 
@@ -16,12 +19,17 @@ public class GetAllowedIpListResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("AllowedList")
-    public GetAllowedIpListResponseBodyAllowedList allowedList;
-
     public static GetAllowedIpListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAllowedIpListResponseBody self = new GetAllowedIpListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetAllowedIpListResponseBody setAllowedList(GetAllowedIpListResponseBodyAllowedList allowedList) {
+        this.allowedList = allowedList;
+        return this;
+    }
+    public GetAllowedIpListResponseBodyAllowedList getAllowedList() {
+        return this.allowedList;
     }
 
     public GetAllowedIpListResponseBody setCode(Integer code) {
@@ -56,62 +64,16 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetAllowedIpListResponseBody setAllowedList(GetAllowedIpListResponseBodyAllowedList allowedList) {
-        this.allowedList = allowedList;
-        return this;
-    }
-    public GetAllowedIpListResponseBodyAllowedList getAllowedList() {
-        return this.allowedList;
-    }
-
-    public static class GetAllowedIpListResponseBodyAllowedListVpcList extends TeaModel {
-        @NameInMap("PortRange")
-        public String portRange;
-
-        @NameInMap("AllowedIpList")
-        public java.util.List<String> allowedIpList;
-
-        public static GetAllowedIpListResponseBodyAllowedListVpcList build(java.util.Map<String, ?> map) throws Exception {
-            GetAllowedIpListResponseBodyAllowedListVpcList self = new GetAllowedIpListResponseBodyAllowedListVpcList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAllowedIpListResponseBodyAllowedListVpcList setPortRange(String portRange) {
-            this.portRange = portRange;
-            return this;
-        }
-        public String getPortRange() {
-            return this.portRange;
-        }
-
-        public GetAllowedIpListResponseBodyAllowedListVpcList setAllowedIpList(java.util.List<String> allowedIpList) {
-            this.allowedIpList = allowedIpList;
-            return this;
-        }
-        public java.util.List<String> getAllowedIpList() {
-            return this.allowedIpList;
-        }
-
-    }
-
     public static class GetAllowedIpListResponseBodyAllowedListInternetList extends TeaModel {
-        @NameInMap("PortRange")
-        public String portRange;
-
         @NameInMap("AllowedIpList")
         public java.util.List<String> allowedIpList;
+
+        @NameInMap("PortRange")
+        public String portRange;
 
         public static GetAllowedIpListResponseBodyAllowedListInternetList build(java.util.Map<String, ?> map) throws Exception {
             GetAllowedIpListResponseBodyAllowedListInternetList self = new GetAllowedIpListResponseBodyAllowedListInternetList();
             return TeaModel.build(map, self);
-        }
-
-        public GetAllowedIpListResponseBodyAllowedListInternetList setPortRange(String portRange) {
-            this.portRange = portRange;
-            return this;
-        }
-        public String getPortRange() {
-            return this.portRange;
         }
 
         public GetAllowedIpListResponseBodyAllowedListInternetList setAllowedIpList(java.util.List<String> allowedIpList) {
@@ -122,17 +84,55 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             return this.allowedIpList;
         }
 
+        public GetAllowedIpListResponseBodyAllowedListInternetList setPortRange(String portRange) {
+            this.portRange = portRange;
+            return this;
+        }
+        public String getPortRange() {
+            return this.portRange;
+        }
+
+    }
+
+    public static class GetAllowedIpListResponseBodyAllowedListVpcList extends TeaModel {
+        @NameInMap("AllowedIpList")
+        public java.util.List<String> allowedIpList;
+
+        @NameInMap("PortRange")
+        public String portRange;
+
+        public static GetAllowedIpListResponseBodyAllowedListVpcList build(java.util.Map<String, ?> map) throws Exception {
+            GetAllowedIpListResponseBodyAllowedListVpcList self = new GetAllowedIpListResponseBodyAllowedListVpcList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAllowedIpListResponseBodyAllowedListVpcList setAllowedIpList(java.util.List<String> allowedIpList) {
+            this.allowedIpList = allowedIpList;
+            return this;
+        }
+        public java.util.List<String> getAllowedIpList() {
+            return this.allowedIpList;
+        }
+
+        public GetAllowedIpListResponseBodyAllowedListVpcList setPortRange(String portRange) {
+            this.portRange = portRange;
+            return this;
+        }
+        public String getPortRange() {
+            return this.portRange;
+        }
+
     }
 
     public static class GetAllowedIpListResponseBodyAllowedList extends TeaModel {
         @NameInMap("DeployType")
         public Integer deployType;
 
-        @NameInMap("VpcList")
-        public java.util.List<GetAllowedIpListResponseBodyAllowedListVpcList> vpcList;
-
         @NameInMap("InternetList")
         public java.util.List<GetAllowedIpListResponseBodyAllowedListInternetList> internetList;
+
+        @NameInMap("VpcList")
+        public java.util.List<GetAllowedIpListResponseBodyAllowedListVpcList> vpcList;
 
         public static GetAllowedIpListResponseBodyAllowedList build(java.util.Map<String, ?> map) throws Exception {
             GetAllowedIpListResponseBodyAllowedList self = new GetAllowedIpListResponseBodyAllowedList();
@@ -147,20 +147,20 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             return this.deployType;
         }
 
-        public GetAllowedIpListResponseBodyAllowedList setVpcList(java.util.List<GetAllowedIpListResponseBodyAllowedListVpcList> vpcList) {
-            this.vpcList = vpcList;
-            return this;
-        }
-        public java.util.List<GetAllowedIpListResponseBodyAllowedListVpcList> getVpcList() {
-            return this.vpcList;
-        }
-
         public GetAllowedIpListResponseBodyAllowedList setInternetList(java.util.List<GetAllowedIpListResponseBodyAllowedListInternetList> internetList) {
             this.internetList = internetList;
             return this;
         }
         public java.util.List<GetAllowedIpListResponseBodyAllowedListInternetList> getInternetList() {
             return this.internetList;
+        }
+
+        public GetAllowedIpListResponseBodyAllowedList setVpcList(java.util.List<GetAllowedIpListResponseBodyAllowedListVpcList> vpcList) {
+            this.vpcList = vpcList;
+            return this;
+        }
+        public java.util.List<GetAllowedIpListResponseBodyAllowedListVpcList> getVpcList() {
+            return this.vpcList;
         }
 
     }

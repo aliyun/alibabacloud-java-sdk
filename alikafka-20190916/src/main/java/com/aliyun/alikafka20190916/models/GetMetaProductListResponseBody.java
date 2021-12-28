@@ -10,14 +10,14 @@ public class GetMetaProductListResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("MetaData")
+    public GetMetaProductListResponseBodyMetaData metaData;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("MetaData")
-    public GetMetaProductListResponseBodyMetaData metaData;
 
     public static GetMetaProductListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMetaProductListResponseBody self = new GetMetaProductListResponseBody();
@@ -40,6 +40,14 @@ public class GetMetaProductListResponseBody extends TeaModel {
         return this.message;
     }
 
+    public GetMetaProductListResponseBody setMetaData(GetMetaProductListResponseBodyMetaData metaData) {
+        this.metaData = metaData;
+        return this;
+    }
+    public GetMetaProductListResponseBodyMetaData getMetaData() {
+        return this.metaData;
+    }
+
     public GetMetaProductListResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -56,55 +64,31 @@ public class GetMetaProductListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetMetaProductListResponseBody setMetaData(GetMetaProductListResponseBodyMetaData metaData) {
-        this.metaData = metaData;
-        return this;
-    }
-    public GetMetaProductListResponseBodyMetaData getMetaData() {
-        return this.metaData;
-    }
-
     public static class GetMetaProductListResponseBodyMetaDataProductsNormalSpecVO extends TeaModel {
-        @NameInMap("TopicQuota")
-        public String topicQuota;
-
-        @NameInMap("SpecType")
-        public String specType;
-
         @NameInMap("DeployType")
         public String deployType;
 
         @NameInMap("DiskSize")
         public String diskSize;
 
-        @NameInMap("IoMax")
-        public Long ioMax;
-
         @NameInMap("DiskType")
         public String diskType;
+
+        @NameInMap("IoMax")
+        public Long ioMax;
 
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("SpecType")
+        public String specType;
+
+        @NameInMap("TopicQuota")
+        public String topicQuota;
+
         public static GetMetaProductListResponseBodyMetaDataProductsNormalSpecVO build(java.util.Map<String, ?> map) throws Exception {
             GetMetaProductListResponseBodyMetaDataProductsNormalSpecVO self = new GetMetaProductListResponseBodyMetaDataProductsNormalSpecVO();
             return TeaModel.build(map, self);
-        }
-
-        public GetMetaProductListResponseBodyMetaDataProductsNormalSpecVO setTopicQuota(String topicQuota) {
-            this.topicQuota = topicQuota;
-            return this;
-        }
-        public String getTopicQuota() {
-            return this.topicQuota;
-        }
-
-        public GetMetaProductListResponseBodyMetaDataProductsNormalSpecVO setSpecType(String specType) {
-            this.specType = specType;
-            return this;
-        }
-        public String getSpecType() {
-            return this.specType;
         }
 
         public GetMetaProductListResponseBodyMetaDataProductsNormalSpecVO setDeployType(String deployType) {
@@ -123,14 +107,6 @@ public class GetMetaProductListResponseBody extends TeaModel {
             return this.diskSize;
         }
 
-        public GetMetaProductListResponseBodyMetaDataProductsNormalSpecVO setIoMax(Long ioMax) {
-            this.ioMax = ioMax;
-            return this;
-        }
-        public Long getIoMax() {
-            return this.ioMax;
-        }
-
         public GetMetaProductListResponseBodyMetaDataProductsNormalSpecVO setDiskType(String diskType) {
             this.diskType = diskType;
             return this;
@@ -139,12 +115,36 @@ public class GetMetaProductListResponseBody extends TeaModel {
             return this.diskType;
         }
 
+        public GetMetaProductListResponseBodyMetaDataProductsNormalSpecVO setIoMax(Long ioMax) {
+            this.ioMax = ioMax;
+            return this;
+        }
+        public Long getIoMax() {
+            return this.ioMax;
+        }
+
         public GetMetaProductListResponseBodyMetaDataProductsNormalSpecVO setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetMetaProductListResponseBodyMetaDataProductsNormalSpecVO setSpecType(String specType) {
+            this.specType = specType;
+            return this;
+        }
+        public String getSpecType() {
+            return this.specType;
+        }
+
+        public GetMetaProductListResponseBodyMetaDataProductsNormalSpecVO setTopicQuota(String topicQuota) {
+            this.topicQuota = topicQuota;
+            return this;
+        }
+        public String getTopicQuota() {
+            return this.topicQuota;
         }
 
     }
@@ -169,46 +169,30 @@ public class GetMetaProductListResponseBody extends TeaModel {
     }
 
     public static class GetMetaProductListResponseBodyMetaDataProductsProfessionalSpecVO extends TeaModel {
-        @NameInMap("TopicQuota")
-        public String topicQuota;
-
-        @NameInMap("SpecType")
-        public String specType;
-
         @NameInMap("DeployType")
         public String deployType;
 
         @NameInMap("DiskSize")
         public String diskSize;
 
-        @NameInMap("IoMax")
-        public Integer ioMax;
-
         @NameInMap("DiskType")
         public String diskType;
+
+        @NameInMap("IoMax")
+        public Integer ioMax;
 
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("SpecType")
+        public String specType;
+
+        @NameInMap("TopicQuota")
+        public String topicQuota;
+
         public static GetMetaProductListResponseBodyMetaDataProductsProfessionalSpecVO build(java.util.Map<String, ?> map) throws Exception {
             GetMetaProductListResponseBodyMetaDataProductsProfessionalSpecVO self = new GetMetaProductListResponseBodyMetaDataProductsProfessionalSpecVO();
             return TeaModel.build(map, self);
-        }
-
-        public GetMetaProductListResponseBodyMetaDataProductsProfessionalSpecVO setTopicQuota(String topicQuota) {
-            this.topicQuota = topicQuota;
-            return this;
-        }
-        public String getTopicQuota() {
-            return this.topicQuota;
-        }
-
-        public GetMetaProductListResponseBodyMetaDataProductsProfessionalSpecVO setSpecType(String specType) {
-            this.specType = specType;
-            return this;
-        }
-        public String getSpecType() {
-            return this.specType;
         }
 
         public GetMetaProductListResponseBodyMetaDataProductsProfessionalSpecVO setDeployType(String deployType) {
@@ -227,14 +211,6 @@ public class GetMetaProductListResponseBody extends TeaModel {
             return this.diskSize;
         }
 
-        public GetMetaProductListResponseBodyMetaDataProductsProfessionalSpecVO setIoMax(Integer ioMax) {
-            this.ioMax = ioMax;
-            return this;
-        }
-        public Integer getIoMax() {
-            return this.ioMax;
-        }
-
         public GetMetaProductListResponseBodyMetaDataProductsProfessionalSpecVO setDiskType(String diskType) {
             this.diskType = diskType;
             return this;
@@ -243,12 +219,36 @@ public class GetMetaProductListResponseBody extends TeaModel {
             return this.diskType;
         }
 
+        public GetMetaProductListResponseBodyMetaDataProductsProfessionalSpecVO setIoMax(Integer ioMax) {
+            this.ioMax = ioMax;
+            return this;
+        }
+        public Integer getIoMax() {
+            return this.ioMax;
+        }
+
         public GetMetaProductListResponseBodyMetaDataProductsProfessionalSpecVO setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetMetaProductListResponseBodyMetaDataProductsProfessionalSpecVO setSpecType(String specType) {
+            this.specType = specType;
+            return this;
+        }
+        public String getSpecType() {
+            return this.specType;
+        }
+
+        public GetMetaProductListResponseBodyMetaDataProductsProfessionalSpecVO setTopicQuota(String topicQuota) {
+            this.topicQuota = topicQuota;
+            return this;
+        }
+        public String getTopicQuota() {
+            return this.topicQuota;
         }
 
     }
