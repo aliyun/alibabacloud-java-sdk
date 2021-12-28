@@ -3,12 +3,12 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class CreateGovernanceKubernetesClusterResponseBody extends TeaModel {
+public class AddGatewayResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
-    public Long data;
+    public String data;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -16,18 +16,19 @@ public class CreateGovernanceKubernetesClusterResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
-    public String success;
+    public Boolean success;
 
-    public static CreateGovernanceKubernetesClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateGovernanceKubernetesClusterResponseBody self = new CreateGovernanceKubernetesClusterResponseBody();
+    public static AddGatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        AddGatewayResponseBody self = new AddGatewayResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateGovernanceKubernetesClusterResponseBody setCode(Integer code) {
+    public AddGatewayResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -35,15 +36,15 @@ public class CreateGovernanceKubernetesClusterResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateGovernanceKubernetesClusterResponseBody setData(Long data) {
+    public AddGatewayResponseBody setData(String data) {
         this.data = data;
         return this;
     }
-    public Long getData() {
+    public String getData() {
         return this.data;
     }
 
-    public CreateGovernanceKubernetesClusterResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public AddGatewayResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -51,7 +52,7 @@ public class CreateGovernanceKubernetesClusterResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public CreateGovernanceKubernetesClusterResponseBody setMessage(String message) {
+    public AddGatewayResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -59,7 +60,7 @@ public class CreateGovernanceKubernetesClusterResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateGovernanceKubernetesClusterResponseBody setRequestId(String requestId) {
+    public AddGatewayResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -67,11 +68,11 @@ public class CreateGovernanceKubernetesClusterResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateGovernanceKubernetesClusterResponseBody setSuccess(String success) {
+    public AddGatewayResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
     }
 

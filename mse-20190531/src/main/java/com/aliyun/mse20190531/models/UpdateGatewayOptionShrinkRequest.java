@@ -10,6 +10,9 @@ public class UpdateGatewayOptionShrinkRequest extends TeaModel {
     @NameInMap("GatewayOption")
     public String gatewayOptionShrink;
 
+    @NameInMap("GatewayUniqueId")
+    public String gatewayUniqueId;
+
     public static UpdateGatewayOptionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateGatewayOptionShrinkRequest self = new UpdateGatewayOptionShrinkRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class UpdateGatewayOptionShrinkRequest extends TeaModel {
     }
     public String getGatewayOptionShrink() {
         return this.gatewayOptionShrink;
+    }
+
+    public UpdateGatewayOptionShrinkRequest setGatewayUniqueId(String gatewayUniqueId) {
+        this.gatewayUniqueId = gatewayUniqueId;
+        return this;
+    }
+    public String getGatewayUniqueId() {
+        return this.gatewayUniqueId;
     }
 
 }
