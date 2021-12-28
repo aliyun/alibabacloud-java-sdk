@@ -7,6 +7,9 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends TeaModel {
     @NameInMap("GatewayId")
     public Long gatewayId;
 
+    @NameInMap("GatewayUniqueId")
+    public String gatewayUniqueId;
+
     @NameInMap("HttpRewriteJSON")
     public String httpRewriteJSON;
 
@@ -24,6 +27,14 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends TeaModel {
     }
     public Long getGatewayId() {
         return this.gatewayId;
+    }
+
+    public UpdateGatewayRouteHTTPRewriteRequest setGatewayUniqueId(String gatewayUniqueId) {
+        this.gatewayUniqueId = gatewayUniqueId;
+        return this;
+    }
+    public String getGatewayUniqueId() {
+        return this.gatewayUniqueId;
     }
 
     public UpdateGatewayRouteHTTPRewriteRequest setHttpRewriteJSON(String httpRewriteJSON) {
