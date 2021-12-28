@@ -7,6 +7,9 @@ public class GetConsumerListResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("ConsumerList")
+    public GetConsumerListResponseBodyConsumerList consumerList;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class GetConsumerListResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ConsumerList")
-    public GetConsumerListResponseBodyConsumerList consumerList;
 
     public static GetConsumerListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetConsumerListResponseBody self = new GetConsumerListResponseBody();
@@ -30,6 +30,14 @@ public class GetConsumerListResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
+    }
+
+    public GetConsumerListResponseBody setConsumerList(GetConsumerListResponseBodyConsumerList consumerList) {
+        this.consumerList = consumerList;
+        return this;
+    }
+    public GetConsumerListResponseBodyConsumerList getConsumerList() {
+        return this.consumerList;
     }
 
     public GetConsumerListResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class GetConsumerListResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public GetConsumerListResponseBody setConsumerList(GetConsumerListResponseBodyConsumerList consumerList) {
-        this.consumerList = consumerList;
-        return this;
-    }
-    public GetConsumerListResponseBodyConsumerList getConsumerList() {
-        return this.consumerList;
     }
 
     public static class GetConsumerListResponseBodyConsumerListConsumerVOTagsTagVO extends TeaModel {
@@ -120,11 +120,11 @@ public class GetConsumerListResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("Remark")
-        public String remark;
-
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("Remark")
+        public String remark;
 
         @NameInMap("Tags")
         public GetConsumerListResponseBodyConsumerListConsumerVOTags tags;
@@ -150,20 +150,20 @@ public class GetConsumerListResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public GetConsumerListResponseBodyConsumerListConsumerVO setRemark(String remark) {
-            this.remark = remark;
-            return this;
-        }
-        public String getRemark() {
-            return this.remark;
-        }
-
         public GetConsumerListResponseBodyConsumerListConsumerVO setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetConsumerListResponseBodyConsumerListConsumerVO setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public GetConsumerListResponseBodyConsumerListConsumerVO setTags(GetConsumerListResponseBodyConsumerListConsumerVOTags tags) {

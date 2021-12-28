@@ -4,23 +4,14 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class StartInstanceRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("VpcId")
-    public String vpcId;
-
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
+    @NameInMap("Config")
+    public String config;
 
     @NameInMap("DeployModule")
     public String deployModule;
 
-    @NameInMap("ZoneId")
-    public String zoneId;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("IsEipInner")
     public Boolean isEipInner;
@@ -28,14 +19,17 @@ public class StartInstanceRequest extends TeaModel {
     @NameInMap("IsSetUserAndPassword")
     public Boolean isSetUserAndPassword;
 
-    @NameInMap("Username")
-    public String username;
+    @NameInMap("KMSKeyId")
+    public String KMSKeyId;
+
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("Password")
     public String password;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("SecurityGroup")
     public String securityGroup;
@@ -43,47 +37,29 @@ public class StartInstanceRequest extends TeaModel {
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
-    @NameInMap("Config")
-    public String config;
+    @NameInMap("Username")
+    public String username;
 
-    @NameInMap("KMSKeyId")
-    public String KMSKeyId;
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
+    @NameInMap("VpcId")
+    public String vpcId;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static StartInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StartInstanceRequest self = new StartInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public StartInstanceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public StartInstanceRequest setConfig(String config) {
+        this.config = config;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public StartInstanceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public StartInstanceRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public StartInstanceRequest setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
-        return this;
-    }
-    public String getVSwitchId() {
-        return this.vSwitchId;
+    public String getConfig() {
+        return this.config;
     }
 
     public StartInstanceRequest setDeployModule(String deployModule) {
@@ -94,12 +70,12 @@ public class StartInstanceRequest extends TeaModel {
         return this.deployModule;
     }
 
-    public StartInstanceRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
+    public StartInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getZoneId() {
-        return this.zoneId;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public StartInstanceRequest setIsEipInner(Boolean isEipInner) {
@@ -118,12 +94,20 @@ public class StartInstanceRequest extends TeaModel {
         return this.isSetUserAndPassword;
     }
 
-    public StartInstanceRequest setUsername(String username) {
-        this.username = username;
+    public StartInstanceRequest setKMSKeyId(String KMSKeyId) {
+        this.KMSKeyId = KMSKeyId;
         return this;
     }
-    public String getUsername() {
-        return this.username;
+    public String getKMSKeyId() {
+        return this.KMSKeyId;
+    }
+
+    public StartInstanceRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public StartInstanceRequest setPassword(String password) {
@@ -134,12 +118,12 @@ public class StartInstanceRequest extends TeaModel {
         return this.password;
     }
 
-    public StartInstanceRequest setName(String name) {
-        this.name = name;
+    public StartInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public StartInstanceRequest setSecurityGroup(String securityGroup) {
@@ -158,20 +142,36 @@ public class StartInstanceRequest extends TeaModel {
         return this.serviceVersion;
     }
 
-    public StartInstanceRequest setConfig(String config) {
-        this.config = config;
+    public StartInstanceRequest setUsername(String username) {
+        this.username = username;
         return this;
     }
-    public String getConfig() {
-        return this.config;
+    public String getUsername() {
+        return this.username;
     }
 
-    public StartInstanceRequest setKMSKeyId(String KMSKeyId) {
-        this.KMSKeyId = KMSKeyId;
+    public StartInstanceRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
         return this;
     }
-    public String getKMSKeyId() {
-        return this.KMSKeyId;
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    public StartInstanceRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public StartInstanceRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

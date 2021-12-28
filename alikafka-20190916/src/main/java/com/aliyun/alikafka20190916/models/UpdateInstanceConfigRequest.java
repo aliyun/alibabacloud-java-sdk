@@ -7,11 +7,11 @@ public class UpdateInstanceConfigRequest extends TeaModel {
     @NameInMap("Config")
     public String config;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static UpdateInstanceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateInstanceConfigRequest self = new UpdateInstanceConfigRequest();
@@ -26,20 +26,20 @@ public class UpdateInstanceConfigRequest extends TeaModel {
         return this.config;
     }
 
-    public UpdateInstanceConfigRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public UpdateInstanceConfigRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public UpdateInstanceConfigRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

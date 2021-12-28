@@ -3,12 +3,12 @@ package com.aliyun.alikafka20190916.models;
 
 import com.aliyun.tea.*;
 
-public class CreateTopicRequest extends TeaModel {
+public class CreateTopicShrinkRequest extends TeaModel {
     @NameInMap("CompactTopic")
     public Boolean compactTopic;
 
     @NameInMap("Config")
-    public java.util.Map<String, ?> config;
+    public String configShrink;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -34,12 +34,12 @@ public class CreateTopicRequest extends TeaModel {
     @NameInMap("Topic")
     public String topic;
 
-    public static CreateTopicRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateTopicRequest self = new CreateTopicRequest();
+    public static CreateTopicShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateTopicShrinkRequest self = new CreateTopicShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateTopicRequest setCompactTopic(Boolean compactTopic) {
+    public CreateTopicShrinkRequest setCompactTopic(Boolean compactTopic) {
         this.compactTopic = compactTopic;
         return this;
     }
@@ -47,15 +47,15 @@ public class CreateTopicRequest extends TeaModel {
         return this.compactTopic;
     }
 
-    public CreateTopicRequest setConfig(java.util.Map<String, ?> config) {
-        this.config = config;
+    public CreateTopicShrinkRequest setConfigShrink(String configShrink) {
+        this.configShrink = configShrink;
         return this;
     }
-    public java.util.Map<String, ?> getConfig() {
-        return this.config;
+    public String getConfigShrink() {
+        return this.configShrink;
     }
 
-    public CreateTopicRequest setInstanceId(String instanceId) {
+    public CreateTopicShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -63,7 +63,7 @@ public class CreateTopicRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public CreateTopicRequest setLocalTopic(Boolean localTopic) {
+    public CreateTopicShrinkRequest setLocalTopic(Boolean localTopic) {
         this.localTopic = localTopic;
         return this;
     }
@@ -71,7 +71,7 @@ public class CreateTopicRequest extends TeaModel {
         return this.localTopic;
     }
 
-    public CreateTopicRequest setMinInsyncReplicas(Long minInsyncReplicas) {
+    public CreateTopicShrinkRequest setMinInsyncReplicas(Long minInsyncReplicas) {
         this.minInsyncReplicas = minInsyncReplicas;
         return this;
     }
@@ -79,7 +79,7 @@ public class CreateTopicRequest extends TeaModel {
         return this.minInsyncReplicas;
     }
 
-    public CreateTopicRequest setPartitionNum(String partitionNum) {
+    public CreateTopicShrinkRequest setPartitionNum(String partitionNum) {
         this.partitionNum = partitionNum;
         return this;
     }
@@ -87,7 +87,7 @@ public class CreateTopicRequest extends TeaModel {
         return this.partitionNum;
     }
 
-    public CreateTopicRequest setRegionId(String regionId) {
+    public CreateTopicShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -95,7 +95,7 @@ public class CreateTopicRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateTopicRequest setRemark(String remark) {
+    public CreateTopicShrinkRequest setRemark(String remark) {
         this.remark = remark;
         return this;
     }
@@ -103,7 +103,7 @@ public class CreateTopicRequest extends TeaModel {
         return this.remark;
     }
 
-    public CreateTopicRequest setReplicationFactor(Long replicationFactor) {
+    public CreateTopicShrinkRequest setReplicationFactor(Long replicationFactor) {
         this.replicationFactor = replicationFactor;
         return this;
     }
@@ -111,7 +111,7 @@ public class CreateTopicRequest extends TeaModel {
         return this.replicationFactor;
     }
 
-    public CreateTopicRequest setTopic(String topic) {
+    public CreateTopicShrinkRequest setTopic(String topic) {
         this.topic = topic;
         return this;
     }

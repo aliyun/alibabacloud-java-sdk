@@ -4,17 +4,8 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class DeleteAclRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("Username")
-    public String username;
-
-    @NameInMap("AclResourceType")
-    public String aclResourceType;
+    @NameInMap("AclOperationType")
+    public String aclOperationType;
 
     @NameInMap("AclResourceName")
     public String aclResourceName;
@@ -22,44 +13,29 @@ public class DeleteAclRequest extends TeaModel {
     @NameInMap("AclResourcePatternType")
     public String aclResourcePatternType;
 
-    @NameInMap("AclOperationType")
-    public String aclOperationType;
+    @NameInMap("AclResourceType")
+    public String aclResourceType;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("Username")
+    public String username;
 
     public static DeleteAclRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAclRequest self = new DeleteAclRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteAclRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DeleteAclRequest setAclOperationType(String aclOperationType) {
+        this.aclOperationType = aclOperationType;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteAclRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DeleteAclRequest setUsername(String username) {
-        this.username = username;
-        return this;
-    }
-    public String getUsername() {
-        return this.username;
-    }
-
-    public DeleteAclRequest setAclResourceType(String aclResourceType) {
-        this.aclResourceType = aclResourceType;
-        return this;
-    }
-    public String getAclResourceType() {
-        return this.aclResourceType;
+    public String getAclOperationType() {
+        return this.aclOperationType;
     }
 
     public DeleteAclRequest setAclResourceName(String aclResourceName) {
@@ -78,12 +54,36 @@ public class DeleteAclRequest extends TeaModel {
         return this.aclResourcePatternType;
     }
 
-    public DeleteAclRequest setAclOperationType(String aclOperationType) {
-        this.aclOperationType = aclOperationType;
+    public DeleteAclRequest setAclResourceType(String aclResourceType) {
+        this.aclResourceType = aclResourceType;
         return this;
     }
-    public String getAclOperationType() {
-        return this.aclOperationType;
+    public String getAclResourceType() {
+        return this.aclResourceType;
+    }
+
+    public DeleteAclRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DeleteAclRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteAclRequest setUsername(String username) {
+        this.username = username;
+        return this;
+    }
+    public String getUsername() {
+        return this.username;
     }
 
 }

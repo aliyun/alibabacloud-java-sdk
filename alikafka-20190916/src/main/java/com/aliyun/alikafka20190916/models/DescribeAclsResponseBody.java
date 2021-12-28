@@ -7,6 +7,9 @@ public class DescribeAclsResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("KafkaAclList")
+    public DescribeAclsResponseBodyKafkaAclList kafkaAclList;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DescribeAclsResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("KafkaAclList")
-    public DescribeAclsResponseBodyKafkaAclList kafkaAclList;
 
     public static DescribeAclsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAclsResponseBody self = new DescribeAclsResponseBody();
@@ -30,6 +30,14 @@ public class DescribeAclsResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
+    }
+
+    public DescribeAclsResponseBody setKafkaAclList(DescribeAclsResponseBodyKafkaAclList kafkaAclList) {
+        this.kafkaAclList = kafkaAclList;
+        return this;
+    }
+    public DescribeAclsResponseBodyKafkaAclList getKafkaAclList() {
+        return this.kafkaAclList;
     }
 
     public DescribeAclsResponseBody setMessage(String message) {
@@ -56,21 +64,7 @@ public class DescribeAclsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeAclsResponseBody setKafkaAclList(DescribeAclsResponseBodyKafkaAclList kafkaAclList) {
-        this.kafkaAclList = kafkaAclList;
-        return this;
-    }
-    public DescribeAclsResponseBodyKafkaAclList getKafkaAclList() {
-        return this.kafkaAclList;
-    }
-
     public static class DescribeAclsResponseBodyKafkaAclListKafkaAclVO extends TeaModel {
-        @NameInMap("AclResourceType")
-        public String aclResourceType;
-
-        @NameInMap("Host")
-        public String host;
-
         @NameInMap("AclOperationType")
         public String aclOperationType;
 
@@ -80,28 +74,18 @@ public class DescribeAclsResponseBody extends TeaModel {
         @NameInMap("AclResourcePatternType")
         public String aclResourcePatternType;
 
+        @NameInMap("AclResourceType")
+        public String aclResourceType;
+
+        @NameInMap("Host")
+        public String host;
+
         @NameInMap("Username")
         public String username;
 
         public static DescribeAclsResponseBodyKafkaAclListKafkaAclVO build(java.util.Map<String, ?> map) throws Exception {
             DescribeAclsResponseBodyKafkaAclListKafkaAclVO self = new DescribeAclsResponseBodyKafkaAclListKafkaAclVO();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAclsResponseBodyKafkaAclListKafkaAclVO setAclResourceType(String aclResourceType) {
-            this.aclResourceType = aclResourceType;
-            return this;
-        }
-        public String getAclResourceType() {
-            return this.aclResourceType;
-        }
-
-        public DescribeAclsResponseBodyKafkaAclListKafkaAclVO setHost(String host) {
-            this.host = host;
-            return this;
-        }
-        public String getHost() {
-            return this.host;
         }
 
         public DescribeAclsResponseBodyKafkaAclListKafkaAclVO setAclOperationType(String aclOperationType) {
@@ -126,6 +110,22 @@ public class DescribeAclsResponseBody extends TeaModel {
         }
         public String getAclResourcePatternType() {
             return this.aclResourcePatternType;
+        }
+
+        public DescribeAclsResponseBodyKafkaAclListKafkaAclVO setAclResourceType(String aclResourceType) {
+            this.aclResourceType = aclResourceType;
+            return this;
+        }
+        public String getAclResourceType() {
+            return this.aclResourceType;
+        }
+
+        public DescribeAclsResponseBodyKafkaAclListKafkaAclVO setHost(String host) {
+            this.host = host;
+            return this;
+        }
+        public String getHost() {
+            return this.host;
         }
 
         public DescribeAclsResponseBodyKafkaAclListKafkaAclVO setUsername(String username) {

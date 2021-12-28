@@ -10,14 +10,14 @@ public class CreatePrePayOrderResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("OrderId")
+    public String orderId;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("OrderId")
-    public String orderId;
 
     public static CreatePrePayOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreatePrePayOrderResponseBody self = new CreatePrePayOrderResponseBody();
@@ -40,6 +40,14 @@ public class CreatePrePayOrderResponseBody extends TeaModel {
         return this.message;
     }
 
+    public CreatePrePayOrderResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
+    }
+
     public CreatePrePayOrderResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -54,14 +62,6 @@ public class CreatePrePayOrderResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreatePrePayOrderResponseBody setOrderId(String orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public String getOrderId() {
-        return this.orderId;
     }
 
 }

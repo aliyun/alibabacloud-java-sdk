@@ -7,14 +7,14 @@ public class ModifyTopicRemarkRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Topic")
-    public String topic;
-
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("Remark")
     public String remark;
+
+    @NameInMap("Topic")
+    public String topic;
 
     public static ModifyTopicRemarkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyTopicRemarkRequest self = new ModifyTopicRemarkRequest();
@@ -27,14 +27,6 @@ public class ModifyTopicRemarkRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ModifyTopicRemarkRequest setTopic(String topic) {
-        this.topic = topic;
-        return this;
-    }
-    public String getTopic() {
-        return this.topic;
     }
 
     public ModifyTopicRemarkRequest setRegionId(String regionId) {
@@ -51,6 +43,14 @@ public class ModifyTopicRemarkRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public ModifyTopicRemarkRequest setTopic(String topic) {
+        this.topic = topic;
+        return this;
+    }
+    public String getTopic() {
+        return this.topic;
     }
 
 }
