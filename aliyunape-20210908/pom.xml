@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>aliyunape20210908</artifactId>
-  <version>1.0.93</version>
+  <version>1.0.94</version>
   <packaging>jar</packaging>
   <name>aliyunape20210908</name>
   <description>Alibaba Cloud aliyunape (20210908) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.1</version>
+      <version>0.2.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
