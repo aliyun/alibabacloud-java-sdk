@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.bssopenapi20171214.models;
+
+import com.aliyun.tea.*;
+
+public class GetAccountRelationResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public GetAccountRelationResponseBody body;
+
+    public static GetAccountRelationResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetAccountRelationResponse self = new GetAccountRelationResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public GetAccountRelationResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetAccountRelationResponse setBody(GetAccountRelationResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetAccountRelationResponseBody getBody() {
+        return this.body;
+    }
+
+}

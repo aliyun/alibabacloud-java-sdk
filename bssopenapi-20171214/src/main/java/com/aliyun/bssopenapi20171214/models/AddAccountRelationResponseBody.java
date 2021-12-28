@@ -68,6 +68,9 @@ public class AddAccountRelationResponseBody extends TeaModel {
         @NameInMap("HostId")
         public String hostId;
 
+        @NameInMap("RelationId")
+        public Long relationId;
+
         public static AddAccountRelationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             AddAccountRelationResponseBodyData self = new AddAccountRelationResponseBodyData();
             return TeaModel.build(map, self);
@@ -79,6 +82,14 @@ public class AddAccountRelationResponseBody extends TeaModel {
         }
         public String getHostId() {
             return this.hostId;
+        }
+
+        public AddAccountRelationResponseBodyData setRelationId(Long relationId) {
+            this.relationId = relationId;
+            return this;
+        }
+        public Long getRelationId() {
+            return this.relationId;
         }
 
     }
