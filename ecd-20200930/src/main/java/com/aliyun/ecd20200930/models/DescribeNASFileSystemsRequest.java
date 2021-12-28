@@ -4,11 +4,8 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeNASFileSystemsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("OfficeSiteId")
-    public String officeSiteId;
+    @NameInMap("FileSystemId")
+    public java.util.List<String> fileSystemId;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -16,28 +13,23 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("FileSystemId")
-    public java.util.List<String> fileSystemId;
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DescribeNASFileSystemsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNASFileSystemsRequest self = new DescribeNASFileSystemsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeNASFileSystemsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeNASFileSystemsRequest setFileSystemId(java.util.List<String> fileSystemId) {
+        this.fileSystemId = fileSystemId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeNASFileSystemsRequest setOfficeSiteId(String officeSiteId) {
-        this.officeSiteId = officeSiteId;
-        return this;
-    }
-    public String getOfficeSiteId() {
-        return this.officeSiteId;
+    public java.util.List<String> getFileSystemId() {
+        return this.fileSystemId;
     }
 
     public DescribeNASFileSystemsRequest setMaxResults(Integer maxResults) {
@@ -56,12 +48,20 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public DescribeNASFileSystemsRequest setFileSystemId(java.util.List<String> fileSystemId) {
-        this.fileSystemId = fileSystemId;
+    public DescribeNASFileSystemsRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
         return this;
     }
-    public java.util.List<String> getFileSystemId() {
-        return this.fileSystemId;
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
+    }
+
+    public DescribeNASFileSystemsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

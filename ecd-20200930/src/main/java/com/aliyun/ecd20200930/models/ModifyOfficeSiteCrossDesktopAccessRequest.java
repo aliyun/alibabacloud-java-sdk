@@ -4,26 +4,26 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyOfficeSiteCrossDesktopAccessRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("EnableCrossDesktopAccess")
+    public Boolean enableCrossDesktopAccess;
 
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    @NameInMap("EnableCrossDesktopAccess")
-    public Boolean enableCrossDesktopAccess;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ModifyOfficeSiteCrossDesktopAccessRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyOfficeSiteCrossDesktopAccessRequest self = new ModifyOfficeSiteCrossDesktopAccessRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyOfficeSiteCrossDesktopAccessRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifyOfficeSiteCrossDesktopAccessRequest setEnableCrossDesktopAccess(Boolean enableCrossDesktopAccess) {
+        this.enableCrossDesktopAccess = enableCrossDesktopAccess;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Boolean getEnableCrossDesktopAccess() {
+        return this.enableCrossDesktopAccess;
     }
 
     public ModifyOfficeSiteCrossDesktopAccessRequest setOfficeSiteId(String officeSiteId) {
@@ -34,12 +34,12 @@ public class ModifyOfficeSiteCrossDesktopAccessRequest extends TeaModel {
         return this.officeSiteId;
     }
 
-    public ModifyOfficeSiteCrossDesktopAccessRequest setEnableCrossDesktopAccess(Boolean enableCrossDesktopAccess) {
-        this.enableCrossDesktopAccess = enableCrossDesktopAccess;
+    public ModifyOfficeSiteCrossDesktopAccessRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Boolean getEnableCrossDesktopAccess() {
-        return this.enableCrossDesktopAccess;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

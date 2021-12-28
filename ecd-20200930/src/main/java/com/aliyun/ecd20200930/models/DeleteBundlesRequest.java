@@ -4,23 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteBundlesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("BundleId")
     public java.util.List<String> bundleId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DeleteBundlesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteBundlesRequest self = new DeleteBundlesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteBundlesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DeleteBundlesRequest setBundleId(java.util.List<String> bundleId) {
@@ -29,6 +21,14 @@ public class DeleteBundlesRequest extends TeaModel {
     }
     public java.util.List<String> getBundleId() {
         return this.bundleId;
+    }
+
+    public DeleteBundlesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

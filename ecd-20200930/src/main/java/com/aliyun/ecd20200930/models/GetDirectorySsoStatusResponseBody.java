@@ -4,23 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class GetDirectorySsoStatusResponseBody extends TeaModel {
-    @NameInMap("SsoStatus")
-    public Boolean ssoStatus;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("SsoStatus")
+    public Boolean ssoStatus;
 
     public static GetDirectorySsoStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDirectorySsoStatusResponseBody self = new GetDirectorySsoStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDirectorySsoStatusResponseBody setSsoStatus(Boolean ssoStatus) {
-        this.ssoStatus = ssoStatus;
-        return this;
-    }
-    public Boolean getSsoStatus() {
-        return this.ssoStatus;
     }
 
     public GetDirectorySsoStatusResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class GetDirectorySsoStatusResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetDirectorySsoStatusResponseBody setSsoStatus(Boolean ssoStatus) {
+        this.ssoStatus = ssoStatus;
+        return this;
+    }
+    public Boolean getSsoStatus() {
+        return this.ssoStatus;
     }
 
 }

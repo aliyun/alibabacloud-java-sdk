@@ -4,32 +4,26 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeClientEventsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("EndUserId")
-    public String endUserId;
-
     @NameInMap("DesktopId")
     public String desktopId;
 
     @NameInMap("DesktopIp")
     public String desktopIp;
 
+    @NameInMap("DesktopName")
+    public String desktopName;
+
     @NameInMap("DirectoryId")
     public String directoryId;
 
-    @NameInMap("OfficeSiteId")
-    public String officeSiteId;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("EndUserId")
+    public String endUserId;
 
     @NameInMap("EventType")
     public String eventType;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -37,25 +31,21 @@ public class DescribeClientEventsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
+
+    @NameInMap("OfficeSiteName")
+    public String officeSiteName;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeClientEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeClientEventsRequest self = new DescribeClientEventsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeClientEventsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeClientEventsRequest setEndUserId(String endUserId) {
-        this.endUserId = endUserId;
-        return this;
-    }
-    public String getEndUserId() {
-        return this.endUserId;
     }
 
     public DescribeClientEventsRequest setDesktopId(String desktopId) {
@@ -74,6 +64,14 @@ public class DescribeClientEventsRequest extends TeaModel {
         return this.desktopIp;
     }
 
+    public DescribeClientEventsRequest setDesktopName(String desktopName) {
+        this.desktopName = desktopName;
+        return this;
+    }
+    public String getDesktopName() {
+        return this.desktopName;
+    }
+
     public DescribeClientEventsRequest setDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -82,12 +80,20 @@ public class DescribeClientEventsRequest extends TeaModel {
         return this.directoryId;
     }
 
-    public DescribeClientEventsRequest setOfficeSiteId(String officeSiteId) {
-        this.officeSiteId = officeSiteId;
+    public DescribeClientEventsRequest setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getOfficeSiteId() {
-        return this.officeSiteId;
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeClientEventsRequest setEndUserId(String endUserId) {
+        this.endUserId = endUserId;
+        return this;
+    }
+    public String getEndUserId() {
+        return this.endUserId;
     }
 
     public DescribeClientEventsRequest setEventType(String eventType) {
@@ -96,22 +102,6 @@ public class DescribeClientEventsRequest extends TeaModel {
     }
     public String getEventType() {
         return this.eventType;
-    }
-
-    public DescribeClientEventsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeClientEventsRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
     }
 
     public DescribeClientEventsRequest setMaxResults(Integer maxResults) {
@@ -128,6 +118,38 @@ public class DescribeClientEventsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeClientEventsRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
+    }
+
+    public DescribeClientEventsRequest setOfficeSiteName(String officeSiteName) {
+        this.officeSiteName = officeSiteName;
+        return this;
+    }
+    public String getOfficeSiteName() {
+        return this.officeSiteName;
+    }
+
+    public DescribeClientEventsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeClientEventsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

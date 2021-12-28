@@ -4,26 +4,26 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyDesktopNameRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("DesktopId")
+    public String desktopId;
 
     @NameInMap("NewDesktopName")
     public String newDesktopName;
 
-    @NameInMap("DesktopId")
-    public String desktopId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ModifyDesktopNameRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDesktopNameRequest self = new ModifyDesktopNameRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDesktopNameRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifyDesktopNameRequest setDesktopId(String desktopId) {
+        this.desktopId = desktopId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getDesktopId() {
+        return this.desktopId;
     }
 
     public ModifyDesktopNameRequest setNewDesktopName(String newDesktopName) {
@@ -34,12 +34,12 @@ public class ModifyDesktopNameRequest extends TeaModel {
         return this.newDesktopName;
     }
 
-    public ModifyDesktopNameRequest setDesktopId(String desktopId) {
-        this.desktopId = desktopId;
+    public ModifyDesktopNameRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getDesktopId() {
-        return this.desktopId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

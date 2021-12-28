@@ -4,26 +4,18 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RemoveUserFromDesktopGroupRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static RemoveUserFromDesktopGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveUserFromDesktopGroupRequest self = new RemoveUserFromDesktopGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveUserFromDesktopGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public RemoveUserFromDesktopGroupRequest setDesktopGroupId(String desktopGroupId) {
@@ -40,6 +32,14 @@ public class RemoveUserFromDesktopGroupRequest extends TeaModel {
     }
     public java.util.List<String> getEndUserIds() {
         return this.endUserIds;
+    }
+
+    public RemoveUserFromDesktopGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

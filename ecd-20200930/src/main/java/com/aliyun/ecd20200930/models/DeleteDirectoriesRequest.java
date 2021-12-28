@@ -4,23 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteDirectoriesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DirectoryId")
     public java.util.List<String> directoryId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DeleteDirectoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDirectoriesRequest self = new DeleteDirectoriesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteDirectoriesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DeleteDirectoriesRequest setDirectoryId(java.util.List<String> directoryId) {
@@ -29,6 +21,14 @@ public class DeleteDirectoriesRequest extends TeaModel {
     }
     public java.util.List<String> getDirectoryId() {
         return this.directoryId;
+    }
+
+    public DeleteDirectoriesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

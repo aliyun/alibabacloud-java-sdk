@@ -4,23 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class GetOfficeSiteSsoStatusRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static GetOfficeSiteSsoStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         GetOfficeSiteSsoStatusRequest self = new GetOfficeSiteSsoStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetOfficeSiteSsoStatusRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetOfficeSiteSsoStatusRequest setOfficeSiteId(String officeSiteId) {
@@ -29,6 +21,14 @@ public class GetOfficeSiteSsoStatusRequest extends TeaModel {
     }
     public String getOfficeSiteId() {
         return this.officeSiteId;
+    }
+
+    public GetOfficeSiteSsoStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

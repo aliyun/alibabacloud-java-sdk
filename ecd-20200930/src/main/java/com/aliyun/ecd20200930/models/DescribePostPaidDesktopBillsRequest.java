@@ -4,17 +4,14 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribePostPaidDesktopBillsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DesktopGroupId")
-    public String desktopGroupId;
+    @NameInMap("BillEndTime")
+    public String billEndTime;
 
     @NameInMap("BillStartTime")
     public String billStartTime;
 
-    @NameInMap("BillEndTime")
-    public String billEndTime;
+    @NameInMap("DesktopGroupId")
+    public String desktopGroupId;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -22,25 +19,20 @@ public class DescribePostPaidDesktopBillsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribePostPaidDesktopBillsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePostPaidDesktopBillsRequest self = new DescribePostPaidDesktopBillsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribePostPaidDesktopBillsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribePostPaidDesktopBillsRequest setBillEndTime(String billEndTime) {
+        this.billEndTime = billEndTime;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribePostPaidDesktopBillsRequest setDesktopGroupId(String desktopGroupId) {
-        this.desktopGroupId = desktopGroupId;
-        return this;
-    }
-    public String getDesktopGroupId() {
-        return this.desktopGroupId;
+    public String getBillEndTime() {
+        return this.billEndTime;
     }
 
     public DescribePostPaidDesktopBillsRequest setBillStartTime(String billStartTime) {
@@ -51,12 +43,12 @@ public class DescribePostPaidDesktopBillsRequest extends TeaModel {
         return this.billStartTime;
     }
 
-    public DescribePostPaidDesktopBillsRequest setBillEndTime(String billEndTime) {
-        this.billEndTime = billEndTime;
+    public DescribePostPaidDesktopBillsRequest setDesktopGroupId(String desktopGroupId) {
+        this.desktopGroupId = desktopGroupId;
         return this;
     }
-    public String getBillEndTime() {
-        return this.billEndTime;
+    public String getDesktopGroupId() {
+        return this.desktopGroupId;
     }
 
     public DescribePostPaidDesktopBillsRequest setMaxResults(Integer maxResults) {
@@ -73,6 +65,14 @@ public class DescribePostPaidDesktopBillsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribePostPaidDesktopBillsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

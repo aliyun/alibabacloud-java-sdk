@@ -4,44 +4,8 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateDesktopsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("GroupId")
-    public String groupId;
-
-    @NameInMap("BundleId")
-    public String bundleId;
-
-    @NameInMap("DesktopName")
-    public String desktopName;
-
-    @NameInMap("UserName")
-    public String userName;
-
-    @NameInMap("VpcId")
-    public String vpcId;
-
     @NameInMap("Amount")
     public Integer amount;
-
-    @NameInMap("DirectoryId")
-    public String directoryId;
-
-    @NameInMap("OfficeSiteId")
-    public String officeSiteId;
-
-    @NameInMap("PolicyGroupId")
-    public String policyGroupId;
-
-    @NameInMap("ChargeType")
-    public String chargeType;
-
-    @NameInMap("Period")
-    public Integer period;
-
-    @NameInMap("PeriodUnit")
-    public String periodUnit;
 
     @NameInMap("AutoPay")
     public Boolean autoPay;
@@ -49,69 +13,63 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
-    @NameInMap("PromotionId")
-    public String promotionId;
+    @NameInMap("BundleId")
+    public String bundleId;
 
-    @NameInMap("UserAssignMode")
-    public String userAssignMode;
+    @NameInMap("ChargeType")
+    public String chargeType;
+
+    @NameInMap("DesktopName")
+    public String desktopName;
+
+    @NameInMap("DesktopNameSuffix")
+    public Boolean desktopNameSuffix;
+
+    @NameInMap("DirectoryId")
+    public String directoryId;
 
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
+    @NameInMap("GroupId")
+    public String groupId;
+
+    @NameInMap("Hostname")
+    public String hostname;
+
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
+
+    @NameInMap("Period")
+    public Integer period;
+
+    @NameInMap("PeriodUnit")
+    public String periodUnit;
+
+    @NameInMap("PolicyGroupId")
+    public String policyGroupId;
+
+    @NameInMap("PromotionId")
+    public String promotionId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Tag")
     public java.util.List<CreateDesktopsRequestTag> tag;
+
+    @NameInMap("UserAssignMode")
+    public String userAssignMode;
+
+    @NameInMap("UserName")
+    public String userName;
+
+    @NameInMap("VpcId")
+    public String vpcId;
 
     public static CreateDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDesktopsRequest self = new CreateDesktopsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDesktopsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateDesktopsRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
-    }
-
-    public CreateDesktopsRequest setBundleId(String bundleId) {
-        this.bundleId = bundleId;
-        return this;
-    }
-    public String getBundleId() {
-        return this.bundleId;
-    }
-
-    public CreateDesktopsRequest setDesktopName(String desktopName) {
-        this.desktopName = desktopName;
-        return this;
-    }
-    public String getDesktopName() {
-        return this.desktopName;
-    }
-
-    public CreateDesktopsRequest setUserName(String userName) {
-        this.userName = userName;
-        return this;
-    }
-    public String getUserName() {
-        return this.userName;
-    }
-
-    public CreateDesktopsRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
     }
 
     public CreateDesktopsRequest setAmount(Integer amount) {
@@ -120,54 +78,6 @@ public class CreateDesktopsRequest extends TeaModel {
     }
     public Integer getAmount() {
         return this.amount;
-    }
-
-    public CreateDesktopsRequest setDirectoryId(String directoryId) {
-        this.directoryId = directoryId;
-        return this;
-    }
-    public String getDirectoryId() {
-        return this.directoryId;
-    }
-
-    public CreateDesktopsRequest setOfficeSiteId(String officeSiteId) {
-        this.officeSiteId = officeSiteId;
-        return this;
-    }
-    public String getOfficeSiteId() {
-        return this.officeSiteId;
-    }
-
-    public CreateDesktopsRequest setPolicyGroupId(String policyGroupId) {
-        this.policyGroupId = policyGroupId;
-        return this;
-    }
-    public String getPolicyGroupId() {
-        return this.policyGroupId;
-    }
-
-    public CreateDesktopsRequest setChargeType(String chargeType) {
-        this.chargeType = chargeType;
-        return this;
-    }
-    public String getChargeType() {
-        return this.chargeType;
-    }
-
-    public CreateDesktopsRequest setPeriod(Integer period) {
-        this.period = period;
-        return this;
-    }
-    public Integer getPeriod() {
-        return this.period;
-    }
-
-    public CreateDesktopsRequest setPeriodUnit(String periodUnit) {
-        this.periodUnit = periodUnit;
-        return this;
-    }
-    public String getPeriodUnit() {
-        return this.periodUnit;
     }
 
     public CreateDesktopsRequest setAutoPay(Boolean autoPay) {
@@ -186,20 +96,44 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.autoRenew;
     }
 
-    public CreateDesktopsRequest setPromotionId(String promotionId) {
-        this.promotionId = promotionId;
+    public CreateDesktopsRequest setBundleId(String bundleId) {
+        this.bundleId = bundleId;
         return this;
     }
-    public String getPromotionId() {
-        return this.promotionId;
+    public String getBundleId() {
+        return this.bundleId;
     }
 
-    public CreateDesktopsRequest setUserAssignMode(String userAssignMode) {
-        this.userAssignMode = userAssignMode;
+    public CreateDesktopsRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
         return this;
     }
-    public String getUserAssignMode() {
-        return this.userAssignMode;
+    public String getChargeType() {
+        return this.chargeType;
+    }
+
+    public CreateDesktopsRequest setDesktopName(String desktopName) {
+        this.desktopName = desktopName;
+        return this;
+    }
+    public String getDesktopName() {
+        return this.desktopName;
+    }
+
+    public CreateDesktopsRequest setDesktopNameSuffix(Boolean desktopNameSuffix) {
+        this.desktopNameSuffix = desktopNameSuffix;
+        return this;
+    }
+    public Boolean getDesktopNameSuffix() {
+        return this.desktopNameSuffix;
+    }
+
+    public CreateDesktopsRequest setDirectoryId(String directoryId) {
+        this.directoryId = directoryId;
+        return this;
+    }
+    public String getDirectoryId() {
+        return this.directoryId;
     }
 
     public CreateDesktopsRequest setEndUserId(java.util.List<String> endUserId) {
@@ -210,12 +144,100 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.endUserId;
     }
 
+    public CreateDesktopsRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public CreateDesktopsRequest setHostname(String hostname) {
+        this.hostname = hostname;
+        return this;
+    }
+    public String getHostname() {
+        return this.hostname;
+    }
+
+    public CreateDesktopsRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
+    }
+
+    public CreateDesktopsRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public CreateDesktopsRequest setPeriodUnit(String periodUnit) {
+        this.periodUnit = periodUnit;
+        return this;
+    }
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
+    public CreateDesktopsRequest setPolicyGroupId(String policyGroupId) {
+        this.policyGroupId = policyGroupId;
+        return this;
+    }
+    public String getPolicyGroupId() {
+        return this.policyGroupId;
+    }
+
+    public CreateDesktopsRequest setPromotionId(String promotionId) {
+        this.promotionId = promotionId;
+        return this;
+    }
+    public String getPromotionId() {
+        return this.promotionId;
+    }
+
+    public CreateDesktopsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public CreateDesktopsRequest setTag(java.util.List<CreateDesktopsRequestTag> tag) {
         this.tag = tag;
         return this;
     }
     public java.util.List<CreateDesktopsRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreateDesktopsRequest setUserAssignMode(String userAssignMode) {
+        this.userAssignMode = userAssignMode;
+        return this;
+    }
+    public String getUserAssignMode() {
+        return this.userAssignMode;
+    }
+
+    public CreateDesktopsRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public CreateDesktopsRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
     public static class CreateDesktopsRequestTag extends TeaModel {

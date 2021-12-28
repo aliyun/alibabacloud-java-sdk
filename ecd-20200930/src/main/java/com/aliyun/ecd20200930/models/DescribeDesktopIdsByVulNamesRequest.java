@@ -4,17 +4,17 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopIdsByVulNamesRequest extends TeaModel {
+    @NameInMap("Necessity")
+    public String necessity;
+
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("Type")
     public String type;
-
-    @NameInMap("OfficeSiteId")
-    public String officeSiteId;
-
-    @NameInMap("Necessity")
-    public String necessity;
 
     @NameInMap("VulName")
     public java.util.List<String> vulName;
@@ -22,6 +22,22 @@ public class DescribeDesktopIdsByVulNamesRequest extends TeaModel {
     public static DescribeDesktopIdsByVulNamesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDesktopIdsByVulNamesRequest self = new DescribeDesktopIdsByVulNamesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDesktopIdsByVulNamesRequest setNecessity(String necessity) {
+        this.necessity = necessity;
+        return this;
+    }
+    public String getNecessity() {
+        return this.necessity;
+    }
+
+    public DescribeDesktopIdsByVulNamesRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
     }
 
     public DescribeDesktopIdsByVulNamesRequest setRegionId(String regionId) {
@@ -38,22 +54,6 @@ public class DescribeDesktopIdsByVulNamesRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public DescribeDesktopIdsByVulNamesRequest setOfficeSiteId(String officeSiteId) {
-        this.officeSiteId = officeSiteId;
-        return this;
-    }
-    public String getOfficeSiteId() {
-        return this.officeSiteId;
-    }
-
-    public DescribeDesktopIdsByVulNamesRequest setNecessity(String necessity) {
-        this.necessity = necessity;
-        return this;
-    }
-    public String getNecessity() {
-        return this.necessity;
     }
 
     public DescribeDesktopIdsByVulNamesRequest setVulName(java.util.List<String> vulName) {

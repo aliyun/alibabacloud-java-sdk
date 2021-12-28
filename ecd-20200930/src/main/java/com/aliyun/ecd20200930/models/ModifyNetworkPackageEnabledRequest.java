@@ -4,26 +4,26 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyNetworkPackageEnabledRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Enabled")
+    public Boolean enabled;
 
     @NameInMap("NetworkPackageId")
     public String networkPackageId;
 
-    @NameInMap("Enabled")
-    public Boolean enabled;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ModifyNetworkPackageEnabledRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNetworkPackageEnabledRequest self = new ModifyNetworkPackageEnabledRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyNetworkPackageEnabledRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifyNetworkPackageEnabledRequest setEnabled(Boolean enabled) {
+        this.enabled = enabled;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Boolean getEnabled() {
+        return this.enabled;
     }
 
     public ModifyNetworkPackageEnabledRequest setNetworkPackageId(String networkPackageId) {
@@ -34,12 +34,12 @@ public class ModifyNetworkPackageEnabledRequest extends TeaModel {
         return this.networkPackageId;
     }
 
-    public ModifyNetworkPackageEnabledRequest setEnabled(Boolean enabled) {
-        this.enabled = enabled;
+    public ModifyNetworkPackageEnabledRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Boolean getEnabled() {
-        return this.enabled;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

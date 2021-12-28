@@ -4,29 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventOverviewResponseBody extends TeaModel {
-    @NameInMap("SuspiciousCount")
-    public Integer suspiciousCount;
-
     @NameInMap("RemindCount")
     public Integer remindCount;
-
-    @NameInMap("SeriousCount")
-    public Integer seriousCount;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SeriousCount")
+    public Integer seriousCount;
+
+    @NameInMap("SuspiciousCount")
+    public Integer suspiciousCount;
+
     public static DescribeSuspEventOverviewResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSuspEventOverviewResponseBody self = new DescribeSuspEventOverviewResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSuspEventOverviewResponseBody setSuspiciousCount(Integer suspiciousCount) {
-        this.suspiciousCount = suspiciousCount;
-        return this;
-    }
-    public Integer getSuspiciousCount() {
-        return this.suspiciousCount;
     }
 
     public DescribeSuspEventOverviewResponseBody setRemindCount(Integer remindCount) {
@@ -37,6 +29,14 @@ public class DescribeSuspEventOverviewResponseBody extends TeaModel {
         return this.remindCount;
     }
 
+    public DescribeSuspEventOverviewResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeSuspEventOverviewResponseBody setSeriousCount(Integer seriousCount) {
         this.seriousCount = seriousCount;
         return this;
@@ -45,12 +45,12 @@ public class DescribeSuspEventOverviewResponseBody extends TeaModel {
         return this.seriousCount;
     }
 
-    public DescribeSuspEventOverviewResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeSuspEventOverviewResponseBody setSuspiciousCount(Integer suspiciousCount) {
+        this.suspiciousCount = suspiciousCount;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getSuspiciousCount() {
+        return this.suspiciousCount;
     }
 
 }

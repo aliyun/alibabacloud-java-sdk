@@ -4,9 +4,6 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserConnectionRecordsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
@@ -22,17 +19,12 @@ public class DescribeUserConnectionRecordsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeUserConnectionRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserConnectionRecordsRequest self = new DescribeUserConnectionRecordsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeUserConnectionRecordsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeUserConnectionRecordsRequest setDesktopGroupId(String desktopGroupId) {
@@ -73,6 +65,14 @@ public class DescribeUserConnectionRecordsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeUserConnectionRecordsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

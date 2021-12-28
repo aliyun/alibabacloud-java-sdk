@@ -4,15 +4,23 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PriceInfo")
     public DescribePriceResponseBodyPriceInfo priceInfo;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribePriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePriceResponseBody self = new DescribePriceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePriceResponseBody setPriceInfo(DescribePriceResponseBodyPriceInfo priceInfo) {
+        this.priceInfo = priceInfo;
+        return this;
+    }
+    public DescribePriceResponseBodyPriceInfo getPriceInfo() {
+        return this.priceInfo;
     }
 
     public DescribePriceResponseBody setRequestId(String requestId) {
@@ -23,12 +31,130 @@ public class DescribePriceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribePriceResponseBody setPriceInfo(DescribePriceResponseBodyPriceInfo priceInfo) {
-        this.priceInfo = priceInfo;
-        return this;
+    public static class DescribePriceResponseBodyPriceInfoPricePromotions extends TeaModel {
+        @NameInMap("OptionCode")
+        public String optionCode;
+
+        @NameInMap("PromotionDesc")
+        public String promotionDesc;
+
+        @NameInMap("PromotionId")
+        public String promotionId;
+
+        @NameInMap("PromotionName")
+        public String promotionName;
+
+        @NameInMap("Selected")
+        public Boolean selected;
+
+        public static DescribePriceResponseBodyPriceInfoPricePromotions build(java.util.Map<String, ?> map) throws Exception {
+            DescribePriceResponseBodyPriceInfoPricePromotions self = new DescribePriceResponseBodyPriceInfoPricePromotions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodyPriceInfoPricePromotions setOptionCode(String optionCode) {
+            this.optionCode = optionCode;
+            return this;
+        }
+        public String getOptionCode() {
+            return this.optionCode;
+        }
+
+        public DescribePriceResponseBodyPriceInfoPricePromotions setPromotionDesc(String promotionDesc) {
+            this.promotionDesc = promotionDesc;
+            return this;
+        }
+        public String getPromotionDesc() {
+            return this.promotionDesc;
+        }
+
+        public DescribePriceResponseBodyPriceInfoPricePromotions setPromotionId(String promotionId) {
+            this.promotionId = promotionId;
+            return this;
+        }
+        public String getPromotionId() {
+            return this.promotionId;
+        }
+
+        public DescribePriceResponseBodyPriceInfoPricePromotions setPromotionName(String promotionName) {
+            this.promotionName = promotionName;
+            return this;
+        }
+        public String getPromotionName() {
+            return this.promotionName;
+        }
+
+        public DescribePriceResponseBodyPriceInfoPricePromotions setSelected(Boolean selected) {
+            this.selected = selected;
+            return this;
+        }
+        public Boolean getSelected() {
+            return this.selected;
+        }
+
     }
-    public DescribePriceResponseBodyPriceInfo getPriceInfo() {
-        return this.priceInfo;
+
+    public static class DescribePriceResponseBodyPriceInfoPrice extends TeaModel {
+        @NameInMap("Currency")
+        public String currency;
+
+        @NameInMap("DiscountPrice")
+        public Float discountPrice;
+
+        @NameInMap("OriginalPrice")
+        public Float originalPrice;
+
+        @NameInMap("Promotions")
+        public java.util.List<DescribePriceResponseBodyPriceInfoPricePromotions> promotions;
+
+        @NameInMap("TradePrice")
+        public Float tradePrice;
+
+        public static DescribePriceResponseBodyPriceInfoPrice build(java.util.Map<String, ?> map) throws Exception {
+            DescribePriceResponseBodyPriceInfoPrice self = new DescribePriceResponseBodyPriceInfoPrice();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodyPriceInfoPrice setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        public DescribePriceResponseBodyPriceInfoPrice setDiscountPrice(Float discountPrice) {
+            this.discountPrice = discountPrice;
+            return this;
+        }
+        public Float getDiscountPrice() {
+            return this.discountPrice;
+        }
+
+        public DescribePriceResponseBodyPriceInfoPrice setOriginalPrice(Float originalPrice) {
+            this.originalPrice = originalPrice;
+            return this;
+        }
+        public Float getOriginalPrice() {
+            return this.originalPrice;
+        }
+
+        public DescribePriceResponseBodyPriceInfoPrice setPromotions(java.util.List<DescribePriceResponseBodyPriceInfoPricePromotions> promotions) {
+            this.promotions = promotions;
+            return this;
+        }
+        public java.util.List<DescribePriceResponseBodyPriceInfoPricePromotions> getPromotions() {
+            return this.promotions;
+        }
+
+        public DescribePriceResponseBodyPriceInfoPrice setTradePrice(Float tradePrice) {
+            this.tradePrice = tradePrice;
+            return this;
+        }
+        public Float getTradePrice() {
+            return this.tradePrice;
+        }
+
     }
 
     public static class DescribePriceResponseBodyPriceInfoRules extends TeaModel {
@@ -61,150 +187,38 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
 
-    public static class DescribePriceResponseBodyPriceInfoPricePromotions extends TeaModel {
-        @NameInMap("PromotionDesc")
-        public String promotionDesc;
-
-        @NameInMap("OptionCode")
-        public String optionCode;
-
-        @NameInMap("Selected")
-        public Boolean selected;
-
-        @NameInMap("PromotionId")
-        public String promotionId;
-
-        @NameInMap("PromotionName")
-        public String promotionName;
-
-        public static DescribePriceResponseBodyPriceInfoPricePromotions build(java.util.Map<String, ?> map) throws Exception {
-            DescribePriceResponseBodyPriceInfoPricePromotions self = new DescribePriceResponseBodyPriceInfoPricePromotions();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribePriceResponseBodyPriceInfoPricePromotions setPromotionDesc(String promotionDesc) {
-            this.promotionDesc = promotionDesc;
-            return this;
-        }
-        public String getPromotionDesc() {
-            return this.promotionDesc;
-        }
-
-        public DescribePriceResponseBodyPriceInfoPricePromotions setOptionCode(String optionCode) {
-            this.optionCode = optionCode;
-            return this;
-        }
-        public String getOptionCode() {
-            return this.optionCode;
-        }
-
-        public DescribePriceResponseBodyPriceInfoPricePromotions setSelected(Boolean selected) {
-            this.selected = selected;
-            return this;
-        }
-        public Boolean getSelected() {
-            return this.selected;
-        }
-
-        public DescribePriceResponseBodyPriceInfoPricePromotions setPromotionId(String promotionId) {
-            this.promotionId = promotionId;
-            return this;
-        }
-        public String getPromotionId() {
-            return this.promotionId;
-        }
-
-        public DescribePriceResponseBodyPriceInfoPricePromotions setPromotionName(String promotionName) {
-            this.promotionName = promotionName;
-            return this;
-        }
-        public String getPromotionName() {
-            return this.promotionName;
-        }
-
-    }
-
-    public static class DescribePriceResponseBodyPriceInfoPrice extends TeaModel {
-        @NameInMap("OriginalPrice")
-        public Float originalPrice;
-
-        @NameInMap("DiscountPrice")
-        public Float discountPrice;
-
-        @NameInMap("Currency")
-        public String currency;
-
-        @NameInMap("TradePrice")
-        public Float tradePrice;
-
-        @NameInMap("Promotions")
-        public java.util.List<DescribePriceResponseBodyPriceInfoPricePromotions> promotions;
-
-        public static DescribePriceResponseBodyPriceInfoPrice build(java.util.Map<String, ?> map) throws Exception {
-            DescribePriceResponseBodyPriceInfoPrice self = new DescribePriceResponseBodyPriceInfoPrice();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribePriceResponseBodyPriceInfoPrice setOriginalPrice(Float originalPrice) {
-            this.originalPrice = originalPrice;
-            return this;
-        }
-        public Float getOriginalPrice() {
-            return this.originalPrice;
-        }
-
-        public DescribePriceResponseBodyPriceInfoPrice setDiscountPrice(Float discountPrice) {
-            this.discountPrice = discountPrice;
-            return this;
-        }
-        public Float getDiscountPrice() {
-            return this.discountPrice;
-        }
-
-        public DescribePriceResponseBodyPriceInfoPrice setCurrency(String currency) {
-            this.currency = currency;
-            return this;
-        }
-        public String getCurrency() {
-            return this.currency;
-        }
-
-        public DescribePriceResponseBodyPriceInfoPrice setTradePrice(Float tradePrice) {
-            this.tradePrice = tradePrice;
-            return this;
-        }
-        public Float getTradePrice() {
-            return this.tradePrice;
-        }
-
-        public DescribePriceResponseBodyPriceInfoPrice setPromotions(java.util.List<DescribePriceResponseBodyPriceInfoPricePromotions> promotions) {
-            this.promotions = promotions;
-            return this;
-        }
-        public java.util.List<DescribePriceResponseBodyPriceInfoPricePromotions> getPromotions() {
-            return this.promotions;
-        }
-
-    }
-
     public static class DescribePriceResponseBodyPriceInfo extends TeaModel {
-        @NameInMap("Rules")
-        public java.util.List<DescribePriceResponseBodyPriceInfoRules> rules;
+        @NameInMap("FreeCdsQuota")
+        public Boolean freeCdsQuota;
+
+        @NameInMap("FreeCdsSize")
+        public Long freeCdsSize;
 
         @NameInMap("Price")
         public DescribePriceResponseBodyPriceInfoPrice price;
+
+        @NameInMap("Rules")
+        public java.util.List<DescribePriceResponseBodyPriceInfoRules> rules;
 
         public static DescribePriceResponseBodyPriceInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribePriceResponseBodyPriceInfo self = new DescribePriceResponseBodyPriceInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribePriceResponseBodyPriceInfo setRules(java.util.List<DescribePriceResponseBodyPriceInfoRules> rules) {
-            this.rules = rules;
+        public DescribePriceResponseBodyPriceInfo setFreeCdsQuota(Boolean freeCdsQuota) {
+            this.freeCdsQuota = freeCdsQuota;
             return this;
         }
-        public java.util.List<DescribePriceResponseBodyPriceInfoRules> getRules() {
-            return this.rules;
+        public Boolean getFreeCdsQuota() {
+            return this.freeCdsQuota;
+        }
+
+        public DescribePriceResponseBodyPriceInfo setFreeCdsSize(Long freeCdsSize) {
+            this.freeCdsSize = freeCdsSize;
+            return this;
+        }
+        public Long getFreeCdsSize() {
+            return this.freeCdsSize;
         }
 
         public DescribePriceResponseBodyPriceInfo setPrice(DescribePriceResponseBodyPriceInfoPrice price) {
@@ -213,6 +227,14 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public DescribePriceResponseBodyPriceInfoPrice getPrice() {
             return this.price;
+        }
+
+        public DescribePriceResponseBodyPriceInfo setRules(java.util.List<DescribePriceResponseBodyPriceInfoRules> rules) {
+            this.rules = rules;
+            return this;
+        }
+        public java.util.List<DescribePriceResponseBodyPriceInfoRules> getRules() {
+            return this.rules;
         }
 
     }

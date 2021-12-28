@@ -7,11 +7,11 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OrderIds")
     public java.util.List<String> orderIds;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateDesktopGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDesktopGroupResponseBody self = new CreateDesktopGroupResponseBody();
@@ -26,20 +26,20 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         return this.desktopGroupId;
     }
 
-    public CreateDesktopGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateDesktopGroupResponseBody setOrderIds(java.util.List<String> orderIds) {
         this.orderIds = orderIds;
         return this;
     }
     public java.util.List<String> getOrderIds() {
         return this.orderIds;
+    }
+
+    public CreateDesktopGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

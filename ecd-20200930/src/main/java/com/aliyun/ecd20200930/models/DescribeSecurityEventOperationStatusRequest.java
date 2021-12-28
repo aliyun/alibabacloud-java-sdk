@@ -7,11 +7,11 @@ public class DescribeSecurityEventOperationStatusRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("TaskId")
-    public Long taskId;
-
     @NameInMap("SecurityEventId")
     public java.util.List<String> securityEventId;
+
+    @NameInMap("TaskId")
+    public Long taskId;
 
     public static DescribeSecurityEventOperationStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityEventOperationStatusRequest self = new DescribeSecurityEventOperationStatusRequest();
@@ -26,20 +26,20 @@ public class DescribeSecurityEventOperationStatusRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeSecurityEventOperationStatusRequest setTaskId(Long taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public Long getTaskId() {
-        return this.taskId;
-    }
-
     public DescribeSecurityEventOperationStatusRequest setSecurityEventId(java.util.List<String> securityEventId) {
         this.securityEventId = securityEventId;
         return this;
     }
     public java.util.List<String> getSecurityEventId() {
         return this.securityEventId;
+    }
+
+    public DescribeSecurityEventOperationStatusRequest setTaskId(Long taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

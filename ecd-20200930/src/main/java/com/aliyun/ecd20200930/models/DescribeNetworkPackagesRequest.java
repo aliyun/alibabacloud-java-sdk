@@ -4,29 +4,32 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkPackagesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("InternetChargeType")
+    public String internetChargeType;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    @NameInMap("NetworkPackageId")
+    public java.util.List<String> networkPackageId;
+
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("NetworkPackageId")
-    public java.util.List<String> networkPackageId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DescribeNetworkPackagesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworkPackagesRequest self = new DescribeNetworkPackagesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeNetworkPackagesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeNetworkPackagesRequest setInternetChargeType(String internetChargeType) {
+        this.internetChargeType = internetChargeType;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getInternetChargeType() {
+        return this.internetChargeType;
     }
 
     public DescribeNetworkPackagesRequest setMaxResults(Integer maxResults) {
@@ -37,6 +40,14 @@ public class DescribeNetworkPackagesRequest extends TeaModel {
         return this.maxResults;
     }
 
+    public DescribeNetworkPackagesRequest setNetworkPackageId(java.util.List<String> networkPackageId) {
+        this.networkPackageId = networkPackageId;
+        return this;
+    }
+    public java.util.List<String> getNetworkPackageId() {
+        return this.networkPackageId;
+    }
+
     public DescribeNetworkPackagesRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -45,12 +56,12 @@ public class DescribeNetworkPackagesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public DescribeNetworkPackagesRequest setNetworkPackageId(java.util.List<String> networkPackageId) {
-        this.networkPackageId = networkPackageId;
+    public DescribeNetworkPackagesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public java.util.List<String> getNetworkPackageId() {
-        return this.networkPackageId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

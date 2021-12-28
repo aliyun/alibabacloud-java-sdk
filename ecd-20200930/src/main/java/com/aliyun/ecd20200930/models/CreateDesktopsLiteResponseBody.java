@@ -4,18 +4,26 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateDesktopsLiteResponseBody extends TeaModel {
+    @NameInMap("DesktopId")
+    public java.util.List<String> desktopId;
+
     @NameInMap("OrderId")
     public String orderId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DesktopId")
-    public java.util.List<String> desktopId;
-
     public static CreateDesktopsLiteResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDesktopsLiteResponseBody self = new CreateDesktopsLiteResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDesktopsLiteResponseBody setDesktopId(java.util.List<String> desktopId) {
+        this.desktopId = desktopId;
+        return this;
+    }
+    public java.util.List<String> getDesktopId() {
+        return this.desktopId;
     }
 
     public CreateDesktopsLiteResponseBody setOrderId(String orderId) {
@@ -32,14 +40,6 @@ public class CreateDesktopsLiteResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateDesktopsLiteResponseBody setDesktopId(java.util.List<String> desktopId) {
-        this.desktopId = desktopId;
-        return this;
-    }
-    public java.util.List<String> getDesktopId() {
-        return this.desktopId;
     }
 
 }

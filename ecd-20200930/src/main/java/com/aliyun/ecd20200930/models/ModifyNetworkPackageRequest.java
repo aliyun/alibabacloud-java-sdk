@@ -4,26 +4,26 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyNetworkPackageRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
 
     @NameInMap("NetworkPackageId")
     public String networkPackageId;
 
-    @NameInMap("Bandwidth")
-    public Integer bandwidth;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ModifyNetworkPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNetworkPackageRequest self = new ModifyNetworkPackageRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyNetworkPackageRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifyNetworkPackageRequest setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Integer getBandwidth() {
+        return this.bandwidth;
     }
 
     public ModifyNetworkPackageRequest setNetworkPackageId(String networkPackageId) {
@@ -34,12 +34,12 @@ public class ModifyNetworkPackageRequest extends TeaModel {
         return this.networkPackageId;
     }
 
-    public ModifyNetworkPackageRequest setBandwidth(Integer bandwidth) {
-        this.bandwidth = bandwidth;
+    public ModifyNetworkPackageRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Integer getBandwidth() {
-        return this.bandwidth;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -4,20 +4,20 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateRAMDirectoryRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("DesktopAccessType")
+    public String desktopAccessType;
 
     @NameInMap("DirectoryName")
     public String directoryName;
 
-    @NameInMap("EnableInternetAccess")
-    public Boolean enableInternetAccess;
-
     @NameInMap("EnableAdminAccess")
     public Boolean enableAdminAccess;
 
-    @NameInMap("DesktopAccessType")
-    public String desktopAccessType;
+    @NameInMap("EnableInternetAccess")
+    public Boolean enableInternetAccess;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("VSwitchId")
     public java.util.List<String> vSwitchId;
@@ -27,12 +27,12 @@ public class CreateRAMDirectoryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateRAMDirectoryRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateRAMDirectoryRequest setDesktopAccessType(String desktopAccessType) {
+        this.desktopAccessType = desktopAccessType;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getDesktopAccessType() {
+        return this.desktopAccessType;
     }
 
     public CreateRAMDirectoryRequest setDirectoryName(String directoryName) {
@@ -43,14 +43,6 @@ public class CreateRAMDirectoryRequest extends TeaModel {
         return this.directoryName;
     }
 
-    public CreateRAMDirectoryRequest setEnableInternetAccess(Boolean enableInternetAccess) {
-        this.enableInternetAccess = enableInternetAccess;
-        return this;
-    }
-    public Boolean getEnableInternetAccess() {
-        return this.enableInternetAccess;
-    }
-
     public CreateRAMDirectoryRequest setEnableAdminAccess(Boolean enableAdminAccess) {
         this.enableAdminAccess = enableAdminAccess;
         return this;
@@ -59,12 +51,20 @@ public class CreateRAMDirectoryRequest extends TeaModel {
         return this.enableAdminAccess;
     }
 
-    public CreateRAMDirectoryRequest setDesktopAccessType(String desktopAccessType) {
-        this.desktopAccessType = desktopAccessType;
+    public CreateRAMDirectoryRequest setEnableInternetAccess(Boolean enableInternetAccess) {
+        this.enableInternetAccess = enableInternetAccess;
         return this;
     }
-    public String getDesktopAccessType() {
-        return this.desktopAccessType;
+    public Boolean getEnableInternetAccess() {
+        return this.enableInternetAccess;
+    }
+
+    public CreateRAMDirectoryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateRAMDirectoryRequest setVSwitchId(java.util.List<String> vSwitchId) {

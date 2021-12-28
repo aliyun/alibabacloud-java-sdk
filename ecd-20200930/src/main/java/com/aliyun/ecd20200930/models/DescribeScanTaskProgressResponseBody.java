@@ -4,18 +4,26 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeScanTaskProgressResponseBody extends TeaModel {
+    @NameInMap("CreateTime")
+    public String createTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TaskStatus")
     public String taskStatus;
 
-    @NameInMap("CreateTime")
-    public String createTime;
-
     public static DescribeScanTaskProgressResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScanTaskProgressResponseBody self = new DescribeScanTaskProgressResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeScanTaskProgressResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
     }
 
     public DescribeScanTaskProgressResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class DescribeScanTaskProgressResponseBody extends TeaModel {
     }
     public String getTaskStatus() {
         return this.taskStatus;
-    }
-
-    public DescribeScanTaskProgressResponseBody setCreateTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-    public String getCreateTime() {
-        return this.createTime;
     }
 
 }

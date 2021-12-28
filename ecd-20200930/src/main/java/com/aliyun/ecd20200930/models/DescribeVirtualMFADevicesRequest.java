@@ -4,8 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeVirtualMFADevicesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("DirectoryId")
+    public String directoryId;
+
+    @NameInMap("EndUserId")
+    public java.util.List<String> endUserId;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -13,26 +16,31 @@ public class DescribeVirtualMFADevicesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("DirectoryId")
-    public String directoryId;
-
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    @NameInMap("EndUserId")
-    public java.util.List<String> endUserId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DescribeVirtualMFADevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVirtualMFADevicesRequest self = new DescribeVirtualMFADevicesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeVirtualMFADevicesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeVirtualMFADevicesRequest setDirectoryId(String directoryId) {
+        this.directoryId = directoryId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getDirectoryId() {
+        return this.directoryId;
+    }
+
+    public DescribeVirtualMFADevicesRequest setEndUserId(java.util.List<String> endUserId) {
+        this.endUserId = endUserId;
+        return this;
+    }
+    public java.util.List<String> getEndUserId() {
+        return this.endUserId;
     }
 
     public DescribeVirtualMFADevicesRequest setMaxResults(Integer maxResults) {
@@ -51,14 +59,6 @@ public class DescribeVirtualMFADevicesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public DescribeVirtualMFADevicesRequest setDirectoryId(String directoryId) {
-        this.directoryId = directoryId;
-        return this;
-    }
-    public String getDirectoryId() {
-        return this.directoryId;
-    }
-
     public DescribeVirtualMFADevicesRequest setOfficeSiteId(String officeSiteId) {
         this.officeSiteId = officeSiteId;
         return this;
@@ -67,12 +67,12 @@ public class DescribeVirtualMFADevicesRequest extends TeaModel {
         return this.officeSiteId;
     }
 
-    public DescribeVirtualMFADevicesRequest setEndUserId(java.util.List<String> endUserId) {
-        this.endUserId = endUserId;
+    public DescribeVirtualMFADevicesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public java.util.List<String> getEndUserId() {
-        return this.endUserId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

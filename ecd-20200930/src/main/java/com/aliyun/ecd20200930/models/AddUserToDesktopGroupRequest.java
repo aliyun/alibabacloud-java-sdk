@@ -4,37 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class AddUserToDesktopGroupRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static AddUserToDesktopGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         AddUserToDesktopGroupRequest self = new AddUserToDesktopGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddUserToDesktopGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public AddUserToDesktopGroupRequest setDesktopGroupId(String desktopGroupId) {
-        this.desktopGroupId = desktopGroupId;
-        return this;
-    }
-    public String getDesktopGroupId() {
-        return this.desktopGroupId;
     }
 
     public AddUserToDesktopGroupRequest setClientToken(String clientToken) {
@@ -45,12 +29,28 @@ public class AddUserToDesktopGroupRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public AddUserToDesktopGroupRequest setDesktopGroupId(String desktopGroupId) {
+        this.desktopGroupId = desktopGroupId;
+        return this;
+    }
+    public String getDesktopGroupId() {
+        return this.desktopGroupId;
+    }
+
     public AddUserToDesktopGroupRequest setEndUserIds(java.util.List<String> endUserIds) {
         this.endUserIds = endUserIds;
         return this;
     }
     public java.util.List<String> getEndUserIds() {
         return this.endUserIds;
+    }
+
+    public AddUserToDesktopGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

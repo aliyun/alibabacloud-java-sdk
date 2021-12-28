@@ -4,8 +4,26 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("DesktopInstanceType")
+    public String desktopInstanceType;
+
+    @NameInMap("GpuCategory")
+    public Boolean gpuCategory;
+
+    @NameInMap("GpuDriverVersion")
+    public String gpuDriverVersion;
+
+    @NameInMap("ImageId")
+    public java.util.List<String> imageId;
+
+    @NameInMap("ImageStatus")
+    public String imageStatus;
+
+    @NameInMap("ImageType")
+    public String imageType;
+
+    @NameInMap("LanguageType")
+    public String languageType;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -13,32 +31,74 @@ public class DescribeImagesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("ImageType")
-    public String imageType;
-
-    @NameInMap("ImageStatus")
-    public String imageStatus;
-
-    @NameInMap("GpuCategory")
-    public Boolean gpuCategory;
+    @NameInMap("OsType")
+    public String osType;
 
     @NameInMap("ProtocolType")
     public String protocolType;
 
-    @NameInMap("ImageId")
-    public java.util.List<String> imageId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DescribeImagesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImagesRequest self = new DescribeImagesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeImagesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeImagesRequest setDesktopInstanceType(String desktopInstanceType) {
+        this.desktopInstanceType = desktopInstanceType;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getDesktopInstanceType() {
+        return this.desktopInstanceType;
+    }
+
+    public DescribeImagesRequest setGpuCategory(Boolean gpuCategory) {
+        this.gpuCategory = gpuCategory;
+        return this;
+    }
+    public Boolean getGpuCategory() {
+        return this.gpuCategory;
+    }
+
+    public DescribeImagesRequest setGpuDriverVersion(String gpuDriverVersion) {
+        this.gpuDriverVersion = gpuDriverVersion;
+        return this;
+    }
+    public String getGpuDriverVersion() {
+        return this.gpuDriverVersion;
+    }
+
+    public DescribeImagesRequest setImageId(java.util.List<String> imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public java.util.List<String> getImageId() {
+        return this.imageId;
+    }
+
+    public DescribeImagesRequest setImageStatus(String imageStatus) {
+        this.imageStatus = imageStatus;
+        return this;
+    }
+    public String getImageStatus() {
+        return this.imageStatus;
+    }
+
+    public DescribeImagesRequest setImageType(String imageType) {
+        this.imageType = imageType;
+        return this;
+    }
+    public String getImageType() {
+        return this.imageType;
+    }
+
+    public DescribeImagesRequest setLanguageType(String languageType) {
+        this.languageType = languageType;
+        return this;
+    }
+    public String getLanguageType() {
+        return this.languageType;
     }
 
     public DescribeImagesRequest setMaxResults(Integer maxResults) {
@@ -57,28 +117,12 @@ public class DescribeImagesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public DescribeImagesRequest setImageType(String imageType) {
-        this.imageType = imageType;
+    public DescribeImagesRequest setOsType(String osType) {
+        this.osType = osType;
         return this;
     }
-    public String getImageType() {
-        return this.imageType;
-    }
-
-    public DescribeImagesRequest setImageStatus(String imageStatus) {
-        this.imageStatus = imageStatus;
-        return this;
-    }
-    public String getImageStatus() {
-        return this.imageStatus;
-    }
-
-    public DescribeImagesRequest setGpuCategory(Boolean gpuCategory) {
-        this.gpuCategory = gpuCategory;
-        return this;
-    }
-    public Boolean getGpuCategory() {
-        return this.gpuCategory;
+    public String getOsType() {
+        return this.osType;
     }
 
     public DescribeImagesRequest setProtocolType(String protocolType) {
@@ -89,12 +133,12 @@ public class DescribeImagesRequest extends TeaModel {
         return this.protocolType;
     }
 
-    public DescribeImagesRequest setImageId(java.util.List<String> imageId) {
-        this.imageId = imageId;
+    public DescribeImagesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public java.util.List<String> getImageId() {
-        return this.imageId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

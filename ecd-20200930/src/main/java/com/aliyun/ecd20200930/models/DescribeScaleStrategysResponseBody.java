@@ -43,14 +43,23 @@ public class DescribeScaleStrategysResponseBody extends TeaModel {
     }
 
     public static class DescribeScaleStrategysResponseBodyScaleStrategys extends TeaModel {
-        @NameInMap("ScaleStrategyId")
-        public String scaleStrategyId;
+        @NameInMap("MaxAvailableDesktopsCount")
+        public Integer maxAvailableDesktopsCount;
 
         @NameInMap("MaxDesktopsCount")
         public Integer maxDesktopsCount;
 
-        @NameInMap("MaxAvailableDesktopsCount")
-        public Integer maxAvailableDesktopsCount;
+        @NameInMap("MinAvailableDesktopsCount")
+        public Integer minAvailableDesktopsCount;
+
+        @NameInMap("MinDesktopsCount")
+        public Integer minDesktopsCount;
+
+        @NameInMap("ScaleStep")
+        public Integer scaleStep;
+
+        @NameInMap("ScaleStrategyId")
+        public String scaleStrategyId;
 
         @NameInMap("ScaleStrategyName")
         public String scaleStrategyName;
@@ -58,26 +67,17 @@ public class DescribeScaleStrategysResponseBody extends TeaModel {
         @NameInMap("ScaleStrategyType")
         public String scaleStrategyType;
 
-        @NameInMap("MinDesktopsCount")
-        public Integer minDesktopsCount;
-
-        @NameInMap("MinAvailableDesktopsCount")
-        public Integer minAvailableDesktopsCount;
-
-        @NameInMap("ScaleStep")
-        public Integer scaleStep;
-
         public static DescribeScaleStrategysResponseBodyScaleStrategys build(java.util.Map<String, ?> map) throws Exception {
             DescribeScaleStrategysResponseBodyScaleStrategys self = new DescribeScaleStrategysResponseBodyScaleStrategys();
             return TeaModel.build(map, self);
         }
 
-        public DescribeScaleStrategysResponseBodyScaleStrategys setScaleStrategyId(String scaleStrategyId) {
-            this.scaleStrategyId = scaleStrategyId;
+        public DescribeScaleStrategysResponseBodyScaleStrategys setMaxAvailableDesktopsCount(Integer maxAvailableDesktopsCount) {
+            this.maxAvailableDesktopsCount = maxAvailableDesktopsCount;
             return this;
         }
-        public String getScaleStrategyId() {
-            return this.scaleStrategyId;
+        public Integer getMaxAvailableDesktopsCount() {
+            return this.maxAvailableDesktopsCount;
         }
 
         public DescribeScaleStrategysResponseBodyScaleStrategys setMaxDesktopsCount(Integer maxDesktopsCount) {
@@ -88,12 +88,36 @@ public class DescribeScaleStrategysResponseBody extends TeaModel {
             return this.maxDesktopsCount;
         }
 
-        public DescribeScaleStrategysResponseBodyScaleStrategys setMaxAvailableDesktopsCount(Integer maxAvailableDesktopsCount) {
-            this.maxAvailableDesktopsCount = maxAvailableDesktopsCount;
+        public DescribeScaleStrategysResponseBodyScaleStrategys setMinAvailableDesktopsCount(Integer minAvailableDesktopsCount) {
+            this.minAvailableDesktopsCount = minAvailableDesktopsCount;
             return this;
         }
-        public Integer getMaxAvailableDesktopsCount() {
-            return this.maxAvailableDesktopsCount;
+        public Integer getMinAvailableDesktopsCount() {
+            return this.minAvailableDesktopsCount;
+        }
+
+        public DescribeScaleStrategysResponseBodyScaleStrategys setMinDesktopsCount(Integer minDesktopsCount) {
+            this.minDesktopsCount = minDesktopsCount;
+            return this;
+        }
+        public Integer getMinDesktopsCount() {
+            return this.minDesktopsCount;
+        }
+
+        public DescribeScaleStrategysResponseBodyScaleStrategys setScaleStep(Integer scaleStep) {
+            this.scaleStep = scaleStep;
+            return this;
+        }
+        public Integer getScaleStep() {
+            return this.scaleStep;
+        }
+
+        public DescribeScaleStrategysResponseBodyScaleStrategys setScaleStrategyId(String scaleStrategyId) {
+            this.scaleStrategyId = scaleStrategyId;
+            return this;
+        }
+        public String getScaleStrategyId() {
+            return this.scaleStrategyId;
         }
 
         public DescribeScaleStrategysResponseBodyScaleStrategys setScaleStrategyName(String scaleStrategyName) {
@@ -110,30 +134,6 @@ public class DescribeScaleStrategysResponseBody extends TeaModel {
         }
         public String getScaleStrategyType() {
             return this.scaleStrategyType;
-        }
-
-        public DescribeScaleStrategysResponseBodyScaleStrategys setMinDesktopsCount(Integer minDesktopsCount) {
-            this.minDesktopsCount = minDesktopsCount;
-            return this;
-        }
-        public Integer getMinDesktopsCount() {
-            return this.minDesktopsCount;
-        }
-
-        public DescribeScaleStrategysResponseBodyScaleStrategys setMinAvailableDesktopsCount(Integer minAvailableDesktopsCount) {
-            this.minAvailableDesktopsCount = minAvailableDesktopsCount;
-            return this;
-        }
-        public Integer getMinAvailableDesktopsCount() {
-            return this.minAvailableDesktopsCount;
-        }
-
-        public DescribeScaleStrategysResponseBodyScaleStrategys setScaleStep(Integer scaleStep) {
-            this.scaleStep = scaleStep;
-            return this;
-        }
-        public Integer getScaleStep() {
-            return this.scaleStep;
         }
 
     }
