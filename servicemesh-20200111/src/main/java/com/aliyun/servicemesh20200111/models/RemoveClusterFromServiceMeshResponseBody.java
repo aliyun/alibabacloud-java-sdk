@@ -4,18 +4,26 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class RemoveClusterFromServiceMeshResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     public static RemoveClusterFromServiceMeshResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemoveClusterFromServiceMeshResponseBody self = new RemoveClusterFromServiceMeshResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RemoveClusterFromServiceMeshResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public RemoveClusterFromServiceMeshResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class RemoveClusterFromServiceMeshResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public RemoveClusterFromServiceMeshResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

@@ -4,29 +4,21 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class RemoveBuiltinEnvoyFilterRequest extends TeaModel {
-    @NameInMap("ServiceMeshId")
-    public String serviceMeshId;
-
     @NameInMap("Id")
     public String id;
-
-    @NameInMap("Name")
-    public String name;
 
     @NameInMap("IstioVersion")
     public String istioVersion;
 
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("ServiceMeshId")
+    public String serviceMeshId;
+
     public static RemoveBuiltinEnvoyFilterRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveBuiltinEnvoyFilterRequest self = new RemoveBuiltinEnvoyFilterRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveBuiltinEnvoyFilterRequest setServiceMeshId(String serviceMeshId) {
-        this.serviceMeshId = serviceMeshId;
-        return this;
-    }
-    public String getServiceMeshId() {
-        return this.serviceMeshId;
     }
 
     public RemoveBuiltinEnvoyFilterRequest setId(String id) {
@@ -37,6 +29,14 @@ public class RemoveBuiltinEnvoyFilterRequest extends TeaModel {
         return this.id;
     }
 
+    public RemoveBuiltinEnvoyFilterRequest setIstioVersion(String istioVersion) {
+        this.istioVersion = istioVersion;
+        return this;
+    }
+    public String getIstioVersion() {
+        return this.istioVersion;
+    }
+
     public RemoveBuiltinEnvoyFilterRequest setName(String name) {
         this.name = name;
         return this;
@@ -45,12 +45,12 @@ public class RemoveBuiltinEnvoyFilterRequest extends TeaModel {
         return this.name;
     }
 
-    public RemoveBuiltinEnvoyFilterRequest setIstioVersion(String istioVersion) {
-        this.istioVersion = istioVersion;
+    public RemoveBuiltinEnvoyFilterRequest setServiceMeshId(String serviceMeshId) {
+        this.serviceMeshId = serviceMeshId;
         return this;
     }
-    public String getIstioVersion() {
-        return this.istioVersion;
+    public String getServiceMeshId() {
+        return this.serviceMeshId;
     }
 
 }

@@ -4,23 +4,18 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DeleteServiceMeshRequest extends TeaModel {
-    @NameInMap("ServiceMeshId")
-    public String serviceMeshId;
-
     @NameInMap("Force")
     public Boolean force;
+
+    @NameInMap("RetainResources")
+    public String retainResources;
+
+    @NameInMap("ServiceMeshId")
+    public String serviceMeshId;
 
     public static DeleteServiceMeshRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteServiceMeshRequest self = new DeleteServiceMeshRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteServiceMeshRequest setServiceMeshId(String serviceMeshId) {
-        this.serviceMeshId = serviceMeshId;
-        return this;
-    }
-    public String getServiceMeshId() {
-        return this.serviceMeshId;
     }
 
     public DeleteServiceMeshRequest setForce(Boolean force) {
@@ -29,6 +24,22 @@ public class DeleteServiceMeshRequest extends TeaModel {
     }
     public Boolean getForce() {
         return this.force;
+    }
+
+    public DeleteServiceMeshRequest setRetainResources(String retainResources) {
+        this.retainResources = retainResources;
+        return this;
+    }
+    public String getRetainResources() {
+        return this.retainResources;
+    }
+
+    public DeleteServiceMeshRequest setServiceMeshId(String serviceMeshId) {
+        this.serviceMeshId = serviceMeshId;
+        return this;
+    }
+    public String getServiceMeshId() {
+        return this.serviceMeshId;
     }
 
 }

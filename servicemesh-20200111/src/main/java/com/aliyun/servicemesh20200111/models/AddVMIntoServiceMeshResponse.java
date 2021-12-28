@@ -3,21 +3,21 @@ package com.aliyun.servicemesh20200111.models;
 
 import com.aliyun.tea.*;
 
-public class AddVmAppToMeshResponse extends TeaModel {
+public class AddVMIntoServiceMeshResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public AddVmAppToMeshResponseBody body;
+    public AddVMIntoServiceMeshResponseBody body;
 
-    public static AddVmAppToMeshResponse build(java.util.Map<String, ?> map) throws Exception {
-        AddVmAppToMeshResponse self = new AddVmAppToMeshResponse();
+    public static AddVMIntoServiceMeshResponse build(java.util.Map<String, ?> map) throws Exception {
+        AddVMIntoServiceMeshResponse self = new AddVMIntoServiceMeshResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddVmAppToMeshResponse setHeaders(java.util.Map<String, String> headers) {
+    public AddVMIntoServiceMeshResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class AddVmAppToMeshResponse extends TeaModel {
         return this.headers;
     }
 
-    public AddVmAppToMeshResponse setBody(AddVmAppToMeshResponseBody body) {
+    public AddVMIntoServiceMeshResponse setBody(AddVMIntoServiceMeshResponseBody body) {
         this.body = body;
         return this;
     }
-    public AddVmAppToMeshResponseBody getBody() {
+    public AddVMIntoServiceMeshResponseBody getBody() {
         return this.body;
     }
 

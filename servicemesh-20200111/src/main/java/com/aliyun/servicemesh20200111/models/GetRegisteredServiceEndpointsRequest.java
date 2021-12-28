@@ -4,26 +4,26 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetRegisteredServiceEndpointsRequest extends TeaModel {
-    @NameInMap("ServiceMeshId")
-    public String serviceMeshId;
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("Namespace")
     public String namespace;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("ServiceMeshId")
+    public String serviceMeshId;
 
     public static GetRegisteredServiceEndpointsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRegisteredServiceEndpointsRequest self = new GetRegisteredServiceEndpointsRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetRegisteredServiceEndpointsRequest setServiceMeshId(String serviceMeshId) {
-        this.serviceMeshId = serviceMeshId;
+    public GetRegisteredServiceEndpointsRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getServiceMeshId() {
-        return this.serviceMeshId;
+    public String getName() {
+        return this.name;
     }
 
     public GetRegisteredServiceEndpointsRequest setNamespace(String namespace) {
@@ -34,12 +34,12 @@ public class GetRegisteredServiceEndpointsRequest extends TeaModel {
         return this.namespace;
     }
 
-    public GetRegisteredServiceEndpointsRequest setName(String name) {
-        this.name = name;
+    public GetRegisteredServiceEndpointsRequest setServiceMeshId(String serviceMeshId) {
+        this.serviceMeshId = serviceMeshId;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getServiceMeshId() {
+        return this.serviceMeshId;
     }
 
 }

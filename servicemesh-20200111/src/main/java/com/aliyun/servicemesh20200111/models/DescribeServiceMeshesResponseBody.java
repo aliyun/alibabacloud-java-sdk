@@ -32,48 +32,24 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshesResponseBodyServiceMeshesEndpoints extends TeaModel {
-        @NameInMap("IntranetPilotEndpoint")
-        public String intranetPilotEndpoint;
-
-        @NameInMap("ReverseTunnelEndpoint")
-        public String reverseTunnelEndpoint;
-
-        @NameInMap("PublicPilotEndpoint")
-        public String publicPilotEndpoint;
-
         @NameInMap("IntranetApiServerEndpoint")
         public String intranetApiServerEndpoint;
+
+        @NameInMap("IntranetPilotEndpoint")
+        public String intranetPilotEndpoint;
 
         @NameInMap("PublicApiServerEndpoint")
         public String publicApiServerEndpoint;
 
+        @NameInMap("PublicPilotEndpoint")
+        public String publicPilotEndpoint;
+
+        @NameInMap("ReverseTunnelEndpoint")
+        public String reverseTunnelEndpoint;
+
         public static DescribeServiceMeshesResponseBodyServiceMeshesEndpoints build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshesResponseBodyServiceMeshesEndpoints self = new DescribeServiceMeshesResponseBodyServiceMeshesEndpoints();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshesEndpoints setIntranetPilotEndpoint(String intranetPilotEndpoint) {
-            this.intranetPilotEndpoint = intranetPilotEndpoint;
-            return this;
-        }
-        public String getIntranetPilotEndpoint() {
-            return this.intranetPilotEndpoint;
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshesEndpoints setReverseTunnelEndpoint(String reverseTunnelEndpoint) {
-            this.reverseTunnelEndpoint = reverseTunnelEndpoint;
-            return this;
-        }
-        public String getReverseTunnelEndpoint() {
-            return this.reverseTunnelEndpoint;
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshesEndpoints setPublicPilotEndpoint(String publicPilotEndpoint) {
-            this.publicPilotEndpoint = publicPilotEndpoint;
-            return this;
-        }
-        public String getPublicPilotEndpoint() {
-            return this.publicPilotEndpoint;
         }
 
         public DescribeServiceMeshesResponseBodyServiceMeshesEndpoints setIntranetApiServerEndpoint(String intranetApiServerEndpoint) {
@@ -84,6 +60,14 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             return this.intranetApiServerEndpoint;
         }
 
+        public DescribeServiceMeshesResponseBodyServiceMeshesEndpoints setIntranetPilotEndpoint(String intranetPilotEndpoint) {
+            this.intranetPilotEndpoint = intranetPilotEndpoint;
+            return this;
+        }
+        public String getIntranetPilotEndpoint() {
+            return this.intranetPilotEndpoint;
+        }
+
         public DescribeServiceMeshesResponseBodyServiceMeshesEndpoints setPublicApiServerEndpoint(String publicApiServerEndpoint) {
             this.publicApiServerEndpoint = publicApiServerEndpoint;
             return this;
@@ -92,47 +76,55 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             return this.publicApiServerEndpoint;
         }
 
+        public DescribeServiceMeshesResponseBodyServiceMeshesEndpoints setPublicPilotEndpoint(String publicPilotEndpoint) {
+            this.publicPilotEndpoint = publicPilotEndpoint;
+            return this;
+        }
+        public String getPublicPilotEndpoint() {
+            return this.publicPilotEndpoint;
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshesEndpoints setReverseTunnelEndpoint(String reverseTunnelEndpoint) {
+            this.reverseTunnelEndpoint = reverseTunnelEndpoint;
+            return this;
+        }
+        public String getReverseTunnelEndpoint() {
+            return this.reverseTunnelEndpoint;
+        }
+
     }
 
     public static class DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo extends TeaModel {
-        @NameInMap("Profile")
-        public String profile;
-
         @NameInMap("CreationTime")
         public String creationTime;
-
-        @NameInMap("UpdateTime")
-        public String updateTime;
 
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        @NameInMap("Version")
-        public String version;
-
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("ServiceMeshId")
-        public String serviceMeshId;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Profile")
+        public String profile;
 
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ServiceMeshId")
+        public String serviceMeshId;
+
+        @NameInMap("State")
+        public String state;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
+        @NameInMap("Version")
+        public String version;
+
         public static DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo self = new DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo setProfile(String profile) {
-            this.profile = profile;
-            return this;
-        }
-        public String getProfile() {
-            return this.profile;
         }
 
         public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo setCreationTime(String creationTime) {
@@ -143,44 +135,12 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
         public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo setErrorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
         public String getErrorMessage() {
             return this.errorMessage;
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo setServiceMeshId(String serviceMeshId) {
-            this.serviceMeshId = serviceMeshId;
-            return this;
-        }
-        public String getServiceMeshId() {
-            return this.serviceMeshId;
         }
 
         public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo setName(String name) {
@@ -191,6 +151,14 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             return this.name;
         }
 
+        public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo setProfile(String profile) {
+            this.profile = profile;
+            return this;
+        }
+        public String getProfile() {
+            return this.profile;
+        }
+
         public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -199,81 +167,56 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             return this.regionId;
         }
 
-    }
-
-    public static class DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("SecurityGroupId")
-        public String securityGroupId;
-
-        @NameInMap("VSwitches")
-        public java.util.List<String> vSwitches;
-
-        public static DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork build(java.util.Map<String, ?> map) throws Exception {
-            DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork self = new DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo setServiceMeshId(String serviceMeshId) {
+            this.serviceMeshId = serviceMeshId;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
+        public String getServiceMeshId() {
+            return this.serviceMeshId;
         }
 
-        public DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork setSecurityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
+        public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo setState(String state) {
+            this.state = state;
             return this;
         }
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
+        public String getState() {
+            return this.state;
         }
 
-        public DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork setVSwitches(java.util.List<String> vSwitches) {
-            this.vSwitches = vSwitches;
+        public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public java.util.List<String> getVSwitches() {
-            return this.vSwitches;
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }
 
     public static class DescribeServiceMeshesResponseBodyServiceMeshesSpecLoadBalancer extends TeaModel {
-        @NameInMap("PilotPublicEip")
-        public Boolean pilotPublicEip;
-
-        @NameInMap("PilotPublicLoadbalancerId")
-        public String pilotPublicLoadbalancerId;
-
         @NameInMap("ApiServerLoadbalancerId")
         public String apiServerLoadbalancerId;
 
         @NameInMap("ApiServerPublicEip")
         public Boolean apiServerPublicEip;
 
+        @NameInMap("PilotPublicEip")
+        public Boolean pilotPublicEip;
+
+        @NameInMap("PilotPublicLoadbalancerId")
+        public String pilotPublicLoadbalancerId;
+
         public static DescribeServiceMeshesResponseBodyServiceMeshesSpecLoadBalancer build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshesResponseBodyServiceMeshesSpecLoadBalancer self = new DescribeServiceMeshesResponseBodyServiceMeshesSpecLoadBalancer();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshesSpecLoadBalancer setPilotPublicEip(Boolean pilotPublicEip) {
-            this.pilotPublicEip = pilotPublicEip;
-            return this;
-        }
-        public Boolean getPilotPublicEip() {
-            return this.pilotPublicEip;
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshesSpecLoadBalancer setPilotPublicLoadbalancerId(String pilotPublicLoadbalancerId) {
-            this.pilotPublicLoadbalancerId = pilotPublicLoadbalancerId;
-            return this;
-        }
-        public String getPilotPublicLoadbalancerId() {
-            return this.pilotPublicLoadbalancerId;
         }
 
         public DescribeServiceMeshesResponseBodyServiceMeshesSpecLoadBalancer setApiServerLoadbalancerId(String apiServerLoadbalancerId) {
@@ -290,6 +233,22 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         }
         public Boolean getApiServerPublicEip() {
             return this.apiServerPublicEip;
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshesSpecLoadBalancer setPilotPublicEip(Boolean pilotPublicEip) {
+            this.pilotPublicEip = pilotPublicEip;
+            return this;
+        }
+        public Boolean getPilotPublicEip() {
+            return this.pilotPublicEip;
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshesSpecLoadBalancer setPilotPublicLoadbalancerId(String pilotPublicLoadbalancerId) {
+            this.pilotPublicLoadbalancerId = pilotPublicLoadbalancerId;
+            return this;
+        }
+        public String getPilotPublicLoadbalancerId() {
+            return this.pilotPublicLoadbalancerId;
         }
 
     }
@@ -325,23 +284,15 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration extends TeaModel {
-        @NameInMap("ExcludeNamespaces")
-        public String excludeNamespaces;
-
         @NameInMap("Enabled")
         public Boolean enabled;
+
+        @NameInMap("ExcludeNamespaces")
+        public String excludeNamespaces;
 
         public static DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration self = new DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration setExcludeNamespaces(String excludeNamespaces) {
-            this.excludeNamespaces = excludeNamespaces;
-            return this;
-        }
-        public String getExcludeNamespaces() {
-            return this.excludeNamespaces;
         }
 
         public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration setEnabled(Boolean enabled) {
@@ -352,14 +303,22 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             return this.enabled;
         }
 
+        public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration setExcludeNamespaces(String excludeNamespaces) {
+            this.excludeNamespaces = excludeNamespaces;
+            return this;
+        }
+        public String getExcludeNamespaces() {
+            return this.excludeNamespaces;
+        }
+
     }
 
     public static class DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjector extends TeaModel {
-        @NameInMap("EnableNamespacesByDefault")
-        public Boolean enableNamespacesByDefault;
-
         @NameInMap("AutoInjectionPolicyEnabled")
         public Boolean autoInjectionPolicyEnabled;
+
+        @NameInMap("EnableNamespacesByDefault")
+        public Boolean enableNamespacesByDefault;
 
         @NameInMap("InitCNIConfiguration")
         public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration initCNIConfiguration;
@@ -369,20 +328,20 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjector setEnableNamespacesByDefault(Boolean enableNamespacesByDefault) {
-            this.enableNamespacesByDefault = enableNamespacesByDefault;
-            return this;
-        }
-        public Boolean getEnableNamespacesByDefault() {
-            return this.enableNamespacesByDefault;
-        }
-
         public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjector setAutoInjectionPolicyEnabled(Boolean autoInjectionPolicyEnabled) {
             this.autoInjectionPolicyEnabled = autoInjectionPolicyEnabled;
             return this;
         }
         public Boolean getAutoInjectionPolicyEnabled() {
             return this.autoInjectionPolicyEnabled;
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjector setEnableNamespacesByDefault(Boolean enableNamespacesByDefault) {
+            this.enableNamespacesByDefault = enableNamespacesByDefault;
+            return this;
+        }
+        public Boolean getEnableNamespacesByDefault() {
+            return this.enableNamespacesByDefault;
         }
 
         public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjector setInitCNIConfiguration(DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration initCNIConfiguration) {
@@ -396,70 +355,30 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig extends TeaModel {
-        @NameInMap("Telemetry")
-        public Boolean telemetry;
+        @NameInMap("Mtls")
+        public Boolean mtls;
 
         @NameInMap("OutboundTrafficPolicy")
         public String outboundTrafficPolicy;
 
-        @NameInMap("Tracing")
-        public Boolean tracing;
-
-        @NameInMap("StrictMtls")
-        public Boolean strictMtls;
-
         @NameInMap("Pilot")
         public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigPilot pilot;
-
-        @NameInMap("Mtls")
-        public Boolean mtls;
 
         @NameInMap("SidecarInjector")
         public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjector sidecarInjector;
 
+        @NameInMap("StrictMtls")
+        public Boolean strictMtls;
+
+        @NameInMap("Telemetry")
+        public Boolean telemetry;
+
+        @NameInMap("Tracing")
+        public Boolean tracing;
+
         public static DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig self = new DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig setTelemetry(Boolean telemetry) {
-            this.telemetry = telemetry;
-            return this;
-        }
-        public Boolean getTelemetry() {
-            return this.telemetry;
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig setOutboundTrafficPolicy(String outboundTrafficPolicy) {
-            this.outboundTrafficPolicy = outboundTrafficPolicy;
-            return this;
-        }
-        public String getOutboundTrafficPolicy() {
-            return this.outboundTrafficPolicy;
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig setTracing(Boolean tracing) {
-            this.tracing = tracing;
-            return this;
-        }
-        public Boolean getTracing() {
-            return this.tracing;
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig setStrictMtls(Boolean strictMtls) {
-            this.strictMtls = strictMtls;
-            return this;
-        }
-        public Boolean getStrictMtls() {
-            return this.strictMtls;
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig setPilot(DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigPilot pilot) {
-            this.pilot = pilot;
-            return this;
-        }
-        public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigPilot getPilot() {
-            return this.pilot;
         }
 
         public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig setMtls(Boolean mtls) {
@@ -470,6 +389,22 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             return this.mtls;
         }
 
+        public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig setOutboundTrafficPolicy(String outboundTrafficPolicy) {
+            this.outboundTrafficPolicy = outboundTrafficPolicy;
+            return this;
+        }
+        public String getOutboundTrafficPolicy() {
+            return this.outboundTrafficPolicy;
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig setPilot(DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigPilot pilot) {
+            this.pilot = pilot;
+            return this;
+        }
+        public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigPilot getPilot() {
+            return this.pilot;
+        }
+
         public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig setSidecarInjector(DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjector sidecarInjector) {
             this.sidecarInjector = sidecarInjector;
             return this;
@@ -478,29 +413,86 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             return this.sidecarInjector;
         }
 
+        public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig setStrictMtls(Boolean strictMtls) {
+            this.strictMtls = strictMtls;
+            return this;
+        }
+        public Boolean getStrictMtls() {
+            return this.strictMtls;
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig setTelemetry(Boolean telemetry) {
+            this.telemetry = telemetry;
+            return this;
+        }
+        public Boolean getTelemetry() {
+            return this.telemetry;
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig setTracing(Boolean tracing) {
+            this.tracing = tracing;
+            return this;
+        }
+        public Boolean getTracing() {
+            return this.tracing;
+        }
+
+    }
+
+    public static class DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork extends TeaModel {
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("VSwitches")
+        public java.util.List<String> vSwitches;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork self = new DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork setVSwitches(java.util.List<String> vSwitches) {
+            this.vSwitches = vSwitches;
+            return this;
+        }
+        public java.util.List<String> getVSwitches() {
+            return this.vSwitches;
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
     }
 
     public static class DescribeServiceMeshesResponseBodyServiceMeshesSpec extends TeaModel {
-        @NameInMap("Network")
-        public DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork network;
-
         @NameInMap("LoadBalancer")
         public DescribeServiceMeshesResponseBodyServiceMeshesSpecLoadBalancer loadBalancer;
 
         @NameInMap("MeshConfig")
         public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig meshConfig;
 
+        @NameInMap("Network")
+        public DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork network;
+
         public static DescribeServiceMeshesResponseBodyServiceMeshesSpec build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshesResponseBodyServiceMeshesSpec self = new DescribeServiceMeshesResponseBodyServiceMeshesSpec();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshesSpec setNetwork(DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork network) {
-            this.network = network;
-            return this;
-        }
-        public DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork getNetwork() {
-            return this.network;
         }
 
         public DescribeServiceMeshesResponseBodyServiceMeshesSpec setLoadBalancer(DescribeServiceMeshesResponseBodyServiceMeshesSpecLoadBalancer loadBalancer) {
@@ -519,9 +511,20 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             return this.meshConfig;
         }
 
+        public DescribeServiceMeshesResponseBodyServiceMeshesSpec setNetwork(DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork network) {
+            this.network = network;
+            return this;
+        }
+        public DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork getNetwork() {
+            return this.network;
+        }
+
     }
 
     public static class DescribeServiceMeshesResponseBodyServiceMeshes extends TeaModel {
+        @NameInMap("Clusters")
+        public java.util.List<String> clusters;
+
         @NameInMap("Endpoints")
         public DescribeServiceMeshesResponseBodyServiceMeshesEndpoints endpoints;
 
@@ -531,12 +534,17 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         @NameInMap("Spec")
         public DescribeServiceMeshesResponseBodyServiceMeshesSpec spec;
 
-        @NameInMap("Clusters")
-        public java.util.List<String> clusters;
-
         public static DescribeServiceMeshesResponseBodyServiceMeshes build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshesResponseBodyServiceMeshes self = new DescribeServiceMeshesResponseBodyServiceMeshes();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshes setClusters(java.util.List<String> clusters) {
+            this.clusters = clusters;
+            return this;
+        }
+        public java.util.List<String> getClusters() {
+            return this.clusters;
         }
 
         public DescribeServiceMeshesResponseBodyServiceMeshes setEndpoints(DescribeServiceMeshesResponseBodyServiceMeshesEndpoints endpoints) {
@@ -561,14 +569,6 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         }
         public DescribeServiceMeshesResponseBodyServiceMeshesSpec getSpec() {
             return this.spec;
-        }
-
-        public DescribeServiceMeshesResponseBodyServiceMeshes setClusters(java.util.List<String> clusters) {
-            this.clusters = clusters;
-            return this;
-        }
-        public java.util.List<String> getClusters() {
-            return this.clusters;
         }
 
     }

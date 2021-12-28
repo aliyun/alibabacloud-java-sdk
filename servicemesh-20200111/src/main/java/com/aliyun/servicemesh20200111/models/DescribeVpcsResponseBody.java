@@ -4,21 +4,21 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcsResponseBody extends TeaModel {
-    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    // MaxResults本次请求所返回的最大记录条数
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("NextToken")
     public String nextToken;
 
-    // MaxResults本次请求所返回的最大记录条数
-    @NameInMap("MaxResults")
-    public Integer maxResults;
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     // Vpcs
     @NameInMap("Vpcs")
@@ -29,20 +29,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeVpcsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeVpcsResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeVpcsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public DescribeVpcsResponseBody setNextToken(String nextToken) {
@@ -53,12 +45,20 @@ public class DescribeVpcsResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public DescribeVpcsResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public DescribeVpcsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeVpcsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeVpcsResponseBody setVpcs(java.util.List<DescribeVpcsResponseBodyVpcs> vpcs) {
@@ -70,21 +70,37 @@ public class DescribeVpcsResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcsResponseBodyVpcs extends TeaModel {
+        @NameInMap("IsDefault")
+        public Boolean isDefault;
+
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("VpcId")
         public String vpcId;
 
         @NameInMap("VpcName")
         public String vpcName;
 
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("IsDefault")
-        public Boolean isDefault;
-
         public static DescribeVpcsResponseBodyVpcs build(java.util.Map<String, ?> map) throws Exception {
             DescribeVpcsResponseBodyVpcs self = new DescribeVpcsResponseBodyVpcs();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcsResponseBodyVpcs setIsDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
+            return this;
+        }
+        public Boolean getIsDefault() {
+            return this.isDefault;
+        }
+
+        public DescribeVpcsResponseBodyVpcs setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeVpcsResponseBodyVpcs setVpcId(String vpcId) {
@@ -101,22 +117,6 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
         public String getVpcName() {
             return this.vpcName;
-        }
-
-        public DescribeVpcsResponseBodyVpcs setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeVpcsResponseBodyVpcs setIsDefault(Boolean isDefault) {
-            this.isDefault = isDefault;
-            return this;
-        }
-        public Boolean getIsDefault() {
-            return this.isDefault;
         }
 
     }

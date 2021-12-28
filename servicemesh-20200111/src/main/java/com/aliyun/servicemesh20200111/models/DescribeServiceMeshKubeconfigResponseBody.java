@@ -4,23 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceMeshKubeconfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Kubeconfig")
     public String kubeconfig;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeServiceMeshKubeconfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeServiceMeshKubeconfigResponseBody self = new DescribeServiceMeshKubeconfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeServiceMeshKubeconfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeServiceMeshKubeconfigResponseBody setKubeconfig(String kubeconfig) {
@@ -29,6 +21,14 @@ public class DescribeServiceMeshKubeconfigResponseBody extends TeaModel {
     }
     public String getKubeconfig() {
         return this.kubeconfig;
+    }
+
+    public DescribeServiceMeshKubeconfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

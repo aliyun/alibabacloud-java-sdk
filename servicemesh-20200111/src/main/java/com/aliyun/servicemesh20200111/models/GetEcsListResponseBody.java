@@ -32,59 +32,27 @@ public class GetEcsListResponseBody extends TeaModel {
     }
 
     public static class GetEcsListResponseBodyEcsInstances extends TeaModel {
-        @NameInMap("InstanceId")
-        public String instanceId;
+        @NameInMap("HasTag")
+        public Boolean hasTag;
 
         @NameInMap("HostName")
         public String hostName;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         @NameInMap("IpAddress")
         public String ipAddress;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("HasTag")
-        public Boolean hasTag;
 
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
 
+        @NameInMap("Status")
+        public String status;
+
         public static GetEcsListResponseBodyEcsInstances build(java.util.Map<String, ?> map) throws Exception {
             GetEcsListResponseBodyEcsInstances self = new GetEcsListResponseBodyEcsInstances();
             return TeaModel.build(map, self);
-        }
-
-        public GetEcsListResponseBodyEcsInstances setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public GetEcsListResponseBodyEcsInstances setHostName(String hostName) {
-            this.hostName = hostName;
-            return this;
-        }
-        public String getHostName() {
-            return this.hostName;
-        }
-
-        public GetEcsListResponseBodyEcsInstances setIpAddress(String ipAddress) {
-            this.ipAddress = ipAddress;
-            return this;
-        }
-        public String getIpAddress() {
-            return this.ipAddress;
-        }
-
-        public GetEcsListResponseBodyEcsInstances setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public GetEcsListResponseBodyEcsInstances setHasTag(Boolean hasTag) {
@@ -95,12 +63,44 @@ public class GetEcsListResponseBody extends TeaModel {
             return this.hasTag;
         }
 
+        public GetEcsListResponseBodyEcsInstances setHostName(String hostName) {
+            this.hostName = hostName;
+            return this;
+        }
+        public String getHostName() {
+            return this.hostName;
+        }
+
+        public GetEcsListResponseBodyEcsInstances setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public GetEcsListResponseBodyEcsInstances setIpAddress(String ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public String getIpAddress() {
+            return this.ipAddress;
+        }
+
         public GetEcsListResponseBodyEcsInstances setSecurityGroupIds(java.util.List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
         public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
+        }
+
+        public GetEcsListResponseBodyEcsInstances setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

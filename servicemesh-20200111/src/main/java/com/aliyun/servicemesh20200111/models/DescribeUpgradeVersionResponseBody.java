@@ -32,26 +32,18 @@ public class DescribeUpgradeVersionResponseBody extends TeaModel {
     }
 
     public static class DescribeUpgradeVersionResponseBodyVersion extends TeaModel {
-        @NameInMap("KubernetesVersion")
-        public String kubernetesVersion;
-
         @NameInMap("IstioOperatorVersion")
         public String istioOperatorVersion;
 
         @NameInMap("IstioVersion")
         public String istioVersion;
 
+        @NameInMap("KubernetesVersion")
+        public String kubernetesVersion;
+
         public static DescribeUpgradeVersionResponseBodyVersion build(java.util.Map<String, ?> map) throws Exception {
             DescribeUpgradeVersionResponseBodyVersion self = new DescribeUpgradeVersionResponseBodyVersion();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeUpgradeVersionResponseBodyVersion setKubernetesVersion(String kubernetesVersion) {
-            this.kubernetesVersion = kubernetesVersion;
-            return this;
-        }
-        public String getKubernetesVersion() {
-            return this.kubernetesVersion;
         }
 
         public DescribeUpgradeVersionResponseBodyVersion setIstioOperatorVersion(String istioOperatorVersion) {
@@ -68,6 +60,14 @@ public class DescribeUpgradeVersionResponseBody extends TeaModel {
         }
         public String getIstioVersion() {
             return this.istioVersion;
+        }
+
+        public DescribeUpgradeVersionResponseBodyVersion setKubernetesVersion(String kubernetesVersion) {
+            this.kubernetesVersion = kubernetesVersion;
+            return this;
+        }
+        public String getKubernetesVersion() {
+            return this.kubernetesVersion;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterGrafanaResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Dashboards")
     public java.util.List<DescribeClusterGrafanaResponseBodyDashboards> dashboards;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeClusterGrafanaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterGrafanaResponseBody self = new DescribeClusterGrafanaResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeClusterGrafanaResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeClusterGrafanaResponseBody setDashboards(java.util.List<DescribeClusterGrafanaResponseBodyDashboards> dashboards) {
@@ -31,24 +23,24 @@ public class DescribeClusterGrafanaResponseBody extends TeaModel {
         return this.dashboards;
     }
 
-    public static class DescribeClusterGrafanaResponseBodyDashboards extends TeaModel {
-        @NameInMap("Url")
-        public String url;
+    public DescribeClusterGrafanaResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeClusterGrafanaResponseBodyDashboards extends TeaModel {
         @NameInMap("Title")
         public String title;
+
+        @NameInMap("Url")
+        public String url;
 
         public static DescribeClusterGrafanaResponseBodyDashboards build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterGrafanaResponseBodyDashboards self = new DescribeClusterGrafanaResponseBodyDashboards();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeClusterGrafanaResponseBodyDashboards setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
         }
 
         public DescribeClusterGrafanaResponseBodyDashboards setTitle(String title) {
@@ -57,6 +49,14 @@ public class DescribeClusterGrafanaResponseBody extends TeaModel {
         }
         public String getTitle() {
             return this.title;
+        }
+
+        public DescribeClusterGrafanaResponseBodyDashboards setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }
