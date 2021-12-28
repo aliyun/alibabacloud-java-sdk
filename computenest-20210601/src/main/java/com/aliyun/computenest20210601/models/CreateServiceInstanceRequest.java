@@ -4,8 +4,29 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceInstanceRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("EnableAccountOps")
+    public Boolean enableAccountOps;
+
+    @NameInMap("EnableInstanceOps")
+    public Boolean enableInstanceOps;
+
+    @NameInMap("OperationMetadata")
+    public CreateServiceInstanceRequestOperationMetadata operationMetadata;
+
+    @NameInMap("Parameters")
+    public java.util.Map<String, ?> parameters;
+
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("RequestTag")
+    public java.util.List<CreateServiceInstanceRequestRequestTag> requestTag;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ServiceId")
     public String serviceId;
@@ -13,30 +34,52 @@ public class CreateServiceInstanceRequest extends TeaModel {
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
-    @NameInMap("Parameters")
-    public java.util.Map<String, ?> parameters;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("EnableInstanceOps")
-    public Boolean enableInstanceOps;
-
-    @NameInMap("EnableAccountOps")
-    public Boolean enableAccountOps;
-
     @NameInMap("TemplateName")
     public String templateName;
-
-    @NameInMap("OperationMetadata")
-    public CreateServiceInstanceRequestOperationMetadata operationMetadata;
-
-    @NameInMap("RequestTag")
-    public java.util.List<CreateServiceInstanceRequestRequestTag> requestTag;
 
     public static CreateServiceInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceInstanceRequest self = new CreateServiceInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateServiceInstanceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateServiceInstanceRequest setEnableAccountOps(Boolean enableAccountOps) {
+        this.enableAccountOps = enableAccountOps;
+        return this;
+    }
+    public Boolean getEnableAccountOps() {
+        return this.enableAccountOps;
+    }
+
+    public CreateServiceInstanceRequest setEnableInstanceOps(Boolean enableInstanceOps) {
+        this.enableInstanceOps = enableInstanceOps;
+        return this;
+    }
+    public Boolean getEnableInstanceOps() {
+        return this.enableInstanceOps;
+    }
+
+    public CreateServiceInstanceRequest setOperationMetadata(CreateServiceInstanceRequestOperationMetadata operationMetadata) {
+        this.operationMetadata = operationMetadata;
+        return this;
+    }
+    public CreateServiceInstanceRequestOperationMetadata getOperationMetadata() {
+        return this.operationMetadata;
+    }
+
+    public CreateServiceInstanceRequest setParameters(java.util.Map<String, ?> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.Map<String, ?> getParameters() {
+        return this.parameters;
     }
 
     public CreateServiceInstanceRequest setRegionId(String regionId) {
@@ -45,6 +88,22 @@ public class CreateServiceInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateServiceInstanceRequest setRequestTag(java.util.List<CreateServiceInstanceRequestRequestTag> requestTag) {
+        this.requestTag = requestTag;
+        return this;
+    }
+    public java.util.List<CreateServiceInstanceRequestRequestTag> getRequestTag() {
+        return this.requestTag;
+    }
+
+    public CreateServiceInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateServiceInstanceRequest setServiceId(String serviceId) {
@@ -63,38 +122,6 @@ public class CreateServiceInstanceRequest extends TeaModel {
         return this.serviceVersion;
     }
 
-    public CreateServiceInstanceRequest setParameters(java.util.Map<String, ?> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.Map<String, ?> getParameters() {
-        return this.parameters;
-    }
-
-    public CreateServiceInstanceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreateServiceInstanceRequest setEnableInstanceOps(Boolean enableInstanceOps) {
-        this.enableInstanceOps = enableInstanceOps;
-        return this;
-    }
-    public Boolean getEnableInstanceOps() {
-        return this.enableInstanceOps;
-    }
-
-    public CreateServiceInstanceRequest setEnableAccountOps(Boolean enableAccountOps) {
-        this.enableAccountOps = enableAccountOps;
-        return this;
-    }
-    public Boolean getEnableAccountOps() {
-        return this.enableAccountOps;
-    }
-
     public CreateServiceInstanceRequest setTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -103,26 +130,7 @@ public class CreateServiceInstanceRequest extends TeaModel {
         return this.templateName;
     }
 
-    public CreateServiceInstanceRequest setOperationMetadata(CreateServiceInstanceRequestOperationMetadata operationMetadata) {
-        this.operationMetadata = operationMetadata;
-        return this;
-    }
-    public CreateServiceInstanceRequestOperationMetadata getOperationMetadata() {
-        return this.operationMetadata;
-    }
-
-    public CreateServiceInstanceRequest setRequestTag(java.util.List<CreateServiceInstanceRequestRequestTag> requestTag) {
-        this.requestTag = requestTag;
-        return this;
-    }
-    public java.util.List<CreateServiceInstanceRequestRequestTag> getRequestTag() {
-        return this.requestTag;
-    }
-
     public static class CreateServiceInstanceRequestOperationMetadata extends TeaModel {
-        @NameInMap("StartTime")
-        public String startTime;
-
         @NameInMap("EndTime")
         public String endTime;
 
@@ -132,17 +140,12 @@ public class CreateServiceInstanceRequest extends TeaModel {
         @NameInMap("ServiceInstanceId")
         public String serviceInstanceId;
 
+        @NameInMap("StartTime")
+        public String startTime;
+
         public static CreateServiceInstanceRequestOperationMetadata build(java.util.Map<String, ?> map) throws Exception {
             CreateServiceInstanceRequestOperationMetadata self = new CreateServiceInstanceRequestOperationMetadata();
             return TeaModel.build(map, self);
-        }
-
-        public CreateServiceInstanceRequestOperationMetadata setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
         }
 
         public CreateServiceInstanceRequestOperationMetadata setEndTime(String endTime) {
@@ -167,6 +170,14 @@ public class CreateServiceInstanceRequest extends TeaModel {
         }
         public String getServiceInstanceId() {
             return this.serviceInstanceId;
+        }
+
+        public CreateServiceInstanceRequestOperationMetadata setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }

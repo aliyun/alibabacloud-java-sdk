@@ -4,14 +4,14 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class ListServiceInstanceLogsResponseBody extends TeaModel {
+    @NameInMap("MaxResults")
+    public String maxResults;
+
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("MaxResults")
-    public String maxResults;
 
     @NameInMap("ServiceInstancesLogs")
     public java.util.List<ListServiceInstanceLogsResponseBodyServiceInstancesLogs> serviceInstancesLogs;
@@ -19,6 +19,14 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
     public static ListServiceInstanceLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListServiceInstanceLogsResponseBody self = new ListServiceInstanceLogsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListServiceInstanceLogsResponseBody setMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public String getMaxResults() {
+        return this.maxResults;
     }
 
     public ListServiceInstanceLogsResponseBody setNextToken(String nextToken) {
@@ -37,14 +45,6 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListServiceInstanceLogsResponseBody setMaxResults(String maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public String getMaxResults() {
-        return this.maxResults;
-    }
-
     public ListServiceInstanceLogsResponseBody setServiceInstancesLogs(java.util.List<ListServiceInstanceLogsResponseBodyServiceInstancesLogs> serviceInstancesLogs) {
         this.serviceInstancesLogs = serviceInstancesLogs;
         return this;
@@ -54,8 +54,11 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
     }
 
     public static class ListServiceInstanceLogsResponseBodyServiceInstancesLogs extends TeaModel {
-        @NameInMap("Timestamp")
-        public String timestamp;
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("Phase")
+        public String phase;
 
         @NameInMap("ServiceInstanceId")
         public String serviceInstanceId;
@@ -63,23 +66,28 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
         @NameInMap("Source")
         public String source;
 
-        @NameInMap("Phase")
-        public String phase;
-
-        @NameInMap("Content")
-        public String content;
+        @NameInMap("Timestamp")
+        public String timestamp;
 
         public static ListServiceInstanceLogsResponseBodyServiceInstancesLogs build(java.util.Map<String, ?> map) throws Exception {
             ListServiceInstanceLogsResponseBodyServiceInstancesLogs self = new ListServiceInstanceLogsResponseBodyServiceInstancesLogs();
             return TeaModel.build(map, self);
         }
 
-        public ListServiceInstanceLogsResponseBodyServiceInstancesLogs setTimestamp(String timestamp) {
-            this.timestamp = timestamp;
+        public ListServiceInstanceLogsResponseBodyServiceInstancesLogs setContent(String content) {
+            this.content = content;
             return this;
         }
-        public String getTimestamp() {
-            return this.timestamp;
+        public String getContent() {
+            return this.content;
+        }
+
+        public ListServiceInstanceLogsResponseBodyServiceInstancesLogs setPhase(String phase) {
+            this.phase = phase;
+            return this;
+        }
+        public String getPhase() {
+            return this.phase;
         }
 
         public ListServiceInstanceLogsResponseBodyServiceInstancesLogs setServiceInstanceId(String serviceInstanceId) {
@@ -98,20 +106,12 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
             return this.source;
         }
 
-        public ListServiceInstanceLogsResponseBodyServiceInstancesLogs setPhase(String phase) {
-            this.phase = phase;
+        public ListServiceInstanceLogsResponseBodyServiceInstancesLogs setTimestamp(String timestamp) {
+            this.timestamp = timestamp;
             return this;
         }
-        public String getPhase() {
-            return this.phase;
-        }
-
-        public ListServiceInstanceLogsResponseBodyServiceInstancesLogs setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
+        public String getTimestamp() {
+            return this.timestamp;
         }
 
     }

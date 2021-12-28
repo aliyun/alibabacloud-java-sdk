@@ -7,14 +7,14 @@ public class ContinueDeployServiceInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("ServiceInstanceId")
-    public String serviceInstanceId;
+    @NameInMap("Parameters")
+    public String parameters;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("Parameters")
-    public String parameters;
+    @NameInMap("ServiceInstanceId")
+    public String serviceInstanceId;
 
     public static ContinueDeployServiceInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ContinueDeployServiceInstanceRequest self = new ContinueDeployServiceInstanceRequest();
@@ -29,12 +29,12 @@ public class ContinueDeployServiceInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public ContinueDeployServiceInstanceRequest setServiceInstanceId(String serviceInstanceId) {
-        this.serviceInstanceId = serviceInstanceId;
+    public ContinueDeployServiceInstanceRequest setParameters(String parameters) {
+        this.parameters = parameters;
         return this;
     }
-    public String getServiceInstanceId() {
-        return this.serviceInstanceId;
+    public String getParameters() {
+        return this.parameters;
     }
 
     public ContinueDeployServiceInstanceRequest setRegionId(String regionId) {
@@ -45,12 +45,12 @@ public class ContinueDeployServiceInstanceRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ContinueDeployServiceInstanceRequest setParameters(String parameters) {
-        this.parameters = parameters;
+    public ContinueDeployServiceInstanceRequest setServiceInstanceId(String serviceInstanceId) {
+        this.serviceInstanceId = serviceInstanceId;
         return this;
     }
-    public String getParameters() {
-        return this.parameters;
+    public String getServiceInstanceId() {
+        return this.serviceInstanceId;
     }
 
 }

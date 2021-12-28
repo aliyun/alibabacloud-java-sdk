@@ -3,25 +3,22 @@ package com.aliyun.computenest20210601.models;
 
 import com.aliyun.tea.*;
 
-public class ListServiceInstanceLogsRequest extends TeaModel {
+public class ListServiceInstanceResourcesRequest extends TeaModel {
     @NameInMap("MaxResults")
     public String maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 
-    public static ListServiceInstanceLogsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListServiceInstanceLogsRequest self = new ListServiceInstanceLogsRequest();
+    public static ListServiceInstanceResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListServiceInstanceResourcesRequest self = new ListServiceInstanceResourcesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListServiceInstanceLogsRequest setMaxResults(String maxResults) {
+    public ListServiceInstanceResourcesRequest setMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -29,7 +26,7 @@ public class ListServiceInstanceLogsRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListServiceInstanceLogsRequest setNextToken(String nextToken) {
+    public ListServiceInstanceResourcesRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -37,15 +34,7 @@ public class ListServiceInstanceLogsRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListServiceInstanceLogsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ListServiceInstanceLogsRequest setServiceInstanceId(String serviceInstanceId) {
+    public ListServiceInstanceResourcesRequest setServiceInstanceId(String serviceInstanceId) {
         this.serviceInstanceId = serviceInstanceId;
         return this;
     }

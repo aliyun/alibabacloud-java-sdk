@@ -4,8 +4,8 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class ListServiceInstancesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Filter")
+    public java.util.List<ListServiceInstancesRequestFilter> filter;
 
     @NameInMap("MaxResults")
     public String maxResults;
@@ -13,8 +13,8 @@ public class ListServiceInstancesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("Filter")
-    public java.util.List<ListServiceInstancesRequestFilter> filter;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("RequestTag")
     public java.util.List<ListServiceInstancesRequestRequestTag> requestTag;
@@ -24,12 +24,12 @@ public class ListServiceInstancesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListServiceInstancesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ListServiceInstancesRequest setFilter(java.util.List<ListServiceInstancesRequestFilter> filter) {
+        this.filter = filter;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public java.util.List<ListServiceInstancesRequestFilter> getFilter() {
+        return this.filter;
     }
 
     public ListServiceInstancesRequest setMaxResults(String maxResults) {
@@ -48,12 +48,12 @@ public class ListServiceInstancesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListServiceInstancesRequest setFilter(java.util.List<ListServiceInstancesRequestFilter> filter) {
-        this.filter = filter;
+    public ListServiceInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public java.util.List<ListServiceInstancesRequestFilter> getFilter() {
-        return this.filter;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListServiceInstancesRequest setRequestTag(java.util.List<ListServiceInstancesRequestRequestTag> requestTag) {
@@ -65,23 +65,15 @@ public class ListServiceInstancesRequest extends TeaModel {
     }
 
     public static class ListServiceInstancesRequestFilter extends TeaModel {
-        @NameInMap("Value")
-        public java.util.List<String> value;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Value")
+        public java.util.List<String> value;
 
         public static ListServiceInstancesRequestFilter build(java.util.Map<String, ?> map) throws Exception {
             ListServiceInstancesRequestFilter self = new ListServiceInstancesRequestFilter();
             return TeaModel.build(map, self);
-        }
-
-        public ListServiceInstancesRequestFilter setValue(java.util.List<String> value) {
-            this.value = value;
-            return this;
-        }
-        public java.util.List<String> getValue() {
-            return this.value;
         }
 
         public ListServiceInstancesRequestFilter setName(String name) {
@@ -90,6 +82,14 @@ public class ListServiceInstancesRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListServiceInstancesRequestFilter setValue(java.util.List<String> value) {
+            this.value = value;
+            return this;
+        }
+        public java.util.List<String> getValue() {
+            return this.value;
         }
 
     }
