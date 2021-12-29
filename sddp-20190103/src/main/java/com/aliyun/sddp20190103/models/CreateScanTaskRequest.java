@@ -10,6 +10,9 @@ public class CreateScanTaskRequest extends TeaModel {
     @NameInMap("IntervalDay")
     public Integer intervalDay;
 
+    @NameInMap("Lang")
+    public String lang;
+
     @NameInMap("OssScanPath")
     public String ossScanPath;
 
@@ -53,6 +56,14 @@ public class CreateScanTaskRequest extends TeaModel {
     }
     public Integer getIntervalDay() {
         return this.intervalDay;
+    }
+
+    public CreateScanTaskRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public CreateScanTaskRequest setOssScanPath(String ossScanPath) {

@@ -7,6 +7,9 @@ public class ExecDatamaskRequest extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    @NameInMap("Lang")
+    public String lang;
+
     @NameInMap("TemplateId")
     public Long templateId;
 
@@ -21,6 +24,14 @@ public class ExecDatamaskRequest extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public ExecDatamaskRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public ExecDatamaskRequest setTemplateId(Long templateId) {

@@ -38,9 +38,6 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         @NameInMap("Authed")
         public Boolean authed;
 
-        @NameInMap("Buyed")
-        public Boolean buyed;
-
         @NameInMap("ChargeType")
         public String chargeType;
 
@@ -52,6 +49,9 @@ public class DescribeUserStatusResponseBody extends TeaModel {
 
         @NameInMap("LabStatus")
         public Integer labStatus;
+
+        @NameInMap("Purchased")
+        public Boolean purchased;
 
         @NameInMap("RemainDays")
         public Integer remainDays;
@@ -86,14 +86,6 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             return this.authed;
         }
 
-        public DescribeUserStatusResponseBodyUserStatus setBuyed(Boolean buyed) {
-            this.buyed = buyed;
-            return this;
-        }
-        public Boolean getBuyed() {
-            return this.buyed;
-        }
-
         public DescribeUserStatusResponseBodyUserStatus setChargeType(String chargeType) {
             this.chargeType = chargeType;
             return this;
@@ -124,6 +116,14 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         }
         public Integer getLabStatus() {
             return this.labStatus;
+        }
+
+        public DescribeUserStatusResponseBodyUserStatus setPurchased(Boolean purchased) {
+            this.purchased = purchased;
+            return this;
+        }
+        public Boolean getPurchased() {
+            return this.purchased;
         }
 
         public DescribeUserStatusResponseBodyUserStatus setRemainDays(Integer remainDays) {
