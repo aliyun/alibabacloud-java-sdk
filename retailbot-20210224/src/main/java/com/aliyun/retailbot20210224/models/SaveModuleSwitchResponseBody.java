@@ -10,7 +10,7 @@ public class SaveModuleSwitchResponseBody extends TeaModel {
 
     // 保存是否成功
     @NameInMap("Data")
-    public Integer data;
+    public Boolean data;
 
     // 错误信息
     @NameInMap("Message")
@@ -37,11 +37,11 @@ public class SaveModuleSwitchResponseBody extends TeaModel {
         return this.code;
     }
 
-    public SaveModuleSwitchResponseBody setData(Integer data) {
+    public SaveModuleSwitchResponseBody setData(Boolean data) {
         this.data = data;
         return this;
     }
-    public Integer getData() {
+    public Boolean getData() {
         return this.data;
     }
 
