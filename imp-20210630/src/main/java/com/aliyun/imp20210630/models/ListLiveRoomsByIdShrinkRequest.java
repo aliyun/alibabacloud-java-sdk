@@ -12,9 +12,6 @@ public class ListLiveRoomsByIdShrinkRequest extends TeaModel {
     @NameInMap("LiveIdList")
     public String liveIdListShrink;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static ListLiveRoomsByIdShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListLiveRoomsByIdShrinkRequest self = new ListLiveRoomsByIdShrinkRequest();
         return TeaModel.build(map, self);
@@ -34,14 +31,6 @@ public class ListLiveRoomsByIdShrinkRequest extends TeaModel {
     }
     public String getLiveIdListShrink() {
         return this.liveIdListShrink;
-    }
-
-    public ListLiveRoomsByIdShrinkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

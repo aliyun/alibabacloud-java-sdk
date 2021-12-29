@@ -16,9 +16,6 @@ public class CreateRoomShrinkRequest extends TeaModel {
     @NameInMap("Notice")
     public String notice;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 房间唯一标识，由字母、数字、符号.和-组成，最大长度36位，传空则随机生成一个房间id。
     @NameInMap("RoomId")
     public String roomId;
@@ -62,14 +59,6 @@ public class CreateRoomShrinkRequest extends TeaModel {
     }
     public String getNotice() {
         return this.notice;
-    }
-
-    public CreateRoomShrinkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateRoomShrinkRequest setRoomId(String roomId) {

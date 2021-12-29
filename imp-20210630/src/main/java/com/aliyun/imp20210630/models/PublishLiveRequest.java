@@ -8,9 +8,6 @@ public class PublishLiveRequest extends TeaModel {
     @NameInMap("LiveId")
     public String liveId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 当前用户Id
     @NameInMap("UserId")
     public String userId;
@@ -26,14 +23,6 @@ public class PublishLiveRequest extends TeaModel {
     }
     public String getLiveId() {
         return this.liveId;
-    }
-
-    public PublishLiveRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public PublishLiveRequest setUserId(String userId) {

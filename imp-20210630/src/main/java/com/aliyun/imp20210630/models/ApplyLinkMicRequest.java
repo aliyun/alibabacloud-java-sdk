@@ -8,10 +8,6 @@ public class ApplyLinkMicRequest extends TeaModel {
     @NameInMap("ConferenceId")
     public String conferenceId;
 
-    // 地域
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 申请连麦用户
     @NameInMap("UserId")
     public String userId;
@@ -27,14 +23,6 @@ public class ApplyLinkMicRequest extends TeaModel {
     }
     public String getConferenceId() {
         return this.conferenceId;
-    }
-
-    public ApplyLinkMicRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ApplyLinkMicRequest setUserId(String userId) {

@@ -16,9 +16,6 @@ public class SendCommentRequest extends TeaModel {
     @NameInMap("Extension")
     public java.util.Map<String, String> extension;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 直播间唯一标识，在调用CreateRoom返回。
     @NameInMap("RoomId")
     public String roomId;
@@ -58,14 +55,6 @@ public class SendCommentRequest extends TeaModel {
     }
     public java.util.Map<String, String> getExtension() {
         return this.extension;
-    }
-
-    public SendCommentRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public SendCommentRequest setRoomId(String roomId) {

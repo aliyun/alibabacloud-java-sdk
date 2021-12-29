@@ -8,9 +8,6 @@ public class CreateConferenceRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 房间ID，最大长度36个字符，传空值，则随机生成一个房间ID。
     @NameInMap("RoomId")
     public String roomId;
@@ -34,14 +31,6 @@ public class CreateConferenceRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
-    }
-
-    public CreateConferenceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateConferenceRequest setRoomId(String roomId) {

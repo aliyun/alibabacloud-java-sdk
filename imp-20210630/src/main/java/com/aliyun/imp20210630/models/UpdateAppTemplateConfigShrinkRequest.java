@@ -12,10 +12,6 @@ public class UpdateAppTemplateConfigShrinkRequest extends TeaModel {
     @NameInMap("ConfigList")
     public String configListShrink;
 
-    // 地域
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static UpdateAppTemplateConfigShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAppTemplateConfigShrinkRequest self = new UpdateAppTemplateConfigShrinkRequest();
         return TeaModel.build(map, self);
@@ -35,14 +31,6 @@ public class UpdateAppTemplateConfigShrinkRequest extends TeaModel {
     }
     public String getConfigListShrink() {
         return this.configListShrink;
-    }
-
-    public UpdateAppTemplateConfigShrinkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

@@ -16,9 +16,6 @@ public class ListRoomUsersRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 房间ID，最大长度36个字符。
     @NameInMap("RoomId")
     public String roomId;
@@ -50,14 +47,6 @@ public class ListRoomUsersRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListRoomUsersRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListRoomUsersRequest setRoomId(String roomId) {

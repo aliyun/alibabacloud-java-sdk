@@ -12,9 +12,6 @@ public class GetLiveRoomRequest extends TeaModel {
     @NameInMap("LiveId")
     public String liveId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static GetLiveRoomRequest build(java.util.Map<String, ?> map) throws Exception {
         GetLiveRoomRequest self = new GetLiveRoomRequest();
         return TeaModel.build(map, self);
@@ -34,14 +31,6 @@ public class GetLiveRoomRequest extends TeaModel {
     }
     public String getLiveId() {
         return this.liveId;
-    }
-
-    public GetLiveRoomRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

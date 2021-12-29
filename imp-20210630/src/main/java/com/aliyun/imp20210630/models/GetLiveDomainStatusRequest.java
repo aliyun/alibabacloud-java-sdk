@@ -16,10 +16,6 @@ public class GetLiveDomainStatusRequest extends TeaModel {
     @NameInMap("LiveDomainType")
     public String liveDomainType;
 
-    // 地域
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static GetLiveDomainStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         GetLiveDomainStatusRequest self = new GetLiveDomainStatusRequest();
         return TeaModel.build(map, self);
@@ -47,14 +43,6 @@ public class GetLiveDomainStatusRequest extends TeaModel {
     }
     public String getLiveDomainType() {
         return this.liveDomainType;
-    }
-
-    public GetLiveDomainStatusRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

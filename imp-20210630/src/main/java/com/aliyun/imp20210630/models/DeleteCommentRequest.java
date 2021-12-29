@@ -12,9 +12,6 @@ public class DeleteCommentRequest extends TeaModel {
     @NameInMap("CommentIdList")
     public java.util.List<String> commentIdList;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 直播间唯一标识，在调用CreateRoom返回。
     @NameInMap("RoomId")
     public String roomId;
@@ -42,14 +39,6 @@ public class DeleteCommentRequest extends TeaModel {
     }
     public java.util.List<String> getCommentIdList() {
         return this.commentIdList;
-    }
-
-    public DeleteCommentRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DeleteCommentRequest setRoomId(String roomId) {

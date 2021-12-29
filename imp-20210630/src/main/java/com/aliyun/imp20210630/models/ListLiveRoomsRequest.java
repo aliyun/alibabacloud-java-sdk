@@ -16,9 +16,6 @@ public class ListLiveRoomsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 直播状态，0-在播 1-下播，不传则返回所有直播。
     @NameInMap("Status")
     public Integer status;
@@ -50,14 +47,6 @@ public class ListLiveRoomsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListLiveRoomsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListLiveRoomsRequest setStatus(Integer status) {

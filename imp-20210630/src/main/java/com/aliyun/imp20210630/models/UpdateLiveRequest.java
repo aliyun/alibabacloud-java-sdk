@@ -12,9 +12,6 @@ public class UpdateLiveRequest extends TeaModel {
     @NameInMap("LiveId")
     public String liveId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 直播标题，支持中英文，最大长度256位
     @NameInMap("Title")
     public String title;
@@ -38,14 +35,6 @@ public class UpdateLiveRequest extends TeaModel {
     }
     public String getLiveId() {
         return this.liveId;
-    }
-
-    public UpdateLiveRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public UpdateLiveRequest setTitle(String title) {
