@@ -8,7 +8,7 @@ public class SaveModuleSwitchResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 开关信息
+    // 保存是否成功
     @NameInMap("Data")
     public Integer data;
 

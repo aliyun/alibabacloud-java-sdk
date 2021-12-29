@@ -8,7 +8,7 @@ public class QueryModuleSwitchStatusRequest extends TeaModel {
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 模块开关状态
+    // 开关类型
     @NameInMap("SwitchType")
     public String switchType;
 

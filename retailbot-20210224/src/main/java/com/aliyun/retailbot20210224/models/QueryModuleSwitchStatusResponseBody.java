@@ -8,7 +8,7 @@ public class QueryModuleSwitchStatusResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 模块开关状态
+    // 开关状态
     @NameInMap("Data")
     public Integer data;
 
