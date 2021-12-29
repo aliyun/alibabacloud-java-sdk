@@ -32,23 +32,15 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone extends TeaModel {
-        @NameInMap("ZoneId")
-        public String zoneId;
-
         @NameInMap("LocalName")
         public String localName;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone self = new DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
         }
 
         public DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone setLocalName(String localName) {
@@ -57,6 +49,14 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
         public String getLocalName() {
             return this.localName;
+        }
+
+        public DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }
@@ -81,26 +81,18 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesZone extends TeaModel {
-        @NameInMap("ZoneId")
-        public String zoneId;
-
         @NameInMap("LocalName")
         public String localName;
 
         @NameInMap("SlaveZones")
         public DescribeZonesResponseBodyZonesZoneSlaveZones slaveZones;
 
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static DescribeZonesResponseBodyZonesZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeZonesResponseBodyZonesZone self = new DescribeZonesResponseBodyZonesZone();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeZonesResponseBodyZonesZone setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
         }
 
         public DescribeZonesResponseBodyZonesZone setLocalName(String localName) {
@@ -117,6 +109,14 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
         public DescribeZonesResponseBodyZonesZoneSlaveZones getSlaveZones() {
             return this.slaveZones;
+        }
+
+        public DescribeZonesResponseBodyZonesZone setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

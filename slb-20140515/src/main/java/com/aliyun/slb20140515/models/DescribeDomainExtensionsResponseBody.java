@@ -4,23 +4,15 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainExtensionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DomainExtensions")
     public DescribeDomainExtensionsResponseBodyDomainExtensions domainExtensions;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDomainExtensionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainExtensionsResponseBody self = new DescribeDomainExtensionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainExtensionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDomainExtensionsResponseBody setDomainExtensions(DescribeDomainExtensionsResponseBodyDomainExtensions domainExtensions) {
@@ -31,27 +23,27 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
         return this.domainExtensions;
     }
 
-    public static class DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension extends TeaModel {
-        @NameInMap("ServerCertificateId")
-        public String serverCertificateId;
+    public DescribeDomainExtensionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension extends TeaModel {
         @NameInMap("Domain")
         public String domain;
 
         @NameInMap("DomainExtensionId")
         public String domainExtensionId;
 
+        @NameInMap("ServerCertificateId")
+        public String serverCertificateId;
+
         public static DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension self = new DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension setServerCertificateId(String serverCertificateId) {
-            this.serverCertificateId = serverCertificateId;
-            return this;
-        }
-        public String getServerCertificateId() {
-            return this.serverCertificateId;
         }
 
         public DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension setDomain(String domain) {
@@ -68,6 +60,14 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
         }
         public String getDomainExtensionId() {
             return this.domainExtensionId;
+        }
+
+        public DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension setServerCertificateId(String serverCertificateId) {
+            this.serverCertificateId = serverCertificateId;
+            return this;
+        }
+        public String getServerCertificateId() {
+            return this.serverCertificateId;
         }
 
     }

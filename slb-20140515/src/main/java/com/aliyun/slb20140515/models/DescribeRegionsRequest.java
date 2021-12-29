@@ -7,20 +7,20 @@ public class DescribeRegionsRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     public static DescribeRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsRequest self = new DescribeRegionsRequest();
@@ -35,12 +35,12 @@ public class DescribeRegionsRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
-    public DescribeRegionsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeRegionsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeRegionsRequest setOwnerId(Long ownerId) {
@@ -49,6 +49,14 @@ public class DescribeRegionsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeRegionsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeRegionsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -65,14 +73,6 @@ public class DescribeRegionsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeRegionsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

@@ -4,34 +4,18 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateVServerGroupResponseBody extends TeaModel {
-    @NameInMap("VServerGroupId")
-    public String VServerGroupId;
+    @NameInMap("BackendServers")
+    public CreateVServerGroupResponseBodyBackendServers backendServers;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("BackendServers")
-    public CreateVServerGroupResponseBodyBackendServers backendServers;
+    @NameInMap("VServerGroupId")
+    public String VServerGroupId;
 
     public static CreateVServerGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateVServerGroupResponseBody self = new CreateVServerGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateVServerGroupResponseBody setVServerGroupId(String VServerGroupId) {
-        this.VServerGroupId = VServerGroupId;
-        return this;
-    }
-    public String getVServerGroupId() {
-        return this.VServerGroupId;
-    }
-
-    public CreateVServerGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateVServerGroupResponseBody setBackendServers(CreateVServerGroupResponseBodyBackendServers backendServers) {
@@ -42,13 +26,23 @@ public class CreateVServerGroupResponseBody extends TeaModel {
         return this.backendServers;
     }
 
+    public CreateVServerGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateVServerGroupResponseBody setVServerGroupId(String VServerGroupId) {
+        this.VServerGroupId = VServerGroupId;
+        return this;
+    }
+    public String getVServerGroupId() {
+        return this.VServerGroupId;
+    }
+
     public static class CreateVServerGroupResponseBodyBackendServersBackendServer extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Weight")
-        public Integer weight;
-
         @NameInMap("Description")
         public String description;
 
@@ -58,25 +52,15 @@ public class CreateVServerGroupResponseBody extends TeaModel {
         @NameInMap("ServerId")
         public String serverId;
 
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Weight")
+        public Integer weight;
+
         public static CreateVServerGroupResponseBodyBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
             CreateVServerGroupResponseBodyBackendServersBackendServer self = new CreateVServerGroupResponseBodyBackendServersBackendServer();
             return TeaModel.build(map, self);
-        }
-
-        public CreateVServerGroupResponseBodyBackendServersBackendServer setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public CreateVServerGroupResponseBodyBackendServersBackendServer setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
         }
 
         public CreateVServerGroupResponseBodyBackendServersBackendServer setDescription(String description) {
@@ -101,6 +85,22 @@ public class CreateVServerGroupResponseBody extends TeaModel {
         }
         public String getServerId() {
             return this.serverId;
+        }
+
+        public CreateVServerGroupResponseBodyBackendServersBackendServer setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public CreateVServerGroupResponseBodyBackendServersBackendServer setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }

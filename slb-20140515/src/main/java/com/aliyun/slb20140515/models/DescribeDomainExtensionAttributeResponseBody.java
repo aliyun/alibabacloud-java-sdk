@@ -7,20 +7,20 @@ public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
+    @NameInMap("DomainExtensionId")
+    public String domainExtensionId;
 
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
-
-    @NameInMap("DomainExtensionId")
-    public String domainExtensionId;
 
     public static DescribeDomainExtensionAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainExtensionAttributeResponseBody self = new DescribeDomainExtensionAttributeResponseBody();
@@ -35,20 +35,12 @@ public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
         return this.domain;
     }
 
-    public DescribeDomainExtensionAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDomainExtensionAttributeResponseBody setDomainExtensionId(String domainExtensionId) {
+        this.domainExtensionId = domainExtensionId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDomainExtensionAttributeResponseBody setLoadBalancerId(String loadBalancerId) {
-        this.loadBalancerId = loadBalancerId;
-        return this;
-    }
-    public String getLoadBalancerId() {
-        return this.loadBalancerId;
+    public String getDomainExtensionId() {
+        return this.domainExtensionId;
     }
 
     public DescribeDomainExtensionAttributeResponseBody setListenerPort(Integer listenerPort) {
@@ -59,20 +51,28 @@ public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
         return this.listenerPort;
     }
 
+    public DescribeDomainExtensionAttributeResponseBody setLoadBalancerId(String loadBalancerId) {
+        this.loadBalancerId = loadBalancerId;
+        return this;
+    }
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
+    }
+
+    public DescribeDomainExtensionAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeDomainExtensionAttributeResponseBody setServerCertificateId(String serverCertificateId) {
         this.serverCertificateId = serverCertificateId;
         return this;
     }
     public String getServerCertificateId() {
         return this.serverCertificateId;
-    }
-
-    public DescribeDomainExtensionAttributeResponseBody setDomainExtensionId(String domainExtensionId) {
-        this.domainExtensionId = domainExtensionId;
-        return this;
-    }
-    public String getDomainExtensionId() {
-        return this.domainExtensionId;
     }
 
 }

@@ -4,8 +4,20 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
+    @NameInMap("IncludeListener")
+    public Boolean includeListener;
+
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,21 +25,33 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
-
-    @NameInMap("IncludeListener")
-    public Boolean includeListener;
-
     public static DescribeMasterSlaveServerGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMasterSlaveServerGroupsRequest self = new DescribeMasterSlaveServerGroupsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMasterSlaveServerGroupsRequest setIncludeListener(Boolean includeListener) {
+        this.includeListener = includeListener;
+        return this;
+    }
+    public Boolean getIncludeListener() {
+        return this.includeListener;
+    }
+
+    public DescribeMasterSlaveServerGroupsRequest setLoadBalancerId(String loadBalancerId) {
+        this.loadBalancerId = loadBalancerId;
+        return this;
+    }
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
+    }
+
+    public DescribeMasterSlaveServerGroupsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeMasterSlaveServerGroupsRequest setOwnerId(Long ownerId) {
@@ -36,6 +60,14 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeMasterSlaveServerGroupsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeMasterSlaveServerGroupsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -52,38 +84,6 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeMasterSlaveServerGroupsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeMasterSlaveServerGroupsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeMasterSlaveServerGroupsRequest setLoadBalancerId(String loadBalancerId) {
-        this.loadBalancerId = loadBalancerId;
-        return this;
-    }
-    public String getLoadBalancerId() {
-        return this.loadBalancerId;
-    }
-
-    public DescribeMasterSlaveServerGroupsRequest setIncludeListener(Boolean includeListener) {
-        this.includeListener = includeListener;
-        return this;
-    }
-    public Boolean getIncludeListener() {
-        return this.includeListener;
     }
 
 }

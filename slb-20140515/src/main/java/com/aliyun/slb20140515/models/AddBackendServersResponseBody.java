@@ -4,18 +4,26 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class AddBackendServersResponseBody extends TeaModel {
+    @NameInMap("BackendServers")
+    public AddBackendServersResponseBodyBackendServers backendServers;
+
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("BackendServers")
-    public AddBackendServersResponseBodyBackendServers backendServers;
-
     public static AddBackendServersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddBackendServersResponseBody self = new AddBackendServersResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AddBackendServersResponseBody setBackendServers(AddBackendServersResponseBodyBackendServers backendServers) {
+        this.backendServers = backendServers;
+        return this;
+    }
+    public AddBackendServersResponseBodyBackendServers getBackendServers() {
+        return this.backendServers;
     }
 
     public AddBackendServersResponseBody setLoadBalancerId(String loadBalancerId) {
@@ -34,46 +42,22 @@ public class AddBackendServersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AddBackendServersResponseBody setBackendServers(AddBackendServersResponseBodyBackendServers backendServers) {
-        this.backendServers = backendServers;
-        return this;
-    }
-    public AddBackendServersResponseBodyBackendServers getBackendServers() {
-        return this.backendServers;
-    }
-
     public static class AddBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Weight")
-        public String weight;
-
         @NameInMap("Description")
         public String description;
 
         @NameInMap("ServerId")
         public String serverId;
 
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Weight")
+        public String weight;
+
         public static AddBackendServersResponseBodyBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
             AddBackendServersResponseBodyBackendServersBackendServer self = new AddBackendServersResponseBodyBackendServersBackendServer();
             return TeaModel.build(map, self);
-        }
-
-        public AddBackendServersResponseBodyBackendServersBackendServer setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public AddBackendServersResponseBodyBackendServersBackendServer setWeight(String weight) {
-            this.weight = weight;
-            return this;
-        }
-        public String getWeight() {
-            return this.weight;
         }
 
         public AddBackendServersResponseBodyBackendServersBackendServer setDescription(String description) {
@@ -90,6 +74,22 @@ public class AddBackendServersResponseBody extends TeaModel {
         }
         public String getServerId() {
             return this.serverId;
+        }
+
+        public AddBackendServersResponseBodyBackendServersBackendServer setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public AddBackendServersResponseBodyBackendServersBackendServer setWeight(String weight) {
+            this.weight = weight;
+            return this;
+        }
+        public String getWeight() {
+            return this.weight;
         }
 
     }

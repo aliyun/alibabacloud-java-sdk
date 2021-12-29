@@ -4,86 +4,78 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeRuleAttributeResponseBody extends TeaModel {
-    @NameInMap("VServerGroupId")
-    public String VServerGroupId;
-
     @NameInMap("Cookie")
     public String cookie;
-
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
-
-    @NameInMap("RuleId")
-    public String ruleId;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("HealthCheckConnectPort")
-    public Integer healthCheckConnectPort;
-
-    @NameInMap("HealthCheckTimeout")
-    public Integer healthCheckTimeout;
 
     @NameInMap("CookieTimeout")
     public Integer cookieTimeout;
 
-    @NameInMap("HealthCheckDomain")
-    public String healthCheckDomain;
-
-    @NameInMap("UnhealthyThreshold")
-    public Integer unhealthyThreshold;
-
-    @NameInMap("HealthCheckHttpCode")
-    public String healthCheckHttpCode;
-
     @NameInMap("Domain")
     public String domain;
-
-    @NameInMap("ListenerPort")
-    public String listenerPort;
-
-    @NameInMap("Url")
-    public String url;
-
-    @NameInMap("HealthCheckInterval")
-    public Integer healthCheckInterval;
-
-    @NameInMap("HealthCheckURI")
-    public String healthCheckURI;
-
-    @NameInMap("RuleName")
-    public String ruleName;
-
-    @NameInMap("StickySessionType")
-    public String stickySessionType;
-
-    @NameInMap("Scheduler")
-    public String scheduler;
-
-    @NameInMap("ListenerSync")
-    public String listenerSync;
-
-    @NameInMap("HealthyThreshold")
-    public Integer healthyThreshold;
-
-    @NameInMap("StickySession")
-    public String stickySession;
 
     @NameInMap("HealthCheck")
     public String healthCheck;
 
+    @NameInMap("HealthCheckConnectPort")
+    public Integer healthCheckConnectPort;
+
+    @NameInMap("HealthCheckDomain")
+    public String healthCheckDomain;
+
+    @NameInMap("HealthCheckHttpCode")
+    public String healthCheckHttpCode;
+
+    @NameInMap("HealthCheckInterval")
+    public Integer healthCheckInterval;
+
+    @NameInMap("HealthCheckTimeout")
+    public Integer healthCheckTimeout;
+
+    @NameInMap("HealthCheckURI")
+    public String healthCheckURI;
+
+    @NameInMap("HealthyThreshold")
+    public Integer healthyThreshold;
+
+    @NameInMap("ListenerPort")
+    public String listenerPort;
+
+    @NameInMap("ListenerSync")
+    public String listenerSync;
+
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("RuleId")
+    public String ruleId;
+
+    @NameInMap("RuleName")
+    public String ruleName;
+
+    @NameInMap("Scheduler")
+    public String scheduler;
+
+    @NameInMap("StickySession")
+    public String stickySession;
+
+    @NameInMap("StickySessionType")
+    public String stickySessionType;
+
+    @NameInMap("UnhealthyThreshold")
+    public Integer unhealthyThreshold;
+
+    @NameInMap("Url")
+    public String url;
+
+    @NameInMap("VServerGroupId")
+    public String VServerGroupId;
+
     public static DescribeRuleAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRuleAttributeResponseBody self = new DescribeRuleAttributeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRuleAttributeResponseBody setVServerGroupId(String VServerGroupId) {
-        this.VServerGroupId = VServerGroupId;
-        return this;
-    }
-    public String getVServerGroupId() {
-        return this.VServerGroupId;
     }
 
     public DescribeRuleAttributeResponseBody setCookie(String cookie) {
@@ -94,76 +86,12 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         return this.cookie;
     }
 
-    public DescribeRuleAttributeResponseBody setLoadBalancerId(String loadBalancerId) {
-        this.loadBalancerId = loadBalancerId;
-        return this;
-    }
-    public String getLoadBalancerId() {
-        return this.loadBalancerId;
-    }
-
-    public DescribeRuleAttributeResponseBody setRuleId(String ruleId) {
-        this.ruleId = ruleId;
-        return this;
-    }
-    public String getRuleId() {
-        return this.ruleId;
-    }
-
-    public DescribeRuleAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeRuleAttributeResponseBody setHealthCheckConnectPort(Integer healthCheckConnectPort) {
-        this.healthCheckConnectPort = healthCheckConnectPort;
-        return this;
-    }
-    public Integer getHealthCheckConnectPort() {
-        return this.healthCheckConnectPort;
-    }
-
-    public DescribeRuleAttributeResponseBody setHealthCheckTimeout(Integer healthCheckTimeout) {
-        this.healthCheckTimeout = healthCheckTimeout;
-        return this;
-    }
-    public Integer getHealthCheckTimeout() {
-        return this.healthCheckTimeout;
-    }
-
     public DescribeRuleAttributeResponseBody setCookieTimeout(Integer cookieTimeout) {
         this.cookieTimeout = cookieTimeout;
         return this;
     }
     public Integer getCookieTimeout() {
         return this.cookieTimeout;
-    }
-
-    public DescribeRuleAttributeResponseBody setHealthCheckDomain(String healthCheckDomain) {
-        this.healthCheckDomain = healthCheckDomain;
-        return this;
-    }
-    public String getHealthCheckDomain() {
-        return this.healthCheckDomain;
-    }
-
-    public DescribeRuleAttributeResponseBody setUnhealthyThreshold(Integer unhealthyThreshold) {
-        this.unhealthyThreshold = unhealthyThreshold;
-        return this;
-    }
-    public Integer getUnhealthyThreshold() {
-        return this.unhealthyThreshold;
-    }
-
-    public DescribeRuleAttributeResponseBody setHealthCheckHttpCode(String healthCheckHttpCode) {
-        this.healthCheckHttpCode = healthCheckHttpCode;
-        return this;
-    }
-    public String getHealthCheckHttpCode() {
-        return this.healthCheckHttpCode;
     }
 
     public DescribeRuleAttributeResponseBody setDomain(String domain) {
@@ -174,20 +102,36 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         return this.domain;
     }
 
-    public DescribeRuleAttributeResponseBody setListenerPort(String listenerPort) {
-        this.listenerPort = listenerPort;
+    public DescribeRuleAttributeResponseBody setHealthCheck(String healthCheck) {
+        this.healthCheck = healthCheck;
         return this;
     }
-    public String getListenerPort() {
-        return this.listenerPort;
+    public String getHealthCheck() {
+        return this.healthCheck;
     }
 
-    public DescribeRuleAttributeResponseBody setUrl(String url) {
-        this.url = url;
+    public DescribeRuleAttributeResponseBody setHealthCheckConnectPort(Integer healthCheckConnectPort) {
+        this.healthCheckConnectPort = healthCheckConnectPort;
         return this;
     }
-    public String getUrl() {
-        return this.url;
+    public Integer getHealthCheckConnectPort() {
+        return this.healthCheckConnectPort;
+    }
+
+    public DescribeRuleAttributeResponseBody setHealthCheckDomain(String healthCheckDomain) {
+        this.healthCheckDomain = healthCheckDomain;
+        return this;
+    }
+    public String getHealthCheckDomain() {
+        return this.healthCheckDomain;
+    }
+
+    public DescribeRuleAttributeResponseBody setHealthCheckHttpCode(String healthCheckHttpCode) {
+        this.healthCheckHttpCode = healthCheckHttpCode;
+        return this;
+    }
+    public String getHealthCheckHttpCode() {
+        return this.healthCheckHttpCode;
     }
 
     public DescribeRuleAttributeResponseBody setHealthCheckInterval(Integer healthCheckInterval) {
@@ -198,44 +142,20 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         return this.healthCheckInterval;
     }
 
+    public DescribeRuleAttributeResponseBody setHealthCheckTimeout(Integer healthCheckTimeout) {
+        this.healthCheckTimeout = healthCheckTimeout;
+        return this;
+    }
+    public Integer getHealthCheckTimeout() {
+        return this.healthCheckTimeout;
+    }
+
     public DescribeRuleAttributeResponseBody setHealthCheckURI(String healthCheckURI) {
         this.healthCheckURI = healthCheckURI;
         return this;
     }
     public String getHealthCheckURI() {
         return this.healthCheckURI;
-    }
-
-    public DescribeRuleAttributeResponseBody setRuleName(String ruleName) {
-        this.ruleName = ruleName;
-        return this;
-    }
-    public String getRuleName() {
-        return this.ruleName;
-    }
-
-    public DescribeRuleAttributeResponseBody setStickySessionType(String stickySessionType) {
-        this.stickySessionType = stickySessionType;
-        return this;
-    }
-    public String getStickySessionType() {
-        return this.stickySessionType;
-    }
-
-    public DescribeRuleAttributeResponseBody setScheduler(String scheduler) {
-        this.scheduler = scheduler;
-        return this;
-    }
-    public String getScheduler() {
-        return this.scheduler;
-    }
-
-    public DescribeRuleAttributeResponseBody setListenerSync(String listenerSync) {
-        this.listenerSync = listenerSync;
-        return this;
-    }
-    public String getListenerSync() {
-        return this.listenerSync;
     }
 
     public DescribeRuleAttributeResponseBody setHealthyThreshold(Integer healthyThreshold) {
@@ -246,6 +166,62 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         return this.healthyThreshold;
     }
 
+    public DescribeRuleAttributeResponseBody setListenerPort(String listenerPort) {
+        this.listenerPort = listenerPort;
+        return this;
+    }
+    public String getListenerPort() {
+        return this.listenerPort;
+    }
+
+    public DescribeRuleAttributeResponseBody setListenerSync(String listenerSync) {
+        this.listenerSync = listenerSync;
+        return this;
+    }
+    public String getListenerSync() {
+        return this.listenerSync;
+    }
+
+    public DescribeRuleAttributeResponseBody setLoadBalancerId(String loadBalancerId) {
+        this.loadBalancerId = loadBalancerId;
+        return this;
+    }
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
+    }
+
+    public DescribeRuleAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeRuleAttributeResponseBody setRuleId(String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public String getRuleId() {
+        return this.ruleId;
+    }
+
+    public DescribeRuleAttributeResponseBody setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+    public String getRuleName() {
+        return this.ruleName;
+    }
+
+    public DescribeRuleAttributeResponseBody setScheduler(String scheduler) {
+        this.scheduler = scheduler;
+        return this;
+    }
+    public String getScheduler() {
+        return this.scheduler;
+    }
+
     public DescribeRuleAttributeResponseBody setStickySession(String stickySession) {
         this.stickySession = stickySession;
         return this;
@@ -254,12 +230,36 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         return this.stickySession;
     }
 
-    public DescribeRuleAttributeResponseBody setHealthCheck(String healthCheck) {
-        this.healthCheck = healthCheck;
+    public DescribeRuleAttributeResponseBody setStickySessionType(String stickySessionType) {
+        this.stickySessionType = stickySessionType;
         return this;
     }
-    public String getHealthCheck() {
-        return this.healthCheck;
+    public String getStickySessionType() {
+        return this.stickySessionType;
+    }
+
+    public DescribeRuleAttributeResponseBody setUnhealthyThreshold(Integer unhealthyThreshold) {
+        this.unhealthyThreshold = unhealthyThreshold;
+        return this;
+    }
+    public Integer getUnhealthyThreshold() {
+        return this.unhealthyThreshold;
+    }
+
+    public DescribeRuleAttributeResponseBody setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
+    }
+
+    public DescribeRuleAttributeResponseBody setVServerGroupId(String VServerGroupId) {
+        this.VServerGroupId = VServerGroupId;
+        return this;
+    }
+    public String getVServerGroupId() {
+        return this.VServerGroupId;
     }
 
 }

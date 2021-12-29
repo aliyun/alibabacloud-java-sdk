@@ -51,44 +51,44 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
     }
 
     public static class DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate extends TeaModel {
-        @NameInMap("CreateTimeStamp")
-        public Long createTimeStamp;
+        @NameInMap("AliCloudCertificateId")
+        public String aliCloudCertificateId;
 
         @NameInMap("AliCloudCertificateName")
         public String aliCloudCertificateName;
 
-        @NameInMap("ExpireTime")
-        public String expireTime;
+        @NameInMap("CommonName")
+        public String commonName;
 
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("ServerCertificateId")
-        public String serverCertificateId;
+        @NameInMap("CreateTimeStamp")
+        public Long createTimeStamp;
+
+        @NameInMap("ExpireTime")
+        public String expireTime;
 
         @NameInMap("ExpireTimeStamp")
         public Long expireTimeStamp;
 
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("ServerCertificateName")
-        public String serverCertificateName;
-
         @NameInMap("Fingerprint")
         public String fingerprint;
-
-        @NameInMap("CommonName")
-        public String commonName;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
 
         @NameInMap("IsAliCloudCertificate")
         public Integer isAliCloudCertificate;
 
-        @NameInMap("AliCloudCertificateId")
-        public String aliCloudCertificateId;
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("ServerCertificateId")
+        public String serverCertificateId;
+
+        @NameInMap("ServerCertificateName")
+        public String serverCertificateName;
 
         @NameInMap("SubjectAlternativeNames")
         public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateSubjectAlternativeNames subjectAlternativeNames;
@@ -98,12 +98,12 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setCreateTimeStamp(Long createTimeStamp) {
-            this.createTimeStamp = createTimeStamp;
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setAliCloudCertificateId(String aliCloudCertificateId) {
+            this.aliCloudCertificateId = aliCloudCertificateId;
             return this;
         }
-        public Long getCreateTimeStamp() {
-            return this.createTimeStamp;
+        public String getAliCloudCertificateId() {
+            return this.aliCloudCertificateId;
         }
 
         public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setAliCloudCertificateName(String aliCloudCertificateName) {
@@ -114,12 +114,12 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return this.aliCloudCertificateName;
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setCommonName(String commonName) {
+            this.commonName = commonName;
             return this;
         }
-        public String getExpireTime() {
-            return this.expireTime;
+        public String getCommonName() {
+            return this.commonName;
         }
 
         public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setCreateTime(String createTime) {
@@ -130,12 +130,20 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setServerCertificateId(String serverCertificateId) {
-            this.serverCertificateId = serverCertificateId;
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setCreateTimeStamp(Long createTimeStamp) {
+            this.createTimeStamp = createTimeStamp;
             return this;
         }
-        public String getServerCertificateId() {
-            return this.serverCertificateId;
+        public Long getCreateTimeStamp() {
+            return this.createTimeStamp;
+        }
+
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
         }
 
         public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setExpireTimeStamp(Long expireTimeStamp) {
@@ -146,44 +154,12 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return this.expireTimeStamp;
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setServerCertificateName(String serverCertificateName) {
-            this.serverCertificateName = serverCertificateName;
-            return this;
-        }
-        public String getServerCertificateName() {
-            return this.serverCertificateName;
-        }
-
         public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setFingerprint(String fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
         public String getFingerprint() {
             return this.fingerprint;
-        }
-
-        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setCommonName(String commonName) {
-            this.commonName = commonName;
-            return this;
-        }
-        public String getCommonName() {
-            return this.commonName;
-        }
-
-        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
         }
 
         public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setIsAliCloudCertificate(Integer isAliCloudCertificate) {
@@ -194,12 +170,36 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return this.isAliCloudCertificate;
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setAliCloudCertificateId(String aliCloudCertificateId) {
-            this.aliCloudCertificateId = aliCloudCertificateId;
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setRegionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
-        public String getAliCloudCertificateId() {
-            return this.aliCloudCertificateId;
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setServerCertificateId(String serverCertificateId) {
+            this.serverCertificateId = serverCertificateId;
+            return this;
+        }
+        public String getServerCertificateId() {
+            return this.serverCertificateId;
+        }
+
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setServerCertificateName(String serverCertificateName) {
+            this.serverCertificateName = serverCertificateName;
+            return this;
+        }
+        public String getServerCertificateName() {
+            return this.serverCertificateName;
         }
 
         public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setSubjectAlternativeNames(DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateSubjectAlternativeNames subjectAlternativeNames) {

@@ -4,8 +4,17 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeServerCertificatesRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,21 +22,20 @@ public class DescribeServerCertificatesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     public static DescribeServerCertificatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeServerCertificatesRequest self = new DescribeServerCertificatesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeServerCertificatesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeServerCertificatesRequest setOwnerId(Long ownerId) {
@@ -36,6 +44,22 @@ public class DescribeServerCertificatesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeServerCertificatesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeServerCertificatesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeServerCertificatesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -54,36 +78,12 @@ public class DescribeServerCertificatesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeServerCertificatesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DescribeServerCertificatesRequest setServerCertificateId(String serverCertificateId) {
         this.serverCertificateId = serverCertificateId;
         return this;
     }
     public String getServerCertificateId() {
         return this.serverCertificateId;
-    }
-
-    public DescribeServerCertificatesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeServerCertificatesRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
 }

@@ -4,8 +4,20 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateTLSCipherPolicyRequest extends TeaModel {
+    @NameInMap("Ciphers")
+    public java.util.List<String> ciphers;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,27 +25,39 @@ public class CreateTLSCipherPolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("TLSVersions")
+    public java.util.List<String> TLSVersions;
 
     @NameInMap("access_key_id")
     public String accessKeyId;
 
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Ciphers")
-    public java.util.List<String> ciphers;
-
-    @NameInMap("TLSVersions")
-    public java.util.List<String> TLSVersions;
-
     public static CreateTLSCipherPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTLSCipherPolicyRequest self = new CreateTLSCipherPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTLSCipherPolicyRequest setCiphers(java.util.List<String> ciphers) {
+        this.ciphers = ciphers;
+        return this;
+    }
+    public java.util.List<String> getCiphers() {
+        return this.ciphers;
+    }
+
+    public CreateTLSCipherPolicyRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateTLSCipherPolicyRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateTLSCipherPolicyRequest setOwnerId(Long ownerId) {
@@ -42,6 +66,14 @@ public class CreateTLSCipherPolicyRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateTLSCipherPolicyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateTLSCipherPolicyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -60,20 +92,12 @@ public class CreateTLSCipherPolicyRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateTLSCipherPolicyRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateTLSCipherPolicyRequest setTLSVersions(java.util.List<String> TLSVersions) {
+        this.TLSVersions = TLSVersions;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateTLSCipherPolicyRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public java.util.List<String> getTLSVersions() {
+        return this.TLSVersions;
     }
 
     public CreateTLSCipherPolicyRequest setAccessKeyId(String accessKeyId) {
@@ -82,30 +106,6 @@ public class CreateTLSCipherPolicyRequest extends TeaModel {
     }
     public String getAccessKeyId() {
         return this.accessKeyId;
-    }
-
-    public CreateTLSCipherPolicyRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateTLSCipherPolicyRequest setCiphers(java.util.List<String> ciphers) {
-        this.ciphers = ciphers;
-        return this;
-    }
-    public java.util.List<String> getCiphers() {
-        return this.ciphers;
-    }
-
-    public CreateTLSCipherPolicyRequest setTLSVersions(java.util.List<String> TLSVersions) {
-        this.TLSVersions = TLSVersions;
-        return this;
-    }
-    public java.util.List<String> getTLSVersions() {
-        return this.TLSVersions;
     }
 
 }

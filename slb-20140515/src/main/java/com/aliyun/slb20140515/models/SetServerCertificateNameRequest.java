@@ -4,8 +4,14 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class SetServerCertificateNameRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,21 +19,23 @@ public class SetServerCertificateNameRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
 
     @NameInMap("ServerCertificateName")
     public String serverCertificateName;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static SetServerCertificateNameRequest build(java.util.Map<String, ?> map) throws Exception {
         SetServerCertificateNameRequest self = new SetServerCertificateNameRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetServerCertificateNameRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public SetServerCertificateNameRequest setOwnerId(Long ownerId) {
@@ -36,6 +44,14 @@ public class SetServerCertificateNameRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public SetServerCertificateNameRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SetServerCertificateNameRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -54,14 +70,6 @@ public class SetServerCertificateNameRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SetServerCertificateNameRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public SetServerCertificateNameRequest setServerCertificateId(String serverCertificateId) {
         this.serverCertificateId = serverCertificateId;
         return this;
@@ -76,14 +84,6 @@ public class SetServerCertificateNameRequest extends TeaModel {
     }
     public String getServerCertificateName() {
         return this.serverCertificateName;
-    }
-
-    public SetServerCertificateNameRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

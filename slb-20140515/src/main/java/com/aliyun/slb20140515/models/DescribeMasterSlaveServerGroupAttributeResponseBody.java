@@ -4,32 +4,24 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
-
-    @NameInMap("MasterSlaveServerGroupName")
-    public String masterSlaveServerGroupName;
-
-    @NameInMap("MasterSlaveServerGroupId")
-    public String masterSlaveServerGroupId;
 
     @NameInMap("MasterSlaveBackendServers")
     public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers masterSlaveBackendServers;
 
+    @NameInMap("MasterSlaveServerGroupId")
+    public String masterSlaveServerGroupId;
+
+    @NameInMap("MasterSlaveServerGroupName")
+    public String masterSlaveServerGroupName;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeMasterSlaveServerGroupAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMasterSlaveServerGroupAttributeResponseBody self = new DescribeMasterSlaveServerGroupAttributeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeMasterSlaveServerGroupAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeMasterSlaveServerGroupAttributeResponseBody setLoadBalancerId(String loadBalancerId) {
@@ -40,12 +32,12 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         return this.loadBalancerId;
     }
 
-    public DescribeMasterSlaveServerGroupAttributeResponseBody setMasterSlaveServerGroupName(String masterSlaveServerGroupName) {
-        this.masterSlaveServerGroupName = masterSlaveServerGroupName;
+    public DescribeMasterSlaveServerGroupAttributeResponseBody setMasterSlaveBackendServers(DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers masterSlaveBackendServers) {
+        this.masterSlaveBackendServers = masterSlaveBackendServers;
         return this;
     }
-    public String getMasterSlaveServerGroupName() {
-        return this.masterSlaveServerGroupName;
+    public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers getMasterSlaveBackendServers() {
+        return this.masterSlaveBackendServers;
     }
 
     public DescribeMasterSlaveServerGroupAttributeResponseBody setMasterSlaveServerGroupId(String masterSlaveServerGroupId) {
@@ -56,21 +48,23 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         return this.masterSlaveServerGroupId;
     }
 
-    public DescribeMasterSlaveServerGroupAttributeResponseBody setMasterSlaveBackendServers(DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers masterSlaveBackendServers) {
-        this.masterSlaveBackendServers = masterSlaveBackendServers;
+    public DescribeMasterSlaveServerGroupAttributeResponseBody setMasterSlaveServerGroupName(String masterSlaveServerGroupName) {
+        this.masterSlaveServerGroupName = masterSlaveServerGroupName;
         return this;
     }
-    public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers getMasterSlaveBackendServers() {
-        return this.masterSlaveBackendServers;
+    public String getMasterSlaveServerGroupName() {
+        return this.masterSlaveServerGroupName;
+    }
+
+    public DescribeMasterSlaveServerGroupAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Weight")
-        public Integer weight;
-
         @NameInMap("Description")
         public String description;
 
@@ -83,25 +77,15 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         @NameInMap("ServerType")
         public String serverType;
 
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Weight")
+        public Integer weight;
+
         public static DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer build(java.util.Map<String, ?> map) throws Exception {
             DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer self = new DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
         }
 
         public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer setDescription(String description) {
@@ -134,6 +118,22 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         }
         public String getServerType() {
             return this.serverType;
+        }
+
+        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }

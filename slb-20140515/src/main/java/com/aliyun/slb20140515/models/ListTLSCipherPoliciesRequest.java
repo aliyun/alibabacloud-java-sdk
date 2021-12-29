@@ -4,8 +4,26 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class ListTLSCipherPoliciesRequest extends TeaModel {
+    @NameInMap("IncludeListener")
+    public Boolean includeListener;
+
+    @NameInMap("MaxItems")
+    public Integer maxItems;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,33 +31,55 @@ public class ListTLSCipherPoliciesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("TLSCipherPolicyId")
+    public String TLSCipherPolicyId;
 
     @NameInMap("access_key_id")
     public String accessKeyId;
 
-    @NameInMap("TLSCipherPolicyId")
-    public String TLSCipherPolicyId;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("IncludeListener")
-    public Boolean includeListener;
-
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("MaxItems")
-    public Integer maxItems;
-
     public static ListTLSCipherPoliciesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTLSCipherPoliciesRequest self = new ListTLSCipherPoliciesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTLSCipherPoliciesRequest setIncludeListener(Boolean includeListener) {
+        this.includeListener = includeListener;
+        return this;
+    }
+    public Boolean getIncludeListener() {
+        return this.includeListener;
+    }
+
+    public ListTLSCipherPoliciesRequest setMaxItems(Integer maxItems) {
+        this.maxItems = maxItems;
+        return this;
+    }
+    public Integer getMaxItems() {
+        return this.maxItems;
+    }
+
+    public ListTLSCipherPoliciesRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public ListTLSCipherPoliciesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListTLSCipherPoliciesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ListTLSCipherPoliciesRequest setOwnerId(Long ownerId) {
@@ -48,6 +88,14 @@ public class ListTLSCipherPoliciesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ListTLSCipherPoliciesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListTLSCipherPoliciesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -66,30 +114,6 @@ public class ListTLSCipherPoliciesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ListTLSCipherPoliciesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ListTLSCipherPoliciesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ListTLSCipherPoliciesRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
     public ListTLSCipherPoliciesRequest setTLSCipherPolicyId(String TLSCipherPolicyId) {
         this.TLSCipherPolicyId = TLSCipherPolicyId;
         return this;
@@ -98,36 +122,12 @@ public class ListTLSCipherPoliciesRequest extends TeaModel {
         return this.TLSCipherPolicyId;
     }
 
-    public ListTLSCipherPoliciesRequest setName(String name) {
-        this.name = name;
+    public ListTLSCipherPoliciesRequest setAccessKeyId(String accessKeyId) {
+        this.accessKeyId = accessKeyId;
         return this;
     }
-    public String getName() {
-        return this.name;
-    }
-
-    public ListTLSCipherPoliciesRequest setIncludeListener(Boolean includeListener) {
-        this.includeListener = includeListener;
-        return this;
-    }
-    public Boolean getIncludeListener() {
-        return this.includeListener;
-    }
-
-    public ListTLSCipherPoliciesRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ListTLSCipherPoliciesRequest setMaxItems(Integer maxItems) {
-        this.maxItems = maxItems;
-        return this;
-    }
-    public Integer getMaxItems() {
-        return this.maxItems;
+    public String getAccessKeyId() {
+        return this.accessKeyId;
     }
 
 }

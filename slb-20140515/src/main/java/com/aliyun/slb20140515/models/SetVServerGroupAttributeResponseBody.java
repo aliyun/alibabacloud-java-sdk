@@ -4,21 +4,37 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class SetVServerGroupAttributeResponseBody extends TeaModel {
+    @NameInMap("BackendServers")
+    public SetVServerGroupAttributeResponseBodyBackendServers backendServers;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
     @NameInMap("VServerGroupName")
     public String VServerGroupName;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("BackendServers")
-    public SetVServerGroupAttributeResponseBodyBackendServers backendServers;
-
     public static SetVServerGroupAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SetVServerGroupAttributeResponseBody self = new SetVServerGroupAttributeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SetVServerGroupAttributeResponseBody setBackendServers(SetVServerGroupAttributeResponseBodyBackendServers backendServers) {
+        this.backendServers = backendServers;
+        return this;
+    }
+    public SetVServerGroupAttributeResponseBodyBackendServers getBackendServers() {
+        return this.backendServers;
+    }
+
+    public SetVServerGroupAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public SetVServerGroupAttributeResponseBody setVServerGroupId(String VServerGroupId) {
@@ -37,29 +53,7 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
         return this.VServerGroupName;
     }
 
-    public SetVServerGroupAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public SetVServerGroupAttributeResponseBody setBackendServers(SetVServerGroupAttributeResponseBodyBackendServers backendServers) {
-        this.backendServers = backendServers;
-        return this;
-    }
-    public SetVServerGroupAttributeResponseBodyBackendServers getBackendServers() {
-        return this.backendServers;
-    }
-
     public static class SetVServerGroupAttributeResponseBodyBackendServersBackendServer extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Weight")
-        public Integer weight;
-
         @NameInMap("Description")
         public String description;
 
@@ -69,25 +63,15 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
         @NameInMap("ServerId")
         public String serverId;
 
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Weight")
+        public Integer weight;
+
         public static SetVServerGroupAttributeResponseBodyBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
             SetVServerGroupAttributeResponseBodyBackendServersBackendServer self = new SetVServerGroupAttributeResponseBodyBackendServersBackendServer();
             return TeaModel.build(map, self);
-        }
-
-        public SetVServerGroupAttributeResponseBodyBackendServersBackendServer setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public SetVServerGroupAttributeResponseBodyBackendServersBackendServer setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
         }
 
         public SetVServerGroupAttributeResponseBodyBackendServersBackendServer setDescription(String description) {
@@ -112,6 +96,22 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
         }
         public String getServerId() {
             return this.serverId;
+        }
+
+        public SetVServerGroupAttributeResponseBodyBackendServersBackendServer setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public SetVServerGroupAttributeResponseBodyBackendServersBackendServer setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }

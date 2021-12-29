@@ -4,11 +4,23 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DeleteLoadBalancerListenerRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ListenerPort")
+    public Integer listenerPort;
+
+    @NameInMap("ListenerProtocol")
+    public String listenerProtocol;
+
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,61 +28,9 @@ public class DeleteLoadBalancerListenerRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
-
-    @NameInMap("ListenerPort")
-    public Integer listenerPort;
-
-    @NameInMap("ListenerProtocol")
-    public String listenerProtocol;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DeleteLoadBalancerListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLoadBalancerListenerRequest self = new DeleteLoadBalancerListenerRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteLoadBalancerListenerRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteLoadBalancerListenerRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DeleteLoadBalancerListenerRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DeleteLoadBalancerListenerRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DeleteLoadBalancerListenerRequest setLoadBalancerId(String loadBalancerId) {
-        this.loadBalancerId = loadBalancerId;
-        return this;
-    }
-    public String getLoadBalancerId() {
-        return this.loadBalancerId;
     }
 
     public DeleteLoadBalancerListenerRequest setListenerPort(Integer listenerPort) {
@@ -89,12 +49,52 @@ public class DeleteLoadBalancerListenerRequest extends TeaModel {
         return this.listenerProtocol;
     }
 
+    public DeleteLoadBalancerListenerRequest setLoadBalancerId(String loadBalancerId) {
+        this.loadBalancerId = loadBalancerId;
+        return this;
+    }
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
+    }
+
     public DeleteLoadBalancerListenerRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public DeleteLoadBalancerListenerRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteLoadBalancerListenerRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteLoadBalancerListenerRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DeleteLoadBalancerListenerRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

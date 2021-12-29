@@ -4,23 +4,23 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class RemoveTagsRequest extends TeaModel {
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
 
     @NameInMap("Tags")
     public String tags;
@@ -30,12 +30,36 @@ public class RemoveTagsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RemoveTagsRequest setLoadBalancerId(String loadBalancerId) {
+        this.loadBalancerId = loadBalancerId;
+        return this;
+    }
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
+    }
+
+    public RemoveTagsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public RemoveTagsRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public RemoveTagsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public RemoveTagsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -52,30 +76,6 @@ public class RemoveTagsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public RemoveTagsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public RemoveTagsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public RemoveTagsRequest setLoadBalancerId(String loadBalancerId) {
-        this.loadBalancerId = loadBalancerId;
-        return this;
-    }
-    public String getLoadBalancerId() {
-        return this.loadBalancerId;
     }
 
     public RemoveTagsRequest setTags(String tags) {

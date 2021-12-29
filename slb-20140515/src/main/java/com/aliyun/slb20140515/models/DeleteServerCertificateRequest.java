@@ -4,8 +4,14 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DeleteServerCertificateRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,18 +19,20 @@ public class DeleteServerCertificateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     public static DeleteServerCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteServerCertificateRequest self = new DeleteServerCertificateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteServerCertificateRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteServerCertificateRequest setOwnerId(Long ownerId) {
@@ -33,6 +41,14 @@ public class DeleteServerCertificateRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteServerCertificateRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteServerCertificateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -51,28 +67,12 @@ public class DeleteServerCertificateRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DeleteServerCertificateRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DeleteServerCertificateRequest setServerCertificateId(String serverCertificateId) {
         this.serverCertificateId = serverCertificateId;
         return this;
     }
     public String getServerCertificateId() {
         return this.serverCertificateId;
-    }
-
-    public DeleteServerCertificateRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

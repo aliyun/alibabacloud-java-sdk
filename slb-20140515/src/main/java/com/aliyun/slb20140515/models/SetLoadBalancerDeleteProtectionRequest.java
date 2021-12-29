@@ -4,11 +4,20 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class SetLoadBalancerDeleteProtectionRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("DeleteProtection")
+    public String deleteProtection;
+
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,26 +25,33 @@ public class SetLoadBalancerDeleteProtectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
-
-    @NameInMap("DeleteProtection")
-    public String deleteProtection;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static SetLoadBalancerDeleteProtectionRequest build(java.util.Map<String, ?> map) throws Exception {
         SetLoadBalancerDeleteProtectionRequest self = new SetLoadBalancerDeleteProtectionRequest();
         return TeaModel.build(map, self);
     }
 
-    public SetLoadBalancerDeleteProtectionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public SetLoadBalancerDeleteProtectionRequest setDeleteProtection(String deleteProtection) {
+        this.deleteProtection = deleteProtection;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getDeleteProtection() {
+        return this.deleteProtection;
+    }
+
+    public SetLoadBalancerDeleteProtectionRequest setLoadBalancerId(String loadBalancerId) {
+        this.loadBalancerId = loadBalancerId;
+        return this;
+    }
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
+    }
+
+    public SetLoadBalancerDeleteProtectionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public SetLoadBalancerDeleteProtectionRequest setOwnerId(Long ownerId) {
@@ -44,6 +60,14 @@ public class SetLoadBalancerDeleteProtectionRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public SetLoadBalancerDeleteProtectionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SetLoadBalancerDeleteProtectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -60,30 +84,6 @@ public class SetLoadBalancerDeleteProtectionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public SetLoadBalancerDeleteProtectionRequest setLoadBalancerId(String loadBalancerId) {
-        this.loadBalancerId = loadBalancerId;
-        return this;
-    }
-    public String getLoadBalancerId() {
-        return this.loadBalancerId;
-    }
-
-    public SetLoadBalancerDeleteProtectionRequest setDeleteProtection(String deleteProtection) {
-        this.deleteProtection = deleteProtection;
-        return this;
-    }
-    public String getDeleteProtection() {
-        return this.deleteProtection;
-    }
-
-    public SetLoadBalancerDeleteProtectionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

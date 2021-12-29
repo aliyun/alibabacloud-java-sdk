@@ -4,95 +4,41 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
-    @NameInMap("VpcId")
-    public String vpcId;
-
-    @NameInMap("CreateTimeStamp")
-    public Long createTimeStamp;
-
-    @NameInMap("CreateTime")
-    public String createTime;
-
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
-
-    @NameInMap("PayType")
-    public String payType;
-
-    @NameInMap("AddressType")
-    public String addressType;
-
-    @NameInMap("NetworkType")
-    public String networkType;
+    @NameInMap("Address")
+    public String address;
 
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
-    @NameInMap("RenewalCycUnit")
-    public String renewalCycUnit;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Bandwidth")
-    public Integer bandwidth;
-
-    @NameInMap("LoadBalancerName")
-    public String loadBalancerName;
-
-    @NameInMap("Address")
-    public String address;
-
-    @NameInMap("SlaveZoneId")
-    public String slaveZoneId;
-
-    @NameInMap("EndTimeStamp")
-    public Long endTimeStamp;
-
-    @NameInMap("MasterZoneId")
-    public String masterZoneId;
-
-    @NameInMap("LoadBalancerSpec")
-    public String loadBalancerSpec;
+    @NameInMap("AddressType")
+    public String addressType;
 
     @NameInMap("AutoReleaseTime")
     public Long autoReleaseTime;
 
-    @NameInMap("ModificationProtectionReason")
-    public String modificationProtectionReason;
+    @NameInMap("BackendServers")
+    public DescribeLoadBalancerAttributeResponseBodyBackendServers backendServers;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
 
-    @NameInMap("ModificationProtectionStatus")
-    public String modificationProtectionStatus;
+    @NameInMap("CreateTime")
+    public String createTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
-
-    @NameInMap("LoadBalancerStatus")
-    public String loadBalancerStatus;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("InternetChargeType")
-    public String internetChargeType;
+    @NameInMap("CreateTimeStamp")
+    public Long createTimeStamp;
 
     @NameInMap("DeleteProtection")
     public String deleteProtection;
 
-    @NameInMap("RegionIdAlias")
-    public String regionIdAlias;
+    @NameInMap("EndTime")
+    public String endTime;
 
-    @NameInMap("RenewalStatus")
-    public String renewalStatus;
+    @NameInMap("EndTimeStamp")
+    public Long endTimeStamp;
 
-    @NameInMap("RenewalDuration")
-    public Integer renewalDuration;
+    @NameInMap("InternetChargeType")
+    public String internetChargeType;
 
     @NameInMap("ListenerPorts")
     public DescribeLoadBalancerAttributeResponseBodyListenerPorts listenerPorts;
@@ -103,108 +49,66 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("ListenerPortsAndProtocol")
     public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol listenerPortsAndProtocol;
 
-    @NameInMap("BackendServers")
-    public DescribeLoadBalancerAttributeResponseBodyBackendServers backendServers;
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
+
+    @NameInMap("LoadBalancerName")
+    public String loadBalancerName;
+
+    @NameInMap("LoadBalancerSpec")
+    public String loadBalancerSpec;
+
+    @NameInMap("LoadBalancerStatus")
+    public String loadBalancerStatus;
+
+    @NameInMap("MasterZoneId")
+    public String masterZoneId;
+
+    @NameInMap("ModificationProtectionReason")
+    public String modificationProtectionReason;
+
+    @NameInMap("ModificationProtectionStatus")
+    public String modificationProtectionStatus;
+
+    @NameInMap("NetworkType")
+    public String networkType;
+
+    @NameInMap("PayType")
+    public String payType;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("RegionIdAlias")
+    public String regionIdAlias;
+
+    @NameInMap("RenewalCycUnit")
+    public String renewalCycUnit;
+
+    @NameInMap("RenewalDuration")
+    public Integer renewalDuration;
+
+    @NameInMap("RenewalStatus")
+    public String renewalStatus;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("SlaveZoneId")
+    public String slaveZoneId;
+
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
+    @NameInMap("VpcId")
+    public String vpcId;
 
     public static DescribeLoadBalancerAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLoadBalancerAttributeResponseBody self = new DescribeLoadBalancerAttributeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setCreateTimeStamp(Long createTimeStamp) {
-        this.createTimeStamp = createTimeStamp;
-        return this;
-    }
-    public Long getCreateTimeStamp() {
-        return this.createTimeStamp;
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setCreateTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-    public String getCreateTime() {
-        return this.createTime;
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setLoadBalancerId(String loadBalancerId) {
-        this.loadBalancerId = loadBalancerId;
-        return this;
-    }
-    public String getLoadBalancerId() {
-        return this.loadBalancerId;
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setPayType(String payType) {
-        this.payType = payType;
-        return this;
-    }
-    public String getPayType() {
-        return this.payType;
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setAddressType(String addressType) {
-        this.addressType = addressType;
-        return this;
-    }
-    public String getAddressType() {
-        return this.addressType;
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setNetworkType(String networkType) {
-        this.networkType = networkType;
-        return this;
-    }
-    public String getNetworkType() {
-        return this.networkType;
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setAddressIPVersion(String addressIPVersion) {
-        this.addressIPVersion = addressIPVersion;
-        return this;
-    }
-    public String getAddressIPVersion() {
-        return this.addressIPVersion;
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setRenewalCycUnit(String renewalCycUnit) {
-        this.renewalCycUnit = renewalCycUnit;
-        return this;
-    }
-    public String getRenewalCycUnit() {
-        return this.renewalCycUnit;
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setBandwidth(Integer bandwidth) {
-        this.bandwidth = bandwidth;
-        return this;
-    }
-    public Integer getBandwidth() {
-        return this.bandwidth;
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setLoadBalancerName(String loadBalancerName) {
-        this.loadBalancerName = loadBalancerName;
-        return this;
-    }
-    public String getLoadBalancerName() {
-        return this.loadBalancerName;
     }
 
     public DescribeLoadBalancerAttributeResponseBody setAddress(String address) {
@@ -215,36 +119,20 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         return this.address;
     }
 
-    public DescribeLoadBalancerAttributeResponseBody setSlaveZoneId(String slaveZoneId) {
-        this.slaveZoneId = slaveZoneId;
+    public DescribeLoadBalancerAttributeResponseBody setAddressIPVersion(String addressIPVersion) {
+        this.addressIPVersion = addressIPVersion;
         return this;
     }
-    public String getSlaveZoneId() {
-        return this.slaveZoneId;
+    public String getAddressIPVersion() {
+        return this.addressIPVersion;
     }
 
-    public DescribeLoadBalancerAttributeResponseBody setEndTimeStamp(Long endTimeStamp) {
-        this.endTimeStamp = endTimeStamp;
+    public DescribeLoadBalancerAttributeResponseBody setAddressType(String addressType) {
+        this.addressType = addressType;
         return this;
     }
-    public Long getEndTimeStamp() {
-        return this.endTimeStamp;
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setMasterZoneId(String masterZoneId) {
-        this.masterZoneId = masterZoneId;
-        return this;
-    }
-    public String getMasterZoneId() {
-        return this.masterZoneId;
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setLoadBalancerSpec(String loadBalancerSpec) {
-        this.loadBalancerSpec = loadBalancerSpec;
-        return this;
-    }
-    public String getLoadBalancerSpec() {
-        return this.loadBalancerSpec;
+    public String getAddressType() {
+        return this.addressType;
     }
 
     public DescribeLoadBalancerAttributeResponseBody setAutoReleaseTime(Long autoReleaseTime) {
@@ -255,68 +143,36 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         return this.autoReleaseTime;
     }
 
-    public DescribeLoadBalancerAttributeResponseBody setModificationProtectionReason(String modificationProtectionReason) {
-        this.modificationProtectionReason = modificationProtectionReason;
+    public DescribeLoadBalancerAttributeResponseBody setBackendServers(DescribeLoadBalancerAttributeResponseBodyBackendServers backendServers) {
+        this.backendServers = backendServers;
         return this;
     }
-    public String getModificationProtectionReason() {
-        return this.modificationProtectionReason;
+    public DescribeLoadBalancerAttributeResponseBodyBackendServers getBackendServers() {
+        return this.backendServers;
     }
 
-    public DescribeLoadBalancerAttributeResponseBody setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeLoadBalancerAttributeResponseBody setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Integer getBandwidth() {
+        return this.bandwidth;
     }
 
-    public DescribeLoadBalancerAttributeResponseBody setModificationProtectionStatus(String modificationProtectionStatus) {
-        this.modificationProtectionStatus = modificationProtectionStatus;
+    public DescribeLoadBalancerAttributeResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
         return this;
     }
-    public String getModificationProtectionStatus() {
-        return this.modificationProtectionStatus;
+    public String getCreateTime() {
+        return this.createTime;
     }
 
-    public DescribeLoadBalancerAttributeResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeLoadBalancerAttributeResponseBody setCreateTimeStamp(Long createTimeStamp) {
+        this.createTimeStamp = createTimeStamp;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
-        return this;
-    }
-    public String getVSwitchId() {
-        return this.vSwitchId;
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setLoadBalancerStatus(String loadBalancerStatus) {
-        this.loadBalancerStatus = loadBalancerStatus;
-        return this;
-    }
-    public String getLoadBalancerStatus() {
-        return this.loadBalancerStatus;
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public DescribeLoadBalancerAttributeResponseBody setInternetChargeType(String internetChargeType) {
-        this.internetChargeType = internetChargeType;
-        return this;
-    }
-    public String getInternetChargeType() {
-        return this.internetChargeType;
+    public Long getCreateTimeStamp() {
+        return this.createTimeStamp;
     }
 
     public DescribeLoadBalancerAttributeResponseBody setDeleteProtection(String deleteProtection) {
@@ -327,28 +183,28 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         return this.deleteProtection;
     }
 
-    public DescribeLoadBalancerAttributeResponseBody setRegionIdAlias(String regionIdAlias) {
-        this.regionIdAlias = regionIdAlias;
+    public DescribeLoadBalancerAttributeResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getRegionIdAlias() {
-        return this.regionIdAlias;
+    public String getEndTime() {
+        return this.endTime;
     }
 
-    public DescribeLoadBalancerAttributeResponseBody setRenewalStatus(String renewalStatus) {
-        this.renewalStatus = renewalStatus;
+    public DescribeLoadBalancerAttributeResponseBody setEndTimeStamp(Long endTimeStamp) {
+        this.endTimeStamp = endTimeStamp;
         return this;
     }
-    public String getRenewalStatus() {
-        return this.renewalStatus;
+    public Long getEndTimeStamp() {
+        return this.endTimeStamp;
     }
 
-    public DescribeLoadBalancerAttributeResponseBody setRenewalDuration(Integer renewalDuration) {
-        this.renewalDuration = renewalDuration;
+    public DescribeLoadBalancerAttributeResponseBody setInternetChargeType(String internetChargeType) {
+        this.internetChargeType = internetChargeType;
         return this;
     }
-    public Integer getRenewalDuration() {
-        return this.renewalDuration;
+    public String getInternetChargeType() {
+        return this.internetChargeType;
     }
 
     public DescribeLoadBalancerAttributeResponseBody setListenerPorts(DescribeLoadBalancerAttributeResponseBodyListenerPorts listenerPorts) {
@@ -375,12 +231,227 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         return this.listenerPortsAndProtocol;
     }
 
-    public DescribeLoadBalancerAttributeResponseBody setBackendServers(DescribeLoadBalancerAttributeResponseBodyBackendServers backendServers) {
-        this.backendServers = backendServers;
+    public DescribeLoadBalancerAttributeResponseBody setLoadBalancerId(String loadBalancerId) {
+        this.loadBalancerId = loadBalancerId;
         return this;
     }
-    public DescribeLoadBalancerAttributeResponseBodyBackendServers getBackendServers() {
-        return this.backendServers;
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setLoadBalancerName(String loadBalancerName) {
+        this.loadBalancerName = loadBalancerName;
+        return this;
+    }
+    public String getLoadBalancerName() {
+        return this.loadBalancerName;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setLoadBalancerSpec(String loadBalancerSpec) {
+        this.loadBalancerSpec = loadBalancerSpec;
+        return this;
+    }
+    public String getLoadBalancerSpec() {
+        return this.loadBalancerSpec;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setLoadBalancerStatus(String loadBalancerStatus) {
+        this.loadBalancerStatus = loadBalancerStatus;
+        return this;
+    }
+    public String getLoadBalancerStatus() {
+        return this.loadBalancerStatus;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setMasterZoneId(String masterZoneId) {
+        this.masterZoneId = masterZoneId;
+        return this;
+    }
+    public String getMasterZoneId() {
+        return this.masterZoneId;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setModificationProtectionReason(String modificationProtectionReason) {
+        this.modificationProtectionReason = modificationProtectionReason;
+        return this;
+    }
+    public String getModificationProtectionReason() {
+        return this.modificationProtectionReason;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setModificationProtectionStatus(String modificationProtectionStatus) {
+        this.modificationProtectionStatus = modificationProtectionStatus;
+        return this;
+    }
+    public String getModificationProtectionStatus() {
+        return this.modificationProtectionStatus;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setPayType(String payType) {
+        this.payType = payType;
+        return this;
+    }
+    public String getPayType() {
+        return this.payType;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setRegionIdAlias(String regionIdAlias) {
+        this.regionIdAlias = regionIdAlias;
+        return this;
+    }
+    public String getRegionIdAlias() {
+        return this.regionIdAlias;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setRenewalCycUnit(String renewalCycUnit) {
+        this.renewalCycUnit = renewalCycUnit;
+        return this;
+    }
+    public String getRenewalCycUnit() {
+        return this.renewalCycUnit;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setRenewalDuration(Integer renewalDuration) {
+        this.renewalDuration = renewalDuration;
+        return this;
+    }
+    public Integer getRenewalDuration() {
+        return this.renewalDuration;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setRenewalStatus(String renewalStatus) {
+        this.renewalStatus = renewalStatus;
+        return this;
+    }
+    public String getRenewalStatus() {
+        return this.renewalStatus;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setSlaveZoneId(String slaveZoneId) {
+        this.slaveZoneId = slaveZoneId;
+        return this;
+    }
+    public String getSlaveZoneId() {
+        return this.slaveZoneId;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public static class DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("ServerId")
+        public String serverId;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Weight")
+        public Integer weight;
+
+        public static DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer self = new DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer setServerId(String serverId) {
+            this.serverId = serverId;
+            return this;
+        }
+        public String getServerId() {
+            return this.serverId;
+        }
+
+        public DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+    }
+
+    public static class DescribeLoadBalancerAttributeResponseBodyBackendServers extends TeaModel {
+        @NameInMap("BackendServer")
+        public java.util.List<DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer> backendServer;
+
+        public static DescribeLoadBalancerAttributeResponseBodyBackendServers build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerAttributeResponseBodyBackendServers self = new DescribeLoadBalancerAttributeResponseBodyBackendServers();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerAttributeResponseBodyBackendServers setBackendServer(java.util.List<DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer> backendServer) {
+            this.backendServer = backendServer;
+            return this;
+        }
+        public java.util.List<DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer> getBackendServer() {
+            return this.backendServer;
+        }
+
     }
 
     public static class DescribeLoadBalancerAttributeResponseBodyListenerPorts extends TeaModel {
@@ -403,23 +474,15 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal extends TeaModel {
-        @NameInMap("ListenerProtocal")
-        public String listenerProtocal;
-
         @NameInMap("ListenerPort")
         public Integer listenerPort;
+
+        @NameInMap("ListenerProtocal")
+        public String listenerProtocal;
 
         public static DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal build(java.util.Map<String, ?> map) throws Exception {
             DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal self = new DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal setListenerProtocal(String listenerProtocal) {
-            this.listenerProtocal = listenerProtocal;
-            return this;
-        }
-        public String getListenerProtocal() {
-            return this.listenerProtocal;
         }
 
         public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal setListenerPort(Integer listenerPort) {
@@ -428,6 +491,14 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
         public Integer getListenerPort() {
             return this.listenerPort;
+        }
+
+        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal setListenerProtocal(String listenerProtocal) {
+            this.listenerProtocal = listenerProtocal;
+            return this;
+        }
+        public String getListenerProtocal() {
+            return this.listenerProtocal;
         }
 
     }
@@ -452,48 +523,24 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol extends TeaModel {
-        @NameInMap("ListenerPort")
-        public Integer listenerPort;
-
-        @NameInMap("ListenerProtocol")
-        public String listenerProtocol;
-
-        @NameInMap("ListenerForward")
-        public String listenerForward;
-
         @NameInMap("Description")
         public String description;
 
         @NameInMap("ForwardPort")
         public Integer forwardPort;
 
+        @NameInMap("ListenerForward")
+        public String listenerForward;
+
+        @NameInMap("ListenerPort")
+        public Integer listenerPort;
+
+        @NameInMap("ListenerProtocol")
+        public String listenerProtocol;
+
         public static DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol build(java.util.Map<String, ?> map) throws Exception {
             DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol self = new DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol setListenerPort(Integer listenerPort) {
-            this.listenerPort = listenerPort;
-            return this;
-        }
-        public Integer getListenerPort() {
-            return this.listenerPort;
-        }
-
-        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol setListenerProtocol(String listenerProtocol) {
-            this.listenerProtocol = listenerProtocol;
-            return this;
-        }
-        public String getListenerProtocol() {
-            return this.listenerProtocol;
-        }
-
-        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol setListenerForward(String listenerForward) {
-            this.listenerForward = listenerForward;
-            return this;
-        }
-        public String getListenerForward() {
-            return this.listenerForward;
         }
 
         public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol setDescription(String description) {
@@ -510,6 +557,30 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
         public Integer getForwardPort() {
             return this.forwardPort;
+        }
+
+        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol setListenerForward(String listenerForward) {
+            this.listenerForward = listenerForward;
+            return this;
+        }
+        public String getListenerForward() {
+            return this.listenerForward;
+        }
+
+        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol setListenerPort(Integer listenerPort) {
+            this.listenerPort = listenerPort;
+            return this;
+        }
+        public Integer getListenerPort() {
+            return this.listenerPort;
+        }
+
+        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol setListenerProtocol(String listenerProtocol) {
+            this.listenerProtocol = listenerProtocol;
+            return this;
+        }
+        public String getListenerProtocol() {
+            return this.listenerProtocol;
         }
 
     }
@@ -529,77 +600,6 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
         public java.util.List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol> getListenerPortAndProtocol() {
             return this.listenerPortAndProtocol;
-        }
-
-    }
-
-    public static class DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Weight")
-        public Integer weight;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("ServerId")
-        public String serverId;
-
-        public static DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer self = new DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
-        }
-
-        public DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer setServerId(String serverId) {
-            this.serverId = serverId;
-            return this;
-        }
-        public String getServerId() {
-            return this.serverId;
-        }
-
-    }
-
-    public static class DescribeLoadBalancerAttributeResponseBodyBackendServers extends TeaModel {
-        @NameInMap("BackendServer")
-        public java.util.List<DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer> backendServer;
-
-        public static DescribeLoadBalancerAttributeResponseBodyBackendServers build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLoadBalancerAttributeResponseBodyBackendServers self = new DescribeLoadBalancerAttributeResponseBodyBackendServers();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeLoadBalancerAttributeResponseBodyBackendServers setBackendServer(java.util.List<DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer> backendServer) {
-            this.backendServer = backendServer;
-            return this;
-        }
-        public java.util.List<DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer> getBackendServer() {
-            return this.backendServer;
         }
 
     }

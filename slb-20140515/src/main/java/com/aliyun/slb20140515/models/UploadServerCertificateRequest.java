@@ -4,18 +4,6 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class UploadServerCertificateRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("AliCloudCertificateId")
     public String aliCloudCertificateId;
 
@@ -25,56 +13,36 @@ public class UploadServerCertificateRequest extends TeaModel {
     @NameInMap("AliCloudCertificateRegionId")
     public String aliCloudCertificateRegionId;
 
-    @NameInMap("ServerCertificate")
-    public String serverCertificate;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PrivateKey")
     public String privateKey;
 
-    @NameInMap("ServerCertificateName")
-    public String serverCertificateName;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("ServerCertificate")
+    public String serverCertificate;
+
+    @NameInMap("ServerCertificateName")
+    public String serverCertificateName;
+
     public static UploadServerCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadServerCertificateRequest self = new UploadServerCertificateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UploadServerCertificateRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public UploadServerCertificateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public UploadServerCertificateRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public UploadServerCertificateRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public UploadServerCertificateRequest setAliCloudCertificateId(String aliCloudCertificateId) {
@@ -101,12 +69,20 @@ public class UploadServerCertificateRequest extends TeaModel {
         return this.aliCloudCertificateRegionId;
     }
 
-    public UploadServerCertificateRequest setServerCertificate(String serverCertificate) {
-        this.serverCertificate = serverCertificate;
+    public UploadServerCertificateRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getServerCertificate() {
-        return this.serverCertificate;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public UploadServerCertificateRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public UploadServerCertificateRequest setPrivateKey(String privateKey) {
@@ -117,20 +93,12 @@ public class UploadServerCertificateRequest extends TeaModel {
         return this.privateKey;
     }
 
-    public UploadServerCertificateRequest setServerCertificateName(String serverCertificateName) {
-        this.serverCertificateName = serverCertificateName;
+    public UploadServerCertificateRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getServerCertificateName() {
-        return this.serverCertificateName;
-    }
-
-    public UploadServerCertificateRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UploadServerCertificateRequest setResourceGroupId(String resourceGroupId) {
@@ -139,6 +107,38 @@ public class UploadServerCertificateRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public UploadServerCertificateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public UploadServerCertificateRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public UploadServerCertificateRequest setServerCertificate(String serverCertificate) {
+        this.serverCertificate = serverCertificate;
+        return this;
+    }
+    public String getServerCertificate() {
+        return this.serverCertificate;
+    }
+
+    public UploadServerCertificateRequest setServerCertificateName(String serverCertificateName) {
+        this.serverCertificateName = serverCertificateName;
+        return this;
+    }
+    public String getServerCertificateName() {
+        return this.serverCertificateName;
     }
 
 }

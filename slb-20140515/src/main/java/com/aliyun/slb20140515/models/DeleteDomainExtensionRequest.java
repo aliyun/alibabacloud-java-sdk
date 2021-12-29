@@ -4,8 +4,17 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DeleteDomainExtensionRequest extends TeaModel {
+    @NameInMap("DomainExtensionId")
+    public String domainExtensionId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,18 +22,25 @@ public class DeleteDomainExtensionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DomainExtensionId")
-    public String domainExtensionId;
-
     public static DeleteDomainExtensionRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDomainExtensionRequest self = new DeleteDomainExtensionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteDomainExtensionRequest setDomainExtensionId(String domainExtensionId) {
+        this.domainExtensionId = domainExtensionId;
+        return this;
+    }
+    public String getDomainExtensionId() {
+        return this.domainExtensionId;
+    }
+
+    public DeleteDomainExtensionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteDomainExtensionRequest setOwnerId(Long ownerId) {
@@ -33,6 +49,14 @@ public class DeleteDomainExtensionRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteDomainExtensionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteDomainExtensionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -49,30 +73,6 @@ public class DeleteDomainExtensionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteDomainExtensionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteDomainExtensionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DeleteDomainExtensionRequest setDomainExtensionId(String domainExtensionId) {
-        this.domainExtensionId = domainExtensionId;
-        return this;
-    }
-    public String getDomainExtensionId() {
-        return this.domainExtensionId;
     }
 
 }
