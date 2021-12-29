@@ -16,10 +16,6 @@ public class ListConferenceUsersRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 地域
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static ListConferenceUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListConferenceUsersRequest self = new ListConferenceUsersRequest();
         return TeaModel.build(map, self);
@@ -47,14 +43,6 @@ public class ListConferenceUsersRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListConferenceUsersRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

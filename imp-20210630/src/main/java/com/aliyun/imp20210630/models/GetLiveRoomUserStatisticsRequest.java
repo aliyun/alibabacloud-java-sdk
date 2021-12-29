@@ -20,9 +20,6 @@ public class GetLiveRoomUserStatisticsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static GetLiveRoomUserStatisticsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetLiveRoomUserStatisticsRequest self = new GetLiveRoomUserStatisticsRequest();
         return TeaModel.build(map, self);
@@ -58,14 +55,6 @@ public class GetLiveRoomUserStatisticsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
-    }
-
-    public GetLiveRoomUserStatisticsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

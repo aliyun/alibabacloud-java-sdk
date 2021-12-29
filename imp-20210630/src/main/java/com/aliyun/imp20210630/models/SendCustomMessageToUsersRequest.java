@@ -16,9 +16,6 @@ public class SendCustomMessageToUsersRequest extends TeaModel {
     @NameInMap("ReceiverList")
     public java.util.List<String> receiverList;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 房间唯一标识，由调用CreateRoom返回。
     @NameInMap("RoomId")
     public String roomId;
@@ -50,14 +47,6 @@ public class SendCustomMessageToUsersRequest extends TeaModel {
     }
     public java.util.List<String> getReceiverList() {
         return this.receiverList;
-    }
-
-    public SendCustomMessageToUsersRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public SendCustomMessageToUsersRequest setRoomId(String roomId) {

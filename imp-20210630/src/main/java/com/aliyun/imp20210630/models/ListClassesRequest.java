@@ -16,9 +16,6 @@ public class ListClassesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 课程状态，0-未开课 1-上课中 2-已下课，不传则返回所有课程。
     @NameInMap("Status")
     public Integer status;
@@ -50,14 +47,6 @@ public class ListClassesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListClassesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListClassesRequest setStatus(Integer status) {

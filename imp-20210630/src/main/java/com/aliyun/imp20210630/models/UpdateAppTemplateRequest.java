@@ -16,10 +16,6 @@ public class UpdateAppTemplateRequest extends TeaModel {
     @NameInMap("ComponentList")
     public java.util.List<String> componentList;
 
-    // 地域
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static UpdateAppTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAppTemplateRequest self = new UpdateAppTemplateRequest();
         return TeaModel.build(map, self);
@@ -47,14 +43,6 @@ public class UpdateAppTemplateRequest extends TeaModel {
     }
     public java.util.List<String> getComponentList() {
         return this.componentList;
-    }
-
-    public UpdateAppTemplateRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

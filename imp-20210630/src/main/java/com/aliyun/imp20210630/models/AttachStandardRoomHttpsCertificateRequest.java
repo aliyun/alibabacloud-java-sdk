@@ -20,10 +20,6 @@ public class AttachStandardRoomHttpsCertificateRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    // 地域
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static AttachStandardRoomHttpsCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachStandardRoomHttpsCertificateRequest self = new AttachStandardRoomHttpsCertificateRequest();
         return TeaModel.build(map, self);
@@ -59,14 +55,6 @@ public class AttachStandardRoomHttpsCertificateRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public AttachStandardRoomHttpsCertificateRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

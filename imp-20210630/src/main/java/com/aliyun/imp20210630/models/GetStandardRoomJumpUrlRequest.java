@@ -24,10 +24,6 @@ public class GetStandardRoomJumpUrlRequest extends TeaModel {
     @NameInMap("Platform")
     public String platform;
 
-    // cn-shanghai
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 用户UserId,在AppId下单独唯一
     @NameInMap("UserId")
     public String userId;
@@ -79,14 +75,6 @@ public class GetStandardRoomJumpUrlRequest extends TeaModel {
     }
     public String getPlatform() {
         return this.platform;
-    }
-
-    public GetStandardRoomJumpUrlRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetStandardRoomJumpUrlRequest setUserId(String userId) {

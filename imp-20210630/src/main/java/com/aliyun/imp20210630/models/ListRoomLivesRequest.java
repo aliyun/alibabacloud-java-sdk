@@ -12,9 +12,6 @@ public class ListRoomLivesRequest extends TeaModel {
     @NameInMap("QueryTimestamp")
     public Long queryTimestamp;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 房间ID，最大长度36个字符。
     @NameInMap("RoomId")
     public String roomId;
@@ -50,14 +47,6 @@ public class ListRoomLivesRequest extends TeaModel {
     }
     public Long getQueryTimestamp() {
         return this.queryTimestamp;
-    }
-
-    public ListRoomLivesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListRoomLivesRequest setRoomId(String roomId) {

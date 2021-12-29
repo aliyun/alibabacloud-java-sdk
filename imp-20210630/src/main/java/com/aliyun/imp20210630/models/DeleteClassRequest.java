@@ -12,9 +12,6 @@ public class DeleteClassRequest extends TeaModel {
     @NameInMap("ClassId")
     public String classId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 操作人用户ID，仅支持中英文数字，下划线，中划线，1~36个字符。
     @NameInMap("UserId")
     public String userId;
@@ -38,14 +35,6 @@ public class DeleteClassRequest extends TeaModel {
     }
     public String getClassId() {
         return this.classId;
-    }
-
-    public DeleteClassRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DeleteClassRequest setUserId(String userId) {

@@ -16,9 +16,6 @@ public class ListCommentsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 房间的唯一标识，在调用CreateRoom时返回。
     @NameInMap("RoomId")
     public String roomId;
@@ -58,14 +55,6 @@ public class ListCommentsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListCommentsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListCommentsRequest setRoomId(String roomId) {

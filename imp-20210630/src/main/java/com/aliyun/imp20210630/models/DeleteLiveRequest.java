@@ -8,9 +8,6 @@ public class DeleteLiveRequest extends TeaModel {
     @NameInMap("LiveId")
     public String liveId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static DeleteLiveRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLiveRequest self = new DeleteLiveRequest();
         return TeaModel.build(map, self);
@@ -22,14 +19,6 @@ public class DeleteLiveRequest extends TeaModel {
     }
     public String getLiveId() {
         return this.liveId;
-    }
-
-    public DeleteLiveRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

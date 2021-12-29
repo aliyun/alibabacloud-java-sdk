@@ -16,9 +16,6 @@ public class SendCommentShrinkRequest extends TeaModel {
     @NameInMap("Extension")
     public String extensionShrink;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 直播间唯一标识，在调用CreateRoom返回。
     @NameInMap("RoomId")
     public String roomId;
@@ -58,14 +55,6 @@ public class SendCommentShrinkRequest extends TeaModel {
     }
     public String getExtensionShrink() {
         return this.extensionShrink;
-    }
-
-    public SendCommentShrinkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public SendCommentShrinkRequest setRoomId(String roomId) {

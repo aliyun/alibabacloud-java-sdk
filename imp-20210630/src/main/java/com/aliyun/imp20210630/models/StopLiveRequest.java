@@ -12,9 +12,6 @@ public class StopLiveRequest extends TeaModel {
     @NameInMap("LiveId")
     public String liveId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 房间ID，最大长度36位
     @NameInMap("RoomId")
     public String roomId;
@@ -42,14 +39,6 @@ public class StopLiveRequest extends TeaModel {
     }
     public String getLiveId() {
         return this.liveId;
-    }
-
-    public StopLiveRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public StopLiveRequest setRoomId(String roomId) {

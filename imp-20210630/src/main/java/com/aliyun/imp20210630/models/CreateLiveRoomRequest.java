@@ -28,9 +28,6 @@ public class CreateLiveRoomRequest extends TeaModel {
     @NameInMap("Notice")
     public String notice;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 标题，支持中英文，最大长度32位。
     @NameInMap("Title")
     public String title;
@@ -90,14 +87,6 @@ public class CreateLiveRoomRequest extends TeaModel {
     }
     public String getNotice() {
         return this.notice;
-    }
-
-    public CreateLiveRoomRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateLiveRoomRequest setTitle(String title) {

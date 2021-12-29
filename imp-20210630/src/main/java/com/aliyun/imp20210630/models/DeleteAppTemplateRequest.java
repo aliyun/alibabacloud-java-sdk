@@ -8,10 +8,6 @@ public class DeleteAppTemplateRequest extends TeaModel {
     @NameInMap("AppTemplateId")
     public String appTemplateId;
 
-    // 地域
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static DeleteAppTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAppTemplateRequest self = new DeleteAppTemplateRequest();
         return TeaModel.build(map, self);
@@ -23,14 +19,6 @@ public class DeleteAppTemplateRequest extends TeaModel {
     }
     public String getAppTemplateId() {
         return this.appTemplateId;
-    }
-
-    public DeleteAppTemplateRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

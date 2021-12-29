@@ -16,9 +16,6 @@ public class BanCommentRequest extends TeaModel {
     @NameInMap("BanCommentUser")
     public String banCommentUser;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 房间唯一标识，由调用CreateRoom返回。
     @NameInMap("RoomId")
     public String roomId;
@@ -54,14 +51,6 @@ public class BanCommentRequest extends TeaModel {
     }
     public String getBanCommentUser() {
         return this.banCommentUser;
-    }
-
-    public BanCommentRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public BanCommentRequest setRoomId(String roomId) {

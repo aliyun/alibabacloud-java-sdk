@@ -16,10 +16,6 @@ public class CreateAppTemplateRequest extends TeaModel {
     @NameInMap("IntegrationMode")
     public String integrationMode;
 
-    // 地域
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 应用模板场景，电商business，课堂classroom
     @NameInMap("Scene")
     public String scene;
@@ -51,14 +47,6 @@ public class CreateAppTemplateRequest extends TeaModel {
     }
     public String getIntegrationMode() {
         return this.integrationMode;
-    }
-
-    public CreateAppTemplateRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateAppTemplateRequest setScene(String scene) {

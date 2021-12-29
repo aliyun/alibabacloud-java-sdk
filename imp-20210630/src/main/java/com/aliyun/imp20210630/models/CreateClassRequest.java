@@ -16,9 +16,6 @@ public class CreateClassRequest extends TeaModel {
     @NameInMap("CreateUserId")
     public String createUserId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 课堂标题
     @NameInMap("Title")
     public String title;
@@ -50,14 +47,6 @@ public class CreateClassRequest extends TeaModel {
     }
     public String getCreateUserId() {
         return this.createUserId;
-    }
-
-    public CreateClassRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateClassRequest setTitle(String title) {

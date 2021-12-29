@@ -16,9 +16,6 @@ public class UpdateRoomRequest extends TeaModel {
     @NameInMap("Notice")
     public String notice;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 房间唯一标识。
     @NameInMap("RoomId")
     public String roomId;
@@ -58,14 +55,6 @@ public class UpdateRoomRequest extends TeaModel {
     }
     public String getNotice() {
         return this.notice;
-    }
-
-    public UpdateRoomRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public UpdateRoomRequest setRoomId(String roomId) {

@@ -12,10 +12,6 @@ public class AgreeLinkMicRequest extends TeaModel {
     @NameInMap("FromUserId")
     public String fromUserId;
 
-    // 地域
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 被同意用户ID
     @NameInMap("ToUserId")
     public String toUserId;
@@ -39,14 +35,6 @@ public class AgreeLinkMicRequest extends TeaModel {
     }
     public String getFromUserId() {
         return this.fromUserId;
-    }
-
-    public AgreeLinkMicRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public AgreeLinkMicRequest setToUserId(String toUserId) {

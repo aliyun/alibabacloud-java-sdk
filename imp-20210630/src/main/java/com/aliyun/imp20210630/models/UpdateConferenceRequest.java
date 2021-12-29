@@ -8,10 +8,6 @@ public class UpdateConferenceRequest extends TeaModel {
     @NameInMap("ConferenceId")
     public String conferenceId;
 
-    // 地域
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 会议标题
     @NameInMap("Title")
     public String title;
@@ -27,14 +23,6 @@ public class UpdateConferenceRequest extends TeaModel {
     }
     public String getConferenceId() {
         return this.conferenceId;
-    }
-
-    public UpdateConferenceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public UpdateConferenceRequest setTitle(String title) {
