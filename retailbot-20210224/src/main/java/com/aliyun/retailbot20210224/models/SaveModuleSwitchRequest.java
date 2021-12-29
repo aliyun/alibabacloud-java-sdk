@@ -8,11 +8,11 @@ public class SaveModuleSwitchRequest extends TeaModel {
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 模块开关状态
+    // 开关状态
     @NameInMap("Status")
     public Integer status;
 
-    // 模块开关类型
+    // 开关类型
     @NameInMap("SwitchType")
     public String switchType;
 
