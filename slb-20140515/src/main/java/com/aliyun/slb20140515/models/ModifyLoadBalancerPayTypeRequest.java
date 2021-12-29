@@ -4,23 +4,20 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class ModifyLoadBalancerPayTypeRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("Duration")
+    public Integer duration;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PayType")
     public String payType;
@@ -28,47 +25,42 @@ public class ModifyLoadBalancerPayTypeRequest extends TeaModel {
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
-    @NameInMap("Duration")
-    public Integer duration;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("AutoPay")
-    public Boolean autoPay;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyLoadBalancerPayTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyLoadBalancerPayTypeRequest self = new ModifyLoadBalancerPayTypeRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyLoadBalancerPayTypeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ModifyLoadBalancerPayTypeRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
-    public ModifyLoadBalancerPayTypeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public ModifyLoadBalancerPayTypeRequest setDuration(Integer duration) {
+        this.duration = duration;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public Integer getDuration() {
+        return this.duration;
     }
 
-    public ModifyLoadBalancerPayTypeRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public ModifyLoadBalancerPayTypeRequest setLoadBalancerId(String loadBalancerId) {
+        this.loadBalancerId = loadBalancerId;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ModifyLoadBalancerPayTypeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
     }
 
     public ModifyLoadBalancerPayTypeRequest setOwnerAccount(String ownerAccount) {
@@ -79,12 +71,12 @@ public class ModifyLoadBalancerPayTypeRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public ModifyLoadBalancerPayTypeRequest setLoadBalancerId(String loadBalancerId) {
-        this.loadBalancerId = loadBalancerId;
+    public ModifyLoadBalancerPayTypeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getLoadBalancerId() {
-        return this.loadBalancerId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyLoadBalancerPayTypeRequest setPayType(String payType) {
@@ -103,20 +95,28 @@ public class ModifyLoadBalancerPayTypeRequest extends TeaModel {
         return this.pricingCycle;
     }
 
-    public ModifyLoadBalancerPayTypeRequest setDuration(Integer duration) {
-        this.duration = duration;
+    public ModifyLoadBalancerPayTypeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Integer getDuration() {
-        return this.duration;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public ModifyLoadBalancerPayTypeRequest setAutoPay(Boolean autoPay) {
-        this.autoPay = autoPay;
+    public ModifyLoadBalancerPayTypeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public Boolean getAutoPay() {
-        return this.autoPay;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyLoadBalancerPayTypeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

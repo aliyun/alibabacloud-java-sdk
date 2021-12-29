@@ -4,8 +4,20 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeCACertificatesRequest extends TeaModel {
+    @NameInMap("CACertificateId")
+    public String CACertificateId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,21 +25,25 @@ public class DescribeCACertificatesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("CACertificateId")
-    public String CACertificateId;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     public static DescribeCACertificatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCACertificatesRequest self = new DescribeCACertificatesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCACertificatesRequest setCACertificateId(String CACertificateId) {
+        this.CACertificateId = CACertificateId;
+        return this;
+    }
+    public String getCACertificateId() {
+        return this.CACertificateId;
+    }
+
+    public DescribeCACertificatesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeCACertificatesRequest setOwnerId(Long ownerId) {
@@ -36,6 +52,22 @@ public class DescribeCACertificatesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeCACertificatesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeCACertificatesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeCACertificatesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -52,38 +84,6 @@ public class DescribeCACertificatesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeCACertificatesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeCACertificatesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeCACertificatesRequest setCACertificateId(String CACertificateId) {
-        this.CACertificateId = CACertificateId;
-        return this;
-    }
-    public String getCACertificateId() {
-        return this.CACertificateId;
-    }
-
-    public DescribeCACertificatesRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
 }

@@ -4,8 +4,17 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainExtensionAttributeRequest extends TeaModel {
+    @NameInMap("DomainExtensionId")
+    public String domainExtensionId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,18 +22,25 @@ public class DescribeDomainExtensionAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DomainExtensionId")
-    public String domainExtensionId;
-
     public static DescribeDomainExtensionAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainExtensionAttributeRequest self = new DescribeDomainExtensionAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDomainExtensionAttributeRequest setDomainExtensionId(String domainExtensionId) {
+        this.domainExtensionId = domainExtensionId;
+        return this;
+    }
+    public String getDomainExtensionId() {
+        return this.domainExtensionId;
+    }
+
+    public DescribeDomainExtensionAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeDomainExtensionAttributeRequest setOwnerId(Long ownerId) {
@@ -33,6 +49,14 @@ public class DescribeDomainExtensionAttributeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeDomainExtensionAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeDomainExtensionAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -49,30 +73,6 @@ public class DescribeDomainExtensionAttributeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeDomainExtensionAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeDomainExtensionAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeDomainExtensionAttributeRequest setDomainExtensionId(String domainExtensionId) {
-        this.domainExtensionId = domainExtensionId;
-        return this;
-    }
-    public String getDomainExtensionId() {
-        return this.domainExtensionId;
     }
 
 }

@@ -81,29 +81,21 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule extends TeaModel {
-        @NameInMap("Url")
-        public String url;
-
         @NameInMap("Domain")
         public String domain;
-
-        @NameInMap("RuleName")
-        public String ruleName;
 
         @NameInMap("RuleId")
         public String ruleId;
 
+        @NameInMap("RuleName")
+        public String ruleName;
+
+        @NameInMap("Url")
+        public String url;
+
         public static DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule build(java.util.Map<String, ?> map) throws Exception {
             DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule self = new DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
         }
 
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule setDomain(String domain) {
@@ -114,6 +106,14 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             return this.domain;
         }
 
+        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule setRuleId(String ruleId) {
+            this.ruleId = ruleId;
+            return this;
+        }
+        public String getRuleId() {
+            return this.ruleId;
+        }
+
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule setRuleName(String ruleName) {
             this.ruleName = ruleName;
             return this;
@@ -122,12 +122,12 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             return this.ruleName;
         }
 
-        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule setRuleId(String ruleId) {
-            this.ruleId = ruleId;
+        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule setUrl(String url) {
+            this.url = url;
             return this;
         }
-        public String getRuleId() {
-            return this.ruleId;
+        public String getUrl() {
+            return this.url;
         }
 
     }
@@ -182,18 +182,37 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup extends TeaModel {
+        @NameInMap("AssociatedObjects")
+        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects associatedObjects;
+
+        @NameInMap("ServerCount")
+        public Long serverCount;
+
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
 
         @NameInMap("VServerGroupName")
         public String VServerGroupName;
 
-        @NameInMap("AssociatedObjects")
-        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects associatedObjects;
-
         public static DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup self = new DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup setAssociatedObjects(DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects associatedObjects) {
+            this.associatedObjects = associatedObjects;
+            return this;
+        }
+        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects getAssociatedObjects() {
+            return this.associatedObjects;
+        }
+
+        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup setServerCount(Long serverCount) {
+            this.serverCount = serverCount;
+            return this;
+        }
+        public Long getServerCount() {
+            return this.serverCount;
         }
 
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup setVServerGroupId(String VServerGroupId) {
@@ -210,14 +229,6 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         }
         public String getVServerGroupName() {
             return this.VServerGroupName;
-        }
-
-        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup setAssociatedObjects(DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects associatedObjects) {
-            this.associatedObjects = associatedObjects;
-            return this;
-        }
-        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects getAssociatedObjects() {
-            return this.associatedObjects;
         }
 
     }

@@ -32,23 +32,15 @@ public class CreateRulesResponseBody extends TeaModel {
     }
 
     public static class CreateRulesResponseBodyRulesRule extends TeaModel {
-        @NameInMap("RuleName")
-        public String ruleName;
-
         @NameInMap("RuleId")
         public String ruleId;
+
+        @NameInMap("RuleName")
+        public String ruleName;
 
         public static CreateRulesResponseBodyRulesRule build(java.util.Map<String, ?> map) throws Exception {
             CreateRulesResponseBodyRulesRule self = new CreateRulesResponseBodyRulesRule();
             return TeaModel.build(map, self);
-        }
-
-        public CreateRulesResponseBodyRulesRule setRuleName(String ruleName) {
-            this.ruleName = ruleName;
-            return this;
-        }
-        public String getRuleName() {
-            return this.ruleName;
         }
 
         public CreateRulesResponseBodyRulesRule setRuleId(String ruleId) {
@@ -57,6 +49,14 @@ public class CreateRulesResponseBody extends TeaModel {
         }
         public String getRuleId() {
             return this.ruleId;
+        }
+
+        public CreateRulesResponseBodyRulesRule setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
         }
 
     }

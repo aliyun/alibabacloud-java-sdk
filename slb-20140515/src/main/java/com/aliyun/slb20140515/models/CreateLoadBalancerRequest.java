@@ -4,23 +4,17 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateLoadBalancerRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("Address")
+    public String address;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AddressIPVersion")
+    public String addressIPVersion;
 
     @NameInMap("AddressType")
     public String addressType;
 
-    @NameInMap("InternetChargeType")
-    public String internetChargeType;
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
 
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -28,29 +22,35 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DeleteProtection")
+    public String deleteProtection;
+
+    @NameInMap("Duration")
+    public Integer duration;
+
+    @NameInMap("InternetChargeType")
+    public String internetChargeType;
+
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
-
-    @NameInMap("VpcId")
-    public String vpcId;
-
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("MasterZoneId")
-    public String masterZoneId;
-
-    @NameInMap("SlaveZoneId")
-    public String slaveZoneId;
 
     @NameInMap("LoadBalancerSpec")
     public String loadBalancerSpec;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("MasterZoneId")
+    public String masterZoneId;
+
+    @NameInMap("ModificationProtectionReason")
+    public String modificationProtectionReason;
+
+    @NameInMap("ModificationProtectionStatus")
+    public String modificationProtectionStatus;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PayType")
     public String payType;
@@ -58,62 +58,46 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
-    @NameInMap("Duration")
-    public Integer duration;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("AutoPay")
-    public Boolean autoPay;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
-    @NameInMap("AddressIPVersion")
-    public String addressIPVersion;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("Address")
-    public String address;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
-    @NameInMap("DeleteProtection")
-    public String deleteProtection;
+    @NameInMap("SlaveZoneId")
+    public String slaveZoneId;
 
-    @NameInMap("ModificationProtectionStatus")
-    public String modificationProtectionStatus;
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
 
-    @NameInMap("ModificationProtectionReason")
-    public String modificationProtectionReason;
+    @NameInMap("VpcId")
+    public String vpcId;
 
     public static CreateLoadBalancerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLoadBalancerRequest self = new CreateLoadBalancerRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateLoadBalancerRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public CreateLoadBalancerRequest setAddress(String address) {
+        this.address = address;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAddress() {
+        return this.address;
     }
 
-    public CreateLoadBalancerRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public CreateLoadBalancerRequest setAddressIPVersion(String addressIPVersion) {
+        this.addressIPVersion = addressIPVersion;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public CreateLoadBalancerRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CreateLoadBalancerRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getAddressIPVersion() {
+        return this.addressIPVersion;
     }
 
     public CreateLoadBalancerRequest setAddressType(String addressType) {
@@ -124,12 +108,12 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.addressType;
     }
 
-    public CreateLoadBalancerRequest setInternetChargeType(String internetChargeType) {
-        this.internetChargeType = internetChargeType;
+    public CreateLoadBalancerRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
         return this;
     }
-    public String getInternetChargeType() {
-        return this.internetChargeType;
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     public CreateLoadBalancerRequest setBandwidth(Integer bandwidth) {
@@ -148,52 +132,36 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateLoadBalancerRequest setDeleteProtection(String deleteProtection) {
+        this.deleteProtection = deleteProtection;
+        return this;
+    }
+    public String getDeleteProtection() {
+        return this.deleteProtection;
+    }
+
+    public CreateLoadBalancerRequest setDuration(Integer duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Integer getDuration() {
+        return this.duration;
+    }
+
+    public CreateLoadBalancerRequest setInternetChargeType(String internetChargeType) {
+        this.internetChargeType = internetChargeType;
+        return this;
+    }
+    public String getInternetChargeType() {
+        return this.internetChargeType;
+    }
+
     public CreateLoadBalancerRequest setLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
     }
     public String getLoadBalancerName() {
         return this.loadBalancerName;
-    }
-
-    public CreateLoadBalancerRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public CreateLoadBalancerRequest setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
-        return this;
-    }
-    public String getVSwitchId() {
-        return this.vSwitchId;
-    }
-
-    public CreateLoadBalancerRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CreateLoadBalancerRequest setMasterZoneId(String masterZoneId) {
-        this.masterZoneId = masterZoneId;
-        return this;
-    }
-    public String getMasterZoneId() {
-        return this.masterZoneId;
-    }
-
-    public CreateLoadBalancerRequest setSlaveZoneId(String slaveZoneId) {
-        this.slaveZoneId = slaveZoneId;
-        return this;
-    }
-    public String getSlaveZoneId() {
-        return this.slaveZoneId;
     }
 
     public CreateLoadBalancerRequest setLoadBalancerSpec(String loadBalancerSpec) {
@@ -204,12 +172,44 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.loadBalancerSpec;
     }
 
-    public CreateLoadBalancerRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public CreateLoadBalancerRequest setMasterZoneId(String masterZoneId) {
+        this.masterZoneId = masterZoneId;
         return this;
     }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getMasterZoneId() {
+        return this.masterZoneId;
+    }
+
+    public CreateLoadBalancerRequest setModificationProtectionReason(String modificationProtectionReason) {
+        this.modificationProtectionReason = modificationProtectionReason;
+        return this;
+    }
+    public String getModificationProtectionReason() {
+        return this.modificationProtectionReason;
+    }
+
+    public CreateLoadBalancerRequest setModificationProtectionStatus(String modificationProtectionStatus) {
+        this.modificationProtectionStatus = modificationProtectionStatus;
+        return this;
+    }
+    public String getModificationProtectionStatus() {
+        return this.modificationProtectionStatus;
+    }
+
+    public CreateLoadBalancerRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public CreateLoadBalancerRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public CreateLoadBalancerRequest setPayType(String payType) {
@@ -228,60 +228,60 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.pricingCycle;
     }
 
-    public CreateLoadBalancerRequest setDuration(Integer duration) {
-        this.duration = duration;
+    public CreateLoadBalancerRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Integer getDuration() {
-        return this.duration;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public CreateLoadBalancerRequest setAutoPay(Boolean autoPay) {
-        this.autoPay = autoPay;
+    public CreateLoadBalancerRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
-    public Boolean getAutoPay() {
-        return this.autoPay;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
-    public CreateLoadBalancerRequest setAddressIPVersion(String addressIPVersion) {
-        this.addressIPVersion = addressIPVersion;
+    public CreateLoadBalancerRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getAddressIPVersion() {
-        return this.addressIPVersion;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public CreateLoadBalancerRequest setAddress(String address) {
-        this.address = address;
+    public CreateLoadBalancerRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getAddress() {
-        return this.address;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
-    public CreateLoadBalancerRequest setDeleteProtection(String deleteProtection) {
-        this.deleteProtection = deleteProtection;
+    public CreateLoadBalancerRequest setSlaveZoneId(String slaveZoneId) {
+        this.slaveZoneId = slaveZoneId;
         return this;
     }
-    public String getDeleteProtection() {
-        return this.deleteProtection;
+    public String getSlaveZoneId() {
+        return this.slaveZoneId;
     }
 
-    public CreateLoadBalancerRequest setModificationProtectionStatus(String modificationProtectionStatus) {
-        this.modificationProtectionStatus = modificationProtectionStatus;
+    public CreateLoadBalancerRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
         return this;
     }
-    public String getModificationProtectionStatus() {
-        return this.modificationProtectionStatus;
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
-    public CreateLoadBalancerRequest setModificationProtectionReason(String modificationProtectionReason) {
-        this.modificationProtectionReason = modificationProtectionReason;
+    public CreateLoadBalancerRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
         return this;
     }
-    public String getModificationProtectionReason() {
-        return this.modificationProtectionReason;
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

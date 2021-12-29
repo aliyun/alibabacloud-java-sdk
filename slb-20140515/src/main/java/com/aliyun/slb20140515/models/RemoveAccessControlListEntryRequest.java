@@ -4,8 +4,20 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class RemoveAccessControlListEntryRequest extends TeaModel {
+    @NameInMap("AclEntrys")
+    public String aclEntrys;
+
+    @NameInMap("AclId")
+    public String aclId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,21 +25,33 @@ public class RemoveAccessControlListEntryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("AclId")
-    public String aclId;
-
-    @NameInMap("AclEntrys")
-    public String aclEntrys;
-
     public static RemoveAccessControlListEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveAccessControlListEntryRequest self = new RemoveAccessControlListEntryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RemoveAccessControlListEntryRequest setAclEntrys(String aclEntrys) {
+        this.aclEntrys = aclEntrys;
+        return this;
+    }
+    public String getAclEntrys() {
+        return this.aclEntrys;
+    }
+
+    public RemoveAccessControlListEntryRequest setAclId(String aclId) {
+        this.aclId = aclId;
+        return this;
+    }
+    public String getAclId() {
+        return this.aclId;
+    }
+
+    public RemoveAccessControlListEntryRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public RemoveAccessControlListEntryRequest setOwnerId(Long ownerId) {
@@ -36,6 +60,14 @@ public class RemoveAccessControlListEntryRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public RemoveAccessControlListEntryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public RemoveAccessControlListEntryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -52,38 +84,6 @@ public class RemoveAccessControlListEntryRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public RemoveAccessControlListEntryRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public RemoveAccessControlListEntryRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public RemoveAccessControlListEntryRequest setAclId(String aclId) {
-        this.aclId = aclId;
-        return this;
-    }
-    public String getAclId() {
-        return this.aclId;
-    }
-
-    public RemoveAccessControlListEntryRequest setAclEntrys(String aclEntrys) {
-        this.aclEntrys = aclEntrys;
-        return this;
-    }
-    public String getAclEntrys() {
-        return this.aclEntrys;
     }
 
 }

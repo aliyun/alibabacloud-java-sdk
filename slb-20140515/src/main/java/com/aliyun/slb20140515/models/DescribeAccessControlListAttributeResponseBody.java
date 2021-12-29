@@ -4,11 +4,20 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
+    @NameInMap("AclEntrys")
+    public DescribeAccessControlListAttributeResponseBodyAclEntrys aclEntrys;
+
     @NameInMap("AclId")
     public String aclId;
 
+    @NameInMap("AclName")
+    public String aclName;
+
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
+
+    @NameInMap("RelatedListeners")
+    public DescribeAccessControlListAttributeResponseBodyRelatedListeners relatedListeners;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,18 +25,17 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("AclName")
-    public String aclName;
-
-    @NameInMap("AclEntrys")
-    public DescribeAccessControlListAttributeResponseBodyAclEntrys aclEntrys;
-
-    @NameInMap("RelatedListeners")
-    public DescribeAccessControlListAttributeResponseBodyRelatedListeners relatedListeners;
-
     public static DescribeAccessControlListAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccessControlListAttributeResponseBody self = new DescribeAccessControlListAttributeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAccessControlListAttributeResponseBody setAclEntrys(DescribeAccessControlListAttributeResponseBodyAclEntrys aclEntrys) {
+        this.aclEntrys = aclEntrys;
+        return this;
+    }
+    public DescribeAccessControlListAttributeResponseBodyAclEntrys getAclEntrys() {
+        return this.aclEntrys;
     }
 
     public DescribeAccessControlListAttributeResponseBody setAclId(String aclId) {
@@ -38,12 +46,28 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         return this.aclId;
     }
 
+    public DescribeAccessControlListAttributeResponseBody setAclName(String aclName) {
+        this.aclName = aclName;
+        return this;
+    }
+    public String getAclName() {
+        return this.aclName;
+    }
+
     public DescribeAccessControlListAttributeResponseBody setAddressIPVersion(String addressIPVersion) {
         this.addressIPVersion = addressIPVersion;
         return this;
     }
     public String getAddressIPVersion() {
         return this.addressIPVersion;
+    }
+
+    public DescribeAccessControlListAttributeResponseBody setRelatedListeners(DescribeAccessControlListAttributeResponseBodyRelatedListeners relatedListeners) {
+        this.relatedListeners = relatedListeners;
+        return this;
+    }
+    public DescribeAccessControlListAttributeResponseBodyRelatedListeners getRelatedListeners() {
+        return this.relatedListeners;
     }
 
     public DescribeAccessControlListAttributeResponseBody setRequestId(String requestId) {
@@ -60,30 +84,6 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public DescribeAccessControlListAttributeResponseBody setAclName(String aclName) {
-        this.aclName = aclName;
-        return this;
-    }
-    public String getAclName() {
-        return this.aclName;
-    }
-
-    public DescribeAccessControlListAttributeResponseBody setAclEntrys(DescribeAccessControlListAttributeResponseBodyAclEntrys aclEntrys) {
-        this.aclEntrys = aclEntrys;
-        return this;
-    }
-    public DescribeAccessControlListAttributeResponseBodyAclEntrys getAclEntrys() {
-        return this.aclEntrys;
-    }
-
-    public DescribeAccessControlListAttributeResponseBody setRelatedListeners(DescribeAccessControlListAttributeResponseBodyRelatedListeners relatedListeners) {
-        this.relatedListeners = relatedListeners;
-        return this;
-    }
-    public DescribeAccessControlListAttributeResponseBodyRelatedListeners getRelatedListeners() {
-        return this.relatedListeners;
     }
 
     public static class DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry extends TeaModel {
@@ -136,29 +136,21 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener extends TeaModel {
-        @NameInMap("ListenerPort")
-        public Integer listenerPort;
-
         @NameInMap("AclType")
         public String aclType;
 
-        @NameInMap("Protocol")
-        public String protocol;
+        @NameInMap("ListenerPort")
+        public Integer listenerPort;
 
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
+        @NameInMap("Protocol")
+        public String protocol;
+
         public static DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener self = new DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener setListenerPort(Integer listenerPort) {
-            this.listenerPort = listenerPort;
-            return this;
-        }
-        public Integer getListenerPort() {
-            return this.listenerPort;
         }
 
         public DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener setAclType(String aclType) {
@@ -169,12 +161,12 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
             return this.aclType;
         }
 
-        public DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener setProtocol(String protocol) {
-            this.protocol = protocol;
+        public DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener setListenerPort(Integer listenerPort) {
+            this.listenerPort = listenerPort;
             return this;
         }
-        public String getProtocol() {
-            return this.protocol;
+        public Integer getListenerPort() {
+            return this.listenerPort;
         }
 
         public DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener setLoadBalancerId(String loadBalancerId) {
@@ -183,6 +175,14 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
         public String getLoadBalancerId() {
             return this.loadBalancerId;
+        }
+
+        public DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
         }
 
     }

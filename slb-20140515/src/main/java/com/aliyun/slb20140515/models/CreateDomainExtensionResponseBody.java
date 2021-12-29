@@ -4,18 +4,26 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateDomainExtensionResponseBody extends TeaModel {
+    @NameInMap("DomainExtensionId")
+    public String domainExtensionId;
+
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DomainExtensionId")
-    public String domainExtensionId;
-
     public static CreateDomainExtensionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDomainExtensionResponseBody self = new CreateDomainExtensionResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDomainExtensionResponseBody setDomainExtensionId(String domainExtensionId) {
+        this.domainExtensionId = domainExtensionId;
+        return this;
+    }
+    public String getDomainExtensionId() {
+        return this.domainExtensionId;
     }
 
     public CreateDomainExtensionResponseBody setListenerPort(Integer listenerPort) {
@@ -32,14 +40,6 @@ public class CreateDomainExtensionResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateDomainExtensionResponseBody setDomainExtensionId(String domainExtensionId) {
-        this.domainExtensionId = domainExtensionId;
-        return this;
-    }
-    public String getDomainExtensionId() {
-        return this.domainExtensionId;
     }
 
 }

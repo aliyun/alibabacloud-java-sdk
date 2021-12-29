@@ -4,23 +4,14 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AclId")
+    public String aclId;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AclStatus")
+    public String aclStatus;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
-
-    @NameInMap("ListenerPort")
-    public Integer listenerPort;
+    @NameInMap("AclType")
+    public String aclType;
 
     @NameInMap("BackendServerPort")
     public Integer backendServerPort;
@@ -28,35 +19,26 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
-    @NameInMap("Scheduler")
-    public String scheduler;
+    @NameInMap("ConnectionDrain")
+    public String connectionDrain;
 
-    @NameInMap("PersistenceTimeout")
-    public Integer persistenceTimeout;
+    @NameInMap("ConnectionDrainTimeout")
+    public Integer connectionDrainTimeout;
+
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("EstablishedTimeout")
     public Integer establishedTimeout;
 
-    @NameInMap("HealthyThreshold")
-    public Integer healthyThreshold;
-
-    @NameInMap("UnhealthyThreshold")
-    public Integer unhealthyThreshold;
+    @NameInMap("HealthCheckConnectPort")
+    public Integer healthCheckConnectPort;
 
     @NameInMap("HealthCheckConnectTimeout")
     public Integer healthCheckConnectTimeout;
 
-    @NameInMap("HealthCheckConnectPort")
-    public Integer healthCheckConnectPort;
-
-    @NameInMap("healthCheckInterval")
-    public Integer healthCheckInterval;
-
     @NameInMap("HealthCheckDomain")
     public String healthCheckDomain;
-
-    @NameInMap("HealthCheckURI")
-    public String healthCheckURI;
 
     @NameInMap("HealthCheckHttpCode")
     public String healthCheckHttpCode;
@@ -64,84 +46,78 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     @NameInMap("HealthCheckType")
     public String healthCheckType;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("HealthCheckURI")
+    public String healthCheckURI;
 
-    @NameInMap("VServerGroupId")
-    public String VServerGroupId;
+    @NameInMap("HealthyThreshold")
+    public Integer healthyThreshold;
+
+    @NameInMap("ListenerPort")
+    public Integer listenerPort;
+
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
 
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
 
-    @NameInMap("AclId")
-    public String aclId;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
-    @NameInMap("AclType")
-    public String aclType;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
-    @NameInMap("AclStatus")
-    public String aclStatus;
+    @NameInMap("PersistenceTimeout")
+    public Integer persistenceTimeout;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("ConnectionDrain")
-    public String connectionDrain;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("ConnectionDrainTimeout")
-    public Integer connectionDrainTimeout;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("Scheduler")
+    public String scheduler;
+
+    @NameInMap("UnhealthyThreshold")
+    public Integer unhealthyThreshold;
+
+    @NameInMap("VServerGroupId")
+    public String VServerGroupId;
+
+    @NameInMap("healthCheckInterval")
+    public Integer healthCheckInterval;
 
     public static CreateLoadBalancerTCPListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLoadBalancerTCPListenerRequest self = new CreateLoadBalancerTCPListenerRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateLoadBalancerTCPListenerRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateLoadBalancerTCPListenerRequest setAclId(String aclId) {
+        this.aclId = aclId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getAclId() {
+        return this.aclId;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public CreateLoadBalancerTCPListenerRequest setAclStatus(String aclStatus) {
+        this.aclStatus = aclStatus;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAclStatus() {
+        return this.aclStatus;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public CreateLoadBalancerTCPListenerRequest setAclType(String aclType) {
+        this.aclType = aclType;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public CreateLoadBalancerTCPListenerRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CreateLoadBalancerTCPListenerRequest setLoadBalancerId(String loadBalancerId) {
-        this.loadBalancerId = loadBalancerId;
-        return this;
-    }
-    public String getLoadBalancerId() {
-        return this.loadBalancerId;
-    }
-
-    public CreateLoadBalancerTCPListenerRequest setListenerPort(Integer listenerPort) {
-        this.listenerPort = listenerPort;
-        return this;
-    }
-    public Integer getListenerPort() {
-        return this.listenerPort;
+    public String getAclType() {
+        return this.aclType;
     }
 
     public CreateLoadBalancerTCPListenerRequest setBackendServerPort(Integer backendServerPort) {
@@ -160,20 +136,28 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
         return this.bandwidth;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setScheduler(String scheduler) {
-        this.scheduler = scheduler;
+    public CreateLoadBalancerTCPListenerRequest setConnectionDrain(String connectionDrain) {
+        this.connectionDrain = connectionDrain;
         return this;
     }
-    public String getScheduler() {
-        return this.scheduler;
+    public String getConnectionDrain() {
+        return this.connectionDrain;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setPersistenceTimeout(Integer persistenceTimeout) {
-        this.persistenceTimeout = persistenceTimeout;
+    public CreateLoadBalancerTCPListenerRequest setConnectionDrainTimeout(Integer connectionDrainTimeout) {
+        this.connectionDrainTimeout = connectionDrainTimeout;
         return this;
     }
-    public Integer getPersistenceTimeout() {
-        return this.persistenceTimeout;
+    public Integer getConnectionDrainTimeout() {
+        return this.connectionDrainTimeout;
+    }
+
+    public CreateLoadBalancerTCPListenerRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateLoadBalancerTCPListenerRequest setEstablishedTimeout(Integer establishedTimeout) {
@@ -184,20 +168,12 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
         return this.establishedTimeout;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setHealthyThreshold(Integer healthyThreshold) {
-        this.healthyThreshold = healthyThreshold;
+    public CreateLoadBalancerTCPListenerRequest setHealthCheckConnectPort(Integer healthCheckConnectPort) {
+        this.healthCheckConnectPort = healthCheckConnectPort;
         return this;
     }
-    public Integer getHealthyThreshold() {
-        return this.healthyThreshold;
-    }
-
-    public CreateLoadBalancerTCPListenerRequest setUnhealthyThreshold(Integer unhealthyThreshold) {
-        this.unhealthyThreshold = unhealthyThreshold;
-        return this;
-    }
-    public Integer getUnhealthyThreshold() {
-        return this.unhealthyThreshold;
+    public Integer getHealthCheckConnectPort() {
+        return this.healthCheckConnectPort;
     }
 
     public CreateLoadBalancerTCPListenerRequest setHealthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
@@ -208,36 +184,12 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
         return this.healthCheckConnectTimeout;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setHealthCheckConnectPort(Integer healthCheckConnectPort) {
-        this.healthCheckConnectPort = healthCheckConnectPort;
-        return this;
-    }
-    public Integer getHealthCheckConnectPort() {
-        return this.healthCheckConnectPort;
-    }
-
-    public CreateLoadBalancerTCPListenerRequest setHealthCheckInterval(Integer healthCheckInterval) {
-        this.healthCheckInterval = healthCheckInterval;
-        return this;
-    }
-    public Integer getHealthCheckInterval() {
-        return this.healthCheckInterval;
-    }
-
     public CreateLoadBalancerTCPListenerRequest setHealthCheckDomain(String healthCheckDomain) {
         this.healthCheckDomain = healthCheckDomain;
         return this;
     }
     public String getHealthCheckDomain() {
         return this.healthCheckDomain;
-    }
-
-    public CreateLoadBalancerTCPListenerRequest setHealthCheckURI(String healthCheckURI) {
-        this.healthCheckURI = healthCheckURI;
-        return this;
-    }
-    public String getHealthCheckURI() {
-        return this.healthCheckURI;
     }
 
     public CreateLoadBalancerTCPListenerRequest setHealthCheckHttpCode(String healthCheckHttpCode) {
@@ -256,20 +208,36 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
         return this.healthCheckType;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public CreateLoadBalancerTCPListenerRequest setHealthCheckURI(String healthCheckURI) {
+        this.healthCheckURI = healthCheckURI;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getHealthCheckURI() {
+        return this.healthCheckURI;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setVServerGroupId(String VServerGroupId) {
-        this.VServerGroupId = VServerGroupId;
+    public CreateLoadBalancerTCPListenerRequest setHealthyThreshold(Integer healthyThreshold) {
+        this.healthyThreshold = healthyThreshold;
         return this;
     }
-    public String getVServerGroupId() {
-        return this.VServerGroupId;
+    public Integer getHealthyThreshold() {
+        return this.healthyThreshold;
+    }
+
+    public CreateLoadBalancerTCPListenerRequest setListenerPort(Integer listenerPort) {
+        this.listenerPort = listenerPort;
+        return this;
+    }
+    public Integer getListenerPort() {
+        return this.listenerPort;
+    }
+
+    public CreateLoadBalancerTCPListenerRequest setLoadBalancerId(String loadBalancerId) {
+        this.loadBalancerId = loadBalancerId;
+        return this;
+    }
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
     }
 
     public CreateLoadBalancerTCPListenerRequest setMasterSlaveServerGroupId(String masterSlaveServerGroupId) {
@@ -280,52 +248,84 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
         return this.masterSlaveServerGroupId;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setAclId(String aclId) {
-        this.aclId = aclId;
+    public CreateLoadBalancerTCPListenerRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getAclId() {
-        return this.aclId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setAclType(String aclType) {
-        this.aclType = aclType;
+    public CreateLoadBalancerTCPListenerRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getAclType() {
-        return this.aclType;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setAclStatus(String aclStatus) {
-        this.aclStatus = aclStatus;
+    public CreateLoadBalancerTCPListenerRequest setPersistenceTimeout(Integer persistenceTimeout) {
+        this.persistenceTimeout = persistenceTimeout;
         return this;
     }
-    public String getAclStatus() {
-        return this.aclStatus;
+    public Integer getPersistenceTimeout() {
+        return this.persistenceTimeout;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setDescription(String description) {
-        this.description = description;
+    public CreateLoadBalancerTCPListenerRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setConnectionDrain(String connectionDrain) {
-        this.connectionDrain = connectionDrain;
+    public CreateLoadBalancerTCPListenerRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getConnectionDrain() {
-        return this.connectionDrain;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setConnectionDrainTimeout(Integer connectionDrainTimeout) {
-        this.connectionDrainTimeout = connectionDrainTimeout;
+    public CreateLoadBalancerTCPListenerRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public Integer getConnectionDrainTimeout() {
-        return this.connectionDrainTimeout;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateLoadBalancerTCPListenerRequest setScheduler(String scheduler) {
+        this.scheduler = scheduler;
+        return this;
+    }
+    public String getScheduler() {
+        return this.scheduler;
+    }
+
+    public CreateLoadBalancerTCPListenerRequest setUnhealthyThreshold(Integer unhealthyThreshold) {
+        this.unhealthyThreshold = unhealthyThreshold;
+        return this;
+    }
+    public Integer getUnhealthyThreshold() {
+        return this.unhealthyThreshold;
+    }
+
+    public CreateLoadBalancerTCPListenerRequest setVServerGroupId(String VServerGroupId) {
+        this.VServerGroupId = VServerGroupId;
+        return this;
+    }
+    public String getVServerGroupId() {
+        return this.VServerGroupId;
+    }
+
+    public CreateLoadBalancerTCPListenerRequest setHealthCheckInterval(Integer healthCheckInterval) {
+        this.healthCheckInterval = healthCheckInterval;
+        return this;
+    }
+    public Integer getHealthCheckInterval() {
+        return this.healthCheckInterval;
     }
 
 }

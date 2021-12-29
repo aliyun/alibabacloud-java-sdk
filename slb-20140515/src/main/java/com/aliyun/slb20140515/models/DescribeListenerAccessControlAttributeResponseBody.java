@@ -4,26 +4,18 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeListenerAccessControlAttributeResponseBody extends TeaModel {
-    @NameInMap("SourceItems")
-    public String sourceItems;
-
     @NameInMap("AccessControlStatus")
     public String accessControlStatus;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SourceItems")
+    public String sourceItems;
+
     public static DescribeListenerAccessControlAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeListenerAccessControlAttributeResponseBody self = new DescribeListenerAccessControlAttributeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeListenerAccessControlAttributeResponseBody setSourceItems(String sourceItems) {
-        this.sourceItems = sourceItems;
-        return this;
-    }
-    public String getSourceItems() {
-        return this.sourceItems;
     }
 
     public DescribeListenerAccessControlAttributeResponseBody setAccessControlStatus(String accessControlStatus) {
@@ -40,6 +32,14 @@ public class DescribeListenerAccessControlAttributeResponseBody extends TeaModel
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeListenerAccessControlAttributeResponseBody setSourceItems(String sourceItems) {
+        this.sourceItems = sourceItems;
+        return this;
+    }
+    public String getSourceItems() {
+        return this.sourceItems;
     }
 
 }

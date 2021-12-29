@@ -4,24 +4,32 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class ListTLSCipherPoliciesResponseBody extends TeaModel {
+    @NameInMap("IsTruncated")
+    public Boolean isTruncated;
+
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("IsTruncated")
-    public Boolean isTruncated;
-
     @NameInMap("TLSCipherPolicies")
     public java.util.List<ListTLSCipherPoliciesResponseBodyTLSCipherPolicies> TLSCipherPolicies;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListTLSCipherPoliciesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTLSCipherPoliciesResponseBody self = new ListTLSCipherPoliciesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListTLSCipherPoliciesResponseBody setIsTruncated(Boolean isTruncated) {
+        this.isTruncated = isTruncated;
+        return this;
+    }
+    public Boolean getIsTruncated() {
+        return this.isTruncated;
     }
 
     public ListTLSCipherPoliciesResponseBody setNextToken(String nextToken) {
@@ -40,22 +48,6 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTLSCipherPoliciesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListTLSCipherPoliciesResponseBody setIsTruncated(Boolean isTruncated) {
-        this.isTruncated = isTruncated;
-        return this;
-    }
-    public Boolean getIsTruncated() {
-        return this.isTruncated;
-    }
-
     public ListTLSCipherPoliciesResponseBody setTLSCipherPolicies(java.util.List<ListTLSCipherPoliciesResponseBodyTLSCipherPolicies> TLSCipherPolicies) {
         this.TLSCipherPolicies = TLSCipherPolicies;
         return this;
@@ -64,19 +56,35 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         return this.TLSCipherPolicies;
     }
 
+    public ListTLSCipherPoliciesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListTLSCipherPoliciesResponseBodyTLSCipherPoliciesRelateListeners extends TeaModel {
+        @NameInMap("LoadBalancerId")
+        public String loadBalancerId;
+
         @NameInMap("Port")
         public Integer port;
 
         @NameInMap("Protocol")
         public String protocol;
 
-        @NameInMap("LoadBalancerId")
-        public String loadBalancerId;
-
         public static ListTLSCipherPoliciesResponseBodyTLSCipherPoliciesRelateListeners build(java.util.Map<String, ?> map) throws Exception {
             ListTLSCipherPoliciesResponseBodyTLSCipherPoliciesRelateListeners self = new ListTLSCipherPoliciesResponseBodyTLSCipherPoliciesRelateListeners();
             return TeaModel.build(map, self);
+        }
+
+        public ListTLSCipherPoliciesResponseBodyTLSCipherPoliciesRelateListeners setLoadBalancerId(String loadBalancerId) {
+            this.loadBalancerId = loadBalancerId;
+            return this;
+        }
+        public String getLoadBalancerId() {
+            return this.loadBalancerId;
         }
 
         public ListTLSCipherPoliciesResponseBodyTLSCipherPoliciesRelateListeners setPort(Integer port) {
@@ -95,19 +103,14 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             return this.protocol;
         }
 
-        public ListTLSCipherPoliciesResponseBodyTLSCipherPoliciesRelateListeners setLoadBalancerId(String loadBalancerId) {
-            this.loadBalancerId = loadBalancerId;
-            return this;
-        }
-        public String getLoadBalancerId() {
-            return this.loadBalancerId;
-        }
-
     }
 
     public static class ListTLSCipherPoliciesResponseBodyTLSCipherPolicies extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("Ciphers")
+        public java.util.List<String> ciphers;
+
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -115,29 +118,34 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("CreateTime")
-        public Long createTime;
-
         @NameInMap("RelateListeners")
         public java.util.List<ListTLSCipherPoliciesResponseBodyTLSCipherPoliciesRelateListeners> relateListeners;
 
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("TLSVersions")
         public java.util.List<String> TLSVersions;
-
-        @NameInMap("Ciphers")
-        public java.util.List<String> ciphers;
 
         public static ListTLSCipherPoliciesResponseBodyTLSCipherPolicies build(java.util.Map<String, ?> map) throws Exception {
             ListTLSCipherPoliciesResponseBodyTLSCipherPolicies self = new ListTLSCipherPoliciesResponseBodyTLSCipherPolicies();
             return TeaModel.build(map, self);
         }
 
-        public ListTLSCipherPoliciesResponseBodyTLSCipherPolicies setStatus(String status) {
-            this.status = status;
+        public ListTLSCipherPoliciesResponseBodyTLSCipherPolicies setCiphers(java.util.List<String> ciphers) {
+            this.ciphers = ciphers;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public java.util.List<String> getCiphers() {
+            return this.ciphers;
+        }
+
+        public ListTLSCipherPoliciesResponseBodyTLSCipherPolicies setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public ListTLSCipherPoliciesResponseBodyTLSCipherPolicies setInstanceId(String instanceId) {
@@ -156,14 +164,6 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListTLSCipherPoliciesResponseBodyTLSCipherPolicies setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
-        }
-
         public ListTLSCipherPoliciesResponseBodyTLSCipherPolicies setRelateListeners(java.util.List<ListTLSCipherPoliciesResponseBodyTLSCipherPoliciesRelateListeners> relateListeners) {
             this.relateListeners = relateListeners;
             return this;
@@ -172,20 +172,20 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             return this.relateListeners;
         }
 
+        public ListTLSCipherPoliciesResponseBodyTLSCipherPolicies setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
         public ListTLSCipherPoliciesResponseBodyTLSCipherPolicies setTLSVersions(java.util.List<String> TLSVersions) {
             this.TLSVersions = TLSVersions;
             return this;
         }
         public java.util.List<String> getTLSVersions() {
             return this.TLSVersions;
-        }
-
-        public ListTLSCipherPoliciesResponseBodyTLSCipherPolicies setCiphers(java.util.List<String> ciphers) {
-            this.ciphers = ciphers;
-            return this;
-        }
-        public java.util.List<String> getCiphers() {
-            return this.ciphers;
         }
 
     }

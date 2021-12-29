@@ -4,18 +4,26 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class RemoveBackendServersResponseBody extends TeaModel {
+    @NameInMap("BackendServers")
+    public RemoveBackendServersResponseBodyBackendServers backendServers;
+
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("BackendServers")
-    public RemoveBackendServersResponseBodyBackendServers backendServers;
-
     public static RemoveBackendServersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemoveBackendServersResponseBody self = new RemoveBackendServersResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RemoveBackendServersResponseBody setBackendServers(RemoveBackendServersResponseBodyBackendServers backendServers) {
+        this.backendServers = backendServers;
+        return this;
+    }
+    public RemoveBackendServersResponseBodyBackendServers getBackendServers() {
+        return this.backendServers;
     }
 
     public RemoveBackendServersResponseBody setLoadBalancerId(String loadBalancerId) {
@@ -34,46 +42,22 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public RemoveBackendServersResponseBody setBackendServers(RemoveBackendServersResponseBodyBackendServers backendServers) {
-        this.backendServers = backendServers;
-        return this;
-    }
-    public RemoveBackendServersResponseBodyBackendServers getBackendServers() {
-        return this.backendServers;
-    }
-
     public static class RemoveBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Weight")
-        public Integer weight;
-
         @NameInMap("Description")
         public String description;
 
         @NameInMap("ServerId")
         public String serverId;
 
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Weight")
+        public Integer weight;
+
         public static RemoveBackendServersResponseBodyBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
             RemoveBackendServersResponseBodyBackendServersBackendServer self = new RemoveBackendServersResponseBodyBackendServersBackendServer();
             return TeaModel.build(map, self);
-        }
-
-        public RemoveBackendServersResponseBodyBackendServersBackendServer setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public RemoveBackendServersResponseBodyBackendServersBackendServer setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
         }
 
         public RemoveBackendServersResponseBodyBackendServersBackendServer setDescription(String description) {
@@ -90,6 +74,22 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         }
         public String getServerId() {
             return this.serverId;
+        }
+
+        public RemoveBackendServersResponseBodyBackendServersBackendServer setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public RemoveBackendServersResponseBodyBackendServersBackendServer setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }

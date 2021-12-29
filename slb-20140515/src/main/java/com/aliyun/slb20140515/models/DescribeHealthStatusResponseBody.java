@@ -4,23 +4,15 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeHealthStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("BackendServers")
     public DescribeHealthStatusResponseBodyBackendServers backendServers;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeHealthStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeHealthStatusResponseBody self = new DescribeHealthStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeHealthStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeHealthStatusResponseBody setBackendServers(DescribeHealthStatusResponseBodyBackendServers backendServers) {
@@ -31,28 +23,52 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         return this.backendServers;
     }
 
+    public DescribeHealthStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeHealthStatusResponseBodyBackendServersBackendServer extends TeaModel {
+        @NameInMap("ListenerPort")
+        public Integer listenerPort;
+
+        @NameInMap("Port")
+        public Integer port;
+
         @NameInMap("Protocol")
         public String protocol;
 
         @NameInMap("ServerHealthStatus")
         public String serverHealthStatus;
 
-        @NameInMap("ListenerPort")
-        public Integer listenerPort;
+        @NameInMap("ServerId")
+        public String serverId;
 
         @NameInMap("ServerIp")
         public String serverIp;
 
-        @NameInMap("Port")
-        public Integer port;
-
-        @NameInMap("ServerId")
-        public String serverId;
-
         public static DescribeHealthStatusResponseBodyBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
             DescribeHealthStatusResponseBodyBackendServersBackendServer self = new DescribeHealthStatusResponseBodyBackendServersBackendServer();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeHealthStatusResponseBodyBackendServersBackendServer setListenerPort(Integer listenerPort) {
+            this.listenerPort = listenerPort;
+            return this;
+        }
+        public Integer getListenerPort() {
+            return this.listenerPort;
+        }
+
+        public DescribeHealthStatusResponseBodyBackendServersBackendServer setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
         }
 
         public DescribeHealthStatusResponseBodyBackendServersBackendServer setProtocol(String protocol) {
@@ -71,12 +87,12 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             return this.serverHealthStatus;
         }
 
-        public DescribeHealthStatusResponseBodyBackendServersBackendServer setListenerPort(Integer listenerPort) {
-            this.listenerPort = listenerPort;
+        public DescribeHealthStatusResponseBodyBackendServersBackendServer setServerId(String serverId) {
+            this.serverId = serverId;
             return this;
         }
-        public Integer getListenerPort() {
-            return this.listenerPort;
+        public String getServerId() {
+            return this.serverId;
         }
 
         public DescribeHealthStatusResponseBodyBackendServersBackendServer setServerIp(String serverIp) {
@@ -85,22 +101,6 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         }
         public String getServerIp() {
             return this.serverIp;
-        }
-
-        public DescribeHealthStatusResponseBodyBackendServersBackendServer setPort(Integer port) {
-            this.port = port;
-            return this;
-        }
-        public Integer getPort() {
-            return this.port;
-        }
-
-        public DescribeHealthStatusResponseBodyBackendServersBackendServer setServerId(String serverId) {
-            this.serverId = serverId;
-            return this;
-        }
-        public String getServerId() {
-            return this.serverId;
         }
 
     }

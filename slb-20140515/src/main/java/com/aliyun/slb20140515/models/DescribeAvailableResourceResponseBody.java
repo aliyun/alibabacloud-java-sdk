@@ -4,23 +4,15 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AvailableResources")
     public DescribeAvailableResourceResponseBodyAvailableResources availableResources;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeAvailableResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableResourceResponseBody self = new DescribeAvailableResourceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAvailableResourceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAvailableResourceResponseBody setAvailableResources(DescribeAvailableResourceResponseBodyAvailableResources availableResources) {
@@ -31,24 +23,24 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         return this.availableResources;
     }
 
-    public static class DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource extends TeaModel {
-        @NameInMap("AddressType")
-        public String addressType;
+    public DescribeAvailableResourceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource extends TeaModel {
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
+
+        @NameInMap("AddressType")
+        public String addressType;
 
         public static DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource self = new DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource setAddressType(String addressType) {
-            this.addressType = addressType;
-            return this;
-        }
-        public String getAddressType() {
-            return this.addressType;
         }
 
         public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource setAddressIPVersion(String addressIPVersion) {
@@ -57,6 +49,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
         public String getAddressIPVersion() {
             return this.addressIPVersion;
+        }
+
+        public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource setAddressType(String addressType) {
+            this.addressType = addressType;
+            return this;
+        }
+        public String getAddressType() {
+            return this.addressType;
         }
 
     }
@@ -81,11 +81,11 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource extends TeaModel {
-        @NameInMap("SlaveZoneId")
-        public String slaveZoneId;
-
         @NameInMap("MasterZoneId")
         public String masterZoneId;
+
+        @NameInMap("SlaveZoneId")
+        public String slaveZoneId;
 
         @NameInMap("SupportResources")
         public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResources supportResources;
@@ -95,20 +95,20 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource setSlaveZoneId(String slaveZoneId) {
-            this.slaveZoneId = slaveZoneId;
-            return this;
-        }
-        public String getSlaveZoneId() {
-            return this.slaveZoneId;
-        }
-
         public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource setMasterZoneId(String masterZoneId) {
             this.masterZoneId = masterZoneId;
             return this;
         }
         public String getMasterZoneId() {
             return this.masterZoneId;
+        }
+
+        public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource setSlaveZoneId(String slaveZoneId) {
+            this.slaveZoneId = slaveZoneId;
+            return this;
+        }
+        public String getSlaveZoneId() {
+            return this.slaveZoneId;
         }
 
         public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource setSupportResources(DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResources supportResources) {

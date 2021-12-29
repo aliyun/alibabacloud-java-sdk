@@ -4,34 +4,18 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
-    @NameInMap("VServerGroupId")
-    public String VServerGroupId;
+    @NameInMap("BackendServers")
+    public ModifyVServerGroupBackendServersResponseBodyBackendServers backendServers;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("BackendServers")
-    public ModifyVServerGroupBackendServersResponseBodyBackendServers backendServers;
+    @NameInMap("VServerGroupId")
+    public String VServerGroupId;
 
     public static ModifyVServerGroupBackendServersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyVServerGroupBackendServersResponseBody self = new ModifyVServerGroupBackendServersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyVServerGroupBackendServersResponseBody setVServerGroupId(String VServerGroupId) {
-        this.VServerGroupId = VServerGroupId;
-        return this;
-    }
-    public String getVServerGroupId() {
-        return this.VServerGroupId;
-    }
-
-    public ModifyVServerGroupBackendServersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ModifyVServerGroupBackendServersResponseBody setBackendServers(ModifyVServerGroupBackendServersResponseBodyBackendServers backendServers) {
@@ -42,13 +26,23 @@ public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
         return this.backendServers;
     }
 
+    public ModifyVServerGroupBackendServersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyVServerGroupBackendServersResponseBody setVServerGroupId(String VServerGroupId) {
+        this.VServerGroupId = VServerGroupId;
+        return this;
+    }
+    public String getVServerGroupId() {
+        return this.VServerGroupId;
+    }
+
     public static class ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Weight")
-        public Integer weight;
-
         @NameInMap("Description")
         public String description;
 
@@ -58,25 +52,15 @@ public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
         @NameInMap("ServerId")
         public String serverId;
 
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Weight")
+        public Integer weight;
+
         public static ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
             ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer self = new ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
         }
 
         public ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer setDescription(String description) {
@@ -101,6 +85,22 @@ public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
         }
         public String getServerId() {
             return this.serverId;
+        }
+
+        public ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }
