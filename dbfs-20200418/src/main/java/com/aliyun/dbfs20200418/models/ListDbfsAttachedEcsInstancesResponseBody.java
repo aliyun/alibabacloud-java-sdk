@@ -32,11 +32,17 @@ public class ListDbfsAttachedEcsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListDbfsAttachedEcsInstancesResponseBodyEcsLabelInfo extends TeaModel {
+        @NameInMap("InstanceTypeFamily")
+        public String instanceTypeFamily;
+
         @NameInMap("MountPoint")
         public String mountPoint;
 
         @NameInMap("MountedTime")
         public String mountedTime;
+
+        @NameInMap("OSName")
+        public String OSName;
 
         @NameInMap("label")
         public String label;
@@ -47,6 +53,14 @@ public class ListDbfsAttachedEcsInstancesResponseBody extends TeaModel {
         public static ListDbfsAttachedEcsInstancesResponseBodyEcsLabelInfo build(java.util.Map<String, ?> map) throws Exception {
             ListDbfsAttachedEcsInstancesResponseBodyEcsLabelInfo self = new ListDbfsAttachedEcsInstancesResponseBodyEcsLabelInfo();
             return TeaModel.build(map, self);
+        }
+
+        public ListDbfsAttachedEcsInstancesResponseBodyEcsLabelInfo setInstanceTypeFamily(String instanceTypeFamily) {
+            this.instanceTypeFamily = instanceTypeFamily;
+            return this;
+        }
+        public String getInstanceTypeFamily() {
+            return this.instanceTypeFamily;
         }
 
         public ListDbfsAttachedEcsInstancesResponseBodyEcsLabelInfo setMountPoint(String mountPoint) {
@@ -63,6 +77,14 @@ public class ListDbfsAttachedEcsInstancesResponseBody extends TeaModel {
         }
         public String getMountedTime() {
             return this.mountedTime;
+        }
+
+        public ListDbfsAttachedEcsInstancesResponseBodyEcsLabelInfo setOSName(String OSName) {
+            this.OSName = OSName;
+            return this;
+        }
+        public String getOSName() {
+            return this.OSName;
         }
 
         public ListDbfsAttachedEcsInstancesResponseBodyEcsLabelInfo setLabel(String label) {

@@ -32,6 +32,12 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo extends TeaModel {
+        @NameInMap("InstanceTypeFamily")
+        public String instanceTypeFamily;
+
+        @NameInMap("OSName")
+        public String OSName;
+
         @NameInMap("label")
         public String label;
 
@@ -41,6 +47,22 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
         public static ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo build(java.util.Map<String, ?> map) throws Exception {
             ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo self = new ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo();
             return TeaModel.build(map, self);
+        }
+
+        public ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo setInstanceTypeFamily(String instanceTypeFamily) {
+            this.instanceTypeFamily = instanceTypeFamily;
+            return this;
+        }
+        public String getInstanceTypeFamily() {
+            return this.instanceTypeFamily;
+        }
+
+        public ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo setOSName(String OSName) {
+            this.OSName = OSName;
+            return this;
+        }
+        public String getOSName() {
+            return this.OSName;
         }
 
         public ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo setLabel(String label) {
