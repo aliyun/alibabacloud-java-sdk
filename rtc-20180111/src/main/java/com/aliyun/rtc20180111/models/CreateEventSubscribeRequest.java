@@ -19,6 +19,9 @@ public class CreateEventSubscribeRequest extends TeaModel {
     @NameInMap("Events")
     public java.util.List<String> events;
 
+    @NameInMap("NeedCallbackAuth")
+    public Boolean needCallbackAuth;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -68,6 +71,14 @@ public class CreateEventSubscribeRequest extends TeaModel {
     }
     public java.util.List<String> getEvents() {
         return this.events;
+    }
+
+    public CreateEventSubscribeRequest setNeedCallbackAuth(Boolean needCallbackAuth) {
+        this.needCallbackAuth = needCallbackAuth;
+        return this;
+    }
+    public Boolean getNeedCallbackAuth() {
+        return this.needCallbackAuth;
     }
 
     public CreateEventSubscribeRequest setOwnerId(Long ownerId) {

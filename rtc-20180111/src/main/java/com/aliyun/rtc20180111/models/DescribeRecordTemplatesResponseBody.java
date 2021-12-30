@@ -337,7 +337,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         public String httpCallbackUrl;
 
         @NameInMap("LayoutIds")
-        public java.util.List<Integer> layoutIds;
+        public java.util.List<Long> layoutIds;
 
         @NameInMap("MediaEncode")
         public Integer mediaEncode;
@@ -440,11 +440,11 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             return this.httpCallbackUrl;
         }
 
-        public DescribeRecordTemplatesResponseBodyTemplates setLayoutIds(java.util.List<Integer> layoutIds) {
+        public DescribeRecordTemplatesResponseBodyTemplates setLayoutIds(java.util.List<Long> layoutIds) {
             this.layoutIds = layoutIds;
             return this;
         }
-        public java.util.List<Integer> getLayoutIds() {
+        public java.util.List<Long> getLayoutIds() {
             return this.layoutIds;
         }
 
