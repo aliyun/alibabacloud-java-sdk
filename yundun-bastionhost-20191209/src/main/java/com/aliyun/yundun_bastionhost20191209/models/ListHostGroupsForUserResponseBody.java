@@ -4,34 +4,18 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListHostGroupsForUserResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("HostGroups")
+    public java.util.List<ListHostGroupsForUserResponseBodyHostGroups> hostGroups;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HostGroups")
-    public java.util.List<ListHostGroupsForUserResponseBodyHostGroups> hostGroups;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListHostGroupsForUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListHostGroupsForUserResponseBody self = new ListHostGroupsForUserResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListHostGroupsForUserResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListHostGroupsForUserResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListHostGroupsForUserResponseBody setHostGroups(java.util.List<ListHostGroupsForUserResponseBodyHostGroups> hostGroups) {
@@ -42,12 +26,28 @@ public class ListHostGroupsForUserResponseBody extends TeaModel {
         return this.hostGroups;
     }
 
-    public static class ListHostGroupsForUserResponseBodyHostGroups extends TeaModel {
-        @NameInMap("HostGroupId")
-        public String hostGroupId;
+    public ListHostGroupsForUserResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public ListHostGroupsForUserResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class ListHostGroupsForUserResponseBodyHostGroups extends TeaModel {
         @NameInMap("Comment")
         public String comment;
+
+        @NameInMap("HostGroupId")
+        public String hostGroupId;
 
         @NameInMap("HostGroupName")
         public String hostGroupName;
@@ -57,20 +57,20 @@ public class ListHostGroupsForUserResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListHostGroupsForUserResponseBodyHostGroups setHostGroupId(String hostGroupId) {
-            this.hostGroupId = hostGroupId;
-            return this;
-        }
-        public String getHostGroupId() {
-            return this.hostGroupId;
-        }
-
         public ListHostGroupsForUserResponseBodyHostGroups setComment(String comment) {
             this.comment = comment;
             return this;
         }
         public String getComment() {
             return this.comment;
+        }
+
+        public ListHostGroupsForUserResponseBodyHostGroups setHostGroupId(String hostGroupId) {
+            this.hostGroupId = hostGroupId;
+            return this;
+        }
+        public String getHostGroupId() {
+            return this.hostGroupId;
         }
 
         public ListHostGroupsForUserResponseBodyHostGroups setHostGroupName(String hostGroupName) {

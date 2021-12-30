@@ -7,14 +7,14 @@ public class StartInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("VswitchId")
-    public String vswitchId;
-
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
+
+    @NameInMap("VswitchId")
+    public String vswitchId;
 
     public static StartInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StartInstanceRequest self = new StartInstanceRequest();
@@ -27,14 +27,6 @@ public class StartInstanceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public StartInstanceRequest setVswitchId(String vswitchId) {
-        this.vswitchId = vswitchId;
-        return this;
-    }
-    public String getVswitchId() {
-        return this.vswitchId;
     }
 
     public StartInstanceRequest setRegionId(String regionId) {
@@ -51,6 +43,14 @@ public class StartInstanceRequest extends TeaModel {
     }
     public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
+    }
+
+    public StartInstanceRequest setVswitchId(String vswitchId) {
+        this.vswitchId = vswitchId;
+        return this;
+    }
+    public String getVswitchId() {
+        return this.vswitchId;
     }
 
 }

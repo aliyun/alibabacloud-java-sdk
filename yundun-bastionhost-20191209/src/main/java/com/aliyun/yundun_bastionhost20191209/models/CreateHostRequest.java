@@ -4,11 +4,14 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class CreateHostRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("ActiveAddressType")
+    public String activeAddressType;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Comment")
+    public String comment;
+
+    @NameInMap("HostName")
+    public String hostName;
 
     @NameInMap("HostPrivateAddress")
     public String hostPrivateAddress;
@@ -16,46 +19,51 @@ public class CreateHostRequest extends TeaModel {
     @NameInMap("HostPublicAddress")
     public String hostPublicAddress;
 
-    @NameInMap("ActiveAddressType")
-    public String activeAddressType;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
-    @NameInMap("HostName")
-    public String hostName;
-
-    @NameInMap("Source")
-    public String source;
+    @NameInMap("InstanceRegionId")
+    public String instanceRegionId;
 
     @NameInMap("OSType")
     public String OSType;
 
-    @NameInMap("Comment")
-    public String comment;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("Source")
+    public String source;
 
     @NameInMap("SourceInstanceId")
     public String sourceInstanceId;
-
-    @NameInMap("InstanceRegionId")
-    public String instanceRegionId;
 
     public static CreateHostRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateHostRequest self = new CreateHostRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateHostRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public CreateHostRequest setActiveAddressType(String activeAddressType) {
+        this.activeAddressType = activeAddressType;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getActiveAddressType() {
+        return this.activeAddressType;
     }
 
-    public CreateHostRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateHostRequest setComment(String comment) {
+        this.comment = comment;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getComment() {
+        return this.comment;
+    }
+
+    public CreateHostRequest setHostName(String hostName) {
+        this.hostName = hostName;
+        return this;
+    }
+    public String getHostName() {
+        return this.hostName;
     }
 
     public CreateHostRequest setHostPrivateAddress(String hostPrivateAddress) {
@@ -74,28 +82,20 @@ public class CreateHostRequest extends TeaModel {
         return this.hostPublicAddress;
     }
 
-    public CreateHostRequest setActiveAddressType(String activeAddressType) {
-        this.activeAddressType = activeAddressType;
+    public CreateHostRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getActiveAddressType() {
-        return this.activeAddressType;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
-    public CreateHostRequest setHostName(String hostName) {
-        this.hostName = hostName;
+    public CreateHostRequest setInstanceRegionId(String instanceRegionId) {
+        this.instanceRegionId = instanceRegionId;
         return this;
     }
-    public String getHostName() {
-        return this.hostName;
-    }
-
-    public CreateHostRequest setSource(String source) {
-        this.source = source;
-        return this;
-    }
-    public String getSource() {
-        return this.source;
+    public String getInstanceRegionId() {
+        return this.instanceRegionId;
     }
 
     public CreateHostRequest setOSType(String OSType) {
@@ -106,12 +106,20 @@ public class CreateHostRequest extends TeaModel {
         return this.OSType;
     }
 
-    public CreateHostRequest setComment(String comment) {
-        this.comment = comment;
+    public CreateHostRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getComment() {
-        return this.comment;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateHostRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public CreateHostRequest setSourceInstanceId(String sourceInstanceId) {
@@ -120,14 +128,6 @@ public class CreateHostRequest extends TeaModel {
     }
     public String getSourceInstanceId() {
         return this.sourceInstanceId;
-    }
-
-    public CreateHostRequest setInstanceRegionId(String instanceRegionId) {
-        this.instanceRegionId = instanceRegionId;
-        return this;
-    }
-    public String getInstanceRegionId() {
-        return this.instanceRegionId;
     }
 
 }

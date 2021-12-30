@@ -4,11 +4,8 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ModifyHostGroupRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Comment")
+    public String comment;
 
     @NameInMap("HostGroupId")
     public String hostGroupId;
@@ -16,28 +13,23 @@ public class ModifyHostGroupRequest extends TeaModel {
     @NameInMap("HostGroupName")
     public String hostGroupName;
 
-    @NameInMap("Comment")
-    public String comment;
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ModifyHostGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyHostGroupRequest self = new ModifyHostGroupRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyHostGroupRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public ModifyHostGroupRequest setComment(String comment) {
+        this.comment = comment;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ModifyHostGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getComment() {
+        return this.comment;
     }
 
     public ModifyHostGroupRequest setHostGroupId(String hostGroupId) {
@@ -56,12 +48,20 @@ public class ModifyHostGroupRequest extends TeaModel {
         return this.hostGroupName;
     }
 
-    public ModifyHostGroupRequest setComment(String comment) {
-        this.comment = comment;
+    public ModifyHostGroupRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getComment() {
-        return this.comment;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyHostGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -32,11 +32,11 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyUser extends TeaModel {
-        @NameInMap("DisplayName")
-        public String displayName;
-
         @NameInMap("Comment")
         public String comment;
+
+        @NameInMap("DisplayName")
+        public String displayName;
 
         @NameInMap("Email")
         public String email;
@@ -47,17 +47,17 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("MobileCountryCode")
         public String mobileCountryCode;
 
-        @NameInMap("UserId")
-        public String userId;
-
         @NameInMap("Source")
         public String source;
 
-        @NameInMap("UserName")
-        public String userName;
-
         @NameInMap("SourceUserId")
         public String sourceUserId;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserName")
+        public String userName;
 
         @NameInMap("UserState")
         public java.util.List<String> userState;
@@ -67,20 +67,20 @@ public class GetUserResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetUserResponseBodyUser setDisplayName(String displayName) {
-            this.displayName = displayName;
-            return this;
-        }
-        public String getDisplayName() {
-            return this.displayName;
-        }
-
         public GetUserResponseBodyUser setComment(String comment) {
             this.comment = comment;
             return this;
         }
         public String getComment() {
             return this.comment;
+        }
+
+        public GetUserResponseBodyUser setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
         }
 
         public GetUserResponseBodyUser setEmail(String email) {
@@ -107,14 +107,6 @@ public class GetUserResponseBody extends TeaModel {
             return this.mobileCountryCode;
         }
 
-        public GetUserResponseBodyUser setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
         public GetUserResponseBodyUser setSource(String source) {
             this.source = source;
             return this;
@@ -123,20 +115,28 @@ public class GetUserResponseBody extends TeaModel {
             return this.source;
         }
 
-        public GetUserResponseBodyUser setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
-        }
-
         public GetUserResponseBodyUser setSourceUserId(String sourceUserId) {
             this.sourceUserId = sourceUserId;
             return this;
         }
         public String getSourceUserId() {
             return this.sourceUserId;
+        }
+
+        public GetUserResponseBodyUser setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public GetUserResponseBodyUser setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
         public GetUserResponseBodyUser setUserState(java.util.List<String> userState) {

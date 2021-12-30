@@ -4,23 +4,15 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceUpgradeInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceUpgradeInfo")
     public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo instanceUpgradeInfo;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetInstanceUpgradeInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceUpgradeInfoResponseBody self = new GetInstanceUpgradeInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetInstanceUpgradeInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetInstanceUpgradeInfoResponseBody setInstanceUpgradeInfo(GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo instanceUpgradeInfo) {
@@ -31,24 +23,24 @@ public class GetInstanceUpgradeInfoResponseBody extends TeaModel {
         return this.instanceUpgradeInfo;
     }
 
-    public static class GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoCandidatePeriodList extends TeaModel {
-        @NameInMap("CandidateStartTime")
-        public Long candidateStartTime;
+    public GetInstanceUpgradeInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoCandidatePeriodList extends TeaModel {
         @NameInMap("CandidateEndTime")
         public Long candidateEndTime;
+
+        @NameInMap("CandidateStartTime")
+        public Long candidateStartTime;
 
         public static GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoCandidatePeriodList build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoCandidatePeriodList self = new GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoCandidatePeriodList();
             return TeaModel.build(map, self);
-        }
-
-        public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoCandidatePeriodList setCandidateStartTime(Long candidateStartTime) {
-            this.candidateStartTime = candidateStartTime;
-            return this;
-        }
-        public Long getCandidateStartTime() {
-            return this.candidateStartTime;
         }
 
         public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoCandidatePeriodList setCandidateEndTime(Long candidateEndTime) {
@@ -57,6 +49,14 @@ public class GetInstanceUpgradeInfoResponseBody extends TeaModel {
         }
         public Long getCandidateEndTime() {
             return this.candidateEndTime;
+        }
+
+        public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoCandidatePeriodList setCandidateStartTime(Long candidateStartTime) {
+            this.candidateStartTime = candidateStartTime;
+            return this;
+        }
+        public Long getCandidateStartTime() {
+            return this.candidateStartTime;
         }
 
     }
@@ -92,17 +92,11 @@ public class GetInstanceUpgradeInfoResponseBody extends TeaModel {
     }
 
     public static class GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo extends TeaModel {
-        @NameInMap("UpgradeMode")
-        public String upgradeMode;
-
-        @NameInMap("Operable")
-        public Boolean operable;
-
         @NameInMap("AliUid")
         public Long aliUid;
 
-        @NameInMap("LatestStartTime")
-        public Long latestStartTime;
+        @NameInMap("CandidatePeriodList")
+        public java.util.List<GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoCandidatePeriodList> candidatePeriodList;
 
         @NameInMap("ImageVersion")
         public String imageVersion;
@@ -110,40 +104,30 @@ public class GetInstanceUpgradeInfoResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("InvalidPeriodList")
+        public java.util.List<GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoInvalidPeriodList> invalidPeriodList;
+
+        @NameInMap("LatestStartTime")
+        public Long latestStartTime;
+
+        @NameInMap("Operable")
+        public Boolean operable;
+
         @NameInMap("PeriodInterval")
         public Integer periodInterval;
-
-        @NameInMap("UpgradeStartTime")
-        public Long upgradeStartTime;
 
         @NameInMap("UpgradeEndTime")
         public Long upgradeEndTime;
 
-        @NameInMap("CandidatePeriodList")
-        public java.util.List<GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoCandidatePeriodList> candidatePeriodList;
+        @NameInMap("UpgradeMode")
+        public String upgradeMode;
 
-        @NameInMap("InvalidPeriodList")
-        public java.util.List<GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoInvalidPeriodList> invalidPeriodList;
+        @NameInMap("UpgradeStartTime")
+        public Long upgradeStartTime;
 
         public static GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo self = new GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo();
             return TeaModel.build(map, self);
-        }
-
-        public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo setUpgradeMode(String upgradeMode) {
-            this.upgradeMode = upgradeMode;
-            return this;
-        }
-        public String getUpgradeMode() {
-            return this.upgradeMode;
-        }
-
-        public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo setOperable(Boolean operable) {
-            this.operable = operable;
-            return this;
-        }
-        public Boolean getOperable() {
-            return this.operable;
         }
 
         public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo setAliUid(Long aliUid) {
@@ -154,12 +138,12 @@ public class GetInstanceUpgradeInfoResponseBody extends TeaModel {
             return this.aliUid;
         }
 
-        public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo setLatestStartTime(Long latestStartTime) {
-            this.latestStartTime = latestStartTime;
+        public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo setCandidatePeriodList(java.util.List<GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoCandidatePeriodList> candidatePeriodList) {
+            this.candidatePeriodList = candidatePeriodList;
             return this;
         }
-        public Long getLatestStartTime() {
-            return this.latestStartTime;
+        public java.util.List<GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoCandidatePeriodList> getCandidatePeriodList() {
+            return this.candidatePeriodList;
         }
 
         public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo setImageVersion(String imageVersion) {
@@ -178,20 +162,36 @@ public class GetInstanceUpgradeInfoResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo setInvalidPeriodList(java.util.List<GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoInvalidPeriodList> invalidPeriodList) {
+            this.invalidPeriodList = invalidPeriodList;
+            return this;
+        }
+        public java.util.List<GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoInvalidPeriodList> getInvalidPeriodList() {
+            return this.invalidPeriodList;
+        }
+
+        public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo setLatestStartTime(Long latestStartTime) {
+            this.latestStartTime = latestStartTime;
+            return this;
+        }
+        public Long getLatestStartTime() {
+            return this.latestStartTime;
+        }
+
+        public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo setOperable(Boolean operable) {
+            this.operable = operable;
+            return this;
+        }
+        public Boolean getOperable() {
+            return this.operable;
+        }
+
         public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo setPeriodInterval(Integer periodInterval) {
             this.periodInterval = periodInterval;
             return this;
         }
         public Integer getPeriodInterval() {
             return this.periodInterval;
-        }
-
-        public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo setUpgradeStartTime(Long upgradeStartTime) {
-            this.upgradeStartTime = upgradeStartTime;
-            return this;
-        }
-        public Long getUpgradeStartTime() {
-            return this.upgradeStartTime;
         }
 
         public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo setUpgradeEndTime(Long upgradeEndTime) {
@@ -202,20 +202,20 @@ public class GetInstanceUpgradeInfoResponseBody extends TeaModel {
             return this.upgradeEndTime;
         }
 
-        public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo setCandidatePeriodList(java.util.List<GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoCandidatePeriodList> candidatePeriodList) {
-            this.candidatePeriodList = candidatePeriodList;
+        public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo setUpgradeMode(String upgradeMode) {
+            this.upgradeMode = upgradeMode;
             return this;
         }
-        public java.util.List<GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoCandidatePeriodList> getCandidatePeriodList() {
-            return this.candidatePeriodList;
+        public String getUpgradeMode() {
+            return this.upgradeMode;
         }
 
-        public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo setInvalidPeriodList(java.util.List<GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoInvalidPeriodList> invalidPeriodList) {
-            this.invalidPeriodList = invalidPeriodList;
+        public GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfo setUpgradeStartTime(Long upgradeStartTime) {
+            this.upgradeStartTime = upgradeStartTime;
             return this;
         }
-        public java.util.List<GetInstanceUpgradeInfoResponseBodyInstanceUpgradeInfoInvalidPeriodList> getInvalidPeriodList() {
-            return this.invalidPeriodList;
+        public Long getUpgradeStartTime() {
+            return this.upgradeStartTime;
         }
 
     }

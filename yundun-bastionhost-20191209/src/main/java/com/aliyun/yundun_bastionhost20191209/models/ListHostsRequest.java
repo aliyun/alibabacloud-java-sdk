@@ -4,11 +4,20 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListHostsRequest extends TeaModel {
+    @NameInMap("HostAddress")
+    public String hostAddress;
+
+    @NameInMap("HostGroupId")
+    public String hostGroupId;
+
+    @NameInMap("HostName")
+    public String hostName;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("OSType")
+    public String OSType;
 
     @NameInMap("PageNumber")
     public String pageNumber;
@@ -16,14 +25,8 @@ public class ListHostsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    @NameInMap("OSType")
-    public String OSType;
-
-    @NameInMap("HostName")
-    public String hostName;
-
-    @NameInMap("HostAddress")
-    public String hostAddress;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("Source")
     public String source;
@@ -34,12 +37,33 @@ public class ListHostsRequest extends TeaModel {
     @NameInMap("SourceInstanceState")
     public String sourceInstanceState;
 
-    @NameInMap("HostGroupId")
-    public String hostGroupId;
-
     public static ListHostsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListHostsRequest self = new ListHostsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListHostsRequest setHostAddress(String hostAddress) {
+        this.hostAddress = hostAddress;
+        return this;
+    }
+    public String getHostAddress() {
+        return this.hostAddress;
+    }
+
+    public ListHostsRequest setHostGroupId(String hostGroupId) {
+        this.hostGroupId = hostGroupId;
+        return this;
+    }
+    public String getHostGroupId() {
+        return this.hostGroupId;
+    }
+
+    public ListHostsRequest setHostName(String hostName) {
+        this.hostName = hostName;
+        return this;
+    }
+    public String getHostName() {
+        return this.hostName;
     }
 
     public ListHostsRequest setInstanceId(String instanceId) {
@@ -50,12 +74,12 @@ public class ListHostsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListHostsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ListHostsRequest setOSType(String OSType) {
+        this.OSType = OSType;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getOSType() {
+        return this.OSType;
     }
 
     public ListHostsRequest setPageNumber(String pageNumber) {
@@ -74,28 +98,12 @@ public class ListHostsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListHostsRequest setOSType(String OSType) {
-        this.OSType = OSType;
+    public ListHostsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getOSType() {
-        return this.OSType;
-    }
-
-    public ListHostsRequest setHostName(String hostName) {
-        this.hostName = hostName;
-        return this;
-    }
-    public String getHostName() {
-        return this.hostName;
-    }
-
-    public ListHostsRequest setHostAddress(String hostAddress) {
-        this.hostAddress = hostAddress;
-        return this;
-    }
-    public String getHostAddress() {
-        return this.hostAddress;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListHostsRequest setSource(String source) {
@@ -120,14 +128,6 @@ public class ListHostsRequest extends TeaModel {
     }
     public String getSourceInstanceState() {
         return this.sourceInstanceState;
-    }
-
-    public ListHostsRequest setHostGroupId(String hostGroupId) {
-        this.hostGroupId = hostGroupId;
-        return this;
-    }
-    public String getHostGroupId() {
-        return this.hostGroupId;
     }
 
 }

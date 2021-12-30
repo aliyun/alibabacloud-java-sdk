@@ -7,14 +7,14 @@ public class ListUserGroupsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("PageNumber")
     public String pageNumber;
 
     @NameInMap("PageSize")
     public String pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("UserGroupName")
     public String userGroupName;
@@ -32,14 +32,6 @@ public class ListUserGroupsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListUserGroupsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public ListUserGroupsRequest setPageNumber(String pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -54,6 +46,14 @@ public class ListUserGroupsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListUserGroupsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListUserGroupsRequest setUserGroupName(String userGroupName) {

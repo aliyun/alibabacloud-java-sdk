@@ -4,6 +4,9 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class CreateUserGroupRequest extends TeaModel {
+    @NameInMap("Comment")
+    public String comment;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,12 +16,17 @@ public class CreateUserGroupRequest extends TeaModel {
     @NameInMap("UserGroupName")
     public String userGroupName;
 
-    @NameInMap("Comment")
-    public String comment;
-
     public static CreateUserGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUserGroupRequest self = new CreateUserGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateUserGroupRequest setComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    public String getComment() {
+        return this.comment;
     }
 
     public CreateUserGroupRequest setInstanceId(String instanceId) {
@@ -43,14 +51,6 @@ public class CreateUserGroupRequest extends TeaModel {
     }
     public String getUserGroupName() {
         return this.userGroupName;
-    }
-
-    public CreateUserGroupRequest setComment(String comment) {
-        this.comment = comment;
-        return this;
-    }
-    public String getComment() {
-        return this.comment;
     }
 
 }

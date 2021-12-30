@@ -35,14 +35,14 @@ public class RemoveHostsFromGroupResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
-        @NameInMap("Message")
-        public String message;
-
         @NameInMap("HostGroupId")
         public String hostGroupId;
 
         @NameInMap("HostId")
         public String hostId;
+
+        @NameInMap("Message")
+        public String message;
 
         public static RemoveHostsFromGroupResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             RemoveHostsFromGroupResponseBodyResults self = new RemoveHostsFromGroupResponseBodyResults();
@@ -55,14 +55,6 @@ public class RemoveHostsFromGroupResponseBody extends TeaModel {
         }
         public String getCode() {
             return this.code;
-        }
-
-        public RemoveHostsFromGroupResponseBodyResults setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
         }
 
         public RemoveHostsFromGroupResponseBodyResults setHostGroupId(String hostGroupId) {
@@ -79,6 +71,14 @@ public class RemoveHostsFromGroupResponseBody extends TeaModel {
         }
         public String getHostId() {
             return this.hostId;
+        }
+
+        public RemoveHostsFromGroupResponseBodyResults setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
         }
 
     }

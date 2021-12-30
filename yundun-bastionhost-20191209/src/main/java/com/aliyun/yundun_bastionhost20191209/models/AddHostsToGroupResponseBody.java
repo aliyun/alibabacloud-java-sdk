@@ -35,14 +35,14 @@ public class AddHostsToGroupResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
-        @NameInMap("Message")
-        public String message;
-
         @NameInMap("HostGroupId")
         public String hostGroupId;
 
         @NameInMap("HostId")
         public String hostId;
+
+        @NameInMap("Message")
+        public String message;
 
         public static AddHostsToGroupResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             AddHostsToGroupResponseBodyResults self = new AddHostsToGroupResponseBodyResults();
@@ -55,14 +55,6 @@ public class AddHostsToGroupResponseBody extends TeaModel {
         }
         public String getCode() {
             return this.code;
-        }
-
-        public AddHostsToGroupResponseBodyResults setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
         }
 
         public AddHostsToGroupResponseBodyResults setHostGroupId(String hostGroupId) {
@@ -79,6 +71,14 @@ public class AddHostsToGroupResponseBody extends TeaModel {
         }
         public String getHostId() {
             return this.hostId;
+        }
+
+        public AddHostsToGroupResponseBodyResults setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
         }
 
     }

@@ -35,11 +35,11 @@ public class DetachHostAccountsFromUserResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
-        @NameInMap("Message")
-        public String message;
-
         @NameInMap("HostAccountId")
         public String hostAccountId;
+
+        @NameInMap("Message")
+        public String message;
 
         public static DetachHostAccountsFromUserResponseBodyResultsHostAccounts build(java.util.Map<String, ?> map) throws Exception {
             DetachHostAccountsFromUserResponseBodyResultsHostAccounts self = new DetachHostAccountsFromUserResponseBodyResultsHostAccounts();
@@ -54,14 +54,6 @@ public class DetachHostAccountsFromUserResponseBody extends TeaModel {
             return this.code;
         }
 
-        public DetachHostAccountsFromUserResponseBodyResultsHostAccounts setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
         public DetachHostAccountsFromUserResponseBodyResultsHostAccounts setHostAccountId(String hostAccountId) {
             this.hostAccountId = hostAccountId;
             return this;
@@ -70,23 +62,31 @@ public class DetachHostAccountsFromUserResponseBody extends TeaModel {
             return this.hostAccountId;
         }
 
+        public DetachHostAccountsFromUserResponseBodyResultsHostAccounts setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
     }
 
     public static class DetachHostAccountsFromUserResponseBodyResults extends TeaModel {
         @NameInMap("Code")
         public String code;
 
-        @NameInMap("Message")
-        public String message;
+        @NameInMap("HostAccounts")
+        public java.util.List<DetachHostAccountsFromUserResponseBodyResultsHostAccounts> hostAccounts;
 
         @NameInMap("HostId")
         public String hostId;
 
+        @NameInMap("Message")
+        public String message;
+
         @NameInMap("UserId")
         public String userId;
-
-        @NameInMap("HostAccounts")
-        public java.util.List<DetachHostAccountsFromUserResponseBodyResultsHostAccounts> hostAccounts;
 
         public static DetachHostAccountsFromUserResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             DetachHostAccountsFromUserResponseBodyResults self = new DetachHostAccountsFromUserResponseBodyResults();
@@ -101,12 +101,12 @@ public class DetachHostAccountsFromUserResponseBody extends TeaModel {
             return this.code;
         }
 
-        public DetachHostAccountsFromUserResponseBodyResults setMessage(String message) {
-            this.message = message;
+        public DetachHostAccountsFromUserResponseBodyResults setHostAccounts(java.util.List<DetachHostAccountsFromUserResponseBodyResultsHostAccounts> hostAccounts) {
+            this.hostAccounts = hostAccounts;
             return this;
         }
-        public String getMessage() {
-            return this.message;
+        public java.util.List<DetachHostAccountsFromUserResponseBodyResultsHostAccounts> getHostAccounts() {
+            return this.hostAccounts;
         }
 
         public DetachHostAccountsFromUserResponseBodyResults setHostId(String hostId) {
@@ -117,20 +117,20 @@ public class DetachHostAccountsFromUserResponseBody extends TeaModel {
             return this.hostId;
         }
 
+        public DetachHostAccountsFromUserResponseBodyResults setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
         public DetachHostAccountsFromUserResponseBodyResults setUserId(String userId) {
             this.userId = userId;
             return this;
         }
         public String getUserId() {
             return this.userId;
-        }
-
-        public DetachHostAccountsFromUserResponseBodyResults setHostAccounts(java.util.List<DetachHostAccountsFromUserResponseBodyResultsHostAccounts> hostAccounts) {
-            this.hostAccounts = hostAccounts;
-            return this;
-        }
-        public java.util.List<DetachHostAccountsFromUserResponseBodyResultsHostAccounts> getHostAccounts() {
-            return this.hostAccounts;
         }
 
     }

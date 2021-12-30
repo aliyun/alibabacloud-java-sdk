@@ -4,11 +4,11 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("Users")
     public java.util.List<ListUsersResponseBodyUsers> users;
@@ -18,20 +18,20 @@ public class ListUsersResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListUsersResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
     public ListUsersResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListUsersResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public ListUsersResponseBody setUsers(java.util.List<ListUsersResponseBodyUsers> users) {
@@ -43,32 +43,32 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyUsers extends TeaModel {
+        @NameInMap("Comment")
+        public String comment;
+
         @NameInMap("DisplayName")
         public String displayName;
 
         @NameInMap("Email")
         public String email;
 
-        @NameInMap("Comment")
-        public String comment;
+        @NameInMap("Mobile")
+        public String mobile;
 
         @NameInMap("MobileCountryCode")
         public String mobileCountryCode;
 
-        @NameInMap("Mobile")
-        public String mobile;
+        @NameInMap("Source")
+        public String source;
+
+        @NameInMap("SourceUserId")
+        public String sourceUserId;
 
         @NameInMap("UserId")
         public String userId;
 
-        @NameInMap("Source")
-        public String source;
-
         @NameInMap("UserName")
         public String userName;
-
-        @NameInMap("SourceUserId")
-        public String sourceUserId;
 
         @NameInMap("UserState")
         public java.util.List<String> userState;
@@ -76,6 +76,14 @@ public class ListUsersResponseBody extends TeaModel {
         public static ListUsersResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
             ListUsersResponseBodyUsers self = new ListUsersResponseBodyUsers();
             return TeaModel.build(map, self);
+        }
+
+        public ListUsersResponseBodyUsers setComment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+        public String getComment() {
+            return this.comment;
         }
 
         public ListUsersResponseBodyUsers setDisplayName(String displayName) {
@@ -94,12 +102,12 @@ public class ListUsersResponseBody extends TeaModel {
             return this.email;
         }
 
-        public ListUsersResponseBodyUsers setComment(String comment) {
-            this.comment = comment;
+        public ListUsersResponseBodyUsers setMobile(String mobile) {
+            this.mobile = mobile;
             return this;
         }
-        public String getComment() {
-            return this.comment;
+        public String getMobile() {
+            return this.mobile;
         }
 
         public ListUsersResponseBodyUsers setMobileCountryCode(String mobileCountryCode) {
@@ -110,12 +118,20 @@ public class ListUsersResponseBody extends TeaModel {
             return this.mobileCountryCode;
         }
 
-        public ListUsersResponseBodyUsers setMobile(String mobile) {
-            this.mobile = mobile;
+        public ListUsersResponseBodyUsers setSource(String source) {
+            this.source = source;
             return this;
         }
-        public String getMobile() {
-            return this.mobile;
+        public String getSource() {
+            return this.source;
+        }
+
+        public ListUsersResponseBodyUsers setSourceUserId(String sourceUserId) {
+            this.sourceUserId = sourceUserId;
+            return this;
+        }
+        public String getSourceUserId() {
+            return this.sourceUserId;
         }
 
         public ListUsersResponseBodyUsers setUserId(String userId) {
@@ -126,28 +142,12 @@ public class ListUsersResponseBody extends TeaModel {
             return this.userId;
         }
 
-        public ListUsersResponseBodyUsers setSource(String source) {
-            this.source = source;
-            return this;
-        }
-        public String getSource() {
-            return this.source;
-        }
-
         public ListUsersResponseBodyUsers setUserName(String userName) {
             this.userName = userName;
             return this;
         }
         public String getUserName() {
             return this.userName;
-        }
-
-        public ListUsersResponseBodyUsers setSourceUserId(String sourceUserId) {
-            this.sourceUserId = sourceUserId;
-            return this;
-        }
-        public String getSourceUserId() {
-            return this.sourceUserId;
         }
 
         public ListUsersResponseBodyUsers setUserState(java.util.List<String> userState) {

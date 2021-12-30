@@ -4,18 +4,26 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class DeleteHostAccountRequest extends TeaModel {
+    @NameInMap("HostAccountId")
+    public String hostAccountId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("HostAccountId")
-    public String hostAccountId;
-
     public static DeleteHostAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteHostAccountRequest self = new DeleteHostAccountRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteHostAccountRequest setHostAccountId(String hostAccountId) {
+        this.hostAccountId = hostAccountId;
+        return this;
+    }
+    public String getHostAccountId() {
+        return this.hostAccountId;
     }
 
     public DeleteHostAccountRequest setInstanceId(String instanceId) {
@@ -32,14 +40,6 @@ public class DeleteHostAccountRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public DeleteHostAccountRequest setHostAccountId(String hostAccountId) {
-        this.hostAccountId = hostAccountId;
-        return this;
-    }
-    public String getHostAccountId() {
-        return this.hostAccountId;
     }
 
 }

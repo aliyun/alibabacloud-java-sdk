@@ -4,18 +4,26 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GetHostGroupRequest extends TeaModel {
+    @NameInMap("HostGroupId")
+    public String hostGroupId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("HostGroupId")
-    public String hostGroupId;
-
     public static GetHostGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHostGroupRequest self = new GetHostGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetHostGroupRequest setHostGroupId(String hostGroupId) {
+        this.hostGroupId = hostGroupId;
+        return this;
+    }
+    public String getHostGroupId() {
+        return this.hostGroupId;
     }
 
     public GetHostGroupRequest setInstanceId(String instanceId) {
@@ -32,14 +40,6 @@ public class GetHostGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public GetHostGroupRequest setHostGroupId(String hostGroupId) {
-        this.hostGroupId = hostGroupId;
-        return this;
-    }
-    public String getHostGroupId() {
-        return this.hostGroupId;
     }
 
 }
