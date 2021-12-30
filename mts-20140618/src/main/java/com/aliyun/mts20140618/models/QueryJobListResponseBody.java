@@ -1375,6 +1375,15 @@ public class QueryJobListResponseBody extends TeaModel {
         @NameInMap("Width")
         public String width;
 
+        @NameInMap("bitsPerRawSample")
+        public String bitsPerRawSample;
+
+        @NameInMap("colorPrimaries")
+        public String colorPrimaries;
+
+        @NameInMap("colorTransfer")
+        public String colorTransfer;
+
         public static QueryJobListResponseBodyJobListJobOutputPropertiesStreamsVideoStreamListVideoStream build(java.util.Map<String, ?> map) throws Exception {
             QueryJobListResponseBodyJobListJobOutputPropertiesStreamsVideoStreamListVideoStream self = new QueryJobListResponseBodyJobListJobOutputPropertiesStreamsVideoStreamListVideoStream();
             return TeaModel.build(map, self);
@@ -1562,6 +1571,30 @@ public class QueryJobListResponseBody extends TeaModel {
         }
         public String getWidth() {
             return this.width;
+        }
+
+        public QueryJobListResponseBodyJobListJobOutputPropertiesStreamsVideoStreamListVideoStream setBitsPerRawSample(String bitsPerRawSample) {
+            this.bitsPerRawSample = bitsPerRawSample;
+            return this;
+        }
+        public String getBitsPerRawSample() {
+            return this.bitsPerRawSample;
+        }
+
+        public QueryJobListResponseBodyJobListJobOutputPropertiesStreamsVideoStreamListVideoStream setColorPrimaries(String colorPrimaries) {
+            this.colorPrimaries = colorPrimaries;
+            return this;
+        }
+        public String getColorPrimaries() {
+            return this.colorPrimaries;
+        }
+
+        public QueryJobListResponseBodyJobListJobOutputPropertiesStreamsVideoStreamListVideoStream setColorTransfer(String colorTransfer) {
+            this.colorTransfer = colorTransfer;
+            return this;
+        }
+        public String getColorTransfer() {
+            return this.colorTransfer;
         }
 
     }

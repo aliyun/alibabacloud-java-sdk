@@ -38,6 +38,9 @@ public class QuerySmarttagTemplateListResponseBody extends TeaModel {
         @NameInMap("FaceCategoryIds")
         public String faceCategoryIds;
 
+        @NameInMap("FaceCustomParamsConfig")
+        public String faceCustomParamsConfig;
+
         @NameInMap("Industry")
         public String industry;
 
@@ -84,6 +87,14 @@ public class QuerySmarttagTemplateListResponseBody extends TeaModel {
         }
         public String getFaceCategoryIds() {
             return this.faceCategoryIds;
+        }
+
+        public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setFaceCustomParamsConfig(String faceCustomParamsConfig) {
+            this.faceCustomParamsConfig = faceCustomParamsConfig;
+            return this;
+        }
+        public String getFaceCustomParamsConfig() {
+            return this.faceCustomParamsConfig;
         }
 
         public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setIndustry(String industry) {
