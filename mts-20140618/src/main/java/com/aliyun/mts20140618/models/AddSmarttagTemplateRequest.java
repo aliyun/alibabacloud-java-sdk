@@ -10,6 +10,9 @@ public class AddSmarttagTemplateRequest extends TeaModel {
     @NameInMap("FaceCategoryIds")
     public String faceCategoryIds;
 
+    @NameInMap("FaceCustomParamsConfig")
+    public String faceCustomParamsConfig;
+
     @NameInMap("Industry")
     public String industry;
 
@@ -65,6 +68,14 @@ public class AddSmarttagTemplateRequest extends TeaModel {
     }
     public String getFaceCategoryIds() {
         return this.faceCategoryIds;
+    }
+
+    public AddSmarttagTemplateRequest setFaceCustomParamsConfig(String faceCustomParamsConfig) {
+        this.faceCustomParamsConfig = faceCustomParamsConfig;
+        return this;
+    }
+    public String getFaceCustomParamsConfig() {
+        return this.faceCustomParamsConfig;
     }
 
     public AddSmarttagTemplateRequest setIndustry(String industry) {
