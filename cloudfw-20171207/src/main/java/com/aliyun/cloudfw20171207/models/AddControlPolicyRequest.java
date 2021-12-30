@@ -37,6 +37,9 @@ public class AddControlPolicyRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("MessageType")
+    public String messageType;
+
     @NameInMap("NewOrder")
     public String newOrder;
 
@@ -146,6 +149,14 @@ public class AddControlPolicyRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public AddControlPolicyRequest setMessageType(String messageType) {
+        this.messageType = messageType;
+        return this;
+    }
+    public String getMessageType() {
+        return this.messageType;
     }
 
     public AddControlPolicyRequest setNewOrder(String newOrder) {
