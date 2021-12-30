@@ -10,6 +10,10 @@ public class DeleteDBInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    // 资源组ID
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static DeleteDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDBInstanceRequest self = new DeleteDBInstanceRequest();
         return TeaModel.build(map, self);
@@ -29,6 +33,14 @@ public class DeleteDBInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DeleteDBInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

@@ -3,16 +3,16 @@ package com.aliyun.polardbx20200202.models;
 
 import com.aliyun.tea.*;
 
-public class CancelPolarxOrderResponseBody extends TeaModel {
+public class UntagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static CancelPolarxOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CancelPolarxOrderResponseBody self = new CancelPolarxOrderResponseBody();
+    public static UntagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UntagResourcesResponseBody self = new UntagResourcesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CancelPolarxOrderResponseBody setRequestId(String requestId) {
+    public UntagResourcesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

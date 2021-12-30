@@ -3,21 +3,21 @@ package com.aliyun.polardbx20200202.models;
 
 import com.aliyun.tea.*;
 
-public class CancelPolarxOrderResponse extends TeaModel {
+public class DescribeSlinkTaskInfoResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public CancelPolarxOrderResponseBody body;
+    public DescribeSlinkTaskInfoResponseBody body;
 
-    public static CancelPolarxOrderResponse build(java.util.Map<String, ?> map) throws Exception {
-        CancelPolarxOrderResponse self = new CancelPolarxOrderResponse();
+    public static DescribeSlinkTaskInfoResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeSlinkTaskInfoResponse self = new DescribeSlinkTaskInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public CancelPolarxOrderResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeSlinkTaskInfoResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class CancelPolarxOrderResponse extends TeaModel {
         return this.headers;
     }
 
-    public CancelPolarxOrderResponse setBody(CancelPolarxOrderResponseBody body) {
+    public DescribeSlinkTaskInfoResponse setBody(DescribeSlinkTaskInfoResponseBody body) {
         this.body = body;
         return this;
     }
-    public CancelPolarxOrderResponseBody getBody() {
+    public DescribeSlinkTaskInfoResponseBody getBody() {
         return this.body;
     }
 

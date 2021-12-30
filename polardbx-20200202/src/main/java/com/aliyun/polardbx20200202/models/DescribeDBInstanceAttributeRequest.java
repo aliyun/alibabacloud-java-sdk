@@ -10,6 +10,10 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    // 资源组ID
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static DescribeDBInstanceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceAttributeRequest self = new DescribeDBInstanceAttributeRequest();
         return TeaModel.build(map, self);
@@ -29,6 +33,14 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDBInstanceAttributeRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }
