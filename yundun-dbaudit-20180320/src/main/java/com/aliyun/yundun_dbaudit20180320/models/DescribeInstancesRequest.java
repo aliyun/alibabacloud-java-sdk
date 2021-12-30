@@ -4,26 +4,26 @@ package com.aliyun.yundun_dbaudit20180320.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
     @NameInMap("InstanceStatus")
     public String instanceStatus;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("PageNo")
     public Integer pageNo;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
 
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;
@@ -31,30 +31,6 @@ public class DescribeInstancesRequest extends TeaModel {
     public static DescribeInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesRequest self = new DescribeInstancesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstancesRequest setInstanceStatus(String instanceStatus) {
-        this.instanceStatus = instanceStatus;
-        return this;
-    }
-    public String getInstanceStatus() {
-        return this.instanceStatus;
-    }
-
-    public DescribeInstancesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeInstancesRequest setPageNo(Integer pageNo) {
-        this.pageNo = pageNo;
-        return this;
-    }
-    public Integer getPageNo() {
-        return this.pageNo;
     }
 
     public DescribeInstancesRequest setCurrentPage(Integer currentPage) {
@@ -65,6 +41,30 @@ public class DescribeInstancesRequest extends TeaModel {
         return this.currentPage;
     }
 
+    public DescribeInstancesRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeInstancesRequest setInstanceStatus(String instanceStatus) {
+        this.instanceStatus = instanceStatus;
+        return this;
+    }
+    public String getInstanceStatus() {
+        return this.instanceStatus;
+    }
+
+    public DescribeInstancesRequest setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+        return this;
+    }
+    public Integer getPageNo() {
+        return this.pageNo;
+    }
+
     public DescribeInstancesRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -73,20 +73,20 @@ public class DescribeInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeInstancesRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public DescribeInstancesRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
     }
 
     public DescribeInstancesRequest setTag(java.util.List<DescribeInstancesRequestTag> tag) {

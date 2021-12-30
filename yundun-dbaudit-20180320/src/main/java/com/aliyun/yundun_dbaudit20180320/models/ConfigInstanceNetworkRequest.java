@@ -7,17 +7,17 @@ public class ConfigInstanceNetworkRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("PublicAccessControl")
-    public Integer publicAccessControl;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("PrivateWhiteList")
     public java.util.List<String> privateWhiteList;
 
+    @NameInMap("PublicAccessControl")
+    public Integer publicAccessControl;
+
     @NameInMap("PublicWhiteList")
     public java.util.List<String> publicWhiteList;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
@@ -35,22 +35,6 @@ public class ConfigInstanceNetworkRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ConfigInstanceNetworkRequest setPublicAccessControl(Integer publicAccessControl) {
-        this.publicAccessControl = publicAccessControl;
-        return this;
-    }
-    public Integer getPublicAccessControl() {
-        return this.publicAccessControl;
-    }
-
-    public ConfigInstanceNetworkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public ConfigInstanceNetworkRequest setPrivateWhiteList(java.util.List<String> privateWhiteList) {
         this.privateWhiteList = privateWhiteList;
         return this;
@@ -59,12 +43,28 @@ public class ConfigInstanceNetworkRequest extends TeaModel {
         return this.privateWhiteList;
     }
 
+    public ConfigInstanceNetworkRequest setPublicAccessControl(Integer publicAccessControl) {
+        this.publicAccessControl = publicAccessControl;
+        return this;
+    }
+    public Integer getPublicAccessControl() {
+        return this.publicAccessControl;
+    }
+
     public ConfigInstanceNetworkRequest setPublicWhiteList(java.util.List<String> publicWhiteList) {
         this.publicWhiteList = publicWhiteList;
         return this;
     }
     public java.util.List<String> getPublicWhiteList() {
         return this.publicWhiteList;
+    }
+
+    public ConfigInstanceNetworkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ConfigInstanceNetworkRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {

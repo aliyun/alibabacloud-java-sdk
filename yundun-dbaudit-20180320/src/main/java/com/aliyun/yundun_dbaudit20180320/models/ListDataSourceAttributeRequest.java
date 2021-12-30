@@ -4,26 +4,26 @@ package com.aliyun.yundun_dbaudit20180320.models;
 import com.aliyun.tea.*;
 
 public class ListDataSourceAttributeRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("DbIds")
+    public java.util.List<String> dbIds;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("DbIds")
-    public java.util.List<String> dbIds;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ListDataSourceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDataSourceAttributeRequest self = new ListDataSourceAttributeRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListDataSourceAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ListDataSourceAttributeRequest setDbIds(java.util.List<String> dbIds) {
+        this.dbIds = dbIds;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public java.util.List<String> getDbIds() {
+        return this.dbIds;
     }
 
     public ListDataSourceAttributeRequest setInstanceId(String instanceId) {
@@ -34,12 +34,12 @@ public class ListDataSourceAttributeRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListDataSourceAttributeRequest setDbIds(java.util.List<String> dbIds) {
-        this.dbIds = dbIds;
+    public ListDataSourceAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public java.util.List<String> getDbIds() {
-        return this.dbIds;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }
