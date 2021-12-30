@@ -13,9 +13,6 @@ public class ListChainInstanceRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("RepoName")
     public String repoName;
 
@@ -49,14 +46,6 @@ public class ListChainInstanceRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListChainInstanceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListChainInstanceRequest setRepoName(String repoName) {

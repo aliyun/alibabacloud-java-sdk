@@ -28,9 +28,6 @@ public class UpdateRepoBuildRuleRequest extends TeaModel {
     @NameInMap("PushType")
     public String pushType;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("RepoId")
     public String repoId;
 
@@ -101,14 +98,6 @@ public class UpdateRepoBuildRuleRequest extends TeaModel {
     }
     public String getPushType() {
         return this.pushType;
-    }
-
-    public UpdateRepoBuildRuleRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public UpdateRepoBuildRuleRequest setRepoId(String repoId) {

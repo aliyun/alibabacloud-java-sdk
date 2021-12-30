@@ -13,9 +13,6 @@ public class GetNamespaceRequest extends TeaModel {
     @NameInMap("NamespaceName")
     public String namespaceName;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static GetNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetNamespaceRequest self = new GetNamespaceRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class GetNamespaceRequest extends TeaModel {
     }
     public String getNamespaceName() {
         return this.namespaceName;
-    }
-
-    public GetNamespaceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

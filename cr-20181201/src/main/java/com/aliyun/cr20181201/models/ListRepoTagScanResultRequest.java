@@ -16,9 +16,6 @@ public class ListRepoTagScanResultRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("RepoId")
     public String repoId;
 
@@ -66,14 +63,6 @@ public class ListRepoTagScanResultRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListRepoTagScanResultRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListRepoTagScanResultRequest setRepoId(String repoId) {

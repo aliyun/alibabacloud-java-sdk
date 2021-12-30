@@ -13,9 +13,6 @@ public class ListRepoBuildRecordRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("RepoId")
     public String repoId;
 
@@ -46,14 +43,6 @@ public class ListRepoBuildRecordRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListRepoBuildRecordRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListRepoBuildRecordRequest setRepoId(String repoId) {

@@ -7,9 +7,6 @@ public class ListInstanceRegionRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static ListInstanceRegionRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceRegionRequest self = new ListInstanceRegionRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class ListInstanceRegionRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public ListInstanceRegionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

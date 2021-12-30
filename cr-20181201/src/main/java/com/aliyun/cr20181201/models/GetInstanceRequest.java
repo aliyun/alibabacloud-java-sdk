@@ -7,9 +7,6 @@ public class GetInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static GetInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceRequest self = new GetInstanceRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class GetInstanceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public GetInstanceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

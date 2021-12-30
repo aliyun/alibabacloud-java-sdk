@@ -237,6 +237,9 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         @NameInMap("SyncTaskId")
         public String syncTaskId;
 
+        @NameInMap("SyncTransAccelerate")
+        public Boolean syncTransAccelerate;
+
         @NameInMap("TaskStatus")
         public String taskStatus;
 
@@ -310,6 +313,14 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         }
         public String getSyncTaskId() {
             return this.syncTaskId;
+        }
+
+        public ListRepoSyncTaskResponseBodySyncTasks setSyncTransAccelerate(Boolean syncTransAccelerate) {
+            this.syncTransAccelerate = syncTransAccelerate;
+            return this;
+        }
+        public Boolean getSyncTransAccelerate() {
+            return this.syncTransAccelerate;
         }
 
         public ListRepoSyncTaskResponseBodySyncTasks setTaskStatus(String taskStatus) {

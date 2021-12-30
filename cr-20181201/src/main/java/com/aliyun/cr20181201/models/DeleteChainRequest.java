@@ -10,9 +10,6 @@ public class DeleteChainRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static DeleteChainRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteChainRequest self = new DeleteChainRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class DeleteChainRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public DeleteChainRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }
