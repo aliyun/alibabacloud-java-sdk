@@ -37,6 +37,9 @@ public class ModifyControlPolicyRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("MessageType")
+    public String messageType;
+
     @NameInMap("Proto")
     public String proto;
 
@@ -143,6 +146,14 @@ public class ModifyControlPolicyRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public ModifyControlPolicyRequest setMessageType(String messageType) {
+        this.messageType = messageType;
+        return this;
+    }
+    public String getMessageType() {
+        return this.messageType;
     }
 
     public ModifyControlPolicyRequest setProto(String proto) {
