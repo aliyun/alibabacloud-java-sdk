@@ -4,11 +4,11 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListHostGroupsRequest extends TeaModel {
+    @NameInMap("HostGroupName")
+    public String hostGroupName;
+
     @NameInMap("InstanceId")
     public String instanceId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("PageNumber")
     public String pageNumber;
@@ -16,12 +16,20 @@ public class ListHostGroupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    @NameInMap("HostGroupName")
-    public String hostGroupName;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ListHostGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListHostGroupsRequest self = new ListHostGroupsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListHostGroupsRequest setHostGroupName(String hostGroupName) {
+        this.hostGroupName = hostGroupName;
+        return this;
+    }
+    public String getHostGroupName() {
+        return this.hostGroupName;
     }
 
     public ListHostGroupsRequest setInstanceId(String instanceId) {
@@ -30,14 +38,6 @@ public class ListHostGroupsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListHostGroupsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListHostGroupsRequest setPageNumber(String pageNumber) {
@@ -56,12 +56,12 @@ public class ListHostGroupsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListHostGroupsRequest setHostGroupName(String hostGroupName) {
-        this.hostGroupName = hostGroupName;
+    public ListHostGroupsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getHostGroupName() {
-        return this.hostGroupName;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

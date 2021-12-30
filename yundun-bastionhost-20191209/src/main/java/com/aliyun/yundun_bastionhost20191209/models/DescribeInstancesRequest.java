@@ -4,6 +4,12 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
+    @NameInMap("InstanceStatus")
+    public String instanceStatus;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -13,14 +19,8 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("InstanceStatus")
-    public String instanceStatus;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
 
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;
@@ -28,6 +28,22 @@ public class DescribeInstancesRequest extends TeaModel {
     public static DescribeInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesRequest self = new DescribeInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstancesRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeInstancesRequest setInstanceStatus(String instanceStatus) {
+        this.instanceStatus = instanceStatus;
+        return this;
+    }
+    public String getInstanceStatus() {
+        return this.instanceStatus;
     }
 
     public DescribeInstancesRequest setPageNumber(Integer pageNumber) {
@@ -54,28 +70,12 @@ public class DescribeInstancesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeInstancesRequest setInstanceStatus(String instanceStatus) {
-        this.instanceStatus = instanceStatus;
-        return this;
-    }
-    public String getInstanceStatus() {
-        return this.instanceStatus;
-    }
-
     public DescribeInstancesRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public DescribeInstancesRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
     }
 
     public DescribeInstancesRequest setTag(java.util.List<DescribeInstancesRequestTag> tag) {

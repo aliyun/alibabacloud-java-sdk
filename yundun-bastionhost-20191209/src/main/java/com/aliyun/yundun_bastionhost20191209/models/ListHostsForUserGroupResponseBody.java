@@ -4,34 +4,18 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListHostsForUserGroupResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("Hosts")
+    public java.util.List<ListHostsForUserGroupResponseBodyHosts> hosts;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Hosts")
-    public java.util.List<ListHostsForUserGroupResponseBodyHosts> hosts;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListHostsForUserGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListHostsForUserGroupResponseBody self = new ListHostsForUserGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListHostsForUserGroupResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListHostsForUserGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListHostsForUserGroupResponseBody setHosts(java.util.List<ListHostsForUserGroupResponseBodyHosts> hosts) {
@@ -42,15 +26,31 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
         return this.hosts;
     }
 
-    public static class ListHostsForUserGroupResponseBodyHosts extends TeaModel {
-        @NameInMap("Comment")
-        public String comment;
+    public ListHostsForUserGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public ListHostsForUserGroupResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class ListHostsForUserGroupResponseBodyHosts extends TeaModel {
         @NameInMap("ActiveAddressType")
         public String activeAddressType;
 
-        @NameInMap("HostPublicAddress")
-        public String hostPublicAddress;
+        @NameInMap("Comment")
+        public String comment;
+
+        @NameInMap("HostId")
+        public String hostId;
 
         @NameInMap("HostName")
         public String hostName;
@@ -58,23 +58,15 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
         @NameInMap("HostPrivateAddress")
         public String hostPrivateAddress;
 
+        @NameInMap("HostPublicAddress")
+        public String hostPublicAddress;
+
         @NameInMap("OSType")
         public String OSType;
-
-        @NameInMap("HostId")
-        public String hostId;
 
         public static ListHostsForUserGroupResponseBodyHosts build(java.util.Map<String, ?> map) throws Exception {
             ListHostsForUserGroupResponseBodyHosts self = new ListHostsForUserGroupResponseBodyHosts();
             return TeaModel.build(map, self);
-        }
-
-        public ListHostsForUserGroupResponseBodyHosts setComment(String comment) {
-            this.comment = comment;
-            return this;
-        }
-        public String getComment() {
-            return this.comment;
         }
 
         public ListHostsForUserGroupResponseBodyHosts setActiveAddressType(String activeAddressType) {
@@ -85,12 +77,20 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             return this.activeAddressType;
         }
 
-        public ListHostsForUserGroupResponseBodyHosts setHostPublicAddress(String hostPublicAddress) {
-            this.hostPublicAddress = hostPublicAddress;
+        public ListHostsForUserGroupResponseBodyHosts setComment(String comment) {
+            this.comment = comment;
             return this;
         }
-        public String getHostPublicAddress() {
-            return this.hostPublicAddress;
+        public String getComment() {
+            return this.comment;
+        }
+
+        public ListHostsForUserGroupResponseBodyHosts setHostId(String hostId) {
+            this.hostId = hostId;
+            return this;
+        }
+        public String getHostId() {
+            return this.hostId;
         }
 
         public ListHostsForUserGroupResponseBodyHosts setHostName(String hostName) {
@@ -109,20 +109,20 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             return this.hostPrivateAddress;
         }
 
+        public ListHostsForUserGroupResponseBodyHosts setHostPublicAddress(String hostPublicAddress) {
+            this.hostPublicAddress = hostPublicAddress;
+            return this;
+        }
+        public String getHostPublicAddress() {
+            return this.hostPublicAddress;
+        }
+
         public ListHostsForUserGroupResponseBodyHosts setOSType(String OSType) {
             this.OSType = OSType;
             return this;
         }
         public String getOSType() {
             return this.OSType;
-        }
-
-        public ListHostsForUserGroupResponseBodyHosts setHostId(String hostId) {
-            this.hostId = hostId;
-            return this;
-        }
-        public String getHostId() {
-            return this.hostId;
         }
 
     }

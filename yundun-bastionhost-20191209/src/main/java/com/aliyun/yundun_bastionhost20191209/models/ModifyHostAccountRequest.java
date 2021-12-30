@@ -4,17 +4,20 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ModifyHostAccountRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("HostAccountId")
     public String hostAccountId;
 
     @NameInMap("HostAccountName")
     public String hostAccountName;
+
+    @NameInMap("HostShareKeyId")
+    public String hostShareKeyId;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("PassPhrase")
+    public String passPhrase;
 
     @NameInMap("Password")
     public String password;
@@ -22,28 +25,12 @@ public class ModifyHostAccountRequest extends TeaModel {
     @NameInMap("PrivateKey")
     public String privateKey;
 
-    @NameInMap("PassPhrase")
-    public String passPhrase;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ModifyHostAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyHostAccountRequest self = new ModifyHostAccountRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyHostAccountRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ModifyHostAccountRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ModifyHostAccountRequest setHostAccountId(String hostAccountId) {
@@ -62,6 +49,30 @@ public class ModifyHostAccountRequest extends TeaModel {
         return this.hostAccountName;
     }
 
+    public ModifyHostAccountRequest setHostShareKeyId(String hostShareKeyId) {
+        this.hostShareKeyId = hostShareKeyId;
+        return this;
+    }
+    public String getHostShareKeyId() {
+        return this.hostShareKeyId;
+    }
+
+    public ModifyHostAccountRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyHostAccountRequest setPassPhrase(String passPhrase) {
+        this.passPhrase = passPhrase;
+        return this;
+    }
+    public String getPassPhrase() {
+        return this.passPhrase;
+    }
+
     public ModifyHostAccountRequest setPassword(String password) {
         this.password = password;
         return this;
@@ -78,12 +89,12 @@ public class ModifyHostAccountRequest extends TeaModel {
         return this.privateKey;
     }
 
-    public ModifyHostAccountRequest setPassPhrase(String passPhrase) {
-        this.passPhrase = passPhrase;
+    public ModifyHostAccountRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getPassPhrase() {
-        return this.passPhrase;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -4,32 +4,24 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TagKeys")
     public java.util.List<ListTagKeysResponseBodyTagKeys> tagKeys;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListTagKeysResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTagKeysResponseBody self = new ListTagKeysResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListTagKeysResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListTagKeysResponseBody setPageNumber(Integer pageNumber) {
@@ -48,12 +40,12 @@ public class ListTagKeysResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public ListTagKeysResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListTagKeysResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListTagKeysResponseBody setTagKeys(java.util.List<ListTagKeysResponseBodyTagKeys> tagKeys) {
@@ -62,6 +54,14 @@ public class ListTagKeysResponseBody extends TeaModel {
     }
     public java.util.List<ListTagKeysResponseBodyTagKeys> getTagKeys() {
         return this.tagKeys;
+    }
+
+    public ListTagKeysResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListTagKeysResponseBodyTagKeys extends TeaModel {

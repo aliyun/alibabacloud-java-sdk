@@ -35,11 +35,11 @@ public class ModifyHostsPortResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
-        @NameInMap("Message")
-        public String message;
-
         @NameInMap("HostId")
         public String hostId;
+
+        @NameInMap("Message")
+        public String message;
 
         public static ModifyHostsPortResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             ModifyHostsPortResponseBodyResults self = new ModifyHostsPortResponseBodyResults();
@@ -54,20 +54,20 @@ public class ModifyHostsPortResponseBody extends TeaModel {
             return this.code;
         }
 
-        public ModifyHostsPortResponseBodyResults setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
         public ModifyHostsPortResponseBodyResults setHostId(String hostId) {
             this.hostId = hostId;
             return this;
         }
         public String getHostId() {
             return this.hostId;
+        }
+
+        public ModifyHostsPortResponseBodyResults setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
         }
 
     }

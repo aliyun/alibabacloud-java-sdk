@@ -4,17 +4,14 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListHostAccountsForUserGroupRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("UserGroupId")
-    public String userGroupId;
+    @NameInMap("HostAccountName")
+    public String hostAccountName;
 
     @NameInMap("HostId")
     public String hostId;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("PageNumber")
     public String pageNumber;
@@ -22,36 +19,23 @@ public class ListHostAccountsForUserGroupRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    @NameInMap("HostAccountName")
-    public String hostAccountName;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("UserGroupId")
+    public String userGroupId;
 
     public static ListHostAccountsForUserGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ListHostAccountsForUserGroupRequest self = new ListHostAccountsForUserGroupRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListHostAccountsForUserGroupRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public ListHostAccountsForUserGroupRequest setHostAccountName(String hostAccountName) {
+        this.hostAccountName = hostAccountName;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ListHostAccountsForUserGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ListHostAccountsForUserGroupRequest setUserGroupId(String userGroupId) {
-        this.userGroupId = userGroupId;
-        return this;
-    }
-    public String getUserGroupId() {
-        return this.userGroupId;
+    public String getHostAccountName() {
+        return this.hostAccountName;
     }
 
     public ListHostAccountsForUserGroupRequest setHostId(String hostId) {
@@ -60,6 +44,14 @@ public class ListHostAccountsForUserGroupRequest extends TeaModel {
     }
     public String getHostId() {
         return this.hostId;
+    }
+
+    public ListHostAccountsForUserGroupRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListHostAccountsForUserGroupRequest setPageNumber(String pageNumber) {
@@ -78,12 +70,20 @@ public class ListHostAccountsForUserGroupRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListHostAccountsForUserGroupRequest setHostAccountName(String hostAccountName) {
-        this.hostAccountName = hostAccountName;
+    public ListHostAccountsForUserGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getHostAccountName() {
-        return this.hostAccountName;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ListHostAccountsForUserGroupRequest setUserGroupId(String userGroupId) {
+        this.userGroupId = userGroupId;
+        return this;
+    }
+    public String getUserGroupId() {
+        return this.userGroupId;
     }
 
 }

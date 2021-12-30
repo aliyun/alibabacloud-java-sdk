@@ -4,6 +4,9 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class AttachHostGroupAccountsToUserGroupRequest extends TeaModel {
+    @NameInMap("HostGroups")
+    public String hostGroups;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,12 +16,17 @@ public class AttachHostGroupAccountsToUserGroupRequest extends TeaModel {
     @NameInMap("UserGroupId")
     public String userGroupId;
 
-    @NameInMap("HostGroups")
-    public String hostGroups;
-
     public static AttachHostGroupAccountsToUserGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachHostGroupAccountsToUserGroupRequest self = new AttachHostGroupAccountsToUserGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AttachHostGroupAccountsToUserGroupRequest setHostGroups(String hostGroups) {
+        this.hostGroups = hostGroups;
+        return this;
+    }
+    public String getHostGroups() {
+        return this.hostGroups;
     }
 
     public AttachHostGroupAccountsToUserGroupRequest setInstanceId(String instanceId) {
@@ -43,14 +51,6 @@ public class AttachHostGroupAccountsToUserGroupRequest extends TeaModel {
     }
     public String getUserGroupId() {
         return this.userGroupId;
-    }
-
-    public AttachHostGroupAccountsToUserGroupRequest setHostGroups(String hostGroups) {
-        this.hostGroups = hostGroups;
-        return this;
-    }
-    public String getHostGroups() {
-        return this.hostGroups;
     }
 
 }

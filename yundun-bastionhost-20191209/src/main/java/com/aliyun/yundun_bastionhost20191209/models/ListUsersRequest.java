@@ -4,11 +4,14 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListUsersRequest extends TeaModel {
+    @NameInMap("DisplayName")
+    public String displayName;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Mobile")
+    public String mobile;
 
     @NameInMap("PageNumber")
     public String pageNumber;
@@ -16,20 +19,11 @@ public class ListUsersRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    @NameInMap("UserName")
-    public String userName;
-
-    @NameInMap("DisplayName")
-    public String displayName;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("Source")
     public String source;
-
-    @NameInMap("Mobile")
-    public String mobile;
-
-    @NameInMap("UserState")
-    public String userState;
 
     @NameInMap("SourceUserId")
     public String sourceUserId;
@@ -37,9 +31,23 @@ public class ListUsersRequest extends TeaModel {
     @NameInMap("UserGroupId")
     public String userGroupId;
 
+    @NameInMap("UserName")
+    public String userName;
+
+    @NameInMap("UserState")
+    public String userState;
+
     public static ListUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListUsersRequest self = new ListUsersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListUsersRequest setDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    public String getDisplayName() {
+        return this.displayName;
     }
 
     public ListUsersRequest setInstanceId(String instanceId) {
@@ -50,12 +58,12 @@ public class ListUsersRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListUsersRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ListUsersRequest setMobile(String mobile) {
+        this.mobile = mobile;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getMobile() {
+        return this.mobile;
     }
 
     public ListUsersRequest setPageNumber(String pageNumber) {
@@ -74,20 +82,12 @@ public class ListUsersRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListUsersRequest setUserName(String userName) {
-        this.userName = userName;
+    public ListUsersRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getUserName() {
-        return this.userName;
-    }
-
-    public ListUsersRequest setDisplayName(String displayName) {
-        this.displayName = displayName;
-        return this;
-    }
-    public String getDisplayName() {
-        return this.displayName;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListUsersRequest setSource(String source) {
@@ -96,22 +96,6 @@ public class ListUsersRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
-    }
-
-    public ListUsersRequest setMobile(String mobile) {
-        this.mobile = mobile;
-        return this;
-    }
-    public String getMobile() {
-        return this.mobile;
-    }
-
-    public ListUsersRequest setUserState(String userState) {
-        this.userState = userState;
-        return this;
-    }
-    public String getUserState() {
-        return this.userState;
     }
 
     public ListUsersRequest setSourceUserId(String sourceUserId) {
@@ -128,6 +112,22 @@ public class ListUsersRequest extends TeaModel {
     }
     public String getUserGroupId() {
         return this.userGroupId;
+    }
+
+    public ListUsersRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public ListUsersRequest setUserState(String userState) {
+        this.userState = userState;
+        return this;
+    }
+    public String getUserState() {
+        return this.userState;
     }
 
 }

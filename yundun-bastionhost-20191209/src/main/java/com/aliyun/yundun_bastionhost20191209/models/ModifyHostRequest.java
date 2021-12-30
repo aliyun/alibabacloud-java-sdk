@@ -4,14 +4,14 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ModifyHostRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Comment")
+    public String comment;
 
     @NameInMap("HostId")
     public String hostId;
+
+    @NameInMap("HostName")
+    public String hostName;
 
     @NameInMap("HostPrivateAddress")
     public String hostPrivateAddress;
@@ -19,34 +19,26 @@ public class ModifyHostRequest extends TeaModel {
     @NameInMap("HostPublicAddress")
     public String hostPublicAddress;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("OSType")
     public String OSType;
 
-    @NameInMap("HostName")
-    public String hostName;
-
-    @NameInMap("Comment")
-    public String comment;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ModifyHostRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyHostRequest self = new ModifyHostRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyHostRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public ModifyHostRequest setComment(String comment) {
+        this.comment = comment;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ModifyHostRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getComment() {
+        return this.comment;
     }
 
     public ModifyHostRequest setHostId(String hostId) {
@@ -55,6 +47,14 @@ public class ModifyHostRequest extends TeaModel {
     }
     public String getHostId() {
         return this.hostId;
+    }
+
+    public ModifyHostRequest setHostName(String hostName) {
+        this.hostName = hostName;
+        return this;
+    }
+    public String getHostName() {
+        return this.hostName;
     }
 
     public ModifyHostRequest setHostPrivateAddress(String hostPrivateAddress) {
@@ -73,6 +73,14 @@ public class ModifyHostRequest extends TeaModel {
         return this.hostPublicAddress;
     }
 
+    public ModifyHostRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public ModifyHostRequest setOSType(String OSType) {
         this.OSType = OSType;
         return this;
@@ -81,20 +89,12 @@ public class ModifyHostRequest extends TeaModel {
         return this.OSType;
     }
 
-    public ModifyHostRequest setHostName(String hostName) {
-        this.hostName = hostName;
+    public ModifyHostRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getHostName() {
-        return this.hostName;
-    }
-
-    public ModifyHostRequest setComment(String comment) {
-        this.comment = comment;
-        return this;
-    }
-    public String getComment() {
-        return this.comment;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

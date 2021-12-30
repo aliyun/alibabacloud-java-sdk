@@ -35,11 +35,11 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
-        @NameInMap("Message")
-        public String message;
-
         @NameInMap("HostAccountId")
         public String hostAccountId;
+
+        @NameInMap("Message")
+        public String message;
 
         public static AttachHostAccountsToUserResponseBodyResultsHostAccounts build(java.util.Map<String, ?> map) throws Exception {
             AttachHostAccountsToUserResponseBodyResultsHostAccounts self = new AttachHostAccountsToUserResponseBodyResultsHostAccounts();
@@ -54,14 +54,6 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
             return this.code;
         }
 
-        public AttachHostAccountsToUserResponseBodyResultsHostAccounts setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
         public AttachHostAccountsToUserResponseBodyResultsHostAccounts setHostAccountId(String hostAccountId) {
             this.hostAccountId = hostAccountId;
             return this;
@@ -70,23 +62,31 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
             return this.hostAccountId;
         }
 
+        public AttachHostAccountsToUserResponseBodyResultsHostAccounts setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
     }
 
     public static class AttachHostAccountsToUserResponseBodyResults extends TeaModel {
         @NameInMap("Code")
         public String code;
 
-        @NameInMap("Message")
-        public String message;
+        @NameInMap("HostAccounts")
+        public java.util.List<AttachHostAccountsToUserResponseBodyResultsHostAccounts> hostAccounts;
 
         @NameInMap("HostId")
         public String hostId;
 
+        @NameInMap("Message")
+        public String message;
+
         @NameInMap("UserId")
         public String userId;
-
-        @NameInMap("HostAccounts")
-        public java.util.List<AttachHostAccountsToUserResponseBodyResultsHostAccounts> hostAccounts;
 
         public static AttachHostAccountsToUserResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             AttachHostAccountsToUserResponseBodyResults self = new AttachHostAccountsToUserResponseBodyResults();
@@ -101,12 +101,12 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
             return this.code;
         }
 
-        public AttachHostAccountsToUserResponseBodyResults setMessage(String message) {
-            this.message = message;
+        public AttachHostAccountsToUserResponseBodyResults setHostAccounts(java.util.List<AttachHostAccountsToUserResponseBodyResultsHostAccounts> hostAccounts) {
+            this.hostAccounts = hostAccounts;
             return this;
         }
-        public String getMessage() {
-            return this.message;
+        public java.util.List<AttachHostAccountsToUserResponseBodyResultsHostAccounts> getHostAccounts() {
+            return this.hostAccounts;
         }
 
         public AttachHostAccountsToUserResponseBodyResults setHostId(String hostId) {
@@ -117,20 +117,20 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
             return this.hostId;
         }
 
+        public AttachHostAccountsToUserResponseBodyResults setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
         public AttachHostAccountsToUserResponseBodyResults setUserId(String userId) {
             this.userId = userId;
             return this;
         }
         public String getUserId() {
             return this.userId;
-        }
-
-        public AttachHostAccountsToUserResponseBodyResults setHostAccounts(java.util.List<AttachHostAccountsToUserResponseBodyResultsHostAccounts> hostAccounts) {
-            this.hostAccounts = hostAccounts;
-            return this;
-        }
-        public java.util.List<AttachHostAccountsToUserResponseBodyResultsHostAccounts> getHostAccounts() {
-            return this.hostAccounts;
         }
 
     }
