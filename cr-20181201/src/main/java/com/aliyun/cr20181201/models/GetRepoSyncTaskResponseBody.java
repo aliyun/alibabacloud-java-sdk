@@ -7,6 +7,9 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("CrossUser")
+    public Boolean crossUser;
+
     @NameInMap("ImageFrom")
     public GetRepoSyncTaskResponseBodyImageFrom imageFrom;
 
@@ -34,6 +37,9 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     @NameInMap("SyncTaskId")
     public String syncTaskId;
 
+    @NameInMap("SyncTransAccelerate")
+    public Boolean syncTransAccelerate;
+
     @NameInMap("SyncedSize")
     public Long syncedSize;
 
@@ -54,6 +60,14 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetRepoSyncTaskResponseBody setCrossUser(Boolean crossUser) {
+        this.crossUser = crossUser;
+        return this;
+    }
+    public Boolean getCrossUser() {
+        return this.crossUser;
     }
 
     public GetRepoSyncTaskResponseBody setImageFrom(GetRepoSyncTaskResponseBodyImageFrom imageFrom) {
@@ -126,6 +140,14 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     }
     public String getSyncTaskId() {
         return this.syncTaskId;
+    }
+
+    public GetRepoSyncTaskResponseBody setSyncTransAccelerate(Boolean syncTransAccelerate) {
+        this.syncTransAccelerate = syncTransAccelerate;
+        return this;
+    }
+    public Boolean getSyncTransAccelerate() {
+        return this.syncTransAccelerate;
     }
 
     public GetRepoSyncTaskResponseBody setSyncedSize(Long syncedSize) {

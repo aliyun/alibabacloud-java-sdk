@@ -22,9 +22,6 @@ public class UpdateEventCenterRuleShrinkRequest extends TeaModel {
     @NameInMap("Namespaces")
     public String namespacesShrink;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("RepoNames")
     public String repoNamesShrink;
 
@@ -88,14 +85,6 @@ public class UpdateEventCenterRuleShrinkRequest extends TeaModel {
     }
     public String getNamespacesShrink() {
         return this.namespacesShrink;
-    }
-
-    public UpdateEventCenterRuleShrinkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public UpdateEventCenterRuleShrinkRequest setRepoNamesShrink(String repoNamesShrink) {

@@ -13,9 +13,6 @@ public class ListRepoBuildRecordLogRequest extends TeaModel {
     @NameInMap("Offset")
     public Integer offset;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("RepoId")
     public String repoId;
 
@@ -46,14 +43,6 @@ public class ListRepoBuildRecordLogRequest extends TeaModel {
     }
     public Integer getOffset() {
         return this.offset;
-    }
-
-    public ListRepoBuildRecordLogRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListRepoBuildRecordLogRequest setRepoId(String repoId) {

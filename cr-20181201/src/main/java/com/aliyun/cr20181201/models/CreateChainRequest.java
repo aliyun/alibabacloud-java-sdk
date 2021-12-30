@@ -16,9 +16,6 @@ public class CreateChainRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("RepoName")
     public String repoName;
 
@@ -60,14 +57,6 @@ public class CreateChainRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public CreateChainRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateChainRequest setRepoName(String repoName) {

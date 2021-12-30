@@ -16,9 +16,6 @@ public class DeleteInstanceEndpointAclPolicyRequest extends TeaModel {
     @NameInMap("ModuleName")
     public String moduleName;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static DeleteInstanceEndpointAclPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteInstanceEndpointAclPolicyRequest self = new DeleteInstanceEndpointAclPolicyRequest();
         return TeaModel.build(map, self);
@@ -54,14 +51,6 @@ public class DeleteInstanceEndpointAclPolicyRequest extends TeaModel {
     }
     public String getModuleName() {
         return this.moduleName;
-    }
-
-    public DeleteInstanceEndpointAclPolicyRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

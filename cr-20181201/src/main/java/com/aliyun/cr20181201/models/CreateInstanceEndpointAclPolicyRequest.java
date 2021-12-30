@@ -19,9 +19,6 @@ public class CreateInstanceEndpointAclPolicyRequest extends TeaModel {
     @NameInMap("ModuleName")
     public String moduleName;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static CreateInstanceEndpointAclPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceEndpointAclPolicyRequest self = new CreateInstanceEndpointAclPolicyRequest();
         return TeaModel.build(map, self);
@@ -65,14 +62,6 @@ public class CreateInstanceEndpointAclPolicyRequest extends TeaModel {
     }
     public String getModuleName() {
         return this.moduleName;
-    }
-
-    public CreateInstanceEndpointAclPolicyRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

@@ -25,9 +25,6 @@ public class CreateRepoSourceCodeRepoRequest extends TeaModel {
     @NameInMap("OverseaBuild")
     public Boolean overseaBuild;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("RepoId")
     public String repoId;
 
@@ -90,14 +87,6 @@ public class CreateRepoSourceCodeRepoRequest extends TeaModel {
     }
     public Boolean getOverseaBuild() {
         return this.overseaBuild;
-    }
-
-    public CreateRepoSourceCodeRepoRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateRepoSourceCodeRepoRequest setRepoId(String repoId) {

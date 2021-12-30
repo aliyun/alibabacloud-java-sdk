@@ -16,9 +16,6 @@ public class UpdateChartNamespaceRequest extends TeaModel {
     @NameInMap("NamespaceName")
     public String namespaceName;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static UpdateChartNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateChartNamespaceRequest self = new UpdateChartNamespaceRequest();
         return TeaModel.build(map, self);
@@ -54,14 +51,6 @@ public class UpdateChartNamespaceRequest extends TeaModel {
     }
     public String getNamespaceName() {
         return this.namespaceName;
-    }
-
-    public UpdateChartNamespaceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }
