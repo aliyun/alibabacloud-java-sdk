@@ -116,12 +116,48 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDBInstancesResponseBodyDBInstancesTagSet extends TeaModel {
+        // 标签名称
+        @NameInMap("Key")
+        public String key;
+
+        // 标签值
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeDBInstancesResponseBodyDBInstancesTagSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstancesResponseBodyDBInstancesTagSet self = new DescribeDBInstancesResponseBodyDBInstancesTagSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstancesTagSet setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstancesTagSet setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeDBInstancesResponseBodyDBInstances extends TeaModel {
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         @NameInMap("CreateTime")
         public String createTime;
+
+        // 数据库实例名称
+        @NameInMap("DBInstanceName")
+        public String DBInstanceName;
 
         @NameInMap("DBType")
         public String DBType;
@@ -174,11 +210,19 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        // 资源组ID
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("Status")
         public String status;
 
         @NameInMap("StorageUsed")
         public Long storageUsed;
+
+        // 标签集合
+        @NameInMap("TagSet")
+        public java.util.List<DescribeDBInstancesResponseBodyDBInstancesTagSet> tagSet;
 
         @NameInMap("Type")
         public String type;
@@ -208,6 +252,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setDBInstanceName(String DBInstanceName) {
+            this.DBInstanceName = DBInstanceName;
+            return this;
+        }
+        public String getDBInstanceName() {
+            return this.DBInstanceName;
         }
 
         public DescribeDBInstancesResponseBodyDBInstances setDBType(String DBType) {
@@ -346,6 +398,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeDBInstancesResponseBodyDBInstances setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public DescribeDBInstancesResponseBodyDBInstances setStatus(String status) {
             this.status = status;
             return this;
@@ -360,6 +420,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public Long getStorageUsed() {
             return this.storageUsed;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setTagSet(java.util.List<DescribeDBInstancesResponseBodyDBInstancesTagSet> tagSet) {
+            this.tagSet = tagSet;
+            return this;
+        }
+        public java.util.List<DescribeDBInstancesResponseBodyDBInstancesTagSet> getTagSet() {
+            return this.tagSet;
         }
 
         public DescribeDBInstancesResponseBodyDBInstances setType(String type) {

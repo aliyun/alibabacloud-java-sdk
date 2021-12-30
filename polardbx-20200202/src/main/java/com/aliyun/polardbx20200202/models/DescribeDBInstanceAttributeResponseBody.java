@@ -168,6 +168,38 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDBInstanceAttributeResponseBodyDBInstanceTagSet extends TeaModel {
+        // 标签名称
+        @NameInMap("Key")
+        public String key;
+
+        // 标签值
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeDBInstanceAttributeResponseBodyDBInstanceTagSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceAttributeResponseBodyDBInstanceTagSet self = new DescribeDBInstanceAttributeResponseBodyDBInstanceTagSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstanceTagSet setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstanceTagSet setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeDBInstanceAttributeResponseBodyDBInstance extends TeaModel {
         @NameInMap("CommodityCode")
         public String commodityCode;
@@ -247,6 +279,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        // 资源组ID
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("RightsSeparationEnabled")
         public Boolean rightsSeparationEnabled;
 
@@ -258,6 +294,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @NameInMap("StorageUsed")
         public Long storageUsed;
+
+        // 标签集合
+        @NameInMap("TagSet")
+        public java.util.List<DescribeDBInstanceAttributeResponseBodyDBInstanceTagSet> tagSet;
 
         @NameInMap("Type")
         public String type;
@@ -484,6 +524,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public DescribeDBInstanceAttributeResponseBodyDBInstance setRightsSeparationEnabled(Boolean rightsSeparationEnabled) {
             this.rightsSeparationEnabled = rightsSeparationEnabled;
             return this;
@@ -514,6 +562,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Long getStorageUsed() {
             return this.storageUsed;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setTagSet(java.util.List<DescribeDBInstanceAttributeResponseBodyDBInstanceTagSet> tagSet) {
+            this.tagSet = tagSet;
+            return this;
+        }
+        public java.util.List<DescribeDBInstanceAttributeResponseBodyDBInstanceTagSet> getTagSet() {
+            return this.tagSet;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstance setType(String type) {
