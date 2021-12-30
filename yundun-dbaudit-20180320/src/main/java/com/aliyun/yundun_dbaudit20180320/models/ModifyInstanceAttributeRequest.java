@@ -4,11 +4,11 @@ package com.aliyun.yundun_dbaudit20180320.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAttributeRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -18,20 +18,20 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyInstanceAttributeRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public ModifyInstanceAttributeRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyInstanceAttributeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ModifyInstanceAttributeRequest setRegionId(String regionId) {

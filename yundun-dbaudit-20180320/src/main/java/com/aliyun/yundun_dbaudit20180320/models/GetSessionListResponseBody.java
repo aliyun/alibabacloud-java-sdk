@@ -4,14 +4,11 @@ package com.aliyun.yundun_dbaudit20180320.models;
 import com.aliyun.tea.*;
 
 public class GetSessionListResponseBody extends TeaModel {
-    @NameInMap("EndDate")
-    public String endDate;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("BeginDate")
     public String beginDate;
+
+    @NameInMap("EndDate")
+    public String endDate;
 
     @NameInMap("Incomplete")
     public String incomplete;
@@ -22,31 +19,18 @@ public class GetSessionListResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Results")
     public java.util.List<GetSessionListResponseBodyResults> results;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     public static GetSessionListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSessionListResponseBody self = new GetSessionListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetSessionListResponseBody setEndDate(String endDate) {
-        this.endDate = endDate;
-        return this;
-    }
-    public String getEndDate() {
-        return this.endDate;
-    }
-
-    public GetSessionListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetSessionListResponseBody setBeginDate(String beginDate) {
@@ -55,6 +39,14 @@ public class GetSessionListResponseBody extends TeaModel {
     }
     public String getBeginDate() {
         return this.beginDate;
+    }
+
+    public GetSessionListResponseBody setEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    public String getEndDate() {
+        return this.endDate;
     }
 
     public GetSessionListResponseBody setIncomplete(String incomplete) {
@@ -81,12 +73,12 @@ public class GetSessionListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public GetSessionListResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
+    public GetSessionListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Long getTotalCount() {
-        return this.totalCount;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetSessionListResponseBody setResults(java.util.List<GetSessionListResponseBodyResults> results) {
@@ -97,36 +89,17 @@ public class GetSessionListResponseBody extends TeaModel {
         return this.results;
     }
 
+    public GetSessionListResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class GetSessionListResponseBodyResults extends TeaModel {
-        @NameInMap("DbId")
-        public Integer dbId;
-
-        @NameInMap("LoginCode")
-        public Integer loginCode;
-
         @NameInMap("Action")
         public String action;
-
-        @NameInMap("ClientPort")
-        public Integer clientPort;
-
-        @NameInMap("LoginMessage")
-        public String loginMessage;
-
-        @NameInMap("DbUser")
-        public String dbUser;
-
-        @NameInMap("ServerPort")
-        public Integer serverPort;
-
-        @NameInMap("ClientOsUser")
-        public String clientOsUser;
-
-        @NameInMap("ServerMac")
-        public String serverMac;
-
-        @NameInMap("ClientProgram")
-        public String clientProgram;
 
         @NameInMap("CaptureTime")
         public String captureTime;
@@ -134,34 +107,45 @@ public class GetSessionListResponseBody extends TeaModel {
         @NameInMap("ClientIp")
         public String clientIp;
 
+        @NameInMap("ClientMac")
+        public String clientMac;
+
+        @NameInMap("ClientOsUser")
+        public String clientOsUser;
+
+        @NameInMap("ClientPort")
+        public Integer clientPort;
+
+        @NameInMap("ClientProgram")
+        public String clientProgram;
+
+        @NameInMap("DbId")
+        public Integer dbId;
+
+        @NameInMap("DbUser")
+        public String dbUser;
+
+        @NameInMap("LoginCode")
+        public Integer loginCode;
+
+        @NameInMap("LoginMessage")
+        public String loginMessage;
+
         @NameInMap("ServerIp")
         public String serverIp;
+
+        @NameInMap("ServerMac")
+        public String serverMac;
+
+        @NameInMap("ServerPort")
+        public Integer serverPort;
 
         @NameInMap("SessionId")
         public String sessionId;
 
-        @NameInMap("ClientMac")
-        public String clientMac;
-
         public static GetSessionListResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             GetSessionListResponseBodyResults self = new GetSessionListResponseBodyResults();
             return TeaModel.build(map, self);
-        }
-
-        public GetSessionListResponseBodyResults setDbId(Integer dbId) {
-            this.dbId = dbId;
-            return this;
-        }
-        public Integer getDbId() {
-            return this.dbId;
-        }
-
-        public GetSessionListResponseBodyResults setLoginCode(Integer loginCode) {
-            this.loginCode = loginCode;
-            return this;
-        }
-        public Integer getLoginCode() {
-            return this.loginCode;
         }
 
         public GetSessionListResponseBodyResults setAction(String action) {
@@ -170,62 +154,6 @@ public class GetSessionListResponseBody extends TeaModel {
         }
         public String getAction() {
             return this.action;
-        }
-
-        public GetSessionListResponseBodyResults setClientPort(Integer clientPort) {
-            this.clientPort = clientPort;
-            return this;
-        }
-        public Integer getClientPort() {
-            return this.clientPort;
-        }
-
-        public GetSessionListResponseBodyResults setLoginMessage(String loginMessage) {
-            this.loginMessage = loginMessage;
-            return this;
-        }
-        public String getLoginMessage() {
-            return this.loginMessage;
-        }
-
-        public GetSessionListResponseBodyResults setDbUser(String dbUser) {
-            this.dbUser = dbUser;
-            return this;
-        }
-        public String getDbUser() {
-            return this.dbUser;
-        }
-
-        public GetSessionListResponseBodyResults setServerPort(Integer serverPort) {
-            this.serverPort = serverPort;
-            return this;
-        }
-        public Integer getServerPort() {
-            return this.serverPort;
-        }
-
-        public GetSessionListResponseBodyResults setClientOsUser(String clientOsUser) {
-            this.clientOsUser = clientOsUser;
-            return this;
-        }
-        public String getClientOsUser() {
-            return this.clientOsUser;
-        }
-
-        public GetSessionListResponseBodyResults setServerMac(String serverMac) {
-            this.serverMac = serverMac;
-            return this;
-        }
-        public String getServerMac() {
-            return this.serverMac;
-        }
-
-        public GetSessionListResponseBodyResults setClientProgram(String clientProgram) {
-            this.clientProgram = clientProgram;
-            return this;
-        }
-        public String getClientProgram() {
-            return this.clientProgram;
         }
 
         public GetSessionListResponseBodyResults setCaptureTime(String captureTime) {
@@ -244,6 +172,70 @@ public class GetSessionListResponseBody extends TeaModel {
             return this.clientIp;
         }
 
+        public GetSessionListResponseBodyResults setClientMac(String clientMac) {
+            this.clientMac = clientMac;
+            return this;
+        }
+        public String getClientMac() {
+            return this.clientMac;
+        }
+
+        public GetSessionListResponseBodyResults setClientOsUser(String clientOsUser) {
+            this.clientOsUser = clientOsUser;
+            return this;
+        }
+        public String getClientOsUser() {
+            return this.clientOsUser;
+        }
+
+        public GetSessionListResponseBodyResults setClientPort(Integer clientPort) {
+            this.clientPort = clientPort;
+            return this;
+        }
+        public Integer getClientPort() {
+            return this.clientPort;
+        }
+
+        public GetSessionListResponseBodyResults setClientProgram(String clientProgram) {
+            this.clientProgram = clientProgram;
+            return this;
+        }
+        public String getClientProgram() {
+            return this.clientProgram;
+        }
+
+        public GetSessionListResponseBodyResults setDbId(Integer dbId) {
+            this.dbId = dbId;
+            return this;
+        }
+        public Integer getDbId() {
+            return this.dbId;
+        }
+
+        public GetSessionListResponseBodyResults setDbUser(String dbUser) {
+            this.dbUser = dbUser;
+            return this;
+        }
+        public String getDbUser() {
+            return this.dbUser;
+        }
+
+        public GetSessionListResponseBodyResults setLoginCode(Integer loginCode) {
+            this.loginCode = loginCode;
+            return this;
+        }
+        public Integer getLoginCode() {
+            return this.loginCode;
+        }
+
+        public GetSessionListResponseBodyResults setLoginMessage(String loginMessage) {
+            this.loginMessage = loginMessage;
+            return this;
+        }
+        public String getLoginMessage() {
+            return this.loginMessage;
+        }
+
         public GetSessionListResponseBodyResults setServerIp(String serverIp) {
             this.serverIp = serverIp;
             return this;
@@ -252,20 +244,28 @@ public class GetSessionListResponseBody extends TeaModel {
             return this.serverIp;
         }
 
+        public GetSessionListResponseBodyResults setServerMac(String serverMac) {
+            this.serverMac = serverMac;
+            return this;
+        }
+        public String getServerMac() {
+            return this.serverMac;
+        }
+
+        public GetSessionListResponseBodyResults setServerPort(Integer serverPort) {
+            this.serverPort = serverPort;
+            return this;
+        }
+        public Integer getServerPort() {
+            return this.serverPort;
+        }
+
         public GetSessionListResponseBodyResults setSessionId(String sessionId) {
             this.sessionId = sessionId;
             return this;
         }
         public String getSessionId() {
             return this.sessionId;
-        }
-
-        public GetSessionListResponseBodyResults setClientMac(String clientMac) {
-            this.clientMac = clientMac;
-            return this;
-        }
-        public String getClientMac() {
-            return this.clientMac;
         }
 
     }

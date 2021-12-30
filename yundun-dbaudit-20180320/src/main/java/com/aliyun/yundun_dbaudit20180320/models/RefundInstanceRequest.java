@@ -7,11 +7,11 @@ public class RefundInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("ServiceCode")
-    public String serviceCode;
-
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ServiceCode")
+    public String serviceCode;
 
     public static RefundInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RefundInstanceRequest self = new RefundInstanceRequest();
@@ -26,20 +26,20 @@ public class RefundInstanceRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public RefundInstanceRequest setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
-        return this;
-    }
-    public String getServiceCode() {
-        return this.serviceCode;
-    }
-
     public RefundInstanceRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public RefundInstanceRequest setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+    public String getServiceCode() {
+        return this.serviceCode;
     }
 
 }

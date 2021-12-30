@@ -4,23 +4,15 @@ package com.aliyun.yundun_dbaudit20180320.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoginTicketResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LoginTicket")
     public DescribeLoginTicketResponseBodyLoginTicket loginTicket;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLoginTicketResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLoginTicketResponseBody self = new DescribeLoginTicketResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLoginTicketResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLoginTicketResponseBody setLoginTicket(DescribeLoginTicketResponseBodyLoginTicket loginTicket) {
@@ -31,24 +23,24 @@ public class DescribeLoginTicketResponseBody extends TeaModel {
         return this.loginTicket;
     }
 
-    public static class DescribeLoginTicketResponseBodyLoginTicketZones extends TeaModel {
-        @NameInMap("ZoneId")
-        public String zoneId;
+    public DescribeLoginTicketResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeLoginTicketResponseBodyLoginTicketZones extends TeaModel {
         @NameInMap("LocalName")
         public String localName;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeLoginTicketResponseBodyLoginTicketZones build(java.util.Map<String, ?> map) throws Exception {
             DescribeLoginTicketResponseBodyLoginTicketZones self = new DescribeLoginTicketResponseBodyLoginTicketZones();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLoginTicketResponseBodyLoginTicketZones setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
         }
 
         public DescribeLoginTicketResponseBodyLoginTicketZones setLocalName(String localName) {
@@ -59,14 +51,22 @@ public class DescribeLoginTicketResponseBody extends TeaModel {
             return this.localName;
         }
 
+        public DescribeLoginTicketResponseBodyLoginTicketZones setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
     }
 
     public static class DescribeLoginTicketResponseBodyLoginTicket extends TeaModel {
-        @NameInMap("Ticket")
-        public String ticket;
-
         @NameInMap("Certificate")
         public String certificate;
+
+        @NameInMap("Ticket")
+        public String ticket;
 
         @NameInMap("Zones")
         public java.util.List<DescribeLoginTicketResponseBodyLoginTicketZones> zones;
@@ -76,20 +76,20 @@ public class DescribeLoginTicketResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeLoginTicketResponseBodyLoginTicket setTicket(String ticket) {
-            this.ticket = ticket;
-            return this;
-        }
-        public String getTicket() {
-            return this.ticket;
-        }
-
         public DescribeLoginTicketResponseBodyLoginTicket setCertificate(String certificate) {
             this.certificate = certificate;
             return this;
         }
         public String getCertificate() {
             return this.certificate;
+        }
+
+        public DescribeLoginTicketResponseBodyLoginTicket setTicket(String ticket) {
+            this.ticket = ticket;
+            return this;
+        }
+        public String getTicket() {
+            return this.ticket;
         }
 
         public DescribeLoginTicketResponseBodyLoginTicket setZones(java.util.List<DescribeLoginTicketResponseBodyLoginTicketZones> zones) {
