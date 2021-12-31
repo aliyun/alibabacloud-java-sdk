@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class CreateScheduledTaskResponseBody extends TeaModel {
-    @NameInMap("result")
-    public java.util.Map<String, ?> result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public java.util.Map<String, ?> result;
 
     public static CreateScheduledTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateScheduledTaskResponseBody self = new CreateScheduledTaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateScheduledTaskResponseBody setResult(java.util.Map<String, ?> result) {
-        this.result = result;
-        return this;
-    }
-    public java.util.Map<String, ?> getResult() {
-        return this.result;
     }
 
     public CreateScheduledTaskResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateScheduledTaskResponseBody setResult(java.util.Map<String, ?> result) {
+        this.result = result;
+        return this;
+    }
+    public java.util.Map<String, ?> getResult() {
+        return this.result;
     }
 
 }

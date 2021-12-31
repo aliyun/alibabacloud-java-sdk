@@ -7,17 +7,17 @@ public class ListAppGroupErrorsRequest extends TeaModel {
     @NameInMap("appId")
     public String appId;
 
-    @NameInMap("startTime")
-    public Integer startTime;
-
-    @NameInMap("stopTime")
-    public Integer stopTime;
-
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     @NameInMap("pageSize")
     public Integer pageSize;
+
+    @NameInMap("startTime")
+    public Integer startTime;
+
+    @NameInMap("stopTime")
+    public Integer stopTime;
 
     public static ListAppGroupErrorsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAppGroupErrorsRequest self = new ListAppGroupErrorsRequest();
@@ -30,22 +30,6 @@ public class ListAppGroupErrorsRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
-    }
-
-    public ListAppGroupErrorsRequest setStartTime(Integer startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Integer getStartTime() {
-        return this.startTime;
-    }
-
-    public ListAppGroupErrorsRequest setStopTime(Integer stopTime) {
-        this.stopTime = stopTime;
-        return this;
-    }
-    public Integer getStopTime() {
-        return this.stopTime;
     }
 
     public ListAppGroupErrorsRequest setPageNumber(Integer pageNumber) {
@@ -62,6 +46,22 @@ public class ListAppGroupErrorsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAppGroupErrorsRequest setStartTime(Integer startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Integer getStartTime() {
+        return this.startTime;
+    }
+
+    public ListAppGroupErrorsRequest setStopTime(Integer stopTime) {
+        this.stopTime = stopTime;
+        return this;
+    }
+    public Integer getStopTime() {
+        return this.stopTime;
     }
 
 }

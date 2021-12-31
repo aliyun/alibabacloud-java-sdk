@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class UpdateFetchFieldsResponseBody extends TeaModel {
-    @NameInMap("result")
-    public Boolean result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public Boolean result;
 
     public static UpdateFetchFieldsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateFetchFieldsResponseBody self = new UpdateFetchFieldsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateFetchFieldsResponseBody setResult(Boolean result) {
-        this.result = result;
-        return this;
-    }
-    public Boolean getResult() {
-        return this.result;
     }
 
     public UpdateFetchFieldsResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class UpdateFetchFieldsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpdateFetchFieldsResponseBody setResult(Boolean result) {
+        this.result = result;
+        return this;
+    }
+    public Boolean getResult() {
+        return this.result;
     }
 
 }

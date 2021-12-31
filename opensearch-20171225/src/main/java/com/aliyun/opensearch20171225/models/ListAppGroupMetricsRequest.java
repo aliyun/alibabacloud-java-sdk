@@ -4,37 +4,21 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListAppGroupMetricsRequest extends TeaModel {
-    @NameInMap("metricType")
-    public String metricType;
-
-    @NameInMap("startTime")
-    public Integer startTime;
-
     @NameInMap("endTime")
     public Integer endTime;
 
     @NameInMap("indexes")
     public String indexes;
 
+    @NameInMap("metricType")
+    public String metricType;
+
+    @NameInMap("startTime")
+    public Integer startTime;
+
     public static ListAppGroupMetricsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAppGroupMetricsRequest self = new ListAppGroupMetricsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListAppGroupMetricsRequest setMetricType(String metricType) {
-        this.metricType = metricType;
-        return this;
-    }
-    public String getMetricType() {
-        return this.metricType;
-    }
-
-    public ListAppGroupMetricsRequest setStartTime(Integer startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Integer getStartTime() {
-        return this.startTime;
     }
 
     public ListAppGroupMetricsRequest setEndTime(Integer endTime) {
@@ -51,6 +35,22 @@ public class ListAppGroupMetricsRequest extends TeaModel {
     }
     public String getIndexes() {
         return this.indexes;
+    }
+
+    public ListAppGroupMetricsRequest setMetricType(String metricType) {
+        this.metricType = metricType;
+        return this;
+    }
+    public String getMetricType() {
+        return this.metricType;
+    }
+
+    public ListAppGroupMetricsRequest setStartTime(Integer startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Integer getStartTime() {
+        return this.startTime;
     }
 
 }

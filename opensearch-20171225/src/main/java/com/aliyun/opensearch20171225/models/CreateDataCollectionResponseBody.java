@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class CreateDataCollectionResponseBody extends TeaModel {
-    @NameInMap("result")
-    public CreateDataCollectionResponseBodyResult result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public CreateDataCollectionResponseBodyResult result;
 
     public static CreateDataCollectionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDataCollectionResponseBody self = new CreateDataCollectionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDataCollectionResponseBody setResult(CreateDataCollectionResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public CreateDataCollectionResponseBodyResult getResult() {
-        return this.result;
     }
 
     public CreateDataCollectionResponseBody setRequestId(String requestId) {
@@ -31,6 +23,14 @@ public class CreateDataCollectionResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public CreateDataCollectionResponseBody setResult(CreateDataCollectionResponseBodyResult result) {
+        this.result = result;
+        return this;
+    }
+    public CreateDataCollectionResponseBodyResult getResult() {
+        return this.result;
+    }
+
     public static class CreateDataCollectionResponseBodyResult extends TeaModel {
         @NameInMap("created")
         public Integer created;
@@ -38,26 +38,26 @@ public class CreateDataCollectionResponseBody extends TeaModel {
         @NameInMap("dataCollectionType")
         public String dataCollectionType;
 
-        @NameInMap("type")
-        public String type;
+        @NameInMap("id")
+        public String id;
 
         @NameInMap("industryName")
         public String industryName;
 
-        @NameInMap("status")
-        public Integer status;
-
-        @NameInMap("updated")
-        public Integer updated;
-
         @NameInMap("name")
         public String name;
+
+        @NameInMap("status")
+        public Integer status;
 
         @NameInMap("sundialId")
         public String sundialId;
 
-        @NameInMap("id")
-        public String id;
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("updated")
+        public Integer updated;
 
         public static CreateDataCollectionResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             CreateDataCollectionResponseBodyResult self = new CreateDataCollectionResponseBodyResult();
@@ -80,12 +80,12 @@ public class CreateDataCollectionResponseBody extends TeaModel {
             return this.dataCollectionType;
         }
 
-        public CreateDataCollectionResponseBodyResult setType(String type) {
-            this.type = type;
+        public CreateDataCollectionResponseBodyResult setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getId() {
+            return this.id;
         }
 
         public CreateDataCollectionResponseBodyResult setIndustryName(String industryName) {
@@ -96,28 +96,20 @@ public class CreateDataCollectionResponseBody extends TeaModel {
             return this.industryName;
         }
 
-        public CreateDataCollectionResponseBodyResult setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public CreateDataCollectionResponseBodyResult setUpdated(Integer updated) {
-            this.updated = updated;
-            return this;
-        }
-        public Integer getUpdated() {
-            return this.updated;
-        }
-
         public CreateDataCollectionResponseBodyResult setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateDataCollectionResponseBodyResult setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
         public CreateDataCollectionResponseBodyResult setSundialId(String sundialId) {
@@ -128,12 +120,20 @@ public class CreateDataCollectionResponseBody extends TeaModel {
             return this.sundialId;
         }
 
-        public CreateDataCollectionResponseBodyResult setId(String id) {
-            this.id = id;
+        public CreateDataCollectionResponseBodyResult setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getType() {
+            return this.type;
+        }
+
+        public CreateDataCollectionResponseBodyResult setUpdated(Integer updated) {
+            this.updated = updated;
+            return this;
+        }
+        public Integer getUpdated() {
+            return this.updated;
         }
 
     }

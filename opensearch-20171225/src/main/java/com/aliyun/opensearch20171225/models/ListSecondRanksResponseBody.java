@@ -4,11 +4,11 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListSecondRanksResponseBody extends TeaModel {
-    @NameInMap("result")
-    public java.util.List<ListSecondRanksResponseBodyResult> result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public java.util.List<ListSecondRanksResponseBodyResult> result;
 
     @NameInMap("totalCount")
     public Integer totalCount;
@@ -18,20 +18,20 @@ public class ListSecondRanksResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListSecondRanksResponseBody setResult(java.util.List<ListSecondRanksResponseBodyResult> result) {
-        this.result = result;
-        return this;
-    }
-    public java.util.List<ListSecondRanksResponseBodyResult> getResult() {
-        return this.result;
-    }
-
     public ListSecondRanksResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListSecondRanksResponseBody setResult(java.util.List<ListSecondRanksResponseBodyResult> result) {
+        this.result = result;
+        return this;
+    }
+    public java.util.List<ListSecondRanksResponseBodyResult> getResult() {
+        return this.result;
     }
 
     public ListSecondRanksResponseBody setTotalCount(Integer totalCount) {
@@ -43,11 +43,17 @@ public class ListSecondRanksResponseBody extends TeaModel {
     }
 
     public static class ListSecondRanksResponseBodyResult extends TeaModel {
+        @NameInMap("active")
+        public Boolean active;
+
         @NameInMap("created")
         public Integer created;
 
-        @NameInMap("active")
-        public Boolean active;
+        @NameInMap("description")
+        public String description;
+
+        @NameInMap("id")
+        public String id;
 
         @NameInMap("isDefault")
         public String isDefault;
@@ -55,24 +61,26 @@ public class ListSecondRanksResponseBody extends TeaModel {
         @NameInMap("isSys")
         public String isSys;
 
-        @NameInMap("description")
-        public String description;
-
-        @NameInMap("updated")
-        public Integer updated;
+        @NameInMap("meta")
+        public String meta;
 
         @NameInMap("name")
         public String name;
 
-        @NameInMap("meta")
-        public String meta;
-
-        @NameInMap("id")
-        public String id;
+        @NameInMap("updated")
+        public Integer updated;
 
         public static ListSecondRanksResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListSecondRanksResponseBodyResult self = new ListSecondRanksResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListSecondRanksResponseBodyResult setActive(Boolean active) {
+            this.active = active;
+            return this;
+        }
+        public Boolean getActive() {
+            return this.active;
         }
 
         public ListSecondRanksResponseBodyResult setCreated(Integer created) {
@@ -83,12 +91,20 @@ public class ListSecondRanksResponseBody extends TeaModel {
             return this.created;
         }
 
-        public ListSecondRanksResponseBodyResult setActive(Boolean active) {
-            this.active = active;
+        public ListSecondRanksResponseBodyResult setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public Boolean getActive() {
-            return this.active;
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListSecondRanksResponseBodyResult setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public ListSecondRanksResponseBodyResult setIsDefault(String isDefault) {
@@ -107,20 +123,12 @@ public class ListSecondRanksResponseBody extends TeaModel {
             return this.isSys;
         }
 
-        public ListSecondRanksResponseBodyResult setDescription(String description) {
-            this.description = description;
+        public ListSecondRanksResponseBodyResult setMeta(String meta) {
+            this.meta = meta;
             return this;
         }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListSecondRanksResponseBodyResult setUpdated(Integer updated) {
-            this.updated = updated;
-            return this;
-        }
-        public Integer getUpdated() {
-            return this.updated;
+        public String getMeta() {
+            return this.meta;
         }
 
         public ListSecondRanksResponseBodyResult setName(String name) {
@@ -131,20 +139,12 @@ public class ListSecondRanksResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListSecondRanksResponseBodyResult setMeta(String meta) {
-            this.meta = meta;
+        public ListSecondRanksResponseBodyResult setUpdated(Integer updated) {
+            this.updated = updated;
             return this;
         }
-        public String getMeta() {
-            return this.meta;
-        }
-
-        public ListSecondRanksResponseBodyResult setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
+        public Integer getUpdated() {
+            return this.updated;
         }
 
     }

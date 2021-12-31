@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class UpdateABTestSceneResponseBody extends TeaModel {
-    @NameInMap("result")
-    public UpdateABTestSceneResponseBodyResult result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public UpdateABTestSceneResponseBodyResult result;
 
     public static UpdateABTestSceneResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateABTestSceneResponseBody self = new UpdateABTestSceneResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateABTestSceneResponseBody setResult(UpdateABTestSceneResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public UpdateABTestSceneResponseBodyResult getResult() {
-        return this.result;
     }
 
     public UpdateABTestSceneResponseBody setRequestId(String requestId) {
@@ -31,9 +23,26 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public UpdateABTestSceneResponseBody setResult(UpdateABTestSceneResponseBodyResult result) {
+        this.result = result;
+        return this;
+    }
+    public UpdateABTestSceneResponseBodyResult getResult() {
+        return this.result;
+    }
+
     public static class UpdateABTestSceneResponseBodyResult extends TeaModel {
         @NameInMap("created")
         public Integer created;
+
+        @NameInMap("id")
+        public String id;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("online")
+        public Boolean online;
 
         @NameInMap("params")
         public java.util.Map<String, ?> params;
@@ -41,17 +50,8 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         @NameInMap("traffic")
         public Integer traffic;
 
-        @NameInMap("online")
-        public Boolean online;
-
-        @NameInMap("name")
-        public String name;
-
         @NameInMap("updated")
         public Integer updated;
-
-        @NameInMap("id")
-        public String id;
 
         public static UpdateABTestSceneResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             UpdateABTestSceneResponseBodyResult self = new UpdateABTestSceneResponseBodyResult();
@@ -64,6 +64,30 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         }
         public Integer getCreated() {
             return this.created;
+        }
+
+        public UpdateABTestSceneResponseBodyResult setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public UpdateABTestSceneResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public UpdateABTestSceneResponseBodyResult setOnline(Boolean online) {
+            this.online = online;
+            return this;
+        }
+        public Boolean getOnline() {
+            return this.online;
         }
 
         public UpdateABTestSceneResponseBodyResult setParams(java.util.Map<String, ?> params) {
@@ -82,36 +106,12 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
             return this.traffic;
         }
 
-        public UpdateABTestSceneResponseBodyResult setOnline(Boolean online) {
-            this.online = online;
-            return this;
-        }
-        public Boolean getOnline() {
-            return this.online;
-        }
-
-        public UpdateABTestSceneResponseBodyResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public UpdateABTestSceneResponseBodyResult setUpdated(Integer updated) {
             this.updated = updated;
             return this;
         }
         public Integer getUpdated() {
             return this.updated;
-        }
-
-        public UpdateABTestSceneResponseBodyResult setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
         }
 
     }

@@ -4,11 +4,11 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListStatisticLogsRequest extends TeaModel {
-    @NameInMap("startTime")
-    public Integer startTime;
+    @NameInMap("columns")
+    public String columns;
 
-    @NameInMap("stopTime")
-    public Integer stopTime;
+    @NameInMap("distinct")
+    public Boolean distinct;
 
     @NameInMap("pageNumber")
     public Integer pageNumber;
@@ -22,31 +22,31 @@ public class ListStatisticLogsRequest extends TeaModel {
     @NameInMap("sortBy")
     public String sortBy;
 
-    @NameInMap("distinct")
-    public Boolean distinct;
+    @NameInMap("startTime")
+    public Integer startTime;
 
-    @NameInMap("columns")
-    public String columns;
+    @NameInMap("stopTime")
+    public Integer stopTime;
 
     public static ListStatisticLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListStatisticLogsRequest self = new ListStatisticLogsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListStatisticLogsRequest setStartTime(Integer startTime) {
-        this.startTime = startTime;
+    public ListStatisticLogsRequest setColumns(String columns) {
+        this.columns = columns;
         return this;
     }
-    public Integer getStartTime() {
-        return this.startTime;
+    public String getColumns() {
+        return this.columns;
     }
 
-    public ListStatisticLogsRequest setStopTime(Integer stopTime) {
-        this.stopTime = stopTime;
+    public ListStatisticLogsRequest setDistinct(Boolean distinct) {
+        this.distinct = distinct;
         return this;
     }
-    public Integer getStopTime() {
-        return this.stopTime;
+    public Boolean getDistinct() {
+        return this.distinct;
     }
 
     public ListStatisticLogsRequest setPageNumber(Integer pageNumber) {
@@ -81,20 +81,20 @@ public class ListStatisticLogsRequest extends TeaModel {
         return this.sortBy;
     }
 
-    public ListStatisticLogsRequest setDistinct(Boolean distinct) {
-        this.distinct = distinct;
+    public ListStatisticLogsRequest setStartTime(Integer startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public Boolean getDistinct() {
-        return this.distinct;
+    public Integer getStartTime() {
+        return this.startTime;
     }
 
-    public ListStatisticLogsRequest setColumns(String columns) {
-        this.columns = columns;
+    public ListStatisticLogsRequest setStopTime(Integer stopTime) {
+        this.stopTime = stopTime;
         return this;
     }
-    public String getColumns() {
-        return this.columns;
+    public Integer getStopTime() {
+        return this.stopTime;
     }
 
 }

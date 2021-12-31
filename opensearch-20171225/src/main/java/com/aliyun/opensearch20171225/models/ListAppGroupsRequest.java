@@ -4,43 +4,30 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListAppGroupsRequest extends TeaModel {
-    @NameInMap("pageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("pageSize")
-    public Integer pageSize;
-
     @NameInMap("instanceId")
     public String instanceId;
 
     @NameInMap("name")
     public String name;
 
-    @NameInMap("type")
-    public String type;
+    @NameInMap("pageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("pageSize")
+    public Integer pageSize;
+
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("sortBy")
     public Integer sortBy;
 
+    @NameInMap("type")
+    public String type;
+
     public static ListAppGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAppGroupsRequest self = new ListAppGroupsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListAppGroupsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListAppGroupsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public ListAppGroupsRequest setInstanceId(String instanceId) {
@@ -59,12 +46,28 @@ public class ListAppGroupsRequest extends TeaModel {
         return this.name;
     }
 
-    public ListAppGroupsRequest setType(String type) {
-        this.type = type;
+    public ListAppGroupsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListAppGroupsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListAppGroupsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListAppGroupsRequest setSortBy(Integer sortBy) {
@@ -73,6 +76,14 @@ public class ListAppGroupsRequest extends TeaModel {
     }
     public Integer getSortBy() {
         return this.sortBy;
+    }
+
+    public ListAppGroupsRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

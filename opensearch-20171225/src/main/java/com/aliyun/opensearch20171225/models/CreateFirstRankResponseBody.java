@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class CreateFirstRankResponseBody extends TeaModel {
-    @NameInMap("result")
-    public CreateFirstRankResponseBodyResult result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public CreateFirstRankResponseBodyResult result;
 
     public static CreateFirstRankResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateFirstRankResponseBody self = new CreateFirstRankResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateFirstRankResponseBody setResult(CreateFirstRankResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public CreateFirstRankResponseBodyResult getResult() {
-        return this.result;
     }
 
     public CreateFirstRankResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class CreateFirstRankResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateFirstRankResponseBody setResult(CreateFirstRankResponseBodyResult result) {
+        this.result = result;
+        return this;
+    }
+    public CreateFirstRankResponseBodyResult getResult() {
+        return this.result;
     }
 
     public static class CreateFirstRankResponseBodyResultMeta extends TeaModel {
@@ -76,11 +76,11 @@ public class CreateFirstRankResponseBody extends TeaModel {
         @NameInMap("active")
         public Boolean active;
 
-        @NameInMap("name")
-        public String name;
-
         @NameInMap("meta")
         public java.util.List<CreateFirstRankResponseBodyResultMeta> meta;
+
+        @NameInMap("name")
+        public String name;
 
         public static CreateFirstRankResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             CreateFirstRankResponseBodyResult self = new CreateFirstRankResponseBodyResult();
@@ -95,20 +95,20 @@ public class CreateFirstRankResponseBody extends TeaModel {
             return this.active;
         }
 
-        public CreateFirstRankResponseBodyResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public CreateFirstRankResponseBodyResult setMeta(java.util.List<CreateFirstRankResponseBodyResultMeta> meta) {
             this.meta = meta;
             return this;
         }
         public java.util.List<CreateFirstRankResponseBodyResultMeta> getMeta() {
             return this.meta;
+        }
+
+        public CreateFirstRankResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class DescribeFirstRankResponseBody extends TeaModel {
-    @NameInMap("result")
-    public DescribeFirstRankResponseBodyResult result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public DescribeFirstRankResponseBodyResult result;
 
     public static DescribeFirstRankResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFirstRankResponseBody self = new DescribeFirstRankResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFirstRankResponseBody setResult(DescribeFirstRankResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public DescribeFirstRankResponseBodyResult getResult() {
-        return this.result;
     }
 
     public DescribeFirstRankResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class DescribeFirstRankResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeFirstRankResponseBody setResult(DescribeFirstRankResponseBodyResult result) {
+        this.result = result;
+        return this;
+    }
+    public DescribeFirstRankResponseBodyResult getResult() {
+        return this.result;
     }
 
     public static class DescribeFirstRankResponseBodyResultMeta extends TeaModel {
@@ -79,11 +79,11 @@ public class DescribeFirstRankResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
-        @NameInMap("name")
-        public String name;
-
         @NameInMap("meta")
         public java.util.List<DescribeFirstRankResponseBodyResultMeta> meta;
+
+        @NameInMap("name")
+        public String name;
 
         public static DescribeFirstRankResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeFirstRankResponseBodyResult self = new DescribeFirstRankResponseBodyResult();
@@ -106,20 +106,20 @@ public class DescribeFirstRankResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeFirstRankResponseBodyResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public DescribeFirstRankResponseBodyResult setMeta(java.util.List<DescribeFirstRankResponseBodyResultMeta> meta) {
             this.meta = meta;
             return this;
         }
         public java.util.List<DescribeFirstRankResponseBodyResultMeta> getMeta() {
             return this.meta;
+        }
+
+        public DescribeFirstRankResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

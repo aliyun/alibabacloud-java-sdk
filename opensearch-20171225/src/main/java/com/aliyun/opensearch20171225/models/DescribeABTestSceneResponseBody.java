@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class DescribeABTestSceneResponseBody extends TeaModel {
-    @NameInMap("result")
-    public DescribeABTestSceneResponseBodyResult result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public DescribeABTestSceneResponseBodyResult result;
 
     public static DescribeABTestSceneResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeABTestSceneResponseBody self = new DescribeABTestSceneResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeABTestSceneResponseBody setResult(DescribeABTestSceneResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public DescribeABTestSceneResponseBodyResult getResult() {
-        return this.result;
     }
 
     public DescribeABTestSceneResponseBody setRequestId(String requestId) {
@@ -31,12 +23,23 @@ public class DescribeABTestSceneResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeABTestSceneResponseBody setResult(DescribeABTestSceneResponseBodyResult result) {
+        this.result = result;
+        return this;
+    }
+    public DescribeABTestSceneResponseBodyResult getResult() {
+        return this.result;
+    }
+
     public static class DescribeABTestSceneResponseBodyResult extends TeaModel {
         @NameInMap("created")
         public Integer created;
 
-        @NameInMap("values")
-        public java.util.List<String> values;
+        @NameInMap("id")
+        public String id;
+
+        @NameInMap("name")
+        public String name;
 
         @NameInMap("status")
         public Integer status;
@@ -44,11 +47,8 @@ public class DescribeABTestSceneResponseBody extends TeaModel {
         @NameInMap("updated")
         public Integer updated;
 
-        @NameInMap("name")
-        public String name;
-
-        @NameInMap("id")
-        public String id;
+        @NameInMap("values")
+        public java.util.List<String> values;
 
         public static DescribeABTestSceneResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeABTestSceneResponseBodyResult self = new DescribeABTestSceneResponseBodyResult();
@@ -63,12 +63,20 @@ public class DescribeABTestSceneResponseBody extends TeaModel {
             return this.created;
         }
 
-        public DescribeABTestSceneResponseBodyResult setValues(java.util.List<String> values) {
-            this.values = values;
+        public DescribeABTestSceneResponseBodyResult setId(String id) {
+            this.id = id;
             return this;
         }
-        public java.util.List<String> getValues() {
-            return this.values;
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeABTestSceneResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public DescribeABTestSceneResponseBodyResult setStatus(Integer status) {
@@ -87,20 +95,12 @@ public class DescribeABTestSceneResponseBody extends TeaModel {
             return this.updated;
         }
 
-        public DescribeABTestSceneResponseBodyResult setName(String name) {
-            this.name = name;
+        public DescribeABTestSceneResponseBodyResult setValues(java.util.List<String> values) {
+            this.values = values;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeABTestSceneResponseBodyResult setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
+        public java.util.List<String> getValues() {
+            return this.values;
         }
 
     }

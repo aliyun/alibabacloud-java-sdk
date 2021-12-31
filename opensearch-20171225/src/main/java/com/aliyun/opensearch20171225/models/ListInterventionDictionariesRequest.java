@@ -4,11 +4,11 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListInterventionDictionariesRequest extends TeaModel {
-    @NameInMap("pageSize")
-    public Integer pageSize;
-
     @NameInMap("pageNumber")
     public Integer pageNumber;
+
+    @NameInMap("pageSize")
+    public Integer pageSize;
 
     @NameInMap("types")
     public String types;
@@ -18,20 +18,20 @@ public class ListInterventionDictionariesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListInterventionDictionariesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public ListInterventionDictionariesRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public ListInterventionDictionariesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListInterventionDictionariesRequest setTypes(String types) {

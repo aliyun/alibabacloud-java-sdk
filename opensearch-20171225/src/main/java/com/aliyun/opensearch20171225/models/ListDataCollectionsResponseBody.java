@@ -4,11 +4,11 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListDataCollectionsResponseBody extends TeaModel {
-    @NameInMap("result")
-    public java.util.List<ListDataCollectionsResponseBodyResult> result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public java.util.List<ListDataCollectionsResponseBodyResult> result;
 
     @NameInMap("totalCount")
     public Integer totalCount;
@@ -18,20 +18,20 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListDataCollectionsResponseBody setResult(java.util.List<ListDataCollectionsResponseBodyResult> result) {
-        this.result = result;
-        return this;
-    }
-    public java.util.List<ListDataCollectionsResponseBodyResult> getResult() {
-        return this.result;
-    }
-
     public ListDataCollectionsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListDataCollectionsResponseBody setResult(java.util.List<ListDataCollectionsResponseBodyResult> result) {
+        this.result = result;
+        return this;
+    }
+    public java.util.List<ListDataCollectionsResponseBodyResult> getResult() {
+        return this.result;
     }
 
     public ListDataCollectionsResponseBody setTotalCount(Integer totalCount) {
@@ -49,26 +49,26 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         @NameInMap("dataCollectionType")
         public String dataCollectionType;
 
-        @NameInMap("type")
-        public String type;
+        @NameInMap("id")
+        public String id;
 
         @NameInMap("industryName")
         public String industryName;
 
-        @NameInMap("status")
-        public Integer status;
-
-        @NameInMap("updated")
-        public Integer updated;
-
         @NameInMap("name")
         public String name;
+
+        @NameInMap("status")
+        public Integer status;
 
         @NameInMap("sundialId")
         public String sundialId;
 
-        @NameInMap("id")
-        public String id;
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("updated")
+        public Integer updated;
 
         public static ListDataCollectionsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListDataCollectionsResponseBodyResult self = new ListDataCollectionsResponseBodyResult();
@@ -91,12 +91,12 @@ public class ListDataCollectionsResponseBody extends TeaModel {
             return this.dataCollectionType;
         }
 
-        public ListDataCollectionsResponseBodyResult setType(String type) {
-            this.type = type;
+        public ListDataCollectionsResponseBodyResult setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getId() {
+            return this.id;
         }
 
         public ListDataCollectionsResponseBodyResult setIndustryName(String industryName) {
@@ -107,28 +107,20 @@ public class ListDataCollectionsResponseBody extends TeaModel {
             return this.industryName;
         }
 
-        public ListDataCollectionsResponseBodyResult setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public ListDataCollectionsResponseBodyResult setUpdated(Integer updated) {
-            this.updated = updated;
-            return this;
-        }
-        public Integer getUpdated() {
-            return this.updated;
-        }
-
         public ListDataCollectionsResponseBodyResult setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListDataCollectionsResponseBodyResult setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
         public ListDataCollectionsResponseBodyResult setSundialId(String sundialId) {
@@ -139,12 +131,20 @@ public class ListDataCollectionsResponseBody extends TeaModel {
             return this.sundialId;
         }
 
-        public ListDataCollectionsResponseBodyResult setId(String id) {
-            this.id = id;
+        public ListDataCollectionsResponseBodyResult setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getType() {
+            return this.type;
+        }
+
+        public ListDataCollectionsResponseBodyResult setUpdated(Integer updated) {
+            this.updated = updated;
+            return this;
+        }
+        public Integer getUpdated() {
+            return this.updated;
         }
 
     }

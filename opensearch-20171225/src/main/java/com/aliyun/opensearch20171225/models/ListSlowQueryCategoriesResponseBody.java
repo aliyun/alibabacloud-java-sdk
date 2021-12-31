@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListSlowQueryCategoriesResponseBody extends TeaModel {
-    @NameInMap("result")
-    public ListSlowQueryCategoriesResponseBodyResult result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public ListSlowQueryCategoriesResponseBodyResult result;
 
     public static ListSlowQueryCategoriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSlowQueryCategoriesResponseBody self = new ListSlowQueryCategoriesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListSlowQueryCategoriesResponseBody setResult(ListSlowQueryCategoriesResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public ListSlowQueryCategoriesResponseBodyResult getResult() {
-        return this.result;
     }
 
     public ListSlowQueryCategoriesResponseBody setRequestId(String requestId) {
@@ -31,27 +23,27 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ListSlowQueryCategoriesResponseBodyResult extends TeaModel {
-        @NameInMap("start")
-        public Integer start;
+    public ListSlowQueryCategoriesResponseBody setResult(ListSlowQueryCategoriesResponseBodyResult result) {
+        this.result = result;
+        return this;
+    }
+    public ListSlowQueryCategoriesResponseBodyResult getResult() {
+        return this.result;
+    }
 
+    public static class ListSlowQueryCategoriesResponseBodyResult extends TeaModel {
         @NameInMap("analyzeStatus")
         public String analyzeStatus;
 
         @NameInMap("end")
         public Integer end;
 
+        @NameInMap("start")
+        public Integer start;
+
         public static ListSlowQueryCategoriesResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListSlowQueryCategoriesResponseBodyResult self = new ListSlowQueryCategoriesResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public ListSlowQueryCategoriesResponseBodyResult setStart(Integer start) {
-            this.start = start;
-            return this;
-        }
-        public Integer getStart() {
-            return this.start;
         }
 
         public ListSlowQueryCategoriesResponseBodyResult setAnalyzeStatus(String analyzeStatus) {
@@ -68,6 +60,14 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
         }
         public Integer getEnd() {
             return this.end;
+        }
+
+        public ListSlowQueryCategoriesResponseBodyResult setStart(Integer start) {
+            this.start = start;
+            return this;
+        }
+        public Integer getStart() {
+            return this.start;
         }
 
     }

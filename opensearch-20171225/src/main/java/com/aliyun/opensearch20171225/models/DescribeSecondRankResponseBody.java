@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecondRankResponseBody extends TeaModel {
-    @NameInMap("result")
-    public DescribeSecondRankResponseBodyResult result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public DescribeSecondRankResponseBodyResult result;
 
     public static DescribeSecondRankResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecondRankResponseBody self = new DescribeSecondRankResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSecondRankResponseBody setResult(DescribeSecondRankResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public DescribeSecondRankResponseBodyResult getResult() {
-        return this.result;
     }
 
     public DescribeSecondRankResponseBody setRequestId(String requestId) {
@@ -31,12 +23,26 @@ public class DescribeSecondRankResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeSecondRankResponseBody setResult(DescribeSecondRankResponseBodyResult result) {
+        this.result = result;
+        return this;
+    }
+    public DescribeSecondRankResponseBodyResult getResult() {
+        return this.result;
+    }
+
     public static class DescribeSecondRankResponseBodyResult extends TeaModel {
+        @NameInMap("active")
+        public Boolean active;
+
         @NameInMap("created")
         public Integer created;
 
-        @NameInMap("active")
-        public Boolean active;
+        @NameInMap("description")
+        public String description;
+
+        @NameInMap("id")
+        public String id;
 
         @NameInMap("isDefault")
         public String isDefault;
@@ -44,24 +50,26 @@ public class DescribeSecondRankResponseBody extends TeaModel {
         @NameInMap("isSys")
         public String isSys;
 
-        @NameInMap("description")
-        public String description;
-
-        @NameInMap("updated")
-        public Integer updated;
+        @NameInMap("meta")
+        public String meta;
 
         @NameInMap("name")
         public String name;
 
-        @NameInMap("meta")
-        public String meta;
-
-        @NameInMap("id")
-        public String id;
+        @NameInMap("updated")
+        public Integer updated;
 
         public static DescribeSecondRankResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecondRankResponseBodyResult self = new DescribeSecondRankResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSecondRankResponseBodyResult setActive(Boolean active) {
+            this.active = active;
+            return this;
+        }
+        public Boolean getActive() {
+            return this.active;
         }
 
         public DescribeSecondRankResponseBodyResult setCreated(Integer created) {
@@ -72,12 +80,20 @@ public class DescribeSecondRankResponseBody extends TeaModel {
             return this.created;
         }
 
-        public DescribeSecondRankResponseBodyResult setActive(Boolean active) {
-            this.active = active;
+        public DescribeSecondRankResponseBodyResult setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public Boolean getActive() {
-            return this.active;
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeSecondRankResponseBodyResult setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public DescribeSecondRankResponseBodyResult setIsDefault(String isDefault) {
@@ -96,20 +112,12 @@ public class DescribeSecondRankResponseBody extends TeaModel {
             return this.isSys;
         }
 
-        public DescribeSecondRankResponseBodyResult setDescription(String description) {
-            this.description = description;
+        public DescribeSecondRankResponseBodyResult setMeta(String meta) {
+            this.meta = meta;
             return this;
         }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeSecondRankResponseBodyResult setUpdated(Integer updated) {
-            this.updated = updated;
-            return this;
-        }
-        public Integer getUpdated() {
-            return this.updated;
+        public String getMeta() {
+            return this.meta;
         }
 
         public DescribeSecondRankResponseBodyResult setName(String name) {
@@ -120,20 +128,12 @@ public class DescribeSecondRankResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeSecondRankResponseBodyResult setMeta(String meta) {
-            this.meta = meta;
+        public DescribeSecondRankResponseBodyResult setUpdated(Integer updated) {
+            this.updated = updated;
             return this;
         }
-        public String getMeta() {
-            return this.meta;
-        }
-
-        public DescribeSecondRankResponseBodyResult setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
+        public Integer getUpdated() {
+            return this.updated;
         }
 
     }

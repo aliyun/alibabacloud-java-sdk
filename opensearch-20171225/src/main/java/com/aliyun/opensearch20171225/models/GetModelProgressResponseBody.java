@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class GetModelProgressResponseBody extends TeaModel {
-    @NameInMap("result")
-    public GetModelProgressResponseBodyResult result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public GetModelProgressResponseBodyResult result;
 
     public static GetModelProgressResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetModelProgressResponseBody self = new GetModelProgressResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetModelProgressResponseBody setResult(GetModelProgressResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public GetModelProgressResponseBodyResult getResult() {
-        return this.result;
     }
 
     public GetModelProgressResponseBody setRequestId(String requestId) {
@@ -31,24 +23,24 @@ public class GetModelProgressResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class GetModelProgressResponseBodyResult extends TeaModel {
-        @NameInMap("status")
-        public String status;
+    public GetModelProgressResponseBody setResult(GetModelProgressResponseBodyResult result) {
+        this.result = result;
+        return this;
+    }
+    public GetModelProgressResponseBodyResult getResult() {
+        return this.result;
+    }
 
+    public static class GetModelProgressResponseBodyResult extends TeaModel {
         @NameInMap("progress")
         public Integer progress;
+
+        @NameInMap("status")
+        public String status;
 
         public static GetModelProgressResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetModelProgressResponseBodyResult self = new GetModelProgressResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetModelProgressResponseBodyResult setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public GetModelProgressResponseBodyResult setProgress(Integer progress) {
@@ -57,6 +49,14 @@ public class GetModelProgressResponseBody extends TeaModel {
         }
         public Integer getProgress() {
             return this.progress;
+        }
+
+        public GetModelProgressResponseBodyResult setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

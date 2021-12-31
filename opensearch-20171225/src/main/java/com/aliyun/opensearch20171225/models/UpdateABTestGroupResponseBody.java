@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class UpdateABTestGroupResponseBody extends TeaModel {
-    @NameInMap("result")
-    public UpdateABTestGroupResponseBodyResult result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public UpdateABTestGroupResponseBodyResult result;
 
     public static UpdateABTestGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateABTestGroupResponseBody self = new UpdateABTestGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateABTestGroupResponseBody setResult(UpdateABTestGroupResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public UpdateABTestGroupResponseBodyResult getResult() {
-        return this.result;
     }
 
     public UpdateABTestGroupResponseBody setRequestId(String requestId) {
@@ -31,21 +23,29 @@ public class UpdateABTestGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public UpdateABTestGroupResponseBody setResult(UpdateABTestGroupResponseBodyResult result) {
+        this.result = result;
+        return this;
+    }
+    public UpdateABTestGroupResponseBodyResult getResult() {
+        return this.result;
+    }
+
     public static class UpdateABTestGroupResponseBodyResult extends TeaModel {
         @NameInMap("created")
         public Integer created;
+
+        @NameInMap("id")
+        public String id;
+
+        @NameInMap("name")
+        public String name;
 
         @NameInMap("status")
         public Integer status;
 
         @NameInMap("updated")
         public Integer updated;
-
-        @NameInMap("name")
-        public String name;
-
-        @NameInMap("id")
-        public String id;
 
         public static UpdateABTestGroupResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             UpdateABTestGroupResponseBodyResult self = new UpdateABTestGroupResponseBodyResult();
@@ -58,6 +58,22 @@ public class UpdateABTestGroupResponseBody extends TeaModel {
         }
         public Integer getCreated() {
             return this.created;
+        }
+
+        public UpdateABTestGroupResponseBodyResult setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public UpdateABTestGroupResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public UpdateABTestGroupResponseBodyResult setStatus(Integer status) {
@@ -74,22 +90,6 @@ public class UpdateABTestGroupResponseBody extends TeaModel {
         }
         public Integer getUpdated() {
             return this.updated;
-        }
-
-        public UpdateABTestGroupResponseBodyResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public UpdateABTestGroupResponseBodyResult setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
         }
 
     }
