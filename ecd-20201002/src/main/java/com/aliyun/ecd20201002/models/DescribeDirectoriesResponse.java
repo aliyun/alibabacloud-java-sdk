@@ -4,65 +4,33 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class DescribeDirectoriesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Directories")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<DescribeDirectoriesResponseDirectories> directories;
+    public DescribeDirectoriesResponseBody body;
 
     public static DescribeDirectoriesResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDirectoriesResponse self = new DescribeDirectoriesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDirectoriesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDirectoriesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeDirectoriesResponse setDirectories(java.util.List<DescribeDirectoriesResponseDirectories> directories) {
-        this.directories = directories;
+    public DescribeDirectoriesResponse setBody(DescribeDirectoriesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<DescribeDirectoriesResponseDirectories> getDirectories() {
-        return this.directories;
-    }
-
-    public static class DescribeDirectoriesResponseDirectories extends TeaModel {
-        @NameInMap("DirectoryId")
-        @Validation(required = true)
-        public String directoryId;
-
-        @NameInMap("DirectoryType")
-        @Validation(required = true)
-        public String directoryType;
-
-        public static DescribeDirectoriesResponseDirectories build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDirectoriesResponseDirectories self = new DescribeDirectoriesResponseDirectories();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDirectoriesResponseDirectories setDirectoryId(String directoryId) {
-            this.directoryId = directoryId;
-            return this;
-        }
-        public String getDirectoryId() {
-            return this.directoryId;
-        }
-
-        public DescribeDirectoriesResponseDirectories setDirectoryType(String directoryType) {
-            this.directoryType = directoryType;
-            return this;
-        }
-        public String getDirectoryType() {
-            return this.directoryType;
-        }
-
+    public DescribeDirectoriesResponseBody getBody() {
+        return this.body;
     }
 
 }

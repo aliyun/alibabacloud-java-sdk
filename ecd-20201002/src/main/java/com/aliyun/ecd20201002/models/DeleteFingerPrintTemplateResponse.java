@@ -3,21 +3,21 @@ package com.aliyun.ecd20201002.models;
 
 import com.aliyun.tea.*;
 
-public class GetConnectionTicketResponse extends TeaModel {
+public class DeleteFingerPrintTemplateResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetConnectionTicketResponseBody body;
+    public DeleteFingerPrintTemplateResponseBody body;
 
-    public static GetConnectionTicketResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetConnectionTicketResponse self = new GetConnectionTicketResponse();
+    public static DeleteFingerPrintTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteFingerPrintTemplateResponse self = new DeleteFingerPrintTemplateResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetConnectionTicketResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteFingerPrintTemplateResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class GetConnectionTicketResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetConnectionTicketResponse setBody(GetConnectionTicketResponseBody body) {
+    public DeleteFingerPrintTemplateResponse setBody(DeleteFingerPrintTemplateResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetConnectionTicketResponseBody getBody() {
+    public DeleteFingerPrintTemplateResponseBody getBody() {
         return this.body;
     }
 

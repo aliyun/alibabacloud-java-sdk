@@ -3,21 +3,21 @@ package com.aliyun.ecd20201002.models;
 
 import com.aliyun.tea.*;
 
-public class GetConnectionTicketResponse extends TeaModel {
+public class IsKeepAliveResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetConnectionTicketResponseBody body;
+    public IsKeepAliveResponseBody body;
 
-    public static GetConnectionTicketResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetConnectionTicketResponse self = new GetConnectionTicketResponse();
+    public static IsKeepAliveResponse build(java.util.Map<String, ?> map) throws Exception {
+        IsKeepAliveResponse self = new IsKeepAliveResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetConnectionTicketResponse setHeaders(java.util.Map<String, String> headers) {
+    public IsKeepAliveResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class GetConnectionTicketResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetConnectionTicketResponse setBody(GetConnectionTicketResponseBody body) {
+    public IsKeepAliveResponse setBody(IsKeepAliveResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetConnectionTicketResponseBody getBody() {
+    public IsKeepAliveResponseBody getBody() {
         return this.body;
     }
 

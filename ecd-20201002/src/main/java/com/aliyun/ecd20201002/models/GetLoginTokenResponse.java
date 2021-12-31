@@ -4,33 +4,33 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class GetLoginTokenResponse extends TeaModel {
-    @NameInMap("LoginToken")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String loginToken;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
+    public GetLoginTokenResponseBody body;
 
     public static GetLoginTokenResponse build(java.util.Map<String, ?> map) throws Exception {
         GetLoginTokenResponse self = new GetLoginTokenResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetLoginTokenResponse setLoginToken(String loginToken) {
-        this.loginToken = loginToken;
+    public GetLoginTokenResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getLoginToken() {
-        return this.loginToken;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetLoginTokenResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetLoginTokenResponse setBody(GetLoginTokenResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public GetLoginTokenResponseBody getBody() {
+        return this.body;
     }
 
 }

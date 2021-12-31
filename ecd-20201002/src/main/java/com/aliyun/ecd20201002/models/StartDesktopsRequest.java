@@ -3,7 +3,7 @@ package com.aliyun.ecd20201002.models;
 
 import com.aliyun.tea.*;
 
-public class RebootDesktopsRequest extends TeaModel {
+public class StartDesktopsRequest extends TeaModel {
     @NameInMap("ClientId")
     public String clientId;
 
@@ -25,12 +25,12 @@ public class RebootDesktopsRequest extends TeaModel {
     @NameInMap("SessionId")
     public String sessionId;
 
-    public static RebootDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
-        RebootDesktopsRequest self = new RebootDesktopsRequest();
+    public static StartDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
+        StartDesktopsRequest self = new StartDesktopsRequest();
         return TeaModel.build(map, self);
     }
 
-    public RebootDesktopsRequest setClientId(String clientId) {
+    public StartDesktopsRequest setClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
@@ -38,7 +38,7 @@ public class RebootDesktopsRequest extends TeaModel {
         return this.clientId;
     }
 
-    public RebootDesktopsRequest setClientOS(String clientOS) {
+    public StartDesktopsRequest setClientOS(String clientOS) {
         this.clientOS = clientOS;
         return this;
     }
@@ -46,7 +46,7 @@ public class RebootDesktopsRequest extends TeaModel {
         return this.clientOS;
     }
 
-    public RebootDesktopsRequest setClientVersion(String clientVersion) {
+    public StartDesktopsRequest setClientVersion(String clientVersion) {
         this.clientVersion = clientVersion;
         return this;
     }
@@ -54,7 +54,7 @@ public class RebootDesktopsRequest extends TeaModel {
         return this.clientVersion;
     }
 
-    public RebootDesktopsRequest setDesktopId(java.util.List<String> desktopId) {
+    public StartDesktopsRequest setDesktopId(java.util.List<String> desktopId) {
         this.desktopId = desktopId;
         return this;
     }
@@ -62,7 +62,7 @@ public class RebootDesktopsRequest extends TeaModel {
         return this.desktopId;
     }
 
-    public RebootDesktopsRequest setLoginToken(String loginToken) {
+    public StartDesktopsRequest setLoginToken(String loginToken) {
         this.loginToken = loginToken;
         return this;
     }
@@ -70,7 +70,7 @@ public class RebootDesktopsRequest extends TeaModel {
         return this.loginToken;
     }
 
-    public RebootDesktopsRequest setRegionId(String regionId) {
+    public StartDesktopsRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -78,7 +78,7 @@ public class RebootDesktopsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public RebootDesktopsRequest setSessionId(String sessionId) {
+    public StartDesktopsRequest setSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
