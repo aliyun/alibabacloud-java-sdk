@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>oss20190517</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
   <name>oss20190517</name>
   <description>Alibaba Cloud Object Storage Service (20190517) SDK for Java
@@ -56,7 +56,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.0</version>
+      <version>0.2.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
