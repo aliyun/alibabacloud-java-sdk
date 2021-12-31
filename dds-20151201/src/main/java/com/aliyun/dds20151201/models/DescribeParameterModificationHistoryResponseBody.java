@@ -4,23 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("HistoricalParameters")
     public DescribeParameterModificationHistoryResponseBodyHistoricalParameters historicalParameters;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeParameterModificationHistoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeParameterModificationHistoryResponseBody self = new DescribeParameterModificationHistoryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeParameterModificationHistoryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeParameterModificationHistoryResponseBody setHistoricalParameters(DescribeParameterModificationHistoryResponseBodyHistoricalParameters historicalParameters) {
@@ -31,38 +23,38 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
         return this.historicalParameters;
     }
 
-    public static class DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter extends TeaModel {
-        @NameInMap("ParameterName")
-        public String parameterName;
+    public DescribeParameterModificationHistoryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        @NameInMap("OldParameterValue")
-        public String oldParameterValue;
+    public static class DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter extends TeaModel {
+        @NameInMap("ModifyTime")
+        public String modifyTime;
 
         @NameInMap("NewParameterValue")
         public String newParameterValue;
 
-        @NameInMap("ModifyTime")
-        public String modifyTime;
+        @NameInMap("OldParameterValue")
+        public String oldParameterValue;
+
+        @NameInMap("ParameterName")
+        public String parameterName;
 
         public static DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter build(java.util.Map<String, ?> map) throws Exception {
             DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter self = new DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter();
             return TeaModel.build(map, self);
         }
 
-        public DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter setParameterName(String parameterName) {
-            this.parameterName = parameterName;
+        public DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter setModifyTime(String modifyTime) {
+            this.modifyTime = modifyTime;
             return this;
         }
-        public String getParameterName() {
-            return this.parameterName;
-        }
-
-        public DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter setOldParameterValue(String oldParameterValue) {
-            this.oldParameterValue = oldParameterValue;
-            return this;
-        }
-        public String getOldParameterValue() {
-            return this.oldParameterValue;
+        public String getModifyTime() {
+            return this.modifyTime;
         }
 
         public DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter setNewParameterValue(String newParameterValue) {
@@ -73,12 +65,20 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
             return this.newParameterValue;
         }
 
-        public DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter setModifyTime(String modifyTime) {
-            this.modifyTime = modifyTime;
+        public DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter setOldParameterValue(String oldParameterValue) {
+            this.oldParameterValue = oldParameterValue;
             return this;
         }
-        public String getModifyTime() {
-            return this.modifyTime;
+        public String getOldParameterValue() {
+            return this.oldParameterValue;
+        }
+
+        public DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter setParameterName(String parameterName) {
+            this.parameterName = parameterName;
+            return this;
+        }
+        public String getParameterName() {
+            return this.parameterName;
         }
 
     }

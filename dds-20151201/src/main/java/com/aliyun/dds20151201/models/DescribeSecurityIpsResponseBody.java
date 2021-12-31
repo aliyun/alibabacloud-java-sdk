@@ -4,26 +4,18 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityIpsResponseBody extends TeaModel {
-    @NameInMap("SecurityIps")
-    public String securityIps;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SecurityIpGroups")
     public DescribeSecurityIpsResponseBodySecurityIpGroups securityIpGroups;
 
+    @NameInMap("SecurityIps")
+    public String securityIps;
+
     public static DescribeSecurityIpsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityIpsResponseBody self = new DescribeSecurityIpsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSecurityIpsResponseBody setSecurityIps(String securityIps) {
-        this.securityIps = securityIps;
-        return this;
-    }
-    public String getSecurityIps() {
-        return this.securityIps;
     }
 
     public DescribeSecurityIpsResponseBody setRequestId(String requestId) {
@@ -42,12 +34,20 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         return this.securityIpGroups;
     }
 
-    public static class DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup extends TeaModel {
-        @NameInMap("SecurityIpGroupName")
-        public String securityIpGroupName;
+    public DescribeSecurityIpsResponseBody setSecurityIps(String securityIps) {
+        this.securityIps = securityIps;
+        return this;
+    }
+    public String getSecurityIps() {
+        return this.securityIps;
+    }
 
+    public static class DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup extends TeaModel {
         @NameInMap("SecurityIpGroupAttribute")
         public String securityIpGroupAttribute;
+
+        @NameInMap("SecurityIpGroupName")
+        public String securityIpGroupName;
 
         @NameInMap("SecurityIpList")
         public String securityIpList;
@@ -57,20 +57,20 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup setSecurityIpGroupName(String securityIpGroupName) {
-            this.securityIpGroupName = securityIpGroupName;
-            return this;
-        }
-        public String getSecurityIpGroupName() {
-            return this.securityIpGroupName;
-        }
-
         public DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup setSecurityIpGroupAttribute(String securityIpGroupAttribute) {
             this.securityIpGroupAttribute = securityIpGroupAttribute;
             return this;
         }
         public String getSecurityIpGroupAttribute() {
             return this.securityIpGroupAttribute;
+        }
+
+        public DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup setSecurityIpGroupName(String securityIpGroupName) {
+            this.securityIpGroupName = securityIpGroupName;
+            return this;
+        }
+        public String getSecurityIpGroupName() {
+            return this.securityIpGroupName;
         }
 
         public DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup setSecurityIpList(String securityIpList) {

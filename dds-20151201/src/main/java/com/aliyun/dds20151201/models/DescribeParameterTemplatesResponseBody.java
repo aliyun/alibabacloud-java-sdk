@@ -4,11 +4,14 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
-    @NameInMap("ParameterCount")
-    public String parameterCount;
+    @NameInMap("Engine")
+    public String engine;
 
     @NameInMap("EngineVersion")
     public String engineVersion;
+
+    @NameInMap("ParameterCount")
+    public String parameterCount;
 
     @NameInMap("Parameters")
     public DescribeParameterTemplatesResponseBodyParameters parameters;
@@ -16,20 +19,17 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Engine")
-    public String engine;
-
     public static DescribeParameterTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeParameterTemplatesResponseBody self = new DescribeParameterTemplatesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeParameterTemplatesResponseBody setParameterCount(String parameterCount) {
-        this.parameterCount = parameterCount;
+    public DescribeParameterTemplatesResponseBody setEngine(String engine) {
+        this.engine = engine;
         return this;
     }
-    public String getParameterCount() {
-        return this.parameterCount;
+    public String getEngine() {
+        return this.engine;
     }
 
     public DescribeParameterTemplatesResponseBody setEngineVersion(String engineVersion) {
@@ -38,6 +38,14 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     }
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    public DescribeParameterTemplatesResponseBody setParameterCount(String parameterCount) {
+        this.parameterCount = parameterCount;
+        return this;
+    }
+    public String getParameterCount() {
+        return this.parameterCount;
     }
 
     public DescribeParameterTemplatesResponseBody setParameters(DescribeParameterTemplatesResponseBodyParameters parameters) {
@@ -56,23 +64,9 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeParameterTemplatesResponseBody setEngine(String engine) {
-        this.engine = engine;
-        return this;
-    }
-    public String getEngine() {
-        return this.engine;
-    }
-
     public static class DescribeParameterTemplatesResponseBodyParametersTemplateRecord extends TeaModel {
         @NameInMap("CheckingCode")
         public String checkingCode;
-
-        @NameInMap("ParameterName")
-        public String parameterName;
-
-        @NameInMap("ParameterValue")
-        public String parameterValue;
 
         @NameInMap("ForceModify")
         public Boolean forceModify;
@@ -82,6 +76,12 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
 
         @NameInMap("ParameterDescription")
         public String parameterDescription;
+
+        @NameInMap("ParameterName")
+        public String parameterName;
+
+        @NameInMap("ParameterValue")
+        public String parameterValue;
 
         public static DescribeParameterTemplatesResponseBodyParametersTemplateRecord build(java.util.Map<String, ?> map) throws Exception {
             DescribeParameterTemplatesResponseBodyParametersTemplateRecord self = new DescribeParameterTemplatesResponseBodyParametersTemplateRecord();
@@ -94,22 +94,6 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
         public String getCheckingCode() {
             return this.checkingCode;
-        }
-
-        public DescribeParameterTemplatesResponseBodyParametersTemplateRecord setParameterName(String parameterName) {
-            this.parameterName = parameterName;
-            return this;
-        }
-        public String getParameterName() {
-            return this.parameterName;
-        }
-
-        public DescribeParameterTemplatesResponseBodyParametersTemplateRecord setParameterValue(String parameterValue) {
-            this.parameterValue = parameterValue;
-            return this;
-        }
-        public String getParameterValue() {
-            return this.parameterValue;
         }
 
         public DescribeParameterTemplatesResponseBodyParametersTemplateRecord setForceModify(Boolean forceModify) {
@@ -134,6 +118,22 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
         public String getParameterDescription() {
             return this.parameterDescription;
+        }
+
+        public DescribeParameterTemplatesResponseBodyParametersTemplateRecord setParameterName(String parameterName) {
+            this.parameterName = parameterName;
+            return this;
+        }
+        public String getParameterName() {
+            return this.parameterName;
+        }
+
+        public DescribeParameterTemplatesResponseBodyParametersTemplateRecord setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
+            return this;
+        }
+        public String getParameterValue() {
+            return this.parameterValue;
         }
 
     }

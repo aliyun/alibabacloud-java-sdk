@@ -4,8 +4,20 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("CurrentConnectionString")
+    public String currentConnectionString;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("NewConnectionString")
+    public String newConnectionString;
+
+    @NameInMap("NodeId")
+    public String nodeId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,32 +28,52 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("NodeId")
-    public String nodeId;
-
-    @NameInMap("CurrentConnectionString")
-    public String currentConnectionString;
-
-    @NameInMap("NewConnectionString")
-    public String newConnectionString;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifyDBInstanceConnectionStringRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceConnectionStringRequest self = new ModifyDBInstanceConnectionStringRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDBInstanceConnectionStringRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyDBInstanceConnectionStringRequest setCurrentConnectionString(String currentConnectionString) {
+        this.currentConnectionString = currentConnectionString;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getCurrentConnectionString() {
+        return this.currentConnectionString;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setNewConnectionString(String newConnectionString) {
+        this.newConnectionString = newConnectionString;
+        return this;
+    }
+    public String getNewConnectionString() {
+        return this.newConnectionString;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public String getNodeId() {
+        return this.nodeId;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyDBInstanceConnectionStringRequest setOwnerId(Long ownerId) {
@@ -68,44 +100,12 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyDBInstanceConnectionStringRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyDBInstanceConnectionStringRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyDBInstanceConnectionStringRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public ModifyDBInstanceConnectionStringRequest setNodeId(String nodeId) {
-        this.nodeId = nodeId;
-        return this;
-    }
-    public String getNodeId() {
-        return this.nodeId;
-    }
-
-    public ModifyDBInstanceConnectionStringRequest setCurrentConnectionString(String currentConnectionString) {
-        this.currentConnectionString = currentConnectionString;
-        return this;
-    }
-    public String getCurrentConnectionString() {
-        return this.currentConnectionString;
-    }
-
-    public ModifyDBInstanceConnectionStringRequest setNewConnectionString(String newConnectionString) {
-        this.newConnectionString = newConnectionString;
-        return this;
-    }
-    public String getNewConnectionString() {
-        return this.newConnectionString;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

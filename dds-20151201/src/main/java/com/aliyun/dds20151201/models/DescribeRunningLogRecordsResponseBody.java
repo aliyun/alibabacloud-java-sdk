@@ -4,8 +4,14 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeRunningLogRecordsResponseBody extends TeaModel {
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
+    @NameInMap("Engine")
+    public String engine;
+
+    @NameInMap("Items")
+    public DescribeRunningLogRecordsResponseBodyItems items;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
@@ -13,26 +19,36 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Items")
-    public DescribeRunningLogRecordsResponseBodyItems items;
-
-    @NameInMap("Engine")
-    public String engine;
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     public static DescribeRunningLogRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRunningLogRecordsResponseBody self = new DescribeRunningLogRecordsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRunningLogRecordsResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
+    public DescribeRunningLogRecordsResponseBody setEngine(String engine) {
+        this.engine = engine;
         return this;
     }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
+    public String getEngine() {
+        return this.engine;
+    }
+
+    public DescribeRunningLogRecordsResponseBody setItems(DescribeRunningLogRecordsResponseBodyItems items) {
+        this.items = items;
+        return this;
+    }
+    public DescribeRunningLogRecordsResponseBodyItems getItems() {
+        return this.items;
+    }
+
+    public DescribeRunningLogRecordsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeRunningLogRecordsResponseBody setPageRecordCount(Integer pageRecordCount) {
@@ -51,42 +67,26 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeRunningLogRecordsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeRunningLogRecordsResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeRunningLogRecordsResponseBody setItems(DescribeRunningLogRecordsResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeRunningLogRecordsResponseBodyItems getItems() {
-        return this.items;
-    }
-
-    public DescribeRunningLogRecordsResponseBody setEngine(String engine) {
-        this.engine = engine;
-        return this;
-    }
-    public String getEngine() {
-        return this.engine;
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public static class DescribeRunningLogRecordsResponseBodyItemsLogRecords extends TeaModel {
-        @NameInMap("ConnInfo")
-        public String connInfo;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
         @NameInMap("Category")
         public String category;
 
+        @NameInMap("ConnInfo")
+        public String connInfo;
+
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("Id")
         public Integer id;
@@ -94,22 +94,6 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         public static DescribeRunningLogRecordsResponseBodyItemsLogRecords build(java.util.Map<String, ?> map) throws Exception {
             DescribeRunningLogRecordsResponseBodyItemsLogRecords self = new DescribeRunningLogRecordsResponseBodyItemsLogRecords();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRunningLogRecordsResponseBodyItemsLogRecords setConnInfo(String connInfo) {
-            this.connInfo = connInfo;
-            return this;
-        }
-        public String getConnInfo() {
-            return this.connInfo;
-        }
-
-        public DescribeRunningLogRecordsResponseBodyItemsLogRecords setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
         public DescribeRunningLogRecordsResponseBodyItemsLogRecords setCategory(String category) {
@@ -120,12 +104,28 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             return this.category;
         }
 
+        public DescribeRunningLogRecordsResponseBodyItemsLogRecords setConnInfo(String connInfo) {
+            this.connInfo = connInfo;
+            return this;
+        }
+        public String getConnInfo() {
+            return this.connInfo;
+        }
+
         public DescribeRunningLogRecordsResponseBodyItemsLogRecords setContent(String content) {
             this.content = content;
             return this;
         }
         public String getContent() {
             return this.content;
+        }
+
+        public DescribeRunningLogRecordsResponseBodyItemsLogRecords setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeRunningLogRecordsResponseBodyItemsLogRecords setId(Integer id) {

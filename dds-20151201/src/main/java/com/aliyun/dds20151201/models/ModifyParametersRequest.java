@@ -4,20 +4,8 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyParametersRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("CharacterType")
+    public String characterType;
 
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -25,55 +13,35 @@ public class ModifyParametersRequest extends TeaModel {
     @NameInMap("NodeId")
     public String nodeId;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("Parameters")
     public String parameters;
 
-    @NameInMap("CharacterType")
-    public String characterType;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifyParametersRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyParametersRequest self = new ModifyParametersRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyParametersRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyParametersRequest setCharacterType(String characterType) {
+        this.characterType = characterType;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public ModifyParametersRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifyParametersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyParametersRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ModifyParametersRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getCharacterType() {
+        return this.characterType;
     }
 
     public ModifyParametersRequest setDBInstanceId(String DBInstanceId) {
@@ -92,6 +60,22 @@ public class ModifyParametersRequest extends TeaModel {
         return this.nodeId;
     }
 
+    public ModifyParametersRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifyParametersRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public ModifyParametersRequest setParameters(String parameters) {
         this.parameters = parameters;
         return this;
@@ -100,12 +84,28 @@ public class ModifyParametersRequest extends TeaModel {
         return this.parameters;
     }
 
-    public ModifyParametersRequest setCharacterType(String characterType) {
-        this.characterType = characterType;
+    public ModifyParametersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getCharacterType() {
-        return this.characterType;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyParametersRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyParametersRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

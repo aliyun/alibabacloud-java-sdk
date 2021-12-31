@@ -4,8 +4,14 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceEncryptionKeyRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("EncryptionKey")
+    public String encryptionKey;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,26 +22,36 @@ public class DescribeDBInstanceEncryptionKeyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("EncryptionKey")
-    public String encryptionKey;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DescribeDBInstanceEncryptionKeyRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceEncryptionKeyRequest self = new DescribeDBInstanceEncryptionKeyRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInstanceEncryptionKeyRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeDBInstanceEncryptionKeyRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescribeDBInstanceEncryptionKeyRequest setEncryptionKey(String encryptionKey) {
+        this.encryptionKey = encryptionKey;
+        return this;
+    }
+    public String getEncryptionKey() {
+        return this.encryptionKey;
+    }
+
+    public DescribeDBInstanceEncryptionKeyRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeDBInstanceEncryptionKeyRequest setOwnerId(Long ownerId) {
@@ -62,28 +78,12 @@ public class DescribeDBInstanceEncryptionKeyRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeDBInstanceEncryptionKeyRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeDBInstanceEncryptionKeyRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeDBInstanceEncryptionKeyRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public DescribeDBInstanceEncryptionKeyRequest setEncryptionKey(String encryptionKey) {
-        this.encryptionKey = encryptionKey;
-        return this;
-    }
-    public String getEncryptionKey() {
-        return this.encryptionKey;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

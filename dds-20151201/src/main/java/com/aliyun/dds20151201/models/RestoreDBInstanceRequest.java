@@ -4,8 +4,14 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class RestoreDBInstanceRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("BackupId")
+    public Integer backupId;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,26 +22,36 @@ public class RestoreDBInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("BackupId")
-    public Integer backupId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static RestoreDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RestoreDBInstanceRequest self = new RestoreDBInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public RestoreDBInstanceRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public RestoreDBInstanceRequest setBackupId(Integer backupId) {
+        this.backupId = backupId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public Integer getBackupId() {
+        return this.backupId;
+    }
+
+    public RestoreDBInstanceRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public RestoreDBInstanceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public RestoreDBInstanceRequest setOwnerId(Long ownerId) {
@@ -62,28 +78,12 @@ public class RestoreDBInstanceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public RestoreDBInstanceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public RestoreDBInstanceRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public RestoreDBInstanceRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public RestoreDBInstanceRequest setBackupId(Integer backupId) {
-        this.backupId = backupId;
-        return this;
-    }
-    public Integer getBackupId() {
-        return this.backupId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

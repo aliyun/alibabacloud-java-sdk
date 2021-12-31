@@ -7,14 +7,14 @@ public class EvaluateResourceResponseBody extends TeaModel {
     @NameInMap("DBInstanceAvailable")
     public String DBInstanceAvailable;
 
+    @NameInMap("Engine")
+    public String engine;
+
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Engine")
-    public String engine;
 
     public static EvaluateResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EvaluateResourceResponseBody self = new EvaluateResourceResponseBody();
@@ -27,6 +27,14 @@ public class EvaluateResourceResponseBody extends TeaModel {
     }
     public String getDBInstanceAvailable() {
         return this.DBInstanceAvailable;
+    }
+
+    public EvaluateResourceResponseBody setEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String getEngine() {
+        return this.engine;
     }
 
     public EvaluateResourceResponseBody setEngineVersion(String engineVersion) {
@@ -43,14 +51,6 @@ public class EvaluateResourceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public EvaluateResourceResponseBody setEngine(String engine) {
-        this.engine = engine;
-        return this;
-    }
-    public String getEngine() {
-        return this.engine;
     }
 
 }

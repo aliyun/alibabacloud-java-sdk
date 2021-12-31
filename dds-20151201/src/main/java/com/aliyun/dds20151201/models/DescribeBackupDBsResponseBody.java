@@ -4,32 +4,24 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupDBsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("Databases")
     public DescribeBackupDBsResponseBodyDatabases databases;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static DescribeBackupDBsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupDBsResponseBody self = new DescribeBackupDBsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBackupDBsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeBackupDBsResponseBody setDatabases(DescribeBackupDBsResponseBodyDatabases databases) {
@@ -40,12 +32,12 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         return this.databases;
     }
 
-    public DescribeBackupDBsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeBackupDBsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeBackupDBsResponseBody setPageSize(Integer pageSize) {
@@ -56,12 +48,20 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeBackupDBsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeBackupDBsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeBackupDBsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeBackupDBsResponseBodyDatabasesDatabase extends TeaModel {

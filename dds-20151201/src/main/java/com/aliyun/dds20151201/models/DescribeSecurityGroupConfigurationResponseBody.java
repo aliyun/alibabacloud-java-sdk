@@ -4,23 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Items")
     public DescribeSecurityGroupConfigurationResponseBodyItems items;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeSecurityGroupConfigurationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityGroupConfigurationResponseBody self = new DescribeSecurityGroupConfigurationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSecurityGroupConfigurationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeSecurityGroupConfigurationResponseBody setItems(DescribeSecurityGroupConfigurationResponseBodyItems items) {
@@ -31,27 +23,27 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         return this.items;
     }
 
-    public static class DescribeSecurityGroupConfigurationResponseBodyItemsRdsEcsSecurityGroupRel extends TeaModel {
-        @NameInMap("SecurityGroupId")
-        public String securityGroupId;
+    public DescribeSecurityGroupConfigurationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeSecurityGroupConfigurationResponseBodyItemsRdsEcsSecurityGroupRel extends TeaModel {
         @NameInMap("NetType")
         public String netType;
 
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
         public static DescribeSecurityGroupConfigurationResponseBodyItemsRdsEcsSecurityGroupRel build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityGroupConfigurationResponseBodyItemsRdsEcsSecurityGroupRel self = new DescribeSecurityGroupConfigurationResponseBodyItemsRdsEcsSecurityGroupRel();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSecurityGroupConfigurationResponseBodyItemsRdsEcsSecurityGroupRel setSecurityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
         }
 
         public DescribeSecurityGroupConfigurationResponseBodyItemsRdsEcsSecurityGroupRel setNetType(String netType) {
@@ -68,6 +60,14 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeSecurityGroupConfigurationResponseBodyItemsRdsEcsSecurityGroupRel setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
     }

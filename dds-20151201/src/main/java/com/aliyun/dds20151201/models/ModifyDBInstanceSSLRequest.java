@@ -4,8 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceSSLRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,26 +19,31 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
     @NameInMap("SSLAction")
     public String SSLAction;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifyDBInstanceSSLRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceSSLRequest self = new ModifyDBInstanceSSLRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDBInstanceSSLRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyDBInstanceSSLRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyDBInstanceSSLRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyDBInstanceSSLRequest setOwnerId(Long ownerId) {
@@ -62,28 +70,20 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyDBInstanceSSLRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyDBInstanceSSLRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
     public ModifyDBInstanceSSLRequest setSSLAction(String SSLAction) {
         this.SSLAction = SSLAction;
         return this;
     }
     public String getSSLAction() {
         return this.SSLAction;
+    }
+
+    public ModifyDBInstanceSSLRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

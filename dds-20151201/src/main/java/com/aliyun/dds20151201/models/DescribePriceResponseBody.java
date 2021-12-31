@@ -7,20 +7,20 @@ public class DescribePriceResponseBody extends TeaModel {
     @NameInMap("Order")
     public DescribePriceResponseBodyOrder order;
 
+    @NameInMap("OrderParams")
+    public String orderParams;
+
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Rules")
+    public DescribePriceResponseBodyRules rules;
 
     @NameInMap("SubOrders")
     public DescribePriceResponseBodySubOrders subOrders;
 
     @NameInMap("TraceId")
     public String traceId;
-
-    @NameInMap("OrderParams")
-    public String orderParams;
-
-    @NameInMap("Rules")
-    public DescribePriceResponseBodyRules rules;
 
     public static DescribePriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePriceResponseBody self = new DescribePriceResponseBody();
@@ -35,12 +35,28 @@ public class DescribePriceResponseBody extends TeaModel {
         return this.order;
     }
 
+    public DescribePriceResponseBody setOrderParams(String orderParams) {
+        this.orderParams = orderParams;
+        return this;
+    }
+    public String getOrderParams() {
+        return this.orderParams;
+    }
+
     public DescribePriceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribePriceResponseBody setRules(DescribePriceResponseBodyRules rules) {
+        this.rules = rules;
+        return this;
+    }
+    public DescribePriceResponseBodyRules getRules() {
+        return this.rules;
     }
 
     public DescribePriceResponseBody setSubOrders(DescribePriceResponseBodySubOrders subOrders) {
@@ -59,31 +75,15 @@ public class DescribePriceResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public DescribePriceResponseBody setOrderParams(String orderParams) {
-        this.orderParams = orderParams;
-        return this;
-    }
-    public String getOrderParams() {
-        return this.orderParams;
-    }
-
-    public DescribePriceResponseBody setRules(DescribePriceResponseBodyRules rules) {
-        this.rules = rules;
-        return this;
-    }
-    public DescribePriceResponseBodyRules getRules() {
-        return this.rules;
-    }
-
     public static class DescribePriceResponseBodyOrderCouponsCoupon extends TeaModel {
+        @NameInMap("CouponNo")
+        public String couponNo;
+
         @NameInMap("Description")
         public String description;
 
         @NameInMap("IsSelected")
         public String isSelected;
-
-        @NameInMap("CouponNo")
-        public String couponNo;
 
         @NameInMap("Name")
         public String name;
@@ -91,6 +91,14 @@ public class DescribePriceResponseBody extends TeaModel {
         public static DescribePriceResponseBodyOrderCouponsCoupon build(java.util.Map<String, ?> map) throws Exception {
             DescribePriceResponseBodyOrderCouponsCoupon self = new DescribePriceResponseBodyOrderCouponsCoupon();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodyOrderCouponsCoupon setCouponNo(String couponNo) {
+            this.couponNo = couponNo;
+            return this;
+        }
+        public String getCouponNo() {
+            return this.couponNo;
         }
 
         public DescribePriceResponseBodyOrderCouponsCoupon setDescription(String description) {
@@ -107,14 +115,6 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public String getIsSelected() {
             return this.isSelected;
-        }
-
-        public DescribePriceResponseBodyOrderCouponsCoupon setCouponNo(String couponNo) {
-            this.couponNo = couponNo;
-            return this;
-        }
-        public String getCouponNo() {
-            return this.couponNo;
         }
 
         public DescribePriceResponseBodyOrderCouponsCoupon setName(String name) {
@@ -169,20 +169,20 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("Coupons")
         public DescribePriceResponseBodyOrderCoupons coupons;
 
-        @NameInMap("OriginalAmount")
-        public String originalAmount;
+        @NameInMap("Currency")
+        public String currency;
 
         @NameInMap("DiscountAmount")
         public String discountAmount;
+
+        @NameInMap("OriginalAmount")
+        public String originalAmount;
 
         @NameInMap("RuleIds")
         public DescribePriceResponseBodyOrderRuleIds ruleIds;
 
         @NameInMap("TradeAmount")
         public String tradeAmount;
-
-        @NameInMap("Currency")
-        public String currency;
 
         public static DescribePriceResponseBodyOrder build(java.util.Map<String, ?> map) throws Exception {
             DescribePriceResponseBodyOrder self = new DescribePriceResponseBodyOrder();
@@ -197,12 +197,12 @@ public class DescribePriceResponseBody extends TeaModel {
             return this.coupons;
         }
 
-        public DescribePriceResponseBodyOrder setOriginalAmount(String originalAmount) {
-            this.originalAmount = originalAmount;
+        public DescribePriceResponseBodyOrder setCurrency(String currency) {
+            this.currency = currency;
             return this;
         }
-        public String getOriginalAmount() {
-            return this.originalAmount;
+        public String getCurrency() {
+            return this.currency;
         }
 
         public DescribePriceResponseBodyOrder setDiscountAmount(String discountAmount) {
@@ -211,6 +211,14 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public String getDiscountAmount() {
             return this.discountAmount;
+        }
+
+        public DescribePriceResponseBodyOrder setOriginalAmount(String originalAmount) {
+            this.originalAmount = originalAmount;
+            return this;
+        }
+        public String getOriginalAmount() {
+            return this.originalAmount;
         }
 
         public DescribePriceResponseBodyOrder setRuleIds(DescribePriceResponseBodyOrderRuleIds ruleIds) {
@@ -229,12 +237,64 @@ public class DescribePriceResponseBody extends TeaModel {
             return this.tradeAmount;
         }
 
-        public DescribePriceResponseBodyOrder setCurrency(String currency) {
-            this.currency = currency;
+    }
+
+    public static class DescribePriceResponseBodyRulesRule extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("RuleDescId")
+        public Long ruleDescId;
+
+        @NameInMap("Title")
+        public String title;
+
+        public static DescribePriceResponseBodyRulesRule build(java.util.Map<String, ?> map) throws Exception {
+            DescribePriceResponseBodyRulesRule self = new DescribePriceResponseBodyRulesRule();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodyRulesRule setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getCurrency() {
-            return this.currency;
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribePriceResponseBodyRulesRule setRuleDescId(Long ruleDescId) {
+            this.ruleDescId = ruleDescId;
+            return this;
+        }
+        public Long getRuleDescId() {
+            return this.ruleDescId;
+        }
+
+        public DescribePriceResponseBodyRulesRule setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class DescribePriceResponseBodyRules extends TeaModel {
+        @NameInMap("Rule")
+        public java.util.List<DescribePriceResponseBodyRulesRule> rule;
+
+        public static DescribePriceResponseBodyRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribePriceResponseBodyRules self = new DescribePriceResponseBodyRules();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodyRules setRule(java.util.List<DescribePriceResponseBodyRulesRule> rule) {
+            this.rule = rule;
+            return this;
+        }
+        public java.util.List<DescribePriceResponseBodyRulesRule> getRule() {
+            return this.rule;
         }
 
     }
@@ -259,11 +319,14 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodySubOrdersSubOrder extends TeaModel {
-        @NameInMap("OriginalAmount")
-        public String originalAmount;
-
         @NameInMap("DiscountAmount")
         public String discountAmount;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("OriginalAmount")
+        public String originalAmount;
 
         @NameInMap("RuleIds")
         public DescribePriceResponseBodySubOrdersSubOrderRuleIds ruleIds;
@@ -271,20 +334,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("TradeAmount")
         public String tradeAmount;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
-
         public static DescribePriceResponseBodySubOrdersSubOrder build(java.util.Map<String, ?> map) throws Exception {
             DescribePriceResponseBodySubOrdersSubOrder self = new DescribePriceResponseBodySubOrdersSubOrder();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePriceResponseBodySubOrdersSubOrder setOriginalAmount(String originalAmount) {
-            this.originalAmount = originalAmount;
-            return this;
-        }
-        public String getOriginalAmount() {
-            return this.originalAmount;
         }
 
         public DescribePriceResponseBodySubOrdersSubOrder setDiscountAmount(String discountAmount) {
@@ -293,6 +345,22 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public String getDiscountAmount() {
             return this.discountAmount;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrder setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrder setOriginalAmount(String originalAmount) {
+            this.originalAmount = originalAmount;
+            return this;
+        }
+        public String getOriginalAmount() {
+            return this.originalAmount;
         }
 
         public DescribePriceResponseBodySubOrdersSubOrder setRuleIds(DescribePriceResponseBodySubOrdersSubOrderRuleIds ruleIds) {
@@ -309,14 +377,6 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public String getTradeAmount() {
             return this.tradeAmount;
-        }
-
-        public DescribePriceResponseBodySubOrdersSubOrder setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
         }
 
     }
@@ -336,66 +396,6 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public java.util.List<DescribePriceResponseBodySubOrdersSubOrder> getSubOrder() {
             return this.subOrder;
-        }
-
-    }
-
-    public static class DescribePriceResponseBodyRulesRule extends TeaModel {
-        @NameInMap("RuleDescId")
-        public Long ruleDescId;
-
-        @NameInMap("Title")
-        public String title;
-
-        @NameInMap("Name")
-        public String name;
-
-        public static DescribePriceResponseBodyRulesRule build(java.util.Map<String, ?> map) throws Exception {
-            DescribePriceResponseBodyRulesRule self = new DescribePriceResponseBodyRulesRule();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribePriceResponseBodyRulesRule setRuleDescId(Long ruleDescId) {
-            this.ruleDescId = ruleDescId;
-            return this;
-        }
-        public Long getRuleDescId() {
-            return this.ruleDescId;
-        }
-
-        public DescribePriceResponseBodyRulesRule setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
-        }
-
-        public DescribePriceResponseBodyRulesRule setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-    }
-
-    public static class DescribePriceResponseBodyRules extends TeaModel {
-        @NameInMap("Rule")
-        public java.util.List<DescribePriceResponseBodyRulesRule> rule;
-
-        public static DescribePriceResponseBodyRules build(java.util.Map<String, ?> map) throws Exception {
-            DescribePriceResponseBodyRules self = new DescribePriceResponseBodyRules();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribePriceResponseBodyRules setRule(java.util.List<DescribePriceResponseBodyRulesRule> rule) {
-            this.rule = rule;
-            return this;
-        }
-        public java.util.List<DescribePriceResponseBodyRulesRule> getRule() {
-            return this.rule;
         }
 
     }

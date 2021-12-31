@@ -4,8 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuditRecordsResponseBody extends TeaModel {
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
+    @NameInMap("Items")
+    public DescribeAuditRecordsResponseBodyItems items;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
@@ -13,23 +16,28 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Items")
-    public DescribeAuditRecordsResponseBodyItems items;
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     public static DescribeAuditRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAuditRecordsResponseBody self = new DescribeAuditRecordsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAuditRecordsResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
+    public DescribeAuditRecordsResponseBody setItems(DescribeAuditRecordsResponseBodyItems items) {
+        this.items = items;
         return this;
     }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
+    public DescribeAuditRecordsResponseBodyItems getItems() {
+        return this.items;
+    }
+
+    public DescribeAuditRecordsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeAuditRecordsResponseBody setPageRecordCount(Integer pageRecordCount) {
@@ -48,31 +56,17 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeAuditRecordsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeAuditRecordsResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeAuditRecordsResponseBody setItems(DescribeAuditRecordsResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeAuditRecordsResponseBodyItems getItems() {
-        return this.items;
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public static class DescribeAuditRecordsResponseBodyItemsSQLRecord extends TeaModel {
-        @NameInMap("HostAddress")
-        public String hostAddress;
-
-        @NameInMap("TableName")
-        public String tableName;
-
-        @NameInMap("ReturnRowCounts")
-        public Long returnRowCounts;
+        @NameInMap("AccountName")
+        public String accountName;
 
         @NameInMap("DBName")
         public String DBName;
@@ -80,45 +74,35 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         @NameInMap("ExecuteTime")
         public String executeTime;
 
+        @NameInMap("HostAddress")
+        public String hostAddress;
+
+        @NameInMap("ReturnRowCounts")
+        public Long returnRowCounts;
+
+        @NameInMap("Syntax")
+        public String syntax;
+
+        @NameInMap("TableName")
+        public String tableName;
+
         @NameInMap("ThreadID")
         public String threadID;
 
         @NameInMap("TotalExecutionTimes")
         public Long totalExecutionTimes;
 
-        @NameInMap("Syntax")
-        public String syntax;
-
-        @NameInMap("AccountName")
-        public String accountName;
-
         public static DescribeAuditRecordsResponseBodyItemsSQLRecord build(java.util.Map<String, ?> map) throws Exception {
             DescribeAuditRecordsResponseBodyItemsSQLRecord self = new DescribeAuditRecordsResponseBodyItemsSQLRecord();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAuditRecordsResponseBodyItemsSQLRecord setHostAddress(String hostAddress) {
-            this.hostAddress = hostAddress;
+        public DescribeAuditRecordsResponseBodyItemsSQLRecord setAccountName(String accountName) {
+            this.accountName = accountName;
             return this;
         }
-        public String getHostAddress() {
-            return this.hostAddress;
-        }
-
-        public DescribeAuditRecordsResponseBodyItemsSQLRecord setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
-        }
-
-        public DescribeAuditRecordsResponseBodyItemsSQLRecord setReturnRowCounts(Long returnRowCounts) {
-            this.returnRowCounts = returnRowCounts;
-            return this;
-        }
-        public Long getReturnRowCounts() {
-            return this.returnRowCounts;
+        public String getAccountName() {
+            return this.accountName;
         }
 
         public DescribeAuditRecordsResponseBodyItemsSQLRecord setDBName(String DBName) {
@@ -137,6 +121,38 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             return this.executeTime;
         }
 
+        public DescribeAuditRecordsResponseBodyItemsSQLRecord setHostAddress(String hostAddress) {
+            this.hostAddress = hostAddress;
+            return this;
+        }
+        public String getHostAddress() {
+            return this.hostAddress;
+        }
+
+        public DescribeAuditRecordsResponseBodyItemsSQLRecord setReturnRowCounts(Long returnRowCounts) {
+            this.returnRowCounts = returnRowCounts;
+            return this;
+        }
+        public Long getReturnRowCounts() {
+            return this.returnRowCounts;
+        }
+
+        public DescribeAuditRecordsResponseBodyItemsSQLRecord setSyntax(String syntax) {
+            this.syntax = syntax;
+            return this;
+        }
+        public String getSyntax() {
+            return this.syntax;
+        }
+
+        public DescribeAuditRecordsResponseBodyItemsSQLRecord setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
         public DescribeAuditRecordsResponseBodyItemsSQLRecord setThreadID(String threadID) {
             this.threadID = threadID;
             return this;
@@ -151,22 +167,6 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
         public Long getTotalExecutionTimes() {
             return this.totalExecutionTimes;
-        }
-
-        public DescribeAuditRecordsResponseBodyItemsSQLRecord setSyntax(String syntax) {
-            this.syntax = syntax;
-            return this;
-        }
-        public String getSyntax() {
-            return this.syntax;
-        }
-
-        public DescribeAuditRecordsResponseBodyItemsSQLRecord setAccountName(String accountName) {
-            this.accountName = accountName;
-            return this;
-        }
-        public String getAccountName() {
-            return this.accountName;
         }
 
     }

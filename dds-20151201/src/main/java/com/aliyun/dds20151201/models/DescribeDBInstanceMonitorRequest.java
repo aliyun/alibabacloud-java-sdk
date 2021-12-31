@@ -4,8 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceMonitorRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,23 +19,28 @@ public class DescribeDBInstanceMonitorRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DescribeDBInstanceMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceMonitorRequest self = new DescribeDBInstanceMonitorRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInstanceMonitorRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeDBInstanceMonitorRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescribeDBInstanceMonitorRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeDBInstanceMonitorRequest setOwnerId(Long ownerId) {
@@ -59,20 +67,12 @@ public class DescribeDBInstanceMonitorRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeDBInstanceMonitorRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeDBInstanceMonitorRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeDBInstanceMonitorRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

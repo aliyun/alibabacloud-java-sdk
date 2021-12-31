@@ -4,6 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class MigrateAvailableZoneRequest extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("EffectiveTime")
+    public String effectiveTime;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,24 +22,39 @@ public class MigrateAvailableZoneRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("Vswitch")
+    public String vswitch;
 
     @NameInMap("ZoneId")
     public String zoneId;
 
-    @NameInMap("Vswitch")
-    public String vswitch;
-
-    @NameInMap("EffectiveTime")
-    public String effectiveTime;
-
     public static MigrateAvailableZoneRequest build(java.util.Map<String, ?> map) throws Exception {
         MigrateAvailableZoneRequest self = new MigrateAvailableZoneRequest();
         return TeaModel.build(map, self);
+    }
+
+    public MigrateAvailableZoneRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public MigrateAvailableZoneRequest setEffectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+    }
+    public String getEffectiveTime() {
+        return this.effectiveTime;
+    }
+
+    public MigrateAvailableZoneRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public MigrateAvailableZoneRequest setOwnerId(Long ownerId) {
@@ -57,30 +81,6 @@ public class MigrateAvailableZoneRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public MigrateAvailableZoneRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public MigrateAvailableZoneRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public MigrateAvailableZoneRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
     public MigrateAvailableZoneRequest setVswitch(String vswitch) {
         this.vswitch = vswitch;
         return this;
@@ -89,12 +89,12 @@ public class MigrateAvailableZoneRequest extends TeaModel {
         return this.vswitch;
     }
 
-    public MigrateAvailableZoneRequest setEffectiveTime(String effectiveTime) {
-        this.effectiveTime = effectiveTime;
+    public MigrateAvailableZoneRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
         return this;
     }
-    public String getEffectiveTime() {
-        return this.effectiveTime;
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

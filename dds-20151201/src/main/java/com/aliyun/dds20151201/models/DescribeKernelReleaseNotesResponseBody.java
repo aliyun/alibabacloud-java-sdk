@@ -4,23 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ReleaseNotes")
     public DescribeKernelReleaseNotesResponseBodyReleaseNotes releaseNotes;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeKernelReleaseNotesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeKernelReleaseNotesResponseBody self = new DescribeKernelReleaseNotesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeKernelReleaseNotesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeKernelReleaseNotesResponseBody setReleaseNotes(DescribeKernelReleaseNotesResponseBodyReleaseNotes releaseNotes) {
@@ -31,24 +23,24 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
         return this.releaseNotes;
     }
 
-    public static class DescribeKernelReleaseNotesResponseBodyReleaseNotesReleaseNote extends TeaModel {
-        @NameInMap("ReleaseNote")
-        public String releaseNote;
+    public DescribeKernelReleaseNotesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeKernelReleaseNotesResponseBodyReleaseNotesReleaseNote extends TeaModel {
         @NameInMap("KernelVersion")
         public String kernelVersion;
+
+        @NameInMap("ReleaseNote")
+        public String releaseNote;
 
         public static DescribeKernelReleaseNotesResponseBodyReleaseNotesReleaseNote build(java.util.Map<String, ?> map) throws Exception {
             DescribeKernelReleaseNotesResponseBodyReleaseNotesReleaseNote self = new DescribeKernelReleaseNotesResponseBodyReleaseNotesReleaseNote();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeKernelReleaseNotesResponseBodyReleaseNotesReleaseNote setReleaseNote(String releaseNote) {
-            this.releaseNote = releaseNote;
-            return this;
-        }
-        public String getReleaseNote() {
-            return this.releaseNote;
         }
 
         public DescribeKernelReleaseNotesResponseBodyReleaseNotesReleaseNote setKernelVersion(String kernelVersion) {
@@ -57,6 +49,14 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
         }
         public String getKernelVersion() {
             return this.kernelVersion;
+        }
+
+        public DescribeKernelReleaseNotesResponseBodyReleaseNotesReleaseNote setReleaseNote(String releaseNote) {
+            this.releaseNote = releaseNote;
+            return this;
+        }
+        public String getReleaseNote() {
+            return this.releaseNote;
         }
 
     }

@@ -4,11 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("NeedPop")
     public Integer needPop;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TaskCount")
     public Integer taskCount;
@@ -18,20 +18,20 @@ public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeActiveOperationTaskCountResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeActiveOperationTaskCountResponseBody setNeedPop(Integer needPop) {
         this.needPop = needPop;
         return this;
     }
     public Integer getNeedPop() {
         return this.needPop;
+    }
+
+    public DescribeActiveOperationTaskCountResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeActiveOperationTaskCountResponseBody setTaskCount(Integer taskCount) {

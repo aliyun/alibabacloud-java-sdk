@@ -4,11 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
-    @NameInMap("PerformanceKeys")
-    public DescribeDBInstancePerformanceResponseBodyPerformanceKeys performanceKeys;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("PerformanceKeys")
+    public DescribeDBInstancePerformanceResponseBodyPerformanceKeys performanceKeys;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -21,20 +21,20 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInstancePerformanceResponseBody setPerformanceKeys(DescribeDBInstancePerformanceResponseBodyPerformanceKeys performanceKeys) {
-        this.performanceKeys = performanceKeys;
-        return this;
-    }
-    public DescribeDBInstancePerformanceResponseBodyPerformanceKeys getPerformanceKeys() {
-        return this.performanceKeys;
-    }
-
     public DescribeDBInstancePerformanceResponseBody setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDBInstancePerformanceResponseBody setPerformanceKeys(DescribeDBInstancePerformanceResponseBodyPerformanceKeys performanceKeys) {
+        this.performanceKeys = performanceKeys;
+        return this;
+    }
+    public DescribeDBInstancePerformanceResponseBodyPerformanceKeys getPerformanceKeys() {
+        return this.performanceKeys;
     }
 
     public DescribeDBInstancePerformanceResponseBody setRequestId(String requestId) {
@@ -54,23 +54,15 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValuesPerformanceValue extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("Date")
         public String date;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValuesPerformanceValue build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValuesPerformanceValue self = new DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValuesPerformanceValue();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValuesPerformanceValue setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValuesPerformanceValue setDate(String date) {
@@ -79,6 +71,14 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
         public String getDate() {
             return this.date;
+        }
+
+        public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValuesPerformanceValue setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -106,14 +106,14 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
+        @NameInMap("PerformanceValues")
+        public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValues performanceValues;
+
         @NameInMap("Unit")
         public String unit;
 
         @NameInMap("ValueFormat")
         public String valueFormat;
-
-        @NameInMap("PerformanceValues")
-        public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValues performanceValues;
 
         public static DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey self = new DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey();
@@ -126,6 +126,14 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
         public String getKey() {
             return this.key;
+        }
+
+        public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey setPerformanceValues(DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValues performanceValues) {
+            this.performanceValues = performanceValues;
+            return this;
+        }
+        public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValues getPerformanceValues() {
+            return this.performanceValues;
         }
 
         public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey setUnit(String unit) {
@@ -142,14 +150,6 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
         public String getValueFormat() {
             return this.valueFormat;
-        }
-
-        public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey setPerformanceValues(DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValues performanceValues) {
-            this.performanceValues = performanceValues;
-            return this;
-        }
-        public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValues getPerformanceValues() {
-            return this.performanceValues;
         }
 
     }

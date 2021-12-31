@@ -4,26 +4,18 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class CreateShardingDBInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     @NameInMap("OrderId")
     public String orderId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static CreateShardingDBInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateShardingDBInstanceResponseBody self = new CreateShardingDBInstanceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateShardingDBInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateShardingDBInstanceResponseBody setDBInstanceId(String DBInstanceId) {
@@ -40,6 +32,14 @@ public class CreateShardingDBInstanceResponseBody extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public CreateShardingDBInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

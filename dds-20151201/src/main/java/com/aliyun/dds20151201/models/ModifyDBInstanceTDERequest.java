@@ -4,8 +4,17 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceTDERequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("EncryptionKey")
+    public String encryptionKey;
+
+    @NameInMap("EncryptorName")
+    public String encryptorName;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,35 +25,50 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("RoleARN")
+    public String roleARN;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("TDEStatus")
     public String TDEStatus;
-
-    @NameInMap("EncryptorName")
-    public String encryptorName;
-
-    @NameInMap("EncryptionKey")
-    public String encryptionKey;
-
-    @NameInMap("RoleARN")
-    public String roleARN;
 
     public static ModifyDBInstanceTDERequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceTDERequest self = new ModifyDBInstanceTDERequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDBInstanceTDERequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyDBInstanceTDERequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyDBInstanceTDERequest setEncryptionKey(String encryptionKey) {
+        this.encryptionKey = encryptionKey;
+        return this;
+    }
+    public String getEncryptionKey() {
+        return this.encryptionKey;
+    }
+
+    public ModifyDBInstanceTDERequest setEncryptorName(String encryptorName) {
+        this.encryptorName = encryptorName;
+        return this;
+    }
+    public String getEncryptorName() {
+        return this.encryptorName;
+    }
+
+    public ModifyDBInstanceTDERequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyDBInstanceTDERequest setOwnerId(Long ownerId) {
@@ -71,20 +95,20 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyDBInstanceTDERequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyDBInstanceTDERequest setRoleARN(String roleARN) {
+        this.roleARN = roleARN;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getRoleARN() {
+        return this.roleARN;
     }
 
-    public ModifyDBInstanceTDERequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public ModifyDBInstanceTDERequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public ModifyDBInstanceTDERequest setTDEStatus(String TDEStatus) {
@@ -93,30 +117,6 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     }
     public String getTDEStatus() {
         return this.TDEStatus;
-    }
-
-    public ModifyDBInstanceTDERequest setEncryptorName(String encryptorName) {
-        this.encryptorName = encryptorName;
-        return this;
-    }
-    public String getEncryptorName() {
-        return this.encryptorName;
-    }
-
-    public ModifyDBInstanceTDERequest setEncryptionKey(String encryptionKey) {
-        this.encryptionKey = encryptionKey;
-        return this;
-    }
-    public String getEncryptionKey() {
-        return this.encryptionKey;
-    }
-
-    public ModifyDBInstanceTDERequest setRoleARN(String roleARN) {
-        this.roleARN = roleARN;
-        return this;
-    }
-    public String getRoleARN() {
-        return this.roleARN;
     }
 
 }

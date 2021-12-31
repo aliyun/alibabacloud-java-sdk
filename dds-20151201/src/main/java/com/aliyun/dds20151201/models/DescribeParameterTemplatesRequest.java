@@ -4,11 +4,20 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("Engine")
+    public String engine;
+
+    @NameInMap("EngineVersion")
+    public String engineVersion;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,26 +25,36 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("Engine")
-    public String engine;
-
-    @NameInMap("EngineVersion")
-    public String engineVersion;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DescribeParameterTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeParameterTemplatesRequest self = new DescribeParameterTemplatesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeParameterTemplatesRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeParameterTemplatesRequest setEngine(String engine) {
+        this.engine = engine;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getEngine() {
+        return this.engine;
+    }
+
+    public DescribeParameterTemplatesRequest setEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    public String getEngineVersion() {
+        return this.engineVersion;
+    }
+
+    public DescribeParameterTemplatesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeParameterTemplatesRequest setOwnerId(Long ownerId) {
@@ -44,6 +63,14 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeParameterTemplatesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeParameterTemplatesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -62,28 +89,12 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeParameterTemplatesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeParameterTemplatesRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeParameterTemplatesRequest setEngine(String engine) {
-        this.engine = engine;
-        return this;
-    }
-    public String getEngine() {
-        return this.engine;
-    }
-
-    public DescribeParameterTemplatesRequest setEngineVersion(String engineVersion) {
-        this.engineVersion = engineVersion;
-        return this;
-    }
-    public String getEngineVersion() {
-        return this.engineVersion;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

@@ -7,11 +7,11 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     @NameInMap("CompatibleConnections")
     public DescribeShardingNetworkAddressResponseBodyCompatibleConnections compatibleConnections;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("NetworkAddresses")
     public DescribeShardingNetworkAddressResponseBodyNetworkAddresses networkAddresses;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeShardingNetworkAddressResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeShardingNetworkAddressResponseBody self = new DescribeShardingNetworkAddressResponseBody();
@@ -26,14 +26,6 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         return this.compatibleConnections;
     }
 
-    public DescribeShardingNetworkAddressResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeShardingNetworkAddressResponseBody setNetworkAddresses(DescribeShardingNetworkAddressResponseBodyNetworkAddresses networkAddresses) {
         this.networkAddresses = networkAddresses;
         return this;
@@ -42,12 +34,23 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         return this.networkAddresses;
     }
 
-    public static class DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection extends TeaModel {
-        @NameInMap("VswitchId")
-        public String vswitchId;
+    public DescribeShardingNetworkAddressResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection extends TeaModel {
         @NameInMap("ExpiredTime")
         public String expiredTime;
+
+        @NameInMap("IPAddress")
+        public String IPAddress;
+
+        @NameInMap("NetworkAddress")
+        public String networkAddress;
 
         @NameInMap("NetworkType")
         public String networkType;
@@ -55,26 +58,15 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         @NameInMap("Port")
         public String port;
 
-        @NameInMap("NetworkAddress")
-        public String networkAddress;
-
         @NameInMap("VPCId")
         public String VPCId;
 
-        @NameInMap("IPAddress")
-        public String IPAddress;
+        @NameInMap("VswitchId")
+        public String vswitchId;
 
         public static DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection build(java.util.Map<String, ?> map) throws Exception {
             DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection self = new DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection setVswitchId(String vswitchId) {
-            this.vswitchId = vswitchId;
-            return this;
-        }
-        public String getVswitchId() {
-            return this.vswitchId;
         }
 
         public DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection setExpiredTime(String expiredTime) {
@@ -83,6 +75,22 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         }
         public String getExpiredTime() {
             return this.expiredTime;
+        }
+
+        public DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection setIPAddress(String IPAddress) {
+            this.IPAddress = IPAddress;
+            return this;
+        }
+        public String getIPAddress() {
+            return this.IPAddress;
+        }
+
+        public DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection setNetworkAddress(String networkAddress) {
+            this.networkAddress = networkAddress;
+            return this;
+        }
+        public String getNetworkAddress() {
+            return this.networkAddress;
         }
 
         public DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection setNetworkType(String networkType) {
@@ -101,14 +109,6 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             return this.port;
         }
 
-        public DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection setNetworkAddress(String networkAddress) {
-            this.networkAddress = networkAddress;
-            return this;
-        }
-        public String getNetworkAddress() {
-            return this.networkAddress;
-        }
-
         public DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection setVPCId(String VPCId) {
             this.VPCId = VPCId;
             return this;
@@ -117,12 +117,12 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             return this.VPCId;
         }
 
-        public DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection setIPAddress(String IPAddress) {
-            this.IPAddress = IPAddress;
+        public DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
             return this;
         }
-        public String getIPAddress() {
-            return this.IPAddress;
+        public String getVswitchId() {
+            return this.vswitchId;
         }
 
     }
@@ -147,55 +147,39 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress extends TeaModel {
-        @NameInMap("NodeType")
-        public String nodeType;
-
-        @NameInMap("VswitchId")
-        public String vswitchId;
-
         @NameInMap("ExpiredTime")
         public String expiredTime;
-
-        @NameInMap("NetworkType")
-        public String networkType;
-
-        @NameInMap("Role")
-        public String role;
-
-        @NameInMap("Port")
-        public String port;
-
-        @NameInMap("VPCId")
-        public String VPCId;
-
-        @NameInMap("NetworkAddress")
-        public String networkAddress;
-
-        @NameInMap("NodeId")
-        public String nodeId;
 
         @NameInMap("IPAddress")
         public String IPAddress;
 
+        @NameInMap("NetworkAddress")
+        public String networkAddress;
+
+        @NameInMap("NetworkType")
+        public String networkType;
+
+        @NameInMap("NodeId")
+        public String nodeId;
+
+        @NameInMap("NodeType")
+        public String nodeType;
+
+        @NameInMap("Port")
+        public String port;
+
+        @NameInMap("Role")
+        public String role;
+
+        @NameInMap("VPCId")
+        public String VPCId;
+
+        @NameInMap("VswitchId")
+        public String vswitchId;
+
         public static DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress build(java.util.Map<String, ?> map) throws Exception {
             DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress self = new DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setNodeType(String nodeType) {
-            this.nodeType = nodeType;
-            return this;
-        }
-        public String getNodeType() {
-            return this.nodeType;
-        }
-
-        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setVswitchId(String vswitchId) {
-            this.vswitchId = vswitchId;
-            return this;
-        }
-        public String getVswitchId() {
-            return this.vswitchId;
         }
 
         public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setExpiredTime(String expiredTime) {
@@ -206,36 +190,12 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
-        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setNetworkType(String networkType) {
-            this.networkType = networkType;
+        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setIPAddress(String IPAddress) {
+            this.IPAddress = IPAddress;
             return this;
         }
-        public String getNetworkType() {
-            return this.networkType;
-        }
-
-        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setRole(String role) {
-            this.role = role;
-            return this;
-        }
-        public String getRole() {
-            return this.role;
-        }
-
-        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setPort(String port) {
-            this.port = port;
-            return this;
-        }
-        public String getPort() {
-            return this.port;
-        }
-
-        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setVPCId(String VPCId) {
-            this.VPCId = VPCId;
-            return this;
-        }
-        public String getVPCId() {
-            return this.VPCId;
+        public String getIPAddress() {
+            return this.IPAddress;
         }
 
         public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setNetworkAddress(String networkAddress) {
@@ -246,6 +206,14 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             return this.networkAddress;
         }
 
+        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
         public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setNodeId(String nodeId) {
             this.nodeId = nodeId;
             return this;
@@ -254,12 +222,44 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             return this.nodeId;
         }
 
-        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setIPAddress(String IPAddress) {
-            this.IPAddress = IPAddress;
+        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setNodeType(String nodeType) {
+            this.nodeType = nodeType;
             return this;
         }
-        public String getIPAddress() {
-            return this.IPAddress;
+        public String getNodeType() {
+            return this.nodeType;
+        }
+
+        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
+        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setVPCId(String VPCId) {
+            this.VPCId = VPCId;
+            return this;
+        }
+        public String getVPCId() {
+            return this.VPCId;
+        }
+
+        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
         }
 
     }

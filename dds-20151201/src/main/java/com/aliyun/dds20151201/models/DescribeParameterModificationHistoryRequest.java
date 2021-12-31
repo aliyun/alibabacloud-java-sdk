@@ -4,8 +4,20 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterModificationHistoryRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("CharacterType")
+    public String characterType;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("NodeId")
+    public String nodeId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,35 +28,55 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("NodeId")
-    public String nodeId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("CharacterType")
-    public String characterType;
 
     public static DescribeParameterModificationHistoryRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeParameterModificationHistoryRequest self = new DescribeParameterModificationHistoryRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeParameterModificationHistoryRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeParameterModificationHistoryRequest setCharacterType(String characterType) {
+        this.characterType = characterType;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getCharacterType() {
+        return this.characterType;
+    }
+
+    public DescribeParameterModificationHistoryRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescribeParameterModificationHistoryRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeParameterModificationHistoryRequest setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public String getNodeId() {
+        return this.nodeId;
+    }
+
+    public DescribeParameterModificationHistoryRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeParameterModificationHistoryRequest setOwnerId(Long ownerId) {
@@ -71,28 +103,12 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeParameterModificationHistoryRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeParameterModificationHistoryRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeParameterModificationHistoryRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public DescribeParameterModificationHistoryRequest setNodeId(String nodeId) {
-        this.nodeId = nodeId;
-        return this;
-    }
-    public String getNodeId() {
-        return this.nodeId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribeParameterModificationHistoryRequest setStartTime(String startTime) {
@@ -101,22 +117,6 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeParameterModificationHistoryRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeParameterModificationHistoryRequest setCharacterType(String characterType) {
-        this.characterType = characterType;
-        return this;
-    }
-    public String getCharacterType() {
-        return this.characterType;
     }
 
 }
