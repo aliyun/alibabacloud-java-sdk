@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ConsumerGroup extends TeaModel {
     // consumerGroup
-    @NameInMap("consumerGroup")
-    public String consumerGroup;
+    @NameInMap("name")
+    public String name;
 
     // order
     @NameInMap("order")
@@ -21,12 +21,12 @@ public class ConsumerGroup extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ConsumerGroup setConsumerGroup(String consumerGroup) {
-        this.consumerGroup = consumerGroup;
+    public ConsumerGroup setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getConsumerGroup() {
-        return this.consumerGroup;
+    public String getName() {
+        return this.name;
     }
 
     public ConsumerGroup setOrder(Boolean order) {
