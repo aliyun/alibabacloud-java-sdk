@@ -118,7 +118,7 @@ public class DescribePluginsResponseBody extends TeaModel {
         public String createdTime;
 
         @NameInMap("Description")
-        public Integer description;
+        public String description;
 
         @NameInMap("ModifiedTime")
         public String modifiedTime;
@@ -136,7 +136,7 @@ public class DescribePluginsResponseBody extends TeaModel {
         public String pluginType;
 
         @NameInMap("RegionId")
-        public Integer regionId;
+        public String regionId;
 
         @NameInMap("Tags")
         public DescribePluginsResponseBodyPluginsPluginAttributeTags tags;
@@ -154,11 +154,11 @@ public class DescribePluginsResponseBody extends TeaModel {
             return this.createdTime;
         }
 
-        public DescribePluginsResponseBodyPluginsPluginAttribute setDescription(Integer description) {
+        public DescribePluginsResponseBodyPluginsPluginAttribute setDescription(String description) {
             this.description = description;
             return this;
         }
-        public Integer getDescription() {
+        public String getDescription() {
             return this.description;
         }
 
@@ -202,11 +202,11 @@ public class DescribePluginsResponseBody extends TeaModel {
             return this.pluginType;
         }
 
-        public DescribePluginsResponseBodyPluginsPluginAttribute setRegionId(Integer regionId) {
+        public DescribePluginsResponseBodyPluginsPluginAttribute setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
-        public Integer getRegionId() {
+        public String getRegionId() {
             return this.regionId;
         }
 
