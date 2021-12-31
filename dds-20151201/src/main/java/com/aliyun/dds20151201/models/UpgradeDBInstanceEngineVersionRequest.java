@@ -4,8 +4,14 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("EngineVersion")
+    public String engineVersion;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,26 +22,36 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("EngineVersion")
-    public String engineVersion;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static UpgradeDBInstanceEngineVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBInstanceEngineVersionRequest self = new UpgradeDBInstanceEngineVersionRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpgradeDBInstanceEngineVersionRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public UpgradeDBInstanceEngineVersionRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public UpgradeDBInstanceEngineVersionRequest setEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    public String getEngineVersion() {
+        return this.engineVersion;
+    }
+
+    public UpgradeDBInstanceEngineVersionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public UpgradeDBInstanceEngineVersionRequest setOwnerId(Long ownerId) {
@@ -62,28 +78,12 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public UpgradeDBInstanceEngineVersionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public UpgradeDBInstanceEngineVersionRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public UpgradeDBInstanceEngineVersionRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public UpgradeDBInstanceEngineVersionRequest setEngineVersion(String engineVersion) {
-        this.engineVersion = engineVersion;
-        return this;
-    }
-    public String getEngineVersion() {
-        return this.engineVersion;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

@@ -4,8 +4,14 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class AllocatePublicNetworkAddressRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("NodeId")
+    public String nodeId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,26 +22,36 @@ public class AllocatePublicNetworkAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("NodeId")
-    public String nodeId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static AllocatePublicNetworkAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocatePublicNetworkAddressRequest self = new AllocatePublicNetworkAddressRequest();
         return TeaModel.build(map, self);
     }
 
-    public AllocatePublicNetworkAddressRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public AllocatePublicNetworkAddressRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public AllocatePublicNetworkAddressRequest setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public String getNodeId() {
+        return this.nodeId;
+    }
+
+    public AllocatePublicNetworkAddressRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public AllocatePublicNetworkAddressRequest setOwnerId(Long ownerId) {
@@ -62,28 +78,12 @@ public class AllocatePublicNetworkAddressRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public AllocatePublicNetworkAddressRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public AllocatePublicNetworkAddressRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public AllocatePublicNetworkAddressRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public AllocatePublicNetworkAddressRequest setNodeId(String nodeId) {
-        this.nodeId = nodeId;
-        return this;
-    }
-    public String getNodeId() {
-        return this.nodeId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

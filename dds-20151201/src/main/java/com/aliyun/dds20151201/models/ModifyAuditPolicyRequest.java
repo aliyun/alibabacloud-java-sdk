@@ -4,8 +4,14 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyAuditPolicyRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("AuditStatus")
+    public String auditStatus;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,14 +22,8 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("AuditStatus")
-    public String auditStatus;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("StoragePeriod")
     public Integer storagePeriod;
@@ -33,12 +33,28 @@ public class ModifyAuditPolicyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyAuditPolicyRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyAuditPolicyRequest setAuditStatus(String auditStatus) {
+        this.auditStatus = auditStatus;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getAuditStatus() {
+        return this.auditStatus;
+    }
+
+    public ModifyAuditPolicyRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyAuditPolicyRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyAuditPolicyRequest setOwnerId(Long ownerId) {
@@ -65,28 +81,12 @@ public class ModifyAuditPolicyRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyAuditPolicyRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyAuditPolicyRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyAuditPolicyRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public ModifyAuditPolicyRequest setAuditStatus(String auditStatus) {
-        this.auditStatus = auditStatus;
-        return this;
-    }
-    public String getAuditStatus() {
-        return this.auditStatus;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public ModifyAuditPolicyRequest setStoragePeriod(Integer storagePeriod) {

@@ -4,8 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeKernelReleaseNotesRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("KernelVersion")
+    public String kernelVersion;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,23 +19,28 @@ public class DescribeKernelReleaseNotesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("KernelVersion")
-    public String kernelVersion;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DescribeKernelReleaseNotesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeKernelReleaseNotesRequest self = new DescribeKernelReleaseNotesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeKernelReleaseNotesRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeKernelReleaseNotesRequest setKernelVersion(String kernelVersion) {
+        this.kernelVersion = kernelVersion;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getKernelVersion() {
+        return this.kernelVersion;
+    }
+
+    public DescribeKernelReleaseNotesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeKernelReleaseNotesRequest setOwnerId(Long ownerId) {
@@ -59,20 +67,12 @@ public class DescribeKernelReleaseNotesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeKernelReleaseNotesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeKernelReleaseNotesRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeKernelReleaseNotesRequest setKernelVersion(String kernelVersion) {
-        this.kernelVersion = kernelVersion;
-        return this;
-    }
-    public String getKernelVersion() {
-        return this.kernelVersion;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

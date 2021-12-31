@@ -4,23 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsResponseBody self = new DescribeRegionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRegionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeRegionsResponseBody setRegions(DescribeRegionsResponseBodyRegions regions) {
@@ -29,6 +21,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
     public DescribeRegionsResponseBodyRegions getRegions() {
         return this.regions;
+    }
+
+    public DescribeRegionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeRegionsResponseBodyRegionsDdsRegionZonesZone extends TeaModel {
@@ -81,23 +81,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsDdsRegion extends TeaModel {
-        @NameInMap("Zones")
-        public DescribeRegionsResponseBodyRegionsDdsRegionZones zones;
-
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("Zones")
+        public DescribeRegionsResponseBodyRegionsDdsRegionZones zones;
 
         public static DescribeRegionsResponseBodyRegionsDdsRegion build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegionsDdsRegion self = new DescribeRegionsResponseBodyRegionsDdsRegion();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRegionsResponseBodyRegionsDdsRegion setZones(DescribeRegionsResponseBodyRegionsDdsRegionZones zones) {
-            this.zones = zones;
-            return this;
-        }
-        public DescribeRegionsResponseBodyRegionsDdsRegionZones getZones() {
-            return this.zones;
         }
 
         public DescribeRegionsResponseBodyRegionsDdsRegion setRegionId(String regionId) {
@@ -106,6 +98,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeRegionsResponseBodyRegionsDdsRegion setZones(DescribeRegionsResponseBodyRegionsDdsRegionZones zones) {
+            this.zones = zones;
+            return this;
+        }
+        public DescribeRegionsResponseBodyRegionsDdsRegionZones getZones() {
+            return this.zones;
         }
 
     }

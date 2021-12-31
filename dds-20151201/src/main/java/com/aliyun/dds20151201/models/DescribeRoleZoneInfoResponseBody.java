@@ -38,14 +38,14 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         @NameInMap("NodeType")
         public String nodeType;
 
+        @NameInMap("RoleId")
+        public String roleId;
+
         @NameInMap("RoleType")
         public String roleType;
 
         @NameInMap("ZoneId")
         public String zoneId;
-
-        @NameInMap("RoleId")
-        public String roleId;
 
         public static DescribeRoleZoneInfoResponseBodyZoneInfosZoneInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeRoleZoneInfoResponseBodyZoneInfosZoneInfo self = new DescribeRoleZoneInfoResponseBodyZoneInfosZoneInfo();
@@ -68,6 +68,14 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             return this.nodeType;
         }
 
+        public DescribeRoleZoneInfoResponseBodyZoneInfosZoneInfo setRoleId(String roleId) {
+            this.roleId = roleId;
+            return this;
+        }
+        public String getRoleId() {
+            return this.roleId;
+        }
+
         public DescribeRoleZoneInfoResponseBodyZoneInfosZoneInfo setRoleType(String roleType) {
             this.roleType = roleType;
             return this;
@@ -82,14 +90,6 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
-        }
-
-        public DescribeRoleZoneInfoResponseBodyZoneInfosZoneInfo setRoleId(String roleId) {
-            this.roleId = roleId;
-            return this;
-        }
-        public String getRoleId() {
-            return this.roleId;
         }
 
     }

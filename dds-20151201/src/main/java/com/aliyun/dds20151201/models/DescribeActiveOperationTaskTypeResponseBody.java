@@ -32,15 +32,29 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeActiveOperationTaskTypeResponseBodyTypeList extends TeaModel {
+        @NameInMap("Count")
+        public Integer count;
+
         @NameInMap("TaskType")
         public String taskType;
 
-        @NameInMap("Count")
-        public Integer count;
+        @NameInMap("TaskTypeInfoEn")
+        public String taskTypeInfoEn;
+
+        @NameInMap("TaskTypeInfoZh")
+        public String taskTypeInfoZh;
 
         public static DescribeActiveOperationTaskTypeResponseBodyTypeList build(java.util.Map<String, ?> map) throws Exception {
             DescribeActiveOperationTaskTypeResponseBodyTypeList self = new DescribeActiveOperationTaskTypeResponseBodyTypeList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeActiveOperationTaskTypeResponseBodyTypeList setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
         }
 
         public DescribeActiveOperationTaskTypeResponseBodyTypeList setTaskType(String taskType) {
@@ -51,12 +65,20 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
             return this.taskType;
         }
 
-        public DescribeActiveOperationTaskTypeResponseBodyTypeList setCount(Integer count) {
-            this.count = count;
+        public DescribeActiveOperationTaskTypeResponseBodyTypeList setTaskTypeInfoEn(String taskTypeInfoEn) {
+            this.taskTypeInfoEn = taskTypeInfoEn;
             return this;
         }
-        public Integer getCount() {
-            return this.count;
+        public String getTaskTypeInfoEn() {
+            return this.taskTypeInfoEn;
+        }
+
+        public DescribeActiveOperationTaskTypeResponseBodyTypeList setTaskTypeInfoZh(String taskTypeInfoZh) {
+            this.taskTypeInfoZh = taskTypeInfoZh;
+            return this;
+        }
+        public String getTaskTypeInfoZh() {
+            return this.taskTypeInfoZh;
         }
 
     }

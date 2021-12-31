@@ -4,23 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyNodeSpecResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OrderId")
     public String orderId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ModifyNodeSpecResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyNodeSpecResponseBody self = new ModifyNodeSpecResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyNodeSpecResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ModifyNodeSpecResponseBody setOrderId(String orderId) {
@@ -29,6 +21,14 @@ public class ModifyNodeSpecResponseBody extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public ModifyNodeSpecResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

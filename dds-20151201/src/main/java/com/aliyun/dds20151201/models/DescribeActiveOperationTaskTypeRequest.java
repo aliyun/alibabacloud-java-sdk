@@ -4,11 +4,17 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskTypeRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("IsHistory")
+    public Integer isHistory;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,26 +22,28 @@ public class DescribeActiveOperationTaskTypeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("IsHistory")
-    public Integer isHistory;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DescribeActiveOperationTaskTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeActiveOperationTaskTypeRequest self = new DescribeActiveOperationTaskTypeRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeActiveOperationTaskTypeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeActiveOperationTaskTypeRequest setIsHistory(Integer isHistory) {
+        this.isHistory = isHistory;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public Integer getIsHistory() {
+        return this.isHistory;
+    }
+
+    public DescribeActiveOperationTaskTypeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeActiveOperationTaskTypeRequest setOwnerId(Long ownerId) {
@@ -44,6 +52,14 @@ public class DescribeActiveOperationTaskTypeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeActiveOperationTaskTypeRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeActiveOperationTaskTypeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -62,28 +78,12 @@ public class DescribeActiveOperationTaskTypeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeActiveOperationTaskTypeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeActiveOperationTaskTypeRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeActiveOperationTaskTypeRequest setIsHistory(Integer isHistory) {
-        this.isHistory = isHistory;
-        return this;
-    }
-    public Integer getIsHistory() {
-        return this.isHistory;
-    }
-
-    public DescribeActiveOperationTaskTypeRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

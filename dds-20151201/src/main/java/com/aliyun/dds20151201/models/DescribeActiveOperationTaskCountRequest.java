@@ -4,11 +4,14 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskCountRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,23 +19,20 @@ public class DescribeActiveOperationTaskCountRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DescribeActiveOperationTaskCountRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeActiveOperationTaskCountRequest self = new DescribeActiveOperationTaskCountRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeActiveOperationTaskCountRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeActiveOperationTaskCountRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeActiveOperationTaskCountRequest setOwnerId(Long ownerId) {
@@ -41,6 +41,14 @@ public class DescribeActiveOperationTaskCountRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeActiveOperationTaskCountRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeActiveOperationTaskCountRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -59,20 +67,12 @@ public class DescribeActiveOperationTaskCountRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeActiveOperationTaskCountRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeActiveOperationTaskCountRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeActiveOperationTaskCountRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

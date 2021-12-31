@@ -4,8 +4,14 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifySecurityIpsRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("ModifyMode")
+    public String modifyMode;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,35 +22,45 @@ public class ModifySecurityIpsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("SecurityIps")
-    public String securityIps;
-
-    @NameInMap("ModifyMode")
-    public String modifyMode;
+    @NameInMap("SecurityIpGroupAttribute")
+    public String securityIpGroupAttribute;
 
     @NameInMap("SecurityIpGroupName")
     public String securityIpGroupName;
 
-    @NameInMap("SecurityIpGroupAttribute")
-    public String securityIpGroupAttribute;
+    @NameInMap("SecurityIps")
+    public String securityIps;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifySecurityIpsRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySecurityIpsRequest self = new ModifySecurityIpsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifySecurityIpsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifySecurityIpsRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifySecurityIpsRequest setModifyMode(String modifyMode) {
+        this.modifyMode = modifyMode;
+        return this;
+    }
+    public String getModifyMode() {
+        return this.modifyMode;
+    }
+
+    public ModifySecurityIpsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifySecurityIpsRequest setOwnerId(Long ownerId) {
@@ -71,36 +87,12 @@ public class ModifySecurityIpsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifySecurityIpsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifySecurityIpsRequest setSecurityIpGroupAttribute(String securityIpGroupAttribute) {
+        this.securityIpGroupAttribute = securityIpGroupAttribute;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifySecurityIpsRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public ModifySecurityIpsRequest setSecurityIps(String securityIps) {
-        this.securityIps = securityIps;
-        return this;
-    }
-    public String getSecurityIps() {
-        return this.securityIps;
-    }
-
-    public ModifySecurityIpsRequest setModifyMode(String modifyMode) {
-        this.modifyMode = modifyMode;
-        return this;
-    }
-    public String getModifyMode() {
-        return this.modifyMode;
+    public String getSecurityIpGroupAttribute() {
+        return this.securityIpGroupAttribute;
     }
 
     public ModifySecurityIpsRequest setSecurityIpGroupName(String securityIpGroupName) {
@@ -111,12 +103,20 @@ public class ModifySecurityIpsRequest extends TeaModel {
         return this.securityIpGroupName;
     }
 
-    public ModifySecurityIpsRequest setSecurityIpGroupAttribute(String securityIpGroupAttribute) {
-        this.securityIpGroupAttribute = securityIpGroupAttribute;
+    public ModifySecurityIpsRequest setSecurityIps(String securityIps) {
+        this.securityIps = securityIps;
         return this;
     }
-    public String getSecurityIpGroupAttribute() {
-        return this.securityIpGroupAttribute;
+    public String getSecurityIps() {
+        return this.securityIps;
+    }
+
+    public ModifySecurityIpsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

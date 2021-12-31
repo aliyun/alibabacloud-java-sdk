@@ -4,26 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class EvaluateResourceRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DBInstanceClass")
+    public String DBInstanceClass;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
 
     @NameInMap("Engine")
     public String engine;
@@ -31,74 +16,55 @@ public class EvaluateResourceRequest extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
-    @NameInMap("DBInstanceClass")
-    public String DBInstanceClass;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ReadonlyReplicas")
+    public String readonlyReplicas;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ReplicationFactor")
+    public String replicationFactor;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("ShardsInfo")
     public String shardsInfo;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static EvaluateResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         EvaluateResourceRequest self = new EvaluateResourceRequest();
         return TeaModel.build(map, self);
     }
 
-    public EvaluateResourceRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public EvaluateResourceRequest setDBInstanceClass(String DBInstanceClass) {
+        this.DBInstanceClass = DBInstanceClass;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDBInstanceClass() {
+        return this.DBInstanceClass;
     }
 
-    public EvaluateResourceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public EvaluateResourceRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public EvaluateResourceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public EvaluateResourceRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public EvaluateResourceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public EvaluateResourceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public EvaluateResourceRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     public EvaluateResourceRequest setEngine(String engine) {
@@ -117,12 +83,68 @@ public class EvaluateResourceRequest extends TeaModel {
         return this.engineVersion;
     }
 
-    public EvaluateResourceRequest setDBInstanceClass(String DBInstanceClass) {
-        this.DBInstanceClass = DBInstanceClass;
+    public EvaluateResourceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getDBInstanceClass() {
-        return this.DBInstanceClass;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public EvaluateResourceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public EvaluateResourceRequest setReadonlyReplicas(String readonlyReplicas) {
+        this.readonlyReplicas = readonlyReplicas;
+        return this;
+    }
+    public String getReadonlyReplicas() {
+        return this.readonlyReplicas;
+    }
+
+    public EvaluateResourceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public EvaluateResourceRequest setReplicationFactor(String replicationFactor) {
+        this.replicationFactor = replicationFactor;
+        return this;
+    }
+    public String getReplicationFactor() {
+        return this.replicationFactor;
+    }
+
+    public EvaluateResourceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public EvaluateResourceRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public EvaluateResourceRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public EvaluateResourceRequest setShardsInfo(String shardsInfo) {
@@ -133,12 +155,12 @@ public class EvaluateResourceRequest extends TeaModel {
         return this.shardsInfo;
     }
 
-    public EvaluateResourceRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public EvaluateResourceRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

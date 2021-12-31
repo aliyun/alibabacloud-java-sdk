@@ -4,8 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuditFilesResponseBody extends TeaModel {
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
+    @NameInMap("Items")
+    public DescribeAuditFilesResponseBodyItems items;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
@@ -13,23 +16,28 @@ public class DescribeAuditFilesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Items")
-    public DescribeAuditFilesResponseBodyItems items;
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     public static DescribeAuditFilesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAuditFilesResponseBody self = new DescribeAuditFilesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAuditFilesResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
+    public DescribeAuditFilesResponseBody setItems(DescribeAuditFilesResponseBodyItems items) {
+        this.items = items;
         return this;
     }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
+    public DescribeAuditFilesResponseBodyItems getItems() {
+        return this.items;
+    }
+
+    public DescribeAuditFilesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeAuditFilesResponseBody setPageRecordCount(Integer pageRecordCount) {
@@ -48,37 +56,29 @@ public class DescribeAuditFilesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeAuditFilesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeAuditFilesResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeAuditFilesResponseBody setItems(DescribeAuditFilesResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeAuditFilesResponseBodyItems getItems() {
-        return this.items;
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public static class DescribeAuditFilesResponseBodyItemsLogFile extends TeaModel {
         @NameInMap("FileID")
         public Integer fileID;
 
-        @NameInMap("LogStartTime")
-        public String logStartTime;
-
-        @NameInMap("LogSize")
-        public Long logSize;
-
         @NameInMap("LogDownloadURL")
         public String logDownloadURL;
 
         @NameInMap("LogEndTime")
         public String logEndTime;
+
+        @NameInMap("LogSize")
+        public Long logSize;
+
+        @NameInMap("LogStartTime")
+        public String logStartTime;
 
         @NameInMap("LogStatus")
         public String logStatus;
@@ -96,22 +96,6 @@ public class DescribeAuditFilesResponseBody extends TeaModel {
             return this.fileID;
         }
 
-        public DescribeAuditFilesResponseBodyItemsLogFile setLogStartTime(String logStartTime) {
-            this.logStartTime = logStartTime;
-            return this;
-        }
-        public String getLogStartTime() {
-            return this.logStartTime;
-        }
-
-        public DescribeAuditFilesResponseBodyItemsLogFile setLogSize(Long logSize) {
-            this.logSize = logSize;
-            return this;
-        }
-        public Long getLogSize() {
-            return this.logSize;
-        }
-
         public DescribeAuditFilesResponseBodyItemsLogFile setLogDownloadURL(String logDownloadURL) {
             this.logDownloadURL = logDownloadURL;
             return this;
@@ -126,6 +110,22 @@ public class DescribeAuditFilesResponseBody extends TeaModel {
         }
         public String getLogEndTime() {
             return this.logEndTime;
+        }
+
+        public DescribeAuditFilesResponseBodyItemsLogFile setLogSize(Long logSize) {
+            this.logSize = logSize;
+            return this;
+        }
+        public Long getLogSize() {
+            return this.logSize;
+        }
+
+        public DescribeAuditFilesResponseBodyItemsLogFile setLogStartTime(String logStartTime) {
+            this.logStartTime = logStartTime;
+            return this;
+        }
+        public String getLogStartTime() {
+            return this.logStartTime;
         }
 
         public DescribeAuditFilesResponseBodyItemsLogFile setLogStatus(String logStatus) {

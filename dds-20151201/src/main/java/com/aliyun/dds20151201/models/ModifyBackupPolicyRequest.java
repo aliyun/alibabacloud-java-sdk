@@ -4,11 +4,29 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("BackupRetentionPeriod")
+    public Long backupRetentionPeriod;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("EnableBackupLog")
+    public Long enableBackupLog;
+
+    @NameInMap("LogBackupRetentionPeriod")
+    public Long logBackupRetentionPeriod;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PreferredBackupPeriod")
+    public String preferredBackupPeriod;
+
+    @NameInMap("PreferredBackupTime")
+    public String preferredBackupTime;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,29 +34,52 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("PreferredBackupTime")
-    public String preferredBackupTime;
-
-    @NameInMap("PreferredBackupPeriod")
-    public String preferredBackupPeriod;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifyBackupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBackupPolicyRequest self = new ModifyBackupPolicyRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyBackupPolicyRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyBackupPolicyRequest setBackupRetentionPeriod(Long backupRetentionPeriod) {
+        this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public Long getBackupRetentionPeriod() {
+        return this.backupRetentionPeriod;
+    }
+
+    public ModifyBackupPolicyRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyBackupPolicyRequest setEnableBackupLog(Long enableBackupLog) {
+        this.enableBackupLog = enableBackupLog;
+        return this;
+    }
+    public Long getEnableBackupLog() {
+        return this.enableBackupLog;
+    }
+
+    public ModifyBackupPolicyRequest setLogBackupRetentionPeriod(Long logBackupRetentionPeriod) {
+        this.logBackupRetentionPeriod = logBackupRetentionPeriod;
+        return this;
+    }
+    public Long getLogBackupRetentionPeriod() {
+        return this.logBackupRetentionPeriod;
+    }
+
+    public ModifyBackupPolicyRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyBackupPolicyRequest setOwnerId(Long ownerId) {
@@ -47,6 +88,22 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyBackupPolicyRequest setPreferredBackupPeriod(String preferredBackupPeriod) {
+        this.preferredBackupPeriod = preferredBackupPeriod;
+        return this;
+    }
+    public String getPreferredBackupPeriod() {
+        return this.preferredBackupPeriod;
+    }
+
+    public ModifyBackupPolicyRequest setPreferredBackupTime(String preferredBackupTime) {
+        this.preferredBackupTime = preferredBackupTime;
+        return this;
+    }
+    public String getPreferredBackupTime() {
+        return this.preferredBackupTime;
     }
 
     public ModifyBackupPolicyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -65,36 +122,12 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyBackupPolicyRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyBackupPolicyRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyBackupPolicyRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public ModifyBackupPolicyRequest setPreferredBackupTime(String preferredBackupTime) {
-        this.preferredBackupTime = preferredBackupTime;
-        return this;
-    }
-    public String getPreferredBackupTime() {
-        return this.preferredBackupTime;
-    }
-
-    public ModifyBackupPolicyRequest setPreferredBackupPeriod(String preferredBackupPeriod) {
-        this.preferredBackupPeriod = preferredBackupPeriod;
-        return this;
-    }
-    public String getPreferredBackupPeriod() {
-        return this.preferredBackupPeriod;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

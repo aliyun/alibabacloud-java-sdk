@@ -4,8 +4,14 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("NodeId")
+    public String nodeId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,14 +22,8 @@ public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("NodeId")
-    public String nodeId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("VpcAuthMode")
     public String vpcAuthMode;
@@ -33,12 +33,28 @@ public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyInstanceVpcAuthModeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyInstanceVpcAuthModeRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyInstanceVpcAuthModeRequest setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public String getNodeId() {
+        return this.nodeId;
+    }
+
+    public ModifyInstanceVpcAuthModeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyInstanceVpcAuthModeRequest setOwnerId(Long ownerId) {
@@ -65,28 +81,12 @@ public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyInstanceVpcAuthModeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyInstanceVpcAuthModeRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyInstanceVpcAuthModeRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public ModifyInstanceVpcAuthModeRequest setNodeId(String nodeId) {
-        this.nodeId = nodeId;
-        return this;
-    }
-    public String getNodeId() {
-        return this.nodeId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public ModifyInstanceVpcAuthModeRequest setVpcAuthMode(String vpcAuthMode) {

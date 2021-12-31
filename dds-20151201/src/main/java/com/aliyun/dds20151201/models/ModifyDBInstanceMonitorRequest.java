@@ -4,8 +4,14 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceMonitorRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("Granularity")
+    public String granularity;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,26 +22,36 @@ public class ModifyDBInstanceMonitorRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("Granularity")
-    public String granularity;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifyDBInstanceMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceMonitorRequest self = new ModifyDBInstanceMonitorRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDBInstanceMonitorRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyDBInstanceMonitorRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyDBInstanceMonitorRequest setGranularity(String granularity) {
+        this.granularity = granularity;
+        return this;
+    }
+    public String getGranularity() {
+        return this.granularity;
+    }
+
+    public ModifyDBInstanceMonitorRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyDBInstanceMonitorRequest setOwnerId(Long ownerId) {
@@ -62,28 +78,12 @@ public class ModifyDBInstanceMonitorRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyDBInstanceMonitorRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyDBInstanceMonitorRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyDBInstanceMonitorRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public ModifyDBInstanceMonitorRequest setGranularity(String granularity) {
-        this.granularity = granularity;
-        return this;
-    }
-    public String getGranularity() {
-        return this.granularity;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

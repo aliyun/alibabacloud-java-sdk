@@ -4,8 +4,17 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("ClassicExpiredDays")
+    public Integer classicExpiredDays;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("NetworkType")
+    public String networkType;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,38 +25,53 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("RetainClassic")
+    public String retainClassic;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("NetworkType")
-    public String networkType;
-
-    @NameInMap("VpcId")
-    public String vpcId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    @NameInMap("RetainClassic")
-    public String retainClassic;
-
-    @NameInMap("ClassicExpiredDays")
-    public Integer classicExpiredDays;
+    @NameInMap("VpcId")
+    public String vpcId;
 
     public static ModifyDBInstanceNetworkTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceNetworkTypeRequest self = new ModifyDBInstanceNetworkTypeRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDBInstanceNetworkTypeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyDBInstanceNetworkTypeRequest setClassicExpiredDays(Integer classicExpiredDays) {
+        this.classicExpiredDays = classicExpiredDays;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public Integer getClassicExpiredDays() {
+        return this.classicExpiredDays;
+    }
+
+    public ModifyDBInstanceNetworkTypeRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyDBInstanceNetworkTypeRequest setNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
+    public ModifyDBInstanceNetworkTypeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyDBInstanceNetworkTypeRequest setOwnerId(Long ownerId) {
@@ -74,36 +98,20 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyDBInstanceNetworkTypeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyDBInstanceNetworkTypeRequest setRetainClassic(String retainClassic) {
+        this.retainClassic = retainClassic;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getRetainClassic() {
+        return this.retainClassic;
     }
 
-    public ModifyDBInstanceNetworkTypeRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public ModifyDBInstanceNetworkTypeRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public ModifyDBInstanceNetworkTypeRequest setNetworkType(String networkType) {
-        this.networkType = networkType;
-        return this;
-    }
-    public String getNetworkType() {
-        return this.networkType;
-    }
-
-    public ModifyDBInstanceNetworkTypeRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public ModifyDBInstanceNetworkTypeRequest setVSwitchId(String vSwitchId) {
@@ -114,20 +122,12 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public ModifyDBInstanceNetworkTypeRequest setRetainClassic(String retainClassic) {
-        this.retainClassic = retainClassic;
+    public ModifyDBInstanceNetworkTypeRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
         return this;
     }
-    public String getRetainClassic() {
-        return this.retainClassic;
-    }
-
-    public ModifyDBInstanceNetworkTypeRequest setClassicExpiredDays(Integer classicExpiredDays) {
-        this.classicExpiredDays = classicExpiredDays;
-        return this;
-    }
-    public Integer getClassicExpiredDays() {
-        return this.classicExpiredDays;
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

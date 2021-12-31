@@ -4,26 +4,26 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DeleteNodeResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public Integer taskId;
+    @NameInMap("OrderId")
+    public String orderId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("OrderId")
-    public String orderId;
+    @NameInMap("TaskId")
+    public Integer taskId;
 
     public static DeleteNodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteNodeResponseBody self = new DeleteNodeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteNodeResponseBody setTaskId(Integer taskId) {
-        this.taskId = taskId;
+    public DeleteNodeResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
-    public Integer getTaskId() {
-        return this.taskId;
+    public String getOrderId() {
+        return this.orderId;
     }
 
     public DeleteNodeResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class DeleteNodeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteNodeResponseBody setOrderId(String orderId) {
-        this.orderId = orderId;
+    public DeleteNodeResponseBody setTaskId(Integer taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public String getOrderId() {
-        return this.orderId;
+    public Integer getTaskId() {
+        return this.taskId;
     }
 
 }

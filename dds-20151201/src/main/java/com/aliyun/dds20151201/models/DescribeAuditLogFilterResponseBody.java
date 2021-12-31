@@ -4,11 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuditLogFilterResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Filter")
     public String filter;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("RoleType")
     public String roleType;
@@ -18,20 +18,20 @@ public class DescribeAuditLogFilterResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeAuditLogFilterResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeAuditLogFilterResponseBody setFilter(String filter) {
         this.filter = filter;
         return this;
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public DescribeAuditLogFilterResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeAuditLogFilterResponseBody setRoleType(String roleType) {

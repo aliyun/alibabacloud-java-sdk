@@ -4,8 +4,20 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceId")
+    public java.util.List<String> resourceId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,20 +25,8 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ResourceType")
     public String resourceType;
-
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("ResourceId")
-    public java.util.List<String> resourceId;
 
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -36,12 +36,44 @@ public class ListTagResourcesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListTagResourcesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListTagResourcesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public ListTagResourcesRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ListTagResourcesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
     }
 
     public ListTagResourcesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -60,44 +92,12 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ListTagResourcesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ListTagResourcesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public ListTagResourcesRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     public String getResourceType() {
         return this.resourceType;
-    }
-
-    public ListTagResourcesRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public java.util.List<String> getResourceId() {
-        return this.resourceId;
     }
 
     public ListTagResourcesRequest setTag(java.util.List<ListTagResourcesRequestTag> tag) {

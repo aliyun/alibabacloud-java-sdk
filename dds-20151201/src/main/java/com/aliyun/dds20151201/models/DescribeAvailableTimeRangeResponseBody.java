@@ -4,23 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableTimeRangeResponseBody extends TeaModel {
-    @NameInMap("TimeRange")
-    public DescribeAvailableTimeRangeResponseBodyTimeRange timeRange;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TimeRange")
+    public DescribeAvailableTimeRangeResponseBodyTimeRange timeRange;
 
     public static DescribeAvailableTimeRangeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableTimeRangeResponseBody self = new DescribeAvailableTimeRangeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAvailableTimeRangeResponseBody setTimeRange(DescribeAvailableTimeRangeResponseBodyTimeRange timeRange) {
-        this.timeRange = timeRange;
-        return this;
-    }
-    public DescribeAvailableTimeRangeResponseBodyTimeRange getTimeRange() {
-        return this.timeRange;
     }
 
     public DescribeAvailableTimeRangeResponseBody setRequestId(String requestId) {
@@ -31,33 +23,33 @@ public class DescribeAvailableTimeRangeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class DescribeAvailableTimeRangeResponseBodyTimeRangeTimeRange extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+    public DescribeAvailableTimeRangeResponseBody setTimeRange(DescribeAvailableTimeRangeResponseBodyTimeRange timeRange) {
+        this.timeRange = timeRange;
+        return this;
+    }
+    public DescribeAvailableTimeRangeResponseBodyTimeRange getTimeRange() {
+        return this.timeRange;
+    }
 
+    public static class DescribeAvailableTimeRangeResponseBodyTimeRangeTimeRange extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("TaskId")
-        public String taskId;
 
         @NameInMap("NodeId")
         public String nodeId;
 
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TaskId")
+        public String taskId;
+
         public static DescribeAvailableTimeRangeResponseBodyTimeRangeTimeRange build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableTimeRangeResponseBodyTimeRangeTimeRange self = new DescribeAvailableTimeRangeResponseBodyTimeRangeTimeRange();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAvailableTimeRangeResponseBodyTimeRangeTimeRange setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeAvailableTimeRangeResponseBodyTimeRangeTimeRange setEndTime(String endTime) {
@@ -68,6 +60,14 @@ public class DescribeAvailableTimeRangeResponseBody extends TeaModel {
             return this.endTime;
         }
 
+        public DescribeAvailableTimeRangeResponseBodyTimeRangeTimeRange setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
         public DescribeAvailableTimeRangeResponseBodyTimeRangeTimeRange setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
@@ -76,20 +76,20 @@ public class DescribeAvailableTimeRangeResponseBody extends TeaModel {
             return this.startTime;
         }
 
+        public DescribeAvailableTimeRangeResponseBodyTimeRangeTimeRange setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
         public DescribeAvailableTimeRangeResponseBodyTimeRangeTimeRange setTaskId(String taskId) {
             this.taskId = taskId;
             return this;
         }
         public String getTaskId() {
             return this.taskId;
-        }
-
-        public DescribeAvailableTimeRangeResponseBodyTimeRangeTimeRange setNodeId(String nodeId) {
-            this.nodeId = nodeId;
-            return this;
-        }
-        public String getNodeId() {
-            return this.nodeId;
         }
 
     }

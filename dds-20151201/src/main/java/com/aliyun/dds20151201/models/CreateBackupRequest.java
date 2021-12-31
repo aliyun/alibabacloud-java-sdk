@@ -4,8 +4,14 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class CreateBackupRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("BackupMethod")
+    public String backupMethod;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,26 +22,36 @@ public class CreateBackupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("BackupMethod")
-    public String backupMethod;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static CreateBackupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateBackupRequest self = new CreateBackupRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateBackupRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public CreateBackupRequest setBackupMethod(String backupMethod) {
+        this.backupMethod = backupMethod;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getBackupMethod() {
+        return this.backupMethod;
+    }
+
+    public CreateBackupRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public CreateBackupRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateBackupRequest setOwnerId(Long ownerId) {
@@ -62,28 +78,12 @@ public class CreateBackupRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateBackupRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public CreateBackupRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CreateBackupRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public CreateBackupRequest setBackupMethod(String backupMethod) {
-        this.backupMethod = backupMethod;
-        return this;
-    }
-    public String getBackupMethod() {
-        return this.backupMethod;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

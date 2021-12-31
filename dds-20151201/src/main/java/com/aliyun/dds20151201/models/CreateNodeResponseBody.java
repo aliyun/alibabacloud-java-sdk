@@ -4,26 +4,18 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class CreateNodeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("NodeId")
     public String nodeId;
 
     @NameInMap("OrderId")
     public String orderId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static CreateNodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateNodeResponseBody self = new CreateNodeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateNodeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateNodeResponseBody setNodeId(String nodeId) {
@@ -40,6 +32,14 @@ public class CreateNodeResponseBody extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public CreateNodeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

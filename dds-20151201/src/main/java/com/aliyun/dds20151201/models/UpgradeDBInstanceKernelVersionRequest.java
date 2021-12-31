@@ -4,8 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,23 +19,28 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static UpgradeDBInstanceKernelVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBInstanceKernelVersionRequest self = new UpgradeDBInstanceKernelVersionRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpgradeDBInstanceKernelVersionRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public UpgradeDBInstanceKernelVersionRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public UpgradeDBInstanceKernelVersionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public UpgradeDBInstanceKernelVersionRequest setOwnerId(Long ownerId) {
@@ -59,20 +67,12 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public UpgradeDBInstanceKernelVersionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public UpgradeDBInstanceKernelVersionRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public UpgradeDBInstanceKernelVersionRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }
