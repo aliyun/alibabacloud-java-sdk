@@ -4,35 +4,45 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class GetConnectionTicketRequest extends TeaModel {
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    public String regionId;
-
     @NameInMap("ClientId")
-    @Validation(required = true)
     public String clientId;
 
-    @NameInMap("LoginToken")
-    @Validation(required = true)
-    public String loginToken;
+    @NameInMap("ClientOS")
+    public String clientOS;
 
-    @NameInMap("TaskId")
-    public String taskId;
+    @NameInMap("ClientType")
+    public String clientType;
+
+    @NameInMap("ClientVersion")
+    public String clientVersion;
 
     @NameInMap("DesktopId")
     public String desktopId;
 
+    @NameInMap("LoginToken")
+    public String loginToken;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("SessionId")
+    public String sessionId;
+
+    @NameInMap("TaskId")
+    public String taskId;
+
     public static GetConnectionTicketRequest build(java.util.Map<String, ?> map) throws Exception {
         GetConnectionTicketRequest self = new GetConnectionTicketRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetConnectionTicketRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetConnectionTicketRequest setClientId(String clientId) {
@@ -43,20 +53,28 @@ public class GetConnectionTicketRequest extends TeaModel {
         return this.clientId;
     }
 
-    public GetConnectionTicketRequest setLoginToken(String loginToken) {
-        this.loginToken = loginToken;
+    public GetConnectionTicketRequest setClientOS(String clientOS) {
+        this.clientOS = clientOS;
         return this;
     }
-    public String getLoginToken() {
-        return this.loginToken;
+    public String getClientOS() {
+        return this.clientOS;
     }
 
-    public GetConnectionTicketRequest setTaskId(String taskId) {
-        this.taskId = taskId;
+    public GetConnectionTicketRequest setClientType(String clientType) {
+        this.clientType = clientType;
         return this;
     }
-    public String getTaskId() {
-        return this.taskId;
+    public String getClientType() {
+        return this.clientType;
+    }
+
+    public GetConnectionTicketRequest setClientVersion(String clientVersion) {
+        this.clientVersion = clientVersion;
+        return this;
+    }
+    public String getClientVersion() {
+        return this.clientVersion;
     }
 
     public GetConnectionTicketRequest setDesktopId(String desktopId) {
@@ -65,6 +83,62 @@ public class GetConnectionTicketRequest extends TeaModel {
     }
     public String getDesktopId() {
         return this.desktopId;
+    }
+
+    public GetConnectionTicketRequest setLoginToken(String loginToken) {
+        this.loginToken = loginToken;
+        return this;
+    }
+    public String getLoginToken() {
+        return this.loginToken;
+    }
+
+    public GetConnectionTicketRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public GetConnectionTicketRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public GetConnectionTicketRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public GetConnectionTicketRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public GetConnectionTicketRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
+    public GetConnectionTicketRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

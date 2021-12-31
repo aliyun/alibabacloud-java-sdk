@@ -3,21 +3,21 @@ package com.aliyun.ecd20201002.models;
 
 import com.aliyun.tea.*;
 
-public class GetConnectionTicketResponse extends TeaModel {
+public class EncryptPasswordResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetConnectionTicketResponseBody body;
+    public EncryptPasswordResponseBody body;
 
-    public static GetConnectionTicketResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetConnectionTicketResponse self = new GetConnectionTicketResponse();
+    public static EncryptPasswordResponse build(java.util.Map<String, ?> map) throws Exception {
+        EncryptPasswordResponse self = new EncryptPasswordResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetConnectionTicketResponse setHeaders(java.util.Map<String, String> headers) {
+    public EncryptPasswordResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class GetConnectionTicketResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetConnectionTicketResponse setBody(GetConnectionTicketResponseBody body) {
+    public EncryptPasswordResponse setBody(EncryptPasswordResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetConnectionTicketResponseBody getBody() {
+    public EncryptPasswordResponseBody getBody() {
         return this.body;
     }
 

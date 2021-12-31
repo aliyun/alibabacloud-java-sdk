@@ -3,15 +3,12 @@ package com.aliyun.ecd20201002.models;
 
 import com.aliyun.tea.*;
 
-public class RefreshLoginTokenRequest extends TeaModel {
+public class EncryptPasswordRequest extends TeaModel {
     @NameInMap("ClientId")
     public String clientId;
 
     @NameInMap("DirectoryId")
     public String directoryId;
-
-    @NameInMap("EndUserId")
-    public String endUserId;
 
     @NameInMap("LoginToken")
     public String loginToken;
@@ -19,18 +16,21 @@ public class RefreshLoginTokenRequest extends TeaModel {
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    @NameInMap("Password")
+    public String password;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("SessionId")
     public String sessionId;
 
-    public static RefreshLoginTokenRequest build(java.util.Map<String, ?> map) throws Exception {
-        RefreshLoginTokenRequest self = new RefreshLoginTokenRequest();
+    public static EncryptPasswordRequest build(java.util.Map<String, ?> map) throws Exception {
+        EncryptPasswordRequest self = new EncryptPasswordRequest();
         return TeaModel.build(map, self);
     }
 
-    public RefreshLoginTokenRequest setClientId(String clientId) {
+    public EncryptPasswordRequest setClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
@@ -38,7 +38,7 @@ public class RefreshLoginTokenRequest extends TeaModel {
         return this.clientId;
     }
 
-    public RefreshLoginTokenRequest setDirectoryId(String directoryId) {
+    public EncryptPasswordRequest setDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
@@ -46,15 +46,7 @@ public class RefreshLoginTokenRequest extends TeaModel {
         return this.directoryId;
     }
 
-    public RefreshLoginTokenRequest setEndUserId(String endUserId) {
-        this.endUserId = endUserId;
-        return this;
-    }
-    public String getEndUserId() {
-        return this.endUserId;
-    }
-
-    public RefreshLoginTokenRequest setLoginToken(String loginToken) {
+    public EncryptPasswordRequest setLoginToken(String loginToken) {
         this.loginToken = loginToken;
         return this;
     }
@@ -62,7 +54,7 @@ public class RefreshLoginTokenRequest extends TeaModel {
         return this.loginToken;
     }
 
-    public RefreshLoginTokenRequest setOfficeSiteId(String officeSiteId) {
+    public EncryptPasswordRequest setOfficeSiteId(String officeSiteId) {
         this.officeSiteId = officeSiteId;
         return this;
     }
@@ -70,7 +62,15 @@ public class RefreshLoginTokenRequest extends TeaModel {
         return this.officeSiteId;
     }
 
-    public RefreshLoginTokenRequest setRegionId(String regionId) {
+    public EncryptPasswordRequest setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    public String getPassword() {
+        return this.password;
+    }
+
+    public EncryptPasswordRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -78,7 +78,7 @@ public class RefreshLoginTokenRequest extends TeaModel {
         return this.regionId;
     }
 
-    public RefreshLoginTokenRequest setSessionId(String sessionId) {
+    public EncryptPasswordRequest setSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
