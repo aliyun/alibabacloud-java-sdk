@@ -8,10 +8,6 @@ public class Logstore extends TeaModel {
     @NameInMap("appendMeta")
     public Boolean appendMeta;
 
-    // archiveSeconds
-    @NameInMap("archiveSeconds")
-    public Integer archiveSeconds;
-
     // auto spilt shard
     @NameInMap("autoSplit")
     public Boolean autoSplit;
@@ -21,8 +17,12 @@ public class Logstore extends TeaModel {
     public Integer createTime;
 
     // enable web tracking
-    @NameInMap("enableTracking")
+    @NameInMap("enable_tracking")
     public Boolean enableTracking;
+
+    // Encrypt configuration
+    @NameInMap("encrypt_conf")
+    public EncryptConf encryptConf;
 
     // last modify time
     @NameInMap("lastModifyTime")
@@ -61,14 +61,6 @@ public class Logstore extends TeaModel {
         return this.appendMeta;
     }
 
-    public Logstore setArchiveSeconds(Integer archiveSeconds) {
-        this.archiveSeconds = archiveSeconds;
-        return this;
-    }
-    public Integer getArchiveSeconds() {
-        return this.archiveSeconds;
-    }
-
     public Logstore setAutoSplit(Boolean autoSplit) {
         this.autoSplit = autoSplit;
         return this;
@@ -91,6 +83,14 @@ public class Logstore extends TeaModel {
     }
     public Boolean getEnableTracking() {
         return this.enableTracking;
+    }
+
+    public Logstore setEncryptConf(EncryptConf encryptConf) {
+        this.encryptConf = encryptConf;
+        return this;
+    }
+    public EncryptConf getEncryptConf() {
+        return this.encryptConf;
     }
 
     public Logstore setLastModifyTime(Integer lastModifyTime) {

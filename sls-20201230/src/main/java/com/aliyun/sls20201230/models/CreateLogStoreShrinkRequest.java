@@ -3,7 +3,7 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateLogStoreRequest extends TeaModel {
+public class CreateLogStoreShrinkRequest extends TeaModel {
     @NameInMap("appendMeta")
     public Boolean appendMeta;
 
@@ -14,7 +14,7 @@ public class UpdateLogStoreRequest extends TeaModel {
     public Boolean enableTracking;
 
     @NameInMap("encrypt_conf")
-    public EncryptConf encryptConf;
+    public String encryptConfShrink;
 
     @NameInMap("logstoreName")
     public String logstoreName;
@@ -28,12 +28,12 @@ public class UpdateLogStoreRequest extends TeaModel {
     @NameInMap("ttl")
     public Integer ttl;
 
-    public static UpdateLogStoreRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateLogStoreRequest self = new UpdateLogStoreRequest();
+    public static CreateLogStoreShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateLogStoreShrinkRequest self = new CreateLogStoreShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateLogStoreRequest setAppendMeta(Boolean appendMeta) {
+    public CreateLogStoreShrinkRequest setAppendMeta(Boolean appendMeta) {
         this.appendMeta = appendMeta;
         return this;
     }
@@ -41,7 +41,7 @@ public class UpdateLogStoreRequest extends TeaModel {
         return this.appendMeta;
     }
 
-    public UpdateLogStoreRequest setAutoSplit(Boolean autoSplit) {
+    public CreateLogStoreShrinkRequest setAutoSplit(Boolean autoSplit) {
         this.autoSplit = autoSplit;
         return this;
     }
@@ -49,7 +49,7 @@ public class UpdateLogStoreRequest extends TeaModel {
         return this.autoSplit;
     }
 
-    public UpdateLogStoreRequest setEnableTracking(Boolean enableTracking) {
+    public CreateLogStoreShrinkRequest setEnableTracking(Boolean enableTracking) {
         this.enableTracking = enableTracking;
         return this;
     }
@@ -57,15 +57,15 @@ public class UpdateLogStoreRequest extends TeaModel {
         return this.enableTracking;
     }
 
-    public UpdateLogStoreRequest setEncryptConf(EncryptConf encryptConf) {
-        this.encryptConf = encryptConf;
+    public CreateLogStoreShrinkRequest setEncryptConfShrink(String encryptConfShrink) {
+        this.encryptConfShrink = encryptConfShrink;
         return this;
     }
-    public EncryptConf getEncryptConf() {
-        return this.encryptConf;
+    public String getEncryptConfShrink() {
+        return this.encryptConfShrink;
     }
 
-    public UpdateLogStoreRequest setLogstoreName(String logstoreName) {
+    public CreateLogStoreShrinkRequest setLogstoreName(String logstoreName) {
         this.logstoreName = logstoreName;
         return this;
     }
@@ -73,7 +73,7 @@ public class UpdateLogStoreRequest extends TeaModel {
         return this.logstoreName;
     }
 
-    public UpdateLogStoreRequest setMaxSplitShard(Integer maxSplitShard) {
+    public CreateLogStoreShrinkRequest setMaxSplitShard(Integer maxSplitShard) {
         this.maxSplitShard = maxSplitShard;
         return this;
     }
@@ -81,7 +81,7 @@ public class UpdateLogStoreRequest extends TeaModel {
         return this.maxSplitShard;
     }
 
-    public UpdateLogStoreRequest setShardCount(Integer shardCount) {
+    public CreateLogStoreShrinkRequest setShardCount(Integer shardCount) {
         this.shardCount = shardCount;
         return this;
     }
@@ -89,7 +89,7 @@ public class UpdateLogStoreRequest extends TeaModel {
         return this.shardCount;
     }
 
-    public UpdateLogStoreRequest setTtl(Integer ttl) {
+    public CreateLogStoreShrinkRequest setTtl(Integer ttl) {
         this.ttl = ttl;
         return this;
     }

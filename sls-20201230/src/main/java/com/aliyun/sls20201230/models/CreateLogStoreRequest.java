@@ -13,6 +13,9 @@ public class CreateLogStoreRequest extends TeaModel {
     @NameInMap("enable_tracking")
     public Boolean enableTracking;
 
+    @NameInMap("encrypt_conf")
+    public EncryptConf encryptConf;
+
     @NameInMap("logstoreName")
     public String logstoreName;
 
@@ -52,6 +55,14 @@ public class CreateLogStoreRequest extends TeaModel {
     }
     public Boolean getEnableTracking() {
         return this.enableTracking;
+    }
+
+    public CreateLogStoreRequest setEncryptConf(EncryptConf encryptConf) {
+        this.encryptConf = encryptConf;
+        return this;
+    }
+    public EncryptConf getEncryptConf() {
+        return this.encryptConf;
     }
 
     public CreateLogStoreRequest setLogstoreName(String logstoreName) {
