@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListDeployedAlgorithmModelsRequest extends TeaModel {
-    @NameInMap("inServiceOnly")
-    public Boolean inServiceOnly;
-
     @NameInMap("algorithmType")
     public String algorithmType;
+
+    @NameInMap("inServiceOnly")
+    public Boolean inServiceOnly;
 
     public static ListDeployedAlgorithmModelsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDeployedAlgorithmModelsRequest self = new ListDeployedAlgorithmModelsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListDeployedAlgorithmModelsRequest setInServiceOnly(Boolean inServiceOnly) {
-        this.inServiceOnly = inServiceOnly;
-        return this;
-    }
-    public Boolean getInServiceOnly() {
-        return this.inServiceOnly;
     }
 
     public ListDeployedAlgorithmModelsRequest setAlgorithmType(String algorithmType) {
@@ -29,6 +21,14 @@ public class ListDeployedAlgorithmModelsRequest extends TeaModel {
     }
     public String getAlgorithmType() {
         return this.algorithmType;
+    }
+
+    public ListDeployedAlgorithmModelsRequest setInServiceOnly(Boolean inServiceOnly) {
+        this.inServiceOnly = inServiceOnly;
+        return this;
+    }
+    public Boolean getInServiceOnly() {
+        return this.inServiceOnly;
     }
 
 }

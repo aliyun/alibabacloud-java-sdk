@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class GetSortScriptFileResponseBody extends TeaModel {
-    @NameInMap("result")
-    public GetSortScriptFileResponseBodyResult result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public GetSortScriptFileResponseBodyResult result;
 
     public static GetSortScriptFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSortScriptFileResponseBody self = new GetSortScriptFileResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetSortScriptFileResponseBody setResult(GetSortScriptFileResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public GetSortScriptFileResponseBodyResult getResult() {
-        return this.result;
     }
 
     public GetSortScriptFileResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class GetSortScriptFileResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetSortScriptFileResponseBody setResult(GetSortScriptFileResponseBodyResult result) {
+        this.result = result;
+        return this;
+    }
+    public GetSortScriptFileResponseBodyResult getResult() {
+        return this.result;
     }
 
     public static class GetSortScriptFileResponseBodyResult extends TeaModel {

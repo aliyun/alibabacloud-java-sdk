@@ -4,8 +4,8 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListStatisticReportRequest extends TeaModel {
-    @NameInMap("startTime")
-    public Integer startTime;
+    @NameInMap("columns")
+    public String columns;
 
     @NameInMap("endTime")
     public Integer endTime;
@@ -16,23 +16,23 @@ public class ListStatisticReportRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    @NameInMap("columns")
-    public String columns;
-
     @NameInMap("query")
     public String query;
+
+    @NameInMap("startTime")
+    public Integer startTime;
 
     public static ListStatisticReportRequest build(java.util.Map<String, ?> map) throws Exception {
         ListStatisticReportRequest self = new ListStatisticReportRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListStatisticReportRequest setStartTime(Integer startTime) {
-        this.startTime = startTime;
+    public ListStatisticReportRequest setColumns(String columns) {
+        this.columns = columns;
         return this;
     }
-    public Integer getStartTime() {
-        return this.startTime;
+    public String getColumns() {
+        return this.columns;
     }
 
     public ListStatisticReportRequest setEndTime(Integer endTime) {
@@ -59,20 +59,20 @@ public class ListStatisticReportRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListStatisticReportRequest setColumns(String columns) {
-        this.columns = columns;
-        return this;
-    }
-    public String getColumns() {
-        return this.columns;
-    }
-
     public ListStatisticReportRequest setQuery(String query) {
         this.query = query;
         return this;
     }
     public String getQuery() {
         return this.query;
+    }
+
+    public ListStatisticReportRequest setStartTime(Integer startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Integer getStartTime() {
+        return this.startTime;
     }
 
 }

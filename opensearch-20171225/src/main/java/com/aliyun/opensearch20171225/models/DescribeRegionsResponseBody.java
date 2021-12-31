@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("result")
-    public java.util.List<DescribeRegionsResponseBodyResult> result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public java.util.List<DescribeRegionsResponseBodyResult> result;
 
     public static DescribeRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsResponseBody self = new DescribeRegionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRegionsResponseBody setResult(java.util.List<DescribeRegionsResponseBodyResult> result) {
-        this.result = result;
-        return this;
-    }
-    public java.util.List<DescribeRegionsResponseBodyResult> getResult() {
-        return this.result;
     }
 
     public DescribeRegionsResponseBody setRequestId(String requestId) {
@@ -31,9 +23,17 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeRegionsResponseBody setResult(java.util.List<DescribeRegionsResponseBodyResult> result) {
+        this.result = result;
+        return this;
+    }
+    public java.util.List<DescribeRegionsResponseBodyResult> getResult() {
+        return this.result;
+    }
+
     public static class DescribeRegionsResponseBodyResult extends TeaModel {
-        @NameInMap("regionId")
-        public String regionId;
+        @NameInMap("consoleUrl")
+        public String consoleUrl;
 
         @NameInMap("endpoint")
         public String endpoint;
@@ -41,20 +41,20 @@ public class DescribeRegionsResponseBody extends TeaModel {
         @NameInMap("localName")
         public String localName;
 
-        @NameInMap("consoleUrl")
-        public String consoleUrl;
+        @NameInMap("regionId")
+        public String regionId;
 
         public static DescribeRegionsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyResult self = new DescribeRegionsResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public DescribeRegionsResponseBodyResult setRegionId(String regionId) {
-            this.regionId = regionId;
+        public DescribeRegionsResponseBodyResult setConsoleUrl(String consoleUrl) {
+            this.consoleUrl = consoleUrl;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
+        public String getConsoleUrl() {
+            return this.consoleUrl;
         }
 
         public DescribeRegionsResponseBodyResult setEndpoint(String endpoint) {
@@ -73,12 +73,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
             return this.localName;
         }
 
-        public DescribeRegionsResponseBodyResult setConsoleUrl(String consoleUrl) {
-            this.consoleUrl = consoleUrl;
+        public DescribeRegionsResponseBodyResult setRegionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
-        public String getConsoleUrl() {
-            return this.consoleUrl;
+        public String getRegionId() {
+            return this.regionId;
         }
 
     }

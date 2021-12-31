@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class RemoveFirstRankResponseBody extends TeaModel {
-    @NameInMap("result")
-    public RemoveFirstRankResponseBodyResult result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public RemoveFirstRankResponseBodyResult result;
 
     public static RemoveFirstRankResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemoveFirstRankResponseBody self = new RemoveFirstRankResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveFirstRankResponseBody setResult(RemoveFirstRankResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public RemoveFirstRankResponseBodyResult getResult() {
-        return this.result;
     }
 
     public RemoveFirstRankResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class RemoveFirstRankResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public RemoveFirstRankResponseBody setResult(RemoveFirstRankResponseBodyResult result) {
+        this.result = result;
+        return this;
+    }
+    public RemoveFirstRankResponseBodyResult getResult() {
+        return this.result;
     }
 
     public static class RemoveFirstRankResponseBodyResultMeta extends TeaModel {
@@ -79,11 +79,11 @@ public class RemoveFirstRankResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
-        @NameInMap("name")
-        public String name;
-
         @NameInMap("meta")
         public java.util.List<RemoveFirstRankResponseBodyResultMeta> meta;
+
+        @NameInMap("name")
+        public String name;
 
         public static RemoveFirstRankResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             RemoveFirstRankResponseBodyResult self = new RemoveFirstRankResponseBodyResult();
@@ -106,20 +106,20 @@ public class RemoveFirstRankResponseBody extends TeaModel {
             return this.description;
         }
 
-        public RemoveFirstRankResponseBodyResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public RemoveFirstRankResponseBodyResult setMeta(java.util.List<RemoveFirstRankResponseBodyResultMeta> meta) {
             this.meta = meta;
             return this;
         }
         public java.util.List<RemoveFirstRankResponseBodyResultMeta> getMeta() {
             return this.meta;
+        }
+
+        public RemoveFirstRankResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

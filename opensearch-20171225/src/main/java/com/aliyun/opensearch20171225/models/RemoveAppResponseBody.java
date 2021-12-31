@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class RemoveAppResponseBody extends TeaModel {
-    @NameInMap("result")
-    public java.util.List<Integer> result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public java.util.List<Integer> result;
 
     public static RemoveAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemoveAppResponseBody self = new RemoveAppResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveAppResponseBody setResult(java.util.List<Integer> result) {
-        this.result = result;
-        return this;
-    }
-    public java.util.List<Integer> getResult() {
-        return this.result;
     }
 
     public RemoveAppResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class RemoveAppResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public RemoveAppResponseBody setResult(java.util.List<Integer> result) {
+        this.result = result;
+        return this;
+    }
+    public java.util.List<Integer> getResult() {
+        return this.result;
     }
 
 }

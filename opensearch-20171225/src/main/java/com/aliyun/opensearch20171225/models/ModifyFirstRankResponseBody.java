@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ModifyFirstRankResponseBody extends TeaModel {
-    @NameInMap("result")
-    public ModifyFirstRankResponseBodyResult result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public ModifyFirstRankResponseBodyResult result;
 
     public static ModifyFirstRankResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyFirstRankResponseBody self = new ModifyFirstRankResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyFirstRankResponseBody setResult(ModifyFirstRankResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public ModifyFirstRankResponseBodyResult getResult() {
-        return this.result;
     }
 
     public ModifyFirstRankResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class ModifyFirstRankResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ModifyFirstRankResponseBody setResult(ModifyFirstRankResponseBodyResult result) {
+        this.result = result;
+        return this;
+    }
+    public ModifyFirstRankResponseBodyResult getResult() {
+        return this.result;
     }
 
     public static class ModifyFirstRankResponseBodyResultMeta extends TeaModel {
@@ -79,11 +79,11 @@ public class ModifyFirstRankResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
-        @NameInMap("name")
-        public String name;
-
         @NameInMap("meta")
         public java.util.List<ModifyFirstRankResponseBodyResultMeta> meta;
+
+        @NameInMap("name")
+        public String name;
 
         public static ModifyFirstRankResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ModifyFirstRankResponseBodyResult self = new ModifyFirstRankResponseBodyResult();
@@ -106,20 +106,20 @@ public class ModifyFirstRankResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ModifyFirstRankResponseBodyResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public ModifyFirstRankResponseBodyResult setMeta(java.util.List<ModifyFirstRankResponseBodyResultMeta> meta) {
             this.meta = meta;
             return this;
         }
         public java.util.List<ModifyFirstRankResponseBodyResultMeta> getMeta() {
             return this.meta;
+        }
+
+        public ModifyFirstRankResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

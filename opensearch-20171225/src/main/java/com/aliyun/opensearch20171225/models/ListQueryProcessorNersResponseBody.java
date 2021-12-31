@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListQueryProcessorNersResponseBody extends TeaModel {
-    @NameInMap("result")
-    public java.util.List<ListQueryProcessorNersResponseBodyResult> result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public java.util.List<ListQueryProcessorNersResponseBodyResult> result;
 
     public static ListQueryProcessorNersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListQueryProcessorNersResponseBody self = new ListQueryProcessorNersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListQueryProcessorNersResponseBody setResult(java.util.List<ListQueryProcessorNersResponseBodyResult> result) {
-        this.result = result;
-        return this;
-    }
-    public java.util.List<ListQueryProcessorNersResponseBodyResult> getResult() {
-        return this.result;
     }
 
     public ListQueryProcessorNersResponseBody setRequestId(String requestId) {
@@ -31,18 +23,26 @@ public class ListQueryProcessorNersResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListQueryProcessorNersResponseBody setResult(java.util.List<ListQueryProcessorNersResponseBodyResult> result) {
+        this.result = result;
+        return this;
+    }
+    public java.util.List<ListQueryProcessorNersResponseBodyResult> getResult() {
+        return this.result;
+    }
+
     public static class ListQueryProcessorNersResponseBodyResult extends TeaModel {
         @NameInMap("label")
         public String label;
-
-        @NameInMap("tag")
-        public String tag;
 
         @NameInMap("order")
         public Integer order;
 
         @NameInMap("priority")
         public String priority;
+
+        @NameInMap("tag")
+        public String tag;
 
         public static ListQueryProcessorNersResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListQueryProcessorNersResponseBodyResult self = new ListQueryProcessorNersResponseBodyResult();
@@ -55,14 +55,6 @@ public class ListQueryProcessorNersResponseBody extends TeaModel {
         }
         public String getLabel() {
             return this.label;
-        }
-
-        public ListQueryProcessorNersResponseBodyResult setTag(String tag) {
-            this.tag = tag;
-            return this;
-        }
-        public String getTag() {
-            return this.tag;
         }
 
         public ListQueryProcessorNersResponseBodyResult setOrder(Integer order) {
@@ -79,6 +71,14 @@ public class ListQueryProcessorNersResponseBody extends TeaModel {
         }
         public String getPriority() {
             return this.priority;
+        }
+
+        public ListQueryProcessorNersResponseBodyResult setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
         }
 
     }

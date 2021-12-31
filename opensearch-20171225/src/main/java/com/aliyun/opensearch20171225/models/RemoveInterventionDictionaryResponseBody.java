@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class RemoveInterventionDictionaryResponseBody extends TeaModel {
-    @NameInMap("result")
-    public RemoveInterventionDictionaryResponseBodyResult result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public RemoveInterventionDictionaryResponseBodyResult result;
 
     public static RemoveInterventionDictionaryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemoveInterventionDictionaryResponseBody self = new RemoveInterventionDictionaryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveInterventionDictionaryResponseBody setResult(RemoveInterventionDictionaryResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public RemoveInterventionDictionaryResponseBodyResult getResult() {
-        return this.result;
     }
 
     public RemoveInterventionDictionaryResponseBody setRequestId(String requestId) {
@@ -31,41 +23,33 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public RemoveInterventionDictionaryResponseBody setResult(RemoveInterventionDictionaryResponseBodyResult result) {
+        this.result = result;
+        return this;
+    }
+    public RemoveInterventionDictionaryResponseBodyResult getResult() {
+        return this.result;
+    }
+
     public static class RemoveInterventionDictionaryResponseBodyResult extends TeaModel {
-        @NameInMap("created")
-        public String created;
-
-        @NameInMap("type")
-        public String type;
-
         @NameInMap("analyzer")
         public String analyzer;
 
-        @NameInMap("updated")
-        public String updated;
+        @NameInMap("created")
+        public String created;
 
         @NameInMap("name")
         public String name;
 
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("updated")
+        public String updated;
+
         public static RemoveInterventionDictionaryResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             RemoveInterventionDictionaryResponseBodyResult self = new RemoveInterventionDictionaryResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public RemoveInterventionDictionaryResponseBodyResult setCreated(String created) {
-            this.created = created;
-            return this;
-        }
-        public String getCreated() {
-            return this.created;
-        }
-
-        public RemoveInterventionDictionaryResponseBodyResult setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public RemoveInterventionDictionaryResponseBodyResult setAnalyzer(String analyzer) {
@@ -76,12 +60,12 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
             return this.analyzer;
         }
 
-        public RemoveInterventionDictionaryResponseBodyResult setUpdated(String updated) {
-            this.updated = updated;
+        public RemoveInterventionDictionaryResponseBodyResult setCreated(String created) {
+            this.created = created;
             return this;
         }
-        public String getUpdated() {
-            return this.updated;
+        public String getCreated() {
+            return this.created;
         }
 
         public RemoveInterventionDictionaryResponseBodyResult setName(String name) {
@@ -90,6 +74,22 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public RemoveInterventionDictionaryResponseBodyResult setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public RemoveInterventionDictionaryResponseBodyResult setUpdated(String updated) {
+            this.updated = updated;
+            return this;
+        }
+        public String getUpdated() {
+            return this.updated;
         }
 
     }

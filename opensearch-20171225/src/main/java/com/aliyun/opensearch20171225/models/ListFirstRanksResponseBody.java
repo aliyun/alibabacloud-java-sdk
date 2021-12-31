@@ -4,23 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListFirstRanksResponseBody extends TeaModel {
-    @NameInMap("result")
-    public java.util.List<ListFirstRanksResponseBodyResult> result;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("result")
+    public java.util.List<ListFirstRanksResponseBodyResult> result;
 
     public static ListFirstRanksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListFirstRanksResponseBody self = new ListFirstRanksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListFirstRanksResponseBody setResult(java.util.List<ListFirstRanksResponseBodyResult> result) {
-        this.result = result;
-        return this;
-    }
-    public java.util.List<ListFirstRanksResponseBodyResult> getResult() {
-        return this.result;
     }
 
     public ListFirstRanksResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class ListFirstRanksResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListFirstRanksResponseBody setResult(java.util.List<ListFirstRanksResponseBodyResult> result) {
+        this.result = result;
+        return this;
+    }
+    public java.util.List<ListFirstRanksResponseBodyResult> getResult() {
+        return this.result;
     }
 
     public static class ListFirstRanksResponseBodyResultMeta extends TeaModel {
@@ -73,35 +73,27 @@ public class ListFirstRanksResponseBody extends TeaModel {
     }
 
     public static class ListFirstRanksResponseBodyResult extends TeaModel {
-        @NameInMap("created")
-        public Integer created;
-
         @NameInMap("active")
         public Boolean active;
+
+        @NameInMap("created")
+        public Integer created;
 
         @NameInMap("description")
         public String description;
 
-        @NameInMap("updated")
-        public Integer updated;
+        @NameInMap("meta")
+        public java.util.List<ListFirstRanksResponseBodyResultMeta> meta;
 
         @NameInMap("name")
         public String name;
 
-        @NameInMap("meta")
-        public java.util.List<ListFirstRanksResponseBodyResultMeta> meta;
+        @NameInMap("updated")
+        public Integer updated;
 
         public static ListFirstRanksResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListFirstRanksResponseBodyResult self = new ListFirstRanksResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public ListFirstRanksResponseBodyResult setCreated(Integer created) {
-            this.created = created;
-            return this;
-        }
-        public Integer getCreated() {
-            return this.created;
         }
 
         public ListFirstRanksResponseBodyResult setActive(Boolean active) {
@@ -112,6 +104,14 @@ public class ListFirstRanksResponseBody extends TeaModel {
             return this.active;
         }
 
+        public ListFirstRanksResponseBodyResult setCreated(Integer created) {
+            this.created = created;
+            return this;
+        }
+        public Integer getCreated() {
+            return this.created;
+        }
+
         public ListFirstRanksResponseBodyResult setDescription(String description) {
             this.description = description;
             return this;
@@ -120,12 +120,12 @@ public class ListFirstRanksResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListFirstRanksResponseBodyResult setUpdated(Integer updated) {
-            this.updated = updated;
+        public ListFirstRanksResponseBodyResult setMeta(java.util.List<ListFirstRanksResponseBodyResultMeta> meta) {
+            this.meta = meta;
             return this;
         }
-        public Integer getUpdated() {
-            return this.updated;
+        public java.util.List<ListFirstRanksResponseBodyResultMeta> getMeta() {
+            return this.meta;
         }
 
         public ListFirstRanksResponseBodyResult setName(String name) {
@@ -136,12 +136,12 @@ public class ListFirstRanksResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListFirstRanksResponseBodyResult setMeta(java.util.List<ListFirstRanksResponseBodyResultMeta> meta) {
-            this.meta = meta;
+        public ListFirstRanksResponseBodyResult setUpdated(Integer updated) {
+            this.updated = updated;
             return this;
         }
-        public java.util.List<ListFirstRanksResponseBodyResultMeta> getMeta() {
-            return this.meta;
+        public Integer getUpdated() {
+            return this.updated;
         }
 
     }
