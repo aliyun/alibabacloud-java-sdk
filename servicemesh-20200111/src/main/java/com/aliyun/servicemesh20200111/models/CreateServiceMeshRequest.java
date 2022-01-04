@@ -130,9 +130,6 @@ public class CreateServiceMeshRequest extends TeaModel {
     @NameInMap("OpenAgentPolicy")
     public Boolean openAgentPolicy;
 
-    @NameInMap("PilotPublicEip")
-    public Boolean pilotPublicEip;
-
     @NameInMap("PrometheusUrl")
     public String prometheusUrl;
 
@@ -514,14 +511,6 @@ public class CreateServiceMeshRequest extends TeaModel {
     }
     public Boolean getOpenAgentPolicy() {
         return this.openAgentPolicy;
-    }
-
-    public CreateServiceMeshRequest setPilotPublicEip(Boolean pilotPublicEip) {
-        this.pilotPublicEip = pilotPublicEip;
-        return this;
-    }
-    public Boolean getPilotPublicEip() {
-        return this.pilotPublicEip;
     }
 
     public CreateServiceMeshRequest setPrometheusUrl(String prometheusUrl) {
