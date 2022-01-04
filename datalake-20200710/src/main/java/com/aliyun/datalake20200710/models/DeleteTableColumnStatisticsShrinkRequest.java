@@ -8,6 +8,9 @@ public class DeleteTableColumnStatisticsShrinkRequest extends TeaModel {
     @NameInMap("CatalogId")
     public String catalogId;
 
+    @NameInMap("ColumnNames")
+    public String columnNamesShrink;
+
     // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
@@ -15,9 +18,6 @@ public class DeleteTableColumnStatisticsShrinkRequest extends TeaModel {
     // TableName
     @NameInMap("TableName")
     public String tableName;
-
-    @NameInMap("ColumnNames")
-    public String columnNamesShrink;
 
     public static DeleteTableColumnStatisticsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteTableColumnStatisticsShrinkRequest self = new DeleteTableColumnStatisticsShrinkRequest();
@@ -30,6 +30,14 @@ public class DeleteTableColumnStatisticsShrinkRequest extends TeaModel {
     }
     public String getCatalogId() {
         return this.catalogId;
+    }
+
+    public DeleteTableColumnStatisticsShrinkRequest setColumnNamesShrink(String columnNamesShrink) {
+        this.columnNamesShrink = columnNamesShrink;
+        return this;
+    }
+    public String getColumnNamesShrink() {
+        return this.columnNamesShrink;
     }
 
     public DeleteTableColumnStatisticsShrinkRequest setDatabaseName(String databaseName) {
@@ -46,14 +54,6 @@ public class DeleteTableColumnStatisticsShrinkRequest extends TeaModel {
     }
     public String getTableName() {
         return this.tableName;
-    }
-
-    public DeleteTableColumnStatisticsShrinkRequest setColumnNamesShrink(String columnNamesShrink) {
-        this.columnNamesShrink = columnNamesShrink;
-        return this;
-    }
-    public String getColumnNamesShrink() {
-        return this.columnNamesShrink;
     }
 
 }

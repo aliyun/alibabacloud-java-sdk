@@ -8,19 +8,19 @@ public class DeletePartitionColumnStatisticsShrinkRequest extends TeaModel {
     @NameInMap("CatalogId")
     public String catalogId;
 
+    @NameInMap("ColumnNames")
+    public String columnNamesShrink;
+
     // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // TableName
-    @NameInMap("TableName")
-    public String tableName;
-
     @NameInMap("PartitionNames")
     public String partitionNamesShrink;
 
-    @NameInMap("ColumnNames")
-    public String columnNamesShrink;
+    // TableName
+    @NameInMap("TableName")
+    public String tableName;
 
     public static DeletePartitionColumnStatisticsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DeletePartitionColumnStatisticsShrinkRequest self = new DeletePartitionColumnStatisticsShrinkRequest();
@@ -35,20 +35,20 @@ public class DeletePartitionColumnStatisticsShrinkRequest extends TeaModel {
         return this.catalogId;
     }
 
+    public DeletePartitionColumnStatisticsShrinkRequest setColumnNamesShrink(String columnNamesShrink) {
+        this.columnNamesShrink = columnNamesShrink;
+        return this;
+    }
+    public String getColumnNamesShrink() {
+        return this.columnNamesShrink;
+    }
+
     public DeletePartitionColumnStatisticsShrinkRequest setDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
     }
     public String getDatabaseName() {
         return this.databaseName;
-    }
-
-    public DeletePartitionColumnStatisticsShrinkRequest setTableName(String tableName) {
-        this.tableName = tableName;
-        return this;
-    }
-    public String getTableName() {
-        return this.tableName;
     }
 
     public DeletePartitionColumnStatisticsShrinkRequest setPartitionNamesShrink(String partitionNamesShrink) {
@@ -59,12 +59,12 @@ public class DeletePartitionColumnStatisticsShrinkRequest extends TeaModel {
         return this.partitionNamesShrink;
     }
 
-    public DeletePartitionColumnStatisticsShrinkRequest setColumnNamesShrink(String columnNamesShrink) {
-        this.columnNamesShrink = columnNamesShrink;
+    public DeletePartitionColumnStatisticsShrinkRequest setTableName(String tableName) {
+        this.tableName = tableName;
         return this;
     }
-    public String getColumnNamesShrink() {
-        return this.columnNamesShrink;
+    public String getTableName() {
+        return this.tableName;
     }
 
 }

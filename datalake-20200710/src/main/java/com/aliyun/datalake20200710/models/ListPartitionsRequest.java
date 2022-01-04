@@ -12,6 +12,10 @@ public class ListPartitionsRequest extends TeaModel {
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    // IsShareSd
+    @NameInMap("IsShareSd")
+    public Boolean isShareSd;
+
     // NextPageToken
     @NameInMap("NextPageToken")
     public String nextPageToken;
@@ -46,6 +50,14 @@ public class ListPartitionsRequest extends TeaModel {
     }
     public String getDatabaseName() {
         return this.databaseName;
+    }
+
+    public ListPartitionsRequest setIsShareSd(Boolean isShareSd) {
+        this.isShareSd = isShareSd;
+        return this;
+    }
+    public Boolean getIsShareSd() {
+        return this.isShareSd;
     }
 
     public ListPartitionsRequest setNextPageToken(String nextPageToken) {

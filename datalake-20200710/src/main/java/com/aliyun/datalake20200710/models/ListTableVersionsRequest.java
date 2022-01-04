@@ -12,10 +12,6 @@ public class ListTableVersionsRequest extends TeaModel {
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // TableName
-    @NameInMap("TableName")
-    public String tableName;
-
     // NextPageToken
     @NameInMap("NextPageToken")
     public String nextPageToken;
@@ -23,6 +19,10 @@ public class ListTableVersionsRequest extends TeaModel {
     // max result of this query
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    // TableName
+    @NameInMap("TableName")
+    public String tableName;
 
     public static ListTableVersionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTableVersionsRequest self = new ListTableVersionsRequest();
@@ -45,14 +45,6 @@ public class ListTableVersionsRequest extends TeaModel {
         return this.databaseName;
     }
 
-    public ListTableVersionsRequest setTableName(String tableName) {
-        this.tableName = tableName;
-        return this;
-    }
-    public String getTableName() {
-        return this.tableName;
-    }
-
     public ListTableVersionsRequest setNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -67,6 +59,14 @@ public class ListTableVersionsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListTableVersionsRequest setTableName(String tableName) {
+        this.tableName = tableName;
+        return this;
+    }
+    public String getTableName() {
+        return this.tableName;
     }
 
 }

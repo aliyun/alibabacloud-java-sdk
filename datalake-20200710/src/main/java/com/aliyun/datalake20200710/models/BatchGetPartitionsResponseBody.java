@@ -16,6 +16,10 @@ public class BatchGetPartitionsResponseBody extends TeaModel {
     @NameInMap("PartitionErrors")
     public java.util.List<PartitionError> partitionErrors;
 
+    // PartitionSpecs
+    @NameInMap("PartitionSpecs")
+    public java.util.List<PartitionSpec> partitionSpecs;
+
     // Partitions
     @NameInMap("Partitions")
     public java.util.List<Partition> partitions;
@@ -55,6 +59,14 @@ public class BatchGetPartitionsResponseBody extends TeaModel {
     }
     public java.util.List<PartitionError> getPartitionErrors() {
         return this.partitionErrors;
+    }
+
+    public BatchGetPartitionsResponseBody setPartitionSpecs(java.util.List<PartitionSpec> partitionSpecs) {
+        this.partitionSpecs = partitionSpecs;
+        return this;
+    }
+    public java.util.List<PartitionSpec> getPartitionSpecs() {
+        return this.partitionSpecs;
     }
 
     public BatchGetPartitionsResponseBody setPartitions(java.util.List<Partition> partitions) {

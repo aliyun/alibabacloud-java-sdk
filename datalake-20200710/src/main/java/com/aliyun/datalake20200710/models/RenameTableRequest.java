@@ -12,6 +12,10 @@ public class RenameTableRequest extends TeaModel {
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    // IsAsync
+    @NameInMap("IsAsync")
+    public Boolean isAsync;
+
     @NameInMap("TableInput")
     public TableInput tableInput;
 
@@ -38,6 +42,14 @@ public class RenameTableRequest extends TeaModel {
     }
     public String getDatabaseName() {
         return this.databaseName;
+    }
+
+    public RenameTableRequest setIsAsync(Boolean isAsync) {
+        this.isAsync = isAsync;
+        return this;
+    }
+    public Boolean getIsAsync() {
+        return this.isAsync;
     }
 
     public RenameTableRequest setTableInput(TableInput tableInput) {

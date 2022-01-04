@@ -8,13 +8,13 @@ public class ColumnStatisticsObj extends TeaModel {
     @NameInMap("ColumnName")
     public String columnName;
 
-    // ColumnType
-    @NameInMap("ColumnType")
-    public String columnType;
-
     // ColumnStatisticsData
     @NameInMap("ColumnStatisticsData")
     public ColumnStatisticsObjColumnStatisticsData columnStatisticsData;
+
+    // ColumnType
+    @NameInMap("ColumnType")
+    public String columnType;
 
     public static ColumnStatisticsObj build(java.util.Map<String, ?> map) throws Exception {
         ColumnStatisticsObj self = new ColumnStatisticsObj();
@@ -29,20 +29,20 @@ public class ColumnStatisticsObj extends TeaModel {
         return this.columnName;
     }
 
-    public ColumnStatisticsObj setColumnType(String columnType) {
-        this.columnType = columnType;
-        return this;
-    }
-    public String getColumnType() {
-        return this.columnType;
-    }
-
     public ColumnStatisticsObj setColumnStatisticsData(ColumnStatisticsObjColumnStatisticsData columnStatisticsData) {
         this.columnStatisticsData = columnStatisticsData;
         return this;
     }
     public ColumnStatisticsObjColumnStatisticsData getColumnStatisticsData() {
         return this.columnStatisticsData;
+    }
+
+    public ColumnStatisticsObj setColumnType(String columnType) {
+        this.columnType = columnType;
+        return this;
+    }
+    public String getColumnType() {
+        return this.columnType;
     }
 
     public static class ColumnStatisticsObjColumnStatisticsData extends TeaModel {

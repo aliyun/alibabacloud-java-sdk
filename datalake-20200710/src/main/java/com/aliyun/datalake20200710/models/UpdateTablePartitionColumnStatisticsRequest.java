@@ -20,6 +20,10 @@ public class UpdateTablePartitionColumnStatisticsRequest extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
+    // IsStatsCompliant
+    @NameInMap("IsStatsCompliant")
+    public Boolean isStatsCompliant;
+
     // TableName
     @NameInMap("TableName")
     public String tableName;
@@ -31,10 +35,6 @@ public class UpdateTablePartitionColumnStatisticsRequest extends TeaModel {
     // WriteId, optional
     @NameInMap("WriteId")
     public String writeId;
-
-    // IsStatsCompliant
-    @NameInMap("IsStatsCompliant")
-    public Boolean isStatsCompliant;
 
     public static UpdateTablePartitionColumnStatisticsRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTablePartitionColumnStatisticsRequest self = new UpdateTablePartitionColumnStatisticsRequest();
@@ -73,6 +73,14 @@ public class UpdateTablePartitionColumnStatisticsRequest extends TeaModel {
         return this.engine;
     }
 
+    public UpdateTablePartitionColumnStatisticsRequest setIsStatsCompliant(Boolean isStatsCompliant) {
+        this.isStatsCompliant = isStatsCompliant;
+        return this;
+    }
+    public Boolean getIsStatsCompliant() {
+        return this.isStatsCompliant;
+    }
+
     public UpdateTablePartitionColumnStatisticsRequest setTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -95,14 +103,6 @@ public class UpdateTablePartitionColumnStatisticsRequest extends TeaModel {
     }
     public String getWriteId() {
         return this.writeId;
-    }
-
-    public UpdateTablePartitionColumnStatisticsRequest setIsStatsCompliant(Boolean isStatsCompliant) {
-        this.isStatsCompliant = isStatsCompliant;
-        return this;
-    }
-    public Boolean getIsStatsCompliant() {
-        return this.isStatsCompliant;
     }
 
 }

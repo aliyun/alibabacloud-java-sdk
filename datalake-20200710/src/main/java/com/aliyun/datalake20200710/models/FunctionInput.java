@@ -8,6 +8,10 @@ public class FunctionInput extends TeaModel {
     @NameInMap("ClassName")
     public String className;
 
+    // createTime
+    @NameInMap("CreateTime")
+    public Integer createTime;
+
     // FunctionName
     @NameInMap("FunctionName")
     public String functionName;
@@ -39,6 +43,14 @@ public class FunctionInput extends TeaModel {
     }
     public String getClassName() {
         return this.className;
+    }
+
+    public FunctionInput setCreateTime(Integer createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public Integer getCreateTime() {
+        return this.createTime;
     }
 
     public FunctionInput setFunctionName(String functionName) {
