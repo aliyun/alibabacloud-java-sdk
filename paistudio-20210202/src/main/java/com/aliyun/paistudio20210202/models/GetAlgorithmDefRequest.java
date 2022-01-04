@@ -4,14 +4,14 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetAlgorithmDefRequest extends TeaModel {
-    @NameInMap("Provider")
-    public String provider;
+    @NameInMap("AlgoVersion")
+    public String algoVersion;
 
     @NameInMap("Identifier")
     public String identifier;
 
-    @NameInMap("AlgoVersion")
-    public String algoVersion;
+    @NameInMap("Provider")
+    public String provider;
 
     @NameInMap("Signature")
     public String signature;
@@ -21,12 +21,12 @@ public class GetAlgorithmDefRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetAlgorithmDefRequest setProvider(String provider) {
-        this.provider = provider;
+    public GetAlgorithmDefRequest setAlgoVersion(String algoVersion) {
+        this.algoVersion = algoVersion;
         return this;
     }
-    public String getProvider() {
-        return this.provider;
+    public String getAlgoVersion() {
+        return this.algoVersion;
     }
 
     public GetAlgorithmDefRequest setIdentifier(String identifier) {
@@ -37,12 +37,12 @@ public class GetAlgorithmDefRequest extends TeaModel {
         return this.identifier;
     }
 
-    public GetAlgorithmDefRequest setAlgoVersion(String algoVersion) {
-        this.algoVersion = algoVersion;
+    public GetAlgorithmDefRequest setProvider(String provider) {
+        this.provider = provider;
         return this;
     }
-    public String getAlgoVersion() {
-        return this.algoVersion;
+    public String getProvider() {
+        return this.provider;
     }
 
     public GetAlgorithmDefRequest setSignature(String signature) {

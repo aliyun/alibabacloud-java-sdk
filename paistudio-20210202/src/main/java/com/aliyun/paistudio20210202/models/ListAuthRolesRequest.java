@@ -4,23 +4,15 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class ListAuthRolesRequest extends TeaModel {
-    @NameInMap("WorkspaceId")
-    public String workspaceId;
-
     @NameInMap("IsGenerateToken")
     public String isGenerateToken;
+
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static ListAuthRolesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAuthRolesRequest self = new ListAuthRolesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListAuthRolesRequest setWorkspaceId(String workspaceId) {
-        this.workspaceId = workspaceId;
-        return this;
-    }
-    public String getWorkspaceId() {
-        return this.workspaceId;
     }
 
     public ListAuthRolesRequest setIsGenerateToken(String isGenerateToken) {
@@ -29,6 +21,14 @@ public class ListAuthRolesRequest extends TeaModel {
     }
     public String getIsGenerateToken() {
         return this.isGenerateToken;
+    }
+
+    public ListAuthRolesRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

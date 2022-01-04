@@ -4,25 +4,17 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class AddImageResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("requestId")
-    public String requestId;
-
     // 镜像 id
     @NameInMap("ImageId")
     public String imageId;
 
+    // Id of the request
+    @NameInMap("requestId")
+    public String requestId;
+
     public static AddImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddImageResponseBody self = new AddImageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AddImageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AddImageResponseBody setImageId(String imageId) {
@@ -31,6 +23,14 @@ public class AddImageResponseBody extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public AddImageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

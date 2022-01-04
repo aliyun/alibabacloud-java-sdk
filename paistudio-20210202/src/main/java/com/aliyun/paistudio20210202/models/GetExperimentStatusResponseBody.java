@@ -4,6 +4,9 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetExperimentStatusResponseBody extends TeaModel {
+    @NameInMap("Nodes")
+    public java.util.List<GetExperimentStatusResponseBodyNodes> nodes;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,12 +14,17 @@ public class GetExperimentStatusResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("Nodes")
-    public java.util.List<GetExperimentStatusResponseBodyNodes> nodes;
-
     public static GetExperimentStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetExperimentStatusResponseBody self = new GetExperimentStatusResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetExperimentStatusResponseBody setNodes(java.util.List<GetExperimentStatusResponseBodyNodes> nodes) {
+        this.nodes = nodes;
+        return this;
+    }
+    public java.util.List<GetExperimentStatusResponseBodyNodes> getNodes() {
+        return this.nodes;
     }
 
     public GetExperimentStatusResponseBody setRequestId(String requestId) {
@@ -35,20 +43,15 @@ public class GetExperimentStatusResponseBody extends TeaModel {
         return this.status;
     }
 
-    public GetExperimentStatusResponseBody setNodes(java.util.List<GetExperimentStatusResponseBodyNodes> nodes) {
-        this.nodes = nodes;
-        return this;
-    }
-    public java.util.List<GetExperimentStatusResponseBodyNodes> getNodes() {
-        return this.nodes;
-    }
-
     public static class GetExperimentStatusResponseBodyNodes extends TeaModel {
-        @NameInMap("NodeId")
-        public String nodeId;
+        @NameInMap("FinishedAt")
+        public String finishedAt;
 
         @NameInMap("JobId")
         public String jobId;
+
+        @NameInMap("NodeId")
+        public String nodeId;
 
         @NameInMap("RunId")
         public String runId;
@@ -56,26 +59,23 @@ public class GetExperimentStatusResponseBody extends TeaModel {
         @NameInMap("RunNodeId")
         public String runNodeId;
 
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("StartedAt")
         public String startedAt;
 
-        @NameInMap("FinishedAt")
-        public String finishedAt;
+        @NameInMap("Status")
+        public String status;
 
         public static GetExperimentStatusResponseBodyNodes build(java.util.Map<String, ?> map) throws Exception {
             GetExperimentStatusResponseBodyNodes self = new GetExperimentStatusResponseBodyNodes();
             return TeaModel.build(map, self);
         }
 
-        public GetExperimentStatusResponseBodyNodes setNodeId(String nodeId) {
-            this.nodeId = nodeId;
+        public GetExperimentStatusResponseBodyNodes setFinishedAt(String finishedAt) {
+            this.finishedAt = finishedAt;
             return this;
         }
-        public String getNodeId() {
-            return this.nodeId;
+        public String getFinishedAt() {
+            return this.finishedAt;
         }
 
         public GetExperimentStatusResponseBodyNodes setJobId(String jobId) {
@@ -84,6 +84,14 @@ public class GetExperimentStatusResponseBody extends TeaModel {
         }
         public String getJobId() {
             return this.jobId;
+        }
+
+        public GetExperimentStatusResponseBodyNodes setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
         }
 
         public GetExperimentStatusResponseBodyNodes setRunId(String runId) {
@@ -102,14 +110,6 @@ public class GetExperimentStatusResponseBody extends TeaModel {
             return this.runNodeId;
         }
 
-        public GetExperimentStatusResponseBodyNodes setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
         public GetExperimentStatusResponseBodyNodes setStartedAt(String startedAt) {
             this.startedAt = startedAt;
             return this;
@@ -118,12 +118,12 @@ public class GetExperimentStatusResponseBody extends TeaModel {
             return this.startedAt;
         }
 
-        public GetExperimentStatusResponseBodyNodes setFinishedAt(String finishedAt) {
-            this.finishedAt = finishedAt;
+        public GetExperimentStatusResponseBodyNodes setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getFinishedAt() {
-            return this.finishedAt;
+        public String getStatus() {
+            return this.status;
         }
 
     }

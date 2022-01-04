@@ -4,11 +4,11 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class ListJobsRequest extends TeaModel {
-    @NameInMap("ExperimentId")
-    public String experimentId;
-
     @NameInMap("Creator")
     public String creator;
+
+    @NameInMap("ExperimentId")
+    public String experimentId;
 
     @NameInMap("Order")
     public String order;
@@ -24,20 +24,20 @@ public class ListJobsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListJobsRequest setExperimentId(String experimentId) {
-        this.experimentId = experimentId;
-        return this;
-    }
-    public String getExperimentId() {
-        return this.experimentId;
-    }
-
     public ListJobsRequest setCreator(String creator) {
         this.creator = creator;
         return this;
     }
     public String getCreator() {
         return this.creator;
+    }
+
+    public ListJobsRequest setExperimentId(String experimentId) {
+        this.experimentId = experimentId;
+        return this;
+    }
+    public String getExperimentId() {
+        return this.experimentId;
     }
 
     public ListJobsRequest setOrder(String order) {

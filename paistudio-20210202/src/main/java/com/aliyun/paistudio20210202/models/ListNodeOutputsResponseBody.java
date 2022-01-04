@@ -4,24 +4,16 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class ListNodeOutputsResponseBody extends TeaModel {
+    @NameInMap("Outputs")
+    public java.util.List<ListNodeOutputsResponseBodyOutputs> outputs;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Outputs")
-    public java.util.List<ListNodeOutputsResponseBodyOutputs> outputs;
-
     public static ListNodeOutputsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListNodeOutputsResponseBody self = new ListNodeOutputsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListNodeOutputsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListNodeOutputsResponseBody setOutputs(java.util.List<ListNodeOutputsResponseBodyOutputs> outputs) {
@@ -32,12 +24,26 @@ public class ListNodeOutputsResponseBody extends TeaModel {
         return this.outputs;
     }
 
+    public ListNodeOutputsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListNodeOutputsResponseBodyOutputs extends TeaModel {
+        @NameInMap("AlgoName")
+        public String algoName;
+
         @NameInMap("DisplayName")
         public String displayName;
 
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("LocationType")
+        public String locationType;
+
+        @NameInMap("NodeName")
+        public String nodeName;
 
         @NameInMap("OutputId")
         public String outputId;
@@ -45,21 +51,23 @@ public class ListNodeOutputsResponseBody extends TeaModel {
         @NameInMap("OutputIndex")
         public String outputIndex;
 
+        @NameInMap("Type")
+        public String type;
+
         @NameInMap("Value")
         public java.util.Map<String, ?> value;
-
-        @NameInMap("NodeName")
-        public String nodeName;
-
-        @NameInMap("AlgoName")
-        public String algoName;
-
-        @NameInMap("LocationType")
-        public String locationType;
 
         public static ListNodeOutputsResponseBodyOutputs build(java.util.Map<String, ?> map) throws Exception {
             ListNodeOutputsResponseBodyOutputs self = new ListNodeOutputsResponseBodyOutputs();
             return TeaModel.build(map, self);
+        }
+
+        public ListNodeOutputsResponseBodyOutputs setAlgoName(String algoName) {
+            this.algoName = algoName;
+            return this;
+        }
+        public String getAlgoName() {
+            return this.algoName;
         }
 
         public ListNodeOutputsResponseBodyOutputs setDisplayName(String displayName) {
@@ -70,12 +78,20 @@ public class ListNodeOutputsResponseBody extends TeaModel {
             return this.displayName;
         }
 
-        public ListNodeOutputsResponseBodyOutputs setType(String type) {
-            this.type = type;
+        public ListNodeOutputsResponseBodyOutputs setLocationType(String locationType) {
+            this.locationType = locationType;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getLocationType() {
+            return this.locationType;
+        }
+
+        public ListNodeOutputsResponseBodyOutputs setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+        public String getNodeName() {
+            return this.nodeName;
         }
 
         public ListNodeOutputsResponseBodyOutputs setOutputId(String outputId) {
@@ -94,36 +110,20 @@ public class ListNodeOutputsResponseBody extends TeaModel {
             return this.outputIndex;
         }
 
+        public ListNodeOutputsResponseBodyOutputs setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
         public ListNodeOutputsResponseBodyOutputs setValue(java.util.Map<String, ?> value) {
             this.value = value;
             return this;
         }
         public java.util.Map<String, ?> getValue() {
             return this.value;
-        }
-
-        public ListNodeOutputsResponseBodyOutputs setNodeName(String nodeName) {
-            this.nodeName = nodeName;
-            return this;
-        }
-        public String getNodeName() {
-            return this.nodeName;
-        }
-
-        public ListNodeOutputsResponseBodyOutputs setAlgoName(String algoName) {
-            this.algoName = algoName;
-            return this;
-        }
-        public String getAlgoName() {
-            return this.algoName;
-        }
-
-        public ListNodeOutputsResponseBodyOutputs setLocationType(String locationType) {
-            this.locationType = locationType;
-            return this;
-        }
-        public String getLocationType() {
-            return this.locationType;
         }
 
     }

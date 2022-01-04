@@ -8,11 +8,11 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Url")
-    public String url;
-
     @NameInMap("ServiceId")
     public String serviceId;
+
+    @NameInMap("Url")
+    public String url;
 
     public static GetServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetServiceResponseBody self = new GetServiceResponseBody();
@@ -27,20 +27,20 @@ public class GetServiceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetServiceResponseBody setUrl(String url) {
-        this.url = url;
-        return this;
-    }
-    public String getUrl() {
-        return this.url;
-    }
-
     public GetServiceResponseBody setServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     public String getServiceId() {
         return this.serviceId;
+    }
+
+    public GetServiceResponseBody setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
     }
 
 }

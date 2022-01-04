@@ -8,11 +8,11 @@ public class ListTemplatesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("TemplateData")
     public java.util.List<ListTemplatesResponseBodyTemplateData> templateData;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTemplatesResponseBody self = new ListTemplatesResponseBody();
@@ -27,14 +27,6 @@ public class ListTemplatesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTemplatesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
     public ListTemplatesResponseBody setTemplateData(java.util.List<ListTemplatesResponseBodyTemplateData> templateData) {
         this.templateData = templateData;
         return this;
@@ -43,10 +35,15 @@ public class ListTemplatesResponseBody extends TeaModel {
         return this.templateData;
     }
 
-    public static class ListTemplatesResponseBodyTemplateDataTemplate extends TeaModel {
-        @NameInMap("TemplateId")
-        public String templateId;
+    public ListTemplatesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
 
+    public static class ListTemplatesResponseBodyTemplateDataTemplate extends TeaModel {
         @NameInMap("Content")
         public String content;
 
@@ -65,17 +62,12 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("TemplateId")
+        public String templateId;
+
         public static ListTemplatesResponseBodyTemplateDataTemplate build(java.util.Map<String, ?> map) throws Exception {
             ListTemplatesResponseBodyTemplateDataTemplate self = new ListTemplatesResponseBodyTemplateDataTemplate();
             return TeaModel.build(map, self);
-        }
-
-        public ListTemplatesResponseBodyTemplateDataTemplate setTemplateId(String templateId) {
-            this.templateId = templateId;
-            return this;
-        }
-        public String getTemplateId() {
-            return this.templateId;
         }
 
         public ListTemplatesResponseBodyTemplateDataTemplate setContent(String content) {
@@ -126,6 +118,14 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ListTemplatesResponseBodyTemplateDataTemplate setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
     }
 
     public static class ListTemplatesResponseBodyTemplateDataTemplateTag extends TeaModel {
@@ -170,23 +170,15 @@ public class ListTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListTemplatesResponseBodyTemplateDataTemplateType extends TeaModel {
-        @NameInMap("TypeId")
-        public String typeId;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("TypeId")
+        public String typeId;
 
         public static ListTemplatesResponseBodyTemplateDataTemplateType build(java.util.Map<String, ?> map) throws Exception {
             ListTemplatesResponseBodyTemplateDataTemplateType self = new ListTemplatesResponseBodyTemplateDataTemplateType();
             return TeaModel.build(map, self);
-        }
-
-        public ListTemplatesResponseBodyTemplateDataTemplateType setTypeId(String typeId) {
-            this.typeId = typeId;
-            return this;
-        }
-        public String getTypeId() {
-            return this.typeId;
         }
 
         public ListTemplatesResponseBodyTemplateDataTemplateType setName(String name) {
@@ -195,6 +187,14 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListTemplatesResponseBodyTemplateDataTemplateType setTypeId(String typeId) {
+            this.typeId = typeId;
+            return this;
+        }
+        public String getTypeId() {
+            return this.typeId;
         }
 
     }

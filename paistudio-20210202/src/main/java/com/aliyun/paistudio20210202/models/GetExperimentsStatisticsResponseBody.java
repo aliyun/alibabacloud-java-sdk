@@ -4,24 +4,16 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetExperimentsStatisticsResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public java.util.List<GetExperimentsStatisticsResponseBodyData> data;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public java.util.List<GetExperimentsStatisticsResponseBodyData> data;
-
     public static GetExperimentsStatisticsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetExperimentsStatisticsResponseBody self = new GetExperimentsStatisticsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetExperimentsStatisticsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetExperimentsStatisticsResponseBody setData(java.util.List<GetExperimentsStatisticsResponseBodyData> data) {
@@ -32,27 +24,35 @@ public class GetExperimentsStatisticsResponseBody extends TeaModel {
         return this.data;
     }
 
+    public GetExperimentsStatisticsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class GetExperimentsStatisticsResponseBodyData extends TeaModel {
-        @NameInMap("WorkspaceId")
-        public String workspaceId;
+        @NameInMap("CreateCount")
+        public Long createCount;
 
         @NameInMap("TotalCount")
         public Long totalCount;
 
-        @NameInMap("CreateCount")
-        public Long createCount;
+        @NameInMap("WorkspaceId")
+        public String workspaceId;
 
         public static GetExperimentsStatisticsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetExperimentsStatisticsResponseBodyData self = new GetExperimentsStatisticsResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetExperimentsStatisticsResponseBodyData setWorkspaceId(String workspaceId) {
-            this.workspaceId = workspaceId;
+        public GetExperimentsStatisticsResponseBodyData setCreateCount(Long createCount) {
+            this.createCount = createCount;
             return this;
         }
-        public String getWorkspaceId() {
-            return this.workspaceId;
+        public Long getCreateCount() {
+            return this.createCount;
         }
 
         public GetExperimentsStatisticsResponseBodyData setTotalCount(Long totalCount) {
@@ -63,12 +63,12 @@ public class GetExperimentsStatisticsResponseBody extends TeaModel {
             return this.totalCount;
         }
 
-        public GetExperimentsStatisticsResponseBodyData setCreateCount(Long createCount) {
-            this.createCount = createCount;
+        public GetExperimentsStatisticsResponseBodyData setWorkspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
-        public Long getCreateCount() {
-            return this.createCount;
+        public String getWorkspaceId() {
+            return this.workspaceId;
         }
 
     }

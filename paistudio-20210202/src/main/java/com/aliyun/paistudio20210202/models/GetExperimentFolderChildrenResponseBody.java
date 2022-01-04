@@ -4,6 +4,9 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetExperimentFolderChildrenResponseBody extends TeaModel {
+    @NameInMap("Items")
+    public java.util.List<GetExperimentFolderChildrenResponseBodyItems> items;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,12 +14,17 @@ public class GetExperimentFolderChildrenResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("Items")
-    public java.util.List<GetExperimentFolderChildrenResponseBodyItems> items;
-
     public static GetExperimentFolderChildrenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetExperimentFolderChildrenResponseBody self = new GetExperimentFolderChildrenResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetExperimentFolderChildrenResponseBody setItems(java.util.List<GetExperimentFolderChildrenResponseBodyItems> items) {
+        this.items = items;
+        return this;
+    }
+    public java.util.List<GetExperimentFolderChildrenResponseBodyItems> getItems() {
+        return this.items;
     }
 
     public GetExperimentFolderChildrenResponseBody setRequestId(String requestId) {
@@ -35,15 +43,13 @@ public class GetExperimentFolderChildrenResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public GetExperimentFolderChildrenResponseBody setItems(java.util.List<GetExperimentFolderChildrenResponseBodyItems> items) {
-        this.items = items;
-        return this;
-    }
-    public java.util.List<GetExperimentFolderChildrenResponseBodyItems> getItems() {
-        return this.items;
-    }
-
     public static class GetExperimentFolderChildrenResponseBodyItems extends TeaModel {
+        @NameInMap("Empty")
+        public Boolean empty;
+
+        @NameInMap("Icon")
+        public String icon;
+
         @NameInMap("Id")
         public String id;
 
@@ -53,15 +59,25 @@ public class GetExperimentFolderChildrenResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        @NameInMap("Icon")
-        public String icon;
-
-        @NameInMap("Empty")
-        public Boolean empty;
-
         public static GetExperimentFolderChildrenResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             GetExperimentFolderChildrenResponseBodyItems self = new GetExperimentFolderChildrenResponseBodyItems();
             return TeaModel.build(map, self);
+        }
+
+        public GetExperimentFolderChildrenResponseBodyItems setEmpty(Boolean empty) {
+            this.empty = empty;
+            return this;
+        }
+        public Boolean getEmpty() {
+            return this.empty;
+        }
+
+        public GetExperimentFolderChildrenResponseBodyItems setIcon(String icon) {
+            this.icon = icon;
+            return this;
+        }
+        public String getIcon() {
+            return this.icon;
         }
 
         public GetExperimentFolderChildrenResponseBodyItems setId(String id) {
@@ -86,22 +102,6 @@ public class GetExperimentFolderChildrenResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
-        }
-
-        public GetExperimentFolderChildrenResponseBodyItems setIcon(String icon) {
-            this.icon = icon;
-            return this;
-        }
-        public String getIcon() {
-            return this.icon;
-        }
-
-        public GetExperimentFolderChildrenResponseBodyItems setEmpty(Boolean empty) {
-            this.empty = empty;
-            return this;
-        }
-        public Boolean getEmpty() {
-            return this.empty;
         }
 
     }

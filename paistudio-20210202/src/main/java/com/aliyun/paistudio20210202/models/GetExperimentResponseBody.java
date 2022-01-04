@@ -4,18 +4,20 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetExperimentResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Accessibility")
+    public String accessibility;
 
-    @NameInMap("ExperimentId")
-    public String experimentId;
+    @NameInMap("Content")
+    public String content;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("Creator")
+    public String creator;
 
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("ExperimentId")
+    public String experimentId;
 
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
@@ -23,8 +25,15 @@ public class GetExperimentResponseBody extends TeaModel {
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
-    @NameInMap("Creator")
-    public String creator;
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("Options")
+    public String options;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Source")
     public String source;
@@ -35,39 +44,33 @@ public class GetExperimentResponseBody extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    @NameInMap("Content")
-    public String content;
-
-    @NameInMap("Options")
-    public String options;
-
     public static GetExperimentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetExperimentResponseBody self = new GetExperimentResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetExperimentResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetExperimentResponseBody setAccessibility(String accessibility) {
+        this.accessibility = accessibility;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
-    public GetExperimentResponseBody setExperimentId(String experimentId) {
-        this.experimentId = experimentId;
+    public GetExperimentResponseBody setContent(String content) {
+        this.content = content;
         return this;
     }
-    public String getExperimentId() {
-        return this.experimentId;
+    public String getContent() {
+        return this.content;
     }
 
-    public GetExperimentResponseBody setName(String name) {
-        this.name = name;
+    public GetExperimentResponseBody setCreator(String creator) {
+        this.creator = creator;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getCreator() {
+        return this.creator;
     }
 
     public GetExperimentResponseBody setDescription(String description) {
@@ -76,6 +79,14 @@ public class GetExperimentResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public GetExperimentResponseBody setExperimentId(String experimentId) {
+        this.experimentId = experimentId;
+        return this;
+    }
+    public String getExperimentId() {
+        return this.experimentId;
     }
 
     public GetExperimentResponseBody setGmtCreateTime(String gmtCreateTime) {
@@ -94,12 +105,28 @@ public class GetExperimentResponseBody extends TeaModel {
         return this.gmtModifiedTime;
     }
 
-    public GetExperimentResponseBody setCreator(String creator) {
-        this.creator = creator;
+    public GetExperimentResponseBody setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getCreator() {
-        return this.creator;
+    public String getName() {
+        return this.name;
+    }
+
+    public GetExperimentResponseBody setOptions(String options) {
+        this.options = options;
+        return this;
+    }
+    public String getOptions() {
+        return this.options;
+    }
+
+    public GetExperimentResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetExperimentResponseBody setSource(String source) {
@@ -124,22 +151,6 @@ public class GetExperimentResponseBody extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
-    }
-
-    public GetExperimentResponseBody setContent(String content) {
-        this.content = content;
-        return this;
-    }
-    public String getContent() {
-        return this.content;
-    }
-
-    public GetExperimentResponseBody setOptions(String options) {
-        this.options = options;
-        return this;
-    }
-    public String getOptions() {
-        return this.options;
     }
 
 }
