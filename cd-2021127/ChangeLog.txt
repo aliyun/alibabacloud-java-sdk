@@ -1,3 +1,6 @@
+2022-01-04 Version: 1.0.5
+- Add Shop, ShopGroup and MenuData API.
+
 2021-12-28 Version: 1.0.2
 - Add CreateShop API.
 - Add ProductImage API.
