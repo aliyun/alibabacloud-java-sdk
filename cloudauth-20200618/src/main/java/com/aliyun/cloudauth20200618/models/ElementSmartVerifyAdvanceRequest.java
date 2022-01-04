@@ -8,29 +8,29 @@ public class ElementSmartVerifyAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream certFileObject;
 
-    @NameInMap("SceneId")
-    public Long sceneId;
-
-    @NameInMap("OuterOrderNo")
-    public String outerOrderNo;
-
-    @NameInMap("Mode")
-    public String mode;
-
-    @NameInMap("CertType")
-    public String certType;
-
     @NameInMap("CertName")
     public String certName;
+
+    @NameInMap("CertNationalEmblemUrl")
+    public String certNationalEmblemUrl;
 
     @NameInMap("CertNo")
     public String certNo;
 
+    @NameInMap("CertType")
+    public String certType;
+
     @NameInMap("CertUrl")
     public String certUrl;
 
-    @NameInMap("CertNationalEmblemUrl")
-    public String certNationalEmblemUrl;
+    @NameInMap("Mode")
+    public String mode;
+
+    @NameInMap("OuterOrderNo")
+    public String outerOrderNo;
+
+    @NameInMap("SceneId")
+    public Long sceneId;
 
     public static ElementSmartVerifyAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ElementSmartVerifyAdvanceRequest self = new ElementSmartVerifyAdvanceRequest();
@@ -45,44 +45,20 @@ public class ElementSmartVerifyAdvanceRequest extends TeaModel {
         return this.certFileObject;
     }
 
-    public ElementSmartVerifyAdvanceRequest setSceneId(Long sceneId) {
-        this.sceneId = sceneId;
-        return this;
-    }
-    public Long getSceneId() {
-        return this.sceneId;
-    }
-
-    public ElementSmartVerifyAdvanceRequest setOuterOrderNo(String outerOrderNo) {
-        this.outerOrderNo = outerOrderNo;
-        return this;
-    }
-    public String getOuterOrderNo() {
-        return this.outerOrderNo;
-    }
-
-    public ElementSmartVerifyAdvanceRequest setMode(String mode) {
-        this.mode = mode;
-        return this;
-    }
-    public String getMode() {
-        return this.mode;
-    }
-
-    public ElementSmartVerifyAdvanceRequest setCertType(String certType) {
-        this.certType = certType;
-        return this;
-    }
-    public String getCertType() {
-        return this.certType;
-    }
-
     public ElementSmartVerifyAdvanceRequest setCertName(String certName) {
         this.certName = certName;
         return this;
     }
     public String getCertName() {
         return this.certName;
+    }
+
+    public ElementSmartVerifyAdvanceRequest setCertNationalEmblemUrl(String certNationalEmblemUrl) {
+        this.certNationalEmblemUrl = certNationalEmblemUrl;
+        return this;
+    }
+    public String getCertNationalEmblemUrl() {
+        return this.certNationalEmblemUrl;
     }
 
     public ElementSmartVerifyAdvanceRequest setCertNo(String certNo) {
@@ -93,6 +69,14 @@ public class ElementSmartVerifyAdvanceRequest extends TeaModel {
         return this.certNo;
     }
 
+    public ElementSmartVerifyAdvanceRequest setCertType(String certType) {
+        this.certType = certType;
+        return this;
+    }
+    public String getCertType() {
+        return this.certType;
+    }
+
     public ElementSmartVerifyAdvanceRequest setCertUrl(String certUrl) {
         this.certUrl = certUrl;
         return this;
@@ -101,12 +85,28 @@ public class ElementSmartVerifyAdvanceRequest extends TeaModel {
         return this.certUrl;
     }
 
-    public ElementSmartVerifyAdvanceRequest setCertNationalEmblemUrl(String certNationalEmblemUrl) {
-        this.certNationalEmblemUrl = certNationalEmblemUrl;
+    public ElementSmartVerifyAdvanceRequest setMode(String mode) {
+        this.mode = mode;
         return this;
     }
-    public String getCertNationalEmblemUrl() {
-        return this.certNationalEmblemUrl;
+    public String getMode() {
+        return this.mode;
+    }
+
+    public ElementSmartVerifyAdvanceRequest setOuterOrderNo(String outerOrderNo) {
+        this.outerOrderNo = outerOrderNo;
+        return this;
+    }
+    public String getOuterOrderNo() {
+        return this.outerOrderNo;
+    }
+
+    public ElementSmartVerifyAdvanceRequest setSceneId(Long sceneId) {
+        this.sceneId = sceneId;
+        return this;
+    }
+    public Long getSceneId() {
+        return this.sceneId;
     }
 
 }

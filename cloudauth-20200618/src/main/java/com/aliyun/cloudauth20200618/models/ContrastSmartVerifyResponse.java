@@ -4,33 +4,125 @@ package com.aliyun.cloudauth20200618.models;
 import com.aliyun.tea.*;
 
 public class ContrastSmartVerifyResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Code")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String code;
 
-    @NameInMap("body")
+    @NameInMap("Message")
     @Validation(required = true)
-    public ContrastSmartVerifyResponseBody body;
+    public String message;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
+    @NameInMap("ResultObject")
+    @Validation(required = true)
+    public ContrastSmartVerifyResponseResultObject resultObject;
 
     public static ContrastSmartVerifyResponse build(java.util.Map<String, ?> map) throws Exception {
         ContrastSmartVerifyResponse self = new ContrastSmartVerifyResponse();
         return TeaModel.build(map, self);
     }
 
-    public ContrastSmartVerifyResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ContrastSmartVerifyResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getCode() {
+        return this.code;
     }
 
-    public ContrastSmartVerifyResponse setBody(ContrastSmartVerifyResponseBody body) {
-        this.body = body;
+    public ContrastSmartVerifyResponse setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public ContrastSmartVerifyResponseBody getBody() {
-        return this.body;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ContrastSmartVerifyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ContrastSmartVerifyResponse setResultObject(ContrastSmartVerifyResponseResultObject resultObject) {
+        this.resultObject = resultObject;
+        return this;
+    }
+    public ContrastSmartVerifyResponseResultObject getResultObject() {
+        return this.resultObject;
+    }
+
+    public static class ContrastSmartVerifyResponseResultObject extends TeaModel {
+        @NameInMap("CertifyId")
+        @Validation(required = true)
+        public String certifyId;
+
+        @NameInMap("Passed")
+        @Validation(required = true)
+        public String passed;
+
+        @NameInMap("RiskInfo")
+        @Validation(required = true)
+        public String riskInfo;
+
+        @NameInMap("SubCode")
+        @Validation(required = true)
+        public String subCode;
+
+        @NameInMap("VerifyInfo")
+        @Validation(required = true)
+        public String verifyInfo;
+
+        public static ContrastSmartVerifyResponseResultObject build(java.util.Map<String, ?> map) throws Exception {
+            ContrastSmartVerifyResponseResultObject self = new ContrastSmartVerifyResponseResultObject();
+            return TeaModel.build(map, self);
+        }
+
+        public ContrastSmartVerifyResponseResultObject setCertifyId(String certifyId) {
+            this.certifyId = certifyId;
+            return this;
+        }
+        public String getCertifyId() {
+            return this.certifyId;
+        }
+
+        public ContrastSmartVerifyResponseResultObject setPassed(String passed) {
+            this.passed = passed;
+            return this;
+        }
+        public String getPassed() {
+            return this.passed;
+        }
+
+        public ContrastSmartVerifyResponseResultObject setRiskInfo(String riskInfo) {
+            this.riskInfo = riskInfo;
+            return this;
+        }
+        public String getRiskInfo() {
+            return this.riskInfo;
+        }
+
+        public ContrastSmartVerifyResponseResultObject setSubCode(String subCode) {
+            this.subCode = subCode;
+            return this;
+        }
+        public String getSubCode() {
+            return this.subCode;
+        }
+
+        public ContrastSmartVerifyResponseResultObject setVerifyInfo(String verifyInfo) {
+            this.verifyInfo = verifyInfo;
+            return this;
+        }
+        public String getVerifyInfo() {
+            return this.verifyInfo;
+        }
+
     }
 
 }
