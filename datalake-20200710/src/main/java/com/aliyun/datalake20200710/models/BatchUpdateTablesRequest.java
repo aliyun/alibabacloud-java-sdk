@@ -12,6 +12,10 @@ public class BatchUpdateTablesRequest extends TeaModel {
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    // 是否异步
+    @NameInMap("IsAsync")
+    public Boolean isAsync;
+
     // TableInputs
     @NameInMap("TableInputs")
     public java.util.List<TableInput> tableInputs;
@@ -35,6 +39,14 @@ public class BatchUpdateTablesRequest extends TeaModel {
     }
     public String getDatabaseName() {
         return this.databaseName;
+    }
+
+    public BatchUpdateTablesRequest setIsAsync(Boolean isAsync) {
+        this.isAsync = isAsync;
+        return this;
+    }
+    public Boolean getIsAsync() {
+        return this.isAsync;
     }
 
     public BatchUpdateTablesRequest setTableInputs(java.util.List<TableInput> tableInputs) {

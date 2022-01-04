@@ -24,6 +24,10 @@ public class BatchUpdateTablesResponseBody extends TeaModel {
     @NameInMap("TableErrors")
     public java.util.List<TableError> tableErrors;
 
+    // 异步更新 taskId
+    @NameInMap("TaskId")
+    public String taskId;
+
     public static BatchUpdateTablesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchUpdateTablesResponseBody self = new BatchUpdateTablesResponseBody();
         return TeaModel.build(map, self);
@@ -67,6 +71,14 @@ public class BatchUpdateTablesResponseBody extends TeaModel {
     }
     public java.util.List<TableError> getTableErrors() {
         return this.tableErrors;
+    }
+
+    public BatchUpdateTablesResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

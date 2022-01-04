@@ -4,6 +4,10 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class PartitionInput extends TeaModel {
+    // createTime
+    @NameInMap("CreateTime")
+    public Integer createTime;
+
     // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
@@ -37,6 +41,14 @@ public class PartitionInput extends TeaModel {
     public static PartitionInput build(java.util.Map<String, ?> map) throws Exception {
         PartitionInput self = new PartitionInput();
         return TeaModel.build(map, self);
+    }
+
+    public PartitionInput setCreateTime(Integer createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public Integer getCreateTime() {
+        return this.createTime;
     }
 
     public PartitionInput setDatabaseName(String databaseName) {

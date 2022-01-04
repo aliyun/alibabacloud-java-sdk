@@ -8,19 +8,19 @@ public class DeletePartitionColumnStatisticsRequest extends TeaModel {
     @NameInMap("CatalogId")
     public String catalogId;
 
+    @NameInMap("ColumnNames")
+    public java.util.List<String> columnNames;
+
     // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // TableName
-    @NameInMap("TableName")
-    public String tableName;
-
     @NameInMap("PartitionNames")
     public java.util.List<String> partitionNames;
 
-    @NameInMap("ColumnNames")
-    public java.util.List<String> columnNames;
+    // TableName
+    @NameInMap("TableName")
+    public String tableName;
 
     public static DeletePartitionColumnStatisticsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeletePartitionColumnStatisticsRequest self = new DeletePartitionColumnStatisticsRequest();
@@ -35,20 +35,20 @@ public class DeletePartitionColumnStatisticsRequest extends TeaModel {
         return this.catalogId;
     }
 
+    public DeletePartitionColumnStatisticsRequest setColumnNames(java.util.List<String> columnNames) {
+        this.columnNames = columnNames;
+        return this;
+    }
+    public java.util.List<String> getColumnNames() {
+        return this.columnNames;
+    }
+
     public DeletePartitionColumnStatisticsRequest setDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
     }
     public String getDatabaseName() {
         return this.databaseName;
-    }
-
-    public DeletePartitionColumnStatisticsRequest setTableName(String tableName) {
-        this.tableName = tableName;
-        return this;
-    }
-    public String getTableName() {
-        return this.tableName;
     }
 
     public DeletePartitionColumnStatisticsRequest setPartitionNames(java.util.List<String> partitionNames) {
@@ -59,12 +59,12 @@ public class DeletePartitionColumnStatisticsRequest extends TeaModel {
         return this.partitionNames;
     }
 
-    public DeletePartitionColumnStatisticsRequest setColumnNames(java.util.List<String> columnNames) {
-        this.columnNames = columnNames;
+    public DeletePartitionColumnStatisticsRequest setTableName(String tableName) {
+        this.tableName = tableName;
         return this;
     }
-    public java.util.List<String> getColumnNames() {
-        return this.columnNames;
+    public String getTableName() {
+        return this.tableName;
     }
 
 }

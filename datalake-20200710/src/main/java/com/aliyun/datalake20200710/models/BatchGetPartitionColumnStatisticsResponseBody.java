@@ -8,13 +8,13 @@ public class BatchGetPartitionColumnStatisticsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // PartitionStatisticsMap
-    @NameInMap("PartitionStatisticsMap")
-    public java.util.Map<String, java.util.List<ColumnStatisticsObj>> partitionStatisticsMap;
-
     // Message
     @NameInMap("Message")
     public String message;
+
+    // PartitionStatisticsMap
+    @NameInMap("PartitionStatisticsMap")
+    public java.util.Map<String, java.util.List<ColumnStatisticsObj>> partitionStatisticsMap;
 
     // RequestId
     @NameInMap("RequestId")
@@ -37,20 +37,20 @@ public class BatchGetPartitionColumnStatisticsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public BatchGetPartitionColumnStatisticsResponseBody setPartitionStatisticsMap(java.util.Map<String, java.util.List<ColumnStatisticsObj>> partitionStatisticsMap) {
-        this.partitionStatisticsMap = partitionStatisticsMap;
-        return this;
-    }
-    public java.util.Map<String, java.util.List<ColumnStatisticsObj>> getPartitionStatisticsMap() {
-        return this.partitionStatisticsMap;
-    }
-
     public BatchGetPartitionColumnStatisticsResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public BatchGetPartitionColumnStatisticsResponseBody setPartitionStatisticsMap(java.util.Map<String, java.util.List<ColumnStatisticsObj>> partitionStatisticsMap) {
+        this.partitionStatisticsMap = partitionStatisticsMap;
+        return this;
+    }
+    public java.util.Map<String, java.util.List<ColumnStatisticsObj>> getPartitionStatisticsMap() {
+        return this.partitionStatisticsMap;
     }
 
     public BatchGetPartitionColumnStatisticsResponseBody setRequestId(String requestId) {

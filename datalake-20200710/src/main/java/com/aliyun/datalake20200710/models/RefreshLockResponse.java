@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.datalake20200710.models;
+
+import com.aliyun.tea.*;
+
+public class RefreshLockResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public RefreshLockResponseBody body;
+
+    public static RefreshLockResponse build(java.util.Map<String, ?> map) throws Exception {
+        RefreshLockResponse self = new RefreshLockResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public RefreshLockResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public RefreshLockResponse setBody(RefreshLockResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public RefreshLockResponseBody getBody() {
+        return this.body;
+    }
+
+}

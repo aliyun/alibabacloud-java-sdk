@@ -8,6 +8,9 @@ public class DeleteTableColumnStatisticsRequest extends TeaModel {
     @NameInMap("CatalogId")
     public String catalogId;
 
+    @NameInMap("ColumnNames")
+    public java.util.List<String> columnNames;
+
     // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
@@ -15,9 +18,6 @@ public class DeleteTableColumnStatisticsRequest extends TeaModel {
     // TableName
     @NameInMap("TableName")
     public String tableName;
-
-    @NameInMap("ColumnNames")
-    public java.util.List<String> columnNames;
 
     public static DeleteTableColumnStatisticsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteTableColumnStatisticsRequest self = new DeleteTableColumnStatisticsRequest();
@@ -30,6 +30,14 @@ public class DeleteTableColumnStatisticsRequest extends TeaModel {
     }
     public String getCatalogId() {
         return this.catalogId;
+    }
+
+    public DeleteTableColumnStatisticsRequest setColumnNames(java.util.List<String> columnNames) {
+        this.columnNames = columnNames;
+        return this;
+    }
+    public java.util.List<String> getColumnNames() {
+        return this.columnNames;
     }
 
     public DeleteTableColumnStatisticsRequest setDatabaseName(String databaseName) {
@@ -46,14 +54,6 @@ public class DeleteTableColumnStatisticsRequest extends TeaModel {
     }
     public String getTableName() {
         return this.tableName;
-    }
-
-    public DeleteTableColumnStatisticsRequest setColumnNames(java.util.List<String> columnNames) {
-        this.columnNames = columnNames;
-        return this;
-    }
-    public java.util.List<String> getColumnNames() {
-        return this.columnNames;
     }
 
 }

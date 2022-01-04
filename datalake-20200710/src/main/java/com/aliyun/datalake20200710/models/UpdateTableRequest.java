@@ -4,6 +4,10 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class UpdateTableRequest extends TeaModel {
+    // AllowPartitionKeyChange
+    @NameInMap("AllowPartitionKeyChange")
+    public Boolean allowPartitionKeyChange;
+
     // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
@@ -11,6 +15,10 @@ public class UpdateTableRequest extends TeaModel {
     // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
+
+    // IsAsync
+    @NameInMap("IsAsync")
+    public Boolean isAsync;
 
     // SkipArchive
     @NameInMap("SkipArchive")
@@ -28,6 +36,14 @@ public class UpdateTableRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateTableRequest setAllowPartitionKeyChange(Boolean allowPartitionKeyChange) {
+        this.allowPartitionKeyChange = allowPartitionKeyChange;
+        return this;
+    }
+    public Boolean getAllowPartitionKeyChange() {
+        return this.allowPartitionKeyChange;
+    }
+
     public UpdateTableRequest setCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -42,6 +58,14 @@ public class UpdateTableRequest extends TeaModel {
     }
     public String getDatabaseName() {
         return this.databaseName;
+    }
+
+    public UpdateTableRequest setIsAsync(Boolean isAsync) {
+        this.isAsync = isAsync;
+        return this;
+    }
+    public Boolean getIsAsync() {
+        return this.isAsync;
     }
 
     public UpdateTableRequest setSkipArchive(Boolean skipArchive) {

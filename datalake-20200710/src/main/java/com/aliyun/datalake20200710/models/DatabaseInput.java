@@ -4,7 +4,11 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class DatabaseInput extends TeaModel {
-    // description
+    // createTime
+    @NameInMap("CreateTime")
+    public Integer createTime;
+
+    // Description
     @NameInMap("Description")
     public String description;
 
@@ -33,6 +37,14 @@ public class DatabaseInput extends TeaModel {
     public static DatabaseInput build(java.util.Map<String, ?> map) throws Exception {
         DatabaseInput self = new DatabaseInput();
         return TeaModel.build(map, self);
+    }
+
+    public DatabaseInput setCreateTime(Integer createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public Integer getCreateTime() {
+        return this.createTime;
     }
 
     public DatabaseInput setDescription(String description) {

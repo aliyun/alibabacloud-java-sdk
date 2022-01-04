@@ -20,6 +20,10 @@ public class UpdateTableResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    // Async task Id
+    @NameInMap("TaskId")
+    public String taskId;
+
     public static UpdateTableResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateTableResponseBody self = new UpdateTableResponseBody();
         return TeaModel.build(map, self);
@@ -55,6 +59,14 @@ public class UpdateTableResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public UpdateTableResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

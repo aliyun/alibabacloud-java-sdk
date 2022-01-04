@@ -16,6 +16,10 @@ public class ListPartitionsByFilterResponseBody extends TeaModel {
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    // PartitionSpecs
+    @NameInMap("PartitionSpecs")
+    public java.util.List<PartitionSpec> partitionSpecs;
+
     // Partitions
     @NameInMap("Partitions")
     public java.util.List<Partition> partitions;
@@ -55,6 +59,14 @@ public class ListPartitionsByFilterResponseBody extends TeaModel {
     }
     public String getNextPageToken() {
         return this.nextPageToken;
+    }
+
+    public ListPartitionsByFilterResponseBody setPartitionSpecs(java.util.List<PartitionSpec> partitionSpecs) {
+        this.partitionSpecs = partitionSpecs;
+        return this;
+    }
+    public java.util.List<PartitionSpec> getPartitionSpecs() {
+        return this.partitionSpecs;
     }
 
     public ListPartitionsByFilterResponseBody setPartitions(java.util.List<Partition> partitions) {

@@ -8,19 +8,19 @@ public class BatchGetPartitionColumnStatisticsRequest extends TeaModel {
     @NameInMap("CatalogId")
     public String catalogId;
 
+    @NameInMap("ColumnNames")
+    public java.util.List<String> columnNames;
+
     // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // TableName
-    @NameInMap("TableName")
-    public String tableName;
-
     @NameInMap("PartitionNames")
     public java.util.List<String> partitionNames;
 
-    @NameInMap("ColumnNames")
-    public java.util.List<String> columnNames;
+    // TableName
+    @NameInMap("TableName")
+    public String tableName;
 
     public static BatchGetPartitionColumnStatisticsRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchGetPartitionColumnStatisticsRequest self = new BatchGetPartitionColumnStatisticsRequest();
@@ -35,20 +35,20 @@ public class BatchGetPartitionColumnStatisticsRequest extends TeaModel {
         return this.catalogId;
     }
 
+    public BatchGetPartitionColumnStatisticsRequest setColumnNames(java.util.List<String> columnNames) {
+        this.columnNames = columnNames;
+        return this;
+    }
+    public java.util.List<String> getColumnNames() {
+        return this.columnNames;
+    }
+
     public BatchGetPartitionColumnStatisticsRequest setDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
     }
     public String getDatabaseName() {
         return this.databaseName;
-    }
-
-    public BatchGetPartitionColumnStatisticsRequest setTableName(String tableName) {
-        this.tableName = tableName;
-        return this;
-    }
-    public String getTableName() {
-        return this.tableName;
     }
 
     public BatchGetPartitionColumnStatisticsRequest setPartitionNames(java.util.List<String> partitionNames) {
@@ -59,12 +59,12 @@ public class BatchGetPartitionColumnStatisticsRequest extends TeaModel {
         return this.partitionNames;
     }
 
-    public BatchGetPartitionColumnStatisticsRequest setColumnNames(java.util.List<String> columnNames) {
-        this.columnNames = columnNames;
+    public BatchGetPartitionColumnStatisticsRequest setTableName(String tableName) {
+        this.tableName = tableName;
         return this;
     }
-    public java.util.List<String> getColumnNames() {
-        return this.columnNames;
+    public String getTableName() {
+        return this.tableName;
     }
 
 }

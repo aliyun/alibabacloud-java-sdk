@@ -12,6 +12,10 @@ public class BatchGetPartitionsRequest extends TeaModel {
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    // IsShareSd
+    @NameInMap("IsShareSd")
+    public Boolean isShareSd;
+
     @NameInMap("PartitionValueList")
     public java.util.List<BatchGetPartitionsRequestPartitionValueList> partitionValueList;
 
@@ -38,6 +42,14 @@ public class BatchGetPartitionsRequest extends TeaModel {
     }
     public String getDatabaseName() {
         return this.databaseName;
+    }
+
+    public BatchGetPartitionsRequest setIsShareSd(Boolean isShareSd) {
+        this.isShareSd = isShareSd;
+        return this;
+    }
+    public Boolean getIsShareSd() {
+        return this.isShareSd;
     }
 
     public BatchGetPartitionsRequest setPartitionValueList(java.util.List<BatchGetPartitionsRequestPartitionValueList> partitionValueList) {

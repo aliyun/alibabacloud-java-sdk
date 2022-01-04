@@ -16,6 +16,10 @@ public class ListPartitionsByFilterRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    // IsShareSd
+    @NameInMap("IsShareSd")
+    public Boolean isShareSd;
+
     // NextPageToken
     @NameInMap("NextPageToken")
     public String nextPageToken;
@@ -55,6 +59,14 @@ public class ListPartitionsByFilterRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public ListPartitionsByFilterRequest setIsShareSd(Boolean isShareSd) {
+        this.isShareSd = isShareSd;
+        return this;
+    }
+    public Boolean getIsShareSd() {
+        return this.isShareSd;
     }
 
     public ListPartitionsByFilterRequest setNextPageToken(String nextPageToken) {

@@ -8,9 +8,9 @@ public class ListTableNamesRequest extends TeaModel {
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // TableNamePattern
-    @NameInMap("TableNamePattern")
-    public String tableNamePattern;
+    // DatabaseName
+    @NameInMap("DatabaseName")
+    public String databaseName;
 
     // NextPageToken
     @NameInMap("NextPageToken")
@@ -20,9 +20,9 @@ public class ListTableNamesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // DatabaseName
-    @NameInMap("DatabaseName")
-    public String databaseName;
+    // TableNamePattern
+    @NameInMap("TableNamePattern")
+    public String tableNamePattern;
 
     // TableType filter
     @NameInMap("TableType")
@@ -41,12 +41,12 @@ public class ListTableNamesRequest extends TeaModel {
         return this.catalogId;
     }
 
-    public ListTableNamesRequest setTableNamePattern(String tableNamePattern) {
-        this.tableNamePattern = tableNamePattern;
+    public ListTableNamesRequest setDatabaseName(String databaseName) {
+        this.databaseName = databaseName;
         return this;
     }
-    public String getTableNamePattern() {
-        return this.tableNamePattern;
+    public String getDatabaseName() {
+        return this.databaseName;
     }
 
     public ListTableNamesRequest setNextPageToken(String nextPageToken) {
@@ -65,12 +65,12 @@ public class ListTableNamesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListTableNamesRequest setDatabaseName(String databaseName) {
-        this.databaseName = databaseName;
+    public ListTableNamesRequest setTableNamePattern(String tableNamePattern) {
+        this.tableNamePattern = tableNamePattern;
         return this;
     }
-    public String getDatabaseName() {
-        return this.databaseName;
+    public String getTableNamePattern() {
+        return this.tableNamePattern;
     }
 
     public ListTableNamesRequest setTableType(String tableType) {

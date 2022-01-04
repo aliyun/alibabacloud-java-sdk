@@ -8,6 +8,10 @@ public class Database extends TeaModel {
     @NameInMap("CreateTime")
     public Integer createTime;
 
+    // CreatedBy
+    @NameInMap("CreatedBy")
+    public String createdBy;
+
     // description
     @NameInMap("Description")
     public String description;
@@ -49,6 +53,14 @@ public class Database extends TeaModel {
     }
     public Integer getCreateTime() {
         return this.createTime;
+    }
+
+    public Database setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+        return this;
+    }
+    public String getCreatedBy() {
+        return this.createdBy;
     }
 
     public Database setDescription(String description) {

@@ -8,6 +8,10 @@ public class TableInput extends TeaModel {
     @NameInMap("Cascade")
     public Boolean cascade;
 
+    // CreateTime
+    @NameInMap("CreateTime")
+    public Integer createTime;
+
     // CreatedBy
     @NameInMap("CreatedBy")
     public String createdBy;
@@ -83,6 +87,14 @@ public class TableInput extends TeaModel {
     }
     public Boolean getCascade() {
         return this.cascade;
+    }
+
+    public TableInput setCreateTime(Integer createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public Integer getCreateTime() {
+        return this.createTime;
     }
 
     public TableInput setCreatedBy(String createdBy) {
