@@ -4,12 +4,12 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class ListRecentExperimentsResponseBody extends TeaModel {
+    @NameInMap("Experiments")
+    public java.util.List<ListRecentExperimentsResponseBodyExperiments> experiments;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Experiments")
-    public java.util.List<ListRecentExperimentsResponseBodyExperiments> experiments;
 
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -19,20 +19,20 @@ public class ListRecentExperimentsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListRecentExperimentsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListRecentExperimentsResponseBody setExperiments(java.util.List<ListRecentExperimentsResponseBodyExperiments> experiments) {
         this.experiments = experiments;
         return this;
     }
     public java.util.List<ListRecentExperimentsResponseBodyExperiments> getExperiments() {
         return this.experiments;
+    }
+
+    public ListRecentExperimentsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListRecentExperimentsResponseBody setTotalCount(Long totalCount) {
@@ -44,23 +44,23 @@ public class ListRecentExperimentsResponseBody extends TeaModel {
     }
 
     public static class ListRecentExperimentsResponseBodyExperiments extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("ExperimentId")
         public String experimentId;
 
+        @NameInMap("ModifyCnt")
+        public Long modifyCnt;
+
         @NameInMap("Name")
         public String name;
-
-        @NameInMap("Description")
-        public String description;
 
         @NameInMap("RecentGmtModifiedTime")
         public String recentGmtModifiedTime;
 
         @NameInMap("Source")
         public String source;
-
-        @NameInMap("ModifyCnt")
-        public Long modifyCnt;
 
         @NameInMap("WorkspaceId")
         public String workspaceId;
@@ -73,6 +73,14 @@ public class ListRecentExperimentsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListRecentExperimentsResponseBodyExperiments setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public ListRecentExperimentsResponseBodyExperiments setExperimentId(String experimentId) {
             this.experimentId = experimentId;
             return this;
@@ -81,20 +89,20 @@ public class ListRecentExperimentsResponseBody extends TeaModel {
             return this.experimentId;
         }
 
+        public ListRecentExperimentsResponseBodyExperiments setModifyCnt(Long modifyCnt) {
+            this.modifyCnt = modifyCnt;
+            return this;
+        }
+        public Long getModifyCnt() {
+            return this.modifyCnt;
+        }
+
         public ListRecentExperimentsResponseBodyExperiments setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
-        }
-
-        public ListRecentExperimentsResponseBodyExperiments setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public ListRecentExperimentsResponseBodyExperiments setRecentGmtModifiedTime(String recentGmtModifiedTime) {
@@ -111,14 +119,6 @@ public class ListRecentExperimentsResponseBody extends TeaModel {
         }
         public String getSource() {
             return this.source;
-        }
-
-        public ListRecentExperimentsResponseBodyExperiments setModifyCnt(Long modifyCnt) {
-            this.modifyCnt = modifyCnt;
-            return this;
-        }
-        public Long getModifyCnt() {
-            return this.modifyCnt;
         }
 
         public ListRecentExperimentsResponseBodyExperiments setWorkspaceId(String workspaceId) {

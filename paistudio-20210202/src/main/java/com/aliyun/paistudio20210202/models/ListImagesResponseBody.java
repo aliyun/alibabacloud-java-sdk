@@ -4,29 +4,29 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class ListImagesResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("requestId")
-    public String requestId;
+    // 镜像列表
+    @NameInMap("Images")
+    public java.util.List<ListImagesResponseBodyImages> images;
 
     // 总数
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    // 镜像列表
-    @NameInMap("Images")
-    public java.util.List<ListImagesResponseBodyImages> images;
+    // Id of the request
+    @NameInMap("requestId")
+    public String requestId;
 
     public static ListImagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListImagesResponseBody self = new ListImagesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListImagesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ListImagesResponseBody setImages(java.util.List<ListImagesResponseBodyImages> images) {
+        this.images = images;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<ListImagesResponseBodyImages> getImages() {
+        return this.images;
     }
 
     public ListImagesResponseBody setTotalCount(Long totalCount) {
@@ -37,12 +37,12 @@ public class ListImagesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListImagesResponseBody setImages(java.util.List<ListImagesResponseBodyImages> images) {
-        this.images = images;
+    public ListImagesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<ListImagesResponseBodyImages> getImages() {
-        return this.images;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListImagesResponseBodyImagesLabels extends TeaModel {
@@ -78,17 +78,17 @@ public class ListImagesResponseBody extends TeaModel {
     }
 
     public static class ListImagesResponseBodyImages extends TeaModel {
-        // 镜像名称
-        @NameInMap("Name")
-        public String name;
+        // 镜像描述
+        @NameInMap("Description")
+        public String description;
 
         // 创建 UTC 时间，日期格式 iso8601
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
-        // 镜像描述
-        @NameInMap("Description")
-        public String description;
+        // 镜像id
+        @NameInMap("ImageId")
+        public String imageId;
 
         // 镜像地址，包含版本号
         @NameInMap("ImageUri")
@@ -98,21 +98,21 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("Labels")
         public java.util.List<ListImagesResponseBodyImagesLabels> labels;
 
-        // 镜像id
-        @NameInMap("ImageId")
-        public String imageId;
+        // 镜像名称
+        @NameInMap("Name")
+        public String name;
 
         public static ListImagesResponseBodyImages build(java.util.Map<String, ?> map) throws Exception {
             ListImagesResponseBodyImages self = new ListImagesResponseBodyImages();
             return TeaModel.build(map, self);
         }
 
-        public ListImagesResponseBodyImages setName(String name) {
-            this.name = name;
+        public ListImagesResponseBodyImages setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getDescription() {
+            return this.description;
         }
 
         public ListImagesResponseBodyImages setGmtCreateTime(String gmtCreateTime) {
@@ -123,12 +123,12 @@ public class ListImagesResponseBody extends TeaModel {
             return this.gmtCreateTime;
         }
 
-        public ListImagesResponseBodyImages setDescription(String description) {
-            this.description = description;
+        public ListImagesResponseBodyImages setImageId(String imageId) {
+            this.imageId = imageId;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getImageId() {
+            return this.imageId;
         }
 
         public ListImagesResponseBodyImages setImageUri(String imageUri) {
@@ -147,12 +147,12 @@ public class ListImagesResponseBody extends TeaModel {
             return this.labels;
         }
 
-        public ListImagesResponseBodyImages setImageId(String imageId) {
-            this.imageId = imageId;
+        public ListImagesResponseBodyImages setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getImageId() {
-            return this.imageId;
+        public String getName() {
+            return this.name;
         }
 
     }

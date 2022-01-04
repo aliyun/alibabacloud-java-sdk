@@ -4,11 +4,11 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class CreateJobRequest extends TeaModel {
-    @NameInMap("ExperimentId")
-    public String experimentId;
-
     @NameInMap("ExecuteType")
     public String executeType;
+
+    @NameInMap("ExperimentId")
+    public String experimentId;
 
     @NameInMap("NodeId")
     public String nodeId;
@@ -21,20 +21,20 @@ public class CreateJobRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateJobRequest setExperimentId(String experimentId) {
-        this.experimentId = experimentId;
-        return this;
-    }
-    public String getExperimentId() {
-        return this.experimentId;
-    }
-
     public CreateJobRequest setExecuteType(String executeType) {
         this.executeType = executeType;
         return this;
     }
     public String getExecuteType() {
         return this.executeType;
+    }
+
+    public CreateJobRequest setExperimentId(String experimentId) {
+        this.experimentId = experimentId;
+        return this;
+    }
+    public String getExperimentId() {
+        return this.experimentId;
     }
 
     public CreateJobRequest setNodeId(String nodeId) {

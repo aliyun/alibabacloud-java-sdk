@@ -4,10 +4,6 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class ListImageLabelsResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("requestId")
-    public String requestId;
-
     // 镜像标签
     @NameInMap("Labels")
     public java.util.List<ListImageLabelsResponseBodyLabels> labels;
@@ -16,17 +12,13 @@ public class ListImageLabelsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    // Id of the request
+    @NameInMap("requestId")
+    public String requestId;
+
     public static ListImageLabelsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListImageLabelsResponseBody self = new ListImageLabelsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListImageLabelsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListImageLabelsResponseBody setLabels(java.util.List<ListImageLabelsResponseBodyLabels> labels) {
@@ -43,6 +35,14 @@ public class ListImageLabelsResponseBody extends TeaModel {
     }
     public Long getTotalCount() {
         return this.totalCount;
+    }
+
+    public ListImageLabelsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListImageLabelsResponseBodyLabels extends TeaModel {

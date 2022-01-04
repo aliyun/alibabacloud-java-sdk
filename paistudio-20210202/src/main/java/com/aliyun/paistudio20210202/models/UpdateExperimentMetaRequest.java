@@ -4,14 +4,18 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class UpdateExperimentMetaRequest extends TeaModel {
-    @NameInMap("Name")
-    public String name;
+    // 工作空间内可见性 PUBLIC; PRIVATE 默认PUBLIC
+    @NameInMap("Accessibility")
+    public String accessibility;
 
     @NameInMap("Description")
     public String description;
 
     @NameInMap("FolderId")
     public String folderId;
+
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("Options")
     public String options;
@@ -21,12 +25,12 @@ public class UpdateExperimentMetaRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateExperimentMetaRequest setName(String name) {
-        this.name = name;
+    public UpdateExperimentMetaRequest setAccessibility(String accessibility) {
+        this.accessibility = accessibility;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     public UpdateExperimentMetaRequest setDescription(String description) {
@@ -43,6 +47,14 @@ public class UpdateExperimentMetaRequest extends TeaModel {
     }
     public String getFolderId() {
         return this.folderId;
+    }
+
+    public UpdateExperimentMetaRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public UpdateExperimentMetaRequest setOptions(String options) {

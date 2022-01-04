@@ -7,6 +7,12 @@ public class ListRecentExperimentsRequest extends TeaModel {
     @NameInMap("Order")
     public String order;
 
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
     @NameInMap("Source")
     public String source;
 
@@ -15,12 +21,6 @@ public class ListRecentExperimentsRequest extends TeaModel {
 
     @NameInMap("WorkspaceId")
     public String workspaceId;
-
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
-    @NameInMap("PageSize")
-    public Long pageSize;
 
     public static ListRecentExperimentsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRecentExperimentsRequest self = new ListRecentExperimentsRequest();
@@ -33,6 +33,22 @@ public class ListRecentExperimentsRequest extends TeaModel {
     }
     public String getOrder() {
         return this.order;
+    }
+
+    public ListRecentExperimentsRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListRecentExperimentsRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public ListRecentExperimentsRequest setSource(String source) {
@@ -57,22 +73,6 @@ public class ListRecentExperimentsRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
-    }
-
-    public ListRecentExperimentsRequest setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListRecentExperimentsRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
     }
 
 }

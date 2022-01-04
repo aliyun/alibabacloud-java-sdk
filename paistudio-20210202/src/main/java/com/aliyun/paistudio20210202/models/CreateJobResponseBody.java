@@ -4,24 +4,16 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class CreateJobResponseBody extends TeaModel {
+    @NameInMap("JobId")
+    public String jobId;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("JobId")
-    public String jobId;
-
     public static CreateJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateJobResponseBody self = new CreateJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateJobResponseBody setJobId(String jobId) {
@@ -30,6 +22,14 @@ public class CreateJobResponseBody extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public CreateJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

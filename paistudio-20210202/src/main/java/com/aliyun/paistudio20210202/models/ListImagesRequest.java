@@ -4,9 +4,17 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class ListImagesRequest extends TeaModel {
+    // 过滤值 以逗号分隔
+    @NameInMap("Labels")
+    public String labels;
+
     // 镜像名称，支持模糊搜索
     @NameInMap("Name")
     public String name;
+
+    // 排序方向： ASC - 升序 DESC - 降序
+    @NameInMap("Order")
+    public String order;
 
     // 分页，从1开始，默认1
     @NameInMap("PageNumber")
@@ -20,14 +28,6 @@ public class ListImagesRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
-    // 排序方向： ASC - 升序 DESC - 降序
-    @NameInMap("Order")
-    public String order;
-
-    // 过滤值 以逗号分隔
-    @NameInMap("Labels")
-    public String labels;
-
     // 是否显示非必要信息：Labels
     @NameInMap("Verbose")
     public Boolean verbose;
@@ -37,12 +37,28 @@ public class ListImagesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListImagesRequest setLabels(String labels) {
+        this.labels = labels;
+        return this;
+    }
+    public String getLabels() {
+        return this.labels;
+    }
+
     public ListImagesRequest setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public ListImagesRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
     }
 
     public ListImagesRequest setPageNumber(Integer pageNumber) {
@@ -67,22 +83,6 @@ public class ListImagesRequest extends TeaModel {
     }
     public String getSortBy() {
         return this.sortBy;
-    }
-
-    public ListImagesRequest setOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    public String getOrder() {
-        return this.order;
-    }
-
-    public ListImagesRequest setLabels(String labels) {
-        this.labels = labels;
-        return this;
-    }
-    public String getLabels() {
-        return this.labels;
     }
 
     public ListImagesRequest setVerbose(Boolean verbose) {

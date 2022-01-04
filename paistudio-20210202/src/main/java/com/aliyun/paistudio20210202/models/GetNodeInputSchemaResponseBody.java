@@ -4,27 +4,19 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetNodeInputSchemaResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ColNames")
     public java.util.List<String> colNames;
 
     @NameInMap("ColTypes")
     public java.util.List<String> colTypes;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static GetNodeInputSchemaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetNodeInputSchemaResponseBody self = new GetNodeInputSchemaResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetNodeInputSchemaResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetNodeInputSchemaResponseBody setColNames(java.util.List<String> colNames) {
@@ -41,6 +33,14 @@ public class GetNodeInputSchemaResponseBody extends TeaModel {
     }
     public java.util.List<String> getColTypes() {
         return this.colTypes;
+    }
+
+    public GetNodeInputSchemaResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

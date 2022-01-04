@@ -4,12 +4,12 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class ListExperimentsResponseBody extends TeaModel {
+    @NameInMap("Experiments")
+    public java.util.List<ListExperimentsResponseBodyExperiments> experiments;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Experiments")
-    public java.util.List<ListExperimentsResponseBodyExperiments> experiments;
 
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -19,20 +19,20 @@ public class ListExperimentsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListExperimentsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListExperimentsResponseBody setExperiments(java.util.List<ListExperimentsResponseBodyExperiments> experiments) {
         this.experiments = experiments;
         return this;
     }
     public java.util.List<ListExperimentsResponseBodyExperiments> getExperiments() {
         return this.experiments;
+    }
+
+    public ListExperimentsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListExperimentsResponseBody setTotalCount(Long totalCount) {
@@ -44,14 +44,17 @@ public class ListExperimentsResponseBody extends TeaModel {
     }
 
     public static class ListExperimentsResponseBodyExperiments extends TeaModel {
-        @NameInMap("ExperimentId")
-        public String experimentId;
+        @NameInMap("Accessibility")
+        public String accessibility;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Creator")
+        public String creator;
 
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("ExperimentId")
+        public String experimentId;
 
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
@@ -59,8 +62,8 @@ public class ListExperimentsResponseBody extends TeaModel {
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
-        @NameInMap("Creator")
-        public String creator;
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("Source")
         public String source;
@@ -76,20 +79,20 @@ public class ListExperimentsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListExperimentsResponseBodyExperiments setExperimentId(String experimentId) {
-            this.experimentId = experimentId;
+        public ListExperimentsResponseBodyExperiments setAccessibility(String accessibility) {
+            this.accessibility = accessibility;
             return this;
         }
-        public String getExperimentId() {
-            return this.experimentId;
+        public String getAccessibility() {
+            return this.accessibility;
         }
 
-        public ListExperimentsResponseBodyExperiments setName(String name) {
-            this.name = name;
+        public ListExperimentsResponseBodyExperiments setCreator(String creator) {
+            this.creator = creator;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getCreator() {
+            return this.creator;
         }
 
         public ListExperimentsResponseBodyExperiments setDescription(String description) {
@@ -98,6 +101,14 @@ public class ListExperimentsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListExperimentsResponseBodyExperiments setExperimentId(String experimentId) {
+            this.experimentId = experimentId;
+            return this;
+        }
+        public String getExperimentId() {
+            return this.experimentId;
         }
 
         public ListExperimentsResponseBodyExperiments setGmtCreateTime(String gmtCreateTime) {
@@ -116,12 +127,12 @@ public class ListExperimentsResponseBody extends TeaModel {
             return this.gmtModifiedTime;
         }
 
-        public ListExperimentsResponseBodyExperiments setCreator(String creator) {
-            this.creator = creator;
+        public ListExperimentsResponseBodyExperiments setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getCreator() {
-            return this.creator;
+        public String getName() {
+            return this.name;
         }
 
         public ListExperimentsResponseBodyExperiments setSource(String source) {

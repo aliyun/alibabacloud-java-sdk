@@ -8,11 +8,11 @@ public class ListServicesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("Services")
     public java.util.List<ListServicesResponseBodyServices> services;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListServicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListServicesResponseBody self = new ListServicesResponseBody();
@@ -27,14 +27,6 @@ public class ListServicesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListServicesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
     public ListServicesResponseBody setServices(java.util.List<ListServicesResponseBodyServices> services) {
         this.services = services;
         return this;
@@ -43,24 +35,24 @@ public class ListServicesResponseBody extends TeaModel {
         return this.services;
     }
 
-    public static class ListServicesResponseBodyServices extends TeaModel {
-        @NameInMap("Url")
-        public String url;
+    public ListServicesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
 
+    public static class ListServicesResponseBodyServices extends TeaModel {
         @NameInMap("ServiceId")
         public String serviceId;
+
+        @NameInMap("Url")
+        public String url;
 
         public static ListServicesResponseBodyServices build(java.util.Map<String, ?> map) throws Exception {
             ListServicesResponseBodyServices self = new ListServicesResponseBodyServices();
             return TeaModel.build(map, self);
-        }
-
-        public ListServicesResponseBodyServices setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
         }
 
         public ListServicesResponseBodyServices setServiceId(String serviceId) {
@@ -69,6 +61,14 @@ public class ListServicesResponseBody extends TeaModel {
         }
         public String getServiceId() {
             return this.serviceId;
+        }
+
+        public ListServicesResponseBodyServices setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }

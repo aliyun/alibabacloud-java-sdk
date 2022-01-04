@@ -4,23 +4,15 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceRequest extends TeaModel {
-    @NameInMap("ServiceType")
-    public String serviceType;
-
     @NameInMap("Config")
     public CreateServiceRequestConfig config;
+
+    @NameInMap("ServiceType")
+    public String serviceType;
 
     public static CreateServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceRequest self = new CreateServiceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateServiceRequest setServiceType(String serviceType) {
-        this.serviceType = serviceType;
-        return this;
-    }
-    public String getServiceType() {
-        return this.serviceType;
     }
 
     public CreateServiceRequest setConfig(CreateServiceRequestConfig config) {
@@ -29,6 +21,14 @@ public class CreateServiceRequest extends TeaModel {
     }
     public CreateServiceRequestConfig getConfig() {
         return this.config;
+    }
+
+    public CreateServiceRequest setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+        return this;
+    }
+    public String getServiceType() {
+        return this.serviceType;
     }
 
     public static class CreateServiceRequestConfig extends TeaModel {

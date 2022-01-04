@@ -4,9 +4,9 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetImageResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("requestId")
-    public String requestId;
+    // 描述
+    @NameInMap("Description")
+    public String description;
 
     // 创建 UTC 时间，日期格式 iso8601
     @NameInMap("GmtCreateTime")
@@ -16,17 +16,17 @@ public class GetImageResponseBody extends TeaModel {
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
-    // 镜像名称
-    @NameInMap("Name")
-    public String name;
-
-    // 描述
-    @NameInMap("Description")
-    public String description;
-
     // 镜像地址，包含版本号
     @NameInMap("ImageUri")
     public String imageUri;
+
+    // 镜像标签
+    @NameInMap("Labels")
+    public java.util.List<GetImageResponseBodyLabels> labels;
+
+    // 镜像名称
+    @NameInMap("Name")
+    public String name;
 
     // 创建人
     @NameInMap("OperatorCreate")
@@ -36,21 +36,21 @@ public class GetImageResponseBody extends TeaModel {
     @NameInMap("ParentOperatorCreate")
     public String parentOperatorCreate;
 
-    // 镜像标签
-    @NameInMap("Labels")
-    public java.util.List<GetImageResponseBodyLabels> labels;
+    // Id of the request
+    @NameInMap("requestId")
+    public String requestId;
 
     public static GetImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetImageResponseBody self = new GetImageResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetImageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetImageResponseBody setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getDescription() {
+        return this.description;
     }
 
     public GetImageResponseBody setGmtCreateTime(String gmtCreateTime) {
@@ -69,28 +69,28 @@ public class GetImageResponseBody extends TeaModel {
         return this.gmtModifiedTime;
     }
 
-    public GetImageResponseBody setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public GetImageResponseBody setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
     public GetImageResponseBody setImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
     }
     public String getImageUri() {
         return this.imageUri;
+    }
+
+    public GetImageResponseBody setLabels(java.util.List<GetImageResponseBodyLabels> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.List<GetImageResponseBodyLabels> getLabels() {
+        return this.labels;
+    }
+
+    public GetImageResponseBody setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public GetImageResponseBody setOperatorCreate(String operatorCreate) {
@@ -109,12 +109,12 @@ public class GetImageResponseBody extends TeaModel {
         return this.parentOperatorCreate;
     }
 
-    public GetImageResponseBody setLabels(java.util.List<GetImageResponseBodyLabels> labels) {
-        this.labels = labels;
+    public GetImageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<GetImageResponseBodyLabels> getLabels() {
-        return this.labels;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GetImageResponseBodyLabels extends TeaModel {

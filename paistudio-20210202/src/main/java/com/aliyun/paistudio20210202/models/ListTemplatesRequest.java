@@ -4,6 +4,12 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesRequest extends TeaModel {
+    @NameInMap("List")
+    public String list;
+
+    @NameInMap("Order")
+    public String order;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -13,14 +19,8 @@ public class ListTemplatesRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
-    @NameInMap("List")
-    public String list;
-
     @NameInMap("TagId")
     public String tagId;
-
-    @NameInMap("Order")
-    public String order;
 
     @NameInMap("TypeId")
     public String typeId;
@@ -28,6 +28,22 @@ public class ListTemplatesRequest extends TeaModel {
     public static ListTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTemplatesRequest self = new ListTemplatesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTemplatesRequest setList(String list) {
+        this.list = list;
+        return this;
+    }
+    public String getList() {
+        return this.list;
+    }
+
+    public ListTemplatesRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
     }
 
     public ListTemplatesRequest setPageNumber(Integer pageNumber) {
@@ -54,28 +70,12 @@ public class ListTemplatesRequest extends TeaModel {
         return this.source;
     }
 
-    public ListTemplatesRequest setList(String list) {
-        this.list = list;
-        return this;
-    }
-    public String getList() {
-        return this.list;
-    }
-
     public ListTemplatesRequest setTagId(String tagId) {
         this.tagId = tagId;
         return this;
     }
     public String getTagId() {
         return this.tagId;
-    }
-
-    public ListTemplatesRequest setOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    public String getOrder() {
-        return this.order;
     }
 
     public ListTemplatesRequest setTypeId(String typeId) {

@@ -33,9 +33,6 @@ public class ListAuthRolesResponseBody extends TeaModel {
     }
 
     public static class ListAuthRolesResponseBodyRolesToken extends TeaModel {
-        @NameInMap("SecurityToken")
-        public String securityToken;
-
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
@@ -45,17 +42,12 @@ public class ListAuthRolesResponseBody extends TeaModel {
         @NameInMap("Expiration")
         public String expiration;
 
+        @NameInMap("SecurityToken")
+        public String securityToken;
+
         public static ListAuthRolesResponseBodyRolesToken build(java.util.Map<String, ?> map) throws Exception {
             ListAuthRolesResponseBodyRolesToken self = new ListAuthRolesResponseBodyRolesToken();
             return TeaModel.build(map, self);
-        }
-
-        public ListAuthRolesResponseBodyRolesToken setSecurityToken(String securityToken) {
-            this.securityToken = securityToken;
-            return this;
-        }
-        public String getSecurityToken() {
-            return this.securityToken;
         }
 
         public ListAuthRolesResponseBodyRolesToken setAccessKeyId(String accessKeyId) {
@@ -82,43 +74,35 @@ public class ListAuthRolesResponseBody extends TeaModel {
             return this.expiration;
         }
 
+        public ListAuthRolesResponseBodyRolesToken setSecurityToken(String securityToken) {
+            this.securityToken = securityToken;
+            return this;
+        }
+        public String getSecurityToken() {
+            return this.securityToken;
+        }
+
     }
 
     public static class ListAuthRolesResponseBodyRoles extends TeaModel {
-        @NameInMap("RoleName")
-        public String roleName;
+        @NameInMap("IsEnabled")
+        public String isEnabled;
 
         @NameInMap("RoleARN")
         public String roleARN;
 
-        @NameInMap("IsEnabled")
-        public String isEnabled;
-
-        @NameInMap("Token")
-        public ListAuthRolesResponseBodyRolesToken token;
+        @NameInMap("RoleName")
+        public String roleName;
 
         @NameInMap("RoleType")
         public String roleType;
 
+        @NameInMap("Token")
+        public ListAuthRolesResponseBodyRolesToken token;
+
         public static ListAuthRolesResponseBodyRoles build(java.util.Map<String, ?> map) throws Exception {
             ListAuthRolesResponseBodyRoles self = new ListAuthRolesResponseBodyRoles();
             return TeaModel.build(map, self);
-        }
-
-        public ListAuthRolesResponseBodyRoles setRoleName(String roleName) {
-            this.roleName = roleName;
-            return this;
-        }
-        public String getRoleName() {
-            return this.roleName;
-        }
-
-        public ListAuthRolesResponseBodyRoles setRoleARN(String roleARN) {
-            this.roleARN = roleARN;
-            return this;
-        }
-        public String getRoleARN() {
-            return this.roleARN;
         }
 
         public ListAuthRolesResponseBodyRoles setIsEnabled(String isEnabled) {
@@ -129,12 +113,20 @@ public class ListAuthRolesResponseBody extends TeaModel {
             return this.isEnabled;
         }
 
-        public ListAuthRolesResponseBodyRoles setToken(ListAuthRolesResponseBodyRolesToken token) {
-            this.token = token;
+        public ListAuthRolesResponseBodyRoles setRoleARN(String roleARN) {
+            this.roleARN = roleARN;
             return this;
         }
-        public ListAuthRolesResponseBodyRolesToken getToken() {
-            return this.token;
+        public String getRoleARN() {
+            return this.roleARN;
+        }
+
+        public ListAuthRolesResponseBodyRoles setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
         }
 
         public ListAuthRolesResponseBodyRoles setRoleType(String roleType) {
@@ -143,6 +135,14 @@ public class ListAuthRolesResponseBody extends TeaModel {
         }
         public String getRoleType() {
             return this.roleType;
+        }
+
+        public ListAuthRolesResponseBodyRoles setToken(ListAuthRolesResponseBodyRolesToken token) {
+            this.token = token;
+            return this;
+        }
+        public ListAuthRolesResponseBodyRolesToken getToken() {
+            return this.token;
         }
 
     }
