@@ -4,29 +4,11 @@ package com.aliyun.cloudauth20200618.models;
 import com.aliyun.tea.*;
 
 public class InitSmartVerifyRequest extends TeaModel {
-    @NameInMap("SceneId")
-    public Long sceneId;
+    @NameInMap("CallbackToken")
+    public String callbackToken;
 
-    @NameInMap("OuterOrderNo")
-    public String outerOrderNo;
-
-    @NameInMap("Mode")
-    public String mode;
-
-    @NameInMap("CertType")
-    public String certType;
-
-    @NameInMap("MetaInfo")
-    public String metaInfo;
-
-    @NameInMap("Mobile")
-    public String mobile;
-
-    @NameInMap("Ip")
-    public String ip;
-
-    @NameInMap("UserId")
-    public String userId;
+    @NameInMap("CallbackUrl")
+    public String callbackUrl;
 
     @NameInMap("CertName")
     public String certName;
@@ -34,14 +16,11 @@ public class InitSmartVerifyRequest extends TeaModel {
     @NameInMap("CertNo")
     public String certNo;
 
-    @NameInMap("Ocr")
-    public String ocr;
+    @NameInMap("CertType")
+    public String certType;
 
-    @NameInMap("CallbackUrl")
-    public String callbackUrl;
-
-    @NameInMap("CallbackToken")
-    public String callbackToken;
+    @NameInMap("CertifyId")
+    public String certifyId;
 
     @NameInMap("FacePictureBase64")
     public String facePictureBase64;
@@ -49,8 +28,26 @@ public class InitSmartVerifyRequest extends TeaModel {
     @NameInMap("FacePictureUrl")
     public String facePictureUrl;
 
-    @NameInMap("CertifyId")
-    public String certifyId;
+    @NameInMap("IdName")
+    public String idName;
+
+    @NameInMap("IdNo")
+    public String idNo;
+
+    @NameInMap("Ip")
+    public String ip;
+
+    @NameInMap("MetaInfo")
+    public String metaInfo;
+
+    @NameInMap("Mobile")
+    public String mobile;
+
+    @NameInMap("Mode")
+    public String mode;
+
+    @NameInMap("Ocr")
+    public String ocr;
 
     @NameInMap("OssBucketName")
     public String ossBucketName;
@@ -58,79 +55,34 @@ public class InitSmartVerifyRequest extends TeaModel {
     @NameInMap("OssObjectName")
     public String ossObjectName;
 
-    @NameInMap("IdNo")
-    public String idNo;
+    @NameInMap("OuterOrderNo")
+    public String outerOrderNo;
 
-    @NameInMap("IdName")
-    public String idName;
+    @NameInMap("SceneId")
+    public Long sceneId;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static InitSmartVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
         InitSmartVerifyRequest self = new InitSmartVerifyRequest();
         return TeaModel.build(map, self);
     }
 
-    public InitSmartVerifyRequest setSceneId(Long sceneId) {
-        this.sceneId = sceneId;
+    public InitSmartVerifyRequest setCallbackToken(String callbackToken) {
+        this.callbackToken = callbackToken;
         return this;
     }
-    public Long getSceneId() {
-        return this.sceneId;
+    public String getCallbackToken() {
+        return this.callbackToken;
     }
 
-    public InitSmartVerifyRequest setOuterOrderNo(String outerOrderNo) {
-        this.outerOrderNo = outerOrderNo;
+    public InitSmartVerifyRequest setCallbackUrl(String callbackUrl) {
+        this.callbackUrl = callbackUrl;
         return this;
     }
-    public String getOuterOrderNo() {
-        return this.outerOrderNo;
-    }
-
-    public InitSmartVerifyRequest setMode(String mode) {
-        this.mode = mode;
-        return this;
-    }
-    public String getMode() {
-        return this.mode;
-    }
-
-    public InitSmartVerifyRequest setCertType(String certType) {
-        this.certType = certType;
-        return this;
-    }
-    public String getCertType() {
-        return this.certType;
-    }
-
-    public InitSmartVerifyRequest setMetaInfo(String metaInfo) {
-        this.metaInfo = metaInfo;
-        return this;
-    }
-    public String getMetaInfo() {
-        return this.metaInfo;
-    }
-
-    public InitSmartVerifyRequest setMobile(String mobile) {
-        this.mobile = mobile;
-        return this;
-    }
-    public String getMobile() {
-        return this.mobile;
-    }
-
-    public InitSmartVerifyRequest setIp(String ip) {
-        this.ip = ip;
-        return this;
-    }
-    public String getIp() {
-        return this.ip;
-    }
-
-    public InitSmartVerifyRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
+    public String getCallbackUrl() {
+        return this.callbackUrl;
     }
 
     public InitSmartVerifyRequest setCertName(String certName) {
@@ -149,28 +101,20 @@ public class InitSmartVerifyRequest extends TeaModel {
         return this.certNo;
     }
 
-    public InitSmartVerifyRequest setOcr(String ocr) {
-        this.ocr = ocr;
+    public InitSmartVerifyRequest setCertType(String certType) {
+        this.certType = certType;
         return this;
     }
-    public String getOcr() {
-        return this.ocr;
+    public String getCertType() {
+        return this.certType;
     }
 
-    public InitSmartVerifyRequest setCallbackUrl(String callbackUrl) {
-        this.callbackUrl = callbackUrl;
+    public InitSmartVerifyRequest setCertifyId(String certifyId) {
+        this.certifyId = certifyId;
         return this;
     }
-    public String getCallbackUrl() {
-        return this.callbackUrl;
-    }
-
-    public InitSmartVerifyRequest setCallbackToken(String callbackToken) {
-        this.callbackToken = callbackToken;
-        return this;
-    }
-    public String getCallbackToken() {
-        return this.callbackToken;
+    public String getCertifyId() {
+        return this.certifyId;
     }
 
     public InitSmartVerifyRequest setFacePictureBase64(String facePictureBase64) {
@@ -189,12 +133,60 @@ public class InitSmartVerifyRequest extends TeaModel {
         return this.facePictureUrl;
     }
 
-    public InitSmartVerifyRequest setCertifyId(String certifyId) {
-        this.certifyId = certifyId;
+    public InitSmartVerifyRequest setIdName(String idName) {
+        this.idName = idName;
         return this;
     }
-    public String getCertifyId() {
-        return this.certifyId;
+    public String getIdName() {
+        return this.idName;
+    }
+
+    public InitSmartVerifyRequest setIdNo(String idNo) {
+        this.idNo = idNo;
+        return this;
+    }
+    public String getIdNo() {
+        return this.idNo;
+    }
+
+    public InitSmartVerifyRequest setIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
+    public String getIp() {
+        return this.ip;
+    }
+
+    public InitSmartVerifyRequest setMetaInfo(String metaInfo) {
+        this.metaInfo = metaInfo;
+        return this;
+    }
+    public String getMetaInfo() {
+        return this.metaInfo;
+    }
+
+    public InitSmartVerifyRequest setMobile(String mobile) {
+        this.mobile = mobile;
+        return this;
+    }
+    public String getMobile() {
+        return this.mobile;
+    }
+
+    public InitSmartVerifyRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
+    }
+
+    public InitSmartVerifyRequest setOcr(String ocr) {
+        this.ocr = ocr;
+        return this;
+    }
+    public String getOcr() {
+        return this.ocr;
     }
 
     public InitSmartVerifyRequest setOssBucketName(String ossBucketName) {
@@ -213,20 +205,28 @@ public class InitSmartVerifyRequest extends TeaModel {
         return this.ossObjectName;
     }
 
-    public InitSmartVerifyRequest setIdNo(String idNo) {
-        this.idNo = idNo;
+    public InitSmartVerifyRequest setOuterOrderNo(String outerOrderNo) {
+        this.outerOrderNo = outerOrderNo;
         return this;
     }
-    public String getIdNo() {
-        return this.idNo;
+    public String getOuterOrderNo() {
+        return this.outerOrderNo;
     }
 
-    public InitSmartVerifyRequest setIdName(String idName) {
-        this.idName = idName;
+    public InitSmartVerifyRequest setSceneId(Long sceneId) {
+        this.sceneId = sceneId;
         return this;
     }
-    public String getIdName() {
-        return this.idName;
+    public Long getSceneId() {
+        return this.sceneId;
+    }
+
+    public InitSmartVerifyRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

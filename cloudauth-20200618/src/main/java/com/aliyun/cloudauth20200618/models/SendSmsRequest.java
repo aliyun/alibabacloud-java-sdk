@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class SendSmsRequest extends TeaModel {
     @NameInMap("Mobile")
+    @Validation(required = true)
     public String mobile;
 
+    @NameInMap("OuterOrderNo")
+    public String outerOrderNo;
+
     @NameInMap("SignName")
+    @Validation(required = true)
     public String signName;
 
     @NameInMap("TemplateCode")
+    @Validation(required = true)
     public String templateCode;
 
     @NameInMap("TemplateParam")
     public String templateParam;
-
-    @NameInMap("OuterOrderNo")
-    public String outerOrderNo;
 
     public static SendSmsRequest build(java.util.Map<String, ?> map) throws Exception {
         SendSmsRequest self = new SendSmsRequest();
@@ -30,6 +33,14 @@ public class SendSmsRequest extends TeaModel {
     }
     public String getMobile() {
         return this.mobile;
+    }
+
+    public SendSmsRequest setOuterOrderNo(String outerOrderNo) {
+        this.outerOrderNo = outerOrderNo;
+        return this;
+    }
+    public String getOuterOrderNo() {
+        return this.outerOrderNo;
     }
 
     public SendSmsRequest setSignName(String signName) {
@@ -54,14 +65,6 @@ public class SendSmsRequest extends TeaModel {
     }
     public String getTemplateParam() {
         return this.templateParam;
-    }
-
-    public SendSmsRequest setOuterOrderNo(String outerOrderNo) {
-        this.outerOrderNo = outerOrderNo;
-        return this;
-    }
-    public String getOuterOrderNo() {
-        return this.outerOrderNo;
     }
 
 }
