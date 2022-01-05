@@ -32,32 +32,24 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeDownloadRecordsResponseBodyRecords extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("DownloadId")
         public Long downloadId;
 
         @NameInMap("ExceptionMsg")
         public String exceptionMsg;
 
-        @NameInMap("Url")
-        public String url;
-
         @NameInMap("FileName")
         public String fileName;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Url")
+        public String url;
 
         public static DescribeDownloadRecordsResponseBodyRecords build(java.util.Map<String, ?> map) throws Exception {
             DescribeDownloadRecordsResponseBodyRecords self = new DescribeDownloadRecordsResponseBodyRecords();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDownloadRecordsResponseBodyRecords setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeDownloadRecordsResponseBodyRecords setDownloadId(Long downloadId) {
@@ -76,20 +68,28 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             return this.exceptionMsg;
         }
 
-        public DescribeDownloadRecordsResponseBodyRecords setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
         public DescribeDownloadRecordsResponseBodyRecords setFileName(String fileName) {
             this.fileName = fileName;
             return this;
         }
         public String getFileName() {
             return this.fileName;
+        }
+
+        public DescribeDownloadRecordsResponseBodyRecords setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeDownloadRecordsResponseBodyRecords setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }

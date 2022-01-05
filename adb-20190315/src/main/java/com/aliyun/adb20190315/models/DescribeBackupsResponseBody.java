@@ -4,8 +4,11 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public String totalCount;
+    @NameInMap("Items")
+    public DescribeBackupsResponseBodyItems items;
+
+    @NameInMap("PageNumber")
+    public String pageNumber;
 
     @NameInMap("PageSize")
     public String pageSize;
@@ -13,23 +16,28 @@ public class DescribeBackupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public String pageNumber;
-
-    @NameInMap("Items")
-    public DescribeBackupsResponseBodyItems items;
+    @NameInMap("TotalCount")
+    public String totalCount;
 
     public static DescribeBackupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupsResponseBody self = new DescribeBackupsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupsResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
+    public DescribeBackupsResponseBody setItems(DescribeBackupsResponseBodyItems items) {
+        this.items = items;
         return this;
     }
-    public String getTotalCount() {
-        return this.totalCount;
+    public DescribeBackupsResponseBodyItems getItems() {
+        return this.items;
+    }
+
+    public DescribeBackupsResponseBody setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeBackupsResponseBody setPageSize(String pageSize) {
@@ -48,35 +56,15 @@ public class DescribeBackupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeBackupsResponseBody setPageNumber(String pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeBackupsResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public String getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeBackupsResponseBody setItems(DescribeBackupsResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeBackupsResponseBodyItems getItems() {
-        return this.items;
+    public String getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeBackupsResponseBodyItemsBackup extends TeaModel {
-        @NameInMap("DBClusterId")
-        public String DBClusterId;
-
-        @NameInMap("BackupType")
-        public String backupType;
-
-        @NameInMap("BackupStartTime")
-        public String backupStartTime;
-
-        @NameInMap("BackupSize")
-        public Integer backupSize;
-
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
@@ -86,41 +74,21 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("BackupMethod")
         public String backupMethod;
 
+        @NameInMap("BackupSize")
+        public Integer backupSize;
+
+        @NameInMap("BackupStartTime")
+        public String backupStartTime;
+
+        @NameInMap("BackupType")
+        public String backupType;
+
+        @NameInMap("DBClusterId")
+        public String DBClusterId;
+
         public static DescribeBackupsResponseBodyItemsBackup build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupsResponseBodyItemsBackup self = new DescribeBackupsResponseBodyItemsBackup();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setDBClusterId(String DBClusterId) {
-            this.DBClusterId = DBClusterId;
-            return this;
-        }
-        public String getDBClusterId() {
-            return this.DBClusterId;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupType(String backupType) {
-            this.backupType = backupType;
-            return this;
-        }
-        public String getBackupType() {
-            return this.backupType;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupStartTime(String backupStartTime) {
-            this.backupStartTime = backupStartTime;
-            return this;
-        }
-        public String getBackupStartTime() {
-            return this.backupStartTime;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupSize(Integer backupSize) {
-            this.backupSize = backupSize;
-            return this;
-        }
-        public Integer getBackupSize() {
-            return this.backupSize;
         }
 
         public DescribeBackupsResponseBodyItemsBackup setBackupEndTime(String backupEndTime) {
@@ -145,6 +113,38 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getBackupMethod() {
             return this.backupMethod;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupSize(Integer backupSize) {
+            this.backupSize = backupSize;
+            return this;
+        }
+        public Integer getBackupSize() {
+            return this.backupSize;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupStartTime(String backupStartTime) {
+            this.backupStartTime = backupStartTime;
+            return this;
+        }
+        public String getBackupStartTime() {
+            return this.backupStartTime;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupType(String backupType) {
+            this.backupType = backupType;
+            return this;
+        }
+        public String getBackupType() {
+            return this.backupType;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setDBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+        public String getDBClusterId() {
+            return this.DBClusterId;
         }
 
     }

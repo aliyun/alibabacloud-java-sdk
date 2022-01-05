@@ -4,47 +4,35 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosisRecordsRequest extends TeaModel {
+    @NameInMap("ClientIp")
+    public String clientIp;
+
     @NameInMap("DBClusterId")
     public String DBClusterId;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("QueryCondition")
-    public String queryCondition;
-
-    @NameInMap("Keyword")
-    public String keyword;
-
-    @NameInMap("MinPeakMemory")
-    public Long minPeakMemory;
-
-    @NameInMap("MaxPeakMemory")
-    public Long maxPeakMemory;
-
-    @NameInMap("MinScanSize")
-    public Long minScanSize;
-
-    @NameInMap("MaxScanSize")
-    public Long maxScanSize;
-
-    @NameInMap("ResourceGroup")
-    public String resourceGroup;
-
-    @NameInMap("UserName")
-    public String userName;
 
     @NameInMap("Database")
     public String database;
 
-    @NameInMap("ClientIp")
-    public String clientIp;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("Keyword")
+    public String keyword;
+
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("MaxPeakMemory")
+    public Long maxPeakMemory;
+
+    @NameInMap("MaxScanSize")
+    public Long maxScanSize;
+
+    @NameInMap("MinPeakMemory")
+    public Long minPeakMemory;
+
+    @NameInMap("MinScanSize")
+    public Long minScanSize;
 
     @NameInMap("Order")
     public String order;
@@ -55,15 +43,35 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("PatternId")
     public Long patternId;
+
+    @NameInMap("QueryCondition")
+    public String queryCondition;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroup")
+    public String resourceGroup;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("UserName")
+    public String userName;
 
     public static DescribeDiagnosisRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDiagnosisRecordsRequest self = new DescribeDiagnosisRecordsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDiagnosisRecordsRequest setClientIp(String clientIp) {
+        this.clientIp = clientIp;
+        return this;
+    }
+    public String getClientIp() {
+        return this.clientIp;
     }
 
     public DescribeDiagnosisRecordsRequest setDBClusterId(String DBClusterId) {
@@ -74,12 +82,12 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public DescribeDiagnosisRecordsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeDiagnosisRecordsRequest setDatabase(String database) {
+        this.database = database;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public String getDatabase() {
+        return this.database;
     }
 
     public DescribeDiagnosisRecordsRequest setEndTime(String endTime) {
@@ -90,22 +98,6 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeDiagnosisRecordsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeDiagnosisRecordsRequest setQueryCondition(String queryCondition) {
-        this.queryCondition = queryCondition;
-        return this;
-    }
-    public String getQueryCondition() {
-        return this.queryCondition;
-    }
-
     public DescribeDiagnosisRecordsRequest setKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -114,12 +106,12 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
         return this.keyword;
     }
 
-    public DescribeDiagnosisRecordsRequest setMinPeakMemory(Long minPeakMemory) {
-        this.minPeakMemory = minPeakMemory;
+    public DescribeDiagnosisRecordsRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public Long getMinPeakMemory() {
-        return this.minPeakMemory;
+    public String getLang() {
+        return this.lang;
     }
 
     public DescribeDiagnosisRecordsRequest setMaxPeakMemory(Long maxPeakMemory) {
@@ -130,14 +122,6 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
         return this.maxPeakMemory;
     }
 
-    public DescribeDiagnosisRecordsRequest setMinScanSize(Long minScanSize) {
-        this.minScanSize = minScanSize;
-        return this;
-    }
-    public Long getMinScanSize() {
-        return this.minScanSize;
-    }
-
     public DescribeDiagnosisRecordsRequest setMaxScanSize(Long maxScanSize) {
         this.maxScanSize = maxScanSize;
         return this;
@@ -146,36 +130,20 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
         return this.maxScanSize;
     }
 
-    public DescribeDiagnosisRecordsRequest setResourceGroup(String resourceGroup) {
-        this.resourceGroup = resourceGroup;
+    public DescribeDiagnosisRecordsRequest setMinPeakMemory(Long minPeakMemory) {
+        this.minPeakMemory = minPeakMemory;
         return this;
     }
-    public String getResourceGroup() {
-        return this.resourceGroup;
+    public Long getMinPeakMemory() {
+        return this.minPeakMemory;
     }
 
-    public DescribeDiagnosisRecordsRequest setUserName(String userName) {
-        this.userName = userName;
+    public DescribeDiagnosisRecordsRequest setMinScanSize(Long minScanSize) {
+        this.minScanSize = minScanSize;
         return this;
     }
-    public String getUserName() {
-        return this.userName;
-    }
-
-    public DescribeDiagnosisRecordsRequest setDatabase(String database) {
-        this.database = database;
-        return this;
-    }
-    public String getDatabase() {
-        return this.database;
-    }
-
-    public DescribeDiagnosisRecordsRequest setClientIp(String clientIp) {
-        this.clientIp = clientIp;
-        return this;
-    }
-    public String getClientIp() {
-        return this.clientIp;
+    public Long getMinScanSize() {
+        return this.minScanSize;
     }
 
     public DescribeDiagnosisRecordsRequest setOrder(String order) {
@@ -202,20 +170,52 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDiagnosisRecordsRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
     public DescribeDiagnosisRecordsRequest setPatternId(Long patternId) {
         this.patternId = patternId;
         return this;
     }
     public Long getPatternId() {
         return this.patternId;
+    }
+
+    public DescribeDiagnosisRecordsRequest setQueryCondition(String queryCondition) {
+        this.queryCondition = queryCondition;
+        return this;
+    }
+    public String getQueryCondition() {
+        return this.queryCondition;
+    }
+
+    public DescribeDiagnosisRecordsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeDiagnosisRecordsRequest setResourceGroup(String resourceGroup) {
+        this.resourceGroup = resourceGroup;
+        return this;
+    }
+    public String getResourceGroup() {
+        return this.resourceGroup;
+    }
+
+    public DescribeDiagnosisRecordsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeDiagnosisRecordsRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
     }
 
 }

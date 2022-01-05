@@ -4,23 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllAccountsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AccountList")
     public java.util.List<DescribeAllAccountsResponseBodyAccountList> accountList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeAllAccountsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAllAccountsResponseBody self = new DescribeAllAccountsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAllAccountsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAllAccountsResponseBody setAccountList(java.util.List<DescribeAllAccountsResponseBodyAccountList> accountList) {
@@ -29,6 +21,14 @@ public class DescribeAllAccountsResponseBody extends TeaModel {
     }
     public java.util.List<DescribeAllAccountsResponseBodyAccountList> getAccountList() {
         return this.accountList;
+    }
+
+    public DescribeAllAccountsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeAllAccountsResponseBodyAccountList extends TeaModel {

@@ -7,14 +7,14 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("Performances")
+    public java.util.List<DescribePatternPerformanceResponseBodyPerformances> performances;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("Performances")
-    public java.util.List<DescribePatternPerformanceResponseBodyPerformances> performances;
 
     public static DescribePatternPerformanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePatternPerformanceResponseBody self = new DescribePatternPerformanceResponseBody();
@@ -27,6 +27,14 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribePatternPerformanceResponseBody setPerformances(java.util.List<DescribePatternPerformanceResponseBodyPerformances> performances) {
+        this.performances = performances;
+        return this;
+    }
+    public java.util.List<DescribePatternPerformanceResponseBodyPerformances> getPerformances() {
+        return this.performances;
     }
 
     public DescribePatternPerformanceResponseBody setRequestId(String requestId) {
@@ -45,32 +53,16 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         return this.startTime;
     }
 
-    public DescribePatternPerformanceResponseBody setPerformances(java.util.List<DescribePatternPerformanceResponseBodyPerformances> performances) {
-        this.performances = performances;
-        return this;
-    }
-    public java.util.List<DescribePatternPerformanceResponseBodyPerformances> getPerformances() {
-        return this.performances;
-    }
-
     public static class DescribePatternPerformanceResponseBodyPerformancesSeries extends TeaModel {
-        @NameInMap("Values")
-        public java.util.List<String> values;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Values")
+        public java.util.List<String> values;
 
         public static DescribePatternPerformanceResponseBodyPerformancesSeries build(java.util.Map<String, ?> map) throws Exception {
             DescribePatternPerformanceResponseBodyPerformancesSeries self = new DescribePatternPerformanceResponseBodyPerformancesSeries();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePatternPerformanceResponseBodyPerformancesSeries setValues(java.util.List<String> values) {
-            this.values = values;
-            return this;
-        }
-        public java.util.List<String> getValues() {
-            return this.values;
         }
 
         public DescribePatternPerformanceResponseBodyPerformancesSeries setName(String name) {
@@ -81,17 +73,25 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
             return this.name;
         }
 
+        public DescribePatternPerformanceResponseBodyPerformancesSeries setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
     }
 
     public static class DescribePatternPerformanceResponseBodyPerformances extends TeaModel {
         @NameInMap("Key")
         public String key;
 
-        @NameInMap("Unit")
-        public String unit;
-
         @NameInMap("Series")
         public java.util.List<DescribePatternPerformanceResponseBodyPerformancesSeries> series;
+
+        @NameInMap("Unit")
+        public String unit;
 
         public static DescribePatternPerformanceResponseBodyPerformances build(java.util.Map<String, ?> map) throws Exception {
             DescribePatternPerformanceResponseBodyPerformances self = new DescribePatternPerformanceResponseBodyPerformances();
@@ -106,20 +106,20 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribePatternPerformanceResponseBodyPerformances setUnit(String unit) {
-            this.unit = unit;
-            return this;
-        }
-        public String getUnit() {
-            return this.unit;
-        }
-
         public DescribePatternPerformanceResponseBodyPerformances setSeries(java.util.List<DescribePatternPerformanceResponseBodyPerformancesSeries> series) {
             this.series = series;
             return this;
         }
         public java.util.List<DescribePatternPerformanceResponseBodyPerformancesSeries> getSeries() {
             return this.series;
+        }
+
+        public DescribePatternPerformanceResponseBodyPerformances setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
         }
 
     }

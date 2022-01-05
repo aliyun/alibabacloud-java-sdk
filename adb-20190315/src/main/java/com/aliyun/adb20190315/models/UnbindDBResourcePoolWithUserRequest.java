@@ -4,20 +4,14 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class UnbindDBResourcePoolWithUserRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PoolName")
     public String poolName;
@@ -25,33 +19,23 @@ public class UnbindDBResourcePoolWithUserRequest extends TeaModel {
     @NameInMap("PoolUser")
     public String poolUser;
 
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static UnbindDBResourcePoolWithUserRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindDBResourcePoolWithUserRequest self = new UnbindDBResourcePoolWithUserRequest();
         return TeaModel.build(map, self);
     }
 
-    public UnbindDBResourcePoolWithUserRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public UnbindDBResourcePoolWithUserRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public UnbindDBResourcePoolWithUserRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public UnbindDBResourcePoolWithUserRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
     public UnbindDBResourcePoolWithUserRequest setOwnerAccount(String ownerAccount) {
@@ -62,12 +46,12 @@ public class UnbindDBResourcePoolWithUserRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public UnbindDBResourcePoolWithUserRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
+    public UnbindDBResourcePoolWithUserRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getDBClusterId() {
-        return this.DBClusterId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public UnbindDBResourcePoolWithUserRequest setPoolName(String poolName) {
@@ -84,6 +68,22 @@ public class UnbindDBResourcePoolWithUserRequest extends TeaModel {
     }
     public String getPoolUser() {
         return this.poolUser;
+    }
+
+    public UnbindDBResourcePoolWithUserRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public UnbindDBResourcePoolWithUserRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

@@ -4,20 +4,20 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifyAutoRenewAttributeRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("Duration")
+    public String duration;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PeriodUnit")
+    public String periodUnit;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -25,39 +25,31 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
     @NameInMap("RenewalStatus")
     public String renewalStatus;
 
-    @NameInMap("Duration")
-    public String duration;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("PeriodUnit")
-    public String periodUnit;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyAutoRenewAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAutoRenewAttributeRequest self = new ModifyAutoRenewAttributeRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyAutoRenewAttributeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ModifyAutoRenewAttributeRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
-    public ModifyAutoRenewAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public ModifyAutoRenewAttributeRequest setDuration(String duration) {
+        this.duration = duration;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyAutoRenewAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getDuration() {
+        return this.duration;
     }
 
     public ModifyAutoRenewAttributeRequest setOwnerAccount(String ownerAccount) {
@@ -68,12 +60,20 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public ModifyAutoRenewAttributeRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
+    public ModifyAutoRenewAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getDBClusterId() {
-        return this.DBClusterId;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyAutoRenewAttributeRequest setPeriodUnit(String periodUnit) {
+        this.periodUnit = periodUnit;
+        return this;
+    }
+    public String getPeriodUnit() {
+        return this.periodUnit;
     }
 
     public ModifyAutoRenewAttributeRequest setRegionId(String regionId) {
@@ -92,20 +92,20 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
         return this.renewalStatus;
     }
 
-    public ModifyAutoRenewAttributeRequest setDuration(String duration) {
-        this.duration = duration;
+    public ModifyAutoRenewAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getDuration() {
-        return this.duration;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public ModifyAutoRenewAttributeRequest setPeriodUnit(String periodUnit) {
-        this.periodUnit = periodUnit;
+    public ModifyAutoRenewAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getPeriodUnit() {
-        return this.periodUnit;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

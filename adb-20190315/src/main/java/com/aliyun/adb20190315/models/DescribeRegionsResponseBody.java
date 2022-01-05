@@ -4,23 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsResponseBody self = new DescribeRegionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRegionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeRegionsResponseBody setRegions(DescribeRegionsResponseBodyRegions regions) {
@@ -31,27 +23,35 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.regions;
     }
 
+    public DescribeRegionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeRegionsResponseBodyRegionsRegionZonesZone extends TeaModel {
-        @NameInMap("ZoneId")
-        public String zoneId;
+        @NameInMap("LocalName")
+        public String localName;
 
         @NameInMap("VpcEnabled")
         public Boolean vpcEnabled;
 
-        @NameInMap("LocalName")
-        public String localName;
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeRegionsResponseBodyRegionsRegionZonesZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegionsRegionZonesZone self = new DescribeRegionsResponseBodyRegionsRegionZonesZone();
             return TeaModel.build(map, self);
         }
 
-        public DescribeRegionsResponseBodyRegionsRegionZonesZone setZoneId(String zoneId) {
-            this.zoneId = zoneId;
+        public DescribeRegionsResponseBodyRegionsRegionZonesZone setLocalName(String localName) {
+            this.localName = localName;
             return this;
         }
-        public String getZoneId() {
-            return this.zoneId;
+        public String getLocalName() {
+            return this.localName;
         }
 
         public DescribeRegionsResponseBodyRegionsRegionZonesZone setVpcEnabled(Boolean vpcEnabled) {
@@ -62,12 +62,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
             return this.vpcEnabled;
         }
 
-        public DescribeRegionsResponseBodyRegionsRegionZonesZone setLocalName(String localName) {
-            this.localName = localName;
+        public DescribeRegionsResponseBodyRegionsRegionZonesZone setZoneId(String zoneId) {
+            this.zoneId = zoneId;
             return this;
         }
-        public String getLocalName() {
-            return this.localName;
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }
@@ -92,11 +92,11 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
-        @NameInMap("RegionEndpoint")
-        public String regionEndpoint;
-
         @NameInMap("LocalName")
         public String localName;
+
+        @NameInMap("RegionEndpoint")
+        public String regionEndpoint;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -109,20 +109,20 @@ public class DescribeRegionsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeRegionsResponseBodyRegionsRegion setRegionEndpoint(String regionEndpoint) {
-            this.regionEndpoint = regionEndpoint;
-            return this;
-        }
-        public String getRegionEndpoint() {
-            return this.regionEndpoint;
-        }
-
         public DescribeRegionsResponseBodyRegionsRegion setLocalName(String localName) {
             this.localName = localName;
             return this;
         }
         public String getLocalName() {
             return this.localName;
+        }
+
+        public DescribeRegionsResponseBodyRegionsRegion setRegionEndpoint(String regionEndpoint) {
+            this.regionEndpoint = regionEndpoint;
+            return this;
+        }
+        public String getRegionEndpoint() {
+            return this.regionEndpoint;
         }
 
         public DescribeRegionsResponseBodyRegionsRegion setRegionId(String regionId) {

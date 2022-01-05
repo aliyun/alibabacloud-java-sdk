@@ -4,14 +4,14 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("AccessIpRecords")
+    public java.util.List<DescribeConnectionCountRecordsResponseBodyAccessIpRecords> accessIpRecords;
 
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    @NameInMap("AccessIpRecords")
-    public java.util.List<DescribeConnectionCountRecordsResponseBodyAccessIpRecords> accessIpRecords;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("UserRecords")
     public java.util.List<DescribeConnectionCountRecordsResponseBodyUserRecords> userRecords;
@@ -21,12 +21,12 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeConnectionCountRecordsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeConnectionCountRecordsResponseBody setAccessIpRecords(java.util.List<DescribeConnectionCountRecordsResponseBodyAccessIpRecords> accessIpRecords) {
+        this.accessIpRecords = accessIpRecords;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<DescribeConnectionCountRecordsResponseBodyAccessIpRecords> getAccessIpRecords() {
+        return this.accessIpRecords;
     }
 
     public DescribeConnectionCountRecordsResponseBody setDBClusterId(String DBClusterId) {
@@ -37,12 +37,12 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         return this.DBClusterId;
     }
 
-    public DescribeConnectionCountRecordsResponseBody setAccessIpRecords(java.util.List<DescribeConnectionCountRecordsResponseBodyAccessIpRecords> accessIpRecords) {
-        this.accessIpRecords = accessIpRecords;
+    public DescribeConnectionCountRecordsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<DescribeConnectionCountRecordsResponseBodyAccessIpRecords> getAccessIpRecords() {
-        return this.accessIpRecords;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeConnectionCountRecordsResponseBody setUserRecords(java.util.List<DescribeConnectionCountRecordsResponseBodyUserRecords> userRecords) {
@@ -84,23 +84,15 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeConnectionCountRecordsResponseBodyUserRecords extends TeaModel {
-        @NameInMap("User")
-        public String user;
-
         @NameInMap("Count")
         public Long count;
+
+        @NameInMap("User")
+        public String user;
 
         public static DescribeConnectionCountRecordsResponseBodyUserRecords build(java.util.Map<String, ?> map) throws Exception {
             DescribeConnectionCountRecordsResponseBodyUserRecords self = new DescribeConnectionCountRecordsResponseBodyUserRecords();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeConnectionCountRecordsResponseBodyUserRecords setUser(String user) {
-            this.user = user;
-            return this;
-        }
-        public String getUser() {
-            return this.user;
         }
 
         public DescribeConnectionCountRecordsResponseBodyUserRecords setCount(Long count) {
@@ -109,6 +101,14 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         }
         public Long getCount() {
             return this.count;
+        }
+
+        public DescribeConnectionCountRecordsResponseBodyUserRecords setUser(String user) {
+            this.user = user;
+            return this;
+        }
+        public String getUser() {
+            return this.user;
         }
 
     }

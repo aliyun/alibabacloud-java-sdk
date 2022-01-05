@@ -4,23 +4,23 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLPlanTaskRequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ProcessId")
+    public String processId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("ProcessId")
-    public String processId;
 
     @NameInMap("StageId")
     public String stageId;
@@ -30,12 +30,36 @@ public class DescribeSQLPlanTaskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeSQLPlanTaskRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public DescribeSQLPlanTaskRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public DescribeSQLPlanTaskRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeSQLPlanTaskRequest setProcessId(String processId) {
+        this.processId = processId;
+        return this;
+    }
+    public String getProcessId() {
+        return this.processId;
     }
 
     public DescribeSQLPlanTaskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -52,30 +76,6 @@ public class DescribeSQLPlanTaskRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeSQLPlanTaskRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeSQLPlanTaskRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public DescribeSQLPlanTaskRequest setProcessId(String processId) {
-        this.processId = processId;
-        return this;
-    }
-    public String getProcessId() {
-        return this.processId;
     }
 
     public DescribeSQLPlanTaskRequest setStageId(String stageId) {

@@ -7,20 +7,20 @@ public class DescribeSQLPatternAttributeRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("PatternId")
     public Long patternId;
 
-    @NameInMap("Lang")
-    public String lang;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeSQLPatternAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSQLPatternAttributeRequest self = new DescribeSQLPatternAttributeRequest();
@@ -35,14 +35,6 @@ public class DescribeSQLPatternAttributeRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public DescribeSQLPatternAttributeRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeSQLPatternAttributeRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -51,12 +43,12 @@ public class DescribeSQLPatternAttributeRequest extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeSQLPatternAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeSQLPatternAttributeRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getLang() {
+        return this.lang;
     }
 
     public DescribeSQLPatternAttributeRequest setPatternId(Long patternId) {
@@ -67,12 +59,20 @@ public class DescribeSQLPatternAttributeRequest extends TeaModel {
         return this.patternId;
     }
 
-    public DescribeSQLPatternAttributeRequest setLang(String lang) {
-        this.lang = lang;
+    public DescribeSQLPatternAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getLang() {
-        return this.lang;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeSQLPatternAttributeRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

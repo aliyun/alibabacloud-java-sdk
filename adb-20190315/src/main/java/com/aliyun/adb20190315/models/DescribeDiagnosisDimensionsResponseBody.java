@@ -7,17 +7,17 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
     @NameInMap("ClientIps")
     public java.util.List<String> clientIps;
 
-    @NameInMap("ResourceGroups")
-    public java.util.List<String> resourceGroups;
-
-    @NameInMap("UserNames")
-    public java.util.List<String> userNames;
-
     @NameInMap("Databases")
     public java.util.List<String> databases;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("ResourceGroups")
+    public java.util.List<String> resourceGroups;
+
+    @NameInMap("UserNames")
+    public java.util.List<String> userNames;
 
     public static DescribeDiagnosisDimensionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDiagnosisDimensionsResponseBody self = new DescribeDiagnosisDimensionsResponseBody();
@@ -30,22 +30,6 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
     }
     public java.util.List<String> getClientIps() {
         return this.clientIps;
-    }
-
-    public DescribeDiagnosisDimensionsResponseBody setResourceGroups(java.util.List<String> resourceGroups) {
-        this.resourceGroups = resourceGroups;
-        return this;
-    }
-    public java.util.List<String> getResourceGroups() {
-        return this.resourceGroups;
-    }
-
-    public DescribeDiagnosisDimensionsResponseBody setUserNames(java.util.List<String> userNames) {
-        this.userNames = userNames;
-        return this;
-    }
-    public java.util.List<String> getUserNames() {
-        return this.userNames;
     }
 
     public DescribeDiagnosisDimensionsResponseBody setDatabases(java.util.List<String> databases) {
@@ -62,6 +46,22 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDiagnosisDimensionsResponseBody setResourceGroups(java.util.List<String> resourceGroups) {
+        this.resourceGroups = resourceGroups;
+        return this;
+    }
+    public java.util.List<String> getResourceGroups() {
+        return this.resourceGroups;
+    }
+
+    public DescribeDiagnosisDimensionsResponseBody setUserNames(java.util.List<String> userNames) {
+        this.userNames = userNames;
+        return this;
+    }
+    public java.util.List<String> getUserNames() {
+        return this.userNames;
     }
 
 }

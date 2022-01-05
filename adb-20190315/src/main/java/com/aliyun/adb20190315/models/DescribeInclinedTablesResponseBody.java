@@ -4,8 +4,11 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeInclinedTablesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public String totalCount;
+    @NameInMap("Items")
+    public DescribeInclinedTablesResponseBodyItems items;
+
+    @NameInMap("PageNumber")
+    public String pageNumber;
 
     @NameInMap("PageSize")
     public String pageSize;
@@ -13,23 +16,28 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public String pageNumber;
-
-    @NameInMap("Items")
-    public DescribeInclinedTablesResponseBodyItems items;
+    @NameInMap("TotalCount")
+    public String totalCount;
 
     public static DescribeInclinedTablesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInclinedTablesResponseBody self = new DescribeInclinedTablesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInclinedTablesResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
+    public DescribeInclinedTablesResponseBody setItems(DescribeInclinedTablesResponseBodyItems items) {
+        this.items = items;
         return this;
     }
-    public String getTotalCount() {
-        return this.totalCount;
+    public DescribeInclinedTablesResponseBodyItems getItems() {
+        return this.items;
+    }
+
+    public DescribeInclinedTablesResponseBody setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeInclinedTablesResponseBody setPageSize(String pageSize) {
@@ -48,25 +56,20 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeInclinedTablesResponseBody setPageNumber(String pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeInclinedTablesResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public String getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeInclinedTablesResponseBody setItems(DescribeInclinedTablesResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeInclinedTablesResponseBodyItems getItems() {
-        return this.items;
+    public String getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeInclinedTablesResponseBodyItemsTable extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("IsIncline")
+        public Boolean isIncline;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("Schema")
         public String schema;
@@ -74,23 +77,28 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         @NameInMap("Size")
         public Long size;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("IsIncline")
-        public Boolean isIncline;
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeInclinedTablesResponseBodyItemsTable build(java.util.Map<String, ?> map) throws Exception {
             DescribeInclinedTablesResponseBodyItemsTable self = new DescribeInclinedTablesResponseBodyItemsTable();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInclinedTablesResponseBodyItemsTable setType(String type) {
-            this.type = type;
+        public DescribeInclinedTablesResponseBodyItemsTable setIsIncline(Boolean isIncline) {
+            this.isIncline = isIncline;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public Boolean getIsIncline() {
+            return this.isIncline;
+        }
+
+        public DescribeInclinedTablesResponseBodyItemsTable setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public DescribeInclinedTablesResponseBodyItemsTable setSchema(String schema) {
@@ -109,20 +117,12 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             return this.size;
         }
 
-        public DescribeInclinedTablesResponseBodyItemsTable setName(String name) {
-            this.name = name;
+        public DescribeInclinedTablesResponseBodyItemsTable setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeInclinedTablesResponseBodyItemsTable setIsIncline(Boolean isIncline) {
-            this.isIncline = isIncline;
-            return this;
-        }
-        public Boolean getIsIncline() {
-            return this.isIncline;
+        public String getType() {
+            return this.type;
         }
 
     }

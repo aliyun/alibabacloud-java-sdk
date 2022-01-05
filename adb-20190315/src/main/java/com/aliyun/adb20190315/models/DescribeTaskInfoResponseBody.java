@@ -4,23 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeTaskInfoResponseBody extends TeaModel {
-    @NameInMap("TaskInfo")
-    public DescribeTaskInfoResponseBodyTaskInfo taskInfo;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TaskInfo")
+    public DescribeTaskInfoResponseBodyTaskInfo taskInfo;
 
     public static DescribeTaskInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTaskInfoResponseBody self = new DescribeTaskInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeTaskInfoResponseBody setTaskInfo(DescribeTaskInfoResponseBodyTaskInfo taskInfo) {
-        this.taskInfo = taskInfo;
-        return this;
-    }
-    public DescribeTaskInfoResponseBodyTaskInfo getTaskInfo() {
-        return this.taskInfo;
     }
 
     public DescribeTaskInfoResponseBody setRequestId(String requestId) {
@@ -31,9 +23,17 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeTaskInfoResponseBody setTaskInfo(DescribeTaskInfoResponseBodyTaskInfo taskInfo) {
+        this.taskInfo = taskInfo;
+        return this;
+    }
+    public DescribeTaskInfoResponseBodyTaskInfo getTaskInfo() {
+        return this.taskInfo;
+    }
+
     public static class DescribeTaskInfoResponseBodyTaskInfo extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("BeginTime")
+        public String beginTime;
 
         @NameInMap("FinishTime")
         public String finishTime;
@@ -41,8 +41,8 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         @NameInMap("Progress")
         public String progress;
 
-        @NameInMap("BeginTime")
-        public String beginTime;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("TaskId")
         public Integer taskId;
@@ -52,12 +52,12 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeTaskInfoResponseBodyTaskInfo setStatus(String status) {
-            this.status = status;
+        public DescribeTaskInfoResponseBodyTaskInfo setBeginTime(String beginTime) {
+            this.beginTime = beginTime;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getBeginTime() {
+            return this.beginTime;
         }
 
         public DescribeTaskInfoResponseBodyTaskInfo setFinishTime(String finishTime) {
@@ -76,12 +76,12 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             return this.progress;
         }
 
-        public DescribeTaskInfoResponseBodyTaskInfo setBeginTime(String beginTime) {
-            this.beginTime = beginTime;
+        public DescribeTaskInfoResponseBodyTaskInfo setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getBeginTime() {
-            return this.beginTime;
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeTaskInfoResponseBodyTaskInfo setTaskId(Integer taskId) {

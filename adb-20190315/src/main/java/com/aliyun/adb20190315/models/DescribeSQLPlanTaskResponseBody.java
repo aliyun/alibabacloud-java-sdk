@@ -32,17 +32,14 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLPlanTaskResponseBodyTaskList extends TeaModel {
-        @NameInMap("ScanCost")
-        public Long scanCost;
+        @NameInMap("ElapsedTime")
+        public Long elapsedTime;
 
-        @NameInMap("OutputSize")
-        public Long outputSize;
+        @NameInMap("InputRows")
+        public Long inputRows;
 
         @NameInMap("InputSize")
         public Long inputSize;
-
-        @NameInMap("State")
-        public String state;
 
         @NameInMap("OperatorCost")
         public Long operatorCost;
@@ -50,43 +47,46 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
         @NameInMap("OutputRows")
         public Long outputRows;
 
-        @NameInMap("ScanSize")
-        public Long scanSize;
-
-        @NameInMap("ElapsedTime")
-        public Long elapsedTime;
-
-        @NameInMap("ScanRows")
-        public Long scanRows;
+        @NameInMap("OutputSize")
+        public Long outputSize;
 
         @NameInMap("PeakMemory")
         public Long peakMemory;
 
+        @NameInMap("ScanCost")
+        public Long scanCost;
+
+        @NameInMap("ScanRows")
+        public Long scanRows;
+
+        @NameInMap("ScanSize")
+        public Long scanSize;
+
+        @NameInMap("State")
+        public String state;
+
         @NameInMap("TaskId")
         public Integer taskId;
-
-        @NameInMap("InputRows")
-        public Long inputRows;
 
         public static DescribeSQLPlanTaskResponseBodyTaskList build(java.util.Map<String, ?> map) throws Exception {
             DescribeSQLPlanTaskResponseBodyTaskList self = new DescribeSQLPlanTaskResponseBodyTaskList();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSQLPlanTaskResponseBodyTaskList setScanCost(Long scanCost) {
-            this.scanCost = scanCost;
+        public DescribeSQLPlanTaskResponseBodyTaskList setElapsedTime(Long elapsedTime) {
+            this.elapsedTime = elapsedTime;
             return this;
         }
-        public Long getScanCost() {
-            return this.scanCost;
+        public Long getElapsedTime() {
+            return this.elapsedTime;
         }
 
-        public DescribeSQLPlanTaskResponseBodyTaskList setOutputSize(Long outputSize) {
-            this.outputSize = outputSize;
+        public DescribeSQLPlanTaskResponseBodyTaskList setInputRows(Long inputRows) {
+            this.inputRows = inputRows;
             return this;
         }
-        public Long getOutputSize() {
-            return this.outputSize;
+        public Long getInputRows() {
+            return this.inputRows;
         }
 
         public DescribeSQLPlanTaskResponseBodyTaskList setInputSize(Long inputSize) {
@@ -95,14 +95,6 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
         }
         public Long getInputSize() {
             return this.inputSize;
-        }
-
-        public DescribeSQLPlanTaskResponseBodyTaskList setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
         }
 
         public DescribeSQLPlanTaskResponseBodyTaskList setOperatorCost(Long operatorCost) {
@@ -121,28 +113,12 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             return this.outputRows;
         }
 
-        public DescribeSQLPlanTaskResponseBodyTaskList setScanSize(Long scanSize) {
-            this.scanSize = scanSize;
+        public DescribeSQLPlanTaskResponseBodyTaskList setOutputSize(Long outputSize) {
+            this.outputSize = outputSize;
             return this;
         }
-        public Long getScanSize() {
-            return this.scanSize;
-        }
-
-        public DescribeSQLPlanTaskResponseBodyTaskList setElapsedTime(Long elapsedTime) {
-            this.elapsedTime = elapsedTime;
-            return this;
-        }
-        public Long getElapsedTime() {
-            return this.elapsedTime;
-        }
-
-        public DescribeSQLPlanTaskResponseBodyTaskList setScanRows(Long scanRows) {
-            this.scanRows = scanRows;
-            return this;
-        }
-        public Long getScanRows() {
-            return this.scanRows;
+        public Long getOutputSize() {
+            return this.outputSize;
         }
 
         public DescribeSQLPlanTaskResponseBodyTaskList setPeakMemory(Long peakMemory) {
@@ -153,20 +129,44 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             return this.peakMemory;
         }
 
+        public DescribeSQLPlanTaskResponseBodyTaskList setScanCost(Long scanCost) {
+            this.scanCost = scanCost;
+            return this;
+        }
+        public Long getScanCost() {
+            return this.scanCost;
+        }
+
+        public DescribeSQLPlanTaskResponseBodyTaskList setScanRows(Long scanRows) {
+            this.scanRows = scanRows;
+            return this;
+        }
+        public Long getScanRows() {
+            return this.scanRows;
+        }
+
+        public DescribeSQLPlanTaskResponseBodyTaskList setScanSize(Long scanSize) {
+            this.scanSize = scanSize;
+            return this;
+        }
+        public Long getScanSize() {
+            return this.scanSize;
+        }
+
+        public DescribeSQLPlanTaskResponseBodyTaskList setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
         public DescribeSQLPlanTaskResponseBodyTaskList setTaskId(Integer taskId) {
             this.taskId = taskId;
             return this;
         }
         public Integer getTaskId() {
             return this.taskId;
-        }
-
-        public DescribeSQLPlanTaskResponseBodyTaskList setInputRows(Long inputRows) {
-            this.inputRows = inputRows;
-            return this;
-        }
-        public Long getInputRows() {
-            return this.inputRows;
         }
 
     }

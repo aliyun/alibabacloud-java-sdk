@@ -65,11 +65,11 @@ public class DescribeDBClusterForecastResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
-        @NameInMap("Unit")
-        public String unit;
-
         @NameInMap("Series")
         public java.util.List<DescribeDBClusterForecastResponseBodyPerformancesSeries> series;
+
+        @NameInMap("Unit")
+        public String unit;
 
         public static DescribeDBClusterForecastResponseBodyPerformances build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterForecastResponseBodyPerformances self = new DescribeDBClusterForecastResponseBodyPerformances();
@@ -84,20 +84,20 @@ public class DescribeDBClusterForecastResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeDBClusterForecastResponseBodyPerformances setUnit(String unit) {
-            this.unit = unit;
-            return this;
-        }
-        public String getUnit() {
-            return this.unit;
-        }
-
         public DescribeDBClusterForecastResponseBodyPerformances setSeries(java.util.List<DescribeDBClusterForecastResponseBodyPerformancesSeries> series) {
             this.series = series;
             return this;
         }
         public java.util.List<DescribeDBClusterForecastResponseBodyPerformancesSeries> getSeries() {
             return this.series;
+        }
+
+        public DescribeDBClusterForecastResponseBodyPerformances setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
         }
 
     }

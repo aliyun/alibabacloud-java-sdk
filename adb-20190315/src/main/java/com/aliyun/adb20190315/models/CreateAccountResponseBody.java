@@ -4,26 +4,26 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class CreateAccountResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public Integer taskId;
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
+    @NameInMap("TaskId")
+    public Integer taskId;
 
     public static CreateAccountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateAccountResponseBody self = new CreateAccountResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateAccountResponseBody setTaskId(Integer taskId) {
-        this.taskId = taskId;
+    public CreateAccountResponseBody setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
         return this;
     }
-    public Integer getTaskId() {
-        return this.taskId;
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
     public CreateAccountResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class CreateAccountResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateAccountResponseBody setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
+    public CreateAccountResponseBody setTaskId(Integer taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public String getDBClusterId() {
-        return this.DBClusterId;
+    public Integer getTaskId() {
+        return this.taskId;
     }
 
 }

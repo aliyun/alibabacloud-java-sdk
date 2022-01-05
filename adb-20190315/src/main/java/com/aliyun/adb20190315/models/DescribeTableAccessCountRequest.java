@@ -7,12 +7,6 @@ public class DescribeTableAccessCountRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    @NameInMap("TableName")
-    public String tableName;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("Order")
     public String order;
 
@@ -25,6 +19,12 @@ public class DescribeTableAccessCountRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("TableName")
+    public String tableName;
+
     public static DescribeTableAccessCountRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTableAccessCountRequest self = new DescribeTableAccessCountRequest();
         return TeaModel.build(map, self);
@@ -36,22 +36,6 @@ public class DescribeTableAccessCountRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
-    }
-
-    public DescribeTableAccessCountRequest setTableName(String tableName) {
-        this.tableName = tableName;
-        return this;
-    }
-    public String getTableName() {
-        return this.tableName;
-    }
-
-    public DescribeTableAccessCountRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeTableAccessCountRequest setOrder(String order) {
@@ -84,6 +68,22 @@ public class DescribeTableAccessCountRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeTableAccessCountRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeTableAccessCountRequest setTableName(String tableName) {
+        this.tableName = tableName;
+        return this;
+    }
+    public String getTableName() {
+        return this.tableName;
     }
 
 }

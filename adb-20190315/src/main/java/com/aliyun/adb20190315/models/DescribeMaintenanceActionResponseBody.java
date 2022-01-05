@@ -4,56 +4,24 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeMaintenanceActionResponseBody extends TeaModel {
+    @NameInMap("Items")
+    public java.util.List<DescribeMaintenanceActionResponseBodyItems> items;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
-
-    @NameInMap("Items")
-    public java.util.List<DescribeMaintenanceActionResponseBodyItems> items;
 
     public static DescribeMaintenanceActionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMaintenanceActionResponseBody self = new DescribeMaintenanceActionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeMaintenanceActionResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeMaintenanceActionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeMaintenanceActionResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeMaintenanceActionResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
     }
 
     public DescribeMaintenanceActionResponseBody setItems(java.util.List<DescribeMaintenanceActionResponseBodyItems> items) {
@@ -64,33 +32,62 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         return this.items;
     }
 
+    public DescribeMaintenanceActionResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeMaintenanceActionResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeMaintenanceActionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeMaintenanceActionResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
     public static class DescribeMaintenanceActionResponseBodyItems extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Deadline")
-        public String deadline;
-
-        @NameInMap("PrepareInterval")
-        public String prepareInterval;
-
-        @NameInMap("DBType")
-        public String DBType;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("TaskType")
-        public String taskType;
-
-        @NameInMap("DBVersion")
-        public String DBVersion;
+        @NameInMap("CreatedTime")
+        public String createdTime;
 
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        @NameInMap("DBType")
+        public String DBType;
+
+        @NameInMap("DBVersion")
+        public String DBVersion;
+
+        @NameInMap("Deadline")
+        public String deadline;
+
+        @NameInMap("Id")
+        public Integer id;
+
         @NameInMap("ModifiedTime")
         public String modifiedTime;
+
+        @NameInMap("PrepareInterval")
+        public String prepareInterval;
 
         @NameInMap("Region")
         public String region;
@@ -98,74 +95,29 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         @NameInMap("ResultInfo")
         public String resultInfo;
 
-        @NameInMap("CreatedTime")
-        public String createdTime;
+        @NameInMap("StartTime")
+        public String startTime;
 
-        @NameInMap("Id")
-        public Integer id;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("SwitchTime")
         public String switchTime;
+
+        @NameInMap("TaskType")
+        public String taskType;
 
         public static DescribeMaintenanceActionResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeMaintenanceActionResponseBodyItems self = new DescribeMaintenanceActionResponseBodyItems();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMaintenanceActionResponseBodyItems setStatus(String status) {
-            this.status = status;
+        public DescribeMaintenanceActionResponseBodyItems setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
             return this;
         }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeMaintenanceActionResponseBodyItems setDeadline(String deadline) {
-            this.deadline = deadline;
-            return this;
-        }
-        public String getDeadline() {
-            return this.deadline;
-        }
-
-        public DescribeMaintenanceActionResponseBodyItems setPrepareInterval(String prepareInterval) {
-            this.prepareInterval = prepareInterval;
-            return this;
-        }
-        public String getPrepareInterval() {
-            return this.prepareInterval;
-        }
-
-        public DescribeMaintenanceActionResponseBodyItems setDBType(String DBType) {
-            this.DBType = DBType;
-            return this;
-        }
-        public String getDBType() {
-            return this.DBType;
-        }
-
-        public DescribeMaintenanceActionResponseBodyItems setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public DescribeMaintenanceActionResponseBodyItems setTaskType(String taskType) {
-            this.taskType = taskType;
-            return this;
-        }
-        public String getTaskType() {
-            return this.taskType;
-        }
-
-        public DescribeMaintenanceActionResponseBodyItems setDBVersion(String DBVersion) {
-            this.DBVersion = DBVersion;
-            return this;
-        }
-        public String getDBVersion() {
-            return this.DBVersion;
+        public String getCreatedTime() {
+            return this.createdTime;
         }
 
         public DescribeMaintenanceActionResponseBodyItems setDBClusterId(String DBClusterId) {
@@ -176,12 +128,52 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             return this.DBClusterId;
         }
 
+        public DescribeMaintenanceActionResponseBodyItems setDBType(String DBType) {
+            this.DBType = DBType;
+            return this;
+        }
+        public String getDBType() {
+            return this.DBType;
+        }
+
+        public DescribeMaintenanceActionResponseBodyItems setDBVersion(String DBVersion) {
+            this.DBVersion = DBVersion;
+            return this;
+        }
+        public String getDBVersion() {
+            return this.DBVersion;
+        }
+
+        public DescribeMaintenanceActionResponseBodyItems setDeadline(String deadline) {
+            this.deadline = deadline;
+            return this;
+        }
+        public String getDeadline() {
+            return this.deadline;
+        }
+
+        public DescribeMaintenanceActionResponseBodyItems setId(Integer id) {
+            this.id = id;
+            return this;
+        }
+        public Integer getId() {
+            return this.id;
+        }
+
         public DescribeMaintenanceActionResponseBodyItems setModifiedTime(String modifiedTime) {
             this.modifiedTime = modifiedTime;
             return this;
         }
         public String getModifiedTime() {
             return this.modifiedTime;
+        }
+
+        public DescribeMaintenanceActionResponseBodyItems setPrepareInterval(String prepareInterval) {
+            this.prepareInterval = prepareInterval;
+            return this;
+        }
+        public String getPrepareInterval() {
+            return this.prepareInterval;
         }
 
         public DescribeMaintenanceActionResponseBodyItems setRegion(String region) {
@@ -200,20 +192,20 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             return this.resultInfo;
         }
 
-        public DescribeMaintenanceActionResponseBodyItems setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
+        public DescribeMaintenanceActionResponseBodyItems setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public String getCreatedTime() {
-            return this.createdTime;
+        public String getStartTime() {
+            return this.startTime;
         }
 
-        public DescribeMaintenanceActionResponseBodyItems setId(Integer id) {
-            this.id = id;
+        public DescribeMaintenanceActionResponseBodyItems setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public Integer getId() {
-            return this.id;
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeMaintenanceActionResponseBodyItems setSwitchTime(String switchTime) {
@@ -222,6 +214,14 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         }
         public String getSwitchTime() {
             return this.switchTime;
+        }
+
+        public DescribeMaintenanceActionResponseBodyItems setTaskType(String taskType) {
+            this.taskType = taskType;
+            return this;
+        }
+        public String getTaskType() {
+            return this.taskType;
         }
 
     }

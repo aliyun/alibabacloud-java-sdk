@@ -4,8 +4,14 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeTableStatisticsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public String totalCount;
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("Items")
+    public DescribeTableStatisticsResponseBodyItems items;
+
+    @NameInMap("PageNumber")
+    public String pageNumber;
 
     @NameInMap("PageSize")
     public String pageSize;
@@ -13,50 +19,12 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public String pageNumber;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("Items")
-    public DescribeTableStatisticsResponseBodyItems items;
+    @NameInMap("TotalCount")
+    public String totalCount;
 
     public static DescribeTableStatisticsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTableStatisticsResponseBody self = new DescribeTableStatisticsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeTableStatisticsResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public String getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeTableStatisticsResponseBody setPageSize(String pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public String getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeTableStatisticsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeTableStatisticsResponseBody setPageNumber(String pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public String getPageNumber() {
-        return this.pageNumber;
     }
 
     public DescribeTableStatisticsResponseBody setDBClusterId(String DBClusterId) {
@@ -75,15 +43,41 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         return this.items;
     }
 
+    public DescribeTableStatisticsResponseBody setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeTableStatisticsResponseBody setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeTableStatisticsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeTableStatisticsResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeTableStatisticsResponseBodyItemsTableStatisticRecords extends TeaModel {
-        @NameInMap("SchemaName")
-        public String schemaName;
-
-        @NameInMap("TableName")
-        public String tableName;
-
-        @NameInMap("RowCount")
-        public Long rowCount;
+        @NameInMap("ColdDataSize")
+        public Long coldDataSize;
 
         @NameInMap("DataSize")
         public Long dataSize;
@@ -91,42 +85,32 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         @NameInMap("IndexSize")
         public Long indexSize;
 
-        @NameInMap("PrimaryKeyIndexSize")
-        public Long primaryKeyIndexSize;
-
         @NameInMap("PartitionCount")
         public Long partitionCount;
 
-        @NameInMap("ColdDataSize")
-        public Long coldDataSize;
+        @NameInMap("PrimaryKeyIndexSize")
+        public Long primaryKeyIndexSize;
+
+        @NameInMap("RowCount")
+        public Long rowCount;
+
+        @NameInMap("SchemaName")
+        public String schemaName;
+
+        @NameInMap("TableName")
+        public String tableName;
 
         public static DescribeTableStatisticsResponseBodyItemsTableStatisticRecords build(java.util.Map<String, ?> map) throws Exception {
             DescribeTableStatisticsResponseBodyItemsTableStatisticRecords self = new DescribeTableStatisticsResponseBodyItemsTableStatisticRecords();
             return TeaModel.build(map, self);
         }
 
-        public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setSchemaName(String schemaName) {
-            this.schemaName = schemaName;
+        public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setColdDataSize(Long coldDataSize) {
+            this.coldDataSize = coldDataSize;
             return this;
         }
-        public String getSchemaName() {
-            return this.schemaName;
-        }
-
-        public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
-        }
-
-        public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setRowCount(Long rowCount) {
-            this.rowCount = rowCount;
-            return this;
-        }
-        public Long getRowCount() {
-            return this.rowCount;
+        public Long getColdDataSize() {
+            return this.coldDataSize;
         }
 
         public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setDataSize(Long dataSize) {
@@ -145,14 +129,6 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             return this.indexSize;
         }
 
-        public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setPrimaryKeyIndexSize(Long primaryKeyIndexSize) {
-            this.primaryKeyIndexSize = primaryKeyIndexSize;
-            return this;
-        }
-        public Long getPrimaryKeyIndexSize() {
-            return this.primaryKeyIndexSize;
-        }
-
         public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setPartitionCount(Long partitionCount) {
             this.partitionCount = partitionCount;
             return this;
@@ -161,12 +137,36 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             return this.partitionCount;
         }
 
-        public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setColdDataSize(Long coldDataSize) {
-            this.coldDataSize = coldDataSize;
+        public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setPrimaryKeyIndexSize(Long primaryKeyIndexSize) {
+            this.primaryKeyIndexSize = primaryKeyIndexSize;
             return this;
         }
-        public Long getColdDataSize() {
-            return this.coldDataSize;
+        public Long getPrimaryKeyIndexSize() {
+            return this.primaryKeyIndexSize;
+        }
+
+        public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setRowCount(Long rowCount) {
+            this.rowCount = rowCount;
+            return this;
+        }
+        public Long getRowCount() {
+            return this.rowCount;
+        }
+
+        public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
+        public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
         }
 
     }

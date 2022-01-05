@@ -4,37 +4,21 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllDataSourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Tables")
-    public DescribeAllDataSourceResponseBodyTables tables;
-
     @NameInMap("Columns")
     public DescribeAllDataSourceResponseBodyColumns columns;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Schemas")
     public DescribeAllDataSourceResponseBodySchemas schemas;
 
+    @NameInMap("Tables")
+    public DescribeAllDataSourceResponseBodyTables tables;
+
     public static DescribeAllDataSourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAllDataSourceResponseBody self = new DescribeAllDataSourceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAllDataSourceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeAllDataSourceResponseBody setTables(DescribeAllDataSourceResponseBodyTables tables) {
-        this.tables = tables;
-        return this;
-    }
-    public DescribeAllDataSourceResponseBodyTables getTables() {
-        return this.tables;
     }
 
     public DescribeAllDataSourceResponseBody setColumns(DescribeAllDataSourceResponseBodyColumns columns) {
@@ -45,6 +29,14 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         return this.columns;
     }
 
+    public DescribeAllDataSourceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeAllDataSourceResponseBody setSchemas(DescribeAllDataSourceResponseBodySchemas schemas) {
         this.schemas = schemas;
         return this;
@@ -53,78 +45,20 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         return this.schemas;
     }
 
-    public static class DescribeAllDataSourceResponseBodyTablesTable extends TeaModel {
-        @NameInMap("TableName")
-        public String tableName;
-
-        @NameInMap("DBClusterId")
-        public String DBClusterId;
-
-        @NameInMap("SchemaName")
-        public String schemaName;
-
-        public static DescribeAllDataSourceResponseBodyTablesTable build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAllDataSourceResponseBodyTablesTable self = new DescribeAllDataSourceResponseBodyTablesTable();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAllDataSourceResponseBodyTablesTable setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
-        }
-
-        public DescribeAllDataSourceResponseBodyTablesTable setDBClusterId(String DBClusterId) {
-            this.DBClusterId = DBClusterId;
-            return this;
-        }
-        public String getDBClusterId() {
-            return this.DBClusterId;
-        }
-
-        public DescribeAllDataSourceResponseBodyTablesTable setSchemaName(String schemaName) {
-            this.schemaName = schemaName;
-            return this;
-        }
-        public String getSchemaName() {
-            return this.schemaName;
-        }
-
+    public DescribeAllDataSourceResponseBody setTables(DescribeAllDataSourceResponseBodyTables tables) {
+        this.tables = tables;
+        return this;
     }
-
-    public static class DescribeAllDataSourceResponseBodyTables extends TeaModel {
-        @NameInMap("Table")
-        public java.util.List<DescribeAllDataSourceResponseBodyTablesTable> table;
-
-        public static DescribeAllDataSourceResponseBodyTables build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAllDataSourceResponseBodyTables self = new DescribeAllDataSourceResponseBodyTables();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAllDataSourceResponseBodyTables setTable(java.util.List<DescribeAllDataSourceResponseBodyTablesTable> table) {
-            this.table = table;
-            return this;
-        }
-        public java.util.List<DescribeAllDataSourceResponseBodyTablesTable> getTable() {
-            return this.table;
-        }
-
+    public DescribeAllDataSourceResponseBodyTables getTables() {
+        return this.tables;
     }
 
     public static class DescribeAllDataSourceResponseBodyColumnsColumn extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("AutoIncrementColumn")
+        public Boolean autoIncrementColumn;
 
         @NameInMap("ColumnName")
         public String columnName;
-
-        @NameInMap("TableName")
-        public String tableName;
-
-        @NameInMap("AutoIncrementColumn")
-        public Boolean autoIncrementColumn;
 
         @NameInMap("DBClusterId")
         public String DBClusterId;
@@ -135,33 +69,15 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         @NameInMap("SchemaName")
         public String schemaName;
 
+        @NameInMap("TableName")
+        public String tableName;
+
+        @NameInMap("Type")
+        public String type;
+
         public static DescribeAllDataSourceResponseBodyColumnsColumn build(java.util.Map<String, ?> map) throws Exception {
             DescribeAllDataSourceResponseBodyColumnsColumn self = new DescribeAllDataSourceResponseBodyColumnsColumn();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAllDataSourceResponseBodyColumnsColumn setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeAllDataSourceResponseBodyColumnsColumn setColumnName(String columnName) {
-            this.columnName = columnName;
-            return this;
-        }
-        public String getColumnName() {
-            return this.columnName;
-        }
-
-        public DescribeAllDataSourceResponseBodyColumnsColumn setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
         }
 
         public DescribeAllDataSourceResponseBodyColumnsColumn setAutoIncrementColumn(Boolean autoIncrementColumn) {
@@ -170,6 +86,14 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         }
         public Boolean getAutoIncrementColumn() {
             return this.autoIncrementColumn;
+        }
+
+        public DescribeAllDataSourceResponseBodyColumnsColumn setColumnName(String columnName) {
+            this.columnName = columnName;
+            return this;
+        }
+        public String getColumnName() {
+            return this.columnName;
         }
 
         public DescribeAllDataSourceResponseBodyColumnsColumn setDBClusterId(String DBClusterId) {
@@ -194,6 +118,22 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         }
         public String getSchemaName() {
             return this.schemaName;
+        }
+
+        public DescribeAllDataSourceResponseBodyColumnsColumn setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public DescribeAllDataSourceResponseBodyColumnsColumn setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -262,6 +202,66 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         }
         public java.util.List<DescribeAllDataSourceResponseBodySchemasSchema> getSchema() {
             return this.schema;
+        }
+
+    }
+
+    public static class DescribeAllDataSourceResponseBodyTablesTable extends TeaModel {
+        @NameInMap("DBClusterId")
+        public String DBClusterId;
+
+        @NameInMap("SchemaName")
+        public String schemaName;
+
+        @NameInMap("TableName")
+        public String tableName;
+
+        public static DescribeAllDataSourceResponseBodyTablesTable build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAllDataSourceResponseBodyTablesTable self = new DescribeAllDataSourceResponseBodyTablesTable();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAllDataSourceResponseBodyTablesTable setDBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+        public String getDBClusterId() {
+            return this.DBClusterId;
+        }
+
+        public DescribeAllDataSourceResponseBodyTablesTable setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
+        public DescribeAllDataSourceResponseBodyTablesTable setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+    }
+
+    public static class DescribeAllDataSourceResponseBodyTables extends TeaModel {
+        @NameInMap("Table")
+        public java.util.List<DescribeAllDataSourceResponseBodyTablesTable> table;
+
+        public static DescribeAllDataSourceResponseBodyTables build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAllDataSourceResponseBodyTables self = new DescribeAllDataSourceResponseBodyTables();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAllDataSourceResponseBodyTables setTable(java.util.List<DescribeAllDataSourceResponseBodyTablesTable> table) {
+            this.table = table;
+            return this;
+        }
+        public java.util.List<DescribeAllDataSourceResponseBodyTablesTable> getTable() {
+            return this.table;
         }
 
     }

@@ -4,6 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class AllocateClusterPublicConnectionRequest extends TeaModel {
+    @NameInMap("ConnectionStringPrefix")
+    public String connectionStringPrefix;
+
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +22,33 @@ public class AllocateClusterPublicConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("ConnectionStringPrefix")
-    public String connectionStringPrefix;
-
     public static AllocateClusterPublicConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateClusterPublicConnectionRequest self = new AllocateClusterPublicConnectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AllocateClusterPublicConnectionRequest setConnectionStringPrefix(String connectionStringPrefix) {
+        this.connectionStringPrefix = connectionStringPrefix;
+        return this;
+    }
+    public String getConnectionStringPrefix() {
+        return this.connectionStringPrefix;
+    }
+
+    public AllocateClusterPublicConnectionRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public AllocateClusterPublicConnectionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public AllocateClusterPublicConnectionRequest setOwnerId(Long ownerId) {
@@ -49,30 +73,6 @@ public class AllocateClusterPublicConnectionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public AllocateClusterPublicConnectionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public AllocateClusterPublicConnectionRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public AllocateClusterPublicConnectionRequest setConnectionStringPrefix(String connectionStringPrefix) {
-        this.connectionStringPrefix = connectionStringPrefix;
-        return this;
-    }
-    public String getConnectionStringPrefix() {
-        return this.connectionStringPrefix;
     }
 
 }

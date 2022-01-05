@@ -4,8 +4,14 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("Performances")
+    public java.util.List<DescribeDBClusterPerformanceResponseBodyPerformances> performances;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,15 +19,17 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("Performances")
-    public java.util.List<DescribeDBClusterPerformanceResponseBodyPerformances> performances;
-
     public static DescribeDBClusterPerformanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterPerformanceResponseBody self = new DescribeDBClusterPerformanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBClusterPerformanceResponseBody setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
     public DescribeDBClusterPerformanceResponseBody setEndTime(String endTime) {
@@ -30,6 +38,14 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDBClusterPerformanceResponseBody setPerformances(java.util.List<DescribeDBClusterPerformanceResponseBodyPerformances> performances) {
+        this.performances = performances;
+        return this;
+    }
+    public java.util.List<DescribeDBClusterPerformanceResponseBodyPerformances> getPerformances() {
+        return this.performances;
     }
 
     public DescribeDBClusterPerformanceResponseBody setRequestId(String requestId) {
@@ -48,40 +64,16 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         return this.startTime;
     }
 
-    public DescribeDBClusterPerformanceResponseBody setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public DescribeDBClusterPerformanceResponseBody setPerformances(java.util.List<DescribeDBClusterPerformanceResponseBodyPerformances> performances) {
-        this.performances = performances;
-        return this;
-    }
-    public java.util.List<DescribeDBClusterPerformanceResponseBodyPerformances> getPerformances() {
-        return this.performances;
-    }
-
     public static class DescribeDBClusterPerformanceResponseBodyPerformancesSeries extends TeaModel {
-        @NameInMap("Values")
-        public java.util.List<String> values;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Values")
+        public java.util.List<String> values;
 
         public static DescribeDBClusterPerformanceResponseBodyPerformancesSeries build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterPerformanceResponseBodyPerformancesSeries self = new DescribeDBClusterPerformanceResponseBodyPerformancesSeries();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClusterPerformanceResponseBodyPerformancesSeries setValues(java.util.List<String> values) {
-            this.values = values;
-            return this;
-        }
-        public java.util.List<String> getValues() {
-            return this.values;
         }
 
         public DescribeDBClusterPerformanceResponseBodyPerformancesSeries setName(String name) {
@@ -92,17 +84,25 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             return this.name;
         }
 
+        public DescribeDBClusterPerformanceResponseBodyPerformancesSeries setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
     }
 
     public static class DescribeDBClusterPerformanceResponseBodyPerformances extends TeaModel {
         @NameInMap("Key")
         public String key;
 
-        @NameInMap("Unit")
-        public String unit;
-
         @NameInMap("Series")
         public java.util.List<DescribeDBClusterPerformanceResponseBodyPerformancesSeries> series;
+
+        @NameInMap("Unit")
+        public String unit;
 
         public static DescribeDBClusterPerformanceResponseBodyPerformances build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterPerformanceResponseBodyPerformances self = new DescribeDBClusterPerformanceResponseBodyPerformances();
@@ -117,20 +117,20 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeDBClusterPerformanceResponseBodyPerformances setUnit(String unit) {
-            this.unit = unit;
-            return this;
-        }
-        public String getUnit() {
-            return this.unit;
-        }
-
         public DescribeDBClusterPerformanceResponseBodyPerformances setSeries(java.util.List<DescribeDBClusterPerformanceResponseBodyPerformancesSeries> series) {
             this.series = series;
             return this;
         }
         public java.util.List<DescribeDBClusterPerformanceResponseBodyPerformancesSeries> getSeries() {
             return this.series;
+        }
+
+        public DescribeDBClusterPerformanceResponseBodyPerformances setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
         }
 
     }

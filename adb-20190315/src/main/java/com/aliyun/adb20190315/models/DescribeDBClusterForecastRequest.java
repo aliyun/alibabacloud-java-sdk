@@ -4,29 +4,21 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterForecastRequest extends TeaModel {
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("DBClusterId")
     public String DBClusterId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("MetricType")
     public String metricType;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeDBClusterForecastRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterForecastRequest self = new DescribeDBClusterForecastRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBClusterForecastRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDBClusterForecastRequest setDBClusterId(String DBClusterId) {
@@ -37,6 +29,14 @@ public class DescribeDBClusterForecastRequest extends TeaModel {
         return this.DBClusterId;
     }
 
+    public DescribeDBClusterForecastRequest setMetricType(String metricType) {
+        this.metricType = metricType;
+        return this;
+    }
+    public String getMetricType() {
+        return this.metricType;
+    }
+
     public DescribeDBClusterForecastRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -45,12 +45,12 @@ public class DescribeDBClusterForecastRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeDBClusterForecastRequest setMetricType(String metricType) {
-        this.metricType = metricType;
+    public DescribeDBClusterForecastRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getMetricType() {
-        return this.metricType;
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }
