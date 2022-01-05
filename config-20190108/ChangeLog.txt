@@ -1,3 +1,6 @@
+2022-01-05 Version: 2.0.5
+- Fix bugx.
+
 2021-12-14 Version: 2.0.3
 - Support query resourceType.
 

@@ -4,9 +4,6 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class ListDiscoveredResourcesRequest extends TeaModel {
-    @NameInMap("ComplianceType")
-    public String complianceType;
-
     @NameInMap("MemberId")
     public Long memberId;
 
@@ -34,14 +31,6 @@ public class ListDiscoveredResourcesRequest extends TeaModel {
     public static ListDiscoveredResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDiscoveredResourcesRequest self = new ListDiscoveredResourcesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListDiscoveredResourcesRequest setComplianceType(String complianceType) {
-        this.complianceType = complianceType;
-        return this;
-    }
-    public String getComplianceType() {
-        return this.complianceType;
     }
 
     public ListDiscoveredResourcesRequest setMemberId(Long memberId) {

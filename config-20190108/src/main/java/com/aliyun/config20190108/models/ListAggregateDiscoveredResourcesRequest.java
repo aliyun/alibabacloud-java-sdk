@@ -7,9 +7,6 @@ public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
-    @NameInMap("ComplianceType")
-    public String complianceType;
-
     // 资源夹ID
     @NameInMap("FolderId")
     public String folderId;
@@ -46,14 +43,6 @@ public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
     }
     public String getAggregatorId() {
         return this.aggregatorId;
-    }
-
-    public ListAggregateDiscoveredResourcesRequest setComplianceType(String complianceType) {
-        this.complianceType = complianceType;
-        return this;
-    }
-    public String getComplianceType() {
-        return this.complianceType;
     }
 
     public ListAggregateDiscoveredResourcesRequest setFolderId(String folderId) {
