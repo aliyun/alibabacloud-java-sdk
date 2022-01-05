@@ -7,20 +7,17 @@ public class DescribePatternPerformanceRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("PatternId")
+    public String patternId;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("PatternId")
-    public Long patternId;
-
-    @NameInMap("Key")
-    public String key;
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribePatternPerformanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePatternPerformanceRequest self = new DescribePatternPerformanceRequest();
@@ -35,20 +32,20 @@ public class DescribePatternPerformanceRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public DescribePatternPerformanceRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribePatternPerformanceRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribePatternPerformanceRequest setPatternId(String patternId) {
+        this.patternId = patternId;
+        return this;
+    }
+    public String getPatternId() {
+        return this.patternId;
     }
 
     public DescribePatternPerformanceRequest setRegionId(String regionId) {
@@ -59,20 +56,12 @@ public class DescribePatternPerformanceRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribePatternPerformanceRequest setPatternId(Long patternId) {
-        this.patternId = patternId;
+    public DescribePatternPerformanceRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public Long getPatternId() {
-        return this.patternId;
-    }
-
-    public DescribePatternPerformanceRequest setKey(String key) {
-        this.key = key;
-        return this;
-    }
-    public String getKey() {
-        return this.key;
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

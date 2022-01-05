@@ -7,17 +7,14 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Keyword")
     public String keyword;
+
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("Order")
     public String order;
@@ -28,8 +25,11 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Lang")
-    public String lang;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeSQLPatternsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSQLPatternsRequest self = new DescribeSQLPatternsRequest();
@@ -44,14 +44,6 @@ public class DescribeSQLPatternsRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public DescribeSQLPatternsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeSQLPatternsRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -60,20 +52,20 @@ public class DescribeSQLPatternsRequest extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeSQLPatternsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DescribeSQLPatternsRequest setKeyword(String keyword) {
         this.keyword = keyword;
         return this;
     }
     public String getKeyword() {
         return this.keyword;
+    }
+
+    public DescribeSQLPatternsRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public DescribeSQLPatternsRequest setOrder(String order) {
@@ -100,12 +92,20 @@ public class DescribeSQLPatternsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeSQLPatternsRequest setLang(String lang) {
-        this.lang = lang;
+    public DescribeSQLPatternsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getLang() {
-        return this.lang;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeSQLPatternsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

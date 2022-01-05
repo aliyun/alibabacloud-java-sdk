@@ -4,6 +4,21 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticDailyPlanRequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("ElasticDailyPlanDay")
+    public String elasticDailyPlanDay;
+
+    @NameInMap("ElasticDailyPlanStatusList")
+    public String elasticDailyPlanStatusList;
+
+    @NameInMap("ElasticPlanName")
+    public String elasticPlanName;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,27 +28,52 @@ public class DescribeElasticDailyPlanRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("ElasticPlanName")
-    public String elasticPlanName;
-
     @NameInMap("ResourcePoolName")
     public String resourcePoolName;
-
-    @NameInMap("ElasticDailyPlanDay")
-    public String elasticDailyPlanDay;
-
-    @NameInMap("ElasticDailyPlanStatusList")
-    public String elasticDailyPlanStatusList;
 
     public static DescribeElasticDailyPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeElasticDailyPlanRequest self = new DescribeElasticDailyPlanRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeElasticDailyPlanRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public DescribeElasticDailyPlanRequest setElasticDailyPlanDay(String elasticDailyPlanDay) {
+        this.elasticDailyPlanDay = elasticDailyPlanDay;
+        return this;
+    }
+    public String getElasticDailyPlanDay() {
+        return this.elasticDailyPlanDay;
+    }
+
+    public DescribeElasticDailyPlanRequest setElasticDailyPlanStatusList(String elasticDailyPlanStatusList) {
+        this.elasticDailyPlanStatusList = elasticDailyPlanStatusList;
+        return this;
+    }
+    public String getElasticDailyPlanStatusList() {
+        return this.elasticDailyPlanStatusList;
+    }
+
+    public DescribeElasticDailyPlanRequest setElasticPlanName(String elasticPlanName) {
+        this.elasticPlanName = elasticPlanName;
+        return this;
+    }
+    public String getElasticPlanName() {
+        return this.elasticPlanName;
+    }
+
+    public DescribeElasticDailyPlanRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeElasticDailyPlanRequest setOwnerId(Long ownerId) {
@@ -60,52 +100,12 @@ public class DescribeElasticDailyPlanRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeElasticDailyPlanRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeElasticDailyPlanRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public DescribeElasticDailyPlanRequest setElasticPlanName(String elasticPlanName) {
-        this.elasticPlanName = elasticPlanName;
-        return this;
-    }
-    public String getElasticPlanName() {
-        return this.elasticPlanName;
-    }
-
     public DescribeElasticDailyPlanRequest setResourcePoolName(String resourcePoolName) {
         this.resourcePoolName = resourcePoolName;
         return this;
     }
     public String getResourcePoolName() {
         return this.resourcePoolName;
-    }
-
-    public DescribeElasticDailyPlanRequest setElasticDailyPlanDay(String elasticDailyPlanDay) {
-        this.elasticDailyPlanDay = elasticDailyPlanDay;
-        return this;
-    }
-    public String getElasticDailyPlanDay() {
-        return this.elasticDailyPlanDay;
-    }
-
-    public DescribeElasticDailyPlanRequest setElasticDailyPlanStatusList(String elasticDailyPlanStatusList) {
-        this.elasticDailyPlanStatusList = elasticDailyPlanStatusList;
-        return this;
-    }
-    public String getElasticDailyPlanStatusList() {
-        return this.elasticDailyPlanStatusList;
     }
 
 }

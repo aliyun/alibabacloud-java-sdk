@@ -7,6 +7,9 @@ public class ModifyAuditLogConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("UpdateSucceed")
+    public Boolean updateSucceed;
+
     public static ModifyAuditLogConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyAuditLogConfigResponseBody self = new ModifyAuditLogConfigResponseBody();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class ModifyAuditLogConfigResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ModifyAuditLogConfigResponseBody setUpdateSucceed(Boolean updateSucceed) {
+        this.updateSucceed = updateSucceed;
+        return this;
+    }
+    public Boolean getUpdateSucceed() {
+        return this.updateSucceed;
     }
 
 }

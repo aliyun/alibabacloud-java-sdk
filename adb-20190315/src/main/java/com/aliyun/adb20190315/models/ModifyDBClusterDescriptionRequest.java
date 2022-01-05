@@ -4,6 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterDescriptionRequest extends TeaModel {
+    @NameInMap("DBClusterDescription")
+    public String DBClusterDescription;
+
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +22,33 @@ public class ModifyDBClusterDescriptionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("DBClusterDescription")
-    public String DBClusterDescription;
-
     public static ModifyDBClusterDescriptionRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterDescriptionRequest self = new ModifyDBClusterDescriptionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBClusterDescriptionRequest setDBClusterDescription(String DBClusterDescription) {
+        this.DBClusterDescription = DBClusterDescription;
+        return this;
+    }
+    public String getDBClusterDescription() {
+        return this.DBClusterDescription;
+    }
+
+    public ModifyDBClusterDescriptionRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public ModifyDBClusterDescriptionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyDBClusterDescriptionRequest setOwnerId(Long ownerId) {
@@ -49,30 +73,6 @@ public class ModifyDBClusterDescriptionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyDBClusterDescriptionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyDBClusterDescriptionRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public ModifyDBClusterDescriptionRequest setDBClusterDescription(String DBClusterDescription) {
-        this.DBClusterDescription = DBClusterDescription;
-        return this;
-    }
-    public String getDBClusterDescription() {
-        return this.DBClusterDescription;
     }
 
 }

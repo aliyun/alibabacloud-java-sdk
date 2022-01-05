@@ -7,11 +7,11 @@ public class DescribeDownloadRecordsRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Lang")
     public String lang;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DescribeDownloadRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDownloadRecordsRequest self = new DescribeDownloadRecordsRequest();
@@ -26,20 +26,20 @@ public class DescribeDownloadRecordsRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public DescribeDownloadRecordsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DescribeDownloadRecordsRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeDownloadRecordsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -4,26 +4,14 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class CreateDBClusterRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("BackupSetID")
+    public String backupSetID;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
-
-    @NameInMap("DBClusterVersion")
-    public String DBClusterVersion;
+    @NameInMap("ComputeResource")
+    public String computeResource;
 
     @NameInMap("DBClusterCategory")
     public String DBClusterCategory;
@@ -31,23 +19,68 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("DBClusterClass")
     public String DBClusterClass;
 
+    @NameInMap("DBClusterDescription")
+    public String DBClusterDescription;
+
+    @NameInMap("DBClusterNetworkType")
+    public String DBClusterNetworkType;
+
+    @NameInMap("DBClusterVersion")
+    public String DBClusterVersion;
+
     @NameInMap("DBNodeGroupCount")
     public String DBNodeGroupCount;
 
     @NameInMap("DBNodeStorage")
     public String DBNodeStorage;
 
-    @NameInMap("DBClusterNetworkType")
-    public String DBClusterNetworkType;
+    @NameInMap("ElasticIOResource")
+    public String elasticIOResource;
 
-    @NameInMap("DBClusterDescription")
-    public String DBClusterDescription;
+    @NameInMap("ExecutorCount")
+    public String executorCount;
+
+    @NameInMap("Mode")
+    public String mode;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PayType")
     public String payType;
 
     @NameInMap("Period")
     public String period;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("RestoreTime")
+    public String restoreTime;
+
+    @NameInMap("RestoreType")
+    public String restoreType;
+
+    @NameInMap("SourceDBInstanceName")
+    public String sourceDBInstanceName;
+
+    @NameInMap("StorageResource")
+    public String storageResource;
+
+    @NameInMap("StorageType")
+    public String storageType;
 
     @NameInMap("UsedTime")
     public String usedTime;
@@ -58,101 +91,36 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("ExecutorCount")
-    public String executorCount;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("Mode")
-    public String mode;
-
-    @NameInMap("StorageResource")
-    public String storageResource;
-
-    @NameInMap("StorageType")
-    public String storageType;
-
-    @NameInMap("ComputeResource")
-    public String computeResource;
-
-    @NameInMap("RestoreType")
-    public String restoreType;
-
-    @NameInMap("SourceDBInstanceName")
-    public String sourceDBInstanceName;
-
-    @NameInMap("BackupSetID")
-    public String backupSetID;
-
-    @NameInMap("RestoreTime")
-    public String restoreTime;
-
-    @NameInMap("ElasticIOResource")
-    public String elasticIOResource;
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static CreateDBClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBClusterRequest self = new CreateDBClusterRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDBClusterRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public CreateDBClusterRequest setBackupSetID(String backupSetID) {
+        this.backupSetID = backupSetID;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getBackupSetID() {
+        return this.backupSetID;
     }
 
-    public CreateDBClusterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public CreateDBClusterRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
-    public CreateDBClusterRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public CreateDBClusterRequest setComputeResource(String computeResource) {
+        this.computeResource = computeResource;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CreateDBClusterRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CreateDBClusterRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateDBClusterRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    public CreateDBClusterRequest setDBClusterVersion(String DBClusterVersion) {
-        this.DBClusterVersion = DBClusterVersion;
-        return this;
-    }
-    public String getDBClusterVersion() {
-        return this.DBClusterVersion;
+    public String getComputeResource() {
+        return this.computeResource;
     }
 
     public CreateDBClusterRequest setDBClusterCategory(String DBClusterCategory) {
@@ -171,6 +139,30 @@ public class CreateDBClusterRequest extends TeaModel {
         return this.DBClusterClass;
     }
 
+    public CreateDBClusterRequest setDBClusterDescription(String DBClusterDescription) {
+        this.DBClusterDescription = DBClusterDescription;
+        return this;
+    }
+    public String getDBClusterDescription() {
+        return this.DBClusterDescription;
+    }
+
+    public CreateDBClusterRequest setDBClusterNetworkType(String DBClusterNetworkType) {
+        this.DBClusterNetworkType = DBClusterNetworkType;
+        return this;
+    }
+    public String getDBClusterNetworkType() {
+        return this.DBClusterNetworkType;
+    }
+
+    public CreateDBClusterRequest setDBClusterVersion(String DBClusterVersion) {
+        this.DBClusterVersion = DBClusterVersion;
+        return this;
+    }
+    public String getDBClusterVersion() {
+        return this.DBClusterVersion;
+    }
+
     public CreateDBClusterRequest setDBNodeGroupCount(String DBNodeGroupCount) {
         this.DBNodeGroupCount = DBNodeGroupCount;
         return this;
@@ -187,20 +179,44 @@ public class CreateDBClusterRequest extends TeaModel {
         return this.DBNodeStorage;
     }
 
-    public CreateDBClusterRequest setDBClusterNetworkType(String DBClusterNetworkType) {
-        this.DBClusterNetworkType = DBClusterNetworkType;
+    public CreateDBClusterRequest setElasticIOResource(String elasticIOResource) {
+        this.elasticIOResource = elasticIOResource;
         return this;
     }
-    public String getDBClusterNetworkType() {
-        return this.DBClusterNetworkType;
+    public String getElasticIOResource() {
+        return this.elasticIOResource;
     }
 
-    public CreateDBClusterRequest setDBClusterDescription(String DBClusterDescription) {
-        this.DBClusterDescription = DBClusterDescription;
+    public CreateDBClusterRequest setExecutorCount(String executorCount) {
+        this.executorCount = executorCount;
         return this;
     }
-    public String getDBClusterDescription() {
-        return this.DBClusterDescription;
+    public String getExecutorCount() {
+        return this.executorCount;
+    }
+
+    public CreateDBClusterRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
+    }
+
+    public CreateDBClusterRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public CreateDBClusterRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public CreateDBClusterRequest setPayType(String payType) {
@@ -217,6 +233,78 @@ public class CreateDBClusterRequest extends TeaModel {
     }
     public String getPeriod() {
         return this.period;
+    }
+
+    public CreateDBClusterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateDBClusterRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateDBClusterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateDBClusterRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateDBClusterRequest setRestoreTime(String restoreTime) {
+        this.restoreTime = restoreTime;
+        return this;
+    }
+    public String getRestoreTime() {
+        return this.restoreTime;
+    }
+
+    public CreateDBClusterRequest setRestoreType(String restoreType) {
+        this.restoreType = restoreType;
+        return this;
+    }
+    public String getRestoreType() {
+        return this.restoreType;
+    }
+
+    public CreateDBClusterRequest setSourceDBInstanceName(String sourceDBInstanceName) {
+        this.sourceDBInstanceName = sourceDBInstanceName;
+        return this;
+    }
+    public String getSourceDBInstanceName() {
+        return this.sourceDBInstanceName;
+    }
+
+    public CreateDBClusterRequest setStorageResource(String storageResource) {
+        this.storageResource = storageResource;
+        return this;
+    }
+    public String getStorageResource() {
+        return this.storageResource;
+    }
+
+    public CreateDBClusterRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
     public CreateDBClusterRequest setUsedTime(String usedTime) {
@@ -243,100 +331,12 @@ public class CreateDBClusterRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public CreateDBClusterRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateDBClusterRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreateDBClusterRequest setExecutorCount(String executorCount) {
-        this.executorCount = executorCount;
-        return this;
-    }
-    public String getExecutorCount() {
-        return this.executorCount;
-    }
-
-    public CreateDBClusterRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public CreateDBClusterRequest setMode(String mode) {
-        this.mode = mode;
-        return this;
-    }
-    public String getMode() {
-        return this.mode;
-    }
-
-    public CreateDBClusterRequest setStorageResource(String storageResource) {
-        this.storageResource = storageResource;
-        return this;
-    }
-    public String getStorageResource() {
-        return this.storageResource;
-    }
-
-    public CreateDBClusterRequest setStorageType(String storageType) {
-        this.storageType = storageType;
-        return this;
-    }
-    public String getStorageType() {
-        return this.storageType;
-    }
-
-    public CreateDBClusterRequest setComputeResource(String computeResource) {
-        this.computeResource = computeResource;
-        return this;
-    }
-    public String getComputeResource() {
-        return this.computeResource;
-    }
-
-    public CreateDBClusterRequest setRestoreType(String restoreType) {
-        this.restoreType = restoreType;
-        return this;
-    }
-    public String getRestoreType() {
-        return this.restoreType;
-    }
-
-    public CreateDBClusterRequest setSourceDBInstanceName(String sourceDBInstanceName) {
-        this.sourceDBInstanceName = sourceDBInstanceName;
-        return this;
-    }
-    public String getSourceDBInstanceName() {
-        return this.sourceDBInstanceName;
-    }
-
-    public CreateDBClusterRequest setBackupSetID(String backupSetID) {
-        this.backupSetID = backupSetID;
-        return this;
-    }
-    public String getBackupSetID() {
-        return this.backupSetID;
-    }
-
-    public CreateDBClusterRequest setRestoreTime(String restoreTime) {
-        this.restoreTime = restoreTime;
-        return this;
-    }
-    public String getRestoreTime() {
-        return this.restoreTime;
-    }
-
-    public CreateDBClusterRequest setElasticIOResource(String elasticIOResource) {
-        this.elasticIOResource = elasticIOResource;
-        return this;
-    }
-    public String getElasticIOResource() {
-        return this.elasticIOResource;
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

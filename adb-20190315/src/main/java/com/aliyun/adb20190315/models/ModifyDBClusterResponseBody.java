@@ -4,26 +4,18 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     @NameInMap("OrderId")
     public String orderId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ModifyDBClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterResponseBody self = new ModifyDBClusterResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyDBClusterResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ModifyDBClusterResponseBody setDBClusterId(String DBClusterId) {
@@ -40,6 +32,14 @@ public class ModifyDBClusterResponseBody extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public ModifyDBClusterResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

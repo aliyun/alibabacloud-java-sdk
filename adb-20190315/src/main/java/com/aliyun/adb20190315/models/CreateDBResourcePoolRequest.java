@@ -4,20 +4,17 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class CreateDBResourcePoolRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("NodeNum")
+    public Integer nodeNum;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PoolName")
     public String poolName;
@@ -25,36 +22,31 @@ public class CreateDBResourcePoolRequest extends TeaModel {
     @NameInMap("QueryType")
     public String queryType;
 
-    @NameInMap("NodeNum")
-    public Integer nodeNum;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static CreateDBResourcePoolRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBResourcePoolRequest self = new CreateDBResourcePoolRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDBResourcePoolRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public CreateDBResourcePoolRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
-    public CreateDBResourcePoolRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public CreateDBResourcePoolRequest setNodeNum(Integer nodeNum) {
+        this.nodeNum = nodeNum;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public CreateDBResourcePoolRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public Integer getNodeNum() {
+        return this.nodeNum;
     }
 
     public CreateDBResourcePoolRequest setOwnerAccount(String ownerAccount) {
@@ -65,12 +57,12 @@ public class CreateDBResourcePoolRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public CreateDBResourcePoolRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
+    public CreateDBResourcePoolRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getDBClusterId() {
-        return this.DBClusterId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public CreateDBResourcePoolRequest setPoolName(String poolName) {
@@ -89,12 +81,20 @@ public class CreateDBResourcePoolRequest extends TeaModel {
         return this.queryType;
     }
 
-    public CreateDBResourcePoolRequest setNodeNum(Integer nodeNum) {
-        this.nodeNum = nodeNum;
+    public CreateDBResourcePoolRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public Integer getNodeNum() {
-        return this.nodeNum;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateDBResourcePoolRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

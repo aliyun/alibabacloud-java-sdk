@@ -7,20 +7,20 @@ public class DescribeDiagnosisDimensionsRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("QueryCondition")
     public String queryCondition;
 
-    @NameInMap("Lang")
-    public String lang;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeDiagnosisDimensionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDiagnosisDimensionsRequest self = new DescribeDiagnosisDimensionsRequest();
@@ -35,14 +35,6 @@ public class DescribeDiagnosisDimensionsRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public DescribeDiagnosisDimensionsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeDiagnosisDimensionsRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -51,12 +43,12 @@ public class DescribeDiagnosisDimensionsRequest extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeDiagnosisDimensionsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeDiagnosisDimensionsRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getLang() {
+        return this.lang;
     }
 
     public DescribeDiagnosisDimensionsRequest setQueryCondition(String queryCondition) {
@@ -67,12 +59,20 @@ public class DescribeDiagnosisDimensionsRequest extends TeaModel {
         return this.queryCondition;
     }
 
-    public DescribeDiagnosisDimensionsRequest setLang(String lang) {
-        this.lang = lang;
+    public DescribeDiagnosisDimensionsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getLang() {
-        return this.lang;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeDiagnosisDimensionsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

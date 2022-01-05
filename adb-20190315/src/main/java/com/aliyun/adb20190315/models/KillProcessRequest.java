@@ -4,8 +4,17 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class KillProcessRequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ProcessId")
+    public String processId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,18 +22,25 @@ public class KillProcessRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("ProcessId")
-    public String processId;
-
     public static KillProcessRequest build(java.util.Map<String, ?> map) throws Exception {
         KillProcessRequest self = new KillProcessRequest();
         return TeaModel.build(map, self);
+    }
+
+    public KillProcessRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public KillProcessRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public KillProcessRequest setOwnerId(Long ownerId) {
@@ -33,6 +49,14 @@ public class KillProcessRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public KillProcessRequest setProcessId(String processId) {
+        this.processId = processId;
+        return this;
+    }
+    public String getProcessId() {
+        return this.processId;
     }
 
     public KillProcessRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -49,30 +73,6 @@ public class KillProcessRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public KillProcessRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public KillProcessRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public KillProcessRequest setProcessId(String processId) {
-        this.processId = processId;
-        return this;
-    }
-    public String getProcessId() {
-        return this.processId;
     }
 
 }

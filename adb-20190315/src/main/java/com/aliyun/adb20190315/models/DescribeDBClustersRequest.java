@@ -4,38 +4,38 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClustersRequest extends TeaModel {
+    @NameInMap("DBClusterDescription")
+    public String DBClusterDescription;
+
+    @NameInMap("DBClusterIds")
+    public String DBClusterIds;
+
+    @NameInMap("DBClusterStatus")
+    public String DBClusterStatus;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DBClusterIds")
-    public String DBClusterIds;
-
-    @NameInMap("DBClusterDescription")
-    public String DBClusterDescription;
-
-    @NameInMap("DBClusterStatus")
-    public String DBClusterStatus;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     @NameInMap("Tag")
     public java.util.List<DescribeDBClustersRequestTag> tag;
@@ -45,12 +45,76 @@ public class DescribeDBClustersRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDBClustersRequest setDBClusterDescription(String DBClusterDescription) {
+        this.DBClusterDescription = DBClusterDescription;
+        return this;
+    }
+    public String getDBClusterDescription() {
+        return this.DBClusterDescription;
+    }
+
+    public DescribeDBClustersRequest setDBClusterIds(String DBClusterIds) {
+        this.DBClusterIds = DBClusterIds;
+        return this;
+    }
+    public String getDBClusterIds() {
+        return this.DBClusterIds;
+    }
+
+    public DescribeDBClustersRequest setDBClusterStatus(String DBClusterStatus) {
+        this.DBClusterStatus = DBClusterStatus;
+        return this;
+    }
+    public String getDBClusterStatus() {
+        return this.DBClusterStatus;
+    }
+
+    public DescribeDBClustersRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public DescribeDBClustersRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeDBClustersRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDBClustersRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeDBClustersRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeDBClustersRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeDBClustersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -67,70 +131,6 @@ public class DescribeDBClustersRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeDBClustersRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeDBClustersRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeDBClustersRequest setDBClusterIds(String DBClusterIds) {
-        this.DBClusterIds = DBClusterIds;
-        return this;
-    }
-    public String getDBClusterIds() {
-        return this.DBClusterIds;
-    }
-
-    public DescribeDBClustersRequest setDBClusterDescription(String DBClusterDescription) {
-        this.DBClusterDescription = DBClusterDescription;
-        return this;
-    }
-    public String getDBClusterDescription() {
-        return this.DBClusterDescription;
-    }
-
-    public DescribeDBClustersRequest setDBClusterStatus(String DBClusterStatus) {
-        this.DBClusterStatus = DBClusterStatus;
-        return this;
-    }
-    public String getDBClusterStatus() {
-        return this.DBClusterStatus;
-    }
-
-    public DescribeDBClustersRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeDBClustersRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeDBClustersRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public DescribeDBClustersRequest setTag(java.util.List<DescribeDBClustersRequestTag> tag) {

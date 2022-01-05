@@ -4,26 +4,26 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DeleteDBClusterResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public Integer taskId;
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
+    @NameInMap("TaskId")
+    public Integer taskId;
 
     public static DeleteDBClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteDBClusterResponseBody self = new DeleteDBClusterResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDBClusterResponseBody setTaskId(Integer taskId) {
-        this.taskId = taskId;
+    public DeleteDBClusterResponseBody setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
         return this;
     }
-    public Integer getTaskId() {
-        return this.taskId;
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
     public DeleteDBClusterResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class DeleteDBClusterResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteDBClusterResponseBody setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
+    public DeleteDBClusterResponseBody setTaskId(Integer taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public String getDBClusterId() {
-        return this.DBClusterId;
+    public Integer getTaskId() {
+        return this.taskId;
     }
 
 }

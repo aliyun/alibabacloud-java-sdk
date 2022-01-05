@@ -7,11 +7,11 @@ public class DescribeTableDetailResponseBody extends TeaModel {
     @NameInMap("AvgSize")
     public Long avgSize;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Items")
     public DescribeTableDetailResponseBodyItems items;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeTableDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTableDetailResponseBody self = new DescribeTableDetailResponseBody();
@@ -26,14 +26,6 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         return this.avgSize;
     }
 
-    public DescribeTableDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeTableDetailResponseBody setItems(DescribeTableDetailResponseBodyItems items) {
         this.items = items;
         return this;
@@ -42,24 +34,24 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         return this.items;
     }
 
-    public static class DescribeTableDetailResponseBodyItemsShard extends TeaModel {
-        @NameInMap("Size")
-        public Long size;
+    public DescribeTableDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeTableDetailResponseBodyItemsShard extends TeaModel {
         @NameInMap("Id")
         public Integer id;
+
+        @NameInMap("Size")
+        public Long size;
 
         public static DescribeTableDetailResponseBodyItemsShard build(java.util.Map<String, ?> map) throws Exception {
             DescribeTableDetailResponseBodyItemsShard self = new DescribeTableDetailResponseBodyItemsShard();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeTableDetailResponseBodyItemsShard setSize(Long size) {
-            this.size = size;
-            return this;
-        }
-        public Long getSize() {
-            return this.size;
         }
 
         public DescribeTableDetailResponseBodyItemsShard setId(Integer id) {
@@ -68,6 +60,14 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         }
         public Integer getId() {
             return this.id;
+        }
+
+        public DescribeTableDetailResponseBodyItemsShard setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
         }
 
     }

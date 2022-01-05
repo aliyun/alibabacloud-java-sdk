@@ -4,23 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeSchemasResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Items")
     public DescribeSchemasResponseBodyItems items;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeSchemasResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSchemasResponseBody self = new DescribeSchemasResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSchemasResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeSchemasResponseBody setItems(DescribeSchemasResponseBodyItems items) {
@@ -29,6 +21,14 @@ public class DescribeSchemasResponseBody extends TeaModel {
     }
     public DescribeSchemasResponseBodyItems getItems() {
         return this.items;
+    }
+
+    public DescribeSchemasResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeSchemasResponseBodyItemsSchema extends TeaModel {

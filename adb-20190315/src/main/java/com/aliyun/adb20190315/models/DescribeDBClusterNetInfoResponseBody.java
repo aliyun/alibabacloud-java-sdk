@@ -7,11 +7,11 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
     @NameInMap("ClusterNetworkType")
     public String clusterNetworkType;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Items")
     public DescribeDBClusterNetInfoResponseBodyItems items;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDBClusterNetInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterNetInfoResponseBody self = new DescribeDBClusterNetInfoResponseBody();
@@ -26,14 +26,6 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
         return this.clusterNetworkType;
     }
 
-    public DescribeDBClusterNetInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDBClusterNetInfoResponseBody setItems(DescribeDBClusterNetInfoResponseBodyItems items) {
         this.items = items;
         return this;
@@ -42,12 +34,23 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
         return this.items;
     }
 
-    public static class DescribeDBClusterNetInfoResponseBodyItemsAddress extends TeaModel {
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
+    public DescribeDBClusterNetInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeDBClusterNetInfoResponseBodyItemsAddress extends TeaModel {
         @NameInMap("ConnectionString")
         public String connectionString;
+
+        @NameInMap("ConnectionStringPrefix")
+        public String connectionStringPrefix;
+
+        @NameInMap("IPAddress")
+        public String IPAddress;
 
         @NameInMap("NetType")
         public String netType;
@@ -58,23 +61,12 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
         @NameInMap("VPCId")
         public String VPCId;
 
-        @NameInMap("IPAddress")
-        public String IPAddress;
-
-        @NameInMap("ConnectionStringPrefix")
-        public String connectionStringPrefix;
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
 
         public static DescribeDBClusterNetInfoResponseBodyItemsAddress build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterNetInfoResponseBodyItemsAddress self = new DescribeDBClusterNetInfoResponseBodyItemsAddress();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClusterNetInfoResponseBodyItemsAddress setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
         }
 
         public DescribeDBClusterNetInfoResponseBodyItemsAddress setConnectionString(String connectionString) {
@@ -83,6 +75,22 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
         }
         public String getConnectionString() {
             return this.connectionString;
+        }
+
+        public DescribeDBClusterNetInfoResponseBodyItemsAddress setConnectionStringPrefix(String connectionStringPrefix) {
+            this.connectionStringPrefix = connectionStringPrefix;
+            return this;
+        }
+        public String getConnectionStringPrefix() {
+            return this.connectionStringPrefix;
+        }
+
+        public DescribeDBClusterNetInfoResponseBodyItemsAddress setIPAddress(String IPAddress) {
+            this.IPAddress = IPAddress;
+            return this;
+        }
+        public String getIPAddress() {
+            return this.IPAddress;
         }
 
         public DescribeDBClusterNetInfoResponseBodyItemsAddress setNetType(String netType) {
@@ -109,20 +117,12 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
             return this.VPCId;
         }
 
-        public DescribeDBClusterNetInfoResponseBodyItemsAddress setIPAddress(String IPAddress) {
-            this.IPAddress = IPAddress;
+        public DescribeDBClusterNetInfoResponseBodyItemsAddress setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
             return this;
         }
-        public String getIPAddress() {
-            return this.IPAddress;
-        }
-
-        public DescribeDBClusterNetInfoResponseBodyItemsAddress setConnectionStringPrefix(String connectionStringPrefix) {
-            this.connectionStringPrefix = connectionStringPrefix;
-            return this;
-        }
-        public String getConnectionStringPrefix() {
-            return this.connectionStringPrefix;
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
     }

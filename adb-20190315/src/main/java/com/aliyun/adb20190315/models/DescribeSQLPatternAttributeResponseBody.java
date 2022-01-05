@@ -32,48 +32,32 @@ public class DescribeSQLPatternAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLPatternAttributeResponseBodyPatternDetail extends TeaModel {
-        @NameInMap("SQLPattern")
-        public String SQLPattern;
-
-        @NameInMap("QueryCount")
-        public Long queryCount;
-
-        @NameInMap("TotalQueryTime")
-        public String totalQueryTime;
+        @NameInMap("AverageMemory")
+        public String averageMemory;
 
         @NameInMap("AverageQueryTime")
         public String averageQueryTime;
 
-        @NameInMap("AverageMemory")
-        public String averageMemory;
+        @NameInMap("QueryCount")
+        public Long queryCount;
+
+        @NameInMap("SQLPattern")
+        public String SQLPattern;
+
+        @NameInMap("TotalQueryTime")
+        public String totalQueryTime;
 
         public static DescribeSQLPatternAttributeResponseBodyPatternDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeSQLPatternAttributeResponseBodyPatternDetail self = new DescribeSQLPatternAttributeResponseBodyPatternDetail();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSQLPatternAttributeResponseBodyPatternDetail setSQLPattern(String SQLPattern) {
-            this.SQLPattern = SQLPattern;
+        public DescribeSQLPatternAttributeResponseBodyPatternDetail setAverageMemory(String averageMemory) {
+            this.averageMemory = averageMemory;
             return this;
         }
-        public String getSQLPattern() {
-            return this.SQLPattern;
-        }
-
-        public DescribeSQLPatternAttributeResponseBodyPatternDetail setQueryCount(Long queryCount) {
-            this.queryCount = queryCount;
-            return this;
-        }
-        public Long getQueryCount() {
-            return this.queryCount;
-        }
-
-        public DescribeSQLPatternAttributeResponseBodyPatternDetail setTotalQueryTime(String totalQueryTime) {
-            this.totalQueryTime = totalQueryTime;
-            return this;
-        }
-        public String getTotalQueryTime() {
-            return this.totalQueryTime;
+        public String getAverageMemory() {
+            return this.averageMemory;
         }
 
         public DescribeSQLPatternAttributeResponseBodyPatternDetail setAverageQueryTime(String averageQueryTime) {
@@ -84,12 +68,28 @@ public class DescribeSQLPatternAttributeResponseBody extends TeaModel {
             return this.averageQueryTime;
         }
 
-        public DescribeSQLPatternAttributeResponseBodyPatternDetail setAverageMemory(String averageMemory) {
-            this.averageMemory = averageMemory;
+        public DescribeSQLPatternAttributeResponseBodyPatternDetail setQueryCount(Long queryCount) {
+            this.queryCount = queryCount;
             return this;
         }
-        public String getAverageMemory() {
-            return this.averageMemory;
+        public Long getQueryCount() {
+            return this.queryCount;
+        }
+
+        public DescribeSQLPatternAttributeResponseBodyPatternDetail setSQLPattern(String SQLPattern) {
+            this.SQLPattern = SQLPattern;
+            return this;
+        }
+        public String getSQLPattern() {
+            return this.SQLPattern;
+        }
+
+        public DescribeSQLPatternAttributeResponseBodyPatternDetail setTotalQueryTime(String totalQueryTime) {
+            this.totalQueryTime = totalQueryTime;
+            return this;
+        }
+        public String getTotalQueryTime() {
+            return this.totalQueryTime;
         }
 
     }

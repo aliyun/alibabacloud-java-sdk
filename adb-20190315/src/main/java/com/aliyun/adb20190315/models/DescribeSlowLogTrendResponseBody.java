@@ -4,8 +4,14 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogTrendResponseBody extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("Items")
+    public DescribeSlowLogTrendResponseBodyItems items;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,15 +19,17 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("Items")
-    public DescribeSlowLogTrendResponseBodyItems items;
-
     public static DescribeSlowLogTrendResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSlowLogTrendResponseBody self = new DescribeSlowLogTrendResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSlowLogTrendResponseBody setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
     public DescribeSlowLogTrendResponseBody setEndTime(String endTime) {
@@ -30,6 +38,14 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeSlowLogTrendResponseBody setItems(DescribeSlowLogTrendResponseBodyItems items) {
+        this.items = items;
+        return this;
+    }
+    public DescribeSlowLogTrendResponseBodyItems getItems() {
+        return this.items;
     }
 
     public DescribeSlowLogTrendResponseBody setRequestId(String requestId) {
@@ -48,40 +64,16 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         return this.startTime;
     }
 
-    public DescribeSlowLogTrendResponseBody setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public DescribeSlowLogTrendResponseBody setItems(DescribeSlowLogTrendResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeSlowLogTrendResponseBodyItems getItems() {
-        return this.items;
-    }
-
     public static class DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItemSeriesSeriesItem extends TeaModel {
-        @NameInMap("Values")
-        public String values;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Values")
+        public String values;
 
         public static DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItemSeriesSeriesItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItemSeriesSeriesItem self = new DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItemSeriesSeriesItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItemSeriesSeriesItem setValues(String values) {
-            this.values = values;
-            return this;
-        }
-        public String getValues() {
-            return this.values;
         }
 
         public DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItemSeriesSeriesItem setName(String name) {
@@ -90,6 +82,14 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItemSeriesSeriesItem setValues(String values) {
+            this.values = values;
+            return this;
+        }
+        public String getValues() {
+            return this.values;
         }
 
     }
@@ -117,11 +117,11 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
-        @NameInMap("Unit")
-        public String unit;
-
         @NameInMap("Series")
         public DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItemSeries series;
+
+        @NameInMap("Unit")
+        public String unit;
 
         public static DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItem self = new DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItem();
@@ -136,20 +136,20 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItem setUnit(String unit) {
-            this.unit = unit;
-            return this;
-        }
-        public String getUnit() {
-            return this.unit;
-        }
-
         public DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItem setSeries(DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItemSeries series) {
             this.series = series;
             return this;
         }
         public DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItemSeries getSeries() {
             return this.series;
+        }
+
+        public DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItem setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
         }
 
     }

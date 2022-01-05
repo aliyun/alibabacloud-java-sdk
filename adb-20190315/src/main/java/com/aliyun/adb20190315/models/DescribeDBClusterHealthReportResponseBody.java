@@ -32,6 +32,9 @@ public class DescribeDBClusterHealthReportResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterHealthReportResponseBodyItems extends TeaModel {
+        @NameInMap("Avg")
+        public String avg;
+
         @NameInMap("Key")
         public String key;
 
@@ -41,12 +44,17 @@ public class DescribeDBClusterHealthReportResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Avg")
-        public String avg;
-
         public static DescribeDBClusterHealthReportResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterHealthReportResponseBodyItems self = new DescribeDBClusterHealthReportResponseBodyItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBClusterHealthReportResponseBodyItems setAvg(String avg) {
+            this.avg = avg;
+            return this;
+        }
+        public String getAvg() {
+            return this.avg;
         }
 
         public DescribeDBClusterHealthReportResponseBodyItems setKey(String key) {
@@ -71,14 +79,6 @@ public class DescribeDBClusterHealthReportResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
-        }
-
-        public DescribeDBClusterHealthReportResponseBodyItems setAvg(String avg) {
-            this.avg = avg;
-            return this;
-        }
-        public String getAvg() {
-            return this.avg;
         }
 
     }

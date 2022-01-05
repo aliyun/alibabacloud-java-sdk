@@ -4,26 +4,18 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterHealthReportRequest extends TeaModel {
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeDBClusterHealthReportRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterHealthReportRequest self = new DescribeDBClusterHealthReportRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBClusterHealthReportRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDBClusterHealthReportRequest setDBClusterId(String DBClusterId) {
@@ -40,6 +32,14 @@ public class DescribeDBClusterHealthReportRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDBClusterHealthReportRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

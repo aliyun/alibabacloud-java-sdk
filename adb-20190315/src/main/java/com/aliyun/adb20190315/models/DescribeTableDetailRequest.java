@@ -4,6 +4,12 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeTableDetailRequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -12,12 +18,6 @@ public class DescribeTableDetailRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
 
     @NameInMap("SchemaName")
     public String schemaName;
@@ -28,6 +28,22 @@ public class DescribeTableDetailRequest extends TeaModel {
     public static DescribeTableDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTableDetailRequest self = new DescribeTableDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeTableDetailRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public DescribeTableDetailRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeTableDetailRequest setOwnerId(Long ownerId) {
@@ -52,22 +68,6 @@ public class DescribeTableDetailRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeTableDetailRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeTableDetailRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
     }
 
     public DescribeTableDetailRequest setSchemaName(String schemaName) {
