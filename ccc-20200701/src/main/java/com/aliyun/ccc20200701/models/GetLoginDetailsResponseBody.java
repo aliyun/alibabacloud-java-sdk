@@ -100,6 +100,9 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         @NameInMap("UserKey")
         public String userKey;
 
+        @NameInMap("WorkMode")
+        public String workMode;
+
         public static GetLoginDetailsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetLoginDetailsResponseBodyData self = new GetLoginDetailsResponseBodyData();
             return TeaModel.build(map, self);
@@ -167,6 +170,14 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         }
         public String getUserKey() {
             return this.userKey;
+        }
+
+        public GetLoginDetailsResponseBodyData setWorkMode(String workMode) {
+            this.workMode = workMode;
+            return this;
+        }
+        public String getWorkMode() {
+            return this.workMode;
         }
 
     }

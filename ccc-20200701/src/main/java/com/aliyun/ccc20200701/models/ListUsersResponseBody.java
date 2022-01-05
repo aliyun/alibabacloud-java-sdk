@@ -201,6 +201,9 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("PrimaryAccount")
         public Boolean primaryAccount;
 
+        @NameInMap("RamId")
+        public Long ramId;
+
         @NameInMap("RoleId")
         public String roleId;
 
@@ -275,6 +278,14 @@ public class ListUsersResponseBody extends TeaModel {
         }
         public Boolean getPrimaryAccount() {
             return this.primaryAccount;
+        }
+
+        public ListUsersResponseBodyDataList setRamId(Long ramId) {
+            this.ramId = ramId;
+            return this;
+        }
+        public Long getRamId() {
+            return this.ramId;
         }
 
         public ListUsersResponseBodyDataList setRoleId(String roleId) {
