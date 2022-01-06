@@ -7,10 +7,6 @@ public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
-    // 资源夹ID
-    @NameInMap("FolderId")
-    public String folderId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -43,14 +39,6 @@ public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
     }
     public String getAggregatorId() {
         return this.aggregatorId;
-    }
-
-    public ListAggregateDiscoveredResourcesRequest setFolderId(String folderId) {
-        this.folderId = folderId;
-        return this;
-    }
-    public String getFolderId() {
-        return this.folderId;
     }
 
     public ListAggregateDiscoveredResourcesRequest setPageNumber(Integer pageNumber) {
