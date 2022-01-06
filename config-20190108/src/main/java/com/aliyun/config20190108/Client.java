@@ -418,10 +418,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AggregatorId", request.aggregatorId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.folderId)) {
-            query.put("FolderId", request.folderId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
