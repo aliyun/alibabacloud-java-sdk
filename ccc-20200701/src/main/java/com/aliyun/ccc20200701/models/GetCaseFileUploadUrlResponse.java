@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ccc20200701.models;
+
+import com.aliyun.tea.*;
+
+public class GetCaseFileUploadUrlResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public GetCaseFileUploadUrlResponseBody body;
+
+    public static GetCaseFileUploadUrlResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetCaseFileUploadUrlResponse self = new GetCaseFileUploadUrlResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public GetCaseFileUploadUrlResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetCaseFileUploadUrlResponse setBody(GetCaseFileUploadUrlResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetCaseFileUploadUrlResponseBody getBody() {
+        return this.body;
+    }
+
+}
