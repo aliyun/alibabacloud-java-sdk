@@ -4,27 +4,43 @@ package com.aliyun.cccxspace20191128.models;
 import com.aliyun.tea.*;
 
 public class AddInstanceUserSaleRequest extends TeaModel {
+    @NameInMap("BuName")
+    public String buName;
+
+    @NameInMap("Email")
+    public String email;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("LoginName")
     public String loginName;
 
-    @NameInMap("RealName")
-    public String realName;
-
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
-    @NameInMap("Email")
-    public String email;
-
-    @NameInMap("BuName")
-    public String buName;
+    @NameInMap("RealName")
+    public String realName;
 
     public static AddInstanceUserSaleRequest build(java.util.Map<String, ?> map) throws Exception {
         AddInstanceUserSaleRequest self = new AddInstanceUserSaleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddInstanceUserSaleRequest setBuName(String buName) {
+        this.buName = buName;
+        return this;
+    }
+    public String getBuName() {
+        return this.buName;
+    }
+
+    public AddInstanceUserSaleRequest setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    public String getEmail() {
+        return this.email;
     }
 
     public AddInstanceUserSaleRequest setInstanceId(String instanceId) {
@@ -43,14 +59,6 @@ public class AddInstanceUserSaleRequest extends TeaModel {
         return this.loginName;
     }
 
-    public AddInstanceUserSaleRequest setRealName(String realName) {
-        this.realName = realName;
-        return this;
-    }
-    public String getRealName() {
-        return this.realName;
-    }
-
     public AddInstanceUserSaleRequest setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -59,20 +67,12 @@ public class AddInstanceUserSaleRequest extends TeaModel {
         return this.phoneNumber;
     }
 
-    public AddInstanceUserSaleRequest setEmail(String email) {
-        this.email = email;
+    public AddInstanceUserSaleRequest setRealName(String realName) {
+        this.realName = realName;
         return this;
     }
-    public String getEmail() {
-        return this.email;
-    }
-
-    public AddInstanceUserSaleRequest setBuName(String buName) {
-        this.buName = buName;
-        return this;
-    }
-    public String getBuName() {
-        return this.buName;
+    public String getRealName() {
+        return this.realName;
     }
 
 }

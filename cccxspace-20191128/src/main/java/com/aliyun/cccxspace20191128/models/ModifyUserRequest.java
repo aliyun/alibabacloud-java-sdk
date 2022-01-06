@@ -4,8 +4,11 @@ package com.aliyun.cccxspace20191128.models;
 import com.aliyun.tea.*;
 
 public class ModifyUserRequest extends TeaModel {
-    @NameInMap("UserId")
-    public Long userId;
+    @NameInMap("BuName")
+    public String buName;
+
+    @NameInMap("Email")
+    public String email;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -13,23 +16,28 @@ public class ModifyUserRequest extends TeaModel {
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
-    @NameInMap("Email")
-    public String email;
-
-    @NameInMap("BuName")
-    public String buName;
+    @NameInMap("UserId")
+    public Long userId;
 
     public static ModifyUserRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyUserRequest self = new ModifyUserRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyUserRequest setUserId(Long userId) {
-        this.userId = userId;
+    public ModifyUserRequest setBuName(String buName) {
+        this.buName = buName;
         return this;
     }
-    public Long getUserId() {
-        return this.userId;
+    public String getBuName() {
+        return this.buName;
+    }
+
+    public ModifyUserRequest setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    public String getEmail() {
+        return this.email;
     }
 
     public ModifyUserRequest setInstanceId(String instanceId) {
@@ -48,20 +56,12 @@ public class ModifyUserRequest extends TeaModel {
         return this.phoneNumber;
     }
 
-    public ModifyUserRequest setEmail(String email) {
-        this.email = email;
+    public ModifyUserRequest setUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
-    public String getEmail() {
-        return this.email;
-    }
-
-    public ModifyUserRequest setBuName(String buName) {
-        this.buName = buName;
-        return this;
-    }
-    public String getBuName() {
-        return this.buName;
+    public Long getUserId() {
+        return this.userId;
     }
 
 }

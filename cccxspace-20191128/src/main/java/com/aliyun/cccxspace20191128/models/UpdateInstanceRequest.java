@@ -4,26 +4,26 @@ package com.aliyun.cccxspace20191128.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("CommodityInstanceId")
+    public String commodityInstanceId;
 
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("CommodityInstanceId")
-    public String commodityInstanceId;
+    @NameInMap("Name")
+    public String name;
 
     public static UpdateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateInstanceRequest self = new UpdateInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateInstanceRequest setName(String name) {
-        this.name = name;
+    public UpdateInstanceRequest setCommodityInstanceId(String commodityInstanceId) {
+        this.commodityInstanceId = commodityInstanceId;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getCommodityInstanceId() {
+        return this.commodityInstanceId;
     }
 
     public UpdateInstanceRequest setDescription(String description) {
@@ -34,12 +34,12 @@ public class UpdateInstanceRequest extends TeaModel {
         return this.description;
     }
 
-    public UpdateInstanceRequest setCommodityInstanceId(String commodityInstanceId) {
-        this.commodityInstanceId = commodityInstanceId;
+    public UpdateInstanceRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getCommodityInstanceId() {
-        return this.commodityInstanceId;
+    public String getName() {
+        return this.name;
     }
 
 }

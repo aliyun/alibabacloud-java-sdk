@@ -7,11 +7,11 @@ public class RenewAliyunCommodityInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Data")
     public String data;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -32,20 +32,20 @@ public class RenewAliyunCommodityInstanceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public RenewAliyunCommodityInstanceResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public RenewAliyunCommodityInstanceResponseBody setData(String data) {
         this.data = data;
         return this;
     }
     public String getData() {
         return this.data;
+    }
+
+    public RenewAliyunCommodityInstanceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public RenewAliyunCommodityInstanceResponseBody setRequestId(String requestId) {

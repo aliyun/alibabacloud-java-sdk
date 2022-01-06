@@ -4,18 +4,26 @@ package com.aliyun.cccxspace20191128.models;
 import com.aliyun.tea.*;
 
 public class ModifyXsInstanceRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Description")
-    public String description;
-
     public static ModifyXsInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyXsInstanceRequest self = new ModifyXsInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyXsInstanceRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public ModifyXsInstanceRequest setInstanceId(String instanceId) {
@@ -32,14 +40,6 @@ public class ModifyXsInstanceRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public ModifyXsInstanceRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
 }
