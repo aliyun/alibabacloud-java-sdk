@@ -28,6 +28,14 @@ public class DetailSubSceneResponseBody extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    // 矫正后图的路径
+    @NameInMap("ImageUrl")
+    public String imageUrl;
+
+    // 墙线标注数据
+    @NameInMap("LayoutData")
+    public String layoutData;
+
     // 错误消息
     @NameInMap("Message")
     public String message;
@@ -35,6 +43,10 @@ public class DetailSubSceneResponseBody extends TeaModel {
     // 子场景名称
     @NameInMap("Name")
     public String name;
+
+    // 原图路径
+    @NameInMap("OriginUrl")
+    public String originUrl;
 
     // 请求ID，与入参requestId对应
     @NameInMap("RequestId")
@@ -51,6 +63,10 @@ public class DetailSubSceneResponseBody extends TeaModel {
     // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
+
+    // 资源类型
+    @NameInMap("Type")
+    public String type;
 
     // 图片路径/视频路径
     @NameInMap("Url")
@@ -109,6 +125,22 @@ public class DetailSubSceneResponseBody extends TeaModel {
         return this.id;
     }
 
+    public DetailSubSceneResponseBody setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    public String getImageUrl() {
+        return this.imageUrl;
+    }
+
+    public DetailSubSceneResponseBody setLayoutData(String layoutData) {
+        this.layoutData = layoutData;
+        return this;
+    }
+    public String getLayoutData() {
+        return this.layoutData;
+    }
+
     public DetailSubSceneResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -123,6 +155,14 @@ public class DetailSubSceneResponseBody extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public DetailSubSceneResponseBody setOriginUrl(String originUrl) {
+        this.originUrl = originUrl;
+        return this;
+    }
+    public String getOriginUrl() {
+        return this.originUrl;
     }
 
     public DetailSubSceneResponseBody setRequestId(String requestId) {
@@ -155,6 +195,14 @@ public class DetailSubSceneResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DetailSubSceneResponseBody setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public DetailSubSceneResponseBody setUrl(String url) {
