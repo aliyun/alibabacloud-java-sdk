@@ -7,6 +7,9 @@ public class DisplayInstanceUserResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public DisplayInstanceUserResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DisplayInstanceUserResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public DisplayInstanceUserResponseBodyData data;
 
     public static DisplayInstanceUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DisplayInstanceUserResponseBody self = new DisplayInstanceUserResponseBody();
@@ -30,6 +30,14 @@ public class DisplayInstanceUserResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DisplayInstanceUserResponseBody setData(DisplayInstanceUserResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DisplayInstanceUserResponseBodyData getData() {
+        return this.data;
     }
 
     public DisplayInstanceUserResponseBody setMessage(String message) {
@@ -56,23 +64,15 @@ public class DisplayInstanceUserResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DisplayInstanceUserResponseBody setData(DisplayInstanceUserResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DisplayInstanceUserResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class DisplayInstanceUserResponseBodyDataAdministratorInfo extends TeaModel {
         @NameInMap("BuName")
         public String buName;
 
-        @NameInMap("LogName")
-        public String logName;
-
         @NameInMap("Email")
         public String email;
+
+        @NameInMap("LogName")
+        public String logName;
 
         @NameInMap("PhoneNumber")
         public String phoneNumber;
@@ -93,20 +93,20 @@ public class DisplayInstanceUserResponseBody extends TeaModel {
             return this.buName;
         }
 
-        public DisplayInstanceUserResponseBodyDataAdministratorInfo setLogName(String logName) {
-            this.logName = logName;
-            return this;
-        }
-        public String getLogName() {
-            return this.logName;
-        }
-
         public DisplayInstanceUserResponseBodyDataAdministratorInfo setEmail(String email) {
             this.email = email;
             return this;
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public DisplayInstanceUserResponseBodyDataAdministratorInfo setLogName(String logName) {
+            this.logName = logName;
+            return this;
+        }
+        public String getLogName() {
+            return this.logName;
         }
 
         public DisplayInstanceUserResponseBodyDataAdministratorInfo setPhoneNumber(String phoneNumber) {

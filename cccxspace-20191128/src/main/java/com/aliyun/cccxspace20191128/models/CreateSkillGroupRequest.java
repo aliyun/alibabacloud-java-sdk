@@ -4,11 +4,8 @@ package com.aliyun.cccxspace20191128.models;
 import com.aliyun.tea.*;
 
 public class CreateSkillGroupRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("SkillGroupName")
-    public String skillGroupName;
+    @NameInMap("ChannelType")
+    public Integer channelType;
 
     @NameInMap("Description")
     public String description;
@@ -16,28 +13,23 @@ public class CreateSkillGroupRequest extends TeaModel {
     @NameInMap("DisplayName")
     public String displayName;
 
-    @NameInMap("ChannelType")
-    public Integer channelType;
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("SkillGroupName")
+    public String skillGroupName;
 
     public static CreateSkillGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSkillGroupRequest self = new CreateSkillGroupRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateSkillGroupRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public CreateSkillGroupRequest setChannelType(Integer channelType) {
+        this.channelType = channelType;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public CreateSkillGroupRequest setSkillGroupName(String skillGroupName) {
-        this.skillGroupName = skillGroupName;
-        return this;
-    }
-    public String getSkillGroupName() {
-        return this.skillGroupName;
+    public Integer getChannelType() {
+        return this.channelType;
     }
 
     public CreateSkillGroupRequest setDescription(String description) {
@@ -56,12 +48,20 @@ public class CreateSkillGroupRequest extends TeaModel {
         return this.displayName;
     }
 
-    public CreateSkillGroupRequest setChannelType(Integer channelType) {
-        this.channelType = channelType;
+    public CreateSkillGroupRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public Integer getChannelType() {
-        return this.channelType;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public CreateSkillGroupRequest setSkillGroupName(String skillGroupName) {
+        this.skillGroupName = skillGroupName;
+        return this;
+    }
+    public String getSkillGroupName() {
+        return this.skillGroupName;
     }
 
 }

@@ -4,11 +4,11 @@ package com.aliyun.cccxspace20191128.models;
 import com.aliyun.tea.*;
 
 public class UpGradeInstanceResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
@@ -24,20 +24,20 @@ public class UpGradeInstanceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpGradeInstanceResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public UpGradeInstanceResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public UpGradeInstanceResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public UpGradeInstanceResponseBody setMessage(String message) {

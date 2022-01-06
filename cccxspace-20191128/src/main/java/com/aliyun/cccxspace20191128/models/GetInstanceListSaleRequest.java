@@ -4,9 +4,6 @@ package com.aliyun.cccxspace20191128.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceListSaleRequest extends TeaModel {
-    @NameInMap("UserId")
-    public String userId;
-
     @NameInMap("InstanceName")
     public String instanceName;
 
@@ -16,17 +13,12 @@ public class GetInstanceListSaleRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("UserId")
+    public String userId;
+
     public static GetInstanceListSaleRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceListSaleRequest self = new GetInstanceListSaleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetInstanceListSaleRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public GetInstanceListSaleRequest setInstanceName(String instanceName) {
@@ -51,6 +43,14 @@ public class GetInstanceListSaleRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public GetInstanceListSaleRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

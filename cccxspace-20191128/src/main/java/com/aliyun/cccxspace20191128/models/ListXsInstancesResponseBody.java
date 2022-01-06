@@ -4,8 +4,23 @@ package com.aliyun.cccxspace20191128.models;
 import com.aliyun.tea.*;
 
 public class ListXsInstancesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("CommodityInstances")
+    public java.util.List<ListXsInstancesResponseBodyCommodityInstances> commodityInstances;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,27 +28,28 @@ public class ListXsInstancesResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("CommodityInstances")
-    public java.util.List<ListXsInstancesResponseBodyCommodityInstances> commodityInstances;
 
     public static ListXsInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListXsInstancesResponseBody self = new ListXsInstancesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListXsInstancesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListXsInstancesResponseBody setCommodityInstances(java.util.List<ListXsInstancesResponseBodyCommodityInstances> commodityInstances) {
+        this.commodityInstances = commodityInstances;
+        return this;
+    }
+    public java.util.List<ListXsInstancesResponseBodyCommodityInstances> getCommodityInstances() {
+        return this.commodityInstances;
     }
 
     public ListXsInstancesResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -42,6 +58,30 @@ public class ListXsInstancesResponseBody extends TeaModel {
     }
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    public ListXsInstancesResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListXsInstancesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListXsInstancesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListXsInstancesResponseBody setRequestId(String requestId) {
@@ -60,52 +100,12 @@ public class ListXsInstancesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListXsInstancesResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListXsInstancesResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListXsInstancesResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListXsInstancesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public ListXsInstancesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public ListXsInstancesResponseBody setCommodityInstances(java.util.List<ListXsInstancesResponseBodyCommodityInstances> commodityInstances) {
-        this.commodityInstances = commodityInstances;
-        return this;
-    }
-    public java.util.List<ListXsInstancesResponseBodyCommodityInstances> getCommodityInstances() {
-        return this.commodityInstances;
     }
 
     public static class ListXsInstancesResponseBodyCommodityInstancesAdministrator extends TeaModel {
@@ -139,20 +139,17 @@ public class ListXsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListXsInstancesResponseBodyCommodityInstances extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("Administrator")
+        public ListXsInstancesResponseBodyCommodityInstancesAdministrator administrator;
 
-        @NameInMap("HotlineSeatNum")
-        public Integer hotlineSeatNum;
-
-        @NameInMap("StartData")
-        public String startData;
+        @NameInMap("Chargetype")
+        public String chargetype;
 
         @NameInMap("HadSTS")
         public Boolean hadSTS;
 
-        @NameInMap("ProdLevel")
-        public String prodLevel;
+        @NameInMap("HotlineSeatNum")
+        public Integer hotlineSeatNum;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -160,45 +157,40 @@ public class ListXsInstancesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Chargetype")
-        public String chargetype;
-
-        @NameInMap("TenantId")
-        public Long tenantId;
-
         @NameInMap("OnlineSeatNum")
         public Integer onlineSeatNum;
 
-        @NameInMap("Administrator")
-        public ListXsInstancesResponseBodyCommodityInstancesAdministrator administrator;
+        @NameInMap("ProdLevel")
+        public String prodLevel;
+
+        @NameInMap("StartData")
+        public String startData;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("TenantId")
+        public Long tenantId;
 
         public static ListXsInstancesResponseBodyCommodityInstances build(java.util.Map<String, ?> map) throws Exception {
             ListXsInstancesResponseBodyCommodityInstances self = new ListXsInstancesResponseBodyCommodityInstances();
             return TeaModel.build(map, self);
         }
 
-        public ListXsInstancesResponseBodyCommodityInstances setStatus(Integer status) {
-            this.status = status;
+        public ListXsInstancesResponseBodyCommodityInstances setAdministrator(ListXsInstancesResponseBodyCommodityInstancesAdministrator administrator) {
+            this.administrator = administrator;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
+        public ListXsInstancesResponseBodyCommodityInstancesAdministrator getAdministrator() {
+            return this.administrator;
         }
 
-        public ListXsInstancesResponseBodyCommodityInstances setHotlineSeatNum(Integer hotlineSeatNum) {
-            this.hotlineSeatNum = hotlineSeatNum;
+        public ListXsInstancesResponseBodyCommodityInstances setChargetype(String chargetype) {
+            this.chargetype = chargetype;
             return this;
         }
-        public Integer getHotlineSeatNum() {
-            return this.hotlineSeatNum;
-        }
-
-        public ListXsInstancesResponseBodyCommodityInstances setStartData(String startData) {
-            this.startData = startData;
-            return this;
-        }
-        public String getStartData() {
-            return this.startData;
+        public String getChargetype() {
+            return this.chargetype;
         }
 
         public ListXsInstancesResponseBodyCommodityInstances setHadSTS(Boolean hadSTS) {
@@ -209,12 +201,12 @@ public class ListXsInstancesResponseBody extends TeaModel {
             return this.hadSTS;
         }
 
-        public ListXsInstancesResponseBodyCommodityInstances setProdLevel(String prodLevel) {
-            this.prodLevel = prodLevel;
+        public ListXsInstancesResponseBodyCommodityInstances setHotlineSeatNum(Integer hotlineSeatNum) {
+            this.hotlineSeatNum = hotlineSeatNum;
             return this;
         }
-        public String getProdLevel() {
-            return this.prodLevel;
+        public Integer getHotlineSeatNum() {
+            return this.hotlineSeatNum;
         }
 
         public ListXsInstancesResponseBodyCommodityInstances setInstanceId(String instanceId) {
@@ -233,22 +225,6 @@ public class ListXsInstancesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListXsInstancesResponseBodyCommodityInstances setChargetype(String chargetype) {
-            this.chargetype = chargetype;
-            return this;
-        }
-        public String getChargetype() {
-            return this.chargetype;
-        }
-
-        public ListXsInstancesResponseBodyCommodityInstances setTenantId(Long tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public Long getTenantId() {
-            return this.tenantId;
-        }
-
         public ListXsInstancesResponseBodyCommodityInstances setOnlineSeatNum(Integer onlineSeatNum) {
             this.onlineSeatNum = onlineSeatNum;
             return this;
@@ -257,12 +233,36 @@ public class ListXsInstancesResponseBody extends TeaModel {
             return this.onlineSeatNum;
         }
 
-        public ListXsInstancesResponseBodyCommodityInstances setAdministrator(ListXsInstancesResponseBodyCommodityInstancesAdministrator administrator) {
-            this.administrator = administrator;
+        public ListXsInstancesResponseBodyCommodityInstances setProdLevel(String prodLevel) {
+            this.prodLevel = prodLevel;
             return this;
         }
-        public ListXsInstancesResponseBodyCommodityInstancesAdministrator getAdministrator() {
-            return this.administrator;
+        public String getProdLevel() {
+            return this.prodLevel;
+        }
+
+        public ListXsInstancesResponseBodyCommodityInstances setStartData(String startData) {
+            this.startData = startData;
+            return this;
+        }
+        public String getStartData() {
+            return this.startData;
+        }
+
+        public ListXsInstancesResponseBodyCommodityInstances setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public ListXsInstancesResponseBodyCommodityInstances setTenantId(Long tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public Long getTenantId() {
+            return this.tenantId;
         }
 
     }

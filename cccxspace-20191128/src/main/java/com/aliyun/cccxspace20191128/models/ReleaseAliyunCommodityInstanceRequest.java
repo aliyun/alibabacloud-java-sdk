@@ -4,23 +4,15 @@ package com.aliyun.cccxspace20191128.models;
 import com.aliyun.tea.*;
 
 public class ReleaseAliyunCommodityInstanceRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("CommodityList")
     public java.util.List<ReleaseAliyunCommodityInstanceRequestCommodityList> commodityList;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     public static ReleaseAliyunCommodityInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleaseAliyunCommodityInstanceRequest self = new ReleaseAliyunCommodityInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ReleaseAliyunCommodityInstanceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public ReleaseAliyunCommodityInstanceRequest setCommodityList(java.util.List<ReleaseAliyunCommodityInstanceRequestCommodityList> commodityList) {
@@ -31,21 +23,23 @@ public class ReleaseAliyunCommodityInstanceRequest extends TeaModel {
         return this.commodityList;
     }
 
+    public ReleaseAliyunCommodityInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public static class ReleaseAliyunCommodityInstanceRequestCommodityList extends TeaModel {
+        @NameInMap("ChargeType")
+        public String chargeType;
+
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        @NameInMap("CommodityNum")
-        public Integer commodityNum;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("CommodityStartTime")
-        public Long commodityStartTime;
-
-        @NameInMap("ChargeType")
-        public String chargeType;
+        @NameInMap("CommodityEdition")
+        public Integer commodityEdition;
 
         @NameInMap("CommodityEndTime")
         public Long commodityEndTime;
@@ -53,15 +47,29 @@ public class ReleaseAliyunCommodityInstanceRequest extends TeaModel {
         @NameInMap("CommodityName")
         public String commodityName;
 
-        @NameInMap("CommodityEdition")
-        public Integer commodityEdition;
+        @NameInMap("CommodityNum")
+        public Integer commodityNum;
+
+        @NameInMap("CommodityStartTime")
+        public Long commodityStartTime;
 
         @NameInMap("CommodityType")
         public Integer commodityType;
 
+        @NameInMap("Description")
+        public String description;
+
         public static ReleaseAliyunCommodityInstanceRequestCommodityList build(java.util.Map<String, ?> map) throws Exception {
             ReleaseAliyunCommodityInstanceRequestCommodityList self = new ReleaseAliyunCommodityInstanceRequestCommodityList();
             return TeaModel.build(map, self);
+        }
+
+        public ReleaseAliyunCommodityInstanceRequestCommodityList setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
         }
 
         public ReleaseAliyunCommodityInstanceRequestCommodityList setCommodityCode(String commodityCode) {
@@ -72,36 +80,12 @@ public class ReleaseAliyunCommodityInstanceRequest extends TeaModel {
             return this.commodityCode;
         }
 
-        public ReleaseAliyunCommodityInstanceRequestCommodityList setCommodityNum(Integer commodityNum) {
-            this.commodityNum = commodityNum;
+        public ReleaseAliyunCommodityInstanceRequestCommodityList setCommodityEdition(Integer commodityEdition) {
+            this.commodityEdition = commodityEdition;
             return this;
         }
-        public Integer getCommodityNum() {
-            return this.commodityNum;
-        }
-
-        public ReleaseAliyunCommodityInstanceRequestCommodityList setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ReleaseAliyunCommodityInstanceRequestCommodityList setCommodityStartTime(Long commodityStartTime) {
-            this.commodityStartTime = commodityStartTime;
-            return this;
-        }
-        public Long getCommodityStartTime() {
-            return this.commodityStartTime;
-        }
-
-        public ReleaseAliyunCommodityInstanceRequestCommodityList setChargeType(String chargeType) {
-            this.chargeType = chargeType;
-            return this;
-        }
-        public String getChargeType() {
-            return this.chargeType;
+        public Integer getCommodityEdition() {
+            return this.commodityEdition;
         }
 
         public ReleaseAliyunCommodityInstanceRequestCommodityList setCommodityEndTime(Long commodityEndTime) {
@@ -120,12 +104,20 @@ public class ReleaseAliyunCommodityInstanceRequest extends TeaModel {
             return this.commodityName;
         }
 
-        public ReleaseAliyunCommodityInstanceRequestCommodityList setCommodityEdition(Integer commodityEdition) {
-            this.commodityEdition = commodityEdition;
+        public ReleaseAliyunCommodityInstanceRequestCommodityList setCommodityNum(Integer commodityNum) {
+            this.commodityNum = commodityNum;
             return this;
         }
-        public Integer getCommodityEdition() {
-            return this.commodityEdition;
+        public Integer getCommodityNum() {
+            return this.commodityNum;
+        }
+
+        public ReleaseAliyunCommodityInstanceRequestCommodityList setCommodityStartTime(Long commodityStartTime) {
+            this.commodityStartTime = commodityStartTime;
+            return this;
+        }
+        public Long getCommodityStartTime() {
+            return this.commodityStartTime;
         }
 
         public ReleaseAliyunCommodityInstanceRequestCommodityList setCommodityType(Integer commodityType) {
@@ -134,6 +126,14 @@ public class ReleaseAliyunCommodityInstanceRequest extends TeaModel {
         }
         public Integer getCommodityType() {
             return this.commodityType;
+        }
+
+        public ReleaseAliyunCommodityInstanceRequestCommodityList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
     }

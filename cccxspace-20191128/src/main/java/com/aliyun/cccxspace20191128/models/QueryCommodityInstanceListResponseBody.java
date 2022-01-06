@@ -4,11 +4,14 @@ package com.aliyun.cccxspace20191128.models;
 import com.aliyun.tea.*;
 
 public class QueryCommodityInstanceListResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("CommodityInstances")
+    public QueryCommodityInstanceListResponseBodyCommodityInstances commodityInstances;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
@@ -19,20 +22,9 @@ public class QueryCommodityInstanceListResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("CommodityInstances")
-    public QueryCommodityInstanceListResponseBodyCommodityInstances commodityInstances;
-
     public static QueryCommodityInstanceListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryCommodityInstanceListResponseBody self = new QueryCommodityInstanceListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryCommodityInstanceListResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public QueryCommodityInstanceListResponseBody setCode(String code) {
@@ -41,6 +33,22 @@ public class QueryCommodityInstanceListResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public QueryCommodityInstanceListResponseBody setCommodityInstances(QueryCommodityInstanceListResponseBodyCommodityInstances commodityInstances) {
+        this.commodityInstances = commodityInstances;
+        return this;
+    }
+    public QueryCommodityInstanceListResponseBodyCommodityInstances getCommodityInstances() {
+        return this.commodityInstances;
+    }
+
+    public QueryCommodityInstanceListResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public QueryCommodityInstanceListResponseBody setMessage(String message) {
@@ -67,26 +75,12 @@ public class QueryCommodityInstanceListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryCommodityInstanceListResponseBody setCommodityInstances(QueryCommodityInstanceListResponseBodyCommodityInstances commodityInstances) {
-        this.commodityInstances = commodityInstances;
-        return this;
-    }
-    public QueryCommodityInstanceListResponseBodyCommodityInstances getCommodityInstances() {
-        return this.commodityInstances;
-    }
-
     public static class QueryCommodityInstanceListResponseBodyCommodityInstancesCommodityInstance extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("EndData")
+        public Long endData;
 
         @NameInMap("HotlineSeatNum")
         public Integer hotlineSeatNum;
-
-        @NameInMap("StartData")
-        public Long startData;
-
-        @NameInMap("EndData")
-        public Long endData;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -94,33 +88,15 @@ public class QueryCommodityInstanceListResponseBody extends TeaModel {
         @NameInMap("OnlineSeatNum")
         public Integer onlineSeatNum;
 
+        @NameInMap("StartData")
+        public Long startData;
+
+        @NameInMap("Status")
+        public Integer status;
+
         public static QueryCommodityInstanceListResponseBodyCommodityInstancesCommodityInstance build(java.util.Map<String, ?> map) throws Exception {
             QueryCommodityInstanceListResponseBodyCommodityInstancesCommodityInstance self = new QueryCommodityInstanceListResponseBodyCommodityInstancesCommodityInstance();
             return TeaModel.build(map, self);
-        }
-
-        public QueryCommodityInstanceListResponseBodyCommodityInstancesCommodityInstance setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public QueryCommodityInstanceListResponseBodyCommodityInstancesCommodityInstance setHotlineSeatNum(Integer hotlineSeatNum) {
-            this.hotlineSeatNum = hotlineSeatNum;
-            return this;
-        }
-        public Integer getHotlineSeatNum() {
-            return this.hotlineSeatNum;
-        }
-
-        public QueryCommodityInstanceListResponseBodyCommodityInstancesCommodityInstance setStartData(Long startData) {
-            this.startData = startData;
-            return this;
-        }
-        public Long getStartData() {
-            return this.startData;
         }
 
         public QueryCommodityInstanceListResponseBodyCommodityInstancesCommodityInstance setEndData(Long endData) {
@@ -129,6 +105,14 @@ public class QueryCommodityInstanceListResponseBody extends TeaModel {
         }
         public Long getEndData() {
             return this.endData;
+        }
+
+        public QueryCommodityInstanceListResponseBodyCommodityInstancesCommodityInstance setHotlineSeatNum(Integer hotlineSeatNum) {
+            this.hotlineSeatNum = hotlineSeatNum;
+            return this;
+        }
+        public Integer getHotlineSeatNum() {
+            return this.hotlineSeatNum;
         }
 
         public QueryCommodityInstanceListResponseBodyCommodityInstancesCommodityInstance setInstanceId(String instanceId) {
@@ -145,6 +129,22 @@ public class QueryCommodityInstanceListResponseBody extends TeaModel {
         }
         public Integer getOnlineSeatNum() {
             return this.onlineSeatNum;
+        }
+
+        public QueryCommodityInstanceListResponseBodyCommodityInstancesCommodityInstance setStartData(Long startData) {
+            this.startData = startData;
+            return this;
+        }
+        public Long getStartData() {
+            return this.startData;
+        }
+
+        public QueryCommodityInstanceListResponseBodyCommodityInstancesCommodityInstance setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
     }

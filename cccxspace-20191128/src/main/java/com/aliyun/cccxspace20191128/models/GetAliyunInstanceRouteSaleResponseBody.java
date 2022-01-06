@@ -7,6 +7,9 @@ public class GetAliyunInstanceRouteSaleResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetAliyunInstanceRouteSaleResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -14,10 +17,7 @@ public class GetAliyunInstanceRouteSaleResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Success")
-    public String success;
-
-    @NameInMap("Data")
-    public java.util.List<GetAliyunInstanceRouteSaleResponseBodyData> data;
+    public Boolean success;
 
     public static GetAliyunInstanceRouteSaleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAliyunInstanceRouteSaleResponseBody self = new GetAliyunInstanceRouteSaleResponseBody();
@@ -30,6 +30,14 @@ public class GetAliyunInstanceRouteSaleResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetAliyunInstanceRouteSaleResponseBody setData(GetAliyunInstanceRouteSaleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetAliyunInstanceRouteSaleResponseBodyData getData() {
+        return this.data;
     }
 
     public GetAliyunInstanceRouteSaleResponseBody setMessage(String message) {
@@ -48,35 +56,27 @@ public class GetAliyunInstanceRouteSaleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetAliyunInstanceRouteSaleResponseBody setSuccess(String success) {
+    public GetAliyunInstanceRouteSaleResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
     }
 
-    public GetAliyunInstanceRouteSaleResponseBody setData(java.util.List<GetAliyunInstanceRouteSaleResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<GetAliyunInstanceRouteSaleResponseBodyData> getData() {
-        return this.data;
-    }
-
-    public static class GetAliyunInstanceRouteSaleResponseBodyData extends TeaModel {
+    public static class GetAliyunInstanceRouteSaleResponseBodyDataRoutList extends TeaModel {
         @NameInMap("RuleId")
         public String ruleId;
 
         @NameInMap("RuleName")
         public String ruleName;
 
-        public static GetAliyunInstanceRouteSaleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            GetAliyunInstanceRouteSaleResponseBodyData self = new GetAliyunInstanceRouteSaleResponseBodyData();
+        public static GetAliyunInstanceRouteSaleResponseBodyDataRoutList build(java.util.Map<String, ?> map) throws Exception {
+            GetAliyunInstanceRouteSaleResponseBodyDataRoutList self = new GetAliyunInstanceRouteSaleResponseBodyDataRoutList();
             return TeaModel.build(map, self);
         }
 
-        public GetAliyunInstanceRouteSaleResponseBodyData setRuleId(String ruleId) {
+        public GetAliyunInstanceRouteSaleResponseBodyDataRoutList setRuleId(String ruleId) {
             this.ruleId = ruleId;
             return this;
         }
@@ -84,12 +84,42 @@ public class GetAliyunInstanceRouteSaleResponseBody extends TeaModel {
             return this.ruleId;
         }
 
-        public GetAliyunInstanceRouteSaleResponseBodyData setRuleName(String ruleName) {
+        public GetAliyunInstanceRouteSaleResponseBodyDataRoutList setRuleName(String ruleName) {
             this.ruleName = ruleName;
             return this;
         }
         public String getRuleName() {
             return this.ruleName;
+        }
+
+    }
+
+    public static class GetAliyunInstanceRouteSaleResponseBodyData extends TeaModel {
+        @NameInMap("RoutList")
+        public java.util.List<GetAliyunInstanceRouteSaleResponseBodyDataRoutList> routList;
+
+        @NameInMap("TenantId")
+        public String tenantId;
+
+        public static GetAliyunInstanceRouteSaleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetAliyunInstanceRouteSaleResponseBodyData self = new GetAliyunInstanceRouteSaleResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAliyunInstanceRouteSaleResponseBodyData setRoutList(java.util.List<GetAliyunInstanceRouteSaleResponseBodyDataRoutList> routList) {
+            this.routList = routList;
+            return this;
+        }
+        public java.util.List<GetAliyunInstanceRouteSaleResponseBodyDataRoutList> getRoutList() {
+            return this.routList;
+        }
+
+        public GetAliyunInstanceRouteSaleResponseBodyData setTenantId(String tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public String getTenantId() {
+            return this.tenantId;
         }
 
     }

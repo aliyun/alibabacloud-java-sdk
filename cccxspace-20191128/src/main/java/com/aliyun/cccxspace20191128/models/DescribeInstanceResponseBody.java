@@ -7,6 +7,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public DescribeInstanceResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public DescribeInstanceResponseBodyData data;
 
     public static DescribeInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceResponseBody self = new DescribeInstanceResponseBody();
@@ -30,6 +30,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeInstanceResponseBody setData(DescribeInstanceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeInstanceResponseBodyData getData() {
+        return this.data;
     }
 
     public DescribeInstanceResponseBody setMessage(String message) {
@@ -56,15 +64,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeInstanceResponseBody setData(DescribeInstanceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeInstanceResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class DescribeInstanceResponseBodyDataCommodityInstanceAdministrator extends TeaModel {
+        @NameInMap("AccountName")
+        public String accountName;
+
         @NameInMap("Email")
         public String email;
 
@@ -74,12 +77,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
-        @NameInMap("AccountName")
-        public String accountName;
-
         public static DescribeInstanceResponseBodyDataCommodityInstanceAdministrator build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceResponseBodyDataCommodityInstanceAdministrator self = new DescribeInstanceResponseBodyDataCommodityInstanceAdministrator();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceResponseBodyDataCommodityInstanceAdministrator setAccountName(String accountName) {
+            this.accountName = accountName;
+            return this;
+        }
+        public String getAccountName() {
+            return this.accountName;
         }
 
         public DescribeInstanceResponseBodyDataCommodityInstanceAdministrator setEmail(String email) {
@@ -106,59 +114,35 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.phoneNumber;
         }
 
-        public DescribeInstanceResponseBodyDataCommodityInstanceAdministrator setAccountName(String accountName) {
-            this.accountName = accountName;
-            return this;
-        }
-        public String getAccountName() {
-            return this.accountName;
-        }
-
     }
 
     public static class DescribeInstanceResponseBodyDataCommodityInstance extends TeaModel {
-        @NameInMap("CommodityInstanceId")
-        public String commodityInstanceId;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("CommodityInstanceName")
-        public String commodityInstanceName;
+        @NameInMap("Administrator")
+        public DescribeInstanceResponseBodyDataCommodityInstanceAdministrator administrator;
 
         @NameInMap("Commodities")
         public java.util.List<String> commodities;
 
-        @NameInMap("Administrator")
-        public DescribeInstanceResponseBodyDataCommodityInstanceAdministrator administrator;
+        @NameInMap("CommodityInstanceId")
+        public String commodityInstanceId;
+
+        @NameInMap("CommodityInstanceName")
+        public String commodityInstanceName;
+
+        @NameInMap("Description")
+        public String description;
 
         public static DescribeInstanceResponseBodyDataCommodityInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceResponseBodyDataCommodityInstance self = new DescribeInstanceResponseBodyDataCommodityInstance();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceResponseBodyDataCommodityInstance setCommodityInstanceId(String commodityInstanceId) {
-            this.commodityInstanceId = commodityInstanceId;
+        public DescribeInstanceResponseBodyDataCommodityInstance setAdministrator(DescribeInstanceResponseBodyDataCommodityInstanceAdministrator administrator) {
+            this.administrator = administrator;
             return this;
         }
-        public String getCommodityInstanceId() {
-            return this.commodityInstanceId;
-        }
-
-        public DescribeInstanceResponseBodyDataCommodityInstance setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeInstanceResponseBodyDataCommodityInstance setCommodityInstanceName(String commodityInstanceName) {
-            this.commodityInstanceName = commodityInstanceName;
-            return this;
-        }
-        public String getCommodityInstanceName() {
-            return this.commodityInstanceName;
+        public DescribeInstanceResponseBodyDataCommodityInstanceAdministrator getAdministrator() {
+            return this.administrator;
         }
 
         public DescribeInstanceResponseBodyDataCommodityInstance setCommodities(java.util.List<String> commodities) {
@@ -169,12 +153,28 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.commodities;
         }
 
-        public DescribeInstanceResponseBodyDataCommodityInstance setAdministrator(DescribeInstanceResponseBodyDataCommodityInstanceAdministrator administrator) {
-            this.administrator = administrator;
+        public DescribeInstanceResponseBodyDataCommodityInstance setCommodityInstanceId(String commodityInstanceId) {
+            this.commodityInstanceId = commodityInstanceId;
             return this;
         }
-        public DescribeInstanceResponseBodyDataCommodityInstanceAdministrator getAdministrator() {
-            return this.administrator;
+        public String getCommodityInstanceId() {
+            return this.commodityInstanceId;
+        }
+
+        public DescribeInstanceResponseBodyDataCommodityInstance setCommodityInstanceName(String commodityInstanceName) {
+            this.commodityInstanceName = commodityInstanceName;
+            return this;
+        }
+        public String getCommodityInstanceName() {
+            return this.commodityInstanceName;
+        }
+
+        public DescribeInstanceResponseBodyDataCommodityInstance setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
     }

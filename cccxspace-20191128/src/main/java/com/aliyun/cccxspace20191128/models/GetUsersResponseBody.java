@@ -4,11 +4,11 @@ package com.aliyun.cccxspace20191128.models;
 import com.aliyun.tea.*;
 
 public class GetUsersResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
@@ -27,20 +27,20 @@ public class GetUsersResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetUsersResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public GetUsersResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetUsersResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public GetUsersResponseBody setMessage(String message) {
@@ -82,11 +82,11 @@ public class GetUsersResponseBody extends TeaModel {
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
-        @NameInMap("UserName")
-        public String userName;
-
         @NameInMap("UserId")
         public Long userId;
+
+        @NameInMap("UserName")
+        public String userName;
 
         public static GetUsersResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
             GetUsersResponseBodyUsers self = new GetUsersResponseBodyUsers();
@@ -109,20 +109,20 @@ public class GetUsersResponseBody extends TeaModel {
             return this.mobilePhone;
         }
 
-        public GetUsersResponseBodyUsers setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
-        }
-
         public GetUsersResponseBodyUsers setUserId(Long userId) {
             this.userId = userId;
             return this;
         }
         public Long getUserId() {
             return this.userId;
+        }
+
+        public GetUsersResponseBodyUsers setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
     }

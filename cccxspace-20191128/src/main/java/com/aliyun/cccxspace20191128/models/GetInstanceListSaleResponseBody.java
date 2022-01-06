@@ -7,6 +7,9 @@ public class GetInstanceListSaleResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetInstanceListSaleResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class GetInstanceListSaleResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public String success;
-
-    @NameInMap("Data")
-    public GetInstanceListSaleResponseBodyData data;
 
     public static GetInstanceListSaleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceListSaleResponseBody self = new GetInstanceListSaleResponseBody();
@@ -30,6 +30,14 @@ public class GetInstanceListSaleResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetInstanceListSaleResponseBody setData(GetInstanceListSaleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetInstanceListSaleResponseBodyData getData() {
+        return this.data;
     }
 
     public GetInstanceListSaleResponseBody setMessage(String message) {
@@ -56,36 +64,44 @@ public class GetInstanceListSaleResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetInstanceListSaleResponseBody setData(GetInstanceListSaleResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetInstanceListSaleResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetInstanceListSaleResponseBodyData extends TeaModel {
+        @NameInMap("HadSTS")
+        public Boolean hadSTS;
+
+        @NameInMap("InstanceList")
+        public java.util.List<String> instanceList;
+
         @NameInMap("PageNum")
         public Integer pageNum;
 
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
-        @NameInMap("HadSTS")
-        public Boolean hadSTS;
-
         @NameInMap("TenantId")
         public Long tenantId;
 
-        @NameInMap("InstanceList")
-        public java.util.List<String> instanceList;
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static GetInstanceListSaleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceListSaleResponseBodyData self = new GetInstanceListSaleResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetInstanceListSaleResponseBodyData setHadSTS(Boolean hadSTS) {
+            this.hadSTS = hadSTS;
+            return this;
+        }
+        public Boolean getHadSTS() {
+            return this.hadSTS;
+        }
+
+        public GetInstanceListSaleResponseBodyData setInstanceList(java.util.List<String> instanceList) {
+            this.instanceList = instanceList;
+            return this;
+        }
+        public java.util.List<String> getInstanceList() {
+            return this.instanceList;
         }
 
         public GetInstanceListSaleResponseBodyData setPageNum(Integer pageNum) {
@@ -104,22 +120,6 @@ public class GetInstanceListSaleResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public GetInstanceListSaleResponseBodyData setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
-        public GetInstanceListSaleResponseBodyData setHadSTS(Boolean hadSTS) {
-            this.hadSTS = hadSTS;
-            return this;
-        }
-        public Boolean getHadSTS() {
-            return this.hadSTS;
-        }
-
         public GetInstanceListSaleResponseBodyData setTenantId(Long tenantId) {
             this.tenantId = tenantId;
             return this;
@@ -128,12 +128,12 @@ public class GetInstanceListSaleResponseBody extends TeaModel {
             return this.tenantId;
         }
 
-        public GetInstanceListSaleResponseBodyData setInstanceList(java.util.List<String> instanceList) {
-            this.instanceList = instanceList;
+        public GetInstanceListSaleResponseBodyData setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public java.util.List<String> getInstanceList() {
-            return this.instanceList;
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

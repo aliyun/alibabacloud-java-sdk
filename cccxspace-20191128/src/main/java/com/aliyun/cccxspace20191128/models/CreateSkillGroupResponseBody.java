@@ -7,11 +7,11 @@ public class CreateSkillGroupResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Data")
     public Long data;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -32,20 +32,20 @@ public class CreateSkillGroupResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateSkillGroupResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public CreateSkillGroupResponseBody setData(Long data) {
         this.data = data;
         return this;
     }
     public Long getData() {
         return this.data;
+    }
+
+    public CreateSkillGroupResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public CreateSkillGroupResponseBody setRequestId(String requestId) {

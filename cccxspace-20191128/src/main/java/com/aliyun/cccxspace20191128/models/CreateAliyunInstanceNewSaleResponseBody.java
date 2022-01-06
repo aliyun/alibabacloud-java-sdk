@@ -7,6 +7,9 @@ public class CreateAliyunInstanceNewSaleResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public CreateAliyunInstanceNewSaleResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class CreateAliyunInstanceNewSaleResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public CreateAliyunInstanceNewSaleResponseBodyData data;
 
     public static CreateAliyunInstanceNewSaleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateAliyunInstanceNewSaleResponseBody self = new CreateAliyunInstanceNewSaleResponseBody();
@@ -30,6 +30,14 @@ public class CreateAliyunInstanceNewSaleResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CreateAliyunInstanceNewSaleResponseBody setData(CreateAliyunInstanceNewSaleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateAliyunInstanceNewSaleResponseBodyData getData() {
+        return this.data;
     }
 
     public CreateAliyunInstanceNewSaleResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class CreateAliyunInstanceNewSaleResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreateAliyunInstanceNewSaleResponseBody setData(CreateAliyunInstanceNewSaleResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateAliyunInstanceNewSaleResponseBodyData getData() {
-        return this.data;
     }
 
     public static class CreateAliyunInstanceNewSaleResponseBodyData extends TeaModel {
