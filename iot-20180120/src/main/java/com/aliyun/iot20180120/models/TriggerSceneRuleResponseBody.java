@@ -4,21 +4,37 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class TriggerSceneRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Code")
-    public String code;
-
     public static TriggerSceneRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TriggerSceneRuleResponseBody self = new TriggerSceneRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public TriggerSceneRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public TriggerSceneRuleResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public TriggerSceneRuleResponseBody setRequestId(String requestId) {
@@ -35,22 +51,6 @@ public class TriggerSceneRuleResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public TriggerSceneRuleResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public TriggerSceneRuleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

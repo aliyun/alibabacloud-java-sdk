@@ -4,17 +4,8 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteTopicRouteTableResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("IsAllSucceed")
-    public Boolean isAllSucceed;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -22,25 +13,18 @@ public class DeleteTopicRouteTableResponseBody extends TeaModel {
     @NameInMap("FailureTopics")
     public DeleteTopicRouteTableResponseBodyFailureTopics failureTopics;
 
+    @NameInMap("IsAllSucceed")
+    public Boolean isAllSucceed;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DeleteTopicRouteTableResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteTopicRouteTableResponseBody self = new DeleteTopicRouteTableResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteTopicRouteTableResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DeleteTopicRouteTableResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public DeleteTopicRouteTableResponseBody setCode(String code) {
@@ -49,14 +33,6 @@ public class DeleteTopicRouteTableResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public DeleteTopicRouteTableResponseBody setIsAllSucceed(Boolean isAllSucceed) {
-        this.isAllSucceed = isAllSucceed;
-        return this;
-    }
-    public Boolean getIsAllSucceed() {
-        return this.isAllSucceed;
     }
 
     public DeleteTopicRouteTableResponseBody setErrorMessage(String errorMessage) {
@@ -73,6 +49,30 @@ public class DeleteTopicRouteTableResponseBody extends TeaModel {
     }
     public DeleteTopicRouteTableResponseBodyFailureTopics getFailureTopics() {
         return this.failureTopics;
+    }
+
+    public DeleteTopicRouteTableResponseBody setIsAllSucceed(Boolean isAllSucceed) {
+        this.isAllSucceed = isAllSucceed;
+        return this;
+    }
+    public Boolean getIsAllSucceed() {
+        return this.isAllSucceed;
+    }
+
+    public DeleteTopicRouteTableResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DeleteTopicRouteTableResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DeleteTopicRouteTableResponseBodyFailureTopics extends TeaModel {

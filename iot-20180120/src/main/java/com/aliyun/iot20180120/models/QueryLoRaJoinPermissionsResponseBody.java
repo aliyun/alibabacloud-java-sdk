@@ -4,43 +4,27 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryLoRaJoinPermissionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("JoinPermissions")
+    public QueryLoRaJoinPermissionsResponseBodyJoinPermissions joinPermissions;
+
     @NameInMap("ProductKey")
     public String productKey;
 
-    @NameInMap("JoinPermissions")
-    public QueryLoRaJoinPermissionsResponseBodyJoinPermissions joinPermissions;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static QueryLoRaJoinPermissionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryLoRaJoinPermissionsResponseBody self = new QueryLoRaJoinPermissionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryLoRaJoinPermissionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryLoRaJoinPermissionsResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public QueryLoRaJoinPermissionsResponseBody setCode(String code) {
@@ -59,14 +43,6 @@ public class QueryLoRaJoinPermissionsResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public QueryLoRaJoinPermissionsResponseBody setProductKey(String productKey) {
-        this.productKey = productKey;
-        return this;
-    }
-    public String getProductKey() {
-        return this.productKey;
-    }
-
     public QueryLoRaJoinPermissionsResponseBody setJoinPermissions(QueryLoRaJoinPermissionsResponseBodyJoinPermissions joinPermissions) {
         this.joinPermissions = joinPermissions;
         return this;
@@ -75,7 +51,37 @@ public class QueryLoRaJoinPermissionsResponseBody extends TeaModel {
         return this.joinPermissions;
     }
 
+    public QueryLoRaJoinPermissionsResponseBody setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
+    }
+
+    public QueryLoRaJoinPermissionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryLoRaJoinPermissionsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class QueryLoRaJoinPermissionsResponseBodyJoinPermissionsJoinPermission extends TeaModel {
+        @NameInMap("ClassMode")
+        public String classMode;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
         @NameInMap("JoinPermissionId")
         public String joinPermissionId;
 
@@ -88,15 +94,25 @@ public class QueryLoRaJoinPermissionsResponseBody extends TeaModel {
         @NameInMap("OwnerAliyunPk")
         public String ownerAliyunPk;
 
-        @NameInMap("Enabled")
-        public Boolean enabled;
-
-        @NameInMap("ClassMode")
-        public String classMode;
-
         public static QueryLoRaJoinPermissionsResponseBodyJoinPermissionsJoinPermission build(java.util.Map<String, ?> map) throws Exception {
             QueryLoRaJoinPermissionsResponseBodyJoinPermissionsJoinPermission self = new QueryLoRaJoinPermissionsResponseBodyJoinPermissionsJoinPermission();
             return TeaModel.build(map, self);
+        }
+
+        public QueryLoRaJoinPermissionsResponseBodyJoinPermissionsJoinPermission setClassMode(String classMode) {
+            this.classMode = classMode;
+            return this;
+        }
+        public String getClassMode() {
+            return this.classMode;
+        }
+
+        public QueryLoRaJoinPermissionsResponseBodyJoinPermissionsJoinPermission setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
         }
 
         public QueryLoRaJoinPermissionsResponseBodyJoinPermissionsJoinPermission setJoinPermissionId(String joinPermissionId) {
@@ -129,22 +145,6 @@ public class QueryLoRaJoinPermissionsResponseBody extends TeaModel {
         }
         public String getOwnerAliyunPk() {
             return this.ownerAliyunPk;
-        }
-
-        public QueryLoRaJoinPermissionsResponseBodyJoinPermissionsJoinPermission setEnabled(Boolean enabled) {
-            this.enabled = enabled;
-            return this;
-        }
-        public Boolean getEnabled() {
-            return this.enabled;
-        }
-
-        public QueryLoRaJoinPermissionsResponseBodyJoinPermissionsJoinPermission setClassMode(String classMode) {
-            this.classMode = classMode;
-            return this;
-        }
-        public String getClassMode() {
-            return this.classMode;
         }
 
     }

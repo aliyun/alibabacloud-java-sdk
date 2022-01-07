@@ -4,14 +4,14 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceSceneRuleRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -21,12 +21,12 @@ public class QueryEdgeInstanceSceneRuleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryEdgeInstanceSceneRuleRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
+    public QueryEdgeInstanceSceneRuleRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public QueryEdgeInstanceSceneRuleRequest setInstanceId(String instanceId) {
@@ -37,12 +37,12 @@ public class QueryEdgeInstanceSceneRuleRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public QueryEdgeInstanceSceneRuleRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public QueryEdgeInstanceSceneRuleRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public QueryEdgeInstanceSceneRuleRequest setPageSize(Integer pageSize) {

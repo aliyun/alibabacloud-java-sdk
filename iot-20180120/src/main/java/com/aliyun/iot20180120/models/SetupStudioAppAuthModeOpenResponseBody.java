@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class SetupStudioAppAuthModeOpenResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public SetupStudioAppAuthModeOpenResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public SetupStudioAppAuthModeOpenResponseBodyData data;
-
     public static SetupStudioAppAuthModeOpenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SetupStudioAppAuthModeOpenResponseBody self = new SetupStudioAppAuthModeOpenResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SetupStudioAppAuthModeOpenResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public SetupStudioAppAuthModeOpenResponseBody setData(SetupStudioAppAuthModeOpenResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public SetupStudioAppAuthModeOpenResponseBodyData getData() {
+        return this.data;
+    }
+
+    public SetupStudioAppAuthModeOpenResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public SetupStudioAppAuthModeOpenResponseBody setRequestId(String requestId) {
@@ -40,65 +64,33 @@ public class SetupStudioAppAuthModeOpenResponseBody extends TeaModel {
         return this.success;
     }
 
-    public SetupStudioAppAuthModeOpenResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public SetupStudioAppAuthModeOpenResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public SetupStudioAppAuthModeOpenResponseBody setData(SetupStudioAppAuthModeOpenResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public SetupStudioAppAuthModeOpenResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class SetupStudioAppAuthModeOpenResponseBodyDataTokenInfo extends TeaModel {
-        @NameInMap("IsEnable")
-        public String isEnable;
-
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("BizId")
+        public String bizId;
 
         @NameInMap("BizType")
         public String bizType;
 
+        @NameInMap("IsEnable")
+        public String isEnable;
+
         @NameInMap("Token")
         public String token;
 
-        @NameInMap("BizId")
-        public String bizId;
+        @NameInMap("Type")
+        public String type;
 
         public static SetupStudioAppAuthModeOpenResponseBodyDataTokenInfo build(java.util.Map<String, ?> map) throws Exception {
             SetupStudioAppAuthModeOpenResponseBodyDataTokenInfo self = new SetupStudioAppAuthModeOpenResponseBodyDataTokenInfo();
             return TeaModel.build(map, self);
         }
 
-        public SetupStudioAppAuthModeOpenResponseBodyDataTokenInfo setIsEnable(String isEnable) {
-            this.isEnable = isEnable;
+        public SetupStudioAppAuthModeOpenResponseBodyDataTokenInfo setBizId(String bizId) {
+            this.bizId = bizId;
             return this;
         }
-        public String getIsEnable() {
-            return this.isEnable;
-        }
-
-        public SetupStudioAppAuthModeOpenResponseBodyDataTokenInfo setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
+        public String getBizId() {
+            return this.bizId;
         }
 
         public SetupStudioAppAuthModeOpenResponseBodyDataTokenInfo setBizType(String bizType) {
@@ -109,6 +101,14 @@ public class SetupStudioAppAuthModeOpenResponseBody extends TeaModel {
             return this.bizType;
         }
 
+        public SetupStudioAppAuthModeOpenResponseBodyDataTokenInfo setIsEnable(String isEnable) {
+            this.isEnable = isEnable;
+            return this;
+        }
+        public String getIsEnable() {
+            return this.isEnable;
+        }
+
         public SetupStudioAppAuthModeOpenResponseBodyDataTokenInfo setToken(String token) {
             this.token = token;
             return this;
@@ -117,12 +117,12 @@ public class SetupStudioAppAuthModeOpenResponseBody extends TeaModel {
             return this.token;
         }
 
-        public SetupStudioAppAuthModeOpenResponseBodyDataTokenInfo setBizId(String bizId) {
-            this.bizId = bizId;
+        public SetupStudioAppAuthModeOpenResponseBodyDataTokenInfo setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getBizId() {
-            return this.bizId;
+        public String getType() {
+            return this.type;
         }
 
     }

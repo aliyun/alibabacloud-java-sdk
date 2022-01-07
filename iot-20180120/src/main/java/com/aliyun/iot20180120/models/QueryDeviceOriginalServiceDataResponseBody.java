@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceOriginalServiceDataResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryDeviceOriginalServiceDataResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryDeviceOriginalServiceDataResponseBodyData data;
-
     public static QueryDeviceOriginalServiceDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceOriginalServiceDataResponseBody self = new QueryDeviceOriginalServiceDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceOriginalServiceDataResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryDeviceOriginalServiceDataResponseBody setData(QueryDeviceOriginalServiceDataResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryDeviceOriginalServiceDataResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryDeviceOriginalServiceDataResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryDeviceOriginalServiceDataResponseBody setRequestId(String requestId) {
@@ -40,57 +64,25 @@ public class QueryDeviceOriginalServiceDataResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryDeviceOriginalServiceDataResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryDeviceOriginalServiceDataResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryDeviceOriginalServiceDataResponseBody setData(QueryDeviceOriginalServiceDataResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryDeviceOriginalServiceDataResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryDeviceOriginalServiceDataResponseBodyDataListServiceInfo extends TeaModel {
-        @NameInMap("Time")
-        public String time;
-
         @NameInMap("Identifier")
         public String identifier;
-
-        @NameInMap("Name")
-        public String name;
 
         @NameInMap("InputData")
         public String inputData;
 
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("OutputData")
         public String outputData;
+
+        @NameInMap("Time")
+        public String time;
 
         public static QueryDeviceOriginalServiceDataResponseBodyDataListServiceInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceOriginalServiceDataResponseBodyDataListServiceInfo self = new QueryDeviceOriginalServiceDataResponseBodyDataListServiceInfo();
             return TeaModel.build(map, self);
-        }
-
-        public QueryDeviceOriginalServiceDataResponseBodyDataListServiceInfo setTime(String time) {
-            this.time = time;
-            return this;
-        }
-        public String getTime() {
-            return this.time;
         }
 
         public QueryDeviceOriginalServiceDataResponseBodyDataListServiceInfo setIdentifier(String identifier) {
@@ -101,14 +93,6 @@ public class QueryDeviceOriginalServiceDataResponseBody extends TeaModel {
             return this.identifier;
         }
 
-        public QueryDeviceOriginalServiceDataResponseBodyDataListServiceInfo setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public QueryDeviceOriginalServiceDataResponseBodyDataListServiceInfo setInputData(String inputData) {
             this.inputData = inputData;
             return this;
@@ -117,12 +101,28 @@ public class QueryDeviceOriginalServiceDataResponseBody extends TeaModel {
             return this.inputData;
         }
 
+        public QueryDeviceOriginalServiceDataResponseBodyDataListServiceInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public QueryDeviceOriginalServiceDataResponseBodyDataListServiceInfo setOutputData(String outputData) {
             this.outputData = outputData;
             return this;
         }
         public String getOutputData() {
             return this.outputData;
+        }
+
+        public QueryDeviceOriginalServiceDataResponseBodyDataListServiceInfo setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
         }
 
     }
@@ -147,18 +147,26 @@ public class QueryDeviceOriginalServiceDataResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceOriginalServiceDataResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public QueryDeviceOriginalServiceDataResponseBodyDataList list;
+
         @NameInMap("NextPageToken")
         public String nextPageToken;
 
         @NameInMap("NextValid")
         public Boolean nextValid;
 
-        @NameInMap("List")
-        public QueryDeviceOriginalServiceDataResponseBodyDataList list;
-
         public static QueryDeviceOriginalServiceDataResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceOriginalServiceDataResponseBodyData self = new QueryDeviceOriginalServiceDataResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryDeviceOriginalServiceDataResponseBodyData setList(QueryDeviceOriginalServiceDataResponseBodyDataList list) {
+            this.list = list;
+            return this;
+        }
+        public QueryDeviceOriginalServiceDataResponseBodyDataList getList() {
+            return this.list;
         }
 
         public QueryDeviceOriginalServiceDataResponseBodyData setNextPageToken(String nextPageToken) {
@@ -175,14 +183,6 @@ public class QueryDeviceOriginalServiceDataResponseBody extends TeaModel {
         }
         public Boolean getNextValid() {
             return this.nextValid;
-        }
-
-        public QueryDeviceOriginalServiceDataResponseBodyData setList(QueryDeviceOriginalServiceDataResponseBodyDataList list) {
-            this.list = list;
-            return this;
-        }
-        public QueryDeviceOriginalServiceDataResponseBodyDataList getList() {
-            return this.list;
         }
 
     }

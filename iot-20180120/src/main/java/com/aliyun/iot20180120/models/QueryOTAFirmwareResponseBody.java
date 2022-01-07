@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryOTAFirmwareResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
 
@@ -19,25 +13,15 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
     @NameInMap("FirmwareInfo")
     public QueryOTAFirmwareResponseBodyFirmwareInfo firmwareInfo;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     public static QueryOTAFirmwareResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryOTAFirmwareResponseBody self = new QueryOTAFirmwareResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryOTAFirmwareResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryOTAFirmwareResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public QueryOTAFirmwareResponseBody setCode(String code) {
@@ -64,30 +48,34 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
         return this.firmwareInfo;
     }
 
+    public QueryOTAFirmwareResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryOTAFirmwareResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class QueryOTAFirmwareResponseBodyFirmwareInfo extends TeaModel {
-        @NameInMap("FirmwareName")
-        public String firmwareName;
+        @NameInMap("DestVersion")
+        public String destVersion;
+
+        @NameInMap("FirmwareDesc")
+        public String firmwareDesc;
 
         @NameInMap("FirmwareId")
         public String firmwareId;
 
-        @NameInMap("SrcVersion")
-        public String srcVersion;
-
-        @NameInMap("DestVersion")
-        public String destVersion;
-
-        @NameInMap("UtcCreate")
-        public String utcCreate;
-
-        @NameInMap("UtcModified")
-        public String utcModified;
-
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("FirmwareDesc")
-        public String firmwareDesc;
+        @NameInMap("FirmwareName")
+        public String firmwareName;
 
         @NameInMap("FirmwareSign")
         public String firmwareSign;
@@ -98,54 +86,42 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
         @NameInMap("FirmwareUrl")
         public String firmwareUrl;
 
+        @NameInMap("ModuleName")
+        public String moduleName;
+
         @NameInMap("ProductKey")
         public String productKey;
-
-        @NameInMap("SignMethod")
-        public String signMethod;
 
         @NameInMap("ProductName")
         public String productName;
 
+        @NameInMap("SignMethod")
+        public String signMethod;
+
+        @NameInMap("SrcVersion")
+        public String srcVersion;
+
+        @NameInMap("Status")
+        public Integer status;
+
         @NameInMap("Type")
         public Integer type;
-
-        @NameInMap("VerifyProgress")
-        public Integer verifyProgress;
-
-        @NameInMap("ModuleName")
-        public String moduleName;
 
         @NameInMap("Udi")
         public String udi;
 
+        @NameInMap("UtcCreate")
+        public String utcCreate;
+
+        @NameInMap("UtcModified")
+        public String utcModified;
+
+        @NameInMap("VerifyProgress")
+        public Integer verifyProgress;
+
         public static QueryOTAFirmwareResponseBodyFirmwareInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryOTAFirmwareResponseBodyFirmwareInfo self = new QueryOTAFirmwareResponseBodyFirmwareInfo();
             return TeaModel.build(map, self);
-        }
-
-        public QueryOTAFirmwareResponseBodyFirmwareInfo setFirmwareName(String firmwareName) {
-            this.firmwareName = firmwareName;
-            return this;
-        }
-        public String getFirmwareName() {
-            return this.firmwareName;
-        }
-
-        public QueryOTAFirmwareResponseBodyFirmwareInfo setFirmwareId(String firmwareId) {
-            this.firmwareId = firmwareId;
-            return this;
-        }
-        public String getFirmwareId() {
-            return this.firmwareId;
-        }
-
-        public QueryOTAFirmwareResponseBodyFirmwareInfo setSrcVersion(String srcVersion) {
-            this.srcVersion = srcVersion;
-            return this;
-        }
-        public String getSrcVersion() {
-            return this.srcVersion;
         }
 
         public QueryOTAFirmwareResponseBodyFirmwareInfo setDestVersion(String destVersion) {
@@ -156,36 +132,28 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
             return this.destVersion;
         }
 
-        public QueryOTAFirmwareResponseBodyFirmwareInfo setUtcCreate(String utcCreate) {
-            this.utcCreate = utcCreate;
-            return this;
-        }
-        public String getUtcCreate() {
-            return this.utcCreate;
-        }
-
-        public QueryOTAFirmwareResponseBodyFirmwareInfo setUtcModified(String utcModified) {
-            this.utcModified = utcModified;
-            return this;
-        }
-        public String getUtcModified() {
-            return this.utcModified;
-        }
-
-        public QueryOTAFirmwareResponseBodyFirmwareInfo setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
         public QueryOTAFirmwareResponseBodyFirmwareInfo setFirmwareDesc(String firmwareDesc) {
             this.firmwareDesc = firmwareDesc;
             return this;
         }
         public String getFirmwareDesc() {
             return this.firmwareDesc;
+        }
+
+        public QueryOTAFirmwareResponseBodyFirmwareInfo setFirmwareId(String firmwareId) {
+            this.firmwareId = firmwareId;
+            return this;
+        }
+        public String getFirmwareId() {
+            return this.firmwareId;
+        }
+
+        public QueryOTAFirmwareResponseBodyFirmwareInfo setFirmwareName(String firmwareName) {
+            this.firmwareName = firmwareName;
+            return this;
+        }
+        public String getFirmwareName() {
+            return this.firmwareName;
         }
 
         public QueryOTAFirmwareResponseBodyFirmwareInfo setFirmwareSign(String firmwareSign) {
@@ -212,20 +180,20 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
             return this.firmwareUrl;
         }
 
+        public QueryOTAFirmwareResponseBodyFirmwareInfo setModuleName(String moduleName) {
+            this.moduleName = moduleName;
+            return this;
+        }
+        public String getModuleName() {
+            return this.moduleName;
+        }
+
         public QueryOTAFirmwareResponseBodyFirmwareInfo setProductKey(String productKey) {
             this.productKey = productKey;
             return this;
         }
         public String getProductKey() {
             return this.productKey;
-        }
-
-        public QueryOTAFirmwareResponseBodyFirmwareInfo setSignMethod(String signMethod) {
-            this.signMethod = signMethod;
-            return this;
-        }
-        public String getSignMethod() {
-            return this.signMethod;
         }
 
         public QueryOTAFirmwareResponseBodyFirmwareInfo setProductName(String productName) {
@@ -236,6 +204,30 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
             return this.productName;
         }
 
+        public QueryOTAFirmwareResponseBodyFirmwareInfo setSignMethod(String signMethod) {
+            this.signMethod = signMethod;
+            return this;
+        }
+        public String getSignMethod() {
+            return this.signMethod;
+        }
+
+        public QueryOTAFirmwareResponseBodyFirmwareInfo setSrcVersion(String srcVersion) {
+            this.srcVersion = srcVersion;
+            return this;
+        }
+        public String getSrcVersion() {
+            return this.srcVersion;
+        }
+
+        public QueryOTAFirmwareResponseBodyFirmwareInfo setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
         public QueryOTAFirmwareResponseBodyFirmwareInfo setType(Integer type) {
             this.type = type;
             return this;
@@ -244,28 +236,36 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
             return this.type;
         }
 
-        public QueryOTAFirmwareResponseBodyFirmwareInfo setVerifyProgress(Integer verifyProgress) {
-            this.verifyProgress = verifyProgress;
-            return this;
-        }
-        public Integer getVerifyProgress() {
-            return this.verifyProgress;
-        }
-
-        public QueryOTAFirmwareResponseBodyFirmwareInfo setModuleName(String moduleName) {
-            this.moduleName = moduleName;
-            return this;
-        }
-        public String getModuleName() {
-            return this.moduleName;
-        }
-
         public QueryOTAFirmwareResponseBodyFirmwareInfo setUdi(String udi) {
             this.udi = udi;
             return this;
         }
         public String getUdi() {
             return this.udi;
+        }
+
+        public QueryOTAFirmwareResponseBodyFirmwareInfo setUtcCreate(String utcCreate) {
+            this.utcCreate = utcCreate;
+            return this;
+        }
+        public String getUtcCreate() {
+            return this.utcCreate;
+        }
+
+        public QueryOTAFirmwareResponseBodyFirmwareInfo setUtcModified(String utcModified) {
+            this.utcModified = utcModified;
+            return this;
+        }
+        public String getUtcModified() {
+            return this.utcModified;
+        }
+
+        public QueryOTAFirmwareResponseBodyFirmwareInfo setVerifyProgress(Integer verifyProgress) {
+            this.verifyProgress = verifyProgress;
+            return this;
+        }
+        public Integer getVerifyProgress() {
+            return this.verifyProgress;
         }
 
     }

@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceStatisticsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryDeviceStatisticsResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryDeviceStatisticsResponseBodyData data;
-
     public static QueryDeviceStatisticsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceStatisticsResponseBody self = new QueryDeviceStatisticsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceStatisticsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryDeviceStatisticsResponseBody setData(QueryDeviceStatisticsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryDeviceStatisticsResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryDeviceStatisticsResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryDeviceStatisticsResponseBody setRequestId(String requestId) {
@@ -40,43 +64,27 @@ public class QueryDeviceStatisticsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryDeviceStatisticsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryDeviceStatisticsResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryDeviceStatisticsResponseBody setData(QueryDeviceStatisticsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryDeviceStatisticsResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryDeviceStatisticsResponseBodyData extends TeaModel {
+        @NameInMap("activeCount")
+        public Long activeCount;
+
         @NameInMap("deviceCount")
         public Long deviceCount;
 
         @NameInMap("onlineCount")
         public Long onlineCount;
 
-        @NameInMap("activeCount")
-        public Long activeCount;
-
         public static QueryDeviceStatisticsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceStatisticsResponseBodyData self = new QueryDeviceStatisticsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryDeviceStatisticsResponseBodyData setActiveCount(Long activeCount) {
+            this.activeCount = activeCount;
+            return this;
+        }
+        public Long getActiveCount() {
+            return this.activeCount;
         }
 
         public QueryDeviceStatisticsResponseBodyData setDeviceCount(Long deviceCount) {
@@ -93,14 +101,6 @@ public class QueryDeviceStatisticsResponseBody extends TeaModel {
         }
         public Long getOnlineCount() {
             return this.onlineCount;
-        }
-
-        public QueryDeviceStatisticsResponseBodyData setActiveCount(Long activeCount) {
-            this.activeCount = activeCount;
-            return this;
-        }
-        public Long getActiveCount() {
-            return this.activeCount;
         }
 
     }

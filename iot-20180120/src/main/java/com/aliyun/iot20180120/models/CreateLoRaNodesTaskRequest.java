@@ -4,18 +4,26 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateLoRaNodesTaskRequest extends TeaModel {
+    @NameInMap("DeviceInfo")
+    public java.util.List<CreateLoRaNodesTaskRequestDeviceInfo> deviceInfo;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
     public String productKey;
 
-    @NameInMap("DeviceInfo")
-    public java.util.List<CreateLoRaNodesTaskRequestDeviceInfo> deviceInfo;
-
     public static CreateLoRaNodesTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLoRaNodesTaskRequest self = new CreateLoRaNodesTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLoRaNodesTaskRequest setDeviceInfo(java.util.List<CreateLoRaNodesTaskRequestDeviceInfo> deviceInfo) {
+        this.deviceInfo = deviceInfo;
+        return this;
+    }
+    public java.util.List<CreateLoRaNodesTaskRequestDeviceInfo> getDeviceInfo() {
+        return this.deviceInfo;
     }
 
     public CreateLoRaNodesTaskRequest setIotInstanceId(String iotInstanceId) {
@@ -32,14 +40,6 @@ public class CreateLoRaNodesTaskRequest extends TeaModel {
     }
     public String getProductKey() {
         return this.productKey;
-    }
-
-    public CreateLoRaNodesTaskRequest setDeviceInfo(java.util.List<CreateLoRaNodesTaskRequestDeviceInfo> deviceInfo) {
-        this.deviceInfo = deviceInfo;
-        return this;
-    }
-    public java.util.List<CreateLoRaNodesTaskRequestDeviceInfo> getDeviceInfo() {
-        return this.deviceInfo;
     }
 
     public static class CreateLoRaNodesTaskRequestDeviceInfo extends TeaModel {

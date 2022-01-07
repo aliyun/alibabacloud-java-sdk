@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDevicePropertyDataResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryDevicePropertyDataResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryDevicePropertyDataResponseBodyData data;
-
     public static QueryDevicePropertyDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDevicePropertyDataResponseBody self = new QueryDevicePropertyDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDevicePropertyDataResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryDevicePropertyDataResponseBody setData(QueryDevicePropertyDataResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryDevicePropertyDataResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryDevicePropertyDataResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryDevicePropertyDataResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class QueryDevicePropertyDataResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public QueryDevicePropertyDataResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryDevicePropertyDataResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryDevicePropertyDataResponseBody setData(QueryDevicePropertyDataResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryDevicePropertyDataResponseBodyData getData() {
-        return this.data;
     }
 
     public static class QueryDevicePropertyDataResponseBodyDataListPropertyInfo extends TeaModel {
@@ -114,26 +114,26 @@ public class QueryDevicePropertyDataResponseBody extends TeaModel {
     }
 
     public static class QueryDevicePropertyDataResponseBodyData extends TeaModel {
-        @NameInMap("NextValid")
-        public Boolean nextValid;
+        @NameInMap("List")
+        public QueryDevicePropertyDataResponseBodyDataList list;
 
         @NameInMap("NextTime")
         public Long nextTime;
 
-        @NameInMap("List")
-        public QueryDevicePropertyDataResponseBodyDataList list;
+        @NameInMap("NextValid")
+        public Boolean nextValid;
 
         public static QueryDevicePropertyDataResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryDevicePropertyDataResponseBodyData self = new QueryDevicePropertyDataResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public QueryDevicePropertyDataResponseBodyData setNextValid(Boolean nextValid) {
-            this.nextValid = nextValid;
+        public QueryDevicePropertyDataResponseBodyData setList(QueryDevicePropertyDataResponseBodyDataList list) {
+            this.list = list;
             return this;
         }
-        public Boolean getNextValid() {
-            return this.nextValid;
+        public QueryDevicePropertyDataResponseBodyDataList getList() {
+            return this.list;
         }
 
         public QueryDevicePropertyDataResponseBodyData setNextTime(Long nextTime) {
@@ -144,12 +144,12 @@ public class QueryDevicePropertyDataResponseBody extends TeaModel {
             return this.nextTime;
         }
 
-        public QueryDevicePropertyDataResponseBodyData setList(QueryDevicePropertyDataResponseBodyDataList list) {
-            this.list = list;
+        public QueryDevicePropertyDataResponseBodyData setNextValid(Boolean nextValid) {
+            this.nextValid = nextValid;
             return this;
         }
-        public QueryDevicePropertyDataResponseBodyDataList getList() {
-            return this.list;
+        public Boolean getNextValid() {
+            return this.nextValid;
         }
 
     }

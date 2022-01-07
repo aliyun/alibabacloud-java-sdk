@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateDeviceDistributeJobResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
 
@@ -19,25 +13,15 @@ public class CreateDeviceDistributeJobResponseBody extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     public static CreateDeviceDistributeJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDeviceDistributeJobResponseBody self = new CreateDeviceDistributeJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDeviceDistributeJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateDeviceDistributeJobResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public CreateDeviceDistributeJobResponseBody setCode(String code) {
@@ -62,6 +46,22 @@ public class CreateDeviceDistributeJobResponseBody extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public CreateDeviceDistributeJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateDeviceDistributeJobResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

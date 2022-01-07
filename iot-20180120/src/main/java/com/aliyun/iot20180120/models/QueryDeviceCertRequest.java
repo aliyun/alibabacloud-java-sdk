@@ -4,18 +4,26 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceCertRequest extends TeaModel {
+    @NameInMap("DeviceName")
+    public String deviceName;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
     public String productKey;
 
-    @NameInMap("DeviceName")
-    public String deviceName;
-
     public static QueryDeviceCertRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceCertRequest self = new QueryDeviceCertRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceCertRequest setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public String getDeviceName() {
+        return this.deviceName;
     }
 
     public QueryDeviceCertRequest setIotInstanceId(String iotInstanceId) {
@@ -32,14 +40,6 @@ public class QueryDeviceCertRequest extends TeaModel {
     }
     public String getProductKey() {
         return this.productKey;
-    }
-
-    public QueryDeviceCertRequest setDeviceName(String deviceName) {
-        this.deviceName = deviceName;
-        return this;
-    }
-    public String getDeviceName() {
-        return this.deviceName;
     }
 
 }

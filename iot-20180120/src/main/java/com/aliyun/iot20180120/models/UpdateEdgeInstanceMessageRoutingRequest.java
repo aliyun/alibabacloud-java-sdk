@@ -4,29 +4,23 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateEdgeInstanceMessageRoutingRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RouteId")
-    public Long routeId;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("TopicFilter")
-    public String topicFilter;
-
-    @NameInMap("SourceType")
-    public String sourceType;
+    @NameInMap("RouteId")
+    public Long routeId;
 
     @NameInMap("SourceData")
     public String sourceData;
 
-    @NameInMap("TargetType")
-    public String targetType;
+    @NameInMap("SourceType")
+    public String sourceType;
 
     @NameInMap("TargetData")
     public String targetData;
@@ -34,17 +28,15 @@ public class UpdateEdgeInstanceMessageRoutingRequest extends TeaModel {
     @NameInMap("TargetIotHubQos")
     public Integer targetIotHubQos;
 
+    @NameInMap("TargetType")
+    public String targetType;
+
+    @NameInMap("TopicFilter")
+    public String topicFilter;
+
     public static UpdateEdgeInstanceMessageRoutingRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEdgeInstanceMessageRoutingRequest self = new UpdateEdgeInstanceMessageRoutingRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateEdgeInstanceMessageRoutingRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
     }
 
     public UpdateEdgeInstanceMessageRoutingRequest setInstanceId(String instanceId) {
@@ -55,12 +47,12 @@ public class UpdateEdgeInstanceMessageRoutingRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public UpdateEdgeInstanceMessageRoutingRequest setRouteId(Long routeId) {
-        this.routeId = routeId;
+    public UpdateEdgeInstanceMessageRoutingRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
         return this;
     }
-    public Long getRouteId() {
-        return this.routeId;
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public UpdateEdgeInstanceMessageRoutingRequest setName(String name) {
@@ -71,20 +63,12 @@ public class UpdateEdgeInstanceMessageRoutingRequest extends TeaModel {
         return this.name;
     }
 
-    public UpdateEdgeInstanceMessageRoutingRequest setTopicFilter(String topicFilter) {
-        this.topicFilter = topicFilter;
+    public UpdateEdgeInstanceMessageRoutingRequest setRouteId(Long routeId) {
+        this.routeId = routeId;
         return this;
     }
-    public String getTopicFilter() {
-        return this.topicFilter;
-    }
-
-    public UpdateEdgeInstanceMessageRoutingRequest setSourceType(String sourceType) {
-        this.sourceType = sourceType;
-        return this;
-    }
-    public String getSourceType() {
-        return this.sourceType;
+    public Long getRouteId() {
+        return this.routeId;
     }
 
     public UpdateEdgeInstanceMessageRoutingRequest setSourceData(String sourceData) {
@@ -95,12 +79,12 @@ public class UpdateEdgeInstanceMessageRoutingRequest extends TeaModel {
         return this.sourceData;
     }
 
-    public UpdateEdgeInstanceMessageRoutingRequest setTargetType(String targetType) {
-        this.targetType = targetType;
+    public UpdateEdgeInstanceMessageRoutingRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
         return this;
     }
-    public String getTargetType() {
-        return this.targetType;
+    public String getSourceType() {
+        return this.sourceType;
     }
 
     public UpdateEdgeInstanceMessageRoutingRequest setTargetData(String targetData) {
@@ -117,6 +101,22 @@ public class UpdateEdgeInstanceMessageRoutingRequest extends TeaModel {
     }
     public Integer getTargetIotHubQos() {
         return this.targetIotHubQos;
+    }
+
+    public UpdateEdgeInstanceMessageRoutingRequest setTargetType(String targetType) {
+        this.targetType = targetType;
+        return this;
+    }
+    public String getTargetType() {
+        return this.targetType;
+    }
+
+    public UpdateEdgeInstanceMessageRoutingRequest setTopicFilter(String topicFilter) {
+        this.topicFilter = topicFilter;
+        return this;
+    }
+    public String getTopicFilter() {
+        return this.topicFilter;
     }
 
 }

@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
 
@@ -19,25 +13,15 @@ public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
     @NameInMap("GatewayList")
     public java.util.List<QueryEdgeInstanceGatewayResponseBodyGatewayList> gatewayList;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     public static QueryEdgeInstanceGatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryEdgeInstanceGatewayResponseBody self = new QueryEdgeInstanceGatewayResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryEdgeInstanceGatewayResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryEdgeInstanceGatewayResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public QueryEdgeInstanceGatewayResponseBody setCode(String code) {
@@ -64,30 +48,38 @@ public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
         return this.gatewayList;
     }
 
-    public static class QueryEdgeInstanceGatewayResponseBodyGatewayList extends TeaModel {
-        @NameInMap("ProductKey")
-        public String productKey;
+    public QueryEdgeInstanceGatewayResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public QueryEdgeInstanceGatewayResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static class QueryEdgeInstanceGatewayResponseBodyGatewayList extends TeaModel {
         @NameInMap("DeviceName")
         public String deviceName;
-
-        @NameInMap("IotId")
-        public String iotId;
 
         @NameInMap("EdgeVersion")
         public String edgeVersion;
 
+        @NameInMap("IotId")
+        public String iotId;
+
+        @NameInMap("ProductKey")
+        public String productKey;
+
         public static QueryEdgeInstanceGatewayResponseBodyGatewayList build(java.util.Map<String, ?> map) throws Exception {
             QueryEdgeInstanceGatewayResponseBodyGatewayList self = new QueryEdgeInstanceGatewayResponseBodyGatewayList();
             return TeaModel.build(map, self);
-        }
-
-        public QueryEdgeInstanceGatewayResponseBodyGatewayList setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
         }
 
         public QueryEdgeInstanceGatewayResponseBodyGatewayList setDeviceName(String deviceName) {
@@ -98,6 +90,14 @@ public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
             return this.deviceName;
         }
 
+        public QueryEdgeInstanceGatewayResponseBodyGatewayList setEdgeVersion(String edgeVersion) {
+            this.edgeVersion = edgeVersion;
+            return this;
+        }
+        public String getEdgeVersion() {
+            return this.edgeVersion;
+        }
+
         public QueryEdgeInstanceGatewayResponseBodyGatewayList setIotId(String iotId) {
             this.iotId = iotId;
             return this;
@@ -106,12 +106,12 @@ public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
             return this.iotId;
         }
 
-        public QueryEdgeInstanceGatewayResponseBodyGatewayList setEdgeVersion(String edgeVersion) {
-            this.edgeVersion = edgeVersion;
+        public QueryEdgeInstanceGatewayResponseBodyGatewayList setProductKey(String productKey) {
+            this.productKey = productKey;
             return this;
         }
-        public String getEdgeVersion() {
-            return this.edgeVersion;
+        public String getProductKey() {
+            return this.productKey;
         }
 
     }

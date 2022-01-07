@@ -4,8 +4,11 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryStudioAppListRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public String projectId;
+    @NameInMap("FuzzyName")
+    public String fuzzyName;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -13,26 +16,31 @@ public class QueryStudioAppListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProjectId")
+    public String projectId;
+
     @NameInMap("Types")
     public java.util.List<String> types;
-
-    @NameInMap("FuzzyName")
-    public String fuzzyName;
-
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
 
     public static QueryStudioAppListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryStudioAppListRequest self = new QueryStudioAppListRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryStudioAppListRequest setProjectId(String projectId) {
-        this.projectId = projectId;
+    public QueryStudioAppListRequest setFuzzyName(String fuzzyName) {
+        this.fuzzyName = fuzzyName;
         return this;
     }
-    public String getProjectId() {
-        return this.projectId;
+    public String getFuzzyName() {
+        return this.fuzzyName;
+    }
+
+    public QueryStudioAppListRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public QueryStudioAppListRequest setPageNo(Integer pageNo) {
@@ -51,28 +59,20 @@ public class QueryStudioAppListRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public QueryStudioAppListRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
+    }
+
     public QueryStudioAppListRequest setTypes(java.util.List<String> types) {
         this.types = types;
         return this;
     }
     public java.util.List<String> getTypes() {
         return this.types;
-    }
-
-    public QueryStudioAppListRequest setFuzzyName(String fuzzyName) {
-        this.fuzzyName = fuzzyName;
-        return this;
-    }
-    public String getFuzzyName() {
-        return this.fuzzyName;
-    }
-
-    public QueryStudioAppListRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
     }
 
 }

@@ -4,37 +4,21 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DisableThingRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
-    @NameInMap("ProductKey")
-    public String productKey;
-
     @NameInMap("DeviceName")
     public String deviceName;
 
     @NameInMap("IotId")
     public String iotId;
 
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
+    @NameInMap("ProductKey")
+    public String productKey;
+
     public static DisableThingRequest build(java.util.Map<String, ?> map) throws Exception {
         DisableThingRequest self = new DisableThingRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DisableThingRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
-    public DisableThingRequest setProductKey(String productKey) {
-        this.productKey = productKey;
-        return this;
-    }
-    public String getProductKey() {
-        return this.productKey;
     }
 
     public DisableThingRequest setDeviceName(String deviceName) {
@@ -51,6 +35,22 @@ public class DisableThingRequest extends TeaModel {
     }
     public String getIotId() {
         return this.iotId;
+    }
+
+    public DisableThingRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
+    public DisableThingRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
     }
 
 }

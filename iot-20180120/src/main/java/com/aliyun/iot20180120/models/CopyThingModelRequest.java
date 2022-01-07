@@ -10,14 +10,14 @@ public class CopyThingModelRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("SourceModelVersion")
+    public String sourceModelVersion;
+
     @NameInMap("SourceProductKey")
     public String sourceProductKey;
 
     @NameInMap("TargetProductKey")
     public String targetProductKey;
-
-    @NameInMap("SourceModelVersion")
-    public String sourceModelVersion;
 
     public static CopyThingModelRequest build(java.util.Map<String, ?> map) throws Exception {
         CopyThingModelRequest self = new CopyThingModelRequest();
@@ -40,6 +40,14 @@ public class CopyThingModelRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public CopyThingModelRequest setSourceModelVersion(String sourceModelVersion) {
+        this.sourceModelVersion = sourceModelVersion;
+        return this;
+    }
+    public String getSourceModelVersion() {
+        return this.sourceModelVersion;
+    }
+
     public CopyThingModelRequest setSourceProductKey(String sourceProductKey) {
         this.sourceProductKey = sourceProductKey;
         return this;
@@ -54,14 +62,6 @@ public class CopyThingModelRequest extends TeaModel {
     }
     public String getTargetProductKey() {
         return this.targetProductKey;
-    }
-
-    public CopyThingModelRequest setSourceModelVersion(String sourceModelVersion) {
-        this.sourceModelVersion = sourceModelVersion;
-        return this;
-    }
-    public String getSourceModelVersion() {
-        return this.sourceModelVersion;
     }
 
 }

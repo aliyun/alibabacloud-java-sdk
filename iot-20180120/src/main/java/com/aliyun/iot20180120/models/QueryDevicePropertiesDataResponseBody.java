@@ -4,46 +4,30 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDevicePropertiesDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    @NameInMap("NextValid")
-    public Boolean nextValid;
-
     @NameInMap("NextTime")
     public Long nextTime;
+
+    @NameInMap("NextValid")
+    public Boolean nextValid;
 
     @NameInMap("PropertyDataInfos")
     public QueryDevicePropertiesDataResponseBodyPropertyDataInfos propertyDataInfos;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     public static QueryDevicePropertiesDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDevicePropertiesDataResponseBody self = new QueryDevicePropertiesDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDevicePropertiesDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryDevicePropertiesDataResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public QueryDevicePropertiesDataResponseBody setCode(String code) {
@@ -62,14 +46,6 @@ public class QueryDevicePropertiesDataResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public QueryDevicePropertiesDataResponseBody setNextValid(Boolean nextValid) {
-        this.nextValid = nextValid;
-        return this;
-    }
-    public Boolean getNextValid() {
-        return this.nextValid;
-    }
-
     public QueryDevicePropertiesDataResponseBody setNextTime(Long nextTime) {
         this.nextTime = nextTime;
         return this;
@@ -78,12 +54,36 @@ public class QueryDevicePropertiesDataResponseBody extends TeaModel {
         return this.nextTime;
     }
 
+    public QueryDevicePropertiesDataResponseBody setNextValid(Boolean nextValid) {
+        this.nextValid = nextValid;
+        return this;
+    }
+    public Boolean getNextValid() {
+        return this.nextValid;
+    }
+
     public QueryDevicePropertiesDataResponseBody setPropertyDataInfos(QueryDevicePropertiesDataResponseBodyPropertyDataInfos propertyDataInfos) {
         this.propertyDataInfos = propertyDataInfos;
         return this;
     }
     public QueryDevicePropertiesDataResponseBodyPropertyDataInfos getPropertyDataInfos() {
         return this.propertyDataInfos;
+    }
+
+    public QueryDevicePropertiesDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryDevicePropertiesDataResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class QueryDevicePropertiesDataResponseBodyPropertyDataInfosPropertyDataInfoListPropertyInfo extends TeaModel {

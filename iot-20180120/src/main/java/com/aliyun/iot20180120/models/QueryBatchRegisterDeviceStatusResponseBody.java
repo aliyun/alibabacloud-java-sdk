@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryBatchRegisterDeviceStatusResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryBatchRegisterDeviceStatusResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryBatchRegisterDeviceStatusResponseBodyData data;
-
     public static QueryBatchRegisterDeviceStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryBatchRegisterDeviceStatusResponseBody self = new QueryBatchRegisterDeviceStatusResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryBatchRegisterDeviceStatusResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryBatchRegisterDeviceStatusResponseBody setData(QueryBatchRegisterDeviceStatusResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryBatchRegisterDeviceStatusResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryBatchRegisterDeviceStatusResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryBatchRegisterDeviceStatusResponseBody setRequestId(String requestId) {
@@ -38,49 +62,6 @@ public class QueryBatchRegisterDeviceStatusResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public QueryBatchRegisterDeviceStatusResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryBatchRegisterDeviceStatusResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryBatchRegisterDeviceStatusResponseBody setData(QueryBatchRegisterDeviceStatusResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryBatchRegisterDeviceStatusResponseBodyData getData() {
-        return this.data;
-    }
-
-    public static class QueryBatchRegisterDeviceStatusResponseBodyDataValidList extends TeaModel {
-        @NameInMap("Name")
-        public java.util.List<String> name;
-
-        public static QueryBatchRegisterDeviceStatusResponseBodyDataValidList build(java.util.Map<String, ?> map) throws Exception {
-            QueryBatchRegisterDeviceStatusResponseBodyDataValidList self = new QueryBatchRegisterDeviceStatusResponseBodyDataValidList();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryBatchRegisterDeviceStatusResponseBodyDataValidList setName(java.util.List<String> name) {
-            this.name = name;
-            return this;
-        }
-        public java.util.List<String> getName() {
-            return this.name;
-        }
-
     }
 
     public static class QueryBatchRegisterDeviceStatusResponseBodyDataInvalidList extends TeaModel {
@@ -102,19 +83,46 @@ public class QueryBatchRegisterDeviceStatusResponseBody extends TeaModel {
 
     }
 
+    public static class QueryBatchRegisterDeviceStatusResponseBodyDataValidList extends TeaModel {
+        @NameInMap("Name")
+        public java.util.List<String> name;
+
+        public static QueryBatchRegisterDeviceStatusResponseBodyDataValidList build(java.util.Map<String, ?> map) throws Exception {
+            QueryBatchRegisterDeviceStatusResponseBodyDataValidList self = new QueryBatchRegisterDeviceStatusResponseBodyDataValidList();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryBatchRegisterDeviceStatusResponseBodyDataValidList setName(java.util.List<String> name) {
+            this.name = name;
+            return this;
+        }
+        public java.util.List<String> getName() {
+            return this.name;
+        }
+
+    }
+
     public static class QueryBatchRegisterDeviceStatusResponseBodyData extends TeaModel {
+        @NameInMap("InvalidList")
+        public QueryBatchRegisterDeviceStatusResponseBodyDataInvalidList invalidList;
+
         @NameInMap("Status")
         public String status;
 
         @NameInMap("ValidList")
         public QueryBatchRegisterDeviceStatusResponseBodyDataValidList validList;
 
-        @NameInMap("InvalidList")
-        public QueryBatchRegisterDeviceStatusResponseBodyDataInvalidList invalidList;
-
         public static QueryBatchRegisterDeviceStatusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryBatchRegisterDeviceStatusResponseBodyData self = new QueryBatchRegisterDeviceStatusResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryBatchRegisterDeviceStatusResponseBodyData setInvalidList(QueryBatchRegisterDeviceStatusResponseBodyDataInvalidList invalidList) {
+            this.invalidList = invalidList;
+            return this;
+        }
+        public QueryBatchRegisterDeviceStatusResponseBodyDataInvalidList getInvalidList() {
+            return this.invalidList;
         }
 
         public QueryBatchRegisterDeviceStatusResponseBodyData setStatus(String status) {
@@ -131,14 +139,6 @@ public class QueryBatchRegisterDeviceStatusResponseBody extends TeaModel {
         }
         public QueryBatchRegisterDeviceStatusResponseBodyDataValidList getValidList() {
             return this.validList;
-        }
-
-        public QueryBatchRegisterDeviceStatusResponseBodyData setInvalidList(QueryBatchRegisterDeviceStatusResponseBodyDataInvalidList invalidList) {
-            this.invalidList = invalidList;
-            return this;
-        }
-        public QueryBatchRegisterDeviceStatusResponseBodyDataInvalidList getInvalidList() {
-            return this.invalidList;
         }
 
     }

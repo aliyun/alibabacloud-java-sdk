@@ -4,11 +4,8 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateConsumerGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -16,28 +13,23 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static CreateConsumerGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateConsumerGroupResponseBody self = new CreateConsumerGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateConsumerGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateConsumerGroupResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateConsumerGroupResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getCode() {
+        return this.code;
     }
 
     public CreateConsumerGroupResponseBody setErrorMessage(String errorMessage) {
@@ -56,12 +48,20 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         return this.groupId;
     }
 
-    public CreateConsumerGroupResponseBody setCode(String code) {
-        this.code = code;
+    public CreateConsumerGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateConsumerGroupResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

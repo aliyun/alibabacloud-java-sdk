@@ -4,8 +4,8 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateEdgeDriverRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
+    @NameInMap("CpuArch")
+    public String cpuArch;
 
     @NameInMap("DriverName")
     public String driverName;
@@ -13,26 +13,26 @@ public class CreateEdgeDriverRequest extends TeaModel {
     @NameInMap("DriverProtocol")
     public String driverProtocol;
 
-    @NameInMap("Runtime")
-    public String runtime;
-
-    @NameInMap("CpuArch")
-    public String cpuArch;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("IsBuiltIn")
     public Boolean isBuiltIn;
+
+    @NameInMap("Runtime")
+    public String runtime;
 
     public static CreateEdgeDriverRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEdgeDriverRequest self = new CreateEdgeDriverRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateEdgeDriverRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
+    public CreateEdgeDriverRequest setCpuArch(String cpuArch) {
+        this.cpuArch = cpuArch;
         return this;
     }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
+    public String getCpuArch() {
+        return this.cpuArch;
     }
 
     public CreateEdgeDriverRequest setDriverName(String driverName) {
@@ -51,20 +51,12 @@ public class CreateEdgeDriverRequest extends TeaModel {
         return this.driverProtocol;
     }
 
-    public CreateEdgeDriverRequest setRuntime(String runtime) {
-        this.runtime = runtime;
+    public CreateEdgeDriverRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
         return this;
     }
-    public String getRuntime() {
-        return this.runtime;
-    }
-
-    public CreateEdgeDriverRequest setCpuArch(String cpuArch) {
-        this.cpuArch = cpuArch;
-        return this;
-    }
-    public String getCpuArch() {
-        return this.cpuArch;
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public CreateEdgeDriverRequest setIsBuiltIn(Boolean isBuiltIn) {
@@ -73,6 +65,14 @@ public class CreateEdgeDriverRequest extends TeaModel {
     }
     public Boolean getIsBuiltIn() {
         return this.isBuiltIn;
+    }
+
+    public CreateEdgeDriverRequest setRuntime(String runtime) {
+        this.runtime = runtime;
+        return this;
+    }
+    public String getRuntime() {
+        return this.runtime;
     }
 
 }

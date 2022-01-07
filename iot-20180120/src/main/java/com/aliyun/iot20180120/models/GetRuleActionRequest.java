@@ -4,23 +4,15 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetRuleActionRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     @NameInMap("ActionId")
     public Long actionId;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     public static GetRuleActionRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRuleActionRequest self = new GetRuleActionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetRuleActionRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
     }
 
     public GetRuleActionRequest setActionId(Long actionId) {
@@ -29,6 +21,14 @@ public class GetRuleActionRequest extends TeaModel {
     }
     public Long getActionId() {
         return this.actionId;
+    }
+
+    public GetRuleActionRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
 }

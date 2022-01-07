@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryJobResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryJobResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryJobResponseBodyData data;
-
     public static QueryJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryJobResponseBody self = new QueryJobResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryJobResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryJobResponseBody setData(QueryJobResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryJobResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryJobResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryJobResponseBody setRequestId(String requestId) {
@@ -40,28 +64,45 @@ public class QueryJobResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryJobResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
+    public static class QueryJobResponseBodyDataJobFile extends TeaModel {
+        @NameInMap("FileUrl")
+        public String fileUrl;
 
-    public QueryJobResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
+        @NameInMap("Sign")
+        public String sign;
 
-    public QueryJobResponseBody setData(QueryJobResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryJobResponseBodyData getData() {
-        return this.data;
+        @NameInMap("SignMethod")
+        public String signMethod;
+
+        public static QueryJobResponseBodyDataJobFile build(java.util.Map<String, ?> map) throws Exception {
+            QueryJobResponseBodyDataJobFile self = new QueryJobResponseBodyDataJobFile();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryJobResponseBodyDataJobFile setFileUrl(String fileUrl) {
+            this.fileUrl = fileUrl;
+            return this;
+        }
+        public String getFileUrl() {
+            return this.fileUrl;
+        }
+
+        public QueryJobResponseBodyDataJobFile setSign(String sign) {
+            this.sign = sign;
+            return this;
+        }
+        public String getSign() {
+            return this.sign;
+        }
+
+        public QueryJobResponseBodyDataJobFile setSignMethod(String signMethod) {
+            this.signMethod = signMethod;
+            return this;
+        }
+        public String getSignMethod() {
+            return this.signMethod;
+        }
+
     }
 
     public static class QueryJobResponseBodyDataRolloutConfig extends TeaModel {
@@ -83,84 +124,16 @@ public class QueryJobResponseBody extends TeaModel {
 
     }
 
-    public static class QueryJobResponseBodyDataTimeoutConfig extends TeaModel {
-        @NameInMap("InProgressTimeoutInMinutes")
-        public Integer inProgressTimeoutInMinutes;
-
-        public static QueryJobResponseBodyDataTimeoutConfig build(java.util.Map<String, ?> map) throws Exception {
-            QueryJobResponseBodyDataTimeoutConfig self = new QueryJobResponseBodyDataTimeoutConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryJobResponseBodyDataTimeoutConfig setInProgressTimeoutInMinutes(Integer inProgressTimeoutInMinutes) {
-            this.inProgressTimeoutInMinutes = inProgressTimeoutInMinutes;
-            return this;
-        }
-        public Integer getInProgressTimeoutInMinutes() {
-            return this.inProgressTimeoutInMinutes;
-        }
-
-    }
-
-    public static class QueryJobResponseBodyDataJobFile extends TeaModel {
-        @NameInMap("FileUrl")
-        public String fileUrl;
-
-        @NameInMap("SignMethod")
-        public String signMethod;
-
-        @NameInMap("Sign")
-        public String sign;
-
-        public static QueryJobResponseBodyDataJobFile build(java.util.Map<String, ?> map) throws Exception {
-            QueryJobResponseBodyDataJobFile self = new QueryJobResponseBodyDataJobFile();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryJobResponseBodyDataJobFile setFileUrl(String fileUrl) {
-            this.fileUrl = fileUrl;
-            return this;
-        }
-        public String getFileUrl() {
-            return this.fileUrl;
-        }
-
-        public QueryJobResponseBodyDataJobFile setSignMethod(String signMethod) {
-            this.signMethod = signMethod;
-            return this;
-        }
-        public String getSignMethod() {
-            return this.signMethod;
-        }
-
-        public QueryJobResponseBodyDataJobFile setSign(String sign) {
-            this.sign = sign;
-            return this;
-        }
-        public String getSign() {
-            return this.sign;
-        }
-
-    }
-
     public static class QueryJobResponseBodyDataTargetConfigTargetDevicesTargetDevices extends TeaModel {
-        @NameInMap("ProductKey")
-        public String productKey;
-
         @NameInMap("DeviceName")
         public String deviceName;
+
+        @NameInMap("ProductKey")
+        public String productKey;
 
         public static QueryJobResponseBodyDataTargetConfigTargetDevicesTargetDevices build(java.util.Map<String, ?> map) throws Exception {
             QueryJobResponseBodyDataTargetConfigTargetDevicesTargetDevices self = new QueryJobResponseBodyDataTargetConfigTargetDevicesTargetDevices();
             return TeaModel.build(map, self);
-        }
-
-        public QueryJobResponseBodyDataTargetConfigTargetDevicesTargetDevices setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
         }
 
         public QueryJobResponseBodyDataTargetConfigTargetDevicesTargetDevices setDeviceName(String deviceName) {
@@ -169,6 +142,14 @@ public class QueryJobResponseBody extends TeaModel {
         }
         public String getDeviceName() {
             return this.deviceName;
+        }
+
+        public QueryJobResponseBodyDataTargetConfigTargetDevicesTargetDevices setProductKey(String productKey) {
+            this.productKey = productKey;
+            return this;
+        }
+        public String getProductKey() {
+            return this.productKey;
         }
 
     }
@@ -193,6 +174,9 @@ public class QueryJobResponseBody extends TeaModel {
     }
 
     public static class QueryJobResponseBodyDataTargetConfig extends TeaModel {
+        @NameInMap("TargetDevices")
+        public QueryJobResponseBodyDataTargetConfigTargetDevices targetDevices;
+
         @NameInMap("TargetGroup")
         public String targetGroup;
 
@@ -202,12 +186,17 @@ public class QueryJobResponseBody extends TeaModel {
         @NameInMap("TargetType")
         public String targetType;
 
-        @NameInMap("TargetDevices")
-        public QueryJobResponseBodyDataTargetConfigTargetDevices targetDevices;
-
         public static QueryJobResponseBodyDataTargetConfig build(java.util.Map<String, ?> map) throws Exception {
             QueryJobResponseBodyDataTargetConfig self = new QueryJobResponseBodyDataTargetConfig();
             return TeaModel.build(map, self);
+        }
+
+        public QueryJobResponseBodyDataTargetConfig setTargetDevices(QueryJobResponseBodyDataTargetConfigTargetDevices targetDevices) {
+            this.targetDevices = targetDevices;
+            return this;
+        }
+        public QueryJobResponseBodyDataTargetConfigTargetDevices getTargetDevices() {
+            return this.targetDevices;
         }
 
         public QueryJobResponseBodyDataTargetConfig setTargetGroup(String targetGroup) {
@@ -234,59 +223,94 @@ public class QueryJobResponseBody extends TeaModel {
             return this.targetType;
         }
 
-        public QueryJobResponseBodyDataTargetConfig setTargetDevices(QueryJobResponseBodyDataTargetConfigTargetDevices targetDevices) {
-            this.targetDevices = targetDevices;
+    }
+
+    public static class QueryJobResponseBodyDataTimeoutConfig extends TeaModel {
+        @NameInMap("InProgressTimeoutInMinutes")
+        public Integer inProgressTimeoutInMinutes;
+
+        public static QueryJobResponseBodyDataTimeoutConfig build(java.util.Map<String, ?> map) throws Exception {
+            QueryJobResponseBodyDataTimeoutConfig self = new QueryJobResponseBodyDataTimeoutConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryJobResponseBodyDataTimeoutConfig setInProgressTimeoutInMinutes(Integer inProgressTimeoutInMinutes) {
+            this.inProgressTimeoutInMinutes = inProgressTimeoutInMinutes;
             return this;
         }
-        public QueryJobResponseBodyDataTargetConfigTargetDevices getTargetDevices() {
-            return this.targetDevices;
+        public Integer getInProgressTimeoutInMinutes() {
+            return this.inProgressTimeoutInMinutes;
         }
 
     }
 
     public static class QueryJobResponseBodyData extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("JobDocument")
+        public String jobDocument;
+
+        @NameInMap("JobFile")
+        public QueryJobResponseBodyDataJobFile jobFile;
+
         @NameInMap("JobId")
         public String jobId;
 
         @NameInMap("JobName")
         public String jobName;
 
-        @NameInMap("UtcCreate")
-        public String utcCreate;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("JobDocument")
-        public String jobDocument;
-
-        @NameInMap("UtcModified")
-        public String utcModified;
+        @NameInMap("RolloutConfig")
+        public QueryJobResponseBodyDataRolloutConfig rolloutConfig;
 
         @NameInMap("ScheduledTime")
         public Long scheduledTime;
 
-        @NameInMap("RolloutConfig")
-        public QueryJobResponseBodyDataRolloutConfig rolloutConfig;
-
-        @NameInMap("TimeoutConfig")
-        public QueryJobResponseBodyDataTimeoutConfig timeoutConfig;
-
-        @NameInMap("JobFile")
-        public QueryJobResponseBodyDataJobFile jobFile;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("TargetConfig")
         public QueryJobResponseBodyDataTargetConfig targetConfig;
 
+        @NameInMap("TimeoutConfig")
+        public QueryJobResponseBodyDataTimeoutConfig timeoutConfig;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("UtcCreate")
+        public String utcCreate;
+
+        @NameInMap("UtcModified")
+        public String utcModified;
+
         public static QueryJobResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryJobResponseBodyData self = new QueryJobResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryJobResponseBodyData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public QueryJobResponseBodyData setJobDocument(String jobDocument) {
+            this.jobDocument = jobDocument;
+            return this;
+        }
+        public String getJobDocument() {
+            return this.jobDocument;
+        }
+
+        public QueryJobResponseBodyData setJobFile(QueryJobResponseBodyDataJobFile jobFile) {
+            this.jobFile = jobFile;
+            return this;
+        }
+        public QueryJobResponseBodyDataJobFile getJobFile() {
+            return this.jobFile;
         }
 
         public QueryJobResponseBodyData setJobId(String jobId) {
@@ -305,52 +329,12 @@ public class QueryJobResponseBody extends TeaModel {
             return this.jobName;
         }
 
-        public QueryJobResponseBodyData setUtcCreate(String utcCreate) {
-            this.utcCreate = utcCreate;
+        public QueryJobResponseBodyData setRolloutConfig(QueryJobResponseBodyDataRolloutConfig rolloutConfig) {
+            this.rolloutConfig = rolloutConfig;
             return this;
         }
-        public String getUtcCreate() {
-            return this.utcCreate;
-        }
-
-        public QueryJobResponseBodyData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public QueryJobResponseBodyData setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public QueryJobResponseBodyData setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public QueryJobResponseBodyData setJobDocument(String jobDocument) {
-            this.jobDocument = jobDocument;
-            return this;
-        }
-        public String getJobDocument() {
-            return this.jobDocument;
-        }
-
-        public QueryJobResponseBodyData setUtcModified(String utcModified) {
-            this.utcModified = utcModified;
-            return this;
-        }
-        public String getUtcModified() {
-            return this.utcModified;
+        public QueryJobResponseBodyDataRolloutConfig getRolloutConfig() {
+            return this.rolloutConfig;
         }
 
         public QueryJobResponseBodyData setScheduledTime(Long scheduledTime) {
@@ -361,12 +345,20 @@ public class QueryJobResponseBody extends TeaModel {
             return this.scheduledTime;
         }
 
-        public QueryJobResponseBodyData setRolloutConfig(QueryJobResponseBodyDataRolloutConfig rolloutConfig) {
-            this.rolloutConfig = rolloutConfig;
+        public QueryJobResponseBodyData setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public QueryJobResponseBodyDataRolloutConfig getRolloutConfig() {
-            return this.rolloutConfig;
+        public String getStatus() {
+            return this.status;
+        }
+
+        public QueryJobResponseBodyData setTargetConfig(QueryJobResponseBodyDataTargetConfig targetConfig) {
+            this.targetConfig = targetConfig;
+            return this;
+        }
+        public QueryJobResponseBodyDataTargetConfig getTargetConfig() {
+            return this.targetConfig;
         }
 
         public QueryJobResponseBodyData setTimeoutConfig(QueryJobResponseBodyDataTimeoutConfig timeoutConfig) {
@@ -377,20 +369,28 @@ public class QueryJobResponseBody extends TeaModel {
             return this.timeoutConfig;
         }
 
-        public QueryJobResponseBodyData setJobFile(QueryJobResponseBodyDataJobFile jobFile) {
-            this.jobFile = jobFile;
+        public QueryJobResponseBodyData setType(String type) {
+            this.type = type;
             return this;
         }
-        public QueryJobResponseBodyDataJobFile getJobFile() {
-            return this.jobFile;
+        public String getType() {
+            return this.type;
         }
 
-        public QueryJobResponseBodyData setTargetConfig(QueryJobResponseBodyDataTargetConfig targetConfig) {
-            this.targetConfig = targetConfig;
+        public QueryJobResponseBodyData setUtcCreate(String utcCreate) {
+            this.utcCreate = utcCreate;
             return this;
         }
-        public QueryJobResponseBodyDataTargetConfig getTargetConfig() {
-            return this.targetConfig;
+        public String getUtcCreate() {
+            return this.utcCreate;
+        }
+
+        public QueryJobResponseBodyData setUtcModified(String utcModified) {
+            this.utcModified = utcModified;
+            return this;
+        }
+        public String getUtcModified() {
+            return this.utcModified;
         }
 
     }

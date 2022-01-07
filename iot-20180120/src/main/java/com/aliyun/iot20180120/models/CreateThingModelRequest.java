@@ -4,6 +4,12 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateThingModelRequest extends TeaModel {
+    @NameInMap("FunctionBlockId")
+    public String functionBlockId;
+
+    @NameInMap("FunctionBlockName")
+    public String functionBlockName;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -13,15 +19,25 @@ public class CreateThingModelRequest extends TeaModel {
     @NameInMap("ThingModelJson")
     public String thingModelJson;
 
-    @NameInMap("FunctionBlockId")
-    public String functionBlockId;
-
-    @NameInMap("FunctionBlockName")
-    public String functionBlockName;
-
     public static CreateThingModelRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateThingModelRequest self = new CreateThingModelRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateThingModelRequest setFunctionBlockId(String functionBlockId) {
+        this.functionBlockId = functionBlockId;
+        return this;
+    }
+    public String getFunctionBlockId() {
+        return this.functionBlockId;
+    }
+
+    public CreateThingModelRequest setFunctionBlockName(String functionBlockName) {
+        this.functionBlockName = functionBlockName;
+        return this;
+    }
+    public String getFunctionBlockName() {
+        return this.functionBlockName;
     }
 
     public CreateThingModelRequest setIotInstanceId(String iotInstanceId) {
@@ -46,22 +62,6 @@ public class CreateThingModelRequest extends TeaModel {
     }
     public String getThingModelJson() {
         return this.thingModelJson;
-    }
-
-    public CreateThingModelRequest setFunctionBlockId(String functionBlockId) {
-        this.functionBlockId = functionBlockId;
-        return this;
-    }
-    public String getFunctionBlockId() {
-        return this.functionBlockId;
-    }
-
-    public CreateThingModelRequest setFunctionBlockName(String functionBlockName) {
-        this.functionBlockName = functionBlockName;
-        return this;
-    }
-    public String getFunctionBlockName() {
-        return this.functionBlockName;
     }
 
 }

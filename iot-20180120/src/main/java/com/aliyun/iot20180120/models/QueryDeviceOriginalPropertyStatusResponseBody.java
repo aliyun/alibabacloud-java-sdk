@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryDeviceOriginalPropertyStatusResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryDeviceOriginalPropertyStatusResponseBodyData data;
-
     public static QueryDeviceOriginalPropertyStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceOriginalPropertyStatusResponseBody self = new QueryDeviceOriginalPropertyStatusResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceOriginalPropertyStatusResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryDeviceOriginalPropertyStatusResponseBody setData(QueryDeviceOriginalPropertyStatusResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryDeviceOriginalPropertyStatusResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryDeviceOriginalPropertyStatusResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryDeviceOriginalPropertyStatusResponseBody setRequestId(String requestId) {
@@ -40,39 +64,15 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryDeviceOriginalPropertyStatusResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryDeviceOriginalPropertyStatusResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryDeviceOriginalPropertyStatusResponseBody setData(QueryDeviceOriginalPropertyStatusResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryDeviceOriginalPropertyStatusResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryDeviceOriginalPropertyStatusResponseBodyDataListPropertyStatusDataInfo extends TeaModel {
         @NameInMap("Identifier")
         public String identifier;
 
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("Time")
         public Long time;
+
+        @NameInMap("Value")
+        public String value;
 
         public static QueryDeviceOriginalPropertyStatusResponseBodyDataListPropertyStatusDataInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceOriginalPropertyStatusResponseBodyDataListPropertyStatusDataInfo self = new QueryDeviceOriginalPropertyStatusResponseBodyDataListPropertyStatusDataInfo();
@@ -87,20 +87,20 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
             return this.identifier;
         }
 
-        public QueryDeviceOriginalPropertyStatusResponseBodyDataListPropertyStatusDataInfo setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
         public QueryDeviceOriginalPropertyStatusResponseBodyDataListPropertyStatusDataInfo setTime(Long time) {
             this.time = time;
             return this;
         }
         public Long getTime() {
             return this.time;
+        }
+
+        public QueryDeviceOriginalPropertyStatusResponseBodyDataListPropertyStatusDataInfo setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -125,26 +125,26 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceOriginalPropertyStatusResponseBodyData extends TeaModel {
-        @NameInMap("NextValid")
-        public Boolean nextValid;
+        @NameInMap("List")
+        public QueryDeviceOriginalPropertyStatusResponseBodyDataList list;
 
         @NameInMap("NextPageToken")
         public String nextPageToken;
 
-        @NameInMap("List")
-        public QueryDeviceOriginalPropertyStatusResponseBodyDataList list;
+        @NameInMap("NextValid")
+        public Boolean nextValid;
 
         public static QueryDeviceOriginalPropertyStatusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceOriginalPropertyStatusResponseBodyData self = new QueryDeviceOriginalPropertyStatusResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public QueryDeviceOriginalPropertyStatusResponseBodyData setNextValid(Boolean nextValid) {
-            this.nextValid = nextValid;
+        public QueryDeviceOriginalPropertyStatusResponseBodyData setList(QueryDeviceOriginalPropertyStatusResponseBodyDataList list) {
+            this.list = list;
             return this;
         }
-        public Boolean getNextValid() {
-            return this.nextValid;
+        public QueryDeviceOriginalPropertyStatusResponseBodyDataList getList() {
+            return this.list;
         }
 
         public QueryDeviceOriginalPropertyStatusResponseBodyData setNextPageToken(String nextPageToken) {
@@ -155,12 +155,12 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
             return this.nextPageToken;
         }
 
-        public QueryDeviceOriginalPropertyStatusResponseBodyData setList(QueryDeviceOriginalPropertyStatusResponseBodyDataList list) {
-            this.list = list;
+        public QueryDeviceOriginalPropertyStatusResponseBodyData setNextValid(Boolean nextValid) {
+            this.nextValid = nextValid;
             return this;
         }
-        public QueryDeviceOriginalPropertyStatusResponseBodyDataList getList() {
-            return this.list;
+        public Boolean getNextValid() {
+            return this.nextValid;
         }
 
     }

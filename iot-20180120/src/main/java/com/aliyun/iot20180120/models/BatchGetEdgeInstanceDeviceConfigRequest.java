@@ -4,26 +4,18 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchGetEdgeInstanceDeviceConfigRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("IotIds")
     public java.util.List<String> iotIds;
 
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
     public static BatchGetEdgeInstanceDeviceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchGetEdgeInstanceDeviceConfigRequest self = new BatchGetEdgeInstanceDeviceConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchGetEdgeInstanceDeviceConfigRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
     }
 
     public BatchGetEdgeInstanceDeviceConfigRequest setInstanceId(String instanceId) {
@@ -40,6 +32,14 @@ public class BatchGetEdgeInstanceDeviceConfigRequest extends TeaModel {
     }
     public java.util.List<String> getIotIds() {
         return this.iotIds;
+    }
+
+    public BatchGetEdgeInstanceDeviceConfigRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
 }

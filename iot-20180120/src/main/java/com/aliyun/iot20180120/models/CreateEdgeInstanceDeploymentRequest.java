@@ -4,11 +4,11 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateEdgeInstanceDeploymentRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("Type")
     public String type;
@@ -18,20 +18,20 @@ public class CreateEdgeInstanceDeploymentRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateEdgeInstanceDeploymentRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
     public CreateEdgeInstanceDeploymentRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateEdgeInstanceDeploymentRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public CreateEdgeInstanceDeploymentRequest setType(String type) {

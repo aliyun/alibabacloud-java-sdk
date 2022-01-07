@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceDistributeJobResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ListDeviceDistributeJobResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public ListDeviceDistributeJobResponseBodyData data;
-
     public static ListDeviceDistributeJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDeviceDistributeJobResponseBody self = new ListDeviceDistributeJobResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListDeviceDistributeJobResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListDeviceDistributeJobResponseBody setData(ListDeviceDistributeJobResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListDeviceDistributeJobResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListDeviceDistributeJobResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListDeviceDistributeJobResponseBody setRequestId(String requestId) {
@@ -40,39 +64,15 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListDeviceDistributeJobResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListDeviceDistributeJobResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ListDeviceDistributeJobResponseBody setData(ListDeviceDistributeJobResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListDeviceDistributeJobResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs extends TeaModel {
         @NameInMap("TargetInstanceId")
         public String targetInstanceId;
 
-        @NameInMap("TargetRegion")
-        public String targetRegion;
-
         @NameInMap("TargetInstanceName")
         public String targetInstanceName;
+
+        @NameInMap("TargetRegion")
+        public String targetRegion;
 
         public static ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs build(java.util.Map<String, ?> map) throws Exception {
             ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs self = new ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs();
@@ -87,20 +87,20 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
             return this.targetInstanceId;
         }
 
-        public ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs setTargetRegion(String targetRegion) {
-            this.targetRegion = targetRegion;
-            return this;
-        }
-        public String getTargetRegion() {
-            return this.targetRegion;
-        }
-
         public ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs setTargetInstanceName(String targetInstanceName) {
             this.targetInstanceName = targetInstanceName;
             return this;
         }
         public String getTargetInstanceName() {
             return this.targetInstanceName;
+        }
+
+        public ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs setTargetRegion(String targetRegion) {
+            this.targetRegion = targetRegion;
+            return this;
+        }
+        public String getTargetRegion() {
+            return this.targetRegion;
         }
 
     }
@@ -128,23 +128,23 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        @NameInMap("SourceUid")
-        public String sourceUid;
-
-        @NameInMap("TargetUid")
-        public String targetUid;
-
         @NameInMap("JobId")
         public String jobId;
-
-        @NameInMap("SourceInstanceId")
-        public String sourceInstanceId;
 
         @NameInMap("ProductKey")
         public String productKey;
 
-        @NameInMap("Total")
-        public Integer total;
+        @NameInMap("SourceInstanceId")
+        public String sourceInstanceId;
+
+        @NameInMap("SourceInstanceName")
+        public String sourceInstanceName;
+
+        @NameInMap("SourceRegion")
+        public String sourceRegion;
+
+        @NameInMap("SourceUid")
+        public String sourceUid;
 
         @NameInMap("Status")
         public Integer status;
@@ -152,14 +152,14 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
         @NameInMap("Strategy")
         public Integer strategy;
 
-        @NameInMap("SourceRegion")
-        public String sourceRegion;
-
-        @NameInMap("SourceInstanceName")
-        public String sourceInstanceName;
-
         @NameInMap("TargetInstanceConfigs")
         public ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigs targetInstanceConfigs;
+
+        @NameInMap("TargetUid")
+        public String targetUid;
+
+        @NameInMap("Total")
+        public Integer total;
 
         public static ListDeviceDistributeJobResponseBodyDataJobInfoItems build(java.util.Map<String, ?> map) throws Exception {
             ListDeviceDistributeJobResponseBodyDataJobInfoItems self = new ListDeviceDistributeJobResponseBodyDataJobInfoItems();
@@ -174,36 +174,12 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public ListDeviceDistributeJobResponseBodyDataJobInfoItems setSourceUid(String sourceUid) {
-            this.sourceUid = sourceUid;
-            return this;
-        }
-        public String getSourceUid() {
-            return this.sourceUid;
-        }
-
-        public ListDeviceDistributeJobResponseBodyDataJobInfoItems setTargetUid(String targetUid) {
-            this.targetUid = targetUid;
-            return this;
-        }
-        public String getTargetUid() {
-            return this.targetUid;
-        }
-
         public ListDeviceDistributeJobResponseBodyDataJobInfoItems setJobId(String jobId) {
             this.jobId = jobId;
             return this;
         }
         public String getJobId() {
             return this.jobId;
-        }
-
-        public ListDeviceDistributeJobResponseBodyDataJobInfoItems setSourceInstanceId(String sourceInstanceId) {
-            this.sourceInstanceId = sourceInstanceId;
-            return this;
-        }
-        public String getSourceInstanceId() {
-            return this.sourceInstanceId;
         }
 
         public ListDeviceDistributeJobResponseBodyDataJobInfoItems setProductKey(String productKey) {
@@ -214,12 +190,36 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
             return this.productKey;
         }
 
-        public ListDeviceDistributeJobResponseBodyDataJobInfoItems setTotal(Integer total) {
-            this.total = total;
+        public ListDeviceDistributeJobResponseBodyDataJobInfoItems setSourceInstanceId(String sourceInstanceId) {
+            this.sourceInstanceId = sourceInstanceId;
             return this;
         }
-        public Integer getTotal() {
-            return this.total;
+        public String getSourceInstanceId() {
+            return this.sourceInstanceId;
+        }
+
+        public ListDeviceDistributeJobResponseBodyDataJobInfoItems setSourceInstanceName(String sourceInstanceName) {
+            this.sourceInstanceName = sourceInstanceName;
+            return this;
+        }
+        public String getSourceInstanceName() {
+            return this.sourceInstanceName;
+        }
+
+        public ListDeviceDistributeJobResponseBodyDataJobInfoItems setSourceRegion(String sourceRegion) {
+            this.sourceRegion = sourceRegion;
+            return this;
+        }
+        public String getSourceRegion() {
+            return this.sourceRegion;
+        }
+
+        public ListDeviceDistributeJobResponseBodyDataJobInfoItems setSourceUid(String sourceUid) {
+            this.sourceUid = sourceUid;
+            return this;
+        }
+        public String getSourceUid() {
+            return this.sourceUid;
         }
 
         public ListDeviceDistributeJobResponseBodyDataJobInfoItems setStatus(Integer status) {
@@ -238,28 +238,28 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
             return this.strategy;
         }
 
-        public ListDeviceDistributeJobResponseBodyDataJobInfoItems setSourceRegion(String sourceRegion) {
-            this.sourceRegion = sourceRegion;
-            return this;
-        }
-        public String getSourceRegion() {
-            return this.sourceRegion;
-        }
-
-        public ListDeviceDistributeJobResponseBodyDataJobInfoItems setSourceInstanceName(String sourceInstanceName) {
-            this.sourceInstanceName = sourceInstanceName;
-            return this;
-        }
-        public String getSourceInstanceName() {
-            return this.sourceInstanceName;
-        }
-
         public ListDeviceDistributeJobResponseBodyDataJobInfoItems setTargetInstanceConfigs(ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigs targetInstanceConfigs) {
             this.targetInstanceConfigs = targetInstanceConfigs;
             return this;
         }
         public ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigs getTargetInstanceConfigs() {
             return this.targetInstanceConfigs;
+        }
+
+        public ListDeviceDistributeJobResponseBodyDataJobInfoItems setTargetUid(String targetUid) {
+            this.targetUid = targetUid;
+            return this;
+        }
+        public String getTargetUid() {
+            return this.targetUid;
+        }
+
+        public ListDeviceDistributeJobResponseBodyDataJobInfoItems setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
         }
 
     }
@@ -284,26 +284,26 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
     }
 
     public static class ListDeviceDistributeJobResponseBodyData extends TeaModel {
-        @NameInMap("Total")
-        public Integer total;
+        @NameInMap("JobInfo")
+        public ListDeviceDistributeJobResponseBodyDataJobInfo jobInfo;
 
         @NameInMap("NextToken")
         public String nextToken;
 
-        @NameInMap("JobInfo")
-        public ListDeviceDistributeJobResponseBodyDataJobInfo jobInfo;
+        @NameInMap("Total")
+        public Integer total;
 
         public static ListDeviceDistributeJobResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListDeviceDistributeJobResponseBodyData self = new ListDeviceDistributeJobResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public ListDeviceDistributeJobResponseBodyData setTotal(Integer total) {
-            this.total = total;
+        public ListDeviceDistributeJobResponseBodyData setJobInfo(ListDeviceDistributeJobResponseBodyDataJobInfo jobInfo) {
+            this.jobInfo = jobInfo;
             return this;
         }
-        public Integer getTotal() {
-            return this.total;
+        public ListDeviceDistributeJobResponseBodyDataJobInfo getJobInfo() {
+            return this.jobInfo;
         }
 
         public ListDeviceDistributeJobResponseBodyData setNextToken(String nextToken) {
@@ -314,12 +314,12 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
             return this.nextToken;
         }
 
-        public ListDeviceDistributeJobResponseBodyData setJobInfo(ListDeviceDistributeJobResponseBodyDataJobInfo jobInfo) {
-            this.jobInfo = jobInfo;
+        public ListDeviceDistributeJobResponseBodyData setTotal(Integer total) {
+            this.total = total;
             return this;
         }
-        public ListDeviceDistributeJobResponseBodyDataJobInfo getJobInfo() {
-            return this.jobInfo;
+        public Integer getTotal() {
+            return this.total;
         }
 
     }

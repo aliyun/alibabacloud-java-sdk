@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchGetDeviceStateResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("DeviceStatusList")
+    public BatchGetDeviceStateResponseBodyDeviceStatusList deviceStatusList;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("DeviceStatusList")
-    public BatchGetDeviceStateResponseBodyDeviceStatusList deviceStatusList;
-
     public static BatchGetDeviceStateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchGetDeviceStateResponseBody self = new BatchGetDeviceStateResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public BatchGetDeviceStateResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public BatchGetDeviceStateResponseBody setDeviceStatusList(BatchGetDeviceStateResponseBodyDeviceStatusList deviceStatusList) {
+        this.deviceStatusList = deviceStatusList;
+        return this;
+    }
+    public BatchGetDeviceStateResponseBodyDeviceStatusList getDeviceStatusList() {
+        return this.deviceStatusList;
+    }
+
+    public BatchGetDeviceStateResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public BatchGetDeviceStateResponseBody setRequestId(String requestId) {
@@ -40,52 +64,36 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
         return this.success;
     }
 
-    public BatchGetDeviceStateResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public BatchGetDeviceStateResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public BatchGetDeviceStateResponseBody setDeviceStatusList(BatchGetDeviceStateResponseBodyDeviceStatusList deviceStatusList) {
-        this.deviceStatusList = deviceStatusList;
-        return this;
-    }
-    public BatchGetDeviceStateResponseBodyDeviceStatusList getDeviceStatusList() {
-        return this.deviceStatusList;
-    }
-
     public static class BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus extends TeaModel {
+        @NameInMap("AsAddress")
+        public String asAddress;
+
         @NameInMap("DeviceId")
         public String deviceId;
 
         @NameInMap("DeviceName")
         public String deviceName;
 
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("AsAddress")
-        public String asAddress;
+        @NameInMap("IotId")
+        public String iotId;
 
         @NameInMap("LastOnlineTime")
         public String lastOnlineTime;
 
-        @NameInMap("IotId")
-        public String iotId;
+        @NameInMap("Status")
+        public String status;
 
         public static BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus build(java.util.Map<String, ?> map) throws Exception {
             BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus self = new BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus();
             return TeaModel.build(map, self);
+        }
+
+        public BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus setAsAddress(String asAddress) {
+            this.asAddress = asAddress;
+            return this;
+        }
+        public String getAsAddress() {
+            return this.asAddress;
         }
 
         public BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus setDeviceId(String deviceId) {
@@ -104,20 +112,12 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
             return this.deviceName;
         }
 
-        public BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus setStatus(String status) {
-            this.status = status;
+        public BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus setIotId(String iotId) {
+            this.iotId = iotId;
             return this;
         }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus setAsAddress(String asAddress) {
-            this.asAddress = asAddress;
-            return this;
-        }
-        public String getAsAddress() {
-            return this.asAddress;
+        public String getIotId() {
+            return this.iotId;
         }
 
         public BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus setLastOnlineTime(String lastOnlineTime) {
@@ -128,12 +128,12 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
             return this.lastOnlineTime;
         }
 
-        public BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus setIotId(String iotId) {
-            this.iotId = iotId;
+        public BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getIotId() {
-            return this.iotId;
+        public String getStatus() {
+            return this.status;
         }
 
     }

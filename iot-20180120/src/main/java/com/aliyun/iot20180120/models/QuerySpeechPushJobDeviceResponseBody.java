@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySpeechPushJobDeviceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QuerySpeechPushJobDeviceResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QuerySpeechPushJobDeviceResponseBodyData data;
-
     public static QuerySpeechPushJobDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySpeechPushJobDeviceResponseBody self = new QuerySpeechPushJobDeviceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySpeechPushJobDeviceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QuerySpeechPushJobDeviceResponseBody setData(QuerySpeechPushJobDeviceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QuerySpeechPushJobDeviceResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QuerySpeechPushJobDeviceResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QuerySpeechPushJobDeviceResponseBody setRequestId(String requestId) {
@@ -40,37 +64,7 @@ public class QuerySpeechPushJobDeviceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QuerySpeechPushJobDeviceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QuerySpeechPushJobDeviceResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QuerySpeechPushJobDeviceResponseBody setData(QuerySpeechPushJobDeviceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QuerySpeechPushJobDeviceResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QuerySpeechPushJobDeviceResponseBodyDataListItems extends TeaModel {
-        @NameInMap("GmtModified")
-        public Long gmtModified;
-
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("DeviceName")
         public String deviceName;
 
@@ -80,25 +74,15 @@ public class QuerySpeechPushJobDeviceResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        @NameInMap("GmtModified")
+        public Long gmtModified;
+
+        @NameInMap("Status")
+        public String status;
+
         public static QuerySpeechPushJobDeviceResponseBodyDataListItems build(java.util.Map<String, ?> map) throws Exception {
             QuerySpeechPushJobDeviceResponseBodyDataListItems self = new QuerySpeechPushJobDeviceResponseBodyDataListItems();
             return TeaModel.build(map, self);
-        }
-
-        public QuerySpeechPushJobDeviceResponseBodyDataListItems setGmtModified(Long gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public Long getGmtModified() {
-            return this.gmtModified;
-        }
-
-        public QuerySpeechPushJobDeviceResponseBodyDataListItems setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public QuerySpeechPushJobDeviceResponseBodyDataListItems setDeviceName(String deviceName) {
@@ -125,6 +109,22 @@ public class QuerySpeechPushJobDeviceResponseBody extends TeaModel {
             return this.errorMessage;
         }
 
+        public QuerySpeechPushJobDeviceResponseBodyDataListItems setGmtModified(Long gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public Long getGmtModified() {
+            return this.gmtModified;
+        }
+
+        public QuerySpeechPushJobDeviceResponseBodyDataListItems setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class QuerySpeechPushJobDeviceResponseBodyDataList extends TeaModel {
@@ -147,8 +147,8 @@ public class QuerySpeechPushJobDeviceResponseBody extends TeaModel {
     }
 
     public static class QuerySpeechPushJobDeviceResponseBodyData extends TeaModel {
-        @NameInMap("Total")
-        public Integer total;
+        @NameInMap("List")
+        public QuerySpeechPushJobDeviceResponseBodyDataList list;
 
         @NameInMap("PageId")
         public Integer pageId;
@@ -156,20 +156,20 @@ public class QuerySpeechPushJobDeviceResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        @NameInMap("List")
-        public QuerySpeechPushJobDeviceResponseBodyDataList list;
+        @NameInMap("Total")
+        public Integer total;
 
         public static QuerySpeechPushJobDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QuerySpeechPushJobDeviceResponseBodyData self = new QuerySpeechPushJobDeviceResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public QuerySpeechPushJobDeviceResponseBodyData setTotal(Integer total) {
-            this.total = total;
+        public QuerySpeechPushJobDeviceResponseBodyData setList(QuerySpeechPushJobDeviceResponseBodyDataList list) {
+            this.list = list;
             return this;
         }
-        public Integer getTotal() {
-            return this.total;
+        public QuerySpeechPushJobDeviceResponseBodyDataList getList() {
+            return this.list;
         }
 
         public QuerySpeechPushJobDeviceResponseBodyData setPageId(Integer pageId) {
@@ -188,12 +188,12 @@ public class QuerySpeechPushJobDeviceResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public QuerySpeechPushJobDeviceResponseBodyData setList(QuerySpeechPushJobDeviceResponseBodyDataList list) {
-            this.list = list;
+        public QuerySpeechPushJobDeviceResponseBodyData setTotal(Integer total) {
+            this.total = total;
             return this;
         }
-        public QuerySpeechPushJobDeviceResponseBodyDataList getList() {
-            return this.list;
+        public Integer getTotal() {
+            return this.total;
         }
 
     }

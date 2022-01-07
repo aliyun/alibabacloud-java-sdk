@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeDriverResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryEdgeDriverResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryEdgeDriverResponseBodyData data;
-
     public static QueryEdgeDriverResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryEdgeDriverResponseBody self = new QueryEdgeDriverResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryEdgeDriverResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryEdgeDriverResponseBody setData(QueryEdgeDriverResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryEdgeDriverResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryEdgeDriverResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryEdgeDriverResponseBody setRequestId(String requestId) {
@@ -40,31 +64,10 @@ public class QueryEdgeDriverResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryEdgeDriverResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryEdgeDriverResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryEdgeDriverResponseBody setData(QueryEdgeDriverResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryEdgeDriverResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryEdgeDriverResponseBodyDataDriverList extends TeaModel {
+        @NameInMap("CpuArch")
+        public String cpuArch;
+
         @NameInMap("DriverId")
         public String driverId;
 
@@ -74,27 +77,32 @@ public class QueryEdgeDriverResponseBody extends TeaModel {
         @NameInMap("DriverProtocol")
         public String driverProtocol;
 
-        @NameInMap("Runtime")
-        public String runtime;
-
-        @NameInMap("CpuArch")
-        public String cpuArch;
-
-        @NameInMap("Type")
-        public Integer type;
-
-        @NameInMap("IsBuiltIn")
-        public Boolean isBuiltIn;
-
         @NameInMap("GmtCreateTimestamp")
         public Long gmtCreateTimestamp;
 
         @NameInMap("GmtModifiedTimestamp")
         public Long gmtModifiedTimestamp;
 
+        @NameInMap("IsBuiltIn")
+        public Boolean isBuiltIn;
+
+        @NameInMap("Runtime")
+        public String runtime;
+
+        @NameInMap("Type")
+        public Integer type;
+
         public static QueryEdgeDriverResponseBodyDataDriverList build(java.util.Map<String, ?> map) throws Exception {
             QueryEdgeDriverResponseBodyDataDriverList self = new QueryEdgeDriverResponseBodyDataDriverList();
             return TeaModel.build(map, self);
+        }
+
+        public QueryEdgeDriverResponseBodyDataDriverList setCpuArch(String cpuArch) {
+            this.cpuArch = cpuArch;
+            return this;
+        }
+        public String getCpuArch() {
+            return this.cpuArch;
         }
 
         public QueryEdgeDriverResponseBodyDataDriverList setDriverId(String driverId) {
@@ -121,38 +129,6 @@ public class QueryEdgeDriverResponseBody extends TeaModel {
             return this.driverProtocol;
         }
 
-        public QueryEdgeDriverResponseBodyDataDriverList setRuntime(String runtime) {
-            this.runtime = runtime;
-            return this;
-        }
-        public String getRuntime() {
-            return this.runtime;
-        }
-
-        public QueryEdgeDriverResponseBodyDataDriverList setCpuArch(String cpuArch) {
-            this.cpuArch = cpuArch;
-            return this;
-        }
-        public String getCpuArch() {
-            return this.cpuArch;
-        }
-
-        public QueryEdgeDriverResponseBodyDataDriverList setType(Integer type) {
-            this.type = type;
-            return this;
-        }
-        public Integer getType() {
-            return this.type;
-        }
-
-        public QueryEdgeDriverResponseBodyDataDriverList setIsBuiltIn(Boolean isBuiltIn) {
-            this.isBuiltIn = isBuiltIn;
-            return this;
-        }
-        public Boolean getIsBuiltIn() {
-            return this.isBuiltIn;
-        }
-
         public QueryEdgeDriverResponseBodyDataDriverList setGmtCreateTimestamp(Long gmtCreateTimestamp) {
             this.gmtCreateTimestamp = gmtCreateTimestamp;
             return this;
@@ -169,40 +145,48 @@ public class QueryEdgeDriverResponseBody extends TeaModel {
             return this.gmtModifiedTimestamp;
         }
 
+        public QueryEdgeDriverResponseBodyDataDriverList setIsBuiltIn(Boolean isBuiltIn) {
+            this.isBuiltIn = isBuiltIn;
+            return this;
+        }
+        public Boolean getIsBuiltIn() {
+            return this.isBuiltIn;
+        }
+
+        public QueryEdgeDriverResponseBodyDataDriverList setRuntime(String runtime) {
+            this.runtime = runtime;
+            return this;
+        }
+        public String getRuntime() {
+            return this.runtime;
+        }
+
+        public QueryEdgeDriverResponseBodyDataDriverList setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
     }
 
     public static class QueryEdgeDriverResponseBodyData extends TeaModel {
-        @NameInMap("Total")
-        public Integer total;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         @NameInMap("DriverList")
         public java.util.List<QueryEdgeDriverResponseBodyDataDriverList> driverList;
 
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("Total")
+        public Integer total;
+
         public static QueryEdgeDriverResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryEdgeDriverResponseBodyData self = new QueryEdgeDriverResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryEdgeDriverResponseBodyData setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
-        }
-
-        public QueryEdgeDriverResponseBodyData setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
         }
 
         public QueryEdgeDriverResponseBodyData setCurrentPage(Integer currentPage) {
@@ -219,6 +203,22 @@ public class QueryEdgeDriverResponseBody extends TeaModel {
         }
         public java.util.List<QueryEdgeDriverResponseBodyDataDriverList> getDriverList() {
             return this.driverList;
+        }
+
+        public QueryEdgeDriverResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public QueryEdgeDriverResponseBodyData setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
         }
 
     }

@@ -43,23 +43,15 @@ public class BatchUnbindProjectDevicesRequest extends TeaModel {
     }
 
     public static class BatchUnbindProjectDevicesRequestDevices extends TeaModel {
-        @NameInMap("ProductKey")
-        public String productKey;
-
         @NameInMap("DeviceName")
         public String deviceName;
+
+        @NameInMap("ProductKey")
+        public String productKey;
 
         public static BatchUnbindProjectDevicesRequestDevices build(java.util.Map<String, ?> map) throws Exception {
             BatchUnbindProjectDevicesRequestDevices self = new BatchUnbindProjectDevicesRequestDevices();
             return TeaModel.build(map, self);
-        }
-
-        public BatchUnbindProjectDevicesRequestDevices setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
         }
 
         public BatchUnbindProjectDevicesRequestDevices setDeviceName(String deviceName) {
@@ -68,6 +60,14 @@ public class BatchUnbindProjectDevicesRequest extends TeaModel {
         }
         public String getDeviceName() {
             return this.deviceName;
+        }
+
+        public BatchUnbindProjectDevicesRequestDevices setProductKey(String productKey) {
+            this.productKey = productKey;
+            return this;
+        }
+        public String getProductKey() {
+            return this.productKey;
         }
 
     }

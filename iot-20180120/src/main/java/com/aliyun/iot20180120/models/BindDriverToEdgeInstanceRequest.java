@@ -4,17 +4,17 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BindDriverToEdgeInstanceRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("DriverId")
     public String driverId;
 
     @NameInMap("DriverVersion")
     public String driverVersion;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("OrderId")
     public String orderId;
@@ -22,22 +22,6 @@ public class BindDriverToEdgeInstanceRequest extends TeaModel {
     public static BindDriverToEdgeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         BindDriverToEdgeInstanceRequest self = new BindDriverToEdgeInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BindDriverToEdgeInstanceRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
-    public BindDriverToEdgeInstanceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public BindDriverToEdgeInstanceRequest setDriverId(String driverId) {
@@ -54,6 +38,22 @@ public class BindDriverToEdgeInstanceRequest extends TeaModel {
     }
     public String getDriverVersion() {
         return this.driverVersion;
+    }
+
+    public BindDriverToEdgeInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public BindDriverToEdgeInstanceRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public BindDriverToEdgeInstanceRequest setOrderId(String orderId) {

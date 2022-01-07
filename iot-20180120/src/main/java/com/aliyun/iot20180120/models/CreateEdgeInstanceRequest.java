@@ -10,11 +10,11 @@ public class CreateEdgeInstanceRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Tags")
-    public String tags;
-
     @NameInMap("Spec")
     public Integer spec;
+
+    @NameInMap("Tags")
+    public String tags;
 
     public static CreateEdgeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEdgeInstanceRequest self = new CreateEdgeInstanceRequest();
@@ -37,20 +37,20 @@ public class CreateEdgeInstanceRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateEdgeInstanceRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
-    }
-
     public CreateEdgeInstanceRequest setSpec(Integer spec) {
         this.spec = spec;
         return this;
     }
     public Integer getSpec() {
         return this.spec;
+    }
+
+    public CreateEdgeInstanceRequest setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
     }
 
 }

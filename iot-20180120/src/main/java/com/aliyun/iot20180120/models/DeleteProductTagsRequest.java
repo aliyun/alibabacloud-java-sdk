@@ -7,11 +7,11 @@ public class DeleteProductTagsRequest extends TeaModel {
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
-    @NameInMap("ProductTagKey")
-    public java.util.List<String> productTagKey;
-
     @NameInMap("ProductKey")
     public String productKey;
+
+    @NameInMap("ProductTagKey")
+    public java.util.List<String> productTagKey;
 
     public static DeleteProductTagsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteProductTagsRequest self = new DeleteProductTagsRequest();
@@ -26,20 +26,20 @@ public class DeleteProductTagsRequest extends TeaModel {
         return this.iotInstanceId;
     }
 
-    public DeleteProductTagsRequest setProductTagKey(java.util.List<String> productTagKey) {
-        this.productTagKey = productTagKey;
-        return this;
-    }
-    public java.util.List<String> getProductTagKey() {
-        return this.productTagKey;
-    }
-
     public DeleteProductTagsRequest setProductKey(String productKey) {
         this.productKey = productKey;
         return this;
     }
     public String getProductKey() {
         return this.productKey;
+    }
+
+    public DeleteProductTagsRequest setProductTagKey(java.util.List<String> productTagKey) {
+        this.productTagKey = productTagKey;
+        return this;
+    }
+    public java.util.List<String> getProductTagKey() {
+        return this.productTagKey;
     }
 
 }

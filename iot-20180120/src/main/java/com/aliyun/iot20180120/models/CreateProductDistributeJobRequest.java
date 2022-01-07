@@ -4,11 +4,14 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateProductDistributeJobRequest extends TeaModel {
+    @NameInMap("ProductKey")
+    public String productKey;
+
     @NameInMap("SourceInstanceId")
     public String sourceInstanceId;
 
-    @NameInMap("ProductKey")
-    public String productKey;
+    @NameInMap("TargetAliyunId")
+    public String targetAliyunId;
 
     @NameInMap("TargetInstanceId")
     public String targetInstanceId;
@@ -16,12 +19,17 @@ public class CreateProductDistributeJobRequest extends TeaModel {
     @NameInMap("TargetUid")
     public String targetUid;
 
-    @NameInMap("TargetAliyunId")
-    public String targetAliyunId;
-
     public static CreateProductDistributeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProductDistributeJobRequest self = new CreateProductDistributeJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateProductDistributeJobRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
     }
 
     public CreateProductDistributeJobRequest setSourceInstanceId(String sourceInstanceId) {
@@ -32,12 +40,12 @@ public class CreateProductDistributeJobRequest extends TeaModel {
         return this.sourceInstanceId;
     }
 
-    public CreateProductDistributeJobRequest setProductKey(String productKey) {
-        this.productKey = productKey;
+    public CreateProductDistributeJobRequest setTargetAliyunId(String targetAliyunId) {
+        this.targetAliyunId = targetAliyunId;
         return this;
     }
-    public String getProductKey() {
-        return this.productKey;
+    public String getTargetAliyunId() {
+        return this.targetAliyunId;
     }
 
     public CreateProductDistributeJobRequest setTargetInstanceId(String targetInstanceId) {
@@ -54,14 +62,6 @@ public class CreateProductDistributeJobRequest extends TeaModel {
     }
     public String getTargetUid() {
         return this.targetUid;
-    }
-
-    public CreateProductDistributeJobRequest setTargetAliyunId(String targetAliyunId) {
-        this.targetAliyunId = targetAliyunId;
-        return this;
-    }
-    public String getTargetAliyunId() {
-        return this.targetAliyunId;
     }
 
 }

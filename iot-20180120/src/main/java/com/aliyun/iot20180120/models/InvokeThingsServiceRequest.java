@@ -4,8 +4,14 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class InvokeThingsServiceRequest extends TeaModel {
+    @NameInMap("Args")
+    public String args;
+
     @NameInMap("DeviceName")
     public java.util.List<String> deviceName;
+
+    @NameInMap("Identifier")
+    public String identifier;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
@@ -13,15 +19,17 @@ public class InvokeThingsServiceRequest extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
-    @NameInMap("Identifier")
-    public String identifier;
-
-    @NameInMap("Args")
-    public String args;
-
     public static InvokeThingsServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeThingsServiceRequest self = new InvokeThingsServiceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InvokeThingsServiceRequest setArgs(String args) {
+        this.args = args;
+        return this;
+    }
+    public String getArgs() {
+        return this.args;
     }
 
     public InvokeThingsServiceRequest setDeviceName(java.util.List<String> deviceName) {
@@ -30,6 +38,14 @@ public class InvokeThingsServiceRequest extends TeaModel {
     }
     public java.util.List<String> getDeviceName() {
         return this.deviceName;
+    }
+
+    public InvokeThingsServiceRequest setIdentifier(String identifier) {
+        this.identifier = identifier;
+        return this;
+    }
+    public String getIdentifier() {
+        return this.identifier;
     }
 
     public InvokeThingsServiceRequest setIotInstanceId(String iotInstanceId) {
@@ -46,22 +62,6 @@ public class InvokeThingsServiceRequest extends TeaModel {
     }
     public String getProductKey() {
         return this.productKey;
-    }
-
-    public InvokeThingsServiceRequest setIdentifier(String identifier) {
-        this.identifier = identifier;
-        return this;
-    }
-    public String getIdentifier() {
-        return this.identifier;
-    }
-
-    public InvokeThingsServiceRequest setArgs(String args) {
-        this.args = args;
-        return this;
-    }
-    public String getArgs() {
-        return this.args;
     }
 
 }

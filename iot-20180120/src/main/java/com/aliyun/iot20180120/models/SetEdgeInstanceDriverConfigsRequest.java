@@ -4,45 +4,21 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class SetEdgeInstanceDriverConfigsRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("Configs")
+    public java.util.List<SetEdgeInstanceDriverConfigsRequestConfigs> configs;
 
     @NameInMap("DriverId")
     public String driverId;
 
-    @NameInMap("Configs")
-    public java.util.List<SetEdgeInstanceDriverConfigsRequestConfigs> configs;
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     public static SetEdgeInstanceDriverConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         SetEdgeInstanceDriverConfigsRequest self = new SetEdgeInstanceDriverConfigsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetEdgeInstanceDriverConfigsRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
-    public SetEdgeInstanceDriverConfigsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public SetEdgeInstanceDriverConfigsRequest setDriverId(String driverId) {
-        this.driverId = driverId;
-        return this;
-    }
-    public String getDriverId() {
-        return this.driverId;
     }
 
     public SetEdgeInstanceDriverConfigsRequest setConfigs(java.util.List<SetEdgeInstanceDriverConfigsRequestConfigs> configs) {
@@ -53,12 +29,36 @@ public class SetEdgeInstanceDriverConfigsRequest extends TeaModel {
         return this.configs;
     }
 
-    public static class SetEdgeInstanceDriverConfigsRequestConfigs extends TeaModel {
-        @NameInMap("Format")
-        public String format;
+    public SetEdgeInstanceDriverConfigsRequest setDriverId(String driverId) {
+        this.driverId = driverId;
+        return this;
+    }
+    public String getDriverId() {
+        return this.driverId;
+    }
 
+    public SetEdgeInstanceDriverConfigsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public SetEdgeInstanceDriverConfigsRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
+    public static class SetEdgeInstanceDriverConfigsRequestConfigs extends TeaModel {
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("Format")
+        public String format;
 
         @NameInMap("Key")
         public String key;
@@ -68,20 +68,20 @@ public class SetEdgeInstanceDriverConfigsRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public SetEdgeInstanceDriverConfigsRequestConfigs setFormat(String format) {
-            this.format = format;
-            return this;
-        }
-        public String getFormat() {
-            return this.format;
-        }
-
         public SetEdgeInstanceDriverConfigsRequestConfigs setContent(String content) {
             this.content = content;
             return this;
         }
         public String getContent() {
             return this.content;
+        }
+
+        public SetEdgeInstanceDriverConfigsRequestConfigs setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
         }
 
         public SetEdgeInstanceDriverConfigsRequestConfigs setKey(String key) {

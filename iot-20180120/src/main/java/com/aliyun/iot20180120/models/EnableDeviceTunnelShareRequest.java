@@ -4,18 +4,26 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class EnableDeviceTunnelShareRequest extends TeaModel {
+    @NameInMap("DeviceName")
+    public String deviceName;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
     public String productKey;
 
-    @NameInMap("DeviceName")
-    public String deviceName;
-
     public static EnableDeviceTunnelShareRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableDeviceTunnelShareRequest self = new EnableDeviceTunnelShareRequest();
         return TeaModel.build(map, self);
+    }
+
+    public EnableDeviceTunnelShareRequest setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public String getDeviceName() {
+        return this.deviceName;
     }
 
     public EnableDeviceTunnelShareRequest setIotInstanceId(String iotInstanceId) {
@@ -32,14 +40,6 @@ public class EnableDeviceTunnelShareRequest extends TeaModel {
     }
     public String getProductKey() {
         return this.productKey;
-    }
-
-    public EnableDeviceTunnelShareRequest setDeviceName(String deviceName) {
-        this.deviceName = deviceName;
-        return this;
-    }
-    public String getDeviceName() {
-        return this.deviceName;
     }
 
 }

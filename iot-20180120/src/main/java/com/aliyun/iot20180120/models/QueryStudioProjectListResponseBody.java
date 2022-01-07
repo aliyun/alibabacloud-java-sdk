@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryStudioProjectListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryStudioProjectListResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryStudioProjectListResponseBodyData data;
-
     public static QueryStudioProjectListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryStudioProjectListResponseBody self = new QueryStudioProjectListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryStudioProjectListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryStudioProjectListResponseBody setData(QueryStudioProjectListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryStudioProjectListResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryStudioProjectListResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryStudioProjectListResponseBody setRequestId(String requestId) {
@@ -40,31 +64,10 @@ public class QueryStudioProjectListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryStudioProjectListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryStudioProjectListResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryStudioProjectListResponseBody setData(QueryStudioProjectListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryStudioProjectListResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryStudioProjectListResponseBodyDataListProjectInfo extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
@@ -77,12 +80,17 @@ public class QueryStudioProjectListResponseBody extends TeaModel {
         @NameInMap("ProjectId")
         public String projectId;
 
-        @NameInMap("Description")
-        public String description;
-
         public static QueryStudioProjectListResponseBodyDataListProjectInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryStudioProjectListResponseBodyDataListProjectInfo self = new QueryStudioProjectListResponseBodyDataListProjectInfo();
             return TeaModel.build(map, self);
+        }
+
+        public QueryStudioProjectListResponseBodyDataListProjectInfo setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public QueryStudioProjectListResponseBodyDataListProjectInfo setGmtCreate(Long gmtCreate) {
@@ -117,14 +125,6 @@ public class QueryStudioProjectListResponseBody extends TeaModel {
             return this.projectId;
         }
 
-        public QueryStudioProjectListResponseBodyDataListProjectInfo setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
     }
 
     public static class QueryStudioProjectListResponseBodyDataList extends TeaModel {
@@ -147,6 +147,9 @@ public class QueryStudioProjectListResponseBody extends TeaModel {
     }
 
     public static class QueryStudioProjectListResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public QueryStudioProjectListResponseBodyDataList list;
+
         @NameInMap("PageNo")
         public Integer pageNo;
 
@@ -159,12 +162,17 @@ public class QueryStudioProjectListResponseBody extends TeaModel {
         @NameInMap("TotalPage")
         public Integer totalPage;
 
-        @NameInMap("List")
-        public QueryStudioProjectListResponseBodyDataList list;
-
         public static QueryStudioProjectListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryStudioProjectListResponseBodyData self = new QueryStudioProjectListResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryStudioProjectListResponseBodyData setList(QueryStudioProjectListResponseBodyDataList list) {
+            this.list = list;
+            return this;
+        }
+        public QueryStudioProjectListResponseBodyDataList getList() {
+            return this.list;
         }
 
         public QueryStudioProjectListResponseBodyData setPageNo(Integer pageNo) {
@@ -197,14 +205,6 @@ public class QueryStudioProjectListResponseBody extends TeaModel {
         }
         public Integer getTotalPage() {
             return this.totalPage;
-        }
-
-        public QueryStudioProjectListResponseBodyData setList(QueryStudioProjectListResponseBodyDataList list) {
-            this.list = list;
-            return this;
-        }
-        public QueryStudioProjectListResponseBodyDataList getList() {
-            return this.list;
         }
 
     }

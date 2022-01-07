@@ -4,11 +4,17 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySpeechPushJobRequest extends TeaModel {
-    @NameInMap("StatusList")
-    public java.util.List<String> statusList;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
+
+    @NameInMap("JobCode")
+    public String jobCode;
+
+    @NameInMap("PageId")
+    public Integer pageId;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("ProjectCode")
     public String projectCode;
@@ -16,26 +22,12 @@ public class QuerySpeechPushJobRequest extends TeaModel {
     @NameInMap("PushMode")
     public String pushMode;
 
-    @NameInMap("JobCode")
-    public String jobCode;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageId")
-    public Integer pageId;
+    @NameInMap("StatusList")
+    public java.util.List<String> statusList;
 
     public static QuerySpeechPushJobRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySpeechPushJobRequest self = new QuerySpeechPushJobRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QuerySpeechPushJobRequest setStatusList(java.util.List<String> statusList) {
-        this.statusList = statusList;
-        return this;
-    }
-    public java.util.List<String> getStatusList() {
-        return this.statusList;
     }
 
     public QuerySpeechPushJobRequest setIotInstanceId(String iotInstanceId) {
@@ -44,6 +36,30 @@ public class QuerySpeechPushJobRequest extends TeaModel {
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
+    }
+
+    public QuerySpeechPushJobRequest setJobCode(String jobCode) {
+        this.jobCode = jobCode;
+        return this;
+    }
+    public String getJobCode() {
+        return this.jobCode;
+    }
+
+    public QuerySpeechPushJobRequest setPageId(Integer pageId) {
+        this.pageId = pageId;
+        return this;
+    }
+    public Integer getPageId() {
+        return this.pageId;
+    }
+
+    public QuerySpeechPushJobRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public QuerySpeechPushJobRequest setProjectCode(String projectCode) {
@@ -62,28 +78,12 @@ public class QuerySpeechPushJobRequest extends TeaModel {
         return this.pushMode;
     }
 
-    public QuerySpeechPushJobRequest setJobCode(String jobCode) {
-        this.jobCode = jobCode;
+    public QuerySpeechPushJobRequest setStatusList(java.util.List<String> statusList) {
+        this.statusList = statusList;
         return this;
     }
-    public String getJobCode() {
-        return this.jobCode;
-    }
-
-    public QuerySpeechPushJobRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public QuerySpeechPushJobRequest setPageId(Integer pageId) {
-        this.pageId = pageId;
-        return this;
-    }
-    public Integer getPageId() {
-        return this.pageId;
+    public java.util.List<String> getStatusList() {
+        return this.statusList;
     }
 
 }

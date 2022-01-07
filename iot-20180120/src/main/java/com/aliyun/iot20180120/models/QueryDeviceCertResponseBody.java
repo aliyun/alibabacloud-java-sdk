@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceCertResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("DeviceCertInfo")
+    public QueryDeviceCertResponseBodyDeviceCertInfo deviceCertInfo;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("DeviceCertInfo")
-    public QueryDeviceCertResponseBodyDeviceCertInfo deviceCertInfo;
-
     public static QueryDeviceCertResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceCertResponseBody self = new QueryDeviceCertResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceCertResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryDeviceCertResponseBody setDeviceCertInfo(QueryDeviceCertResponseBodyDeviceCertInfo deviceCertInfo) {
+        this.deviceCertInfo = deviceCertInfo;
+        return this;
+    }
+    public QueryDeviceCertResponseBodyDeviceCertInfo getDeviceCertInfo() {
+        return this.deviceCertInfo;
+    }
+
+    public QueryDeviceCertResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryDeviceCertResponseBody setRequestId(String requestId) {
@@ -40,33 +64,9 @@ public class QueryDeviceCertResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryDeviceCertResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryDeviceCertResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryDeviceCertResponseBody setDeviceCertInfo(QueryDeviceCertResponseBodyDeviceCertInfo deviceCertInfo) {
-        this.deviceCertInfo = deviceCertInfo;
-        return this;
-    }
-    public QueryDeviceCertResponseBodyDeviceCertInfo getDeviceCertInfo() {
-        return this.deviceCertInfo;
-    }
-
     public static class QueryDeviceCertResponseBodyDeviceCertInfo extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("CertSN")
+        public String certSN;
 
         @NameInMap("Certificate")
         public String certificate;
@@ -74,20 +74,20 @@ public class QueryDeviceCertResponseBody extends TeaModel {
         @NameInMap("PrivateKey")
         public String privateKey;
 
-        @NameInMap("CertSN")
-        public String certSN;
+        @NameInMap("Status")
+        public Integer status;
 
         public static QueryDeviceCertResponseBodyDeviceCertInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceCertResponseBodyDeviceCertInfo self = new QueryDeviceCertResponseBodyDeviceCertInfo();
             return TeaModel.build(map, self);
         }
 
-        public QueryDeviceCertResponseBodyDeviceCertInfo setStatus(Integer status) {
-            this.status = status;
+        public QueryDeviceCertResponseBodyDeviceCertInfo setCertSN(String certSN) {
+            this.certSN = certSN;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
+        public String getCertSN() {
+            return this.certSN;
         }
 
         public QueryDeviceCertResponseBodyDeviceCertInfo setCertificate(String certificate) {
@@ -106,12 +106,12 @@ public class QueryDeviceCertResponseBody extends TeaModel {
             return this.privateKey;
         }
 
-        public QueryDeviceCertResponseBodyDeviceCertInfo setCertSN(String certSN) {
-            this.certSN = certSN;
+        public QueryDeviceCertResponseBodyDeviceCertInfo setStatus(Integer status) {
+            this.status = status;
             return this;
         }
-        public String getCertSN() {
-            return this.certSN;
+        public Integer getStatus() {
+            return this.status;
         }
 
     }

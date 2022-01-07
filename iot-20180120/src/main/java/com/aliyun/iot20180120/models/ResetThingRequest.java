@@ -4,37 +4,21 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ResetThingRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
-    @NameInMap("ProductKey")
-    public String productKey;
-
     @NameInMap("DeviceName")
     public String deviceName;
 
     @NameInMap("IotId")
     public String iotId;
 
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
+    @NameInMap("ProductKey")
+    public String productKey;
+
     public static ResetThingRequest build(java.util.Map<String, ?> map) throws Exception {
         ResetThingRequest self = new ResetThingRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ResetThingRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
-    public ResetThingRequest setProductKey(String productKey) {
-        this.productKey = productKey;
-        return this;
-    }
-    public String getProductKey() {
-        return this.productKey;
     }
 
     public ResetThingRequest setDeviceName(String deviceName) {
@@ -51,6 +35,22 @@ public class ResetThingRequest extends TeaModel {
     }
     public String getIotId() {
         return this.iotId;
+    }
+
+    public ResetThingRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
+    public ResetThingRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
     }
 
 }

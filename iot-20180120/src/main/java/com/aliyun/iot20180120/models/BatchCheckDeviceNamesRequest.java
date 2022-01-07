@@ -4,37 +4,21 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchCheckDeviceNamesRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
-    @NameInMap("ProductKey")
-    public String productKey;
-
     @NameInMap("DeviceName")
     public java.util.List<String> deviceName;
 
     @NameInMap("DeviceNameList")
     public java.util.List<BatchCheckDeviceNamesRequestDeviceNameList> deviceNameList;
 
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
+    @NameInMap("ProductKey")
+    public String productKey;
+
     public static BatchCheckDeviceNamesRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchCheckDeviceNamesRequest self = new BatchCheckDeviceNamesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchCheckDeviceNamesRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
-    public BatchCheckDeviceNamesRequest setProductKey(String productKey) {
-        this.productKey = productKey;
-        return this;
-    }
-    public String getProductKey() {
-        return this.productKey;
     }
 
     public BatchCheckDeviceNamesRequest setDeviceName(java.util.List<String> deviceName) {
@@ -51,6 +35,22 @@ public class BatchCheckDeviceNamesRequest extends TeaModel {
     }
     public java.util.List<BatchCheckDeviceNamesRequestDeviceNameList> getDeviceNameList() {
         return this.deviceNameList;
+    }
+
+    public BatchCheckDeviceNamesRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
+    public BatchCheckDeviceNamesRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
     }
 
     public static class BatchCheckDeviceNamesRequestDeviceNameList extends TeaModel {

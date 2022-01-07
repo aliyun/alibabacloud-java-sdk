@@ -4,20 +4,20 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class SetDeviceDesiredPropertyRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
+    @NameInMap("DeviceName")
+    public String deviceName;
 
     @NameInMap("IotId")
     public String iotId;
 
-    @NameInMap("DeviceName")
-    public String deviceName;
-
-    @NameInMap("ProductKey")
-    public String productKey;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("Items")
     public String items;
+
+    @NameInMap("ProductKey")
+    public String productKey;
 
     @NameInMap("Versions")
     public String versions;
@@ -25,22 +25,6 @@ public class SetDeviceDesiredPropertyRequest extends TeaModel {
     public static SetDeviceDesiredPropertyRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDeviceDesiredPropertyRequest self = new SetDeviceDesiredPropertyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetDeviceDesiredPropertyRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
-    public SetDeviceDesiredPropertyRequest setIotId(String iotId) {
-        this.iotId = iotId;
-        return this;
-    }
-    public String getIotId() {
-        return this.iotId;
     }
 
     public SetDeviceDesiredPropertyRequest setDeviceName(String deviceName) {
@@ -51,12 +35,20 @@ public class SetDeviceDesiredPropertyRequest extends TeaModel {
         return this.deviceName;
     }
 
-    public SetDeviceDesiredPropertyRequest setProductKey(String productKey) {
-        this.productKey = productKey;
+    public SetDeviceDesiredPropertyRequest setIotId(String iotId) {
+        this.iotId = iotId;
         return this;
     }
-    public String getProductKey() {
-        return this.productKey;
+    public String getIotId() {
+        return this.iotId;
+    }
+
+    public SetDeviceDesiredPropertyRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public SetDeviceDesiredPropertyRequest setItems(String items) {
@@ -65,6 +57,14 @@ public class SetDeviceDesiredPropertyRequest extends TeaModel {
     }
     public String getItems() {
         return this.items;
+    }
+
+    public SetDeviceDesiredPropertyRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
     }
 
     public SetDeviceDesiredPropertyRequest setVersions(String versions) {

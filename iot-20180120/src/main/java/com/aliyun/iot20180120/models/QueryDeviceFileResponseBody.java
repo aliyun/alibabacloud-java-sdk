@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceFileResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryDeviceFileResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryDeviceFileResponseBodyData data;
-
     public static QueryDeviceFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceFileResponseBody self = new QueryDeviceFileResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceFileResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryDeviceFileResponseBody setData(QueryDeviceFileResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryDeviceFileResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryDeviceFileResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryDeviceFileResponseBody setRequestId(String requestId) {
@@ -40,31 +64,10 @@ public class QueryDeviceFileResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryDeviceFileResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryDeviceFileResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryDeviceFileResponseBody setData(QueryDeviceFileResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryDeviceFileResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryDeviceFileResponseBodyData extends TeaModel {
+        @NameInMap("DownloadUrl")
+        public String downloadUrl;
+
         @NameInMap("FileId")
         public String fileId;
 
@@ -77,12 +80,17 @@ public class QueryDeviceFileResponseBody extends TeaModel {
         @NameInMap("UtcCreatedOn")
         public String utcCreatedOn;
 
-        @NameInMap("DownloadUrl")
-        public String downloadUrl;
-
         public static QueryDeviceFileResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceFileResponseBodyData self = new QueryDeviceFileResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryDeviceFileResponseBodyData setDownloadUrl(String downloadUrl) {
+            this.downloadUrl = downloadUrl;
+            return this;
+        }
+        public String getDownloadUrl() {
+            return this.downloadUrl;
         }
 
         public QueryDeviceFileResponseBodyData setFileId(String fileId) {
@@ -115,14 +123,6 @@ public class QueryDeviceFileResponseBody extends TeaModel {
         }
         public String getUtcCreatedOn() {
             return this.utcCreatedOn;
-        }
-
-        public QueryDeviceFileResponseBodyData setDownloadUrl(String downloadUrl) {
-            this.downloadUrl = downloadUrl;
-            return this;
-        }
-        public String getDownloadUrl() {
-            return this.downloadUrl;
         }
 
     }

@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryProductResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryProductResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryProductResponseBodyData data;
-
     public static QueryProductResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryProductResponseBody self = new QueryProductResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryProductResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryProductResponseBody setData(QueryProductResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryProductResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryProductResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryProductResponseBody setRequestId(String requestId) {
@@ -40,33 +64,18 @@ public class QueryProductResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryProductResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryProductResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryProductResponseBody setData(QueryProductResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryProductResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryProductResponseBodyData extends TeaModel {
-        @NameInMap("GmtCreate")
-        public Long gmtCreate;
+        @NameInMap("AliyunCommodityCode")
+        public String aliyunCommodityCode;
+
+        @NameInMap("AuthType")
+        public String authType;
+
+        @NameInMap("CategoryKey")
+        public String categoryKey;
+
+        @NameInMap("CategoryName")
+        public String categoryName;
 
         @NameInMap("DataFormat")
         public Integer dataFormat;
@@ -77,8 +86,20 @@ public class QueryProductResponseBody extends TeaModel {
         @NameInMap("DeviceCount")
         public Integer deviceCount;
 
+        @NameInMap("GmtCreate")
+        public Long gmtCreate;
+
+        @NameInMap("Id2")
+        public Boolean id2;
+
+        @NameInMap("NetType")
+        public Integer netType;
+
         @NameInMap("NodeType")
         public Integer nodeType;
+
+        @NameInMap("Owner")
+        public Boolean owner;
 
         @NameInMap("ProductKey")
         public String productKey;
@@ -89,32 +110,11 @@ public class QueryProductResponseBody extends TeaModel {
         @NameInMap("ProductSecret")
         public String productSecret;
 
-        @NameInMap("CategoryName")
-        public String categoryName;
-
-        @NameInMap("CategoryKey")
-        public String categoryKey;
-
-        @NameInMap("AliyunCommodityCode")
-        public String aliyunCommodityCode;
-
-        @NameInMap("Id2")
-        public Boolean id2;
-
-        @NameInMap("ProtocolType")
-        public String protocolType;
-
         @NameInMap("ProductStatus")
         public String productStatus;
 
-        @NameInMap("Owner")
-        public Boolean owner;
-
-        @NameInMap("NetType")
-        public Integer netType;
-
-        @NameInMap("AuthType")
-        public String authType;
+        @NameInMap("ProtocolType")
+        public String protocolType;
 
         @NameInMap("ValidateType")
         public Integer validateType;
@@ -124,12 +124,36 @@ public class QueryProductResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryProductResponseBodyData setGmtCreate(Long gmtCreate) {
-            this.gmtCreate = gmtCreate;
+        public QueryProductResponseBodyData setAliyunCommodityCode(String aliyunCommodityCode) {
+            this.aliyunCommodityCode = aliyunCommodityCode;
             return this;
         }
-        public Long getGmtCreate() {
-            return this.gmtCreate;
+        public String getAliyunCommodityCode() {
+            return this.aliyunCommodityCode;
+        }
+
+        public QueryProductResponseBodyData setAuthType(String authType) {
+            this.authType = authType;
+            return this;
+        }
+        public String getAuthType() {
+            return this.authType;
+        }
+
+        public QueryProductResponseBodyData setCategoryKey(String categoryKey) {
+            this.categoryKey = categoryKey;
+            return this;
+        }
+        public String getCategoryKey() {
+            return this.categoryKey;
+        }
+
+        public QueryProductResponseBodyData setCategoryName(String categoryName) {
+            this.categoryName = categoryName;
+            return this;
+        }
+        public String getCategoryName() {
+            return this.categoryName;
         }
 
         public QueryProductResponseBodyData setDataFormat(Integer dataFormat) {
@@ -156,12 +180,44 @@ public class QueryProductResponseBody extends TeaModel {
             return this.deviceCount;
         }
 
+        public QueryProductResponseBodyData setGmtCreate(Long gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public Long getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public QueryProductResponseBodyData setId2(Boolean id2) {
+            this.id2 = id2;
+            return this;
+        }
+        public Boolean getId2() {
+            return this.id2;
+        }
+
+        public QueryProductResponseBodyData setNetType(Integer netType) {
+            this.netType = netType;
+            return this;
+        }
+        public Integer getNetType() {
+            return this.netType;
+        }
+
         public QueryProductResponseBodyData setNodeType(Integer nodeType) {
             this.nodeType = nodeType;
             return this;
         }
         public Integer getNodeType() {
             return this.nodeType;
+        }
+
+        public QueryProductResponseBodyData setOwner(Boolean owner) {
+            this.owner = owner;
+            return this;
+        }
+        public Boolean getOwner() {
+            return this.owner;
         }
 
         public QueryProductResponseBodyData setProductKey(String productKey) {
@@ -188,46 +244,6 @@ public class QueryProductResponseBody extends TeaModel {
             return this.productSecret;
         }
 
-        public QueryProductResponseBodyData setCategoryName(String categoryName) {
-            this.categoryName = categoryName;
-            return this;
-        }
-        public String getCategoryName() {
-            return this.categoryName;
-        }
-
-        public QueryProductResponseBodyData setCategoryKey(String categoryKey) {
-            this.categoryKey = categoryKey;
-            return this;
-        }
-        public String getCategoryKey() {
-            return this.categoryKey;
-        }
-
-        public QueryProductResponseBodyData setAliyunCommodityCode(String aliyunCommodityCode) {
-            this.aliyunCommodityCode = aliyunCommodityCode;
-            return this;
-        }
-        public String getAliyunCommodityCode() {
-            return this.aliyunCommodityCode;
-        }
-
-        public QueryProductResponseBodyData setId2(Boolean id2) {
-            this.id2 = id2;
-            return this;
-        }
-        public Boolean getId2() {
-            return this.id2;
-        }
-
-        public QueryProductResponseBodyData setProtocolType(String protocolType) {
-            this.protocolType = protocolType;
-            return this;
-        }
-        public String getProtocolType() {
-            return this.protocolType;
-        }
-
         public QueryProductResponseBodyData setProductStatus(String productStatus) {
             this.productStatus = productStatus;
             return this;
@@ -236,28 +252,12 @@ public class QueryProductResponseBody extends TeaModel {
             return this.productStatus;
         }
 
-        public QueryProductResponseBodyData setOwner(Boolean owner) {
-            this.owner = owner;
+        public QueryProductResponseBodyData setProtocolType(String protocolType) {
+            this.protocolType = protocolType;
             return this;
         }
-        public Boolean getOwner() {
-            return this.owner;
-        }
-
-        public QueryProductResponseBodyData setNetType(Integer netType) {
-            this.netType = netType;
-            return this;
-        }
-        public Integer getNetType() {
-            return this.netType;
-        }
-
-        public QueryProductResponseBodyData setAuthType(String authType) {
-            this.authType = authType;
-            return this;
-        }
-        public String getAuthType() {
-            return this.authType;
+        public String getProtocolType() {
+            return this.protocolType;
         }
 
         public QueryProductResponseBodyData setValidateType(Integer validateType) {

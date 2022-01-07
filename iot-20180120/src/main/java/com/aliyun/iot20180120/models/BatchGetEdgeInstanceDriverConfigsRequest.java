@@ -4,26 +4,26 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchGetEdgeInstanceDriverConfigsRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
+    @NameInMap("DriverIds")
+    public java.util.List<String> driverIds;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("DriverIds")
-    public java.util.List<String> driverIds;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     public static BatchGetEdgeInstanceDriverConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchGetEdgeInstanceDriverConfigsRequest self = new BatchGetEdgeInstanceDriverConfigsRequest();
         return TeaModel.build(map, self);
     }
 
-    public BatchGetEdgeInstanceDriverConfigsRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
+    public BatchGetEdgeInstanceDriverConfigsRequest setDriverIds(java.util.List<String> driverIds) {
+        this.driverIds = driverIds;
         return this;
     }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
+    public java.util.List<String> getDriverIds() {
+        return this.driverIds;
     }
 
     public BatchGetEdgeInstanceDriverConfigsRequest setInstanceId(String instanceId) {
@@ -34,12 +34,12 @@ public class BatchGetEdgeInstanceDriverConfigsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public BatchGetEdgeInstanceDriverConfigsRequest setDriverIds(java.util.List<String> driverIds) {
-        this.driverIds = driverIds;
+    public BatchGetEdgeInstanceDriverConfigsRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
         return this;
     }
-    public java.util.List<String> getDriverIds() {
-        return this.driverIds;
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
 }

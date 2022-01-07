@@ -4,20 +4,20 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class RRpcRequest extends TeaModel {
+    @NameInMap("DeviceName")
+    public String deviceName;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
     public String productKey;
 
-    @NameInMap("DeviceName")
-    public String deviceName;
+    @NameInMap("RequestBase64Byte")
+    public String requestBase64Byte;
 
     @NameInMap("Timeout")
     public Integer timeout;
-
-    @NameInMap("RequestBase64Byte")
-    public String requestBase64Byte;
 
     @NameInMap("Topic")
     public String topic;
@@ -25,6 +25,14 @@ public class RRpcRequest extends TeaModel {
     public static RRpcRequest build(java.util.Map<String, ?> map) throws Exception {
         RRpcRequest self = new RRpcRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RRpcRequest setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public String getDeviceName() {
+        return this.deviceName;
     }
 
     public RRpcRequest setIotInstanceId(String iotInstanceId) {
@@ -43,12 +51,12 @@ public class RRpcRequest extends TeaModel {
         return this.productKey;
     }
 
-    public RRpcRequest setDeviceName(String deviceName) {
-        this.deviceName = deviceName;
+    public RRpcRequest setRequestBase64Byte(String requestBase64Byte) {
+        this.requestBase64Byte = requestBase64Byte;
         return this;
     }
-    public String getDeviceName() {
-        return this.deviceName;
+    public String getRequestBase64Byte() {
+        return this.requestBase64Byte;
     }
 
     public RRpcRequest setTimeout(Integer timeout) {
@@ -57,14 +65,6 @@ public class RRpcRequest extends TeaModel {
     }
     public Integer getTimeout() {
         return this.timeout;
-    }
-
-    public RRpcRequest setRequestBase64Byte(String requestBase64Byte) {
-        this.requestBase64Byte = requestBase64Byte;
-        return this;
-    }
-    public String getRequestBase64Byte() {
-        return this.requestBase64Byte;
     }
 
     public RRpcRequest setTopic(String topic) {

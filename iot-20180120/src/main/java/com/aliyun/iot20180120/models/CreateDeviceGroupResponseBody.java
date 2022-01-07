@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateDeviceGroupResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public CreateDeviceGroupResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public CreateDeviceGroupResponseBodyData data;
-
     public static CreateDeviceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDeviceGroupResponseBody self = new CreateDeviceGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDeviceGroupResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateDeviceGroupResponseBody setData(CreateDeviceGroupResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateDeviceGroupResponseBodyData getData() {
+        return this.data;
+    }
+
+    public CreateDeviceGroupResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public CreateDeviceGroupResponseBody setRequestId(String requestId) {
@@ -40,46 +64,30 @@ public class CreateDeviceGroupResponseBody extends TeaModel {
         return this.success;
     }
 
-    public CreateDeviceGroupResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public CreateDeviceGroupResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public CreateDeviceGroupResponseBody setData(CreateDeviceGroupResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateDeviceGroupResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class CreateDeviceGroupResponseBodyData extends TeaModel {
+        @NameInMap("GroupDesc")
+        public String groupDesc;
+
         @NameInMap("GroupId")
         public String groupId;
-
-        @NameInMap("UtcCreate")
-        public String utcCreate;
 
         @NameInMap("GroupName")
         public String groupName;
 
-        @NameInMap("GroupDesc")
-        public String groupDesc;
+        @NameInMap("UtcCreate")
+        public String utcCreate;
 
         public static CreateDeviceGroupResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateDeviceGroupResponseBodyData self = new CreateDeviceGroupResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDeviceGroupResponseBodyData setGroupDesc(String groupDesc) {
+            this.groupDesc = groupDesc;
+            return this;
+        }
+        public String getGroupDesc() {
+            return this.groupDesc;
         }
 
         public CreateDeviceGroupResponseBodyData setGroupId(String groupId) {
@@ -90,14 +98,6 @@ public class CreateDeviceGroupResponseBody extends TeaModel {
             return this.groupId;
         }
 
-        public CreateDeviceGroupResponseBodyData setUtcCreate(String utcCreate) {
-            this.utcCreate = utcCreate;
-            return this;
-        }
-        public String getUtcCreate() {
-            return this.utcCreate;
-        }
-
         public CreateDeviceGroupResponseBodyData setGroupName(String groupName) {
             this.groupName = groupName;
             return this;
@@ -106,12 +106,12 @@ public class CreateDeviceGroupResponseBody extends TeaModel {
             return this.groupName;
         }
 
-        public CreateDeviceGroupResponseBodyData setGroupDesc(String groupDesc) {
-            this.groupDesc = groupDesc;
+        public CreateDeviceGroupResponseBodyData setUtcCreate(String utcCreate) {
+            this.utcCreate = utcCreate;
             return this;
         }
-        public String getGroupDesc() {
-            return this.groupDesc;
+        public String getUtcCreate() {
+            return this.utcCreate;
         }
 
     }

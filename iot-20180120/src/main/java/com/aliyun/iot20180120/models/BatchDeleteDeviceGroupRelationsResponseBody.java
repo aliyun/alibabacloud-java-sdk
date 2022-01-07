@@ -4,11 +4,8 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchDeleteDeviceGroupRelationsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("AlreadyRelatedGroupDeviceCount")
+    public Integer alreadyRelatedGroupDeviceCount;
 
     @NameInMap("Code")
     public String code;
@@ -16,34 +13,29 @@ public class BatchDeleteDeviceGroupRelationsResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    @NameInMap("ValidDeviceCount")
-    public Integer validDeviceCount;
+    @NameInMap("RequestId")
+    public String requestId;
 
-    @NameInMap("AlreadyRelatedGroupDeviceCount")
-    public Integer alreadyRelatedGroupDeviceCount;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("SuccessDeviceCount")
     public Integer successDeviceCount;
+
+    @NameInMap("ValidDeviceCount")
+    public Integer validDeviceCount;
 
     public static BatchDeleteDeviceGroupRelationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchDeleteDeviceGroupRelationsResponseBody self = new BatchDeleteDeviceGroupRelationsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public BatchDeleteDeviceGroupRelationsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public BatchDeleteDeviceGroupRelationsResponseBody setAlreadyRelatedGroupDeviceCount(Integer alreadyRelatedGroupDeviceCount) {
+        this.alreadyRelatedGroupDeviceCount = alreadyRelatedGroupDeviceCount;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public BatchDeleteDeviceGroupRelationsResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public Integer getAlreadyRelatedGroupDeviceCount() {
+        return this.alreadyRelatedGroupDeviceCount;
     }
 
     public BatchDeleteDeviceGroupRelationsResponseBody setCode(String code) {
@@ -62,20 +54,20 @@ public class BatchDeleteDeviceGroupRelationsResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public BatchDeleteDeviceGroupRelationsResponseBody setValidDeviceCount(Integer validDeviceCount) {
-        this.validDeviceCount = validDeviceCount;
+    public BatchDeleteDeviceGroupRelationsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getValidDeviceCount() {
-        return this.validDeviceCount;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public BatchDeleteDeviceGroupRelationsResponseBody setAlreadyRelatedGroupDeviceCount(Integer alreadyRelatedGroupDeviceCount) {
-        this.alreadyRelatedGroupDeviceCount = alreadyRelatedGroupDeviceCount;
+    public BatchDeleteDeviceGroupRelationsResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public Integer getAlreadyRelatedGroupDeviceCount() {
-        return this.alreadyRelatedGroupDeviceCount;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public BatchDeleteDeviceGroupRelationsResponseBody setSuccessDeviceCount(Integer successDeviceCount) {
@@ -84,6 +76,14 @@ public class BatchDeleteDeviceGroupRelationsResponseBody extends TeaModel {
     }
     public Integer getSuccessDeviceCount() {
         return this.successDeviceCount;
+    }
+
+    public BatchDeleteDeviceGroupRelationsResponseBody setValidDeviceCount(Integer validDeviceCount) {
+        this.validDeviceCount = validDeviceCount;
+        return this;
+    }
+    public Integer getValidDeviceCount() {
+        return this.validDeviceCount;
     }
 
 }

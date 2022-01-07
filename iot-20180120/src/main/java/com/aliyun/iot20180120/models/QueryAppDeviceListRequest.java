@@ -4,6 +4,15 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryAppDeviceListRequest extends TeaModel {
+    @NameInMap("AppKey")
+    public String appKey;
+
+    @NameInMap("CategoryKeyList")
+    public java.util.List<String> categoryKeyList;
+
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -13,21 +22,36 @@ public class QueryAppDeviceListRequest extends TeaModel {
     @NameInMap("ProductKeyList")
     public java.util.List<String> productKeyList;
 
-    @NameInMap("CategoryKeyList")
-    public java.util.List<String> categoryKeyList;
-
-    @NameInMap("AppKey")
-    public String appKey;
-
     @NameInMap("TagList")
     public java.util.List<QueryAppDeviceListRequestTagList> tagList;
-
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
 
     public static QueryAppDeviceListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAppDeviceListRequest self = new QueryAppDeviceListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryAppDeviceListRequest setAppKey(String appKey) {
+        this.appKey = appKey;
+        return this;
+    }
+    public String getAppKey() {
+        return this.appKey;
+    }
+
+    public QueryAppDeviceListRequest setCategoryKeyList(java.util.List<String> categoryKeyList) {
+        this.categoryKeyList = categoryKeyList;
+        return this;
+    }
+    public java.util.List<String> getCategoryKeyList() {
+        return this.categoryKeyList;
+    }
+
+    public QueryAppDeviceListRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public QueryAppDeviceListRequest setIotInstanceId(String iotInstanceId) {
@@ -54,36 +78,12 @@ public class QueryAppDeviceListRequest extends TeaModel {
         return this.productKeyList;
     }
 
-    public QueryAppDeviceListRequest setCategoryKeyList(java.util.List<String> categoryKeyList) {
-        this.categoryKeyList = categoryKeyList;
-        return this;
-    }
-    public java.util.List<String> getCategoryKeyList() {
-        return this.categoryKeyList;
-    }
-
-    public QueryAppDeviceListRequest setAppKey(String appKey) {
-        this.appKey = appKey;
-        return this;
-    }
-    public String getAppKey() {
-        return this.appKey;
-    }
-
     public QueryAppDeviceListRequest setTagList(java.util.List<QueryAppDeviceListRequestTagList> tagList) {
         this.tagList = tagList;
         return this;
     }
     public java.util.List<QueryAppDeviceListRequestTagList> getTagList() {
         return this.tagList;
-    }
-
-    public QueryAppDeviceListRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
     }
 
     public static class QueryAppDeviceListRequestTagList extends TeaModel {

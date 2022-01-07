@@ -4,35 +4,35 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateEdgeInstanceRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
+    @NameInMap("BizEnable")
+    public Boolean bizEnable;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
     @NameInMap("Name")
     public String name;
-
-    @NameInMap("Tags")
-    public String tags;
 
     @NameInMap("Spec")
     public Integer spec;
 
-    @NameInMap("BizEnable")
-    public Boolean bizEnable;
+    @NameInMap("Tags")
+    public String tags;
 
     public static UpdateEdgeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEdgeInstanceRequest self = new UpdateEdgeInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateEdgeInstanceRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
+    public UpdateEdgeInstanceRequest setBizEnable(Boolean bizEnable) {
+        this.bizEnable = bizEnable;
         return this;
     }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
+    public Boolean getBizEnable() {
+        return this.bizEnable;
     }
 
     public UpdateEdgeInstanceRequest setInstanceId(String instanceId) {
@@ -43,20 +43,20 @@ public class UpdateEdgeInstanceRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public UpdateEdgeInstanceRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
     public UpdateEdgeInstanceRequest setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
-    }
-
-    public UpdateEdgeInstanceRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
     public UpdateEdgeInstanceRequest setSpec(Integer spec) {
@@ -67,12 +67,12 @@ public class UpdateEdgeInstanceRequest extends TeaModel {
         return this.spec;
     }
 
-    public UpdateEdgeInstanceRequest setBizEnable(Boolean bizEnable) {
-        this.bizEnable = bizEnable;
+    public UpdateEdgeInstanceRequest setTags(String tags) {
+        this.tags = tags;
         return this;
     }
-    public Boolean getBizEnable() {
-        return this.bizEnable;
+    public String getTags() {
+        return this.tags;
     }
 
 }

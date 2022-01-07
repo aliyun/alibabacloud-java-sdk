@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryMessageInfoResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("Message")
+    public QueryMessageInfoResponseBodyMessage message;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public QueryMessageInfoResponseBodyMessage message;
-
     public static QueryMessageInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMessageInfoResponseBody self = new QueryMessageInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMessageInfoResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryMessageInfoResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public QueryMessageInfoResponseBody setMessage(QueryMessageInfoResponseBodyMessage message) {
+        this.message = message;
+        return this;
+    }
+    public QueryMessageInfoResponseBodyMessage getMessage() {
+        return this.message;
     }
 
     public QueryMessageInfoResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class QueryMessageInfoResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public QueryMessageInfoResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryMessageInfoResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryMessageInfoResponseBody setMessage(QueryMessageInfoResponseBodyMessage message) {
-        this.message = message;
-        return this;
-    }
-    public QueryMessageInfoResponseBodyMessage getMessage() {
-        return this.message;
     }
 
     public static class QueryMessageInfoResponseBodyMessageUserProperties extends TeaModel {
@@ -95,17 +95,17 @@ public class QueryMessageInfoResponseBody extends TeaModel {
     }
 
     public static class QueryMessageInfoResponseBodyMessage extends TeaModel {
-        @NameInMap("UniMsgId")
-        public String uniMsgId;
-
-        @NameInMap("TopicFullName")
-        public String topicFullName;
+        @NameInMap("GenerateTime")
+        public Long generateTime;
 
         @NameInMap("MessageContent")
         public String messageContent;
 
-        @NameInMap("GenerateTime")
-        public Long generateTime;
+        @NameInMap("TopicFullName")
+        public String topicFullName;
+
+        @NameInMap("UniMsgId")
+        public String uniMsgId;
 
         @NameInMap("UserProperties")
         public java.util.List<QueryMessageInfoResponseBodyMessageUserProperties> userProperties;
@@ -115,20 +115,12 @@ public class QueryMessageInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryMessageInfoResponseBodyMessage setUniMsgId(String uniMsgId) {
-            this.uniMsgId = uniMsgId;
+        public QueryMessageInfoResponseBodyMessage setGenerateTime(Long generateTime) {
+            this.generateTime = generateTime;
             return this;
         }
-        public String getUniMsgId() {
-            return this.uniMsgId;
-        }
-
-        public QueryMessageInfoResponseBodyMessage setTopicFullName(String topicFullName) {
-            this.topicFullName = topicFullName;
-            return this;
-        }
-        public String getTopicFullName() {
-            return this.topicFullName;
+        public Long getGenerateTime() {
+            return this.generateTime;
         }
 
         public QueryMessageInfoResponseBodyMessage setMessageContent(String messageContent) {
@@ -139,12 +131,20 @@ public class QueryMessageInfoResponseBody extends TeaModel {
             return this.messageContent;
         }
 
-        public QueryMessageInfoResponseBodyMessage setGenerateTime(Long generateTime) {
-            this.generateTime = generateTime;
+        public QueryMessageInfoResponseBodyMessage setTopicFullName(String topicFullName) {
+            this.topicFullName = topicFullName;
             return this;
         }
-        public Long getGenerateTime() {
-            return this.generateTime;
+        public String getTopicFullName() {
+            return this.topicFullName;
+        }
+
+        public QueryMessageInfoResponseBodyMessage setUniMsgId(String uniMsgId) {
+            this.uniMsgId = uniMsgId;
+            return this;
+        }
+        public String getUniMsgId() {
+            return this.uniMsgId;
         }
 
         public QueryMessageInfoResponseBodyMessage setUserProperties(java.util.List<QueryMessageInfoResponseBodyMessageUserProperties> userProperties) {

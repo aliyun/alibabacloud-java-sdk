@@ -4,21 +4,37 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchAddThingTopoRequest extends TeaModel {
+    @NameInMap("GwDeviceName")
+    public String gwDeviceName;
+
+    @NameInMap("GwProductKey")
+    public String gwProductKey;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("TopoAddItem")
     public java.util.List<BatchAddThingTopoRequestTopoAddItem> topoAddItem;
 
-    @NameInMap("GwProductKey")
-    public String gwProductKey;
-
-    @NameInMap("GwDeviceName")
-    public String gwDeviceName;
-
     public static BatchAddThingTopoRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchAddThingTopoRequest self = new BatchAddThingTopoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchAddThingTopoRequest setGwDeviceName(String gwDeviceName) {
+        this.gwDeviceName = gwDeviceName;
+        return this;
+    }
+    public String getGwDeviceName() {
+        return this.gwDeviceName;
+    }
+
+    public BatchAddThingTopoRequest setGwProductKey(String gwProductKey) {
+        this.gwProductKey = gwProductKey;
+        return this;
+    }
+    public String getGwProductKey() {
+        return this.gwProductKey;
     }
 
     public BatchAddThingTopoRequest setIotInstanceId(String iotInstanceId) {
@@ -37,28 +53,15 @@ public class BatchAddThingTopoRequest extends TeaModel {
         return this.topoAddItem;
     }
 
-    public BatchAddThingTopoRequest setGwProductKey(String gwProductKey) {
-        this.gwProductKey = gwProductKey;
-        return this;
-    }
-    public String getGwProductKey() {
-        return this.gwProductKey;
-    }
-
-    public BatchAddThingTopoRequest setGwDeviceName(String gwDeviceName) {
-        this.gwDeviceName = gwDeviceName;
-        return this;
-    }
-    public String getGwDeviceName() {
-        return this.gwDeviceName;
-    }
-
     public static class BatchAddThingTopoRequestTopoAddItem extends TeaModel {
-        @NameInMap("ProductKey")
-        public String productKey;
+        @NameInMap("ClientId")
+        public String clientId;
 
         @NameInMap("DeviceName")
         public String deviceName;
+
+        @NameInMap("ProductKey")
+        public String productKey;
 
         @NameInMap("Sign")
         public String sign;
@@ -69,20 +72,17 @@ public class BatchAddThingTopoRequest extends TeaModel {
         @NameInMap("Timestamp")
         public String timestamp;
 
-        @NameInMap("ClientId")
-        public String clientId;
-
         public static BatchAddThingTopoRequestTopoAddItem build(java.util.Map<String, ?> map) throws Exception {
             BatchAddThingTopoRequestTopoAddItem self = new BatchAddThingTopoRequestTopoAddItem();
             return TeaModel.build(map, self);
         }
 
-        public BatchAddThingTopoRequestTopoAddItem setProductKey(String productKey) {
-            this.productKey = productKey;
+        public BatchAddThingTopoRequestTopoAddItem setClientId(String clientId) {
+            this.clientId = clientId;
             return this;
         }
-        public String getProductKey() {
-            return this.productKey;
+        public String getClientId() {
+            return this.clientId;
         }
 
         public BatchAddThingTopoRequestTopoAddItem setDeviceName(String deviceName) {
@@ -91,6 +91,14 @@ public class BatchAddThingTopoRequest extends TeaModel {
         }
         public String getDeviceName() {
             return this.deviceName;
+        }
+
+        public BatchAddThingTopoRequestTopoAddItem setProductKey(String productKey) {
+            this.productKey = productKey;
+            return this;
+        }
+        public String getProductKey() {
+            return this.productKey;
         }
 
         public BatchAddThingTopoRequestTopoAddItem setSign(String sign) {
@@ -115,14 +123,6 @@ public class BatchAddThingTopoRequest extends TeaModel {
         }
         public String getTimestamp() {
             return this.timestamp;
-        }
-
-        public BatchAddThingTopoRequestTopoAddItem setClientId(String clientId) {
-            this.clientId = clientId;
-            return this;
-        }
-        public String getClientId() {
-            return this.clientId;
         }
 
     }

@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchGetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("DeviceChannelList")
+    public java.util.List<BatchGetEdgeInstanceDeviceChannelResponseBodyDeviceChannelList> deviceChannelList;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("DeviceChannelList")
-    public java.util.List<BatchGetEdgeInstanceDeviceChannelResponseBodyDeviceChannelList> deviceChannelList;
-
     public static BatchGetEdgeInstanceDeviceChannelResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchGetEdgeInstanceDeviceChannelResponseBody self = new BatchGetEdgeInstanceDeviceChannelResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public BatchGetEdgeInstanceDeviceChannelResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public BatchGetEdgeInstanceDeviceChannelResponseBody setDeviceChannelList(java.util.List<BatchGetEdgeInstanceDeviceChannelResponseBodyDeviceChannelList> deviceChannelList) {
+        this.deviceChannelList = deviceChannelList;
+        return this;
+    }
+    public java.util.List<BatchGetEdgeInstanceDeviceChannelResponseBodyDeviceChannelList> getDeviceChannelList() {
+        return this.deviceChannelList;
+    }
+
+    public BatchGetEdgeInstanceDeviceChannelResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public BatchGetEdgeInstanceDeviceChannelResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class BatchGetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public BatchGetEdgeInstanceDeviceChannelResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public BatchGetEdgeInstanceDeviceChannelResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public BatchGetEdgeInstanceDeviceChannelResponseBody setDeviceChannelList(java.util.List<BatchGetEdgeInstanceDeviceChannelResponseBodyDeviceChannelList> deviceChannelList) {
-        this.deviceChannelList = deviceChannelList;
-        return this;
-    }
-    public java.util.List<BatchGetEdgeInstanceDeviceChannelResponseBodyDeviceChannelList> getDeviceChannelList() {
-        return this.deviceChannelList;
     }
 
     public static class BatchGetEdgeInstanceDeviceChannelResponseBodyDeviceChannelList extends TeaModel {

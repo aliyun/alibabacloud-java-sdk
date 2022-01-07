@@ -4,17 +4,23 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetNodesAddingTaskResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("SuccessCount")
+    public Long successCount;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("SuccessDevEuis")
+    public GetNodesAddingTaskResponseBodySuccessDevEuis successDevEuis;
 
     @NameInMap("TaskId")
     public String taskId;
@@ -25,15 +31,25 @@ public class GetNodesAddingTaskResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    @NameInMap("SuccessCount")
-    public Long successCount;
-
-    @NameInMap("SuccessDevEuis")
-    public GetNodesAddingTaskResponseBodySuccessDevEuis successDevEuis;
-
     public static GetNodesAddingTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetNodesAddingTaskResponseBody self = new GetNodesAddingTaskResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetNodesAddingTaskResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetNodesAddingTaskResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetNodesAddingTaskResponseBody setRequestId(String requestId) {
@@ -52,20 +68,20 @@ public class GetNodesAddingTaskResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetNodesAddingTaskResponseBody setCode(String code) {
-        this.code = code;
+    public GetNodesAddingTaskResponseBody setSuccessCount(Long successCount) {
+        this.successCount = successCount;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public Long getSuccessCount() {
+        return this.successCount;
     }
 
-    public GetNodesAddingTaskResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public GetNodesAddingTaskResponseBody setSuccessDevEuis(GetNodesAddingTaskResponseBodySuccessDevEuis successDevEuis) {
+        this.successDevEuis = successDevEuis;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public GetNodesAddingTaskResponseBodySuccessDevEuis getSuccessDevEuis() {
+        return this.successDevEuis;
     }
 
     public GetNodesAddingTaskResponseBody setTaskId(String taskId) {
@@ -90,22 +106,6 @@ public class GetNodesAddingTaskResponseBody extends TeaModel {
     }
     public Long getTotalCount() {
         return this.totalCount;
-    }
-
-    public GetNodesAddingTaskResponseBody setSuccessCount(Long successCount) {
-        this.successCount = successCount;
-        return this;
-    }
-    public Long getSuccessCount() {
-        return this.successCount;
-    }
-
-    public GetNodesAddingTaskResponseBody setSuccessDevEuis(GetNodesAddingTaskResponseBodySuccessDevEuis successDevEuis) {
-        this.successDevEuis = successDevEuis;
-        return this;
-    }
-    public GetNodesAddingTaskResponseBodySuccessDevEuis getSuccessDevEuis() {
-        return this.successDevEuis;
     }
 
     public static class GetNodesAddingTaskResponseBodySuccessDevEuis extends TeaModel {

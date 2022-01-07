@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetEdgeInstanceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetEdgeInstanceResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public GetEdgeInstanceResponseBodyData data;
-
     public static GetEdgeInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetEdgeInstanceResponseBody self = new GetEdgeInstanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetEdgeInstanceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetEdgeInstanceResponseBody setData(GetEdgeInstanceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetEdgeInstanceResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetEdgeInstanceResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetEdgeInstanceResponseBody setRequestId(String requestId) {
@@ -40,63 +64,24 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetEdgeInstanceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetEdgeInstanceResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetEdgeInstanceResponseBody setData(GetEdgeInstanceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetEdgeInstanceResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetEdgeInstanceResponseBodyData extends TeaModel {
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Tags")
-        public String tags;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Spec")
-        public Integer spec;
-
         @NameInMap("BizEnable")
         public Boolean bizEnable;
 
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        @NameInMap("GmtCreateTimestamp")
+        public Long gmtCreateTimestamp;
+
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        @NameInMap("RoleArn")
-        public String roleArn;
+        @NameInMap("GmtModifiedTimestamp")
+        public Long gmtModifiedTimestamp;
 
-        @NameInMap("RoleName")
-        public String roleName;
-
-        @NameInMap("RoleAttachTime")
-        public String roleAttachTime;
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         @NameInMap("LatestDeploymentStatus")
         public Integer latestDeploymentStatus;
@@ -104,58 +89,33 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
         @NameInMap("LatestDeploymentType")
         public String latestDeploymentType;
 
-        @NameInMap("GmtCreateTimestamp")
-        public Long gmtCreateTimestamp;
+        @NameInMap("Name")
+        public String name;
 
-        @NameInMap("GmtModifiedTimestamp")
-        public Long gmtModifiedTimestamp;
+        @NameInMap("RoleArn")
+        public String roleArn;
+
+        @NameInMap("RoleAttachTime")
+        public String roleAttachTime;
 
         @NameInMap("RoleAttachTimestamp")
         public Long roleAttachTimestamp;
 
+        @NameInMap("RoleName")
+        public String roleName;
+
+        @NameInMap("Spec")
+        public Integer spec;
+
+        @NameInMap("Tags")
+        public String tags;
+
+        @NameInMap("Type")
+        public String type;
+
         public static GetEdgeInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetEdgeInstanceResponseBodyData self = new GetEdgeInstanceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetEdgeInstanceResponseBodyData setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public GetEdgeInstanceResponseBodyData setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public GetEdgeInstanceResponseBodyData setTags(String tags) {
-            this.tags = tags;
-            return this;
-        }
-        public String getTags() {
-            return this.tags;
-        }
-
-        public GetEdgeInstanceResponseBodyData setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public GetEdgeInstanceResponseBodyData setSpec(Integer spec) {
-            this.spec = spec;
-            return this;
-        }
-        public Integer getSpec() {
-            return this.spec;
         }
 
         public GetEdgeInstanceResponseBodyData setBizEnable(Boolean bizEnable) {
@@ -174,6 +134,14 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
+        public GetEdgeInstanceResponseBodyData setGmtCreateTimestamp(Long gmtCreateTimestamp) {
+            this.gmtCreateTimestamp = gmtCreateTimestamp;
+            return this;
+        }
+        public Long getGmtCreateTimestamp() {
+            return this.gmtCreateTimestamp;
+        }
+
         public GetEdgeInstanceResponseBodyData setGmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
             return this;
@@ -182,28 +150,20 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public GetEdgeInstanceResponseBodyData setRoleArn(String roleArn) {
-            this.roleArn = roleArn;
+        public GetEdgeInstanceResponseBodyData setGmtModifiedTimestamp(Long gmtModifiedTimestamp) {
+            this.gmtModifiedTimestamp = gmtModifiedTimestamp;
             return this;
         }
-        public String getRoleArn() {
-            return this.roleArn;
+        public Long getGmtModifiedTimestamp() {
+            return this.gmtModifiedTimestamp;
         }
 
-        public GetEdgeInstanceResponseBodyData setRoleName(String roleName) {
-            this.roleName = roleName;
+        public GetEdgeInstanceResponseBodyData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public String getRoleName() {
-            return this.roleName;
-        }
-
-        public GetEdgeInstanceResponseBodyData setRoleAttachTime(String roleAttachTime) {
-            this.roleAttachTime = roleAttachTime;
-            return this;
-        }
-        public String getRoleAttachTime() {
-            return this.roleAttachTime;
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public GetEdgeInstanceResponseBodyData setLatestDeploymentStatus(Integer latestDeploymentStatus) {
@@ -222,20 +182,28 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             return this.latestDeploymentType;
         }
 
-        public GetEdgeInstanceResponseBodyData setGmtCreateTimestamp(Long gmtCreateTimestamp) {
-            this.gmtCreateTimestamp = gmtCreateTimestamp;
+        public GetEdgeInstanceResponseBodyData setName(String name) {
+            this.name = name;
             return this;
         }
-        public Long getGmtCreateTimestamp() {
-            return this.gmtCreateTimestamp;
+        public String getName() {
+            return this.name;
         }
 
-        public GetEdgeInstanceResponseBodyData setGmtModifiedTimestamp(Long gmtModifiedTimestamp) {
-            this.gmtModifiedTimestamp = gmtModifiedTimestamp;
+        public GetEdgeInstanceResponseBodyData setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
             return this;
         }
-        public Long getGmtModifiedTimestamp() {
-            return this.gmtModifiedTimestamp;
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+        public GetEdgeInstanceResponseBodyData setRoleAttachTime(String roleAttachTime) {
+            this.roleAttachTime = roleAttachTime;
+            return this;
+        }
+        public String getRoleAttachTime() {
+            return this.roleAttachTime;
         }
 
         public GetEdgeInstanceResponseBodyData setRoleAttachTimestamp(Long roleAttachTimestamp) {
@@ -244,6 +212,38 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
         }
         public Long getRoleAttachTimestamp() {
             return this.roleAttachTimestamp;
+        }
+
+        public GetEdgeInstanceResponseBodyData setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
+        }
+
+        public GetEdgeInstanceResponseBodyData setSpec(Integer spec) {
+            this.spec = spec;
+            return this;
+        }
+        public Integer getSpec() {
+            return this.spec;
+        }
+
+        public GetEdgeInstanceResponseBodyData setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
+        }
+
+        public GetEdgeInstanceResponseBodyData setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

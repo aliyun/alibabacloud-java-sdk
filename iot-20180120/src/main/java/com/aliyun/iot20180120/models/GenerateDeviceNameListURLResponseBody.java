@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GenerateDeviceNameListURLResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GenerateDeviceNameListURLResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public GenerateDeviceNameListURLResponseBodyData data;
-
     public static GenerateDeviceNameListURLResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GenerateDeviceNameListURLResponseBody self = new GenerateDeviceNameListURLResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GenerateDeviceNameListURLResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GenerateDeviceNameListURLResponseBody setData(GenerateDeviceNameListURLResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GenerateDeviceNameListURLResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GenerateDeviceNameListURLResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GenerateDeviceNameListURLResponseBody setRequestId(String requestId) {
@@ -40,82 +64,34 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GenerateDeviceNameListURLResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GenerateDeviceNameListURLResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GenerateDeviceNameListURLResponseBody setData(GenerateDeviceNameListURLResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GenerateDeviceNameListURLResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GenerateDeviceNameListURLResponseBodyData extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Host")
-        public String host;
-
-        @NameInMap("Policy")
-        public String policy;
-
         @NameInMap("AccessKeyId")
         public String accessKeyId;
-
-        @NameInMap("Signature")
-        public String signature;
 
         @NameInMap("FileUrl")
         public String fileUrl;
 
-        @NameInMap("UtcCreate")
-        public String utcCreate;
+        @NameInMap("Host")
+        public String host;
+
+        @NameInMap("Key")
+        public String key;
 
         @NameInMap("ObjectStorage")
         public String objectStorage;
 
+        @NameInMap("Policy")
+        public String policy;
+
+        @NameInMap("Signature")
+        public String signature;
+
+        @NameInMap("UtcCreate")
+        public String utcCreate;
+
         public static GenerateDeviceNameListURLResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GenerateDeviceNameListURLResponseBodyData self = new GenerateDeviceNameListURLResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GenerateDeviceNameListURLResponseBodyData setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public GenerateDeviceNameListURLResponseBodyData setHost(String host) {
-            this.host = host;
-            return this;
-        }
-        public String getHost() {
-            return this.host;
-        }
-
-        public GenerateDeviceNameListURLResponseBodyData setPolicy(String policy) {
-            this.policy = policy;
-            return this;
-        }
-        public String getPolicy() {
-            return this.policy;
         }
 
         public GenerateDeviceNameListURLResponseBodyData setAccessKeyId(String accessKeyId) {
@@ -126,14 +102,6 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
             return this.accessKeyId;
         }
 
-        public GenerateDeviceNameListURLResponseBodyData setSignature(String signature) {
-            this.signature = signature;
-            return this;
-        }
-        public String getSignature() {
-            return this.signature;
-        }
-
         public GenerateDeviceNameListURLResponseBodyData setFileUrl(String fileUrl) {
             this.fileUrl = fileUrl;
             return this;
@@ -142,12 +110,20 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
             return this.fileUrl;
         }
 
-        public GenerateDeviceNameListURLResponseBodyData setUtcCreate(String utcCreate) {
-            this.utcCreate = utcCreate;
+        public GenerateDeviceNameListURLResponseBodyData setHost(String host) {
+            this.host = host;
             return this;
         }
-        public String getUtcCreate() {
-            return this.utcCreate;
+        public String getHost() {
+            return this.host;
+        }
+
+        public GenerateDeviceNameListURLResponseBodyData setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
         }
 
         public GenerateDeviceNameListURLResponseBodyData setObjectStorage(String objectStorage) {
@@ -156,6 +132,30 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
         }
         public String getObjectStorage() {
             return this.objectStorage;
+        }
+
+        public GenerateDeviceNameListURLResponseBodyData setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        public GenerateDeviceNameListURLResponseBodyData setSignature(String signature) {
+            this.signature = signature;
+            return this;
+        }
+        public String getSignature() {
+            return this.signature;
+        }
+
+        public GenerateDeviceNameListURLResponseBodyData setUtcCreate(String utcCreate) {
+            this.utcCreate = utcCreate;
+            return this;
+        }
+        public String getUtcCreate() {
+            return this.utcCreate;
         }
 
     }

@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class RefreshStudioAppTokenOpenResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public RefreshStudioAppTokenOpenResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public RefreshStudioAppTokenOpenResponseBodyData data;
-
     public static RefreshStudioAppTokenOpenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RefreshStudioAppTokenOpenResponseBody self = new RefreshStudioAppTokenOpenResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RefreshStudioAppTokenOpenResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public RefreshStudioAppTokenOpenResponseBody setData(RefreshStudioAppTokenOpenResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public RefreshStudioAppTokenOpenResponseBodyData getData() {
+        return this.data;
+    }
+
+    public RefreshStudioAppTokenOpenResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public RefreshStudioAppTokenOpenResponseBody setRequestId(String requestId) {
@@ -40,65 +64,33 @@ public class RefreshStudioAppTokenOpenResponseBody extends TeaModel {
         return this.success;
     }
 
-    public RefreshStudioAppTokenOpenResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public RefreshStudioAppTokenOpenResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public RefreshStudioAppTokenOpenResponseBody setData(RefreshStudioAppTokenOpenResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public RefreshStudioAppTokenOpenResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class RefreshStudioAppTokenOpenResponseBodyData extends TeaModel {
-        @NameInMap("IsEnable")
-        public String isEnable;
-
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("BizId")
+        public String bizId;
 
         @NameInMap("BizType")
         public String bizType;
 
+        @NameInMap("IsEnable")
+        public String isEnable;
+
         @NameInMap("Token")
         public String token;
 
-        @NameInMap("BizId")
-        public String bizId;
+        @NameInMap("Type")
+        public String type;
 
         public static RefreshStudioAppTokenOpenResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RefreshStudioAppTokenOpenResponseBodyData self = new RefreshStudioAppTokenOpenResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public RefreshStudioAppTokenOpenResponseBodyData setIsEnable(String isEnable) {
-            this.isEnable = isEnable;
+        public RefreshStudioAppTokenOpenResponseBodyData setBizId(String bizId) {
+            this.bizId = bizId;
             return this;
         }
-        public String getIsEnable() {
-            return this.isEnable;
-        }
-
-        public RefreshStudioAppTokenOpenResponseBodyData setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
+        public String getBizId() {
+            return this.bizId;
         }
 
         public RefreshStudioAppTokenOpenResponseBodyData setBizType(String bizType) {
@@ -109,6 +101,14 @@ public class RefreshStudioAppTokenOpenResponseBody extends TeaModel {
             return this.bizType;
         }
 
+        public RefreshStudioAppTokenOpenResponseBodyData setIsEnable(String isEnable) {
+            this.isEnable = isEnable;
+            return this;
+        }
+        public String getIsEnable() {
+            return this.isEnable;
+        }
+
         public RefreshStudioAppTokenOpenResponseBodyData setToken(String token) {
             this.token = token;
             return this;
@@ -117,12 +117,12 @@ public class RefreshStudioAppTokenOpenResponseBody extends TeaModel {
             return this.token;
         }
 
-        public RefreshStudioAppTokenOpenResponseBodyData setBizId(String bizId) {
-            this.bizId = bizId;
+        public RefreshStudioAppTokenOpenResponseBodyData setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getBizId() {
-            return this.bizId;
+        public String getType() {
+            return this.type;
         }
 
     }

@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetDataAPIServiceDetailResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetDataAPIServiceDetailResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public GetDataAPIServiceDetailResponseBodyData data;
-
     public static GetDataAPIServiceDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDataAPIServiceDetailResponseBody self = new GetDataAPIServiceDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetDataAPIServiceDetailResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetDataAPIServiceDetailResponseBody setData(GetDataAPIServiceDetailResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetDataAPIServiceDetailResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetDataAPIServiceDetailResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetDataAPIServiceDetailResponseBody setRequestId(String requestId) {
@@ -40,65 +64,25 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetDataAPIServiceDetailResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetDataAPIServiceDetailResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetDataAPIServiceDetailResponseBody setData(GetDataAPIServiceDetailResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetDataAPIServiceDetailResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTORequestParamsRequestParams extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("Desc")
         public String desc;
 
         @NameInMap("Example")
         public String example;
 
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("Required")
         public Boolean required;
+
+        @NameInMap("Type")
+        public String type;
 
         public static GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTORequestParamsRequestParams build(java.util.Map<String, ?> map) throws Exception {
             GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTORequestParamsRequestParams self = new GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTORequestParamsRequestParams();
             return TeaModel.build(map, self);
-        }
-
-        public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTORequestParamsRequestParams setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTORequestParamsRequestParams setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTORequestParamsRequestParams setDesc(String desc) {
@@ -117,12 +101,28 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
             return this.example;
         }
 
+        public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTORequestParamsRequestParams setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTORequestParamsRequestParams setRequired(Boolean required) {
             this.required = required;
             return this;
         }
         public Boolean getRequired() {
             return this.required;
+        }
+
+        public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTORequestParamsRequestParams setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -147,40 +147,24 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTOResponseParamsResponseParams extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("Desc")
         public String desc;
 
         @NameInMap("Example")
         public String example;
 
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("Required")
         public Boolean required;
+
+        @NameInMap("Type")
+        public String type;
 
         public static GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTOResponseParamsResponseParams build(java.util.Map<String, ?> map) throws Exception {
             GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTOResponseParamsResponseParams self = new GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTOResponseParamsResponseParams();
             return TeaModel.build(map, self);
-        }
-
-        public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTOResponseParamsResponseParams setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTOResponseParamsResponseParams setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTOResponseParamsResponseParams setDesc(String desc) {
@@ -199,12 +183,28 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
             return this.example;
         }
 
+        public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTOResponseParamsResponseParams setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTOResponseParamsResponseParams setRequired(Boolean required) {
             this.required = required;
             return this;
         }
         public Boolean getRequired() {
             return this.required;
+        }
+
+        public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTOResponseParamsResponseParams setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -232,14 +232,14 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
         @NameInMap("OriginSql")
         public String originSql;
 
-        @NameInMap("TemplateSql")
-        public String templateSql;
-
         @NameInMap("RequestParams")
         public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTORequestParams requestParams;
 
         @NameInMap("ResponseParams")
         public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTOResponseParams responseParams;
+
+        @NameInMap("TemplateSql")
+        public String templateSql;
 
         public static GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTO build(java.util.Map<String, ?> map) throws Exception {
             GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTO self = new GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTO();
@@ -252,14 +252,6 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
         }
         public String getOriginSql() {
             return this.originSql;
-        }
-
-        public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTO setTemplateSql(String templateSql) {
-            this.templateSql = templateSql;
-            return this;
-        }
-        public String getTemplateSql() {
-            return this.templateSql;
         }
 
         public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTO setRequestParams(GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTORequestParams requestParams) {
@@ -278,29 +270,37 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
             return this.responseParams;
         }
 
+        public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTO setTemplateSql(String templateSql) {
+            this.templateSql = templateSql;
+            return this;
+        }
+        public String getTemplateSql() {
+            return this.templateSql;
+        }
+
     }
 
     public static class GetDataAPIServiceDetailResponseBodyData extends TeaModel {
-        @NameInMap("ApiSrn")
-        public String apiSrn;
-
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("DisplayName")
-        public String displayName;
-
         @NameInMap("ApiPath")
         public String apiPath;
+
+        @NameInMap("ApiSrn")
+        public String apiSrn;
 
         @NameInMap("CreateTime")
         public Long createTime;
 
-        @NameInMap("LastUpdateTime")
-        public Long lastUpdateTime;
-
         @NameInMap("DateFormat")
         public String dateFormat;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("DisplayName")
+        public String displayName;
+
+        @NameInMap("LastUpdateTime")
+        public Long lastUpdateTime;
 
         @NameInMap("RequestMethod")
         public String requestMethod;
@@ -308,39 +308,15 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
         @NameInMap("RequestProtocol")
         public String requestProtocol;
 
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("SqlTemplateDTO")
         public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTO sqlTemplateDTO;
+
+        @NameInMap("Status")
+        public Integer status;
 
         public static GetDataAPIServiceDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetDataAPIServiceDetailResponseBodyData self = new GetDataAPIServiceDetailResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetDataAPIServiceDetailResponseBodyData setApiSrn(String apiSrn) {
-            this.apiSrn = apiSrn;
-            return this;
-        }
-        public String getApiSrn() {
-            return this.apiSrn;
-        }
-
-        public GetDataAPIServiceDetailResponseBodyData setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public GetDataAPIServiceDetailResponseBodyData setDisplayName(String displayName) {
-            this.displayName = displayName;
-            return this;
-        }
-        public String getDisplayName() {
-            return this.displayName;
         }
 
         public GetDataAPIServiceDetailResponseBodyData setApiPath(String apiPath) {
@@ -351,6 +327,14 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
             return this.apiPath;
         }
 
+        public GetDataAPIServiceDetailResponseBodyData setApiSrn(String apiSrn) {
+            this.apiSrn = apiSrn;
+            return this;
+        }
+        public String getApiSrn() {
+            return this.apiSrn;
+        }
+
         public GetDataAPIServiceDetailResponseBodyData setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
@@ -359,20 +343,36 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetDataAPIServiceDetailResponseBodyData setLastUpdateTime(Long lastUpdateTime) {
-            this.lastUpdateTime = lastUpdateTime;
-            return this;
-        }
-        public Long getLastUpdateTime() {
-            return this.lastUpdateTime;
-        }
-
         public GetDataAPIServiceDetailResponseBodyData setDateFormat(String dateFormat) {
             this.dateFormat = dateFormat;
             return this;
         }
         public String getDateFormat() {
             return this.dateFormat;
+        }
+
+        public GetDataAPIServiceDetailResponseBodyData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetDataAPIServiceDetailResponseBodyData setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public GetDataAPIServiceDetailResponseBodyData setLastUpdateTime(Long lastUpdateTime) {
+            this.lastUpdateTime = lastUpdateTime;
+            return this;
+        }
+        public Long getLastUpdateTime() {
+            return this.lastUpdateTime;
         }
 
         public GetDataAPIServiceDetailResponseBodyData setRequestMethod(String requestMethod) {
@@ -391,20 +391,20 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
             return this.requestProtocol;
         }
 
-        public GetDataAPIServiceDetailResponseBodyData setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
         public GetDataAPIServiceDetailResponseBodyData setSqlTemplateDTO(GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTO sqlTemplateDTO) {
             this.sqlTemplateDTO = sqlTemplateDTO;
             return this;
         }
         public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTO getSqlTemplateDTO() {
             return this.sqlTemplateDTO;
+        }
+
+        public GetDataAPIServiceDetailResponseBodyData setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
     }

@@ -4,26 +4,26 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UnbindDriverFromEdgeInstanceRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
+    @NameInMap("DriverId")
+    public String driverId;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("DriverId")
-    public String driverId;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     public static UnbindDriverFromEdgeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindDriverFromEdgeInstanceRequest self = new UnbindDriverFromEdgeInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public UnbindDriverFromEdgeInstanceRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
+    public UnbindDriverFromEdgeInstanceRequest setDriverId(String driverId) {
+        this.driverId = driverId;
         return this;
     }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
+    public String getDriverId() {
+        return this.driverId;
     }
 
     public UnbindDriverFromEdgeInstanceRequest setInstanceId(String instanceId) {
@@ -34,12 +34,12 @@ public class UnbindDriverFromEdgeInstanceRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public UnbindDriverFromEdgeInstanceRequest setDriverId(String driverId) {
-        this.driverId = driverId;
+    public UnbindDriverFromEdgeInstanceRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
         return this;
     }
-    public String getDriverId() {
-        return this.driverId;
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
 }

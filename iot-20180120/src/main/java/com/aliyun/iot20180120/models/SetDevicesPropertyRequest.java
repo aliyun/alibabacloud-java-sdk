@@ -10,11 +10,11 @@ public class SetDevicesPropertyRequest extends TeaModel {
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
-    @NameInMap("ProductKey")
-    public String productKey;
-
     @NameInMap("Items")
     public String items;
+
+    @NameInMap("ProductKey")
+    public String productKey;
 
     public static SetDevicesPropertyRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDevicesPropertyRequest self = new SetDevicesPropertyRequest();
@@ -37,20 +37,20 @@ public class SetDevicesPropertyRequest extends TeaModel {
         return this.iotInstanceId;
     }
 
-    public SetDevicesPropertyRequest setProductKey(String productKey) {
-        this.productKey = productKey;
-        return this;
-    }
-    public String getProductKey() {
-        return this.productKey;
-    }
-
     public SetDevicesPropertyRequest setItems(String items) {
         this.items = items;
         return this;
     }
     public String getItems() {
         return this.items;
+    }
+
+    public SetDevicesPropertyRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
     }
 
 }

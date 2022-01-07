@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeDriverVersionRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -19,28 +13,18 @@ public class QueryEdgeDriverVersionRequest extends TeaModel {
     @NameInMap("DriverVersion")
     public String driverVersion;
 
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("VersionState")
     public Integer versionState;
 
     public static QueryEdgeDriverVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryEdgeDriverVersionRequest self = new QueryEdgeDriverVersionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryEdgeDriverVersionRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
-    public QueryEdgeDriverVersionRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public QueryEdgeDriverVersionRequest setCurrentPage(Integer currentPage) {
@@ -65,6 +49,22 @@ public class QueryEdgeDriverVersionRequest extends TeaModel {
     }
     public String getDriverVersion() {
         return this.driverVersion;
+    }
+
+    public QueryEdgeDriverVersionRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
+    public QueryEdgeDriverVersionRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public QueryEdgeDriverVersionRequest setVersionState(Integer versionState) {

@@ -7,17 +7,17 @@ public class UpdateSceneRuleRequest extends TeaModel {
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
-    @NameInMap("RuleId")
-    public String ruleId;
-
-    @NameInMap("RuleName")
-    public String ruleName;
-
     @NameInMap("RuleContent")
     public String ruleContent;
 
     @NameInMap("RuleDescription")
     public String ruleDescription;
+
+    @NameInMap("RuleId")
+    public String ruleId;
+
+    @NameInMap("RuleName")
+    public String ruleName;
 
     public static UpdateSceneRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSceneRuleRequest self = new UpdateSceneRuleRequest();
@@ -30,22 +30,6 @@ public class UpdateSceneRuleRequest extends TeaModel {
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
-    }
-
-    public UpdateSceneRuleRequest setRuleId(String ruleId) {
-        this.ruleId = ruleId;
-        return this;
-    }
-    public String getRuleId() {
-        return this.ruleId;
-    }
-
-    public UpdateSceneRuleRequest setRuleName(String ruleName) {
-        this.ruleName = ruleName;
-        return this;
-    }
-    public String getRuleName() {
-        return this.ruleName;
     }
 
     public UpdateSceneRuleRequest setRuleContent(String ruleContent) {
@@ -62,6 +46,22 @@ public class UpdateSceneRuleRequest extends TeaModel {
     }
     public String getRuleDescription() {
         return this.ruleDescription;
+    }
+
+    public UpdateSceneRuleRequest setRuleId(String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public String getRuleId() {
+        return this.ruleId;
+    }
+
+    public UpdateSceneRuleRequest setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+    public String getRuleName() {
+        return this.ruleName;
     }
 
 }

@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceGroupTagListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryDeviceGroupTagListResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryDeviceGroupTagListResponseBodyData data;
-
     public static QueryDeviceGroupTagListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceGroupTagListResponseBody self = new QueryDeviceGroupTagListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceGroupTagListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryDeviceGroupTagListResponseBody setData(QueryDeviceGroupTagListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryDeviceGroupTagListResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryDeviceGroupTagListResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryDeviceGroupTagListResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class QueryDeviceGroupTagListResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public QueryDeviceGroupTagListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryDeviceGroupTagListResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryDeviceGroupTagListResponseBody setData(QueryDeviceGroupTagListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryDeviceGroupTagListResponseBodyData getData() {
-        return this.data;
     }
 
     public static class QueryDeviceGroupTagListResponseBodyDataGroupTagInfo extends TeaModel {

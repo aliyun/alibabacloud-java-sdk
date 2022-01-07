@@ -4,48 +4,24 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetSceneRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetSceneRuleResponseBodyData data;
 
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     public static GetSceneRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSceneRuleResponseBody self = new GetSceneRuleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetSceneRuleResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetSceneRuleResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GetSceneRuleResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public GetSceneRuleResponseBody setCode(String code) {
@@ -64,6 +40,30 @@ public class GetSceneRuleResponseBody extends TeaModel {
         return this.data;
     }
 
+    public GetSceneRuleResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GetSceneRuleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetSceneRuleResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class GetSceneRuleResponseBodyData extends TeaModel {
         @NameInMap("GmtCreate")
         public Long gmtCreate;
@@ -71,14 +71,14 @@ public class GetSceneRuleResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        @NameInMap("RuleName")
-        public String ruleName;
-
         @NameInMap("RuleContent")
         public String ruleContent;
 
         @NameInMap("RuleDescription")
         public String ruleDescription;
+
+        @NameInMap("RuleName")
+        public String ruleName;
 
         @NameInMap("RuleStatus")
         public Integer ruleStatus;
@@ -104,14 +104,6 @@ public class GetSceneRuleResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public GetSceneRuleResponseBodyData setRuleName(String ruleName) {
-            this.ruleName = ruleName;
-            return this;
-        }
-        public String getRuleName() {
-            return this.ruleName;
-        }
-
         public GetSceneRuleResponseBodyData setRuleContent(String ruleContent) {
             this.ruleContent = ruleContent;
             return this;
@@ -126,6 +118,14 @@ public class GetSceneRuleResponseBody extends TeaModel {
         }
         public String getRuleDescription() {
             return this.ruleDescription;
+        }
+
+        public GetSceneRuleResponseBodyData setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
         }
 
         public GetSceneRuleResponseBodyData setRuleStatus(Integer ruleStatus) {

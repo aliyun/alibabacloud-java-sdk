@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateDataAPIServiceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public CreateDataAPIServiceResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public CreateDataAPIServiceResponseBodyData data;
-
     public static CreateDataAPIServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDataAPIServiceResponseBody self = new CreateDataAPIServiceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDataAPIServiceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateDataAPIServiceResponseBody setData(CreateDataAPIServiceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateDataAPIServiceResponseBodyData getData() {
+        return this.data;
+    }
+
+    public CreateDataAPIServiceResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public CreateDataAPIServiceResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class CreateDataAPIServiceResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreateDataAPIServiceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public CreateDataAPIServiceResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public CreateDataAPIServiceResponseBody setData(CreateDataAPIServiceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateDataAPIServiceResponseBodyData getData() {
-        return this.data;
     }
 
     public static class CreateDataAPIServiceResponseBodyData extends TeaModel {

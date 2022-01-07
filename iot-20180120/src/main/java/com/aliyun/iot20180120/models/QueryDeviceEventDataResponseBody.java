@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceEventDataResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryDeviceEventDataResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryDeviceEventDataResponseBodyData data;
-
     public static QueryDeviceEventDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceEventDataResponseBody self = new QueryDeviceEventDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceEventDataResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryDeviceEventDataResponseBody setData(QueryDeviceEventDataResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryDeviceEventDataResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryDeviceEventDataResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryDeviceEventDataResponseBody setRequestId(String requestId) {
@@ -40,33 +64,9 @@ public class QueryDeviceEventDataResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryDeviceEventDataResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryDeviceEventDataResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryDeviceEventDataResponseBody setData(QueryDeviceEventDataResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryDeviceEventDataResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryDeviceEventDataResponseBodyDataListEventInfo extends TeaModel {
-        @NameInMap("Time")
-        public String time;
+        @NameInMap("EventType")
+        public String eventType;
 
         @NameInMap("Identifier")
         public String identifier;
@@ -74,23 +74,23 @@ public class QueryDeviceEventDataResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("EventType")
-        public String eventType;
-
         @NameInMap("OutputData")
         public String outputData;
+
+        @NameInMap("Time")
+        public String time;
 
         public static QueryDeviceEventDataResponseBodyDataListEventInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceEventDataResponseBodyDataListEventInfo self = new QueryDeviceEventDataResponseBodyDataListEventInfo();
             return TeaModel.build(map, self);
         }
 
-        public QueryDeviceEventDataResponseBodyDataListEventInfo setTime(String time) {
-            this.time = time;
+        public QueryDeviceEventDataResponseBodyDataListEventInfo setEventType(String eventType) {
+            this.eventType = eventType;
             return this;
         }
-        public String getTime() {
-            return this.time;
+        public String getEventType() {
+            return this.eventType;
         }
 
         public QueryDeviceEventDataResponseBodyDataListEventInfo setIdentifier(String identifier) {
@@ -109,20 +109,20 @@ public class QueryDeviceEventDataResponseBody extends TeaModel {
             return this.name;
         }
 
-        public QueryDeviceEventDataResponseBodyDataListEventInfo setEventType(String eventType) {
-            this.eventType = eventType;
-            return this;
-        }
-        public String getEventType() {
-            return this.eventType;
-        }
-
         public QueryDeviceEventDataResponseBodyDataListEventInfo setOutputData(String outputData) {
             this.outputData = outputData;
             return this;
         }
         public String getOutputData() {
             return this.outputData;
+        }
+
+        public QueryDeviceEventDataResponseBodyDataListEventInfo setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
         }
 
     }
@@ -147,18 +147,26 @@ public class QueryDeviceEventDataResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceEventDataResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public QueryDeviceEventDataResponseBodyDataList list;
+
         @NameInMap("NextTime")
         public Long nextTime;
 
         @NameInMap("NextValid")
         public Boolean nextValid;
 
-        @NameInMap("List")
-        public QueryDeviceEventDataResponseBodyDataList list;
-
         public static QueryDeviceEventDataResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceEventDataResponseBodyData self = new QueryDeviceEventDataResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryDeviceEventDataResponseBodyData setList(QueryDeviceEventDataResponseBodyDataList list) {
+            this.list = list;
+            return this;
+        }
+        public QueryDeviceEventDataResponseBodyDataList getList() {
+            return this.list;
         }
 
         public QueryDeviceEventDataResponseBodyData setNextTime(Long nextTime) {
@@ -175,14 +183,6 @@ public class QueryDeviceEventDataResponseBody extends TeaModel {
         }
         public Boolean getNextValid() {
             return this.nextValid;
-        }
-
-        public QueryDeviceEventDataResponseBodyData setList(QueryDeviceEventDataResponseBodyDataList list) {
-            this.list = list;
-            return this;
-        }
-        public QueryDeviceEventDataResponseBodyDataList getList() {
-            return this.list;
         }
 
     }

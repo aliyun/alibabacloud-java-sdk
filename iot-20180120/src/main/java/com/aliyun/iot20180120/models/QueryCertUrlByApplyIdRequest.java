@@ -4,23 +4,15 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryCertUrlByApplyIdRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     @NameInMap("ApplyId")
     public Long applyId;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     public static QueryCertUrlByApplyIdRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCertUrlByApplyIdRequest self = new QueryCertUrlByApplyIdRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryCertUrlByApplyIdRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
     }
 
     public QueryCertUrlByApplyIdRequest setApplyId(Long applyId) {
@@ -29,6 +21,14 @@ public class QueryCertUrlByApplyIdRequest extends TeaModel {
     }
     public Long getApplyId() {
         return this.applyId;
+    }
+
+    public QueryCertUrlByApplyIdRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
 }

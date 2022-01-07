@@ -4,26 +4,26 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UnbindApplicationFromEdgeInstanceRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
+    @NameInMap("ApplicationId")
+    public String applicationId;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("ApplicationId")
-    public String applicationId;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     public static UnbindApplicationFromEdgeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindApplicationFromEdgeInstanceRequest self = new UnbindApplicationFromEdgeInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public UnbindApplicationFromEdgeInstanceRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
+    public UnbindApplicationFromEdgeInstanceRequest setApplicationId(String applicationId) {
+        this.applicationId = applicationId;
         return this;
     }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
+    public String getApplicationId() {
+        return this.applicationId;
     }
 
     public UnbindApplicationFromEdgeInstanceRequest setInstanceId(String instanceId) {
@@ -34,12 +34,12 @@ public class UnbindApplicationFromEdgeInstanceRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public UnbindApplicationFromEdgeInstanceRequest setApplicationId(String applicationId) {
-        this.applicationId = applicationId;
+    public UnbindApplicationFromEdgeInstanceRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
         return this;
     }
-    public String getApplicationId() {
-        return this.applicationId;
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
 }

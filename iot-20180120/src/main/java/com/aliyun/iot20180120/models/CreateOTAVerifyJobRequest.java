@@ -4,14 +4,17 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateOTAVerifyJobRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     @NameInMap("FirmwareId")
     public String firmwareId;
 
-    @NameInMap("TimeoutInMinutes")
-    public Integer timeoutInMinutes;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
+    @NameInMap("NeedConfirm")
+    public Boolean needConfirm;
+
+    @NameInMap("NeedPush")
+    public Boolean needPush;
 
     @NameInMap("ProductKey")
     public String productKey;
@@ -19,23 +22,12 @@ public class CreateOTAVerifyJobRequest extends TeaModel {
     @NameInMap("TargetDeviceName")
     public java.util.List<String> targetDeviceName;
 
-    @NameInMap("NeedPush")
-    public Boolean needPush;
-
-    @NameInMap("NeedConfirm")
-    public Boolean needConfirm;
+    @NameInMap("TimeoutInMinutes")
+    public Integer timeoutInMinutes;
 
     public static CreateOTAVerifyJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOTAVerifyJobRequest self = new CreateOTAVerifyJobRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateOTAVerifyJobRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
     }
 
     public CreateOTAVerifyJobRequest setFirmwareId(String firmwareId) {
@@ -46,12 +38,28 @@ public class CreateOTAVerifyJobRequest extends TeaModel {
         return this.firmwareId;
     }
 
-    public CreateOTAVerifyJobRequest setTimeoutInMinutes(Integer timeoutInMinutes) {
-        this.timeoutInMinutes = timeoutInMinutes;
+    public CreateOTAVerifyJobRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
         return this;
     }
-    public Integer getTimeoutInMinutes() {
-        return this.timeoutInMinutes;
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
+    public CreateOTAVerifyJobRequest setNeedConfirm(Boolean needConfirm) {
+        this.needConfirm = needConfirm;
+        return this;
+    }
+    public Boolean getNeedConfirm() {
+        return this.needConfirm;
+    }
+
+    public CreateOTAVerifyJobRequest setNeedPush(Boolean needPush) {
+        this.needPush = needPush;
+        return this;
+    }
+    public Boolean getNeedPush() {
+        return this.needPush;
     }
 
     public CreateOTAVerifyJobRequest setProductKey(String productKey) {
@@ -70,20 +78,12 @@ public class CreateOTAVerifyJobRequest extends TeaModel {
         return this.targetDeviceName;
     }
 
-    public CreateOTAVerifyJobRequest setNeedPush(Boolean needPush) {
-        this.needPush = needPush;
+    public CreateOTAVerifyJobRequest setTimeoutInMinutes(Integer timeoutInMinutes) {
+        this.timeoutInMinutes = timeoutInMinutes;
         return this;
     }
-    public Boolean getNeedPush() {
-        return this.needPush;
-    }
-
-    public CreateOTAVerifyJobRequest setNeedConfirm(Boolean needConfirm) {
-        this.needConfirm = needConfirm;
-        return this;
-    }
-    public Boolean getNeedConfirm() {
-        return this.needConfirm;
+    public Integer getTimeoutInMinutes() {
+        return this.timeoutInMinutes;
     }
 
 }

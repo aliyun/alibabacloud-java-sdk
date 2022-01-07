@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class PubResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
 
@@ -19,25 +13,15 @@ public class PubResponseBody extends TeaModel {
     @NameInMap("MessageId")
     public String messageId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     public static PubResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PubResponseBody self = new PubResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public PubResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public PubResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public PubResponseBody setCode(String code) {
@@ -62,6 +46,22 @@ public class PubResponseBody extends TeaModel {
     }
     public String getMessageId() {
         return this.messageId;
+    }
+
+    public PubResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public PubResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

@@ -4,11 +4,11 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class NotifyAddThingTopoRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     @NameInMap("DeviceListStr")
     public String deviceListStr;
+
+    @NameInMap("GwDeviceName")
+    public String gwDeviceName;
 
     @NameInMap("GwIotId")
     public String gwIotId;
@@ -16,20 +16,12 @@ public class NotifyAddThingTopoRequest extends TeaModel {
     @NameInMap("GwProductKey")
     public String gwProductKey;
 
-    @NameInMap("GwDeviceName")
-    public String gwDeviceName;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     public static NotifyAddThingTopoRequest build(java.util.Map<String, ?> map) throws Exception {
         NotifyAddThingTopoRequest self = new NotifyAddThingTopoRequest();
         return TeaModel.build(map, self);
-    }
-
-    public NotifyAddThingTopoRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
     }
 
     public NotifyAddThingTopoRequest setDeviceListStr(String deviceListStr) {
@@ -38,6 +30,14 @@ public class NotifyAddThingTopoRequest extends TeaModel {
     }
     public String getDeviceListStr() {
         return this.deviceListStr;
+    }
+
+    public NotifyAddThingTopoRequest setGwDeviceName(String gwDeviceName) {
+        this.gwDeviceName = gwDeviceName;
+        return this;
+    }
+    public String getGwDeviceName() {
+        return this.gwDeviceName;
     }
 
     public NotifyAddThingTopoRequest setGwIotId(String gwIotId) {
@@ -56,12 +56,12 @@ public class NotifyAddThingTopoRequest extends TeaModel {
         return this.gwProductKey;
     }
 
-    public NotifyAddThingTopoRequest setGwDeviceName(String gwDeviceName) {
-        this.gwDeviceName = gwDeviceName;
+    public NotifyAddThingTopoRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
         return this;
     }
-    public String getGwDeviceName() {
-        return this.gwDeviceName;
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
 }

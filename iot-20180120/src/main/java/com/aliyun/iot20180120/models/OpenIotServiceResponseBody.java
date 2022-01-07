@@ -4,23 +4,15 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class OpenIotServiceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OrderId")
     public String orderId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static OpenIotServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         OpenIotServiceResponseBody self = new OpenIotServiceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public OpenIotServiceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public OpenIotServiceResponseBody setOrderId(String orderId) {
@@ -29,6 +21,14 @@ public class OpenIotServiceResponseBody extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public OpenIotServiceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -4,26 +4,8 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListOTAJobByFirmwareResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Total")
-    public Integer total;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageCount")
-    public Integer pageCount;
 
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -31,9 +13,75 @@ public class ListOTAJobByFirmwareResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListOTAJobByFirmwareResponseBodyData data;
 
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("PageCount")
+    public Integer pageCount;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("Total")
+    public Integer total;
+
     public static ListOTAJobByFirmwareResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListOTAJobByFirmwareResponseBody self = new ListOTAJobByFirmwareResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListOTAJobByFirmwareResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListOTAJobByFirmwareResponseBody setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public ListOTAJobByFirmwareResponseBody setData(ListOTAJobByFirmwareResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListOTAJobByFirmwareResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListOTAJobByFirmwareResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public ListOTAJobByFirmwareResponseBody setPageCount(Integer pageCount) {
+        this.pageCount = pageCount;
+        return this;
+    }
+    public Integer getPageCount() {
+        return this.pageCount;
+    }
+
+    public ListOTAJobByFirmwareResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListOTAJobByFirmwareResponseBody setRequestId(String requestId) {
@@ -52,60 +100,12 @@ public class ListOTAJobByFirmwareResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListOTAJobByFirmwareResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListOTAJobByFirmwareResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public ListOTAJobByFirmwareResponseBody setTotal(Integer total) {
         this.total = total;
         return this;
     }
     public Integer getTotal() {
         return this.total;
-    }
-
-    public ListOTAJobByFirmwareResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListOTAJobByFirmwareResponseBody setPageCount(Integer pageCount) {
-        this.pageCount = pageCount;
-        return this;
-    }
-    public Integer getPageCount() {
-        return this.pageCount;
-    }
-
-    public ListOTAJobByFirmwareResponseBody setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
-    }
-
-    public ListOTAJobByFirmwareResponseBody setData(ListOTAJobByFirmwareResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListOTAJobByFirmwareResponseBodyData getData() {
-        return this.data;
     }
 
     public static class ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfoTagsOtaTagDTO extends TeaModel {
@@ -158,26 +158,11 @@ public class ListOTAJobByFirmwareResponseBody extends TeaModel {
     }
 
     public static class ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo extends TeaModel {
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("UtcCreate")
-        public String utcCreate;
-
-        @NameInMap("UtcModified")
-        public String utcModified;
-
-        @NameInMap("ProductKey")
-        public String productKey;
-
         @NameInMap("FirmwareId")
         public String firmwareId;
 
-        @NameInMap("UtcStartTime")
-        public String utcStartTime;
-
-        @NameInMap("UtcEndTime")
-        public String utcEndTime;
+        @NameInMap("JobId")
+        public String jobId;
 
         @NameInMap("JobStatus")
         public String jobStatus;
@@ -185,8 +170,8 @@ public class ListOTAJobByFirmwareResponseBody extends TeaModel {
         @NameInMap("JobType")
         public String jobType;
 
-        @NameInMap("TargetSelection")
-        public String targetSelection;
+        @NameInMap("ProductKey")
+        public String productKey;
 
         @NameInMap("SelectionType")
         public String selectionType;
@@ -194,41 +179,24 @@ public class ListOTAJobByFirmwareResponseBody extends TeaModel {
         @NameInMap("Tags")
         public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfoTags tags;
 
+        @NameInMap("TargetSelection")
+        public String targetSelection;
+
+        @NameInMap("UtcCreate")
+        public String utcCreate;
+
+        @NameInMap("UtcEndTime")
+        public String utcEndTime;
+
+        @NameInMap("UtcModified")
+        public String utcModified;
+
+        @NameInMap("UtcStartTime")
+        public String utcStartTime;
+
         public static ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo build(java.util.Map<String, ?> map) throws Exception {
             ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo self = new ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo();
             return TeaModel.build(map, self);
-        }
-
-        public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo setUtcCreate(String utcCreate) {
-            this.utcCreate = utcCreate;
-            return this;
-        }
-        public String getUtcCreate() {
-            return this.utcCreate;
-        }
-
-        public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo setUtcModified(String utcModified) {
-            this.utcModified = utcModified;
-            return this;
-        }
-        public String getUtcModified() {
-            return this.utcModified;
-        }
-
-        public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
         }
 
         public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo setFirmwareId(String firmwareId) {
@@ -239,20 +207,12 @@ public class ListOTAJobByFirmwareResponseBody extends TeaModel {
             return this.firmwareId;
         }
 
-        public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo setUtcStartTime(String utcStartTime) {
-            this.utcStartTime = utcStartTime;
+        public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo setJobId(String jobId) {
+            this.jobId = jobId;
             return this;
         }
-        public String getUtcStartTime() {
-            return this.utcStartTime;
-        }
-
-        public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo setUtcEndTime(String utcEndTime) {
-            this.utcEndTime = utcEndTime;
-            return this;
-        }
-        public String getUtcEndTime() {
-            return this.utcEndTime;
+        public String getJobId() {
+            return this.jobId;
         }
 
         public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo setJobStatus(String jobStatus) {
@@ -271,12 +231,12 @@ public class ListOTAJobByFirmwareResponseBody extends TeaModel {
             return this.jobType;
         }
 
-        public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo setTargetSelection(String targetSelection) {
-            this.targetSelection = targetSelection;
+        public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo setProductKey(String productKey) {
+            this.productKey = productKey;
             return this;
         }
-        public String getTargetSelection() {
-            return this.targetSelection;
+        public String getProductKey() {
+            return this.productKey;
         }
 
         public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo setSelectionType(String selectionType) {
@@ -293,6 +253,46 @@ public class ListOTAJobByFirmwareResponseBody extends TeaModel {
         }
         public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfoTags getTags() {
             return this.tags;
+        }
+
+        public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo setTargetSelection(String targetSelection) {
+            this.targetSelection = targetSelection;
+            return this;
+        }
+        public String getTargetSelection() {
+            return this.targetSelection;
+        }
+
+        public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo setUtcCreate(String utcCreate) {
+            this.utcCreate = utcCreate;
+            return this;
+        }
+        public String getUtcCreate() {
+            return this.utcCreate;
+        }
+
+        public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo setUtcEndTime(String utcEndTime) {
+            this.utcEndTime = utcEndTime;
+            return this;
+        }
+        public String getUtcEndTime() {
+            return this.utcEndTime;
+        }
+
+        public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo setUtcModified(String utcModified) {
+            this.utcModified = utcModified;
+            return this;
+        }
+        public String getUtcModified() {
+            return this.utcModified;
+        }
+
+        public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo setUtcStartTime(String utcStartTime) {
+            this.utcStartTime = utcStartTime;
+            return this;
+        }
+        public String getUtcStartTime() {
+            return this.utcStartTime;
         }
 
     }

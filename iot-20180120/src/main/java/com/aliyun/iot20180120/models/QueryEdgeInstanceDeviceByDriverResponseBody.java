@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceDeviceByDriverResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryEdgeInstanceDeviceByDriverResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryEdgeInstanceDeviceByDriverResponseBodyData data;
-
     public static QueryEdgeInstanceDeviceByDriverResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryEdgeInstanceDeviceByDriverResponseBody self = new QueryEdgeInstanceDeviceByDriverResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryEdgeInstanceDeviceByDriverResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryEdgeInstanceDeviceByDriverResponseBody setData(QueryEdgeInstanceDeviceByDriverResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryEdgeInstanceDeviceByDriverResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryEdgeInstanceDeviceByDriverResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryEdgeInstanceDeviceByDriverResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class QueryEdgeInstanceDeviceByDriverResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public QueryEdgeInstanceDeviceByDriverResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryEdgeInstanceDeviceByDriverResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryEdgeInstanceDeviceByDriverResponseBody setData(QueryEdgeInstanceDeviceByDriverResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryEdgeInstanceDeviceByDriverResponseBodyData getData() {
-        return this.data;
     }
 
     public static class QueryEdgeInstanceDeviceByDriverResponseBodyDataDeviceList extends TeaModel {
@@ -84,37 +84,21 @@ public class QueryEdgeInstanceDeviceByDriverResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeInstanceDeviceByDriverResponseBodyData extends TeaModel {
-        @NameInMap("Total")
-        public Integer total;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         @NameInMap("DeviceList")
         public java.util.List<QueryEdgeInstanceDeviceByDriverResponseBodyDataDeviceList> deviceList;
 
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("Total")
+        public Integer total;
+
         public static QueryEdgeInstanceDeviceByDriverResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryEdgeInstanceDeviceByDriverResponseBodyData self = new QueryEdgeInstanceDeviceByDriverResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryEdgeInstanceDeviceByDriverResponseBodyData setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
-        }
-
-        public QueryEdgeInstanceDeviceByDriverResponseBodyData setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
         }
 
         public QueryEdgeInstanceDeviceByDriverResponseBodyData setCurrentPage(Integer currentPage) {
@@ -131,6 +115,22 @@ public class QueryEdgeInstanceDeviceByDriverResponseBody extends TeaModel {
         }
         public java.util.List<QueryEdgeInstanceDeviceByDriverResponseBodyDataDeviceList> getDeviceList() {
             return this.deviceList;
+        }
+
+        public QueryEdgeInstanceDeviceByDriverResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public QueryEdgeInstanceDeviceByDriverResponseBodyData setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
         }
 
     }

@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceGroupByDeviceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
 
@@ -19,25 +13,15 @@ public class QueryDeviceGroupByDeviceResponseBody extends TeaModel {
     @NameInMap("GroupInfos")
     public QueryDeviceGroupByDeviceResponseBodyGroupInfos groupInfos;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     public static QueryDeviceGroupByDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceGroupByDeviceResponseBody self = new QueryDeviceGroupByDeviceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDeviceGroupByDeviceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryDeviceGroupByDeviceResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public QueryDeviceGroupByDeviceResponseBody setCode(String code) {
@@ -64,7 +48,26 @@ public class QueryDeviceGroupByDeviceResponseBody extends TeaModel {
         return this.groupInfos;
     }
 
+    public QueryDeviceGroupByDeviceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryDeviceGroupByDeviceResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class QueryDeviceGroupByDeviceResponseBodyGroupInfosGroupInfo extends TeaModel {
+        @NameInMap("GroupDesc")
+        public String groupDesc;
+
         @NameInMap("GroupId")
         public String groupId;
 
@@ -74,12 +77,17 @@ public class QueryDeviceGroupByDeviceResponseBody extends TeaModel {
         @NameInMap("UtcCreate")
         public String utcCreate;
 
-        @NameInMap("GroupDesc")
-        public String groupDesc;
-
         public static QueryDeviceGroupByDeviceResponseBodyGroupInfosGroupInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceGroupByDeviceResponseBodyGroupInfosGroupInfo self = new QueryDeviceGroupByDeviceResponseBodyGroupInfosGroupInfo();
             return TeaModel.build(map, self);
+        }
+
+        public QueryDeviceGroupByDeviceResponseBodyGroupInfosGroupInfo setGroupDesc(String groupDesc) {
+            this.groupDesc = groupDesc;
+            return this;
+        }
+        public String getGroupDesc() {
+            return this.groupDesc;
         }
 
         public QueryDeviceGroupByDeviceResponseBodyGroupInfosGroupInfo setGroupId(String groupId) {
@@ -104,14 +112,6 @@ public class QueryDeviceGroupByDeviceResponseBody extends TeaModel {
         }
         public String getUtcCreate() {
             return this.utcCreate;
-        }
-
-        public QueryDeviceGroupByDeviceResponseBodyGroupInfosGroupInfo setGroupDesc(String groupDesc) {
-            this.groupDesc = groupDesc;
-            return this;
-        }
-        public String getGroupDesc() {
-            return this.groupDesc;
         }
 
     }

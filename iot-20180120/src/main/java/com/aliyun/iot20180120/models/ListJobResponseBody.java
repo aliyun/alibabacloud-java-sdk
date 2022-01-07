@@ -4,33 +4,73 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListJobResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ListJobResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("Page")
+    public Integer page;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Total")
     public Integer total;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("Page")
-    public Integer page;
-
-    @NameInMap("Data")
-    public ListJobResponseBodyData data;
 
     public static ListJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListJobResponseBody self = new ListJobResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListJobResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListJobResponseBody setData(ListJobResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListJobResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListJobResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public ListJobResponseBody setPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    public Integer getPage() {
+        return this.page;
+    }
+
+    public ListJobResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListJobResponseBody setRequestId(String requestId) {
@@ -49,22 +89,6 @@ public class ListJobResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListJobResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListJobResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public ListJobResponseBody setTotal(Integer total) {
         this.total = total;
         return this;
@@ -73,36 +97,24 @@ public class ListJobResponseBody extends TeaModel {
         return this.total;
     }
 
-    public ListJobResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListJobResponseBody setPage(Integer page) {
-        this.page = page;
-        return this;
-    }
-    public Integer getPage() {
-        return this.page;
-    }
-
-    public ListJobResponseBody setData(ListJobResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListJobResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListJobResponseBodyDataData extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("JobId")
         public String jobId;
 
         @NameInMap("JobName")
         public String jobName;
+
+        @NameInMap("ScheduledTime")
+        public Long scheduledTime;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
 
         @NameInMap("UtcCreate")
         public String utcCreate;
@@ -110,21 +122,17 @@ public class ListJobResponseBody extends TeaModel {
         @NameInMap("UtcModified")
         public String utcModified;
 
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("ScheduledTime")
-        public Long scheduledTime;
-
         public static ListJobResponseBodyDataData build(java.util.Map<String, ?> map) throws Exception {
             ListJobResponseBodyDataData self = new ListJobResponseBodyDataData();
             return TeaModel.build(map, self);
+        }
+
+        public ListJobResponseBodyDataData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public ListJobResponseBodyDataData setJobId(String jobId) {
@@ -143,6 +151,30 @@ public class ListJobResponseBody extends TeaModel {
             return this.jobName;
         }
 
+        public ListJobResponseBodyDataData setScheduledTime(Long scheduledTime) {
+            this.scheduledTime = scheduledTime;
+            return this;
+        }
+        public Long getScheduledTime() {
+            return this.scheduledTime;
+        }
+
+        public ListJobResponseBodyDataData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListJobResponseBodyDataData setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
         public ListJobResponseBodyDataData setUtcCreate(String utcCreate) {
             this.utcCreate = utcCreate;
             return this;
@@ -157,38 +189,6 @@ public class ListJobResponseBody extends TeaModel {
         }
         public String getUtcModified() {
             return this.utcModified;
-        }
-
-        public ListJobResponseBodyDataData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListJobResponseBodyDataData setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListJobResponseBodyDataData setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public ListJobResponseBodyDataData setScheduledTime(Long scheduledTime) {
-            this.scheduledTime = scheduledTime;
-            return this;
-        }
-        public Long getScheduledTime() {
-            return this.scheduledTime;
         }
 
     }

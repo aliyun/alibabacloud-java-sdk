@@ -4,34 +4,18 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchAddDeviceGroupRelationsRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
+    @NameInMap("Device")
+    public java.util.List<BatchAddDeviceGroupRelationsRequestDevice> device;
 
     @NameInMap("GroupId")
     public String groupId;
 
-    @NameInMap("Device")
-    public java.util.List<BatchAddDeviceGroupRelationsRequestDevice> device;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     public static BatchAddDeviceGroupRelationsRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchAddDeviceGroupRelationsRequest self = new BatchAddDeviceGroupRelationsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchAddDeviceGroupRelationsRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
-    public BatchAddDeviceGroupRelationsRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
     }
 
     public BatchAddDeviceGroupRelationsRequest setDevice(java.util.List<BatchAddDeviceGroupRelationsRequestDevice> device) {
@@ -42,24 +26,32 @@ public class BatchAddDeviceGroupRelationsRequest extends TeaModel {
         return this.device;
     }
 
-    public static class BatchAddDeviceGroupRelationsRequestDevice extends TeaModel {
-        @NameInMap("ProductKey")
-        public String productKey;
+    public BatchAddDeviceGroupRelationsRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
 
+    public BatchAddDeviceGroupRelationsRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
+    public static class BatchAddDeviceGroupRelationsRequestDevice extends TeaModel {
         @NameInMap("DeviceName")
         public String deviceName;
+
+        @NameInMap("ProductKey")
+        public String productKey;
 
         public static BatchAddDeviceGroupRelationsRequestDevice build(java.util.Map<String, ?> map) throws Exception {
             BatchAddDeviceGroupRelationsRequestDevice self = new BatchAddDeviceGroupRelationsRequestDevice();
             return TeaModel.build(map, self);
-        }
-
-        public BatchAddDeviceGroupRelationsRequestDevice setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
         }
 
         public BatchAddDeviceGroupRelationsRequestDevice setDeviceName(String deviceName) {
@@ -68,6 +60,14 @@ public class BatchAddDeviceGroupRelationsRequest extends TeaModel {
         }
         public String getDeviceName() {
             return this.deviceName;
+        }
+
+        public BatchAddDeviceGroupRelationsRequestDevice setProductKey(String productKey) {
+            this.productKey = productKey;
+            return this;
+        }
+        public String getProductKey() {
+            return this.productKey;
         }
 
     }

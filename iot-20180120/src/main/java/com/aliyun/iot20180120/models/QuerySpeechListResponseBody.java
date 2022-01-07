@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySpeechListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QuerySpeechListResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QuerySpeechListResponseBodyData data;
-
     public static QuerySpeechListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySpeechListResponseBody self = new QuerySpeechListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySpeechListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QuerySpeechListResponseBody setData(QuerySpeechListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QuerySpeechListResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QuerySpeechListResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QuerySpeechListResponseBody setRequestId(String requestId) {
@@ -40,36 +64,12 @@ public class QuerySpeechListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QuerySpeechListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QuerySpeechListResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QuerySpeechListResponseBody setData(QuerySpeechListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QuerySpeechListResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QuerySpeechListResponseBodyDataListItemsSpeechListItems extends TeaModel {
-        @NameInMap("SpeechCode")
-        public String speechCode;
-
         @NameInMap("BizCode")
         public String bizCode;
+
+        @NameInMap("SpeechCode")
+        public String speechCode;
 
         @NameInMap("Text")
         public String text;
@@ -82,20 +82,20 @@ public class QuerySpeechListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QuerySpeechListResponseBodyDataListItemsSpeechListItems setSpeechCode(String speechCode) {
-            this.speechCode = speechCode;
-            return this;
-        }
-        public String getSpeechCode() {
-            return this.speechCode;
-        }
-
         public QuerySpeechListResponseBodyDataListItemsSpeechListItems setBizCode(String bizCode) {
             this.bizCode = bizCode;
             return this;
         }
         public String getBizCode() {
             return this.bizCode;
+        }
+
+        public QuerySpeechListResponseBodyDataListItemsSpeechListItems setSpeechCode(String speechCode) {
+            this.speechCode = speechCode;
+            return this;
+        }
+        public String getSpeechCode() {
+            return this.speechCode;
         }
 
         public QuerySpeechListResponseBodyDataListItemsSpeechListItems setText(String text) {
@@ -136,11 +136,17 @@ public class QuerySpeechListResponseBody extends TeaModel {
     }
 
     public static class QuerySpeechListResponseBodyDataListItems extends TeaModel {
+        @NameInMap("BizCode")
+        public String bizCode;
+
         @NameInMap("SpeechCode")
         public String speechCode;
 
-        @NameInMap("BizCode")
-        public String bizCode;
+        @NameInMap("SpeechList")
+        public QuerySpeechListResponseBodyDataListItemsSpeechList speechList;
+
+        @NameInMap("SpeechType")
+        public String speechType;
 
         @NameInMap("Text")
         public String text;
@@ -148,15 +154,17 @@ public class QuerySpeechListResponseBody extends TeaModel {
         @NameInMap("Voice")
         public String voice;
 
-        @NameInMap("SpeechType")
-        public String speechType;
-
-        @NameInMap("SpeechList")
-        public QuerySpeechListResponseBodyDataListItemsSpeechList speechList;
-
         public static QuerySpeechListResponseBodyDataListItems build(java.util.Map<String, ?> map) throws Exception {
             QuerySpeechListResponseBodyDataListItems self = new QuerySpeechListResponseBodyDataListItems();
             return TeaModel.build(map, self);
+        }
+
+        public QuerySpeechListResponseBodyDataListItems setBizCode(String bizCode) {
+            this.bizCode = bizCode;
+            return this;
+        }
+        public String getBizCode() {
+            return this.bizCode;
         }
 
         public QuerySpeechListResponseBodyDataListItems setSpeechCode(String speechCode) {
@@ -167,12 +175,20 @@ public class QuerySpeechListResponseBody extends TeaModel {
             return this.speechCode;
         }
 
-        public QuerySpeechListResponseBodyDataListItems setBizCode(String bizCode) {
-            this.bizCode = bizCode;
+        public QuerySpeechListResponseBodyDataListItems setSpeechList(QuerySpeechListResponseBodyDataListItemsSpeechList speechList) {
+            this.speechList = speechList;
             return this;
         }
-        public String getBizCode() {
-            return this.bizCode;
+        public QuerySpeechListResponseBodyDataListItemsSpeechList getSpeechList() {
+            return this.speechList;
+        }
+
+        public QuerySpeechListResponseBodyDataListItems setSpeechType(String speechType) {
+            this.speechType = speechType;
+            return this;
+        }
+        public String getSpeechType() {
+            return this.speechType;
         }
 
         public QuerySpeechListResponseBodyDataListItems setText(String text) {
@@ -189,22 +205,6 @@ public class QuerySpeechListResponseBody extends TeaModel {
         }
         public String getVoice() {
             return this.voice;
-        }
-
-        public QuerySpeechListResponseBodyDataListItems setSpeechType(String speechType) {
-            this.speechType = speechType;
-            return this;
-        }
-        public String getSpeechType() {
-            return this.speechType;
-        }
-
-        public QuerySpeechListResponseBodyDataListItems setSpeechList(QuerySpeechListResponseBodyDataListItemsSpeechList speechList) {
-            this.speechList = speechList;
-            return this;
-        }
-        public QuerySpeechListResponseBodyDataListItemsSpeechList getSpeechList() {
-            return this.speechList;
         }
 
     }
@@ -229,8 +229,8 @@ public class QuerySpeechListResponseBody extends TeaModel {
     }
 
     public static class QuerySpeechListResponseBodyData extends TeaModel {
-        @NameInMap("Total")
-        public Integer total;
+        @NameInMap("List")
+        public QuerySpeechListResponseBodyDataList list;
 
         @NameInMap("PageId")
         public Integer pageId;
@@ -238,20 +238,20 @@ public class QuerySpeechListResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        @NameInMap("List")
-        public QuerySpeechListResponseBodyDataList list;
+        @NameInMap("Total")
+        public Integer total;
 
         public static QuerySpeechListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QuerySpeechListResponseBodyData self = new QuerySpeechListResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public QuerySpeechListResponseBodyData setTotal(Integer total) {
-            this.total = total;
+        public QuerySpeechListResponseBodyData setList(QuerySpeechListResponseBodyDataList list) {
+            this.list = list;
             return this;
         }
-        public Integer getTotal() {
-            return this.total;
+        public QuerySpeechListResponseBodyDataList getList() {
+            return this.list;
         }
 
         public QuerySpeechListResponseBodyData setPageId(Integer pageId) {
@@ -270,12 +270,12 @@ public class QuerySpeechListResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public QuerySpeechListResponseBodyData setList(QuerySpeechListResponseBodyDataList list) {
-            this.list = list;
+        public QuerySpeechListResponseBodyData setTotal(Integer total) {
+            this.total = total;
             return this;
         }
-        public QuerySpeechListResponseBodyDataList getList() {
-            return this.list;
+        public Integer getTotal() {
+            return this.total;
         }
 
     }

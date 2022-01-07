@@ -4,15 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateEdgeInstanceChannelRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("DriverId")
-    public String driverId;
-
     @NameInMap("ChannelId")
     public String channelId;
 
@@ -22,33 +13,18 @@ public class UpdateEdgeInstanceChannelRequest extends TeaModel {
     @NameInMap("Configs")
     public java.util.List<UpdateEdgeInstanceChannelRequestConfigs> configs;
 
+    @NameInMap("DriverId")
+    public String driverId;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
     public static UpdateEdgeInstanceChannelRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEdgeInstanceChannelRequest self = new UpdateEdgeInstanceChannelRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateEdgeInstanceChannelRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
-    public UpdateEdgeInstanceChannelRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public UpdateEdgeInstanceChannelRequest setDriverId(String driverId) {
-        this.driverId = driverId;
-        return this;
-    }
-    public String getDriverId() {
-        return this.driverId;
     }
 
     public UpdateEdgeInstanceChannelRequest setChannelId(String channelId) {
@@ -75,12 +51,36 @@ public class UpdateEdgeInstanceChannelRequest extends TeaModel {
         return this.configs;
     }
 
-    public static class UpdateEdgeInstanceChannelRequestConfigs extends TeaModel {
-        @NameInMap("Format")
-        public String format;
+    public UpdateEdgeInstanceChannelRequest setDriverId(String driverId) {
+        this.driverId = driverId;
+        return this;
+    }
+    public String getDriverId() {
+        return this.driverId;
+    }
 
+    public UpdateEdgeInstanceChannelRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public UpdateEdgeInstanceChannelRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
+    public static class UpdateEdgeInstanceChannelRequestConfigs extends TeaModel {
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("Format")
+        public String format;
 
         @NameInMap("Key")
         public String key;
@@ -90,20 +90,20 @@ public class UpdateEdgeInstanceChannelRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public UpdateEdgeInstanceChannelRequestConfigs setFormat(String format) {
-            this.format = format;
-            return this;
-        }
-        public String getFormat() {
-            return this.format;
-        }
-
         public UpdateEdgeInstanceChannelRequestConfigs setContent(String content) {
             this.content = content;
             return this;
         }
         public String getContent() {
             return this.content;
+        }
+
+        public UpdateEdgeInstanceChannelRequestConfigs setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
         }
 
         public UpdateEdgeInstanceChannelRequestConfigs setKey(String key) {

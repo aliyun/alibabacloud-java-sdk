@@ -4,14 +4,14 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class SetupStudioAppAuthModeOpenRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     @NameInMap("AppId")
     public String appId;
 
     @NameInMap("AuthMode")
     public Integer authMode;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("ProjectId")
     public String projectId;
@@ -19,14 +19,6 @@ public class SetupStudioAppAuthModeOpenRequest extends TeaModel {
     public static SetupStudioAppAuthModeOpenRequest build(java.util.Map<String, ?> map) throws Exception {
         SetupStudioAppAuthModeOpenRequest self = new SetupStudioAppAuthModeOpenRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetupStudioAppAuthModeOpenRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
     }
 
     public SetupStudioAppAuthModeOpenRequest setAppId(String appId) {
@@ -43,6 +35,14 @@ public class SetupStudioAppAuthModeOpenRequest extends TeaModel {
     }
     public Integer getAuthMode() {
         return this.authMode;
+    }
+
+    public SetupStudioAppAuthModeOpenRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public SetupStudioAppAuthModeOpenRequest setProjectId(String projectId) {

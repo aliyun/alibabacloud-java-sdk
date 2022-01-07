@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchGetEdgeDriverResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("DriverList")
+    public java.util.List<BatchGetEdgeDriverResponseBodyDriverList> driverList;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("DriverList")
-    public java.util.List<BatchGetEdgeDriverResponseBodyDriverList> driverList;
-
     public static BatchGetEdgeDriverResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchGetEdgeDriverResponseBody self = new BatchGetEdgeDriverResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public BatchGetEdgeDriverResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public BatchGetEdgeDriverResponseBody setDriverList(java.util.List<BatchGetEdgeDriverResponseBodyDriverList> driverList) {
+        this.driverList = driverList;
+        return this;
+    }
+    public java.util.List<BatchGetEdgeDriverResponseBodyDriverList> getDriverList() {
+        return this.driverList;
+    }
+
+    public BatchGetEdgeDriverResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public BatchGetEdgeDriverResponseBody setRequestId(String requestId) {
@@ -40,31 +64,10 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
         return this.success;
     }
 
-    public BatchGetEdgeDriverResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public BatchGetEdgeDriverResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public BatchGetEdgeDriverResponseBody setDriverList(java.util.List<BatchGetEdgeDriverResponseBodyDriverList> driverList) {
-        this.driverList = driverList;
-        return this;
-    }
-    public java.util.List<BatchGetEdgeDriverResponseBodyDriverList> getDriverList() {
-        return this.driverList;
-    }
-
     public static class BatchGetEdgeDriverResponseBodyDriverList extends TeaModel {
+        @NameInMap("CpuArch")
+        public String cpuArch;
+
         @NameInMap("DriverId")
         public String driverId;
 
@@ -74,27 +77,32 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
         @NameInMap("DriverProtocol")
         public String driverProtocol;
 
-        @NameInMap("Runtime")
-        public String runtime;
-
-        @NameInMap("CpuArch")
-        public String cpuArch;
-
-        @NameInMap("Type")
-        public Integer type;
-
-        @NameInMap("IsBuiltIn")
-        public Boolean isBuiltIn;
-
         @NameInMap("GmtCreateTimestamp")
         public Long gmtCreateTimestamp;
 
         @NameInMap("GmtModifiedTimestamp")
         public Long gmtModifiedTimestamp;
 
+        @NameInMap("IsBuiltIn")
+        public Boolean isBuiltIn;
+
+        @NameInMap("Runtime")
+        public String runtime;
+
+        @NameInMap("Type")
+        public Integer type;
+
         public static BatchGetEdgeDriverResponseBodyDriverList build(java.util.Map<String, ?> map) throws Exception {
             BatchGetEdgeDriverResponseBodyDriverList self = new BatchGetEdgeDriverResponseBodyDriverList();
             return TeaModel.build(map, self);
+        }
+
+        public BatchGetEdgeDriverResponseBodyDriverList setCpuArch(String cpuArch) {
+            this.cpuArch = cpuArch;
+            return this;
+        }
+        public String getCpuArch() {
+            return this.cpuArch;
         }
 
         public BatchGetEdgeDriverResponseBodyDriverList setDriverId(String driverId) {
@@ -121,38 +129,6 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
             return this.driverProtocol;
         }
 
-        public BatchGetEdgeDriverResponseBodyDriverList setRuntime(String runtime) {
-            this.runtime = runtime;
-            return this;
-        }
-        public String getRuntime() {
-            return this.runtime;
-        }
-
-        public BatchGetEdgeDriverResponseBodyDriverList setCpuArch(String cpuArch) {
-            this.cpuArch = cpuArch;
-            return this;
-        }
-        public String getCpuArch() {
-            return this.cpuArch;
-        }
-
-        public BatchGetEdgeDriverResponseBodyDriverList setType(Integer type) {
-            this.type = type;
-            return this;
-        }
-        public Integer getType() {
-            return this.type;
-        }
-
-        public BatchGetEdgeDriverResponseBodyDriverList setIsBuiltIn(Boolean isBuiltIn) {
-            this.isBuiltIn = isBuiltIn;
-            return this;
-        }
-        public Boolean getIsBuiltIn() {
-            return this.isBuiltIn;
-        }
-
         public BatchGetEdgeDriverResponseBodyDriverList setGmtCreateTimestamp(Long gmtCreateTimestamp) {
             this.gmtCreateTimestamp = gmtCreateTimestamp;
             return this;
@@ -167,6 +143,30 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
         }
         public Long getGmtModifiedTimestamp() {
             return this.gmtModifiedTimestamp;
+        }
+
+        public BatchGetEdgeDriverResponseBodyDriverList setIsBuiltIn(Boolean isBuiltIn) {
+            this.isBuiltIn = isBuiltIn;
+            return this;
+        }
+        public Boolean getIsBuiltIn() {
+            return this.isBuiltIn;
+        }
+
+        public BatchGetEdgeDriverResponseBodyDriverList setRuntime(String runtime) {
+            this.runtime = runtime;
+            return this;
+        }
+        public String getRuntime() {
+            return this.runtime;
+        }
+
+        public BatchGetEdgeDriverResponseBodyDriverList setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchUpdateDeviceNicknameRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     @NameInMap("DeviceNicknameInfo")
     public java.util.List<BatchUpdateDeviceNicknameRequestDeviceNicknameInfo> deviceNicknameInfo;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     public static BatchUpdateDeviceNicknameRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchUpdateDeviceNicknameRequest self = new BatchUpdateDeviceNicknameRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchUpdateDeviceNicknameRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
     }
 
     public BatchUpdateDeviceNicknameRequest setDeviceNicknameInfo(java.util.List<BatchUpdateDeviceNicknameRequestDeviceNicknameInfo> deviceNicknameInfo) {
@@ -31,30 +23,30 @@ public class BatchUpdateDeviceNicknameRequest extends TeaModel {
         return this.deviceNicknameInfo;
     }
 
-    public static class BatchUpdateDeviceNicknameRequestDeviceNicknameInfo extends TeaModel {
-        @NameInMap("ProductKey")
-        public String productKey;
+    public BatchUpdateDeviceNicknameRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
 
+    public static class BatchUpdateDeviceNicknameRequestDeviceNicknameInfo extends TeaModel {
         @NameInMap("DeviceName")
         public String deviceName;
-
-        @NameInMap("Nickname")
-        public String nickname;
 
         @NameInMap("IotId")
         public String iotId;
 
+        @NameInMap("Nickname")
+        public String nickname;
+
+        @NameInMap("ProductKey")
+        public String productKey;
+
         public static BatchUpdateDeviceNicknameRequestDeviceNicknameInfo build(java.util.Map<String, ?> map) throws Exception {
             BatchUpdateDeviceNicknameRequestDeviceNicknameInfo self = new BatchUpdateDeviceNicknameRequestDeviceNicknameInfo();
             return TeaModel.build(map, self);
-        }
-
-        public BatchUpdateDeviceNicknameRequestDeviceNicknameInfo setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
         }
 
         public BatchUpdateDeviceNicknameRequestDeviceNicknameInfo setDeviceName(String deviceName) {
@@ -65,6 +57,14 @@ public class BatchUpdateDeviceNicknameRequest extends TeaModel {
             return this.deviceName;
         }
 
+        public BatchUpdateDeviceNicknameRequestDeviceNicknameInfo setIotId(String iotId) {
+            this.iotId = iotId;
+            return this;
+        }
+        public String getIotId() {
+            return this.iotId;
+        }
+
         public BatchUpdateDeviceNicknameRequestDeviceNicknameInfo setNickname(String nickname) {
             this.nickname = nickname;
             return this;
@@ -73,12 +73,12 @@ public class BatchUpdateDeviceNicknameRequest extends TeaModel {
             return this.nickname;
         }
 
-        public BatchUpdateDeviceNicknameRequestDeviceNicknameInfo setIotId(String iotId) {
-            this.iotId = iotId;
+        public BatchUpdateDeviceNicknameRequestDeviceNicknameInfo setProductKey(String productKey) {
+            this.productKey = productKey;
             return this;
         }
-        public String getIotId() {
-            return this.iotId;
+        public String getProductKey() {
+            return this.productKey;
         }
 
     }

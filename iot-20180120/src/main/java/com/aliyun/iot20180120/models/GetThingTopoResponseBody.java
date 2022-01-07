@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetThingTopoResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetThingTopoResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public GetThingTopoResponseBodyData data;
-
     public static GetThingTopoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetThingTopoResponseBody self = new GetThingTopoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetThingTopoResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetThingTopoResponseBody setData(GetThingTopoResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetThingTopoResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetThingTopoResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetThingTopoResponseBody setRequestId(String requestId) {
@@ -40,43 +64,27 @@ public class GetThingTopoResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetThingTopoResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetThingTopoResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetThingTopoResponseBody setData(GetThingTopoResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetThingTopoResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetThingTopoResponseBodyDataListDeviceInfo extends TeaModel {
+        @NameInMap("DeviceName")
+        public String deviceName;
+
         @NameInMap("IotId")
         public String iotId;
 
         @NameInMap("ProductKey")
         public String productKey;
 
-        @NameInMap("DeviceName")
-        public String deviceName;
-
         public static GetThingTopoResponseBodyDataListDeviceInfo build(java.util.Map<String, ?> map) throws Exception {
             GetThingTopoResponseBodyDataListDeviceInfo self = new GetThingTopoResponseBodyDataListDeviceInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetThingTopoResponseBodyDataListDeviceInfo setDeviceName(String deviceName) {
+            this.deviceName = deviceName;
+            return this;
+        }
+        public String getDeviceName() {
+            return this.deviceName;
         }
 
         public GetThingTopoResponseBodyDataListDeviceInfo setIotId(String iotId) {
@@ -93,14 +101,6 @@ public class GetThingTopoResponseBody extends TeaModel {
         }
         public String getProductKey() {
             return this.productKey;
-        }
-
-        public GetThingTopoResponseBodyDataListDeviceInfo setDeviceName(String deviceName) {
-            this.deviceName = deviceName;
-            return this;
-        }
-        public String getDeviceName() {
-            return this.deviceName;
         }
 
     }
@@ -125,32 +125,24 @@ public class GetThingTopoResponseBody extends TeaModel {
     }
 
     public static class GetThingTopoResponseBodyData extends TeaModel {
-        @NameInMap("Total")
-        public Long total;
-
         @NameInMap("CurrentPage")
         public Integer currentPage;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
-        @NameInMap("PageCount")
-        public Long pageCount;
 
         @NameInMap("List")
         public GetThingTopoResponseBodyDataList list;
 
+        @NameInMap("PageCount")
+        public Long pageCount;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("Total")
+        public Long total;
+
         public static GetThingTopoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetThingTopoResponseBodyData self = new GetThingTopoResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetThingTopoResponseBodyData setTotal(Long total) {
-            this.total = total;
-            return this;
-        }
-        public Long getTotal() {
-            return this.total;
         }
 
         public GetThingTopoResponseBodyData setCurrentPage(Integer currentPage) {
@@ -161,12 +153,12 @@ public class GetThingTopoResponseBody extends TeaModel {
             return this.currentPage;
         }
 
-        public GetThingTopoResponseBodyData setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public GetThingTopoResponseBodyData setList(GetThingTopoResponseBodyDataList list) {
+            this.list = list;
             return this;
         }
-        public Integer getPageSize() {
-            return this.pageSize;
+        public GetThingTopoResponseBodyDataList getList() {
+            return this.list;
         }
 
         public GetThingTopoResponseBodyData setPageCount(Long pageCount) {
@@ -177,12 +169,20 @@ public class GetThingTopoResponseBody extends TeaModel {
             return this.pageCount;
         }
 
-        public GetThingTopoResponseBodyData setList(GetThingTopoResponseBodyDataList list) {
-            this.list = list;
+        public GetThingTopoResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
-        public GetThingTopoResponseBodyDataList getList() {
-            return this.list;
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public GetThingTopoResponseBodyData setTotal(Long total) {
+            this.total = total;
+            return this;
+        }
+        public Long getTotal() {
+            return this.total;
         }
 
     }

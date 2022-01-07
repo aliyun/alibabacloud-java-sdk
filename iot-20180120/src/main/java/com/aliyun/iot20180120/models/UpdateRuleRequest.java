@@ -7,6 +7,15 @@ public class UpdateRuleRequest extends TeaModel {
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("ProductKey")
+    public String productKey;
+
+    @NameInMap("RuleDesc")
+    public String ruleDesc;
+
     @NameInMap("RuleId")
     public Long ruleId;
 
@@ -16,23 +25,14 @@ public class UpdateRuleRequest extends TeaModel {
     @NameInMap("ShortTopic")
     public String shortTopic;
 
-    @NameInMap("Where")
-    public String where;
-
-    @NameInMap("ProductKey")
-    public String productKey;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("RuleDesc")
-    public String ruleDesc;
+    @NameInMap("Topic")
+    public String topic;
 
     @NameInMap("TopicType")
     public Integer topicType;
 
-    @NameInMap("Topic")
-    public String topic;
+    @NameInMap("Where")
+    public String where;
 
     public static UpdateRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRuleRequest self = new UpdateRuleRequest();
@@ -45,6 +45,30 @@ public class UpdateRuleRequest extends TeaModel {
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
+    }
+
+    public UpdateRuleRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public UpdateRuleRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
+    }
+
+    public UpdateRuleRequest setRuleDesc(String ruleDesc) {
+        this.ruleDesc = ruleDesc;
+        return this;
+    }
+    public String getRuleDesc() {
+        return this.ruleDesc;
     }
 
     public UpdateRuleRequest setRuleId(Long ruleId) {
@@ -71,36 +95,12 @@ public class UpdateRuleRequest extends TeaModel {
         return this.shortTopic;
     }
 
-    public UpdateRuleRequest setWhere(String where) {
-        this.where = where;
+    public UpdateRuleRequest setTopic(String topic) {
+        this.topic = topic;
         return this;
     }
-    public String getWhere() {
-        return this.where;
-    }
-
-    public UpdateRuleRequest setProductKey(String productKey) {
-        this.productKey = productKey;
-        return this;
-    }
-    public String getProductKey() {
-        return this.productKey;
-    }
-
-    public UpdateRuleRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public UpdateRuleRequest setRuleDesc(String ruleDesc) {
-        this.ruleDesc = ruleDesc;
-        return this;
-    }
-    public String getRuleDesc() {
-        return this.ruleDesc;
+    public String getTopic() {
+        return this.topic;
     }
 
     public UpdateRuleRequest setTopicType(Integer topicType) {
@@ -111,12 +111,12 @@ public class UpdateRuleRequest extends TeaModel {
         return this.topicType;
     }
 
-    public UpdateRuleRequest setTopic(String topic) {
-        this.topic = topic;
+    public UpdateRuleRequest setWhere(String where) {
+        this.where = where;
         return this;
     }
-    public String getTopic() {
-        return this.topic;
+    public String getWhere() {
+        return this.where;
     }
 
 }

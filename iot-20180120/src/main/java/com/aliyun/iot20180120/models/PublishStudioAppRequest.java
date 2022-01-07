@@ -4,14 +4,14 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class PublishStudioAppRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     @NameInMap("AppId")
     public String appId;
 
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("ProjectId")
     public String projectId;
@@ -19,14 +19,6 @@ public class PublishStudioAppRequest extends TeaModel {
     public static PublishStudioAppRequest build(java.util.Map<String, ?> map) throws Exception {
         PublishStudioAppRequest self = new PublishStudioAppRequest();
         return TeaModel.build(map, self);
-    }
-
-    public PublishStudioAppRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
     }
 
     public PublishStudioAppRequest setAppId(String appId) {
@@ -43,6 +35,14 @@ public class PublishStudioAppRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public PublishStudioAppRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public PublishStudioAppRequest setProjectId(String projectId) {

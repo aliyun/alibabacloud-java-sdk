@@ -4,40 +4,24 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySolutionDeviceGroupPageRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
-    @NameInMap("ProjectCode")
-    public String projectCode;
-
     @NameInMap("FuzzyGroupName")
     public String fuzzyGroupName;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("PageId")
     public Integer pageId;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("ProjectCode")
+    public String projectCode;
+
     public static QuerySolutionDeviceGroupPageRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySolutionDeviceGroupPageRequest self = new QuerySolutionDeviceGroupPageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QuerySolutionDeviceGroupPageRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
-    public QuerySolutionDeviceGroupPageRequest setProjectCode(String projectCode) {
-        this.projectCode = projectCode;
-        return this;
-    }
-    public String getProjectCode() {
-        return this.projectCode;
     }
 
     public QuerySolutionDeviceGroupPageRequest setFuzzyGroupName(String fuzzyGroupName) {
@@ -48,12 +32,12 @@ public class QuerySolutionDeviceGroupPageRequest extends TeaModel {
         return this.fuzzyGroupName;
     }
 
-    public QuerySolutionDeviceGroupPageRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public QuerySolutionDeviceGroupPageRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public QuerySolutionDeviceGroupPageRequest setPageId(Integer pageId) {
@@ -62,6 +46,22 @@ public class QuerySolutionDeviceGroupPageRequest extends TeaModel {
     }
     public Integer getPageId() {
         return this.pageId;
+    }
+
+    public QuerySolutionDeviceGroupPageRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public QuerySolutionDeviceGroupPageRequest setProjectCode(String projectCode) {
+        this.projectCode = projectCode;
+        return this;
+    }
+    public String getProjectCode() {
+        return this.projectCode;
     }
 
 }

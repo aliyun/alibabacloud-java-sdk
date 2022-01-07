@@ -4,46 +4,30 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class RRpcResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    @NameInMap("RrpcCode")
-    public String rrpcCode;
+    @NameInMap("MessageId")
+    public Long messageId;
 
     @NameInMap("PayloadBase64Byte")
     public String payloadBase64Byte;
 
-    @NameInMap("MessageId")
-    public Long messageId;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("RrpcCode")
+    public String rrpcCode;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static RRpcResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RRpcResponseBody self = new RRpcResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RRpcResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public RRpcResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public RRpcResponseBody setCode(String code) {
@@ -62,12 +46,12 @@ public class RRpcResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public RRpcResponseBody setRrpcCode(String rrpcCode) {
-        this.rrpcCode = rrpcCode;
+    public RRpcResponseBody setMessageId(Long messageId) {
+        this.messageId = messageId;
         return this;
     }
-    public String getRrpcCode() {
-        return this.rrpcCode;
+    public Long getMessageId() {
+        return this.messageId;
     }
 
     public RRpcResponseBody setPayloadBase64Byte(String payloadBase64Byte) {
@@ -78,12 +62,28 @@ public class RRpcResponseBody extends TeaModel {
         return this.payloadBase64Byte;
     }
 
-    public RRpcResponseBody setMessageId(Long messageId) {
-        this.messageId = messageId;
+    public RRpcResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Long getMessageId() {
-        return this.messageId;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public RRpcResponseBody setRrpcCode(String rrpcCode) {
+        this.rrpcCode = rrpcCode;
+        return this;
+    }
+    public String getRrpcCode() {
+        return this.rrpcCode;
+    }
+
+    public RRpcResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

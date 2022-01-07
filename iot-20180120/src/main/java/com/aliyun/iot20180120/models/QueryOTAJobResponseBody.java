@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryOTAJobResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryOTAJobResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryOTAJobResponseBodyData data;
-
     public static QueryOTAJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryOTAJobResponseBody self = new QueryOTAJobResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryOTAJobResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryOTAJobResponseBody setData(QueryOTAJobResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryOTAJobResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryOTAJobResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryOTAJobResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class QueryOTAJobResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public QueryOTAJobResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryOTAJobResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryOTAJobResponseBody setData(QueryOTAJobResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryOTAJobResponseBodyData getData() {
-        return this.data;
     }
 
     public static class QueryOTAJobResponseBodyDataSrcVersions extends TeaModel {
@@ -133,26 +133,23 @@ public class QueryOTAJobResponseBody extends TeaModel {
     }
 
     public static class QueryOTAJobResponseBodyData extends TeaModel {
-        @NameInMap("JobId")
-        public String jobId;
+        @NameInMap("DestVersion")
+        public String destVersion;
 
-        @NameInMap("UtcCreate")
-        public String utcCreate;
-
-        @NameInMap("UtcModified")
-        public String utcModified;
-
-        @NameInMap("ProductKey")
-        public String productKey;
+        @NameInMap("DynamicMode")
+        public Integer dynamicMode;
 
         @NameInMap("FirmwareId")
         public String firmwareId;
 
-        @NameInMap("UtcStartTime")
-        public String utcStartTime;
+        @NameInMap("GrayPercent")
+        public String grayPercent;
 
-        @NameInMap("UtcEndTime")
-        public String utcEndTime;
+        @NameInMap("JobDesc")
+        public String jobDesc;
+
+        @NameInMap("JobId")
+        public String jobId;
 
         @NameInMap("JobStatus")
         public String jobStatus;
@@ -160,53 +157,32 @@ public class QueryOTAJobResponseBody extends TeaModel {
         @NameInMap("JobType")
         public String jobType;
 
-        @NameInMap("JobDesc")
-        public String jobDesc;
+        @NameInMap("MaximumPerMinute")
+        public Integer maximumPerMinute;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("UtcScheduleTime")
-        public String utcScheduleTime;
-
-        @NameInMap("RetryInterval")
-        public Integer retryInterval;
-
-        @NameInMap("RetryCount")
-        public Integer retryCount;
-
-        @NameInMap("TimeoutInMinutes")
-        public Integer timeoutInMinutes;
-
-        @NameInMap("TargetSelection")
-        public String targetSelection;
-
-        @NameInMap("SelectionType")
-        public String selectionType;
-
-        @NameInMap("GrayPercent")
-        public String grayPercent;
-
-        @NameInMap("MaximumPerMinute")
-        public Integer maximumPerMinute;
-
-        @NameInMap("DestVersion")
-        public String destVersion;
-
-        @NameInMap("UtcScheduleFinishTime")
-        public String utcScheduleFinishTime;
-
-        @NameInMap("OverwriteMode")
-        public Integer overwriteMode;
-
-        @NameInMap("DynamicMode")
-        public Integer dynamicMode;
+        @NameInMap("NeedConfirm")
+        public Boolean needConfirm;
 
         @NameInMap("NeedPush")
         public Boolean needPush;
 
-        @NameInMap("NeedConfirm")
-        public Boolean needConfirm;
+        @NameInMap("OverwriteMode")
+        public Integer overwriteMode;
+
+        @NameInMap("ProductKey")
+        public String productKey;
+
+        @NameInMap("RetryCount")
+        public Integer retryCount;
+
+        @NameInMap("RetryInterval")
+        public Integer retryInterval;
+
+        @NameInMap("SelectionType")
+        public String selectionType;
 
         @NameInMap("SrcVersions")
         public QueryOTAJobResponseBodyDataSrcVersions srcVersions;
@@ -214,41 +190,49 @@ public class QueryOTAJobResponseBody extends TeaModel {
         @NameInMap("Tags")
         public QueryOTAJobResponseBodyDataTags tags;
 
+        @NameInMap("TargetSelection")
+        public String targetSelection;
+
+        @NameInMap("TimeoutInMinutes")
+        public Integer timeoutInMinutes;
+
+        @NameInMap("UtcCreate")
+        public String utcCreate;
+
+        @NameInMap("UtcEndTime")
+        public String utcEndTime;
+
+        @NameInMap("UtcModified")
+        public String utcModified;
+
+        @NameInMap("UtcScheduleFinishTime")
+        public String utcScheduleFinishTime;
+
+        @NameInMap("UtcScheduleTime")
+        public String utcScheduleTime;
+
+        @NameInMap("UtcStartTime")
+        public String utcStartTime;
+
         public static QueryOTAJobResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryOTAJobResponseBodyData self = new QueryOTAJobResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public QueryOTAJobResponseBodyData setJobId(String jobId) {
-            this.jobId = jobId;
+        public QueryOTAJobResponseBodyData setDestVersion(String destVersion) {
+            this.destVersion = destVersion;
             return this;
         }
-        public String getJobId() {
-            return this.jobId;
+        public String getDestVersion() {
+            return this.destVersion;
         }
 
-        public QueryOTAJobResponseBodyData setUtcCreate(String utcCreate) {
-            this.utcCreate = utcCreate;
+        public QueryOTAJobResponseBodyData setDynamicMode(Integer dynamicMode) {
+            this.dynamicMode = dynamicMode;
             return this;
         }
-        public String getUtcCreate() {
-            return this.utcCreate;
-        }
-
-        public QueryOTAJobResponseBodyData setUtcModified(String utcModified) {
-            this.utcModified = utcModified;
-            return this;
-        }
-        public String getUtcModified() {
-            return this.utcModified;
-        }
-
-        public QueryOTAJobResponseBodyData setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
+        public Integer getDynamicMode() {
+            return this.dynamicMode;
         }
 
         public QueryOTAJobResponseBodyData setFirmwareId(String firmwareId) {
@@ -259,20 +243,28 @@ public class QueryOTAJobResponseBody extends TeaModel {
             return this.firmwareId;
         }
 
-        public QueryOTAJobResponseBodyData setUtcStartTime(String utcStartTime) {
-            this.utcStartTime = utcStartTime;
+        public QueryOTAJobResponseBodyData setGrayPercent(String grayPercent) {
+            this.grayPercent = grayPercent;
             return this;
         }
-        public String getUtcStartTime() {
-            return this.utcStartTime;
+        public String getGrayPercent() {
+            return this.grayPercent;
         }
 
-        public QueryOTAJobResponseBodyData setUtcEndTime(String utcEndTime) {
-            this.utcEndTime = utcEndTime;
+        public QueryOTAJobResponseBodyData setJobDesc(String jobDesc) {
+            this.jobDesc = jobDesc;
             return this;
         }
-        public String getUtcEndTime() {
-            return this.utcEndTime;
+        public String getJobDesc() {
+            return this.jobDesc;
+        }
+
+        public QueryOTAJobResponseBodyData setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
         }
 
         public QueryOTAJobResponseBodyData setJobStatus(String jobStatus) {
@@ -291,12 +283,12 @@ public class QueryOTAJobResponseBody extends TeaModel {
             return this.jobType;
         }
 
-        public QueryOTAJobResponseBodyData setJobDesc(String jobDesc) {
-            this.jobDesc = jobDesc;
+        public QueryOTAJobResponseBodyData setMaximumPerMinute(Integer maximumPerMinute) {
+            this.maximumPerMinute = maximumPerMinute;
             return this;
         }
-        public String getJobDesc() {
-            return this.jobDesc;
+        public Integer getMaximumPerMinute() {
+            return this.maximumPerMinute;
         }
 
         public QueryOTAJobResponseBodyData setName(String name) {
@@ -307,100 +299,12 @@ public class QueryOTAJobResponseBody extends TeaModel {
             return this.name;
         }
 
-        public QueryOTAJobResponseBodyData setUtcScheduleTime(String utcScheduleTime) {
-            this.utcScheduleTime = utcScheduleTime;
+        public QueryOTAJobResponseBodyData setNeedConfirm(Boolean needConfirm) {
+            this.needConfirm = needConfirm;
             return this;
         }
-        public String getUtcScheduleTime() {
-            return this.utcScheduleTime;
-        }
-
-        public QueryOTAJobResponseBodyData setRetryInterval(Integer retryInterval) {
-            this.retryInterval = retryInterval;
-            return this;
-        }
-        public Integer getRetryInterval() {
-            return this.retryInterval;
-        }
-
-        public QueryOTAJobResponseBodyData setRetryCount(Integer retryCount) {
-            this.retryCount = retryCount;
-            return this;
-        }
-        public Integer getRetryCount() {
-            return this.retryCount;
-        }
-
-        public QueryOTAJobResponseBodyData setTimeoutInMinutes(Integer timeoutInMinutes) {
-            this.timeoutInMinutes = timeoutInMinutes;
-            return this;
-        }
-        public Integer getTimeoutInMinutes() {
-            return this.timeoutInMinutes;
-        }
-
-        public QueryOTAJobResponseBodyData setTargetSelection(String targetSelection) {
-            this.targetSelection = targetSelection;
-            return this;
-        }
-        public String getTargetSelection() {
-            return this.targetSelection;
-        }
-
-        public QueryOTAJobResponseBodyData setSelectionType(String selectionType) {
-            this.selectionType = selectionType;
-            return this;
-        }
-        public String getSelectionType() {
-            return this.selectionType;
-        }
-
-        public QueryOTAJobResponseBodyData setGrayPercent(String grayPercent) {
-            this.grayPercent = grayPercent;
-            return this;
-        }
-        public String getGrayPercent() {
-            return this.grayPercent;
-        }
-
-        public QueryOTAJobResponseBodyData setMaximumPerMinute(Integer maximumPerMinute) {
-            this.maximumPerMinute = maximumPerMinute;
-            return this;
-        }
-        public Integer getMaximumPerMinute() {
-            return this.maximumPerMinute;
-        }
-
-        public QueryOTAJobResponseBodyData setDestVersion(String destVersion) {
-            this.destVersion = destVersion;
-            return this;
-        }
-        public String getDestVersion() {
-            return this.destVersion;
-        }
-
-        public QueryOTAJobResponseBodyData setUtcScheduleFinishTime(String utcScheduleFinishTime) {
-            this.utcScheduleFinishTime = utcScheduleFinishTime;
-            return this;
-        }
-        public String getUtcScheduleFinishTime() {
-            return this.utcScheduleFinishTime;
-        }
-
-        public QueryOTAJobResponseBodyData setOverwriteMode(Integer overwriteMode) {
-            this.overwriteMode = overwriteMode;
-            return this;
-        }
-        public Integer getOverwriteMode() {
-            return this.overwriteMode;
-        }
-
-        public QueryOTAJobResponseBodyData setDynamicMode(Integer dynamicMode) {
-            this.dynamicMode = dynamicMode;
-            return this;
-        }
-        public Integer getDynamicMode() {
-            return this.dynamicMode;
+        public Boolean getNeedConfirm() {
+            return this.needConfirm;
         }
 
         public QueryOTAJobResponseBodyData setNeedPush(Boolean needPush) {
@@ -411,12 +315,44 @@ public class QueryOTAJobResponseBody extends TeaModel {
             return this.needPush;
         }
 
-        public QueryOTAJobResponseBodyData setNeedConfirm(Boolean needConfirm) {
-            this.needConfirm = needConfirm;
+        public QueryOTAJobResponseBodyData setOverwriteMode(Integer overwriteMode) {
+            this.overwriteMode = overwriteMode;
             return this;
         }
-        public Boolean getNeedConfirm() {
-            return this.needConfirm;
+        public Integer getOverwriteMode() {
+            return this.overwriteMode;
+        }
+
+        public QueryOTAJobResponseBodyData setProductKey(String productKey) {
+            this.productKey = productKey;
+            return this;
+        }
+        public String getProductKey() {
+            return this.productKey;
+        }
+
+        public QueryOTAJobResponseBodyData setRetryCount(Integer retryCount) {
+            this.retryCount = retryCount;
+            return this;
+        }
+        public Integer getRetryCount() {
+            return this.retryCount;
+        }
+
+        public QueryOTAJobResponseBodyData setRetryInterval(Integer retryInterval) {
+            this.retryInterval = retryInterval;
+            return this;
+        }
+        public Integer getRetryInterval() {
+            return this.retryInterval;
+        }
+
+        public QueryOTAJobResponseBodyData setSelectionType(String selectionType) {
+            this.selectionType = selectionType;
+            return this;
+        }
+        public String getSelectionType() {
+            return this.selectionType;
         }
 
         public QueryOTAJobResponseBodyData setSrcVersions(QueryOTAJobResponseBodyDataSrcVersions srcVersions) {
@@ -433,6 +369,70 @@ public class QueryOTAJobResponseBody extends TeaModel {
         }
         public QueryOTAJobResponseBodyDataTags getTags() {
             return this.tags;
+        }
+
+        public QueryOTAJobResponseBodyData setTargetSelection(String targetSelection) {
+            this.targetSelection = targetSelection;
+            return this;
+        }
+        public String getTargetSelection() {
+            return this.targetSelection;
+        }
+
+        public QueryOTAJobResponseBodyData setTimeoutInMinutes(Integer timeoutInMinutes) {
+            this.timeoutInMinutes = timeoutInMinutes;
+            return this;
+        }
+        public Integer getTimeoutInMinutes() {
+            return this.timeoutInMinutes;
+        }
+
+        public QueryOTAJobResponseBodyData setUtcCreate(String utcCreate) {
+            this.utcCreate = utcCreate;
+            return this;
+        }
+        public String getUtcCreate() {
+            return this.utcCreate;
+        }
+
+        public QueryOTAJobResponseBodyData setUtcEndTime(String utcEndTime) {
+            this.utcEndTime = utcEndTime;
+            return this;
+        }
+        public String getUtcEndTime() {
+            return this.utcEndTime;
+        }
+
+        public QueryOTAJobResponseBodyData setUtcModified(String utcModified) {
+            this.utcModified = utcModified;
+            return this;
+        }
+        public String getUtcModified() {
+            return this.utcModified;
+        }
+
+        public QueryOTAJobResponseBodyData setUtcScheduleFinishTime(String utcScheduleFinishTime) {
+            this.utcScheduleFinishTime = utcScheduleFinishTime;
+            return this;
+        }
+        public String getUtcScheduleFinishTime() {
+            return this.utcScheduleFinishTime;
+        }
+
+        public QueryOTAJobResponseBodyData setUtcScheduleTime(String utcScheduleTime) {
+            this.utcScheduleTime = utcScheduleTime;
+            return this;
+        }
+        public String getUtcScheduleTime() {
+            return this.utcScheduleTime;
+        }
+
+        public QueryOTAJobResponseBodyData setUtcStartTime(String utcStartTime) {
+            this.utcStartTime = utcStartTime;
+            return this;
+        }
+        public String getUtcStartTime() {
+            return this.utcStartTime;
         }
 
     }

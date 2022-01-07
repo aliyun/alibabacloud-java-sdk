@@ -43,23 +43,15 @@ public class UpdateProductTagsRequest extends TeaModel {
     }
 
     public static class UpdateProductTagsRequestProductTag extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static UpdateProductTagsRequestProductTag build(java.util.Map<String, ?> map) throws Exception {
             UpdateProductTagsRequestProductTag self = new UpdateProductTagsRequestProductTag();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateProductTagsRequestProductTag setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public UpdateProductTagsRequestProductTag setTagKey(String tagKey) {
@@ -68,6 +60,14 @@ public class UpdateProductTagsRequest extends TeaModel {
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public UpdateProductTagsRequestProductTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

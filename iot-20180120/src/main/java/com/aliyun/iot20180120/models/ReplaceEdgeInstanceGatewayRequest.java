@@ -4,14 +4,14 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ReplaceEdgeInstanceGatewayRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
+    @NameInMap("CurrentGatewayId")
+    public String currentGatewayId;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("CurrentGatewayId")
-    public String currentGatewayId;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("NewGatewayId")
     public String newGatewayId;
@@ -21,12 +21,12 @@ public class ReplaceEdgeInstanceGatewayRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ReplaceEdgeInstanceGatewayRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
+    public ReplaceEdgeInstanceGatewayRequest setCurrentGatewayId(String currentGatewayId) {
+        this.currentGatewayId = currentGatewayId;
         return this;
     }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
+    public String getCurrentGatewayId() {
+        return this.currentGatewayId;
     }
 
     public ReplaceEdgeInstanceGatewayRequest setInstanceId(String instanceId) {
@@ -37,12 +37,12 @@ public class ReplaceEdgeInstanceGatewayRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ReplaceEdgeInstanceGatewayRequest setCurrentGatewayId(String currentGatewayId) {
-        this.currentGatewayId = currentGatewayId;
+    public ReplaceEdgeInstanceGatewayRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
         return this;
     }
-    public String getCurrentGatewayId() {
-        return this.currentGatewayId;
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public ReplaceEdgeInstanceGatewayRequest setNewGatewayId(String newGatewayId) {

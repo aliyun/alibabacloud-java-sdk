@@ -4,62 +4,30 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CancelOTATaskByJobRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
-    @NameInMap("JobId")
-    public String jobId;
-
-    @NameInMap("CancelScheduledTask")
-    public Boolean cancelScheduledTask;
-
-    @NameInMap("CancelQueuedTask")
-    public Boolean cancelQueuedTask;
-
     @NameInMap("CancelInProgressTask")
     public Boolean cancelInProgressTask;
 
     @NameInMap("CancelNotifiedTask")
     public Boolean cancelNotifiedTask;
 
+    @NameInMap("CancelQueuedTask")
+    public Boolean cancelQueuedTask;
+
+    @NameInMap("CancelScheduledTask")
+    public Boolean cancelScheduledTask;
+
     @NameInMap("CancelUnconfirmedTask")
     public Boolean cancelUnconfirmedTask;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
+    @NameInMap("JobId")
+    public String jobId;
 
     public static CancelOTATaskByJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CancelOTATaskByJobRequest self = new CancelOTATaskByJobRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CancelOTATaskByJobRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
-    public CancelOTATaskByJobRequest setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
-    }
-
-    public CancelOTATaskByJobRequest setCancelScheduledTask(Boolean cancelScheduledTask) {
-        this.cancelScheduledTask = cancelScheduledTask;
-        return this;
-    }
-    public Boolean getCancelScheduledTask() {
-        return this.cancelScheduledTask;
-    }
-
-    public CancelOTATaskByJobRequest setCancelQueuedTask(Boolean cancelQueuedTask) {
-        this.cancelQueuedTask = cancelQueuedTask;
-        return this;
-    }
-    public Boolean getCancelQueuedTask() {
-        return this.cancelQueuedTask;
     }
 
     public CancelOTATaskByJobRequest setCancelInProgressTask(Boolean cancelInProgressTask) {
@@ -78,12 +46,44 @@ public class CancelOTATaskByJobRequest extends TeaModel {
         return this.cancelNotifiedTask;
     }
 
+    public CancelOTATaskByJobRequest setCancelQueuedTask(Boolean cancelQueuedTask) {
+        this.cancelQueuedTask = cancelQueuedTask;
+        return this;
+    }
+    public Boolean getCancelQueuedTask() {
+        return this.cancelQueuedTask;
+    }
+
+    public CancelOTATaskByJobRequest setCancelScheduledTask(Boolean cancelScheduledTask) {
+        this.cancelScheduledTask = cancelScheduledTask;
+        return this;
+    }
+    public Boolean getCancelScheduledTask() {
+        return this.cancelScheduledTask;
+    }
+
     public CancelOTATaskByJobRequest setCancelUnconfirmedTask(Boolean cancelUnconfirmedTask) {
         this.cancelUnconfirmedTask = cancelUnconfirmedTask;
         return this;
     }
     public Boolean getCancelUnconfirmedTask() {
         return this.cancelUnconfirmedTask;
+    }
+
+    public CancelOTATaskByJobRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
+    public CancelOTATaskByJobRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
 }

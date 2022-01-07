@@ -4,14 +4,11 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryThingModelResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("Data")
+    public QueryThingModelResponseBodyData data;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -19,28 +16,15 @@ public class QueryThingModelResponseBody extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
-    @NameInMap("Data")
-    public QueryThingModelResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static QueryThingModelResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryThingModelResponseBody self = new QueryThingModelResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryThingModelResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryThingModelResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public QueryThingModelResponseBody setCode(String code) {
@@ -49,6 +33,14 @@ public class QueryThingModelResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public QueryThingModelResponseBody setData(QueryThingModelResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryThingModelResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryThingModelResponseBody setErrorMessage(String errorMessage) {
@@ -67,12 +59,20 @@ public class QueryThingModelResponseBody extends TeaModel {
         return this.productKey;
     }
 
-    public QueryThingModelResponseBody setData(QueryThingModelResponseBodyData data) {
-        this.data = data;
+    public QueryThingModelResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public QueryThingModelResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryThingModelResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class QueryThingModelResponseBodyData extends TeaModel {

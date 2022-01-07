@@ -4,11 +4,8 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateSubscribeRelationRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
-    @NameInMap("ProductKey")
-    public String productKey;
+    @NameInMap("ConsumerGroupIds")
+    public java.util.List<String> consumerGroupIds;
 
     @NameInMap("DeviceDataFlag")
     public Boolean deviceDataFlag;
@@ -19,55 +16,50 @@ public class CreateSubscribeRelationRequest extends TeaModel {
     @NameInMap("DeviceStatusChangeFlag")
     public Boolean deviceStatusChangeFlag;
 
+    @NameInMap("DeviceTagFlag")
+    public Boolean deviceTagFlag;
+
     @NameInMap("DeviceTopoLifeCycleFlag")
     public Boolean deviceTopoLifeCycleFlag;
 
     @NameInMap("FoundDeviceListFlag")
     public Boolean foundDeviceListFlag;
 
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
     @NameInMap("MnsConfiguration")
     public String mnsConfiguration;
-
-    @NameInMap("Type")
-    public String type;
-
-    @NameInMap("ConsumerGroupIds")
-    public java.util.List<String> consumerGroupIds;
 
     @NameInMap("OtaEventFlag")
     public Boolean otaEventFlag;
 
-    @NameInMap("ThingHistoryFlag")
-    public Boolean thingHistoryFlag;
-
-    @NameInMap("DeviceTagFlag")
-    public Boolean deviceTagFlag;
+    @NameInMap("OtaJobFlag")
+    public Boolean otaJobFlag;
 
     @NameInMap("OtaVersionFlag")
     public Boolean otaVersionFlag;
 
-    @NameInMap("OtaJobFlag")
-    public Boolean otaJobFlag;
+    @NameInMap("ProductKey")
+    public String productKey;
+
+    @NameInMap("ThingHistoryFlag")
+    public Boolean thingHistoryFlag;
+
+    @NameInMap("Type")
+    public String type;
 
     public static CreateSubscribeRelationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSubscribeRelationRequest self = new CreateSubscribeRelationRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateSubscribeRelationRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
+    public CreateSubscribeRelationRequest setConsumerGroupIds(java.util.List<String> consumerGroupIds) {
+        this.consumerGroupIds = consumerGroupIds;
         return this;
     }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
-    public CreateSubscribeRelationRequest setProductKey(String productKey) {
-        this.productKey = productKey;
-        return this;
-    }
-    public String getProductKey() {
-        return this.productKey;
+    public java.util.List<String> getConsumerGroupIds() {
+        return this.consumerGroupIds;
     }
 
     public CreateSubscribeRelationRequest setDeviceDataFlag(Boolean deviceDataFlag) {
@@ -94,6 +86,14 @@ public class CreateSubscribeRelationRequest extends TeaModel {
         return this.deviceStatusChangeFlag;
     }
 
+    public CreateSubscribeRelationRequest setDeviceTagFlag(Boolean deviceTagFlag) {
+        this.deviceTagFlag = deviceTagFlag;
+        return this;
+    }
+    public Boolean getDeviceTagFlag() {
+        return this.deviceTagFlag;
+    }
+
     public CreateSubscribeRelationRequest setDeviceTopoLifeCycleFlag(Boolean deviceTopoLifeCycleFlag) {
         this.deviceTopoLifeCycleFlag = deviceTopoLifeCycleFlag;
         return this;
@@ -110,28 +110,20 @@ public class CreateSubscribeRelationRequest extends TeaModel {
         return this.foundDeviceListFlag;
     }
 
+    public CreateSubscribeRelationRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
     public CreateSubscribeRelationRequest setMnsConfiguration(String mnsConfiguration) {
         this.mnsConfiguration = mnsConfiguration;
         return this;
     }
     public String getMnsConfiguration() {
         return this.mnsConfiguration;
-    }
-
-    public CreateSubscribeRelationRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public CreateSubscribeRelationRequest setConsumerGroupIds(java.util.List<String> consumerGroupIds) {
-        this.consumerGroupIds = consumerGroupIds;
-        return this;
-    }
-    public java.util.List<String> getConsumerGroupIds() {
-        return this.consumerGroupIds;
     }
 
     public CreateSubscribeRelationRequest setOtaEventFlag(Boolean otaEventFlag) {
@@ -142,20 +134,12 @@ public class CreateSubscribeRelationRequest extends TeaModel {
         return this.otaEventFlag;
     }
 
-    public CreateSubscribeRelationRequest setThingHistoryFlag(Boolean thingHistoryFlag) {
-        this.thingHistoryFlag = thingHistoryFlag;
+    public CreateSubscribeRelationRequest setOtaJobFlag(Boolean otaJobFlag) {
+        this.otaJobFlag = otaJobFlag;
         return this;
     }
-    public Boolean getThingHistoryFlag() {
-        return this.thingHistoryFlag;
-    }
-
-    public CreateSubscribeRelationRequest setDeviceTagFlag(Boolean deviceTagFlag) {
-        this.deviceTagFlag = deviceTagFlag;
-        return this;
-    }
-    public Boolean getDeviceTagFlag() {
-        return this.deviceTagFlag;
+    public Boolean getOtaJobFlag() {
+        return this.otaJobFlag;
     }
 
     public CreateSubscribeRelationRequest setOtaVersionFlag(Boolean otaVersionFlag) {
@@ -166,12 +150,28 @@ public class CreateSubscribeRelationRequest extends TeaModel {
         return this.otaVersionFlag;
     }
 
-    public CreateSubscribeRelationRequest setOtaJobFlag(Boolean otaJobFlag) {
-        this.otaJobFlag = otaJobFlag;
+    public CreateSubscribeRelationRequest setProductKey(String productKey) {
+        this.productKey = productKey;
         return this;
     }
-    public Boolean getOtaJobFlag() {
-        return this.otaJobFlag;
+    public String getProductKey() {
+        return this.productKey;
+    }
+
+    public CreateSubscribeRelationRequest setThingHistoryFlag(Boolean thingHistoryFlag) {
+        this.thingHistoryFlag = thingHistoryFlag;
+        return this;
+    }
+    public Boolean getThingHistoryFlag() {
+        return this.thingHistoryFlag;
+    }
+
+    public CreateSubscribeRelationRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

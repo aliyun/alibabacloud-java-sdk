@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySuperDeviceGroupResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QuerySuperDeviceGroupResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QuerySuperDeviceGroupResponseBodyData data;
-
     public static QuerySuperDeviceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySuperDeviceGroupResponseBody self = new QuerySuperDeviceGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySuperDeviceGroupResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QuerySuperDeviceGroupResponseBody setData(QuerySuperDeviceGroupResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QuerySuperDeviceGroupResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QuerySuperDeviceGroupResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QuerySuperDeviceGroupResponseBody setRequestId(String requestId) {
@@ -40,43 +64,27 @@ public class QuerySuperDeviceGroupResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QuerySuperDeviceGroupResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QuerySuperDeviceGroupResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QuerySuperDeviceGroupResponseBody setData(QuerySuperDeviceGroupResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QuerySuperDeviceGroupResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QuerySuperDeviceGroupResponseBodyDataGroupInfo extends TeaModel {
+        @NameInMap("GroupDesc")
+        public String groupDesc;
+
         @NameInMap("GroupId")
         public String groupId;
 
         @NameInMap("GroupName")
         public String groupName;
 
-        @NameInMap("GroupDesc")
-        public String groupDesc;
-
         public static QuerySuperDeviceGroupResponseBodyDataGroupInfo build(java.util.Map<String, ?> map) throws Exception {
             QuerySuperDeviceGroupResponseBodyDataGroupInfo self = new QuerySuperDeviceGroupResponseBodyDataGroupInfo();
             return TeaModel.build(map, self);
+        }
+
+        public QuerySuperDeviceGroupResponseBodyDataGroupInfo setGroupDesc(String groupDesc) {
+            this.groupDesc = groupDesc;
+            return this;
+        }
+        public String getGroupDesc() {
+            return this.groupDesc;
         }
 
         public QuerySuperDeviceGroupResponseBodyDataGroupInfo setGroupId(String groupId) {
@@ -93,14 +101,6 @@ public class QuerySuperDeviceGroupResponseBody extends TeaModel {
         }
         public String getGroupName() {
             return this.groupName;
-        }
-
-        public QuerySuperDeviceGroupResponseBodyDataGroupInfo setGroupDesc(String groupDesc) {
-            this.groupDesc = groupDesc;
-            return this;
-        }
-        public String getGroupDesc() {
-            return this.groupDesc;
         }
 
     }

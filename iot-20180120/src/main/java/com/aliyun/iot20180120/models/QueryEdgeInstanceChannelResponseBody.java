@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryEdgeInstanceChannelResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryEdgeInstanceChannelResponseBodyData data;
-
     public static QueryEdgeInstanceChannelResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryEdgeInstanceChannelResponseBody self = new QueryEdgeInstanceChannelResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryEdgeInstanceChannelResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryEdgeInstanceChannelResponseBody setData(QueryEdgeInstanceChannelResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryEdgeInstanceChannelResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryEdgeInstanceChannelResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryEdgeInstanceChannelResponseBody setRequestId(String requestId) {
@@ -40,39 +64,15 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryEdgeInstanceChannelResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryEdgeInstanceChannelResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryEdgeInstanceChannelResponseBody setData(QueryEdgeInstanceChannelResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryEdgeInstanceChannelResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryEdgeInstanceChannelResponseBodyDataChannelListChannelConfigListConfig extends TeaModel {
         @NameInMap("ConfigId")
         public String configId;
 
-        @NameInMap("Format")
-        public String format;
-
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("Format")
+        public String format;
 
         @NameInMap("Key")
         public String key;
@@ -90,20 +90,20 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
             return this.configId;
         }
 
-        public QueryEdgeInstanceChannelResponseBodyDataChannelListChannelConfigListConfig setFormat(String format) {
-            this.format = format;
-            return this;
-        }
-        public String getFormat() {
-            return this.format;
-        }
-
         public QueryEdgeInstanceChannelResponseBodyDataChannelListChannelConfigListConfig setContent(String content) {
             this.content = content;
             return this;
         }
         public String getContent() {
             return this.content;
+        }
+
+        public QueryEdgeInstanceChannelResponseBodyDataChannelListChannelConfigListConfig setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
         }
 
         public QueryEdgeInstanceChannelResponseBodyDataChannelListChannelConfigListConfig setKey(String key) {
@@ -142,20 +142,20 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
         @NameInMap("ChannelName")
         public String channelName;
 
+        @NameInMap("ConfigList")
+        public QueryEdgeInstanceChannelResponseBodyDataChannelListChannelConfigList configList;
+
         @NameInMap("GmtCreate")
         public String gmtCreate;
-
-        @NameInMap("GmtModified")
-        public String gmtModified;
 
         @NameInMap("GmtCreateTimestamp")
         public Long gmtCreateTimestamp;
 
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
         @NameInMap("GmtModifiedTimestamp")
         public Long gmtModifiedTimestamp;
-
-        @NameInMap("ConfigList")
-        public QueryEdgeInstanceChannelResponseBodyDataChannelListChannelConfigList configList;
 
         public static QueryEdgeInstanceChannelResponseBodyDataChannelListChannel build(java.util.Map<String, ?> map) throws Exception {
             QueryEdgeInstanceChannelResponseBodyDataChannelListChannel self = new QueryEdgeInstanceChannelResponseBodyDataChannelListChannel();
@@ -178,20 +178,20 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
             return this.channelName;
         }
 
+        public QueryEdgeInstanceChannelResponseBodyDataChannelListChannel setConfigList(QueryEdgeInstanceChannelResponseBodyDataChannelListChannelConfigList configList) {
+            this.configList = configList;
+            return this;
+        }
+        public QueryEdgeInstanceChannelResponseBodyDataChannelListChannelConfigList getConfigList() {
+            return this.configList;
+        }
+
         public QueryEdgeInstanceChannelResponseBodyDataChannelListChannel setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
         public String getGmtCreate() {
             return this.gmtCreate;
-        }
-
-        public QueryEdgeInstanceChannelResponseBodyDataChannelListChannel setGmtModified(String gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public String getGmtModified() {
-            return this.gmtModified;
         }
 
         public QueryEdgeInstanceChannelResponseBodyDataChannelListChannel setGmtCreateTimestamp(Long gmtCreateTimestamp) {
@@ -202,20 +202,20 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
             return this.gmtCreateTimestamp;
         }
 
+        public QueryEdgeInstanceChannelResponseBodyDataChannelListChannel setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
         public QueryEdgeInstanceChannelResponseBodyDataChannelListChannel setGmtModifiedTimestamp(Long gmtModifiedTimestamp) {
             this.gmtModifiedTimestamp = gmtModifiedTimestamp;
             return this;
         }
         public Long getGmtModifiedTimestamp() {
             return this.gmtModifiedTimestamp;
-        }
-
-        public QueryEdgeInstanceChannelResponseBodyDataChannelListChannel setConfigList(QueryEdgeInstanceChannelResponseBodyDataChannelListChannelConfigList configList) {
-            this.configList = configList;
-            return this;
-        }
-        public QueryEdgeInstanceChannelResponseBodyDataChannelListChannelConfigList getConfigList() {
-            return this.configList;
         }
 
     }
@@ -240,37 +240,29 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeInstanceChannelResponseBodyData extends TeaModel {
-        @NameInMap("Total")
-        public Integer total;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
+        @NameInMap("ChannelList")
+        public QueryEdgeInstanceChannelResponseBodyDataChannelList channelList;
 
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        @NameInMap("ChannelList")
-        public QueryEdgeInstanceChannelResponseBodyDataChannelList channelList;
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("Total")
+        public Integer total;
 
         public static QueryEdgeInstanceChannelResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryEdgeInstanceChannelResponseBodyData self = new QueryEdgeInstanceChannelResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public QueryEdgeInstanceChannelResponseBodyData setTotal(Integer total) {
-            this.total = total;
+        public QueryEdgeInstanceChannelResponseBodyData setChannelList(QueryEdgeInstanceChannelResponseBodyDataChannelList channelList) {
+            this.channelList = channelList;
             return this;
         }
-        public Integer getTotal() {
-            return this.total;
-        }
-
-        public QueryEdgeInstanceChannelResponseBodyData setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
+        public QueryEdgeInstanceChannelResponseBodyDataChannelList getChannelList() {
+            return this.channelList;
         }
 
         public QueryEdgeInstanceChannelResponseBodyData setCurrentPage(Integer currentPage) {
@@ -281,12 +273,20 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
             return this.currentPage;
         }
 
-        public QueryEdgeInstanceChannelResponseBodyData setChannelList(QueryEdgeInstanceChannelResponseBodyDataChannelList channelList) {
-            this.channelList = channelList;
+        public QueryEdgeInstanceChannelResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
-        public QueryEdgeInstanceChannelResponseBodyDataChannelList getChannelList() {
-            return this.channelList;
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public QueryEdgeInstanceChannelResponseBodyData setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
         }
 
     }

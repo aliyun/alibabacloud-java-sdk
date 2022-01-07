@@ -4,14 +4,11 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("Data")
+    public ListTaskResponseBodyData data;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -19,28 +16,15 @@ public class ListTaskResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("Data")
-    public ListTaskResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static ListTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTaskResponseBody self = new ListTaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListTaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListTaskResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public ListTaskResponseBody setCode(String code) {
@@ -49,6 +33,14 @@ public class ListTaskResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListTaskResponseBody setData(ListTaskResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListTaskResponseBodyData getData() {
+        return this.data;
     }
 
     public ListTaskResponseBody setErrorMessage(String errorMessage) {
@@ -67,80 +59,56 @@ public class ListTaskResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public ListTaskResponseBody setData(ListTaskResponseBodyData data) {
-        this.data = data;
+    public ListTaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public ListTaskResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListTaskResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class ListTaskResponseBodyDataData extends TeaModel {
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("JobName")
-        public String jobName;
-
-        @NameInMap("TaskId")
-        public String taskId;
-
-        @NameInMap("ProductKey")
-        public String productKey;
-
         @NameInMap("DeviceName")
         public String deviceName;
 
         @NameInMap("IotId")
         public String iotId;
 
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("JobName")
+        public String jobName;
+
+        @NameInMap("ProductKey")
+        public String productKey;
+
         @NameInMap("Progress")
         public String progress;
-
-        @NameInMap("UtcQueueTime")
-        public String utcQueueTime;
-
-        @NameInMap("UtcModified")
-        public String utcModified;
 
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("TaskId")
+        public String taskId;
+
+        @NameInMap("UtcModified")
+        public String utcModified;
+
+        @NameInMap("UtcQueueTime")
+        public String utcQueueTime;
+
         public static ListTaskResponseBodyDataData build(java.util.Map<String, ?> map) throws Exception {
             ListTaskResponseBodyDataData self = new ListTaskResponseBodyDataData();
             return TeaModel.build(map, self);
-        }
-
-        public ListTaskResponseBodyDataData setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public ListTaskResponseBodyDataData setJobName(String jobName) {
-            this.jobName = jobName;
-            return this;
-        }
-        public String getJobName() {
-            return this.jobName;
-        }
-
-        public ListTaskResponseBodyDataData setTaskId(String taskId) {
-            this.taskId = taskId;
-            return this;
-        }
-        public String getTaskId() {
-            return this.taskId;
-        }
-
-        public ListTaskResponseBodyDataData setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
         }
 
         public ListTaskResponseBodyDataData setDeviceName(String deviceName) {
@@ -159,6 +127,30 @@ public class ListTaskResponseBody extends TeaModel {
             return this.iotId;
         }
 
+        public ListTaskResponseBodyDataData setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public ListTaskResponseBodyDataData setJobName(String jobName) {
+            this.jobName = jobName;
+            return this;
+        }
+        public String getJobName() {
+            return this.jobName;
+        }
+
+        public ListTaskResponseBodyDataData setProductKey(String productKey) {
+            this.productKey = productKey;
+            return this;
+        }
+        public String getProductKey() {
+            return this.productKey;
+        }
+
         public ListTaskResponseBodyDataData setProgress(String progress) {
             this.progress = progress;
             return this;
@@ -167,12 +159,20 @@ public class ListTaskResponseBody extends TeaModel {
             return this.progress;
         }
 
-        public ListTaskResponseBodyDataData setUtcQueueTime(String utcQueueTime) {
-            this.utcQueueTime = utcQueueTime;
+        public ListTaskResponseBodyDataData setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getUtcQueueTime() {
-            return this.utcQueueTime;
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListTaskResponseBodyDataData setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
         }
 
         public ListTaskResponseBodyDataData setUtcModified(String utcModified) {
@@ -183,12 +183,12 @@ public class ListTaskResponseBody extends TeaModel {
             return this.utcModified;
         }
 
-        public ListTaskResponseBodyDataData setStatus(String status) {
-            this.status = status;
+        public ListTaskResponseBodyDataData setUtcQueueTime(String utcQueueTime) {
+            this.utcQueueTime = utcQueueTime;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getUtcQueueTime() {
+            return this.utcQueueTime;
         }
 
     }
