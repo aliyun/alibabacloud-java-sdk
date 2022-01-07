@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLogicTableRouteConfigRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("RouteKey")
     public String routeKey;
 
@@ -19,14 +16,6 @@ public class DeleteLogicTableRouteConfigRequest extends TeaModel {
     public static DeleteLogicTableRouteConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLogicTableRouteConfigRequest self = new DeleteLogicTableRouteConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteLogicTableRouteConfigRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DeleteLogicTableRouteConfigRequest setRouteKey(String routeKey) {

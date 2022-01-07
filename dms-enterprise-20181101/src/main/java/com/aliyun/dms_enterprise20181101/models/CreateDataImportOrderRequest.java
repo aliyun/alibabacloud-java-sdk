@@ -13,9 +13,6 @@ public class CreateDataImportOrderRequest extends TeaModel {
     @NameInMap("Param")
     public CreateDataImportOrderRequestParam param;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("RelatedUserList")
     public java.util.List<Long> relatedUserList;
 
@@ -49,14 +46,6 @@ public class CreateDataImportOrderRequest extends TeaModel {
     }
     public CreateDataImportOrderRequestParam getParam() {
         return this.param;
-    }
-
-    public CreateDataImportOrderRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateDataImportOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {

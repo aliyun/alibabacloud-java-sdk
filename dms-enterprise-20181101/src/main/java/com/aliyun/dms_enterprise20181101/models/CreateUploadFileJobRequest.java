@@ -10,9 +10,6 @@ public class CreateUploadFileJobRequest extends TeaModel {
     @NameInMap("FileSource")
     public String fileSource;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Tid")
     public Long tid;
 
@@ -38,14 +35,6 @@ public class CreateUploadFileJobRequest extends TeaModel {
     }
     public String getFileSource() {
         return this.fileSource;
-    }
-
-    public CreateUploadFileJobRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateUploadFileJobRequest setTid(Long tid) {

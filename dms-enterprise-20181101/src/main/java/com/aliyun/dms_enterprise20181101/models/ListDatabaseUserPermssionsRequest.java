@@ -19,9 +19,6 @@ public class ListDatabaseUserPermssionsRequest extends TeaModel {
     @NameInMap("PermType")
     public String permType;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Tid")
     public Long tid;
 
@@ -71,14 +68,6 @@ public class ListDatabaseUserPermssionsRequest extends TeaModel {
     }
     public String getPermType() {
         return this.permType;
-    }
-
-    public ListDatabaseUserPermssionsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListDatabaseUserPermssionsRequest setTid(Long tid) {

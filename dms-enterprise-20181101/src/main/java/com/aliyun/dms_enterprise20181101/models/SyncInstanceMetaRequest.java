@@ -10,9 +10,6 @@ public class SyncInstanceMetaRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Tid")
     public Long tid;
 
@@ -35,14 +32,6 @@ public class SyncInstanceMetaRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public SyncInstanceMetaRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public SyncInstanceMetaRequest setTid(Long tid) {

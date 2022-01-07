@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableColumnRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("TableGuid")
     public String tableGuid;
 
@@ -16,14 +13,6 @@ public class GetMetaTableColumnRequest extends TeaModel {
     public static GetMetaTableColumnRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMetaTableColumnRequest self = new GetMetaTableColumnRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetMetaTableColumnRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetMetaTableColumnRequest setTableGuid(String tableGuid) {

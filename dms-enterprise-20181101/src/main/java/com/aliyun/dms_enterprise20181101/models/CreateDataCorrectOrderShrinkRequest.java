@@ -13,9 +13,6 @@ public class CreateDataCorrectOrderShrinkRequest extends TeaModel {
     @NameInMap("Param")
     public String paramShrink;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("RelatedUserList")
     public String relatedUserListShrink;
 
@@ -49,14 +46,6 @@ public class CreateDataCorrectOrderShrinkRequest extends TeaModel {
     }
     public String getParamShrink() {
         return this.paramShrink;
-    }
-
-    public CreateDataCorrectOrderShrinkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateDataCorrectOrderShrinkRequest setRelatedUserListShrink(String relatedUserListShrink) {

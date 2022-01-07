@@ -16,9 +16,6 @@ public class GetStructSyncJobAnalyzeResultRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Tid")
     public Long tid;
 
@@ -57,14 +54,6 @@ public class GetStructSyncJobAnalyzeResultRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
-    }
-
-    public GetStructSyncJobAnalyzeResultRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetStructSyncJobAnalyzeResultRequest setTid(Long tid) {

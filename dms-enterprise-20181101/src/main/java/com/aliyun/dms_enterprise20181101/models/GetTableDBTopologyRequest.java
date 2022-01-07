@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetTableDBTopologyRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("TableGuid")
     public String tableGuid;
 
@@ -16,14 +13,6 @@ public class GetTableDBTopologyRequest extends TeaModel {
     public static GetTableDBTopologyRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTableDBTopologyRequest self = new GetTableDBTopologyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetTableDBTopologyRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetTableDBTopologyRequest setTableGuid(String tableGuid) {

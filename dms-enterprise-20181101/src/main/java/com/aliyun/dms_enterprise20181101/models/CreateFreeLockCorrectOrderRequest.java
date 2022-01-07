@@ -13,9 +13,6 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
     @NameInMap("Param")
     public CreateFreeLockCorrectOrderRequestParam param;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("RelatedUserList")
     public java.util.List<Long> relatedUserList;
 
@@ -49,14 +46,6 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
     }
     public CreateFreeLockCorrectOrderRequestParam getParam() {
         return this.param;
-    }
-
-    public CreateFreeLockCorrectOrderRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateFreeLockCorrectOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {

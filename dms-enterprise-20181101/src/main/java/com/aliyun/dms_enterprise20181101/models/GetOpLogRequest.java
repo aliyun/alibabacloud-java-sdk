@@ -16,9 +16,6 @@ public class GetOpLogRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -60,14 +57,6 @@ public class GetOpLogRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public GetOpLogRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetOpLogRequest setStartTime(String startTime) {

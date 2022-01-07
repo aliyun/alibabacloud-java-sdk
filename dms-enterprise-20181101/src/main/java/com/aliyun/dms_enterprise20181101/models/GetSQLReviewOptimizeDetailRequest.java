@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetSQLReviewOptimizeDetailRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SQLReviewQueryKey")
     public String SQLReviewQueryKey;
 
@@ -16,14 +13,6 @@ public class GetSQLReviewOptimizeDetailRequest extends TeaModel {
     public static GetSQLReviewOptimizeDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSQLReviewOptimizeDetailRequest self = new GetSQLReviewOptimizeDetailRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetSQLReviewOptimizeDetailRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetSQLReviewOptimizeDetailRequest setSQLReviewQueryKey(String SQLReviewQueryKey) {

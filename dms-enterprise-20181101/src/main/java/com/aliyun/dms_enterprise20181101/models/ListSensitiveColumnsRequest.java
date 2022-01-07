@@ -19,9 +19,6 @@ public class ListSensitiveColumnsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SchemaName")
     public String schemaName;
 
@@ -77,14 +74,6 @@ public class ListSensitiveColumnsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListSensitiveColumnsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListSensitiveColumnsRequest setSchemaName(String schemaName) {
