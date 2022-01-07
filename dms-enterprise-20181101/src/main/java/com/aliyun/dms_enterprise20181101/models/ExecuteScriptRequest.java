@@ -10,9 +10,6 @@ public class ExecuteScriptRequest extends TeaModel {
     @NameInMap("Logic")
     public Boolean logic;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Script")
     public String script;
 
@@ -38,14 +35,6 @@ public class ExecuteScriptRequest extends TeaModel {
     }
     public Boolean getLogic() {
         return this.logic;
-    }
-
-    public ExecuteScriptRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ExecuteScriptRequest setScript(String script) {

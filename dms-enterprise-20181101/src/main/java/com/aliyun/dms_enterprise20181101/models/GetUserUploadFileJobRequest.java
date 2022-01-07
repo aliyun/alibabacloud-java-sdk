@@ -7,9 +7,6 @@ public class GetUserUploadFileJobRequest extends TeaModel {
     @NameInMap("JobKey")
     public String jobKey;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Tid")
     public Long tid;
 
@@ -24,14 +21,6 @@ public class GetUserUploadFileJobRequest extends TeaModel {
     }
     public String getJobKey() {
         return this.jobKey;
-    }
-
-    public GetUserUploadFileJobRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetUserUploadFileJobRequest setTid(Long tid) {

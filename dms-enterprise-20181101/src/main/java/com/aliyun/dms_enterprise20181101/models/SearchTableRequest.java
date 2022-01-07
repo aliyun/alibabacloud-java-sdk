@@ -16,9 +16,6 @@ public class SearchTableRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ReturnGuid")
     public Boolean returnGuid;
 
@@ -69,14 +66,6 @@ public class SearchTableRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public SearchTableRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public SearchTableRequest setReturnGuid(Boolean returnGuid) {

@@ -7,9 +7,6 @@ public class ListProxyAccessesRequest extends TeaModel {
     @NameInMap("ProxyId")
     public Long proxyId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Tid")
     public Long tid;
 
@@ -24,14 +21,6 @@ public class ListProxyAccessesRequest extends TeaModel {
     }
     public Long getProxyId() {
         return this.proxyId;
-    }
-
-    public ListProxyAccessesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListProxyAccessesRequest setTid(Long tid) {

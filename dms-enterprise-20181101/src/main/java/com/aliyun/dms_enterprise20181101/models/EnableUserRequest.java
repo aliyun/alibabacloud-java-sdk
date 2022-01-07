@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class EnableUserRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Tid")
     public Long tid;
 
@@ -16,14 +13,6 @@ public class EnableUserRequest extends TeaModel {
     public static EnableUserRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableUserRequest self = new EnableUserRequest();
         return TeaModel.build(map, self);
-    }
-
-    public EnableUserRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public EnableUserRequest setTid(Long tid) {

@@ -19,9 +19,6 @@ public class CreatePublishGroupTaskRequest extends TeaModel {
     @NameInMap("PublishStrategy")
     public String publishStrategy;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Tid")
     public Long tid;
 
@@ -68,14 +65,6 @@ public class CreatePublishGroupTaskRequest extends TeaModel {
     }
     public String getPublishStrategy() {
         return this.publishStrategy;
-    }
-
-    public CreatePublishGroupTaskRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreatePublishGroupTaskRequest setTid(Long tid) {

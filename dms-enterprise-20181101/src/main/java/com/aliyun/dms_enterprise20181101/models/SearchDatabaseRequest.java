@@ -16,9 +16,6 @@ public class SearchDatabaseRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SearchKey")
     public String searchKey;
 
@@ -66,14 +63,6 @@ public class SearchDatabaseRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public SearchDatabaseRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public SearchDatabaseRequest setSearchKey(String searchKey) {

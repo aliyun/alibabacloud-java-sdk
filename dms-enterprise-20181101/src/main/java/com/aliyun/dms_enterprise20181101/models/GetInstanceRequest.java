@@ -10,9 +10,6 @@ public class GetInstanceRequest extends TeaModel {
     @NameInMap("Port")
     public Integer port;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Sid")
     public String sid;
 
@@ -38,14 +35,6 @@ public class GetInstanceRequest extends TeaModel {
     }
     public Integer getPort() {
         return this.port;
-    }
-
-    public GetInstanceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetInstanceRequest setSid(String sid) {

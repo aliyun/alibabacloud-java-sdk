@@ -7,9 +7,6 @@ public class DeleteLogicDatabaseRequest extends TeaModel {
     @NameInMap("LogicDbId")
     public Long logicDbId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Tid")
     public Long tid;
 
@@ -24,14 +21,6 @@ public class DeleteLogicDatabaseRequest extends TeaModel {
     }
     public Long getLogicDbId() {
         return this.logicDbId;
-    }
-
-    public DeleteLogicDatabaseRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DeleteLogicDatabaseRequest setTid(Long tid) {

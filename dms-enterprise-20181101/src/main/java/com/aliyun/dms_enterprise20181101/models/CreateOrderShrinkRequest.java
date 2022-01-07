@@ -16,9 +16,6 @@ public class CreateOrderShrinkRequest extends TeaModel {
     @NameInMap("PluginType")
     public String pluginType;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("RelatedUserList")
     public String relatedUserList;
 
@@ -60,14 +57,6 @@ public class CreateOrderShrinkRequest extends TeaModel {
     }
     public String getPluginType() {
         return this.pluginType;
-    }
-
-    public CreateOrderShrinkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateOrderShrinkRequest setRelatedUserList(String relatedUserList) {

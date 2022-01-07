@@ -13,9 +13,6 @@ public class CreateStructSyncOrderRequest extends TeaModel {
     @NameInMap("Param")
     public CreateStructSyncOrderRequestParam param;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("RelatedUserList")
     public java.util.List<Long> relatedUserList;
 
@@ -49,14 +46,6 @@ public class CreateStructSyncOrderRequest extends TeaModel {
     }
     public CreateStructSyncOrderRequestParam getParam() {
         return this.param;
-    }
-
-    public CreateStructSyncOrderRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateStructSyncOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {

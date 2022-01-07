@@ -13,9 +13,6 @@ public class EditLogicDatabaseRequest extends TeaModel {
     @NameInMap("LogicDbId")
     public Long logicDbId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Tid")
     public Long tid;
 
@@ -46,14 +43,6 @@ public class EditLogicDatabaseRequest extends TeaModel {
     }
     public Long getLogicDbId() {
         return this.logicDbId;
-    }
-
-    public EditLogicDatabaseRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public EditLogicDatabaseRequest setTid(Long tid) {

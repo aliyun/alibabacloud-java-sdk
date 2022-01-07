@@ -7,9 +7,6 @@ public class GetPermApplyOrderDetailRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Tid")
     public Long tid;
 
@@ -24,14 +21,6 @@ public class GetPermApplyOrderDetailRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
-    }
-
-    public GetPermApplyOrderDetailRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetPermApplyOrderDetailRequest setTid(Long tid) {

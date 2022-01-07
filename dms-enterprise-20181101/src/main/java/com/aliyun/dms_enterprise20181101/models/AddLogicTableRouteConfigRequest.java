@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class AddLogicTableRouteConfigRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("RouteExpr")
     public String routeExpr;
 
@@ -22,14 +19,6 @@ public class AddLogicTableRouteConfigRequest extends TeaModel {
     public static AddLogicTableRouteConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         AddLogicTableRouteConfigRequest self = new AddLogicTableRouteConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddLogicTableRouteConfigRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public AddLogicTableRouteConfigRequest setRouteExpr(String routeExpr) {

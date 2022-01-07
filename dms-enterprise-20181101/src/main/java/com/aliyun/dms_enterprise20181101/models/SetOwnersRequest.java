@@ -10,9 +10,6 @@ public class SetOwnersRequest extends TeaModel {
     @NameInMap("OwnerType")
     public String ownerType;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -38,14 +35,6 @@ public class SetOwnersRequest extends TeaModel {
     }
     public String getOwnerType() {
         return this.ownerType;
-    }
-
-    public SetOwnersRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public SetOwnersRequest setResourceId(String resourceId) {

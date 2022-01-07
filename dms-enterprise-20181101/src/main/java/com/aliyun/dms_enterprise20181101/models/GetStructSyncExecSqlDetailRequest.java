@@ -13,9 +13,6 @@ public class GetStructSyncExecSqlDetailRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Tid")
     public Long tid;
 
@@ -46,14 +43,6 @@ public class GetStructSyncExecSqlDetailRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
-    }
-
-    public GetStructSyncExecSqlDetailRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetStructSyncExecSqlDetailRequest setTid(Long tid) {

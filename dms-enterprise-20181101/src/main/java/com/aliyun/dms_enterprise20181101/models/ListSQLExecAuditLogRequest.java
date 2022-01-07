@@ -19,9 +19,6 @@ public class ListSQLExecAuditLogRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SearchName")
     public String searchName;
 
@@ -77,14 +74,6 @@ public class ListSQLExecAuditLogRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListSQLExecAuditLogRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListSQLExecAuditLogRequest setSearchName(String searchName) {

@@ -13,9 +13,6 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
     @NameInMap("Param")
     public CreateDataCorrectOrderRequestParam param;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("RelatedUserList")
     public java.util.List<Long> relatedUserList;
 
@@ -49,14 +46,6 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
     }
     public CreateDataCorrectOrderRequestParam getParam() {
         return this.param;
-    }
-
-    public CreateDataCorrectOrderRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateDataCorrectOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {

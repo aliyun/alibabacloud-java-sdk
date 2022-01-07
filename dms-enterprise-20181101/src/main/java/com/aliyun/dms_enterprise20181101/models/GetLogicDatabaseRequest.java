@@ -7,9 +7,6 @@ public class GetLogicDatabaseRequest extends TeaModel {
     @NameInMap("DbId")
     public String dbId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Tid")
     public Long tid;
 
@@ -24,14 +21,6 @@ public class GetLogicDatabaseRequest extends TeaModel {
     }
     public String getDbId() {
         return this.dbId;
-    }
-
-    public GetLogicDatabaseRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetLogicDatabaseRequest setTid(Long tid) {

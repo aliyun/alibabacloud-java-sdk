@@ -7,9 +7,6 @@ public class RegisterUserRequest extends TeaModel {
     @NameInMap("Mobile")
     public String mobile;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("RoleNames")
     public String roleNames;
 
@@ -33,14 +30,6 @@ public class RegisterUserRequest extends TeaModel {
     }
     public String getMobile() {
         return this.mobile;
-    }
-
-    public RegisterUserRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public RegisterUserRequest setRoleNames(String roleNames) {
