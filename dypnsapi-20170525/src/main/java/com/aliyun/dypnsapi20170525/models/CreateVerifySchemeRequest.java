@@ -4,8 +4,23 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreateVerifySchemeRequest extends TeaModel {
+    @NameInMap("AppName")
+    public String appName;
+
+    @NameInMap("BundleId")
+    public String bundleId;
+
+    @NameInMap("OsType")
+    public String osType;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PackName")
+    public String packName;
+
+    @NameInMap("PackSign")
+    public String packSign;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,24 +31,33 @@ public class CreateVerifySchemeRequest extends TeaModel {
     @NameInMap("SchemeName")
     public String schemeName;
 
-    @NameInMap("AppName")
-    public String appName;
-
-    @NameInMap("OsType")
-    public String osType;
-
-    @NameInMap("PackName")
-    public String packName;
-
-    @NameInMap("PackSign")
-    public String packSign;
-
-    @NameInMap("BundleId")
-    public String bundleId;
-
     public static CreateVerifySchemeRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVerifySchemeRequest self = new CreateVerifySchemeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateVerifySchemeRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
+    public CreateVerifySchemeRequest setBundleId(String bundleId) {
+        this.bundleId = bundleId;
+        return this;
+    }
+    public String getBundleId() {
+        return this.bundleId;
+    }
+
+    public CreateVerifySchemeRequest setOsType(String osType) {
+        this.osType = osType;
+        return this;
+    }
+    public String getOsType() {
+        return this.osType;
     }
 
     public CreateVerifySchemeRequest setOwnerId(Long ownerId) {
@@ -42,6 +66,22 @@ public class CreateVerifySchemeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateVerifySchemeRequest setPackName(String packName) {
+        this.packName = packName;
+        return this;
+    }
+    public String getPackName() {
+        return this.packName;
+    }
+
+    public CreateVerifySchemeRequest setPackSign(String packSign) {
+        this.packSign = packSign;
+        return this;
+    }
+    public String getPackSign() {
+        return this.packSign;
     }
 
     public CreateVerifySchemeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -66,46 +106,6 @@ public class CreateVerifySchemeRequest extends TeaModel {
     }
     public String getSchemeName() {
         return this.schemeName;
-    }
-
-    public CreateVerifySchemeRequest setAppName(String appName) {
-        this.appName = appName;
-        return this;
-    }
-    public String getAppName() {
-        return this.appName;
-    }
-
-    public CreateVerifySchemeRequest setOsType(String osType) {
-        this.osType = osType;
-        return this;
-    }
-    public String getOsType() {
-        return this.osType;
-    }
-
-    public CreateVerifySchemeRequest setPackName(String packName) {
-        this.packName = packName;
-        return this;
-    }
-    public String getPackName() {
-        return this.packName;
-    }
-
-    public CreateVerifySchemeRequest setPackSign(String packSign) {
-        this.packSign = packSign;
-        return this;
-    }
-    public String getPackSign() {
-        return this.packSign;
-    }
-
-    public CreateVerifySchemeRequest setBundleId(String bundleId) {
-        this.bundleId = bundleId;
-        return this;
-    }
-    public String getBundleId() {
-        return this.bundleId;
     }
 
 }

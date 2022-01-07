@@ -4,6 +4,9 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class DescribeVerifySchemeRequest extends TeaModel {
+    @NameInMap("CustomerId")
+    public Long customerId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,12 +19,17 @@ public class DescribeVerifySchemeRequest extends TeaModel {
     @NameInMap("SchemeCode")
     public String schemeCode;
 
-    @NameInMap("CustomerId")
-    public Long customerId;
-
     public static DescribeVerifySchemeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVerifySchemeRequest self = new DescribeVerifySchemeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVerifySchemeRequest setCustomerId(Long customerId) {
+        this.customerId = customerId;
+        return this;
+    }
+    public Long getCustomerId() {
+        return this.customerId;
     }
 
     public DescribeVerifySchemeRequest setOwnerId(Long ownerId) {
@@ -54,14 +62,6 @@ public class DescribeVerifySchemeRequest extends TeaModel {
     }
     public String getSchemeCode() {
         return this.schemeCode;
-    }
-
-    public DescribeVerifySchemeRequest setCustomerId(Long customerId) {
-        this.customerId = customerId;
-        return this;
-    }
-    public Long getCustomerId() {
-        return this.customerId;
     }
 
 }

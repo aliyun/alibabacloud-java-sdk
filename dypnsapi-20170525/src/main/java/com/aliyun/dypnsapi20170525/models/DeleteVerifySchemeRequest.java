@@ -4,6 +4,9 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class DeleteVerifySchemeRequest extends TeaModel {
+    @NameInMap("CustomerId")
+    public Long customerId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,12 +19,17 @@ public class DeleteVerifySchemeRequest extends TeaModel {
     @NameInMap("SchemeCode")
     public String schemeCode;
 
-    @NameInMap("CustomerId")
-    public Long customerId;
-
     public static DeleteVerifySchemeRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteVerifySchemeRequest self = new DeleteVerifySchemeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteVerifySchemeRequest setCustomerId(Long customerId) {
+        this.customerId = customerId;
+        return this;
+    }
+    public Long getCustomerId() {
+        return this.customerId;
     }
 
     public DeleteVerifySchemeRequest setOwnerId(Long ownerId) {
@@ -54,14 +62,6 @@ public class DeleteVerifySchemeRequest extends TeaModel {
     }
     public String getSchemeCode() {
         return this.schemeCode;
-    }
-
-    public DeleteVerifySchemeRequest setCustomerId(Long customerId) {
-        this.customerId = customerId;
-        return this;
-    }
-    public Long getCustomerId() {
-        return this.customerId;
     }
 
 }

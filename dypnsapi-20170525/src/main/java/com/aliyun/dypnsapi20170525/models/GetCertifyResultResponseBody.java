@@ -7,14 +7,14 @@ public class GetCertifyResultResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public java.util.List<GetCertifyResultResponseBodyData> data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public java.util.List<GetCertifyResultResponseBodyData> data;
 
     public static GetCertifyResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCertifyResultResponseBody self = new GetCertifyResultResponseBody();
@@ -27,6 +27,14 @@ public class GetCertifyResultResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetCertifyResultResponseBody setData(java.util.List<GetCertifyResultResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetCertifyResultResponseBodyData> getData() {
+        return this.data;
     }
 
     public GetCertifyResultResponseBody setMessage(String message) {
@@ -45,20 +53,15 @@ public class GetCertifyResultResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetCertifyResultResponseBody setData(java.util.List<GetCertifyResultResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<GetCertifyResultResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class GetCertifyResultResponseBodyData extends TeaModel {
-        @NameInMap("MaterialInfo")
-        public String materialInfo;
+        @NameInMap("DeviceToken")
+        public String deviceToken;
 
         @NameInMap("IdentityInfo")
         public String identityInfo;
+
+        @NameInMap("MaterialInfo")
+        public String materialInfo;
 
         @NameInMap("VerifyDesc")
         public String verifyDesc;
@@ -66,20 +69,17 @@ public class GetCertifyResultResponseBody extends TeaModel {
         @NameInMap("VerifyResult")
         public String verifyResult;
 
-        @NameInMap("DeviceToken")
-        public String deviceToken;
-
         public static GetCertifyResultResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetCertifyResultResponseBodyData self = new GetCertifyResultResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetCertifyResultResponseBodyData setMaterialInfo(String materialInfo) {
-            this.materialInfo = materialInfo;
+        public GetCertifyResultResponseBodyData setDeviceToken(String deviceToken) {
+            this.deviceToken = deviceToken;
             return this;
         }
-        public String getMaterialInfo() {
-            return this.materialInfo;
+        public String getDeviceToken() {
+            return this.deviceToken;
         }
 
         public GetCertifyResultResponseBodyData setIdentityInfo(String identityInfo) {
@@ -88,6 +88,14 @@ public class GetCertifyResultResponseBody extends TeaModel {
         }
         public String getIdentityInfo() {
             return this.identityInfo;
+        }
+
+        public GetCertifyResultResponseBodyData setMaterialInfo(String materialInfo) {
+            this.materialInfo = materialInfo;
+            return this;
+        }
+        public String getMaterialInfo() {
+            return this.materialInfo;
         }
 
         public GetCertifyResultResponseBodyData setVerifyDesc(String verifyDesc) {
@@ -104,14 +112,6 @@ public class GetCertifyResultResponseBody extends TeaModel {
         }
         public String getVerifyResult() {
             return this.verifyResult;
-        }
-
-        public GetCertifyResultResponseBodyData setDeviceToken(String deviceToken) {
-            this.deviceToken = deviceToken;
-            return this;
-        }
-        public String getDeviceToken() {
-            return this.deviceToken;
         }
 
     }

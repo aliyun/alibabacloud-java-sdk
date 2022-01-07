@@ -7,14 +7,14 @@ public class GetMobileResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("GetMobileResultDTO")
+    public GetMobileResponseBodyGetMobileResultDTO getMobileResultDTO;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("GetMobileResultDTO")
-    public GetMobileResponseBodyGetMobileResultDTO getMobileResultDTO;
 
     public static GetMobileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMobileResponseBody self = new GetMobileResponseBody();
@@ -27,6 +27,14 @@ public class GetMobileResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetMobileResponseBody setGetMobileResultDTO(GetMobileResponseBodyGetMobileResultDTO getMobileResultDTO) {
+        this.getMobileResultDTO = getMobileResultDTO;
+        return this;
+    }
+    public GetMobileResponseBodyGetMobileResultDTO getGetMobileResultDTO() {
+        return this.getMobileResultDTO;
     }
 
     public GetMobileResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class GetMobileResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetMobileResponseBody setGetMobileResultDTO(GetMobileResponseBodyGetMobileResultDTO getMobileResultDTO) {
-        this.getMobileResultDTO = getMobileResultDTO;
-        return this;
-    }
-    public GetMobileResponseBodyGetMobileResultDTO getGetMobileResultDTO() {
-        return this.getMobileResultDTO;
     }
 
     public static class GetMobileResponseBodyGetMobileResultDTO extends TeaModel {

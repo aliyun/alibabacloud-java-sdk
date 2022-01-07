@@ -4,8 +4,14 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetAuthorizationUrlRequest extends TeaModel {
+    @NameInMap("EndDate")
+    public String endDate;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PhoneNo")
+    public String phoneNo;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,18 +19,20 @@ public class GetAuthorizationUrlRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("PhoneNo")
-    public String phoneNo;
-
     @NameInMap("SchemeId")
     public Long schemeId;
-
-    @NameInMap("EndDate")
-    public String endDate;
 
     public static GetAuthorizationUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAuthorizationUrlRequest self = new GetAuthorizationUrlRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetAuthorizationUrlRequest setEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    public String getEndDate() {
+        return this.endDate;
     }
 
     public GetAuthorizationUrlRequest setOwnerId(Long ownerId) {
@@ -33,6 +41,14 @@ public class GetAuthorizationUrlRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public GetAuthorizationUrlRequest setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+        return this;
+    }
+    public String getPhoneNo() {
+        return this.phoneNo;
     }
 
     public GetAuthorizationUrlRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -51,28 +67,12 @@ public class GetAuthorizationUrlRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public GetAuthorizationUrlRequest setPhoneNo(String phoneNo) {
-        this.phoneNo = phoneNo;
-        return this;
-    }
-    public String getPhoneNo() {
-        return this.phoneNo;
-    }
-
     public GetAuthorizationUrlRequest setSchemeId(Long schemeId) {
         this.schemeId = schemeId;
         return this;
     }
     public Long getSchemeId() {
         return this.schemeId;
-    }
-
-    public GetAuthorizationUrlRequest setEndDate(String endDate) {
-        this.endDate = endDate;
-        return this;
-    }
-    public String getEndDate() {
-        return this.endDate;
     }
 
 }

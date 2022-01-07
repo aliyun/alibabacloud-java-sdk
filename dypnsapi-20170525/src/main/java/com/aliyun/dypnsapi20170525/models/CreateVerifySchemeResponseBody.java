@@ -7,14 +7,14 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("GateVerifySchemeDTO")
+    public CreateVerifySchemeResponseBodyGateVerifySchemeDTO gateVerifySchemeDTO;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("GateVerifySchemeDTO")
-    public CreateVerifySchemeResponseBodyGateVerifySchemeDTO gateVerifySchemeDTO;
 
     public static CreateVerifySchemeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateVerifySchemeResponseBody self = new CreateVerifySchemeResponseBody();
@@ -27,6 +27,14 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CreateVerifySchemeResponseBody setGateVerifySchemeDTO(CreateVerifySchemeResponseBodyGateVerifySchemeDTO gateVerifySchemeDTO) {
+        this.gateVerifySchemeDTO = gateVerifySchemeDTO;
+        return this;
+    }
+    public CreateVerifySchemeResponseBodyGateVerifySchemeDTO getGateVerifySchemeDTO() {
+        return this.gateVerifySchemeDTO;
     }
 
     public CreateVerifySchemeResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateVerifySchemeResponseBody setGateVerifySchemeDTO(CreateVerifySchemeResponseBodyGateVerifySchemeDTO gateVerifySchemeDTO) {
-        this.gateVerifySchemeDTO = gateVerifySchemeDTO;
-        return this;
-    }
-    public CreateVerifySchemeResponseBodyGateVerifySchemeDTO getGateVerifySchemeDTO() {
-        return this.gateVerifySchemeDTO;
     }
 
     public static class CreateVerifySchemeResponseBodyGateVerifySchemeDTO extends TeaModel {
