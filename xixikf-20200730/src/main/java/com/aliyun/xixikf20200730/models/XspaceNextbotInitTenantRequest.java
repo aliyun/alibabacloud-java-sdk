@@ -19,6 +19,9 @@ public class XspaceNextbotInitTenantRequest extends TeaModel {
     @NameInMap("ProductValidPeriod")
     public Long productValidPeriod;
 
+    @NameInMap("ProductVersion")
+    public String productVersion;
+
     @NameInMap("TenantDesc")
     public String tenantDesc;
 
@@ -27,9 +30,6 @@ public class XspaceNextbotInitTenantRequest extends TeaModel {
 
     @NameInMap("TenantName")
     public String tenantName;
-
-    @NameInMap("Version")
-    public String version;
 
     public static XspaceNextbotInitTenantRequest build(java.util.Map<String, ?> map) throws Exception {
         XspaceNextbotInitTenantRequest self = new XspaceNextbotInitTenantRequest();
@@ -76,6 +76,14 @@ public class XspaceNextbotInitTenantRequest extends TeaModel {
         return this.productValidPeriod;
     }
 
+    public XspaceNextbotInitTenantRequest setProductVersion(String productVersion) {
+        this.productVersion = productVersion;
+        return this;
+    }
+    public String getProductVersion() {
+        return this.productVersion;
+    }
+
     public XspaceNextbotInitTenantRequest setTenantDesc(String tenantDesc) {
         this.tenantDesc = tenantDesc;
         return this;
@@ -98,14 +106,6 @@ public class XspaceNextbotInitTenantRequest extends TeaModel {
     }
     public String getTenantName() {
         return this.tenantName;
-    }
-
-    public XspaceNextbotInitTenantRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }
