@@ -54,11 +54,20 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointServiceResourcesResponseBodyResources extends TeaModel {
+        @NameInMap("AutoAllocatedEnabled")
+        public Boolean autoAllocatedEnabled;
+
         @NameInMap("Ip")
         public String ip;
 
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("RelatedDeprecatedEndpointCount")
+        public Long relatedDeprecatedEndpointCount;
+
+        @NameInMap("RelatedEndpointCount")
+        public Long relatedEndpointCount;
 
         @NameInMap("ResourceId")
         public String resourceId;
@@ -80,6 +89,14 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListVpcEndpointServiceResourcesResponseBodyResources setAutoAllocatedEnabled(Boolean autoAllocatedEnabled) {
+            this.autoAllocatedEnabled = autoAllocatedEnabled;
+            return this;
+        }
+        public Boolean getAutoAllocatedEnabled() {
+            return this.autoAllocatedEnabled;
+        }
+
         public ListVpcEndpointServiceResourcesResponseBodyResources setIp(String ip) {
             this.ip = ip;
             return this;
@@ -94,6 +111,22 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListVpcEndpointServiceResourcesResponseBodyResources setRelatedDeprecatedEndpointCount(Long relatedDeprecatedEndpointCount) {
+            this.relatedDeprecatedEndpointCount = relatedDeprecatedEndpointCount;
+            return this;
+        }
+        public Long getRelatedDeprecatedEndpointCount() {
+            return this.relatedDeprecatedEndpointCount;
+        }
+
+        public ListVpcEndpointServiceResourcesResponseBodyResources setRelatedEndpointCount(Long relatedEndpointCount) {
+            this.relatedEndpointCount = relatedEndpointCount;
+            return this;
+        }
+        public Long getRelatedEndpointCount() {
+            return this.relatedEndpointCount;
         }
 
         public ListVpcEndpointServiceResourcesResponseBodyResources setResourceId(String resourceId) {
