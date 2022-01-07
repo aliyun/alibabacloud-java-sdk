@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateProductTagsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("InvalidProductTags")
+    public UpdateProductTagsResponseBodyInvalidProductTags invalidProductTags;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("InvalidProductTags")
-    public UpdateProductTagsResponseBodyInvalidProductTags invalidProductTags;
-
     public static UpdateProductTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateProductTagsResponseBody self = new UpdateProductTagsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateProductTagsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public UpdateProductTagsResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public UpdateProductTagsResponseBody setInvalidProductTags(UpdateProductTagsResponseBodyInvalidProductTags invalidProductTags) {
+        this.invalidProductTags = invalidProductTags;
+        return this;
+    }
+    public UpdateProductTagsResponseBodyInvalidProductTags getInvalidProductTags() {
+        return this.invalidProductTags;
     }
 
     public UpdateProductTagsResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class UpdateProductTagsResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public UpdateProductTagsResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public UpdateProductTagsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public UpdateProductTagsResponseBody setInvalidProductTags(UpdateProductTagsResponseBodyInvalidProductTags invalidProductTags) {
-        this.invalidProductTags = invalidProductTags;
-        return this;
-    }
-    public UpdateProductTagsResponseBodyInvalidProductTags getInvalidProductTags() {
-        return this.invalidProductTags;
     }
 
     public static class UpdateProductTagsResponseBodyInvalidProductTagsProductTag extends TeaModel {

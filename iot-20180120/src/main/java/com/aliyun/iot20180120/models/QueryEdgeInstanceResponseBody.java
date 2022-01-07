@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryEdgeInstanceResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryEdgeInstanceResponseBodyData data;
-
     public static QueryEdgeInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryEdgeInstanceResponseBody self = new QueryEdgeInstanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryEdgeInstanceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryEdgeInstanceResponseBody setData(QueryEdgeInstanceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryEdgeInstanceResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryEdgeInstanceResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryEdgeInstanceResponseBody setRequestId(String requestId) {
@@ -40,63 +64,24 @@ public class QueryEdgeInstanceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryEdgeInstanceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryEdgeInstanceResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryEdgeInstanceResponseBody setData(QueryEdgeInstanceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryEdgeInstanceResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryEdgeInstanceResponseBodyDataInstanceList extends TeaModel {
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Tags")
-        public String tags;
-
-        @NameInMap("Type")
-        public Integer type;
+        @NameInMap("BizEnable")
+        public Boolean bizEnable;
 
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        @NameInMap("GmtCreateTimestamp")
+        public Long gmtCreateTimestamp;
+
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        @NameInMap("RoleArn")
-        public String roleArn;
+        @NameInMap("GmtModifiedTimestamp")
+        public Long gmtModifiedTimestamp;
 
-        @NameInMap("RoleName")
-        public String roleName;
-
-        @NameInMap("RoleAttachTime")
-        public String roleAttachTime;
-
-        @NameInMap("Spec")
-        public Integer spec;
-
-        @NameInMap("BizEnable")
-        public Boolean bizEnable;
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         @NameInMap("LatestDeploymentStatus")
         public Integer latestDeploymentStatus;
@@ -104,50 +89,41 @@ public class QueryEdgeInstanceResponseBody extends TeaModel {
         @NameInMap("LatestDeploymentType")
         public String latestDeploymentType;
 
-        @NameInMap("GmtCreateTimestamp")
-        public Long gmtCreateTimestamp;
+        @NameInMap("Name")
+        public String name;
 
-        @NameInMap("GmtModifiedTimestamp")
-        public Long gmtModifiedTimestamp;
+        @NameInMap("RoleArn")
+        public String roleArn;
+
+        @NameInMap("RoleAttachTime")
+        public String roleAttachTime;
 
         @NameInMap("RoleAttachTimestamp")
         public Long roleAttachTimestamp;
+
+        @NameInMap("RoleName")
+        public String roleName;
+
+        @NameInMap("Spec")
+        public Integer spec;
+
+        @NameInMap("Tags")
+        public String tags;
+
+        @NameInMap("Type")
+        public Integer type;
 
         public static QueryEdgeInstanceResponseBodyDataInstanceList build(java.util.Map<String, ?> map) throws Exception {
             QueryEdgeInstanceResponseBodyDataInstanceList self = new QueryEdgeInstanceResponseBodyDataInstanceList();
             return TeaModel.build(map, self);
         }
 
-        public QueryEdgeInstanceResponseBodyDataInstanceList setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public QueryEdgeInstanceResponseBodyDataInstanceList setBizEnable(Boolean bizEnable) {
+            this.bizEnable = bizEnable;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public QueryEdgeInstanceResponseBodyDataInstanceList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public QueryEdgeInstanceResponseBodyDataInstanceList setTags(String tags) {
-            this.tags = tags;
-            return this;
-        }
-        public String getTags() {
-            return this.tags;
-        }
-
-        public QueryEdgeInstanceResponseBodyDataInstanceList setType(Integer type) {
-            this.type = type;
-            return this;
-        }
-        public Integer getType() {
-            return this.type;
+        public Boolean getBizEnable() {
+            return this.bizEnable;
         }
 
         public QueryEdgeInstanceResponseBodyDataInstanceList setGmtCreate(String gmtCreate) {
@@ -158,6 +134,14 @@ public class QueryEdgeInstanceResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
+        public QueryEdgeInstanceResponseBodyDataInstanceList setGmtCreateTimestamp(Long gmtCreateTimestamp) {
+            this.gmtCreateTimestamp = gmtCreateTimestamp;
+            return this;
+        }
+        public Long getGmtCreateTimestamp() {
+            return this.gmtCreateTimestamp;
+        }
+
         public QueryEdgeInstanceResponseBodyDataInstanceList setGmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
             return this;
@@ -166,44 +150,20 @@ public class QueryEdgeInstanceResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public QueryEdgeInstanceResponseBodyDataInstanceList setRoleArn(String roleArn) {
-            this.roleArn = roleArn;
+        public QueryEdgeInstanceResponseBodyDataInstanceList setGmtModifiedTimestamp(Long gmtModifiedTimestamp) {
+            this.gmtModifiedTimestamp = gmtModifiedTimestamp;
             return this;
         }
-        public String getRoleArn() {
-            return this.roleArn;
+        public Long getGmtModifiedTimestamp() {
+            return this.gmtModifiedTimestamp;
         }
 
-        public QueryEdgeInstanceResponseBodyDataInstanceList setRoleName(String roleName) {
-            this.roleName = roleName;
+        public QueryEdgeInstanceResponseBodyDataInstanceList setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public String getRoleName() {
-            return this.roleName;
-        }
-
-        public QueryEdgeInstanceResponseBodyDataInstanceList setRoleAttachTime(String roleAttachTime) {
-            this.roleAttachTime = roleAttachTime;
-            return this;
-        }
-        public String getRoleAttachTime() {
-            return this.roleAttachTime;
-        }
-
-        public QueryEdgeInstanceResponseBodyDataInstanceList setSpec(Integer spec) {
-            this.spec = spec;
-            return this;
-        }
-        public Integer getSpec() {
-            return this.spec;
-        }
-
-        public QueryEdgeInstanceResponseBodyDataInstanceList setBizEnable(Boolean bizEnable) {
-            this.bizEnable = bizEnable;
-            return this;
-        }
-        public Boolean getBizEnable() {
-            return this.bizEnable;
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public QueryEdgeInstanceResponseBodyDataInstanceList setLatestDeploymentStatus(Integer latestDeploymentStatus) {
@@ -222,20 +182,28 @@ public class QueryEdgeInstanceResponseBody extends TeaModel {
             return this.latestDeploymentType;
         }
 
-        public QueryEdgeInstanceResponseBodyDataInstanceList setGmtCreateTimestamp(Long gmtCreateTimestamp) {
-            this.gmtCreateTimestamp = gmtCreateTimestamp;
+        public QueryEdgeInstanceResponseBodyDataInstanceList setName(String name) {
+            this.name = name;
             return this;
         }
-        public Long getGmtCreateTimestamp() {
-            return this.gmtCreateTimestamp;
+        public String getName() {
+            return this.name;
         }
 
-        public QueryEdgeInstanceResponseBodyDataInstanceList setGmtModifiedTimestamp(Long gmtModifiedTimestamp) {
-            this.gmtModifiedTimestamp = gmtModifiedTimestamp;
+        public QueryEdgeInstanceResponseBodyDataInstanceList setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
             return this;
         }
-        public Long getGmtModifiedTimestamp() {
-            return this.gmtModifiedTimestamp;
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+        public QueryEdgeInstanceResponseBodyDataInstanceList setRoleAttachTime(String roleAttachTime) {
+            this.roleAttachTime = roleAttachTime;
+            return this;
+        }
+        public String getRoleAttachTime() {
+            return this.roleAttachTime;
         }
 
         public QueryEdgeInstanceResponseBodyDataInstanceList setRoleAttachTimestamp(Long roleAttachTimestamp) {
@@ -246,40 +214,56 @@ public class QueryEdgeInstanceResponseBody extends TeaModel {
             return this.roleAttachTimestamp;
         }
 
+        public QueryEdgeInstanceResponseBodyDataInstanceList setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
+        }
+
+        public QueryEdgeInstanceResponseBodyDataInstanceList setSpec(Integer spec) {
+            this.spec = spec;
+            return this;
+        }
+        public Integer getSpec() {
+            return this.spec;
+        }
+
+        public QueryEdgeInstanceResponseBodyDataInstanceList setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
+        }
+
+        public QueryEdgeInstanceResponseBodyDataInstanceList setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
     }
 
     public static class QueryEdgeInstanceResponseBodyData extends TeaModel {
-        @NameInMap("Total")
-        public Integer total;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         @NameInMap("InstanceList")
         public java.util.List<QueryEdgeInstanceResponseBodyDataInstanceList> instanceList;
 
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("Total")
+        public Integer total;
+
         public static QueryEdgeInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryEdgeInstanceResponseBodyData self = new QueryEdgeInstanceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryEdgeInstanceResponseBodyData setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
-        }
-
-        public QueryEdgeInstanceResponseBodyData setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
         }
 
         public QueryEdgeInstanceResponseBodyData setCurrentPage(Integer currentPage) {
@@ -296,6 +280,22 @@ public class QueryEdgeInstanceResponseBody extends TeaModel {
         }
         public java.util.List<QueryEdgeInstanceResponseBodyDataInstanceList> getInstanceList() {
             return this.instanceList;
+        }
+
+        public QueryEdgeInstanceResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public QueryEdgeInstanceResponseBodyData setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
         }
 
     }

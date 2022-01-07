@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryEdgeInstanceMessageRoutingResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryEdgeInstanceMessageRoutingResponseBodyData data;
-
     public static QueryEdgeInstanceMessageRoutingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryEdgeInstanceMessageRoutingResponseBody self = new QueryEdgeInstanceMessageRoutingResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryEdgeInstanceMessageRoutingResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryEdgeInstanceMessageRoutingResponseBody setData(QueryEdgeInstanceMessageRoutingResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryEdgeInstanceMessageRoutingResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryEdgeInstanceMessageRoutingResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryEdgeInstanceMessageRoutingResponseBody setRequestId(String requestId) {
@@ -40,103 +64,31 @@ public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryEdgeInstanceMessageRoutingResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryEdgeInstanceMessageRoutingResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryEdgeInstanceMessageRoutingResponseBody setData(QueryEdgeInstanceMessageRoutingResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryEdgeInstanceMessageRoutingResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext extends TeaModel {
-        @NameInMap("SourceFcServiceName")
-        public String sourceFcServiceName;
-
-        @NameInMap("SourceFcFunctionName")
-        public String sourceFcFunctionName;
+        @NameInMap("Qos")
+        public String qos;
 
         @NameInMap("SourceApplicationName")
         public String sourceApplicationName;
 
-        @NameInMap("TargetFcServiceName")
-        public String targetFcServiceName;
+        @NameInMap("SourceFcFunctionName")
+        public String sourceFcFunctionName;
 
-        @NameInMap("TargetFcFunctionName")
-        public String targetFcFunctionName;
+        @NameInMap("SourceFcServiceName")
+        public String sourceFcServiceName;
 
         @NameInMap("TargetApplicationName")
         public String targetApplicationName;
 
-        @NameInMap("Qos")
-        public String qos;
+        @NameInMap("TargetFcFunctionName")
+        public String targetFcFunctionName;
+
+        @NameInMap("TargetFcServiceName")
+        public String targetFcServiceName;
 
         public static QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext build(java.util.Map<String, ?> map) throws Exception {
             QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext self = new QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext();
             return TeaModel.build(map, self);
-        }
-
-        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext setSourceFcServiceName(String sourceFcServiceName) {
-            this.sourceFcServiceName = sourceFcServiceName;
-            return this;
-        }
-        public String getSourceFcServiceName() {
-            return this.sourceFcServiceName;
-        }
-
-        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext setSourceFcFunctionName(String sourceFcFunctionName) {
-            this.sourceFcFunctionName = sourceFcFunctionName;
-            return this;
-        }
-        public String getSourceFcFunctionName() {
-            return this.sourceFcFunctionName;
-        }
-
-        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext setSourceApplicationName(String sourceApplicationName) {
-            this.sourceApplicationName = sourceApplicationName;
-            return this;
-        }
-        public String getSourceApplicationName() {
-            return this.sourceApplicationName;
-        }
-
-        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext setTargetFcServiceName(String targetFcServiceName) {
-            this.targetFcServiceName = targetFcServiceName;
-            return this;
-        }
-        public String getTargetFcServiceName() {
-            return this.targetFcServiceName;
-        }
-
-        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext setTargetFcFunctionName(String targetFcFunctionName) {
-            this.targetFcFunctionName = targetFcFunctionName;
-            return this;
-        }
-        public String getTargetFcFunctionName() {
-            return this.targetFcFunctionName;
-        }
-
-        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext setTargetApplicationName(String targetApplicationName) {
-            this.targetApplicationName = targetApplicationName;
-            return this;
-        }
-        public String getTargetApplicationName() {
-            return this.targetApplicationName;
         }
 
         public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext setQos(String qos) {
@@ -147,104 +99,96 @@ public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
             return this.qos;
         }
 
+        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext setSourceApplicationName(String sourceApplicationName) {
+            this.sourceApplicationName = sourceApplicationName;
+            return this;
+        }
+        public String getSourceApplicationName() {
+            return this.sourceApplicationName;
+        }
+
+        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext setSourceFcFunctionName(String sourceFcFunctionName) {
+            this.sourceFcFunctionName = sourceFcFunctionName;
+            return this;
+        }
+        public String getSourceFcFunctionName() {
+            return this.sourceFcFunctionName;
+        }
+
+        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext setSourceFcServiceName(String sourceFcServiceName) {
+            this.sourceFcServiceName = sourceFcServiceName;
+            return this;
+        }
+        public String getSourceFcServiceName() {
+            return this.sourceFcServiceName;
+        }
+
+        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext setTargetApplicationName(String targetApplicationName) {
+            this.targetApplicationName = targetApplicationName;
+            return this;
+        }
+        public String getTargetApplicationName() {
+            return this.targetApplicationName;
+        }
+
+        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext setTargetFcFunctionName(String targetFcFunctionName) {
+            this.targetFcFunctionName = targetFcFunctionName;
+            return this;
+        }
+        public String getTargetFcFunctionName() {
+            return this.targetFcFunctionName;
+        }
+
+        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext setTargetFcServiceName(String targetFcServiceName) {
+            this.targetFcServiceName = targetFcServiceName;
+            return this;
+        }
+        public String getTargetFcServiceName() {
+            return this.targetFcServiceName;
+        }
+
     }
 
     public static class QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute extends TeaModel {
-        @NameInMap("RouteId")
-        public Integer routeId;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("TopicFilter")
-        public String topicFilter;
-
-        @NameInMap("SourceType")
-        public String sourceType;
-
-        @NameInMap("SourceData")
-        public String sourceData;
-
-        @NameInMap("TargetType")
-        public String targetType;
-
-        @NameInMap("TargetData")
-        public String targetData;
-
         @NameInMap("GmtCreate")
         public String gmtCreate;
-
-        @NameInMap("GmtModified")
-        public String gmtModified;
 
         @NameInMap("GmtCreateTimestamp")
         public Long gmtCreateTimestamp;
 
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
         @NameInMap("GmtModifiedTimestamp")
         public Long gmtModifiedTimestamp;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("RouteContext")
         public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext routeContext;
 
+        @NameInMap("RouteId")
+        public Integer routeId;
+
+        @NameInMap("SourceData")
+        public String sourceData;
+
+        @NameInMap("SourceType")
+        public String sourceType;
+
+        @NameInMap("TargetData")
+        public String targetData;
+
+        @NameInMap("TargetType")
+        public String targetType;
+
+        @NameInMap("TopicFilter")
+        public String topicFilter;
+
         public static QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute build(java.util.Map<String, ?> map) throws Exception {
             QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute self = new QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute();
             return TeaModel.build(map, self);
-        }
-
-        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setRouteId(Integer routeId) {
-            this.routeId = routeId;
-            return this;
-        }
-        public Integer getRouteId() {
-            return this.routeId;
-        }
-
-        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setTopicFilter(String topicFilter) {
-            this.topicFilter = topicFilter;
-            return this;
-        }
-        public String getTopicFilter() {
-            return this.topicFilter;
-        }
-
-        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setSourceType(String sourceType) {
-            this.sourceType = sourceType;
-            return this;
-        }
-        public String getSourceType() {
-            return this.sourceType;
-        }
-
-        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setSourceData(String sourceData) {
-            this.sourceData = sourceData;
-            return this;
-        }
-        public String getSourceData() {
-            return this.sourceData;
-        }
-
-        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setTargetType(String targetType) {
-            this.targetType = targetType;
-            return this;
-        }
-        public String getTargetType() {
-            return this.targetType;
-        }
-
-        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setTargetData(String targetData) {
-            this.targetData = targetData;
-            return this;
-        }
-        public String getTargetData() {
-            return this.targetData;
         }
 
         public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setGmtCreate(String gmtCreate) {
@@ -255,20 +199,20 @@ public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setGmtModified(String gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public String getGmtModified() {
-            return this.gmtModified;
-        }
-
         public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setGmtCreateTimestamp(Long gmtCreateTimestamp) {
             this.gmtCreateTimestamp = gmtCreateTimestamp;
             return this;
         }
         public Long getGmtCreateTimestamp() {
             return this.gmtCreateTimestamp;
+        }
+
+        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
         }
 
         public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setGmtModifiedTimestamp(Long gmtModifiedTimestamp) {
@@ -279,12 +223,68 @@ public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
             return this.gmtModifiedTimestamp;
         }
 
+        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setRouteContext(QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext routeContext) {
             this.routeContext = routeContext;
             return this;
         }
         public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRouteRouteContext getRouteContext() {
             return this.routeContext;
+        }
+
+        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setRouteId(Integer routeId) {
+            this.routeId = routeId;
+            return this;
+        }
+        public Integer getRouteId() {
+            return this.routeId;
+        }
+
+        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setSourceData(String sourceData) {
+            this.sourceData = sourceData;
+            return this;
+        }
+        public String getSourceData() {
+            return this.sourceData;
+        }
+
+        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setTargetData(String targetData) {
+            this.targetData = targetData;
+            return this;
+        }
+        public String getTargetData() {
+            return this.targetData;
+        }
+
+        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setTargetType(String targetType) {
+            this.targetType = targetType;
+            return this;
+        }
+        public String getTargetType() {
+            return this.targetType;
+        }
+
+        public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteListMessageRoute setTopicFilter(String topicFilter) {
+            this.topicFilter = topicFilter;
+            return this;
+        }
+        public String getTopicFilter() {
+            return this.topicFilter;
         }
 
     }
@@ -309,37 +309,21 @@ public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeInstanceMessageRoutingResponseBodyData extends TeaModel {
-        @NameInMap("Total")
-        public Integer total;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         @NameInMap("MessageRouteList")
         public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteList messageRouteList;
 
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("Total")
+        public Integer total;
+
         public static QueryEdgeInstanceMessageRoutingResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryEdgeInstanceMessageRoutingResponseBodyData self = new QueryEdgeInstanceMessageRoutingResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryEdgeInstanceMessageRoutingResponseBodyData setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
-        }
-
-        public QueryEdgeInstanceMessageRoutingResponseBodyData setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
         }
 
         public QueryEdgeInstanceMessageRoutingResponseBodyData setCurrentPage(Integer currentPage) {
@@ -356,6 +340,22 @@ public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
         }
         public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteList getMessageRouteList() {
             return this.messageRouteList;
+        }
+
+        public QueryEdgeInstanceMessageRoutingResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public QueryEdgeInstanceMessageRoutingResponseBodyData setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
         }
 
     }

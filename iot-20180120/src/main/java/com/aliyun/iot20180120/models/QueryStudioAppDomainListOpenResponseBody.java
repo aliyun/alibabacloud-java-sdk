@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryStudioAppDomainListOpenResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryStudioAppDomainListOpenResponseBodyData data;
-
     public static QueryStudioAppDomainListOpenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryStudioAppDomainListOpenResponseBody self = new QueryStudioAppDomainListOpenResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryStudioAppDomainListOpenResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryStudioAppDomainListOpenResponseBody setData(QueryStudioAppDomainListOpenResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryStudioAppDomainListOpenResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryStudioAppDomainListOpenResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryStudioAppDomainListOpenResponseBody setRequestId(String requestId) {
@@ -40,39 +64,15 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryStudioAppDomainListOpenResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryStudioAppDomainListOpenResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryStudioAppDomainListOpenResponseBody setData(QueryStudioAppDomainListOpenResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryStudioAppDomainListOpenResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryStudioAppDomainListOpenResponseBodyDataListDomainInfo extends TeaModel {
-        @NameInMap("TenantId")
-        public String tenantId;
-
         @NameInMap("AppId")
         public String appId;
 
-        @NameInMap("ProjectId")
-        public String projectId;
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
+
+        @NameInMap("GmtModified")
+        public String gmtModified;
 
         @NameInMap("Host")
         public String host;
@@ -83,26 +83,18 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
         @NameInMap("IsBeian")
         public String isBeian;
 
+        @NameInMap("ProjectId")
+        public String projectId;
+
         @NameInMap("Protocol")
         public String protocol;
 
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
-
-        @NameInMap("GmtModified")
-        public String gmtModified;
+        @NameInMap("TenantId")
+        public String tenantId;
 
         public static QueryStudioAppDomainListOpenResponseBodyDataListDomainInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryStudioAppDomainListOpenResponseBodyDataListDomainInfo self = new QueryStudioAppDomainListOpenResponseBodyDataListDomainInfo();
             return TeaModel.build(map, self);
-        }
-
-        public QueryStudioAppDomainListOpenResponseBodyDataListDomainInfo setTenantId(String tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public String getTenantId() {
-            return this.tenantId;
         }
 
         public QueryStudioAppDomainListOpenResponseBodyDataListDomainInfo setAppId(String appId) {
@@ -113,12 +105,20 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public QueryStudioAppDomainListOpenResponseBodyDataListDomainInfo setProjectId(String projectId) {
-            this.projectId = projectId;
+        public QueryStudioAppDomainListOpenResponseBodyDataListDomainInfo setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
             return this;
         }
-        public String getProjectId() {
-            return this.projectId;
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public QueryStudioAppDomainListOpenResponseBodyDataListDomainInfo setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
         }
 
         public QueryStudioAppDomainListOpenResponseBodyDataListDomainInfo setHost(String host) {
@@ -145,6 +145,14 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
             return this.isBeian;
         }
 
+        public QueryStudioAppDomainListOpenResponseBodyDataListDomainInfo setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
+        }
+
         public QueryStudioAppDomainListOpenResponseBodyDataListDomainInfo setProtocol(String protocol) {
             this.protocol = protocol;
             return this;
@@ -153,20 +161,12 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
             return this.protocol;
         }
 
-        public QueryStudioAppDomainListOpenResponseBodyDataListDomainInfo setGmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
+        public QueryStudioAppDomainListOpenResponseBodyDataListDomainInfo setTenantId(String tenantId) {
+            this.tenantId = tenantId;
             return this;
         }
-        public String getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public QueryStudioAppDomainListOpenResponseBodyDataListDomainInfo setGmtModified(String gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public String getGmtModified() {
-            return this.gmtModified;
+        public String getTenantId() {
+            return this.tenantId;
         }
 
     }
@@ -191,6 +191,9 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
     }
 
     public static class QueryStudioAppDomainListOpenResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public QueryStudioAppDomainListOpenResponseBodyDataList list;
+
         @NameInMap("PageNo")
         public Integer pageNo;
 
@@ -203,12 +206,17 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
         @NameInMap("TotalPage")
         public Integer totalPage;
 
-        @NameInMap("List")
-        public QueryStudioAppDomainListOpenResponseBodyDataList list;
-
         public static QueryStudioAppDomainListOpenResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryStudioAppDomainListOpenResponseBodyData self = new QueryStudioAppDomainListOpenResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryStudioAppDomainListOpenResponseBodyData setList(QueryStudioAppDomainListOpenResponseBodyDataList list) {
+            this.list = list;
+            return this;
+        }
+        public QueryStudioAppDomainListOpenResponseBodyDataList getList() {
+            return this.list;
         }
 
         public QueryStudioAppDomainListOpenResponseBodyData setPageNo(Integer pageNo) {
@@ -241,14 +249,6 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
         }
         public Integer getTotalPage() {
             return this.totalPage;
-        }
-
-        public QueryStudioAppDomainListOpenResponseBodyData setList(QueryStudioAppDomainListOpenResponseBodyDataList list) {
-            this.list = list;
-            return this;
-        }
-        public QueryStudioAppDomainListOpenResponseBodyDataList getList() {
-            return this.list;
         }
 
     }

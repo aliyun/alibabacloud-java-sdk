@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryTopicRouteTableResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("DstTopics")
+    public QueryTopicRouteTableResponseBodyDstTopics dstTopics;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("DstTopics")
-    public QueryTopicRouteTableResponseBodyDstTopics dstTopics;
-
     public static QueryTopicRouteTableResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryTopicRouteTableResponseBody self = new QueryTopicRouteTableResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryTopicRouteTableResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryTopicRouteTableResponseBody setDstTopics(QueryTopicRouteTableResponseBodyDstTopics dstTopics) {
+        this.dstTopics = dstTopics;
+        return this;
+    }
+    public QueryTopicRouteTableResponseBodyDstTopics getDstTopics() {
+        return this.dstTopics;
+    }
+
+    public QueryTopicRouteTableResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryTopicRouteTableResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class QueryTopicRouteTableResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public QueryTopicRouteTableResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryTopicRouteTableResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryTopicRouteTableResponseBody setDstTopics(QueryTopicRouteTableResponseBodyDstTopics dstTopics) {
-        this.dstTopics = dstTopics;
-        return this;
-    }
-    public QueryTopicRouteTableResponseBodyDstTopics getDstTopics() {
-        return this.dstTopics;
     }
 
     public static class QueryTopicRouteTableResponseBodyDstTopics extends TeaModel {

@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryDeviceOriginalEventDataResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryDeviceOriginalEventDataResponseBodyData data;
-
     public static QueryDeviceOriginalEventDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceOriginalEventDataResponseBody self = new QueryDeviceOriginalEventDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceOriginalEventDataResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryDeviceOriginalEventDataResponseBody setData(QueryDeviceOriginalEventDataResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryDeviceOriginalEventDataResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryDeviceOriginalEventDataResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryDeviceOriginalEventDataResponseBody setRequestId(String requestId) {
@@ -40,33 +64,9 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryDeviceOriginalEventDataResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryDeviceOriginalEventDataResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryDeviceOriginalEventDataResponseBody setData(QueryDeviceOriginalEventDataResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryDeviceOriginalEventDataResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryDeviceOriginalEventDataResponseBodyDataListEventInfo extends TeaModel {
-        @NameInMap("Time")
-        public String time;
+        @NameInMap("EventType")
+        public String eventType;
 
         @NameInMap("Identifier")
         public String identifier;
@@ -74,23 +74,23 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("EventType")
-        public String eventType;
-
         @NameInMap("OutputData")
         public String outputData;
+
+        @NameInMap("Time")
+        public String time;
 
         public static QueryDeviceOriginalEventDataResponseBodyDataListEventInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceOriginalEventDataResponseBodyDataListEventInfo self = new QueryDeviceOriginalEventDataResponseBodyDataListEventInfo();
             return TeaModel.build(map, self);
         }
 
-        public QueryDeviceOriginalEventDataResponseBodyDataListEventInfo setTime(String time) {
-            this.time = time;
+        public QueryDeviceOriginalEventDataResponseBodyDataListEventInfo setEventType(String eventType) {
+            this.eventType = eventType;
             return this;
         }
-        public String getTime() {
-            return this.time;
+        public String getEventType() {
+            return this.eventType;
         }
 
         public QueryDeviceOriginalEventDataResponseBodyDataListEventInfo setIdentifier(String identifier) {
@@ -109,20 +109,20 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
             return this.name;
         }
 
-        public QueryDeviceOriginalEventDataResponseBodyDataListEventInfo setEventType(String eventType) {
-            this.eventType = eventType;
-            return this;
-        }
-        public String getEventType() {
-            return this.eventType;
-        }
-
         public QueryDeviceOriginalEventDataResponseBodyDataListEventInfo setOutputData(String outputData) {
             this.outputData = outputData;
             return this;
         }
         public String getOutputData() {
             return this.outputData;
+        }
+
+        public QueryDeviceOriginalEventDataResponseBodyDataListEventInfo setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
         }
 
     }
@@ -147,18 +147,26 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceOriginalEventDataResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public QueryDeviceOriginalEventDataResponseBodyDataList list;
+
         @NameInMap("NextPageToken")
         public String nextPageToken;
 
         @NameInMap("NextValid")
         public Boolean nextValid;
 
-        @NameInMap("List")
-        public QueryDeviceOriginalEventDataResponseBodyDataList list;
-
         public static QueryDeviceOriginalEventDataResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceOriginalEventDataResponseBodyData self = new QueryDeviceOriginalEventDataResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryDeviceOriginalEventDataResponseBodyData setList(QueryDeviceOriginalEventDataResponseBodyDataList list) {
+            this.list = list;
+            return this;
+        }
+        public QueryDeviceOriginalEventDataResponseBodyDataList getList() {
+            return this.list;
         }
 
         public QueryDeviceOriginalEventDataResponseBodyData setNextPageToken(String nextPageToken) {
@@ -175,14 +183,6 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
         }
         public Boolean getNextValid() {
             return this.nextValid;
-        }
-
-        public QueryDeviceOriginalEventDataResponseBodyData setList(QueryDeviceOriginalEventDataResponseBodyDataList list) {
-            this.list = list;
-            return this;
-        }
-        public QueryDeviceOriginalEventDataResponseBodyDataList getList() {
-            return this.list;
         }
 
     }

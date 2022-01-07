@@ -4,23 +4,15 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateConsumerGroupRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     @NameInMap("GroupName")
     public String groupName;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     public static CreateConsumerGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateConsumerGroupRequest self = new CreateConsumerGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateConsumerGroupRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
     }
 
     public CreateConsumerGroupRequest setGroupName(String groupName) {
@@ -29,6 +21,14 @@ public class CreateConsumerGroupRequest extends TeaModel {
     }
     public String getGroupName() {
         return this.groupName;
+    }
+
+    public CreateConsumerGroupRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
 }

@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class InvokeDataAPIServiceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public InvokeDataAPIServiceResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public InvokeDataAPIServiceResponseBodyData data;
-
     public static InvokeDataAPIServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InvokeDataAPIServiceResponseBody self = new InvokeDataAPIServiceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public InvokeDataAPIServiceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public InvokeDataAPIServiceResponseBody setData(InvokeDataAPIServiceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public InvokeDataAPIServiceResponseBodyData getData() {
+        return this.data;
+    }
+
+    public InvokeDataAPIServiceResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public InvokeDataAPIServiceResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public InvokeDataAPIServiceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public InvokeDataAPIServiceResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public InvokeDataAPIServiceResponseBody setData(InvokeDataAPIServiceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public InvokeDataAPIServiceResponseBodyData getData() {
-        return this.data;
     }
 
     public static class InvokeDataAPIServiceResponseBodyDataFieldNameList extends TeaModel {
@@ -103,17 +103,17 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
     }
 
     public static class InvokeDataAPIServiceResponseBodyData extends TeaModel {
-        @NameInMap("PageNo")
-        public Integer pageNo;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
         @NameInMap("ApiSrn")
         public String apiSrn;
 
         @NameInMap("FieldNameList")
         public InvokeDataAPIServiceResponseBodyDataFieldNameList fieldNameList;
+
+        @NameInMap("PageNo")
+        public Integer pageNo;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
 
         @NameInMap("ResultList")
         public InvokeDataAPIServiceResponseBodyDataResultList resultList;
@@ -121,22 +121,6 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
         public static InvokeDataAPIServiceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             InvokeDataAPIServiceResponseBodyData self = new InvokeDataAPIServiceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public InvokeDataAPIServiceResponseBodyData setPageNo(Integer pageNo) {
-            this.pageNo = pageNo;
-            return this;
-        }
-        public Integer getPageNo() {
-            return this.pageNo;
-        }
-
-        public InvokeDataAPIServiceResponseBodyData setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
         }
 
         public InvokeDataAPIServiceResponseBodyData setApiSrn(String apiSrn) {
@@ -153,6 +137,22 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
         }
         public InvokeDataAPIServiceResponseBodyDataFieldNameList getFieldNameList() {
             return this.fieldNameList;
+        }
+
+        public InvokeDataAPIServiceResponseBodyData setPageNo(Integer pageNo) {
+            this.pageNo = pageNo;
+            return this;
+        }
+        public Integer getPageNo() {
+            return this.pageNo;
+        }
+
+        public InvokeDataAPIServiceResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
         }
 
         public InvokeDataAPIServiceResponseBodyData setResultList(InvokeDataAPIServiceResponseBodyDataResultList resultList) {

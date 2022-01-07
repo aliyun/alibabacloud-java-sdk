@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetGatewayBySubDeviceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetGatewayBySubDeviceResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public GetGatewayBySubDeviceResponseBodyData data;
-
     public static GetGatewayBySubDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetGatewayBySubDeviceResponseBody self = new GetGatewayBySubDeviceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetGatewayBySubDeviceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetGatewayBySubDeviceResponseBody setData(GetGatewayBySubDeviceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetGatewayBySubDeviceResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetGatewayBySubDeviceResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetGatewayBySubDeviceResponseBody setRequestId(String requestId) {
@@ -40,66 +64,24 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetGatewayBySubDeviceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetGatewayBySubDeviceResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetGatewayBySubDeviceResponseBody setData(GetGatewayBySubDeviceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetGatewayBySubDeviceResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetGatewayBySubDeviceResponseBodyData extends TeaModel {
-        @NameInMap("ProductKey")
-        public String productKey;
-
-        @NameInMap("ProductName")
-        public String productName;
+        @NameInMap("DeviceName")
+        public String deviceName;
 
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 
-        @NameInMap("DeviceName")
-        public String deviceName;
-
         @NameInMap("FirmwareVersion")
         public String firmwareVersion;
-
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
-
-        @NameInMap("UtcCreate")
-        public String utcCreate;
 
         @NameInMap("GmtActive")
         public String gmtActive;
 
-        @NameInMap("UtcActive")
-        public String utcActive;
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
 
         @NameInMap("GmtOnline")
         public String gmtOnline;
-
-        @NameInMap("UtcOnline")
-        public String utcOnline;
-
-        @NameInMap("Status")
-        public String status;
 
         @NameInMap("IpAddress")
         public String ipAddress;
@@ -107,39 +89,33 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
         @NameInMap("NodeType")
         public String nodeType;
 
-        @NameInMap("region")
-        public String region;
+        @NameInMap("ProductKey")
+        public String productKey;
+
+        @NameInMap("ProductName")
+        public String productName;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("UtcActive")
+        public String utcActive;
+
+        @NameInMap("UtcCreate")
+        public String utcCreate;
+
+        @NameInMap("UtcOnline")
+        public String utcOnline;
 
         @NameInMap("iotId")
         public String iotId;
 
+        @NameInMap("region")
+        public String region;
+
         public static GetGatewayBySubDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetGatewayBySubDeviceResponseBodyData self = new GetGatewayBySubDeviceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetGatewayBySubDeviceResponseBodyData setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
-        }
-
-        public GetGatewayBySubDeviceResponseBodyData setProductName(String productName) {
-            this.productName = productName;
-            return this;
-        }
-        public String getProductName() {
-            return this.productName;
-        }
-
-        public GetGatewayBySubDeviceResponseBodyData setDeviceSecret(String deviceSecret) {
-            this.deviceSecret = deviceSecret;
-            return this;
-        }
-        public String getDeviceSecret() {
-            return this.deviceSecret;
         }
 
         public GetGatewayBySubDeviceResponseBodyData setDeviceName(String deviceName) {
@@ -150,28 +126,20 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             return this.deviceName;
         }
 
+        public GetGatewayBySubDeviceResponseBodyData setDeviceSecret(String deviceSecret) {
+            this.deviceSecret = deviceSecret;
+            return this;
+        }
+        public String getDeviceSecret() {
+            return this.deviceSecret;
+        }
+
         public GetGatewayBySubDeviceResponseBodyData setFirmwareVersion(String firmwareVersion) {
             this.firmwareVersion = firmwareVersion;
             return this;
         }
         public String getFirmwareVersion() {
             return this.firmwareVersion;
-        }
-
-        public GetGatewayBySubDeviceResponseBodyData setGmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public String getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public GetGatewayBySubDeviceResponseBodyData setUtcCreate(String utcCreate) {
-            this.utcCreate = utcCreate;
-            return this;
-        }
-        public String getUtcCreate() {
-            return this.utcCreate;
         }
 
         public GetGatewayBySubDeviceResponseBodyData setGmtActive(String gmtActive) {
@@ -182,12 +150,12 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             return this.gmtActive;
         }
 
-        public GetGatewayBySubDeviceResponseBodyData setUtcActive(String utcActive) {
-            this.utcActive = utcActive;
+        public GetGatewayBySubDeviceResponseBodyData setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
             return this;
         }
-        public String getUtcActive() {
-            return this.utcActive;
+        public String getGmtCreate() {
+            return this.gmtCreate;
         }
 
         public GetGatewayBySubDeviceResponseBodyData setGmtOnline(String gmtOnline) {
@@ -196,22 +164,6 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
         }
         public String getGmtOnline() {
             return this.gmtOnline;
-        }
-
-        public GetGatewayBySubDeviceResponseBodyData setUtcOnline(String utcOnline) {
-            this.utcOnline = utcOnline;
-            return this;
-        }
-        public String getUtcOnline() {
-            return this.utcOnline;
-        }
-
-        public GetGatewayBySubDeviceResponseBodyData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public GetGatewayBySubDeviceResponseBodyData setIpAddress(String ipAddress) {
@@ -230,12 +182,52 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             return this.nodeType;
         }
 
-        public GetGatewayBySubDeviceResponseBodyData setRegion(String region) {
-            this.region = region;
+        public GetGatewayBySubDeviceResponseBodyData setProductKey(String productKey) {
+            this.productKey = productKey;
             return this;
         }
-        public String getRegion() {
-            return this.region;
+        public String getProductKey() {
+            return this.productKey;
+        }
+
+        public GetGatewayBySubDeviceResponseBodyData setProductName(String productName) {
+            this.productName = productName;
+            return this;
+        }
+        public String getProductName() {
+            return this.productName;
+        }
+
+        public GetGatewayBySubDeviceResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetGatewayBySubDeviceResponseBodyData setUtcActive(String utcActive) {
+            this.utcActive = utcActive;
+            return this;
+        }
+        public String getUtcActive() {
+            return this.utcActive;
+        }
+
+        public GetGatewayBySubDeviceResponseBodyData setUtcCreate(String utcCreate) {
+            this.utcCreate = utcCreate;
+            return this;
+        }
+        public String getUtcCreate() {
+            return this.utcCreate;
+        }
+
+        public GetGatewayBySubDeviceResponseBodyData setUtcOnline(String utcOnline) {
+            this.utcOnline = utcOnline;
+            return this;
+        }
+        public String getUtcOnline() {
+            return this.utcOnline;
         }
 
         public GetGatewayBySubDeviceResponseBodyData setIotId(String iotId) {
@@ -244,6 +236,14 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
         }
         public String getIotId() {
             return this.iotId;
+        }
+
+        public GetGatewayBySubDeviceResponseBodyData setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
     }

@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchCheckDeviceNamesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public BatchCheckDeviceNamesResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public BatchCheckDeviceNamesResponseBodyData data;
-
     public static BatchCheckDeviceNamesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchCheckDeviceNamesResponseBody self = new BatchCheckDeviceNamesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public BatchCheckDeviceNamesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public BatchCheckDeviceNamesResponseBody setData(BatchCheckDeviceNamesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public BatchCheckDeviceNamesResponseBodyData getData() {
+        return this.data;
+    }
+
+    public BatchCheckDeviceNamesResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public BatchCheckDeviceNamesResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class BatchCheckDeviceNamesResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public BatchCheckDeviceNamesResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public BatchCheckDeviceNamesResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public BatchCheckDeviceNamesResponseBody setData(BatchCheckDeviceNamesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public BatchCheckDeviceNamesResponseBodyData getData() {
-        return this.data;
     }
 
     public static class BatchCheckDeviceNamesResponseBodyDataInvalidDeviceNameList extends TeaModel {

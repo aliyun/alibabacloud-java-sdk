@@ -7,14 +7,14 @@ public class CreateDeviceDistributeJobRequest extends TeaModel {
     @NameInMap("DeviceName")
     public java.util.List<String> deviceName;
 
-    @NameInMap("SourceInstanceId")
-    public String sourceInstanceId;
-
     @NameInMap("ProductKey")
     public String productKey;
 
-    @NameInMap("TargetUid")
-    public String targetUid;
+    @NameInMap("SourceInstanceId")
+    public String sourceInstanceId;
+
+    @NameInMap("Strategy")
+    public Integer strategy;
 
     @NameInMap("TargetAliyunId")
     public String targetAliyunId;
@@ -22,8 +22,8 @@ public class CreateDeviceDistributeJobRequest extends TeaModel {
     @NameInMap("TargetInstanceConfig")
     public java.util.List<CreateDeviceDistributeJobRequestTargetInstanceConfig> targetInstanceConfig;
 
-    @NameInMap("Strategy")
-    public Integer strategy;
+    @NameInMap("TargetUid")
+    public String targetUid;
 
     public static CreateDeviceDistributeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDeviceDistributeJobRequest self = new CreateDeviceDistributeJobRequest();
@@ -38,14 +38,6 @@ public class CreateDeviceDistributeJobRequest extends TeaModel {
         return this.deviceName;
     }
 
-    public CreateDeviceDistributeJobRequest setSourceInstanceId(String sourceInstanceId) {
-        this.sourceInstanceId = sourceInstanceId;
-        return this;
-    }
-    public String getSourceInstanceId() {
-        return this.sourceInstanceId;
-    }
-
     public CreateDeviceDistributeJobRequest setProductKey(String productKey) {
         this.productKey = productKey;
         return this;
@@ -54,12 +46,20 @@ public class CreateDeviceDistributeJobRequest extends TeaModel {
         return this.productKey;
     }
 
-    public CreateDeviceDistributeJobRequest setTargetUid(String targetUid) {
-        this.targetUid = targetUid;
+    public CreateDeviceDistributeJobRequest setSourceInstanceId(String sourceInstanceId) {
+        this.sourceInstanceId = sourceInstanceId;
         return this;
     }
-    public String getTargetUid() {
-        return this.targetUid;
+    public String getSourceInstanceId() {
+        return this.sourceInstanceId;
+    }
+
+    public CreateDeviceDistributeJobRequest setStrategy(Integer strategy) {
+        this.strategy = strategy;
+        return this;
+    }
+    public Integer getStrategy() {
+        return this.strategy;
     }
 
     public CreateDeviceDistributeJobRequest setTargetAliyunId(String targetAliyunId) {
@@ -78,12 +78,12 @@ public class CreateDeviceDistributeJobRequest extends TeaModel {
         return this.targetInstanceConfig;
     }
 
-    public CreateDeviceDistributeJobRequest setStrategy(Integer strategy) {
-        this.strategy = strategy;
+    public CreateDeviceDistributeJobRequest setTargetUid(String targetUid) {
+        this.targetUid = targetUid;
         return this;
     }
-    public Integer getStrategy() {
-        return this.strategy;
+    public String getTargetUid() {
+        return this.targetUid;
     }
 
     public static class CreateDeviceDistributeJobRequestTargetInstanceConfig extends TeaModel {

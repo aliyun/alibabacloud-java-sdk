@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryProductListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryProductListResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryProductListResponseBodyData data;
-
     public static QueryProductListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryProductListResponseBody self = new QueryProductListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryProductListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryProductListResponseBody setData(QueryProductListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryProductListResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryProductListResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryProductListResponseBody setRequestId(String requestId) {
@@ -40,33 +64,9 @@ public class QueryProductListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryProductListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryProductListResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryProductListResponseBody setData(QueryProductListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryProductListResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryProductListResponseBodyDataListProductInfo extends TeaModel {
-        @NameInMap("GmtCreate")
-        public Long gmtCreate;
+        @NameInMap("AuthType")
+        public String authType;
 
         @NameInMap("DataFormat")
         public Integer dataFormat;
@@ -77,6 +77,9 @@ public class QueryProductListResponseBody extends TeaModel {
         @NameInMap("DeviceCount")
         public Integer deviceCount;
 
+        @NameInMap("GmtCreate")
+        public Long gmtCreate;
+
         @NameInMap("NodeType")
         public Integer nodeType;
 
@@ -86,20 +89,17 @@ public class QueryProductListResponseBody extends TeaModel {
         @NameInMap("ProductName")
         public String productName;
 
-        @NameInMap("AuthType")
-        public String authType;
-
         public static QueryProductListResponseBodyDataListProductInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryProductListResponseBodyDataListProductInfo self = new QueryProductListResponseBodyDataListProductInfo();
             return TeaModel.build(map, self);
         }
 
-        public QueryProductListResponseBodyDataListProductInfo setGmtCreate(Long gmtCreate) {
-            this.gmtCreate = gmtCreate;
+        public QueryProductListResponseBodyDataListProductInfo setAuthType(String authType) {
+            this.authType = authType;
             return this;
         }
-        public Long getGmtCreate() {
-            return this.gmtCreate;
+        public String getAuthType() {
+            return this.authType;
         }
 
         public QueryProductListResponseBodyDataListProductInfo setDataFormat(Integer dataFormat) {
@@ -126,6 +126,14 @@ public class QueryProductListResponseBody extends TeaModel {
             return this.deviceCount;
         }
 
+        public QueryProductListResponseBodyDataListProductInfo setGmtCreate(Long gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public Long getGmtCreate() {
+            return this.gmtCreate;
+        }
+
         public QueryProductListResponseBodyDataListProductInfo setNodeType(Integer nodeType) {
             this.nodeType = nodeType;
             return this;
@@ -148,14 +156,6 @@ public class QueryProductListResponseBody extends TeaModel {
         }
         public String getProductName() {
             return this.productName;
-        }
-
-        public QueryProductListResponseBodyDataListProductInfo setAuthType(String authType) {
-            this.authType = authType;
-            return this;
-        }
-        public String getAuthType() {
-            return this.authType;
         }
 
     }
@@ -183,6 +183,9 @@ public class QueryProductListResponseBody extends TeaModel {
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        @NameInMap("List")
+        public QueryProductListResponseBodyDataList list;
+
         @NameInMap("PageCount")
         public Integer pageCount;
 
@@ -191,9 +194,6 @@ public class QueryProductListResponseBody extends TeaModel {
 
         @NameInMap("Total")
         public Integer total;
-
-        @NameInMap("List")
-        public QueryProductListResponseBodyDataList list;
 
         public static QueryProductListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryProductListResponseBodyData self = new QueryProductListResponseBodyData();
@@ -206,6 +206,14 @@ public class QueryProductListResponseBody extends TeaModel {
         }
         public Integer getCurrentPage() {
             return this.currentPage;
+        }
+
+        public QueryProductListResponseBodyData setList(QueryProductListResponseBodyDataList list) {
+            this.list = list;
+            return this;
+        }
+        public QueryProductListResponseBodyDataList getList() {
+            return this.list;
         }
 
         public QueryProductListResponseBodyData setPageCount(Integer pageCount) {
@@ -230,14 +238,6 @@ public class QueryProductListResponseBody extends TeaModel {
         }
         public Integer getTotal() {
             return this.total;
-        }
-
-        public QueryProductListResponseBodyData setList(QueryProductListResponseBodyDataList list) {
-            this.list = list;
-            return this;
-        }
-        public QueryProductListResponseBodyDataList getList() {
-            return this.list;
         }
 
     }

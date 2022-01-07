@@ -4,20 +4,17 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceGroupListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("CurrentPage")
     public Integer currentPage;
+
+    @NameInMap("Data")
+    public QueryDeviceGroupListResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     @NameInMap("PageCount")
     public Integer pageCount;
@@ -25,31 +22,18 @@ public class QueryDeviceGroupListResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     @NameInMap("Total")
     public Integer total;
-
-    @NameInMap("Data")
-    public QueryDeviceGroupListResponseBodyData data;
 
     public static QueryDeviceGroupListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceGroupListResponseBody self = new QueryDeviceGroupListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDeviceGroupListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryDeviceGroupListResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public QueryDeviceGroupListResponseBody setCode(String code) {
@@ -60,20 +44,28 @@ public class QueryDeviceGroupListResponseBody extends TeaModel {
         return this.code;
     }
 
-    public QueryDeviceGroupListResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public QueryDeviceGroupListResponseBody setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public QueryDeviceGroupListResponseBody setData(QueryDeviceGroupListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryDeviceGroupListResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryDeviceGroupListResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryDeviceGroupListResponseBody setPageCount(Integer pageCount) {
@@ -92,6 +84,22 @@ public class QueryDeviceGroupListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public QueryDeviceGroupListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryDeviceGroupListResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public QueryDeviceGroupListResponseBody setTotal(Integer total) {
         this.total = total;
         return this;
@@ -100,30 +108,30 @@ public class QueryDeviceGroupListResponseBody extends TeaModel {
         return this.total;
     }
 
-    public QueryDeviceGroupListResponseBody setData(QueryDeviceGroupListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryDeviceGroupListResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryDeviceGroupListResponseBodyDataGroupInfo extends TeaModel {
+        @NameInMap("GroupDesc")
+        public String groupDesc;
+
         @NameInMap("GroupId")
         public String groupId;
-
-        @NameInMap("UtcCreate")
-        public String utcCreate;
 
         @NameInMap("GroupName")
         public String groupName;
 
-        @NameInMap("GroupDesc")
-        public String groupDesc;
+        @NameInMap("UtcCreate")
+        public String utcCreate;
 
         public static QueryDeviceGroupListResponseBodyDataGroupInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceGroupListResponseBodyDataGroupInfo self = new QueryDeviceGroupListResponseBodyDataGroupInfo();
             return TeaModel.build(map, self);
+        }
+
+        public QueryDeviceGroupListResponseBodyDataGroupInfo setGroupDesc(String groupDesc) {
+            this.groupDesc = groupDesc;
+            return this;
+        }
+        public String getGroupDesc() {
+            return this.groupDesc;
         }
 
         public QueryDeviceGroupListResponseBodyDataGroupInfo setGroupId(String groupId) {
@@ -134,14 +142,6 @@ public class QueryDeviceGroupListResponseBody extends TeaModel {
             return this.groupId;
         }
 
-        public QueryDeviceGroupListResponseBodyDataGroupInfo setUtcCreate(String utcCreate) {
-            this.utcCreate = utcCreate;
-            return this;
-        }
-        public String getUtcCreate() {
-            return this.utcCreate;
-        }
-
         public QueryDeviceGroupListResponseBodyDataGroupInfo setGroupName(String groupName) {
             this.groupName = groupName;
             return this;
@@ -150,12 +150,12 @@ public class QueryDeviceGroupListResponseBody extends TeaModel {
             return this.groupName;
         }
 
-        public QueryDeviceGroupListResponseBodyDataGroupInfo setGroupDesc(String groupDesc) {
-            this.groupDesc = groupDesc;
+        public QueryDeviceGroupListResponseBodyDataGroupInfo setUtcCreate(String utcCreate) {
+            this.utcCreate = utcCreate;
             return this;
         }
-        public String getGroupDesc() {
-            return this.groupDesc;
+        public String getUtcCreate() {
+            return this.utcCreate;
         }
 
     }

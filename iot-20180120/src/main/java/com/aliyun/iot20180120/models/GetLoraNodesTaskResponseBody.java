@@ -4,17 +4,23 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetLoraNodesTaskResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("SuccessCount")
+    public Long successCount;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("SuccessDevEuis")
+    public GetLoraNodesTaskResponseBodySuccessDevEuis successDevEuis;
 
     @NameInMap("TaskId")
     public String taskId;
@@ -25,15 +31,25 @@ public class GetLoraNodesTaskResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    @NameInMap("SuccessCount")
-    public Long successCount;
-
-    @NameInMap("SuccessDevEuis")
-    public GetLoraNodesTaskResponseBodySuccessDevEuis successDevEuis;
-
     public static GetLoraNodesTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetLoraNodesTaskResponseBody self = new GetLoraNodesTaskResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetLoraNodesTaskResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetLoraNodesTaskResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetLoraNodesTaskResponseBody setRequestId(String requestId) {
@@ -52,20 +68,20 @@ public class GetLoraNodesTaskResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetLoraNodesTaskResponseBody setCode(String code) {
-        this.code = code;
+    public GetLoraNodesTaskResponseBody setSuccessCount(Long successCount) {
+        this.successCount = successCount;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public Long getSuccessCount() {
+        return this.successCount;
     }
 
-    public GetLoraNodesTaskResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public GetLoraNodesTaskResponseBody setSuccessDevEuis(GetLoraNodesTaskResponseBodySuccessDevEuis successDevEuis) {
+        this.successDevEuis = successDevEuis;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public GetLoraNodesTaskResponseBodySuccessDevEuis getSuccessDevEuis() {
+        return this.successDevEuis;
     }
 
     public GetLoraNodesTaskResponseBody setTaskId(String taskId) {
@@ -90,22 +106,6 @@ public class GetLoraNodesTaskResponseBody extends TeaModel {
     }
     public Long getTotalCount() {
         return this.totalCount;
-    }
-
-    public GetLoraNodesTaskResponseBody setSuccessCount(Long successCount) {
-        this.successCount = successCount;
-        return this;
-    }
-    public Long getSuccessCount() {
-        return this.successCount;
-    }
-
-    public GetLoraNodesTaskResponseBody setSuccessDevEuis(GetLoraNodesTaskResponseBodySuccessDevEuis successDevEuis) {
-        this.successDevEuis = successDevEuis;
-        return this;
-    }
-    public GetLoraNodesTaskResponseBodySuccessDevEuis getSuccessDevEuis() {
-        return this.successDevEuis;
     }
 
     public static class GetLoraNodesTaskResponseBodySuccessDevEuis extends TeaModel {

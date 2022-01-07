@@ -4,11 +4,14 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteThingModelRequest extends TeaModel {
+    @NameInMap("EventIdentifier")
+    public java.util.List<String> eventIdentifier;
+
+    @NameInMap("FunctionBlockId")
+    public String functionBlockId;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     @NameInMap("ProductKey")
     public String productKey;
@@ -16,18 +19,31 @@ public class DeleteThingModelRequest extends TeaModel {
     @NameInMap("PropertyIdentifier")
     public java.util.List<String> propertyIdentifier;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ServiceIdentifier")
     public java.util.List<String> serviceIdentifier;
-
-    @NameInMap("EventIdentifier")
-    public java.util.List<String> eventIdentifier;
-
-    @NameInMap("FunctionBlockId")
-    public String functionBlockId;
 
     public static DeleteThingModelRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteThingModelRequest self = new DeleteThingModelRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteThingModelRequest setEventIdentifier(java.util.List<String> eventIdentifier) {
+        this.eventIdentifier = eventIdentifier;
+        return this;
+    }
+    public java.util.List<String> getEventIdentifier() {
+        return this.eventIdentifier;
+    }
+
+    public DeleteThingModelRequest setFunctionBlockId(String functionBlockId) {
+        this.functionBlockId = functionBlockId;
+        return this;
+    }
+    public String getFunctionBlockId() {
+        return this.functionBlockId;
     }
 
     public DeleteThingModelRequest setIotInstanceId(String iotInstanceId) {
@@ -36,14 +52,6 @@ public class DeleteThingModelRequest extends TeaModel {
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
-    }
-
-    public DeleteThingModelRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public DeleteThingModelRequest setProductKey(String productKey) {
@@ -62,28 +70,20 @@ public class DeleteThingModelRequest extends TeaModel {
         return this.propertyIdentifier;
     }
 
+    public DeleteThingModelRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DeleteThingModelRequest setServiceIdentifier(java.util.List<String> serviceIdentifier) {
         this.serviceIdentifier = serviceIdentifier;
         return this;
     }
     public java.util.List<String> getServiceIdentifier() {
         return this.serviceIdentifier;
-    }
-
-    public DeleteThingModelRequest setEventIdentifier(java.util.List<String> eventIdentifier) {
-        this.eventIdentifier = eventIdentifier;
-        return this;
-    }
-    public java.util.List<String> getEventIdentifier() {
-        return this.eventIdentifier;
-    }
-
-    public DeleteThingModelRequest setFunctionBlockId(String functionBlockId) {
-        this.functionBlockId = functionBlockId;
-        return this;
-    }
-    public String getFunctionBlockId() {
-        return this.functionBlockId;
     }
 
 }

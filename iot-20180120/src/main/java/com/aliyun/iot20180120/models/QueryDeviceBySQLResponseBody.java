@@ -4,27 +4,51 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceBySQLResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public java.util.List<QueryDeviceBySQLResponseBodyData> data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("TotalCount")
     public Long totalCount;
-
-    @NameInMap("Data")
-    public java.util.List<QueryDeviceBySQLResponseBodyData> data;
 
     public static QueryDeviceBySQLResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceBySQLResponseBody self = new QueryDeviceBySQLResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceBySQLResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryDeviceBySQLResponseBody setData(java.util.List<QueryDeviceBySQLResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<QueryDeviceBySQLResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public QueryDeviceBySQLResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryDeviceBySQLResponseBody setRequestId(String requestId) {
@@ -43,36 +67,12 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryDeviceBySQLResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryDeviceBySQLResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public QueryDeviceBySQLResponseBody setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Long getTotalCount() {
         return this.totalCount;
-    }
-
-    public QueryDeviceBySQLResponseBody setData(java.util.List<QueryDeviceBySQLResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<QueryDeviceBySQLResponseBodyData> getData() {
-        return this.data;
     }
 
     public static class QueryDeviceBySQLResponseBodyDataGroups extends TeaModel {
@@ -90,6 +90,36 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
         }
         public String getGroupId() {
             return this.groupId;
+        }
+
+    }
+
+    public static class QueryDeviceBySQLResponseBodyDataOTAModules extends TeaModel {
+        @NameInMap("FirmwareVersion")
+        public String firmwareVersion;
+
+        @NameInMap("ModuleName")
+        public String moduleName;
+
+        public static QueryDeviceBySQLResponseBodyDataOTAModules build(java.util.Map<String, ?> map) throws Exception {
+            QueryDeviceBySQLResponseBodyDataOTAModules self = new QueryDeviceBySQLResponseBodyDataOTAModules();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryDeviceBySQLResponseBodyDataOTAModules setFirmwareVersion(String firmwareVersion) {
+            this.firmwareVersion = firmwareVersion;
+            return this;
+        }
+        public String getFirmwareVersion() {
+            return this.firmwareVersion;
+        }
+
+        public QueryDeviceBySQLResponseBodyDataOTAModules setModuleName(String moduleName) {
+            this.moduleName = moduleName;
+            return this;
+        }
+        public String getModuleName() {
+            return this.moduleName;
         }
 
     }
@@ -124,54 +154,12 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
 
     }
 
-    public static class QueryDeviceBySQLResponseBodyDataOTAModules extends TeaModel {
-        @NameInMap("ModuleName")
-        public String moduleName;
-
-        @NameInMap("FirmwareVersion")
-        public String firmwareVersion;
-
-        public static QueryDeviceBySQLResponseBodyDataOTAModules build(java.util.Map<String, ?> map) throws Exception {
-            QueryDeviceBySQLResponseBodyDataOTAModules self = new QueryDeviceBySQLResponseBodyDataOTAModules();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryDeviceBySQLResponseBodyDataOTAModules setModuleName(String moduleName) {
-            this.moduleName = moduleName;
-            return this;
-        }
-        public String getModuleName() {
-            return this.moduleName;
-        }
-
-        public QueryDeviceBySQLResponseBodyDataOTAModules setFirmwareVersion(String firmwareVersion) {
-            this.firmwareVersion = firmwareVersion;
-            return this;
-        }
-        public String getFirmwareVersion() {
-            return this.firmwareVersion;
-        }
-
-    }
-
     public static class QueryDeviceBySQLResponseBodyData extends TeaModel {
-        @NameInMap("ProductKey")
-        public String productKey;
-
-        @NameInMap("DeviceName")
-        public String deviceName;
-
-        @NameInMap("Nickname")
-        public String nickname;
-
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("ActiveTime")
         public String activeTime;
 
-        @NameInMap("IotId")
-        public String iotId;
+        @NameInMap("DeviceName")
+        public String deviceName;
 
         @NameInMap("GmtCreate")
         public String gmtCreate;
@@ -182,47 +170,27 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
         @NameInMap("Groups")
         public java.util.List<QueryDeviceBySQLResponseBodyDataGroups> groups;
 
-        @NameInMap("Tags")
-        public java.util.List<QueryDeviceBySQLResponseBodyDataTags> tags;
+        @NameInMap("IotId")
+        public String iotId;
+
+        @NameInMap("Nickname")
+        public String nickname;
 
         @NameInMap("OTAModules")
         public java.util.List<QueryDeviceBySQLResponseBodyDataOTAModules> OTAModules;
 
+        @NameInMap("ProductKey")
+        public String productKey;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<QueryDeviceBySQLResponseBodyDataTags> tags;
+
         public static QueryDeviceBySQLResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceBySQLResponseBodyData self = new QueryDeviceBySQLResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryDeviceBySQLResponseBodyData setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
-        }
-
-        public QueryDeviceBySQLResponseBodyData setDeviceName(String deviceName) {
-            this.deviceName = deviceName;
-            return this;
-        }
-        public String getDeviceName() {
-            return this.deviceName;
-        }
-
-        public QueryDeviceBySQLResponseBodyData setNickname(String nickname) {
-            this.nickname = nickname;
-            return this;
-        }
-        public String getNickname() {
-            return this.nickname;
-        }
-
-        public QueryDeviceBySQLResponseBodyData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public QueryDeviceBySQLResponseBodyData setActiveTime(String activeTime) {
@@ -233,12 +201,12 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
             return this.activeTime;
         }
 
-        public QueryDeviceBySQLResponseBodyData setIotId(String iotId) {
-            this.iotId = iotId;
+        public QueryDeviceBySQLResponseBodyData setDeviceName(String deviceName) {
+            this.deviceName = deviceName;
             return this;
         }
-        public String getIotId() {
-            return this.iotId;
+        public String getDeviceName() {
+            return this.deviceName;
         }
 
         public QueryDeviceBySQLResponseBodyData setGmtCreate(String gmtCreate) {
@@ -265,12 +233,20 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
             return this.groups;
         }
 
-        public QueryDeviceBySQLResponseBodyData setTags(java.util.List<QueryDeviceBySQLResponseBodyDataTags> tags) {
-            this.tags = tags;
+        public QueryDeviceBySQLResponseBodyData setIotId(String iotId) {
+            this.iotId = iotId;
             return this;
         }
-        public java.util.List<QueryDeviceBySQLResponseBodyDataTags> getTags() {
-            return this.tags;
+        public String getIotId() {
+            return this.iotId;
+        }
+
+        public QueryDeviceBySQLResponseBodyData setNickname(String nickname) {
+            this.nickname = nickname;
+            return this;
+        }
+        public String getNickname() {
+            return this.nickname;
         }
 
         public QueryDeviceBySQLResponseBodyData setOTAModules(java.util.List<QueryDeviceBySQLResponseBodyDataOTAModules> OTAModules) {
@@ -279,6 +255,30 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
         }
         public java.util.List<QueryDeviceBySQLResponseBodyDataOTAModules> getOTAModules() {
             return this.OTAModules;
+        }
+
+        public QueryDeviceBySQLResponseBodyData setProductKey(String productKey) {
+            this.productKey = productKey;
+            return this;
+        }
+        public String getProductKey() {
+            return this.productKey;
+        }
+
+        public QueryDeviceBySQLResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public QueryDeviceBySQLResponseBodyData setTags(java.util.List<QueryDeviceBySQLResponseBodyDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<QueryDeviceBySQLResponseBodyDataTags> getTags() {
+            return this.tags;
         }
 
     }

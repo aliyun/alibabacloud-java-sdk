@@ -4,6 +4,12 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceGroupListRequest extends TeaModel {
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    @NameInMap("GroupName")
+    public String groupName;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -13,15 +19,25 @@ public class QueryDeviceGroupListRequest extends TeaModel {
     @NameInMap("SuperGroupId")
     public String superGroupId;
 
-    @NameInMap("GroupName")
-    public String groupName;
-
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
-
     public static QueryDeviceGroupListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceGroupListRequest self = new QueryDeviceGroupListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceGroupListRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public QueryDeviceGroupListRequest setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
     }
 
     public QueryDeviceGroupListRequest setIotInstanceId(String iotInstanceId) {
@@ -46,22 +62,6 @@ public class QueryDeviceGroupListRequest extends TeaModel {
     }
     public String getSuperGroupId() {
         return this.superGroupId;
-    }
-
-    public QueryDeviceGroupListRequest setGroupName(String groupName) {
-        this.groupName = groupName;
-        return this;
-    }
-    public String getGroupName() {
-        return this.groupName;
-    }
-
-    public QueryDeviceGroupListRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
     }
 
 }

@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryThingModelExtendConfigPublishedResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryThingModelExtendConfigPublishedResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryThingModelExtendConfigPublishedResponseBodyData data;
-
     public static QueryThingModelExtendConfigPublishedResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryThingModelExtendConfigPublishedResponseBody self = new QueryThingModelExtendConfigPublishedResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryThingModelExtendConfigPublishedResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryThingModelExtendConfigPublishedResponseBody setData(QueryThingModelExtendConfigPublishedResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryThingModelExtendConfigPublishedResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryThingModelExtendConfigPublishedResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryThingModelExtendConfigPublishedResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class QueryThingModelExtendConfigPublishedResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public QueryThingModelExtendConfigPublishedResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryThingModelExtendConfigPublishedResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryThingModelExtendConfigPublishedResponseBody setData(QueryThingModelExtendConfigPublishedResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryThingModelExtendConfigPublishedResponseBodyData getData() {
-        return this.data;
     }
 
     public static class QueryThingModelExtendConfigPublishedResponseBodyData extends TeaModel {

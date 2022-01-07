@@ -10,11 +10,11 @@ public class DeleteStudioAppDomainOpenRequest extends TeaModel {
     @NameInMap("DomainId")
     public Integer domainId;
 
-    @NameInMap("ProjectId")
-    public String projectId;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
+
+    @NameInMap("ProjectId")
+    public String projectId;
 
     public static DeleteStudioAppDomainOpenRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteStudioAppDomainOpenRequest self = new DeleteStudioAppDomainOpenRequest();
@@ -37,20 +37,20 @@ public class DeleteStudioAppDomainOpenRequest extends TeaModel {
         return this.domainId;
     }
 
-    public DeleteStudioAppDomainOpenRequest setProjectId(String projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public String getProjectId() {
-        return this.projectId;
-    }
-
     public DeleteStudioAppDomainOpenRequest setIotInstanceId(String iotInstanceId) {
         this.iotInstanceId = iotInstanceId;
         return this;
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
+    }
+
+    public DeleteStudioAppDomainOpenRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
     }
 
 }

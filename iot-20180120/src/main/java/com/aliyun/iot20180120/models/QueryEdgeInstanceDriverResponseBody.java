@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryEdgeInstanceDriverResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryEdgeInstanceDriverResponseBodyData data;
-
     public static QueryEdgeInstanceDriverResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryEdgeInstanceDriverResponseBody self = new QueryEdgeInstanceDriverResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryEdgeInstanceDriverResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryEdgeInstanceDriverResponseBody setData(QueryEdgeInstanceDriverResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryEdgeInstanceDriverResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryEdgeInstanceDriverResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryEdgeInstanceDriverResponseBody setRequestId(String requestId) {
@@ -40,30 +64,6 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryEdgeInstanceDriverResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryEdgeInstanceDriverResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryEdgeInstanceDriverResponseBody setData(QueryEdgeInstanceDriverResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryEdgeInstanceDriverResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryEdgeInstanceDriverResponseBodyDataDriverList extends TeaModel {
         @NameInMap("DriverId")
         public String driverId;
@@ -71,14 +71,14 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
         @NameInMap("DriverVersion")
         public String driverVersion;
 
-        @NameInMap("OrderId")
-        public String orderId;
-
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         @NameInMap("GmtModified")
         public String gmtModified;
+
+        @NameInMap("OrderId")
+        public String orderId;
 
         public static QueryEdgeInstanceDriverResponseBodyDataDriverList build(java.util.Map<String, ?> map) throws Exception {
             QueryEdgeInstanceDriverResponseBodyDataDriverList self = new QueryEdgeInstanceDriverResponseBodyDataDriverList();
@@ -101,14 +101,6 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
             return this.driverVersion;
         }
 
-        public QueryEdgeInstanceDriverResponseBodyDataDriverList setOrderId(String orderId) {
-            this.orderId = orderId;
-            return this;
-        }
-        public String getOrderId() {
-            return this.orderId;
-        }
-
         public QueryEdgeInstanceDriverResponseBodyDataDriverList setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -125,40 +117,32 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
+        public QueryEdgeInstanceDriverResponseBodyDataDriverList setOrderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public String getOrderId() {
+            return this.orderId;
+        }
+
     }
 
     public static class QueryEdgeInstanceDriverResponseBodyData extends TeaModel {
-        @NameInMap("Total")
-        public Integer total;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         @NameInMap("DriverList")
         public java.util.List<QueryEdgeInstanceDriverResponseBodyDataDriverList> driverList;
 
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("Total")
+        public Integer total;
+
         public static QueryEdgeInstanceDriverResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryEdgeInstanceDriverResponseBodyData self = new QueryEdgeInstanceDriverResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryEdgeInstanceDriverResponseBodyData setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
-        }
-
-        public QueryEdgeInstanceDriverResponseBodyData setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
         }
 
         public QueryEdgeInstanceDriverResponseBodyData setCurrentPage(Integer currentPage) {
@@ -175,6 +159,22 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
         }
         public java.util.List<QueryEdgeInstanceDriverResponseBodyDataDriverList> getDriverList() {
             return this.driverList;
+        }
+
+        public QueryEdgeInstanceDriverResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public QueryEdgeInstanceDriverResponseBodyData setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
         }
 
     }

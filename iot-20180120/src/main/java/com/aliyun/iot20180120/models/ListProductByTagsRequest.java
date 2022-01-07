@@ -4,11 +4,11 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListProductByTagsRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     @NameInMap("CurrentPage")
     public Integer currentPage;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -21,20 +21,20 @@ public class ListProductByTagsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListProductByTagsRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
     public ListProductByTagsRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public ListProductByTagsRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public ListProductByTagsRequest setPageSize(Integer pageSize) {

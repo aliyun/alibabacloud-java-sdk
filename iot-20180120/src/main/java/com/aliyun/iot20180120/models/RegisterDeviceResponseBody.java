@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class RegisterDeviceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public RegisterDeviceResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public RegisterDeviceResponseBodyData data;
-
     public static RegisterDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RegisterDeviceResponseBody self = new RegisterDeviceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RegisterDeviceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public RegisterDeviceResponseBody setData(RegisterDeviceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public RegisterDeviceResponseBodyData getData() {
+        return this.data;
+    }
+
+    public RegisterDeviceResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public RegisterDeviceResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class RegisterDeviceResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public RegisterDeviceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public RegisterDeviceResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public RegisterDeviceResponseBody setData(RegisterDeviceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public RegisterDeviceResponseBodyData getData() {
-        return this.data;
     }
 
     public static class BatchRegisterDeviceResponseBodyData extends TeaModel {
@@ -84,11 +84,8 @@ public class RegisterDeviceResponseBody extends TeaModel {
     }
 
     public static class RegisterDeviceResponseBodyData extends TeaModel {
-        @NameInMap("IotId")
-        public String iotId;
-
-        @NameInMap("ProductKey")
-        public String productKey;
+        @NameInMap("DevEui")
+        public String devEui;
 
         @NameInMap("DeviceName")
         public String deviceName;
@@ -96,8 +93,8 @@ public class RegisterDeviceResponseBody extends TeaModel {
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 
-        @NameInMap("DevEui")
-        public String devEui;
+        @NameInMap("IotId")
+        public String iotId;
 
         @NameInMap("JoinEui")
         public String joinEui;
@@ -105,25 +102,20 @@ public class RegisterDeviceResponseBody extends TeaModel {
         @NameInMap("Nickname")
         public String nickname;
 
+        @NameInMap("ProductKey")
+        public String productKey;
+
         public static RegisterDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RegisterDeviceResponseBodyData self = new RegisterDeviceResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public RegisterDeviceResponseBodyData setIotId(String iotId) {
-            this.iotId = iotId;
+        public RegisterDeviceResponseBodyData setDevEui(String devEui) {
+            this.devEui = devEui;
             return this;
         }
-        public String getIotId() {
-            return this.iotId;
-        }
-
-        public RegisterDeviceResponseBodyData setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
+        public String getDevEui() {
+            return this.devEui;
         }
 
         public RegisterDeviceResponseBodyData setDeviceName(String deviceName) {
@@ -142,12 +134,12 @@ public class RegisterDeviceResponseBody extends TeaModel {
             return this.deviceSecret;
         }
 
-        public RegisterDeviceResponseBodyData setDevEui(String devEui) {
-            this.devEui = devEui;
+        public RegisterDeviceResponseBodyData setIotId(String iotId) {
+            this.iotId = iotId;
             return this;
         }
-        public String getDevEui() {
-            return this.devEui;
+        public String getIotId() {
+            return this.iotId;
         }
 
         public RegisterDeviceResponseBodyData setJoinEui(String joinEui) {
@@ -164,6 +156,14 @@ public class RegisterDeviceResponseBody extends TeaModel {
         }
         public String getNickname() {
             return this.nickname;
+        }
+
+        public RegisterDeviceResponseBodyData setProductKey(String productKey) {
+            this.productKey = productKey;
+            return this;
+        }
+        public String getProductKey() {
+            return this.productKey;
         }
 
     }

@@ -4,11 +4,14 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchPubRequest extends TeaModel {
+    @NameInMap("DeviceName")
+    public java.util.List<String> deviceName;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
-    @NameInMap("DeviceName")
-    public java.util.List<String> deviceName;
+    @NameInMap("MessageContent")
+    public String messageContent;
 
     @NameInMap("ProductKey")
     public String productKey;
@@ -19,12 +22,17 @@ public class BatchPubRequest extends TeaModel {
     @NameInMap("TopicShortName")
     public String topicShortName;
 
-    @NameInMap("MessageContent")
-    public String messageContent;
-
     public static BatchPubRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchPubRequest self = new BatchPubRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchPubRequest setDeviceName(java.util.List<String> deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public java.util.List<String> getDeviceName() {
+        return this.deviceName;
     }
 
     public BatchPubRequest setIotInstanceId(String iotInstanceId) {
@@ -35,12 +43,12 @@ public class BatchPubRequest extends TeaModel {
         return this.iotInstanceId;
     }
 
-    public BatchPubRequest setDeviceName(java.util.List<String> deviceName) {
-        this.deviceName = deviceName;
+    public BatchPubRequest setMessageContent(String messageContent) {
+        this.messageContent = messageContent;
         return this;
     }
-    public java.util.List<String> getDeviceName() {
-        return this.deviceName;
+    public String getMessageContent() {
+        return this.messageContent;
     }
 
     public BatchPubRequest setProductKey(String productKey) {
@@ -65,14 +73,6 @@ public class BatchPubRequest extends TeaModel {
     }
     public String getTopicShortName() {
         return this.topicShortName;
-    }
-
-    public BatchPubRequest setMessageContent(String messageContent) {
-        this.messageContent = messageContent;
-        return this;
-    }
-    public String getMessageContent() {
-        return this.messageContent;
     }
 
 }

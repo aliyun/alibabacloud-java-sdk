@@ -4,40 +4,24 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetRuleActionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("RuleActionInfo")
     public GetRuleActionResponseBodyRuleActionInfo ruleActionInfo;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static GetRuleActionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRuleActionResponseBody self = new GetRuleActionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetRuleActionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetRuleActionResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public GetRuleActionResponseBody setCode(String code) {
@@ -56,6 +40,14 @@ public class GetRuleActionResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public GetRuleActionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public GetRuleActionResponseBody setRuleActionInfo(GetRuleActionResponseBodyRuleActionInfo ruleActionInfo) {
         this.ruleActionInfo = ruleActionInfo;
         return this;
@@ -64,7 +56,21 @@ public class GetRuleActionResponseBody extends TeaModel {
         return this.ruleActionInfo;
     }
 
+    public GetRuleActionResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class GetRuleActionResponseBodyRuleActionInfo extends TeaModel {
+        @NameInMap("Configuration")
+        public String configuration;
+
+        @NameInMap("ErrorActionFlag")
+        public Boolean errorActionFlag;
+
         @NameInMap("Id")
         public Long id;
 
@@ -74,15 +80,25 @@ public class GetRuleActionResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        @NameInMap("Configuration")
-        public String configuration;
-
-        @NameInMap("ErrorActionFlag")
-        public Boolean errorActionFlag;
-
         public static GetRuleActionResponseBodyRuleActionInfo build(java.util.Map<String, ?> map) throws Exception {
             GetRuleActionResponseBodyRuleActionInfo self = new GetRuleActionResponseBodyRuleActionInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetRuleActionResponseBodyRuleActionInfo setConfiguration(String configuration) {
+            this.configuration = configuration;
+            return this;
+        }
+        public String getConfiguration() {
+            return this.configuration;
+        }
+
+        public GetRuleActionResponseBodyRuleActionInfo setErrorActionFlag(Boolean errorActionFlag) {
+            this.errorActionFlag = errorActionFlag;
+            return this;
+        }
+        public Boolean getErrorActionFlag() {
+            return this.errorActionFlag;
         }
 
         public GetRuleActionResponseBodyRuleActionInfo setId(Long id) {
@@ -107,22 +123,6 @@ public class GetRuleActionResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
-        }
-
-        public GetRuleActionResponseBodyRuleActionInfo setConfiguration(String configuration) {
-            this.configuration = configuration;
-            return this;
-        }
-        public String getConfiguration() {
-            return this.configuration;
-        }
-
-        public GetRuleActionResponseBodyRuleActionInfo setErrorActionFlag(Boolean errorActionFlag) {
-            this.errorActionFlag = errorActionFlag;
-            return this;
-        }
-        public Boolean getErrorActionFlag() {
-            return this.errorActionFlag;
         }
 
     }

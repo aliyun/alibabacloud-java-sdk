@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryStudioAppListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryStudioAppListResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryStudioAppListResponseBodyData data;
-
     public static QueryStudioAppListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryStudioAppListResponseBody self = new QueryStudioAppListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryStudioAppListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryStudioAppListResponseBody setData(QueryStudioAppListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryStudioAppListResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryStudioAppListResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryStudioAppListResponseBody setRequestId(String requestId) {
@@ -40,34 +64,7 @@ public class QueryStudioAppListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryStudioAppListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryStudioAppListResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryStudioAppListResponseBody setData(QueryStudioAppListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryStudioAppListResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryStudioAppListResponseBodyDataListAppInfo extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("AppId")
         public String appId;
 
@@ -76,12 +73,6 @@ public class QueryStudioAppListResponseBody extends TeaModel {
 
         @NameInMap("AppSecret")
         public String appSecret;
-
-        @NameInMap("ProjectId")
-        public String projectId;
-
-        @NameInMap("Type")
-        public String type;
 
         @NameInMap("Description")
         public String description;
@@ -95,17 +86,18 @@ public class QueryStudioAppListResponseBody extends TeaModel {
         @NameInMap("GmtRelease")
         public String gmtRelease;
 
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("ProjectId")
+        public String projectId;
+
+        @NameInMap("Type")
+        public String type;
+
         public static QueryStudioAppListResponseBodyDataListAppInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryStudioAppListResponseBodyDataListAppInfo self = new QueryStudioAppListResponseBodyDataListAppInfo();
             return TeaModel.build(map, self);
-        }
-
-        public QueryStudioAppListResponseBodyDataListAppInfo setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public QueryStudioAppListResponseBodyDataListAppInfo setAppId(String appId) {
@@ -130,22 +122,6 @@ public class QueryStudioAppListResponseBody extends TeaModel {
         }
         public String getAppSecret() {
             return this.appSecret;
-        }
-
-        public QueryStudioAppListResponseBodyDataListAppInfo setProjectId(String projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public String getProjectId() {
-            return this.projectId;
-        }
-
-        public QueryStudioAppListResponseBodyDataListAppInfo setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public QueryStudioAppListResponseBodyDataListAppInfo setDescription(String description) {
@@ -180,6 +156,30 @@ public class QueryStudioAppListResponseBody extends TeaModel {
             return this.gmtRelease;
         }
 
+        public QueryStudioAppListResponseBodyDataListAppInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public QueryStudioAppListResponseBodyDataListAppInfo setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        public QueryStudioAppListResponseBodyDataListAppInfo setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
     public static class QueryStudioAppListResponseBodyDataList extends TeaModel {
@@ -202,11 +202,14 @@ public class QueryStudioAppListResponseBody extends TeaModel {
     }
 
     public static class QueryStudioAppListResponseBodyData extends TeaModel {
-        @NameInMap("PageSize")
-        public Integer pageSize;
+        @NameInMap("List")
+        public QueryStudioAppListResponseBodyDataList list;
 
         @NameInMap("PageNo")
         public Integer pageNo;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
 
         @NameInMap("Total")
         public Integer total;
@@ -214,20 +217,17 @@ public class QueryStudioAppListResponseBody extends TeaModel {
         @NameInMap("TotalPage")
         public Integer totalPage;
 
-        @NameInMap("List")
-        public QueryStudioAppListResponseBodyDataList list;
-
         public static QueryStudioAppListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryStudioAppListResponseBodyData self = new QueryStudioAppListResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public QueryStudioAppListResponseBodyData setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public QueryStudioAppListResponseBodyData setList(QueryStudioAppListResponseBodyDataList list) {
+            this.list = list;
             return this;
         }
-        public Integer getPageSize() {
-            return this.pageSize;
+        public QueryStudioAppListResponseBodyDataList getList() {
+            return this.list;
         }
 
         public QueryStudioAppListResponseBodyData setPageNo(Integer pageNo) {
@@ -236,6 +236,14 @@ public class QueryStudioAppListResponseBody extends TeaModel {
         }
         public Integer getPageNo() {
             return this.pageNo;
+        }
+
+        public QueryStudioAppListResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
         }
 
         public QueryStudioAppListResponseBodyData setTotal(Integer total) {
@@ -252,14 +260,6 @@ public class QueryStudioAppListResponseBody extends TeaModel {
         }
         public Integer getTotalPage() {
             return this.totalPage;
-        }
-
-        public QueryStudioAppListResponseBodyData setList(QueryStudioAppListResponseBodyDataList list) {
-            this.list = list;
-            return this;
-        }
-        public QueryStudioAppListResponseBodyDataList getList() {
-            return this.list;
         }
 
     }

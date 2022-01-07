@@ -4,27 +4,43 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListAnalyticsDataRequest extends TeaModel {
+    @NameInMap("ApiPath")
+    public String apiPath;
+
+    @NameInMap("Condition")
+    public java.util.List<ListAnalyticsDataRequestCondition> condition;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("IsoId")
     public String isoId;
 
-    @NameInMap("ApiPath")
-    public String apiPath;
+    @NameInMap("PageNum")
+    public Integer pageNum;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Condition")
-    public java.util.List<ListAnalyticsDataRequestCondition> condition;
-
-    @NameInMap("PageNum")
-    public Integer pageNum;
-
     public static ListAnalyticsDataRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAnalyticsDataRequest self = new ListAnalyticsDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListAnalyticsDataRequest setApiPath(String apiPath) {
+        this.apiPath = apiPath;
+        return this;
+    }
+    public String getApiPath() {
+        return this.apiPath;
+    }
+
+    public ListAnalyticsDataRequest setCondition(java.util.List<ListAnalyticsDataRequestCondition> condition) {
+        this.condition = condition;
+        return this;
+    }
+    public java.util.List<ListAnalyticsDataRequestCondition> getCondition() {
+        return this.condition;
     }
 
     public ListAnalyticsDataRequest setIotInstanceId(String iotInstanceId) {
@@ -43,12 +59,12 @@ public class ListAnalyticsDataRequest extends TeaModel {
         return this.isoId;
     }
 
-    public ListAnalyticsDataRequest setApiPath(String apiPath) {
-        this.apiPath = apiPath;
+    public ListAnalyticsDataRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getApiPath() {
-        return this.apiPath;
+    public Integer getPageNum() {
+        return this.pageNum;
     }
 
     public ListAnalyticsDataRequest setPageSize(Integer pageSize) {
@@ -59,23 +75,13 @@ public class ListAnalyticsDataRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListAnalyticsDataRequest setCondition(java.util.List<ListAnalyticsDataRequestCondition> condition) {
-        this.condition = condition;
-        return this;
-    }
-    public java.util.List<ListAnalyticsDataRequestCondition> getCondition() {
-        return this.condition;
-    }
-
-    public ListAnalyticsDataRequest setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public Integer getPageNum() {
-        return this.pageNum;
-    }
-
     public static class ListAnalyticsDataRequestCondition extends TeaModel {
+        @NameInMap("BetweenEnd")
+        public String betweenEnd;
+
+        @NameInMap("BetweenStart")
+        public String betweenStart;
+
         @NameInMap("FieldName")
         public String fieldName;
 
@@ -85,15 +91,25 @@ public class ListAnalyticsDataRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        @NameInMap("BetweenStart")
-        public String betweenStart;
-
-        @NameInMap("BetweenEnd")
-        public String betweenEnd;
-
         public static ListAnalyticsDataRequestCondition build(java.util.Map<String, ?> map) throws Exception {
             ListAnalyticsDataRequestCondition self = new ListAnalyticsDataRequestCondition();
             return TeaModel.build(map, self);
+        }
+
+        public ListAnalyticsDataRequestCondition setBetweenEnd(String betweenEnd) {
+            this.betweenEnd = betweenEnd;
+            return this;
+        }
+        public String getBetweenEnd() {
+            return this.betweenEnd;
+        }
+
+        public ListAnalyticsDataRequestCondition setBetweenStart(String betweenStart) {
+            this.betweenStart = betweenStart;
+            return this;
+        }
+        public String getBetweenStart() {
+            return this.betweenStart;
         }
 
         public ListAnalyticsDataRequestCondition setFieldName(String fieldName) {
@@ -118,22 +134,6 @@ public class ListAnalyticsDataRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
-        }
-
-        public ListAnalyticsDataRequestCondition setBetweenStart(String betweenStart) {
-            this.betweenStart = betweenStart;
-            return this;
-        }
-        public String getBetweenStart() {
-            return this.betweenStart;
-        }
-
-        public ListAnalyticsDataRequestCondition setBetweenEnd(String betweenEnd) {
-            this.betweenEnd = betweenEnd;
-            return this;
-        }
-        public String getBetweenEnd() {
-            return this.betweenEnd;
         }
 
     }

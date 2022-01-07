@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetSpeechVoiceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetSpeechVoiceResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public GetSpeechVoiceResponseBodyData data;
-
     public static GetSpeechVoiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSpeechVoiceResponseBody self = new GetSpeechVoiceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetSpeechVoiceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetSpeechVoiceResponseBody setData(GetSpeechVoiceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetSpeechVoiceResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetSpeechVoiceResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetSpeechVoiceResponseBody setRequestId(String requestId) {
@@ -40,48 +64,16 @@ public class GetSpeechVoiceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetSpeechVoiceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetSpeechVoiceResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetSpeechVoiceResponseBody setData(GetSpeechVoiceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetSpeechVoiceResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetSpeechVoiceResponseBodyDataItemsVoiceListItems extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("Label")
         public String label;
+
+        @NameInMap("Value")
+        public String value;
 
         public static GetSpeechVoiceResponseBodyDataItemsVoiceListItems build(java.util.Map<String, ?> map) throws Exception {
             GetSpeechVoiceResponseBodyDataItemsVoiceListItems self = new GetSpeechVoiceResponseBodyDataItemsVoiceListItems();
             return TeaModel.build(map, self);
-        }
-
-        public GetSpeechVoiceResponseBodyDataItemsVoiceListItems setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public GetSpeechVoiceResponseBodyDataItemsVoiceListItems setLabel(String label) {
@@ -90,6 +82,14 @@ public class GetSpeechVoiceResponseBody extends TeaModel {
         }
         public String getLabel() {
             return this.label;
+        }
+
+        public GetSpeechVoiceResponseBodyDataItemsVoiceListItems setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -114,11 +114,11 @@ public class GetSpeechVoiceResponseBody extends TeaModel {
     }
 
     public static class GetSpeechVoiceResponseBodyDataItems extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("Label")
         public String label;
+
+        @NameInMap("Value")
+        public String value;
 
         @NameInMap("VoiceList")
         public GetSpeechVoiceResponseBodyDataItemsVoiceList voiceList;
@@ -128,20 +128,20 @@ public class GetSpeechVoiceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetSpeechVoiceResponseBodyDataItems setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
         public GetSpeechVoiceResponseBodyDataItems setLabel(String label) {
             this.label = label;
             return this;
         }
         public String getLabel() {
             return this.label;
+        }
+
+        public GetSpeechVoiceResponseBodyDataItems setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
         public GetSpeechVoiceResponseBodyDataItems setVoiceList(GetSpeechVoiceResponseBodyDataItemsVoiceList voiceList) {

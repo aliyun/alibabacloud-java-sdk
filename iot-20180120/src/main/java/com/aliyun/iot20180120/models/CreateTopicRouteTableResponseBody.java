@@ -4,17 +4,8 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateTopicRouteTableResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("IsAllSucceed")
-    public Boolean isAllSucceed;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -22,25 +13,18 @@ public class CreateTopicRouteTableResponseBody extends TeaModel {
     @NameInMap("FailureTopics")
     public CreateTopicRouteTableResponseBodyFailureTopics failureTopics;
 
+    @NameInMap("IsAllSucceed")
+    public Boolean isAllSucceed;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     public static CreateTopicRouteTableResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateTopicRouteTableResponseBody self = new CreateTopicRouteTableResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateTopicRouteTableResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateTopicRouteTableResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public CreateTopicRouteTableResponseBody setCode(String code) {
@@ -49,14 +33,6 @@ public class CreateTopicRouteTableResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public CreateTopicRouteTableResponseBody setIsAllSucceed(Boolean isAllSucceed) {
-        this.isAllSucceed = isAllSucceed;
-        return this;
-    }
-    public Boolean getIsAllSucceed() {
-        return this.isAllSucceed;
     }
 
     public CreateTopicRouteTableResponseBody setErrorMessage(String errorMessage) {
@@ -73,6 +49,30 @@ public class CreateTopicRouteTableResponseBody extends TeaModel {
     }
     public CreateTopicRouteTableResponseBodyFailureTopics getFailureTopics() {
         return this.failureTopics;
+    }
+
+    public CreateTopicRouteTableResponseBody setIsAllSucceed(Boolean isAllSucceed) {
+        this.isAllSucceed = isAllSucceed;
+        return this;
+    }
+    public Boolean getIsAllSucceed() {
+        return this.isAllSucceed;
+    }
+
+    public CreateTopicRouteTableResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateTopicRouteTableResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class CreateTopicRouteTableResponseBodyFailureTopics extends TeaModel {

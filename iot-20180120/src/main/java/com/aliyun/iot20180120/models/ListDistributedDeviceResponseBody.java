@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListDistributedDeviceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ListDistributedDeviceResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public ListDistributedDeviceResponseBodyData data;
-
     public static ListDistributedDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDistributedDeviceResponseBody self = new ListDistributedDeviceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListDistributedDeviceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListDistributedDeviceResponseBody setData(ListDistributedDeviceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListDistributedDeviceResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListDistributedDeviceResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListDistributedDeviceResponseBody setRequestId(String requestId) {
@@ -40,97 +64,49 @@ public class ListDistributedDeviceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListDistributedDeviceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListDistributedDeviceResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ListDistributedDeviceResponseBody setData(ListDistributedDeviceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListDistributedDeviceResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListDistributedDeviceResponseBodyDataInfoItems extends TeaModel {
-        @NameInMap("SourceUid")
-        public String sourceUid;
-
-        @NameInMap("TargetUid")
-        public String targetUid;
-
-        @NameInMap("ProductKey")
-        public String productKey;
-
         @NameInMap("DeviceName")
         public String deviceName;
-
-        @NameInMap("SourceInstanceId")
-        public String sourceInstanceId;
-
-        @NameInMap("TargetInstanceId")
-        public String targetInstanceId;
 
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        @NameInMap("TargetAliyunId")
-        public String targetAliyunId;
+        @NameInMap("GmtModified")
+        public Long gmtModified;
 
-        @NameInMap("SourceRegion")
-        public String sourceRegion;
+        @NameInMap("ProductKey")
+        public String productKey;
 
-        @NameInMap("TargetRegion")
-        public String targetRegion;
+        @NameInMap("SourceInstanceId")
+        public String sourceInstanceId;
 
         @NameInMap("SourceInstanceName")
         public String sourceInstanceName;
 
+        @NameInMap("SourceRegion")
+        public String sourceRegion;
+
+        @NameInMap("SourceUid")
+        public String sourceUid;
+
+        @NameInMap("TargetAliyunId")
+        public String targetAliyunId;
+
+        @NameInMap("TargetInstanceId")
+        public String targetInstanceId;
+
         @NameInMap("TargetInstanceName")
         public String targetInstanceName;
 
-        @NameInMap("GmtModified")
-        public Long gmtModified;
+        @NameInMap("TargetRegion")
+        public String targetRegion;
+
+        @NameInMap("TargetUid")
+        public String targetUid;
 
         public static ListDistributedDeviceResponseBodyDataInfoItems build(java.util.Map<String, ?> map) throws Exception {
             ListDistributedDeviceResponseBodyDataInfoItems self = new ListDistributedDeviceResponseBodyDataInfoItems();
             return TeaModel.build(map, self);
-        }
-
-        public ListDistributedDeviceResponseBodyDataInfoItems setSourceUid(String sourceUid) {
-            this.sourceUid = sourceUid;
-            return this;
-        }
-        public String getSourceUid() {
-            return this.sourceUid;
-        }
-
-        public ListDistributedDeviceResponseBodyDataInfoItems setTargetUid(String targetUid) {
-            this.targetUid = targetUid;
-            return this;
-        }
-        public String getTargetUid() {
-            return this.targetUid;
-        }
-
-        public ListDistributedDeviceResponseBodyDataInfoItems setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
         }
 
         public ListDistributedDeviceResponseBodyDataInfoItems setDeviceName(String deviceName) {
@@ -141,22 +117,6 @@ public class ListDistributedDeviceResponseBody extends TeaModel {
             return this.deviceName;
         }
 
-        public ListDistributedDeviceResponseBodyDataInfoItems setSourceInstanceId(String sourceInstanceId) {
-            this.sourceInstanceId = sourceInstanceId;
-            return this;
-        }
-        public String getSourceInstanceId() {
-            return this.sourceInstanceId;
-        }
-
-        public ListDistributedDeviceResponseBodyDataInfoItems setTargetInstanceId(String targetInstanceId) {
-            this.targetInstanceId = targetInstanceId;
-            return this;
-        }
-        public String getTargetInstanceId() {
-            return this.targetInstanceId;
-        }
-
         public ListDistributedDeviceResponseBodyDataInfoItems setGmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -165,28 +125,28 @@ public class ListDistributedDeviceResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public ListDistributedDeviceResponseBodyDataInfoItems setTargetAliyunId(String targetAliyunId) {
-            this.targetAliyunId = targetAliyunId;
+        public ListDistributedDeviceResponseBodyDataInfoItems setGmtModified(Long gmtModified) {
+            this.gmtModified = gmtModified;
             return this;
         }
-        public String getTargetAliyunId() {
-            return this.targetAliyunId;
+        public Long getGmtModified() {
+            return this.gmtModified;
         }
 
-        public ListDistributedDeviceResponseBodyDataInfoItems setSourceRegion(String sourceRegion) {
-            this.sourceRegion = sourceRegion;
+        public ListDistributedDeviceResponseBodyDataInfoItems setProductKey(String productKey) {
+            this.productKey = productKey;
             return this;
         }
-        public String getSourceRegion() {
-            return this.sourceRegion;
+        public String getProductKey() {
+            return this.productKey;
         }
 
-        public ListDistributedDeviceResponseBodyDataInfoItems setTargetRegion(String targetRegion) {
-            this.targetRegion = targetRegion;
+        public ListDistributedDeviceResponseBodyDataInfoItems setSourceInstanceId(String sourceInstanceId) {
+            this.sourceInstanceId = sourceInstanceId;
             return this;
         }
-        public String getTargetRegion() {
-            return this.targetRegion;
+        public String getSourceInstanceId() {
+            return this.sourceInstanceId;
         }
 
         public ListDistributedDeviceResponseBodyDataInfoItems setSourceInstanceName(String sourceInstanceName) {
@@ -197,6 +157,38 @@ public class ListDistributedDeviceResponseBody extends TeaModel {
             return this.sourceInstanceName;
         }
 
+        public ListDistributedDeviceResponseBodyDataInfoItems setSourceRegion(String sourceRegion) {
+            this.sourceRegion = sourceRegion;
+            return this;
+        }
+        public String getSourceRegion() {
+            return this.sourceRegion;
+        }
+
+        public ListDistributedDeviceResponseBodyDataInfoItems setSourceUid(String sourceUid) {
+            this.sourceUid = sourceUid;
+            return this;
+        }
+        public String getSourceUid() {
+            return this.sourceUid;
+        }
+
+        public ListDistributedDeviceResponseBodyDataInfoItems setTargetAliyunId(String targetAliyunId) {
+            this.targetAliyunId = targetAliyunId;
+            return this;
+        }
+        public String getTargetAliyunId() {
+            return this.targetAliyunId;
+        }
+
+        public ListDistributedDeviceResponseBodyDataInfoItems setTargetInstanceId(String targetInstanceId) {
+            this.targetInstanceId = targetInstanceId;
+            return this;
+        }
+        public String getTargetInstanceId() {
+            return this.targetInstanceId;
+        }
+
         public ListDistributedDeviceResponseBodyDataInfoItems setTargetInstanceName(String targetInstanceName) {
             this.targetInstanceName = targetInstanceName;
             return this;
@@ -205,12 +197,20 @@ public class ListDistributedDeviceResponseBody extends TeaModel {
             return this.targetInstanceName;
         }
 
-        public ListDistributedDeviceResponseBodyDataInfoItems setGmtModified(Long gmtModified) {
-            this.gmtModified = gmtModified;
+        public ListDistributedDeviceResponseBodyDataInfoItems setTargetRegion(String targetRegion) {
+            this.targetRegion = targetRegion;
             return this;
         }
-        public Long getGmtModified() {
-            return this.gmtModified;
+        public String getTargetRegion() {
+            return this.targetRegion;
+        }
+
+        public ListDistributedDeviceResponseBodyDataInfoItems setTargetUid(String targetUid) {
+            this.targetUid = targetUid;
+            return this;
+        }
+        public String getTargetUid() {
+            return this.targetUid;
         }
 
     }
@@ -235,23 +235,15 @@ public class ListDistributedDeviceResponseBody extends TeaModel {
     }
 
     public static class ListDistributedDeviceResponseBodyData extends TeaModel {
-        @NameInMap("Total")
-        public Integer total;
-
         @NameInMap("Info")
         public ListDistributedDeviceResponseBodyDataInfo info;
+
+        @NameInMap("Total")
+        public Integer total;
 
         public static ListDistributedDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListDistributedDeviceResponseBodyData self = new ListDistributedDeviceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListDistributedDeviceResponseBodyData setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
         }
 
         public ListDistributedDeviceResponseBodyData setInfo(ListDistributedDeviceResponseBodyDataInfo info) {
@@ -260,6 +252,14 @@ public class ListDistributedDeviceResponseBody extends TeaModel {
         }
         public ListDistributedDeviceResponseBodyDataInfo getInfo() {
             return this.info;
+        }
+
+        public ListDistributedDeviceResponseBodyData setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
         }
 
     }

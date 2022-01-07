@@ -4,24 +4,32 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetThingModelTslRequest extends TeaModel {
+    @NameInMap("FunctionBlockId")
+    public String functionBlockId;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
-
-    @NameInMap("ProductKey")
-    public String productKey;
 
     @NameInMap("ModelVersion")
     public String modelVersion;
 
+    @NameInMap("ProductKey")
+    public String productKey;
+
     @NameInMap("Simple")
     public Boolean simple;
-
-    @NameInMap("FunctionBlockId")
-    public String functionBlockId;
 
     public static GetThingModelTslRequest build(java.util.Map<String, ?> map) throws Exception {
         GetThingModelTslRequest self = new GetThingModelTslRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetThingModelTslRequest setFunctionBlockId(String functionBlockId) {
+        this.functionBlockId = functionBlockId;
+        return this;
+    }
+    public String getFunctionBlockId() {
+        return this.functionBlockId;
     }
 
     public GetThingModelTslRequest setIotInstanceId(String iotInstanceId) {
@@ -32,14 +40,6 @@ public class GetThingModelTslRequest extends TeaModel {
         return this.iotInstanceId;
     }
 
-    public GetThingModelTslRequest setProductKey(String productKey) {
-        this.productKey = productKey;
-        return this;
-    }
-    public String getProductKey() {
-        return this.productKey;
-    }
-
     public GetThingModelTslRequest setModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
@@ -48,20 +48,20 @@ public class GetThingModelTslRequest extends TeaModel {
         return this.modelVersion;
     }
 
+    public GetThingModelTslRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
+    }
+
     public GetThingModelTslRequest setSimple(Boolean simple) {
         this.simple = simple;
         return this;
     }
     public Boolean getSimple() {
         return this.simple;
-    }
-
-    public GetThingModelTslRequest setFunctionBlockId(String functionBlockId) {
-        this.functionBlockId = functionBlockId;
-        return this;
-    }
-    public String getFunctionBlockId() {
-        return this.functionBlockId;
     }
 
 }

@@ -4,48 +4,24 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySummarySceneRuleLogResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QuerySummarySceneRuleLogResponseBodyData data;
 
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     public static QuerySummarySceneRuleLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySummarySceneRuleLogResponseBody self = new QuerySummarySceneRuleLogResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QuerySummarySceneRuleLogResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QuerySummarySceneRuleLogResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public QuerySummarySceneRuleLogResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public QuerySummarySceneRuleLogResponseBody setCode(String code) {
@@ -62,6 +38,30 @@ public class QuerySummarySceneRuleLogResponseBody extends TeaModel {
     }
     public QuerySummarySceneRuleLogResponseBodyData getData() {
         return this.data;
+    }
+
+    public QuerySummarySceneRuleLogResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public QuerySummarySceneRuleLogResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QuerySummarySceneRuleLogResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class QuerySummarySceneRuleLogResponseBodyDataLogListLogInfo extends TeaModel {
@@ -125,37 +125,21 @@ public class QuerySummarySceneRuleLogResponseBody extends TeaModel {
     }
 
     public static class QuerySummarySceneRuleLogResponseBodyData extends TeaModel {
-        @NameInMap("Total")
-        public Integer total;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         @NameInMap("LogList")
         public QuerySummarySceneRuleLogResponseBodyDataLogList logList;
 
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("Total")
+        public Integer total;
+
         public static QuerySummarySceneRuleLogResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QuerySummarySceneRuleLogResponseBodyData self = new QuerySummarySceneRuleLogResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QuerySummarySceneRuleLogResponseBodyData setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
-        }
-
-        public QuerySummarySceneRuleLogResponseBodyData setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
         }
 
         public QuerySummarySceneRuleLogResponseBodyData setCurrentPage(Integer currentPage) {
@@ -172,6 +156,22 @@ public class QuerySummarySceneRuleLogResponseBody extends TeaModel {
         }
         public QuerySummarySceneRuleLogResponseBodyDataLogList getLogList() {
             return this.logList;
+        }
+
+        public QuerySummarySceneRuleLogResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public QuerySummarySceneRuleLogResponseBodyData setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
         }
 
     }

@@ -7,11 +7,11 @@ public class DeleteOTAModuleRequest extends TeaModel {
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
-    @NameInMap("ProductKey")
-    public String productKey;
-
     @NameInMap("ModuleName")
     public String moduleName;
+
+    @NameInMap("ProductKey")
+    public String productKey;
 
     public static DeleteOTAModuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteOTAModuleRequest self = new DeleteOTAModuleRequest();
@@ -26,20 +26,20 @@ public class DeleteOTAModuleRequest extends TeaModel {
         return this.iotInstanceId;
     }
 
-    public DeleteOTAModuleRequest setProductKey(String productKey) {
-        this.productKey = productKey;
-        return this;
-    }
-    public String getProductKey() {
-        return this.productKey;
-    }
-
     public DeleteOTAModuleRequest setModuleName(String moduleName) {
         this.moduleName = moduleName;
         return this;
     }
     public String getModuleName() {
         return this.moduleName;
+    }
+
+    public DeleteOTAModuleRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
     }
 
 }

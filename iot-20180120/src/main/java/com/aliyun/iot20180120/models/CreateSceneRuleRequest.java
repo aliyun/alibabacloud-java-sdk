@@ -7,14 +7,14 @@ public class CreateSceneRuleRequest extends TeaModel {
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
-    @NameInMap("RuleName")
-    public String ruleName;
-
     @NameInMap("RuleContent")
     public String ruleContent;
 
     @NameInMap("RuleDescription")
     public String ruleDescription;
+
+    @NameInMap("RuleName")
+    public String ruleName;
 
     public static CreateSceneRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSceneRuleRequest self = new CreateSceneRuleRequest();
@@ -27,14 +27,6 @@ public class CreateSceneRuleRequest extends TeaModel {
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
-    }
-
-    public CreateSceneRuleRequest setRuleName(String ruleName) {
-        this.ruleName = ruleName;
-        return this;
-    }
-    public String getRuleName() {
-        return this.ruleName;
     }
 
     public CreateSceneRuleRequest setRuleContent(String ruleContent) {
@@ -51,6 +43,14 @@ public class CreateSceneRuleRequest extends TeaModel {
     }
     public String getRuleDescription() {
         return this.ruleDescription;
+    }
+
+    public CreateSceneRuleRequest setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+    public String getRuleName() {
+        return this.ruleName;
     }
 
 }

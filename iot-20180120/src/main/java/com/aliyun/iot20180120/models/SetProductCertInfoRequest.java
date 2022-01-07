@@ -7,11 +7,11 @@ public class SetProductCertInfoRequest extends TeaModel {
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
-    @NameInMap("ProductKey")
-    public String productKey;
-
     @NameInMap("IssueModel")
     public Integer issueModel;
+
+    @NameInMap("ProductKey")
+    public String productKey;
 
     public static SetProductCertInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         SetProductCertInfoRequest self = new SetProductCertInfoRequest();
@@ -26,20 +26,20 @@ public class SetProductCertInfoRequest extends TeaModel {
         return this.iotInstanceId;
     }
 
-    public SetProductCertInfoRequest setProductKey(String productKey) {
-        this.productKey = productKey;
-        return this;
-    }
-    public String getProductKey() {
-        return this.productKey;
-    }
-
     public SetProductCertInfoRequest setIssueModel(Integer issueModel) {
         this.issueModel = issueModel;
         return this;
     }
     public Integer getIssueModel() {
         return this.issueModel;
+    }
+
+    public SetProductCertInfoRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
     }
 
 }

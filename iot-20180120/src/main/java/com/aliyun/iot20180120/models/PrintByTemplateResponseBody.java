@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class PrintByTemplateResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public PrintByTemplateResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public PrintByTemplateResponseBodyData data;
-
     public static PrintByTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PrintByTemplateResponseBody self = new PrintByTemplateResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public PrintByTemplateResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public PrintByTemplateResponseBody setData(PrintByTemplateResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public PrintByTemplateResponseBodyData getData() {
+        return this.data;
+    }
+
+    public PrintByTemplateResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public PrintByTemplateResponseBody setRequestId(String requestId) {
@@ -40,34 +64,7 @@ public class PrintByTemplateResponseBody extends TeaModel {
         return this.success;
     }
 
-    public PrintByTemplateResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public PrintByTemplateResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public PrintByTemplateResponseBody setData(PrintByTemplateResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public PrintByTemplateResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class PrintByTemplateResponseBodyData extends TeaModel {
-        @NameInMap("Success")
-        public Boolean success;
-
         @NameInMap("DeviceErrorCode")
         public String deviceErrorCode;
 
@@ -77,23 +74,18 @@ public class PrintByTemplateResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("MaxRetryCount")
+        public Integer maxRetryCount;
+
         @NameInMap("RetryCount")
         public Integer retryCount;
 
-        @NameInMap("MaxRetryCount")
-        public Integer maxRetryCount;
+        @NameInMap("Success")
+        public Boolean success;
 
         public static PrintByTemplateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             PrintByTemplateResponseBodyData self = new PrintByTemplateResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public PrintByTemplateResponseBodyData setSuccess(Boolean success) {
-            this.success = success;
-            return this;
-        }
-        public Boolean getSuccess() {
-            return this.success;
         }
 
         public PrintByTemplateResponseBodyData setDeviceErrorCode(String deviceErrorCode) {
@@ -120,6 +112,14 @@ public class PrintByTemplateResponseBody extends TeaModel {
             return this.id;
         }
 
+        public PrintByTemplateResponseBodyData setMaxRetryCount(Integer maxRetryCount) {
+            this.maxRetryCount = maxRetryCount;
+            return this;
+        }
+        public Integer getMaxRetryCount() {
+            return this.maxRetryCount;
+        }
+
         public PrintByTemplateResponseBodyData setRetryCount(Integer retryCount) {
             this.retryCount = retryCount;
             return this;
@@ -128,12 +128,12 @@ public class PrintByTemplateResponseBody extends TeaModel {
             return this.retryCount;
         }
 
-        public PrintByTemplateResponseBodyData setMaxRetryCount(Integer maxRetryCount) {
-            this.maxRetryCount = maxRetryCount;
+        public PrintByTemplateResponseBodyData setSuccess(Boolean success) {
+            this.success = success;
             return this;
         }
-        public Integer getMaxRetryCount() {
-            return this.maxRetryCount;
+        public Boolean getSuccess() {
+            return this.success;
         }
 
     }

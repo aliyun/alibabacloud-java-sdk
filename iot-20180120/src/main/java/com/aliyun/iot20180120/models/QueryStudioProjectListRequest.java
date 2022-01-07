@@ -4,6 +4,9 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryStudioProjectListRequest extends TeaModel {
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
     @NameInMap("Name")
     public String name;
 
@@ -13,12 +16,17 @@ public class QueryStudioProjectListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     public static QueryStudioProjectListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryStudioProjectListRequest self = new QueryStudioProjectListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryStudioProjectListRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public QueryStudioProjectListRequest setName(String name) {
@@ -43,14 +51,6 @@ public class QueryStudioProjectListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public QueryStudioProjectListRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
     }
 
 }

@@ -4,8 +4,14 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateProductTopicRequest extends TeaModel {
+    @NameInMap("Desc")
+    public String desc;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
+
+    @NameInMap("Operation")
+    public String operation;
 
     @NameInMap("ProductKey")
     public String productKey;
@@ -13,15 +19,17 @@ public class CreateProductTopicRequest extends TeaModel {
     @NameInMap("TopicShortName")
     public String topicShortName;
 
-    @NameInMap("Operation")
-    public String operation;
-
-    @NameInMap("Desc")
-    public String desc;
-
     public static CreateProductTopicRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProductTopicRequest self = new CreateProductTopicRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateProductTopicRequest setDesc(String desc) {
+        this.desc = desc;
+        return this;
+    }
+    public String getDesc() {
+        return this.desc;
     }
 
     public CreateProductTopicRequest setIotInstanceId(String iotInstanceId) {
@@ -30,6 +38,14 @@ public class CreateProductTopicRequest extends TeaModel {
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
+    }
+
+    public CreateProductTopicRequest setOperation(String operation) {
+        this.operation = operation;
+        return this;
+    }
+    public String getOperation() {
+        return this.operation;
     }
 
     public CreateProductTopicRequest setProductKey(String productKey) {
@@ -46,22 +62,6 @@ public class CreateProductTopicRequest extends TeaModel {
     }
     public String getTopicShortName() {
         return this.topicShortName;
-    }
-
-    public CreateProductTopicRequest setOperation(String operation) {
-        this.operation = operation;
-        return this;
-    }
-    public String getOperation() {
-        return this.operation;
-    }
-
-    public CreateProductTopicRequest setDesc(String desc) {
-        this.desc = desc;
-        return this;
-    }
-    public String getDesc() {
-        return this.desc;
     }
 
 }

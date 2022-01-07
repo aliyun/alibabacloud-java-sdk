@@ -4,14 +4,11 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("Data")
+    public QueryDeviceListByDeviceGroupResponseBodyData data;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -19,37 +16,24 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
     @NameInMap("Page")
     public Integer page;
 
+    @NameInMap("PageCount")
+    public Integer pageCount;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageCount")
-    public Integer pageCount;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Total")
     public Integer total;
 
-    @NameInMap("Data")
-    public QueryDeviceListByDeviceGroupResponseBodyData data;
-
     public static QueryDeviceListByDeviceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceListByDeviceGroupResponseBody self = new QueryDeviceListByDeviceGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDeviceListByDeviceGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryDeviceListByDeviceGroupResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public QueryDeviceListByDeviceGroupResponseBody setCode(String code) {
@@ -58,6 +42,14 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public QueryDeviceListByDeviceGroupResponseBody setData(QueryDeviceListByDeviceGroupResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryDeviceListByDeviceGroupResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryDeviceListByDeviceGroupResponseBody setErrorMessage(String errorMessage) {
@@ -76,6 +68,14 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
         return this.page;
     }
 
+    public QueryDeviceListByDeviceGroupResponseBody setPageCount(Integer pageCount) {
+        this.pageCount = pageCount;
+        return this;
+    }
+    public Integer getPageCount() {
+        return this.pageCount;
+    }
+
     public QueryDeviceListByDeviceGroupResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -84,12 +84,20 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryDeviceListByDeviceGroupResponseBody setPageCount(Integer pageCount) {
-        this.pageCount = pageCount;
+    public QueryDeviceListByDeviceGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getPageCount() {
-        return this.pageCount;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryDeviceListByDeviceGroupResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public QueryDeviceListByDeviceGroupResponseBody setTotal(Integer total) {
@@ -100,46 +108,22 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
         return this.total;
     }
 
-    public QueryDeviceListByDeviceGroupResponseBody setData(QueryDeviceListByDeviceGroupResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryDeviceListByDeviceGroupResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryDeviceListByDeviceGroupResponseBodyDataSimpleDeviceInfo extends TeaModel {
-        @NameInMap("ProductName")
-        public String productName;
-
-        @NameInMap("ProductKey")
-        public String productKey;
-
         @NameInMap("DeviceName")
         public String deviceName;
 
         @NameInMap("IotId")
         public String iotId;
 
+        @NameInMap("ProductKey")
+        public String productKey;
+
+        @NameInMap("ProductName")
+        public String productName;
+
         public static QueryDeviceListByDeviceGroupResponseBodyDataSimpleDeviceInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceListByDeviceGroupResponseBodyDataSimpleDeviceInfo self = new QueryDeviceListByDeviceGroupResponseBodyDataSimpleDeviceInfo();
             return TeaModel.build(map, self);
-        }
-
-        public QueryDeviceListByDeviceGroupResponseBodyDataSimpleDeviceInfo setProductName(String productName) {
-            this.productName = productName;
-            return this;
-        }
-        public String getProductName() {
-            return this.productName;
-        }
-
-        public QueryDeviceListByDeviceGroupResponseBodyDataSimpleDeviceInfo setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
         }
 
         public QueryDeviceListByDeviceGroupResponseBodyDataSimpleDeviceInfo setDeviceName(String deviceName) {
@@ -156,6 +140,22 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
         }
         public String getIotId() {
             return this.iotId;
+        }
+
+        public QueryDeviceListByDeviceGroupResponseBodyDataSimpleDeviceInfo setProductKey(String productKey) {
+            this.productKey = productKey;
+            return this;
+        }
+        public String getProductKey() {
+            return this.productKey;
+        }
+
+        public QueryDeviceListByDeviceGroupResponseBodyDataSimpleDeviceInfo setProductName(String productName) {
+            this.productName = productName;
+            return this;
+        }
+        public String getProductName() {
+            return this.productName;
         }
 
     }

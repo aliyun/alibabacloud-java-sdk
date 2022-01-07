@@ -4,17 +4,8 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceDistributeJobRequest extends TeaModel {
-    @NameInMap("TargetUid")
-    public String targetUid;
-
     @NameInMap("CurrentPage")
     public Integer currentPage;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("Status")
-    public Integer status;
 
     @NameInMap("JobId")
     public String jobId;
@@ -22,17 +13,18 @@ public class ListDeviceDistributeJobRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("Status")
+    public Integer status;
+
+    @NameInMap("TargetUid")
+    public String targetUid;
+
     public static ListDeviceDistributeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDeviceDistributeJobRequest self = new ListDeviceDistributeJobRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListDeviceDistributeJobRequest setTargetUid(String targetUid) {
-        this.targetUid = targetUid;
-        return this;
-    }
-    public String getTargetUid() {
-        return this.targetUid;
     }
 
     public ListDeviceDistributeJobRequest setCurrentPage(Integer currentPage) {
@@ -41,6 +33,22 @@ public class ListDeviceDistributeJobRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public ListDeviceDistributeJobRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
+    }
+
+    public ListDeviceDistributeJobRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListDeviceDistributeJobRequest setPageSize(Integer pageSize) {
@@ -59,20 +67,12 @@ public class ListDeviceDistributeJobRequest extends TeaModel {
         return this.status;
     }
 
-    public ListDeviceDistributeJobRequest setJobId(String jobId) {
-        this.jobId = jobId;
+    public ListDeviceDistributeJobRequest setTargetUid(String targetUid) {
+        this.targetUid = targetUid;
         return this;
     }
-    public String getJobId() {
-        return this.jobId;
-    }
-
-    public ListDeviceDistributeJobRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
+    public String getTargetUid() {
+        return this.targetUid;
     }
 
 }

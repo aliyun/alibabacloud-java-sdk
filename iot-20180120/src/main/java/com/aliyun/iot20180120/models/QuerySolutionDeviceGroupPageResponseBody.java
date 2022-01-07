@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QuerySolutionDeviceGroupPageResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QuerySolutionDeviceGroupPageResponseBodyData data;
-
     public static QuerySolutionDeviceGroupPageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySolutionDeviceGroupPageResponseBody self = new QuerySolutionDeviceGroupPageResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySolutionDeviceGroupPageResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QuerySolutionDeviceGroupPageResponseBody setData(QuerySolutionDeviceGroupPageResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QuerySolutionDeviceGroupPageResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QuerySolutionDeviceGroupPageResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QuerySolutionDeviceGroupPageResponseBody setRequestId(String requestId) {
@@ -40,36 +64,18 @@ public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QuerySolutionDeviceGroupPageResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QuerySolutionDeviceGroupPageResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QuerySolutionDeviceGroupPageResponseBody setData(QuerySolutionDeviceGroupPageResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QuerySolutionDeviceGroupPageResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QuerySolutionDeviceGroupPageResponseBodyDataListItemName extends TeaModel {
+        @NameInMap("DeviceCount")
+        public Long deviceCount;
+
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         @NameInMap("GmtModified")
         public Long gmtModified;
+
+        @NameInMap("GroupDesc")
+        public String groupDesc;
 
         @NameInMap("GroupId")
         public String groupId;
@@ -77,15 +83,17 @@ public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
-        @NameInMap("GroupDesc")
-        public String groupDesc;
-
-        @NameInMap("DeviceCount")
-        public Long deviceCount;
-
         public static QuerySolutionDeviceGroupPageResponseBodyDataListItemName build(java.util.Map<String, ?> map) throws Exception {
             QuerySolutionDeviceGroupPageResponseBodyDataListItemName self = new QuerySolutionDeviceGroupPageResponseBodyDataListItemName();
             return TeaModel.build(map, self);
+        }
+
+        public QuerySolutionDeviceGroupPageResponseBodyDataListItemName setDeviceCount(Long deviceCount) {
+            this.deviceCount = deviceCount;
+            return this;
+        }
+        public Long getDeviceCount() {
+            return this.deviceCount;
         }
 
         public QuerySolutionDeviceGroupPageResponseBodyDataListItemName setGmtCreate(Long gmtCreate) {
@@ -104,6 +112,14 @@ public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
+        public QuerySolutionDeviceGroupPageResponseBodyDataListItemName setGroupDesc(String groupDesc) {
+            this.groupDesc = groupDesc;
+            return this;
+        }
+        public String getGroupDesc() {
+            return this.groupDesc;
+        }
+
         public QuerySolutionDeviceGroupPageResponseBodyDataListItemName setGroupId(String groupId) {
             this.groupId = groupId;
             return this;
@@ -118,22 +134,6 @@ public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
         }
         public String getGroupName() {
             return this.groupName;
-        }
-
-        public QuerySolutionDeviceGroupPageResponseBodyDataListItemName setGroupDesc(String groupDesc) {
-            this.groupDesc = groupDesc;
-            return this;
-        }
-        public String getGroupDesc() {
-            return this.groupDesc;
-        }
-
-        public QuerySolutionDeviceGroupPageResponseBodyDataListItemName setDeviceCount(Long deviceCount) {
-            this.deviceCount = deviceCount;
-            return this;
-        }
-        public Long getDeviceCount() {
-            return this.deviceCount;
         }
 
     }
@@ -158,6 +158,9 @@ public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
     }
 
     public static class QuerySolutionDeviceGroupPageResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public QuerySolutionDeviceGroupPageResponseBodyDataList list;
+
         @NameInMap("PageId")
         public Integer pageId;
 
@@ -167,12 +170,17 @@ public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
         @NameInMap("Total")
         public Integer total;
 
-        @NameInMap("List")
-        public QuerySolutionDeviceGroupPageResponseBodyDataList list;
-
         public static QuerySolutionDeviceGroupPageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QuerySolutionDeviceGroupPageResponseBodyData self = new QuerySolutionDeviceGroupPageResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QuerySolutionDeviceGroupPageResponseBodyData setList(QuerySolutionDeviceGroupPageResponseBodyDataList list) {
+            this.list = list;
+            return this;
+        }
+        public QuerySolutionDeviceGroupPageResponseBodyDataList getList() {
+            return this.list;
         }
 
         public QuerySolutionDeviceGroupPageResponseBodyData setPageId(Integer pageId) {
@@ -197,14 +205,6 @@ public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
         }
         public Integer getTotal() {
             return this.total;
-        }
-
-        public QuerySolutionDeviceGroupPageResponseBodyData setList(QuerySolutionDeviceGroupPageResponseBodyDataList list) {
-            this.list = list;
-            return this;
-        }
-        public QuerySolutionDeviceGroupPageResponseBodyDataList getList() {
-            return this.list;
         }
 
     }

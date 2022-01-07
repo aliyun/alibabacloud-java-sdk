@@ -4,11 +4,8 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryPageByApplyIdResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ApplyDeviceList")
+    public QueryPageByApplyIdResponseBodyApplyDeviceList applyDeviceList;
 
     @NameInMap("Code")
     public String code;
@@ -16,40 +13,35 @@ public class QueryPageByApplyIdResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("Page")
     public Integer page;
 
     @NameInMap("PageCount")
     public Integer pageCount;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     @NameInMap("Total")
     public Integer total;
-
-    @NameInMap("ApplyDeviceList")
-    public QueryPageByApplyIdResponseBodyApplyDeviceList applyDeviceList;
 
     public static QueryPageByApplyIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryPageByApplyIdResponseBody self = new QueryPageByApplyIdResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QueryPageByApplyIdResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryPageByApplyIdResponseBody setApplyDeviceList(QueryPageByApplyIdResponseBodyApplyDeviceList applyDeviceList) {
+        this.applyDeviceList = applyDeviceList;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryPageByApplyIdResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public QueryPageByApplyIdResponseBodyApplyDeviceList getApplyDeviceList() {
+        return this.applyDeviceList;
     }
 
     public QueryPageByApplyIdResponseBody setCode(String code) {
@@ -68,14 +60,6 @@ public class QueryPageByApplyIdResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public QueryPageByApplyIdResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public QueryPageByApplyIdResponseBody setPage(Integer page) {
         this.page = page;
         return this;
@@ -92,20 +76,36 @@ public class QueryPageByApplyIdResponseBody extends TeaModel {
         return this.pageCount;
     }
 
+    public QueryPageByApplyIdResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public QueryPageByApplyIdResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryPageByApplyIdResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public QueryPageByApplyIdResponseBody setTotal(Integer total) {
         this.total = total;
         return this;
     }
     public Integer getTotal() {
         return this.total;
-    }
-
-    public QueryPageByApplyIdResponseBody setApplyDeviceList(QueryPageByApplyIdResponseBodyApplyDeviceList applyDeviceList) {
-        this.applyDeviceList = applyDeviceList;
-        return this;
-    }
-    public QueryPageByApplyIdResponseBodyApplyDeviceList getApplyDeviceList() {
-        return this.applyDeviceList;
     }
 
     public static class QueryPageByApplyIdResponseBodyApplyDeviceListApplyDeviceInfo extends TeaModel {

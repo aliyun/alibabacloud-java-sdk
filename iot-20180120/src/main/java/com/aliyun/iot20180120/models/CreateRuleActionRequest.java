@@ -4,6 +4,12 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateRuleActionRequest extends TeaModel {
+    @NameInMap("Configuration")
+    public String configuration;
+
+    @NameInMap("ErrorActionFlag")
+    public Boolean errorActionFlag;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -13,15 +19,25 @@ public class CreateRuleActionRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
-    @NameInMap("Configuration")
-    public String configuration;
-
-    @NameInMap("ErrorActionFlag")
-    public Boolean errorActionFlag;
-
     public static CreateRuleActionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRuleActionRequest self = new CreateRuleActionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRuleActionRequest setConfiguration(String configuration) {
+        this.configuration = configuration;
+        return this;
+    }
+    public String getConfiguration() {
+        return this.configuration;
+    }
+
+    public CreateRuleActionRequest setErrorActionFlag(Boolean errorActionFlag) {
+        this.errorActionFlag = errorActionFlag;
+        return this;
+    }
+    public Boolean getErrorActionFlag() {
+        return this.errorActionFlag;
     }
 
     public CreateRuleActionRequest setIotInstanceId(String iotInstanceId) {
@@ -46,22 +62,6 @@ public class CreateRuleActionRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public CreateRuleActionRequest setConfiguration(String configuration) {
-        this.configuration = configuration;
-        return this;
-    }
-    public String getConfiguration() {
-        return this.configuration;
-    }
-
-    public CreateRuleActionRequest setErrorActionFlag(Boolean errorActionFlag) {
-        this.errorActionFlag = errorActionFlag;
-        return this;
-    }
-    public Boolean getErrorActionFlag() {
-        return this.errorActionFlag;
     }
 
 }

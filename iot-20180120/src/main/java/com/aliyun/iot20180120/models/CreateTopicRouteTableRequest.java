@@ -4,11 +4,11 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateTopicRouteTableRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     @NameInMap("DstTopic")
     public java.util.List<String> dstTopic;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("SrcTopic")
     public String srcTopic;
@@ -18,20 +18,20 @@ public class CreateTopicRouteTableRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateTopicRouteTableRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
     public CreateTopicRouteTableRequest setDstTopic(java.util.List<String> dstTopic) {
         this.dstTopic = dstTopic;
         return this;
     }
     public java.util.List<String> getDstTopic() {
         return this.dstTopic;
+    }
+
+    public CreateTopicRouteTableRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public CreateTopicRouteTableRequest setSrcTopic(String srcTopic) {

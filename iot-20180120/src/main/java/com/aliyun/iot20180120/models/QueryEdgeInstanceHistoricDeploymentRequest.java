@@ -4,14 +4,17 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceHistoricDeploymentRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    @NameInMap("EndTime")
+    public Long endTime;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -19,20 +22,25 @@ public class QueryEdgeInstanceHistoricDeploymentRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
-    @NameInMap("EndTime")
-    public Long endTime;
-
     public static QueryEdgeInstanceHistoricDeploymentRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryEdgeInstanceHistoricDeploymentRequest self = new QueryEdgeInstanceHistoricDeploymentRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryEdgeInstanceHistoricDeploymentRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
+    public QueryEdgeInstanceHistoricDeploymentRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public QueryEdgeInstanceHistoricDeploymentRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public QueryEdgeInstanceHistoricDeploymentRequest setInstanceId(String instanceId) {
@@ -43,12 +51,12 @@ public class QueryEdgeInstanceHistoricDeploymentRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public QueryEdgeInstanceHistoricDeploymentRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public QueryEdgeInstanceHistoricDeploymentRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public QueryEdgeInstanceHistoricDeploymentRequest setPageSize(Integer pageSize) {
@@ -65,14 +73,6 @@ public class QueryEdgeInstanceHistoricDeploymentRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
-    }
-
-    public QueryEdgeInstanceHistoricDeploymentRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
     }
 
 }

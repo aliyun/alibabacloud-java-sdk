@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListOTAModuleByProductResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public java.util.List<ListOTAModuleByProductResponseBodyData> data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public java.util.List<ListOTAModuleByProductResponseBodyData> data;
-
     public static ListOTAModuleByProductResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListOTAModuleByProductResponseBody self = new ListOTAModuleByProductResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListOTAModuleByProductResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListOTAModuleByProductResponseBody setData(java.util.List<ListOTAModuleByProductResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListOTAModuleByProductResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public ListOTAModuleByProductResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListOTAModuleByProductResponseBody setRequestId(String requestId) {
@@ -40,37 +64,7 @@ public class ListOTAModuleByProductResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListOTAModuleByProductResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListOTAModuleByProductResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ListOTAModuleByProductResponseBody setData(java.util.List<ListOTAModuleByProductResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListOTAModuleByProductResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class ListOTAModuleByProductResponseBodyData extends TeaModel {
-        @NameInMap("ProductKey")
-        public String productKey;
-
-        @NameInMap("ModuleName")
-        public String moduleName;
-
         @NameInMap("AliasName")
         public String aliasName;
 
@@ -83,25 +77,15 @@ public class ListOTAModuleByProductResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        @NameInMap("ModuleName")
+        public String moduleName;
+
+        @NameInMap("ProductKey")
+        public String productKey;
+
         public static ListOTAModuleByProductResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListOTAModuleByProductResponseBodyData self = new ListOTAModuleByProductResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListOTAModuleByProductResponseBodyData setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
-        }
-
-        public ListOTAModuleByProductResponseBodyData setModuleName(String moduleName) {
-            this.moduleName = moduleName;
-            return this;
-        }
-        public String getModuleName() {
-            return this.moduleName;
         }
 
         public ListOTAModuleByProductResponseBodyData setAliasName(String aliasName) {
@@ -134,6 +118,22 @@ public class ListOTAModuleByProductResponseBody extends TeaModel {
         }
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        public ListOTAModuleByProductResponseBodyData setModuleName(String moduleName) {
+            this.moduleName = moduleName;
+            return this;
+        }
+        public String getModuleName() {
+            return this.moduleName;
+        }
+
+        public ListOTAModuleByProductResponseBodyData setProductKey(String productKey) {
+            this.productKey = productKey;
+            return this;
+        }
+        public String getProductKey() {
+            return this.productKey;
         }
 
     }

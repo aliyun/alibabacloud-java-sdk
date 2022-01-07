@@ -4,6 +4,21 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDevicePropertiesDataRequest extends TeaModel {
+    @NameInMap("Asc")
+    public Integer asc;
+
+    @NameInMap("DeviceName")
+    public String deviceName;
+
+    @NameInMap("EndTime")
+    public Long endTime;
+
+    @NameInMap("Identifier")
+    public java.util.List<String> identifier;
+
+    @NameInMap("IotId")
+    public String iotId;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -13,27 +28,52 @@ public class QueryDevicePropertiesDataRequest extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
-    @NameInMap("DeviceName")
-    public String deviceName;
-
     @NameInMap("StartTime")
     public Long startTime;
-
-    @NameInMap("Identifier")
-    public java.util.List<String> identifier;
-
-    @NameInMap("Asc")
-    public Integer asc;
-
-    @NameInMap("IotId")
-    public String iotId;
-
-    @NameInMap("EndTime")
-    public Long endTime;
 
     public static QueryDevicePropertiesDataRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDevicePropertiesDataRequest self = new QueryDevicePropertiesDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDevicePropertiesDataRequest setAsc(Integer asc) {
+        this.asc = asc;
+        return this;
+    }
+    public Integer getAsc() {
+        return this.asc;
+    }
+
+    public QueryDevicePropertiesDataRequest setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public String getDeviceName() {
+        return this.deviceName;
+    }
+
+    public QueryDevicePropertiesDataRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    public QueryDevicePropertiesDataRequest setIdentifier(java.util.List<String> identifier) {
+        this.identifier = identifier;
+        return this;
+    }
+    public java.util.List<String> getIdentifier() {
+        return this.identifier;
+    }
+
+    public QueryDevicePropertiesDataRequest setIotId(String iotId) {
+        this.iotId = iotId;
+        return this;
+    }
+    public String getIotId() {
+        return this.iotId;
     }
 
     public QueryDevicePropertiesDataRequest setIotInstanceId(String iotInstanceId) {
@@ -60,52 +100,12 @@ public class QueryDevicePropertiesDataRequest extends TeaModel {
         return this.productKey;
     }
 
-    public QueryDevicePropertiesDataRequest setDeviceName(String deviceName) {
-        this.deviceName = deviceName;
-        return this;
-    }
-    public String getDeviceName() {
-        return this.deviceName;
-    }
-
     public QueryDevicePropertiesDataRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
     public Long getStartTime() {
         return this.startTime;
-    }
-
-    public QueryDevicePropertiesDataRequest setIdentifier(java.util.List<String> identifier) {
-        this.identifier = identifier;
-        return this;
-    }
-    public java.util.List<String> getIdentifier() {
-        return this.identifier;
-    }
-
-    public QueryDevicePropertiesDataRequest setAsc(Integer asc) {
-        this.asc = asc;
-        return this;
-    }
-    public Integer getAsc() {
-        return this.asc;
-    }
-
-    public QueryDevicePropertiesDataRequest setIotId(String iotId) {
-        this.iotId = iotId;
-        return this;
-    }
-    public String getIotId() {
-        return this.iotId;
-    }
-
-    public QueryDevicePropertiesDataRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
     }
 
 }

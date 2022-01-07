@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateOTAStaticUpgradeJobResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public CreateOTAStaticUpgradeJobResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public CreateOTAStaticUpgradeJobResponseBodyData data;
-
     public static CreateOTAStaticUpgradeJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateOTAStaticUpgradeJobResponseBody self = new CreateOTAStaticUpgradeJobResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateOTAStaticUpgradeJobResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateOTAStaticUpgradeJobResponseBody setData(CreateOTAStaticUpgradeJobResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateOTAStaticUpgradeJobResponseBodyData getData() {
+        return this.data;
+    }
+
+    public CreateOTAStaticUpgradeJobResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public CreateOTAStaticUpgradeJobResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class CreateOTAStaticUpgradeJobResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreateOTAStaticUpgradeJobResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public CreateOTAStaticUpgradeJobResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public CreateOTAStaticUpgradeJobResponseBody setData(CreateOTAStaticUpgradeJobResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateOTAStaticUpgradeJobResponseBodyData getData() {
-        return this.data;
     }
 
     public static class CreateOTAStaticUpgradeJobResponseBodyData extends TeaModel {

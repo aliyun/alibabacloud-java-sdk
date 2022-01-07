@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryProductTopicResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryProductTopicResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryProductTopicResponseBodyData data;
-
     public static QueryProductTopicResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryProductTopicResponseBody self = new QueryProductTopicResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryProductTopicResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryProductTopicResponseBody setData(QueryProductTopicResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryProductTopicResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryProductTopicResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryProductTopicResponseBody setRequestId(String requestId) {
@@ -40,73 +64,25 @@ public class QueryProductTopicResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryProductTopicResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryProductTopicResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryProductTopicResponseBody setData(QueryProductTopicResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryProductTopicResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryProductTopicResponseBodyDataProductTopicInfo extends TeaModel {
-        @NameInMap("ProductKey")
-        public String productKey;
-
-        @NameInMap("TopicShortName")
-        public String topicShortName;
-
-        @NameInMap("Operation")
-        public String operation;
-
         @NameInMap("Desc")
         public String desc;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("Operation")
+        public String operation;
+
+        @NameInMap("ProductKey")
+        public String productKey;
+
+        @NameInMap("TopicShortName")
+        public String topicShortName;
+
         public static QueryProductTopicResponseBodyDataProductTopicInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryProductTopicResponseBodyDataProductTopicInfo self = new QueryProductTopicResponseBodyDataProductTopicInfo();
             return TeaModel.build(map, self);
-        }
-
-        public QueryProductTopicResponseBodyDataProductTopicInfo setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
-        }
-
-        public QueryProductTopicResponseBodyDataProductTopicInfo setTopicShortName(String topicShortName) {
-            this.topicShortName = topicShortName;
-            return this;
-        }
-        public String getTopicShortName() {
-            return this.topicShortName;
-        }
-
-        public QueryProductTopicResponseBodyDataProductTopicInfo setOperation(String operation) {
-            this.operation = operation;
-            return this;
-        }
-        public String getOperation() {
-            return this.operation;
         }
 
         public QueryProductTopicResponseBodyDataProductTopicInfo setDesc(String desc) {
@@ -123,6 +99,30 @@ public class QueryProductTopicResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public QueryProductTopicResponseBodyDataProductTopicInfo setOperation(String operation) {
+            this.operation = operation;
+            return this;
+        }
+        public String getOperation() {
+            return this.operation;
+        }
+
+        public QueryProductTopicResponseBodyDataProductTopicInfo setProductKey(String productKey) {
+            this.productKey = productKey;
+            return this;
+        }
+        public String getProductKey() {
+            return this.productKey;
+        }
+
+        public QueryProductTopicResponseBodyDataProductTopicInfo setTopicShortName(String topicShortName) {
+            this.topicShortName = topicShortName;
+            return this;
+        }
+        public String getTopicShortName() {
+            return this.topicShortName;
         }
 
     }

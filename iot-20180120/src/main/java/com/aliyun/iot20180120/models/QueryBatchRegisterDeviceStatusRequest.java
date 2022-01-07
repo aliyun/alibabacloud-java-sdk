@@ -4,18 +4,26 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryBatchRegisterDeviceStatusRequest extends TeaModel {
+    @NameInMap("ApplyId")
+    public Long applyId;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
     public String productKey;
 
-    @NameInMap("ApplyId")
-    public Long applyId;
-
     public static QueryBatchRegisterDeviceStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryBatchRegisterDeviceStatusRequest self = new QueryBatchRegisterDeviceStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryBatchRegisterDeviceStatusRequest setApplyId(Long applyId) {
+        this.applyId = applyId;
+        return this;
+    }
+    public Long getApplyId() {
+        return this.applyId;
     }
 
     public QueryBatchRegisterDeviceStatusRequest setIotInstanceId(String iotInstanceId) {
@@ -32,14 +40,6 @@ public class QueryBatchRegisterDeviceStatusRequest extends TeaModel {
     }
     public String getProductKey() {
         return this.productKey;
-    }
-
-    public QueryBatchRegisterDeviceStatusRequest setApplyId(Long applyId) {
-        this.applyId = applyId;
-        return this;
-    }
-    public Long getApplyId() {
-        return this.applyId;
     }
 
 }

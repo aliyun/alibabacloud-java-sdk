@@ -4,39 +4,95 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryDeviceResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("Page")
+    public Integer page;
+
+    @NameInMap("PageCount")
+    public Integer pageCount;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Total")
     public Integer total;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageCount")
-    public Integer pageCount;
-
-    @NameInMap("Page")
-    public Integer page;
-
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("Data")
-    public QueryDeviceResponseBodyData data;
 
     public static QueryDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceResponseBody self = new QueryDeviceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryDeviceResponseBody setData(QueryDeviceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryDeviceResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryDeviceResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public QueryDeviceResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public QueryDeviceResponseBody setPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    public Integer getPage() {
+        return this.page;
+    }
+
+    public QueryDeviceResponseBody setPageCount(Integer pageCount) {
+        this.pageCount = pageCount;
+        return this;
+    }
+    public Integer getPageCount() {
+        return this.pageCount;
+    }
+
+    public QueryDeviceResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public QueryDeviceResponseBody setRequestId(String requestId) {
@@ -55,22 +111,6 @@ public class QueryDeviceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryDeviceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryDeviceResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public QueryDeviceResponseBody setTotal(Integer total) {
         this.total = total;
         return this;
@@ -79,61 +119,18 @@ public class QueryDeviceResponseBody extends TeaModel {
         return this.total;
     }
 
-    public QueryDeviceResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public QueryDeviceResponseBody setPageCount(Integer pageCount) {
-        this.pageCount = pageCount;
-        return this;
-    }
-    public Integer getPageCount() {
-        return this.pageCount;
-    }
-
-    public QueryDeviceResponseBody setPage(Integer page) {
-        this.page = page;
-        return this;
-    }
-    public Integer getPage() {
-        return this.page;
-    }
-
-    public QueryDeviceResponseBody setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public QueryDeviceResponseBody setData(QueryDeviceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryDeviceResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryDeviceResponseBodyDataDeviceInfo extends TeaModel {
         @NameInMap("DeviceId")
         public String deviceId;
 
+        @NameInMap("DeviceName")
+        public String deviceName;
+
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 
-        @NameInMap("ProductKey")
-        public String productKey;
-
         @NameInMap("DeviceStatus")
         public String deviceStatus;
-
-        @NameInMap("DeviceName")
-        public String deviceName;
 
         @NameInMap("DeviceType")
         public String deviceType;
@@ -144,17 +141,20 @@ public class QueryDeviceResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        @NameInMap("UtcCreate")
-        public String utcCreate;
-
-        @NameInMap("UtcModified")
-        public String utcModified;
-
         @NameInMap("IotId")
         public String iotId;
 
         @NameInMap("Nickname")
         public String nickname;
+
+        @NameInMap("ProductKey")
+        public String productKey;
+
+        @NameInMap("UtcCreate")
+        public String utcCreate;
+
+        @NameInMap("UtcModified")
+        public String utcModified;
 
         public static QueryDeviceResponseBodyDataDeviceInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceResponseBodyDataDeviceInfo self = new QueryDeviceResponseBodyDataDeviceInfo();
@@ -169,6 +169,14 @@ public class QueryDeviceResponseBody extends TeaModel {
             return this.deviceId;
         }
 
+        public QueryDeviceResponseBodyDataDeviceInfo setDeviceName(String deviceName) {
+            this.deviceName = deviceName;
+            return this;
+        }
+        public String getDeviceName() {
+            return this.deviceName;
+        }
+
         public QueryDeviceResponseBodyDataDeviceInfo setDeviceSecret(String deviceSecret) {
             this.deviceSecret = deviceSecret;
             return this;
@@ -177,28 +185,12 @@ public class QueryDeviceResponseBody extends TeaModel {
             return this.deviceSecret;
         }
 
-        public QueryDeviceResponseBodyDataDeviceInfo setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
-        }
-
         public QueryDeviceResponseBodyDataDeviceInfo setDeviceStatus(String deviceStatus) {
             this.deviceStatus = deviceStatus;
             return this;
         }
         public String getDeviceStatus() {
             return this.deviceStatus;
-        }
-
-        public QueryDeviceResponseBodyDataDeviceInfo setDeviceName(String deviceName) {
-            this.deviceName = deviceName;
-            return this;
-        }
-        public String getDeviceName() {
-            return this.deviceName;
         }
 
         public QueryDeviceResponseBodyDataDeviceInfo setDeviceType(String deviceType) {
@@ -225,22 +217,6 @@ public class QueryDeviceResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public QueryDeviceResponseBodyDataDeviceInfo setUtcCreate(String utcCreate) {
-            this.utcCreate = utcCreate;
-            return this;
-        }
-        public String getUtcCreate() {
-            return this.utcCreate;
-        }
-
-        public QueryDeviceResponseBodyDataDeviceInfo setUtcModified(String utcModified) {
-            this.utcModified = utcModified;
-            return this;
-        }
-        public String getUtcModified() {
-            return this.utcModified;
-        }
-
         public QueryDeviceResponseBodyDataDeviceInfo setIotId(String iotId) {
             this.iotId = iotId;
             return this;
@@ -255,6 +231,30 @@ public class QueryDeviceResponseBody extends TeaModel {
         }
         public String getNickname() {
             return this.nickname;
+        }
+
+        public QueryDeviceResponseBodyDataDeviceInfo setProductKey(String productKey) {
+            this.productKey = productKey;
+            return this;
+        }
+        public String getProductKey() {
+            return this.productKey;
+        }
+
+        public QueryDeviceResponseBodyDataDeviceInfo setUtcCreate(String utcCreate) {
+            this.utcCreate = utcCreate;
+            return this;
+        }
+        public String getUtcCreate() {
+            return this.utcCreate;
+        }
+
+        public QueryDeviceResponseBodyDataDeviceInfo setUtcModified(String utcModified) {
+            this.utcModified = utcModified;
+            return this;
+        }
+        public String getUtcModified() {
+            return this.utcModified;
         }
 
     }

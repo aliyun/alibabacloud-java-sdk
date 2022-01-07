@@ -4,26 +4,18 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ReleaseEdgeDriverVersionRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     @NameInMap("DriverId")
     public String driverId;
 
     @NameInMap("DriverVersion")
     public String driverVersion;
 
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
     public static ReleaseEdgeDriverVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleaseEdgeDriverVersionRequest self = new ReleaseEdgeDriverVersionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ReleaseEdgeDriverVersionRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
     }
 
     public ReleaseEdgeDriverVersionRequest setDriverId(String driverId) {
@@ -40,6 +32,14 @@ public class ReleaseEdgeDriverVersionRequest extends TeaModel {
     }
     public String getDriverVersion() {
         return this.driverVersion;
+    }
+
+    public ReleaseEdgeDriverVersionRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
 }

@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryConsumerGroupListRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -19,25 +13,15 @@ public class QueryConsumerGroupListRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     public static QueryConsumerGroupListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryConsumerGroupListRequest self = new QueryConsumerGroupListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryConsumerGroupListRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
-    public QueryConsumerGroupListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public QueryConsumerGroupListRequest setCurrentPage(Integer currentPage) {
@@ -62,6 +46,22 @@ public class QueryConsumerGroupListRequest extends TeaModel {
     }
     public String getGroupName() {
         return this.groupName;
+    }
+
+    public QueryConsumerGroupListRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
+    public QueryConsumerGroupListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

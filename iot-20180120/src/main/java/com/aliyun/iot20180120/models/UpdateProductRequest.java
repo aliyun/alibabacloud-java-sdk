@@ -4,11 +4,11 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateProductRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("ProductKey")
     public String productKey;
@@ -21,20 +21,20 @@ public class UpdateProductRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateProductRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
     public UpdateProductRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateProductRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public UpdateProductRequest setProductKey(String productKey) {

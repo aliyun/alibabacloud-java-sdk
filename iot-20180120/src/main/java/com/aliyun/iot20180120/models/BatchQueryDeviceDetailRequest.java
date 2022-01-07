@@ -7,11 +7,11 @@ public class BatchQueryDeviceDetailRequest extends TeaModel {
     @NameInMap("DeviceName")
     public java.util.List<String> deviceName;
 
-    @NameInMap("ProductKey")
-    public String productKey;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
+
+    @NameInMap("ProductKey")
+    public String productKey;
 
     public static BatchQueryDeviceDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchQueryDeviceDetailRequest self = new BatchQueryDeviceDetailRequest();
@@ -26,20 +26,20 @@ public class BatchQueryDeviceDetailRequest extends TeaModel {
         return this.deviceName;
     }
 
-    public BatchQueryDeviceDetailRequest setProductKey(String productKey) {
-        this.productKey = productKey;
-        return this;
-    }
-    public String getProductKey() {
-        return this.productKey;
-    }
-
     public BatchQueryDeviceDetailRequest setIotInstanceId(String iotInstanceId) {
         this.iotInstanceId = iotInstanceId;
         return this;
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
+    }
+
+    public BatchQueryDeviceDetailRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
     }
 
 }

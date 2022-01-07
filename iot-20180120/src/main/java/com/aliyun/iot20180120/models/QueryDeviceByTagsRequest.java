@@ -4,37 +4,21 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceByTagsRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
-    @NameInMap("Tag")
-    public java.util.List<QueryDeviceByTagsRequestTag> tag;
-
     @NameInMap("CurrentPage")
     public Integer currentPage;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Tag")
+    public java.util.List<QueryDeviceByTagsRequestTag> tag;
+
     public static QueryDeviceByTagsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceByTagsRequest self = new QueryDeviceByTagsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDeviceByTagsRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
-    public QueryDeviceByTagsRequest setTag(java.util.List<QueryDeviceByTagsRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<QueryDeviceByTagsRequestTag> getTag() {
-        return this.tag;
     }
 
     public QueryDeviceByTagsRequest setCurrentPage(Integer currentPage) {
@@ -45,12 +29,28 @@ public class QueryDeviceByTagsRequest extends TeaModel {
         return this.currentPage;
     }
 
+    public QueryDeviceByTagsRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
     public QueryDeviceByTagsRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public QueryDeviceByTagsRequest setTag(java.util.List<QueryDeviceByTagsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<QueryDeviceByTagsRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class QueryDeviceByTagsRequestTag extends TeaModel {

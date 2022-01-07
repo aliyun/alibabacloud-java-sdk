@@ -4,26 +4,26 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetEdgeInstanceDeploymentRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
+    @NameInMap("DeploymentId")
+    public String deploymentId;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("DeploymentId")
-    public String deploymentId;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     public static GetEdgeInstanceDeploymentRequest build(java.util.Map<String, ?> map) throws Exception {
         GetEdgeInstanceDeploymentRequest self = new GetEdgeInstanceDeploymentRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetEdgeInstanceDeploymentRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
+    public GetEdgeInstanceDeploymentRequest setDeploymentId(String deploymentId) {
+        this.deploymentId = deploymentId;
         return this;
     }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
+    public String getDeploymentId() {
+        return this.deploymentId;
     }
 
     public GetEdgeInstanceDeploymentRequest setInstanceId(String instanceId) {
@@ -34,12 +34,12 @@ public class GetEdgeInstanceDeploymentRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public GetEdgeInstanceDeploymentRequest setDeploymentId(String deploymentId) {
-        this.deploymentId = deploymentId;
+    public GetEdgeInstanceDeploymentRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
         return this;
     }
-    public String getDeploymentId() {
-        return this.deploymentId;
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
 }

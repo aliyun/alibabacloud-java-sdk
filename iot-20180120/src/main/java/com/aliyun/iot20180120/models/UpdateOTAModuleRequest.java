@@ -7,14 +7,14 @@ public class UpdateOTAModuleRequest extends TeaModel {
     @NameInMap("AliasName")
     public String aliasName;
 
+    @NameInMap("Desc")
+    public String desc;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ModuleName")
     public String moduleName;
-
-    @NameInMap("Desc")
-    public String desc;
 
     @NameInMap("ProductKey")
     public String productKey;
@@ -32,6 +32,14 @@ public class UpdateOTAModuleRequest extends TeaModel {
         return this.aliasName;
     }
 
+    public UpdateOTAModuleRequest setDesc(String desc) {
+        this.desc = desc;
+        return this;
+    }
+    public String getDesc() {
+        return this.desc;
+    }
+
     public UpdateOTAModuleRequest setIotInstanceId(String iotInstanceId) {
         this.iotInstanceId = iotInstanceId;
         return this;
@@ -46,14 +54,6 @@ public class UpdateOTAModuleRequest extends TeaModel {
     }
     public String getModuleName() {
         return this.moduleName;
-    }
-
-    public UpdateOTAModuleRequest setDesc(String desc) {
-        this.desc = desc;
-        return this;
-    }
-    public String getDesc() {
-        return this.desc;
     }
 
     public UpdateOTAModuleRequest setProductKey(String productKey) {

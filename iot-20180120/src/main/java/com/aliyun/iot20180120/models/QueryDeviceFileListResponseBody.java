@@ -4,20 +4,17 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceFileListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("CurrentPage")
     public Integer currentPage;
+
+    @NameInMap("Data")
+    public QueryDeviceFileListResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     @NameInMap("PageCount")
     public Integer pageCount;
@@ -25,31 +22,18 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     @NameInMap("Total")
     public Integer total;
-
-    @NameInMap("Data")
-    public QueryDeviceFileListResponseBodyData data;
 
     public static QueryDeviceFileListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceFileListResponseBody self = new QueryDeviceFileListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDeviceFileListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryDeviceFileListResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public QueryDeviceFileListResponseBody setCode(String code) {
@@ -60,20 +44,28 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
         return this.code;
     }
 
-    public QueryDeviceFileListResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public QueryDeviceFileListResponseBody setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public QueryDeviceFileListResponseBody setData(QueryDeviceFileListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryDeviceFileListResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryDeviceFileListResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryDeviceFileListResponseBody setPageCount(Integer pageCount) {
@@ -92,20 +84,28 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public QueryDeviceFileListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryDeviceFileListResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public QueryDeviceFileListResponseBody setTotal(Integer total) {
         this.total = total;
         return this;
     }
     public Integer getTotal() {
         return this.total;
-    }
-
-    public QueryDeviceFileListResponseBody setData(QueryDeviceFileListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryDeviceFileListResponseBodyData getData() {
-        return this.data;
     }
 
     public static class QueryDeviceFileListResponseBodyDataFileSummary extends TeaModel {

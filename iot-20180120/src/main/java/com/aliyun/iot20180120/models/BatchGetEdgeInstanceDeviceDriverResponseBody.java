@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchGetEdgeInstanceDeviceDriverResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("DeviceDriverList")
+    public java.util.List<BatchGetEdgeInstanceDeviceDriverResponseBodyDeviceDriverList> deviceDriverList;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("DeviceDriverList")
-    public java.util.List<BatchGetEdgeInstanceDeviceDriverResponseBodyDeviceDriverList> deviceDriverList;
-
     public static BatchGetEdgeInstanceDeviceDriverResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchGetEdgeInstanceDeviceDriverResponseBody self = new BatchGetEdgeInstanceDeviceDriverResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public BatchGetEdgeInstanceDeviceDriverResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public BatchGetEdgeInstanceDeviceDriverResponseBody setDeviceDriverList(java.util.List<BatchGetEdgeInstanceDeviceDriverResponseBodyDeviceDriverList> deviceDriverList) {
+        this.deviceDriverList = deviceDriverList;
+        return this;
+    }
+    public java.util.List<BatchGetEdgeInstanceDeviceDriverResponseBodyDeviceDriverList> getDeviceDriverList() {
+        return this.deviceDriverList;
+    }
+
+    public BatchGetEdgeInstanceDeviceDriverResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public BatchGetEdgeInstanceDeviceDriverResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class BatchGetEdgeInstanceDeviceDriverResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public BatchGetEdgeInstanceDeviceDriverResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public BatchGetEdgeInstanceDeviceDriverResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public BatchGetEdgeInstanceDeviceDriverResponseBody setDeviceDriverList(java.util.List<BatchGetEdgeInstanceDeviceDriverResponseBodyDeviceDriverList> deviceDriverList) {
-        this.deviceDriverList = deviceDriverList;
-        return this;
-    }
-    public java.util.List<BatchGetEdgeInstanceDeviceDriverResponseBodyDeviceDriverList> getDeviceDriverList() {
-        return this.deviceDriverList;
     }
 
     public static class BatchGetEdgeInstanceDeviceDriverResponseBodyDeviceDriverList extends TeaModel {

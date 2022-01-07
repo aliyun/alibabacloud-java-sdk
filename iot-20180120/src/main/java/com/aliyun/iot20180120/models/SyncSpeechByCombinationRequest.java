@@ -7,17 +7,17 @@ public class SyncSpeechByCombinationRequest extends TeaModel {
     @NameInMap("CombinationList")
     public java.util.List<String> combinationList;
 
-    @NameInMap("IotId")
-    public String iotId;
-
-    @NameInMap("ProductKey")
-    public String productKey;
-
     @NameInMap("DeviceName")
     public String deviceName;
 
+    @NameInMap("IotId")
+    public String iotId;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
+
+    @NameInMap("ProductKey")
+    public String productKey;
 
     public static SyncSpeechByCombinationRequest build(java.util.Map<String, ?> map) throws Exception {
         SyncSpeechByCombinationRequest self = new SyncSpeechByCombinationRequest();
@@ -32,22 +32,6 @@ public class SyncSpeechByCombinationRequest extends TeaModel {
         return this.combinationList;
     }
 
-    public SyncSpeechByCombinationRequest setIotId(String iotId) {
-        this.iotId = iotId;
-        return this;
-    }
-    public String getIotId() {
-        return this.iotId;
-    }
-
-    public SyncSpeechByCombinationRequest setProductKey(String productKey) {
-        this.productKey = productKey;
-        return this;
-    }
-    public String getProductKey() {
-        return this.productKey;
-    }
-
     public SyncSpeechByCombinationRequest setDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -56,12 +40,28 @@ public class SyncSpeechByCombinationRequest extends TeaModel {
         return this.deviceName;
     }
 
+    public SyncSpeechByCombinationRequest setIotId(String iotId) {
+        this.iotId = iotId;
+        return this;
+    }
+    public String getIotId() {
+        return this.iotId;
+    }
+
     public SyncSpeechByCombinationRequest setIotInstanceId(String iotInstanceId) {
         this.iotInstanceId = iotInstanceId;
         return this;
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
+    }
+
+    public SyncSpeechByCombinationRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
     }
 
 }

@@ -4,14 +4,11 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceDesiredPropertyRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
-    @NameInMap("ProductKey")
-    public String productKey;
-
     @NameInMap("DeviceName")
     public String deviceName;
+
+    @NameInMap("FunctionBlockId")
+    public String functionBlockId;
 
     @NameInMap("Identifier")
     public java.util.List<String> identifier;
@@ -19,28 +16,15 @@ public class QueryDeviceDesiredPropertyRequest extends TeaModel {
     @NameInMap("IotId")
     public String iotId;
 
-    @NameInMap("FunctionBlockId")
-    public String functionBlockId;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
+    @NameInMap("ProductKey")
+    public String productKey;
 
     public static QueryDeviceDesiredPropertyRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceDesiredPropertyRequest self = new QueryDeviceDesiredPropertyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDeviceDesiredPropertyRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
-    public QueryDeviceDesiredPropertyRequest setProductKey(String productKey) {
-        this.productKey = productKey;
-        return this;
-    }
-    public String getProductKey() {
-        return this.productKey;
     }
 
     public QueryDeviceDesiredPropertyRequest setDeviceName(String deviceName) {
@@ -49,6 +33,14 @@ public class QueryDeviceDesiredPropertyRequest extends TeaModel {
     }
     public String getDeviceName() {
         return this.deviceName;
+    }
+
+    public QueryDeviceDesiredPropertyRequest setFunctionBlockId(String functionBlockId) {
+        this.functionBlockId = functionBlockId;
+        return this;
+    }
+    public String getFunctionBlockId() {
+        return this.functionBlockId;
     }
 
     public QueryDeviceDesiredPropertyRequest setIdentifier(java.util.List<String> identifier) {
@@ -67,12 +59,20 @@ public class QueryDeviceDesiredPropertyRequest extends TeaModel {
         return this.iotId;
     }
 
-    public QueryDeviceDesiredPropertyRequest setFunctionBlockId(String functionBlockId) {
-        this.functionBlockId = functionBlockId;
+    public QueryDeviceDesiredPropertyRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
         return this;
     }
-    public String getFunctionBlockId() {
-        return this.functionBlockId;
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
+    public QueryDeviceDesiredPropertyRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
     }
 
 }

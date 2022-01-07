@@ -4,8 +4,14 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceRequest extends TeaModel {
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
+
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,15 +19,17 @@ public class QueryDeviceRequest extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
-
-    @NameInMap("NextToken")
-    public String nextToken;
-
     public static QueryDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceRequest self = new QueryDeviceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public QueryDeviceRequest setIotInstanceId(String iotInstanceId) {
@@ -30,6 +38,14 @@ public class QueryDeviceRequest extends TeaModel {
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
+    }
+
+    public QueryDeviceRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public QueryDeviceRequest setPageSize(Integer pageSize) {
@@ -46,22 +62,6 @@ public class QueryDeviceRequest extends TeaModel {
     }
     public String getProductKey() {
         return this.productKey;
-    }
-
-    public QueryDeviceRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
-    }
-
-    public QueryDeviceRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
     }
 
 }

@@ -4,20 +4,20 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceChannelRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("DriverId")
-    public String driverId;
-
     @NameInMap("ChannelName")
     public String channelName;
 
     @NameInMap("CurrentPage")
     public Integer currentPage;
+
+    @NameInMap("DriverId")
+    public String driverId;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -25,30 +25,6 @@ public class QueryEdgeInstanceChannelRequest extends TeaModel {
     public static QueryEdgeInstanceChannelRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryEdgeInstanceChannelRequest self = new QueryEdgeInstanceChannelRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryEdgeInstanceChannelRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
-    public QueryEdgeInstanceChannelRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public QueryEdgeInstanceChannelRequest setDriverId(String driverId) {
-        this.driverId = driverId;
-        return this;
-    }
-    public String getDriverId() {
-        return this.driverId;
     }
 
     public QueryEdgeInstanceChannelRequest setChannelName(String channelName) {
@@ -65,6 +41,30 @@ public class QueryEdgeInstanceChannelRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public QueryEdgeInstanceChannelRequest setDriverId(String driverId) {
+        this.driverId = driverId;
+        return this;
+    }
+    public String getDriverId() {
+        return this.driverId;
+    }
+
+    public QueryEdgeInstanceChannelRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public QueryEdgeInstanceChannelRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public QueryEdgeInstanceChannelRequest setPageSize(Integer pageSize) {

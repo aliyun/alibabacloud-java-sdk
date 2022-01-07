@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceDesiredPropertyResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryDeviceDesiredPropertyResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryDeviceDesiredPropertyResponseBodyData data;
-
     public static QueryDeviceDesiredPropertyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceDesiredPropertyResponseBody self = new QueryDeviceDesiredPropertyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceDesiredPropertyResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryDeviceDesiredPropertyResponseBody setData(QueryDeviceDesiredPropertyResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryDeviceDesiredPropertyResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryDeviceDesiredPropertyResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryDeviceDesiredPropertyResponseBody setRequestId(String requestId) {
@@ -40,48 +64,24 @@ public class QueryDeviceDesiredPropertyResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryDeviceDesiredPropertyResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryDeviceDesiredPropertyResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryDeviceDesiredPropertyResponseBody setData(QueryDeviceDesiredPropertyResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryDeviceDesiredPropertyResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryDeviceDesiredPropertyResponseBodyDataListDesiredPropertyInfo extends TeaModel {
-        @NameInMap("Unit")
-        public String unit;
+        @NameInMap("DataType")
+        public String dataType;
 
         @NameInMap("Identifier")
         public String identifier;
 
-        @NameInMap("DataType")
-        public String dataType;
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("Time")
         public String time;
 
+        @NameInMap("Unit")
+        public String unit;
+
         @NameInMap("Value")
         public String value;
-
-        @NameInMap("Name")
-        public String name;
 
         @NameInMap("Version")
         public Long version;
@@ -89,22 +89,6 @@ public class QueryDeviceDesiredPropertyResponseBody extends TeaModel {
         public static QueryDeviceDesiredPropertyResponseBodyDataListDesiredPropertyInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceDesiredPropertyResponseBodyDataListDesiredPropertyInfo self = new QueryDeviceDesiredPropertyResponseBodyDataListDesiredPropertyInfo();
             return TeaModel.build(map, self);
-        }
-
-        public QueryDeviceDesiredPropertyResponseBodyDataListDesiredPropertyInfo setUnit(String unit) {
-            this.unit = unit;
-            return this;
-        }
-        public String getUnit() {
-            return this.unit;
-        }
-
-        public QueryDeviceDesiredPropertyResponseBodyDataListDesiredPropertyInfo setIdentifier(String identifier) {
-            this.identifier = identifier;
-            return this;
-        }
-        public String getIdentifier() {
-            return this.identifier;
         }
 
         public QueryDeviceDesiredPropertyResponseBodyDataListDesiredPropertyInfo setDataType(String dataType) {
@@ -115,20 +99,12 @@ public class QueryDeviceDesiredPropertyResponseBody extends TeaModel {
             return this.dataType;
         }
 
-        public QueryDeviceDesiredPropertyResponseBodyDataListDesiredPropertyInfo setTime(String time) {
-            this.time = time;
+        public QueryDeviceDesiredPropertyResponseBodyDataListDesiredPropertyInfo setIdentifier(String identifier) {
+            this.identifier = identifier;
             return this;
         }
-        public String getTime() {
-            return this.time;
-        }
-
-        public QueryDeviceDesiredPropertyResponseBodyDataListDesiredPropertyInfo setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
+        public String getIdentifier() {
+            return this.identifier;
         }
 
         public QueryDeviceDesiredPropertyResponseBodyDataListDesiredPropertyInfo setName(String name) {
@@ -137,6 +113,30 @@ public class QueryDeviceDesiredPropertyResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public QueryDeviceDesiredPropertyResponseBodyDataListDesiredPropertyInfo setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
+        }
+
+        public QueryDeviceDesiredPropertyResponseBodyDataListDesiredPropertyInfo setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
+        }
+
+        public QueryDeviceDesiredPropertyResponseBodyDataListDesiredPropertyInfo setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
         public QueryDeviceDesiredPropertyResponseBodyDataListDesiredPropertyInfo setVersion(Long version) {

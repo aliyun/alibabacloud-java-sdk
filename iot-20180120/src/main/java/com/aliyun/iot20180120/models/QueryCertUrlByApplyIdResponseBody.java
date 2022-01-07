@@ -4,11 +4,8 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryCertUrlByApplyIdResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("CertUrl")
+    public String certUrl;
 
     @NameInMap("Code")
     public String code;
@@ -16,28 +13,23 @@ public class QueryCertUrlByApplyIdResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    @NameInMap("CertUrl")
-    public String certUrl;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static QueryCertUrlByApplyIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryCertUrlByApplyIdResponseBody self = new QueryCertUrlByApplyIdResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QueryCertUrlByApplyIdResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryCertUrlByApplyIdResponseBody setCertUrl(String certUrl) {
+        this.certUrl = certUrl;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryCertUrlByApplyIdResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getCertUrl() {
+        return this.certUrl;
     }
 
     public QueryCertUrlByApplyIdResponseBody setCode(String code) {
@@ -56,12 +48,20 @@ public class QueryCertUrlByApplyIdResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public QueryCertUrlByApplyIdResponseBody setCertUrl(String certUrl) {
-        this.certUrl = certUrl;
+    public QueryCertUrlByApplyIdResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCertUrl() {
-        return this.certUrl;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryCertUrlByApplyIdResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

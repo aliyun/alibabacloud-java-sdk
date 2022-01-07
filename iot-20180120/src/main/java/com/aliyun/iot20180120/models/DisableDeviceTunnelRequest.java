@@ -4,18 +4,26 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DisableDeviceTunnelRequest extends TeaModel {
+    @NameInMap("DeviceName")
+    public String deviceName;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
     public String productKey;
 
-    @NameInMap("DeviceName")
-    public String deviceName;
-
     public static DisableDeviceTunnelRequest build(java.util.Map<String, ?> map) throws Exception {
         DisableDeviceTunnelRequest self = new DisableDeviceTunnelRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DisableDeviceTunnelRequest setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public String getDeviceName() {
+        return this.deviceName;
     }
 
     public DisableDeviceTunnelRequest setIotInstanceId(String iotInstanceId) {
@@ -32,14 +40,6 @@ public class DisableDeviceTunnelRequest extends TeaModel {
     }
     public String getProductKey() {
         return this.productKey;
-    }
-
-    public DisableDeviceTunnelRequest setDeviceName(String deviceName) {
-        this.deviceName = deviceName;
-        return this;
-    }
-    public String getDeviceName() {
-        return this.deviceName;
     }
 
 }

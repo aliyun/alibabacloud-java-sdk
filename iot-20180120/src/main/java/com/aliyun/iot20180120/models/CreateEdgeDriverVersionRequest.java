@@ -4,8 +4,20 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateEdgeDriverVersionRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
+    @NameInMap("Argument")
+    public String argument;
+
+    @NameInMap("ConfigCheckRule")
+    public String configCheckRule;
+
+    @NameInMap("ContainerConfig")
+    public String containerConfig;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("DriverConfig")
+    public String driverConfig;
 
     @NameInMap("DriverId")
     public String driverId;
@@ -16,35 +28,55 @@ public class CreateEdgeDriverVersionRequest extends TeaModel {
     @NameInMap("EdgeVersion")
     public String edgeVersion;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("SourceConfig")
     public String sourceConfig;
-
-    @NameInMap("DriverConfig")
-    public String driverConfig;
-
-    @NameInMap("ContainerConfig")
-    public String containerConfig;
-
-    @NameInMap("ConfigCheckRule")
-    public String configCheckRule;
-
-    @NameInMap("Argument")
-    public String argument;
 
     public static CreateEdgeDriverVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEdgeDriverVersionRequest self = new CreateEdgeDriverVersionRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateEdgeDriverVersionRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
+    public CreateEdgeDriverVersionRequest setArgument(String argument) {
+        this.argument = argument;
         return this;
     }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
+    public String getArgument() {
+        return this.argument;
+    }
+
+    public CreateEdgeDriverVersionRequest setConfigCheckRule(String configCheckRule) {
+        this.configCheckRule = configCheckRule;
+        return this;
+    }
+    public String getConfigCheckRule() {
+        return this.configCheckRule;
+    }
+
+    public CreateEdgeDriverVersionRequest setContainerConfig(String containerConfig) {
+        this.containerConfig = containerConfig;
+        return this;
+    }
+    public String getContainerConfig() {
+        return this.containerConfig;
+    }
+
+    public CreateEdgeDriverVersionRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateEdgeDriverVersionRequest setDriverConfig(String driverConfig) {
+        this.driverConfig = driverConfig;
+        return this;
+    }
+    public String getDriverConfig() {
+        return this.driverConfig;
     }
 
     public CreateEdgeDriverVersionRequest setDriverId(String driverId) {
@@ -71,12 +103,12 @@ public class CreateEdgeDriverVersionRequest extends TeaModel {
         return this.edgeVersion;
     }
 
-    public CreateEdgeDriverVersionRequest setDescription(String description) {
-        this.description = description;
+    public CreateEdgeDriverVersionRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public CreateEdgeDriverVersionRequest setSourceConfig(String sourceConfig) {
@@ -85,38 +117,6 @@ public class CreateEdgeDriverVersionRequest extends TeaModel {
     }
     public String getSourceConfig() {
         return this.sourceConfig;
-    }
-
-    public CreateEdgeDriverVersionRequest setDriverConfig(String driverConfig) {
-        this.driverConfig = driverConfig;
-        return this;
-    }
-    public String getDriverConfig() {
-        return this.driverConfig;
-    }
-
-    public CreateEdgeDriverVersionRequest setContainerConfig(String containerConfig) {
-        this.containerConfig = containerConfig;
-        return this;
-    }
-    public String getContainerConfig() {
-        return this.containerConfig;
-    }
-
-    public CreateEdgeDriverVersionRequest setConfigCheckRule(String configCheckRule) {
-        this.configCheckRule = configCheckRule;
-        return this;
-    }
-    public String getConfigCheckRule() {
-        return this.configCheckRule;
-    }
-
-    public CreateEdgeDriverVersionRequest setArgument(String argument) {
-        this.argument = argument;
-        return this;
-    }
-    public String getArgument() {
-        return this.argument;
     }
 
 }

@@ -7,14 +7,14 @@ public class PubBroadcastRequest extends TeaModel {
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    @NameInMap("MessageContent")
+    public String messageContent;
+
     @NameInMap("ProductKey")
     public String productKey;
 
     @NameInMap("TopicFullName")
     public String topicFullName;
-
-    @NameInMap("MessageContent")
-    public String messageContent;
 
     public static PubBroadcastRequest build(java.util.Map<String, ?> map) throws Exception {
         PubBroadcastRequest self = new PubBroadcastRequest();
@@ -27,6 +27,14 @@ public class PubBroadcastRequest extends TeaModel {
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
+    }
+
+    public PubBroadcastRequest setMessageContent(String messageContent) {
+        this.messageContent = messageContent;
+        return this;
+    }
+    public String getMessageContent() {
+        return this.messageContent;
     }
 
     public PubBroadcastRequest setProductKey(String productKey) {
@@ -43,14 +51,6 @@ public class PubBroadcastRequest extends TeaModel {
     }
     public String getTopicFullName() {
         return this.topicFullName;
-    }
-
-    public PubBroadcastRequest setMessageContent(String messageContent) {
-        this.messageContent = messageContent;
-        return this;
-    }
-    public String getMessageContent() {
-        return this.messageContent;
     }
 
 }

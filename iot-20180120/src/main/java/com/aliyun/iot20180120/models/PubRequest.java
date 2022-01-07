@@ -4,8 +4,14 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class PubRequest extends TeaModel {
+    @NameInMap("CorrelationData")
+    public String correlationData;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
+
+    @NameInMap("MessageContent")
+    public String messageContent;
 
     @NameInMap("ProductKey")
     public String productKey;
@@ -13,17 +19,11 @@ public class PubRequest extends TeaModel {
     @NameInMap("Qos")
     public Integer qos;
 
-    @NameInMap("TopicFullName")
-    public String topicFullName;
-
-    @NameInMap("MessageContent")
-    public String messageContent;
-
     @NameInMap("ResponseTopic")
     public String responseTopic;
 
-    @NameInMap("CorrelationData")
-    public String correlationData;
+    @NameInMap("TopicFullName")
+    public String topicFullName;
 
     @NameInMap("UserProp")
     public java.util.List<PubRequestUserProp> userProp;
@@ -33,12 +33,28 @@ public class PubRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public PubRequest setCorrelationData(String correlationData) {
+        this.correlationData = correlationData;
+        return this;
+    }
+    public String getCorrelationData() {
+        return this.correlationData;
+    }
+
     public PubRequest setIotInstanceId(String iotInstanceId) {
         this.iotInstanceId = iotInstanceId;
         return this;
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
+    }
+
+    public PubRequest setMessageContent(String messageContent) {
+        this.messageContent = messageContent;
+        return this;
+    }
+    public String getMessageContent() {
+        return this.messageContent;
     }
 
     public PubRequest setProductKey(String productKey) {
@@ -57,22 +73,6 @@ public class PubRequest extends TeaModel {
         return this.qos;
     }
 
-    public PubRequest setTopicFullName(String topicFullName) {
-        this.topicFullName = topicFullName;
-        return this;
-    }
-    public String getTopicFullName() {
-        return this.topicFullName;
-    }
-
-    public PubRequest setMessageContent(String messageContent) {
-        this.messageContent = messageContent;
-        return this;
-    }
-    public String getMessageContent() {
-        return this.messageContent;
-    }
-
     public PubRequest setResponseTopic(String responseTopic) {
         this.responseTopic = responseTopic;
         return this;
@@ -81,12 +81,12 @@ public class PubRequest extends TeaModel {
         return this.responseTopic;
     }
 
-    public PubRequest setCorrelationData(String correlationData) {
-        this.correlationData = correlationData;
+    public PubRequest setTopicFullName(String topicFullName) {
+        this.topicFullName = topicFullName;
         return this;
     }
-    public String getCorrelationData() {
-        return this.correlationData;
+    public String getTopicFullName() {
+        return this.topicFullName;
     }
 
     public PubRequest setUserProp(java.util.List<PubRequestUserProp> userProp) {

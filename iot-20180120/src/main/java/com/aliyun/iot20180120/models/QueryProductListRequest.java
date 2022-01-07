@@ -4,6 +4,12 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryProductListRequest extends TeaModel {
+    @NameInMap("AliyunCommodityCode")
+    public String aliyunCommodityCode;
+
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -13,15 +19,25 @@ public class QueryProductListRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("AliyunCommodityCode")
-    public String aliyunCommodityCode;
-
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
-
     public static QueryProductListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryProductListRequest self = new QueryProductListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryProductListRequest setAliyunCommodityCode(String aliyunCommodityCode) {
+        this.aliyunCommodityCode = aliyunCommodityCode;
+        return this;
+    }
+    public String getAliyunCommodityCode() {
+        return this.aliyunCommodityCode;
+    }
+
+    public QueryProductListRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public QueryProductListRequest setIotInstanceId(String iotInstanceId) {
@@ -46,22 +62,6 @@ public class QueryProductListRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public QueryProductListRequest setAliyunCommodityCode(String aliyunCommodityCode) {
-        this.aliyunCommodityCode = aliyunCommodityCode;
-        return this;
-    }
-    public String getAliyunCommodityCode() {
-        return this.aliyunCommodityCode;
-    }
-
-    public QueryProductListRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
     }
 
 }

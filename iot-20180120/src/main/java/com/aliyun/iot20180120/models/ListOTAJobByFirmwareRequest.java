@@ -4,29 +4,29 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListOTAJobByFirmwareRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("FirmwareId")
     public String firmwareId;
 
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
 
     public static ListOTAJobByFirmwareRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOTAJobByFirmwareRequest self = new ListOTAJobByFirmwareRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListOTAJobByFirmwareRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
+    public ListOTAJobByFirmwareRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public ListOTAJobByFirmwareRequest setFirmwareId(String firmwareId) {
@@ -37,20 +37,20 @@ public class ListOTAJobByFirmwareRequest extends TeaModel {
         return this.firmwareId;
     }
 
+    public ListOTAJobByFirmwareRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
     public ListOTAJobByFirmwareRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListOTAJobByFirmwareRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
     }
 
 }

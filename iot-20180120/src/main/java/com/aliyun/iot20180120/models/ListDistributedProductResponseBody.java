@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListDistributedProductResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ListDistributedProductResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public ListDistributedProductResponseBodyData data;
-
     public static ListDistributedProductResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDistributedProductResponseBody self = new ListDistributedProductResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListDistributedProductResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListDistributedProductResponseBody setData(ListDistributedProductResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListDistributedProductResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListDistributedProductResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListDistributedProductResponseBody setRequestId(String requestId) {
@@ -40,36 +64,9 @@ public class ListDistributedProductResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListDistributedProductResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListDistributedProductResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ListDistributedProductResponseBody setData(ListDistributedProductResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListDistributedProductResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListDistributedProductResponseBodyDataInfoItems extends TeaModel {
-        @NameInMap("SourceUid")
-        public String sourceUid;
-
-        @NameInMap("TargetUid")
-        public String targetUid;
+        @NameInMap("GmtCreate")
+        public Integer gmtCreate;
 
         @NameInMap("ProductKey")
         public String productKey;
@@ -77,46 +74,41 @@ public class ListDistributedProductResponseBody extends TeaModel {
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 
-        @NameInMap("TargetInstanceId")
-        public String targetInstanceId;
-
-        @NameInMap("GmtCreate")
-        public Integer gmtCreate;
-
-        @NameInMap("TargetAliyunId")
-        public String targetAliyunId;
+        @NameInMap("SourceInstanceName")
+        public String sourceInstanceName;
 
         @NameInMap("SourceRegion")
         public String sourceRegion;
 
-        @NameInMap("TargetRegion")
-        public String targetRegion;
+        @NameInMap("SourceUid")
+        public String sourceUid;
 
-        @NameInMap("SourceInstanceName")
-        public String sourceInstanceName;
+        @NameInMap("TargetAliyunId")
+        public String targetAliyunId;
+
+        @NameInMap("TargetInstanceId")
+        public String targetInstanceId;
 
         @NameInMap("TargetInstanceName")
         public String targetInstanceName;
+
+        @NameInMap("TargetRegion")
+        public String targetRegion;
+
+        @NameInMap("TargetUid")
+        public String targetUid;
 
         public static ListDistributedProductResponseBodyDataInfoItems build(java.util.Map<String, ?> map) throws Exception {
             ListDistributedProductResponseBodyDataInfoItems self = new ListDistributedProductResponseBodyDataInfoItems();
             return TeaModel.build(map, self);
         }
 
-        public ListDistributedProductResponseBodyDataInfoItems setSourceUid(String sourceUid) {
-            this.sourceUid = sourceUid;
+        public ListDistributedProductResponseBodyDataInfoItems setGmtCreate(Integer gmtCreate) {
+            this.gmtCreate = gmtCreate;
             return this;
         }
-        public String getSourceUid() {
-            return this.sourceUid;
-        }
-
-        public ListDistributedProductResponseBodyDataInfoItems setTargetUid(String targetUid) {
-            this.targetUid = targetUid;
-            return this;
-        }
-        public String getTargetUid() {
-            return this.targetUid;
+        public Integer getGmtCreate() {
+            return this.gmtCreate;
         }
 
         public ListDistributedProductResponseBodyDataInfoItems setProductKey(String productKey) {
@@ -135,28 +127,12 @@ public class ListDistributedProductResponseBody extends TeaModel {
             return this.sourceInstanceId;
         }
 
-        public ListDistributedProductResponseBodyDataInfoItems setTargetInstanceId(String targetInstanceId) {
-            this.targetInstanceId = targetInstanceId;
+        public ListDistributedProductResponseBodyDataInfoItems setSourceInstanceName(String sourceInstanceName) {
+            this.sourceInstanceName = sourceInstanceName;
             return this;
         }
-        public String getTargetInstanceId() {
-            return this.targetInstanceId;
-        }
-
-        public ListDistributedProductResponseBodyDataInfoItems setGmtCreate(Integer gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public Integer getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public ListDistributedProductResponseBodyDataInfoItems setTargetAliyunId(String targetAliyunId) {
-            this.targetAliyunId = targetAliyunId;
-            return this;
-        }
-        public String getTargetAliyunId() {
-            return this.targetAliyunId;
+        public String getSourceInstanceName() {
+            return this.sourceInstanceName;
         }
 
         public ListDistributedProductResponseBodyDataInfoItems setSourceRegion(String sourceRegion) {
@@ -167,20 +143,28 @@ public class ListDistributedProductResponseBody extends TeaModel {
             return this.sourceRegion;
         }
 
-        public ListDistributedProductResponseBodyDataInfoItems setTargetRegion(String targetRegion) {
-            this.targetRegion = targetRegion;
+        public ListDistributedProductResponseBodyDataInfoItems setSourceUid(String sourceUid) {
+            this.sourceUid = sourceUid;
             return this;
         }
-        public String getTargetRegion() {
-            return this.targetRegion;
+        public String getSourceUid() {
+            return this.sourceUid;
         }
 
-        public ListDistributedProductResponseBodyDataInfoItems setSourceInstanceName(String sourceInstanceName) {
-            this.sourceInstanceName = sourceInstanceName;
+        public ListDistributedProductResponseBodyDataInfoItems setTargetAliyunId(String targetAliyunId) {
+            this.targetAliyunId = targetAliyunId;
             return this;
         }
-        public String getSourceInstanceName() {
-            return this.sourceInstanceName;
+        public String getTargetAliyunId() {
+            return this.targetAliyunId;
+        }
+
+        public ListDistributedProductResponseBodyDataInfoItems setTargetInstanceId(String targetInstanceId) {
+            this.targetInstanceId = targetInstanceId;
+            return this;
+        }
+        public String getTargetInstanceId() {
+            return this.targetInstanceId;
         }
 
         public ListDistributedProductResponseBodyDataInfoItems setTargetInstanceName(String targetInstanceName) {
@@ -189,6 +173,22 @@ public class ListDistributedProductResponseBody extends TeaModel {
         }
         public String getTargetInstanceName() {
             return this.targetInstanceName;
+        }
+
+        public ListDistributedProductResponseBodyDataInfoItems setTargetRegion(String targetRegion) {
+            this.targetRegion = targetRegion;
+            return this;
+        }
+        public String getTargetRegion() {
+            return this.targetRegion;
+        }
+
+        public ListDistributedProductResponseBodyDataInfoItems setTargetUid(String targetUid) {
+            this.targetUid = targetUid;
+            return this;
+        }
+        public String getTargetUid() {
+            return this.targetUid;
         }
 
     }
@@ -213,23 +213,15 @@ public class ListDistributedProductResponseBody extends TeaModel {
     }
 
     public static class ListDistributedProductResponseBodyData extends TeaModel {
-        @NameInMap("Total")
-        public Integer total;
-
         @NameInMap("Info")
         public ListDistributedProductResponseBodyDataInfo info;
+
+        @NameInMap("Total")
+        public Integer total;
 
         public static ListDistributedProductResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListDistributedProductResponseBodyData self = new ListDistributedProductResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListDistributedProductResponseBodyData setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
         }
 
         public ListDistributedProductResponseBodyData setInfo(ListDistributedProductResponseBodyDataInfo info) {
@@ -238,6 +230,14 @@ public class ListDistributedProductResponseBody extends TeaModel {
         }
         public ListDistributedProductResponseBodyDataInfo getInfo() {
             return this.info;
+        }
+
+        public ListDistributedProductResponseBodyData setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
         }
 
     }

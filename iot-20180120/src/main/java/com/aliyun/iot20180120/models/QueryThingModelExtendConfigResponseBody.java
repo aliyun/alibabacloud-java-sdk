@@ -4,24 +4,48 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryThingModelExtendConfigResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryThingModelExtendConfigResponseBodyData data;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Data")
-    public QueryThingModelExtendConfigResponseBodyData data;
-
     public static QueryThingModelExtendConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryThingModelExtendConfigResponseBody self = new QueryThingModelExtendConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryThingModelExtendConfigResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryThingModelExtendConfigResponseBody setData(QueryThingModelExtendConfigResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryThingModelExtendConfigResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryThingModelExtendConfigResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public QueryThingModelExtendConfigResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class QueryThingModelExtendConfigResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public QueryThingModelExtendConfigResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryThingModelExtendConfigResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryThingModelExtendConfigResponseBody setData(QueryThingModelExtendConfigResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryThingModelExtendConfigResponseBodyData getData() {
-        return this.data;
     }
 
     public static class QueryThingModelExtendConfigResponseBodyData extends TeaModel {

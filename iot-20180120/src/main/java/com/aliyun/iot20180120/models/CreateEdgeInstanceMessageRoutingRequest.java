@@ -4,26 +4,20 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateEdgeInstanceMessageRoutingRequest extends TeaModel {
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("TopicFilter")
-    public String topicFilter;
-
-    @NameInMap("SourceType")
-    public String sourceType;
-
     @NameInMap("SourceData")
     public String sourceData;
 
-    @NameInMap("TargetType")
-    public String targetType;
+    @NameInMap("SourceType")
+    public String sourceType;
 
     @NameInMap("TargetData")
     public String targetData;
@@ -31,17 +25,15 @@ public class CreateEdgeInstanceMessageRoutingRequest extends TeaModel {
     @NameInMap("TargetIotHubQos")
     public Integer targetIotHubQos;
 
+    @NameInMap("TargetType")
+    public String targetType;
+
+    @NameInMap("TopicFilter")
+    public String topicFilter;
+
     public static CreateEdgeInstanceMessageRoutingRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEdgeInstanceMessageRoutingRequest self = new CreateEdgeInstanceMessageRoutingRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateEdgeInstanceMessageRoutingRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
     }
 
     public CreateEdgeInstanceMessageRoutingRequest setInstanceId(String instanceId) {
@@ -52,28 +44,20 @@ public class CreateEdgeInstanceMessageRoutingRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public CreateEdgeInstanceMessageRoutingRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
     public CreateEdgeInstanceMessageRoutingRequest setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
-    }
-
-    public CreateEdgeInstanceMessageRoutingRequest setTopicFilter(String topicFilter) {
-        this.topicFilter = topicFilter;
-        return this;
-    }
-    public String getTopicFilter() {
-        return this.topicFilter;
-    }
-
-    public CreateEdgeInstanceMessageRoutingRequest setSourceType(String sourceType) {
-        this.sourceType = sourceType;
-        return this;
-    }
-    public String getSourceType() {
-        return this.sourceType;
     }
 
     public CreateEdgeInstanceMessageRoutingRequest setSourceData(String sourceData) {
@@ -84,12 +68,12 @@ public class CreateEdgeInstanceMessageRoutingRequest extends TeaModel {
         return this.sourceData;
     }
 
-    public CreateEdgeInstanceMessageRoutingRequest setTargetType(String targetType) {
-        this.targetType = targetType;
+    public CreateEdgeInstanceMessageRoutingRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
         return this;
     }
-    public String getTargetType() {
-        return this.targetType;
+    public String getSourceType() {
+        return this.sourceType;
     }
 
     public CreateEdgeInstanceMessageRoutingRequest setTargetData(String targetData) {
@@ -106,6 +90,22 @@ public class CreateEdgeInstanceMessageRoutingRequest extends TeaModel {
     }
     public Integer getTargetIotHubQos() {
         return this.targetIotHubQos;
+    }
+
+    public CreateEdgeInstanceMessageRoutingRequest setTargetType(String targetType) {
+        this.targetType = targetType;
+        return this;
+    }
+    public String getTargetType() {
+        return this.targetType;
+    }
+
+    public CreateEdgeInstanceMessageRoutingRequest setTopicFilter(String topicFilter) {
+        this.topicFilter = topicFilter;
+        return this;
+    }
+    public String getTopicFilter() {
+        return this.topicFilter;
     }
 
 }
