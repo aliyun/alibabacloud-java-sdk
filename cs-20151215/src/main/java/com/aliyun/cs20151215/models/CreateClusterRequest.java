@@ -220,6 +220,10 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("region_id")
     public String regionId;
 
+    // 集群所属资源组ID
+    @NameInMap("resource_group_id")
+    public String resourceGroupId;
+
     @NameInMap("runtime")
     public Runtime runtime;
 
@@ -770,6 +774,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateClusterRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateClusterRequest setRuntime(Runtime runtime) {

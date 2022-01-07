@@ -458,6 +458,10 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         @NameInMap("data_disks")
         public java.util.List<DataDisk> dataDisks;
 
+        // 节点池期望节点数
+        @NameInMap("desired_size")
+        public Long desiredSize;
+
         // 自定义镜像
         @NameInMap("image_id")
         public String imageId;
@@ -589,6 +593,14 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         }
         public java.util.List<DataDisk> getDataDisks() {
             return this.dataDisks;
+        }
+
+        public ModifyClusterNodePoolRequestScalingGroup setDesiredSize(Long desiredSize) {
+            this.desiredSize = desiredSize;
+            return this;
+        }
+        public Long getDesiredSize() {
+            return this.desiredSize;
         }
 
         public ModifyClusterNodePoolRequestScalingGroup setImageId(String imageId) {
