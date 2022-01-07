@@ -23,7 +23,7 @@ public class XspaceNextbotInitTenantRequest extends TeaModel {
     public String tenantDesc;
 
     @NameInMap("TenantId")
-    public String tenantId;
+    public Long tenantId;
 
     @NameInMap("TenantName")
     public String tenantName;
@@ -84,11 +84,11 @@ public class XspaceNextbotInitTenantRequest extends TeaModel {
         return this.tenantDesc;
     }
 
-    public XspaceNextbotInitTenantRequest setTenantId(String tenantId) {
+    public XspaceNextbotInitTenantRequest setTenantId(Long tenantId) {
         this.tenantId = tenantId;
         return this;
     }
-    public String getTenantId() {
+    public Long getTenantId() {
         return this.tenantId;
     }
 

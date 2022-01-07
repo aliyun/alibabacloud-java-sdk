@@ -8,7 +8,7 @@ public class XspaceNextbotChatResponseBody extends TeaModel {
     public String code;
 
     @NameInMap("Data")
-    public String data;
+    public XspaceNextbotChatResponseBodyData data;
 
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
@@ -36,11 +36,11 @@ public class XspaceNextbotChatResponseBody extends TeaModel {
         return this.code;
     }
 
-    public XspaceNextbotChatResponseBody setData(String data) {
+    public XspaceNextbotChatResponseBody setData(XspaceNextbotChatResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public XspaceNextbotChatResponseBodyData getData() {
         return this.data;
     }
 
@@ -74,6 +74,58 @@ public class XspaceNextbotChatResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class XspaceNextbotChatResponseBodyData extends TeaModel {
+        @NameInMap("message")
+        public String message;
+
+        @NameInMap("messageId")
+        public String messageId;
+
+        @NameInMap("requestId")
+        public String requestId;
+
+        @NameInMap("sessionId")
+        public String sessionId;
+
+        public static XspaceNextbotChatResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            XspaceNextbotChatResponseBodyData self = new XspaceNextbotChatResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public XspaceNextbotChatResponseBodyData setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public XspaceNextbotChatResponseBodyData setMessageId(String messageId) {
+            this.messageId = messageId;
+            return this;
+        }
+        public String getMessageId() {
+            return this.messageId;
+        }
+
+        public XspaceNextbotChatResponseBodyData setRequestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+        public String getRequestId() {
+            return this.requestId;
+        }
+
+        public XspaceNextbotChatResponseBodyData setSessionId(String sessionId) {
+            this.sessionId = sessionId;
+            return this;
+        }
+        public String getSessionId() {
+            return this.sessionId;
+        }
+
     }
 
 }
