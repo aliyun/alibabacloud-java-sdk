@@ -57,6 +57,12 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         @NameInMap("EniId")
         public String eniId;
 
+        @NameInMap("ReplacedEniId")
+        public String replacedEniId;
+
+        @NameInMap("ReplacedResourceId")
+        public String replacedResourceId;
+
         @NameInMap("ResourceId")
         public String resourceId;
 
@@ -69,6 +75,9 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         @NameInMap("ZoneId")
         public String zoneId;
 
+        @NameInMap("ZoneStatus")
+        public String zoneStatus;
+
         public static ListVpcEndpointConnectionsResponseBodyConnectionsZones build(java.util.Map<String, ?> map) throws Exception {
             ListVpcEndpointConnectionsResponseBodyConnectionsZones self = new ListVpcEndpointConnectionsResponseBodyConnectionsZones();
             return TeaModel.build(map, self);
@@ -80,6 +89,22 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         }
         public String getEniId() {
             return this.eniId;
+        }
+
+        public ListVpcEndpointConnectionsResponseBodyConnectionsZones setReplacedEniId(String replacedEniId) {
+            this.replacedEniId = replacedEniId;
+            return this;
+        }
+        public String getReplacedEniId() {
+            return this.replacedEniId;
+        }
+
+        public ListVpcEndpointConnectionsResponseBodyConnectionsZones setReplacedResourceId(String replacedResourceId) {
+            this.replacedResourceId = replacedResourceId;
+            return this;
+        }
+        public String getReplacedResourceId() {
+            return this.replacedResourceId;
         }
 
         public ListVpcEndpointConnectionsResponseBodyConnectionsZones setResourceId(String resourceId) {
@@ -112,6 +137,14 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public ListVpcEndpointConnectionsResponseBodyConnectionsZones setZoneStatus(String zoneStatus) {
+            this.zoneStatus = zoneStatus;
+            return this;
+        }
+        public String getZoneStatus() {
+            return this.zoneStatus;
         }
 
     }

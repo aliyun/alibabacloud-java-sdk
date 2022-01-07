@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>privatelink20200415</artifactId>
-  <version>1.0.6</version>
+  <version>1.0.7</version>
   <packaging>jar</packaging>
   <name>privatelink20200415</name>
   <description>Alibaba Cloud Privatelink (20200415) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.0</version>
+      <version>0.2.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
