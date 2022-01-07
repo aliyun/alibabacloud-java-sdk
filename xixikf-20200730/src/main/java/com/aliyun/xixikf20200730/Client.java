@@ -3805,6 +3805,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProductValidPeriod", request.productValidPeriod);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.productVersion)) {
+            query.put("ProductVersion", request.productVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tenantDesc)) {
             query.put("TenantDesc", request.tenantDesc);
         }
@@ -3815,10 +3819,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantName)) {
             query.put("TenantName", request.tenantName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
-            query.put("Version", request.version);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
