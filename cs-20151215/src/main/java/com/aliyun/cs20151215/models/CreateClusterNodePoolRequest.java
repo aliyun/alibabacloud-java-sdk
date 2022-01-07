@@ -622,6 +622,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("deploymentset_id")
         public String deploymentsetId;
 
+        // 姐弟池期望节点数
+        @NameInMap("desired_size")
+        public Long desiredSize;
+
         // 自定义镜像。
         @NameInMap("image_id")
         public String imageId;
@@ -773,6 +777,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public String getDeploymentsetId() {
             return this.deploymentsetId;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setDesiredSize(Long desiredSize) {
+            this.desiredSize = desiredSize;
+            return this;
+        }
+        public Long getDesiredSize() {
+            return this.desiredSize;
         }
 
         public CreateClusterNodePoolRequestScalingGroup setImageId(String imageId) {

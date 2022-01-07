@@ -505,6 +505,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("region_id", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("resource_group_id", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.runtime))) {
             body.put("runtime", request.runtime);
         }
