@@ -7,14 +7,14 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetAuthorizationUrlResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetAuthorizationUrlResponseBodyData data;
 
     public static GetAuthorizationUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAuthorizationUrlResponseBody self = new GetAuthorizationUrlResponseBody();
@@ -27,6 +27,14 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetAuthorizationUrlResponseBody setData(GetAuthorizationUrlResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetAuthorizationUrlResponseBodyData getData() {
+        return this.data;
     }
 
     public GetAuthorizationUrlResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetAuthorizationUrlResponseBody setData(GetAuthorizationUrlResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetAuthorizationUrlResponseBodyData getData() {
-        return this.data;
     }
 
     public static class GetAuthorizationUrlResponseBodyData extends TeaModel {

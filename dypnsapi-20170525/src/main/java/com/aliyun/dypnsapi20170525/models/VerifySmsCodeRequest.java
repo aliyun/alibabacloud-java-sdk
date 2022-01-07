@@ -4,11 +4,11 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class VerifySmsCodeRequest extends TeaModel {
-    @NameInMap("SmsCode")
-    public String smsCode;
-
     @NameInMap("PhoneNumber")
     public String phoneNumber;
+
+    @NameInMap("SmsCode")
+    public String smsCode;
 
     @NameInMap("SmsToken")
     public String smsToken;
@@ -18,20 +18,20 @@ public class VerifySmsCodeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public VerifySmsCodeRequest setSmsCode(String smsCode) {
-        this.smsCode = smsCode;
-        return this;
-    }
-    public String getSmsCode() {
-        return this.smsCode;
-    }
-
     public VerifySmsCodeRequest setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     public String getPhoneNumber() {
         return this.phoneNumber;
+    }
+
+    public VerifySmsCodeRequest setSmsCode(String smsCode) {
+        this.smsCode = smsCode;
+        return this;
+    }
+    public String getSmsCode() {
+        return this.smsCode;
     }
 
     public VerifySmsCodeRequest setSmsToken(String smsToken) {

@@ -7,14 +7,14 @@ public class VerifyPhoneWithTokenResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("GateVerify")
+    public VerifyPhoneWithTokenResponseBodyGateVerify gateVerify;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("GateVerify")
-    public VerifyPhoneWithTokenResponseBodyGateVerify gateVerify;
 
     public static VerifyPhoneWithTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         VerifyPhoneWithTokenResponseBody self = new VerifyPhoneWithTokenResponseBody();
@@ -27,6 +27,14 @@ public class VerifyPhoneWithTokenResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public VerifyPhoneWithTokenResponseBody setGateVerify(VerifyPhoneWithTokenResponseBodyGateVerify gateVerify) {
+        this.gateVerify = gateVerify;
+        return this;
+    }
+    public VerifyPhoneWithTokenResponseBodyGateVerify getGateVerify() {
+        return this.gateVerify;
     }
 
     public VerifyPhoneWithTokenResponseBody setMessage(String message) {
@@ -45,32 +53,16 @@ public class VerifyPhoneWithTokenResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public VerifyPhoneWithTokenResponseBody setGateVerify(VerifyPhoneWithTokenResponseBodyGateVerify gateVerify) {
-        this.gateVerify = gateVerify;
-        return this;
-    }
-    public VerifyPhoneWithTokenResponseBodyGateVerify getGateVerify() {
-        return this.gateVerify;
-    }
-
     public static class VerifyPhoneWithTokenResponseBodyGateVerify extends TeaModel {
-        @NameInMap("VerifyResult")
-        public String verifyResult;
-
         @NameInMap("VerifyId")
         public String verifyId;
+
+        @NameInMap("VerifyResult")
+        public String verifyResult;
 
         public static VerifyPhoneWithTokenResponseBodyGateVerify build(java.util.Map<String, ?> map) throws Exception {
             VerifyPhoneWithTokenResponseBodyGateVerify self = new VerifyPhoneWithTokenResponseBodyGateVerify();
             return TeaModel.build(map, self);
-        }
-
-        public VerifyPhoneWithTokenResponseBodyGateVerify setVerifyResult(String verifyResult) {
-            this.verifyResult = verifyResult;
-            return this;
-        }
-        public String getVerifyResult() {
-            return this.verifyResult;
         }
 
         public VerifyPhoneWithTokenResponseBodyGateVerify setVerifyId(String verifyId) {
@@ -79,6 +71,14 @@ public class VerifyPhoneWithTokenResponseBody extends TeaModel {
         }
         public String getVerifyId() {
             return this.verifyId;
+        }
+
+        public VerifyPhoneWithTokenResponseBodyGateVerify setVerifyResult(String verifyResult) {
+            this.verifyResult = verifyResult;
+            return this;
+        }
+        public String getVerifyResult() {
+            return this.verifyResult;
         }
 
     }

@@ -7,14 +7,14 @@ public class GetSmsAuthTokensResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetSmsAuthTokensResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetSmsAuthTokensResponseBodyData data;
 
     public static GetSmsAuthTokensResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSmsAuthTokensResponseBody self = new GetSmsAuthTokensResponseBody();
@@ -27,6 +27,14 @@ public class GetSmsAuthTokensResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetSmsAuthTokensResponseBody setData(GetSmsAuthTokensResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetSmsAuthTokensResponseBodyData getData() {
+        return this.data;
     }
 
     public GetSmsAuthTokensResponseBody setMessage(String message) {
@@ -45,26 +53,18 @@ public class GetSmsAuthTokensResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetSmsAuthTokensResponseBody setData(GetSmsAuthTokensResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetSmsAuthTokensResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetSmsAuthTokensResponseBodyData extends TeaModel {
         @NameInMap("BizToken")
         public String bizToken;
 
-        @NameInMap("StsAccessKeySecret")
-        public String stsAccessKeySecret;
+        @NameInMap("ExpireTime")
+        public Long expireTime;
 
         @NameInMap("StsAccessKeyId")
         public String stsAccessKeyId;
 
-        @NameInMap("ExpireTime")
-        public Long expireTime;
+        @NameInMap("StsAccessKeySecret")
+        public String stsAccessKeySecret;
 
         @NameInMap("StsToken")
         public String stsToken;
@@ -82,12 +82,12 @@ public class GetSmsAuthTokensResponseBody extends TeaModel {
             return this.bizToken;
         }
 
-        public GetSmsAuthTokensResponseBodyData setStsAccessKeySecret(String stsAccessKeySecret) {
-            this.stsAccessKeySecret = stsAccessKeySecret;
+        public GetSmsAuthTokensResponseBodyData setExpireTime(Long expireTime) {
+            this.expireTime = expireTime;
             return this;
         }
-        public String getStsAccessKeySecret() {
-            return this.stsAccessKeySecret;
+        public Long getExpireTime() {
+            return this.expireTime;
         }
 
         public GetSmsAuthTokensResponseBodyData setStsAccessKeyId(String stsAccessKeyId) {
@@ -98,12 +98,12 @@ public class GetSmsAuthTokensResponseBody extends TeaModel {
             return this.stsAccessKeyId;
         }
 
-        public GetSmsAuthTokensResponseBodyData setExpireTime(Long expireTime) {
-            this.expireTime = expireTime;
+        public GetSmsAuthTokensResponseBodyData setStsAccessKeySecret(String stsAccessKeySecret) {
+            this.stsAccessKeySecret = stsAccessKeySecret;
             return this;
         }
-        public Long getExpireTime() {
-            return this.expireTime;
+        public String getStsAccessKeySecret() {
+            return this.stsAccessKeySecret;
         }
 
         public GetSmsAuthTokensResponseBodyData setStsToken(String stsToken) {

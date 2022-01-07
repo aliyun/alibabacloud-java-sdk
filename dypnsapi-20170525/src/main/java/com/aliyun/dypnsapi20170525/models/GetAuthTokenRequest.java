@@ -4,6 +4,9 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetAuthTokenRequest extends TeaModel {
+    @NameInMap("Origin")
+    public String origin;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,12 +19,17 @@ public class GetAuthTokenRequest extends TeaModel {
     @NameInMap("Url")
     public String url;
 
-    @NameInMap("Origin")
-    public String origin;
-
     public static GetAuthTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAuthTokenRequest self = new GetAuthTokenRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetAuthTokenRequest setOrigin(String origin) {
+        this.origin = origin;
+        return this;
+    }
+    public String getOrigin() {
+        return this.origin;
     }
 
     public GetAuthTokenRequest setOwnerId(Long ownerId) {
@@ -54,14 +62,6 @@ public class GetAuthTokenRequest extends TeaModel {
     }
     public String getUrl() {
         return this.url;
-    }
-
-    public GetAuthTokenRequest setOrigin(String origin) {
-        this.origin = origin;
-        return this;
-    }
-    public String getOrigin() {
-        return this.origin;
     }
 
 }

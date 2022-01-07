@@ -7,14 +7,14 @@ public class VerifyMobileResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("GateVerifyResultDTO")
+    public VerifyMobileResponseBodyGateVerifyResultDTO gateVerifyResultDTO;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("GateVerifyResultDTO")
-    public VerifyMobileResponseBodyGateVerifyResultDTO gateVerifyResultDTO;
 
     public static VerifyMobileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         VerifyMobileResponseBody self = new VerifyMobileResponseBody();
@@ -27,6 +27,14 @@ public class VerifyMobileResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public VerifyMobileResponseBody setGateVerifyResultDTO(VerifyMobileResponseBodyGateVerifyResultDTO gateVerifyResultDTO) {
+        this.gateVerifyResultDTO = gateVerifyResultDTO;
+        return this;
+    }
+    public VerifyMobileResponseBodyGateVerifyResultDTO getGateVerifyResultDTO() {
+        return this.gateVerifyResultDTO;
     }
 
     public VerifyMobileResponseBody setMessage(String message) {
@@ -45,32 +53,16 @@ public class VerifyMobileResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public VerifyMobileResponseBody setGateVerifyResultDTO(VerifyMobileResponseBodyGateVerifyResultDTO gateVerifyResultDTO) {
-        this.gateVerifyResultDTO = gateVerifyResultDTO;
-        return this;
-    }
-    public VerifyMobileResponseBodyGateVerifyResultDTO getGateVerifyResultDTO() {
-        return this.gateVerifyResultDTO;
-    }
-
     public static class VerifyMobileResponseBodyGateVerifyResultDTO extends TeaModel {
-        @NameInMap("VerifyResult")
-        public String verifyResult;
-
         @NameInMap("VerifyId")
         public String verifyId;
+
+        @NameInMap("VerifyResult")
+        public String verifyResult;
 
         public static VerifyMobileResponseBodyGateVerifyResultDTO build(java.util.Map<String, ?> map) throws Exception {
             VerifyMobileResponseBodyGateVerifyResultDTO self = new VerifyMobileResponseBodyGateVerifyResultDTO();
             return TeaModel.build(map, self);
-        }
-
-        public VerifyMobileResponseBodyGateVerifyResultDTO setVerifyResult(String verifyResult) {
-            this.verifyResult = verifyResult;
-            return this;
-        }
-        public String getVerifyResult() {
-            return this.verifyResult;
         }
 
         public VerifyMobileResponseBodyGateVerifyResultDTO setVerifyId(String verifyId) {
@@ -79,6 +71,14 @@ public class VerifyMobileResponseBody extends TeaModel {
         }
         public String getVerifyId() {
             return this.verifyId;
+        }
+
+        public VerifyMobileResponseBodyGateVerifyResultDTO setVerifyResult(String verifyResult) {
+            this.verifyResult = verifyResult;
+            return this;
+        }
+        public String getVerifyResult() {
+            return this.verifyResult;
         }
 
     }
