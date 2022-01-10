@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>commondriver20160712</artifactId>
-  <version>1.0.13</version>
+  <version>1.0.14</version>
   <packaging>jar</packaging>
   <name>commondriver20160712</name>
   <description>Alibaba Cloud Commondriver (20160712) SDK for Java
