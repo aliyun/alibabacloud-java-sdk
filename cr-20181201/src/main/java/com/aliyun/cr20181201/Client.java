@@ -322,6 +322,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateInstanceVpcEndpointLinkedVpcResponse createInstanceVpcEndpointLinkedVpcWithOptions(CreateInstanceVpcEndpointLinkedVpcRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableCreateDNSRecordInPvzt)) {
+            query.put("EnableCreateDNSRecordInPvzt", request.enableCreateDNSRecordInPvzt);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }

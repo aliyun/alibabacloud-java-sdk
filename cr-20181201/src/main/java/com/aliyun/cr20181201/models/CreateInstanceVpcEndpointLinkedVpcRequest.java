@@ -4,6 +4,9 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceVpcEndpointLinkedVpcRequest extends TeaModel {
+    @NameInMap("EnableCreateDNSRecordInPvzt")
+    public Boolean enableCreateDNSRecordInPvzt;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -19,6 +22,14 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends TeaModel {
     public static CreateInstanceVpcEndpointLinkedVpcRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceVpcEndpointLinkedVpcRequest self = new CreateInstanceVpcEndpointLinkedVpcRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateInstanceVpcEndpointLinkedVpcRequest setEnableCreateDNSRecordInPvzt(Boolean enableCreateDNSRecordInPvzt) {
+        this.enableCreateDNSRecordInPvzt = enableCreateDNSRecordInPvzt;
+        return this;
+    }
+    public Boolean getEnableCreateDNSRecordInPvzt() {
+        return this.enableCreateDNSRecordInPvzt;
     }
 
     public CreateInstanceVpcEndpointLinkedVpcRequest setInstanceId(String instanceId) {
