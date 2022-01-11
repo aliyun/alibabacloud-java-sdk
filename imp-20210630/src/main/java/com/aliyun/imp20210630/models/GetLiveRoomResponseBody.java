@@ -162,6 +162,10 @@ public class GetLiveRoomResponseBody extends TeaModel {
         @NameInMap("HlsUrl")
         public String hlsUrl;
 
+        // https协议的原画HLS播放地址。
+        @NameInMap("HlsUrlHttps")
+        public String hlsUrlHttps;
+
         // 直播ID。
         @NameInMap("LiveId")
         public String liveId;
@@ -169,6 +173,10 @@ public class GetLiveRoomResponseBody extends TeaModel {
         // 直播拉流地址。
         @NameInMap("LiveUrl")
         public String liveUrl;
+
+        // https协议的直播拉流地址。
+        @NameInMap("LiveUrlHttps")
+        public String liveUrlHttps;
 
         // 公告。
         @NameInMap("Notice")
@@ -181,6 +189,10 @@ public class GetLiveRoomResponseBody extends TeaModel {
         // 直播回放地址。
         @NameInMap("PlaybackUrl")
         public String playbackUrl;
+
+        // https协议的直播回放地址
+        @NameInMap("PlaybackUrlHttps")
+        public String playbackUrlHttps;
 
         // 活跃插件列表。
         @NameInMap("PluginInstanceInfoList")
@@ -197,6 +209,10 @@ public class GetLiveRoomResponseBody extends TeaModel {
         // 房间ID。
         @NameInMap("RoomId")
         public String roomId;
+
+        // rtmp协议的播放地址
+        @NameInMap("RtmpUrl")
+        public String rtmpUrl;
 
         // 直播开始时间，单位：毫秒。
         @NameInMap("StartTime")
@@ -299,6 +315,14 @@ public class GetLiveRoomResponseBody extends TeaModel {
             return this.hlsUrl;
         }
 
+        public GetLiveRoomResponseBodyResult setHlsUrlHttps(String hlsUrlHttps) {
+            this.hlsUrlHttps = hlsUrlHttps;
+            return this;
+        }
+        public String getHlsUrlHttps() {
+            return this.hlsUrlHttps;
+        }
+
         public GetLiveRoomResponseBodyResult setLiveId(String liveId) {
             this.liveId = liveId;
             return this;
@@ -313,6 +337,14 @@ public class GetLiveRoomResponseBody extends TeaModel {
         }
         public String getLiveUrl() {
             return this.liveUrl;
+        }
+
+        public GetLiveRoomResponseBodyResult setLiveUrlHttps(String liveUrlHttps) {
+            this.liveUrlHttps = liveUrlHttps;
+            return this;
+        }
+        public String getLiveUrlHttps() {
+            return this.liveUrlHttps;
         }
 
         public GetLiveRoomResponseBodyResult setNotice(String notice) {
@@ -337,6 +369,14 @@ public class GetLiveRoomResponseBody extends TeaModel {
         }
         public String getPlaybackUrl() {
             return this.playbackUrl;
+        }
+
+        public GetLiveRoomResponseBodyResult setPlaybackUrlHttps(String playbackUrlHttps) {
+            this.playbackUrlHttps = playbackUrlHttps;
+            return this;
+        }
+        public String getPlaybackUrlHttps() {
+            return this.playbackUrlHttps;
         }
 
         public GetLiveRoomResponseBodyResult setPluginInstanceInfoList(java.util.List<GetLiveRoomResponseBodyResultPluginInstanceInfoList> pluginInstanceInfoList) {
@@ -369,6 +409,14 @@ public class GetLiveRoomResponseBody extends TeaModel {
         }
         public String getRoomId() {
             return this.roomId;
+        }
+
+        public GetLiveRoomResponseBodyResult setRtmpUrl(String rtmpUrl) {
+            this.rtmpUrl = rtmpUrl;
+            return this;
+        }
+        public String getRtmpUrl() {
+            return this.rtmpUrl;
         }
 
         public GetLiveRoomResponseBodyResult setStartTime(Long startTime) {
