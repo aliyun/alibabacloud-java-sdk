@@ -65,6 +65,9 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsZoneMappings extends TeaModel {
+        @NameInMap("NetworkInterfaceId")
+        public String networkInterfaceId;
+
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -74,6 +77,14 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public static ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsZoneMappings build(java.util.Map<String, ?> map) throws Exception {
             ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsZoneMappings self = new ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsZoneMappings();
             return TeaModel.build(map, self);
+        }
+
+        public ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsZoneMappings setNetworkInterfaceId(String networkInterfaceId) {
+            this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+        public String getNetworkInterfaceId() {
+            return this.networkInterfaceId;
         }
 
         public ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsZoneMappings setVSwitchId(String vSwitchId) {
