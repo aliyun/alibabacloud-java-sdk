@@ -99,11 +99,20 @@ public class ListAllHotLineSkillGroupsResponseBody extends TeaModel {
         @NameInMap("AccountName")
         public String accountName;
 
+        @NameInMap("Acid")
+        public String acid;
+
         @NameInMap("AgentId")
         public Long agentId;
 
+        @NameInMap("ConnId")
+        public String connId;
+
         @NameInMap("DisplayName")
         public String displayName;
+
+        @NameInMap("JobId")
+        public String jobId;
 
         @NameInMap("Status")
         public Long status;
@@ -121,6 +130,14 @@ public class ListAllHotLineSkillGroupsResponseBody extends TeaModel {
             return this.accountName;
         }
 
+        public ListAllHotLineSkillGroupsResponseBodyDataSkillGroupAgentsAgents setAcid(String acid) {
+            this.acid = acid;
+            return this;
+        }
+        public String getAcid() {
+            return this.acid;
+        }
+
         public ListAllHotLineSkillGroupsResponseBodyDataSkillGroupAgentsAgents setAgentId(Long agentId) {
             this.agentId = agentId;
             return this;
@@ -129,12 +146,28 @@ public class ListAllHotLineSkillGroupsResponseBody extends TeaModel {
             return this.agentId;
         }
 
+        public ListAllHotLineSkillGroupsResponseBodyDataSkillGroupAgentsAgents setConnId(String connId) {
+            this.connId = connId;
+            return this;
+        }
+        public String getConnId() {
+            return this.connId;
+        }
+
         public ListAllHotLineSkillGroupsResponseBodyDataSkillGroupAgentsAgents setDisplayName(String displayName) {
             this.displayName = displayName;
             return this;
         }
         public String getDisplayName() {
             return this.displayName;
+        }
+
+        public ListAllHotLineSkillGroupsResponseBodyDataSkillGroupAgentsAgents setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
         }
 
         public ListAllHotLineSkillGroupsResponseBodyDataSkillGroupAgentsAgents setStatus(Long status) {
