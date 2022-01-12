@@ -123,6 +123,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         @NameInMap("Transform")
         public String transform;
 
+        @NameInMap("UpdateAllowedTransforms")
+        public java.util.List<String> updateAllowedTransforms;
+
         public static GetFeatureDetailsResponseBodyTerraformSupportedVersions build(java.util.Map<String, ?> map) throws Exception {
             GetFeatureDetailsResponseBodyTerraformSupportedVersions self = new GetFeatureDetailsResponseBodyTerraformSupportedVersions();
             return TeaModel.build(map, self);
@@ -150,6 +153,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
         public String getTransform() {
             return this.transform;
+        }
+
+        public GetFeatureDetailsResponseBodyTerraformSupportedVersions setUpdateAllowedTransforms(java.util.List<String> updateAllowedTransforms) {
+            this.updateAllowedTransforms = updateAllowedTransforms;
+            return this;
+        }
+        public java.util.List<String> getUpdateAllowedTransforms() {
+            return this.updateAllowedTransforms;
         }
 
     }
