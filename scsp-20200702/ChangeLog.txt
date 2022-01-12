@@ -1,3 +1,6 @@
+2022-01-12 Version: 1.9.16
+- Publish agent monitor Servicer.
+
 2021-12-21 Version: 1.9.15
 - Publish Servicer And Department api.
 
