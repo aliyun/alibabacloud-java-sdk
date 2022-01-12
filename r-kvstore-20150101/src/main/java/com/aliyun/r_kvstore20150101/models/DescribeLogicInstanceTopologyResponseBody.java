@@ -4,9 +4,6 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,17 +13,12 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     @NameInMap("RedisShardList")
     public DescribeLogicInstanceTopologyResponseBodyRedisShardList redisShardList;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeLogicInstanceTopologyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogicInstanceTopologyResponseBody self = new DescribeLogicInstanceTopologyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLogicInstanceTopologyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLogicInstanceTopologyResponseBody setInstanceId(String instanceId) {
@@ -53,18 +45,26 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         return this.redisShardList;
     }
 
+    public DescribeLogicInstanceTopologyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo extends TeaModel {
-        @NameInMap("NodeId")
-        public String nodeId;
-
-        @NameInMap("Connection")
-        public String connection;
-
         @NameInMap("Bandwidth")
         public String bandwidth;
 
         @NameInMap("Capacity")
         public String capacity;
+
+        @NameInMap("Connection")
+        public String connection;
+
+        @NameInMap("NodeId")
+        public String nodeId;
 
         @NameInMap("NodeType")
         public String nodeType;
@@ -72,22 +72,6 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         public static DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo self = new DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo setNodeId(String nodeId) {
-            this.nodeId = nodeId;
-            return this;
-        }
-        public String getNodeId() {
-            return this.nodeId;
-        }
-
-        public DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo setConnection(String connection) {
-            this.connection = connection;
-            return this;
-        }
-        public String getConnection() {
-            return this.connection;
         }
 
         public DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo setBandwidth(String bandwidth) {
@@ -104,6 +88,22 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         }
         public String getCapacity() {
             return this.capacity;
+        }
+
+        public DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo setConnection(String connection) {
+            this.connection = connection;
+            return this;
+        }
+        public String getConnection() {
+            return this.connection;
+        }
+
+        public DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
         }
 
         public DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo setNodeType(String nodeType) {
@@ -136,17 +136,17 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo extends TeaModel {
-        @NameInMap("NodeId")
-        public String nodeId;
-
-        @NameInMap("Connection")
-        public String connection;
-
         @NameInMap("Bandwidth")
         public String bandwidth;
 
         @NameInMap("Capacity")
         public String capacity;
+
+        @NameInMap("Connection")
+        public String connection;
+
+        @NameInMap("NodeId")
+        public String nodeId;
 
         @NameInMap("NodeType")
         public String nodeType;
@@ -154,22 +154,6 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         public static DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo self = new DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo setNodeId(String nodeId) {
-            this.nodeId = nodeId;
-            return this;
-        }
-        public String getNodeId() {
-            return this.nodeId;
-        }
-
-        public DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo setConnection(String connection) {
-            this.connection = connection;
-            return this;
-        }
-        public String getConnection() {
-            return this.connection;
         }
 
         public DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo setBandwidth(String bandwidth) {
@@ -186,6 +170,22 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         }
         public String getCapacity() {
             return this.capacity;
+        }
+
+        public DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo setConnection(String connection) {
+            this.connection = connection;
+            return this;
+        }
+        public String getConnection() {
+            return this.connection;
+        }
+
+        public DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
         }
 
         public DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo setNodeType(String nodeType) {

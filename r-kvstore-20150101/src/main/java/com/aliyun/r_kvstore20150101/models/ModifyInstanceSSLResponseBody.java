@@ -4,11 +4,11 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceSSLResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TaskId")
     public String taskId;
@@ -18,20 +18,20 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyInstanceSSLResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ModifyInstanceSSLResponseBody setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyInstanceSSLResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ModifyInstanceSSLResponseBody setTaskId(String taskId) {

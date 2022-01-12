@@ -4,23 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Items")
     public DescribeSecurityGroupConfigurationResponseBodyItems items;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeSecurityGroupConfigurationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityGroupConfigurationResponseBody self = new DescribeSecurityGroupConfigurationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSecurityGroupConfigurationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeSecurityGroupConfigurationResponseBody setItems(DescribeSecurityGroupConfigurationResponseBodyItems items) {
@@ -31,19 +23,35 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         return this.items;
     }
 
+    public DescribeSecurityGroupConfigurationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation extends TeaModel {
+        @NameInMap("NetType")
+        public String netType;
+
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
-        @NameInMap("NetType")
-        public String netType;
-
         public static DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation self = new DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation setNetType(String netType) {
+            this.netType = netType;
+            return this;
+        }
+        public String getNetType() {
+            return this.netType;
         }
 
         public DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation setRegionId(String regionId) {
@@ -60,14 +68,6 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         }
         public String getSecurityGroupId() {
             return this.securityGroupId;
-        }
-
-        public DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation setNetType(String netType) {
-            this.netType = netType;
-            return this;
-        }
-        public String getNetType() {
-            return this.netType;
         }
 
     }

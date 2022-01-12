@@ -4,23 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class EnableAdditionalBandwidthResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OrderId")
     public String orderId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static EnableAdditionalBandwidthResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EnableAdditionalBandwidthResponseBody self = new EnableAdditionalBandwidthResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public EnableAdditionalBandwidthResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public EnableAdditionalBandwidthResponseBody setOrderId(String orderId) {
@@ -29,6 +21,14 @@ public class EnableAdditionalBandwidthResponseBody extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public EnableAdditionalBandwidthResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

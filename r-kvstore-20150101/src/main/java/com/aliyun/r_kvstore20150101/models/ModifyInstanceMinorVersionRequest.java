@@ -4,8 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceMinorVersionRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("EffectiveTime")
+    public String effectiveTime;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("Minorversion")
+    public String minorversion;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,29 +25,44 @@ public class ModifyInstanceMinorVersionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("Minorversion")
-    public String minorversion;
-
-    @NameInMap("EffectiveTime")
-    public String effectiveTime;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifyInstanceMinorVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceMinorVersionRequest self = new ModifyInstanceMinorVersionRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyInstanceMinorVersionRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyInstanceMinorVersionRequest setEffectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getEffectiveTime() {
+        return this.effectiveTime;
+    }
+
+    public ModifyInstanceMinorVersionRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyInstanceMinorVersionRequest setMinorversion(String minorversion) {
+        this.minorversion = minorversion;
+        return this;
+    }
+    public String getMinorversion() {
+        return this.minorversion;
+    }
+
+    public ModifyInstanceMinorVersionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyInstanceMinorVersionRequest setOwnerId(Long ownerId) {
@@ -65,36 +89,12 @@ public class ModifyInstanceMinorVersionRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyInstanceMinorVersionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyInstanceMinorVersionRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyInstanceMinorVersionRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ModifyInstanceMinorVersionRequest setMinorversion(String minorversion) {
-        this.minorversion = minorversion;
-        return this;
-    }
-    public String getMinorversion() {
-        return this.minorversion;
-    }
-
-    public ModifyInstanceMinorVersionRequest setEffectiveTime(String effectiveTime) {
-        this.effectiveTime = effectiveTime;
-        return this;
-    }
-    public String getEffectiveTime() {
-        return this.effectiveTime;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

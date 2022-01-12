@@ -4,8 +4,8 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Instances")
+    public DescribeInstancesResponseBodyInstances instances;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,23 +13,23 @@ public class DescribeInstancesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Instances")
-    public DescribeInstancesResponseBodyInstances instances;
 
     public static DescribeInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesResponseBody self = new DescribeInstancesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstancesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeInstancesResponseBody setInstances(DescribeInstancesResponseBodyInstances instances) {
+        this.instances = instances;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public DescribeInstancesResponseBodyInstances getInstances() {
+        return this.instances;
     }
 
     public DescribeInstancesResponseBody setPageNumber(Integer pageNumber) {
@@ -48,20 +48,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeInstancesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeInstancesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public DescribeInstancesResponseBody setInstances(DescribeInstancesResponseBodyInstances instances) {
-        this.instances = instances;
-        return this;
-    }
-    public DescribeInstancesResponseBodyInstances getInstances() {
-        return this.instances;
     }
 
     public static class DescribeInstancesResponseBodyInstancesKVStoreInstanceTagsTag extends TeaModel {
@@ -114,8 +114,50 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesKVStoreInstance extends TeaModel {
-        @NameInMap("ReplacateId")
-        public String replacateId;
+        @NameInMap("ArchitectureType")
+        public String architectureType;
+
+        @NameInMap("Bandwidth")
+        public Long bandwidth;
+
+        @NameInMap("Capacity")
+        public Long capacity;
+
+        @NameInMap("ChargeType")
+        public String chargeType;
+
+        @NameInMap("Config")
+        public String config;
+
+        @NameInMap("ConnectionDomain")
+        public String connectionDomain;
+
+        @NameInMap("ConnectionMode")
+        public String connectionMode;
+
+        @NameInMap("Connections")
+        public Long connections;
+
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("DestroyTime")
+        public String destroyTime;
+
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("EngineVersion")
+        public String engineVersion;
+
+        @NameInMap("GlobalInstanceId")
+        public String globalInstanceId;
+
+        @NameInMap("HasRenewChangeOrder")
+        public Boolean hasRenewChangeOrder;
+
+        @NameInMap("InstanceClass")
+        public String instanceClass;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -123,77 +165,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceName")
         public String instanceName;
 
-        @NameInMap("SearchKey")
-        public String searchKey;
-
-        @NameInMap("ConnectionDomain")
-        public String connectionDomain;
-
-        @NameInMap("Port")
-        public Long port;
-
-        @NameInMap("UserName")
-        public String userName;
-
         @NameInMap("InstanceStatus")
         public String instanceStatus;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("Capacity")
-        public Long capacity;
-
-        @NameInMap("InstanceClass")
-        public String instanceClass;
-
-        @NameInMap("QPS")
-        public Long QPS;
-
-        @NameInMap("Bandwidth")
-        public Long bandwidth;
-
-        @NameInMap("Connections")
-        public Long connections;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        @NameInMap("Config")
-        public String config;
-
-        @NameInMap("ChargeType")
-        public String chargeType;
-
-        @NameInMap("NetworkType")
-        public String networkType;
-
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
-
-        @NameInMap("PrivateIp")
-        public String privateIp;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("EndTime")
-        public String endTime;
-
-        @NameInMap("HasRenewChangeOrder")
-        public Boolean hasRenewChangeOrder;
-
-        @NameInMap("IsRds")
-        public Boolean isRds;
 
         @NameInMap("InstanceType")
         public String instanceType;
 
-        @NameInMap("ArchitectureType")
-        public String architectureType;
+        @NameInMap("IsRds")
+        public Boolean isRds;
+
+        @NameInMap("NetworkType")
+        public String networkType;
 
         @NameInMap("NodeType")
         public String nodeType;
@@ -201,17 +183,29 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("PackageType")
         public String packageType;
 
-        @NameInMap("EngineVersion")
-        public String engineVersion;
+        @NameInMap("Port")
+        public Long port;
 
-        @NameInMap("DestroyTime")
-        public String destroyTime;
+        @NameInMap("PrivateIp")
+        public String privateIp;
 
-        @NameInMap("ConnectionMode")
-        public String connectionMode;
+        @NameInMap("QPS")
+        public Long QPS;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("ReplacateId")
+        public String replacateId;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("SearchKey")
+        public String searchKey;
+
+        @NameInMap("SecondaryZoneId")
+        public String secondaryZoneId;
 
         @NameInMap("ShardCount")
         public Integer shardCount;
@@ -219,17 +213,141 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Tags")
         public DescribeInstancesResponseBodyInstancesKVStoreInstanceTags tags;
 
+        @NameInMap("UserName")
+        public String userName;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static DescribeInstancesResponseBodyInstancesKVStoreInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesKVStoreInstance self = new DescribeInstancesResponseBodyInstancesKVStoreInstance();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setReplacateId(String replacateId) {
-            this.replacateId = replacateId;
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setArchitectureType(String architectureType) {
+            this.architectureType = architectureType;
             return this;
         }
-        public String getReplacateId() {
-            return this.replacateId;
+        public String getArchitectureType() {
+            return this.architectureType;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setBandwidth(Long bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public Long getBandwidth() {
+            return this.bandwidth;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setCapacity(Long capacity) {
+            this.capacity = capacity;
+            return this;
+        }
+        public Long getCapacity() {
+            return this.capacity;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setConnectionDomain(String connectionDomain) {
+            this.connectionDomain = connectionDomain;
+            return this;
+        }
+        public String getConnectionDomain() {
+            return this.connectionDomain;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setConnectionMode(String connectionMode) {
+            this.connectionMode = connectionMode;
+            return this;
+        }
+        public String getConnectionMode() {
+            return this.connectionMode;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setConnections(Long connections) {
+            this.connections = connections;
+            return this;
+        }
+        public Long getConnections() {
+            return this.connections;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setDestroyTime(String destroyTime) {
+            this.destroyTime = destroyTime;
+            return this;
+        }
+        public String getDestroyTime() {
+            return this.destroyTime;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setEngineVersion(String engineVersion) {
+            this.engineVersion = engineVersion;
+            return this;
+        }
+        public String getEngineVersion() {
+            return this.engineVersion;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setGlobalInstanceId(String globalInstanceId) {
+            this.globalInstanceId = globalInstanceId;
+            return this;
+        }
+        public String getGlobalInstanceId() {
+            return this.globalInstanceId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setHasRenewChangeOrder(Boolean hasRenewChangeOrder) {
+            this.hasRenewChangeOrder = hasRenewChangeOrder;
+            return this;
+        }
+        public Boolean getHasRenewChangeOrder() {
+            return this.hasRenewChangeOrder;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setInstanceClass(String instanceClass) {
+            this.instanceClass = instanceClass;
+            return this;
+        }
+        public String getInstanceClass() {
+            return this.instanceClass;
         }
 
         public DescribeInstancesResponseBodyInstancesKVStoreInstance setInstanceId(String instanceId) {
@@ -248,180 +366,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.instanceName;
         }
 
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setSearchKey(String searchKey) {
-            this.searchKey = searchKey;
-            return this;
-        }
-        public String getSearchKey() {
-            return this.searchKey;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setConnectionDomain(String connectionDomain) {
-            this.connectionDomain = connectionDomain;
-            return this;
-        }
-        public String getConnectionDomain() {
-            return this.connectionDomain;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setPort(Long port) {
-            this.port = port;
-            return this;
-        }
-        public Long getPort() {
-            return this.port;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
-        }
-
         public DescribeInstancesResponseBodyInstancesKVStoreInstance setInstanceStatus(String instanceStatus) {
             this.instanceStatus = instanceStatus;
             return this;
         }
         public String getInstanceStatus() {
             return this.instanceStatus;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setCapacity(Long capacity) {
-            this.capacity = capacity;
-            return this;
-        }
-        public Long getCapacity() {
-            return this.capacity;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setInstanceClass(String instanceClass) {
-            this.instanceClass = instanceClass;
-            return this;
-        }
-        public String getInstanceClass() {
-            return this.instanceClass;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setQPS(Long QPS) {
-            this.QPS = QPS;
-            return this;
-        }
-        public Long getQPS() {
-            return this.QPS;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setBandwidth(Long bandwidth) {
-            this.bandwidth = bandwidth;
-            return this;
-        }
-        public Long getBandwidth() {
-            return this.bandwidth;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setConnections(Long connections) {
-            this.connections = connections;
-            return this;
-        }
-        public Long getConnections() {
-            return this.connections;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setConfig(String config) {
-            this.config = config;
-            return this;
-        }
-        public String getConfig() {
-            return this.config;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setChargeType(String chargeType) {
-            this.chargeType = chargeType;
-            return this;
-        }
-        public String getChargeType() {
-            return this.chargeType;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setNetworkType(String networkType) {
-            this.networkType = networkType;
-            return this;
-        }
-        public String getNetworkType() {
-            return this.networkType;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setPrivateIp(String privateIp) {
-            this.privateIp = privateIp;
-            return this;
-        }
-        public String getPrivateIp() {
-            return this.privateIp;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setHasRenewChangeOrder(Boolean hasRenewChangeOrder) {
-            this.hasRenewChangeOrder = hasRenewChangeOrder;
-            return this;
-        }
-        public Boolean getHasRenewChangeOrder() {
-            return this.hasRenewChangeOrder;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setIsRds(Boolean isRds) {
-            this.isRds = isRds;
-            return this;
-        }
-        public Boolean getIsRds() {
-            return this.isRds;
         }
 
         public DescribeInstancesResponseBodyInstancesKVStoreInstance setInstanceType(String instanceType) {
@@ -432,12 +382,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.instanceType;
         }
 
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setArchitectureType(String architectureType) {
-            this.architectureType = architectureType;
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setIsRds(Boolean isRds) {
+            this.isRds = isRds;
             return this;
         }
-        public String getArchitectureType() {
-            return this.architectureType;
+        public Boolean getIsRds() {
+            return this.isRds;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
         }
 
         public DescribeInstancesResponseBodyInstancesKVStoreInstance setNodeType(String nodeType) {
@@ -456,28 +414,44 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.packageType;
         }
 
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setEngineVersion(String engineVersion) {
-            this.engineVersion = engineVersion;
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setPort(Long port) {
+            this.port = port;
             return this;
         }
-        public String getEngineVersion() {
-            return this.engineVersion;
+        public Long getPort() {
+            return this.port;
         }
 
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setDestroyTime(String destroyTime) {
-            this.destroyTime = destroyTime;
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setPrivateIp(String privateIp) {
+            this.privateIp = privateIp;
             return this;
         }
-        public String getDestroyTime() {
-            return this.destroyTime;
+        public String getPrivateIp() {
+            return this.privateIp;
         }
 
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setConnectionMode(String connectionMode) {
-            this.connectionMode = connectionMode;
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setQPS(Long QPS) {
+            this.QPS = QPS;
             return this;
         }
-        public String getConnectionMode() {
-            return this.connectionMode;
+        public Long getQPS() {
+            return this.QPS;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setReplacateId(String replacateId) {
+            this.replacateId = replacateId;
+            return this;
+        }
+        public String getReplacateId() {
+            return this.replacateId;
         }
 
         public DescribeInstancesResponseBodyInstancesKVStoreInstance setResourceGroupId(String resourceGroupId) {
@@ -486,6 +460,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setSearchKey(String searchKey) {
+            this.searchKey = searchKey;
+            return this;
+        }
+        public String getSearchKey() {
+            return this.searchKey;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setSecondaryZoneId(String secondaryZoneId) {
+            this.secondaryZoneId = secondaryZoneId;
+            return this;
+        }
+        public String getSecondaryZoneId() {
+            return this.secondaryZoneId;
         }
 
         public DescribeInstancesResponseBodyInstancesKVStoreInstance setShardCount(Integer shardCount) {
@@ -502,6 +492,38 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesKVStoreInstanceTags getTags() {
             return this.tags;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

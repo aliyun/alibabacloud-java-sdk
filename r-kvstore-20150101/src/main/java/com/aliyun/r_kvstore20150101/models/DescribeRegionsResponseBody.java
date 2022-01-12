@@ -4,23 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("RegionIds")
     public DescribeRegionsResponseBodyRegionIds regionIds;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsResponseBody self = new DescribeRegionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRegionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeRegionsResponseBody setRegionIds(DescribeRegionsResponseBodyRegionIds regionIds) {
@@ -29,6 +21,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
     public DescribeRegionsResponseBodyRegionIds getRegionIds() {
         return this.regionIds;
+    }
+
+    public DescribeRegionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeRegionsResponseBodyRegionIdsKVStoreRegionZoneIdList extends TeaModel {
@@ -51,40 +51,24 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionIdsKVStoreRegion extends TeaModel {
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("ZoneIds")
-        public String zoneIds;
-
         @NameInMap("LocalName")
         public String localName;
 
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("ZoneIdList")
         public DescribeRegionsResponseBodyRegionIdsKVStoreRegionZoneIdList zoneIdList;
+
+        @NameInMap("ZoneIds")
+        public String zoneIds;
 
         public static DescribeRegionsResponseBodyRegionIdsKVStoreRegion build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegionIdsKVStoreRegion self = new DescribeRegionsResponseBodyRegionIdsKVStoreRegion();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRegionsResponseBodyRegionIdsKVStoreRegion setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeRegionsResponseBodyRegionIdsKVStoreRegion setZoneIds(String zoneIds) {
-            this.zoneIds = zoneIds;
-            return this;
-        }
-        public String getZoneIds() {
-            return this.zoneIds;
         }
 
         public DescribeRegionsResponseBodyRegionIdsKVStoreRegion setLocalName(String localName) {
@@ -103,12 +87,28 @@ public class DescribeRegionsResponseBody extends TeaModel {
             return this.regionEndpoint;
         }
 
+        public DescribeRegionsResponseBodyRegionIdsKVStoreRegion setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
         public DescribeRegionsResponseBodyRegionIdsKVStoreRegion setZoneIdList(DescribeRegionsResponseBodyRegionIdsKVStoreRegionZoneIdList zoneIdList) {
             this.zoneIdList = zoneIdList;
             return this;
         }
         public DescribeRegionsResponseBodyRegionIdsKVStoreRegionZoneIdList getZoneIdList() {
             return this.zoneIdList;
+        }
+
+        public DescribeRegionsResponseBodyRegionIdsKVStoreRegion setZoneIds(String zoneIds) {
+            this.zoneIds = zoneIds;
+            return this;
+        }
+        public String getZoneIds() {
+            return this.zoneIds;
         }
 
     }

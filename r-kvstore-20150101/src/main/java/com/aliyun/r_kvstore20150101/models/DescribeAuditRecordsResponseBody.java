@@ -4,8 +4,14 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuditRecordsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("InstanceName")
+    public String instanceName;
+
+    @NameInMap("Items")
+    public DescribeAuditRecordsResponseBodyItems items;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,32 +19,42 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
-
-    @NameInMap("InstanceName")
-    public String instanceName;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("Items")
-    public DescribeAuditRecordsResponseBodyItems items;
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     public static DescribeAuditRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAuditRecordsResponseBody self = new DescribeAuditRecordsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAuditRecordsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeAuditRecordsResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeAuditRecordsResponseBody setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    public DescribeAuditRecordsResponseBody setItems(DescribeAuditRecordsResponseBodyItems items) {
+        this.items = items;
+        return this;
+    }
+    public DescribeAuditRecordsResponseBodyItems getItems() {
+        return this.items;
     }
 
     public DescribeAuditRecordsResponseBody setPageNumber(Integer pageNumber) {
@@ -57,20 +73,12 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeAuditRecordsResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
+    public DescribeAuditRecordsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
-    }
-
-    public DescribeAuditRecordsResponseBody setInstanceName(String instanceName) {
-        this.instanceName = instanceName;
-        return this;
-    }
-    public String getInstanceName() {
-        return this.instanceName;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeAuditRecordsResponseBody setStartTime(String startTime) {
@@ -81,31 +89,32 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         return this.startTime;
     }
 
-    public DescribeAuditRecordsResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeAuditRecordsResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeAuditRecordsResponseBody setItems(DescribeAuditRecordsResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeAuditRecordsResponseBodyItems getItems() {
-        return this.items;
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public static class DescribeAuditRecordsResponseBodyItemsSQL extends TeaModel {
-        @NameInMap("HostAddress")
-        public String hostAddress;
+        @NameInMap("AccountName")
+        public String accountName;
 
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        @NameInMap("ExecuteTime")
+        public String executeTime;
+
+        @NameInMap("HostAddress")
+        public String hostAddress;
+
         @NameInMap("IPAddress")
         public String IPAddress;
+
+        @NameInMap("NodeId")
+        public String nodeId;
 
         @NameInMap("SQLText")
         public String SQLText;
@@ -116,23 +125,17 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         @NameInMap("TotalExecutionTimes")
         public String totalExecutionTimes;
 
-        @NameInMap("ExecuteTime")
-        public String executeTime;
-
-        @NameInMap("AccountName")
-        public String accountName;
-
         public static DescribeAuditRecordsResponseBodyItemsSQL build(java.util.Map<String, ?> map) throws Exception {
             DescribeAuditRecordsResponseBodyItemsSQL self = new DescribeAuditRecordsResponseBodyItemsSQL();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAuditRecordsResponseBodyItemsSQL setHostAddress(String hostAddress) {
-            this.hostAddress = hostAddress;
+        public DescribeAuditRecordsResponseBodyItemsSQL setAccountName(String accountName) {
+            this.accountName = accountName;
             return this;
         }
-        public String getHostAddress() {
-            return this.hostAddress;
+        public String getAccountName() {
+            return this.accountName;
         }
 
         public DescribeAuditRecordsResponseBodyItemsSQL setDatabaseName(String databaseName) {
@@ -143,12 +146,36 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             return this.databaseName;
         }
 
+        public DescribeAuditRecordsResponseBodyItemsSQL setExecuteTime(String executeTime) {
+            this.executeTime = executeTime;
+            return this;
+        }
+        public String getExecuteTime() {
+            return this.executeTime;
+        }
+
+        public DescribeAuditRecordsResponseBodyItemsSQL setHostAddress(String hostAddress) {
+            this.hostAddress = hostAddress;
+            return this;
+        }
+        public String getHostAddress() {
+            return this.hostAddress;
+        }
+
         public DescribeAuditRecordsResponseBodyItemsSQL setIPAddress(String IPAddress) {
             this.IPAddress = IPAddress;
             return this;
         }
         public String getIPAddress() {
             return this.IPAddress;
+        }
+
+        public DescribeAuditRecordsResponseBodyItemsSQL setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
         }
 
         public DescribeAuditRecordsResponseBodyItemsSQL setSQLText(String SQLText) {
@@ -173,22 +200,6 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
         public String getTotalExecutionTimes() {
             return this.totalExecutionTimes;
-        }
-
-        public DescribeAuditRecordsResponseBodyItemsSQL setExecuteTime(String executeTime) {
-            this.executeTime = executeTime;
-            return this;
-        }
-        public String getExecuteTime() {
-            return this.executeTime;
-        }
-
-        public DescribeAuditRecordsResponseBodyItemsSQL setAccountName(String accountName) {
-            this.accountName = accountName;
-            return this;
-        }
-        public String getAccountName() {
-            return this.accountName;
         }
 
     }

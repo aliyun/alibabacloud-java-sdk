@@ -4,11 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeIntranetAttributeRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,26 +22,28 @@ public class DescribeIntranetAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DescribeIntranetAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeIntranetAttributeRequest self = new DescribeIntranetAttributeRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeIntranetAttributeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeIntranetAttributeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeIntranetAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeIntranetAttributeRequest setOwnerId(Long ownerId) {
@@ -44,6 +52,14 @@ public class DescribeIntranetAttributeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeIntranetAttributeRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeIntranetAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -62,28 +78,12 @@ public class DescribeIntranetAttributeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeIntranetAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeIntranetAttributeRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeIntranetAttributeRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DescribeIntranetAttributeRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

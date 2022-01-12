@@ -3,21 +3,21 @@ package com.aliyun.r_kvstore20150101.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyUserClusterHostResponse extends TeaModel {
+public class DescribeEncryptionKeyResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public ModifyUserClusterHostResponseBody body;
+    public DescribeEncryptionKeyResponseBody body;
 
-    public static ModifyUserClusterHostResponse build(java.util.Map<String, ?> map) throws Exception {
-        ModifyUserClusterHostResponse self = new ModifyUserClusterHostResponse();
+    public static DescribeEncryptionKeyResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeEncryptionKeyResponse self = new DescribeEncryptionKeyResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyUserClusterHostResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeEncryptionKeyResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class ModifyUserClusterHostResponse extends TeaModel {
         return this.headers;
     }
 
-    public ModifyUserClusterHostResponse setBody(ModifyUserClusterHostResponseBody body) {
+    public DescribeEncryptionKeyResponse setBody(DescribeEncryptionKeyResponseBody body) {
         this.body = body;
         return this;
     }
-    public ModifyUserClusterHostResponseBody getBody() {
+    public DescribeEncryptionKeyResponseBody getBody() {
         return this.body;
     }
 

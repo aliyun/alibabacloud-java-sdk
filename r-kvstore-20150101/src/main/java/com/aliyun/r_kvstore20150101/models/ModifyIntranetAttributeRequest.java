@@ -4,8 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyIntranetAttributeRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("BandWidth")
+    public Long bandWidth;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("NodeId")
+    public String nodeId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,29 +25,44 @@ public class ModifyIntranetAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("BandWidth")
-    public Long bandWidth;
-
-    @NameInMap("NodeId")
-    public String nodeId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifyIntranetAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyIntranetAttributeRequest self = new ModifyIntranetAttributeRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyIntranetAttributeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyIntranetAttributeRequest setBandWidth(Long bandWidth) {
+        this.bandWidth = bandWidth;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public Long getBandWidth() {
+        return this.bandWidth;
+    }
+
+    public ModifyIntranetAttributeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyIntranetAttributeRequest setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public String getNodeId() {
+        return this.nodeId;
+    }
+
+    public ModifyIntranetAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyIntranetAttributeRequest setOwnerId(Long ownerId) {
@@ -65,36 +89,12 @@ public class ModifyIntranetAttributeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyIntranetAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyIntranetAttributeRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyIntranetAttributeRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ModifyIntranetAttributeRequest setBandWidth(Long bandWidth) {
-        this.bandWidth = bandWidth;
-        return this;
-    }
-    public Long getBandWidth() {
-        return this.bandWidth;
-    }
-
-    public ModifyIntranetAttributeRequest setNodeId(String nodeId) {
-        this.nodeId = nodeId;
-        return this;
-    }
-    public String getNodeId() {
-        return this.nodeId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

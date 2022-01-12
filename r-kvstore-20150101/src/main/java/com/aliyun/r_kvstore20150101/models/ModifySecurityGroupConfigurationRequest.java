@@ -4,8 +4,11 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifySecurityGroupConfigurationRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,26 +19,31 @@ public class ModifySecurityGroupConfigurationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifySecurityGroupConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySecurityGroupConfigurationRequest self = new ModifySecurityGroupConfigurationRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifySecurityGroupConfigurationRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifySecurityGroupConfigurationRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifySecurityGroupConfigurationRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifySecurityGroupConfigurationRequest setOwnerId(Long ownerId) {
@@ -62,28 +70,20 @@ public class ModifySecurityGroupConfigurationRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifySecurityGroupConfigurationRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifySecurityGroupConfigurationRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
     public ModifySecurityGroupConfigurationRequest setSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public ModifySecurityGroupConfigurationRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

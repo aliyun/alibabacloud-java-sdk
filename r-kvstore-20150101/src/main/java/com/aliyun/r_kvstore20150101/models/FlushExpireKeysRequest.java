@@ -4,8 +4,14 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class FlushExpireKeysRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("EffectiveTime")
+    public String effectiveTime;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,26 +22,36 @@ public class FlushExpireKeysRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("EffectiveTime")
-    public String effectiveTime;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static FlushExpireKeysRequest build(java.util.Map<String, ?> map) throws Exception {
         FlushExpireKeysRequest self = new FlushExpireKeysRequest();
         return TeaModel.build(map, self);
     }
 
-    public FlushExpireKeysRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public FlushExpireKeysRequest setEffectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getEffectiveTime() {
+        return this.effectiveTime;
+    }
+
+    public FlushExpireKeysRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public FlushExpireKeysRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public FlushExpireKeysRequest setOwnerId(Long ownerId) {
@@ -62,28 +78,12 @@ public class FlushExpireKeysRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public FlushExpireKeysRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public FlushExpireKeysRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public FlushExpireKeysRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public FlushExpireKeysRequest setEffectiveTime(String effectiveTime) {
-        this.effectiveTime = effectiveTime;
-        return this;
-    }
-    public String getEffectiveTime() {
-        return this.effectiveTime;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

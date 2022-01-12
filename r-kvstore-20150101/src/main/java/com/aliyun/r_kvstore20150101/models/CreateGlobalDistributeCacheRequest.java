@@ -4,8 +4,8 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class CreateGlobalDistributeCacheRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,8 +16,8 @@ public class CreateGlobalDistributeCacheRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("SeedSubInstanceId")
     public String seedSubInstanceId;
@@ -27,12 +27,12 @@ public class CreateGlobalDistributeCacheRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateGlobalDistributeCacheRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public CreateGlobalDistributeCacheRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateGlobalDistributeCacheRequest setOwnerId(Long ownerId) {
@@ -59,12 +59,12 @@ public class CreateGlobalDistributeCacheRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateGlobalDistributeCacheRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public CreateGlobalDistributeCacheRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public CreateGlobalDistributeCacheRequest setSeedSubInstanceId(String seedSubInstanceId) {

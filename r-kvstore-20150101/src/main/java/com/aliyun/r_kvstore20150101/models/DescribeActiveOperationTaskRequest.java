@@ -4,11 +4,23 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("IsHistory")
+    public Integer isHistory;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("Region")
+    public String region;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,35 +28,31 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("Region")
-    public String region;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("TaskType")
     public String taskType;
-
-    @NameInMap("IsHistory")
-    public Integer isHistory;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
 
     public static DescribeActiveOperationTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeActiveOperationTaskRequest self = new DescribeActiveOperationTaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeActiveOperationTaskRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeActiveOperationTaskRequest setIsHistory(Integer isHistory) {
+        this.isHistory = isHistory;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public Integer getIsHistory() {
+        return this.isHistory;
+    }
+
+    public DescribeActiveOperationTaskRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeActiveOperationTaskRequest setOwnerId(Long ownerId) {
@@ -53,6 +61,30 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeActiveOperationTaskRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeActiveOperationTaskRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeActiveOperationTaskRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
     public DescribeActiveOperationTaskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -71,20 +103,12 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeActiveOperationTaskRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeActiveOperationTaskRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeActiveOperationTaskRequest setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribeActiveOperationTaskRequest setTaskType(String taskType) {
@@ -93,30 +117,6 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     }
     public String getTaskType() {
         return this.taskType;
-    }
-
-    public DescribeActiveOperationTaskRequest setIsHistory(Integer isHistory) {
-        this.isHistory = isHistory;
-        return this;
-    }
-    public Integer getIsHistory() {
-        return this.isHistory;
-    }
-
-    public DescribeActiveOperationTaskRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeActiveOperationTaskRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
 }

@@ -3,16 +3,16 @@ package com.aliyun.r_kvstore20150101.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteUserClusterHostResponseBody extends TeaModel {
+public class SwitchInstanceProxyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteUserClusterHostResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteUserClusterHostResponseBody self = new DeleteUserClusterHostResponseBody();
+    public static SwitchInstanceProxyResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SwitchInstanceProxyResponseBody self = new SwitchInstanceProxyResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteUserClusterHostResponseBody setRequestId(String requestId) {
+    public SwitchInstanceProxyResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

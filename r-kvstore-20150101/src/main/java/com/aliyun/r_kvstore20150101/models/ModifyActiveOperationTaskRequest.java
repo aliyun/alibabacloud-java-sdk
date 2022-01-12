@@ -4,8 +4,11 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyActiveOperationTaskRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("Ids")
+    public String ids;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,11 +19,8 @@ public class ModifyActiveOperationTaskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("Ids")
-    public String ids;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("SwitchTime")
     public String switchTime;
@@ -30,12 +30,20 @@ public class ModifyActiveOperationTaskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyActiveOperationTaskRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyActiveOperationTaskRequest setIds(String ids) {
+        this.ids = ids;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getIds() {
+        return this.ids;
+    }
+
+    public ModifyActiveOperationTaskRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyActiveOperationTaskRequest setOwnerId(Long ownerId) {
@@ -62,20 +70,12 @@ public class ModifyActiveOperationTaskRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyActiveOperationTaskRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyActiveOperationTaskRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyActiveOperationTaskRequest setIds(String ids) {
-        this.ids = ids;
-        return this;
-    }
-    public String getIds() {
-        return this.ids;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public ModifyActiveOperationTaskRequest setSwitchTime(String switchTime) {

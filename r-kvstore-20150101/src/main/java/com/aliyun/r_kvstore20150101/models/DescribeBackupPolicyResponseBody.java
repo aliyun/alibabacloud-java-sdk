@@ -4,35 +4,27 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("BackupRetentionPeriod")
     public String backupRetentionPeriod;
-
-    @NameInMap("PreferredBackupTime")
-    public String preferredBackupTime;
-
-    @NameInMap("PreferredBackupPeriod")
-    public String preferredBackupPeriod;
-
-    @NameInMap("PreferredNextBackupTime")
-    public String preferredNextBackupTime;
 
     @NameInMap("EnableBackupLog")
     public Integer enableBackupLog;
 
+    @NameInMap("PreferredBackupPeriod")
+    public String preferredBackupPeriod;
+
+    @NameInMap("PreferredBackupTime")
+    public String preferredBackupTime;
+
+    @NameInMap("PreferredNextBackupTime")
+    public String preferredNextBackupTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeBackupPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupPolicyResponseBody self = new DescribeBackupPolicyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBackupPolicyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeBackupPolicyResponseBody setBackupRetentionPeriod(String backupRetentionPeriod) {
@@ -43,12 +35,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return this.backupRetentionPeriod;
     }
 
-    public DescribeBackupPolicyResponseBody setPreferredBackupTime(String preferredBackupTime) {
-        this.preferredBackupTime = preferredBackupTime;
+    public DescribeBackupPolicyResponseBody setEnableBackupLog(Integer enableBackupLog) {
+        this.enableBackupLog = enableBackupLog;
         return this;
     }
-    public String getPreferredBackupTime() {
-        return this.preferredBackupTime;
+    public Integer getEnableBackupLog() {
+        return this.enableBackupLog;
     }
 
     public DescribeBackupPolicyResponseBody setPreferredBackupPeriod(String preferredBackupPeriod) {
@@ -59,6 +51,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return this.preferredBackupPeriod;
     }
 
+    public DescribeBackupPolicyResponseBody setPreferredBackupTime(String preferredBackupTime) {
+        this.preferredBackupTime = preferredBackupTime;
+        return this;
+    }
+    public String getPreferredBackupTime() {
+        return this.preferredBackupTime;
+    }
+
     public DescribeBackupPolicyResponseBody setPreferredNextBackupTime(String preferredNextBackupTime) {
         this.preferredNextBackupTime = preferredNextBackupTime;
         return this;
@@ -67,12 +67,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return this.preferredNextBackupTime;
     }
 
-    public DescribeBackupPolicyResponseBody setEnableBackupLog(Integer enableBackupLog) {
-        this.enableBackupLog = enableBackupLog;
+    public DescribeBackupPolicyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getEnableBackupLog() {
-        return this.enableBackupLog;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

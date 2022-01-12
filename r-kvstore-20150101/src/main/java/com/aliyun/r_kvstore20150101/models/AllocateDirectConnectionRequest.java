@@ -4,11 +4,20 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class AllocateDirectConnectionRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("ConnectionString")
+    public String connectionString;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Port")
+    public String port;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,29 +25,36 @@ public class AllocateDirectConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("ConnectionString")
-    public String connectionString;
-
-    @NameInMap("Port")
-    public String port;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static AllocateDirectConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateDirectConnectionRequest self = new AllocateDirectConnectionRequest();
         return TeaModel.build(map, self);
     }
 
-    public AllocateDirectConnectionRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public AllocateDirectConnectionRequest setConnectionString(String connectionString) {
+        this.connectionString = connectionString;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getConnectionString() {
+        return this.connectionString;
+    }
+
+    public AllocateDirectConnectionRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public AllocateDirectConnectionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public AllocateDirectConnectionRequest setOwnerId(Long ownerId) {
@@ -47,6 +63,14 @@ public class AllocateDirectConnectionRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public AllocateDirectConnectionRequest setPort(String port) {
+        this.port = port;
+        return this;
+    }
+    public String getPort() {
+        return this.port;
     }
 
     public AllocateDirectConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -65,36 +89,12 @@ public class AllocateDirectConnectionRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public AllocateDirectConnectionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public AllocateDirectConnectionRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public AllocateDirectConnectionRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public AllocateDirectConnectionRequest setConnectionString(String connectionString) {
-        this.connectionString = connectionString;
-        return this;
-    }
-    public String getConnectionString() {
-        return this.connectionString;
-    }
-
-    public AllocateDirectConnectionRequest setPort(String port) {
-        this.port = port;
-        return this;
-    }
-    public String getPort() {
-        return this.port;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

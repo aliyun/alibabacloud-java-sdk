@@ -4,26 +4,26 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupTasksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("BackupJobs")
+    public java.util.List<DescribeBackupTasksResponseBodyBackupJobs> backupJobs;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("BackupJobs")
-    public java.util.List<DescribeBackupTasksResponseBodyBackupJobs> backupJobs;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeBackupTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupTasksResponseBody self = new DescribeBackupTasksResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupTasksResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeBackupTasksResponseBody setBackupJobs(java.util.List<DescribeBackupTasksResponseBodyBackupJobs> backupJobs) {
+        this.backupJobs = backupJobs;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<DescribeBackupTasksResponseBodyBackupJobs> getBackupJobs() {
+        return this.backupJobs;
     }
 
     public DescribeBackupTasksResponseBody setInstanceId(String instanceId) {
@@ -34,12 +34,12 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeBackupTasksResponseBody setBackupJobs(java.util.List<DescribeBackupTasksResponseBodyBackupJobs> backupJobs) {
-        this.backupJobs = backupJobs;
+    public DescribeBackupTasksResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<DescribeBackupTasksResponseBodyBackupJobs> getBackupJobs() {
-        return this.backupJobs;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeBackupTasksResponseBodyBackupJobs extends TeaModel {
@@ -51,6 +51,9 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
 
         @NameInMap("JobMode")
         public String jobMode;
+
+        @NameInMap("NodeId")
+        public String nodeId;
 
         @NameInMap("Process")
         public String process;
@@ -88,6 +91,14 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         }
         public String getJobMode() {
             return this.jobMode;
+        }
+
+        public DescribeBackupTasksResponseBodyBackupJobs setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
         }
 
         public DescribeBackupTasksResponseBodyBackupJobs setProcess(String process) {

@@ -4,11 +4,14 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class InitializeKvstorePermissionRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,23 +19,20 @@ public class InitializeKvstorePermissionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static InitializeKvstorePermissionRequest build(java.util.Map<String, ?> map) throws Exception {
         InitializeKvstorePermissionRequest self = new InitializeKvstorePermissionRequest();
         return TeaModel.build(map, self);
     }
 
-    public InitializeKvstorePermissionRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public InitializeKvstorePermissionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public InitializeKvstorePermissionRequest setOwnerId(Long ownerId) {
@@ -41,6 +41,14 @@ public class InitializeKvstorePermissionRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public InitializeKvstorePermissionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public InitializeKvstorePermissionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -59,20 +67,12 @@ public class InitializeKvstorePermissionRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public InitializeKvstorePermissionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public InitializeKvstorePermissionRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public InitializeKvstorePermissionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

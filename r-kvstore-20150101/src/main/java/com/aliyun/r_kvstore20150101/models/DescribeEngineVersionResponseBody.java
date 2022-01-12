@@ -4,8 +4,14 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeEngineVersionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DBVersionRelease")
+    public String DBVersionRelease;
+
+    @NameInMap("EnableUpgradeMajorVersion")
+    public Boolean enableUpgradeMajorVersion;
+
+    @NameInMap("EnableUpgradeMinorVersion")
+    public Boolean enableUpgradeMinorVersion;
 
     @NameInMap("Engine")
     public String engine;
@@ -13,29 +19,48 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     @NameInMap("IsLatestVersion")
     public Boolean isLatestVersion;
 
-    @NameInMap("MinorVersion")
-    public String minorVersion;
-
-    @NameInMap("EnableUpgradeMinorVersion")
-    public Boolean enableUpgradeMinorVersion;
-
     @NameInMap("MajorVersion")
     public String majorVersion;
 
-    @NameInMap("EnableUpgradeMajorVersion")
-    public Boolean enableUpgradeMajorVersion;
+    @NameInMap("MinorVersion")
+    public String minorVersion;
+
+    @NameInMap("ProxyMinorVersion")
+    public String proxyMinorVersion;
+
+    @NameInMap("ProxyVersionRelease")
+    public String proxyVersionRelease;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeEngineVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEngineVersionResponseBody self = new DescribeEngineVersionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeEngineVersionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeEngineVersionResponseBody setDBVersionRelease(String DBVersionRelease) {
+        this.DBVersionRelease = DBVersionRelease;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getDBVersionRelease() {
+        return this.DBVersionRelease;
+    }
+
+    public DescribeEngineVersionResponseBody setEnableUpgradeMajorVersion(Boolean enableUpgradeMajorVersion) {
+        this.enableUpgradeMajorVersion = enableUpgradeMajorVersion;
+        return this;
+    }
+    public Boolean getEnableUpgradeMajorVersion() {
+        return this.enableUpgradeMajorVersion;
+    }
+
+    public DescribeEngineVersionResponseBody setEnableUpgradeMinorVersion(Boolean enableUpgradeMinorVersion) {
+        this.enableUpgradeMinorVersion = enableUpgradeMinorVersion;
+        return this;
+    }
+    public Boolean getEnableUpgradeMinorVersion() {
+        return this.enableUpgradeMinorVersion;
     }
 
     public DescribeEngineVersionResponseBody setEngine(String engine) {
@@ -54,22 +79,6 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         return this.isLatestVersion;
     }
 
-    public DescribeEngineVersionResponseBody setMinorVersion(String minorVersion) {
-        this.minorVersion = minorVersion;
-        return this;
-    }
-    public String getMinorVersion() {
-        return this.minorVersion;
-    }
-
-    public DescribeEngineVersionResponseBody setEnableUpgradeMinorVersion(Boolean enableUpgradeMinorVersion) {
-        this.enableUpgradeMinorVersion = enableUpgradeMinorVersion;
-        return this;
-    }
-    public Boolean getEnableUpgradeMinorVersion() {
-        return this.enableUpgradeMinorVersion;
-    }
-
     public DescribeEngineVersionResponseBody setMajorVersion(String majorVersion) {
         this.majorVersion = majorVersion;
         return this;
@@ -78,12 +87,36 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         return this.majorVersion;
     }
 
-    public DescribeEngineVersionResponseBody setEnableUpgradeMajorVersion(Boolean enableUpgradeMajorVersion) {
-        this.enableUpgradeMajorVersion = enableUpgradeMajorVersion;
+    public DescribeEngineVersionResponseBody setMinorVersion(String minorVersion) {
+        this.minorVersion = minorVersion;
         return this;
     }
-    public Boolean getEnableUpgradeMajorVersion() {
-        return this.enableUpgradeMajorVersion;
+    public String getMinorVersion() {
+        return this.minorVersion;
+    }
+
+    public DescribeEngineVersionResponseBody setProxyMinorVersion(String proxyMinorVersion) {
+        this.proxyMinorVersion = proxyMinorVersion;
+        return this;
+    }
+    public String getProxyMinorVersion() {
+        return this.proxyMinorVersion;
+    }
+
+    public DescribeEngineVersionResponseBody setProxyVersionRelease(String proxyVersionRelease) {
+        this.proxyVersionRelease = proxyVersionRelease;
+        return this;
+    }
+    public String getProxyVersionRelease() {
+        return this.proxyVersionRelease;
+    }
+
+    public DescribeEngineVersionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

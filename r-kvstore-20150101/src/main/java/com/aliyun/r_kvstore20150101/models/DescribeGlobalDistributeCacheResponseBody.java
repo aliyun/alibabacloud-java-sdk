@@ -4,11 +4,8 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
+    @NameInMap("GlobalDistributeCaches")
+    public java.util.List<DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches> globalDistributeCaches;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -16,28 +13,23 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("GlobalDistributeCaches")
-    public java.util.List<DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches> globalDistributeCaches;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     public static DescribeGlobalDistributeCacheResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGlobalDistributeCacheResponseBody self = new DescribeGlobalDistributeCacheResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeGlobalDistributeCacheResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeGlobalDistributeCacheResponseBody setGlobalDistributeCaches(java.util.List<DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches> globalDistributeCaches) {
+        this.globalDistributeCaches = globalDistributeCaches;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeGlobalDistributeCacheResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
+    public java.util.List<DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches> getGlobalDistributeCaches() {
+        return this.globalDistributeCaches;
     }
 
     public DescribeGlobalDistributeCacheResponseBody setPageNumber(Integer pageNumber) {
@@ -56,29 +48,37 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeGlobalDistributeCacheResponseBody setGlobalDistributeCaches(java.util.List<DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches> globalDistributeCaches) {
-        this.globalDistributeCaches = globalDistributeCaches;
+    public DescribeGlobalDistributeCacheResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches> getGlobalDistributeCaches() {
-        return this.globalDistributeCaches;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeGlobalDistributeCacheResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public static class DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances extends TeaModel {
         @NameInMap("GlobalInstanceId")
         public String globalInstanceId;
 
+        @NameInMap("InstanceClass")
+        public String instanceClass;
+
         @NameInMap("InstanceID")
         public String instanceID;
-
-        @NameInMap("RegionId")
-        public String regionId;
 
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
-        @NameInMap("InstanceClass")
-        public String instanceClass;
+        @NameInMap("RegionId")
+        public String regionId;
 
         public static DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances build(java.util.Map<String, ?> map) throws Exception {
             DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances self = new DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances();
@@ -93,20 +93,20 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             return this.globalInstanceId;
         }
 
+        public DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances setInstanceClass(String instanceClass) {
+            this.instanceClass = instanceClass;
+            return this;
+        }
+        public String getInstanceClass() {
+            return this.instanceClass;
+        }
+
         public DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances setInstanceID(String instanceID) {
             this.instanceID = instanceID;
             return this;
         }
         public String getInstanceID() {
             return this.instanceID;
-        }
-
-        public DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
         public DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances setInstanceStatus(String instanceStatus) {
@@ -117,12 +117,12 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             return this.instanceStatus;
         }
 
-        public DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances setInstanceClass(String instanceClass) {
-            this.instanceClass = instanceClass;
+        public DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances setRegionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
-        public String getInstanceClass() {
-            return this.instanceClass;
+        public String getRegionId() {
+            return this.regionId;
         }
 
     }

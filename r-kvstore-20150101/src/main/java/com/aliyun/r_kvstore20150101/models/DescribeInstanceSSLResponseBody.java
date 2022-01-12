@@ -4,17 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSSLResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("CertCommonName")
+    public String certCommonName;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("SSLEnabled")
     public String SSLEnabled;
-
-    @NameInMap("CertCommonName")
-    public String certCommonName;
 
     @NameInMap("SSLExpiredTime")
     public String SSLExpiredTime;
@@ -24,12 +24,12 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceSSLResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeInstanceSSLResponseBody setCertCommonName(String certCommonName) {
+        this.certCommonName = certCommonName;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCertCommonName() {
+        return this.certCommonName;
     }
 
     public DescribeInstanceSSLResponseBody setInstanceId(String instanceId) {
@@ -40,20 +40,20 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         return this.instanceId;
     }
 
+    public DescribeInstanceSSLResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeInstanceSSLResponseBody setSSLEnabled(String SSLEnabled) {
         this.SSLEnabled = SSLEnabled;
         return this;
     }
     public String getSSLEnabled() {
         return this.SSLEnabled;
-    }
-
-    public DescribeInstanceSSLResponseBody setCertCommonName(String certCommonName) {
-        this.certCommonName = certCommonName;
-        return this;
-    }
-    public String getCertCommonName() {
-        return this.certCommonName;
     }
 
     public DescribeInstanceSSLResponseBody setSSLExpiredTime(String SSLExpiredTime) {

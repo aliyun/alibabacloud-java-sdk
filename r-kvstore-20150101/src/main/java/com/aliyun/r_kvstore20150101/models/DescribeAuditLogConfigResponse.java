@@ -3,21 +3,21 @@ package com.aliyun.r_kvstore20150101.models;
 
 import com.aliyun.tea.*;
 
-public class ReplaceUserClusterHostResponse extends TeaModel {
+public class DescribeAuditLogConfigResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public ReplaceUserClusterHostResponseBody body;
+    public DescribeAuditLogConfigResponseBody body;
 
-    public static ReplaceUserClusterHostResponse build(java.util.Map<String, ?> map) throws Exception {
-        ReplaceUserClusterHostResponse self = new ReplaceUserClusterHostResponse();
+    public static DescribeAuditLogConfigResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeAuditLogConfigResponse self = new DescribeAuditLogConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public ReplaceUserClusterHostResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeAuditLogConfigResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class ReplaceUserClusterHostResponse extends TeaModel {
         return this.headers;
     }
 
-    public ReplaceUserClusterHostResponse setBody(ReplaceUserClusterHostResponseBody body) {
+    public DescribeAuditLogConfigResponse setBody(DescribeAuditLogConfigResponseBody body) {
         this.body = body;
         return this;
     }
-    public ReplaceUserClusterHostResponseBody getBody() {
+    public DescribeAuditLogConfigResponseBody getBody() {
         return this.body;
     }
 

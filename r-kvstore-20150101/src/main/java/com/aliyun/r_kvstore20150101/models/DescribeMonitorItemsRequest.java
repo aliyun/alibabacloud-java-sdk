@@ -4,8 +4,8 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorItemsRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,20 +16,20 @@ public class DescribeMonitorItemsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DescribeMonitorItemsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitorItemsRequest self = new DescribeMonitorItemsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeMonitorItemsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeMonitorItemsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeMonitorItemsRequest setOwnerId(Long ownerId) {
@@ -56,12 +56,12 @@ public class DescribeMonitorItemsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeMonitorItemsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeMonitorItemsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

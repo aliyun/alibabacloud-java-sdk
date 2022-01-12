@@ -4,11 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class SyncDtsStatusRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,14 +22,8 @@ public class SyncDtsStatusRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("Status")
     public String status;
@@ -36,12 +36,20 @@ public class SyncDtsStatusRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SyncDtsStatusRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public SyncDtsStatusRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public SyncDtsStatusRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public SyncDtsStatusRequest setOwnerId(Long ownerId) {
@@ -50,6 +58,14 @@ public class SyncDtsStatusRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public SyncDtsStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SyncDtsStatusRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -68,28 +84,12 @@ public class SyncDtsStatusRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SyncDtsStatusRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public SyncDtsStatusRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public SyncDtsStatusRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public SyncDtsStatusRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public SyncDtsStatusRequest setStatus(String status) {

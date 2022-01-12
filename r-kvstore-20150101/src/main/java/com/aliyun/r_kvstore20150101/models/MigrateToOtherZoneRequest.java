@@ -4,8 +4,14 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class MigrateToOtherZoneRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("EffectiveTime")
+    public String effectiveTime;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,32 +22,45 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("SecondaryZoneId")
+    public String secondaryZoneId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    @NameInMap("EffectiveTime")
-    public String effectiveTime;
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static MigrateToOtherZoneRequest build(java.util.Map<String, ?> map) throws Exception {
         MigrateToOtherZoneRequest self = new MigrateToOtherZoneRequest();
         return TeaModel.build(map, self);
     }
 
-    public MigrateToOtherZoneRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public MigrateToOtherZoneRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public MigrateToOtherZoneRequest setEffectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+    }
+    public String getEffectiveTime() {
+        return this.effectiveTime;
+    }
+
+    public MigrateToOtherZoneRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public MigrateToOtherZoneRequest setOwnerId(Long ownerId) {
@@ -68,28 +87,20 @@ public class MigrateToOtherZoneRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public MigrateToOtherZoneRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public MigrateToOtherZoneRequest setSecondaryZoneId(String secondaryZoneId) {
+        this.secondaryZoneId = secondaryZoneId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getSecondaryZoneId() {
+        return this.secondaryZoneId;
     }
 
-    public MigrateToOtherZoneRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public MigrateToOtherZoneRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public MigrateToOtherZoneRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public MigrateToOtherZoneRequest setVSwitchId(String vSwitchId) {
@@ -100,12 +111,12 @@ public class MigrateToOtherZoneRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public MigrateToOtherZoneRequest setEffectiveTime(String effectiveTime) {
-        this.effectiveTime = effectiveTime;
+    public MigrateToOtherZoneRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
         return this;
     }
-    public String getEffectiveTime() {
-        return this.effectiveTime;
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

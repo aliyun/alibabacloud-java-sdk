@@ -4,20 +4,14 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRunningLogRecordsRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("CharacterType")
+    public String characterType;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("DBName")
+    public String DBName;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -25,79 +19,69 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     @NameInMap("NodeId")
     public String nodeId;
 
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("OrderType")
+    public String orderType;
 
-    @NameInMap("EndTime")
-    public String endTime;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
-    @NameInMap("DBName")
-    public String DBName;
-
-    @NameInMap("RoleType")
-    public String roleType;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("CharacterType")
-    public String characterType;
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("QueryKeyword")
     public String queryKeyword;
 
-    @NameInMap("OrderType")
-    public String orderType;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("RoleType")
+    public String roleType;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeRunningLogRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRunningLogRecordsRequest self = new DescribeRunningLogRecordsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRunningLogRecordsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeRunningLogRecordsRequest setCharacterType(String characterType) {
+        this.characterType = characterType;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getCharacterType() {
+        return this.characterType;
     }
 
-    public DescribeRunningLogRecordsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeRunningLogRecordsRequest setDBName(String DBName) {
+        this.DBName = DBName;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getDBName() {
+        return this.DBName;
     }
 
-    public DescribeRunningLogRecordsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public DescribeRunningLogRecordsRequest setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeRunningLogRecordsRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeRunningLogRecordsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeRunningLogRecordsRequest setInstanceId(String instanceId) {
@@ -116,44 +100,28 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
         return this.nodeId;
     }
 
-    public DescribeRunningLogRecordsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeRunningLogRecordsRequest setOrderType(String orderType) {
+        this.orderType = orderType;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public String getOrderType() {
+        return this.orderType;
     }
 
-    public DescribeRunningLogRecordsRequest setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeRunningLogRecordsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
-    public DescribeRunningLogRecordsRequest setDBName(String DBName) {
-        this.DBName = DBName;
+    public DescribeRunningLogRecordsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getDBName() {
-        return this.DBName;
-    }
-
-    public DescribeRunningLogRecordsRequest setRoleType(String roleType) {
-        this.roleType = roleType;
-        return this;
-    }
-    public String getRoleType() {
-        return this.roleType;
-    }
-
-    public DescribeRunningLogRecordsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeRunningLogRecordsRequest setPageNumber(Integer pageNumber) {
@@ -164,20 +132,12 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeRunningLogRecordsRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public DescribeRunningLogRecordsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public DescribeRunningLogRecordsRequest setCharacterType(String characterType) {
-        this.characterType = characterType;
-        return this;
-    }
-    public String getCharacterType() {
-        return this.characterType;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeRunningLogRecordsRequest setQueryKeyword(String queryKeyword) {
@@ -188,12 +148,52 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
         return this.queryKeyword;
     }
 
-    public DescribeRunningLogRecordsRequest setOrderType(String orderType) {
-        this.orderType = orderType;
+    public DescribeRunningLogRecordsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
-    public String getOrderType() {
-        return this.orderType;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeRunningLogRecordsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeRunningLogRecordsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeRunningLogRecordsRequest setRoleType(String roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public String getRoleType() {
+        return this.roleType;
+    }
+
+    public DescribeRunningLogRecordsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public DescribeRunningLogRecordsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }
