@@ -22,8 +22,17 @@ public class UpdateAggregateConfigRuleRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ExcludeAccountIdsScope")
+    public String excludeAccountIdsScope;
+
+    @NameInMap("ExcludeFolderIdsScope")
+    public String excludeFolderIdsScope;
+
     @NameInMap("ExcludeResourceIdsScope")
     public String excludeResourceIdsScope;
+
+    @NameInMap("FolderIdsScope")
+    public String folderIdsScope;
 
     @NameInMap("InputParameters")
     public java.util.Map<String, ?> inputParameters;
@@ -105,12 +114,36 @@ public class UpdateAggregateConfigRuleRequest extends TeaModel {
         return this.description;
     }
 
+    public UpdateAggregateConfigRuleRequest setExcludeAccountIdsScope(String excludeAccountIdsScope) {
+        this.excludeAccountIdsScope = excludeAccountIdsScope;
+        return this;
+    }
+    public String getExcludeAccountIdsScope() {
+        return this.excludeAccountIdsScope;
+    }
+
+    public UpdateAggregateConfigRuleRequest setExcludeFolderIdsScope(String excludeFolderIdsScope) {
+        this.excludeFolderIdsScope = excludeFolderIdsScope;
+        return this;
+    }
+    public String getExcludeFolderIdsScope() {
+        return this.excludeFolderIdsScope;
+    }
+
     public UpdateAggregateConfigRuleRequest setExcludeResourceIdsScope(String excludeResourceIdsScope) {
         this.excludeResourceIdsScope = excludeResourceIdsScope;
         return this;
     }
     public String getExcludeResourceIdsScope() {
         return this.excludeResourceIdsScope;
+    }
+
+    public UpdateAggregateConfigRuleRequest setFolderIdsScope(String folderIdsScope) {
+        this.folderIdsScope = folderIdsScope;
+        return this;
+    }
+    public String getFolderIdsScope() {
+        return this.folderIdsScope;
     }
 
     public UpdateAggregateConfigRuleRequest setInputParameters(java.util.Map<String, ?> inputParameters) {

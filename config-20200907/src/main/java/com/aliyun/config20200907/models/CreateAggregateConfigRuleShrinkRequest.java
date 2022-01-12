@@ -19,8 +19,17 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ExcludeAccountIdsScope")
+    public String excludeAccountIdsScope;
+
+    @NameInMap("ExcludeFolderIdsScope")
+    public String excludeFolderIdsScope;
+
     @NameInMap("ExcludeResourceIdsScope")
     public String excludeResourceIdsScope;
+
+    @NameInMap("FolderIdsScope")
+    public String folderIdsScope;
 
     @NameInMap("InputParameters")
     public String inputParametersShrink;
@@ -100,12 +109,36 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
         return this.description;
     }
 
+    public CreateAggregateConfigRuleShrinkRequest setExcludeAccountIdsScope(String excludeAccountIdsScope) {
+        this.excludeAccountIdsScope = excludeAccountIdsScope;
+        return this;
+    }
+    public String getExcludeAccountIdsScope() {
+        return this.excludeAccountIdsScope;
+    }
+
+    public CreateAggregateConfigRuleShrinkRequest setExcludeFolderIdsScope(String excludeFolderIdsScope) {
+        this.excludeFolderIdsScope = excludeFolderIdsScope;
+        return this;
+    }
+    public String getExcludeFolderIdsScope() {
+        return this.excludeFolderIdsScope;
+    }
+
     public CreateAggregateConfigRuleShrinkRequest setExcludeResourceIdsScope(String excludeResourceIdsScope) {
         this.excludeResourceIdsScope = excludeResourceIdsScope;
         return this;
     }
     public String getExcludeResourceIdsScope() {
         return this.excludeResourceIdsScope;
+    }
+
+    public CreateAggregateConfigRuleShrinkRequest setFolderIdsScope(String folderIdsScope) {
+        this.folderIdsScope = folderIdsScope;
+        return this;
+    }
+    public String getFolderIdsScope() {
+        return this.folderIdsScope;
     }
 
     public CreateAggregateConfigRuleShrinkRequest setInputParametersShrink(String inputParametersShrink) {
