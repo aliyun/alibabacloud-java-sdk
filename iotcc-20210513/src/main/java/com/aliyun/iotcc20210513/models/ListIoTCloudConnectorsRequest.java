@@ -10,6 +10,9 @@ public class ListIoTCloudConnectorsRequest extends TeaModel {
     @NameInMap("ISP")
     public java.util.List<String> ISP;
 
+    @NameInMap("IoTCloudConnectorGroupId")
+    public String ioTCloudConnectorGroupId;
+
     @NameInMap("IoTCloudConnectorIds")
     public java.util.List<String> ioTCloudConnectorIds;
 
@@ -53,6 +56,14 @@ public class ListIoTCloudConnectorsRequest extends TeaModel {
     }
     public java.util.List<String> getISP() {
         return this.ISP;
+    }
+
+    public ListIoTCloudConnectorsRequest setIoTCloudConnectorGroupId(String ioTCloudConnectorGroupId) {
+        this.ioTCloudConnectorGroupId = ioTCloudConnectorGroupId;
+        return this;
+    }
+    public String getIoTCloudConnectorGroupId() {
+        return this.ioTCloudConnectorGroupId;
     }
 
     public ListIoTCloudConnectorsRequest setIoTCloudConnectorIds(java.util.List<String> ioTCloudConnectorIds) {
