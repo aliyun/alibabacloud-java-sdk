@@ -231,8 +231,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeAccountIdsScope)) {
+            body.put("ExcludeAccountIdsScope", request.excludeAccountIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeFolderIdsScope)) {
+            body.put("ExcludeFolderIdsScope", request.excludeFolderIdsScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceIdsScope)) {
             body.put("ExcludeResourceIdsScope", request.excludeResourceIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.folderIdsScope)) {
+            body.put("FolderIdsScope", request.folderIdsScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.inputParametersShrink)) {
@@ -2384,8 +2396,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeAccountIdsScope)) {
+            body.put("ExcludeAccountIdsScope", request.excludeAccountIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeFolderIdsScope)) {
+            body.put("ExcludeFolderIdsScope", request.excludeFolderIdsScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceIdsScope)) {
             body.put("ExcludeResourceIdsScope", request.excludeResourceIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.folderIdsScope)) {
+            body.put("FolderIdsScope", request.folderIdsScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.inputParametersShrink)) {

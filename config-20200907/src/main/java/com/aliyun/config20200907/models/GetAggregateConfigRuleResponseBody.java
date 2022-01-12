@@ -448,8 +448,17 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("ExcludeAccountIdsScope")
+        public String excludeAccountIdsScope;
+
+        @NameInMap("ExcludeFolderIdsScope")
+        public String excludeFolderIdsScope;
+
         @NameInMap("ExcludeResourceIdsScope")
         public String excludeResourceIdsScope;
+
+        @NameInMap("FolderIdsScope")
+        public String folderIdsScope;
 
         @NameInMap("InputParameters")
         public java.util.Map<String, ?> inputParameters;
@@ -564,12 +573,36 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GetAggregateConfigRuleResponseBodyConfigRule setExcludeAccountIdsScope(String excludeAccountIdsScope) {
+            this.excludeAccountIdsScope = excludeAccountIdsScope;
+            return this;
+        }
+        public String getExcludeAccountIdsScope() {
+            return this.excludeAccountIdsScope;
+        }
+
+        public GetAggregateConfigRuleResponseBodyConfigRule setExcludeFolderIdsScope(String excludeFolderIdsScope) {
+            this.excludeFolderIdsScope = excludeFolderIdsScope;
+            return this;
+        }
+        public String getExcludeFolderIdsScope() {
+            return this.excludeFolderIdsScope;
+        }
+
         public GetAggregateConfigRuleResponseBodyConfigRule setExcludeResourceIdsScope(String excludeResourceIdsScope) {
             this.excludeResourceIdsScope = excludeResourceIdsScope;
             return this;
         }
         public String getExcludeResourceIdsScope() {
             return this.excludeResourceIdsScope;
+        }
+
+        public GetAggregateConfigRuleResponseBodyConfigRule setFolderIdsScope(String folderIdsScope) {
+            this.folderIdsScope = folderIdsScope;
+            return this;
+        }
+        public String getFolderIdsScope() {
+            return this.folderIdsScope;
         }
 
         public GetAggregateConfigRuleResponseBodyConfigRule setInputParameters(java.util.Map<String, ?> inputParameters) {
