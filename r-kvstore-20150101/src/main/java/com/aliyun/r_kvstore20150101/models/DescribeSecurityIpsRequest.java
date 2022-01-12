@@ -4,8 +4,11 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityIpsRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,23 +19,28 @@ public class DescribeSecurityIpsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DescribeSecurityIpsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityIpsRequest self = new DescribeSecurityIpsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSecurityIpsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeSecurityIpsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeSecurityIpsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeSecurityIpsRequest setOwnerId(Long ownerId) {
@@ -59,20 +67,12 @@ public class DescribeSecurityIpsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeSecurityIpsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeSecurityIpsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeSecurityIpsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

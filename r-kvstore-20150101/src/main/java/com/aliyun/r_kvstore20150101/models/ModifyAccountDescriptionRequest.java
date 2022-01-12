@@ -4,8 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyAccountDescriptionRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("AccountDescription")
+    public String accountDescription;
+
+    @NameInMap("AccountName")
+    public String accountName;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,29 +25,44 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("AccountName")
-    public String accountName;
-
-    @NameInMap("AccountDescription")
-    public String accountDescription;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifyAccountDescriptionRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAccountDescriptionRequest self = new ModifyAccountDescriptionRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyAccountDescriptionRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyAccountDescriptionRequest setAccountDescription(String accountDescription) {
+        this.accountDescription = accountDescription;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getAccountDescription() {
+        return this.accountDescription;
+    }
+
+    public ModifyAccountDescriptionRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
+    }
+
+    public ModifyAccountDescriptionRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyAccountDescriptionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyAccountDescriptionRequest setOwnerId(Long ownerId) {
@@ -65,36 +89,12 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyAccountDescriptionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyAccountDescriptionRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyAccountDescriptionRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ModifyAccountDescriptionRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
-    }
-
-    public ModifyAccountDescriptionRequest setAccountDescription(String accountDescription) {
-        this.accountDescription = accountDescription;
-        return this;
-    }
-    public String getAccountDescription() {
-        return this.accountDescription;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

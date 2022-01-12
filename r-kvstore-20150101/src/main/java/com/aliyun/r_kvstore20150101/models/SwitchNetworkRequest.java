@@ -4,8 +4,14 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class SwitchNetworkRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("ClassicExpiredDays")
+    public String classicExpiredDays;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,38 +22,48 @@ public class SwitchNetworkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("RetainClassic")
+    public String retainClassic;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("TargetNetworkType")
     public String targetNetworkType;
 
-    @NameInMap("VpcId")
-    public String vpcId;
-
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("RetainClassic")
-    public String retainClassic;
-
-    @NameInMap("ClassicExpiredDays")
-    public String classicExpiredDays;
+    @NameInMap("VpcId")
+    public String vpcId;
 
     public static SwitchNetworkRequest build(java.util.Map<String, ?> map) throws Exception {
         SwitchNetworkRequest self = new SwitchNetworkRequest();
         return TeaModel.build(map, self);
     }
 
-    public SwitchNetworkRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public SwitchNetworkRequest setClassicExpiredDays(String classicExpiredDays) {
+        this.classicExpiredDays = classicExpiredDays;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getClassicExpiredDays() {
+        return this.classicExpiredDays;
+    }
+
+    public SwitchNetworkRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public SwitchNetworkRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public SwitchNetworkRequest setOwnerId(Long ownerId) {
@@ -74,12 +90,20 @@ public class SwitchNetworkRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SwitchNetworkRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public SwitchNetworkRequest setRetainClassic(String retainClassic) {
+        this.retainClassic = retainClassic;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getRetainClassic() {
+        return this.retainClassic;
+    }
+
+    public SwitchNetworkRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public SwitchNetworkRequest setTargetNetworkType(String targetNetworkType) {
@@ -90,14 +114,6 @@ public class SwitchNetworkRequest extends TeaModel {
         return this.targetNetworkType;
     }
 
-    public SwitchNetworkRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
     public SwitchNetworkRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
@@ -106,28 +122,12 @@ public class SwitchNetworkRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public SwitchNetworkRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public SwitchNetworkRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public SwitchNetworkRequest setRetainClassic(String retainClassic) {
-        this.retainClassic = retainClassic;
-        return this;
-    }
-    public String getRetainClassic() {
-        return this.retainClassic;
-    }
-
-    public SwitchNetworkRequest setClassicExpiredDays(String classicExpiredDays) {
-        this.classicExpiredDays = classicExpiredDays;
-        return this;
-    }
-    public String getClassicExpiredDays() {
-        return this.classicExpiredDays;
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

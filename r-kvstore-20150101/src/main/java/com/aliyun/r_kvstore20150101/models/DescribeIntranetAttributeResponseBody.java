@@ -4,37 +4,40 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeIntranetAttributeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("AutoRenewal")
+    public Boolean autoRenewal;
 
-    @NameInMap("IntranetBandwidth")
-    public Integer intranetBandwidth;
+    @NameInMap("BandwidthExpireTime")
+    public String bandwidthExpireTime;
 
     @NameInMap("ExpireTime")
     public String expireTime;
 
-    @NameInMap("BandwidthExpireTime")
-    public String bandwidthExpireTime;
+    @NameInMap("IntranetBandwidth")
+    public Integer intranetBandwidth;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeIntranetAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeIntranetAttributeResponseBody self = new DescribeIntranetAttributeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeIntranetAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeIntranetAttributeResponseBody setAutoRenewal(Boolean autoRenewal) {
+        this.autoRenewal = autoRenewal;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Boolean getAutoRenewal() {
+        return this.autoRenewal;
     }
 
-    public DescribeIntranetAttributeResponseBody setIntranetBandwidth(Integer intranetBandwidth) {
-        this.intranetBandwidth = intranetBandwidth;
+    public DescribeIntranetAttributeResponseBody setBandwidthExpireTime(String bandwidthExpireTime) {
+        this.bandwidthExpireTime = bandwidthExpireTime;
         return this;
     }
-    public Integer getIntranetBandwidth() {
-        return this.intranetBandwidth;
+    public String getBandwidthExpireTime() {
+        return this.bandwidthExpireTime;
     }
 
     public DescribeIntranetAttributeResponseBody setExpireTime(String expireTime) {
@@ -45,12 +48,20 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         return this.expireTime;
     }
 
-    public DescribeIntranetAttributeResponseBody setBandwidthExpireTime(String bandwidthExpireTime) {
-        this.bandwidthExpireTime = bandwidthExpireTime;
+    public DescribeIntranetAttributeResponseBody setIntranetBandwidth(Integer intranetBandwidth) {
+        this.intranetBandwidth = intranetBandwidth;
         return this;
     }
-    public String getBandwidthExpireTime() {
-        return this.bandwidthExpireTime;
+    public Integer getIntranetBandwidth() {
+        return this.intranetBandwidth;
+    }
+
+    public DescribeIntranetAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

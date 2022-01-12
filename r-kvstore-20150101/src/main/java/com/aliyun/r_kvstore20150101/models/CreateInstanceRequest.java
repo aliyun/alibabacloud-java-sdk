@@ -4,11 +4,80 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("AutoRenew")
+    public String autoRenew;
+
+    @NameInMap("AutoRenewPeriod")
+    public String autoRenewPeriod;
+
+    @NameInMap("AutoUseCoupon")
+    public String autoUseCoupon;
+
+    @NameInMap("BackupId")
+    public String backupId;
+
+    @NameInMap("BusinessInfo")
+    public String businessInfo;
+
+    @NameInMap("Capacity")
+    public Long capacity;
+
+    @NameInMap("ChargeType")
+    public String chargeType;
+
+    @NameInMap("CouponNo")
+    public String couponNo;
+
+    @NameInMap("DedicatedHostGroupId")
+    public String dedicatedHostGroupId;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    @NameInMap("EngineVersion")
+    public String engineVersion;
+
+    @NameInMap("GlobalInstance")
+    public Boolean globalInstance;
+
+    @NameInMap("GlobalInstanceId")
+    public String globalInstanceId;
+
+    @NameInMap("InstanceClass")
+    public String instanceClass;
+
+    @NameInMap("InstanceName")
+    public String instanceName;
+
+    @NameInMap("InstanceType")
+    public String instanceType;
+
+    @NameInMap("NetworkType")
+    public String networkType;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Password")
+    public String password;
+
+    @NameInMap("Period")
+    public String period;
+
+    @NameInMap("Port")
+    public String port;
+
+    @NameInMap("PrivateIpAddress")
+    public String privateIpAddress;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,315 +85,36 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("RestoreTime")
+    public String restoreTime;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("SecondaryZoneId")
+    public String secondaryZoneId;
 
-    @NameInMap("Token")
-    public String token;
-
-    @NameInMap("InstanceName")
-    public String instanceName;
-
-    @NameInMap("Password")
-    public String password;
-
-    @NameInMap("Capacity")
-    public Long capacity;
-
-    @NameInMap("InstanceClass")
-    public String instanceClass;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
-
-    @NameInMap("Config")
-    public String config;
-
-    @NameInMap("ChargeType")
-    public String chargeType;
-
-    @NameInMap("NodeType")
-    public String nodeType;
-
-    @NameInMap("NetworkType")
-    public String networkType;
-
-    @NameInMap("VpcId")
-    public String vpcId;
-
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
-
-    @NameInMap("Period")
-    public String period;
-
-    @NameInMap("BusinessInfo")
-    public String businessInfo;
-
-    @NameInMap("CouponNo")
-    public String couponNo;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("SrcDBInstanceId")
     public String srcDBInstanceId;
 
-    @NameInMap("BackupId")
-    public String backupId;
+    @NameInMap("Tag")
+    public java.util.List<CreateInstanceRequestTag> tag;
 
-    @NameInMap("InstanceType")
-    public String instanceType;
+    @NameInMap("Token")
+    public String token;
 
-    @NameInMap("EngineVersion")
-    public String engineVersion;
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
 
-    @NameInMap("PrivateIpAddress")
-    public String privateIpAddress;
+    @NameInMap("VpcId")
+    public String vpcId;
 
-    @NameInMap("AutoUseCoupon")
-    public String autoUseCoupon;
-
-    @NameInMap("AutoRenew")
-    public String autoRenew;
-
-    @NameInMap("AutoRenewPeriod")
-    public String autoRenewPeriod;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("RestoreTime")
-    public String restoreTime;
-
-    @NameInMap("DedicatedHostGroupId")
-    public String dedicatedHostGroupId;
-
-    @NameInMap("GlobalInstanceId")
-    public String globalInstanceId;
-
-    @NameInMap("GlobalInstance")
-    public Boolean globalInstance;
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static CreateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceRequest self = new CreateInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateInstanceRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public CreateInstanceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CreateInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public CreateInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CreateInstanceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CreateInstanceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateInstanceRequest setToken(String token) {
-        this.token = token;
-        return this;
-    }
-    public String getToken() {
-        return this.token;
-    }
-
-    public CreateInstanceRequest setInstanceName(String instanceName) {
-        this.instanceName = instanceName;
-        return this;
-    }
-    public String getInstanceName() {
-        return this.instanceName;
-    }
-
-    public CreateInstanceRequest setPassword(String password) {
-        this.password = password;
-        return this;
-    }
-    public String getPassword() {
-        return this.password;
-    }
-
-    public CreateInstanceRequest setCapacity(Long capacity) {
-        this.capacity = capacity;
-        return this;
-    }
-    public Long getCapacity() {
-        return this.capacity;
-    }
-
-    public CreateInstanceRequest setInstanceClass(String instanceClass) {
-        this.instanceClass = instanceClass;
-        return this;
-    }
-    public String getInstanceClass() {
-        return this.instanceClass;
-    }
-
-    public CreateInstanceRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    public CreateInstanceRequest setConfig(String config) {
-        this.config = config;
-        return this;
-    }
-    public String getConfig() {
-        return this.config;
-    }
-
-    public CreateInstanceRequest setChargeType(String chargeType) {
-        this.chargeType = chargeType;
-        return this;
-    }
-    public String getChargeType() {
-        return this.chargeType;
-    }
-
-    public CreateInstanceRequest setNodeType(String nodeType) {
-        this.nodeType = nodeType;
-        return this;
-    }
-    public String getNodeType() {
-        return this.nodeType;
-    }
-
-    public CreateInstanceRequest setNetworkType(String networkType) {
-        this.networkType = networkType;
-        return this;
-    }
-    public String getNetworkType() {
-        return this.networkType;
-    }
-
-    public CreateInstanceRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public CreateInstanceRequest setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
-        return this;
-    }
-    public String getVSwitchId() {
-        return this.vSwitchId;
-    }
-
-    public CreateInstanceRequest setPeriod(String period) {
-        this.period = period;
-        return this;
-    }
-    public String getPeriod() {
-        return this.period;
-    }
-
-    public CreateInstanceRequest setBusinessInfo(String businessInfo) {
-        this.businessInfo = businessInfo;
-        return this;
-    }
-    public String getBusinessInfo() {
-        return this.businessInfo;
-    }
-
-    public CreateInstanceRequest setCouponNo(String couponNo) {
-        this.couponNo = couponNo;
-        return this;
-    }
-    public String getCouponNo() {
-        return this.couponNo;
-    }
-
-    public CreateInstanceRequest setSrcDBInstanceId(String srcDBInstanceId) {
-        this.srcDBInstanceId = srcDBInstanceId;
-        return this;
-    }
-    public String getSrcDBInstanceId() {
-        return this.srcDBInstanceId;
-    }
-
-    public CreateInstanceRequest setBackupId(String backupId) {
-        this.backupId = backupId;
-        return this;
-    }
-    public String getBackupId() {
-        return this.backupId;
-    }
-
-    public CreateInstanceRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public String getInstanceType() {
-        return this.instanceType;
-    }
-
-    public CreateInstanceRequest setEngineVersion(String engineVersion) {
-        this.engineVersion = engineVersion;
-        return this;
-    }
-    public String getEngineVersion() {
-        return this.engineVersion;
-    }
-
-    public CreateInstanceRequest setPrivateIpAddress(String privateIpAddress) {
-        this.privateIpAddress = privateIpAddress;
-        return this;
-    }
-    public String getPrivateIpAddress() {
-        return this.privateIpAddress;
-    }
-
-    public CreateInstanceRequest setAutoUseCoupon(String autoUseCoupon) {
-        this.autoUseCoupon = autoUseCoupon;
-        return this;
-    }
-    public String getAutoUseCoupon() {
-        return this.autoUseCoupon;
     }
 
     public CreateInstanceRequest setAutoRenew(String autoRenew) {
@@ -343,20 +133,52 @@ public class CreateInstanceRequest extends TeaModel {
         return this.autoRenewPeriod;
     }
 
-    public CreateInstanceRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public CreateInstanceRequest setAutoUseCoupon(String autoUseCoupon) {
+        this.autoUseCoupon = autoUseCoupon;
         return this;
     }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
-    public CreateInstanceRequest setRestoreTime(String restoreTime) {
-        this.restoreTime = restoreTime;
+    public CreateInstanceRequest setBackupId(String backupId) {
+        this.backupId = backupId;
         return this;
     }
-    public String getRestoreTime() {
-        return this.restoreTime;
+    public String getBackupId() {
+        return this.backupId;
+    }
+
+    public CreateInstanceRequest setBusinessInfo(String businessInfo) {
+        this.businessInfo = businessInfo;
+        return this;
+    }
+    public String getBusinessInfo() {
+        return this.businessInfo;
+    }
+
+    public CreateInstanceRequest setCapacity(Long capacity) {
+        this.capacity = capacity;
+        return this;
+    }
+    public Long getCapacity() {
+        return this.capacity;
+    }
+
+    public CreateInstanceRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
+    }
+
+    public CreateInstanceRequest setCouponNo(String couponNo) {
+        this.couponNo = couponNo;
+        return this;
+    }
+    public String getCouponNo() {
+        return this.couponNo;
     }
 
     public CreateInstanceRequest setDedicatedHostGroupId(String dedicatedHostGroupId) {
@@ -367,12 +189,20 @@ public class CreateInstanceRequest extends TeaModel {
         return this.dedicatedHostGroupId;
     }
 
-    public CreateInstanceRequest setGlobalInstanceId(String globalInstanceId) {
-        this.globalInstanceId = globalInstanceId;
+    public CreateInstanceRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
         return this;
     }
-    public String getGlobalInstanceId() {
-        return this.globalInstanceId;
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public CreateInstanceRequest setEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    public String getEngineVersion() {
+        return this.engineVersion;
     }
 
     public CreateInstanceRequest setGlobalInstance(Boolean globalInstance) {
@@ -381,6 +211,228 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public Boolean getGlobalInstance() {
         return this.globalInstance;
+    }
+
+    public CreateInstanceRequest setGlobalInstanceId(String globalInstanceId) {
+        this.globalInstanceId = globalInstanceId;
+        return this;
+    }
+    public String getGlobalInstanceId() {
+        return this.globalInstanceId;
+    }
+
+    public CreateInstanceRequest setInstanceClass(String instanceClass) {
+        this.instanceClass = instanceClass;
+        return this;
+    }
+    public String getInstanceClass() {
+        return this.instanceClass;
+    }
+
+    public CreateInstanceRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    public CreateInstanceRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public CreateInstanceRequest setNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
+    public CreateInstanceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public CreateInstanceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateInstanceRequest setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    public String getPassword() {
+        return this.password;
+    }
+
+    public CreateInstanceRequest setPeriod(String period) {
+        this.period = period;
+        return this;
+    }
+    public String getPeriod() {
+        return this.period;
+    }
+
+    public CreateInstanceRequest setPort(String port) {
+        this.port = port;
+        return this;
+    }
+    public String getPort() {
+        return this.port;
+    }
+
+    public CreateInstanceRequest setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
+    public CreateInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateInstanceRequest setRestoreTime(String restoreTime) {
+        this.restoreTime = restoreTime;
+        return this;
+    }
+    public String getRestoreTime() {
+        return this.restoreTime;
+    }
+
+    public CreateInstanceRequest setSecondaryZoneId(String secondaryZoneId) {
+        this.secondaryZoneId = secondaryZoneId;
+        return this;
+    }
+    public String getSecondaryZoneId() {
+        return this.secondaryZoneId;
+    }
+
+    public CreateInstanceRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public CreateInstanceRequest setSrcDBInstanceId(String srcDBInstanceId) {
+        this.srcDBInstanceId = srcDBInstanceId;
+        return this;
+    }
+    public String getSrcDBInstanceId() {
+        return this.srcDBInstanceId;
+    }
+
+    public CreateInstanceRequest setTag(java.util.List<CreateInstanceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateInstanceRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public CreateInstanceRequest setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
+    }
+
+    public CreateInstanceRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    public CreateInstanceRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public CreateInstanceRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
+    public static class CreateInstanceRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateInstanceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestTag self = new CreateInstanceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateInstanceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

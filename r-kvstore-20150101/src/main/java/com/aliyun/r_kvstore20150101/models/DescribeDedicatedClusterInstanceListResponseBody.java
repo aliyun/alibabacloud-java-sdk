@@ -7,8 +7,8 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
     @NameInMap("Instances")
     public java.util.List<DescribeDedicatedClusterInstanceListResponseBodyInstances> instances;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -16,8 +16,8 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeDedicatedClusterInstanceListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDedicatedClusterInstanceListResponseBody self = new DescribeDedicatedClusterInstanceListResponseBody();
@@ -32,12 +32,12 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         return this.instances;
     }
 
-    public DescribeDedicatedClusterInstanceListResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeDedicatedClusterInstanceListResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDedicatedClusterInstanceListResponseBody setPageSize(Integer pageSize) {
@@ -56,29 +56,29 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDedicatedClusterInstanceListResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDedicatedClusterInstanceListResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList extends TeaModel {
-        @NameInMap("NodeIp")
-        public String nodeIp;
-
         @NameInMap("DedicatedHostName")
         public String dedicatedHostName;
 
-        @NameInMap("NodeType")
-        public String nodeType;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("NodeId")
+        public Integer nodeId;
+
+        @NameInMap("NodeIp")
+        public String nodeIp;
+
+        @NameInMap("NodeType")
+        public String nodeType;
 
         @NameInMap("Port")
         public Integer port;
@@ -86,20 +86,12 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         @NameInMap("Role")
         public String role;
 
-        @NameInMap("NodeId")
-        public Integer nodeId;
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList build(java.util.Map<String, ?> map) throws Exception {
             DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList self = new DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList setNodeIp(String nodeIp) {
-            this.nodeIp = nodeIp;
-            return this;
-        }
-        public String getNodeIp() {
-            return this.nodeIp;
         }
 
         public DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList setDedicatedHostName(String dedicatedHostName) {
@@ -110,28 +102,36 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             return this.dedicatedHostName;
         }
 
-        public DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList setNodeType(String nodeType) {
-            this.nodeType = nodeType;
-            return this;
-        }
-        public String getNodeType() {
-            return this.nodeType;
-        }
-
-        public DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
         public DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList setNodeId(Integer nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public Integer getNodeId() {
+            return this.nodeId;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList setNodeIp(String nodeIp) {
+            this.nodeIp = nodeIp;
+            return this;
+        }
+        public String getNodeIp() {
+            return this.nodeIp;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList setNodeType(String nodeType) {
+            this.nodeType = nodeType;
+            return this;
+        }
+        public String getNodeType() {
+            return this.nodeType;
         }
 
         public DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList setPort(Integer port) {
@@ -150,31 +150,28 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             return this.role;
         }
 
-        public DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList setNodeId(Integer nodeId) {
-            this.nodeId = nodeId;
+        public DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList setZoneId(String zoneId) {
+            this.zoneId = zoneId;
             return this;
         }
-        public Integer getNodeId() {
-            return this.nodeId;
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }
 
     public static class DescribeDedicatedClusterInstanceListResponseBodyInstances extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
+        @NameInMap("BandWidth")
+        public Long bandWidth;
 
         @NameInMap("CharacterType")
-        public Integer characterType;
+        public String characterType;
 
-        @NameInMap("VswitchId")
-        public String vswitchId;
+        @NameInMap("ClusterId")
+        public String clusterId;
 
-        @NameInMap("MaintainStartTime")
-        public String maintainStartTime;
-
-        @NameInMap("InstanceClass")
-        public String instanceClass;
+        @NameInMap("ClusterName")
+        public String clusterName;
 
         @NameInMap("ConnectionDomain")
         public String connectionDomain;
@@ -182,97 +179,95 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("MaintainEndTime")
-        public String maintainEndTime;
-
-        @NameInMap("StorageType")
-        public String storageType;
-
-        @NameInMap("InstanceNodeList")
-        public java.util.List<DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList> instanceNodeList;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("BandWidth")
-        public Long bandWidth;
-
         @NameInMap("CurrentBandWidth")
         public Long currentBandWidth;
-
-        @NameInMap("EngineVersion")
-        public String engineVersion;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        @NameInMap("ClusterName")
-        public String clusterName;
-
-        @NameInMap("InstanceStatus")
-        public String instanceStatus;
-
-        @NameInMap("Engine")
-        public String engine;
-
-        @NameInMap("ShardCount")
-        public Integer shardCount;
 
         @NameInMap("CustomId")
         public String customId;
 
-        @NameInMap("ClusterId")
-        public String clusterId;
+        @NameInMap("Engine")
+        public String engine;
+
+        @NameInMap("EngineVersion")
+        public String engineVersion;
+
+        @NameInMap("InstanceClass")
+        public String instanceClass;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("InstanceNodeList")
+        public java.util.List<DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList> instanceNodeList;
+
+        @NameInMap("InstanceStatus")
+        public String instanceStatus;
+
+        @NameInMap("MaintainEndTime")
+        public String maintainEndTime;
+
+        @NameInMap("MaintainStartTime")
+        public String maintainStartTime;
+
+        @NameInMap("ProxyCount")
+        public Integer proxyCount;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("ShardCount")
+        public Integer shardCount;
+
+        @NameInMap("StorageType")
+        public String storageType;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("VswitchId")
+        public String vswitchId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeDedicatedClusterInstanceListResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
             DescribeDedicatedClusterInstanceListResponseBodyInstances self = new DescribeDedicatedClusterInstanceListResponseBodyInstances();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setBandWidth(Long bandWidth) {
+            this.bandWidth = bandWidth;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
+        public Long getBandWidth() {
+            return this.bandWidth;
         }
 
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setCharacterType(Integer characterType) {
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setCharacterType(String characterType) {
             this.characterType = characterType;
             return this;
         }
-        public Integer getCharacterType() {
+        public String getCharacterType() {
             return this.characterType;
         }
 
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setVswitchId(String vswitchId) {
-            this.vswitchId = vswitchId;
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setClusterId(String clusterId) {
+            this.clusterId = clusterId;
             return this;
         }
-        public String getVswitchId() {
-            return this.vswitchId;
+        public String getClusterId() {
+            return this.clusterId;
         }
 
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setMaintainStartTime(String maintainStartTime) {
-            this.maintainStartTime = maintainStartTime;
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setClusterName(String clusterName) {
+            this.clusterName = clusterName;
             return this;
         }
-        public String getMaintainStartTime() {
-            return this.maintainStartTime;
-        }
-
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setInstanceClass(String instanceClass) {
-            this.instanceClass = instanceClass;
-            return this;
-        }
-        public String getInstanceClass() {
-            return this.instanceClass;
+        public String getClusterName() {
+            return this.clusterName;
         }
 
         public DescribeDedicatedClusterInstanceListResponseBodyInstances setConnectionDomain(String connectionDomain) {
@@ -291,116 +286,12 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setMaintainEndTime(String maintainEndTime) {
-            this.maintainEndTime = maintainEndTime;
-            return this;
-        }
-        public String getMaintainEndTime() {
-            return this.maintainEndTime;
-        }
-
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setStorageType(String storageType) {
-            this.storageType = storageType;
-            return this;
-        }
-        public String getStorageType() {
-            return this.storageType;
-        }
-
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setInstanceNodeList(java.util.List<DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList> instanceNodeList) {
-            this.instanceNodeList = instanceNodeList;
-            return this;
-        }
-        public java.util.List<DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList> getInstanceNodeList() {
-            return this.instanceNodeList;
-        }
-
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setBandWidth(Long bandWidth) {
-            this.bandWidth = bandWidth;
-            return this;
-        }
-        public Long getBandWidth() {
-            return this.bandWidth;
-        }
-
         public DescribeDedicatedClusterInstanceListResponseBodyInstances setCurrentBandWidth(Long currentBandWidth) {
             this.currentBandWidth = currentBandWidth;
             return this;
         }
         public Long getCurrentBandWidth() {
             return this.currentBandWidth;
-        }
-
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setEngineVersion(String engineVersion) {
-            this.engineVersion = engineVersion;
-            return this;
-        }
-        public String getEngineVersion() {
-            return this.engineVersion;
-        }
-
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
-        }
-
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setClusterName(String clusterName) {
-            this.clusterName = clusterName;
-            return this;
-        }
-        public String getClusterName() {
-            return this.clusterName;
-        }
-
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setInstanceStatus(String instanceStatus) {
-            this.instanceStatus = instanceStatus;
-            return this;
-        }
-        public String getInstanceStatus() {
-            return this.instanceStatus;
-        }
-
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setEngine(String engine) {
-            this.engine = engine;
-            return this;
-        }
-        public String getEngine() {
-            return this.engine;
-        }
-
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setShardCount(Integer shardCount) {
-            this.shardCount = shardCount;
-            return this;
-        }
-        public Integer getShardCount() {
-            return this.shardCount;
         }
 
         public DescribeDedicatedClusterInstanceListResponseBodyInstances setCustomId(String customId) {
@@ -411,12 +302,132 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             return this.customId;
         }
 
-        public DescribeDedicatedClusterInstanceListResponseBodyInstances setClusterId(String clusterId) {
-            this.clusterId = clusterId;
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setEngine(String engine) {
+            this.engine = engine;
             return this;
         }
-        public String getClusterId() {
-            return this.clusterId;
+        public String getEngine() {
+            return this.engine;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setEngineVersion(String engineVersion) {
+            this.engineVersion = engineVersion;
+            return this;
+        }
+        public String getEngineVersion() {
+            return this.engineVersion;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setInstanceClass(String instanceClass) {
+            this.instanceClass = instanceClass;
+            return this;
+        }
+        public String getInstanceClass() {
+            return this.instanceClass;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setInstanceNodeList(java.util.List<DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList> instanceNodeList) {
+            this.instanceNodeList = instanceNodeList;
+            return this;
+        }
+        public java.util.List<DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList> getInstanceNodeList() {
+            return this.instanceNodeList;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setInstanceStatus(String instanceStatus) {
+            this.instanceStatus = instanceStatus;
+            return this;
+        }
+        public String getInstanceStatus() {
+            return this.instanceStatus;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setMaintainEndTime(String maintainEndTime) {
+            this.maintainEndTime = maintainEndTime;
+            return this;
+        }
+        public String getMaintainEndTime() {
+            return this.maintainEndTime;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setMaintainStartTime(String maintainStartTime) {
+            this.maintainStartTime = maintainStartTime;
+            return this;
+        }
+        public String getMaintainStartTime() {
+            return this.maintainStartTime;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setProxyCount(Integer proxyCount) {
+            this.proxyCount = proxyCount;
+            return this;
+        }
+        public Integer getProxyCount() {
+            return this.proxyCount;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setShardCount(Integer shardCount) {
+            this.shardCount = shardCount;
+            return this;
+        }
+        public Integer getShardCount() {
+            return this.shardCount;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

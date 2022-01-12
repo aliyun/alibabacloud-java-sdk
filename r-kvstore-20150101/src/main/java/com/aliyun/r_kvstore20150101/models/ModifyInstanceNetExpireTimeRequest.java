@@ -4,8 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceNetExpireTimeRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("ClassicExpiredDays")
+    public Integer classicExpiredDays;
+
+    @NameInMap("ConnectionString")
+    public String connectionString;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,29 +25,44 @@ public class ModifyInstanceNetExpireTimeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("ConnectionString")
-    public String connectionString;
-
-    @NameInMap("ClassicExpiredDays")
-    public Integer classicExpiredDays;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifyInstanceNetExpireTimeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceNetExpireTimeRequest self = new ModifyInstanceNetExpireTimeRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyInstanceNetExpireTimeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyInstanceNetExpireTimeRequest setClassicExpiredDays(Integer classicExpiredDays) {
+        this.classicExpiredDays = classicExpiredDays;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public Integer getClassicExpiredDays() {
+        return this.classicExpiredDays;
+    }
+
+    public ModifyInstanceNetExpireTimeRequest setConnectionString(String connectionString) {
+        this.connectionString = connectionString;
+        return this;
+    }
+    public String getConnectionString() {
+        return this.connectionString;
+    }
+
+    public ModifyInstanceNetExpireTimeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyInstanceNetExpireTimeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyInstanceNetExpireTimeRequest setOwnerId(Long ownerId) {
@@ -65,36 +89,12 @@ public class ModifyInstanceNetExpireTimeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyInstanceNetExpireTimeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyInstanceNetExpireTimeRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyInstanceNetExpireTimeRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ModifyInstanceNetExpireTimeRequest setConnectionString(String connectionString) {
-        this.connectionString = connectionString;
-        return this;
-    }
-    public String getConnectionString() {
-        return this.connectionString;
-    }
-
-    public ModifyInstanceNetExpireTimeRequest setClassicExpiredDays(Integer classicExpiredDays) {
-        this.classicExpiredDays = classicExpiredDays;
-        return this;
-    }
-    public Integer getClassicExpiredDays() {
-        return this.classicExpiredDays;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

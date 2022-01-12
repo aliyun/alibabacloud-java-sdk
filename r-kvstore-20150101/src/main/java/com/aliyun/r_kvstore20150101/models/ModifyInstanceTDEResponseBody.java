@@ -3,16 +3,16 @@ package com.aliyun.r_kvstore20150101.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyUserClusterHostResponseBody extends TeaModel {
+public class ModifyInstanceTDEResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ModifyUserClusterHostResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModifyUserClusterHostResponseBody self = new ModifyUserClusterHostResponseBody();
+    public static ModifyInstanceTDEResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ModifyInstanceTDEResponseBody self = new ModifyInstanceTDEResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyUserClusterHostResponseBody setRequestId(String requestId) {
+    public ModifyInstanceTDEResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

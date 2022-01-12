@@ -32,11 +32,11 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup extends TeaModel {
-        @NameInMap("SecurityIpGroupName")
-        public String securityIpGroupName;
-
         @NameInMap("SecurityIpGroupAttribute")
         public String securityIpGroupAttribute;
+
+        @NameInMap("SecurityIpGroupName")
+        public String securityIpGroupName;
 
         @NameInMap("SecurityIpList")
         public String securityIpList;
@@ -46,20 +46,20 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup setSecurityIpGroupName(String securityIpGroupName) {
-            this.securityIpGroupName = securityIpGroupName;
-            return this;
-        }
-        public String getSecurityIpGroupName() {
-            return this.securityIpGroupName;
-        }
-
         public DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup setSecurityIpGroupAttribute(String securityIpGroupAttribute) {
             this.securityIpGroupAttribute = securityIpGroupAttribute;
             return this;
         }
         public String getSecurityIpGroupAttribute() {
             return this.securityIpGroupAttribute;
+        }
+
+        public DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup setSecurityIpGroupName(String securityIpGroupName) {
+            this.securityIpGroupName = securityIpGroupName;
+            return this;
+        }
+        public String getSecurityIpGroupName() {
+            return this.securityIpGroupName;
         }
 
         public DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup setSecurityIpList(String securityIpList) {

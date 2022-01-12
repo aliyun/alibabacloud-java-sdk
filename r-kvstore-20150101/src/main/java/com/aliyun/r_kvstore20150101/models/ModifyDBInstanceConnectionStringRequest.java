@@ -4,11 +4,26 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("CurrentConnectionString")
+    public String currentConnectionString;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("IPType")
+    public String IPType;
+
+    @NameInMap("NewConnectionString")
+    public String newConnectionString;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Port")
+    public String port;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,35 +31,52 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("NewConnectionString")
-    public String newConnectionString;
-
-    @NameInMap("CurrentConnectionString")
-    public String currentConnectionString;
-
-    @NameInMap("Port")
-    public String port;
-
-    @NameInMap("IPType")
-    public String IPType;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifyDBInstanceConnectionStringRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceConnectionStringRequest self = new ModifyDBInstanceConnectionStringRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDBInstanceConnectionStringRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyDBInstanceConnectionStringRequest setCurrentConnectionString(String currentConnectionString) {
+        this.currentConnectionString = currentConnectionString;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getCurrentConnectionString() {
+        return this.currentConnectionString;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setIPType(String IPType) {
+        this.IPType = IPType;
+        return this;
+    }
+    public String getIPType() {
+        return this.IPType;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setNewConnectionString(String newConnectionString) {
+        this.newConnectionString = newConnectionString;
+        return this;
+    }
+    public String getNewConnectionString() {
+        return this.newConnectionString;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyDBInstanceConnectionStringRequest setOwnerId(Long ownerId) {
@@ -53,6 +85,14 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setPort(String port) {
+        this.port = port;
+        return this;
+    }
+    public String getPort() {
+        return this.port;
     }
 
     public ModifyDBInstanceConnectionStringRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -71,52 +111,12 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyDBInstanceConnectionStringRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyDBInstanceConnectionStringRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyDBInstanceConnectionStringRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public ModifyDBInstanceConnectionStringRequest setNewConnectionString(String newConnectionString) {
-        this.newConnectionString = newConnectionString;
-        return this;
-    }
-    public String getNewConnectionString() {
-        return this.newConnectionString;
-    }
-
-    public ModifyDBInstanceConnectionStringRequest setCurrentConnectionString(String currentConnectionString) {
-        this.currentConnectionString = currentConnectionString;
-        return this;
-    }
-    public String getCurrentConnectionString() {
-        return this.currentConnectionString;
-    }
-
-    public ModifyDBInstanceConnectionStringRequest setPort(String port) {
-        this.port = port;
-        return this;
-    }
-    public String getPort() {
-        return this.port;
-    }
-
-    public ModifyDBInstanceConnectionStringRequest setIPType(String IPType) {
-        this.IPType = IPType;
-        return this;
-    }
-    public String getIPType() {
-        return this.IPType;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

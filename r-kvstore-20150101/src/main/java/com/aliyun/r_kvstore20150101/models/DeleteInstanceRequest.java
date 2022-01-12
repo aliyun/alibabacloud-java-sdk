@@ -4,8 +4,14 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("GlobalInstanceId")
+    public String globalInstanceId;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,26 +22,36 @@ public class DeleteInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("GlobalInstanceId")
-    public String globalInstanceId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DeleteInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteInstanceRequest self = new DeleteInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteInstanceRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DeleteInstanceRequest setGlobalInstanceId(String globalInstanceId) {
+        this.globalInstanceId = globalInstanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getGlobalInstanceId() {
+        return this.globalInstanceId;
+    }
+
+    public DeleteInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DeleteInstanceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteInstanceRequest setOwnerId(Long ownerId) {
@@ -62,28 +78,12 @@ public class DeleteInstanceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DeleteInstanceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DeleteInstanceRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DeleteInstanceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DeleteInstanceRequest setGlobalInstanceId(String globalInstanceId) {
-        this.globalInstanceId = globalInstanceId;
-        return this;
-    }
-    public String getGlobalInstanceId() {
-        return this.globalInstanceId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

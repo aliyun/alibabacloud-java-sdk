@@ -4,23 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeAccountsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccountsResponseBody self = new DescribeAccountsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAccountsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAccountsResponseBody setAccounts(DescribeAccountsResponseBodyAccounts accounts) {
@@ -29,6 +21,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
     public DescribeAccountsResponseBodyAccounts getAccounts() {
         return this.accounts;
+    }
+
+    public DescribeAccountsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeAccountsResponseBodyAccountsAccountDatabasePrivilegesDatabasePrivilege extends TeaModel {
@@ -70,8 +70,8 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsAccount extends TeaModel {
-        @NameInMap("InstanceId")
-        public String instanceId;
+        @NameInMap("AccountDescription")
+        public String accountDescription;
 
         @NameInMap("AccountName")
         public String accountName;
@@ -82,23 +82,23 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("AccountType")
         public String accountType;
 
-        @NameInMap("AccountDescription")
-        public String accountDescription;
-
         @NameInMap("DatabasePrivileges")
         public DescribeAccountsResponseBodyAccountsAccountDatabasePrivileges databasePrivileges;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         public static DescribeAccountsResponseBodyAccountsAccount build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccountsResponseBodyAccountsAccount self = new DescribeAccountsResponseBodyAccountsAccount();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAccountsResponseBodyAccountsAccount setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public DescribeAccountsResponseBodyAccountsAccount setAccountDescription(String accountDescription) {
+            this.accountDescription = accountDescription;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
+        public String getAccountDescription() {
+            return this.accountDescription;
         }
 
         public DescribeAccountsResponseBodyAccountsAccount setAccountName(String accountName) {
@@ -125,20 +125,20 @@ public class DescribeAccountsResponseBody extends TeaModel {
             return this.accountType;
         }
 
-        public DescribeAccountsResponseBodyAccountsAccount setAccountDescription(String accountDescription) {
-            this.accountDescription = accountDescription;
-            return this;
-        }
-        public String getAccountDescription() {
-            return this.accountDescription;
-        }
-
         public DescribeAccountsResponseBodyAccountsAccount setDatabasePrivileges(DescribeAccountsResponseBodyAccountsAccountDatabasePrivileges databasePrivileges) {
             this.databasePrivileges = databasePrivileges;
             return this;
         }
         public DescribeAccountsResponseBodyAccountsAccountDatabasePrivileges getDatabasePrivileges() {
             return this.databasePrivileges;
+        }
+
+        public DescribeAccountsResponseBodyAccountsAccount setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
     }

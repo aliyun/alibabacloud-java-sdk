@@ -4,8 +4,14 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class SwitchInstanceHARequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("NodeId")
+    public String nodeId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,14 +22,8 @@ public class SwitchInstanceHARequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("NodeId")
-    public String nodeId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("SwitchMode")
     public Integer switchMode;
@@ -36,12 +36,28 @@ public class SwitchInstanceHARequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SwitchInstanceHARequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public SwitchInstanceHARequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public SwitchInstanceHARequest setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public String getNodeId() {
+        return this.nodeId;
+    }
+
+    public SwitchInstanceHARequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public SwitchInstanceHARequest setOwnerId(Long ownerId) {
@@ -68,28 +84,12 @@ public class SwitchInstanceHARequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SwitchInstanceHARequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public SwitchInstanceHARequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public SwitchInstanceHARequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public SwitchInstanceHARequest setNodeId(String nodeId) {
-        this.nodeId = nodeId;
-        return this;
-    }
-    public String getNodeId() {
-        return this.nodeId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public SwitchInstanceHARequest setSwitchMode(Integer switchMode) {

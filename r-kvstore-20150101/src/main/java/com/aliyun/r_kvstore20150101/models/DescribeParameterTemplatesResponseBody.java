@@ -13,11 +13,11 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     @NameInMap("ParameterCount")
     public String parameterCount;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Parameters")
     public DescribeParameterTemplatesResponseBodyParameters parameters;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeParameterTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeParameterTemplatesResponseBody self = new DescribeParameterTemplatesResponseBody();
@@ -48,20 +48,20 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         return this.parameterCount;
     }
 
-    public DescribeParameterTemplatesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeParameterTemplatesResponseBody setParameters(DescribeParameterTemplatesResponseBodyParameters parameters) {
         this.parameters = parameters;
         return this;
     }
     public DescribeParameterTemplatesResponseBodyParameters getParameters() {
         return this.parameters;
+    }
+
+    public DescribeParameterTemplatesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeParameterTemplatesResponseBodyParametersTemplateRecord extends TeaModel {

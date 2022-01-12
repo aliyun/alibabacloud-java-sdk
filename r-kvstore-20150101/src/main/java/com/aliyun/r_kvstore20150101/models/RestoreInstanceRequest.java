@@ -4,8 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class RestoreInstanceRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("BackupId")
+    public String backupId;
+
+    @NameInMap("FilterKey")
+    public String filterKey;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,26 +25,50 @@ public class RestoreInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("RestoreTime")
+    public String restoreTime;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("RestoreType")
+    public String restoreType;
 
-    @NameInMap("BackupId")
-    public String backupId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static RestoreInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RestoreInstanceRequest self = new RestoreInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public RestoreInstanceRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public RestoreInstanceRequest setBackupId(String backupId) {
+        this.backupId = backupId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getBackupId() {
+        return this.backupId;
+    }
+
+    public RestoreInstanceRequest setFilterKey(String filterKey) {
+        this.filterKey = filterKey;
+        return this;
+    }
+    public String getFilterKey() {
+        return this.filterKey;
+    }
+
+    public RestoreInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public RestoreInstanceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public RestoreInstanceRequest setOwnerId(Long ownerId) {
@@ -62,28 +95,28 @@ public class RestoreInstanceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public RestoreInstanceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public RestoreInstanceRequest setRestoreTime(String restoreTime) {
+        this.restoreTime = restoreTime;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getRestoreTime() {
+        return this.restoreTime;
     }
 
-    public RestoreInstanceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public RestoreInstanceRequest setRestoreType(String restoreType) {
+        this.restoreType = restoreType;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getRestoreType() {
+        return this.restoreType;
     }
 
-    public RestoreInstanceRequest setBackupId(String backupId) {
-        this.backupId = backupId;
+    public RestoreInstanceRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getBackupId() {
-        return this.backupId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

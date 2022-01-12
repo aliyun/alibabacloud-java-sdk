@@ -4,8 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("AutoRenew")
+    public String autoRenew;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("Duration")
+    public String duration;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,29 +25,44 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("Duration")
-    public String duration;
-
-    @NameInMap("AutoRenew")
-    public String autoRenew;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifyInstanceAutoRenewalAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceAutoRenewalAttributeRequest self = new ModifyInstanceAutoRenewalAttributeRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyInstanceAutoRenewalAttributeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyInstanceAutoRenewalAttributeRequest setAutoRenew(String autoRenew) {
+        this.autoRenew = autoRenew;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    public ModifyInstanceAutoRenewalAttributeRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyInstanceAutoRenewalAttributeRequest setDuration(String duration) {
+        this.duration = duration;
+        return this;
+    }
+    public String getDuration() {
+        return this.duration;
+    }
+
+    public ModifyInstanceAutoRenewalAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyInstanceAutoRenewalAttributeRequest setOwnerId(Long ownerId) {
@@ -65,36 +89,12 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyInstanceAutoRenewalAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyInstanceAutoRenewalAttributeRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyInstanceAutoRenewalAttributeRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public ModifyInstanceAutoRenewalAttributeRequest setDuration(String duration) {
-        this.duration = duration;
-        return this;
-    }
-    public String getDuration() {
-        return this.duration;
-    }
-
-    public ModifyInstanceAutoRenewalAttributeRequest setAutoRenew(String autoRenew) {
-        this.autoRenew = autoRenew;
-        return this;
-    }
-    public String getAutoRenew() {
-        return this.autoRenew;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

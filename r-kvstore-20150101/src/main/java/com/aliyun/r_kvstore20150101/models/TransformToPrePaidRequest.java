@@ -4,11 +4,20 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class TransformToPrePaidRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Period")
+    public Long period;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,29 +25,36 @@ public class TransformToPrePaidRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("Period")
-    public Long period;
-
-    @NameInMap("AutoPay")
-    public Boolean autoPay;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static TransformToPrePaidRequest build(java.util.Map<String, ?> map) throws Exception {
         TransformToPrePaidRequest self = new TransformToPrePaidRequest();
         return TeaModel.build(map, self);
     }
 
-    public TransformToPrePaidRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public TransformToPrePaidRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public TransformToPrePaidRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public TransformToPrePaidRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public TransformToPrePaidRequest setOwnerId(Long ownerId) {
@@ -47,6 +63,14 @@ public class TransformToPrePaidRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public TransformToPrePaidRequest setPeriod(Long period) {
+        this.period = period;
+        return this;
+    }
+    public Long getPeriod() {
+        return this.period;
     }
 
     public TransformToPrePaidRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -65,36 +89,12 @@ public class TransformToPrePaidRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public TransformToPrePaidRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public TransformToPrePaidRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public TransformToPrePaidRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public TransformToPrePaidRequest setPeriod(Long period) {
-        this.period = period;
-        return this;
-    }
-    public Long getPeriod() {
-        return this.period;
-    }
-
-    public TransformToPrePaidRequest setAutoPay(Boolean autoPay) {
-        this.autoPay = autoPay;
-        return this;
-    }
-    public Boolean getAutoPay() {
-        return this.autoPay;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

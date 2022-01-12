@@ -4,8 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class GrantAccountPrivilegeRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("AccountName")
+    public String accountName;
+
+    @NameInMap("AccountPrivilege")
+    public String accountPrivilege;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,29 +25,44 @@ public class GrantAccountPrivilegeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("AccountName")
-    public String accountName;
-
-    @NameInMap("AccountPrivilege")
-    public String accountPrivilege;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static GrantAccountPrivilegeRequest build(java.util.Map<String, ?> map) throws Exception {
         GrantAccountPrivilegeRequest self = new GrantAccountPrivilegeRequest();
         return TeaModel.build(map, self);
     }
 
-    public GrantAccountPrivilegeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public GrantAccountPrivilegeRequest setAccountName(String accountName) {
+        this.accountName = accountName;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getAccountName() {
+        return this.accountName;
+    }
+
+    public GrantAccountPrivilegeRequest setAccountPrivilege(String accountPrivilege) {
+        this.accountPrivilege = accountPrivilege;
+        return this;
+    }
+    public String getAccountPrivilege() {
+        return this.accountPrivilege;
+    }
+
+    public GrantAccountPrivilegeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public GrantAccountPrivilegeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public GrantAccountPrivilegeRequest setOwnerId(Long ownerId) {
@@ -65,36 +89,12 @@ public class GrantAccountPrivilegeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public GrantAccountPrivilegeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public GrantAccountPrivilegeRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public GrantAccountPrivilegeRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public GrantAccountPrivilegeRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
-    }
-
-    public GrantAccountPrivilegeRequest setAccountPrivilege(String accountPrivilege) {
-        this.accountPrivilege = accountPrivilege;
-        return this;
-    }
-    public String getAccountPrivilege() {
-        return this.accountPrivilege;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

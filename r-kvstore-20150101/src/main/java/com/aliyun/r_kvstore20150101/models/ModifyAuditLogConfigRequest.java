@@ -4,8 +4,14 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyAuditLogConfigRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DbAudit")
+    public Boolean dbAudit;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,29 +22,39 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("Retention")
     public Integer retention;
 
-    @NameInMap("DbAudit")
-    public Boolean dbAudit;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifyAuditLogConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAuditLogConfigRequest self = new ModifyAuditLogConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyAuditLogConfigRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyAuditLogConfigRequest setDbAudit(Boolean dbAudit) {
+        this.dbAudit = dbAudit;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public Boolean getDbAudit() {
+        return this.dbAudit;
+    }
+
+    public ModifyAuditLogConfigRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyAuditLogConfigRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyAuditLogConfigRequest setOwnerId(Long ownerId) {
@@ -65,22 +81,6 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyAuditLogConfigRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyAuditLogConfigRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public ModifyAuditLogConfigRequest setRetention(Integer retention) {
         this.retention = retention;
         return this;
@@ -89,12 +89,12 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
         return this.retention;
     }
 
-    public ModifyAuditLogConfigRequest setDbAudit(Boolean dbAudit) {
-        this.dbAudit = dbAudit;
+    public ModifyAuditLogConfigRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public Boolean getDbAudit() {
-        return this.dbAudit;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

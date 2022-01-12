@@ -4,8 +4,14 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceConfigRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("Config")
+    public String config;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,26 +22,36 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("Config")
-    public String config;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifyInstanceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceConfigRequest self = new ModifyInstanceConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyInstanceConfigRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyInstanceConfigRequest setConfig(String config) {
+        this.config = config;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getConfig() {
+        return this.config;
+    }
+
+    public ModifyInstanceConfigRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyInstanceConfigRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyInstanceConfigRequest setOwnerId(Long ownerId) {
@@ -62,28 +78,12 @@ public class ModifyInstanceConfigRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyInstanceConfigRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyInstanceConfigRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyInstanceConfigRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ModifyInstanceConfigRequest setConfig(String config) {
-        this.config = config;
-        return this;
-    }
-    public String getConfig() {
-        return this.config;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

@@ -4,11 +4,26 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCacheAnalysisReportListRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("Days")
+    public Integer days;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("NodeId")
+    public String nodeId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PageNumbers")
+    public Integer pageNumbers;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,35 +31,44 @@ public class DescribeCacheAnalysisReportListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("Days")
-    public Integer days;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumbers")
-    public Integer pageNumbers;
-
-    @NameInMap("NodeId")
-    public String nodeId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DescribeCacheAnalysisReportListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCacheAnalysisReportListRequest self = new DescribeCacheAnalysisReportListRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCacheAnalysisReportListRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeCacheAnalysisReportListRequest setDays(Integer days) {
+        this.days = days;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public Integer getDays() {
+        return this.days;
+    }
+
+    public DescribeCacheAnalysisReportListRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeCacheAnalysisReportListRequest setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public String getNodeId() {
+        return this.nodeId;
+    }
+
+    public DescribeCacheAnalysisReportListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeCacheAnalysisReportListRequest setOwnerId(Long ownerId) {
@@ -53,6 +77,22 @@ public class DescribeCacheAnalysisReportListRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeCacheAnalysisReportListRequest setPageNumbers(Integer pageNumbers) {
+        this.pageNumbers = pageNumbers;
+        return this;
+    }
+    public Integer getPageNumbers() {
+        return this.pageNumbers;
+    }
+
+    public DescribeCacheAnalysisReportListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeCacheAnalysisReportListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -71,52 +111,12 @@ public class DescribeCacheAnalysisReportListRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeCacheAnalysisReportListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeCacheAnalysisReportListRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeCacheAnalysisReportListRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DescribeCacheAnalysisReportListRequest setDays(Integer days) {
-        this.days = days;
-        return this;
-    }
-    public Integer getDays() {
-        return this.days;
-    }
-
-    public DescribeCacheAnalysisReportListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeCacheAnalysisReportListRequest setPageNumbers(Integer pageNumbers) {
-        this.pageNumbers = pageNumbers;
-        return this;
-    }
-    public Integer getPageNumbers() {
-        return this.pageNumbers;
-    }
-
-    public DescribeCacheAnalysisReportListRequest setNodeId(String nodeId) {
-        this.nodeId = nodeId;
-        return this;
-    }
-    public String getNodeId() {
-        return this.nodeId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

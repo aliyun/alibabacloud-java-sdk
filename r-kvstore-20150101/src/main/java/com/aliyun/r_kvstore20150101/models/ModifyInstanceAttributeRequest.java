@@ -4,8 +4,20 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAttributeRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("InstanceName")
+    public String instanceName;
+
+    @NameInMap("InstanceReleaseProtection")
+    public Boolean instanceReleaseProtection;
+
+    @NameInMap("NewPassword")
+    public String newPassword;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,32 +28,52 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("InstanceName")
-    public String instanceName;
-
-    @NameInMap("NewPassword")
-    public String newPassword;
-
-    @NameInMap("InstanceReleaseProtection")
-    public Boolean instanceReleaseProtection;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifyInstanceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceAttributeRequest self = new ModifyInstanceAttributeRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyInstanceAttributeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyInstanceAttributeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyInstanceAttributeRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    public ModifyInstanceAttributeRequest setInstanceReleaseProtection(Boolean instanceReleaseProtection) {
+        this.instanceReleaseProtection = instanceReleaseProtection;
+        return this;
+    }
+    public Boolean getInstanceReleaseProtection() {
+        return this.instanceReleaseProtection;
+    }
+
+    public ModifyInstanceAttributeRequest setNewPassword(String newPassword) {
+        this.newPassword = newPassword;
+        return this;
+    }
+    public String getNewPassword() {
+        return this.newPassword;
+    }
+
+    public ModifyInstanceAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyInstanceAttributeRequest setOwnerId(Long ownerId) {
@@ -68,44 +100,12 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyInstanceAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyInstanceAttributeRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyInstanceAttributeRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ModifyInstanceAttributeRequest setInstanceName(String instanceName) {
-        this.instanceName = instanceName;
-        return this;
-    }
-    public String getInstanceName() {
-        return this.instanceName;
-    }
-
-    public ModifyInstanceAttributeRequest setNewPassword(String newPassword) {
-        this.newPassword = newPassword;
-        return this;
-    }
-    public String getNewPassword() {
-        return this.newPassword;
-    }
-
-    public ModifyInstanceAttributeRequest setInstanceReleaseProtection(Boolean instanceReleaseProtection) {
-        this.instanceReleaseProtection = instanceReleaseProtection;
-        return this;
-    }
-    public Boolean getInstanceReleaseProtection() {
-        return this.instanceReleaseProtection;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

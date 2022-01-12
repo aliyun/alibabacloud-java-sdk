@@ -4,8 +4,8 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Backups")
+    public DescribeBackupsResponseBodyBackups backups;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,23 +13,23 @@ public class DescribeBackupsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Backups")
-    public DescribeBackupsResponseBodyBackups backups;
 
     public static DescribeBackupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupsResponseBody self = new DescribeBackupsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeBackupsResponseBody setBackups(DescribeBackupsResponseBodyBackups backups) {
+        this.backups = backups;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public DescribeBackupsResponseBodyBackups getBackups() {
+        return this.backups;
     }
 
     public DescribeBackupsResponseBody setPageNumber(Integer pageNumber) {
@@ -48,6 +48,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeBackupsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeBackupsResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,44 +64,39 @@ public class DescribeBackupsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeBackupsResponseBody setBackups(DescribeBackupsResponseBodyBackups backups) {
-        this.backups = backups;
-        return this;
-    }
-    public DescribeBackupsResponseBodyBackups getBackups() {
-        return this.backups;
-    }
-
     public static class DescribeBackupsResponseBodyBackupsBackup extends TeaModel {
-        @NameInMap("BackupId")
-        public Integer backupId;
-
         @NameInMap("BackupDBNames")
         public String backupDBNames;
-
-        @NameInMap("BackupStatus")
-        public String backupStatus;
-
-        @NameInMap("BackupStartTime")
-        public String backupStartTime;
-
-        @NameInMap("BackupEndTime")
-        public String backupEndTime;
-
-        @NameInMap("BackupType")
-        public String backupType;
-
-        @NameInMap("BackupMode")
-        public String backupMode;
-
-        @NameInMap("BackupMethod")
-        public String backupMethod;
 
         @NameInMap("BackupDownloadURL")
         public String backupDownloadURL;
 
+        @NameInMap("BackupEndTime")
+        public String backupEndTime;
+
+        @NameInMap("BackupId")
+        public Integer backupId;
+
+        @NameInMap("BackupIntranetDownloadURL")
+        public String backupIntranetDownloadURL;
+
+        @NameInMap("BackupMethod")
+        public String backupMethod;
+
+        @NameInMap("BackupMode")
+        public String backupMode;
+
         @NameInMap("BackupSize")
         public Long backupSize;
+
+        @NameInMap("BackupStartTime")
+        public String backupStartTime;
+
+        @NameInMap("BackupStatus")
+        public String backupStatus;
+
+        @NameInMap("BackupType")
+        public String backupType;
 
         @NameInMap("EngineVersion")
         public String engineVersion;
@@ -101,20 +104,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("NodeInstanceId")
         public String nodeInstanceId;
 
-        @NameInMap("BackupIntranetDownloadURL")
-        public String backupIntranetDownloadURL;
-
         public static DescribeBackupsResponseBodyBackupsBackup build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupsResponseBodyBackupsBackup self = new DescribeBackupsResponseBodyBackupsBackup();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBackupsResponseBodyBackupsBackup setBackupId(Integer backupId) {
-            this.backupId = backupId;
-            return this;
-        }
-        public Integer getBackupId() {
-            return this.backupId;
         }
 
         public DescribeBackupsResponseBodyBackupsBackup setBackupDBNames(String backupDBNames) {
@@ -125,20 +117,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.backupDBNames;
         }
 
-        public DescribeBackupsResponseBodyBackupsBackup setBackupStatus(String backupStatus) {
-            this.backupStatus = backupStatus;
+        public DescribeBackupsResponseBodyBackupsBackup setBackupDownloadURL(String backupDownloadURL) {
+            this.backupDownloadURL = backupDownloadURL;
             return this;
         }
-        public String getBackupStatus() {
-            return this.backupStatus;
-        }
-
-        public DescribeBackupsResponseBodyBackupsBackup setBackupStartTime(String backupStartTime) {
-            this.backupStartTime = backupStartTime;
-            return this;
-        }
-        public String getBackupStartTime() {
-            return this.backupStartTime;
+        public String getBackupDownloadURL() {
+            return this.backupDownloadURL;
         }
 
         public DescribeBackupsResponseBodyBackupsBackup setBackupEndTime(String backupEndTime) {
@@ -149,20 +133,20 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.backupEndTime;
         }
 
-        public DescribeBackupsResponseBodyBackupsBackup setBackupType(String backupType) {
-            this.backupType = backupType;
+        public DescribeBackupsResponseBodyBackupsBackup setBackupId(Integer backupId) {
+            this.backupId = backupId;
             return this;
         }
-        public String getBackupType() {
-            return this.backupType;
+        public Integer getBackupId() {
+            return this.backupId;
         }
 
-        public DescribeBackupsResponseBodyBackupsBackup setBackupMode(String backupMode) {
-            this.backupMode = backupMode;
+        public DescribeBackupsResponseBodyBackupsBackup setBackupIntranetDownloadURL(String backupIntranetDownloadURL) {
+            this.backupIntranetDownloadURL = backupIntranetDownloadURL;
             return this;
         }
-        public String getBackupMode() {
-            return this.backupMode;
+        public String getBackupIntranetDownloadURL() {
+            return this.backupIntranetDownloadURL;
         }
 
         public DescribeBackupsResponseBodyBackupsBackup setBackupMethod(String backupMethod) {
@@ -173,12 +157,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.backupMethod;
         }
 
-        public DescribeBackupsResponseBodyBackupsBackup setBackupDownloadURL(String backupDownloadURL) {
-            this.backupDownloadURL = backupDownloadURL;
+        public DescribeBackupsResponseBodyBackupsBackup setBackupMode(String backupMode) {
+            this.backupMode = backupMode;
             return this;
         }
-        public String getBackupDownloadURL() {
-            return this.backupDownloadURL;
+        public String getBackupMode() {
+            return this.backupMode;
         }
 
         public DescribeBackupsResponseBodyBackupsBackup setBackupSize(Long backupSize) {
@@ -187,6 +171,30 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public Long getBackupSize() {
             return this.backupSize;
+        }
+
+        public DescribeBackupsResponseBodyBackupsBackup setBackupStartTime(String backupStartTime) {
+            this.backupStartTime = backupStartTime;
+            return this;
+        }
+        public String getBackupStartTime() {
+            return this.backupStartTime;
+        }
+
+        public DescribeBackupsResponseBodyBackupsBackup setBackupStatus(String backupStatus) {
+            this.backupStatus = backupStatus;
+            return this;
+        }
+        public String getBackupStatus() {
+            return this.backupStatus;
+        }
+
+        public DescribeBackupsResponseBodyBackupsBackup setBackupType(String backupType) {
+            this.backupType = backupType;
+            return this;
+        }
+        public String getBackupType() {
+            return this.backupType;
         }
 
         public DescribeBackupsResponseBodyBackupsBackup setEngineVersion(String engineVersion) {
@@ -203,14 +211,6 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getNodeInstanceId() {
             return this.nodeInstanceId;
-        }
-
-        public DescribeBackupsResponseBodyBackupsBackup setBackupIntranetDownloadURL(String backupIntranetDownloadURL) {
-            this.backupIntranetDownloadURL = backupIntranetDownloadURL;
-            return this;
-        }
-        public String getBackupIntranetDownloadURL() {
-            return this.backupIntranetDownloadURL;
         }
 
     }

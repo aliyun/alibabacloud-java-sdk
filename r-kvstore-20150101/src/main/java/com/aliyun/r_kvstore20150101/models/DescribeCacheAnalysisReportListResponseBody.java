@@ -4,34 +4,18 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DailyTasks")
+    public DescribeCacheAnalysisReportListResponseBodyDailyTasks dailyTasks;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("DailyTasks")
-    public DescribeCacheAnalysisReportListResponseBodyDailyTasks dailyTasks;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeCacheAnalysisReportListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCacheAnalysisReportListResponseBody self = new DescribeCacheAnalysisReportListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCacheAnalysisReportListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeCacheAnalysisReportListResponseBody setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public DescribeCacheAnalysisReportListResponseBody setDailyTasks(DescribeCacheAnalysisReportListResponseBodyDailyTasks dailyTasks) {
@@ -42,10 +26,23 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         return this.dailyTasks;
     }
 
-    public static class DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask extends TeaModel {
-        @NameInMap("TaskId")
-        public String taskId;
+    public DescribeCacheAnalysisReportListResponseBody setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
 
+    public DescribeCacheAnalysisReportListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask extends TeaModel {
         @NameInMap("NodeId")
         public String nodeId;
 
@@ -55,17 +52,12 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("TaskId")
+        public String taskId;
+
         public static DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask build(java.util.Map<String, ?> map) throws Exception {
             DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask self = new DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask setTaskId(String taskId) {
-            this.taskId = taskId;
-            return this;
-        }
-        public String getTaskId() {
-            return this.taskId;
         }
 
         public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask setNodeId(String nodeId) {
@@ -90,6 +82,14 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
         }
 
     }

@@ -4,20 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuditRecordsRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("AccountName")
+    public String accountName;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("DatabaseName")
+    public String databaseName;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("EndTime")
+    public String endTime;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("HostAddress")
+    public String hostAddress;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -25,89 +22,36 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     @NameInMap("NodeId")
     public String nodeId;
 
-    @NameInMap("AccountName")
-    public String accountName;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
-    @NameInMap("DatabaseName")
-    public String databaseName;
-
-    @NameInMap("QueryKeywords")
-    public String queryKeywords;
-
-    @NameInMap("HostAddress")
-    public String hostAddress;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("QueryKeywords")
+    public String queryKeywords;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
 
     public static DescribeAuditRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAuditRecordsRequest self = new DescribeAuditRecordsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAuditRecordsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DescribeAuditRecordsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeAuditRecordsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeAuditRecordsRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeAuditRecordsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeAuditRecordsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DescribeAuditRecordsRequest setNodeId(String nodeId) {
-        this.nodeId = nodeId;
-        return this;
-    }
-    public String getNodeId() {
-        return this.nodeId;
     }
 
     public DescribeAuditRecordsRequest setAccountName(String accountName) {
@@ -126,12 +70,12 @@ public class DescribeAuditRecordsRequest extends TeaModel {
         return this.databaseName;
     }
 
-    public DescribeAuditRecordsRequest setQueryKeywords(String queryKeywords) {
-        this.queryKeywords = queryKeywords;
+    public DescribeAuditRecordsRequest setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getQueryKeywords() {
-        return this.queryKeywords;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeAuditRecordsRequest setHostAddress(String hostAddress) {
@@ -142,12 +86,36 @@ public class DescribeAuditRecordsRequest extends TeaModel {
         return this.hostAddress;
     }
 
-    public DescribeAuditRecordsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeAuditRecordsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeAuditRecordsRequest setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public String getNodeId() {
+        return this.nodeId;
+    }
+
+    public DescribeAuditRecordsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeAuditRecordsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeAuditRecordsRequest setPageNumber(Integer pageNumber) {
@@ -158,20 +126,52 @@ public class DescribeAuditRecordsRequest extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeAuditRecordsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeAuditRecordsRequest setQueryKeywords(String queryKeywords) {
+        this.queryKeywords = queryKeywords;
+        return this;
+    }
+    public String getQueryKeywords() {
+        return this.queryKeywords;
+    }
+
+    public DescribeAuditRecordsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeAuditRecordsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeAuditRecordsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
     public DescribeAuditRecordsRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeAuditRecordsRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
     }
 
 }

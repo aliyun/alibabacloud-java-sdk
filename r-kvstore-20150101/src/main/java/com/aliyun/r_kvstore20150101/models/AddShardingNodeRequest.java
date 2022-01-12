@@ -4,8 +4,20 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class AddShardingNodeRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    @NameInMap("BusinessInfo")
+    public String businessInfo;
+
+    @NameInMap("CouponNo")
+    public String couponNo;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,38 +28,61 @@ public class AddShardingNodeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("ShardCount")
-    public Integer shardCount;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("ShardClass")
     public String shardClass;
 
-    @NameInMap("AutoPay")
-    public Boolean autoPay;
+    @NameInMap("ShardCount")
+    public Integer shardCount;
 
-    @NameInMap("CouponNo")
-    public String couponNo;
-
-    @NameInMap("BusinessInfo")
-    public String businessInfo;
+    @NameInMap("SourceBiz")
+    public String sourceBiz;
 
     public static AddShardingNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         AddShardingNodeRequest self = new AddShardingNodeRequest();
         return TeaModel.build(map, self);
     }
 
-    public AddShardingNodeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public AddShardingNodeRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public AddShardingNodeRequest setBusinessInfo(String businessInfo) {
+        this.businessInfo = businessInfo;
+        return this;
+    }
+    public String getBusinessInfo() {
+        return this.businessInfo;
+    }
+
+    public AddShardingNodeRequest setCouponNo(String couponNo) {
+        this.couponNo = couponNo;
+        return this;
+    }
+    public String getCouponNo() {
+        return this.couponNo;
+    }
+
+    public AddShardingNodeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public AddShardingNodeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public AddShardingNodeRequest setOwnerId(Long ownerId) {
@@ -74,28 +109,12 @@ public class AddShardingNodeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public AddShardingNodeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public AddShardingNodeRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public AddShardingNodeRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public AddShardingNodeRequest setShardCount(Integer shardCount) {
-        this.shardCount = shardCount;
-        return this;
-    }
-    public Integer getShardCount() {
-        return this.shardCount;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public AddShardingNodeRequest setShardClass(String shardClass) {
@@ -106,28 +125,20 @@ public class AddShardingNodeRequest extends TeaModel {
         return this.shardClass;
     }
 
-    public AddShardingNodeRequest setAutoPay(Boolean autoPay) {
-        this.autoPay = autoPay;
+    public AddShardingNodeRequest setShardCount(Integer shardCount) {
+        this.shardCount = shardCount;
         return this;
     }
-    public Boolean getAutoPay() {
-        return this.autoPay;
+    public Integer getShardCount() {
+        return this.shardCount;
     }
 
-    public AddShardingNodeRequest setCouponNo(String couponNo) {
-        this.couponNo = couponNo;
+    public AddShardingNodeRequest setSourceBiz(String sourceBiz) {
+        this.sourceBiz = sourceBiz;
         return this;
     }
-    public String getCouponNo() {
-        return this.couponNo;
-    }
-
-    public AddShardingNodeRequest setBusinessInfo(String businessInfo) {
-        this.businessInfo = businessInfo;
-        return this;
-    }
-    public String getBusinessInfo() {
-        return this.businessInfo;
+    public String getSourceBiz() {
+        return this.sourceBiz;
     }
 
 }

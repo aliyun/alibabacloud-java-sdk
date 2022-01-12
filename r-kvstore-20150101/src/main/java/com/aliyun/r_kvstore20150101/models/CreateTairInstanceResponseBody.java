@@ -4,8 +4,20 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class CreateTairInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Bandwidth")
+    public Long bandwidth;
+
+    @NameInMap("ChargeType")
+    public String chargeType;
+
+    @NameInMap("Config")
+    public String config;
+
+    @NameInMap("ConnectionDomain")
+    public String connectionDomain;
+
+    @NameInMap("Connections")
+    public Long connections;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -13,50 +25,70 @@ public class CreateTairInstanceResponseBody extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
-    @NameInMap("ConnectionDomain")
-    public String connectionDomain;
+    @NameInMap("InstanceStatus")
+    public String instanceStatus;
 
     @NameInMap("Port")
     public Integer port;
 
-    @NameInMap("InstanceStatus")
-    public String instanceStatus;
+    @NameInMap("QPS")
+    public Long QPS;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("QPS")
-    public Long QPS;
-
-    @NameInMap("Bandwidth")
-    public Long bandwidth;
-
-    @NameInMap("Connections")
-    public Long connections;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
-
-    @NameInMap("Config")
-    public String config;
-
-    @NameInMap("ChargeType")
-    public String chargeType;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TaskId")
     public String taskId;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static CreateTairInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateTairInstanceResponseBody self = new CreateTairInstanceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateTairInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateTairInstanceResponseBody setBandwidth(Long bandwidth) {
+        this.bandwidth = bandwidth;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Long getBandwidth() {
+        return this.bandwidth;
+    }
+
+    public CreateTairInstanceResponseBody setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
+    }
+
+    public CreateTairInstanceResponseBody setConfig(String config) {
+        this.config = config;
+        return this;
+    }
+    public String getConfig() {
+        return this.config;
+    }
+
+    public CreateTairInstanceResponseBody setConnectionDomain(String connectionDomain) {
+        this.connectionDomain = connectionDomain;
+        return this;
+    }
+    public String getConnectionDomain() {
+        return this.connectionDomain;
+    }
+
+    public CreateTairInstanceResponseBody setConnections(Long connections) {
+        this.connections = connections;
+        return this;
+    }
+    public Long getConnections() {
+        return this.connections;
     }
 
     public CreateTairInstanceResponseBody setInstanceId(String instanceId) {
@@ -75,12 +107,12 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         return this.instanceName;
     }
 
-    public CreateTairInstanceResponseBody setConnectionDomain(String connectionDomain) {
-        this.connectionDomain = connectionDomain;
+    public CreateTairInstanceResponseBody setInstanceStatus(String instanceStatus) {
+        this.instanceStatus = instanceStatus;
         return this;
     }
-    public String getConnectionDomain() {
-        return this.connectionDomain;
+    public String getInstanceStatus() {
+        return this.instanceStatus;
     }
 
     public CreateTairInstanceResponseBody setPort(Integer port) {
@@ -91,12 +123,12 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         return this.port;
     }
 
-    public CreateTairInstanceResponseBody setInstanceStatus(String instanceStatus) {
-        this.instanceStatus = instanceStatus;
+    public CreateTairInstanceResponseBody setQPS(Long QPS) {
+        this.QPS = QPS;
         return this;
     }
-    public String getInstanceStatus() {
-        return this.instanceStatus;
+    public Long getQPS() {
+        return this.QPS;
     }
 
     public CreateTairInstanceResponseBody setRegionId(String regionId) {
@@ -107,52 +139,12 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         return this.regionId;
     }
 
-    public CreateTairInstanceResponseBody setQPS(Long QPS) {
-        this.QPS = QPS;
+    public CreateTairInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Long getQPS() {
-        return this.QPS;
-    }
-
-    public CreateTairInstanceResponseBody setBandwidth(Long bandwidth) {
-        this.bandwidth = bandwidth;
-        return this;
-    }
-    public Long getBandwidth() {
-        return this.bandwidth;
-    }
-
-    public CreateTairInstanceResponseBody setConnections(Long connections) {
-        this.connections = connections;
-        return this;
-    }
-    public Long getConnections() {
-        return this.connections;
-    }
-
-    public CreateTairInstanceResponseBody setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    public CreateTairInstanceResponseBody setConfig(String config) {
-        this.config = config;
-        return this;
-    }
-    public String getConfig() {
-        return this.config;
-    }
-
-    public CreateTairInstanceResponseBody setChargeType(String chargeType) {
-        this.chargeType = chargeType;
-        return this;
-    }
-    public String getChargeType() {
-        return this.chargeType;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateTairInstanceResponseBody setTaskId(String taskId) {
@@ -161,6 +153,14 @@ public class CreateTairInstanceResponseBody extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public CreateTairInstanceResponseBody setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }
