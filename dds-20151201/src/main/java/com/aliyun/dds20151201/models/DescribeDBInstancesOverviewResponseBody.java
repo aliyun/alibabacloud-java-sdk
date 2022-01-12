@@ -7,12 +7,11 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
     @NameInMap("DBInstances")
     public java.util.List<DescribeDBInstancesOverviewResponseBodyDBInstances> DBInstances;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TotalCount")
-    public Integer totalCount;
+    public String totalCount;
 
     public static DescribeDBInstancesOverviewResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstancesOverviewResponseBody self = new DescribeDBInstancesOverviewResponseBody();
@@ -35,11 +34,11 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDBInstancesOverviewResponseBody setTotalCount(Integer totalCount) {
+    public DescribeDBInstancesOverviewResponseBody setTotalCount(String totalCount) {
         this.totalCount = totalCount;
         return this;
     }
-    public Integer getTotalCount() {
+    public String getTotalCount() {
         return this.totalCount;
     }
 
@@ -178,6 +177,9 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesOverviewResponseBodyDBInstances extends TeaModel {
+        @NameInMap("CapacityUnit")
+        public String capacityUnit;
+
         @NameInMap("ChargeType")
         public String chargeType;
 
@@ -253,6 +255,14 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public static DescribeDBInstancesOverviewResponseBodyDBInstances build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancesOverviewResponseBodyDBInstances self = new DescribeDBInstancesOverviewResponseBodyDBInstances();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstancesOverviewResponseBodyDBInstances setCapacityUnit(String capacityUnit) {
+            this.capacityUnit = capacityUnit;
+            return this;
+        }
+        public String getCapacityUnit() {
+            return this.capacityUnit;
         }
 
         public DescribeDBInstancesOverviewResponseBodyDBInstances setChargeType(String chargeType) {
