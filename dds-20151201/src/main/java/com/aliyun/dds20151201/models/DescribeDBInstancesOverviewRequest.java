@@ -4,17 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesOverviewRequest extends TeaModel {
-    @NameInMap("ArchitectureType")
-    public String architectureType;
-
     @NameInMap("ChargeType")
     public String chargeType;
 
     @NameInMap("EngineVersion")
     public String engineVersion;
-
-    @NameInMap("ExpireTime")
-    public String expireTime;
 
     @NameInMap("InstanceClass")
     public String instanceClass;
@@ -37,9 +31,6 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -48,9 +39,6 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("SearchKey")
-    public String searchKey;
 
     @NameInMap("SecurityToken")
     public String securityToken;
@@ -69,14 +57,6 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInstancesOverviewRequest setArchitectureType(String architectureType) {
-        this.architectureType = architectureType;
-        return this;
-    }
-    public String getArchitectureType() {
-        return this.architectureType;
-    }
-
     public DescribeDBInstancesOverviewRequest setChargeType(String chargeType) {
         this.chargeType = chargeType;
         return this;
@@ -91,14 +71,6 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     }
     public String getEngineVersion() {
         return this.engineVersion;
-    }
-
-    public DescribeDBInstancesOverviewRequest setExpireTime(String expireTime) {
-        this.expireTime = expireTime;
-        return this;
-    }
-    public String getExpireTime() {
-        return this.expireTime;
     }
 
     public DescribeDBInstancesOverviewRequest setInstanceClass(String instanceClass) {
@@ -157,14 +129,6 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeDBInstancesOverviewRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DescribeDBInstancesOverviewRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -187,14 +151,6 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeDBInstancesOverviewRequest setSearchKey(String searchKey) {
-        this.searchKey = searchKey;
-        return this;
-    }
-    public String getSearchKey() {
-        return this.searchKey;
     }
 
     public DescribeDBInstancesOverviewRequest setSecurityToken(String securityToken) {
