@@ -16,8 +16,14 @@ public class ModifyDtsJobShrinkRequest extends TeaModel {
     @NameInMap("EtlOperatorColumnReference")
     public String etlOperatorColumnReference;
 
+    @NameInMap("ModifyTypeEnum")
+    public String modifyTypeEnum;
+
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("Reserved")
+    public String reserved;
 
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
@@ -59,12 +65,28 @@ public class ModifyDtsJobShrinkRequest extends TeaModel {
         return this.etlOperatorColumnReference;
     }
 
+    public ModifyDtsJobShrinkRequest setModifyTypeEnum(String modifyTypeEnum) {
+        this.modifyTypeEnum = modifyTypeEnum;
+        return this;
+    }
+    public String getModifyTypeEnum() {
+        return this.modifyTypeEnum;
+    }
+
     public ModifyDtsJobShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyDtsJobShrinkRequest setReserved(String reserved) {
+        this.reserved = reserved;
+        return this;
+    }
+    public String getReserved() {
+        return this.reserved;
     }
 
     public ModifyDtsJobShrinkRequest setSynchronizationDirection(String synchronizationDirection) {

@@ -34,6 +34,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @NameInMap("Delay")
     public Long delay;
 
+    @NameInMap("DemoJob")
+    public Boolean demoJob;
+
     @NameInMap("DestNetType")
     public String destNetType;
 
@@ -201,6 +204,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
     public Long getDelay() {
         return this.delay;
+    }
+
+    public DescribeDtsJobDetailResponseBody setDemoJob(Boolean demoJob) {
+        this.demoJob = demoJob;
+        return this;
+    }
+    public Boolean getDemoJob() {
+        return this.demoJob;
     }
 
     public DescribeDtsJobDetailResponseBody setDestNetType(String destNetType) {
