@@ -16,8 +16,8 @@ public class ListConnectionPoolAllIpsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("TotalIpsCount")
+    public Integer totalIpsCount;
 
     public static ListConnectionPoolAllIpsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListConnectionPoolAllIpsResponseBody self = new ListConnectionPoolAllIpsResponseBody();
@@ -56,12 +56,12 @@ public class ListConnectionPoolAllIpsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListConnectionPoolAllIpsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListConnectionPoolAllIpsResponseBody setTotalIpsCount(Integer totalIpsCount) {
+        this.totalIpsCount = totalIpsCount;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getTotalIpsCount() {
+        return this.totalIpsCount;
     }
 
     public static class ListConnectionPoolAllIpsResponseBodyConnectionPoolIps extends TeaModel {

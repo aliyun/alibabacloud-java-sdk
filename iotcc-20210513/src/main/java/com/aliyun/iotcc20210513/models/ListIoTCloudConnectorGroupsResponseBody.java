@@ -65,8 +65,14 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
     }
 
     public static class ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroupsIoTCloudConnectors extends TeaModel {
+        @NameInMap("APN")
+        public String APN;
+
         @NameInMap("CreateTime")
         public Long createTime;
+
+        @NameInMap("ISP")
+        public String ISP;
 
         @NameInMap("IoTCloudConnectorDescription")
         public String ioTCloudConnectorDescription;
@@ -85,12 +91,28 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroupsIoTCloudConnectors setAPN(String APN) {
+            this.APN = APN;
+            return this;
+        }
+        public String getAPN() {
+            return this.APN;
+        }
+
         public ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroupsIoTCloudConnectors setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroupsIoTCloudConnectors setISP(String ISP) {
+            this.ISP = ISP;
+            return this;
+        }
+        public String getISP() {
+            return this.ISP;
         }
 
         public ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroupsIoTCloudConnectors setIoTCloudConnectorDescription(String ioTCloudConnectorDescription) {
