@@ -16,14 +16,8 @@ public class QueryGateVerifyStatisticPublicRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ProdCode")
-    public String prodCode;
-
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
 
     @NameInMap("SceneCode")
     public String sceneCode;
@@ -68,28 +62,12 @@ public class QueryGateVerifyStatisticPublicRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public QueryGateVerifyStatisticPublicRequest setProdCode(String prodCode) {
-        this.prodCode = prodCode;
-        return this;
-    }
-    public String getProdCode() {
-        return this.prodCode;
-    }
-
     public QueryGateVerifyStatisticPublicRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
     public String getResourceOwnerAccount() {
         return this.resourceOwnerAccount;
-    }
-
-    public QueryGateVerifyStatisticPublicRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public QueryGateVerifyStatisticPublicRequest setSceneCode(String sceneCode) {
