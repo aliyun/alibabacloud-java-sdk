@@ -21,18 +21,6 @@ public class CreateShopRequest extends TeaModel {
     }
 
     public static class CreateShopRequestShopList extends TeaModel {
-        // 设备列表(查询结果)
-        @NameInMap("DeviceMacList")
-        public java.util.List<String> deviceMacList;
-
-        // 设备总数(查询结果)
-        @NameInMap("DeviceNum")
-        public Integer deviceNum;
-
-        // 添加时间(查询结果)
-        @NameInMap("GmtCreateTime")
-        public Long gmtCreateTime;
-
         // 地理纬度-选填
         @NameInMap("Latitude")
         public String latitude;
@@ -88,30 +76,6 @@ public class CreateShopRequest extends TeaModel {
         public static CreateShopRequestShopList build(java.util.Map<String, ?> map) throws Exception {
             CreateShopRequestShopList self = new CreateShopRequestShopList();
             return TeaModel.build(map, self);
-        }
-
-        public CreateShopRequestShopList setDeviceMacList(java.util.List<String> deviceMacList) {
-            this.deviceMacList = deviceMacList;
-            return this;
-        }
-        public java.util.List<String> getDeviceMacList() {
-            return this.deviceMacList;
-        }
-
-        public CreateShopRequestShopList setDeviceNum(Integer deviceNum) {
-            this.deviceNum = deviceNum;
-            return this;
-        }
-        public Integer getDeviceNum() {
-            return this.deviceNum;
-        }
-
-        public CreateShopRequestShopList setGmtCreateTime(Long gmtCreateTime) {
-            this.gmtCreateTime = gmtCreateTime;
-            return this;
-        }
-        public Long getGmtCreateTime() {
-            return this.gmtCreateTime;
         }
 
         public CreateShopRequestShopList setLatitude(String latitude) {
