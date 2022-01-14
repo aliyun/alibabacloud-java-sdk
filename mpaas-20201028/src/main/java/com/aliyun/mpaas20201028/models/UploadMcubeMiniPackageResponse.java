@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.mpaas20201028.models;
+
+import com.aliyun.tea.*;
+
+public class UploadMcubeMiniPackageResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public UploadMcubeMiniPackageResponseBody body;
+
+    public static UploadMcubeMiniPackageResponse build(java.util.Map<String, ?> map) throws Exception {
+        UploadMcubeMiniPackageResponse self = new UploadMcubeMiniPackageResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public UploadMcubeMiniPackageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UploadMcubeMiniPackageResponse setBody(UploadMcubeMiniPackageResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UploadMcubeMiniPackageResponseBody getBody() {
+        return this.body;
+    }
+
+}

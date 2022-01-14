@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.mpaas20201028.models;
+
+import com.aliyun.tea.*;
+
+public class AddMdsMiniConfigResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public AddMdsMiniConfigResponseBody body;
+
+    public static AddMdsMiniConfigResponse build(java.util.Map<String, ?> map) throws Exception {
+        AddMdsMiniConfigResponse self = new AddMdsMiniConfigResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public AddMdsMiniConfigResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public AddMdsMiniConfigResponse setBody(AddMdsMiniConfigResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AddMdsMiniConfigResponseBody getBody() {
+        return this.body;
+    }
+
+}
