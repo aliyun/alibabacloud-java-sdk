@@ -86,6 +86,9 @@ public class ListAccountsResponseBody extends TeaModel {
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
 
+        @NameInMap("ResourceDirectoryPath")
+        public String resourceDirectoryPath;
+
         @NameInMap("Status")
         public String status;
 
@@ -151,6 +154,14 @@ public class ListAccountsResponseBody extends TeaModel {
         }
         public String getResourceDirectoryId() {
             return this.resourceDirectoryId;
+        }
+
+        public ListAccountsResponseBodyAccountsAccount setResourceDirectoryPath(String resourceDirectoryPath) {
+            this.resourceDirectoryPath = resourceDirectoryPath;
+            return this;
+        }
+        public String getResourceDirectoryPath() {
+            return this.resourceDirectoryPath;
         }
 
         public ListAccountsResponseBodyAccountsAccount setStatus(String status) {

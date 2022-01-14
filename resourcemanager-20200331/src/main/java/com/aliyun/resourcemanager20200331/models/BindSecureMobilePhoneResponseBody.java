@@ -3,16 +3,16 @@ package com.aliyun.resourcemanager20200331.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteAccountResponseBody extends TeaModel {
+public class BindSecureMobilePhoneResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteAccountResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteAccountResponseBody self = new DeleteAccountResponseBody();
+    public static BindSecureMobilePhoneResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        BindSecureMobilePhoneResponseBody self = new BindSecureMobilePhoneResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteAccountResponseBody setRequestId(String requestId) {
+    public BindSecureMobilePhoneResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
