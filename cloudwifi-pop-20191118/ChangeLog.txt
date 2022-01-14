@@ -1,3 +1,6 @@
+2022-01-14 Version: 2.0.1
+- Add three APIs.
+
 2021-10-14 Version: 1.9.6
 - Aliyun POP SDK.
 
