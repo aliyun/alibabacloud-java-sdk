@@ -54,17 +54,17 @@ public class UpdateNetDeviceInfoRequest extends TeaModel {
     }
 
     public static class UpdateNetDeviceInfoRequestDevices extends TeaModel {
-        @NameInMap("LogicNetPod")
-        public String logicNetPod;
-
-        @NameInMap("ServiceTag")
-        public String serviceTag;
-
-        @NameInMap("NetPod")
-        public String netPod;
-
         @NameInMap("HostName")
         public String hostName;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("Idc")
+        public String idc;
+
+        @NameInMap("LogicNetPod")
+        public String logicNetPod;
 
         @NameInMap("Manufacturer")
         public String manufacturer;
@@ -75,17 +75,17 @@ public class UpdateNetDeviceInfoRequest extends TeaModel {
         @NameInMap("Model")
         public String model;
 
+        @NameInMap("NetPod")
+        public String netPod;
+
         @NameInMap("Password")
         public String password;
-
-        @NameInMap("Idc")
-        public String idc;
 
         @NameInMap("Role")
         public String role;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("ServiceTag")
+        public String serviceTag;
 
         @NameInMap("Username")
         public String username;
@@ -95,36 +95,36 @@ public class UpdateNetDeviceInfoRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public UpdateNetDeviceInfoRequestDevices setLogicNetPod(String logicNetPod) {
-            this.logicNetPod = logicNetPod;
-            return this;
-        }
-        public String getLogicNetPod() {
-            return this.logicNetPod;
-        }
-
-        public UpdateNetDeviceInfoRequestDevices setServiceTag(String serviceTag) {
-            this.serviceTag = serviceTag;
-            return this;
-        }
-        public String getServiceTag() {
-            return this.serviceTag;
-        }
-
-        public UpdateNetDeviceInfoRequestDevices setNetPod(String netPod) {
-            this.netPod = netPod;
-            return this;
-        }
-        public String getNetPod() {
-            return this.netPod;
-        }
-
         public UpdateNetDeviceInfoRequestDevices setHostName(String hostName) {
             this.hostName = hostName;
             return this;
         }
         public String getHostName() {
             return this.hostName;
+        }
+
+        public UpdateNetDeviceInfoRequestDevices setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public UpdateNetDeviceInfoRequestDevices setIdc(String idc) {
+            this.idc = idc;
+            return this;
+        }
+        public String getIdc() {
+            return this.idc;
+        }
+
+        public UpdateNetDeviceInfoRequestDevices setLogicNetPod(String logicNetPod) {
+            this.logicNetPod = logicNetPod;
+            return this;
+        }
+        public String getLogicNetPod() {
+            return this.logicNetPod;
         }
 
         public UpdateNetDeviceInfoRequestDevices setManufacturer(String manufacturer) {
@@ -151,20 +151,20 @@ public class UpdateNetDeviceInfoRequest extends TeaModel {
             return this.model;
         }
 
+        public UpdateNetDeviceInfoRequestDevices setNetPod(String netPod) {
+            this.netPod = netPod;
+            return this;
+        }
+        public String getNetPod() {
+            return this.netPod;
+        }
+
         public UpdateNetDeviceInfoRequestDevices setPassword(String password) {
             this.password = password;
             return this;
         }
         public String getPassword() {
             return this.password;
-        }
-
-        public UpdateNetDeviceInfoRequestDevices setIdc(String idc) {
-            this.idc = idc;
-            return this;
-        }
-        public String getIdc() {
-            return this.idc;
         }
 
         public UpdateNetDeviceInfoRequestDevices setRole(String role) {
@@ -175,12 +175,12 @@ public class UpdateNetDeviceInfoRequest extends TeaModel {
             return this.role;
         }
 
-        public UpdateNetDeviceInfoRequestDevices setId(Long id) {
-            this.id = id;
+        public UpdateNetDeviceInfoRequestDevices setServiceTag(String serviceTag) {
+            this.serviceTag = serviceTag;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public String getServiceTag() {
+            return this.serviceTag;
         }
 
         public UpdateNetDeviceInfoRequestDevices setUsername(String username) {

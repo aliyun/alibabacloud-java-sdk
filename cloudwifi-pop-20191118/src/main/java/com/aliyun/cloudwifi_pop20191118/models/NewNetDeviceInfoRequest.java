@@ -54,35 +54,35 @@ public class NewNetDeviceInfoRequest extends TeaModel {
     }
 
     public static class NewNetDeviceInfoRequestDevices extends TeaModel {
-        @NameInMap("MgnIp")
-        public String mgnIp;
-
-        @NameInMap("Password")
-        public String password;
-
-        @NameInMap("Model")
-        public String model;
-
-        @NameInMap("LogicNetPod")
-        public String logicNetPod;
-
-        @NameInMap("ServiceTag")
-        public String serviceTag;
-
-        @NameInMap("NetPod")
-        public String netPod;
-
         @NameInMap("HostName")
         public String hostName;
-
-        @NameInMap("Role")
-        public String role;
 
         @NameInMap("Idc")
         public String idc;
 
+        @NameInMap("LogicNetPod")
+        public String logicNetPod;
+
         @NameInMap("Manufacturer")
         public String manufacturer;
+
+        @NameInMap("MgnIp")
+        public String mgnIp;
+
+        @NameInMap("Model")
+        public String model;
+
+        @NameInMap("NetPod")
+        public String netPod;
+
+        @NameInMap("Password")
+        public String password;
+
+        @NameInMap("Role")
+        public String role;
+
+        @NameInMap("ServiceTag")
+        public String serviceTag;
 
         @NameInMap("Username")
         public String username;
@@ -90,54 +90,6 @@ public class NewNetDeviceInfoRequest extends TeaModel {
         public static NewNetDeviceInfoRequestDevices build(java.util.Map<String, ?> map) throws Exception {
             NewNetDeviceInfoRequestDevices self = new NewNetDeviceInfoRequestDevices();
             return TeaModel.build(map, self);
-        }
-
-        public NewNetDeviceInfoRequestDevices setMgnIp(String mgnIp) {
-            this.mgnIp = mgnIp;
-            return this;
-        }
-        public String getMgnIp() {
-            return this.mgnIp;
-        }
-
-        public NewNetDeviceInfoRequestDevices setPassword(String password) {
-            this.password = password;
-            return this;
-        }
-        public String getPassword() {
-            return this.password;
-        }
-
-        public NewNetDeviceInfoRequestDevices setModel(String model) {
-            this.model = model;
-            return this;
-        }
-        public String getModel() {
-            return this.model;
-        }
-
-        public NewNetDeviceInfoRequestDevices setLogicNetPod(String logicNetPod) {
-            this.logicNetPod = logicNetPod;
-            return this;
-        }
-        public String getLogicNetPod() {
-            return this.logicNetPod;
-        }
-
-        public NewNetDeviceInfoRequestDevices setServiceTag(String serviceTag) {
-            this.serviceTag = serviceTag;
-            return this;
-        }
-        public String getServiceTag() {
-            return this.serviceTag;
-        }
-
-        public NewNetDeviceInfoRequestDevices setNetPod(String netPod) {
-            this.netPod = netPod;
-            return this;
-        }
-        public String getNetPod() {
-            return this.netPod;
         }
 
         public NewNetDeviceInfoRequestDevices setHostName(String hostName) {
@@ -148,14 +100,6 @@ public class NewNetDeviceInfoRequest extends TeaModel {
             return this.hostName;
         }
 
-        public NewNetDeviceInfoRequestDevices setRole(String role) {
-            this.role = role;
-            return this;
-        }
-        public String getRole() {
-            return this.role;
-        }
-
         public NewNetDeviceInfoRequestDevices setIdc(String idc) {
             this.idc = idc;
             return this;
@@ -164,12 +108,68 @@ public class NewNetDeviceInfoRequest extends TeaModel {
             return this.idc;
         }
 
+        public NewNetDeviceInfoRequestDevices setLogicNetPod(String logicNetPod) {
+            this.logicNetPod = logicNetPod;
+            return this;
+        }
+        public String getLogicNetPod() {
+            return this.logicNetPod;
+        }
+
         public NewNetDeviceInfoRequestDevices setManufacturer(String manufacturer) {
             this.manufacturer = manufacturer;
             return this;
         }
         public String getManufacturer() {
             return this.manufacturer;
+        }
+
+        public NewNetDeviceInfoRequestDevices setMgnIp(String mgnIp) {
+            this.mgnIp = mgnIp;
+            return this;
+        }
+        public String getMgnIp() {
+            return this.mgnIp;
+        }
+
+        public NewNetDeviceInfoRequestDevices setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
+        }
+
+        public NewNetDeviceInfoRequestDevices setNetPod(String netPod) {
+            this.netPod = netPod;
+            return this;
+        }
+        public String getNetPod() {
+            return this.netPod;
+        }
+
+        public NewNetDeviceInfoRequestDevices setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
+        }
+
+        public NewNetDeviceInfoRequestDevices setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+        public NewNetDeviceInfoRequestDevices setServiceTag(String serviceTag) {
+            this.serviceTag = serviceTag;
+            return this;
+        }
+        public String getServiceTag() {
+            return this.serviceTag;
         }
 
         public NewNetDeviceInfoRequestDevices setUsername(String username) {
