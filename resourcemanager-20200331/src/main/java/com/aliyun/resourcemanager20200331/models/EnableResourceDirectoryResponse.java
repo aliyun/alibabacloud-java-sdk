@@ -3,21 +3,21 @@ package com.aliyun.resourcemanager20200331.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteAccountResponse extends TeaModel {
+public class EnableResourceDirectoryResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DeleteAccountResponseBody body;
+    public EnableResourceDirectoryResponseBody body;
 
-    public static DeleteAccountResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteAccountResponse self = new DeleteAccountResponse();
+    public static EnableResourceDirectoryResponse build(java.util.Map<String, ?> map) throws Exception {
+        EnableResourceDirectoryResponse self = new EnableResourceDirectoryResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteAccountResponse setHeaders(java.util.Map<String, String> headers) {
+    public EnableResourceDirectoryResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DeleteAccountResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteAccountResponse setBody(DeleteAccountResponseBody body) {
+    public EnableResourceDirectoryResponse setBody(EnableResourceDirectoryResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteAccountResponseBody getBody() {
+    public EnableResourceDirectoryResponseBody getBody() {
         return this.body;
     }
 
