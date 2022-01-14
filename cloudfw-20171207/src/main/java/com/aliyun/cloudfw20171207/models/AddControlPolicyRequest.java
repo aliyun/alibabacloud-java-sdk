@@ -10,6 +10,9 @@ public class AddControlPolicyRequest extends TeaModel {
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    @NameInMap("ApplicationNameList")
+    public java.util.List<String> applicationNameList;
+
     @NameInMap("Description")
     public String description;
 
@@ -77,6 +80,14 @@ public class AddControlPolicyRequest extends TeaModel {
     }
     public String getApplicationName() {
         return this.applicationName;
+    }
+
+    public AddControlPolicyRequest setApplicationNameList(java.util.List<String> applicationNameList) {
+        this.applicationNameList = applicationNameList;
+        return this;
+    }
+    public java.util.List<String> getApplicationNameList() {
+        return this.applicationNameList;
     }
 
     public AddControlPolicyRequest setDescription(String description) {
