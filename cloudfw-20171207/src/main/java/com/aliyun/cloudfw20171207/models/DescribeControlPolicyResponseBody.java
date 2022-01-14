@@ -77,6 +77,9 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         @NameInMap("ApplicationName")
         public String applicationName;
 
+        @NameInMap("ApplicationNameList")
+        public java.util.List<String> applicationNameList;
+
         @NameInMap("Description")
         public String description;
 
@@ -181,6 +184,14 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         }
         public String getApplicationName() {
             return this.applicationName;
+        }
+
+        public DescribeControlPolicyResponseBodyPolicys setApplicationNameList(java.util.List<String> applicationNameList) {
+            this.applicationNameList = applicationNameList;
+            return this;
+        }
+        public java.util.List<String> getApplicationNameList() {
+            return this.applicationNameList;
         }
 
         public DescribeControlPolicyResponseBodyPolicys setDescription(String description) {
