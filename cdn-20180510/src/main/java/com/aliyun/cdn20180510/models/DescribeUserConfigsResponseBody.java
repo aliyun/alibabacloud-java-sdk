@@ -31,36 +31,6 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class DescribeUserConfigsResponseBodyConfigsGreenManagerConfig extends TeaModel {
-        @NameInMap("Quota")
-        public String quota;
-
-        @NameInMap("Ratio")
-        public String ratio;
-
-        public static DescribeUserConfigsResponseBodyConfigsGreenManagerConfig build(java.util.Map<String, ?> map) throws Exception {
-            DescribeUserConfigsResponseBodyConfigsGreenManagerConfig self = new DescribeUserConfigsResponseBodyConfigsGreenManagerConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeUserConfigsResponseBodyConfigsGreenManagerConfig setQuota(String quota) {
-            this.quota = quota;
-            return this;
-        }
-        public String getQuota() {
-            return this.quota;
-        }
-
-        public DescribeUserConfigsResponseBodyConfigsGreenManagerConfig setRatio(String ratio) {
-            this.ratio = ratio;
-            return this;
-        }
-        public String getRatio() {
-            return this.ratio;
-        }
-
-    }
-
     public static class DescribeUserConfigsResponseBodyConfigsOssLogConfig extends TeaModel {
         @NameInMap("Bucket")
         public String bucket;
@@ -122,9 +92,6 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeUserConfigsResponseBodyConfigs extends TeaModel {
-        @NameInMap("GreenManagerConfig")
-        public DescribeUserConfigsResponseBodyConfigsGreenManagerConfig greenManagerConfig;
-
         @NameInMap("OssLogConfig")
         public DescribeUserConfigsResponseBodyConfigsOssLogConfig ossLogConfig;
 
@@ -134,14 +101,6 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
         public static DescribeUserConfigsResponseBodyConfigs build(java.util.Map<String, ?> map) throws Exception {
             DescribeUserConfigsResponseBodyConfigs self = new DescribeUserConfigsResponseBodyConfigs();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeUserConfigsResponseBodyConfigs setGreenManagerConfig(DescribeUserConfigsResponseBodyConfigsGreenManagerConfig greenManagerConfig) {
-            this.greenManagerConfig = greenManagerConfig;
-            return this;
-        }
-        public DescribeUserConfigsResponseBodyConfigsGreenManagerConfig getGreenManagerConfig() {
-            return this.greenManagerConfig;
         }
 
         public DescribeUserConfigsResponseBodyConfigs setOssLogConfig(DescribeUserConfigsResponseBodyConfigsOssLogConfig ossLogConfig) {
