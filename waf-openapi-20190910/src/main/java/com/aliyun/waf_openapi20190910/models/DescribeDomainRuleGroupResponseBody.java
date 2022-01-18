@@ -10,6 +10,9 @@ public class DescribeDomainRuleGroupResponseBody extends TeaModel {
     @NameInMap("RuleGroupId")
     public Long ruleGroupId;
 
+    @NameInMap("WafAiStatus")
+    public Integer wafAiStatus;
+
     public static DescribeDomainRuleGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainRuleGroupResponseBody self = new DescribeDomainRuleGroupResponseBody();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DescribeDomainRuleGroupResponseBody extends TeaModel {
     }
     public Long getRuleGroupId() {
         return this.ruleGroupId;
+    }
+
+    public DescribeDomainRuleGroupResponseBody setWafAiStatus(Integer wafAiStatus) {
+        this.wafAiStatus = wafAiStatus;
+        return this;
+    }
+    public Integer getWafAiStatus() {
+        return this.wafAiStatus;
     }
 
 }

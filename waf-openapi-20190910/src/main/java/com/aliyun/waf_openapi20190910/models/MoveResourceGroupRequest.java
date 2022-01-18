@@ -4,9 +4,6 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class MoveResourceGroupRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -19,14 +16,6 @@ public class MoveResourceGroupRequest extends TeaModel {
     public static MoveResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         MoveResourceGroupRequest self = new MoveResourceGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public MoveResourceGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public MoveResourceGroupRequest setResourceGroupId(String resourceGroupId) {

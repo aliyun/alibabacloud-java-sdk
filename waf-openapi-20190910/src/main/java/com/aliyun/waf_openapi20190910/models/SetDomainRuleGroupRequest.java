@@ -16,6 +16,9 @@ public class SetDomainRuleGroupRequest extends TeaModel {
     @NameInMap("RuleGroupId")
     public Long ruleGroupId;
 
+    @NameInMap("WafAiStatus")
+    public Integer wafAiStatus;
+
     @NameInMap("WafVersion")
     public Long wafVersion;
 
@@ -54,6 +57,14 @@ public class SetDomainRuleGroupRequest extends TeaModel {
     }
     public Long getRuleGroupId() {
         return this.ruleGroupId;
+    }
+
+    public SetDomainRuleGroupRequest setWafAiStatus(Integer wafAiStatus) {
+        this.wafAiStatus = wafAiStatus;
+        return this;
+    }
+    public Integer getWafAiStatus() {
+        return this.wafAiStatus;
     }
 
     public SetDomainRuleGroupRequest setWafVersion(Long wafVersion) {
