@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAlarmContactGroupsRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("PageNum")
     public Integer pageNum;
 
@@ -16,6 +19,14 @@ public class ListAlarmContactGroupsRequest extends TeaModel {
     public static ListAlarmContactGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAlarmContactGroupsRequest self = new ListAlarmContactGroupsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListAlarmContactGroupsRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public ListAlarmContactGroupsRequest setPageNum(Integer pageNum) {

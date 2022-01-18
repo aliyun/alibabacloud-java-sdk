@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpgradeClusterRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,6 +19,14 @@ public class UpgradeClusterRequest extends TeaModel {
     public static UpgradeClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeClusterRequest self = new UpgradeClusterRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpgradeClusterRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public UpgradeClusterRequest setInstanceId(String instanceId) {

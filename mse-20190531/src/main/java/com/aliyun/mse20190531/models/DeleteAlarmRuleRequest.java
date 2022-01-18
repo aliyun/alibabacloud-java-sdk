@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteAlarmRuleRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("AlarmRuleId")
     public String alarmRuleId;
 
@@ -13,6 +16,14 @@ public class DeleteAlarmRuleRequest extends TeaModel {
     public static DeleteAlarmRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAlarmRuleRequest self = new DeleteAlarmRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteAlarmRuleRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public DeleteAlarmRuleRequest setAlarmRuleId(String alarmRuleId) {

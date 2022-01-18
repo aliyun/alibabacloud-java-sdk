@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListEurekaServicesRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -22,6 +25,14 @@ public class ListEurekaServicesRequest extends TeaModel {
     public static ListEurekaServicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEurekaServicesRequest self = new ListEurekaServicesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListEurekaServicesRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public ListEurekaServicesRequest setClusterId(String clusterId) {

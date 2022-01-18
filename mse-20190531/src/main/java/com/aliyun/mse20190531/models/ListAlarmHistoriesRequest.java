@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAlarmHistoriesRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("AlarmMseType")
     public String alarmMseType;
 
@@ -28,6 +31,14 @@ public class ListAlarmHistoriesRequest extends TeaModel {
     public static ListAlarmHistoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAlarmHistoriesRequest self = new ListAlarmHistoriesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListAlarmHistoriesRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public ListAlarmHistoriesRequest setAlarmMseType(String alarmMseType) {

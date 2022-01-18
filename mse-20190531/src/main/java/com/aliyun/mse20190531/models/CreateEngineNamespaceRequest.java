@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateEngineNamespaceRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -22,6 +25,14 @@ public class CreateEngineNamespaceRequest extends TeaModel {
     public static CreateEngineNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEngineNamespaceRequest self = new CreateEngineNamespaceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateEngineNamespaceRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public CreateEngineNamespaceRequest setClusterId(String clusterId) {

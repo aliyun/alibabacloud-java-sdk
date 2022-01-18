@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateConfigRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("AutopurgePurgeInterval")
     public String autopurgePurgeInterval;
 
@@ -37,6 +40,14 @@ public class UpdateConfigRequest extends TeaModel {
     @NameInMap("MaxClientCnxns")
     public String maxClientCnxns;
 
+    // 最大超时时间
+    @NameInMap("MaxSessionTimeout")
+    public String maxSessionTimeout;
+
+    // 最小超时时间
+    @NameInMap("MinSessionTimeout")
+    public String minSessionTimeout;
+
     @NameInMap("OpenSuperAcl")
     public String openSuperAcl;
 
@@ -58,6 +69,14 @@ public class UpdateConfigRequest extends TeaModel {
     public static UpdateConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateConfigRequest self = new UpdateConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateConfigRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public UpdateConfigRequest setAutopurgePurgeInterval(String autopurgePurgeInterval) {
@@ -146,6 +165,22 @@ public class UpdateConfigRequest extends TeaModel {
     }
     public String getMaxClientCnxns() {
         return this.maxClientCnxns;
+    }
+
+    public UpdateConfigRequest setMaxSessionTimeout(String maxSessionTimeout) {
+        this.maxSessionTimeout = maxSessionTimeout;
+        return this;
+    }
+    public String getMaxSessionTimeout() {
+        return this.maxSessionTimeout;
+    }
+
+    public UpdateConfigRequest setMinSessionTimeout(String minSessionTimeout) {
+        this.minSessionTimeout = minSessionTimeout;
+        return this;
+    }
+    public String getMinSessionTimeout() {
+        return this.minSessionTimeout;
     }
 
     public UpdateConfigRequest setOpenSuperAcl(String openSuperAcl) {

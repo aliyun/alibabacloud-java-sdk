@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.mse20190531.models;
+
+import com.aliyun.tea.*;
+
+public class AddAuthResourceResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public AddAuthResourceResponseBody body;
+
+    public static AddAuthResourceResponse build(java.util.Map<String, ?> map) throws Exception {
+        AddAuthResourceResponse self = new AddAuthResourceResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public AddAuthResourceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public AddAuthResourceResponse setBody(AddAuthResourceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AddAuthResourceResponseBody getBody() {
+        return this.body;
+    }
+
+}

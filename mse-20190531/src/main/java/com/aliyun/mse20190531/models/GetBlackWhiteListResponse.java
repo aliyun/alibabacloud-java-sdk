@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.mse20190531.models;
+
+import com.aliyun.tea.*;
+
+public class GetBlackWhiteListResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public GetBlackWhiteListResponseBody body;
+
+    public static GetBlackWhiteListResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetBlackWhiteListResponse self = new GetBlackWhiteListResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public GetBlackWhiteListResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetBlackWhiteListResponse setBody(GetBlackWhiteListResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetBlackWhiteListResponseBody getBody() {
+        return this.body;
+    }
+
+}

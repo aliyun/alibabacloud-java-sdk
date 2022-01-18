@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateAclRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("AclEntryList")
     public String aclEntryList;
 
@@ -13,6 +16,14 @@ public class UpdateAclRequest extends TeaModel {
     public static UpdateAclRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAclRequest self = new UpdateAclRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAclRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public UpdateAclRequest setAclEntryList(String aclEntryList) {

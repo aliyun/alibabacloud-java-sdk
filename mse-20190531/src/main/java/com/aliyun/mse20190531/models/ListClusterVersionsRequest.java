@@ -4,12 +4,23 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListClusterVersionsRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("ClusterType")
     public String clusterType;
 
     public static ListClusterVersionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListClusterVersionsRequest self = new ListClusterVersionsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListClusterVersionsRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public ListClusterVersionsRequest setClusterType(String clusterType) {
