@@ -4,12 +4,23 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class MoveResourceGroupRequest extends TeaModel {
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("clientToken")
     public String clientToken;
 
     public static MoveResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         MoveResourceGroupRequest self = new MoveResourceGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public MoveResourceGroupRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public MoveResourceGroupRequest setClientToken(String clientToken) {
