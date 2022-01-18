@@ -1983,8 +1983,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listChangeSetsWithOptions(request, runtime);
     }
 
-    public ListResourceTypesResponse listResourceTypesWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
+    public ListResourceTypesResponse listResourceTypesWithOptions(ListResourceTypesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
+            query.put("EntityType", request.entityType);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListResourceTypes"),
             new TeaPair("version", "2019-09-10"),
@@ -1999,9 +2007,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceTypesResponse());
     }
 
-    public ListResourceTypesResponse listResourceTypes() throws Exception {
+    public ListResourceTypesResponse listResourceTypes(ListResourceTypesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.listResourceTypesWithOptions(runtime);
+        return this.listResourceTypesWithOptions(request, runtime);
     }
 
     public ListStackEventsResponse listStackEventsWithOptions(ListStackEventsRequest request, RuntimeOptions runtime) throws Exception {
