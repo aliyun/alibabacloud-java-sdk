@@ -61,36 +61,6 @@ public class ListComponentIndicesResponseBody extends TeaModel {
 
     }
 
-    public static class ListComponentIndicesResponseBodyResultContentMeta extends TeaModel {
-        @NameInMap("description")
-        public String description;
-
-        @NameInMap("managed")
-        public Boolean managed;
-
-        public static ListComponentIndicesResponseBodyResultContentMeta build(java.util.Map<String, ?> map) throws Exception {
-            ListComponentIndicesResponseBodyResultContentMeta self = new ListComponentIndicesResponseBodyResultContentMeta();
-            return TeaModel.build(map, self);
-        }
-
-        public ListComponentIndicesResponseBodyResultContentMeta setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListComponentIndicesResponseBodyResultContentMeta setManaged(Boolean managed) {
-            this.managed = managed;
-            return this;
-        }
-        public Boolean getManaged() {
-            return this.managed;
-        }
-
-    }
-
     public static class ListComponentIndicesResponseBodyResultContentTemplateSettingsIndexLifecycle extends TeaModel {
         @NameInMap("name")
         public String name;
@@ -180,7 +150,7 @@ public class ListComponentIndicesResponseBody extends TeaModel {
 
     public static class ListComponentIndicesResponseBodyResultContent extends TeaModel {
         @NameInMap("_meta")
-        public ListComponentIndicesResponseBodyResultContentMeta meta;
+        public java.util.Map<String, ?> meta;
 
         @NameInMap("template")
         public ListComponentIndicesResponseBodyResultContentTemplate template;
@@ -193,11 +163,11 @@ public class ListComponentIndicesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListComponentIndicesResponseBodyResultContent setMeta(ListComponentIndicesResponseBodyResultContentMeta meta) {
+        public ListComponentIndicesResponseBodyResultContent setMeta(java.util.Map<String, ?> meta) {
             this.meta = meta;
             return this;
         }
-        public ListComponentIndicesResponseBodyResultContentMeta getMeta() {
+        public java.util.Map<String, ?> getMeta() {
             return this.meta;
         }
 

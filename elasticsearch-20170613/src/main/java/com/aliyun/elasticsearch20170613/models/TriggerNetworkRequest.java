@@ -4,12 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class TriggerNetworkRequest extends TeaModel {
+    // 动作类型。CLOSE：关闭; OPEN：开启
     @NameInMap("actionType")
     public String actionType;
 
+    // 网络类型。PUBLIC：公网；PRIVATE：私网
     @NameInMap("networkType")
     public String networkType;
 
+    // 实例类型。KIBANA kibana公私网/WORKER 集群公私网
     @NameInMap("nodeType")
     public String nodeType;
 

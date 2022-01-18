@@ -4,12 +4,23 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateLogstashSettingsRequest extends TeaModel {
+    @NameInMap("body")
+    public java.util.Map<String, ?> body;
+
     @NameInMap("clientToken")
     public String clientToken;
 
     public static UpdateLogstashSettingsRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateLogstashSettingsRequest self = new UpdateLogstashSettingsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateLogstashSettingsRequest setBody(java.util.Map<String, ?> body) {
+        this.body = body;
+        return this;
+    }
+    public java.util.Map<String, ?> getBody() {
+        return this.body;
     }
 
     public UpdateLogstashSettingsRequest setClientToken(String clientToken) {

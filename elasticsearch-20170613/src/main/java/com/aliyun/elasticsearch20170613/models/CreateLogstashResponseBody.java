@@ -8,7 +8,7 @@ public class CreateLogstashResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Result")
-    public CreateLogstashResponseBodyResult result;
+    public Logstash result;
 
     public static CreateLogstashResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateLogstashResponseBody self = new CreateLogstashResponseBody();
@@ -23,31 +23,12 @@ public class CreateLogstashResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateLogstashResponseBody setResult(CreateLogstashResponseBodyResult result) {
+    public CreateLogstashResponseBody setResult(Logstash result) {
         this.result = result;
         return this;
     }
-    public CreateLogstashResponseBodyResult getResult() {
+    public Logstash getResult() {
         return this.result;
-    }
-
-    public static class CreateLogstashResponseBodyResult extends TeaModel {
-        @NameInMap("instanceId")
-        public String instanceId;
-
-        public static CreateLogstashResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
-            CreateLogstashResponseBodyResult self = new CreateLogstashResponseBodyResult();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateLogstashResponseBodyResult setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
     }
 
 }
