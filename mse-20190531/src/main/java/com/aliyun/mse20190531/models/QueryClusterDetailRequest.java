@@ -4,9 +4,6 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryClusterDetailRequest extends TeaModel {
-    @NameInMap("AcceptLanguage")
-    public String acceptLanguage;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,14 +13,6 @@ public class QueryClusterDetailRequest extends TeaModel {
     public static QueryClusterDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryClusterDetailRequest self = new QueryClusterDetailRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryClusterDetailRequest setAcceptLanguage(String acceptLanguage) {
-        this.acceptLanguage = acceptLanguage;
-        return this;
-    }
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
     }
 
     public QueryClusterDetailRequest setInstanceId(String instanceId) {

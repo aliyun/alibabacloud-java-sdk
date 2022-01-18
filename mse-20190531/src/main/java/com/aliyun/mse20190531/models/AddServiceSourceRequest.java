@@ -4,9 +4,6 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddServiceSourceRequest extends TeaModel {
-    @NameInMap("AcceptLanguage")
-    public String acceptLanguage;
-
     @NameInMap("Address")
     public String address;
 
@@ -25,14 +22,6 @@ public class AddServiceSourceRequest extends TeaModel {
     public static AddServiceSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         AddServiceSourceRequest self = new AddServiceSourceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddServiceSourceRequest setAcceptLanguage(String acceptLanguage) {
-        this.acceptLanguage = acceptLanguage;
-        return this;
-    }
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
     }
 
     public AddServiceSourceRequest setAddress(String address) {

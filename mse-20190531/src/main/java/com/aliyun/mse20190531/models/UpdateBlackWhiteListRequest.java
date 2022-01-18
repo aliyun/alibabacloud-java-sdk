@@ -4,9 +4,6 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateBlackWhiteListRequest extends TeaModel {
-    @NameInMap("AcceptLanguage")
-    public String acceptLanguage;
-
     @NameInMap("Content")
     public String content;
 
@@ -28,14 +25,6 @@ public class UpdateBlackWhiteListRequest extends TeaModel {
     public static UpdateBlackWhiteListRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateBlackWhiteListRequest self = new UpdateBlackWhiteListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateBlackWhiteListRequest setAcceptLanguage(String acceptLanguage) {
-        this.acceptLanguage = acceptLanguage;
-        return this;
-    }
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
     }
 
     public UpdateBlackWhiteListRequest setContent(String content) {

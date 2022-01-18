@@ -4,9 +4,6 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddSSLCertRequest extends TeaModel {
-    @NameInMap("AcceptLanguage")
-    public String acceptLanguage;
-
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
@@ -19,14 +16,6 @@ public class AddSSLCertRequest extends TeaModel {
     public static AddSSLCertRequest build(java.util.Map<String, ?> map) throws Exception {
         AddSSLCertRequest self = new AddSSLCertRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddSSLCertRequest setAcceptLanguage(String acceptLanguage) {
-        this.acceptLanguage = acceptLanguage;
-        return this;
-    }
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
     }
 
     public AddSSLCertRequest setCertIdentifier(String certIdentifier) {

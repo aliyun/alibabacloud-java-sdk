@@ -4,9 +4,6 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateNacosServiceRequest extends TeaModel {
-    @NameInMap("AcceptLanguage")
-    public String acceptLanguage;
-
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -31,14 +28,6 @@ public class CreateNacosServiceRequest extends TeaModel {
     public static CreateNacosServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNacosServiceRequest self = new CreateNacosServiceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateNacosServiceRequest setAcceptLanguage(String acceptLanguage) {
-        this.acceptLanguage = acceptLanguage;
-        return this;
-    }
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
     }
 
     public CreateNacosServiceRequest setClusterId(String clusterId) {

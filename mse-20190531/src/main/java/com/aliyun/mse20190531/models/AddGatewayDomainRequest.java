@@ -4,9 +4,6 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddGatewayDomainRequest extends TeaModel {
-    @NameInMap("AcceptLanguage")
-    public String acceptLanguage;
-
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
@@ -25,14 +22,6 @@ public class AddGatewayDomainRequest extends TeaModel {
     public static AddGatewayDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         AddGatewayDomainRequest self = new AddGatewayDomainRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddGatewayDomainRequest setAcceptLanguage(String acceptLanguage) {
-        this.acceptLanguage = acceptLanguage;
-        return this;
-    }
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
     }
 
     public AddGatewayDomainRequest setCertIdentifier(String certIdentifier) {

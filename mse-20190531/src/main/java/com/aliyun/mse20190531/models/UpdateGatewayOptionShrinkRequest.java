@@ -4,9 +4,6 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayOptionShrinkRequest extends TeaModel {
-    @NameInMap("AcceptLanguage")
-    public String acceptLanguage;
-
     @NameInMap("GatewayId")
     public Long gatewayId;
 
@@ -19,14 +16,6 @@ public class UpdateGatewayOptionShrinkRequest extends TeaModel {
     public static UpdateGatewayOptionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateGatewayOptionShrinkRequest self = new UpdateGatewayOptionShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateGatewayOptionShrinkRequest setAcceptLanguage(String acceptLanguage) {
-        this.acceptLanguage = acceptLanguage;
-        return this;
-    }
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
     }
 
     public UpdateGatewayOptionShrinkRequest setGatewayId(Long gatewayId) {

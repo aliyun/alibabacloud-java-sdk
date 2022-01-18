@@ -4,9 +4,6 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateImageRequest extends TeaModel {
-    @NameInMap("AcceptLanguage")
-    public String acceptLanguage;
-
     // 目标集群的id
     @NameInMap("ClusterId")
     public String clusterId;
@@ -18,14 +15,6 @@ public class UpdateImageRequest extends TeaModel {
     public static UpdateImageRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateImageRequest self = new UpdateImageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateImageRequest setAcceptLanguage(String acceptLanguage) {
-        this.acceptLanguage = acceptLanguage;
-        return this;
-    }
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
     }
 
     public UpdateImageRequest setClusterId(String clusterId) {
