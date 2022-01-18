@@ -67,6 +67,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("Liveness")
     public String liveness;
 
+    @NameInMap("MinReadyInstanceRatio")
+    public Integer minReadyInstanceRatio;
+
     @NameInMap("MinReadyInstances")
     public Integer minReadyInstances;
 
@@ -299,6 +302,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getLiveness() {
         return this.liveness;
+    }
+
+    public DeployApplicationRequest setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
+        this.minReadyInstanceRatio = minReadyInstanceRatio;
+        return this;
+    }
+    public Integer getMinReadyInstanceRatio() {
+        return this.minReadyInstanceRatio;
     }
 
     public DeployApplicationRequest setMinReadyInstances(Integer minReadyInstances) {

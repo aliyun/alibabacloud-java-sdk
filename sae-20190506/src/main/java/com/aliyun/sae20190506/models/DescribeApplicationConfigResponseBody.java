@@ -320,6 +320,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("Memory")
         public Integer memory;
 
+        @NameInMap("MinReadyInstanceRatio")
+        public Integer minReadyInstanceRatio;
+
         @NameInMap("MinReadyInstances")
         public Integer minReadyInstances;
 
@@ -588,6 +591,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public Integer getMemory() {
             return this.memory;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
+            this.minReadyInstanceRatio = minReadyInstanceRatio;
+            return this;
+        }
+        public Integer getMinReadyInstanceRatio() {
+            return this.minReadyInstanceRatio;
         }
 
         public DescribeApplicationConfigResponseBodyData setMinReadyInstances(Integer minReadyInstances) {

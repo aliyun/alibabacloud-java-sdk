@@ -42,6 +42,77 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         return this.traceId;
     }
 
+    public static class CreateApplicationScalingRuleResponseBodyDataMetricMetrics extends TeaModel {
+        @NameInMap("MetricTargetAverageUtilization")
+        public Integer metricTargetAverageUtilization;
+
+        @NameInMap("MetricType")
+        public String metricType;
+
+        public static CreateApplicationScalingRuleResponseBodyDataMetricMetrics build(java.util.Map<String, ?> map) throws Exception {
+            CreateApplicationScalingRuleResponseBodyDataMetricMetrics self = new CreateApplicationScalingRuleResponseBodyDataMetricMetrics();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateApplicationScalingRuleResponseBodyDataMetricMetrics setMetricTargetAverageUtilization(Integer metricTargetAverageUtilization) {
+            this.metricTargetAverageUtilization = metricTargetAverageUtilization;
+            return this;
+        }
+        public Integer getMetricTargetAverageUtilization() {
+            return this.metricTargetAverageUtilization;
+        }
+
+        public CreateApplicationScalingRuleResponseBodyDataMetricMetrics setMetricType(String metricType) {
+            this.metricType = metricType;
+            return this;
+        }
+        public String getMetricType() {
+            return this.metricType;
+        }
+
+    }
+
+    public static class CreateApplicationScalingRuleResponseBodyDataMetric extends TeaModel {
+        @NameInMap("MaxReplicas")
+        public Integer maxReplicas;
+
+        @NameInMap("Metrics")
+        public java.util.List<CreateApplicationScalingRuleResponseBodyDataMetricMetrics> metrics;
+
+        @NameInMap("MinReplicas")
+        public Integer minReplicas;
+
+        public static CreateApplicationScalingRuleResponseBodyDataMetric build(java.util.Map<String, ?> map) throws Exception {
+            CreateApplicationScalingRuleResponseBodyDataMetric self = new CreateApplicationScalingRuleResponseBodyDataMetric();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateApplicationScalingRuleResponseBodyDataMetric setMaxReplicas(Integer maxReplicas) {
+            this.maxReplicas = maxReplicas;
+            return this;
+        }
+        public Integer getMaxReplicas() {
+            return this.maxReplicas;
+        }
+
+        public CreateApplicationScalingRuleResponseBodyDataMetric setMetrics(java.util.List<CreateApplicationScalingRuleResponseBodyDataMetricMetrics> metrics) {
+            this.metrics = metrics;
+            return this;
+        }
+        public java.util.List<CreateApplicationScalingRuleResponseBodyDataMetricMetrics> getMetrics() {
+            return this.metrics;
+        }
+
+        public CreateApplicationScalingRuleResponseBodyDataMetric setMinReplicas(Integer minReplicas) {
+            this.minReplicas = minReplicas;
+            return this;
+        }
+        public Integer getMinReplicas() {
+            return this.minReplicas;
+        }
+
+    }
+
     public static class CreateApplicationScalingRuleResponseBodyDataTimerSchedules extends TeaModel {
         @NameInMap("AtTime")
         public String atTime;
@@ -131,6 +202,12 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("LastDisableTime")
+        public Long lastDisableTime;
+
+        @NameInMap("Metric")
+        public CreateApplicationScalingRuleResponseBodyDataMetric metric;
+
         @NameInMap("ScaleRuleEnabled")
         public Boolean scaleRuleEnabled;
 
@@ -165,6 +242,22 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public CreateApplicationScalingRuleResponseBodyData setLastDisableTime(Long lastDisableTime) {
+            this.lastDisableTime = lastDisableTime;
+            return this;
+        }
+        public Long getLastDisableTime() {
+            return this.lastDisableTime;
+        }
+
+        public CreateApplicationScalingRuleResponseBodyData setMetric(CreateApplicationScalingRuleResponseBodyDataMetric metric) {
+            this.metric = metric;
+            return this;
+        }
+        public CreateApplicationScalingRuleResponseBodyDataMetric getMetric() {
+            return this.metric;
         }
 
         public CreateApplicationScalingRuleResponseBodyData setScaleRuleEnabled(Boolean scaleRuleEnabled) {

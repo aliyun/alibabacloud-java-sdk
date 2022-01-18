@@ -10,6 +10,9 @@ public class RescaleApplicationRequest extends TeaModel {
     @NameInMap("AutoEnableApplicationScalingRule")
     public Boolean autoEnableApplicationScalingRule;
 
+    @NameInMap("MinReadyInstanceRatio")
+    public Integer minReadyInstanceRatio;
+
     @NameInMap("MinReadyInstances")
     public Integer minReadyInstances;
 
@@ -35,6 +38,14 @@ public class RescaleApplicationRequest extends TeaModel {
     }
     public Boolean getAutoEnableApplicationScalingRule() {
         return this.autoEnableApplicationScalingRule;
+    }
+
+    public RescaleApplicationRequest setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
+        this.minReadyInstanceRatio = minReadyInstanceRatio;
+        return this;
+    }
+    public Integer getMinReadyInstanceRatio() {
+        return this.minReadyInstanceRatio;
     }
 
     public RescaleApplicationRequest setMinReadyInstances(Integer minReadyInstances) {

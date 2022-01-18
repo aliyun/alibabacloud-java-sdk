@@ -105,6 +105,9 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         @NameInMap("EnableAgent")
         public Boolean enableAgent;
 
+        @NameInMap("FileSizeLimit")
+        public Long fileSizeLimit;
+
         @NameInMap("LastChangeOrderId")
         public String lastChangeOrderId;
 
@@ -171,6 +174,14 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
         public Boolean getEnableAgent() {
             return this.enableAgent;
+        }
+
+        public DescribeApplicationStatusResponseBodyData setFileSizeLimit(Long fileSizeLimit) {
+            this.fileSizeLimit = fileSizeLimit;
+            return this;
+        }
+        public Long getFileSizeLimit() {
+            return this.fileSizeLimit;
         }
 
         public DescribeApplicationStatusResponseBodyData setLastChangeOrderId(String lastChangeOrderId) {
