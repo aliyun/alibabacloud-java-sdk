@@ -4,9 +4,6 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateConfigRequest extends TeaModel {
-    @NameInMap("AcceptLanguage")
-    public String acceptLanguage;
-
     @NameInMap("AutopurgePurgeInterval")
     public String autopurgePurgeInterval;
 
@@ -69,14 +66,6 @@ public class UpdateConfigRequest extends TeaModel {
     public static UpdateConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateConfigRequest self = new UpdateConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateConfigRequest setAcceptLanguage(String acceptLanguage) {
-        this.acceptLanguage = acceptLanguage;
-        return this;
-    }
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
     }
 
     public UpdateConfigRequest setAutopurgePurgeInterval(String autopurgePurgeInterval) {

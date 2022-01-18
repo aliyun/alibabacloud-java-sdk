@@ -4,9 +4,6 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteGatewaySlbRequest extends TeaModel {
-    @NameInMap("AcceptLanguage")
-    public String acceptLanguage;
-
     @NameInMap("DeleteSlb")
     public Boolean deleteSlb;
 
@@ -19,14 +16,6 @@ public class DeleteGatewaySlbRequest extends TeaModel {
     public static DeleteGatewaySlbRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteGatewaySlbRequest self = new DeleteGatewaySlbRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteGatewaySlbRequest setAcceptLanguage(String acceptLanguage) {
-        this.acceptLanguage = acceptLanguage;
-        return this;
-    }
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
     }
 
     public DeleteGatewaySlbRequest setDeleteSlb(Boolean deleteSlb) {

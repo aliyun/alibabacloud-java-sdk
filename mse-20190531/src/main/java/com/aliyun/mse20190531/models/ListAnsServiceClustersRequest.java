@@ -4,9 +4,6 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAnsServiceClustersRequest extends TeaModel {
-    @NameInMap("AcceptLanguage")
-    public String acceptLanguage;
-
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -37,14 +34,6 @@ public class ListAnsServiceClustersRequest extends TeaModel {
     public static ListAnsServiceClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAnsServiceClustersRequest self = new ListAnsServiceClustersRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListAnsServiceClustersRequest setAcceptLanguage(String acceptLanguage) {
-        this.acceptLanguage = acceptLanguage;
-        return this;
-    }
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
     }
 
     public ListAnsServiceClustersRequest setClusterId(String clusterId) {

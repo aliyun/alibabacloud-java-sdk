@@ -4,9 +4,6 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetImageRequest extends TeaModel {
-    @NameInMap("AcceptLanguage")
-    public String acceptLanguage;
-
     // 集群版本
     @NameInMap("VersionCode")
     public String versionCode;
@@ -14,14 +11,6 @@ public class GetImageRequest extends TeaModel {
     public static GetImageRequest build(java.util.Map<String, ?> map) throws Exception {
         GetImageRequest self = new GetImageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetImageRequest setAcceptLanguage(String acceptLanguage) {
-        this.acceptLanguage = acceptLanguage;
-        return this;
-    }
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
     }
 
     public GetImageRequest setVersionCode(String versionCode) {
