@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListListenersByIpRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -19,6 +22,14 @@ public class ListListenersByIpRequest extends TeaModel {
     public static ListListenersByIpRequest build(java.util.Map<String, ?> map) throws Exception {
         ListListenersByIpRequest self = new ListListenersByIpRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListListenersByIpRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public ListListenersByIpRequest setInstanceId(String instanceId) {

@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("AppName")
     public String appName;
 
@@ -22,6 +25,14 @@ public class CreateApplicationRequest extends TeaModel {
     public static CreateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationRequest self = new CreateApplicationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateApplicationRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public CreateApplicationRequest setAppName(String appName) {

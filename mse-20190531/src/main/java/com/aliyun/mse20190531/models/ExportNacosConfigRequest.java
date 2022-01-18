@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ExportNacosConfigRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("AppName")
     public String appName;
 
@@ -25,6 +28,14 @@ public class ExportNacosConfigRequest extends TeaModel {
     public static ExportNacosConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportNacosConfigRequest self = new ExportNacosConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ExportNacosConfigRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public ExportNacosConfigRequest setAppName(String appName) {

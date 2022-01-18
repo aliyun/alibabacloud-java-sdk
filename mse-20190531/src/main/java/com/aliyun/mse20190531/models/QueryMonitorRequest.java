@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryMonitorRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -25,6 +28,14 @@ public class QueryMonitorRequest extends TeaModel {
     public static QueryMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryMonitorRequest self = new QueryMonitorRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMonitorRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public QueryMonitorRequest setEndTime(Long endTime) {

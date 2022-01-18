@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetImportFileUrlRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("ContentType")
     public String contentType;
 
@@ -16,6 +19,14 @@ public class GetImportFileUrlRequest extends TeaModel {
     public static GetImportFileUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         GetImportFileUrlRequest self = new GetImportFileUrlRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetImportFileUrlRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public GetImportFileUrlRequest setContentType(String contentType) {

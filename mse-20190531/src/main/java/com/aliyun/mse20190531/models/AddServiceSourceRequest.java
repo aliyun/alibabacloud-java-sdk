@@ -4,20 +4,14 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddServiceSourceRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("Address")
     public String address;
 
-    @NameInMap("GatewayId")
-    public Long gatewayId;
-
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
-
-    @NameInMap("Info1")
-    public String info1;
-
-    @NameInMap("Info2")
-    public String info2;
 
     @NameInMap("Name")
     public String name;
@@ -33,6 +27,14 @@ public class AddServiceSourceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AddServiceSourceRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
     public AddServiceSourceRequest setAddress(String address) {
         this.address = address;
         return this;
@@ -41,36 +43,12 @@ public class AddServiceSourceRequest extends TeaModel {
         return this.address;
     }
 
-    public AddServiceSourceRequest setGatewayId(Long gatewayId) {
-        this.gatewayId = gatewayId;
-        return this;
-    }
-    public Long getGatewayId() {
-        return this.gatewayId;
-    }
-
     public AddServiceSourceRequest setGatewayUniqueId(String gatewayUniqueId) {
         this.gatewayUniqueId = gatewayUniqueId;
         return this;
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
-    }
-
-    public AddServiceSourceRequest setInfo1(String info1) {
-        this.info1 = info1;
-        return this;
-    }
-    public String getInfo1() {
-        return this.info1;
-    }
-
-    public AddServiceSourceRequest setInfo2(String info2) {
-        this.info2 = info2;
-        return this;
-    }
-    public String getInfo2() {
-        return this.info2;
     }
 
     public AddServiceSourceRequest setName(String name) {

@@ -115,6 +115,17 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("MaxClientCnxns")
         public String maxClientCnxns;
 
+        // 最大超时时间
+        @NameInMap("MaxSessionTimeout")
+        public String maxSessionTimeout;
+
+        // 最小超时时间
+        @NameInMap("MinSessionTimeout")
+        public String minSessionTimeout;
+
+        @NameInMap("NamingCreateServiceSupported")
+        public Boolean namingCreateServiceSupported;
+
         @NameInMap("OpenSuperAcl")
         public Boolean openSuperAcl;
 
@@ -240,6 +251,30 @@ public class QueryConfigResponseBody extends TeaModel {
         }
         public String getMaxClientCnxns() {
             return this.maxClientCnxns;
+        }
+
+        public QueryConfigResponseBodyData setMaxSessionTimeout(String maxSessionTimeout) {
+            this.maxSessionTimeout = maxSessionTimeout;
+            return this;
+        }
+        public String getMaxSessionTimeout() {
+            return this.maxSessionTimeout;
+        }
+
+        public QueryConfigResponseBodyData setMinSessionTimeout(String minSessionTimeout) {
+            this.minSessionTimeout = minSessionTimeout;
+            return this;
+        }
+        public String getMinSessionTimeout() {
+            return this.minSessionTimeout;
+        }
+
+        public QueryConfigResponseBodyData setNamingCreateServiceSupported(Boolean namingCreateServiceSupported) {
+            this.namingCreateServiceSupported = namingCreateServiceSupported;
+            return this;
+        }
+        public Boolean getNamingCreateServiceSupported() {
+            return this.namingCreateServiceSupported;
         }
 
         public QueryConfigResponseBodyData setOpenSuperAcl(Boolean openSuperAcl) {

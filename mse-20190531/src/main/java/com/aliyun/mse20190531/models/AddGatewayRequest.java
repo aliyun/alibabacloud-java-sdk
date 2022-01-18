@@ -4,39 +4,60 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddGatewayRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
+    // 是否企业安全组类型
     @NameInMap("EnterpriseSecurityGroup")
     public Boolean enterpriseSecurityGroup;
 
+    // 外网SLB规格
     @NameInMap("InternetSlbSpec")
     public String internetSlbSpec;
 
+    // 网关名称
     @NameInMap("Name")
     public String name;
 
+    // 地域
     @NameInMap("Region")
     public String region;
 
+    // 节点数量
     @NameInMap("Replica")
     public Integer replica;
 
+    // 内网SLB规格
     @NameInMap("SlbSpec")
     public String slbSpec;
 
+    // 节点规格
     @NameInMap("Spec")
     public String spec;
 
+    // 主交换机ID
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
+    // 备交换机ID
+    @NameInMap("VSwitchId2")
+    public String vSwitchId2;
+
+    // 专有网络ID
     @NameInMap("Vpc")
     public String vpc;
-
-    @NameInMap("Vswitch")
-    public String vswitch;
-
-    @NameInMap("Vswitch2")
-    public String vswitch2;
 
     public static AddGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         AddGatewayRequest self = new AddGatewayRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddGatewayRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public AddGatewayRequest setEnterpriseSecurityGroup(Boolean enterpriseSecurityGroup) {
@@ -95,28 +116,28 @@ public class AddGatewayRequest extends TeaModel {
         return this.spec;
     }
 
+    public AddGatewayRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    public AddGatewayRequest setVSwitchId2(String vSwitchId2) {
+        this.vSwitchId2 = vSwitchId2;
+        return this;
+    }
+    public String getVSwitchId2() {
+        return this.vSwitchId2;
+    }
+
     public AddGatewayRequest setVpc(String vpc) {
         this.vpc = vpc;
         return this;
     }
     public String getVpc() {
         return this.vpc;
-    }
-
-    public AddGatewayRequest setVswitch(String vswitch) {
-        this.vswitch = vswitch;
-        return this;
-    }
-    public String getVswitch() {
-        return this.vswitch;
-    }
-
-    public AddGatewayRequest setVswitch2(String vswitch2) {
-        this.vswitch2 = vswitch2;
-        return this;
-    }
-    public String getVswitch2() {
-        return this.vswitch2;
     }
 
 }

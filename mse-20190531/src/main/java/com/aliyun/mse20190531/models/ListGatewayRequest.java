@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("DescSort")
     public Boolean descSort;
 
@@ -22,6 +25,14 @@ public class ListGatewayRequest extends TeaModel {
     public static ListGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGatewayRequest self = new ListGatewayRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListGatewayRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public ListGatewayRequest setDescSort(Boolean descSort) {

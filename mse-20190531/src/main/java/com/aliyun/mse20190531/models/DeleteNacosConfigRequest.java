@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteNacosConfigRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("Beta")
     public Boolean beta;
 
@@ -22,6 +25,14 @@ public class DeleteNacosConfigRequest extends TeaModel {
     public static DeleteNacosConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteNacosConfigRequest self = new DeleteNacosConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteNacosConfigRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public DeleteNacosConfigRequest setBeta(Boolean beta) {

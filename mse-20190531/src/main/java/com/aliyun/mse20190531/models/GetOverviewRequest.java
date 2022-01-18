@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetOverviewRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("Period")
     public Integer period;
 
@@ -13,6 +16,14 @@ public class GetOverviewRequest extends TeaModel {
     public static GetOverviewRequest build(java.util.Map<String, ?> map) throws Exception {
         GetOverviewRequest self = new GetOverviewRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetOverviewRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public GetOverviewRequest setPeriod(Integer period) {

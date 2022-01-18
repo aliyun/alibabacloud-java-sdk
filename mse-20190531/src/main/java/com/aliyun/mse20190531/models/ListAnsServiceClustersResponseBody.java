@@ -153,6 +153,9 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         @NameInMap("Clusters")
         public java.util.List<ListAnsServiceClustersResponseBodyDataClusters> clusters;
 
+        @NameInMap("Ephemeral")
+        public Boolean ephemeral;
+
         @NameInMap("GroupName")
         public String groupName;
 
@@ -179,6 +182,14 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
         public java.util.List<ListAnsServiceClustersResponseBodyDataClusters> getClusters() {
             return this.clusters;
+        }
+
+        public ListAnsServiceClustersResponseBodyData setEphemeral(Boolean ephemeral) {
+            this.ephemeral = ephemeral;
+            return this;
+        }
+        public Boolean getEphemeral() {
+            return this.ephemeral;
         }
 
         public ListAnsServiceClustersResponseBodyData setGroupName(String groupName) {

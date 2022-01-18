@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.mse20190531.models;
+
+import com.aliyun.tea.*;
+
+public class UpdateNacosServiceResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public UpdateNacosServiceResponseBody body;
+
+    public static UpdateNacosServiceResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateNacosServiceResponse self = new UpdateNacosServiceResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdateNacosServiceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UpdateNacosServiceResponse setBody(UpdateNacosServiceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateNacosServiceResponseBody getBody() {
+        return this.body;
+    }
+
+}

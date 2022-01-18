@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteZnodeRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -16,6 +19,14 @@ public class DeleteZnodeRequest extends TeaModel {
     public static DeleteZnodeRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteZnodeRequest self = new DeleteZnodeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteZnodeRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public DeleteZnodeRequest setClusterId(String clusterId) {

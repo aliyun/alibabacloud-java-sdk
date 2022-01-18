@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateAlarmRuleShrinkRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("Aggregates")
     public String aggregates;
 
@@ -34,6 +37,14 @@ public class CreateAlarmRuleShrinkRequest extends TeaModel {
     public static CreateAlarmRuleShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAlarmRuleShrinkRequest self = new CreateAlarmRuleShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAlarmRuleShrinkRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public CreateAlarmRuleShrinkRequest setAggregates(String aggregates) {

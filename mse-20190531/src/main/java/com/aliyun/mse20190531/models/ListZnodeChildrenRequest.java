@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListZnodeChildrenRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -13,6 +16,14 @@ public class ListZnodeChildrenRequest extends TeaModel {
     public static ListZnodeChildrenRequest build(java.util.Map<String, ?> map) throws Exception {
         ListZnodeChildrenRequest self = new ListZnodeChildrenRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListZnodeChildrenRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public ListZnodeChildrenRequest setClusterId(String clusterId) {

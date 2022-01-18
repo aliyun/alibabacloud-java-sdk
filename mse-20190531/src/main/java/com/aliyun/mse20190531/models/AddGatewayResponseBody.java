@@ -8,7 +8,7 @@ public class AddGatewayResponseBody extends TeaModel {
     public Integer code;
 
     @NameInMap("Data")
-    public String data;
+    public AddGatewayResponseBodyData data;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -36,11 +36,11 @@ public class AddGatewayResponseBody extends TeaModel {
         return this.code;
     }
 
-    public AddGatewayResponseBody setData(String data) {
+    public AddGatewayResponseBody setData(AddGatewayResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public AddGatewayResponseBodyData getData() {
         return this.data;
     }
 
@@ -74,6 +74,25 @@ public class AddGatewayResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class AddGatewayResponseBodyData extends TeaModel {
+        @NameInMap("GatewayUniqueId")
+        public String gatewayUniqueId;
+
+        public static AddGatewayResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            AddGatewayResponseBodyData self = new AddGatewayResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public AddGatewayResponseBodyData setGatewayUniqueId(String gatewayUniqueId) {
+            this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+        public String getGatewayUniqueId() {
+            return this.gatewayUniqueId;
+        }
+
     }
 
 }

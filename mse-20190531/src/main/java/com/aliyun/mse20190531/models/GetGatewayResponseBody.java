@@ -148,17 +148,11 @@ public class GetGatewayResponseBody extends TeaModel {
     }
 
     public static class GetGatewayResponseBodyData extends TeaModel {
-        @NameInMap("ArmsOn")
-        public Boolean armsOn;
-
         @NameInMap("ChargeType")
         public String chargeType;
 
         @NameInMap("EndDate")
         public String endDate;
-
-        @NameInMap("GatewayType")
-        public String gatewayType;
 
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
@@ -216,14 +210,6 @@ public class GetGatewayResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetGatewayResponseBodyData setArmsOn(Boolean armsOn) {
-            this.armsOn = armsOn;
-            return this;
-        }
-        public Boolean getArmsOn() {
-            return this.armsOn;
-        }
-
         public GetGatewayResponseBodyData setChargeType(String chargeType) {
             this.chargeType = chargeType;
             return this;
@@ -238,14 +224,6 @@ public class GetGatewayResponseBody extends TeaModel {
         }
         public String getEndDate() {
             return this.endDate;
-        }
-
-        public GetGatewayResponseBodyData setGatewayType(String gatewayType) {
-            this.gatewayType = gatewayType;
-            return this;
-        }
-        public String getGatewayType() {
-            return this.gatewayType;
         }
 
         public GetGatewayResponseBodyData setGatewayUniqueId(String gatewayUniqueId) {

@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryZnodeDetailRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -16,6 +19,14 @@ public class QueryZnodeDetailRequest extends TeaModel {
     public static QueryZnodeDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryZnodeDetailRequest self = new QueryZnodeDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryZnodeDetailRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public QueryZnodeDetailRequest setClusterId(String clusterId) {
