@@ -7,6 +7,15 @@ public class UpdateApplicationScalingRuleRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("MinReadyInstanceRatio")
+    public Integer minReadyInstanceRatio;
+
+    @NameInMap("MinReadyInstances")
+    public Integer minReadyInstances;
+
+    @NameInMap("ScalingRuleMetric")
+    public String scalingRuleMetric;
+
     @NameInMap("ScalingRuleName")
     public String scalingRuleName;
 
@@ -24,6 +33,30 @@ public class UpdateApplicationScalingRuleRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public UpdateApplicationScalingRuleRequest setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
+        this.minReadyInstanceRatio = minReadyInstanceRatio;
+        return this;
+    }
+    public Integer getMinReadyInstanceRatio() {
+        return this.minReadyInstanceRatio;
+    }
+
+    public UpdateApplicationScalingRuleRequest setMinReadyInstances(Integer minReadyInstances) {
+        this.minReadyInstances = minReadyInstances;
+        return this;
+    }
+    public Integer getMinReadyInstances() {
+        return this.minReadyInstances;
+    }
+
+    public UpdateApplicationScalingRuleRequest setScalingRuleMetric(String scalingRuleMetric) {
+        this.scalingRuleMetric = scalingRuleMetric;
+        return this;
+    }
+    public String getScalingRuleMetric() {
+        return this.scalingRuleMetric;
     }
 
     public UpdateApplicationScalingRuleRequest setScalingRuleName(String scalingRuleName) {

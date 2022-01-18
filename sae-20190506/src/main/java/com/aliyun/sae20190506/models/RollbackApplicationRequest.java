@@ -13,6 +13,9 @@ public class RollbackApplicationRequest extends TeaModel {
     @NameInMap("BatchWaitTime")
     public Integer batchWaitTime;
 
+    @NameInMap("MinReadyInstanceRatio")
+    public Integer minReadyInstanceRatio;
+
     @NameInMap("MinReadyInstances")
     public Integer minReadyInstances;
 
@@ -49,6 +52,14 @@ public class RollbackApplicationRequest extends TeaModel {
     }
     public Integer getBatchWaitTime() {
         return this.batchWaitTime;
+    }
+
+    public RollbackApplicationRequest setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
+        this.minReadyInstanceRatio = minReadyInstanceRatio;
+        return this;
+    }
+    public Integer getMinReadyInstanceRatio() {
+        return this.minReadyInstanceRatio;
     }
 
     public RollbackApplicationRequest setMinReadyInstances(Integer minReadyInstances) {

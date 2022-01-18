@@ -7,6 +7,9 @@ public class RestartApplicationRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("MinReadyInstanceRatio")
+    public Integer minReadyInstanceRatio;
+
     @NameInMap("MinReadyInstances")
     public Integer minReadyInstances;
 
@@ -21,6 +24,14 @@ public class RestartApplicationRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public RestartApplicationRequest setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
+        this.minReadyInstanceRatio = minReadyInstanceRatio;
+        return this;
+    }
+    public Integer getMinReadyInstanceRatio() {
+        return this.minReadyInstanceRatio;
     }
 
     public RestartApplicationRequest setMinReadyInstances(Integer minReadyInstances) {

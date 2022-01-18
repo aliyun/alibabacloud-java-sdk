@@ -412,6 +412,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acrInstanceId)) {
+            body.put("AcrInstanceId", request.acrInstanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.associateEip)) {
             body.put("AssociateEip", request.associateEip);
         }
@@ -468,8 +472,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppId", request.appId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstanceRatio)) {
+            query.put("MinReadyInstanceRatio", request.minReadyInstanceRatio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstances)) {
+            query.put("MinReadyInstances", request.minReadyInstances);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.scalingRuleEnable)) {
             query.put("ScalingRuleEnable", request.scalingRuleEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingRuleMetric)) {
+            query.put("ScalingRuleMetric", request.scalingRuleMetric);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scalingRuleName)) {
@@ -957,6 +973,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Liveness", request.liveness);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstanceRatio)) {
+            query.put("MinReadyInstanceRatio", request.minReadyInstanceRatio);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstances)) {
             query.put("MinReadyInstances", request.minReadyInstances);
         }
@@ -1280,6 +1300,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApplicationInstancesResponse());
     }
 
+    public DescribeApplicationScalingRuleResponse describeApplicationScalingRule(DescribeApplicationScalingRuleRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeApplicationScalingRuleWithOptions(request, headers, runtime);
+    }
+
+    public DescribeApplicationScalingRuleResponse describeApplicationScalingRuleWithOptions(DescribeApplicationScalingRuleRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingRuleName)) {
+            query.put("ScalingRuleName", request.scalingRuleName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApplicationScalingRule"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v1/sam/scale/applicationScalingRule"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApplicationScalingRuleResponse());
+    }
+
     public DescribeApplicationScalingRulesResponse describeApplicationScalingRules(DescribeApplicationScalingRulesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1468,6 +1523,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeConfigMapResponse());
+    }
+
+    public DescribeConfigurationPriceResponse describeConfigurationPrice(DescribeConfigurationPriceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeConfigurationPriceWithOptions(request, headers, runtime);
+    }
+
+    public DescribeConfigurationPriceResponse describeConfigurationPriceWithOptions(DescribeConfigurationPriceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cpu)) {
+            query.put("Cpu", request.cpu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memory)) {
+            query.put("Memory", request.memory);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeConfigurationPrice"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v1/paas/configurationPrice"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeConfigurationPriceResponse());
     }
 
     public DescribeEdasContainersResponse describeEdasContainers() throws Exception {
@@ -1862,7 +1952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DownloadFiles"),
             new TeaPair("version", "2019-05-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/pop/v1/sam/app/downloadFiles.json"),
+            new TeaPair("pathname", "/pop/v1/sam/app/downloadFiles"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2557,6 +2647,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoEnableApplicationScalingRule", request.autoEnableApplicationScalingRule);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstanceRatio)) {
+            query.put("MinReadyInstanceRatio", request.minReadyInstanceRatio);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstances)) {
             query.put("MinReadyInstances", request.minReadyInstances);
         }
@@ -2635,6 +2729,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppId", request.appId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstanceRatio)) {
+            query.put("MinReadyInstanceRatio", request.minReadyInstanceRatio);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstances)) {
             query.put("MinReadyInstances", request.minReadyInstances);
         }
@@ -2711,6 +2809,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.batchWaitTime)) {
             query.put("BatchWaitTime", request.batchWaitTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstanceRatio)) {
+            query.put("MinReadyInstanceRatio", request.minReadyInstanceRatio);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstances)) {
@@ -2980,6 +3082,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstanceRatio)) {
+            query.put("MinReadyInstanceRatio", request.minReadyInstanceRatio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstances)) {
+            query.put("MinReadyInstances", request.minReadyInstances);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingRuleMetric)) {
+            query.put("ScalingRuleMetric", request.scalingRuleMetric);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scalingRuleName)) {
@@ -3252,7 +3366,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UploadFiles"),
             new TeaPair("version", "2019-05-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/pop/v1/sam/app/uploadFiles.json"),
+            new TeaPair("pathname", "/pop/v1/sam/app/uploadFiles"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),

@@ -7,6 +7,10 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("AcrAssumeRoleArn")
     public String acrAssumeRoleArn;
 
+    // ACR 企业版实例 ID
+    @NameInMap("AcrInstanceId")
+    public String acrInstanceId;
+
     @NameInMap("AppDescription")
     public String appDescription;
 
@@ -154,6 +158,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getAcrAssumeRoleArn() {
         return this.acrAssumeRoleArn;
+    }
+
+    public CreateApplicationRequest setAcrInstanceId(String acrInstanceId) {
+        this.acrInstanceId = acrInstanceId;
+        return this;
+    }
+    public String getAcrInstanceId() {
+        return this.acrInstanceId;
     }
 
     public CreateApplicationRequest setAppDescription(String appDescription) {
