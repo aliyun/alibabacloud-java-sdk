@@ -8,7 +8,7 @@ public class UpdateFigureClusterRequest extends TeaModel {
     public String datasetName;
 
     @NameInMap("FigureCluster")
-    public FigureCluster figureCluster;
+    public FigureClusterForReq figureCluster;
 
     @NameInMap("ProjectName")
     public String projectName;
@@ -26,11 +26,11 @@ public class UpdateFigureClusterRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public UpdateFigureClusterRequest setFigureCluster(FigureCluster figureCluster) {
+    public UpdateFigureClusterRequest setFigureCluster(FigureClusterForReq figureCluster) {
         this.figureCluster = figureCluster;
         return this;
     }
-    public FigureCluster getFigureCluster() {
+    public FigureClusterForReq getFigureCluster() {
         return this.figureCluster;
     }
 

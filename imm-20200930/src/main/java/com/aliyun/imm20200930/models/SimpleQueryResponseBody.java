@@ -102,9 +102,8 @@ public class SimpleQueryResponseBody extends TeaModel {
         @NameInMap("Operation")
         public String operation;
 
-        // 聚合的统计结果
         @NameInMap("Value")
-        public Float value;
+        public String value;
 
         public static SimpleQueryResponseBodyAggregations build(java.util.Map<String, ?> map) throws Exception {
             SimpleQueryResponseBodyAggregations self = new SimpleQueryResponseBodyAggregations();
@@ -135,11 +134,11 @@ public class SimpleQueryResponseBody extends TeaModel {
             return this.operation;
         }
 
-        public SimpleQueryResponseBodyAggregations setValue(Float value) {
+        public SimpleQueryResponseBodyAggregations setValue(String value) {
             this.value = value;
             return this;
         }
-        public Float getValue() {
+        public String getValue() {
             return this.value;
         }
 

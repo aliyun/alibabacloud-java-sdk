@@ -24,33 +24,17 @@ public class File extends TeaModel {
     @NameInMap("AlbumArtist")
     public String albumArtist;
 
-    // Artists
-    @NameInMap("Artists")
-    public java.util.List<String> artists;
-
-    // AudioBitrate
-    @NameInMap("AudioBitrate")
-    public Float audioBitrate;
+    // Artist
+    @NameInMap("Artist")
+    public String artist;
 
     // AudioCovers
     @NameInMap("AudioCovers")
     public java.util.List<Image> audioCovers;
 
-    // AudioDuration
-    @NameInMap("AudioDuration")
-    public Float audioDuration;
-
-    // AudioLanguage
-    @NameInMap("AudioLanguage")
-    public String audioLanguage;
-
     // AudioStreams
     @NameInMap("AudioStreams")
     public java.util.List<AudioStream> audioStreams;
-
-    // AudioTakenTime
-    @NameInMap("AudioTakenTime")
-    public String audioTakenTime;
 
     // CacheControl
     @NameInMap("CacheControl")
@@ -159,6 +143,10 @@ public class File extends TeaModel {
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
+    // Language
+    @NameInMap("Language")
+    public String language;
+
     // LatLong
     @NameInMap("LatLong")
     public String latLong;
@@ -225,7 +213,7 @@ public class File extends TeaModel {
 
     // Orientation
     @NameInMap("Orientation")
-    public String orientation;
+    public Long orientation;
 
     // OwnerId
     @NameInMap("OwnerId")
@@ -291,14 +279,6 @@ public class File extends TeaModel {
     @NameInMap("UpdateTime")
     public String updateTime;
 
-    // VideoBitrate
-    @NameInMap("VideoBitrate")
-    public Long videoBitrate;
-
-    // VideoDuration
-    @NameInMap("VideoDuration")
-    public Float videoDuration;
-
     // VideoHeight
     @NameInMap("VideoHeight")
     public Long videoHeight;
@@ -310,10 +290,6 @@ public class File extends TeaModel {
     // VideoStreams
     @NameInMap("VideoStreams")
     public java.util.List<VideoStream> videoStreams;
-
-    // VideoTakenTime
-    @NameInMap("VideoTakenTime")
-    public String videoTakenTime;
 
     // VideoWidth
     @NameInMap("VideoWidth")
@@ -364,20 +340,12 @@ public class File extends TeaModel {
         return this.albumArtist;
     }
 
-    public File setArtists(java.util.List<String> artists) {
-        this.artists = artists;
+    public File setArtist(String artist) {
+        this.artist = artist;
         return this;
     }
-    public java.util.List<String> getArtists() {
-        return this.artists;
-    }
-
-    public File setAudioBitrate(Float audioBitrate) {
-        this.audioBitrate = audioBitrate;
-        return this;
-    }
-    public Float getAudioBitrate() {
-        return this.audioBitrate;
+    public String getArtist() {
+        return this.artist;
     }
 
     public File setAudioCovers(java.util.List<Image> audioCovers) {
@@ -388,36 +356,12 @@ public class File extends TeaModel {
         return this.audioCovers;
     }
 
-    public File setAudioDuration(Float audioDuration) {
-        this.audioDuration = audioDuration;
-        return this;
-    }
-    public Float getAudioDuration() {
-        return this.audioDuration;
-    }
-
-    public File setAudioLanguage(String audioLanguage) {
-        this.audioLanguage = audioLanguage;
-        return this;
-    }
-    public String getAudioLanguage() {
-        return this.audioLanguage;
-    }
-
     public File setAudioStreams(java.util.List<AudioStream> audioStreams) {
         this.audioStreams = audioStreams;
         return this;
     }
     public java.util.List<AudioStream> getAudioStreams() {
         return this.audioStreams;
-    }
-
-    public File setAudioTakenTime(String audioTakenTime) {
-        this.audioTakenTime = audioTakenTime;
-        return this;
-    }
-    public String getAudioTakenTime() {
-        return this.audioTakenTime;
     }
 
     public File setCacheControl(String cacheControl) {
@@ -636,6 +580,14 @@ public class File extends TeaModel {
         return this.labels;
     }
 
+    public File setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
+    }
+
     public File setLatLong(String latLong) {
         this.latLong = latLong;
         return this;
@@ -764,11 +716,11 @@ public class File extends TeaModel {
         return this.objectType;
     }
 
-    public File setOrientation(String orientation) {
+    public File setOrientation(Long orientation) {
         this.orientation = orientation;
         return this;
     }
-    public String getOrientation() {
+    public Long getOrientation() {
         return this.orientation;
     }
 
@@ -900,22 +852,6 @@ public class File extends TeaModel {
         return this.updateTime;
     }
 
-    public File setVideoBitrate(Long videoBitrate) {
-        this.videoBitrate = videoBitrate;
-        return this;
-    }
-    public Long getVideoBitrate() {
-        return this.videoBitrate;
-    }
-
-    public File setVideoDuration(Float videoDuration) {
-        this.videoDuration = videoDuration;
-        return this;
-    }
-    public Float getVideoDuration() {
-        return this.videoDuration;
-    }
-
     public File setVideoHeight(Long videoHeight) {
         this.videoHeight = videoHeight;
         return this;
@@ -938,14 +874,6 @@ public class File extends TeaModel {
     }
     public java.util.List<VideoStream> getVideoStreams() {
         return this.videoStreams;
-    }
-
-    public File setVideoTakenTime(String videoTakenTime) {
-        this.videoTakenTime = videoTakenTime;
-        return this;
-    }
-    public String getVideoTakenTime() {
-        return this.videoTakenTime;
     }
 
     public File setVideoWidth(Long videoWidth) {

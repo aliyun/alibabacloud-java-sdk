@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class VideoStream extends TeaModel {
     // AverageFrameRate
     @NameInMap("AverageFrameRate")
-    public Float averageFrameRate;
+    public String averageFrameRate;
 
     // Bitrate
     @NameInMap("Bitrate")
@@ -46,11 +46,11 @@ public class VideoStream extends TeaModel {
 
     // FrameRate
     @NameInMap("FrameRate")
-    public Float frameRate;
+    public String frameRate;
 
     // HasBFrames
     @NameInMap("HasBFrames")
-    public String hasBFrames;
+    public Long hasBFrames;
 
     // Height
     @NameInMap("Height")
@@ -76,6 +76,10 @@ public class VideoStream extends TeaModel {
     @NameInMap("Profile")
     public String profile;
 
+    // Rotate
+    @NameInMap("Rotate")
+    public String rotate;
+
     // SampleAspectRatio
     @NameInMap("SampleAspectRatio")
     public String sampleAspectRatio;
@@ -97,11 +101,11 @@ public class VideoStream extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public VideoStream setAverageFrameRate(Float averageFrameRate) {
+    public VideoStream setAverageFrameRate(String averageFrameRate) {
         this.averageFrameRate = averageFrameRate;
         return this;
     }
-    public Float getAverageFrameRate() {
+    public String getAverageFrameRate() {
         return this.averageFrameRate;
     }
 
@@ -177,19 +181,19 @@ public class VideoStream extends TeaModel {
         return this.frameCount;
     }
 
-    public VideoStream setFrameRate(Float frameRate) {
+    public VideoStream setFrameRate(String frameRate) {
         this.frameRate = frameRate;
         return this;
     }
-    public Float getFrameRate() {
+    public String getFrameRate() {
         return this.frameRate;
     }
 
-    public VideoStream setHasBFrames(String hasBFrames) {
+    public VideoStream setHasBFrames(Long hasBFrames) {
         this.hasBFrames = hasBFrames;
         return this;
     }
-    public String getHasBFrames() {
+    public Long getHasBFrames() {
         return this.hasBFrames;
     }
 
@@ -239,6 +243,14 @@ public class VideoStream extends TeaModel {
     }
     public String getProfile() {
         return this.profile;
+    }
+
+    public VideoStream setRotate(String rotate) {
+        this.rotate = rotate;
+        return this;
+    }
+    public String getRotate() {
+        return this.rotate;
     }
 
     public VideoStream setSampleAspectRatio(String sampleAspectRatio) {

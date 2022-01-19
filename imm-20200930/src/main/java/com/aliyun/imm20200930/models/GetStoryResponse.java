@@ -3,21 +3,21 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class GetFileSignedURIResponse extends TeaModel {
+public class GetStoryResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetFileSignedURIResponseBody body;
+    public GetStoryResponseBody body;
 
-    public static GetFileSignedURIResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetFileSignedURIResponse self = new GetFileSignedURIResponse();
+    public static GetStoryResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetStoryResponse self = new GetStoryResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetFileSignedURIResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetStoryResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class GetFileSignedURIResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetFileSignedURIResponse setBody(GetFileSignedURIResponseBody body) {
+    public GetStoryResponse setBody(GetStoryResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetFileSignedURIResponseBody getBody() {
+    public GetStoryResponseBody getBody() {
         return this.body;
     }
 

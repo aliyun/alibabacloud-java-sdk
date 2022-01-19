@@ -3,33 +3,36 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDetectVideoLabelsTaskRequest extends TeaModel {
-    // NotifyEndpoint
+public class CreateFigureClusteringTaskRequest extends TeaModel {
+    @NameInMap("DatasetName")
+    public String datasetName;
+
     @NameInMap("NotifyEndpoint")
     public String notifyEndpoint;
 
-    // NotifyTopicName
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
-    // SourceURI
-    @NameInMap("SourceURI")
-    public String sourceURI;
-
-    // UserData
     @NameInMap("UserData")
     public String userData;
 
-    public static CreateDetectVideoLabelsTaskRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateDetectVideoLabelsTaskRequest self = new CreateDetectVideoLabelsTaskRequest();
+    public static CreateFigureClusteringTaskRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateFigureClusteringTaskRequest self = new CreateFigureClusteringTaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDetectVideoLabelsTaskRequest setNotifyEndpoint(String notifyEndpoint) {
+    public CreateFigureClusteringTaskRequest setDatasetName(String datasetName) {
+        this.datasetName = datasetName;
+        return this;
+    }
+    public String getDatasetName() {
+        return this.datasetName;
+    }
+
+    public CreateFigureClusteringTaskRequest setNotifyEndpoint(String notifyEndpoint) {
         this.notifyEndpoint = notifyEndpoint;
         return this;
     }
@@ -37,7 +40,7 @@ public class CreateDetectVideoLabelsTaskRequest extends TeaModel {
         return this.notifyEndpoint;
     }
 
-    public CreateDetectVideoLabelsTaskRequest setNotifyTopicName(String notifyTopicName) {
+    public CreateFigureClusteringTaskRequest setNotifyTopicName(String notifyTopicName) {
         this.notifyTopicName = notifyTopicName;
         return this;
     }
@@ -45,7 +48,7 @@ public class CreateDetectVideoLabelsTaskRequest extends TeaModel {
         return this.notifyTopicName;
     }
 
-    public CreateDetectVideoLabelsTaskRequest setProjectName(String projectName) {
+    public CreateFigureClusteringTaskRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -53,15 +56,7 @@ public class CreateDetectVideoLabelsTaskRequest extends TeaModel {
         return this.projectName;
     }
 
-    public CreateDetectVideoLabelsTaskRequest setSourceURI(String sourceURI) {
-        this.sourceURI = sourceURI;
-        return this;
-    }
-    public String getSourceURI() {
-        return this.sourceURI;
-    }
-
-    public CreateDetectVideoLabelsTaskRequest setUserData(String userData) {
+    public CreateFigureClusteringTaskRequest setUserData(String userData) {
         this.userData = userData;
         return this;
     }
