@@ -16,12 +16,14 @@ public class ModifyDtsJobRequest extends TeaModel {
     @NameInMap("EtlOperatorColumnReference")
     public String etlOperatorColumnReference;
 
+    // 修改任务的方式，当为UPDATE_RESERVED时为修改reserve字段，不传默认修改dbList
     @NameInMap("ModifyTypeEnum")
     public String modifyTypeEnum;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    // 新增的reserved字段，新增而不是覆盖
     @NameInMap("Reserved")
     public String reserved;
 
