@@ -3,10 +3,10 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class ClusterForReq extends TeaModel {
+public class FigureClusterForReq extends TeaModel {
     // Cover
     @NameInMap("Cover")
-    public ClusterForReqCover cover;
+    public FigureClusterForReqCover cover;
 
     // CustomId
     @NameInMap("CustomId")
@@ -24,20 +24,20 @@ public class ClusterForReq extends TeaModel {
     @NameInMap("ObjectId")
     public String objectId;
 
-    public static ClusterForReq build(java.util.Map<String, ?> map) throws Exception {
-        ClusterForReq self = new ClusterForReq();
+    public static FigureClusterForReq build(java.util.Map<String, ?> map) throws Exception {
+        FigureClusterForReq self = new FigureClusterForReq();
         return TeaModel.build(map, self);
     }
 
-    public ClusterForReq setCover(ClusterForReqCover cover) {
+    public FigureClusterForReq setCover(FigureClusterForReqCover cover) {
         this.cover = cover;
         return this;
     }
-    public ClusterForReqCover getCover() {
+    public FigureClusterForReqCover getCover() {
         return this.cover;
     }
 
-    public ClusterForReq setCustomId(String customId) {
+    public FigureClusterForReq setCustomId(String customId) {
         this.customId = customId;
         return this;
     }
@@ -45,7 +45,7 @@ public class ClusterForReq extends TeaModel {
         return this.customId;
     }
 
-    public ClusterForReq setCustomLabels(java.util.Map<String, ?> customLabels) {
+    public FigureClusterForReq setCustomLabels(java.util.Map<String, ?> customLabels) {
         this.customLabels = customLabels;
         return this;
     }
@@ -53,7 +53,7 @@ public class ClusterForReq extends TeaModel {
         return this.customLabels;
     }
 
-    public ClusterForReq setName(String name) {
+    public FigureClusterForReq setName(String name) {
         this.name = name;
         return this;
     }
@@ -61,52 +61,12 @@ public class ClusterForReq extends TeaModel {
         return this.name;
     }
 
-    public ClusterForReq setObjectId(String objectId) {
+    public FigureClusterForReq setObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     public String getObjectId() {
         return this.objectId;
-    }
-
-    public static class ClusterForReqCoverFigures extends TeaModel {
-        // FigureId
-        @NameInMap("FigureId")
-        public String figureId;
-
-        public static ClusterForReqCoverFigures build(java.util.Map<String, ?> map) throws Exception {
-            ClusterForReqCoverFigures self = new ClusterForReqCoverFigures();
-            return TeaModel.build(map, self);
-        }
-
-        public ClusterForReqCoverFigures setFigureId(String figureId) {
-            this.figureId = figureId;
-            return this;
-        }
-        public String getFigureId() {
-            return this.figureId;
-        }
-
-    }
-
-    public static class ClusterForReqCover extends TeaModel {
-        // Figures
-        @NameInMap("Figures")
-        public java.util.List<ClusterForReqCoverFigures> figures;
-
-        public static ClusterForReqCover build(java.util.Map<String, ?> map) throws Exception {
-            ClusterForReqCover self = new ClusterForReqCover();
-            return TeaModel.build(map, self);
-        }
-
-        public ClusterForReqCover setFigures(java.util.List<ClusterForReqCoverFigures> figures) {
-            this.figures = figures;
-            return this;
-        }
-        public java.util.List<ClusterForReqCoverFigures> getFigures() {
-            return this.figures;
-        }
-
     }
 
     public static class FigureClusterForReqCoverFigures extends TeaModel {

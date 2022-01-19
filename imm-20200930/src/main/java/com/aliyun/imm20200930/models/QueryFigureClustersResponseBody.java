@@ -3,7 +3,7 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class ListFigureClustersResponseBody extends TeaModel {
+public class QueryFigureClustersResponseBody extends TeaModel {
     @NameInMap("FigureClusters")
     public java.util.List<FigureCluster> figureClusters;
 
@@ -14,12 +14,12 @@ public class ListFigureClustersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ListFigureClustersResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListFigureClustersResponseBody self = new ListFigureClustersResponseBody();
+    public static QueryFigureClustersResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        QueryFigureClustersResponseBody self = new QueryFigureClustersResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListFigureClustersResponseBody setFigureClusters(java.util.List<FigureCluster> figureClusters) {
+    public QueryFigureClustersResponseBody setFigureClusters(java.util.List<FigureCluster> figureClusters) {
         this.figureClusters = figureClusters;
         return this;
     }
@@ -27,7 +27,7 @@ public class ListFigureClustersResponseBody extends TeaModel {
         return this.figureClusters;
     }
 
-    public ListFigureClustersResponseBody setNextToken(String nextToken) {
+    public QueryFigureClustersResponseBody setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -35,7 +35,7 @@ public class ListFigureClustersResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public ListFigureClustersResponseBody setRequestId(String requestId) {
+    public QueryFigureClustersResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

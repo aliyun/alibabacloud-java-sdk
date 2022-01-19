@@ -72,9 +72,9 @@ public class FigureCluster extends TeaModel {
     @NameInMap("UpdateTime")
     public String updateTime;
 
-    // Version
-    @NameInMap("Version")
-    public String version;
+    // VideoCount
+    @NameInMap("VideoCount")
+    public Long videoCount;
 
     public static FigureCluster build(java.util.Map<String, ?> map) throws Exception {
         FigureCluster self = new FigureCluster();
@@ -217,12 +217,12 @@ public class FigureCluster extends TeaModel {
         return this.updateTime;
     }
 
-    public FigureCluster setVersion(String version) {
-        this.version = version;
+    public FigureCluster setVideoCount(Long videoCount) {
+        this.videoCount = videoCount;
         return this;
     }
-    public String getVersion() {
-        return this.version;
+    public Long getVideoCount() {
+        return this.videoCount;
     }
 
 }

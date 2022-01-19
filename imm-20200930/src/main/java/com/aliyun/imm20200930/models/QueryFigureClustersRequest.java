@@ -3,12 +3,12 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class ListFigureClustersRequest extends TeaModel {
+public class QueryFigureClustersRequest extends TeaModel {
+    @NameInMap("CustomLabels")
+    public String customLabels;
+
     @NameInMap("DatasetName")
     public String datasetName;
-
-    @NameInMap("Labels")
-    public String labels;
 
     @NameInMap("MaxResults")
     public Long maxResults;
@@ -16,21 +16,31 @@ public class ListFigureClustersRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    // 升降序
     @NameInMap("Order")
     public String order;
 
     @NameInMap("ProjectName")
     public String projectName;
 
+    // 排序字段
     @NameInMap("Sort")
     public String sort;
 
-    public static ListFigureClustersRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListFigureClustersRequest self = new ListFigureClustersRequest();
+    public static QueryFigureClustersRequest build(java.util.Map<String, ?> map) throws Exception {
+        QueryFigureClustersRequest self = new QueryFigureClustersRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListFigureClustersRequest setDatasetName(String datasetName) {
+    public QueryFigureClustersRequest setCustomLabels(String customLabels) {
+        this.customLabels = customLabels;
+        return this;
+    }
+    public String getCustomLabels() {
+        return this.customLabels;
+    }
+
+    public QueryFigureClustersRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
@@ -38,15 +48,7 @@ public class ListFigureClustersRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public ListFigureClustersRequest setLabels(String labels) {
-        this.labels = labels;
-        return this;
-    }
-    public String getLabels() {
-        return this.labels;
-    }
-
-    public ListFigureClustersRequest setMaxResults(Long maxResults) {
+    public QueryFigureClustersRequest setMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -54,7 +56,7 @@ public class ListFigureClustersRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListFigureClustersRequest setNextToken(String nextToken) {
+    public QueryFigureClustersRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -62,7 +64,7 @@ public class ListFigureClustersRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListFigureClustersRequest setOrder(String order) {
+    public QueryFigureClustersRequest setOrder(String order) {
         this.order = order;
         return this;
     }
@@ -70,7 +72,7 @@ public class ListFigureClustersRequest extends TeaModel {
         return this.order;
     }
 
-    public ListFigureClustersRequest setProjectName(String projectName) {
+    public QueryFigureClustersRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -78,7 +80,7 @@ public class ListFigureClustersRequest extends TeaModel {
         return this.projectName;
     }
 
-    public ListFigureClustersRequest setSort(String sort) {
+    public QueryFigureClustersRequest setSort(String sort) {
         this.sort = sort;
         return this;
     }

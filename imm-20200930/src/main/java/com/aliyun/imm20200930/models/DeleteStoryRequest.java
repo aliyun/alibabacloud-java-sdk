@@ -3,7 +3,7 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class GetFigureClusterRequest extends TeaModel {
+public class DeleteStoryRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
@@ -13,12 +13,12 @@ public class GetFigureClusterRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
-    public static GetFigureClusterRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetFigureClusterRequest self = new GetFigureClusterRequest();
+    public static DeleteStoryRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteStoryRequest self = new DeleteStoryRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetFigureClusterRequest setDatasetName(String datasetName) {
+    public DeleteStoryRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetFigureClusterRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public GetFigureClusterRequest setObjectId(String objectId) {
+    public DeleteStoryRequest setObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
@@ -34,7 +34,7 @@ public class GetFigureClusterRequest extends TeaModel {
         return this.objectId;
     }
 
-    public GetFigureClusterRequest setProjectName(String projectName) {
+    public DeleteStoryRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
