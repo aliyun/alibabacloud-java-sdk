@@ -161,6 +161,9 @@ public class GetDbfsResponseBody extends TeaModel {
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 
+        @NameInMap("LastFailed")
+        public String lastFailed;
+
         @NameInMap("LastMountTime")
         public String lastMountTime;
 
@@ -301,6 +304,14 @@ public class GetDbfsResponseBody extends TeaModel {
         }
         public String getKMSKeyId() {
             return this.KMSKeyId;
+        }
+
+        public GetDbfsResponseBodyDBFSInfo setLastFailed(String lastFailed) {
+            this.lastFailed = lastFailed;
+            return this;
+        }
+        public String getLastFailed() {
+            return this.lastFailed;
         }
 
         public GetDbfsResponseBodyDBFSInfo setLastMountTime(String lastMountTime) {
