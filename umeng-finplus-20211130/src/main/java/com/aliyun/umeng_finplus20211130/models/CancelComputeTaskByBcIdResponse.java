@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.umeng_finplus20211130.models;
+
+import com.aliyun.tea.*;
+
+public class CancelComputeTaskByBcIdResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public CancelComputeTaskByBcIdResponseBody body;
+
+    public static CancelComputeTaskByBcIdResponse build(java.util.Map<String, ?> map) throws Exception {
+        CancelComputeTaskByBcIdResponse self = new CancelComputeTaskByBcIdResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public CancelComputeTaskByBcIdResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CancelComputeTaskByBcIdResponse setBody(CancelComputeTaskByBcIdResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CancelComputeTaskByBcIdResponseBody getBody() {
+        return this.body;
+    }
+
+}

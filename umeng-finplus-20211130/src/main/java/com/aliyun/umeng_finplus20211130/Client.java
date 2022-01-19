@@ -32,6 +32,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public CancelComputeTaskByBcIdResponse cancelComputeTaskByBcId(CancelComputeTaskByBcIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.cancelComputeTaskByBcIdWithOptions(request, headers, runtime);
+    }
+
+    public CancelComputeTaskByBcIdResponse cancelComputeTaskByBcIdWithOptions(CancelComputeTaskByBcIdRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bcId)) {
+            query.put("bcId", request.bcId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelComputeTaskByBcId"),
+            new TeaPair("version", "2021-11-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/batch_compute/cancelComputeTaskByBcId"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelComputeTaskByBcIdResponse());
+    }
+
     public CreateComputeTaskByDataSetIdResponse createComputeTaskByDataSetId(CreateComputeTaskByDataSetIdRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
