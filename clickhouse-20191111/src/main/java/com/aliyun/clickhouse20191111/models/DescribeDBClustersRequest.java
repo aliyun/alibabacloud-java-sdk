@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClustersRequest extends TeaModel {
+    @NameInMap("ControlVersion")
+    public String controlVersion;
+
     @NameInMap("DBClusterDescription")
     public String DBClusterDescription;
 
@@ -40,6 +43,14 @@ public class DescribeDBClustersRequest extends TeaModel {
     public static DescribeDBClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClustersRequest self = new DescribeDBClustersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBClustersRequest setControlVersion(String controlVersion) {
+        this.controlVersion = controlVersion;
+        return this;
+    }
+    public String getControlVersion() {
+        return this.controlVersion;
     }
 
     public DescribeDBClustersRequest setDBClusterDescription(String DBClusterDescription) {
