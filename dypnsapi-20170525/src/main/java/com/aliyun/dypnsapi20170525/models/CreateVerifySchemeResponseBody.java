@@ -72,4 +72,23 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
 
     }
 
+    public static class JyCreateVerifySchemeResponseBodyGateVerifySchemeData extends TeaModel {
+        @NameInMap("SchemeCode")
+        public String schemeCode;
+
+        public static JyCreateVerifySchemeResponseBodyGateVerifySchemeData build(java.util.Map<String, ?> map) throws Exception {
+            JyCreateVerifySchemeResponseBodyGateVerifySchemeData self = new JyCreateVerifySchemeResponseBodyGateVerifySchemeData();
+            return TeaModel.build(map, self);
+        }
+
+        public JyCreateVerifySchemeResponseBodyGateVerifySchemeData setSchemeCode(String schemeCode) {
+            this.schemeCode = schemeCode;
+            return this;
+        }
+        public String getSchemeCode() {
+            return this.schemeCode;
+        }
+
+    }
+
 }
