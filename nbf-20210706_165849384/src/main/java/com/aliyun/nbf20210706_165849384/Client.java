@@ -46,6 +46,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appointOrderCode)) {
+            body.put("appointOrderCode", request.appointOrderCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extFields)) {
+            body.put("extFields", request.extFields);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fulfilmentOrderCode)) {
+            body.put("fulfilmentOrderCode", request.fulfilmentOrderCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outBusinessOrderCode)) {
+            body.put("outBusinessOrderCode", request.outBusinessOrderCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outOrderCode)) {
+            body.put("outOrderCode", request.outOrderCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
             body.put("reason", request.reason);
         }
@@ -54,28 +74,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("supplierId", request.supplierId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.fulfilmentOrderCode)) {
-            body.put("fulfilmentOrderCode", request.fulfilmentOrderCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.outOrderCode)) {
-            body.put("outOrderCode", request.outOrderCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.appointOrderCode)) {
-            body.put("appointOrderCode", request.appointOrderCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.outBusinessOrderCode)) {
-            body.put("outBusinessOrderCode", request.outBusinessOrderCode);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("AscpAppointOrderCancelledErpSpi", "2021-07-06_16-58-49-384", "HTTP", "POST", "AK", "/ascpAppointOrderCancelledErpSpi", "json", req, runtime), new AscpAppointOrderCancelledErpSpiResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AscpAppointOrderCancelledErpSpi"),
+            new TeaPair("version", "2021-07-06_16-58-49-384"),
+            new TeaPair("protocol", "HTTP"),
+            new TeaPair("pathname", "/ascpAppointOrderCancelledErpSpi"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AscpAppointOrderCancelledErpSpiResponse());
     }
 
     public AscpAppointOrderCreatedErpSpiResponse ascpAppointOrderCreatedErpSpi(AscpAppointOrderCreatedErpSpiRequest request) throws Exception {
@@ -92,36 +107,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
-            body.put("orderType", request.orderType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.supplierId)) {
-            body.put("supplierId", request.supplierId);
+        if (!com.aliyun.teautil.Common.isUnset(request.appointOrderCode)) {
+            body.put("appointOrderCode", request.appointOrderCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.entityCode)) {
             body.put("entityCode", request.entityCode);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.relationName)) {
-            body.put("relationName", request.relationName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.realSupplierNick)) {
-            body.put("realSupplierNick", request.realSupplierNick);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.entityName)) {
             body.put("entityName", request.entityName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.relationCode)) {
-            body.put("relationCode", request.relationCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.outOrderCode)) {
-            body.put("outOrderCode", request.outOrderCode);
+        if (!com.aliyun.teautil.Common.isUnset(request.extFields)) {
+            body.put("extFields", request.extFields);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.inboundType)) {
@@ -132,16 +131,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("items", request.items);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.appointOrderCode)) {
-            body.put("appointOrderCode", request.appointOrderCode);
+        if (!com.aliyun.teautil.Common.isUnset(request.memberId)) {
+            body.put("memberId", request.memberId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            body.put("orderType", request.orderType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.outBusinessOrderCode)) {
             body.put("outBusinessOrderCode", request.outBusinessOrderCode);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.memberId)) {
-            body.put("memberId", request.memberId);
+        if (!com.aliyun.teautil.Common.isUnset(request.outOrderCode)) {
+            body.put("outOrderCode", request.outOrderCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realSupplierNick)) {
+            body.put("realSupplierNick", request.realSupplierNick);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relationCode)) {
+            body.put("relationCode", request.relationCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relationName)) {
+            body.put("relationName", request.relationName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supplierId)) {
+            body.put("supplierId", request.supplierId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -149,7 +168,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("AscpAppointOrderCreatedErpSpi", "2021-07-06_16-58-49-384", "HTTP", "POST", "AK", "/ascpAppointOrderCreatedErpSpi", "json", req, runtime), new AscpAppointOrderCreatedErpSpiResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AscpAppointOrderCreatedErpSpi"),
+            new TeaPair("version", "2021-07-06_16-58-49-384"),
+            new TeaPair("protocol", "HTTP"),
+            new TeaPair("pathname", "/ascpAppointOrderCreatedErpSpi"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AscpAppointOrderCreatedErpSpiResponse());
     }
 
     public AscpAppointOrderDoFinishedErpSpiResponse ascpAppointOrderDoFinishedErpSpi(AscpAppointOrderDoFinishedErpSpiRequest request) throws Exception {
@@ -166,46 +196,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appointWave)) {
-            body.put("appointWave", request.appointWave);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.appointType)) {
-            body.put("appointType", request.appointType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.warehouseAddress)) {
-            body.put("warehouseAddress", request.warehouseAddress);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
-            body.put("reason", request.reason);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.originalAppointWave)) {
-            body.put("originalAppointWave", request.originalAppointWave);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.supplierId)) {
-            body.put("supplierId", request.supplierId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.fulfilmentOrderCode)) {
-            body.put("fulfilmentOrderCode", request.fulfilmentOrderCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.outOrderCode)) {
-            body.put("outOrderCode", request.outOrderCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.warehouseType)) {
-            body.put("warehouseType", request.warehouseType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.originalAppointDate)) {
-            body.put("originalAppointDate", request.originalAppointDate);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.appointDate)) {
             body.put("appointDate", request.appointDate);
         }
@@ -214,8 +204,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("appointOrderCode", request.appointOrderCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.appointType)) {
+            body.put("appointType", request.appointType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appointWave)) {
+            body.put("appointWave", request.appointWave);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extFields)) {
+            body.put("extFields", request.extFields);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fulfilmentOrderCode)) {
+            body.put("fulfilmentOrderCode", request.fulfilmentOrderCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalAppointDate)) {
+            body.put("originalAppointDate", request.originalAppointDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalAppointWave)) {
+            body.put("originalAppointWave", request.originalAppointWave);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.outBusinessOrderCode)) {
             body.put("outBusinessOrderCode", request.outBusinessOrderCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outOrderCode)) {
+            body.put("outOrderCode", request.outOrderCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
+            body.put("reason", request.reason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supplierId)) {
+            body.put("supplierId", request.supplierId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.warehouseAddress)) {
+            body.put("warehouseAddress", request.warehouseAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.warehouseType)) {
+            body.put("warehouseType", request.warehouseType);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -223,6 +257,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("AscpAppointOrderDoFinishedErpSpi", "2021-07-06_16-58-49-384", "HTTPS", "POST", "AK", "/ascpAppointOrderDoFinishedErpSpi", "json", req, runtime), new AscpAppointOrderDoFinishedErpSpiResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AscpAppointOrderDoFinishedErpSpi"),
+            new TeaPair("version", "2021-07-06_16-58-49-384"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ascpAppointOrderDoFinishedErpSpi"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AscpAppointOrderDoFinishedErpSpiResponse());
     }
 }

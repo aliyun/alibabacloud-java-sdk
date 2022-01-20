@@ -4,37 +4,21 @@ package com.aliyun.nbf20210706_165849384.models;
 import com.aliyun.tea.*;
 
 public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
-    // 预约单类型
-    @NameInMap("orderType")
-    public Integer orderType;
-
-    // 供应商ID
-    @NameInMap("supplierId")
-    public Long supplierId;
+    // 预约单号
+    @NameInMap("appointOrderCode")
+    public String appointOrderCode;
 
     // 仓库编码（物理仓）
     @NameInMap("entityCode")
     public String entityCode;
 
-    // 仓库名称（逻辑仓）
-    @NameInMap("relationName")
-    public String relationName;
-
-    // 供应商名称
-    @NameInMap("realSupplierNick")
-    public String realSupplierNick;
-
     // 仓库名称（物理仓）
     @NameInMap("entityName")
     public String entityName;
 
-    // 仓库编码（逻辑仓）
-    @NameInMap("relationCode")
-    public String relationCode;
-
-    // 待预约单据编号
-    @NameInMap("outOrderCode")
-    public String outOrderCode;
+    // 附加信息
+    @NameInMap("extFields")
+    public String extFields;
 
     // 出入库方式
     @NameInMap("inboundType")
@@ -44,17 +28,37 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
     @NameInMap("items")
     public java.util.List<AscpAppointOrderCreatedErpSpiRequestItems> items;
 
-    // 预约单号
-    @NameInMap("appointOrderCode")
-    public String appointOrderCode;
+    // 二级供应商编码
+    @NameInMap("memberId")
+    public Long memberId;
+
+    // 预约单类型
+    @NameInMap("orderType")
+    public Integer orderType;
 
     // 关联业务单号
     @NameInMap("outBusinessOrderCode")
     public String outBusinessOrderCode;
 
-    // 二级供应商编码
-    @NameInMap("memberId")
-    public Long memberId;
+    // 待预约单据编号
+    @NameInMap("outOrderCode")
+    public String outOrderCode;
+
+    // 供应商名称
+    @NameInMap("realSupplierNick")
+    public String realSupplierNick;
+
+    // 仓库编码（逻辑仓）
+    @NameInMap("relationCode")
+    public String relationCode;
+
+    // 仓库名称（逻辑仓）
+    @NameInMap("relationName")
+    public String relationName;
+
+    // 供应商ID
+    @NameInMap("supplierId")
+    public Long supplierId;
 
     // 供应商ID，路由专用
     @NameInMap("routeSupplierId")
@@ -65,20 +69,12 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AscpAppointOrderCreatedErpSpiRequest setOrderType(Integer orderType) {
-        this.orderType = orderType;
+    public AscpAppointOrderCreatedErpSpiRequest setAppointOrderCode(String appointOrderCode) {
+        this.appointOrderCode = appointOrderCode;
         return this;
     }
-    public Integer getOrderType() {
-        return this.orderType;
-    }
-
-    public AscpAppointOrderCreatedErpSpiRequest setSupplierId(Long supplierId) {
-        this.supplierId = supplierId;
-        return this;
-    }
-    public Long getSupplierId() {
-        return this.supplierId;
+    public String getAppointOrderCode() {
+        return this.appointOrderCode;
     }
 
     public AscpAppointOrderCreatedErpSpiRequest setEntityCode(String entityCode) {
@@ -89,22 +85,6 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
         return this.entityCode;
     }
 
-    public AscpAppointOrderCreatedErpSpiRequest setRelationName(String relationName) {
-        this.relationName = relationName;
-        return this;
-    }
-    public String getRelationName() {
-        return this.relationName;
-    }
-
-    public AscpAppointOrderCreatedErpSpiRequest setRealSupplierNick(String realSupplierNick) {
-        this.realSupplierNick = realSupplierNick;
-        return this;
-    }
-    public String getRealSupplierNick() {
-        return this.realSupplierNick;
-    }
-
     public AscpAppointOrderCreatedErpSpiRequest setEntityName(String entityName) {
         this.entityName = entityName;
         return this;
@@ -113,20 +93,12 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
         return this.entityName;
     }
 
-    public AscpAppointOrderCreatedErpSpiRequest setRelationCode(String relationCode) {
-        this.relationCode = relationCode;
+    public AscpAppointOrderCreatedErpSpiRequest setExtFields(String extFields) {
+        this.extFields = extFields;
         return this;
     }
-    public String getRelationCode() {
-        return this.relationCode;
-    }
-
-    public AscpAppointOrderCreatedErpSpiRequest setOutOrderCode(String outOrderCode) {
-        this.outOrderCode = outOrderCode;
-        return this;
-    }
-    public String getOutOrderCode() {
-        return this.outOrderCode;
+    public String getExtFields() {
+        return this.extFields;
     }
 
     public AscpAppointOrderCreatedErpSpiRequest setInboundType(String inboundType) {
@@ -145,12 +117,20 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
         return this.items;
     }
 
-    public AscpAppointOrderCreatedErpSpiRequest setAppointOrderCode(String appointOrderCode) {
-        this.appointOrderCode = appointOrderCode;
+    public AscpAppointOrderCreatedErpSpiRequest setMemberId(Long memberId) {
+        this.memberId = memberId;
         return this;
     }
-    public String getAppointOrderCode() {
-        return this.appointOrderCode;
+    public Long getMemberId() {
+        return this.memberId;
+    }
+
+    public AscpAppointOrderCreatedErpSpiRequest setOrderType(Integer orderType) {
+        this.orderType = orderType;
+        return this;
+    }
+    public Integer getOrderType() {
+        return this.orderType;
     }
 
     public AscpAppointOrderCreatedErpSpiRequest setOutBusinessOrderCode(String outBusinessOrderCode) {
@@ -161,12 +141,44 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
         return this.outBusinessOrderCode;
     }
 
-    public AscpAppointOrderCreatedErpSpiRequest setMemberId(Long memberId) {
-        this.memberId = memberId;
+    public AscpAppointOrderCreatedErpSpiRequest setOutOrderCode(String outOrderCode) {
+        this.outOrderCode = outOrderCode;
         return this;
     }
-    public Long getMemberId() {
-        return this.memberId;
+    public String getOutOrderCode() {
+        return this.outOrderCode;
+    }
+
+    public AscpAppointOrderCreatedErpSpiRequest setRealSupplierNick(String realSupplierNick) {
+        this.realSupplierNick = realSupplierNick;
+        return this;
+    }
+    public String getRealSupplierNick() {
+        return this.realSupplierNick;
+    }
+
+    public AscpAppointOrderCreatedErpSpiRequest setRelationCode(String relationCode) {
+        this.relationCode = relationCode;
+        return this;
+    }
+    public String getRelationCode() {
+        return this.relationCode;
+    }
+
+    public AscpAppointOrderCreatedErpSpiRequest setRelationName(String relationName) {
+        this.relationName = relationName;
+        return this;
+    }
+    public String getRelationName() {
+        return this.relationName;
+    }
+
+    public AscpAppointOrderCreatedErpSpiRequest setSupplierId(Long supplierId) {
+        this.supplierId = supplierId;
+        return this;
+    }
+    public Long getSupplierId() {
+        return this.supplierId;
     }
 
     public AscpAppointOrderCreatedErpSpiRequest setRouteSupplierId(Long routeSupplierId) {
@@ -178,89 +190,69 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
     }
 
     public static class AscpAppointOrderCreatedErpSpiRequestItems extends TeaModel {
-        // 箱规
-        @NameInMap("pcs")
-        public Integer pcs;
+        // 总箱数
+        @NameInMap("box")
+        public Integer box;
 
         // 品牌名称
         @NameInMap("brandName")
         public String brandName;
 
-        // 重量（克）
-        @NameInMap("weight")
-        public Float weight;
-
-        // 总箱数
-        @NameInMap("box")
-        public Integer box;
-
-        // 货品ID
-        @NameInMap("scItemId")
-        public Long scItemId;
-
         // 商品类目
         @NameInMap("categoryName")
         public String categoryName;
+
+        // 附加信息
+        @NameInMap("extFields")
+        public String extFields;
 
         // 条形码
         @NameInMap("goodsBarCode")
         public String goodsBarCode;
 
-        // 体积（立方毫米）
-        @NameInMap("volume")
-        public Float volume;
-
         // 商品ID
         @NameInMap("itemId")
         public Long itemId;
-
-        // 计量单位
-        @NameInMap("unit")
-        public String unit;
-
-        // 总件数
-        @NameInMap("planNum")
-        public Integer planNum;
-
-        // 货品名称
-        @NameInMap("scItemName")
-        public String scItemName;
 
         // 存储类型
         @NameInMap("packageModel")
         public String packageModel;
 
+        // 箱规
+        @NameInMap("pcs")
+        public Integer pcs;
+
+        // 总件数
+        @NameInMap("planNum")
+        public Integer planNum;
+
+        // 货品ID
+        @NameInMap("scItemId")
+        public Long scItemId;
+
+        // 货品名称
+        @NameInMap("scItemName")
+        public String scItemName;
+
         // SKUID
         @NameInMap("skuId")
         public Long skuId;
 
+        // 计量单位
+        @NameInMap("unit")
+        public String unit;
+
+        // 体积（立方毫米）
+        @NameInMap("volume")
+        public Float volume;
+
+        // 重量（克）
+        @NameInMap("weight")
+        public Float weight;
+
         public static AscpAppointOrderCreatedErpSpiRequestItems build(java.util.Map<String, ?> map) throws Exception {
             AscpAppointOrderCreatedErpSpiRequestItems self = new AscpAppointOrderCreatedErpSpiRequestItems();
             return TeaModel.build(map, self);
-        }
-
-        public AscpAppointOrderCreatedErpSpiRequestItems setPcs(Integer pcs) {
-            this.pcs = pcs;
-            return this;
-        }
-        public Integer getPcs() {
-            return this.pcs;
-        }
-
-        public AscpAppointOrderCreatedErpSpiRequestItems setBrandName(String brandName) {
-            this.brandName = brandName;
-            return this;
-        }
-        public String getBrandName() {
-            return this.brandName;
-        }
-
-        public AscpAppointOrderCreatedErpSpiRequestItems setWeight(Float weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Float getWeight() {
-            return this.weight;
         }
 
         public AscpAppointOrderCreatedErpSpiRequestItems setBox(Integer box) {
@@ -271,12 +263,12 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
             return this.box;
         }
 
-        public AscpAppointOrderCreatedErpSpiRequestItems setScItemId(Long scItemId) {
-            this.scItemId = scItemId;
+        public AscpAppointOrderCreatedErpSpiRequestItems setBrandName(String brandName) {
+            this.brandName = brandName;
             return this;
         }
-        public Long getScItemId() {
-            return this.scItemId;
+        public String getBrandName() {
+            return this.brandName;
         }
 
         public AscpAppointOrderCreatedErpSpiRequestItems setCategoryName(String categoryName) {
@@ -287,20 +279,20 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
             return this.categoryName;
         }
 
+        public AscpAppointOrderCreatedErpSpiRequestItems setExtFields(String extFields) {
+            this.extFields = extFields;
+            return this;
+        }
+        public String getExtFields() {
+            return this.extFields;
+        }
+
         public AscpAppointOrderCreatedErpSpiRequestItems setGoodsBarCode(String goodsBarCode) {
             this.goodsBarCode = goodsBarCode;
             return this;
         }
         public String getGoodsBarCode() {
             return this.goodsBarCode;
-        }
-
-        public AscpAppointOrderCreatedErpSpiRequestItems setVolume(Float volume) {
-            this.volume = volume;
-            return this;
-        }
-        public Float getVolume() {
-            return this.volume;
         }
 
         public AscpAppointOrderCreatedErpSpiRequestItems setItemId(Long itemId) {
@@ -311,12 +303,20 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
             return this.itemId;
         }
 
-        public AscpAppointOrderCreatedErpSpiRequestItems setUnit(String unit) {
-            this.unit = unit;
+        public AscpAppointOrderCreatedErpSpiRequestItems setPackageModel(String packageModel) {
+            this.packageModel = packageModel;
             return this;
         }
-        public String getUnit() {
-            return this.unit;
+        public String getPackageModel() {
+            return this.packageModel;
+        }
+
+        public AscpAppointOrderCreatedErpSpiRequestItems setPcs(Integer pcs) {
+            this.pcs = pcs;
+            return this;
+        }
+        public Integer getPcs() {
+            return this.pcs;
         }
 
         public AscpAppointOrderCreatedErpSpiRequestItems setPlanNum(Integer planNum) {
@@ -327,6 +327,14 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
             return this.planNum;
         }
 
+        public AscpAppointOrderCreatedErpSpiRequestItems setScItemId(Long scItemId) {
+            this.scItemId = scItemId;
+            return this;
+        }
+        public Long getScItemId() {
+            return this.scItemId;
+        }
+
         public AscpAppointOrderCreatedErpSpiRequestItems setScItemName(String scItemName) {
             this.scItemName = scItemName;
             return this;
@@ -335,20 +343,36 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
             return this.scItemName;
         }
 
-        public AscpAppointOrderCreatedErpSpiRequestItems setPackageModel(String packageModel) {
-            this.packageModel = packageModel;
-            return this;
-        }
-        public String getPackageModel() {
-            return this.packageModel;
-        }
-
         public AscpAppointOrderCreatedErpSpiRequestItems setSkuId(Long skuId) {
             this.skuId = skuId;
             return this;
         }
         public Long getSkuId() {
             return this.skuId;
+        }
+
+        public AscpAppointOrderCreatedErpSpiRequestItems setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
+        }
+
+        public AscpAppointOrderCreatedErpSpiRequestItems setVolume(Float volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Float getVolume() {
+            return this.volume;
+        }
+
+        public AscpAppointOrderCreatedErpSpiRequestItems setWeight(Float weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Float getWeight() {
+            return this.weight;
         }
 
     }
