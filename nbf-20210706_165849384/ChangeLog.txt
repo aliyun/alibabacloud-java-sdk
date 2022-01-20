@@ -1,3 +1,6 @@
+2022-01-20 Version: 1.0.7
+- Add_ext_info.
+
 2021-08-16 Version: 1.0.6
 - Deploy.
 

@@ -4,10 +4,6 @@ package com.aliyun.nbf20210706_165849384.models;
 import com.aliyun.tea.*;
 
 public class AscpAppointOrderCreatedErpSpiResponseBody extends TeaModel {
-    // 请求是否成功
-    @NameInMap("success")
-    public Boolean success;
-
     // 错误编码，失败情况下返回
     @NameInMap("errorCode")
     public String errorCode;
@@ -16,17 +12,13 @@ public class AscpAppointOrderCreatedErpSpiResponseBody extends TeaModel {
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    // 请求是否成功
+    @NameInMap("success")
+    public Boolean success;
+
     public static AscpAppointOrderCreatedErpSpiResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AscpAppointOrderCreatedErpSpiResponseBody self = new AscpAppointOrderCreatedErpSpiResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AscpAppointOrderCreatedErpSpiResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public AscpAppointOrderCreatedErpSpiResponseBody setErrorCode(String errorCode) {
@@ -43,6 +35,14 @@ public class AscpAppointOrderCreatedErpSpiResponseBody extends TeaModel {
     }
     public String getErrorMsg() {
         return this.errorMsg;
+    }
+
+    public AscpAppointOrderCreatedErpSpiResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }
