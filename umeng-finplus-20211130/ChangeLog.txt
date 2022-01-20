@@ -1,3 +1,6 @@
+2022-01-20 Version: 1.8.4
+- Add  message info.
+
 2022-01-19 Version: 1.8.3
 - Add  rta cancel interface.
 
