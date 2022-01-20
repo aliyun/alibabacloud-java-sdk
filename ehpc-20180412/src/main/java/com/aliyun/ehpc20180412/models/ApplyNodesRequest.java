@@ -46,6 +46,9 @@ public class ApplyNodesRequest extends TeaModel {
     @NameInMap("Interval")
     public Integer interval;
 
+    @NameInMap("JobQueue")
+    public String jobQueue;
+
     @NameInMap("Memory")
     public Integer memory;
 
@@ -197,6 +200,14 @@ public class ApplyNodesRequest extends TeaModel {
     }
     public Integer getInterval() {
         return this.interval;
+    }
+
+    public ApplyNodesRequest setJobQueue(String jobQueue) {
+        this.jobQueue = jobQueue;
+        return this;
+    }
+    public String getJobQueue() {
+        return this.jobQueue;
     }
 
     public ApplyNodesRequest setMemory(Integer memory) {

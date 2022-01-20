@@ -10,9 +10,6 @@ public class ListNodesNoPagingRequest extends TeaModel {
     @NameInMap("HostName")
     public String hostName;
 
-    @NameInMap("OnlyDetached")
-    public Boolean onlyDetached;
-
     @NameInMap("Role")
     public String role;
 
@@ -38,14 +35,6 @@ public class ListNodesNoPagingRequest extends TeaModel {
     }
     public String getHostName() {
         return this.hostName;
-    }
-
-    public ListNodesNoPagingRequest setOnlyDetached(Boolean onlyDetached) {
-        this.onlyDetached = onlyDetached;
-        return this;
-    }
-    public Boolean getOnlyDetached() {
-        return this.onlyDetached;
     }
 
     public ListNodesNoPagingRequest setRole(String role) {
