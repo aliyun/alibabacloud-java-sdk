@@ -86,6 +86,10 @@ public class GetDataSetStatusResponseBody extends TeaModel {
         @NameInMap("idTypeDesc")
         public String idTypeDesc;
 
+        // 错误消息描述
+        @NameInMap("message")
+        public String message;
+
         // 数据集名称
         @NameInMap("name")
         public String name;
@@ -129,6 +133,14 @@ public class GetDataSetStatusResponseBody extends TeaModel {
         }
         public String getIdTypeDesc() {
             return this.idTypeDesc;
+        }
+
+        public GetDataSetStatusResponseBodyData setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
         }
 
         public GetDataSetStatusResponseBodyData setName(String name) {
