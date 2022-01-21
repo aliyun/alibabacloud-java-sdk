@@ -7,6 +7,9 @@ public class CreateMonitorGroupByResourceGroupIdResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Id")
+    public Long id;
+
     @NameInMap("Message")
     public String message;
 
@@ -27,6 +30,14 @@ public class CreateMonitorGroupByResourceGroupIdResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CreateMonitorGroupByResourceGroupIdResponseBody setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public CreateMonitorGroupByResourceGroupIdResponseBody setMessage(String message) {

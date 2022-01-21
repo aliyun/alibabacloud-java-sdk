@@ -4,8 +4,8 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventRuleListRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("GroupId")
+    public String groupId;
 
     @NameInMap("NamePrefix")
     public String namePrefix;
@@ -16,20 +16,20 @@ public class DescribeEventRuleListRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    @NameInMap("GroupId")
-    public String groupId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DescribeEventRuleListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEventRuleListRequest self = new DescribeEventRuleListRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeEventRuleListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeEventRuleListRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public DescribeEventRuleListRequest setNamePrefix(String namePrefix) {
@@ -56,12 +56,12 @@ public class DescribeEventRuleListRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeEventRuleListRequest setGroupId(String groupId) {
-        this.groupId = groupId;
+    public DescribeEventRuleListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getGroupId() {
-        return this.groupId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

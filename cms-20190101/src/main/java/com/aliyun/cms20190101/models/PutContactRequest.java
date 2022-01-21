@@ -54,37 +54,21 @@ public class PutContactRequest extends TeaModel {
     }
 
     public static class PutContactRequestChannels extends TeaModel {
-        @NameInMap("SMS")
-        public String SMS;
-
-        @NameInMap("Mail")
-        public String mail;
-
         @NameInMap("AliIM")
         public String aliIM;
 
         @NameInMap("DingWebHook")
         public String dingWebHook;
 
+        @NameInMap("Mail")
+        public String mail;
+
+        @NameInMap("SMS")
+        public String SMS;
+
         public static PutContactRequestChannels build(java.util.Map<String, ?> map) throws Exception {
             PutContactRequestChannels self = new PutContactRequestChannels();
             return TeaModel.build(map, self);
-        }
-
-        public PutContactRequestChannels setSMS(String SMS) {
-            this.SMS = SMS;
-            return this;
-        }
-        public String getSMS() {
-            return this.SMS;
-        }
-
-        public PutContactRequestChannels setMail(String mail) {
-            this.mail = mail;
-            return this;
-        }
-        public String getMail() {
-            return this.mail;
         }
 
         public PutContactRequestChannels setAliIM(String aliIM) {
@@ -101,6 +85,22 @@ public class PutContactRequest extends TeaModel {
         }
         public String getDingWebHook() {
             return this.dingWebHook;
+        }
+
+        public PutContactRequestChannels setMail(String mail) {
+            this.mail = mail;
+            return this;
+        }
+        public String getMail() {
+            return this.mail;
+        }
+
+        public PutContactRequestChannels setSMS(String SMS) {
+            this.SMS = SMS;
+            return this;
+        }
+        public String getSMS() {
+            return this.SMS;
         }
 
     }

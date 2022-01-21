@@ -7,6 +7,9 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("Group")
+    public DeleteMonitorGroupResponseBodyGroup group;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Group")
-    public DeleteMonitorGroupResponseBodyGroup group;
 
     public static DeleteMonitorGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteMonitorGroupResponseBody self = new DeleteMonitorGroupResponseBody();
@@ -30,6 +30,14 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
+    }
+
+    public DeleteMonitorGroupResponseBody setGroup(DeleteMonitorGroupResponseBodyGroup group) {
+        this.group = group;
+        return this;
+    }
+    public DeleteMonitorGroupResponseBodyGroup getGroup() {
+        return this.group;
     }
 
     public DeleteMonitorGroupResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public DeleteMonitorGroupResponseBody setGroup(DeleteMonitorGroupResponseBodyGroup group) {
-        this.group = group;
-        return this;
-    }
-    public DeleteMonitorGroupResponseBodyGroup getGroup() {
-        return this.group;
     }
 
     public static class DeleteMonitorGroupResponseBodyGroupContactGroupsContactGroup extends TeaModel {
@@ -103,23 +103,15 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteMonitorGroupResponseBodyGroup extends TeaModel {
-        @NameInMap("GroupName")
-        public String groupName;
-
         @NameInMap("ContactGroups")
         public DeleteMonitorGroupResponseBodyGroupContactGroups contactGroups;
+
+        @NameInMap("GroupName")
+        public String groupName;
 
         public static DeleteMonitorGroupResponseBodyGroup build(java.util.Map<String, ?> map) throws Exception {
             DeleteMonitorGroupResponseBodyGroup self = new DeleteMonitorGroupResponseBodyGroup();
             return TeaModel.build(map, self);
-        }
-
-        public DeleteMonitorGroupResponseBodyGroup setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
         }
 
         public DeleteMonitorGroupResponseBodyGroup setContactGroups(DeleteMonitorGroupResponseBodyGroupContactGroups contactGroups) {
@@ -128,6 +120,14 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         }
         public DeleteMonitorGroupResponseBodyGroupContactGroups getContactGroups() {
             return this.contactGroups;
+        }
+
+        public DeleteMonitorGroupResponseBodyGroup setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
         }
 
     }

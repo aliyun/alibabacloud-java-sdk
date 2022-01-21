@@ -4,45 +4,21 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMetricRuleTemplateRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("AlertTemplates")
+    public java.util.List<CreateMetricRuleTemplateRequestAlertTemplates> alertTemplates;
 
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("AlertTemplates")
-    public java.util.List<CreateMetricRuleTemplateRequestAlertTemplates> alertTemplates;
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static CreateMetricRuleTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMetricRuleTemplateRequest self = new CreateMetricRuleTemplateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateMetricRuleTemplateRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateMetricRuleTemplateRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateMetricRuleTemplateRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public CreateMetricRuleTemplateRequest setAlertTemplates(java.util.List<CreateMetricRuleTemplateRequestAlertTemplates> alertTemplates) {
@@ -53,15 +29,91 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         return this.alertTemplates;
     }
 
-    public static class CreateMetricRuleTemplateRequestAlertTemplatesEscalationsInfo extends TeaModel {
-        @NameInMap("Threshold")
-        public String threshold;
+    public CreateMetricRuleTemplateRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateMetricRuleTemplateRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateMetricRuleTemplateRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public static class CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical extends TeaModel {
+        @NameInMap("ComparisonOperator")
+        public String comparisonOperator;
 
         @NameInMap("Statistics")
         public String statistics;
 
+        @NameInMap("Threshold")
+        public String threshold;
+
+        @NameInMap("Times")
+        public Integer times;
+
+        public static CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical build(java.util.Map<String, ?> map) throws Exception {
+            CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical self = new CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical setComparisonOperator(String comparisonOperator) {
+            this.comparisonOperator = comparisonOperator;
+            return this;
+        }
+        public String getComparisonOperator() {
+            return this.comparisonOperator;
+        }
+
+        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical setStatistics(String statistics) {
+            this.statistics = statistics;
+            return this;
+        }
+        public String getStatistics() {
+            return this.statistics;
+        }
+
+        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical setThreshold(String threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical setTimes(Integer times) {
+            this.times = times;
+            return this;
+        }
+        public Integer getTimes() {
+            return this.times;
+        }
+
+    }
+
+    public static class CreateMetricRuleTemplateRequestAlertTemplatesEscalationsInfo extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
+
+        @NameInMap("Statistics")
+        public String statistics;
+
+        @NameInMap("Threshold")
+        public String threshold;
 
         @NameInMap("Times")
         public Integer times;
@@ -71,12 +123,12 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsInfo setThreshold(String threshold) {
-            this.threshold = threshold;
+        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsInfo setComparisonOperator(String comparisonOperator) {
+            this.comparisonOperator = comparisonOperator;
             return this;
         }
-        public String getThreshold() {
-            return this.threshold;
+        public String getComparisonOperator() {
+            return this.comparisonOperator;
         }
 
         public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsInfo setStatistics(String statistics) {
@@ -87,12 +139,12 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
             return this.statistics;
         }
 
-        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsInfo setComparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = comparisonOperator;
+        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsInfo setThreshold(String threshold) {
+            this.threshold = threshold;
             return this;
         }
-        public String getComparisonOperator() {
-            return this.comparisonOperator;
+        public String getThreshold() {
+            return this.threshold;
         }
 
         public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsInfo setTimes(Integer times) {
@@ -106,37 +158,21 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
     }
 
     public static class CreateMetricRuleTemplateRequestAlertTemplatesEscalationsWarn extends TeaModel {
-        @NameInMap("Threshold")
-        public String threshold;
-
-        @NameInMap("Times")
-        public Integer times;
-
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         @NameInMap("Statistics")
         public String statistics;
 
+        @NameInMap("Threshold")
+        public String threshold;
+
+        @NameInMap("Times")
+        public Integer times;
+
         public static CreateMetricRuleTemplateRequestAlertTemplatesEscalationsWarn build(java.util.Map<String, ?> map) throws Exception {
             CreateMetricRuleTemplateRequestAlertTemplatesEscalationsWarn self = new CreateMetricRuleTemplateRequestAlertTemplatesEscalationsWarn();
             return TeaModel.build(map, self);
-        }
-
-        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsWarn setThreshold(String threshold) {
-            this.threshold = threshold;
-            return this;
-        }
-        public String getThreshold() {
-            return this.threshold;
-        }
-
-        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsWarn setTimes(Integer times) {
-            this.times = times;
-            return this;
-        }
-        public Integer getTimes() {
-            return this.times;
         }
 
         public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsWarn setComparisonOperator(String comparisonOperator) {
@@ -155,35 +191,7 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
             return this.statistics;
         }
 
-    }
-
-    public static class CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical extends TeaModel {
-        @NameInMap("Times")
-        public Integer times;
-
-        @NameInMap("Threshold")
-        public String threshold;
-
-        @NameInMap("Statistics")
-        public String statistics;
-
-        @NameInMap("ComparisonOperator")
-        public String comparisonOperator;
-
-        public static CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical build(java.util.Map<String, ?> map) throws Exception {
-            CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical self = new CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical setTimes(Integer times) {
-            this.times = times;
-            return this;
-        }
-        public Integer getTimes() {
-            return this.times;
-        }
-
-        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical setThreshold(String threshold) {
+        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsWarn setThreshold(String threshold) {
             this.threshold = threshold;
             return this;
         }
@@ -191,25 +199,21 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
             return this.threshold;
         }
 
-        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical setStatistics(String statistics) {
-            this.statistics = statistics;
+        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsWarn setTimes(Integer times) {
+            this.times = times;
             return this;
         }
-        public String getStatistics() {
-            return this.statistics;
-        }
-
-        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical setComparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = comparisonOperator;
-            return this;
-        }
-        public String getComparisonOperator() {
-            return this.comparisonOperator;
+        public Integer getTimes() {
+            return this.times;
         }
 
     }
 
     public static class CreateMetricRuleTemplateRequestAlertTemplatesEscalations extends TeaModel {
+        @NameInMap("Critical")
+        @Validation(required = true)
+        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical critical;
+
         @NameInMap("Info")
         @Validation(required = true)
         public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsInfo info;
@@ -218,13 +222,17 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         @Validation(required = true)
         public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsWarn warn;
 
-        @NameInMap("Critical")
-        @Validation(required = true)
-        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical critical;
-
         public static CreateMetricRuleTemplateRequestAlertTemplatesEscalations build(java.util.Map<String, ?> map) throws Exception {
             CreateMetricRuleTemplateRequestAlertTemplatesEscalations self = new CreateMetricRuleTemplateRequestAlertTemplatesEscalations();
             return TeaModel.build(map, self);
+        }
+
+        public CreateMetricRuleTemplateRequestAlertTemplatesEscalations setCritical(CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical critical) {
+            this.critical = critical;
+            return this;
+        }
+        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical getCritical() {
+            return this.critical;
         }
 
         public CreateMetricRuleTemplateRequestAlertTemplatesEscalations setInfo(CreateMetricRuleTemplateRequestAlertTemplatesEscalationsInfo info) {
@@ -243,14 +251,6 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
             return this.warn;
         }
 
-        public CreateMetricRuleTemplateRequestAlertTemplatesEscalations setCritical(CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical critical) {
-            this.critical = critical;
-            return this;
-        }
-        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical getCritical() {
-            return this.critical;
-        }
-
     }
 
     public static class CreateMetricRuleTemplateRequestAlertTemplates extends TeaModel {
@@ -258,11 +258,11 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         @Validation(required = true)
         public CreateMetricRuleTemplateRequestAlertTemplatesEscalations escalations;
 
+        @NameInMap("Category")
+        public String category;
+
         @NameInMap("MetricName")
         public String metricName;
-
-        @NameInMap("Webhook")
-        public String webhook;
 
         @NameInMap("Namespace")
         public String namespace;
@@ -276,8 +276,8 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         @NameInMap("Selector")
         public String selector;
 
-        @NameInMap("Category")
-        public String category;
+        @NameInMap("Webhook")
+        public String webhook;
 
         public static CreateMetricRuleTemplateRequestAlertTemplates build(java.util.Map<String, ?> map) throws Exception {
             CreateMetricRuleTemplateRequestAlertTemplates self = new CreateMetricRuleTemplateRequestAlertTemplates();
@@ -292,20 +292,20 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
             return this.escalations;
         }
 
+        public CreateMetricRuleTemplateRequestAlertTemplates setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
         public CreateMetricRuleTemplateRequestAlertTemplates setMetricName(String metricName) {
             this.metricName = metricName;
             return this;
         }
         public String getMetricName() {
             return this.metricName;
-        }
-
-        public CreateMetricRuleTemplateRequestAlertTemplates setWebhook(String webhook) {
-            this.webhook = webhook;
-            return this;
-        }
-        public String getWebhook() {
-            return this.webhook;
         }
 
         public CreateMetricRuleTemplateRequestAlertTemplates setNamespace(String namespace) {
@@ -340,12 +340,12 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
             return this.selector;
         }
 
-        public CreateMetricRuleTemplateRequestAlertTemplates setCategory(String category) {
-            this.category = category;
+        public CreateMetricRuleTemplateRequestAlertTemplates setWebhook(String webhook) {
+            this.webhook = webhook;
             return this;
         }
-        public String getCategory() {
-            return this.category;
+        public String getWebhook() {
+            return this.webhook;
         }
 
     }

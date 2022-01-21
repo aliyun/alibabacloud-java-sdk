@@ -4,26 +4,18 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeExporterRuleListRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeExporterRuleListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeExporterRuleListRequest self = new DescribeExporterRuleListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeExporterRuleListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeExporterRuleListRequest setPageNumber(Integer pageNumber) {
@@ -40,6 +32,14 @@ public class DescribeExporterRuleListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeExporterRuleListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

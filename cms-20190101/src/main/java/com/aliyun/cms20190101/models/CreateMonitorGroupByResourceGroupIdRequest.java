@@ -4,11 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitorGroupByResourceGroupIdRequest extends TeaModel {
-    @NameInMap("EnableSubscribeEvent")
-    public Boolean enableSubscribeEvent;
+    @NameInMap("ContactGroupList")
+    public java.util.List<String> contactGroupList;
 
     @NameInMap("EnableInstallAgent")
     public Boolean enableInstallAgent;
+
+    @NameInMap("EnableSubscribeEvent")
+    public Boolean enableSubscribeEvent;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -19,20 +22,17 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends TeaModel {
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
 
-    @NameInMap("ContactGroupList")
-    public java.util.List<String> contactGroupList;
-
     public static CreateMonitorGroupByResourceGroupIdRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMonitorGroupByResourceGroupIdRequest self = new CreateMonitorGroupByResourceGroupIdRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateMonitorGroupByResourceGroupIdRequest setEnableSubscribeEvent(Boolean enableSubscribeEvent) {
-        this.enableSubscribeEvent = enableSubscribeEvent;
+    public CreateMonitorGroupByResourceGroupIdRequest setContactGroupList(java.util.List<String> contactGroupList) {
+        this.contactGroupList = contactGroupList;
         return this;
     }
-    public Boolean getEnableSubscribeEvent() {
-        return this.enableSubscribeEvent;
+    public java.util.List<String> getContactGroupList() {
+        return this.contactGroupList;
     }
 
     public CreateMonitorGroupByResourceGroupIdRequest setEnableInstallAgent(Boolean enableInstallAgent) {
@@ -41,6 +41,14 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends TeaModel {
     }
     public Boolean getEnableInstallAgent() {
         return this.enableInstallAgent;
+    }
+
+    public CreateMonitorGroupByResourceGroupIdRequest setEnableSubscribeEvent(Boolean enableSubscribeEvent) {
+        this.enableSubscribeEvent = enableSubscribeEvent;
+        return this;
+    }
+    public Boolean getEnableSubscribeEvent() {
+        return this.enableSubscribeEvent;
     }
 
     public CreateMonitorGroupByResourceGroupIdRequest setRegionId(String regionId) {
@@ -65,14 +73,6 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends TeaModel {
     }
     public String getResourceGroupName() {
         return this.resourceGroupName;
-    }
-
-    public CreateMonitorGroupByResourceGroupIdRequest setContactGroupList(java.util.List<String> contactGroupList) {
-        this.contactGroupList = contactGroupList;
-        return this;
-    }
-    public java.util.List<String> getContactGroupList() {
-        return this.contactGroupList;
     }
 
 }

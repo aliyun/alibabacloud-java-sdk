@@ -7,6 +7,9 @@ public class DisableSiteMonitorsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public DisableSiteMonitorsResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DisableSiteMonitorsResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public String success;
-
-    @NameInMap("Data")
-    public DisableSiteMonitorsResponseBodyData data;
 
     public static DisableSiteMonitorsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DisableSiteMonitorsResponseBody self = new DisableSiteMonitorsResponseBody();
@@ -30,6 +30,14 @@ public class DisableSiteMonitorsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DisableSiteMonitorsResponseBody setData(DisableSiteMonitorsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DisableSiteMonitorsResponseBodyData getData() {
+        return this.data;
     }
 
     public DisableSiteMonitorsResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class DisableSiteMonitorsResponseBody extends TeaModel {
     }
     public String getSuccess() {
         return this.success;
-    }
-
-    public DisableSiteMonitorsResponseBody setData(DisableSiteMonitorsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DisableSiteMonitorsResponseBodyData getData() {
-        return this.data;
     }
 
     public static class DisableSiteMonitorsResponseBodyData extends TeaModel {

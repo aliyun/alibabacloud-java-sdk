@@ -4,26 +4,26 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeContactGroupListRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DescribeContactGroupListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeContactGroupListRequest self = new DescribeContactGroupListRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeContactGroupListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeContactGroupListRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeContactGroupListRequest setPageSize(Integer pageSize) {
@@ -34,12 +34,12 @@ public class DescribeContactGroupListRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeContactGroupListRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeContactGroupListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

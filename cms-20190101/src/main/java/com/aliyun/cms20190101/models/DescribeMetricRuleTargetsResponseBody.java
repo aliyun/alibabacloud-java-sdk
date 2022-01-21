@@ -65,11 +65,11 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricRuleTargetsResponseBodyTargetsTarget extends TeaModel {
-        @NameInMap("Id")
-        public String id;
-
         @NameInMap("Arn")
         public String arn;
+
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("Level")
         public String level;
@@ -79,20 +79,20 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeMetricRuleTargetsResponseBodyTargetsTarget setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
         public DescribeMetricRuleTargetsResponseBodyTargetsTarget setArn(String arn) {
             this.arn = arn;
             return this;
         }
         public String getArn() {
             return this.arn;
+        }
+
+        public DescribeMetricRuleTargetsResponseBodyTargetsTarget setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public DescribeMetricRuleTargetsResponseBodyTargetsTarget setLevel(String level) {

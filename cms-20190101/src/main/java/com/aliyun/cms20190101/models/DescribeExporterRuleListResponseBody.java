@@ -4,14 +4,11 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeExporterRuleListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("Datapoints")
+    public DescribeExporterRuleListResponseBodyDatapoints datapoints;
 
     @NameInMap("Message")
     public String message;
@@ -19,31 +16,18 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     @NameInMap("Total")
     public Integer total;
-
-    @NameInMap("Datapoints")
-    public DescribeExporterRuleListResponseBodyDatapoints datapoints;
 
     public static DescribeExporterRuleListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeExporterRuleListResponseBody self = new DescribeExporterRuleListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeExporterRuleListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeExporterRuleListResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public DescribeExporterRuleListResponseBody setCode(String code) {
@@ -52,6 +36,14 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeExporterRuleListResponseBody setDatapoints(DescribeExporterRuleListResponseBodyDatapoints datapoints) {
+        this.datapoints = datapoints;
+        return this;
+    }
+    public DescribeExporterRuleListResponseBodyDatapoints getDatapoints() {
+        return this.datapoints;
     }
 
     public DescribeExporterRuleListResponseBody setMessage(String message) {
@@ -70,20 +62,28 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeExporterRuleListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeExporterRuleListResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public DescribeExporterRuleListResponseBody setTotal(Integer total) {
         this.total = total;
         return this;
     }
     public Integer getTotal() {
         return this.total;
-    }
-
-    public DescribeExporterRuleListResponseBody setDatapoints(DescribeExporterRuleListResponseBodyDatapoints datapoints) {
-        this.datapoints = datapoints;
-        return this;
-    }
-    public DescribeExporterRuleListResponseBodyDatapoints getDatapoints() {
-        return this.datapoints;
     }
 
     public static class DescribeExporterRuleListResponseBodyDatapointsDatapointDstName extends TeaModel {
@@ -106,23 +106,23 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeExporterRuleListResponseBodyDatapointsDatapoint extends TeaModel {
-        @NameInMap("MetricName")
-        public String metricName;
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("Describe")
         public String describe;
 
-        @NameInMap("TargetWindows")
-        public String targetWindows;
+        @NameInMap("Dimension")
+        public String dimension;
 
-        @NameInMap("CreateTime")
-        public Long createTime;
+        @NameInMap("DstName")
+        public DescribeExporterRuleListResponseBodyDatapointsDatapointDstName dstName;
 
         @NameInMap("Enabled")
         public Boolean enabled;
 
-        @NameInMap("Dimension")
-        public String dimension;
+        @NameInMap("MetricName")
+        public String metricName;
 
         @NameInMap("Namespace")
         public String namespace;
@@ -130,36 +130,12 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         @NameInMap("RuleName")
         public String ruleName;
 
-        @NameInMap("DstName")
-        public DescribeExporterRuleListResponseBodyDatapointsDatapointDstName dstName;
+        @NameInMap("TargetWindows")
+        public String targetWindows;
 
         public static DescribeExporterRuleListResponseBodyDatapointsDatapoint build(java.util.Map<String, ?> map) throws Exception {
             DescribeExporterRuleListResponseBodyDatapointsDatapoint self = new DescribeExporterRuleListResponseBodyDatapointsDatapoint();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeExporterRuleListResponseBodyDatapointsDatapoint setMetricName(String metricName) {
-            this.metricName = metricName;
-            return this;
-        }
-        public String getMetricName() {
-            return this.metricName;
-        }
-
-        public DescribeExporterRuleListResponseBodyDatapointsDatapoint setDescribe(String describe) {
-            this.describe = describe;
-            return this;
-        }
-        public String getDescribe() {
-            return this.describe;
-        }
-
-        public DescribeExporterRuleListResponseBodyDatapointsDatapoint setTargetWindows(String targetWindows) {
-            this.targetWindows = targetWindows;
-            return this;
-        }
-        public String getTargetWindows() {
-            return this.targetWindows;
         }
 
         public DescribeExporterRuleListResponseBodyDatapointsDatapoint setCreateTime(Long createTime) {
@@ -170,12 +146,12 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeExporterRuleListResponseBodyDatapointsDatapoint setEnabled(Boolean enabled) {
-            this.enabled = enabled;
+        public DescribeExporterRuleListResponseBodyDatapointsDatapoint setDescribe(String describe) {
+            this.describe = describe;
             return this;
         }
-        public Boolean getEnabled() {
-            return this.enabled;
+        public String getDescribe() {
+            return this.describe;
         }
 
         public DescribeExporterRuleListResponseBodyDatapointsDatapoint setDimension(String dimension) {
@@ -184,6 +160,30 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         }
         public String getDimension() {
             return this.dimension;
+        }
+
+        public DescribeExporterRuleListResponseBodyDatapointsDatapoint setDstName(DescribeExporterRuleListResponseBodyDatapointsDatapointDstName dstName) {
+            this.dstName = dstName;
+            return this;
+        }
+        public DescribeExporterRuleListResponseBodyDatapointsDatapointDstName getDstName() {
+            return this.dstName;
+        }
+
+        public DescribeExporterRuleListResponseBodyDatapointsDatapoint setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public DescribeExporterRuleListResponseBodyDatapointsDatapoint setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
         }
 
         public DescribeExporterRuleListResponseBodyDatapointsDatapoint setNamespace(String namespace) {
@@ -202,12 +202,12 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             return this.ruleName;
         }
 
-        public DescribeExporterRuleListResponseBodyDatapointsDatapoint setDstName(DescribeExporterRuleListResponseBodyDatapointsDatapointDstName dstName) {
-            this.dstName = dstName;
+        public DescribeExporterRuleListResponseBodyDatapointsDatapoint setTargetWindows(String targetWindows) {
+            this.targetWindows = targetWindows;
             return this;
         }
-        public DescribeExporterRuleListResponseBodyDatapointsDatapointDstName getDstName() {
-            return this.dstName;
+        public String getTargetWindows() {
+            return this.targetWindows;
         }
 
     }

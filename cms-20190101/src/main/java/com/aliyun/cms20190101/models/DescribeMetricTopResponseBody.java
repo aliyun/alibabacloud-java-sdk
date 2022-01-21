@@ -7,17 +7,17 @@ public class DescribeMetricTopResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Datapoints")
     public String datapoints;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("Period")
     public String period;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeMetricTopResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricTopResponseBody self = new DescribeMetricTopResponseBody();
@@ -32,22 +32,6 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeMetricTopResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DescribeMetricTopResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeMetricTopResponseBody setDatapoints(String datapoints) {
         this.datapoints = datapoints;
         return this;
@@ -56,12 +40,28 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         return this.datapoints;
     }
 
+    public DescribeMetricTopResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public DescribeMetricTopResponseBody setPeriod(String period) {
         this.period = period;
         return this;
     }
     public String getPeriod() {
         return this.period;
+    }
+
+    public DescribeMetricTopResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

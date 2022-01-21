@@ -13,11 +13,11 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Resource")
     public DescribeMonitorGroupDynamicRulesResponseBodyResource resource;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DescribeMonitorGroupDynamicRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitorGroupDynamicRulesResponseBody self = new DescribeMonitorGroupDynamicRulesResponseBody();
@@ -48,14 +48,6 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeMonitorGroupDynamicRulesResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public DescribeMonitorGroupDynamicRulesResponseBody setResource(DescribeMonitorGroupDynamicRulesResponseBodyResource resource) {
         this.resource = resource;
         return this;
@@ -64,27 +56,27 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         return this.resource;
     }
 
-    public static class DescribeMonitorGroupDynamicRulesResponseBodyResourceResourceFiltersFilter extends TeaModel {
-        @NameInMap("Value")
-        public String value;
+    public DescribeMonitorGroupDynamicRulesResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
 
+    public static class DescribeMonitorGroupDynamicRulesResponseBodyResourceResourceFiltersFilter extends TeaModel {
         @NameInMap("Function")
         public String function;
 
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Value")
+        public String value;
+
         public static DescribeMonitorGroupDynamicRulesResponseBodyResourceResourceFiltersFilter build(java.util.Map<String, ?> map) throws Exception {
             DescribeMonitorGroupDynamicRulesResponseBodyResourceResourceFiltersFilter self = new DescribeMonitorGroupDynamicRulesResponseBodyResourceResourceFiltersFilter();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeMonitorGroupDynamicRulesResponseBodyResourceResourceFiltersFilter setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DescribeMonitorGroupDynamicRulesResponseBodyResourceResourceFiltersFilter setFunction(String function) {
@@ -101,6 +93,14 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeMonitorGroupDynamicRulesResponseBodyResourceResourceFiltersFilter setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

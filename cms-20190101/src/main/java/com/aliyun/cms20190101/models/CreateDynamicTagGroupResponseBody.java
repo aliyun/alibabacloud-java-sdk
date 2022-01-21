@@ -7,6 +7,9 @@ public class CreateDynamicTagGroupResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Id")
+    public String id;
+
     @NameInMap("Message")
     public String message;
 
@@ -27,6 +30,14 @@ public class CreateDynamicTagGroupResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CreateDynamicTagGroupResponseBody setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
     public CreateDynamicTagGroupResponseBody setMessage(String message) {

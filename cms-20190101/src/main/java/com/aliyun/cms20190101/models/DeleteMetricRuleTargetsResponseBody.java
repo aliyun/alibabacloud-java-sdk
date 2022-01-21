@@ -7,6 +7,9 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("FailIds")
+    public DeleteMetricRuleTargetsResponseBodyFailIds failIds;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("FailIds")
-    public DeleteMetricRuleTargetsResponseBodyFailIds failIds;
 
     public static DeleteMetricRuleTargetsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteMetricRuleTargetsResponseBody self = new DeleteMetricRuleTargetsResponseBody();
@@ -30,6 +30,14 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DeleteMetricRuleTargetsResponseBody setFailIds(DeleteMetricRuleTargetsResponseBodyFailIds failIds) {
+        this.failIds = failIds;
+        return this;
+    }
+    public DeleteMetricRuleTargetsResponseBodyFailIds getFailIds() {
+        return this.failIds;
     }
 
     public DeleteMetricRuleTargetsResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public DeleteMetricRuleTargetsResponseBody setFailIds(DeleteMetricRuleTargetsResponseBodyFailIds failIds) {
-        this.failIds = failIds;
-        return this;
-    }
-    public DeleteMetricRuleTargetsResponseBodyFailIds getFailIds() {
-        return this.failIds;
     }
 
     public static class DeleteMetricRuleTargetsResponseBodyFailIdsTargetIds extends TeaModel {

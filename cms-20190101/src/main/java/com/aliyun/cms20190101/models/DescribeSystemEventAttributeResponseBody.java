@@ -65,39 +65,103 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("Level")
+        public String level;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Product")
+        public String product;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("ResourceId")
+        public String resourceId;
+
         @NameInMap("Status")
         public String status;
 
         @NameInMap("Time")
         public Long time;
 
-        @NameInMap("GroupId")
-        public String groupId;
-
-        @NameInMap("Product")
-        public String product;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
-
-        @NameInMap("ResourceId")
-        public String resourceId;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Content")
-        public String content;
-
-        @NameInMap("Level")
-        public String level;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
         public static DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent build(java.util.Map<String, ?> map) throws Exception {
             DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent self = new DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setProduct(String product) {
+            this.product = product;
+            return this;
+        }
+        public String getProduct() {
+            return this.product;
+        }
+
+        public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
         }
 
         public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setStatus(String status) {
@@ -114,70 +178,6 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         }
         public Long getTime() {
             return this.time;
-        }
-
-        public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
-        public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setProduct(String product) {
-            this.product = product;
-            return this;
-        }
-        public String getProduct() {
-            return this.product;
-        }
-
-        public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
-        }
-
-        public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setResourceId(String resourceId) {
-            this.resourceId = resourceId;
-            return this;
-        }
-        public String getResourceId() {
-            return this.resourceId;
-        }
-
-        public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
-        public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setLevel(String level) {
-            this.level = level;
-            return this;
-        }
-        public String getLevel() {
-            return this.level;
-        }
-
-        public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
     }

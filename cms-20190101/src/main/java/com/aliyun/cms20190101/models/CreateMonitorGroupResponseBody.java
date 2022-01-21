@@ -7,14 +7,14 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("GroupId")
+    public Long groupId;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("GroupId")
-    public Long groupId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -32,6 +32,14 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
         return this.code;
     }
 
+    public CreateMonitorGroupResponseBody setGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public Long getGroupId() {
+        return this.groupId;
+    }
+
     public CreateMonitorGroupResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -46,14 +54,6 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateMonitorGroupResponseBody setGroupId(Long groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public Long getGroupId() {
-        return this.groupId;
     }
 
     public CreateMonitorGroupResponseBody setSuccess(Boolean success) {

@@ -4,14 +4,8 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomEventHistogramRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Level")
-    public String level;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("EventId")
     public String eventId;
@@ -19,42 +13,32 @@ public class DescribeCustomEventHistogramRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("Level")
+    public String level;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SearchKeywords")
     public String searchKeywords;
 
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
     public static DescribeCustomEventHistogramRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomEventHistogramRequest self = new DescribeCustomEventHistogramRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCustomEventHistogramRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeCustomEventHistogramRequest setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeCustomEventHistogramRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public DescribeCustomEventHistogramRequest setLevel(String level) {
-        this.level = level;
-        return this;
-    }
-    public String getLevel() {
-        return this.level;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeCustomEventHistogramRequest setEventId(String eventId) {
@@ -73,6 +57,30 @@ public class DescribeCustomEventHistogramRequest extends TeaModel {
         return this.groupId;
     }
 
+    public DescribeCustomEventHistogramRequest setLevel(String level) {
+        this.level = level;
+        return this;
+    }
+    public String getLevel() {
+        return this.level;
+    }
+
+    public DescribeCustomEventHistogramRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public DescribeCustomEventHistogramRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeCustomEventHistogramRequest setSearchKeywords(String searchKeywords) {
         this.searchKeywords = searchKeywords;
         return this;
@@ -87,14 +95,6 @@ public class DescribeCustomEventHistogramRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeCustomEventHistogramRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
     }
 
 }

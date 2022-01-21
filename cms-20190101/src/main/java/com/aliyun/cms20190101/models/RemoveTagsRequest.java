@@ -4,18 +4,26 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class RemoveTagsRequest extends TeaModel {
+    @NameInMap("GroupIds")
+    public java.util.List<String> groupIds;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("Tag")
     public java.util.List<RemoveTagsRequestTag> tag;
 
-    @NameInMap("GroupIds")
-    public java.util.List<String> groupIds;
-
     public static RemoveTagsRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveTagsRequest self = new RemoveTagsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RemoveTagsRequest setGroupIds(java.util.List<String> groupIds) {
+        this.groupIds = groupIds;
+        return this;
+    }
+    public java.util.List<String> getGroupIds() {
+        return this.groupIds;
     }
 
     public RemoveTagsRequest setRegionId(String regionId) {
@@ -32,14 +40,6 @@ public class RemoveTagsRequest extends TeaModel {
     }
     public java.util.List<RemoveTagsRequestTag> getTag() {
         return this.tag;
-    }
-
-    public RemoveTagsRequest setGroupIds(java.util.List<String> groupIds) {
-        this.groupIds = groupIds;
-        return this;
-    }
-    public java.util.List<String> getGroupIds() {
-        return this.groupIds;
     }
 
     public static class RemoveTagsRequestTag extends TeaModel {

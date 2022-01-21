@@ -4,35 +4,20 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSystemEventAttributeRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Product")
-    public String product;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("EventType")
     public String eventType;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("GroupId")
+    public String groupId;
 
     @NameInMap("Level")
     public String level;
 
-    @NameInMap("Status")
-    public String status;
-
-    @NameInMap("GroupId")
-    public String groupId;
-
-    @NameInMap("SearchKeywords")
-    public String searchKeywords;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -40,25 +25,32 @@ public class DescribeSystemEventAttributeRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Product")
+    public String product;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("SearchKeywords")
+    public String searchKeywords;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("Status")
+    public String status;
+
     public static DescribeSystemEventAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSystemEventAttributeRequest self = new DescribeSystemEventAttributeRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSystemEventAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeSystemEventAttributeRequest setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeSystemEventAttributeRequest setProduct(String product) {
-        this.product = product;
-        return this;
-    }
-    public String getProduct() {
-        return this.product;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeSystemEventAttributeRequest setEventType(String eventType) {
@@ -69,12 +61,12 @@ public class DescribeSystemEventAttributeRequest extends TeaModel {
         return this.eventType;
     }
 
-    public DescribeSystemEventAttributeRequest setName(String name) {
-        this.name = name;
+    public DescribeSystemEventAttributeRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public DescribeSystemEventAttributeRequest setLevel(String level) {
@@ -85,20 +77,44 @@ public class DescribeSystemEventAttributeRequest extends TeaModel {
         return this.level;
     }
 
-    public DescribeSystemEventAttributeRequest setStatus(String status) {
-        this.status = status;
+    public DescribeSystemEventAttributeRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getName() {
+        return this.name;
     }
 
-    public DescribeSystemEventAttributeRequest setGroupId(String groupId) {
-        this.groupId = groupId;
+    public DescribeSystemEventAttributeRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getGroupId() {
-        return this.groupId;
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeSystemEventAttributeRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeSystemEventAttributeRequest setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
+    }
+
+    public DescribeSystemEventAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeSystemEventAttributeRequest setSearchKeywords(String searchKeywords) {
@@ -117,28 +133,12 @@ public class DescribeSystemEventAttributeRequest extends TeaModel {
         return this.startTime;
     }
 
-    public DescribeSystemEventAttributeRequest setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeSystemEventAttributeRequest setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeSystemEventAttributeRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeSystemEventAttributeRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getStatus() {
+        return this.status;
     }
 
 }

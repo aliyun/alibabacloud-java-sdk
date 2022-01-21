@@ -7,6 +7,18 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("FailedContactParameters")
+    public PutEventRuleTargetsResponseBodyFailedContactParameters failedContactParameters;
+
+    @NameInMap("FailedFcParameters")
+    public PutEventRuleTargetsResponseBodyFailedFcParameters failedFcParameters;
+
+    @NameInMap("FailedMnsParameters")
+    public PutEventRuleTargetsResponseBodyFailedMnsParameters failedMnsParameters;
+
+    @NameInMap("FailedParameterCount")
+    public String failedParameterCount;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,18 +27,6 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("FailedParameterCount")
-    public String failedParameterCount;
-
-    @NameInMap("FailedContactParameters")
-    public PutEventRuleTargetsResponseBodyFailedContactParameters failedContactParameters;
-
-    @NameInMap("FailedMnsParameters")
-    public PutEventRuleTargetsResponseBodyFailedMnsParameters failedMnsParameters;
-
-    @NameInMap("FailedFcParameters")
-    public PutEventRuleTargetsResponseBodyFailedFcParameters failedFcParameters;
 
     public static PutEventRuleTargetsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PutEventRuleTargetsResponseBody self = new PutEventRuleTargetsResponseBody();
@@ -39,6 +39,38 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public PutEventRuleTargetsResponseBody setFailedContactParameters(PutEventRuleTargetsResponseBodyFailedContactParameters failedContactParameters) {
+        this.failedContactParameters = failedContactParameters;
+        return this;
+    }
+    public PutEventRuleTargetsResponseBodyFailedContactParameters getFailedContactParameters() {
+        return this.failedContactParameters;
+    }
+
+    public PutEventRuleTargetsResponseBody setFailedFcParameters(PutEventRuleTargetsResponseBodyFailedFcParameters failedFcParameters) {
+        this.failedFcParameters = failedFcParameters;
+        return this;
+    }
+    public PutEventRuleTargetsResponseBodyFailedFcParameters getFailedFcParameters() {
+        return this.failedFcParameters;
+    }
+
+    public PutEventRuleTargetsResponseBody setFailedMnsParameters(PutEventRuleTargetsResponseBodyFailedMnsParameters failedMnsParameters) {
+        this.failedMnsParameters = failedMnsParameters;
+        return this;
+    }
+    public PutEventRuleTargetsResponseBodyFailedMnsParameters getFailedMnsParameters() {
+        return this.failedMnsParameters;
+    }
+
+    public PutEventRuleTargetsResponseBody setFailedParameterCount(String failedParameterCount) {
+        this.failedParameterCount = failedParameterCount;
+        return this;
+    }
+    public String getFailedParameterCount() {
+        return this.failedParameterCount;
     }
 
     public PutEventRuleTargetsResponseBody setMessage(String message) {
@@ -63,38 +95,6 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public PutEventRuleTargetsResponseBody setFailedParameterCount(String failedParameterCount) {
-        this.failedParameterCount = failedParameterCount;
-        return this;
-    }
-    public String getFailedParameterCount() {
-        return this.failedParameterCount;
-    }
-
-    public PutEventRuleTargetsResponseBody setFailedContactParameters(PutEventRuleTargetsResponseBodyFailedContactParameters failedContactParameters) {
-        this.failedContactParameters = failedContactParameters;
-        return this;
-    }
-    public PutEventRuleTargetsResponseBodyFailedContactParameters getFailedContactParameters() {
-        return this.failedContactParameters;
-    }
-
-    public PutEventRuleTargetsResponseBody setFailedMnsParameters(PutEventRuleTargetsResponseBodyFailedMnsParameters failedMnsParameters) {
-        this.failedMnsParameters = failedMnsParameters;
-        return this;
-    }
-    public PutEventRuleTargetsResponseBodyFailedMnsParameters getFailedMnsParameters() {
-        return this.failedMnsParameters;
-    }
-
-    public PutEventRuleTargetsResponseBody setFailedFcParameters(PutEventRuleTargetsResponseBodyFailedFcParameters failedFcParameters) {
-        this.failedFcParameters = failedFcParameters;
-        return this;
-    }
-    public PutEventRuleTargetsResponseBodyFailedFcParameters getFailedFcParameters() {
-        return this.failedFcParameters;
     }
 
     public static class PutEventRuleTargetsResponseBodyFailedContactParametersContactParameter extends TeaModel {
@@ -157,12 +157,83 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
 
     }
 
-    public static class PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter extends TeaModel {
-        @NameInMap("Queue")
-        public String queue;
+    public static class PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter extends TeaModel {
+        @NameInMap("FunctionName")
+        public String functionName;
 
         @NameInMap("Id")
         public Integer id;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("ServiceName")
+        public String serviceName;
+
+        public static PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter build(java.util.Map<String, ?> map) throws Exception {
+            PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter self = new PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter();
+            return TeaModel.build(map, self);
+        }
+
+        public PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter setFunctionName(String functionName) {
+            this.functionName = functionName;
+            return this;
+        }
+        public String getFunctionName() {
+            return this.functionName;
+        }
+
+        public PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter setId(Integer id) {
+            this.id = id;
+            return this;
+        }
+        public Integer getId() {
+            return this.id;
+        }
+
+        public PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+    }
+
+    public static class PutEventRuleTargetsResponseBodyFailedFcParameters extends TeaModel {
+        @NameInMap("FcParameter")
+        public java.util.List<PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter> fcParameter;
+
+        public static PutEventRuleTargetsResponseBodyFailedFcParameters build(java.util.Map<String, ?> map) throws Exception {
+            PutEventRuleTargetsResponseBodyFailedFcParameters self = new PutEventRuleTargetsResponseBodyFailedFcParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public PutEventRuleTargetsResponseBodyFailedFcParameters setFcParameter(java.util.List<PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter> fcParameter) {
+            this.fcParameter = fcParameter;
+            return this;
+        }
+        public java.util.List<PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter> getFcParameter() {
+            return this.fcParameter;
+        }
+
+    }
+
+    public static class PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter extends TeaModel {
+        @NameInMap("Id")
+        public Integer id;
+
+        @NameInMap("Queue")
+        public String queue;
 
         @NameInMap("Region")
         public String region;
@@ -172,20 +243,20 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter setQueue(String queue) {
-            this.queue = queue;
-            return this;
-        }
-        public String getQueue() {
-            return this.queue;
-        }
-
         public PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter setId(Integer id) {
             this.id = id;
             return this;
         }
         public Integer getId() {
             return this.id;
+        }
+
+        public PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter setQueue(String queue) {
+            this.queue = queue;
+            return this;
+        }
+        public String getQueue() {
+            return this.queue;
         }
 
         public PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter setRegion(String region) {
@@ -213,77 +284,6 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
         public java.util.List<PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter> getMnsParameter() {
             return this.mnsParameter;
-        }
-
-    }
-
-    public static class PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter extends TeaModel {
-        @NameInMap("ServiceName")
-        public String serviceName;
-
-        @NameInMap("FunctionName")
-        public String functionName;
-
-        @NameInMap("Id")
-        public Integer id;
-
-        @NameInMap("Region")
-        public String region;
-
-        public static PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter build(java.util.Map<String, ?> map) throws Exception {
-            PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter self = new PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter();
-            return TeaModel.build(map, self);
-        }
-
-        public PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter setServiceName(String serviceName) {
-            this.serviceName = serviceName;
-            return this;
-        }
-        public String getServiceName() {
-            return this.serviceName;
-        }
-
-        public PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter setFunctionName(String functionName) {
-            this.functionName = functionName;
-            return this;
-        }
-        public String getFunctionName() {
-            return this.functionName;
-        }
-
-        public PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter setId(Integer id) {
-            this.id = id;
-            return this;
-        }
-        public Integer getId() {
-            return this.id;
-        }
-
-        public PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
-        }
-
-    }
-
-    public static class PutEventRuleTargetsResponseBodyFailedFcParameters extends TeaModel {
-        @NameInMap("FcParameter")
-        public java.util.List<PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter> fcParameter;
-
-        public static PutEventRuleTargetsResponseBodyFailedFcParameters build(java.util.Map<String, ?> map) throws Exception {
-            PutEventRuleTargetsResponseBodyFailedFcParameters self = new PutEventRuleTargetsResponseBodyFailedFcParameters();
-            return TeaModel.build(map, self);
-        }
-
-        public PutEventRuleTargetsResponseBodyFailedFcParameters setFcParameter(java.util.List<PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter> fcParameter) {
-            this.fcParameter = fcParameter;
-            return this;
-        }
-        public java.util.List<PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter> getFcParameter() {
-            return this.fcParameter;
         }
 
     }

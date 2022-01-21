@@ -4,23 +4,11 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricDataRequest extends TeaModel {
-    @NameInMap("Namespace")
-    public String namespace;
-
-    @NameInMap("MetricName")
-    public String metricName;
-
-    @NameInMap("Period")
-    public String period;
-
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("Dimensions")
+    public String dimensions;
 
     @NameInMap("EndTime")
     public String endTime;
-
-    @NameInMap("Dimensions")
-    public String dimensions;
 
     @NameInMap("Express")
     public String express;
@@ -28,52 +16,24 @@ public class DescribeMetricDataRequest extends TeaModel {
     @NameInMap("Length")
     public String length;
 
+    @NameInMap("MetricName")
+    public String metricName;
+
+    @NameInMap("Namespace")
+    public String namespace;
+
+    @NameInMap("Period")
+    public String period;
+
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeMetricDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricDataRequest self = new DescribeMetricDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeMetricDataRequest setNamespace(String namespace) {
-        this.namespace = namespace;
-        return this;
-    }
-    public String getNamespace() {
-        return this.namespace;
-    }
-
-    public DescribeMetricDataRequest setMetricName(String metricName) {
-        this.metricName = metricName;
-        return this;
-    }
-    public String getMetricName() {
-        return this.metricName;
-    }
-
-    public DescribeMetricDataRequest setPeriod(String period) {
-        this.period = period;
-        return this;
-    }
-    public String getPeriod() {
-        return this.period;
-    }
-
-    public DescribeMetricDataRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeMetricDataRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
     }
 
     public DescribeMetricDataRequest setDimensions(String dimensions) {
@@ -82,6 +42,14 @@ public class DescribeMetricDataRequest extends TeaModel {
     }
     public String getDimensions() {
         return this.dimensions;
+    }
+
+    public DescribeMetricDataRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeMetricDataRequest setExpress(String express) {
@@ -100,12 +68,44 @@ public class DescribeMetricDataRequest extends TeaModel {
         return this.length;
     }
 
+    public DescribeMetricDataRequest setMetricName(String metricName) {
+        this.metricName = metricName;
+        return this;
+    }
+    public String getMetricName() {
+        return this.metricName;
+    }
+
+    public DescribeMetricDataRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    public DescribeMetricDataRequest setPeriod(String period) {
+        this.period = period;
+        return this;
+    }
+    public String getPeriod() {
+        return this.period;
+    }
+
     public DescribeMetricDataRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeMetricDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

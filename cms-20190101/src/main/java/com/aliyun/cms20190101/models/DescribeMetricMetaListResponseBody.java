@@ -13,14 +13,14 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TotalCount")
-    public String totalCount;
+    @NameInMap("Resources")
+    public DescribeMetricMetaListResponseBodyResources resources;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Resources")
-    public DescribeMetricMetaListResponseBodyResources resources;
+    @NameInMap("TotalCount")
+    public String totalCount;
 
     public static DescribeMetricMetaListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricMetaListResponseBody self = new DescribeMetricMetaListResponseBody();
@@ -51,12 +51,12 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeMetricMetaListResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
+    public DescribeMetricMetaListResponseBody setResources(DescribeMetricMetaListResponseBodyResources resources) {
+        this.resources = resources;
         return this;
     }
-    public String getTotalCount() {
-        return this.totalCount;
+    public DescribeMetricMetaListResponseBodyResources getResources() {
+        return this.resources;
     }
 
     public DescribeMetricMetaListResponseBody setSuccess(Boolean success) {
@@ -67,29 +67,26 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeMetricMetaListResponseBody setResources(DescribeMetricMetaListResponseBodyResources resources) {
-        this.resources = resources;
+    public DescribeMetricMetaListResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public DescribeMetricMetaListResponseBodyResources getResources() {
-        return this.resources;
+    public String getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeMetricMetaListResponseBodyResourcesResource extends TeaModel {
-        @NameInMap("MetricName")
-        public String metricName;
-
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("Dimensions")
+        public String dimensions;
 
         @NameInMap("Labels")
         public String labels;
 
-        @NameInMap("Unit")
-        public String unit;
-
-        @NameInMap("Dimensions")
-        public String dimensions;
+        @NameInMap("MetricName")
+        public String metricName;
 
         @NameInMap("Namespace")
         public String namespace;
@@ -100,17 +97,12 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         @NameInMap("Statistics")
         public String statistics;
 
+        @NameInMap("Unit")
+        public String unit;
+
         public static DescribeMetricMetaListResponseBodyResourcesResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeMetricMetaListResponseBodyResourcesResource self = new DescribeMetricMetaListResponseBodyResourcesResource();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeMetricMetaListResponseBodyResourcesResource setMetricName(String metricName) {
-            this.metricName = metricName;
-            return this;
-        }
-        public String getMetricName() {
-            return this.metricName;
         }
 
         public DescribeMetricMetaListResponseBodyResourcesResource setDescription(String description) {
@@ -121,6 +113,14 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeMetricMetaListResponseBodyResourcesResource setDimensions(String dimensions) {
+            this.dimensions = dimensions;
+            return this;
+        }
+        public String getDimensions() {
+            return this.dimensions;
+        }
+
         public DescribeMetricMetaListResponseBodyResourcesResource setLabels(String labels) {
             this.labels = labels;
             return this;
@@ -129,20 +129,12 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             return this.labels;
         }
 
-        public DescribeMetricMetaListResponseBodyResourcesResource setUnit(String unit) {
-            this.unit = unit;
+        public DescribeMetricMetaListResponseBodyResourcesResource setMetricName(String metricName) {
+            this.metricName = metricName;
             return this;
         }
-        public String getUnit() {
-            return this.unit;
-        }
-
-        public DescribeMetricMetaListResponseBodyResourcesResource setDimensions(String dimensions) {
-            this.dimensions = dimensions;
-            return this;
-        }
-        public String getDimensions() {
-            return this.dimensions;
+        public String getMetricName() {
+            return this.metricName;
         }
 
         public DescribeMetricMetaListResponseBodyResourcesResource setNamespace(String namespace) {
@@ -167,6 +159,14 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         }
         public String getStatistics() {
             return this.statistics;
+        }
+
+        public DescribeMetricMetaListResponseBodyResourcesResource setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
         }
 
     }

@@ -7,6 +7,9 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("CustomEvents")
+    public DescribeCustomEventAttributeResponseBodyCustomEvents customEvents;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public String success;
-
-    @NameInMap("CustomEvents")
-    public DescribeCustomEventAttributeResponseBodyCustomEvents customEvents;
 
     public static DescribeCustomEventAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomEventAttributeResponseBody self = new DescribeCustomEventAttributeResponseBody();
@@ -30,6 +30,14 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeCustomEventAttributeResponseBody setCustomEvents(DescribeCustomEventAttributeResponseBodyCustomEvents customEvents) {
+        this.customEvents = customEvents;
+        return this;
+    }
+    public DescribeCustomEventAttributeResponseBodyCustomEvents getCustomEvents() {
+        return this.customEvents;
     }
 
     public DescribeCustomEventAttributeResponseBody setMessage(String message) {
@@ -56,57 +64,25 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeCustomEventAttributeResponseBody setCustomEvents(DescribeCustomEventAttributeResponseBodyCustomEvents customEvents) {
-        this.customEvents = customEvents;
-        return this;
-    }
-    public DescribeCustomEventAttributeResponseBodyCustomEvents getCustomEvents() {
-        return this.customEvents;
-    }
-
     public static class DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent extends TeaModel {
-        @NameInMap("Time")
-        public String time;
-
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Content")
+        public String content;
 
         @NameInMap("GroupId")
         public String groupId;
 
-        @NameInMap("Content")
-        public String content;
-
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Time")
+        public String time;
 
         public static DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent build(java.util.Map<String, ?> map) throws Exception {
             DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent self = new DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent setTime(String time) {
-            this.time = time;
-            return this;
-        }
-        public String getTime() {
-            return this.time;
-        }
-
-        public DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
         }
 
         public DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent setContent(String content) {
@@ -117,12 +93,36 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
             return this.content;
         }
 
+        public DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
         public DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
         }
 
     }

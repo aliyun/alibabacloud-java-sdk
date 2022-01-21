@@ -4,18 +4,26 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class AddTagsRequest extends TeaModel {
+    @NameInMap("GroupIds")
+    public java.util.List<String> groupIds;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("Tag")
     public java.util.List<AddTagsRequestTag> tag;
 
-    @NameInMap("GroupIds")
-    public java.util.List<String> groupIds;
-
     public static AddTagsRequest build(java.util.Map<String, ?> map) throws Exception {
         AddTagsRequest self = new AddTagsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddTagsRequest setGroupIds(java.util.List<String> groupIds) {
+        this.groupIds = groupIds;
+        return this;
+    }
+    public java.util.List<String> getGroupIds() {
+        return this.groupIds;
     }
 
     public AddTagsRequest setRegionId(String regionId) {
@@ -32,14 +40,6 @@ public class AddTagsRequest extends TeaModel {
     }
     public java.util.List<AddTagsRequestTag> getTag() {
         return this.tag;
-    }
-
-    public AddTagsRequest setGroupIds(java.util.List<String> groupIds) {
-        this.groupIds = groupIds;
-        return this;
-    }
-    public java.util.List<String> getGroupIds() {
-        return this.groupIds;
     }
 
     public static class AddTagsRequestTag extends TeaModel {

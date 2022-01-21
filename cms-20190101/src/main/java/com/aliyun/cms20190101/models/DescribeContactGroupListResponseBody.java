@@ -7,23 +7,23 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("ContactGroupList")
+    public DescribeContactGroupListResponseBodyContactGroupList contactGroupList;
+
+    @NameInMap("ContactGroups")
+    public DescribeContactGroupListResponseBodyContactGroups contactGroups;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Total")
-    public Integer total;
-
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ContactGroups")
-    public DescribeContactGroupListResponseBodyContactGroups contactGroups;
-
-    @NameInMap("ContactGroupList")
-    public DescribeContactGroupListResponseBodyContactGroupList contactGroupList;
+    @NameInMap("Total")
+    public Integer total;
 
     public static DescribeContactGroupListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeContactGroupListResponseBody self = new DescribeContactGroupListResponseBody();
@@ -36,6 +36,22 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeContactGroupListResponseBody setContactGroupList(DescribeContactGroupListResponseBodyContactGroupList contactGroupList) {
+        this.contactGroupList = contactGroupList;
+        return this;
+    }
+    public DescribeContactGroupListResponseBodyContactGroupList getContactGroupList() {
+        return this.contactGroupList;
+    }
+
+    public DescribeContactGroupListResponseBody setContactGroups(DescribeContactGroupListResponseBodyContactGroups contactGroups) {
+        this.contactGroups = contactGroups;
+        return this;
+    }
+    public DescribeContactGroupListResponseBodyContactGroups getContactGroups() {
+        return this.contactGroups;
     }
 
     public DescribeContactGroupListResponseBody setMessage(String message) {
@@ -54,14 +70,6 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeContactGroupListResponseBody setTotal(Integer total) {
-        this.total = total;
-        return this;
-    }
-    public Integer getTotal() {
-        return this.total;
-    }
-
     public DescribeContactGroupListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -70,39 +78,12 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeContactGroupListResponseBody setContactGroups(DescribeContactGroupListResponseBodyContactGroups contactGroups) {
-        this.contactGroups = contactGroups;
+    public DescribeContactGroupListResponseBody setTotal(Integer total) {
+        this.total = total;
         return this;
     }
-    public DescribeContactGroupListResponseBodyContactGroups getContactGroups() {
-        return this.contactGroups;
-    }
-
-    public DescribeContactGroupListResponseBody setContactGroupList(DescribeContactGroupListResponseBodyContactGroupList contactGroupList) {
-        this.contactGroupList = contactGroupList;
-        return this;
-    }
-    public DescribeContactGroupListResponseBodyContactGroupList getContactGroupList() {
-        return this.contactGroupList;
-    }
-
-    public static class DescribeContactGroupListResponseBodyContactGroups extends TeaModel {
-        @NameInMap("ContactGroup")
-        public java.util.List<String> contactGroup;
-
-        public static DescribeContactGroupListResponseBodyContactGroups build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContactGroupListResponseBodyContactGroups self = new DescribeContactGroupListResponseBodyContactGroups();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeContactGroupListResponseBodyContactGroups setContactGroup(java.util.List<String> contactGroup) {
-            this.contactGroup = contactGroup;
-            return this;
-        }
-        public java.util.List<String> getContactGroup() {
-            return this.contactGroup;
-        }
-
+    public Integer getTotal() {
+        return this.total;
     }
 
     public static class DescribeContactGroupListResponseBodyContactGroupListContactGroupContacts extends TeaModel {
@@ -125,14 +106,17 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
     }
 
     public static class DescribeContactGroupListResponseBodyContactGroupListContactGroup extends TeaModel {
-        @NameInMap("Describe")
-        public String describe;
-
-        @NameInMap("UpdateTime")
-        public Long updateTime;
+        @NameInMap("Contacts")
+        public DescribeContactGroupListResponseBodyContactGroupListContactGroupContacts contacts;
 
         @NameInMap("CreateTime")
         public Long createTime;
+
+        @NameInMap("Describe")
+        public String describe;
+
+        @NameInMap("EnableSubscribed")
+        public Boolean enableSubscribed;
 
         @NameInMap("EnabledWeeklyReport")
         public Boolean enabledWeeklyReport;
@@ -140,15 +124,28 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("EnableSubscribed")
-        public Boolean enableSubscribed;
-
-        @NameInMap("Contacts")
-        public DescribeContactGroupListResponseBodyContactGroupListContactGroupContacts contacts;
+        @NameInMap("UpdateTime")
+        public Long updateTime;
 
         public static DescribeContactGroupListResponseBodyContactGroupListContactGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeContactGroupListResponseBodyContactGroupListContactGroup self = new DescribeContactGroupListResponseBodyContactGroupListContactGroup();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeContactGroupListResponseBodyContactGroupListContactGroup setContacts(DescribeContactGroupListResponseBodyContactGroupListContactGroupContacts contacts) {
+            this.contacts = contacts;
+            return this;
+        }
+        public DescribeContactGroupListResponseBodyContactGroupListContactGroupContacts getContacts() {
+            return this.contacts;
+        }
+
+        public DescribeContactGroupListResponseBodyContactGroupListContactGroup setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeContactGroupListResponseBodyContactGroupListContactGroup setDescribe(String describe) {
@@ -159,20 +156,12 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
             return this.describe;
         }
 
-        public DescribeContactGroupListResponseBodyContactGroupListContactGroup setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
+        public DescribeContactGroupListResponseBodyContactGroupListContactGroup setEnableSubscribed(Boolean enableSubscribed) {
+            this.enableSubscribed = enableSubscribed;
             return this;
         }
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public DescribeContactGroupListResponseBodyContactGroupListContactGroup setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
+        public Boolean getEnableSubscribed() {
+            return this.enableSubscribed;
         }
 
         public DescribeContactGroupListResponseBodyContactGroupListContactGroup setEnabledWeeklyReport(Boolean enabledWeeklyReport) {
@@ -191,20 +180,12 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeContactGroupListResponseBodyContactGroupListContactGroup setEnableSubscribed(Boolean enableSubscribed) {
-            this.enableSubscribed = enableSubscribed;
+        public DescribeContactGroupListResponseBodyContactGroupListContactGroup setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public Boolean getEnableSubscribed() {
-            return this.enableSubscribed;
-        }
-
-        public DescribeContactGroupListResponseBodyContactGroupListContactGroup setContacts(DescribeContactGroupListResponseBodyContactGroupListContactGroupContacts contacts) {
-            this.contacts = contacts;
-            return this;
-        }
-        public DescribeContactGroupListResponseBodyContactGroupListContactGroupContacts getContacts() {
-            return this.contacts;
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
     }
@@ -223,6 +204,25 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
             return this;
         }
         public java.util.List<DescribeContactGroupListResponseBodyContactGroupListContactGroup> getContactGroup() {
+            return this.contactGroup;
+        }
+
+    }
+
+    public static class DescribeContactGroupListResponseBodyContactGroups extends TeaModel {
+        @NameInMap("ContactGroup")
+        public java.util.List<String> contactGroup;
+
+        public static DescribeContactGroupListResponseBodyContactGroups build(java.util.Map<String, ?> map) throws Exception {
+            DescribeContactGroupListResponseBodyContactGroups self = new DescribeContactGroupListResponseBodyContactGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeContactGroupListResponseBodyContactGroups setContactGroup(java.util.List<String> contactGroup) {
+            this.contactGroup = contactGroup;
+            return this;
+        }
+        public java.util.List<String> getContactGroup() {
             return this.contactGroup;
         }
 

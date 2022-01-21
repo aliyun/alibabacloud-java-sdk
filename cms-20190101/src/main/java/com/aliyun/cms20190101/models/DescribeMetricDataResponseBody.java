@@ -7,17 +7,17 @@ public class DescribeMetricDataResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Datapoints")
     public String datapoints;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("Period")
     public String period;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeMetricDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricDataResponseBody self = new DescribeMetricDataResponseBody();
@@ -32,22 +32,6 @@ public class DescribeMetricDataResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeMetricDataResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DescribeMetricDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeMetricDataResponseBody setDatapoints(String datapoints) {
         this.datapoints = datapoints;
         return this;
@@ -56,12 +40,28 @@ public class DescribeMetricDataResponseBody extends TeaModel {
         return this.datapoints;
     }
 
+    public DescribeMetricDataResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public DescribeMetricDataResponseBody setPeriod(String period) {
         this.period = period;
         return this;
     }
     public String getPeriod() {
         return this.period;
+    }
+
+    public DescribeMetricDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

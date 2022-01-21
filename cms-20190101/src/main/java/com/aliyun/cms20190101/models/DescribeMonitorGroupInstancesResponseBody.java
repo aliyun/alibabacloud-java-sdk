@@ -4,12 +4,6 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public Integer code;
 
@@ -22,31 +16,21 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Total")
-    public Integer total;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Resources")
     public DescribeMonitorGroupInstancesResponseBodyResources resources;
 
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("Total")
+    public Integer total;
+
     public static DescribeMonitorGroupInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitorGroupInstancesResponseBody self = new DescribeMonitorGroupInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeMonitorGroupInstancesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeMonitorGroupInstancesResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public DescribeMonitorGroupInstancesResponseBody setCode(Integer code) {
@@ -81,12 +65,12 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeMonitorGroupInstancesResponseBody setTotal(Integer total) {
-        this.total = total;
+    public DescribeMonitorGroupInstancesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getTotal() {
-        return this.total;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeMonitorGroupInstancesResponseBody setResources(DescribeMonitorGroupInstancesResponseBodyResources resources) {
@@ -97,18 +81,34 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         return this.resources;
     }
 
+    public DescribeMonitorGroupInstancesResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DescribeMonitorGroupInstancesResponseBody setTotal(Integer total) {
+        this.total = total;
+        return this;
+    }
+    public Integer getTotal() {
+        return this.total;
+    }
+
     public static class DescribeMonitorGroupInstancesResponseBodyResourcesResource extends TeaModel {
         @NameInMap("Category")
         public String category;
+
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("InstanceName")
         public String instanceName;
-
-        @NameInMap("Id")
-        public Long id;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -126,6 +126,14 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             return this.category;
         }
 
+        public DescribeMonitorGroupInstancesResponseBodyResourcesResource setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
         public DescribeMonitorGroupInstancesResponseBodyResourcesResource setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -140,14 +148,6 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
         public String getInstanceName() {
             return this.instanceName;
-        }
-
-        public DescribeMonitorGroupInstancesResponseBodyResourcesResource setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
         }
 
         public DescribeMonitorGroupInstancesResponseBodyResourcesResource setRegionId(String regionId) {

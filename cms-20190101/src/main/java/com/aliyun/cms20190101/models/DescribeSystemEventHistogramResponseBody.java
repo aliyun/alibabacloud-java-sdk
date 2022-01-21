@@ -65,18 +65,26 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
     }
 
     public static class DescribeSystemEventHistogramResponseBodySystemEventHistogramsSystemEventHistogram extends TeaModel {
+        @NameInMap("Count")
+        public Long count;
+
         @NameInMap("EndTime")
         public Long endTime;
 
         @NameInMap("StartTime")
         public Long startTime;
 
-        @NameInMap("Count")
-        public Long count;
-
         public static DescribeSystemEventHistogramResponseBodySystemEventHistogramsSystemEventHistogram build(java.util.Map<String, ?> map) throws Exception {
             DescribeSystemEventHistogramResponseBodySystemEventHistogramsSystemEventHistogram self = new DescribeSystemEventHistogramResponseBodySystemEventHistogramsSystemEventHistogram();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSystemEventHistogramResponseBodySystemEventHistogramsSystemEventHistogram setCount(Long count) {
+            this.count = count;
+            return this;
+        }
+        public Long getCount() {
+            return this.count;
         }
 
         public DescribeSystemEventHistogramResponseBodySystemEventHistogramsSystemEventHistogram setEndTime(Long endTime) {
@@ -93,14 +101,6 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
         }
         public Long getStartTime() {
             return this.startTime;
-        }
-
-        public DescribeSystemEventHistogramResponseBodySystemEventHistogramsSystemEventHistogram setCount(Long count) {
-            this.count = count;
-            return this;
-        }
-        public Long getCount() {
-            return this.count;
         }
 
     }

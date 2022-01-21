@@ -4,14 +4,20 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricRuleListRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AlertState")
+    public String alertState;
 
-    @NameInMap("MetricName")
-    public String metricName;
+    @NameInMap("Dimensions")
+    public String dimensions;
 
     @NameInMap("EnableState")
     public Boolean enableState;
+
+    @NameInMap("GroupId")
+    public String groupId;
+
+    @NameInMap("MetricName")
+    public String metricName;
 
     @NameInMap("Namespace")
     public String namespace;
@@ -22,40 +28,34 @@ public class DescribeMetricRuleListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("AlertState")
-    public String alertState;
-
-    @NameInMap("Dimensions")
-    public String dimensions;
-
-    @NameInMap("RuleName")
-    public String ruleName;
-
-    @NameInMap("GroupId")
-    public String groupId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("RuleIds")
     public String ruleIds;
+
+    @NameInMap("RuleName")
+    public String ruleName;
 
     public static DescribeMetricRuleListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricRuleListRequest self = new DescribeMetricRuleListRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeMetricRuleListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeMetricRuleListRequest setAlertState(String alertState) {
+        this.alertState = alertState;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getAlertState() {
+        return this.alertState;
     }
 
-    public DescribeMetricRuleListRequest setMetricName(String metricName) {
-        this.metricName = metricName;
+    public DescribeMetricRuleListRequest setDimensions(String dimensions) {
+        this.dimensions = dimensions;
         return this;
     }
-    public String getMetricName() {
-        return this.metricName;
+    public String getDimensions() {
+        return this.dimensions;
     }
 
     public DescribeMetricRuleListRequest setEnableState(Boolean enableState) {
@@ -64,6 +64,22 @@ public class DescribeMetricRuleListRequest extends TeaModel {
     }
     public Boolean getEnableState() {
         return this.enableState;
+    }
+
+    public DescribeMetricRuleListRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public DescribeMetricRuleListRequest setMetricName(String metricName) {
+        this.metricName = metricName;
+        return this;
+    }
+    public String getMetricName() {
+        return this.metricName;
     }
 
     public DescribeMetricRuleListRequest setNamespace(String namespace) {
@@ -90,36 +106,12 @@ public class DescribeMetricRuleListRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeMetricRuleListRequest setAlertState(String alertState) {
-        this.alertState = alertState;
+    public DescribeMetricRuleListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAlertState() {
-        return this.alertState;
-    }
-
-    public DescribeMetricRuleListRequest setDimensions(String dimensions) {
-        this.dimensions = dimensions;
-        return this;
-    }
-    public String getDimensions() {
-        return this.dimensions;
-    }
-
-    public DescribeMetricRuleListRequest setRuleName(String ruleName) {
-        this.ruleName = ruleName;
-        return this;
-    }
-    public String getRuleName() {
-        return this.ruleName;
-    }
-
-    public DescribeMetricRuleListRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeMetricRuleListRequest setRuleIds(String ruleIds) {
@@ -128,6 +120,14 @@ public class DescribeMetricRuleListRequest extends TeaModel {
     }
     public String getRuleIds() {
         return this.ruleIds;
+    }
+
+    public DescribeMetricRuleListRequest setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+    public String getRuleName() {
+        return this.ruleName;
     }
 
 }

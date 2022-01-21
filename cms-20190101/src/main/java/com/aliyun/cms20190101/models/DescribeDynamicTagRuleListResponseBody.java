@@ -4,49 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("PageSize")
-    public String pageSize;
-
     @NameInMap("PageNumber")
     public String pageNumber;
 
-    @NameInMap("Total")
-    public Integer total;
+    @NameInMap("PageSize")
+    public String pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("TagGroupList")
     public DescribeDynamicTagRuleListResponseBodyTagGroupList tagGroupList;
 
+    @NameInMap("Total")
+    public Integer total;
+
     public static DescribeDynamicTagRuleListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDynamicTagRuleListResponseBody self = new DescribeDynamicTagRuleListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDynamicTagRuleListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDynamicTagRuleListResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public DescribeDynamicTagRuleListResponseBody setCode(String code) {
@@ -65,6 +49,14 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         return this.message;
     }
 
+    public DescribeDynamicTagRuleListResponseBody setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
+    }
+
     public DescribeDynamicTagRuleListResponseBody setPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -73,12 +65,28 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDynamicTagRuleListResponseBody setPageNumber(String pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDynamicTagRuleListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getPageNumber() {
-        return this.pageNumber;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDynamicTagRuleListResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DescribeDynamicTagRuleListResponseBody setTagGroupList(DescribeDynamicTagRuleListResponseBodyTagGroupList tagGroupList) {
+        this.tagGroupList = tagGroupList;
+        return this;
+    }
+    public DescribeDynamicTagRuleListResponseBodyTagGroupList getTagGroupList() {
+        return this.tagGroupList;
     }
 
     public DescribeDynamicTagRuleListResponseBody setTotal(Integer total) {
@@ -89,12 +97,23 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         return this.total;
     }
 
-    public DescribeDynamicTagRuleListResponseBody setTagGroupList(DescribeDynamicTagRuleListResponseBodyTagGroupList tagGroupList) {
-        this.tagGroupList = tagGroupList;
-        return this;
-    }
-    public DescribeDynamicTagRuleListResponseBodyTagGroupList getTagGroupList() {
-        return this.tagGroupList;
+    public static class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupContactGroupList extends TeaModel {
+        @NameInMap("ContactGroupList")
+        public java.util.List<String> contactGroupList;
+
+        public static DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupContactGroupList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupContactGroupList self = new DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupContactGroupList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupContactGroupList setContactGroupList(java.util.List<String> contactGroupList) {
+            this.contactGroupList = contactGroupList;
+            return this;
+        }
+        public java.util.List<String> getContactGroupList() {
+            return this.contactGroupList;
+        }
+
     }
 
     public static class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpressMatchExpress extends TeaModel {
@@ -166,8 +185,14 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("ContactGroupList")
+        public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupContactGroupList contactGroupList;
+
+        @NameInMap("DynamicTagRuleId")
+        public String dynamicTagRuleId;
+
+        @NameInMap("MatchExpress")
+        public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpress matchExpress;
 
         @NameInMap("MatchExpressFilterRelation")
         public String matchExpressFilterRelation;
@@ -175,14 +200,11 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("TagKey")
         public String tagKey;
-
-        @NameInMap("DynamicTagRuleId")
-        public String dynamicTagRuleId;
-
-        @NameInMap("MatchExpress")
-        public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpress matchExpress;
 
         @NameInMap("TemplateIdList")
         public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupTemplateIdList templateIdList;
@@ -192,12 +214,28 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup setStatus(String status) {
-            this.status = status;
+        public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup setContactGroupList(DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupContactGroupList contactGroupList) {
+            this.contactGroupList = contactGroupList;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupContactGroupList getContactGroupList() {
+            return this.contactGroupList;
+        }
+
+        public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup setDynamicTagRuleId(String dynamicTagRuleId) {
+            this.dynamicTagRuleId = dynamicTagRuleId;
+            return this;
+        }
+        public String getDynamicTagRuleId() {
+            return this.dynamicTagRuleId;
+        }
+
+        public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup setMatchExpress(DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpress matchExpress) {
+            this.matchExpress = matchExpress;
+            return this;
+        }
+        public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpress getMatchExpress() {
+            return this.matchExpress;
         }
 
         public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup setMatchExpressFilterRelation(String matchExpressFilterRelation) {
@@ -216,28 +254,20 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
         public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
         public String getTagKey() {
             return this.tagKey;
-        }
-
-        public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup setDynamicTagRuleId(String dynamicTagRuleId) {
-            this.dynamicTagRuleId = dynamicTagRuleId;
-            return this;
-        }
-        public String getDynamicTagRuleId() {
-            return this.dynamicTagRuleId;
-        }
-
-        public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup setMatchExpress(DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpress matchExpress) {
-            this.matchExpress = matchExpress;
-            return this;
-        }
-        public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpress getMatchExpress() {
-            return this.matchExpress;
         }
 
         public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup setTemplateIdList(DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupTemplateIdList templateIdList) {

@@ -7,6 +7,9 @@ public class CreateMonitoringAgentProcessResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Id")
+    public Long id;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class CreateMonitoringAgentProcessResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Id")
-    public Long id;
 
     public static CreateMonitoringAgentProcessResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateMonitoringAgentProcessResponseBody self = new CreateMonitoringAgentProcessResponseBody();
@@ -30,6 +30,14 @@ public class CreateMonitoringAgentProcessResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CreateMonitoringAgentProcessResponseBody setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public CreateMonitoringAgentProcessResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class CreateMonitoringAgentProcessResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreateMonitoringAgentProcessResponseBody setId(Long id) {
-        this.id = id;
-        return this;
-    }
-    public Long getId() {
-        return this.id;
     }
 
 }

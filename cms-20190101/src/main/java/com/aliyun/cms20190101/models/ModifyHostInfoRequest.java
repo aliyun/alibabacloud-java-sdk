@@ -4,26 +4,26 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyHostInfoRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("HostName")
+    public String hostName;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("HostName")
-    public String hostName;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ModifyHostInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyHostInfoRequest self = new ModifyHostInfoRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyHostInfoRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifyHostInfoRequest setHostName(String hostName) {
+        this.hostName = hostName;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getHostName() {
+        return this.hostName;
     }
 
     public ModifyHostInfoRequest setInstanceId(String instanceId) {
@@ -34,12 +34,12 @@ public class ModifyHostInfoRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ModifyHostInfoRequest setHostName(String hostName) {
-        this.hostName = hostName;
+    public ModifyHostInfoRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getHostName() {
-        return this.hostName;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -4,14 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHostAvailabilityListRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("GroupId")
+    public Long groupId;
 
     @NameInMap("Id")
     public Long id;
 
-    @NameInMap("TaskName")
-    public String taskName;
+    @NameInMap("Ids")
+    public String ids;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -19,20 +19,23 @@ public class DescribeHostAvailabilityListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("GroupId")
-    public Long groupId;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("TaskName")
+    public String taskName;
 
     public static DescribeHostAvailabilityListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeHostAvailabilityListRequest self = new DescribeHostAvailabilityListRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeHostAvailabilityListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeHostAvailabilityListRequest setGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Long getGroupId() {
+        return this.groupId;
     }
 
     public DescribeHostAvailabilityListRequest setId(Long id) {
@@ -43,12 +46,12 @@ public class DescribeHostAvailabilityListRequest extends TeaModel {
         return this.id;
     }
 
-    public DescribeHostAvailabilityListRequest setTaskName(String taskName) {
-        this.taskName = taskName;
+    public DescribeHostAvailabilityListRequest setIds(String ids) {
+        this.ids = ids;
         return this;
     }
-    public String getTaskName() {
-        return this.taskName;
+    public String getIds() {
+        return this.ids;
     }
 
     public DescribeHostAvailabilityListRequest setPageNumber(Integer pageNumber) {
@@ -67,12 +70,20 @@ public class DescribeHostAvailabilityListRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeHostAvailabilityListRequest setGroupId(Long groupId) {
-        this.groupId = groupId;
+    public DescribeHostAvailabilityListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Long getGroupId() {
-        return this.groupId;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeHostAvailabilityListRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
     }
 
 }

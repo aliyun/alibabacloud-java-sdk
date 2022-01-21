@@ -7,14 +7,14 @@ public class PutLogMonitorResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("LogId")
+    public String logId;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("LogId")
-    public String logId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -32,6 +32,14 @@ public class PutLogMonitorResponseBody extends TeaModel {
         return this.code;
     }
 
+    public PutLogMonitorResponseBody setLogId(String logId) {
+        this.logId = logId;
+        return this;
+    }
+    public String getLogId() {
+        return this.logId;
+    }
+
     public PutLogMonitorResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -46,14 +54,6 @@ public class PutLogMonitorResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public PutLogMonitorResponseBody setLogId(String logId) {
-        this.logId = logId;
-        return this;
-    }
-    public String getLogId() {
-        return this.logId;
     }
 
     public PutLogMonitorResponseBody setSuccess(Boolean success) {

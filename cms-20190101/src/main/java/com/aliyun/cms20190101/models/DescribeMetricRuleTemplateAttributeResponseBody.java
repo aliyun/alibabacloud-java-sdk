@@ -13,11 +13,11 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Resource")
     public DescribeMetricRuleTemplateAttributeResponseBodyResource resource;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DescribeMetricRuleTemplateAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricRuleTemplateAttributeResponseBody self = new DescribeMetricRuleTemplateAttributeResponseBody();
@@ -48,14 +48,6 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeMetricRuleTemplateAttributeResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public DescribeMetricRuleTemplateAttributeResponseBody setResource(DescribeMetricRuleTemplateAttributeResponseBodyResource resource) {
         this.resource = resource;
         return this;
@@ -64,122 +56,26 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         return this.resource;
     }
 
-    public static class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo extends TeaModel {
-        @NameInMap("ComparisonOperator")
-        public String comparisonOperator;
-
-        @NameInMap("Times")
-        public Integer times;
-
-        @NameInMap("Threshold")
-        public String threshold;
-
-        @NameInMap("Statistics")
-        public String statistics;
-
-        public static DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo self = new DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo setComparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = comparisonOperator;
-            return this;
-        }
-        public String getComparisonOperator() {
-            return this.comparisonOperator;
-        }
-
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo setTimes(Integer times) {
-            this.times = times;
-            return this;
-        }
-        public Integer getTimes() {
-            return this.times;
-        }
-
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo setThreshold(String threshold) {
-            this.threshold = threshold;
-            return this;
-        }
-        public String getThreshold() {
-            return this.threshold;
-        }
-
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo setStatistics(String statistics) {
-            this.statistics = statistics;
-            return this;
-        }
-        public String getStatistics() {
-            return this.statistics;
-        }
-
+    public DescribeMetricRuleTemplateAttributeResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
     }
-
-    public static class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn extends TeaModel {
-        @NameInMap("ComparisonOperator")
-        public String comparisonOperator;
-
-        @NameInMap("Times")
-        public Integer times;
-
-        @NameInMap("Threshold")
-        public String threshold;
-
-        @NameInMap("Statistics")
-        public String statistics;
-
-        public static DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn self = new DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn setComparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = comparisonOperator;
-            return this;
-        }
-        public String getComparisonOperator() {
-            return this.comparisonOperator;
-        }
-
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn setTimes(Integer times) {
-            this.times = times;
-            return this;
-        }
-        public Integer getTimes() {
-            return this.times;
-        }
-
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn setThreshold(String threshold) {
-            this.threshold = threshold;
-            return this;
-        }
-        public String getThreshold() {
-            return this.threshold;
-        }
-
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn setStatistics(String statistics) {
-            this.statistics = statistics;
-            return this;
-        }
-        public String getStatistics() {
-            return this.statistics;
-        }
-
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
-        @NameInMap("Times")
-        public Integer times;
+        @NameInMap("Statistics")
+        public String statistics;
 
         @NameInMap("Threshold")
         public String threshold;
 
-        @NameInMap("Statistics")
-        public String statistics;
+        @NameInMap("Times")
+        public Integer times;
 
         public static DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical build(java.util.Map<String, ?> map) throws Exception {
             DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical self = new DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical();
@@ -194,12 +90,12 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             return this.comparisonOperator;
         }
 
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical setTimes(Integer times) {
-            this.times = times;
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical setStatistics(String statistics) {
+            this.statistics = statistics;
             return this;
         }
-        public Integer getTimes() {
-            return this.times;
+        public String getStatistics() {
+            return this.statistics;
         }
 
         public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical setThreshold(String threshold) {
@@ -210,7 +106,43 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             return this.threshold;
         }
 
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical setStatistics(String statistics) {
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical setTimes(Integer times) {
+            this.times = times;
+            return this;
+        }
+        public Integer getTimes() {
+            return this.times;
+        }
+
+    }
+
+    public static class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo extends TeaModel {
+        @NameInMap("ComparisonOperator")
+        public String comparisonOperator;
+
+        @NameInMap("Statistics")
+        public String statistics;
+
+        @NameInMap("Threshold")
+        public String threshold;
+
+        @NameInMap("Times")
+        public Integer times;
+
+        public static DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo self = new DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo setComparisonOperator(String comparisonOperator) {
+            this.comparisonOperator = comparisonOperator;
+            return this;
+        }
+        public String getComparisonOperator() {
+            return this.comparisonOperator;
+        }
+
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo setStatistics(String statistics) {
             this.statistics = statistics;
             return this;
         }
@@ -218,21 +150,97 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             return this.statistics;
         }
 
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo setThreshold(String threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo setTimes(Integer times) {
+            this.times = times;
+            return this;
+        }
+        public Integer getTimes() {
+            return this.times;
+        }
+
+    }
+
+    public static class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn extends TeaModel {
+        @NameInMap("ComparisonOperator")
+        public String comparisonOperator;
+
+        @NameInMap("Statistics")
+        public String statistics;
+
+        @NameInMap("Threshold")
+        public String threshold;
+
+        @NameInMap("Times")
+        public Integer times;
+
+        public static DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn self = new DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn setComparisonOperator(String comparisonOperator) {
+            this.comparisonOperator = comparisonOperator;
+            return this;
+        }
+        public String getComparisonOperator() {
+            return this.comparisonOperator;
+        }
+
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn setStatistics(String statistics) {
+            this.statistics = statistics;
+            return this;
+        }
+        public String getStatistics() {
+            return this.statistics;
+        }
+
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn setThreshold(String threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn setTimes(Integer times) {
+            this.times = times;
+            return this;
+        }
+        public Integer getTimes() {
+            return this.times;
+        }
+
     }
 
     public static class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalations extends TeaModel {
+        @NameInMap("Critical")
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical critical;
+
         @NameInMap("Info")
         public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo info;
 
         @NameInMap("Warn")
         public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn warn;
 
-        @NameInMap("Critical")
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical critical;
-
         public static DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalations build(java.util.Map<String, ?> map) throws Exception {
             DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalations self = new DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalations();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalations setCritical(DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical critical) {
+            this.critical = critical;
+            return this;
+        }
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical getCritical() {
+            return this.critical;
         }
 
         public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalations setInfo(DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo info) {
@@ -251,19 +259,26 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             return this.warn;
         }
 
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalations setCritical(DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical critical) {
-            this.critical = critical;
-            return this;
-        }
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical getCritical() {
-            return this.critical;
-        }
-
     }
 
     public static class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("Escalations")
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalations escalations;
+
         @NameInMap("MetricName")
         public String metricName;
+
+        @NameInMap("Namespace")
+        public String namespace;
+
+        @NameInMap("NoDataPolicy")
+        public String noDataPolicy;
+
+        @NameInMap("RuleName")
+        public String ruleName;
 
         @NameInMap("Selector")
         public String selector;
@@ -271,21 +286,25 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         @NameInMap("Webhook")
         public String webhook;
 
-        @NameInMap("Namespace")
-        public String namespace;
-
-        @NameInMap("Category")
-        public String category;
-
-        @NameInMap("RuleName")
-        public String ruleName;
-
-        @NameInMap("Escalations")
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalations escalations;
-
         public static DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate build(java.util.Map<String, ?> map) throws Exception {
             DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate self = new DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate setEscalations(DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalations escalations) {
+            this.escalations = escalations;
+            return this;
+        }
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalations getEscalations() {
+            return this.escalations;
         }
 
         public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate setMetricName(String metricName) {
@@ -294,6 +313,30 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         }
         public String getMetricName() {
             return this.metricName;
+        }
+
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate setNoDataPolicy(String noDataPolicy) {
+            this.noDataPolicy = noDataPolicy;
+            return this;
+        }
+        public String getNoDataPolicy() {
+            return this.noDataPolicy;
+        }
+
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
         }
 
         public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate setSelector(String selector) {
@@ -310,38 +353,6 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         }
         public String getWebhook() {
             return this.webhook;
-        }
-
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate setNamespace(String namespace) {
-            this.namespace = namespace;
-            return this;
-        }
-        public String getNamespace() {
-            return this.namespace;
-        }
-
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
-        }
-
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate setRuleName(String ruleName) {
-            this.ruleName = ruleName;
-            return this;
-        }
-        public String getRuleName() {
-            return this.ruleName;
-        }
-
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate setEscalations(DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalations escalations) {
-            this.escalations = escalations;
-            return this;
-        }
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalations getEscalations() {
-            return this.escalations;
         }
 
     }
@@ -366,6 +377,9 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricRuleTemplateAttributeResponseBodyResource extends TeaModel {
+        @NameInMap("AlertTemplates")
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplates alertTemplates;
+
         @NameInMap("Description")
         public String description;
 
@@ -378,12 +392,17 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         @NameInMap("TemplateId")
         public String templateId;
 
-        @NameInMap("AlertTemplates")
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplates alertTemplates;
-
         public static DescribeMetricRuleTemplateAttributeResponseBodyResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeMetricRuleTemplateAttributeResponseBodyResource self = new DescribeMetricRuleTemplateAttributeResponseBodyResource();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleTemplateAttributeResponseBodyResource setAlertTemplates(DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplates alertTemplates) {
+            this.alertTemplates = alertTemplates;
+            return this;
+        }
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplates getAlertTemplates() {
+            return this.alertTemplates;
         }
 
         public DescribeMetricRuleTemplateAttributeResponseBodyResource setDescription(String description) {
@@ -416,14 +435,6 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         }
         public String getTemplateId() {
             return this.templateId;
-        }
-
-        public DescribeMetricRuleTemplateAttributeResponseBodyResource setAlertTemplates(DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplates alertTemplates) {
-            this.alertTemplates = alertTemplates;
-            return this;
-        }
-        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplates getAlertTemplates() {
-            return this.alertTemplates;
         }
 
     }

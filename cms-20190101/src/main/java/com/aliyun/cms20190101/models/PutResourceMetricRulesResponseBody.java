@@ -7,6 +7,9 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("FailedListResult")
+    public PutResourceMetricRulesResponseBodyFailedListResult failedListResult;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("FailedListResult")
-    public PutResourceMetricRulesResponseBodyFailedListResult failedListResult;
 
     public static PutResourceMetricRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PutResourceMetricRulesResponseBody self = new PutResourceMetricRulesResponseBody();
@@ -30,6 +30,14 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public PutResourceMetricRulesResponseBody setFailedListResult(PutResourceMetricRulesResponseBodyFailedListResult failedListResult) {
+        this.failedListResult = failedListResult;
+        return this;
+    }
+    public PutResourceMetricRulesResponseBodyFailedListResult getFailedListResult() {
+        return this.failedListResult;
     }
 
     public PutResourceMetricRulesResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public PutResourceMetricRulesResponseBody setFailedListResult(PutResourceMetricRulesResponseBodyFailedListResult failedListResult) {
-        this.failedListResult = failedListResult;
-        return this;
-    }
-    public PutResourceMetricRulesResponseBodyFailedListResult getFailedListResult() {
-        return this.failedListResult;
     }
 
     public static class PutResourceMetricRulesResponseBodyFailedListResultTargetResult extends TeaModel {
@@ -106,23 +106,15 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
     }
 
     public static class PutResourceMetricRulesResponseBodyFailedListResultTarget extends TeaModel {
-        @NameInMap("RuleId")
-        public String ruleId;
-
         @NameInMap("Result")
         public PutResourceMetricRulesResponseBodyFailedListResultTargetResult result;
+
+        @NameInMap("RuleId")
+        public String ruleId;
 
         public static PutResourceMetricRulesResponseBodyFailedListResultTarget build(java.util.Map<String, ?> map) throws Exception {
             PutResourceMetricRulesResponseBodyFailedListResultTarget self = new PutResourceMetricRulesResponseBodyFailedListResultTarget();
             return TeaModel.build(map, self);
-        }
-
-        public PutResourceMetricRulesResponseBodyFailedListResultTarget setRuleId(String ruleId) {
-            this.ruleId = ruleId;
-            return this;
-        }
-        public String getRuleId() {
-            return this.ruleId;
         }
 
         public PutResourceMetricRulesResponseBodyFailedListResultTarget setResult(PutResourceMetricRulesResponseBodyFailedListResultTargetResult result) {
@@ -131,6 +123,14 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         }
         public PutResourceMetricRulesResponseBodyFailedListResultTargetResult getResult() {
             return this.result;
+        }
+
+        public PutResourceMetricRulesResponseBodyFailedListResultTarget setRuleId(String ruleId) {
+            this.ruleId = ruleId;
+            return this;
+        }
+        public String getRuleId() {
+            return this.ruleId;
         }
 
     }

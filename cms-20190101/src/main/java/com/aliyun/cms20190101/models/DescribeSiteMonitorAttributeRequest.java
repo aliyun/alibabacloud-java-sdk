@@ -4,18 +4,26 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorAttributeRequest extends TeaModel {
+    @NameInMap("IncludeAlert")
+    public Boolean includeAlert;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("TaskId")
     public String taskId;
 
-    @NameInMap("IncludeAlert")
-    public Boolean includeAlert;
-
     public static DescribeSiteMonitorAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSiteMonitorAttributeRequest self = new DescribeSiteMonitorAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSiteMonitorAttributeRequest setIncludeAlert(Boolean includeAlert) {
+        this.includeAlert = includeAlert;
+        return this;
+    }
+    public Boolean getIncludeAlert() {
+        return this.includeAlert;
     }
 
     public DescribeSiteMonitorAttributeRequest setRegionId(String regionId) {
@@ -32,14 +40,6 @@ public class DescribeSiteMonitorAttributeRequest extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
-    }
-
-    public DescribeSiteMonitorAttributeRequest setIncludeAlert(Boolean includeAlert) {
-        this.includeAlert = includeAlert;
-        return this;
-    }
-    public Boolean getIncludeAlert() {
-        return this.includeAlert;
     }
 
 }

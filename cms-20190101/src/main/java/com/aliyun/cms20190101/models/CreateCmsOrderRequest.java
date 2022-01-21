@@ -4,32 +4,23 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateCmsOrderRequest extends TeaModel {
-    @NameInMap("Period")
-    public Integer period;
-
-    @NameInMap("PeriodUnit")
-    public String periodUnit;
-
-    @NameInMap("AutoRenewPeriod")
-    public Integer autoRenewPeriod;
+    @NameInMap("ApiCount")
+    public String apiCount;
 
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    @NameInMap("AutoRenewPeriod")
+    public Integer autoRenewPeriod;
+
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
-    @NameInMap("PayType")
-    public String payType;
+    @NameInMap("CustomTimeSeries")
+    public String customTimeSeries;
 
-    @NameInMap("SuggestType")
-    public String suggestType;
-
-    @NameInMap("ApiCount")
-    public String apiCount;
-
-    @NameInMap("SiteOperatorNum")
-    public String siteOperatorNum;
+    @NameInMap("EventStoreNum")
+    public String eventStoreNum;
 
     @NameInMap("EventStoreTime")
     public String eventStoreTime;
@@ -37,83 +28,36 @@ public class CreateCmsOrderRequest extends TeaModel {
     @NameInMap("LogMonitorStream")
     public String logMonitorStream;
 
-    @NameInMap("SiteTaskNum")
-    public String siteTaskNum;
+    @NameInMap("PayType")
+    public String payType;
 
-    @NameInMap("EventStoreNum")
-    public String eventStoreNum;
+    @NameInMap("Period")
+    public Integer period;
 
-    @NameInMap("SiteEcsNum")
-    public String siteEcsNum;
-
-    @NameInMap("CustomTimeSeries")
-    public String customTimeSeries;
-
-    @NameInMap("SmsCount")
-    public String smsCount;
+    @NameInMap("PeriodUnit")
+    public String periodUnit;
 
     @NameInMap("PhoneCount")
     public String phoneCount;
 
+    @NameInMap("SiteEcsNum")
+    public String siteEcsNum;
+
+    @NameInMap("SiteOperatorNum")
+    public String siteOperatorNum;
+
+    @NameInMap("SiteTaskNum")
+    public String siteTaskNum;
+
+    @NameInMap("SmsCount")
+    public String smsCount;
+
+    @NameInMap("SuggestType")
+    public String suggestType;
+
     public static CreateCmsOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCmsOrderRequest self = new CreateCmsOrderRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateCmsOrderRequest setPeriod(Integer period) {
-        this.period = period;
-        return this;
-    }
-    public Integer getPeriod() {
-        return this.period;
-    }
-
-    public CreateCmsOrderRequest setPeriodUnit(String periodUnit) {
-        this.periodUnit = periodUnit;
-        return this;
-    }
-    public String getPeriodUnit() {
-        return this.periodUnit;
-    }
-
-    public CreateCmsOrderRequest setAutoRenewPeriod(Integer autoRenewPeriod) {
-        this.autoRenewPeriod = autoRenewPeriod;
-        return this;
-    }
-    public Integer getAutoRenewPeriod() {
-        return this.autoRenewPeriod;
-    }
-
-    public CreateCmsOrderRequest setAutoPay(Boolean autoPay) {
-        this.autoPay = autoPay;
-        return this;
-    }
-    public Boolean getAutoPay() {
-        return this.autoPay;
-    }
-
-    public CreateCmsOrderRequest setAutoUseCoupon(Boolean autoUseCoupon) {
-        this.autoUseCoupon = autoUseCoupon;
-        return this;
-    }
-    public Boolean getAutoUseCoupon() {
-        return this.autoUseCoupon;
-    }
-
-    public CreateCmsOrderRequest setPayType(String payType) {
-        this.payType = payType;
-        return this;
-    }
-    public String getPayType() {
-        return this.payType;
-    }
-
-    public CreateCmsOrderRequest setSuggestType(String suggestType) {
-        this.suggestType = suggestType;
-        return this;
-    }
-    public String getSuggestType() {
-        return this.suggestType;
     }
 
     public CreateCmsOrderRequest setApiCount(String apiCount) {
@@ -124,12 +68,44 @@ public class CreateCmsOrderRequest extends TeaModel {
         return this.apiCount;
     }
 
-    public CreateCmsOrderRequest setSiteOperatorNum(String siteOperatorNum) {
-        this.siteOperatorNum = siteOperatorNum;
+    public CreateCmsOrderRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
         return this;
     }
-    public String getSiteOperatorNum() {
-        return this.siteOperatorNum;
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public CreateCmsOrderRequest setAutoRenewPeriod(Integer autoRenewPeriod) {
+        this.autoRenewPeriod = autoRenewPeriod;
+        return this;
+    }
+    public Integer getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
+    }
+
+    public CreateCmsOrderRequest setAutoUseCoupon(Boolean autoUseCoupon) {
+        this.autoUseCoupon = autoUseCoupon;
+        return this;
+    }
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
+    }
+
+    public CreateCmsOrderRequest setCustomTimeSeries(String customTimeSeries) {
+        this.customTimeSeries = customTimeSeries;
+        return this;
+    }
+    public String getCustomTimeSeries() {
+        return this.customTimeSeries;
+    }
+
+    public CreateCmsOrderRequest setEventStoreNum(String eventStoreNum) {
+        this.eventStoreNum = eventStoreNum;
+        return this;
+    }
+    public String getEventStoreNum() {
+        return this.eventStoreNum;
     }
 
     public CreateCmsOrderRequest setEventStoreTime(String eventStoreTime) {
@@ -148,20 +124,36 @@ public class CreateCmsOrderRequest extends TeaModel {
         return this.logMonitorStream;
     }
 
-    public CreateCmsOrderRequest setSiteTaskNum(String siteTaskNum) {
-        this.siteTaskNum = siteTaskNum;
+    public CreateCmsOrderRequest setPayType(String payType) {
+        this.payType = payType;
         return this;
     }
-    public String getSiteTaskNum() {
-        return this.siteTaskNum;
+    public String getPayType() {
+        return this.payType;
     }
 
-    public CreateCmsOrderRequest setEventStoreNum(String eventStoreNum) {
-        this.eventStoreNum = eventStoreNum;
+    public CreateCmsOrderRequest setPeriod(Integer period) {
+        this.period = period;
         return this;
     }
-    public String getEventStoreNum() {
-        return this.eventStoreNum;
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public CreateCmsOrderRequest setPeriodUnit(String periodUnit) {
+        this.periodUnit = periodUnit;
+        return this;
+    }
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
+    public CreateCmsOrderRequest setPhoneCount(String phoneCount) {
+        this.phoneCount = phoneCount;
+        return this;
+    }
+    public String getPhoneCount() {
+        return this.phoneCount;
     }
 
     public CreateCmsOrderRequest setSiteEcsNum(String siteEcsNum) {
@@ -172,12 +164,20 @@ public class CreateCmsOrderRequest extends TeaModel {
         return this.siteEcsNum;
     }
 
-    public CreateCmsOrderRequest setCustomTimeSeries(String customTimeSeries) {
-        this.customTimeSeries = customTimeSeries;
+    public CreateCmsOrderRequest setSiteOperatorNum(String siteOperatorNum) {
+        this.siteOperatorNum = siteOperatorNum;
         return this;
     }
-    public String getCustomTimeSeries() {
-        return this.customTimeSeries;
+    public String getSiteOperatorNum() {
+        return this.siteOperatorNum;
+    }
+
+    public CreateCmsOrderRequest setSiteTaskNum(String siteTaskNum) {
+        this.siteTaskNum = siteTaskNum;
+        return this;
+    }
+    public String getSiteTaskNum() {
+        return this.siteTaskNum;
     }
 
     public CreateCmsOrderRequest setSmsCount(String smsCount) {
@@ -188,12 +188,12 @@ public class CreateCmsOrderRequest extends TeaModel {
         return this.smsCount;
     }
 
-    public CreateCmsOrderRequest setPhoneCount(String phoneCount) {
-        this.phoneCount = phoneCount;
+    public CreateCmsOrderRequest setSuggestType(String suggestType) {
+        this.suggestType = suggestType;
         return this;
     }
-    public String getPhoneCount() {
-        return this.phoneCount;
+    public String getSuggestType() {
+        return this.suggestType;
     }
 
 }

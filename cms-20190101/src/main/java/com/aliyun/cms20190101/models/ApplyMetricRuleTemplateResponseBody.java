@@ -13,11 +13,11 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Resource")
     public ApplyMetricRuleTemplateResponseBodyResource resource;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static ApplyMetricRuleTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ApplyMetricRuleTemplateResponseBody self = new ApplyMetricRuleTemplateResponseBody();
@@ -48,20 +48,20 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ApplyMetricRuleTemplateResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public ApplyMetricRuleTemplateResponseBody setResource(ApplyMetricRuleTemplateResponseBodyResource resource) {
         this.resource = resource;
         return this;
     }
     public ApplyMetricRuleTemplateResponseBodyResource getResource() {
         return this.resource;
+    }
+
+    public ApplyMetricRuleTemplateResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class ApplyMetricRuleTemplateResponseBodyResourceAlertResults extends TeaModel {
@@ -71,14 +71,14 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
-        @NameInMap("Success")
-        public Boolean success;
+        @NameInMap("RuleId")
+        public String ruleId;
 
         @NameInMap("RuleName")
         public String ruleName;
 
-        @NameInMap("RuleId")
-        public String ruleId;
+        @NameInMap("Success")
+        public Boolean success;
 
         public static ApplyMetricRuleTemplateResponseBodyResourceAlertResults build(java.util.Map<String, ?> map) throws Exception {
             ApplyMetricRuleTemplateResponseBodyResourceAlertResults self = new ApplyMetricRuleTemplateResponseBodyResourceAlertResults();
@@ -101,12 +101,12 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             return this.message;
         }
 
-        public ApplyMetricRuleTemplateResponseBodyResourceAlertResults setSuccess(Boolean success) {
-            this.success = success;
+        public ApplyMetricRuleTemplateResponseBodyResourceAlertResults setRuleId(String ruleId) {
+            this.ruleId = ruleId;
             return this;
         }
-        public Boolean getSuccess() {
-            return this.success;
+        public String getRuleId() {
+            return this.ruleId;
         }
 
         public ApplyMetricRuleTemplateResponseBodyResourceAlertResults setRuleName(String ruleName) {
@@ -117,34 +117,26 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             return this.ruleName;
         }
 
-        public ApplyMetricRuleTemplateResponseBodyResourceAlertResults setRuleId(String ruleId) {
-            this.ruleId = ruleId;
+        public ApplyMetricRuleTemplateResponseBodyResourceAlertResults setSuccess(Boolean success) {
+            this.success = success;
             return this;
         }
-        public String getRuleId() {
-            return this.ruleId;
+        public Boolean getSuccess() {
+            return this.success;
         }
 
     }
 
     public static class ApplyMetricRuleTemplateResponseBodyResource extends TeaModel {
-        @NameInMap("GroupId")
-        public Long groupId;
-
         @NameInMap("AlertResults")
         public java.util.List<ApplyMetricRuleTemplateResponseBodyResourceAlertResults> alertResults;
+
+        @NameInMap("GroupId")
+        public Long groupId;
 
         public static ApplyMetricRuleTemplateResponseBodyResource build(java.util.Map<String, ?> map) throws Exception {
             ApplyMetricRuleTemplateResponseBodyResource self = new ApplyMetricRuleTemplateResponseBodyResource();
             return TeaModel.build(map, self);
-        }
-
-        public ApplyMetricRuleTemplateResponseBodyResource setGroupId(Long groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public Long getGroupId() {
-            return this.groupId;
         }
 
         public ApplyMetricRuleTemplateResponseBodyResource setAlertResults(java.util.List<ApplyMetricRuleTemplateResponseBodyResourceAlertResults> alertResults) {
@@ -153,6 +145,14 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         }
         public java.util.List<ApplyMetricRuleTemplateResponseBodyResourceAlertResults> getAlertResults() {
             return this.alertResults;
+        }
+
+        public ApplyMetricRuleTemplateResponseBodyResource setGroupId(Long groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public Long getGroupId() {
+            return this.groupId;
         }
 
     }

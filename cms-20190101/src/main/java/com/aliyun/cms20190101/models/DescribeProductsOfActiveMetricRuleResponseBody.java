@@ -4,8 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
+    @NameInMap("AllProductInitMetricRuleList")
+    public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleList allProductInitMetricRuleList;
+
     @NameInMap("Code")
     public Integer code;
+
+    @NameInMap("Datapoints")
+    public String datapoints;
 
     @NameInMap("Message")
     public String message;
@@ -13,18 +19,20 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Datapoints")
-    public String datapoints;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("AllProductInitMetricRuleList")
-    public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleList allProductInitMetricRuleList;
 
     public static DescribeProductsOfActiveMetricRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeProductsOfActiveMetricRuleResponseBody self = new DescribeProductsOfActiveMetricRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeProductsOfActiveMetricRuleResponseBody setAllProductInitMetricRuleList(DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleList allProductInitMetricRuleList) {
+        this.allProductInitMetricRuleList = allProductInitMetricRuleList;
+        return this;
+    }
+    public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleList getAllProductInitMetricRuleList() {
+        return this.allProductInitMetricRuleList;
     }
 
     public DescribeProductsOfActiveMetricRuleResponseBody setCode(Integer code) {
@@ -33,6 +41,14 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
+    }
+
+    public DescribeProductsOfActiveMetricRuleResponseBody setDatapoints(String datapoints) {
+        this.datapoints = datapoints;
+        return this;
+    }
+    public String getDatapoints() {
+        return this.datapoints;
     }
 
     public DescribeProductsOfActiveMetricRuleResponseBody setMessage(String message) {
@@ -51,14 +67,6 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeProductsOfActiveMetricRuleResponseBody setDatapoints(String datapoints) {
-        this.datapoints = datapoints;
-        return this;
-    }
-    public String getDatapoints() {
-        return this.datapoints;
-    }
-
     public DescribeProductsOfActiveMetricRuleResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -67,44 +75,28 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeProductsOfActiveMetricRuleResponseBody setAllProductInitMetricRuleList(DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleList allProductInitMetricRuleList) {
-        this.allProductInitMetricRuleList = allProductInitMetricRuleList;
-        return this;
-    }
-    public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleList getAllProductInitMetricRuleList() {
-        return this.allProductInitMetricRuleList;
-    }
-
     public static class DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig extends TeaModel {
-        @NameInMap("MetricName")
-        public String metricName;
-
         @NameInMap("EvaluationCount")
         public String evaluationCount;
+
+        @NameInMap("MetricName")
+        public String metricName;
 
         @NameInMap("Namespace")
         public String namespace;
 
-        @NameInMap("Threshold")
-        public String threshold;
+        @NameInMap("Period")
+        public String period;
 
         @NameInMap("Statistics")
         public String statistics;
 
-        @NameInMap("Period")
-        public String period;
+        @NameInMap("Threshold")
+        public String threshold;
 
         public static DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig self = new DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig setMetricName(String metricName) {
-            this.metricName = metricName;
-            return this;
-        }
-        public String getMetricName() {
-            return this.metricName;
         }
 
         public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig setEvaluationCount(String evaluationCount) {
@@ -115,6 +107,14 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             return this.evaluationCount;
         }
 
+        public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
+        }
+
         public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig setNamespace(String namespace) {
             this.namespace = namespace;
             return this;
@@ -123,12 +123,12 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             return this.namespace;
         }
 
-        public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig setThreshold(String threshold) {
-            this.threshold = threshold;
+        public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig setPeriod(String period) {
+            this.period = period;
             return this;
         }
-        public String getThreshold() {
-            return this.threshold;
+        public String getPeriod() {
+            return this.period;
         }
 
         public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig setStatistics(String statistics) {
@@ -139,12 +139,12 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             return this.statistics;
         }
 
-        public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig setPeriod(String period) {
-            this.period = period;
+        public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig setThreshold(String threshold) {
+            this.threshold = threshold;
             return this;
         }
-        public String getPeriod() {
-            return this.period;
+        public String getThreshold() {
+            return this.threshold;
         }
 
     }
@@ -169,23 +169,15 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRule extends TeaModel {
-        @NameInMap("Product")
-        public String product;
-
         @NameInMap("AlertInitConfigList")
         public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigList alertInitConfigList;
+
+        @NameInMap("Product")
+        public String product;
 
         public static DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRule build(java.util.Map<String, ?> map) throws Exception {
             DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRule self = new DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRule setProduct(String product) {
-            this.product = product;
-            return this;
-        }
-        public String getProduct() {
-            return this.product;
         }
 
         public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRule setAlertInitConfigList(DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigList alertInitConfigList) {
@@ -194,6 +186,14 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         }
         public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigList getAlertInitConfigList() {
             return this.alertInitConfigList;
+        }
+
+        public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRule setProduct(String product) {
+            this.product = product;
+            return this;
+        }
+        public String getProduct() {
+            return this.product;
         }
 
     }

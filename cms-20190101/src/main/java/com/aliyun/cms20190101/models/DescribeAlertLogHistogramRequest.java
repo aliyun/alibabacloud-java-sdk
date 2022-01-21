@@ -4,14 +4,29 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertLogHistogramRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("StartTime")
-    public Long startTime;
+    @NameInMap("ContactGroup")
+    public String contactGroup;
 
     @NameInMap("EndTime")
     public Long endTime;
+
+    @NameInMap("GroupBy")
+    public String groupBy;
+
+    @NameInMap("GroupId")
+    public String groupId;
+
+    @NameInMap("LastMin")
+    public String lastMin;
+
+    @NameInMap("Level")
+    public String level;
+
+    @NameInMap("MetricName")
+    public String metricName;
+
+    @NameInMap("Namespace")
+    public String namespace;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -19,58 +34,35 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("SearchKey")
-    public String searchKey;
-
-    @NameInMap("GroupId")
-    public String groupId;
-
     @NameInMap("Product")
     public String product;
 
-    @NameInMap("Namespace")
-    public String namespace;
-
-    @NameInMap("Level")
-    public String level;
-
-    @NameInMap("SendStatus")
-    public String sendStatus;
-
-    @NameInMap("ContactGroup")
-    public String contactGroup;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("RuleName")
     public String ruleName;
 
-    @NameInMap("MetricName")
-    public String metricName;
+    @NameInMap("SearchKey")
+    public String searchKey;
 
-    @NameInMap("LastMin")
-    public String lastMin;
+    @NameInMap("SendStatus")
+    public String sendStatus;
 
-    @NameInMap("GroupBy")
-    public String groupBy;
+    @NameInMap("StartTime")
+    public Long startTime;
 
     public static DescribeAlertLogHistogramRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlertLogHistogramRequest self = new DescribeAlertLogHistogramRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAlertLogHistogramRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeAlertLogHistogramRequest setContactGroup(String contactGroup) {
+        this.contactGroup = contactGroup;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeAlertLogHistogramRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
+    public String getContactGroup() {
+        return this.contactGroup;
     }
 
     public DescribeAlertLogHistogramRequest setEndTime(Long endTime) {
@@ -79,6 +71,54 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeAlertLogHistogramRequest setGroupBy(String groupBy) {
+        this.groupBy = groupBy;
+        return this;
+    }
+    public String getGroupBy() {
+        return this.groupBy;
+    }
+
+    public DescribeAlertLogHistogramRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public DescribeAlertLogHistogramRequest setLastMin(String lastMin) {
+        this.lastMin = lastMin;
+        return this;
+    }
+    public String getLastMin() {
+        return this.lastMin;
+    }
+
+    public DescribeAlertLogHistogramRequest setLevel(String level) {
+        this.level = level;
+        return this;
+    }
+    public String getLevel() {
+        return this.level;
+    }
+
+    public DescribeAlertLogHistogramRequest setMetricName(String metricName) {
+        this.metricName = metricName;
+        return this;
+    }
+    public String getMetricName() {
+        return this.metricName;
+    }
+
+    public DescribeAlertLogHistogramRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public DescribeAlertLogHistogramRequest setPageNumber(Integer pageNumber) {
@@ -97,22 +137,6 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeAlertLogHistogramRequest setSearchKey(String searchKey) {
-        this.searchKey = searchKey;
-        return this;
-    }
-    public String getSearchKey() {
-        return this.searchKey;
-    }
-
-    public DescribeAlertLogHistogramRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
-    }
-
     public DescribeAlertLogHistogramRequest setProduct(String product) {
         this.product = product;
         return this;
@@ -121,36 +145,12 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
         return this.product;
     }
 
-    public DescribeAlertLogHistogramRequest setNamespace(String namespace) {
-        this.namespace = namespace;
+    public DescribeAlertLogHistogramRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getNamespace() {
-        return this.namespace;
-    }
-
-    public DescribeAlertLogHistogramRequest setLevel(String level) {
-        this.level = level;
-        return this;
-    }
-    public String getLevel() {
-        return this.level;
-    }
-
-    public DescribeAlertLogHistogramRequest setSendStatus(String sendStatus) {
-        this.sendStatus = sendStatus;
-        return this;
-    }
-    public String getSendStatus() {
-        return this.sendStatus;
-    }
-
-    public DescribeAlertLogHistogramRequest setContactGroup(String contactGroup) {
-        this.contactGroup = contactGroup;
-        return this;
-    }
-    public String getContactGroup() {
-        return this.contactGroup;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeAlertLogHistogramRequest setRuleName(String ruleName) {
@@ -161,28 +161,28 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
         return this.ruleName;
     }
 
-    public DescribeAlertLogHistogramRequest setMetricName(String metricName) {
-        this.metricName = metricName;
+    public DescribeAlertLogHistogramRequest setSearchKey(String searchKey) {
+        this.searchKey = searchKey;
         return this;
     }
-    public String getMetricName() {
-        return this.metricName;
+    public String getSearchKey() {
+        return this.searchKey;
     }
 
-    public DescribeAlertLogHistogramRequest setLastMin(String lastMin) {
-        this.lastMin = lastMin;
+    public DescribeAlertLogHistogramRequest setSendStatus(String sendStatus) {
+        this.sendStatus = sendStatus;
         return this;
     }
-    public String getLastMin() {
-        return this.lastMin;
+    public String getSendStatus() {
+        return this.sendStatus;
     }
 
-    public DescribeAlertLogHistogramRequest setGroupBy(String groupBy) {
-        this.groupBy = groupBy;
+    public DescribeAlertLogHistogramRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getGroupBy() {
-        return this.groupBy;
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

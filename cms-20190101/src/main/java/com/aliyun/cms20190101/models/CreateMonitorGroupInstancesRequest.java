@@ -4,26 +4,18 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitorGroupInstancesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("Instances")
     public java.util.List<CreateMonitorGroupInstancesRequestInstances> instances;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static CreateMonitorGroupInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMonitorGroupInstancesRequest self = new CreateMonitorGroupInstancesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateMonitorGroupInstancesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateMonitorGroupInstancesRequest setGroupId(String groupId) {
@@ -42,15 +34,23 @@ public class CreateMonitorGroupInstancesRequest extends TeaModel {
         return this.instances;
     }
 
-    public static class CreateMonitorGroupInstancesRequestInstances extends TeaModel {
-        @NameInMap("InstanceName")
-        public String instanceName;
+    public CreateMonitorGroupInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
 
+    public static class CreateMonitorGroupInstancesRequestInstances extends TeaModel {
         @NameInMap("Category")
         public String category;
 
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -58,14 +58,6 @@ public class CreateMonitorGroupInstancesRequest extends TeaModel {
         public static CreateMonitorGroupInstancesRequestInstances build(java.util.Map<String, ?> map) throws Exception {
             CreateMonitorGroupInstancesRequestInstances self = new CreateMonitorGroupInstancesRequestInstances();
             return TeaModel.build(map, self);
-        }
-
-        public CreateMonitorGroupInstancesRequestInstances setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
         }
 
         public CreateMonitorGroupInstancesRequestInstances setCategory(String category) {
@@ -82,6 +74,14 @@ public class CreateMonitorGroupInstancesRequest extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public CreateMonitorGroupInstancesRequestInstances setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
         public CreateMonitorGroupInstancesRequestInstances setRegionId(String regionId) {

@@ -4,11 +4,8 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitoringAgentHostsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("KeyWord")
-    public String keyWord;
+    @NameInMap("AliyunHost")
+    public Boolean aliyunHost;
 
     @NameInMap("HostName")
     public String hostName;
@@ -16,8 +13,11 @@ public class DescribeMonitoringAgentHostsRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public String instanceIds;
 
-    @NameInMap("SerialNumbers")
-    public String serialNumbers;
+    @NameInMap("InstanceRegionId")
+    public String instanceRegionId;
+
+    @NameInMap("KeyWord")
+    public String keyWord;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -25,11 +25,11 @@ public class DescribeMonitoringAgentHostsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("InstanceRegionId")
-    public String instanceRegionId;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("AliyunHost")
-    public Boolean aliyunHost;
+    @NameInMap("SerialNumbers")
+    public String serialNumbers;
 
     @NameInMap("Status")
     public String status;
@@ -39,20 +39,12 @@ public class DescribeMonitoringAgentHostsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeMonitoringAgentHostsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeMonitoringAgentHostsRequest setAliyunHost(Boolean aliyunHost) {
+        this.aliyunHost = aliyunHost;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeMonitoringAgentHostsRequest setKeyWord(String keyWord) {
-        this.keyWord = keyWord;
-        return this;
-    }
-    public String getKeyWord() {
-        return this.keyWord;
+    public Boolean getAliyunHost() {
+        return this.aliyunHost;
     }
 
     public DescribeMonitoringAgentHostsRequest setHostName(String hostName) {
@@ -71,12 +63,20 @@ public class DescribeMonitoringAgentHostsRequest extends TeaModel {
         return this.instanceIds;
     }
 
-    public DescribeMonitoringAgentHostsRequest setSerialNumbers(String serialNumbers) {
-        this.serialNumbers = serialNumbers;
+    public DescribeMonitoringAgentHostsRequest setInstanceRegionId(String instanceRegionId) {
+        this.instanceRegionId = instanceRegionId;
         return this;
     }
-    public String getSerialNumbers() {
-        return this.serialNumbers;
+    public String getInstanceRegionId() {
+        return this.instanceRegionId;
+    }
+
+    public DescribeMonitoringAgentHostsRequest setKeyWord(String keyWord) {
+        this.keyWord = keyWord;
+        return this;
+    }
+    public String getKeyWord() {
+        return this.keyWord;
     }
 
     public DescribeMonitoringAgentHostsRequest setPageNumber(Integer pageNumber) {
@@ -95,20 +95,20 @@ public class DescribeMonitoringAgentHostsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeMonitoringAgentHostsRequest setInstanceRegionId(String instanceRegionId) {
-        this.instanceRegionId = instanceRegionId;
+    public DescribeMonitoringAgentHostsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getInstanceRegionId() {
-        return this.instanceRegionId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public DescribeMonitoringAgentHostsRequest setAliyunHost(Boolean aliyunHost) {
-        this.aliyunHost = aliyunHost;
+    public DescribeMonitoringAgentHostsRequest setSerialNumbers(String serialNumbers) {
+        this.serialNumbers = serialNumbers;
         return this;
     }
-    public Boolean getAliyunHost() {
-        return this.aliyunHost;
+    public String getSerialNumbers() {
+        return this.serialNumbers;
     }
 
     public DescribeMonitoringAgentHostsRequest setStatus(String status) {

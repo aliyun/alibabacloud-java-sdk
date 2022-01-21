@@ -7,6 +7,9 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public DeleteSiteMonitorsResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public String success;
-
-    @NameInMap("Data")
-    public DeleteSiteMonitorsResponseBodyData data;
 
     public static DeleteSiteMonitorsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteSiteMonitorsResponseBody self = new DeleteSiteMonitorsResponseBody();
@@ -30,6 +30,14 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DeleteSiteMonitorsResponseBody setData(DeleteSiteMonitorsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DeleteSiteMonitorsResponseBodyData getData() {
+        return this.data;
     }
 
     public DeleteSiteMonitorsResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
     }
     public String getSuccess() {
         return this.success;
-    }
-
-    public DeleteSiteMonitorsResponseBody setData(DeleteSiteMonitorsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DeleteSiteMonitorsResponseBodyData getData() {
-        return this.data;
     }
 
     public static class DeleteSiteMonitorsResponseBodyData extends TeaModel {
