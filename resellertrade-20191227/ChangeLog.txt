@@ -1,0 +1,3 @@
+2022-01-21 Version: 1.1.3
+- Update api frequency.
+
