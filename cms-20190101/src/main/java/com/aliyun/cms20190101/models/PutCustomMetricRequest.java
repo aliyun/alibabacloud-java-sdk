@@ -4,23 +4,15 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutCustomMetricRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("MetricList")
     public java.util.List<PutCustomMetricRequestMetricList> metricList;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static PutCustomMetricRequest build(java.util.Map<String, ?> map) throws Exception {
         PutCustomMetricRequest self = new PutCustomMetricRequest();
         return TeaModel.build(map, self);
-    }
-
-    public PutCustomMetricRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public PutCustomMetricRequest setMetricList(java.util.List<PutCustomMetricRequestMetricList> metricList) {
@@ -31,71 +23,39 @@ public class PutCustomMetricRequest extends TeaModel {
         return this.metricList;
     }
 
+    public PutCustomMetricRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static class PutCustomMetricRequestMetricList extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("MetricName")
-        public String metricName;
-
-        @NameInMap("Time")
-        public String time;
+        @NameInMap("Dimensions")
+        public String dimensions;
 
         @NameInMap("GroupId")
         public String groupId;
 
-        @NameInMap("Values")
-        public String values;
-
-        @NameInMap("Dimensions")
-        public String dimensions;
+        @NameInMap("MetricName")
+        public String metricName;
 
         @NameInMap("Period")
         public String period;
 
+        @NameInMap("Time")
+        public String time;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Values")
+        public String values;
+
         public static PutCustomMetricRequestMetricList build(java.util.Map<String, ?> map) throws Exception {
             PutCustomMetricRequestMetricList self = new PutCustomMetricRequestMetricList();
             return TeaModel.build(map, self);
-        }
-
-        public PutCustomMetricRequestMetricList setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public PutCustomMetricRequestMetricList setMetricName(String metricName) {
-            this.metricName = metricName;
-            return this;
-        }
-        public String getMetricName() {
-            return this.metricName;
-        }
-
-        public PutCustomMetricRequestMetricList setTime(String time) {
-            this.time = time;
-            return this;
-        }
-        public String getTime() {
-            return this.time;
-        }
-
-        public PutCustomMetricRequestMetricList setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
-        public PutCustomMetricRequestMetricList setValues(String values) {
-            this.values = values;
-            return this;
-        }
-        public String getValues() {
-            return this.values;
         }
 
         public PutCustomMetricRequestMetricList setDimensions(String dimensions) {
@@ -106,12 +66,52 @@ public class PutCustomMetricRequest extends TeaModel {
             return this.dimensions;
         }
 
+        public PutCustomMetricRequestMetricList setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public PutCustomMetricRequestMetricList setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
+        }
+
         public PutCustomMetricRequestMetricList setPeriod(String period) {
             this.period = period;
             return this;
         }
         public String getPeriod() {
             return this.period;
+        }
+
+        public PutCustomMetricRequestMetricList setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
+        }
+
+        public PutCustomMetricRequestMetricList setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public PutCustomMetricRequestMetricList setValues(String values) {
+            this.values = values;
+            return this;
+        }
+        public String getValues() {
+            return this.values;
         }
 
     }

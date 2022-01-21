@@ -4,8 +4,8 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogMonitorListRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("GroupId")
+    public Long groupId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,23 +13,23 @@ public class DescribeLogMonitorListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SearchValue")
     public String searchValue;
-
-    @NameInMap("GroupId")
-    public Long groupId;
 
     public static DescribeLogMonitorListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogMonitorListRequest self = new DescribeLogMonitorListRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLogMonitorListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeLogMonitorListRequest setGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Long getGroupId() {
+        return this.groupId;
     }
 
     public DescribeLogMonitorListRequest setPageNumber(Integer pageNumber) {
@@ -48,20 +48,20 @@ public class DescribeLogMonitorListRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeLogMonitorListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeLogMonitorListRequest setSearchValue(String searchValue) {
         this.searchValue = searchValue;
         return this;
     }
     public String getSearchValue() {
         return this.searchValue;
-    }
-
-    public DescribeLogMonitorListRequest setGroupId(Long groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public Long getGroupId() {
-        return this.groupId;
     }
 
 }

@@ -7,6 +7,9 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("EventHistograms")
+    public DescribeCustomEventHistogramResponseBodyEventHistograms eventHistograms;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public String success;
-
-    @NameInMap("EventHistograms")
-    public DescribeCustomEventHistogramResponseBodyEventHistograms eventHistograms;
 
     public static DescribeCustomEventHistogramResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomEventHistogramResponseBody self = new DescribeCustomEventHistogramResponseBody();
@@ -30,6 +30,14 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeCustomEventHistogramResponseBody setEventHistograms(DescribeCustomEventHistogramResponseBodyEventHistograms eventHistograms) {
+        this.eventHistograms = eventHistograms;
+        return this;
+    }
+    public DescribeCustomEventHistogramResponseBodyEventHistograms getEventHistograms() {
+        return this.eventHistograms;
     }
 
     public DescribeCustomEventHistogramResponseBody setMessage(String message) {
@@ -56,27 +64,27 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeCustomEventHistogramResponseBody setEventHistograms(DescribeCustomEventHistogramResponseBodyEventHistograms eventHistograms) {
-        this.eventHistograms = eventHistograms;
-        return this;
-    }
-    public DescribeCustomEventHistogramResponseBodyEventHistograms getEventHistograms() {
-        return this.eventHistograms;
-    }
-
     public static class DescribeCustomEventHistogramResponseBodyEventHistogramsEventHistogram extends TeaModel {
+        @NameInMap("Count")
+        public Long count;
+
         @NameInMap("EndTime")
         public Long endTime;
 
         @NameInMap("StartTime")
         public Long startTime;
 
-        @NameInMap("Count")
-        public Long count;
-
         public static DescribeCustomEventHistogramResponseBodyEventHistogramsEventHistogram build(java.util.Map<String, ?> map) throws Exception {
             DescribeCustomEventHistogramResponseBodyEventHistogramsEventHistogram self = new DescribeCustomEventHistogramResponseBodyEventHistogramsEventHistogram();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCustomEventHistogramResponseBodyEventHistogramsEventHistogram setCount(Long count) {
+            this.count = count;
+            return this;
+        }
+        public Long getCount() {
+            return this.count;
         }
 
         public DescribeCustomEventHistogramResponseBodyEventHistogramsEventHistogram setEndTime(Long endTime) {
@@ -93,14 +101,6 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
         }
         public Long getStartTime() {
             return this.startTime;
-        }
-
-        public DescribeCustomEventHistogramResponseBodyEventHistogramsEventHistogram setCount(Long count) {
-            this.count = count;
-            return this;
-        }
-        public Long getCount() {
-            return this.count;
         }
 
     }

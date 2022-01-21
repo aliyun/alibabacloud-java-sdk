@@ -13,14 +13,14 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Total")
-    public Long total;
-
     @NameInMap("Success")
     public Boolean success;
 
     @NameInMap("Templates")
     public DescribeMetricRuleTemplateListResponseBodyTemplates templates;
+
+    @NameInMap("Total")
+    public Long total;
 
     public static DescribeMetricRuleTemplateListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricRuleTemplateListResponseBody self = new DescribeMetricRuleTemplateListResponseBody();
@@ -51,14 +51,6 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeMetricRuleTemplateListResponseBody setTotal(Long total) {
-        this.total = total;
-        return this;
-    }
-    public Long getTotal() {
-        return this.total;
-    }
-
     public DescribeMetricRuleTemplateListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -75,19 +67,35 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         return this.templates;
     }
 
+    public DescribeMetricRuleTemplateListResponseBody setTotal(Long total) {
+        this.total = total;
+        return this;
+    }
+    public Long getTotal() {
+        return this.total;
+    }
+
     public static class DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistoriesApplyHistory extends TeaModel {
+        @NameInMap("ApplyTime")
+        public Long applyTime;
+
         @NameInMap("GroupId")
         public Long groupId;
 
         @NameInMap("GroupName")
         public String groupName;
 
-        @NameInMap("ApplyTime")
-        public Long applyTime;
-
         public static DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistoriesApplyHistory build(java.util.Map<String, ?> map) throws Exception {
             DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistoriesApplyHistory self = new DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistoriesApplyHistory();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistoriesApplyHistory setApplyTime(Long applyTime) {
+            this.applyTime = applyTime;
+            return this;
+        }
+        public Long getApplyTime() {
+            return this.applyTime;
         }
 
         public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistoriesApplyHistory setGroupId(Long groupId) {
@@ -104,14 +112,6 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         }
         public String getGroupName() {
             return this.groupName;
-        }
-
-        public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistoriesApplyHistory setApplyTime(Long applyTime) {
-            this.applyTime = applyTime;
-            return this;
-        }
-        public Long getApplyTime() {
-            return this.applyTime;
         }
 
     }
@@ -136,11 +136,17 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate extends TeaModel {
+        @NameInMap("ApplyHistories")
+        public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistories applyHistories;
+
         @NameInMap("Description")
         public String description;
 
         @NameInMap("GmtCreate")
         public Long gmtCreate;
+
+        @NameInMap("GmtModified")
+        public Long gmtModified;
 
         @NameInMap("Name")
         public String name;
@@ -148,18 +154,20 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         @NameInMap("RestVersion")
         public Long restVersion;
 
-        @NameInMap("GmtModified")
-        public Long gmtModified;
-
         @NameInMap("TemplateId")
         public Long templateId;
-
-        @NameInMap("ApplyHistories")
-        public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistories applyHistories;
 
         public static DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate build(java.util.Map<String, ?> map) throws Exception {
             DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate self = new DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate setApplyHistories(DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistories applyHistories) {
+            this.applyHistories = applyHistories;
+            return this;
+        }
+        public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistories getApplyHistories() {
+            return this.applyHistories;
         }
 
         public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate setDescription(String description) {
@@ -178,6 +186,14 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
+        public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate setGmtModified(Long gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public Long getGmtModified() {
+            return this.gmtModified;
+        }
+
         public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate setName(String name) {
             this.name = name;
             return this;
@@ -194,28 +210,12 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             return this.restVersion;
         }
 
-        public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate setGmtModified(Long gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public Long getGmtModified() {
-            return this.gmtModified;
-        }
-
         public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate setTemplateId(Long templateId) {
             this.templateId = templateId;
             return this;
         }
         public Long getTemplateId() {
             return this.templateId;
-        }
-
-        public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate setApplyHistories(DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistories applyHistories) {
-            this.applyHistories = applyHistories;
-            return this;
-        }
-        public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistories getApplyHistories() {
-            return this.applyHistories;
         }
 
     }

@@ -4,26 +4,26 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupDynamicRuleRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Category")
+    public String category;
 
     @NameInMap("GroupId")
     public Long groupId;
 
-    @NameInMap("Category")
-    public String category;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DeleteMonitorGroupDynamicRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMonitorGroupDynamicRuleRequest self = new DeleteMonitorGroupDynamicRuleRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteMonitorGroupDynamicRuleRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DeleteMonitorGroupDynamicRuleRequest setCategory(String category) {
+        this.category = category;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getCategory() {
+        return this.category;
     }
 
     public DeleteMonitorGroupDynamicRuleRequest setGroupId(Long groupId) {
@@ -34,12 +34,12 @@ public class DeleteMonitorGroupDynamicRuleRequest extends TeaModel {
         return this.groupId;
     }
 
-    public DeleteMonitorGroupDynamicRuleRequest setCategory(String category) {
-        this.category = category;
+    public DeleteMonitorGroupDynamicRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getCategory() {
-        return this.category;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

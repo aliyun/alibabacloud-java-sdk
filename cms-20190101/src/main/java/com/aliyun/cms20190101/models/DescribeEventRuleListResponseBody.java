@@ -7,20 +7,20 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("EventRules")
+    public DescribeEventRuleListResponseBodyEventRules eventRules;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Total")
-    public Integer total;
-
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("EventRules")
-    public DescribeEventRuleListResponseBodyEventRules eventRules;
+    @NameInMap("Total")
+    public Integer total;
 
     public static DescribeEventRuleListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEventRuleListResponseBody self = new DescribeEventRuleListResponseBody();
@@ -33,6 +33,14 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeEventRuleListResponseBody setEventRules(DescribeEventRuleListResponseBodyEventRules eventRules) {
+        this.eventRules = eventRules;
+        return this;
+    }
+    public DescribeEventRuleListResponseBodyEventRules getEventRules() {
+        return this.eventRules;
     }
 
     public DescribeEventRuleListResponseBody setMessage(String message) {
@@ -51,14 +59,6 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeEventRuleListResponseBody setTotal(Integer total) {
-        this.total = total;
-        return this;
-    }
-    public Integer getTotal() {
-        return this.total;
-    }
-
     public DescribeEventRuleListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -67,31 +67,12 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeEventRuleListResponseBody setEventRules(DescribeEventRuleListResponseBodyEventRules eventRules) {
-        this.eventRules = eventRules;
+    public DescribeEventRuleListResponseBody setTotal(Integer total) {
+        this.total = total;
         return this;
     }
-    public DescribeEventRuleListResponseBodyEventRules getEventRules() {
-        return this.eventRules;
-    }
-
-    public static class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList extends TeaModel {
-        @NameInMap("LevelList")
-        public java.util.List<String> levelList;
-
-        public static DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList self = new DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList setLevelList(java.util.List<String> levelList) {
-            this.levelList = levelList;
-            return this;
-        }
-        public java.util.List<String> getLevelList() {
-            return this.levelList;
-        }
-
+    public Integer getTotal() {
+        return this.total;
     }
 
     public static class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternEventTypeList extends TeaModel {
@@ -109,6 +90,74 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         }
         public java.util.List<String> getEventTypeList() {
             return this.eventTypeList;
+        }
+
+    }
+
+    public static class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilterKeywords extends TeaModel {
+        @NameInMap("Keywords")
+        public java.util.List<String> keywords;
+
+        public static DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilterKeywords build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilterKeywords self = new DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilterKeywords();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilterKeywords setKeywords(java.util.List<String> keywords) {
+            this.keywords = keywords;
+            return this;
+        }
+        public java.util.List<String> getKeywords() {
+            return this.keywords;
+        }
+
+    }
+
+    public static class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilter extends TeaModel {
+        @NameInMap("Keywords")
+        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilterKeywords keywords;
+
+        @NameInMap("Relation")
+        public String relation;
+
+        public static DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilter build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilter self = new DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilter();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilter setKeywords(DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilterKeywords keywords) {
+            this.keywords = keywords;
+            return this;
+        }
+        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilterKeywords getKeywords() {
+            return this.keywords;
+        }
+
+        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilter setRelation(String relation) {
+            this.relation = relation;
+            return this;
+        }
+        public String getRelation() {
+            return this.relation;
+        }
+
+    }
+
+    public static class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList extends TeaModel {
+        @NameInMap("LevelList")
+        public java.util.List<String> levelList;
+
+        public static DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList self = new DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList setLevelList(java.util.List<String> levelList) {
+            this.levelList = levelList;
+            return this;
+        }
+        public java.util.List<String> getLevelList() {
+            return this.levelList;
         }
 
     }
@@ -133,37 +182,35 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern extends TeaModel {
-        @NameInMap("Product")
-        public String product;
-
-        @NameInMap("LevelList")
-        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList levelList;
+        @NameInMap("CustomFilters")
+        public String customFilters;
 
         @NameInMap("EventTypeList")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternEventTypeList eventTypeList;
 
+        @NameInMap("KeywordFilter")
+        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilter keywordFilter;
+
+        @NameInMap("LevelList")
+        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList levelList;
+
         @NameInMap("NameList")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternNameList nameList;
+
+        @NameInMap("Product")
+        public String product;
 
         public static DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern self = new DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern();
             return TeaModel.build(map, self);
         }
 
-        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern setProduct(String product) {
-            this.product = product;
+        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern setCustomFilters(String customFilters) {
+            this.customFilters = customFilters;
             return this;
         }
-        public String getProduct() {
-            return this.product;
-        }
-
-        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern setLevelList(DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList levelList) {
-            this.levelList = levelList;
-            return this;
-        }
-        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList getLevelList() {
-            return this.levelList;
+        public String getCustomFilters() {
+            return this.customFilters;
         }
 
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern setEventTypeList(DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternEventTypeList eventTypeList) {
@@ -174,12 +221,36 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             return this.eventTypeList;
         }
 
+        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern setKeywordFilter(DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilter keywordFilter) {
+            this.keywordFilter = keywordFilter;
+            return this;
+        }
+        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilter getKeywordFilter() {
+            return this.keywordFilter;
+        }
+
+        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern setLevelList(DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList levelList) {
+            this.levelList = levelList;
+            return this;
+        }
+        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList getLevelList() {
+            return this.levelList;
+        }
+
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern setNameList(DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternNameList nameList) {
             this.nameList = nameList;
             return this;
         }
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternNameList getNameList() {
             return this.nameList;
+        }
+
+        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern setProduct(String product) {
+            this.product = product;
+            return this;
+        }
+        public String getProduct() {
+            return this.product;
         }
 
     }
@@ -204,11 +275,14 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleListResponseBodyEventRulesEventRule extends TeaModel {
-        @NameInMap("EventType")
-        public String eventType;
-
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("EventPattern")
+        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPattern eventPattern;
+
+        @NameInMap("EventType")
+        public String eventType;
 
         @NameInMap("GroupId")
         public String groupId;
@@ -216,23 +290,15 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("SilenceTime")
+        public Long silenceTime;
+
         @NameInMap("State")
         public String state;
-
-        @NameInMap("EventPattern")
-        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPattern eventPattern;
 
         public static DescribeEventRuleListResponseBodyEventRulesEventRule build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventRuleListResponseBodyEventRulesEventRule self = new DescribeEventRuleListResponseBodyEventRulesEventRule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeEventRuleListResponseBodyEventRulesEventRule setEventType(String eventType) {
-            this.eventType = eventType;
-            return this;
-        }
-        public String getEventType() {
-            return this.eventType;
         }
 
         public DescribeEventRuleListResponseBodyEventRulesEventRule setDescription(String description) {
@@ -241,6 +307,22 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeEventRuleListResponseBodyEventRulesEventRule setEventPattern(DescribeEventRuleListResponseBodyEventRulesEventRuleEventPattern eventPattern) {
+            this.eventPattern = eventPattern;
+            return this;
+        }
+        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPattern getEventPattern() {
+            return this.eventPattern;
+        }
+
+        public DescribeEventRuleListResponseBodyEventRulesEventRule setEventType(String eventType) {
+            this.eventType = eventType;
+            return this;
+        }
+        public String getEventType() {
+            return this.eventType;
         }
 
         public DescribeEventRuleListResponseBodyEventRulesEventRule setGroupId(String groupId) {
@@ -259,20 +341,20 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             return this.name;
         }
 
+        public DescribeEventRuleListResponseBodyEventRulesEventRule setSilenceTime(Long silenceTime) {
+            this.silenceTime = silenceTime;
+            return this;
+        }
+        public Long getSilenceTime() {
+            return this.silenceTime;
+        }
+
         public DescribeEventRuleListResponseBodyEventRulesEventRule setState(String state) {
             this.state = state;
             return this;
         }
         public String getState() {
             return this.state;
-        }
-
-        public DescribeEventRuleListResponseBodyEventRulesEventRule setEventPattern(DescribeEventRuleListResponseBodyEventRulesEventRuleEventPattern eventPattern) {
-            this.eventPattern = eventPattern;
-            return this;
-        }
-        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPattern getEventPattern() {
-            return this.eventPattern;
         }
 
     }

@@ -4,49 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeProjectMetaResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("PageSize")
-    public String pageSize;
-
     @NameInMap("PageNumber")
     public String pageNumber;
 
-    @NameInMap("Total")
-    public String total;
+    @NameInMap("PageSize")
+    public String pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Resources")
     public DescribeProjectMetaResponseBodyResources resources;
 
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("Total")
+    public String total;
+
     public static DescribeProjectMetaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeProjectMetaResponseBody self = new DescribeProjectMetaResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeProjectMetaResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeProjectMetaResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public DescribeProjectMetaResponseBody setCode(String code) {
@@ -65,14 +49,6 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DescribeProjectMetaResponseBody setPageSize(String pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public String getPageSize() {
-        return this.pageSize;
-    }
-
     public DescribeProjectMetaResponseBody setPageNumber(String pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -81,12 +57,20 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeProjectMetaResponseBody setTotal(String total) {
-        this.total = total;
+    public DescribeProjectMetaResponseBody setPageSize(String pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getTotal() {
-        return this.total;
+    public String getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeProjectMetaResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeProjectMetaResponseBody setResources(DescribeProjectMetaResponseBodyResources resources) {
@@ -97,27 +81,35 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
         return this.resources;
     }
 
-    public static class DescribeProjectMetaResponseBodyResourcesResource extends TeaModel {
-        @NameInMap("Namespace")
-        public String namespace;
+    public DescribeProjectMetaResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
 
+    public DescribeProjectMetaResponseBody setTotal(String total) {
+        this.total = total;
+        return this;
+    }
+    public String getTotal() {
+        return this.total;
+    }
+
+    public static class DescribeProjectMetaResponseBodyResourcesResource extends TeaModel {
         @NameInMap("Description")
         public String description;
 
         @NameInMap("Labels")
         public String labels;
 
+        @NameInMap("Namespace")
+        public String namespace;
+
         public static DescribeProjectMetaResponseBodyResourcesResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeProjectMetaResponseBodyResourcesResource self = new DescribeProjectMetaResponseBodyResourcesResource();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeProjectMetaResponseBodyResourcesResource setNamespace(String namespace) {
-            this.namespace = namespace;
-            return this;
-        }
-        public String getNamespace() {
-            return this.namespace;
         }
 
         public DescribeProjectMetaResponseBodyResourcesResource setDescription(String description) {
@@ -134,6 +126,14 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
         }
         public String getLabels() {
             return this.labels;
+        }
+
+        public DescribeProjectMetaResponseBodyResourcesResource setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
     }

@@ -4,8 +4,8 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupInstancesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Category")
+    public String category;
 
     @NameInMap("GroupId")
     public Long groupId;
@@ -13,20 +13,20 @@ public class DeleteMonitorGroupInstancesRequest extends TeaModel {
     @NameInMap("InstanceIdList")
     public String instanceIdList;
 
-    @NameInMap("Category")
-    public String category;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DeleteMonitorGroupInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMonitorGroupInstancesRequest self = new DeleteMonitorGroupInstancesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteMonitorGroupInstancesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DeleteMonitorGroupInstancesRequest setCategory(String category) {
+        this.category = category;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getCategory() {
+        return this.category;
     }
 
     public DeleteMonitorGroupInstancesRequest setGroupId(Long groupId) {
@@ -45,12 +45,12 @@ public class DeleteMonitorGroupInstancesRequest extends TeaModel {
         return this.instanceIdList;
     }
 
-    public DeleteMonitorGroupInstancesRequest setCategory(String category) {
-        this.category = category;
+    public DeleteMonitorGroupInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getCategory() {
-        return this.category;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

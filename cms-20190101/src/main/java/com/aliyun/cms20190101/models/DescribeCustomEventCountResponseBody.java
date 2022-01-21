@@ -7,6 +7,9 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("CustomEventCounts")
+    public DescribeCustomEventCountResponseBodyCustomEventCounts customEventCounts;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("CustomEventCounts")
-    public DescribeCustomEventCountResponseBodyCustomEventCounts customEventCounts;
 
     public static DescribeCustomEventCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomEventCountResponseBody self = new DescribeCustomEventCountResponseBody();
@@ -30,6 +30,14 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeCustomEventCountResponseBody setCustomEventCounts(DescribeCustomEventCountResponseBodyCustomEventCounts customEventCounts) {
+        this.customEventCounts = customEventCounts;
+        return this;
+    }
+    public DescribeCustomEventCountResponseBodyCustomEventCounts getCustomEventCounts() {
+        return this.customEventCounts;
     }
 
     public DescribeCustomEventCountResponseBody setMessage(String message) {
@@ -56,35 +64,27 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeCustomEventCountResponseBody setCustomEventCounts(DescribeCustomEventCountResponseBodyCustomEventCounts customEventCounts) {
-        this.customEventCounts = customEventCounts;
-        return this;
-    }
-    public DescribeCustomEventCountResponseBodyCustomEventCounts getCustomEventCounts() {
-        return this.customEventCounts;
-    }
-
     public static class DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount extends TeaModel {
-        @NameInMap("Time")
-        public Long time;
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("Num")
         public Integer num;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Time")
+        public Long time;
 
         public static DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount build(java.util.Map<String, ?> map) throws Exception {
             DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount self = new DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount setTime(Long time) {
-            this.time = time;
+        public DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount setName(String name) {
+            this.name = name;
             return this;
         }
-        public Long getTime() {
-            return this.time;
+        public String getName() {
+            return this.name;
         }
 
         public DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount setNum(Integer num) {
@@ -95,12 +95,12 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
             return this.num;
         }
 
-        public DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount setName(String name) {
-            this.name = name;
+        public DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount setTime(Long time) {
+            this.time = time;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public Long getTime() {
+            return this.time;
         }
 
     }

@@ -7,6 +7,9 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public DescribeSiteMonitorQuotaResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public String success;
-
-    @NameInMap("Data")
-    public DescribeSiteMonitorQuotaResponseBodyData data;
 
     public static DescribeSiteMonitorQuotaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSiteMonitorQuotaResponseBody self = new DescribeSiteMonitorQuotaResponseBody();
@@ -30,6 +30,14 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeSiteMonitorQuotaResponseBody setData(DescribeSiteMonitorQuotaResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeSiteMonitorQuotaResponseBodyData getData() {
+        return this.data;
     }
 
     public DescribeSiteMonitorQuotaResponseBody setMessage(String message) {
@@ -56,20 +64,15 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeSiteMonitorQuotaResponseBody setData(DescribeSiteMonitorQuotaResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeSiteMonitorQuotaResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class DescribeSiteMonitorQuotaResponseBodyData extends TeaModel {
-        @NameInMap("SiteMonitorOperatorQuotaQuota")
-        public Integer siteMonitorOperatorQuotaQuota;
-
         @NameInMap("SecondMonitor")
         public Boolean secondMonitor;
+
+        @NameInMap("SiteMonitorIdcQuota")
+        public Integer siteMonitorIdcQuota;
+
+        @NameInMap("SiteMonitorOperatorQuotaQuota")
+        public Integer siteMonitorOperatorQuotaQuota;
 
         @NameInMap("SiteMonitorQuotaTaskUsed")
         public Integer siteMonitorQuotaTaskUsed;
@@ -80,20 +83,9 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
         @NameInMap("SiteMonitorVersion")
         public String siteMonitorVersion;
 
-        @NameInMap("SiteMonitorIdcQuota")
-        public Integer siteMonitorIdcQuota;
-
         public static DescribeSiteMonitorQuotaResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeSiteMonitorQuotaResponseBodyData self = new DescribeSiteMonitorQuotaResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSiteMonitorQuotaResponseBodyData setSiteMonitorOperatorQuotaQuota(Integer siteMonitorOperatorQuotaQuota) {
-            this.siteMonitorOperatorQuotaQuota = siteMonitorOperatorQuotaQuota;
-            return this;
-        }
-        public Integer getSiteMonitorOperatorQuotaQuota() {
-            return this.siteMonitorOperatorQuotaQuota;
         }
 
         public DescribeSiteMonitorQuotaResponseBodyData setSecondMonitor(Boolean secondMonitor) {
@@ -102,6 +94,22 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
         }
         public Boolean getSecondMonitor() {
             return this.secondMonitor;
+        }
+
+        public DescribeSiteMonitorQuotaResponseBodyData setSiteMonitorIdcQuota(Integer siteMonitorIdcQuota) {
+            this.siteMonitorIdcQuota = siteMonitorIdcQuota;
+            return this;
+        }
+        public Integer getSiteMonitorIdcQuota() {
+            return this.siteMonitorIdcQuota;
+        }
+
+        public DescribeSiteMonitorQuotaResponseBodyData setSiteMonitorOperatorQuotaQuota(Integer siteMonitorOperatorQuotaQuota) {
+            this.siteMonitorOperatorQuotaQuota = siteMonitorOperatorQuotaQuota;
+            return this;
+        }
+        public Integer getSiteMonitorOperatorQuotaQuota() {
+            return this.siteMonitorOperatorQuotaQuota;
         }
 
         public DescribeSiteMonitorQuotaResponseBodyData setSiteMonitorQuotaTaskUsed(Integer siteMonitorQuotaTaskUsed) {
@@ -126,14 +134,6 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
         }
         public String getSiteMonitorVersion() {
             return this.siteMonitorVersion;
-        }
-
-        public DescribeSiteMonitorQuotaResponseBodyData setSiteMonitorIdcQuota(Integer siteMonitorIdcQuota) {
-            this.siteMonitorIdcQuota = siteMonitorIdcQuota;
-            return this;
-        }
-        public Integer getSiteMonitorIdcQuota() {
-            return this.siteMonitorIdcQuota;
         }
 
     }

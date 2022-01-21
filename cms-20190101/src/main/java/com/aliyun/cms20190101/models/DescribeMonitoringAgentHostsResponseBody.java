@@ -4,14 +4,11 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("Hosts")
+    public DescribeMonitoringAgentHostsResponseBodyHosts hosts;
 
     @NameInMap("Message")
     public String message;
@@ -25,31 +22,18 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
     @NameInMap("PageTotal")
     public Integer pageTotal;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     @NameInMap("Total")
     public Integer total;
-
-    @NameInMap("Hosts")
-    public DescribeMonitoringAgentHostsResponseBodyHosts hosts;
 
     public static DescribeMonitoringAgentHostsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitoringAgentHostsResponseBody self = new DescribeMonitoringAgentHostsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeMonitoringAgentHostsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeMonitoringAgentHostsResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public DescribeMonitoringAgentHostsResponseBody setCode(String code) {
@@ -58,6 +42,14 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeMonitoringAgentHostsResponseBody setHosts(DescribeMonitoringAgentHostsResponseBodyHosts hosts) {
+        this.hosts = hosts;
+        return this;
+    }
+    public DescribeMonitoringAgentHostsResponseBodyHosts getHosts() {
+        return this.hosts;
     }
 
     public DescribeMonitoringAgentHostsResponseBody setMessage(String message) {
@@ -92,6 +84,22 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
         return this.pageTotal;
     }
 
+    public DescribeMonitoringAgentHostsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeMonitoringAgentHostsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public DescribeMonitoringAgentHostsResponseBody setTotal(Integer total) {
         this.total = total;
         return this;
@@ -100,124 +108,52 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
         return this.total;
     }
 
-    public DescribeMonitoringAgentHostsResponseBody setHosts(DescribeMonitoringAgentHostsResponseBodyHosts hosts) {
-        this.hosts = hosts;
-        return this;
-    }
-    public DescribeMonitoringAgentHostsResponseBodyHosts getHosts() {
-        return this.hosts;
-    }
-
     public static class DescribeMonitoringAgentHostsResponseBodyHostsHost extends TeaModel {
-        @NameInMap("SerialNumber")
-        public String serialNumber;
-
-        @NameInMap("NatIp")
-        public String natIp;
-
-        @NameInMap("HostName")
-        public String hostName;
+        @NameInMap("AgentVersion")
+        public String agentVersion;
 
         @NameInMap("AliUid")
         public Long aliUid;
 
-        @NameInMap("NetworkType")
-        public String networkType;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("isAliyunHost")
-        public Boolean isAliyunHost;
-
         @NameInMap("EipAddress")
         public String eipAddress;
-
-        @NameInMap("AgentVersion")
-        public String agentVersion;
-
-        @NameInMap("IpGroup")
-        public String ipGroup;
 
         @NameInMap("EipId")
         public String eipId;
 
-        @NameInMap("Region")
-        public String region;
+        @NameInMap("HostName")
+        public String hostName;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
+        @NameInMap("IpGroup")
+        public String ipGroup;
+
+        @NameInMap("NatIp")
+        public String natIp;
+
+        @NameInMap("NetworkType")
+        public String networkType;
+
         @NameInMap("OperatingSystem")
         public String operatingSystem;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("SerialNumber")
+        public String serialNumber;
+
+        @NameInMap("isAliyunHost")
+        public Boolean isAliyunHost;
 
         public static DescribeMonitoringAgentHostsResponseBodyHostsHost build(java.util.Map<String, ?> map) throws Exception {
             DescribeMonitoringAgentHostsResponseBodyHostsHost self = new DescribeMonitoringAgentHostsResponseBodyHostsHost();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeMonitoringAgentHostsResponseBodyHostsHost setSerialNumber(String serialNumber) {
-            this.serialNumber = serialNumber;
-            return this;
-        }
-        public String getSerialNumber() {
-            return this.serialNumber;
-        }
-
-        public DescribeMonitoringAgentHostsResponseBodyHostsHost setNatIp(String natIp) {
-            this.natIp = natIp;
-            return this;
-        }
-        public String getNatIp() {
-            return this.natIp;
-        }
-
-        public DescribeMonitoringAgentHostsResponseBodyHostsHost setHostName(String hostName) {
-            this.hostName = hostName;
-            return this;
-        }
-        public String getHostName() {
-            return this.hostName;
-        }
-
-        public DescribeMonitoringAgentHostsResponseBodyHostsHost setAliUid(Long aliUid) {
-            this.aliUid = aliUid;
-            return this;
-        }
-        public Long getAliUid() {
-            return this.aliUid;
-        }
-
-        public DescribeMonitoringAgentHostsResponseBodyHostsHost setNetworkType(String networkType) {
-            this.networkType = networkType;
-            return this;
-        }
-        public String getNetworkType() {
-            return this.networkType;
-        }
-
-        public DescribeMonitoringAgentHostsResponseBodyHostsHost setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeMonitoringAgentHostsResponseBodyHostsHost setIsAliyunHost(Boolean isAliyunHost) {
-            this.isAliyunHost = isAliyunHost;
-            return this;
-        }
-        public Boolean getIsAliyunHost() {
-            return this.isAliyunHost;
-        }
-
-        public DescribeMonitoringAgentHostsResponseBodyHostsHost setEipAddress(String eipAddress) {
-            this.eipAddress = eipAddress;
-            return this;
-        }
-        public String getEipAddress() {
-            return this.eipAddress;
         }
 
         public DescribeMonitoringAgentHostsResponseBodyHostsHost setAgentVersion(String agentVersion) {
@@ -228,12 +164,20 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             return this.agentVersion;
         }
 
-        public DescribeMonitoringAgentHostsResponseBodyHostsHost setIpGroup(String ipGroup) {
-            this.ipGroup = ipGroup;
+        public DescribeMonitoringAgentHostsResponseBodyHostsHost setAliUid(Long aliUid) {
+            this.aliUid = aliUid;
             return this;
         }
-        public String getIpGroup() {
-            return this.ipGroup;
+        public Long getAliUid() {
+            return this.aliUid;
+        }
+
+        public DescribeMonitoringAgentHostsResponseBodyHostsHost setEipAddress(String eipAddress) {
+            this.eipAddress = eipAddress;
+            return this;
+        }
+        public String getEipAddress() {
+            return this.eipAddress;
         }
 
         public DescribeMonitoringAgentHostsResponseBodyHostsHost setEipId(String eipId) {
@@ -244,12 +188,20 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             return this.eipId;
         }
 
-        public DescribeMonitoringAgentHostsResponseBodyHostsHost setRegion(String region) {
-            this.region = region;
+        public DescribeMonitoringAgentHostsResponseBodyHostsHost setHostName(String hostName) {
+            this.hostName = hostName;
             return this;
         }
-        public String getRegion() {
-            return this.region;
+        public String getHostName() {
+            return this.hostName;
+        }
+
+        public DescribeMonitoringAgentHostsResponseBodyHostsHost setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DescribeMonitoringAgentHostsResponseBodyHostsHost setInstanceTypeFamily(String instanceTypeFamily) {
@@ -260,12 +212,60 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
             return this.instanceTypeFamily;
         }
 
+        public DescribeMonitoringAgentHostsResponseBodyHostsHost setIpGroup(String ipGroup) {
+            this.ipGroup = ipGroup;
+            return this;
+        }
+        public String getIpGroup() {
+            return this.ipGroup;
+        }
+
+        public DescribeMonitoringAgentHostsResponseBodyHostsHost setNatIp(String natIp) {
+            this.natIp = natIp;
+            return this;
+        }
+        public String getNatIp() {
+            return this.natIp;
+        }
+
+        public DescribeMonitoringAgentHostsResponseBodyHostsHost setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
         public DescribeMonitoringAgentHostsResponseBodyHostsHost setOperatingSystem(String operatingSystem) {
             this.operatingSystem = operatingSystem;
             return this;
         }
         public String getOperatingSystem() {
             return this.operatingSystem;
+        }
+
+        public DescribeMonitoringAgentHostsResponseBodyHostsHost setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeMonitoringAgentHostsResponseBodyHostsHost setSerialNumber(String serialNumber) {
+            this.serialNumber = serialNumber;
+            return this;
+        }
+        public String getSerialNumber() {
+            return this.serialNumber;
+        }
+
+        public DescribeMonitoringAgentHostsResponseBodyHostsHost setIsAliyunHost(Boolean isAliyunHost) {
+            this.isAliyunHost = isAliyunHost;
+            return this;
+        }
+        public Boolean getIsAliyunHost() {
+            return this.isAliyunHost;
         }
 
     }

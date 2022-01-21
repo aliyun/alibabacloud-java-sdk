@@ -7,6 +7,9 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("FailData")
+    public PutMetricRuleTargetsResponseBodyFailData failData;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("FailData")
-    public PutMetricRuleTargetsResponseBodyFailData failData;
 
     public static PutMetricRuleTargetsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PutMetricRuleTargetsResponseBody self = new PutMetricRuleTargetsResponseBody();
@@ -30,6 +30,14 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public PutMetricRuleTargetsResponseBody setFailData(PutMetricRuleTargetsResponseBodyFailData failData) {
+        this.failData = failData;
+        return this;
+    }
+    public PutMetricRuleTargetsResponseBodyFailData getFailData() {
+        return this.failData;
     }
 
     public PutMetricRuleTargetsResponseBody setMessage(String message) {
@@ -56,20 +64,12 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public PutMetricRuleTargetsResponseBody setFailData(PutMetricRuleTargetsResponseBodyFailData failData) {
-        this.failData = failData;
-        return this;
-    }
-    public PutMetricRuleTargetsResponseBodyFailData getFailData() {
-        return this.failData;
-    }
-
     public static class PutMetricRuleTargetsResponseBodyFailDataTargetsTarget extends TeaModel {
-        @NameInMap("Id")
-        public String id;
-
         @NameInMap("Arn")
         public String arn;
+
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("Level")
         public String level;
@@ -79,20 +79,20 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public PutMetricRuleTargetsResponseBodyFailDataTargetsTarget setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
         public PutMetricRuleTargetsResponseBodyFailDataTargetsTarget setArn(String arn) {
             this.arn = arn;
             return this;
         }
         public String getArn() {
             return this.arn;
+        }
+
+        public PutMetricRuleTargetsResponseBodyFailDataTargetsTarget setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public PutMetricRuleTargetsResponseBodyFailDataTargetsTarget setLevel(String level) {

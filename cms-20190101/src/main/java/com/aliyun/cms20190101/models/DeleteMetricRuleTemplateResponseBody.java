@@ -13,11 +13,11 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Resource")
     public DeleteMetricRuleTemplateResponseBodyResource resource;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DeleteMetricRuleTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteMetricRuleTemplateResponseBody self = new DeleteMetricRuleTemplateResponseBody();
@@ -48,20 +48,20 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteMetricRuleTemplateResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public DeleteMetricRuleTemplateResponseBody setResource(DeleteMetricRuleTemplateResponseBodyResource resource) {
         this.resource = resource;
         return this;
     }
     public DeleteMetricRuleTemplateResponseBodyResource getResource() {
         return this.resource;
+    }
+
+    public DeleteMetricRuleTemplateResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DeleteMetricRuleTemplateResponseBodyResource extends TeaModel {

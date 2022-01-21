@@ -10,17 +10,17 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("NotifyPolicyList")
+    public DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyList notifyPolicyList;
+
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Total")
-    public Integer total;
 
     @NameInMap("Success")
     public String success;
 
-    @NameInMap("NotifyPolicyList")
-    public DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyList notifyPolicyList;
+    @NameInMap("Total")
+    public Integer total;
 
     public static DescribeMonitorGroupNotifyPolicyListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitorGroupNotifyPolicyListResponseBody self = new DescribeMonitorGroupNotifyPolicyListResponseBody();
@@ -43,20 +43,20 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         return this.message;
     }
 
+    public DescribeMonitorGroupNotifyPolicyListResponseBody setNotifyPolicyList(DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyList notifyPolicyList) {
+        this.notifyPolicyList = notifyPolicyList;
+        return this;
+    }
+    public DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyList getNotifyPolicyList() {
+        return this.notifyPolicyList;
+    }
+
     public DescribeMonitorGroupNotifyPolicyListResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeMonitorGroupNotifyPolicyListResponseBody setTotal(Integer total) {
-        this.total = total;
-        return this;
-    }
-    public Integer getTotal() {
-        return this.total;
     }
 
     public DescribeMonitorGroupNotifyPolicyListResponseBody setSuccess(String success) {
@@ -67,29 +67,29 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeMonitorGroupNotifyPolicyListResponseBody setNotifyPolicyList(DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyList notifyPolicyList) {
-        this.notifyPolicyList = notifyPolicyList;
+    public DescribeMonitorGroupNotifyPolicyListResponseBody setTotal(Integer total) {
+        this.total = total;
         return this;
     }
-    public DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyList getNotifyPolicyList() {
-        return this.notifyPolicyList;
+    public Integer getTotal() {
+        return this.total;
     }
 
     public static class DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy extends TeaModel {
         @NameInMap("EndTime")
         public Long endTime;
 
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("StartTime")
-        public Long startTime;
-
         @NameInMap("GroupId")
         public String groupId;
 
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy build(java.util.Map<String, ?> map) throws Exception {
             DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy self = new DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy();
@@ -102,22 +102,6 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         }
         public Long getEndTime() {
             return this.endTime;
-        }
-
-        public DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
         }
 
         public DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy setGroupId(String groupId) {
@@ -134,6 +118,22 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

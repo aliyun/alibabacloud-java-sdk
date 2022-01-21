@@ -7,26 +7,29 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ContactParameters")
     public DescribeEventRuleTargetListResponseBodyContactParameters contactParameters;
 
     @NameInMap("FcParameters")
     public DescribeEventRuleTargetListResponseBodyFcParameters fcParameters;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("MnsParameters")
     public DescribeEventRuleTargetListResponseBodyMnsParameters mnsParameters;
 
-    @NameInMap("WebhookParameters")
-    public DescribeEventRuleTargetListResponseBodyWebhookParameters webhookParameters;
+    @NameInMap("OpenApiParameters")
+    public DescribeEventRuleTargetListResponseBodyOpenApiParameters openApiParameters;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("SlsParameters")
     public DescribeEventRuleTargetListResponseBodySlsParameters slsParameters;
+
+    @NameInMap("WebhookParameters")
+    public DescribeEventRuleTargetListResponseBodyWebhookParameters webhookParameters;
 
     public static DescribeEventRuleTargetListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEventRuleTargetListResponseBody self = new DescribeEventRuleTargetListResponseBody();
@@ -39,22 +42,6 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public DescribeEventRuleTargetListResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DescribeEventRuleTargetListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeEventRuleTargetListResponseBody setContactParameters(DescribeEventRuleTargetListResponseBodyContactParameters contactParameters) {
@@ -73,6 +60,14 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         return this.fcParameters;
     }
 
+    public DescribeEventRuleTargetListResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public DescribeEventRuleTargetListResponseBody setMnsParameters(DescribeEventRuleTargetListResponseBodyMnsParameters mnsParameters) {
         this.mnsParameters = mnsParameters;
         return this;
@@ -81,12 +76,20 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         return this.mnsParameters;
     }
 
-    public DescribeEventRuleTargetListResponseBody setWebhookParameters(DescribeEventRuleTargetListResponseBodyWebhookParameters webhookParameters) {
-        this.webhookParameters = webhookParameters;
+    public DescribeEventRuleTargetListResponseBody setOpenApiParameters(DescribeEventRuleTargetListResponseBodyOpenApiParameters openApiParameters) {
+        this.openApiParameters = openApiParameters;
         return this;
     }
-    public DescribeEventRuleTargetListResponseBodyWebhookParameters getWebhookParameters() {
-        return this.webhookParameters;
+    public DescribeEventRuleTargetListResponseBodyOpenApiParameters getOpenApiParameters() {
+        return this.openApiParameters;
+    }
+
+    public DescribeEventRuleTargetListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeEventRuleTargetListResponseBody setSlsParameters(DescribeEventRuleTargetListResponseBodySlsParameters slsParameters) {
@@ -97,15 +100,23 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         return this.slsParameters;
     }
 
+    public DescribeEventRuleTargetListResponseBody setWebhookParameters(DescribeEventRuleTargetListResponseBodyWebhookParameters webhookParameters) {
+        this.webhookParameters = webhookParameters;
+        return this;
+    }
+    public DescribeEventRuleTargetListResponseBodyWebhookParameters getWebhookParameters() {
+        return this.webhookParameters;
+    }
+
     public static class DescribeEventRuleTargetListResponseBodyContactParametersContactParameter extends TeaModel {
         @NameInMap("ContactGroupName")
         public String contactGroupName;
 
-        @NameInMap("Level")
-        public String level;
-
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Level")
+        public String level;
 
         public static DescribeEventRuleTargetListResponseBodyContactParametersContactParameter build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventRuleTargetListResponseBodyContactParametersContactParameter self = new DescribeEventRuleTargetListResponseBodyContactParametersContactParameter();
@@ -120,20 +131,20 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             return this.contactGroupName;
         }
 
-        public DescribeEventRuleTargetListResponseBodyContactParametersContactParameter setLevel(String level) {
-            this.level = level;
-            return this;
-        }
-        public String getLevel() {
-            return this.level;
-        }
-
         public DescribeEventRuleTargetListResponseBodyContactParametersContactParameter setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public DescribeEventRuleTargetListResponseBodyContactParametersContactParameter setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
         }
 
     }
@@ -158,14 +169,11 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleTargetListResponseBodyFcParametersFCParameter extends TeaModel {
-        @NameInMap("ServiceName")
-        public String serviceName;
+        @NameInMap("Arn")
+        public String arn;
 
         @NameInMap("FunctionName")
         public String functionName;
-
-        @NameInMap("Arn")
-        public String arn;
 
         @NameInMap("Id")
         public String id;
@@ -173,25 +181,12 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
+        @NameInMap("ServiceName")
+        public String serviceName;
+
         public static DescribeEventRuleTargetListResponseBodyFcParametersFCParameter build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventRuleTargetListResponseBodyFcParametersFCParameter self = new DescribeEventRuleTargetListResponseBodyFcParametersFCParameter();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeEventRuleTargetListResponseBodyFcParametersFCParameter setServiceName(String serviceName) {
-            this.serviceName = serviceName;
-            return this;
-        }
-        public String getServiceName() {
-            return this.serviceName;
-        }
-
-        public DescribeEventRuleTargetListResponseBodyFcParametersFCParameter setFunctionName(String functionName) {
-            this.functionName = functionName;
-            return this;
-        }
-        public String getFunctionName() {
-            return this.functionName;
         }
 
         public DescribeEventRuleTargetListResponseBodyFcParametersFCParameter setArn(String arn) {
@@ -200,6 +195,14 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
         public String getArn() {
             return this.arn;
+        }
+
+        public DescribeEventRuleTargetListResponseBodyFcParametersFCParameter setFunctionName(String functionName) {
+            this.functionName = functionName;
+            return this;
+        }
+        public String getFunctionName() {
+            return this.functionName;
         }
 
         public DescribeEventRuleTargetListResponseBodyFcParametersFCParameter setId(String id) {
@@ -216,6 +219,14 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public DescribeEventRuleTargetListResponseBodyFcParametersFCParameter setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
         }
 
     }
@@ -240,29 +251,21 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter extends TeaModel {
-        @NameInMap("Queue")
-        public String queue;
-
         @NameInMap("Arn")
         public String arn;
-
-        @NameInMap("Region")
-        public String region;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("Queue")
+        public String queue;
+
+        @NameInMap("Region")
+        public String region;
+
         public static DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter self = new DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter setQueue(String queue) {
-            this.queue = queue;
-            return this;
-        }
-        public String getQueue() {
-            return this.queue;
         }
 
         public DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter setArn(String arn) {
@@ -273,20 +276,28 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             return this.arn;
         }
 
-        public DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
-        }
-
         public DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter setQueue(String queue) {
+            this.queue = queue;
+            return this;
+        }
+        public String getQueue() {
+            return this.queue;
+        }
+
+        public DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
     }
@@ -310,49 +321,50 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter extends TeaModel {
-        @NameInMap("Url")
-        public String url;
+    public static class DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters extends TeaModel {
+        @NameInMap("Action")
+        public String action;
 
-        @NameInMap("Method")
-        public String method;
-
-        @NameInMap("Protocol")
-        public String protocol;
+        @NameInMap("Arn")
+        public String arn;
 
         @NameInMap("Id")
         public String id;
 
-        public static DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter build(java.util.Map<String, ?> map) throws Exception {
-            DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter self = new DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter();
+        @NameInMap("Product")
+        public String product;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("Role")
+        public String role;
+
+        @NameInMap("Version")
+        public String version;
+
+        public static DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters self = new DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters();
             return TeaModel.build(map, self);
         }
 
-        public DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter setUrl(String url) {
-            this.url = url;
+        public DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters setAction(String action) {
+            this.action = action;
             return this;
         }
-        public String getUrl() {
-            return this.url;
+        public String getAction() {
+            return this.action;
         }
 
-        public DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter setMethod(String method) {
-            this.method = method;
+        public DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters setArn(String arn) {
+            this.arn = arn;
             return this;
         }
-        public String getMethod() {
-            return this.method;
+        public String getArn() {
+            return this.arn;
         }
 
-        public DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter setProtocol(String protocol) {
-            this.protocol = protocol;
-            return this;
-        }
-        public String getProtocol() {
-            return this.protocol;
-        }
-
-        public DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter setId(String id) {
+        public DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters setId(String id) {
             this.id = id;
             return this;
         }
@@ -360,62 +372,78 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             return this.id;
         }
 
+        public DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters setProduct(String product) {
+            this.product = product;
+            return this;
+        }
+        public String getProduct() {
+            return this.product;
+        }
+
+        public DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+        public DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
     }
 
-    public static class DescribeEventRuleTargetListResponseBodyWebhookParameters extends TeaModel {
-        @NameInMap("WebhookParameter")
-        public java.util.List<DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter> webhookParameter;
+    public static class DescribeEventRuleTargetListResponseBodyOpenApiParameters extends TeaModel {
+        @NameInMap("OpenApiParameters")
+        public java.util.List<DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters> openApiParameters;
 
-        public static DescribeEventRuleTargetListResponseBodyWebhookParameters build(java.util.Map<String, ?> map) throws Exception {
-            DescribeEventRuleTargetListResponseBodyWebhookParameters self = new DescribeEventRuleTargetListResponseBodyWebhookParameters();
+        public static DescribeEventRuleTargetListResponseBodyOpenApiParameters build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEventRuleTargetListResponseBodyOpenApiParameters self = new DescribeEventRuleTargetListResponseBodyOpenApiParameters();
             return TeaModel.build(map, self);
         }
 
-        public DescribeEventRuleTargetListResponseBodyWebhookParameters setWebhookParameter(java.util.List<DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter> webhookParameter) {
-            this.webhookParameter = webhookParameter;
+        public DescribeEventRuleTargetListResponseBodyOpenApiParameters setOpenApiParameters(java.util.List<DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters> openApiParameters) {
+            this.openApiParameters = openApiParameters;
             return this;
         }
-        public java.util.List<DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter> getWebhookParameter() {
-            return this.webhookParameter;
+        public java.util.List<DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters> getOpenApiParameters() {
+            return this.openApiParameters;
         }
 
     }
 
     public static class DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter extends TeaModel {
-        @NameInMap("Project")
-        public String project;
-
-        @NameInMap("LogStore")
-        public String logStore;
-
         @NameInMap("Arn")
         public String arn;
-
-        @NameInMap("Region")
-        public String region;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("LogStore")
+        public String logStore;
+
+        @NameInMap("Project")
+        public String project;
+
+        @NameInMap("Region")
+        public String region;
+
         public static DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter self = new DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter setProject(String project) {
-            this.project = project;
-            return this;
-        }
-        public String getProject() {
-            return this.project;
-        }
-
-        public DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter setLogStore(String logStore) {
-            this.logStore = logStore;
-            return this;
-        }
-        public String getLogStore() {
-            return this.logStore;
         }
 
         public DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter setArn(String arn) {
@@ -426,20 +454,36 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             return this.arn;
         }
 
-        public DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
-        }
-
         public DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter setLogStore(String logStore) {
+            this.logStore = logStore;
+            return this;
+        }
+        public String getLogStore() {
+            return this.logStore;
+        }
+
+        public DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter setProject(String project) {
+            this.project = project;
+            return this;
+        }
+        public String getProject() {
+            return this.project;
+        }
+
+        public DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
     }
@@ -459,6 +503,77 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
         public java.util.List<DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter> getSlsParameter() {
             return this.slsParameter;
+        }
+
+    }
+
+    public static class DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter extends TeaModel {
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Method")
+        public String method;
+
+        @NameInMap("Protocol")
+        public String protocol;
+
+        @NameInMap("Url")
+        public String url;
+
+        public static DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter self = new DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter setMethod(String method) {
+            this.method = method;
+            return this;
+        }
+        public String getMethod() {
+            return this.method;
+        }
+
+        public DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class DescribeEventRuleTargetListResponseBodyWebhookParameters extends TeaModel {
+        @NameInMap("WebhookParameter")
+        public java.util.List<DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter> webhookParameter;
+
+        public static DescribeEventRuleTargetListResponseBodyWebhookParameters build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEventRuleTargetListResponseBodyWebhookParameters self = new DescribeEventRuleTargetListResponseBodyWebhookParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeEventRuleTargetListResponseBodyWebhookParameters setWebhookParameter(java.util.List<DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter> webhookParameter) {
+            this.webhookParameter = webhookParameter;
+            return this;
+        }
+        public java.util.List<DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter> getWebhookParameter() {
+            return this.webhookParameter;
         }
 
     }

@@ -10,14 +10,14 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("NodeProcesses")
+    public DescribeMonitoringAgentProcessesResponseBodyNodeProcesses nodeProcesses;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("NodeProcesses")
-    public DescribeMonitoringAgentProcessesResponseBodyNodeProcesses nodeProcesses;
 
     public static DescribeMonitoringAgentProcessesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitoringAgentProcessesResponseBody self = new DescribeMonitoringAgentProcessesResponseBody();
@@ -40,6 +40,14 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         return this.message;
     }
 
+    public DescribeMonitoringAgentProcessesResponseBody setNodeProcesses(DescribeMonitoringAgentProcessesResponseBodyNodeProcesses nodeProcesses) {
+        this.nodeProcesses = nodeProcesses;
+        return this;
+    }
+    public DescribeMonitoringAgentProcessesResponseBodyNodeProcesses getNodeProcesses() {
+        return this.nodeProcesses;
+    }
+
     public DescribeMonitoringAgentProcessesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -56,60 +64,28 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeMonitoringAgentProcessesResponseBody setNodeProcesses(DescribeMonitoringAgentProcessesResponseBodyNodeProcesses nodeProcesses) {
-        this.nodeProcesses = nodeProcesses;
-        return this;
-    }
-    public DescribeMonitoringAgentProcessesResponseBodyNodeProcesses getNodeProcesses() {
-        return this.nodeProcesses;
-    }
-
     public static class DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess extends TeaModel {
-        @NameInMap("ProcessName")
-        public String processName;
-
-        @NameInMap("ProcessId")
-        public Long processId;
+        @NameInMap("Command")
+        public String command;
 
         @NameInMap("GroupId")
         public String groupId;
 
-        @NameInMap("Command")
-        public String command;
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("ProcessId")
+        public Long processId;
+
+        @NameInMap("ProcessName")
+        public String processName;
 
         @NameInMap("ProcessUser")
         public String processUser;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
-
         public static DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess build(java.util.Map<String, ?> map) throws Exception {
             DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess self = new DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess setProcessName(String processName) {
-            this.processName = processName;
-            return this;
-        }
-        public String getProcessName() {
-            return this.processName;
-        }
-
-        public DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess setProcessId(Long processId) {
-            this.processId = processId;
-            return this;
-        }
-        public Long getProcessId() {
-            return this.processId;
-        }
-
-        public DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
         }
 
         public DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess setCommand(String command) {
@@ -120,12 +96,12 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             return this.command;
         }
 
-        public DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess setProcessUser(String processUser) {
-            this.processUser = processUser;
+        public DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess setGroupId(String groupId) {
+            this.groupId = groupId;
             return this;
         }
-        public String getProcessUser() {
-            return this.processUser;
+        public String getGroupId() {
+            return this.groupId;
         }
 
         public DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess setInstanceId(String instanceId) {
@@ -134,6 +110,30 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess setProcessId(Long processId) {
+            this.processId = processId;
+            return this;
+        }
+        public Long getProcessId() {
+            return this.processId;
+        }
+
+        public DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess setProcessName(String processName) {
+            this.processName = processName;
+            return this;
+        }
+        public String getProcessName() {
+            return this.processName;
+        }
+
+        public DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess setProcessUser(String processUser) {
+            this.processUser = processUser;
+            return this;
+        }
+        public String getProcessUser() {
+            return this.processUser;
         }
 
     }

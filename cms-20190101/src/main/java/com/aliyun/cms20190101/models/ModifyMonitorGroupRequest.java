@@ -4,8 +4,8 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyMonitorGroupRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ContactGroups")
+    public String contactGroups;
 
     @NameInMap("GroupId")
     public String groupId;
@@ -13,20 +13,20 @@ public class ModifyMonitorGroupRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
-    @NameInMap("ContactGroups")
-    public String contactGroups;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ModifyMonitorGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyMonitorGroupRequest self = new ModifyMonitorGroupRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyMonitorGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifyMonitorGroupRequest setContactGroups(String contactGroups) {
+        this.contactGroups = contactGroups;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getContactGroups() {
+        return this.contactGroups;
     }
 
     public ModifyMonitorGroupRequest setGroupId(String groupId) {
@@ -45,12 +45,12 @@ public class ModifyMonitorGroupRequest extends TeaModel {
         return this.groupName;
     }
 
-    public ModifyMonitorGroupRequest setContactGroups(String contactGroups) {
-        this.contactGroups = contactGroups;
+    public ModifyMonitorGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getContactGroups() {
-        return this.contactGroups;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

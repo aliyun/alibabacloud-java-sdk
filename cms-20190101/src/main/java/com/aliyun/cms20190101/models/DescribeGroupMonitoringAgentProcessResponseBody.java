@@ -4,12 +4,6 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public String code;
 
@@ -22,31 +16,21 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    @NameInMap("Total")
-    public String total;
-
     @NameInMap("Processes")
     public DescribeGroupMonitoringAgentProcessResponseBodyProcesses processes;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("Total")
+    public String total;
 
     public static DescribeGroupMonitoringAgentProcessResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGroupMonitoringAgentProcessResponseBody self = new DescribeGroupMonitoringAgentProcessResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeGroupMonitoringAgentProcessResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeGroupMonitoringAgentProcessResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public DescribeGroupMonitoringAgentProcessResponseBody setCode(String code) {
@@ -81,14 +65,6 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeGroupMonitoringAgentProcessResponseBody setTotal(String total) {
-        this.total = total;
-        return this;
-    }
-    public String getTotal() {
-        return this.total;
-    }
-
     public DescribeGroupMonitoringAgentProcessResponseBody setProcesses(DescribeGroupMonitoringAgentProcessResponseBodyProcesses processes) {
         this.processes = processes;
         return this;
@@ -97,78 +73,36 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         return this.processes;
     }
 
-    public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Function")
-        public String function;
-
-        public static DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress build(java.util.Map<String, ?> map) throws Exception {
-            DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress self = new DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress setFunction(String function) {
-            this.function = function;
-            return this;
-        }
-        public String getFunction() {
-            return this.function;
-        }
-
+    public DescribeGroupMonitoringAgentProcessResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpress extends TeaModel {
-        @NameInMap("MatchExpress")
-        public java.util.List<DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress> matchExpress;
+    public DescribeGroupMonitoringAgentProcessResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
 
-        public static DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpress build(java.util.Map<String, ?> map) throws Exception {
-            DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpress self = new DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpress();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpress setMatchExpress(java.util.List<DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress> matchExpress) {
-            this.matchExpress = matchExpress;
-            return this;
-        }
-        public java.util.List<DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress> getMatchExpress() {
-            return this.matchExpress;
-        }
-
+    public DescribeGroupMonitoringAgentProcessResponseBody setTotal(String total) {
+        this.total = total;
+        return this;
+    }
+    public String getTotal() {
+        return this.total;
     }
 
     public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
-        @NameInMap("SilenceTime")
-        public String silenceTime;
-
-        @NameInMap("Webhook")
-        public String webhook;
-
-        @NameInMap("Times")
-        public String times;
+        @NameInMap("EffectiveInterval")
+        public String effectiveInterval;
 
         @NameInMap("EscalationsLevel")
         public String escalationsLevel;
@@ -176,14 +110,20 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         @NameInMap("NoEffectiveInterval")
         public String noEffectiveInterval;
 
-        @NameInMap("EffectiveInterval")
-        public String effectiveInterval;
+        @NameInMap("SilenceTime")
+        public String silenceTime;
+
+        @NameInMap("Statistics")
+        public String statistics;
 
         @NameInMap("Threshold")
         public String threshold;
 
-        @NameInMap("Statistics")
-        public String statistics;
+        @NameInMap("Times")
+        public String times;
+
+        @NameInMap("Webhook")
+        public String webhook;
 
         public static DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig self = new DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig();
@@ -198,28 +138,12 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             return this.comparisonOperator;
         }
 
-        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig setSilenceTime(String silenceTime) {
-            this.silenceTime = silenceTime;
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig setEffectiveInterval(String effectiveInterval) {
+            this.effectiveInterval = effectiveInterval;
             return this;
         }
-        public String getSilenceTime() {
-            return this.silenceTime;
-        }
-
-        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig setWebhook(String webhook) {
-            this.webhook = webhook;
-            return this;
-        }
-        public String getWebhook() {
-            return this.webhook;
-        }
-
-        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig setTimes(String times) {
-            this.times = times;
-            return this;
-        }
-        public String getTimes() {
-            return this.times;
+        public String getEffectiveInterval() {
+            return this.effectiveInterval;
         }
 
         public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig setEscalationsLevel(String escalationsLevel) {
@@ -238,12 +162,20 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             return this.noEffectiveInterval;
         }
 
-        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig setEffectiveInterval(String effectiveInterval) {
-            this.effectiveInterval = effectiveInterval;
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig setSilenceTime(String silenceTime) {
+            this.silenceTime = silenceTime;
             return this;
         }
-        public String getEffectiveInterval() {
-            return this.effectiveInterval;
+        public String getSilenceTime() {
+            return this.silenceTime;
+        }
+
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig setStatistics(String statistics) {
+            this.statistics = statistics;
+            return this;
+        }
+        public String getStatistics() {
+            return this.statistics;
         }
 
         public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig setThreshold(String threshold) {
@@ -254,12 +186,20 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             return this.threshold;
         }
 
-        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig setStatistics(String statistics) {
-            this.statistics = statistics;
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig setTimes(String times) {
+            this.times = times;
             return this;
         }
-        public String getStatistics() {
-            return this.statistics;
+        public String getTimes() {
+            return this.times;
+        }
+
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig setWebhook(String webhook) {
+            this.webhook = webhook;
+            return this;
+        }
+        public String getWebhook() {
+            return this.webhook;
         }
 
     }
@@ -283,12 +223,69 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess extends TeaModel {
-        @NameInMap("ProcessName")
-        public String processName;
+    public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress extends TeaModel {
+        @NameInMap("Function")
+        public String function;
 
-        @NameInMap("MatchExpressFilterRelation")
-        public String matchExpressFilterRelation;
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress self = new DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress setFunction(String function) {
+            this.function = function;
+            return this;
+        }
+        public String getFunction() {
+            return this.function;
+        }
+
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpress extends TeaModel {
+        @NameInMap("MatchExpress")
+        public java.util.List<DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress> matchExpress;
+
+        public static DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpress build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpress self = new DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpress();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpress setMatchExpress(java.util.List<DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress> matchExpress) {
+            this.matchExpress = matchExpress;
+            return this;
+        }
+        public java.util.List<DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress> getMatchExpress() {
+            return this.matchExpress;
+        }
+
+    }
+
+    public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess extends TeaModel {
+        @NameInMap("AlertConfig")
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfig alertConfig;
 
         @NameInMap("GroupId")
         public String groupId;
@@ -299,28 +296,23 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         @NameInMap("MatchExpress")
         public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpress matchExpress;
 
-        @NameInMap("AlertConfig")
-        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfig alertConfig;
+        @NameInMap("MatchExpressFilterRelation")
+        public String matchExpressFilterRelation;
+
+        @NameInMap("ProcessName")
+        public String processName;
 
         public static DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess build(java.util.Map<String, ?> map) throws Exception {
             DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess self = new DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess();
             return TeaModel.build(map, self);
         }
 
-        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess setProcessName(String processName) {
-            this.processName = processName;
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess setAlertConfig(DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfig alertConfig) {
+            this.alertConfig = alertConfig;
             return this;
         }
-        public String getProcessName() {
-            return this.processName;
-        }
-
-        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess setMatchExpressFilterRelation(String matchExpressFilterRelation) {
-            this.matchExpressFilterRelation = matchExpressFilterRelation;
-            return this;
-        }
-        public String getMatchExpressFilterRelation() {
-            return this.matchExpressFilterRelation;
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfig getAlertConfig() {
+            return this.alertConfig;
         }
 
         public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess setGroupId(String groupId) {
@@ -347,12 +339,20 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             return this.matchExpress;
         }
 
-        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess setAlertConfig(DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfig alertConfig) {
-            this.alertConfig = alertConfig;
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess setMatchExpressFilterRelation(String matchExpressFilterRelation) {
+            this.matchExpressFilterRelation = matchExpressFilterRelation;
             return this;
         }
-        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfig getAlertConfig() {
-            return this.alertConfig;
+        public String getMatchExpressFilterRelation() {
+            return this.matchExpressFilterRelation;
+        }
+
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess setProcessName(String processName) {
+            this.processName = processName;
+            return this;
+        }
+        public String getProcessName() {
+            return this.processName;
         }
 
     }

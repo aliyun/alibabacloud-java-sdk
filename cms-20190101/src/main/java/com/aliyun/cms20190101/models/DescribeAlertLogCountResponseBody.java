@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertLogCountResponseBody extends TeaModel {
+    @NameInMap("AlertLogCount")
+    public java.util.List<DescribeAlertLogCountResponseBodyAlertLogCount> alertLogCount;
+
     @NameInMap("Code")
     public String code;
 
@@ -16,12 +19,17 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("AlertLogCount")
-    public java.util.List<DescribeAlertLogCountResponseBodyAlertLogCount> alertLogCount;
-
     public static DescribeAlertLogCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlertLogCountResponseBody self = new DescribeAlertLogCountResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAlertLogCountResponseBody setAlertLogCount(java.util.List<DescribeAlertLogCountResponseBodyAlertLogCount> alertLogCount) {
+        this.alertLogCount = alertLogCount;
+        return this;
+    }
+    public java.util.List<DescribeAlertLogCountResponseBodyAlertLogCount> getAlertLogCount() {
+        return this.alertLogCount;
     }
 
     public DescribeAlertLogCountResponseBody setCode(String code) {
@@ -54,14 +62,6 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public DescribeAlertLogCountResponseBody setAlertLogCount(java.util.List<DescribeAlertLogCountResponseBodyAlertLogCount> alertLogCount) {
-        this.alertLogCount = alertLogCount;
-        return this;
-    }
-    public java.util.List<DescribeAlertLogCountResponseBodyAlertLogCount> getAlertLogCount() {
-        return this.alertLogCount;
     }
 
     public static class DescribeAlertLogCountResponseBodyAlertLogCountLogs extends TeaModel {

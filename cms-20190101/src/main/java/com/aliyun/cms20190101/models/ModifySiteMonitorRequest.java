@@ -4,20 +4,17 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifySiteMonitorRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Address")
     public String address;
 
-    @NameInMap("TaskId")
-    public String taskId;
-
-    @NameInMap("TaskName")
-    public String taskName;
+    @NameInMap("AlertIds")
+    public String alertIds;
 
     @NameInMap("Interval")
     public String interval;
+
+    @NameInMap("IntervalUnit")
+    public String intervalUnit;
 
     @NameInMap("IspCities")
     public String ispCities;
@@ -25,23 +22,18 @@ public class ModifySiteMonitorRequest extends TeaModel {
     @NameInMap("OptionsJson")
     public String optionsJson;
 
-    @NameInMap("AlertIds")
-    public String alertIds;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("IntervalUnit")
-    public String intervalUnit;
+    @NameInMap("TaskId")
+    public String taskId;
+
+    @NameInMap("TaskName")
+    public String taskName;
 
     public static ModifySiteMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySiteMonitorRequest self = new ModifySiteMonitorRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifySiteMonitorRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ModifySiteMonitorRequest setAddress(String address) {
@@ -52,20 +44,12 @@ public class ModifySiteMonitorRequest extends TeaModel {
         return this.address;
     }
 
-    public ModifySiteMonitorRequest setTaskId(String taskId) {
-        this.taskId = taskId;
+    public ModifySiteMonitorRequest setAlertIds(String alertIds) {
+        this.alertIds = alertIds;
         return this;
     }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
-    public ModifySiteMonitorRequest setTaskName(String taskName) {
-        this.taskName = taskName;
-        return this;
-    }
-    public String getTaskName() {
-        return this.taskName;
+    public String getAlertIds() {
+        return this.alertIds;
     }
 
     public ModifySiteMonitorRequest setInterval(String interval) {
@@ -74,6 +58,14 @@ public class ModifySiteMonitorRequest extends TeaModel {
     }
     public String getInterval() {
         return this.interval;
+    }
+
+    public ModifySiteMonitorRequest setIntervalUnit(String intervalUnit) {
+        this.intervalUnit = intervalUnit;
+        return this;
+    }
+    public String getIntervalUnit() {
+        return this.intervalUnit;
     }
 
     public ModifySiteMonitorRequest setIspCities(String ispCities) {
@@ -92,20 +84,28 @@ public class ModifySiteMonitorRequest extends TeaModel {
         return this.optionsJson;
     }
 
-    public ModifySiteMonitorRequest setAlertIds(String alertIds) {
-        this.alertIds = alertIds;
+    public ModifySiteMonitorRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAlertIds() {
-        return this.alertIds;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public ModifySiteMonitorRequest setIntervalUnit(String intervalUnit) {
-        this.intervalUnit = intervalUnit;
+    public ModifySiteMonitorRequest setTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public String getIntervalUnit() {
-        return this.intervalUnit;
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    public ModifySiteMonitorRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
     }
 
 }

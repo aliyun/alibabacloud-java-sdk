@@ -7,20 +7,20 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
     @NameInMap("AccessKey")
     public String accessKey;
 
-    @NameInMap("SecretKey")
-    public String secretKey;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("SecretKey")
+    public String secretKey;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DescribeMonitoringAgentAccessKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitoringAgentAccessKeyResponseBody self = new DescribeMonitoringAgentAccessKeyResponseBody();
@@ -33,30 +33,6 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
     }
     public String getAccessKey() {
         return this.accessKey;
-    }
-
-    public DescribeMonitoringAgentAccessKeyResponseBody setSecretKey(String secretKey) {
-        this.secretKey = secretKey;
-        return this;
-    }
-    public String getSecretKey() {
-        return this.secretKey;
-    }
-
-    public DescribeMonitoringAgentAccessKeyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeMonitoringAgentAccessKeyResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public DescribeMonitoringAgentAccessKeyResponseBody setCode(Integer code) {
@@ -73,6 +49,30 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public DescribeMonitoringAgentAccessKeyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeMonitoringAgentAccessKeyResponseBody setSecretKey(String secretKey) {
+        this.secretKey = secretKey;
+        return this;
+    }
+    public String getSecretKey() {
+        return this.secretKey;
+    }
+
+    public DescribeMonitoringAgentAccessKeyResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

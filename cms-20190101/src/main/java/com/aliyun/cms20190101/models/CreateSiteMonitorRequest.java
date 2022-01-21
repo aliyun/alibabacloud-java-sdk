@@ -4,23 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateSiteMonitorRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Address")
     public String address;
 
-    @NameInMap("TaskType")
-    public String taskType;
-
-    @NameInMap("TaskName")
-    public String taskName;
+    @NameInMap("AlertIds")
+    public String alertIds;
 
     @NameInMap("Interval")
     public String interval;
-
-    @NameInMap("IntervalUnit")
-    public String intervalUnit;
 
     @NameInMap("IspCities")
     public String ispCities;
@@ -28,20 +19,18 @@ public class CreateSiteMonitorRequest extends TeaModel {
     @NameInMap("OptionsJson")
     public String optionsJson;
 
-    @NameInMap("AlertIds")
-    public String alertIds;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("TaskName")
+    public String taskName;
+
+    @NameInMap("TaskType")
+    public String taskType;
 
     public static CreateSiteMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSiteMonitorRequest self = new CreateSiteMonitorRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateSiteMonitorRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateSiteMonitorRequest setAddress(String address) {
@@ -52,20 +41,12 @@ public class CreateSiteMonitorRequest extends TeaModel {
         return this.address;
     }
 
-    public CreateSiteMonitorRequest setTaskType(String taskType) {
-        this.taskType = taskType;
+    public CreateSiteMonitorRequest setAlertIds(String alertIds) {
+        this.alertIds = alertIds;
         return this;
     }
-    public String getTaskType() {
-        return this.taskType;
-    }
-
-    public CreateSiteMonitorRequest setTaskName(String taskName) {
-        this.taskName = taskName;
-        return this;
-    }
-    public String getTaskName() {
-        return this.taskName;
+    public String getAlertIds() {
+        return this.alertIds;
     }
 
     public CreateSiteMonitorRequest setInterval(String interval) {
@@ -74,14 +55,6 @@ public class CreateSiteMonitorRequest extends TeaModel {
     }
     public String getInterval() {
         return this.interval;
-    }
-
-    public CreateSiteMonitorRequest setIntervalUnit(String intervalUnit) {
-        this.intervalUnit = intervalUnit;
-        return this;
-    }
-    public String getIntervalUnit() {
-        return this.intervalUnit;
     }
 
     public CreateSiteMonitorRequest setIspCities(String ispCities) {
@@ -100,12 +73,28 @@ public class CreateSiteMonitorRequest extends TeaModel {
         return this.optionsJson;
     }
 
-    public CreateSiteMonitorRequest setAlertIds(String alertIds) {
-        this.alertIds = alertIds;
+    public CreateSiteMonitorRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAlertIds() {
-        return this.alertIds;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateSiteMonitorRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    public CreateSiteMonitorRequest setTaskType(String taskType) {
+        this.taskType = taskType;
+        return this;
+    }
+    public String getTaskType() {
+        return this.taskType;
     }
 
 }

@@ -4,18 +4,26 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteSiteMonitorsRequest extends TeaModel {
+    @NameInMap("IsDeleteAlarms")
+    public Boolean isDeleteAlarms;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("TaskIds")
     public String taskIds;
 
-    @NameInMap("IsDeleteAlarms")
-    public Boolean isDeleteAlarms;
-
     public static DeleteSiteMonitorsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSiteMonitorsRequest self = new DeleteSiteMonitorsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSiteMonitorsRequest setIsDeleteAlarms(Boolean isDeleteAlarms) {
+        this.isDeleteAlarms = isDeleteAlarms;
+        return this;
+    }
+    public Boolean getIsDeleteAlarms() {
+        return this.isDeleteAlarms;
     }
 
     public DeleteSiteMonitorsRequest setRegionId(String regionId) {
@@ -32,14 +40,6 @@ public class DeleteSiteMonitorsRequest extends TeaModel {
     }
     public String getTaskIds() {
         return this.taskIds;
-    }
-
-    public DeleteSiteMonitorsRequest setIsDeleteAlarms(Boolean isDeleteAlarms) {
-        this.isDeleteAlarms = isDeleteAlarms;
-        return this;
-    }
-    public Boolean getIsDeleteAlarms() {
-        return this.isDeleteAlarms;
     }
 
 }

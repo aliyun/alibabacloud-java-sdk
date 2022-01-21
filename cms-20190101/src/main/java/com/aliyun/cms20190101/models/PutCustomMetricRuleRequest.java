@@ -4,8 +4,35 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutCustomMetricRuleRequest extends TeaModel {
+    @NameInMap("ComparisonOperator")
+    public String comparisonOperator;
+
+    @NameInMap("ContactGroups")
+    public String contactGroups;
+
+    @NameInMap("EffectiveInterval")
+    public String effectiveInterval;
+
+    @NameInMap("EmailSubject")
+    public String emailSubject;
+
+    @NameInMap("EvaluationCount")
+    public Integer evaluationCount;
+
     @NameInMap("GroupId")
     public String groupId;
+
+    @NameInMap("Level")
+    public String level;
+
+    @NameInMap("MetricName")
+    public String metricName;
+
+    @NameInMap("Period")
+    public String period;
+
+    @NameInMap("Resources")
+    public String resources;
 
     @NameInMap("RuleId")
     public String ruleId;
@@ -13,48 +40,61 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
-    @NameInMap("MetricName")
-    public String metricName;
-
-    @NameInMap("Resources")
-    public String resources;
-
-    @NameInMap("ContactGroups")
-    public String contactGroups;
-
-    @NameInMap("Webhook")
-    public String webhook;
-
-    @NameInMap("EffectiveInterval")
-    public String effectiveInterval;
-
     @NameInMap("SilenceTime")
     public Integer silenceTime;
-
-    @NameInMap("Period")
-    public String period;
-
-    @NameInMap("EmailSubject")
-    public String emailSubject;
-
-    @NameInMap("Threshold")
-    public String threshold;
-
-    @NameInMap("Level")
-    public String level;
-
-    @NameInMap("EvaluationCount")
-    public Integer evaluationCount;
 
     @NameInMap("Statistics")
     public String statistics;
 
-    @NameInMap("ComparisonOperator")
-    public String comparisonOperator;
+    @NameInMap("Threshold")
+    public String threshold;
+
+    @NameInMap("Webhook")
+    public String webhook;
 
     public static PutCustomMetricRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         PutCustomMetricRuleRequest self = new PutCustomMetricRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PutCustomMetricRuleRequest setComparisonOperator(String comparisonOperator) {
+        this.comparisonOperator = comparisonOperator;
+        return this;
+    }
+    public String getComparisonOperator() {
+        return this.comparisonOperator;
+    }
+
+    public PutCustomMetricRuleRequest setContactGroups(String contactGroups) {
+        this.contactGroups = contactGroups;
+        return this;
+    }
+    public String getContactGroups() {
+        return this.contactGroups;
+    }
+
+    public PutCustomMetricRuleRequest setEffectiveInterval(String effectiveInterval) {
+        this.effectiveInterval = effectiveInterval;
+        return this;
+    }
+    public String getEffectiveInterval() {
+        return this.effectiveInterval;
+    }
+
+    public PutCustomMetricRuleRequest setEmailSubject(String emailSubject) {
+        this.emailSubject = emailSubject;
+        return this;
+    }
+    public String getEmailSubject() {
+        return this.emailSubject;
+    }
+
+    public PutCustomMetricRuleRequest setEvaluationCount(Integer evaluationCount) {
+        this.evaluationCount = evaluationCount;
+        return this;
+    }
+    public Integer getEvaluationCount() {
+        return this.evaluationCount;
     }
 
     public PutCustomMetricRuleRequest setGroupId(String groupId) {
@@ -63,6 +103,38 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public PutCustomMetricRuleRequest setLevel(String level) {
+        this.level = level;
+        return this;
+    }
+    public String getLevel() {
+        return this.level;
+    }
+
+    public PutCustomMetricRuleRequest setMetricName(String metricName) {
+        this.metricName = metricName;
+        return this;
+    }
+    public String getMetricName() {
+        return this.metricName;
+    }
+
+    public PutCustomMetricRuleRequest setPeriod(String period) {
+        this.period = period;
+        return this;
+    }
+    public String getPeriod() {
+        return this.period;
+    }
+
+    public PutCustomMetricRuleRequest setResources(String resources) {
+        this.resources = resources;
+        return this;
+    }
+    public String getResources() {
+        return this.resources;
     }
 
     public PutCustomMetricRuleRequest setRuleId(String ruleId) {
@@ -81,92 +153,12 @@ public class PutCustomMetricRuleRequest extends TeaModel {
         return this.ruleName;
     }
 
-    public PutCustomMetricRuleRequest setMetricName(String metricName) {
-        this.metricName = metricName;
-        return this;
-    }
-    public String getMetricName() {
-        return this.metricName;
-    }
-
-    public PutCustomMetricRuleRequest setResources(String resources) {
-        this.resources = resources;
-        return this;
-    }
-    public String getResources() {
-        return this.resources;
-    }
-
-    public PutCustomMetricRuleRequest setContactGroups(String contactGroups) {
-        this.contactGroups = contactGroups;
-        return this;
-    }
-    public String getContactGroups() {
-        return this.contactGroups;
-    }
-
-    public PutCustomMetricRuleRequest setWebhook(String webhook) {
-        this.webhook = webhook;
-        return this;
-    }
-    public String getWebhook() {
-        return this.webhook;
-    }
-
-    public PutCustomMetricRuleRequest setEffectiveInterval(String effectiveInterval) {
-        this.effectiveInterval = effectiveInterval;
-        return this;
-    }
-    public String getEffectiveInterval() {
-        return this.effectiveInterval;
-    }
-
     public PutCustomMetricRuleRequest setSilenceTime(Integer silenceTime) {
         this.silenceTime = silenceTime;
         return this;
     }
     public Integer getSilenceTime() {
         return this.silenceTime;
-    }
-
-    public PutCustomMetricRuleRequest setPeriod(String period) {
-        this.period = period;
-        return this;
-    }
-    public String getPeriod() {
-        return this.period;
-    }
-
-    public PutCustomMetricRuleRequest setEmailSubject(String emailSubject) {
-        this.emailSubject = emailSubject;
-        return this;
-    }
-    public String getEmailSubject() {
-        return this.emailSubject;
-    }
-
-    public PutCustomMetricRuleRequest setThreshold(String threshold) {
-        this.threshold = threshold;
-        return this;
-    }
-    public String getThreshold() {
-        return this.threshold;
-    }
-
-    public PutCustomMetricRuleRequest setLevel(String level) {
-        this.level = level;
-        return this;
-    }
-    public String getLevel() {
-        return this.level;
-    }
-
-    public PutCustomMetricRuleRequest setEvaluationCount(Integer evaluationCount) {
-        this.evaluationCount = evaluationCount;
-        return this;
-    }
-    public Integer getEvaluationCount() {
-        return this.evaluationCount;
     }
 
     public PutCustomMetricRuleRequest setStatistics(String statistics) {
@@ -177,12 +169,20 @@ public class PutCustomMetricRuleRequest extends TeaModel {
         return this.statistics;
     }
 
-    public PutCustomMetricRuleRequest setComparisonOperator(String comparisonOperator) {
-        this.comparisonOperator = comparisonOperator;
+    public PutCustomMetricRuleRequest setThreshold(String threshold) {
+        this.threshold = threshold;
         return this;
     }
-    public String getComparisonOperator() {
-        return this.comparisonOperator;
+    public String getThreshold() {
+        return this.threshold;
+    }
+
+    public PutCustomMetricRuleRequest setWebhook(String webhook) {
+        this.webhook = webhook;
+        return this;
+    }
+    public String getWebhook() {
+        return this.webhook;
     }
 
 }

@@ -53,6 +53,282 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         return this.resourceQuota;
     }
 
+    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi extends TeaModel {
+        @NameInMap("QuotaLimit")
+        public Integer quotaLimit;
+
+        @NameInMap("QuotaPackage")
+        public Integer quotaPackage;
+
+        @NameInMap("QuotaUsed")
+        public Integer quotaUsed;
+
+        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi setQuotaLimit(Integer quotaLimit) {
+            this.quotaLimit = quotaLimit;
+            return this;
+        }
+        public Integer getQuotaLimit() {
+            return this.quotaLimit;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi setQuotaPackage(Integer quotaPackage) {
+            this.quotaPackage = quotaPackage;
+            return this;
+        }
+        public Integer getQuotaPackage() {
+            return this.quotaPackage;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi setQuotaUsed(Integer quotaUsed) {
+            this.quotaUsed = quotaUsed;
+            return this;
+        }
+        public Integer getQuotaUsed() {
+            return this.quotaUsed;
+        }
+
+    }
+
+    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor extends TeaModel {
+        @NameInMap("QuotaLimit")
+        public Integer quotaLimit;
+
+        @NameInMap("QuotaPackage")
+        public Integer quotaPackage;
+
+        @NameInMap("QuotaUsed")
+        public Integer quotaUsed;
+
+        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor setQuotaLimit(Integer quotaLimit) {
+            this.quotaLimit = quotaLimit;
+            return this;
+        }
+        public Integer getQuotaLimit() {
+            return this.quotaLimit;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor setQuotaPackage(Integer quotaPackage) {
+            this.quotaPackage = quotaPackage;
+            return this;
+        }
+        public Integer getQuotaPackage() {
+            return this.quotaPackage;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor setQuotaUsed(Integer quotaUsed) {
+            this.quotaUsed = quotaUsed;
+            return this;
+        }
+        public Integer getQuotaUsed() {
+            return this.quotaUsed;
+        }
+
+    }
+
+    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota extends TeaModel {
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("SuitInfo")
+        public String suitInfo;
+
+        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota setSuitInfo(String suitInfo) {
+            this.suitInfo = suitInfo;
+            return this;
+        }
+        public String getSuitInfo() {
+            return this.suitInfo;
+        }
+
+    }
+
+    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor extends TeaModel {
+        @NameInMap("QuotaLimit")
+        public Integer quotaLimit;
+
+        @NameInMap("QuotaPackage")
+        public Integer quotaPackage;
+
+        @NameInMap("QuotaUsed")
+        public Integer quotaUsed;
+
+        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor setQuotaLimit(Integer quotaLimit) {
+            this.quotaLimit = quotaLimit;
+            return this;
+        }
+        public Integer getQuotaLimit() {
+            return this.quotaLimit;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor setQuotaPackage(Integer quotaPackage) {
+            this.quotaPackage = quotaPackage;
+            return this;
+        }
+        public Integer getQuotaPackage() {
+            return this.quotaPackage;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor setQuotaUsed(Integer quotaUsed) {
+            this.quotaUsed = quotaUsed;
+            return this;
+        }
+        public Integer getQuotaUsed() {
+            return this.quotaUsed;
+        }
+
+    }
+
+    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor extends TeaModel {
+        @NameInMap("QuotaLimit")
+        public Integer quotaLimit;
+
+        @NameInMap("QuotaPackage")
+        public Integer quotaPackage;
+
+        @NameInMap("QuotaUsed")
+        public Integer quotaUsed;
+
+        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor setQuotaLimit(Integer quotaLimit) {
+            this.quotaLimit = quotaLimit;
+            return this;
+        }
+        public Integer getQuotaLimit() {
+            return this.quotaLimit;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor setQuotaPackage(Integer quotaPackage) {
+            this.quotaPackage = quotaPackage;
+            return this;
+        }
+        public Integer getQuotaPackage() {
+            return this.quotaPackage;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor setQuotaUsed(Integer quotaUsed) {
+            this.quotaUsed = quotaUsed;
+            return this;
+        }
+        public Integer getQuotaUsed() {
+            return this.quotaUsed;
+        }
+
+    }
+
+    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone extends TeaModel {
+        @NameInMap("QuotaLimit")
+        public Integer quotaLimit;
+
+        @NameInMap("QuotaPackage")
+        public Integer quotaPackage;
+
+        @NameInMap("QuotaUsed")
+        public Integer quotaUsed;
+
+        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone setQuotaLimit(Integer quotaLimit) {
+            this.quotaLimit = quotaLimit;
+            return this;
+        }
+        public Integer getQuotaLimit() {
+            return this.quotaLimit;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone setQuotaPackage(Integer quotaPackage) {
+            this.quotaPackage = quotaPackage;
+            return this;
+        }
+        public Integer getQuotaPackage() {
+            return this.quotaPackage;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone setQuotaUsed(Integer quotaUsed) {
+            this.quotaUsed = quotaUsed;
+            return this;
+        }
+        public Integer getQuotaUsed() {
+            return this.quotaUsed;
+        }
+
+    }
+
+    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS extends TeaModel {
+        @NameInMap("QuotaLimit")
+        public Integer quotaLimit;
+
+        @NameInMap("QuotaPackage")
+        public Integer quotaPackage;
+
+        @NameInMap("QuotaUsed")
+        public Integer quotaUsed;
+
+        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS setQuotaLimit(Integer quotaLimit) {
+            this.quotaLimit = quotaLimit;
+            return this;
+        }
+        public Integer getQuotaLimit() {
+            return this.quotaLimit;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS setQuotaPackage(Integer quotaPackage) {
+            this.quotaPackage = quotaPackage;
+            return this;
+        }
+        public Integer getQuotaPackage() {
+            return this.quotaPackage;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS setQuotaUsed(Integer quotaUsed) {
+            this.quotaUsed = quotaUsed;
+            return this;
+        }
+        public Integer getQuotaUsed() {
+            return this.quotaUsed;
+        }
+
+    }
+
     public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe extends TeaModel {
         @NameInMap("QuotaLimit")
         public Integer quotaLimit;
@@ -176,291 +452,33 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     }
 
-    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor extends TeaModel {
-        @NameInMap("QuotaLimit")
-        public Integer quotaLimit;
-
-        @NameInMap("QuotaPackage")
-        public Integer quotaPackage;
-
-        @NameInMap("QuotaUsed")
-        public Integer quotaUsed;
-
-        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor setQuotaLimit(Integer quotaLimit) {
-            this.quotaLimit = quotaLimit;
-            return this;
-        }
-        public Integer getQuotaLimit() {
-            return this.quotaLimit;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor setQuotaPackage(Integer quotaPackage) {
-            this.quotaPackage = quotaPackage;
-            return this;
-        }
-        public Integer getQuotaPackage() {
-            return this.quotaPackage;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor setQuotaUsed(Integer quotaUsed) {
-            this.quotaUsed = quotaUsed;
-            return this;
-        }
-        public Integer getQuotaUsed() {
-            return this.quotaUsed;
-        }
-
-    }
-
-    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor extends TeaModel {
-        @NameInMap("QuotaLimit")
-        public Integer quotaLimit;
-
-        @NameInMap("QuotaPackage")
-        public Integer quotaPackage;
-
-        @NameInMap("QuotaUsed")
-        public Integer quotaUsed;
-
-        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor setQuotaLimit(Integer quotaLimit) {
-            this.quotaLimit = quotaLimit;
-            return this;
-        }
-        public Integer getQuotaLimit() {
-            return this.quotaLimit;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor setQuotaPackage(Integer quotaPackage) {
-            this.quotaPackage = quotaPackage;
-            return this;
-        }
-        public Integer getQuotaPackage() {
-            return this.quotaPackage;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor setQuotaUsed(Integer quotaUsed) {
-            this.quotaUsed = quotaUsed;
-            return this;
-        }
-        public Integer getQuotaUsed() {
-            return this.quotaUsed;
-        }
-
-    }
-
-    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor extends TeaModel {
-        @NameInMap("QuotaLimit")
-        public Integer quotaLimit;
-
-        @NameInMap("QuotaPackage")
-        public Integer quotaPackage;
-
-        @NameInMap("QuotaUsed")
-        public Integer quotaUsed;
-
-        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor setQuotaLimit(Integer quotaLimit) {
-            this.quotaLimit = quotaLimit;
-            return this;
-        }
-        public Integer getQuotaLimit() {
-            return this.quotaLimit;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor setQuotaPackage(Integer quotaPackage) {
-            this.quotaPackage = quotaPackage;
-            return this;
-        }
-        public Integer getQuotaPackage() {
-            return this.quotaPackage;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor setQuotaUsed(Integer quotaUsed) {
-            this.quotaUsed = quotaUsed;
-            return this;
-        }
-        public Integer getQuotaUsed() {
-            return this.quotaUsed;
-        }
-
-    }
-
-    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi extends TeaModel {
-        @NameInMap("QuotaLimit")
-        public Integer quotaLimit;
-
-        @NameInMap("QuotaPackage")
-        public Integer quotaPackage;
-
-        @NameInMap("QuotaUsed")
-        public Integer quotaUsed;
-
-        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi setQuotaLimit(Integer quotaLimit) {
-            this.quotaLimit = quotaLimit;
-            return this;
-        }
-        public Integer getQuotaLimit() {
-            return this.quotaLimit;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi setQuotaPackage(Integer quotaPackage) {
-            this.quotaPackage = quotaPackage;
-            return this;
-        }
-        public Integer getQuotaPackage() {
-            return this.quotaPackage;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi setQuotaUsed(Integer quotaUsed) {
-            this.quotaUsed = quotaUsed;
-            return this;
-        }
-        public Integer getQuotaUsed() {
-            return this.quotaUsed;
-        }
-
-    }
-
-    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS extends TeaModel {
-        @NameInMap("QuotaLimit")
-        public Integer quotaLimit;
-
-        @NameInMap("QuotaPackage")
-        public Integer quotaPackage;
-
-        @NameInMap("QuotaUsed")
-        public Integer quotaUsed;
-
-        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS setQuotaLimit(Integer quotaLimit) {
-            this.quotaLimit = quotaLimit;
-            return this;
-        }
-        public Integer getQuotaLimit() {
-            return this.quotaLimit;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS setQuotaPackage(Integer quotaPackage) {
-            this.quotaPackage = quotaPackage;
-            return this;
-        }
-        public Integer getQuotaPackage() {
-            return this.quotaPackage;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS setQuotaUsed(Integer quotaUsed) {
-            this.quotaUsed = quotaUsed;
-            return this;
-        }
-        public Integer getQuotaUsed() {
-            return this.quotaUsed;
-        }
-
-    }
-
-    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone extends TeaModel {
-        @NameInMap("QuotaLimit")
-        public Integer quotaLimit;
-
-        @NameInMap("QuotaPackage")
-        public Integer quotaPackage;
-
-        @NameInMap("QuotaUsed")
-        public Integer quotaUsed;
-
-        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone setQuotaLimit(Integer quotaLimit) {
-            this.quotaLimit = quotaLimit;
-            return this;
-        }
-        public Integer getQuotaLimit() {
-            return this.quotaLimit;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone setQuotaPackage(Integer quotaPackage) {
-            this.quotaPackage = quotaPackage;
-            return this;
-        }
-        public Integer getQuotaPackage() {
-            return this.quotaPackage;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone setQuotaUsed(Integer quotaUsed) {
-            this.quotaUsed = quotaUsed;
-            return this;
-        }
-        public Integer getQuotaUsed() {
-            return this.quotaUsed;
-        }
-
-    }
-
-    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota extends TeaModel {
-        @NameInMap("SuitInfo")
-        public String suitInfo;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota setSuitInfo(String suitInfo) {
-            this.suitInfo = suitInfo;
-            return this;
-        }
-        public String getSuitInfo() {
-            return this.suitInfo;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-    }
-
     public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota extends TeaModel {
-        @NameInMap("SuitInfo")
-        public String suitInfo;
+        @NameInMap("Api")
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi api;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
+        @NameInMap("CustomMonitor")
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor customMonitor;
+
+        @NameInMap("EnterpriseQuota")
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota enterpriseQuota;
+
+        @NameInMap("EventMonitor")
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor eventMonitor;
 
         @NameInMap("ExpireTime")
         public String expireTime;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("LogMonitor")
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor logMonitor;
+
+        @NameInMap("Phone")
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone phone;
+
+        @NameInMap("SMS")
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS SMS;
 
         @NameInMap("SiteMonitorEcsProbe")
         public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe siteMonitorEcsProbe;
@@ -471,38 +489,52 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         @NameInMap("SiteMonitorTask")
         public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask siteMonitorTask;
 
-        @NameInMap("CustomMonitor")
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor customMonitor;
-
-        @NameInMap("EventMonitor")
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor eventMonitor;
-
-        @NameInMap("LogMonitor")
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor logMonitor;
-
-        @NameInMap("Api")
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi api;
-
-        @NameInMap("SMS")
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS SMS;
-
-        @NameInMap("Phone")
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone phone;
-
-        @NameInMap("EnterpriseQuota")
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota enterpriseQuota;
+        @NameInMap("SuitInfo")
+        public String suitInfo;
 
         public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota build(java.util.Map<String, ?> map) throws Exception {
             DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setSuitInfo(String suitInfo) {
-            this.suitInfo = suitInfo;
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setApi(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi api) {
+            this.api = api;
             return this;
         }
-        public String getSuitInfo() {
-            return this.suitInfo;
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi getApi() {
+            return this.api;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setCustomMonitor(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor customMonitor) {
+            this.customMonitor = customMonitor;
+            return this;
+        }
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor getCustomMonitor() {
+            return this.customMonitor;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setEnterpriseQuota(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota enterpriseQuota) {
+            this.enterpriseQuota = enterpriseQuota;
+            return this;
+        }
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota getEnterpriseQuota() {
+            return this.enterpriseQuota;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setEventMonitor(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor eventMonitor) {
+            this.eventMonitor = eventMonitor;
+            return this;
+        }
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor getEventMonitor() {
+            return this.eventMonitor;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
         }
 
         public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setInstanceId(String instanceId) {
@@ -513,12 +545,28 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             return this.instanceId;
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setLogMonitor(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor logMonitor) {
+            this.logMonitor = logMonitor;
             return this;
         }
-        public String getExpireTime() {
-            return this.expireTime;
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor getLogMonitor() {
+            return this.logMonitor;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setPhone(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone phone) {
+            this.phone = phone;
+            return this;
+        }
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone getPhone() {
+            return this.phone;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setSMS(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS SMS) {
+            this.SMS = SMS;
+            return this;
+        }
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS getSMS() {
+            return this.SMS;
         }
 
         public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setSiteMonitorEcsProbe(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe siteMonitorEcsProbe) {
@@ -545,60 +593,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             return this.siteMonitorTask;
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setCustomMonitor(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor customMonitor) {
-            this.customMonitor = customMonitor;
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setSuitInfo(String suitInfo) {
+            this.suitInfo = suitInfo;
             return this;
         }
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor getCustomMonitor() {
-            return this.customMonitor;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setEventMonitor(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor eventMonitor) {
-            this.eventMonitor = eventMonitor;
-            return this;
-        }
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor getEventMonitor() {
-            return this.eventMonitor;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setLogMonitor(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor logMonitor) {
-            this.logMonitor = logMonitor;
-            return this;
-        }
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor getLogMonitor() {
-            return this.logMonitor;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setApi(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi api) {
-            this.api = api;
-            return this;
-        }
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi getApi() {
-            return this.api;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setSMS(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS SMS) {
-            this.SMS = SMS;
-            return this;
-        }
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS getSMS() {
-            return this.SMS;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setPhone(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone phone) {
-            this.phone = phone;
-            return this;
-        }
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone getPhone() {
-            return this.phone;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setEnterpriseQuota(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota enterpriseQuota) {
-            this.enterpriseQuota = enterpriseQuota;
-            return this;
-        }
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota getEnterpriseQuota() {
-            return this.enterpriseQuota;
+        public String getSuitInfo() {
+            return this.suitInfo;
         }
 
     }

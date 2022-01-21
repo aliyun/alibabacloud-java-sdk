@@ -4,11 +4,17 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorDataResponseBody extends TeaModel {
-    @NameInMap("NextToken")
-    public String nextToken;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Data")
     public String data;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,23 +22,17 @@ public class DescribeSiteMonitorDataResponseBody extends TeaModel {
     @NameInMap("Success")
     public String success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
     public static DescribeSiteMonitorDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSiteMonitorDataResponseBody self = new DescribeSiteMonitorDataResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSiteMonitorDataResponseBody setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public DescribeSiteMonitorDataResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeSiteMonitorDataResponseBody setData(String data) {
@@ -41,6 +41,22 @@ public class DescribeSiteMonitorDataResponseBody extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public DescribeSiteMonitorDataResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DescribeSiteMonitorDataResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeSiteMonitorDataResponseBody setRequestId(String requestId) {
@@ -57,22 +73,6 @@ public class DescribeSiteMonitorDataResponseBody extends TeaModel {
     }
     public String getSuccess() {
         return this.success;
-    }
-
-    public DescribeSiteMonitorDataResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DescribeSiteMonitorDataResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
 }

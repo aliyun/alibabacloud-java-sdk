@@ -4,33 +4,73 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogMonitorListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("LogMonitorList")
+    public java.util.List<DescribeLogMonitorListResponseBodyLogMonitorList> logMonitorList;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("Total")
     public Long total;
-
-    @NameInMap("LogMonitorList")
-    public java.util.List<DescribeLogMonitorListResponseBodyLogMonitorList> logMonitorList;
 
     public static DescribeLogMonitorListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogMonitorListResponseBody self = new DescribeLogMonitorListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLogMonitorListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DescribeLogMonitorListResponseBody setLogMonitorList(java.util.List<DescribeLogMonitorListResponseBodyLogMonitorList> logMonitorList) {
+        this.logMonitorList = logMonitorList;
+        return this;
+    }
+    public java.util.List<DescribeLogMonitorListResponseBodyLogMonitorList> getLogMonitorList() {
+        return this.logMonitorList;
+    }
+
+    public DescribeLogMonitorListResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DescribeLogMonitorListResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeLogMonitorListResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeLogMonitorListResponseBody setRequestId(String requestId) {
@@ -49,38 +89,6 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeLogMonitorListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DescribeLogMonitorListResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DescribeLogMonitorListResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeLogMonitorListResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeLogMonitorListResponseBody setTotal(Long total) {
         this.total = total;
         return this;
@@ -89,23 +97,15 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         return this.total;
     }
 
-    public DescribeLogMonitorListResponseBody setLogMonitorList(java.util.List<DescribeLogMonitorListResponseBodyLogMonitorList> logMonitorList) {
-        this.logMonitorList = logMonitorList;
-        return this;
-    }
-    public java.util.List<DescribeLogMonitorListResponseBodyLogMonitorList> getLogMonitorList() {
-        return this.logMonitorList;
-    }
-
     public static class DescribeLogMonitorListResponseBodyLogMonitorListValueFilter extends TeaModel {
         @NameInMap("Key")
         public String key;
 
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("Operator")
         public String operator;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeLogMonitorListResponseBodyLogMonitorListValueFilter build(java.util.Map<String, ?> map) throws Exception {
             DescribeLogMonitorListResponseBodyLogMonitorListValueFilter self = new DescribeLogMonitorListResponseBodyLogMonitorListValueFilter();
@@ -120,14 +120,6 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeLogMonitorListResponseBodyLogMonitorListValueFilter setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
         public DescribeLogMonitorListResponseBodyLogMonitorListValueFilter setOperator(String operator) {
             this.operator = operator;
             return this;
@@ -136,17 +128,19 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             return this.operator;
         }
 
+        public DescribeLogMonitorListResponseBodyLogMonitorListValueFilter setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class DescribeLogMonitorListResponseBodyLogMonitorList extends TeaModel {
-        @NameInMap("ValueFilterRelation")
-        public String valueFilterRelation;
-
-        @NameInMap("SlsLogstore")
-        public String slsLogstore;
-
-        @NameInMap("MetricName")
-        public String metricName;
+        @NameInMap("GmtCreate")
+        public Long gmtCreate;
 
         @NameInMap("GroupId")
         public Long groupId;
@@ -154,45 +148,35 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         @NameInMap("LogId")
         public Long logId;
 
-        @NameInMap("SlsRegionId")
-        public String slsRegionId;
+        @NameInMap("MetricName")
+        public String metricName;
 
-        @NameInMap("GmtCreate")
-        public Long gmtCreate;
+        @NameInMap("SlsLogstore")
+        public String slsLogstore;
 
         @NameInMap("SlsProject")
         public String slsProject;
 
+        @NameInMap("SlsRegionId")
+        public String slsRegionId;
+
         @NameInMap("ValueFilter")
         public java.util.List<DescribeLogMonitorListResponseBodyLogMonitorListValueFilter> valueFilter;
+
+        @NameInMap("ValueFilterRelation")
+        public String valueFilterRelation;
 
         public static DescribeLogMonitorListResponseBodyLogMonitorList build(java.util.Map<String, ?> map) throws Exception {
             DescribeLogMonitorListResponseBodyLogMonitorList self = new DescribeLogMonitorListResponseBodyLogMonitorList();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLogMonitorListResponseBodyLogMonitorList setValueFilterRelation(String valueFilterRelation) {
-            this.valueFilterRelation = valueFilterRelation;
+        public DescribeLogMonitorListResponseBodyLogMonitorList setGmtCreate(Long gmtCreate) {
+            this.gmtCreate = gmtCreate;
             return this;
         }
-        public String getValueFilterRelation() {
-            return this.valueFilterRelation;
-        }
-
-        public DescribeLogMonitorListResponseBodyLogMonitorList setSlsLogstore(String slsLogstore) {
-            this.slsLogstore = slsLogstore;
-            return this;
-        }
-        public String getSlsLogstore() {
-            return this.slsLogstore;
-        }
-
-        public DescribeLogMonitorListResponseBodyLogMonitorList setMetricName(String metricName) {
-            this.metricName = metricName;
-            return this;
-        }
-        public String getMetricName() {
-            return this.metricName;
+        public Long getGmtCreate() {
+            return this.gmtCreate;
         }
 
         public DescribeLogMonitorListResponseBodyLogMonitorList setGroupId(Long groupId) {
@@ -211,20 +195,20 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             return this.logId;
         }
 
-        public DescribeLogMonitorListResponseBodyLogMonitorList setSlsRegionId(String slsRegionId) {
-            this.slsRegionId = slsRegionId;
+        public DescribeLogMonitorListResponseBodyLogMonitorList setMetricName(String metricName) {
+            this.metricName = metricName;
             return this;
         }
-        public String getSlsRegionId() {
-            return this.slsRegionId;
+        public String getMetricName() {
+            return this.metricName;
         }
 
-        public DescribeLogMonitorListResponseBodyLogMonitorList setGmtCreate(Long gmtCreate) {
-            this.gmtCreate = gmtCreate;
+        public DescribeLogMonitorListResponseBodyLogMonitorList setSlsLogstore(String slsLogstore) {
+            this.slsLogstore = slsLogstore;
             return this;
         }
-        public Long getGmtCreate() {
-            return this.gmtCreate;
+        public String getSlsLogstore() {
+            return this.slsLogstore;
         }
 
         public DescribeLogMonitorListResponseBodyLogMonitorList setSlsProject(String slsProject) {
@@ -235,12 +219,28 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             return this.slsProject;
         }
 
+        public DescribeLogMonitorListResponseBodyLogMonitorList setSlsRegionId(String slsRegionId) {
+            this.slsRegionId = slsRegionId;
+            return this;
+        }
+        public String getSlsRegionId() {
+            return this.slsRegionId;
+        }
+
         public DescribeLogMonitorListResponseBodyLogMonitorList setValueFilter(java.util.List<DescribeLogMonitorListResponseBodyLogMonitorListValueFilter> valueFilter) {
             this.valueFilter = valueFilter;
             return this;
         }
         public java.util.List<DescribeLogMonitorListResponseBodyLogMonitorListValueFilter> getValueFilter() {
             return this.valueFilter;
+        }
+
+        public DescribeLogMonitorListResponseBodyLogMonitorList setValueFilterRelation(String valueFilterRelation) {
+            this.valueFilterRelation = valueFilterRelation;
+            return this;
+        }
+        public String getValueFilterRelation() {
+            return this.valueFilterRelation;
         }
 
     }

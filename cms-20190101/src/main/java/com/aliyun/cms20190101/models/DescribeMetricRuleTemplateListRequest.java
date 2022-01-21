@@ -4,17 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricRuleTemplateListRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("History")
+    public Boolean history;
 
     @NameInMap("Keyword")
     public String keyword;
 
-    @NameInMap("TemplateId")
-    public Long templateId;
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -22,28 +19,23 @@ public class DescribeMetricRuleTemplateListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("History")
-    public Boolean history;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("TemplateId")
+    public Long templateId;
 
     public static DescribeMetricRuleTemplateListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricRuleTemplateListRequest self = new DescribeMetricRuleTemplateListRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeMetricRuleTemplateListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeMetricRuleTemplateListRequest setHistory(Boolean history) {
+        this.history = history;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeMetricRuleTemplateListRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
+    public Boolean getHistory() {
+        return this.history;
     }
 
     public DescribeMetricRuleTemplateListRequest setKeyword(String keyword) {
@@ -54,12 +46,12 @@ public class DescribeMetricRuleTemplateListRequest extends TeaModel {
         return this.keyword;
     }
 
-    public DescribeMetricRuleTemplateListRequest setTemplateId(Long templateId) {
-        this.templateId = templateId;
+    public DescribeMetricRuleTemplateListRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public Long getTemplateId() {
-        return this.templateId;
+    public String getName() {
+        return this.name;
     }
 
     public DescribeMetricRuleTemplateListRequest setPageNumber(Long pageNumber) {
@@ -78,12 +70,20 @@ public class DescribeMetricRuleTemplateListRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeMetricRuleTemplateListRequest setHistory(Boolean history) {
-        this.history = history;
+    public DescribeMetricRuleTemplateListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Boolean getHistory() {
-        return this.history;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeMetricRuleTemplateListRequest setTemplateId(Long templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public Long getTemplateId() {
+        return this.templateId;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupDynamicRulesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("GroupId")
     public Long groupId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DescribeMonitorGroupDynamicRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitorGroupDynamicRulesRequest self = new DescribeMonitorGroupDynamicRulesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeMonitorGroupDynamicRulesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeMonitorGroupDynamicRulesRequest setGroupId(Long groupId) {
@@ -29,6 +21,14 @@ public class DescribeMonitorGroupDynamicRulesRequest extends TeaModel {
     }
     public Long getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeMonitorGroupDynamicRulesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

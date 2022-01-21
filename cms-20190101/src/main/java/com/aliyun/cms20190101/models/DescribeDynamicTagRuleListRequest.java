@@ -4,48 +4,24 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDynamicTagRuleListRequest extends TeaModel {
-    @NameInMap("TagRegionId")
-    public String tagRegionId;
-
-    @NameInMap("TagKey")
-    public String tagKey;
-
-    @NameInMap("TagValue")
-    public String tagValue;
-
     @NameInMap("PageNumber")
     public String pageNumber;
 
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("TagKey")
+    public String tagKey;
+
+    @NameInMap("TagRegionId")
+    public String tagRegionId;
+
+    @NameInMap("TagValue")
+    public String tagValue;
+
     public static DescribeDynamicTagRuleListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDynamicTagRuleListRequest self = new DescribeDynamicTagRuleListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDynamicTagRuleListRequest setTagRegionId(String tagRegionId) {
-        this.tagRegionId = tagRegionId;
-        return this;
-    }
-    public String getTagRegionId() {
-        return this.tagRegionId;
-    }
-
-    public DescribeDynamicTagRuleListRequest setTagKey(String tagKey) {
-        this.tagKey = tagKey;
-        return this;
-    }
-    public String getTagKey() {
-        return this.tagKey;
-    }
-
-    public DescribeDynamicTagRuleListRequest setTagValue(String tagValue) {
-        this.tagValue = tagValue;
-        return this;
-    }
-    public String getTagValue() {
-        return this.tagValue;
     }
 
     public DescribeDynamicTagRuleListRequest setPageNumber(String pageNumber) {
@@ -62,6 +38,30 @@ public class DescribeDynamicTagRuleListRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeDynamicTagRuleListRequest setTagKey(String tagKey) {
+        this.tagKey = tagKey;
+        return this;
+    }
+    public String getTagKey() {
+        return this.tagKey;
+    }
+
+    public DescribeDynamicTagRuleListRequest setTagRegionId(String tagRegionId) {
+        this.tagRegionId = tagRegionId;
+        return this;
+    }
+    public String getTagRegionId() {
+        return this.tagRegionId;
+    }
+
+    public DescribeDynamicTagRuleListRequest setTagValue(String tagValue) {
+        this.tagValue = tagValue;
+        return this;
+    }
+    public String getTagValue() {
+        return this.tagValue;
     }
 
 }

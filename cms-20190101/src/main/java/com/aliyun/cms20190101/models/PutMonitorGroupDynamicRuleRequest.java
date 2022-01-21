@@ -4,26 +4,18 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("GroupId")
     public Long groupId;
 
     @NameInMap("GroupRules")
     public java.util.List<PutMonitorGroupDynamicRuleRequestGroupRules> groupRules;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static PutMonitorGroupDynamicRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         PutMonitorGroupDynamicRuleRequest self = new PutMonitorGroupDynamicRuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public PutMonitorGroupDynamicRuleRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public PutMonitorGroupDynamicRuleRequest setGroupId(Long groupId) {
@@ -42,35 +34,27 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
         return this.groupRules;
     }
 
+    public PutMonitorGroupDynamicRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static class PutMonitorGroupDynamicRuleRequestGroupRulesFilters extends TeaModel {
-        @NameInMap("Value")
-        public String value;
+        @NameInMap("Function")
+        public String function;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Function")
-        public String function;
+        @NameInMap("Value")
+        public String value;
 
         public static PutMonitorGroupDynamicRuleRequestGroupRulesFilters build(java.util.Map<String, ?> map) throws Exception {
             PutMonitorGroupDynamicRuleRequestGroupRulesFilters self = new PutMonitorGroupDynamicRuleRequestGroupRulesFilters();
             return TeaModel.build(map, self);
-        }
-
-        public PutMonitorGroupDynamicRuleRequestGroupRulesFilters setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-        public PutMonitorGroupDynamicRuleRequestGroupRulesFilters setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public PutMonitorGroupDynamicRuleRequestGroupRulesFilters setFunction(String function) {
@@ -81,21 +65,45 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
             return this.function;
         }
 
+        public PutMonitorGroupDynamicRuleRequestGroupRulesFilters setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public PutMonitorGroupDynamicRuleRequestGroupRulesFilters setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class PutMonitorGroupDynamicRuleRequestGroupRules extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
         @NameInMap("FilterRelation")
         public String filterRelation;
 
         @NameInMap("Filters")
         public java.util.List<PutMonitorGroupDynamicRuleRequestGroupRulesFilters> filters;
 
-        @NameInMap("Category")
-        public String category;
-
         public static PutMonitorGroupDynamicRuleRequestGroupRules build(java.util.Map<String, ?> map) throws Exception {
             PutMonitorGroupDynamicRuleRequestGroupRules self = new PutMonitorGroupDynamicRuleRequestGroupRules();
             return TeaModel.build(map, self);
+        }
+
+        public PutMonitorGroupDynamicRuleRequestGroupRules setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public PutMonitorGroupDynamicRuleRequestGroupRules setFilterRelation(String filterRelation) {
@@ -112,14 +120,6 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
         }
         public java.util.List<PutMonitorGroupDynamicRuleRequestGroupRulesFilters> getFilters() {
             return this.filters;
-        }
-
-        public PutMonitorGroupDynamicRuleRequestGroupRules setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
         }
 
     }

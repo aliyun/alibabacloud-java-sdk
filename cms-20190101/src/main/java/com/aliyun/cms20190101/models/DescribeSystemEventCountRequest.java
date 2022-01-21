@@ -4,26 +4,26 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSystemEventCountRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Product")
-    public String product;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("EventType")
     public String eventType;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("GroupId")
+    public String groupId;
 
     @NameInMap("Level")
     public String level;
 
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("Name")
+    public String name;
 
-    @NameInMap("GroupId")
-    public String groupId;
+    @NameInMap("Product")
+    public String product;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("SearchKeywords")
     public String searchKeywords;
@@ -31,28 +31,20 @@ public class DescribeSystemEventCountRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
+    @NameInMap("Status")
+    public String status;
 
     public static DescribeSystemEventCountRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSystemEventCountRequest self = new DescribeSystemEventCountRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSystemEventCountRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeSystemEventCountRequest setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeSystemEventCountRequest setProduct(String product) {
-        this.product = product;
-        return this;
-    }
-    public String getProduct() {
-        return this.product;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeSystemEventCountRequest setEventType(String eventType) {
@@ -63,12 +55,12 @@ public class DescribeSystemEventCountRequest extends TeaModel {
         return this.eventType;
     }
 
-    public DescribeSystemEventCountRequest setName(String name) {
-        this.name = name;
+    public DescribeSystemEventCountRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public DescribeSystemEventCountRequest setLevel(String level) {
@@ -79,20 +71,28 @@ public class DescribeSystemEventCountRequest extends TeaModel {
         return this.level;
     }
 
-    public DescribeSystemEventCountRequest setStatus(String status) {
-        this.status = status;
+    public DescribeSystemEventCountRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getName() {
+        return this.name;
     }
 
-    public DescribeSystemEventCountRequest setGroupId(String groupId) {
-        this.groupId = groupId;
+    public DescribeSystemEventCountRequest setProduct(String product) {
+        this.product = product;
         return this;
     }
-    public String getGroupId() {
-        return this.groupId;
+    public String getProduct() {
+        return this.product;
+    }
+
+    public DescribeSystemEventCountRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeSystemEventCountRequest setSearchKeywords(String searchKeywords) {
@@ -111,12 +111,12 @@ public class DescribeSystemEventCountRequest extends TeaModel {
         return this.startTime;
     }
 
-    public DescribeSystemEventCountRequest setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeSystemEventCountRequest setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
+    public String getStatus() {
+        return this.status;
     }
 
 }

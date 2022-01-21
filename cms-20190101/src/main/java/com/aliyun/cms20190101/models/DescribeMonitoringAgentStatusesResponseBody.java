@@ -10,14 +10,14 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("NodeStatusList")
+    public DescribeMonitoringAgentStatusesResponseBodyNodeStatusList nodeStatusList;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("NodeStatusList")
-    public DescribeMonitoringAgentStatusesResponseBodyNodeStatusList nodeStatusList;
 
     public static DescribeMonitoringAgentStatusesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitoringAgentStatusesResponseBody self = new DescribeMonitoringAgentStatusesResponseBody();
@@ -40,6 +40,14 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         return this.message;
     }
 
+    public DescribeMonitoringAgentStatusesResponseBody setNodeStatusList(DescribeMonitoringAgentStatusesResponseBodyNodeStatusList nodeStatusList) {
+        this.nodeStatusList = nodeStatusList;
+        return this;
+    }
+    public DescribeMonitoringAgentStatusesResponseBodyNodeStatusList getNodeStatusList() {
+        return this.nodeStatusList;
+    }
+
     public DescribeMonitoringAgentStatusesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -56,35 +64,27 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeMonitoringAgentStatusesResponseBody setNodeStatusList(DescribeMonitoringAgentStatusesResponseBodyNodeStatusList nodeStatusList) {
-        this.nodeStatusList = nodeStatusList;
-        return this;
-    }
-    public DescribeMonitoringAgentStatusesResponseBodyNodeStatusList getNodeStatusList() {
-        return this.nodeStatusList;
-    }
-
     public static class DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("AutoInstall")
+        public Boolean autoInstall;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("AutoInstall")
-        public Boolean autoInstall;
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus self = new DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus setStatus(String status) {
-            this.status = status;
+        public DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus setAutoInstall(Boolean autoInstall) {
+            this.autoInstall = autoInstall;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public Boolean getAutoInstall() {
+            return this.autoInstall;
         }
 
         public DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus setInstanceId(String instanceId) {
@@ -95,12 +95,12 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus setAutoInstall(Boolean autoInstall) {
-            this.autoInstall = autoInstall;
+        public DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public Boolean getAutoInstall() {
-            return this.autoInstall;
+        public String getStatus() {
+            return this.status;
         }
 
     }

@@ -65,42 +65,114 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
     }
 
     public static class DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("Level")
+        public String level;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Num")
+        public Long num;
+
+        @NameInMap("Product")
+        public String product;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("ResourceId")
+        public String resourceId;
+
         @NameInMap("Status")
         public String status;
 
         @NameInMap("Time")
         public Long time;
 
-        @NameInMap("GroupId")
-        public String groupId;
-
-        @NameInMap("Product")
-        public String product;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
-
-        @NameInMap("Num")
-        public Long num;
-
-        @NameInMap("ResourceId")
-        public String resourceId;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Content")
-        public String content;
-
-        @NameInMap("Level")
-        public String level;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
         public static DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount build(java.util.Map<String, ?> map) throws Exception {
             DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount self = new DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setNum(Long num) {
+            this.num = num;
+            return this;
+        }
+        public Long getNum() {
+            return this.num;
+        }
+
+        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setProduct(String product) {
+            this.product = product;
+            return this;
+        }
+        public String getProduct() {
+            return this.product;
+        }
+
+        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
         }
 
         public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setStatus(String status) {
@@ -117,78 +189,6 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         }
         public Long getTime() {
             return this.time;
-        }
-
-        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
-        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setProduct(String product) {
-            this.product = product;
-            return this;
-        }
-        public String getProduct() {
-            return this.product;
-        }
-
-        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
-        }
-
-        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setNum(Long num) {
-            this.num = num;
-            return this;
-        }
-        public Long getNum() {
-            return this.num;
-        }
-
-        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setResourceId(String resourceId) {
-            this.resourceId = resourceId;
-            return this;
-        }
-        public String getResourceId() {
-            return this.resourceId;
-        }
-
-        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
-        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setLevel(String level) {
-            this.level = level;
-            return this;
-        }
-        public String getLevel() {
-            return this.level;
-        }
-
-        public DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
     }

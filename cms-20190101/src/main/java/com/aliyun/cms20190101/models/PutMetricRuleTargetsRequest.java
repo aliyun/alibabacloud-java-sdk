@@ -43,11 +43,11 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
     }
 
     public static class PutMetricRuleTargetsRequestTargets extends TeaModel {
-        @NameInMap("Id")
-        public String id;
-
         @NameInMap("Arn")
         public String arn;
+
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("Level")
         public String level;
@@ -57,20 +57,20 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public PutMetricRuleTargetsRequestTargets setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
         public PutMetricRuleTargetsRequestTargets setArn(String arn) {
             this.arn = arn;
             return this;
         }
         public String getArn() {
             return this.arn;
+        }
+
+        public PutMetricRuleTargetsRequestTargets setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public PutMetricRuleTargetsRequestTargets setLevel(String level) {

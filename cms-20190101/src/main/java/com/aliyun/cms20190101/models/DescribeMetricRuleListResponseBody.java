@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricRuleListResponseBody extends TeaModel {
+    @NameInMap("Alarms")
+    public DescribeMetricRuleListResponseBodyAlarms alarms;
+
     @NameInMap("Code")
     public Integer code;
 
@@ -13,18 +16,23 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Total")
-    public String total;
-
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Alarms")
-    public DescribeMetricRuleListResponseBodyAlarms alarms;
+    @NameInMap("Total")
+    public String total;
 
     public static DescribeMetricRuleListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricRuleListResponseBody self = new DescribeMetricRuleListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMetricRuleListResponseBody setAlarms(DescribeMetricRuleListResponseBodyAlarms alarms) {
+        this.alarms = alarms;
+        return this;
+    }
+    public DescribeMetricRuleListResponseBodyAlarms getAlarms() {
+        return this.alarms;
     }
 
     public DescribeMetricRuleListResponseBody setCode(Integer code) {
@@ -51,14 +59,6 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeMetricRuleListResponseBody setTotal(String total) {
-        this.total = total;
-        return this;
-    }
-    public String getTotal() {
-        return this.total;
-    }
-
     public DescribeMetricRuleListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -67,138 +67,12 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeMetricRuleListResponseBody setAlarms(DescribeMetricRuleListResponseBodyAlarms alarms) {
-        this.alarms = alarms;
+    public DescribeMetricRuleListResponseBody setTotal(String total) {
+        this.total = total;
         return this;
     }
-    public DescribeMetricRuleListResponseBodyAlarms getAlarms() {
-        return this.alarms;
-    }
-
-    public static class DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo extends TeaModel {
-        @NameInMap("ComparisonOperator")
-        public String comparisonOperator;
-
-        @NameInMap("PreCondition")
-        public String preCondition;
-
-        @NameInMap("Times")
-        public Integer times;
-
-        @NameInMap("Threshold")
-        public String threshold;
-
-        @NameInMap("Statistics")
-        public String statistics;
-
-        public static DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo self = new DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo setComparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = comparisonOperator;
-            return this;
-        }
-        public String getComparisonOperator() {
-            return this.comparisonOperator;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo setPreCondition(String preCondition) {
-            this.preCondition = preCondition;
-            return this;
-        }
-        public String getPreCondition() {
-            return this.preCondition;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo setTimes(Integer times) {
-            this.times = times;
-            return this;
-        }
-        public Integer getTimes() {
-            return this.times;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo setThreshold(String threshold) {
-            this.threshold = threshold;
-            return this;
-        }
-        public String getThreshold() {
-            return this.threshold;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo setStatistics(String statistics) {
-            this.statistics = statistics;
-            return this;
-        }
-        public String getStatistics() {
-            return this.statistics;
-        }
-
-    }
-
-    public static class DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn extends TeaModel {
-        @NameInMap("ComparisonOperator")
-        public String comparisonOperator;
-
-        @NameInMap("PreCondition")
-        public String preCondition;
-
-        @NameInMap("Times")
-        public Integer times;
-
-        @NameInMap("Threshold")
-        public String threshold;
-
-        @NameInMap("Statistics")
-        public String statistics;
-
-        public static DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn self = new DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn setComparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = comparisonOperator;
-            return this;
-        }
-        public String getComparisonOperator() {
-            return this.comparisonOperator;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn setPreCondition(String preCondition) {
-            this.preCondition = preCondition;
-            return this;
-        }
-        public String getPreCondition() {
-            return this.preCondition;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn setTimes(Integer times) {
-            this.times = times;
-            return this;
-        }
-        public Integer getTimes() {
-            return this.times;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn setThreshold(String threshold) {
-            this.threshold = threshold;
-            return this;
-        }
-        public String getThreshold() {
-            return this.threshold;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn setStatistics(String statistics) {
-            this.statistics = statistics;
-            return this;
-        }
-        public String getStatistics() {
-            return this.statistics;
-        }
-
+    public String getTotal() {
+        return this.total;
     }
 
     public static class DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsCritical extends TeaModel {
@@ -208,14 +82,14 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         @NameInMap("PreCondition")
         public String preCondition;
 
-        @NameInMap("Times")
-        public Integer times;
+        @NameInMap("Statistics")
+        public String statistics;
 
         @NameInMap("Threshold")
         public String threshold;
 
-        @NameInMap("Statistics")
-        public String statistics;
+        @NameInMap("Times")
+        public Integer times;
 
         public static DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsCritical build(java.util.Map<String, ?> map) throws Exception {
             DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsCritical self = new DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsCritical();
@@ -238,12 +112,12 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             return this.preCondition;
         }
 
-        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsCritical setTimes(Integer times) {
-            this.times = times;
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsCritical setStatistics(String statistics) {
+            this.statistics = statistics;
             return this;
         }
-        public Integer getTimes() {
-            return this.times;
+        public String getStatistics() {
+            return this.statistics;
         }
 
         public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsCritical setThreshold(String threshold) {
@@ -254,7 +128,54 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             return this.threshold;
         }
 
-        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsCritical setStatistics(String statistics) {
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsCritical setTimes(Integer times) {
+            this.times = times;
+            return this;
+        }
+        public Integer getTimes() {
+            return this.times;
+        }
+
+    }
+
+    public static class DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo extends TeaModel {
+        @NameInMap("ComparisonOperator")
+        public String comparisonOperator;
+
+        @NameInMap("PreCondition")
+        public String preCondition;
+
+        @NameInMap("Statistics")
+        public String statistics;
+
+        @NameInMap("Threshold")
+        public String threshold;
+
+        @NameInMap("Times")
+        public Integer times;
+
+        public static DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo self = new DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo setComparisonOperator(String comparisonOperator) {
+            this.comparisonOperator = comparisonOperator;
+            return this;
+        }
+        public String getComparisonOperator() {
+            return this.comparisonOperator;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo setPreCondition(String preCondition) {
+            this.preCondition = preCondition;
+            return this;
+        }
+        public String getPreCondition() {
+            return this.preCondition;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo setStatistics(String statistics) {
             this.statistics = statistics;
             return this;
         }
@@ -262,21 +183,108 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             return this.statistics;
         }
 
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo setThreshold(String threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo setTimes(Integer times) {
+            this.times = times;
+            return this;
+        }
+        public Integer getTimes() {
+            return this.times;
+        }
+
+    }
+
+    public static class DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn extends TeaModel {
+        @NameInMap("ComparisonOperator")
+        public String comparisonOperator;
+
+        @NameInMap("PreCondition")
+        public String preCondition;
+
+        @NameInMap("Statistics")
+        public String statistics;
+
+        @NameInMap("Threshold")
+        public String threshold;
+
+        @NameInMap("Times")
+        public Integer times;
+
+        public static DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn self = new DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn setComparisonOperator(String comparisonOperator) {
+            this.comparisonOperator = comparisonOperator;
+            return this;
+        }
+        public String getComparisonOperator() {
+            return this.comparisonOperator;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn setPreCondition(String preCondition) {
+            this.preCondition = preCondition;
+            return this;
+        }
+        public String getPreCondition() {
+            return this.preCondition;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn setStatistics(String statistics) {
+            this.statistics = statistics;
+            return this;
+        }
+        public String getStatistics() {
+            return this.statistics;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn setThreshold(String threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn setTimes(Integer times) {
+            this.times = times;
+            return this;
+        }
+        public Integer getTimes() {
+            return this.times;
+        }
+
     }
 
     public static class DescribeMetricRuleListResponseBodyAlarmsAlarmEscalations extends TeaModel {
+        @NameInMap("Critical")
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsCritical critical;
+
         @NameInMap("Info")
         public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo info;
 
         @NameInMap("Warn")
         public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsWarn warn;
 
-        @NameInMap("Critical")
-        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsCritical critical;
-
         public static DescribeMetricRuleListResponseBodyAlarmsAlarmEscalations build(java.util.Map<String, ?> map) throws Exception {
             DescribeMetricRuleListResponseBodyAlarmsAlarmEscalations self = new DescribeMetricRuleListResponseBodyAlarmsAlarmEscalations();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalations setCritical(DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsCritical critical) {
+            this.critical = critical;
+            return this;
+        }
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsCritical getCritical() {
+            return this.critical;
         }
 
         public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalations setInfo(DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsInfo info) {
@@ -295,157 +303,124 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             return this.warn;
         }
 
-        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalations setCritical(DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsCritical critical) {
-            this.critical = critical;
+    }
+
+    public static class DescribeMetricRuleListResponseBodyAlarmsAlarmLabelsLabels extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeMetricRuleListResponseBodyAlarmsAlarmLabelsLabels build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMetricRuleListResponseBodyAlarmsAlarmLabelsLabels self = new DescribeMetricRuleListResponseBodyAlarmsAlarmLabelsLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmLabelsLabels setKey(String key) {
+            this.key = key;
             return this;
         }
-        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsCritical getCritical() {
-            return this.critical;
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmLabelsLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeMetricRuleListResponseBodyAlarmsAlarmLabels extends TeaModel {
+        @NameInMap("Labels")
+        public java.util.List<DescribeMetricRuleListResponseBodyAlarmsAlarmLabelsLabels> labels;
+
+        public static DescribeMetricRuleListResponseBodyAlarmsAlarmLabels build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMetricRuleListResponseBodyAlarmsAlarmLabels self = new DescribeMetricRuleListResponseBodyAlarmsAlarmLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmLabels setLabels(java.util.List<DescribeMetricRuleListResponseBodyAlarmsAlarmLabelsLabels> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.List<DescribeMetricRuleListResponseBodyAlarmsAlarmLabelsLabels> getLabels() {
+            return this.labels;
         }
 
     }
 
     public static class DescribeMetricRuleListResponseBodyAlarmsAlarm extends TeaModel {
-        @NameInMap("SilenceTime")
-        public Integer silenceTime;
-
-        @NameInMap("MetricName")
-        public String metricName;
-
-        @NameInMap("Webhook")
-        public String webhook;
+        @NameInMap("AlertState")
+        public String alertState;
 
         @NameInMap("ContactGroups")
         public String contactGroups;
 
-        @NameInMap("SourceType")
-        public String sourceType;
-
-        @NameInMap("Namespace")
-        public String namespace;
-
-        @NameInMap("MailSubject")
-        public String mailSubject;
-
-        @NameInMap("NoEffectiveInterval")
-        public String noEffectiveInterval;
+        @NameInMap("Dimensions")
+        public String dimensions;
 
         @NameInMap("EffectiveInterval")
         public String effectiveInterval;
 
-        @NameInMap("RuleName")
-        public String ruleName;
-
-        @NameInMap("AlertState")
-        public String alertState;
-
-        @NameInMap("Period")
-        public String period;
-
-        @NameInMap("RuleId")
-        public String ruleId;
-
-        @NameInMap("GroupName")
-        public String groupName;
-
-        @NameInMap("GroupId")
-        public String groupId;
-
-        @NameInMap("Dimensions")
-        public String dimensions;
-
         @NameInMap("EnableState")
         public Boolean enableState;
-
-        @NameInMap("Resources")
-        public String resources;
 
         @NameInMap("Escalations")
         public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalations escalations;
 
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("Labels")
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmLabels labels;
+
+        @NameInMap("MailSubject")
+        public String mailSubject;
+
+        @NameInMap("MetricName")
+        public String metricName;
+
+        @NameInMap("Namespace")
+        public String namespace;
+
+        @NameInMap("NoDataPolicy")
+        public String noDataPolicy;
+
+        @NameInMap("NoEffectiveInterval")
+        public String noEffectiveInterval;
+
+        @NameInMap("Period")
+        public String period;
+
+        @NameInMap("Resources")
+        public String resources;
+
+        @NameInMap("RuleId")
+        public String ruleId;
+
+        @NameInMap("RuleName")
+        public String ruleName;
+
+        @NameInMap("SilenceTime")
+        public Integer silenceTime;
+
+        @NameInMap("SourceType")
+        public String sourceType;
+
+        @NameInMap("Webhook")
+        public String webhook;
+
         public static DescribeMetricRuleListResponseBodyAlarmsAlarm build(java.util.Map<String, ?> map) throws Exception {
             DescribeMetricRuleListResponseBodyAlarmsAlarm self = new DescribeMetricRuleListResponseBodyAlarmsAlarm();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarm setSilenceTime(Integer silenceTime) {
-            this.silenceTime = silenceTime;
-            return this;
-        }
-        public Integer getSilenceTime() {
-            return this.silenceTime;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarm setMetricName(String metricName) {
-            this.metricName = metricName;
-            return this;
-        }
-        public String getMetricName() {
-            return this.metricName;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarm setWebhook(String webhook) {
-            this.webhook = webhook;
-            return this;
-        }
-        public String getWebhook() {
-            return this.webhook;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarm setContactGroups(String contactGroups) {
-            this.contactGroups = contactGroups;
-            return this;
-        }
-        public String getContactGroups() {
-            return this.contactGroups;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarm setSourceType(String sourceType) {
-            this.sourceType = sourceType;
-            return this;
-        }
-        public String getSourceType() {
-            return this.sourceType;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarm setNamespace(String namespace) {
-            this.namespace = namespace;
-            return this;
-        }
-        public String getNamespace() {
-            return this.namespace;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarm setMailSubject(String mailSubject) {
-            this.mailSubject = mailSubject;
-            return this;
-        }
-        public String getMailSubject() {
-            return this.mailSubject;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarm setNoEffectiveInterval(String noEffectiveInterval) {
-            this.noEffectiveInterval = noEffectiveInterval;
-            return this;
-        }
-        public String getNoEffectiveInterval() {
-            return this.noEffectiveInterval;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarm setEffectiveInterval(String effectiveInterval) {
-            this.effectiveInterval = effectiveInterval;
-            return this;
-        }
-        public String getEffectiveInterval() {
-            return this.effectiveInterval;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarm setRuleName(String ruleName) {
-            this.ruleName = ruleName;
-            return this;
-        }
-        public String getRuleName() {
-            return this.ruleName;
         }
 
         public DescribeMetricRuleListResponseBodyAlarmsAlarm setAlertState(String alertState) {
@@ -456,36 +431,12 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             return this.alertState;
         }
 
-        public DescribeMetricRuleListResponseBodyAlarmsAlarm setPeriod(String period) {
-            this.period = period;
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setContactGroups(String contactGroups) {
+            this.contactGroups = contactGroups;
             return this;
         }
-        public String getPeriod() {
-            return this.period;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarm setRuleId(String ruleId) {
-            this.ruleId = ruleId;
-            return this;
-        }
-        public String getRuleId() {
-            return this.ruleId;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarm setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
-        }
-
-        public DescribeMetricRuleListResponseBodyAlarmsAlarm setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
+        public String getContactGroups() {
+            return this.contactGroups;
         }
 
         public DescribeMetricRuleListResponseBodyAlarmsAlarm setDimensions(String dimensions) {
@@ -496,12 +447,100 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             return this.dimensions;
         }
 
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setEffectiveInterval(String effectiveInterval) {
+            this.effectiveInterval = effectiveInterval;
+            return this;
+        }
+        public String getEffectiveInterval() {
+            return this.effectiveInterval;
+        }
+
         public DescribeMetricRuleListResponseBodyAlarmsAlarm setEnableState(Boolean enableState) {
             this.enableState = enableState;
             return this;
         }
         public Boolean getEnableState() {
             return this.enableState;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setEscalations(DescribeMetricRuleListResponseBodyAlarmsAlarmEscalations escalations) {
+            this.escalations = escalations;
+            return this;
+        }
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalations getEscalations() {
+            return this.escalations;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setLabels(DescribeMetricRuleListResponseBodyAlarmsAlarmLabels labels) {
+            this.labels = labels;
+            return this;
+        }
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmLabels getLabels() {
+            return this.labels;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setMailSubject(String mailSubject) {
+            this.mailSubject = mailSubject;
+            return this;
+        }
+        public String getMailSubject() {
+            return this.mailSubject;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setNoDataPolicy(String noDataPolicy) {
+            this.noDataPolicy = noDataPolicy;
+            return this;
+        }
+        public String getNoDataPolicy() {
+            return this.noDataPolicy;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setNoEffectiveInterval(String noEffectiveInterval) {
+            this.noEffectiveInterval = noEffectiveInterval;
+            return this;
+        }
+        public String getNoEffectiveInterval() {
+            return this.noEffectiveInterval;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setPeriod(String period) {
+            this.period = period;
+            return this;
+        }
+        public String getPeriod() {
+            return this.period;
         }
 
         public DescribeMetricRuleListResponseBodyAlarmsAlarm setResources(String resources) {
@@ -512,12 +551,44 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             return this.resources;
         }
 
-        public DescribeMetricRuleListResponseBodyAlarmsAlarm setEscalations(DescribeMetricRuleListResponseBodyAlarmsAlarmEscalations escalations) {
-            this.escalations = escalations;
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setRuleId(String ruleId) {
+            this.ruleId = ruleId;
             return this;
         }
-        public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalations getEscalations() {
-            return this.escalations;
+        public String getRuleId() {
+            return this.ruleId;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setSilenceTime(Integer silenceTime) {
+            this.silenceTime = silenceTime;
+            return this;
+        }
+        public Integer getSilenceTime() {
+            return this.silenceTime;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setWebhook(String webhook) {
+            this.webhook = webhook;
+            return this;
+        }
+        public String getWebhook() {
+            return this.webhook;
         }
 
     }

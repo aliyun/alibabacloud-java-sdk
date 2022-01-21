@@ -4,12 +4,6 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public Integer code;
 
@@ -22,31 +16,21 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Total")
-    public Integer total;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Resources")
     public DescribeMonitorGroupsResponseBodyResources resources;
 
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("Total")
+    public Integer total;
+
     public static DescribeMonitorGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitorGroupsResponseBody self = new DescribeMonitorGroupsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeMonitorGroupsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeMonitorGroupsResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public DescribeMonitorGroupsResponseBody setCode(Integer code) {
@@ -81,12 +65,12 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeMonitorGroupsResponseBody setTotal(Integer total) {
-        this.total = total;
+    public DescribeMonitorGroupsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getTotal() {
-        return this.total;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeMonitorGroupsResponseBody setResources(DescribeMonitorGroupsResponseBodyResources resources) {
@@ -95,6 +79,22 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
     }
     public DescribeMonitorGroupsResponseBodyResources getResources() {
         return this.resources;
+    }
+
+    public DescribeMonitorGroupsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DescribeMonitorGroupsResponseBody setTotal(Integer total) {
+        this.total = total;
+        return this;
+    }
+    public Integer getTotal() {
+        return this.total;
     }
 
     public static class DescribeMonitorGroupsResponseBodyResourcesResourceContactGroupsContactGroup extends TeaModel {
@@ -204,23 +204,11 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitorGroupsResponseBodyResourcesResource extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("GroupFounderTagValue")
-        public String groupFounderTagValue;
-
         @NameInMap("BindUrl")
         public String bindUrl;
 
-        @NameInMap("GroupName")
-        public String groupName;
-
-        @NameInMap("GroupId")
-        public Long groupId;
-
-        @NameInMap("ServiceId")
-        public String serviceId;
+        @NameInMap("ContactGroups")
+        public DescribeMonitorGroupsResponseBodyResourcesResourceContactGroups contactGroups;
 
         @NameInMap("DynamicTagRuleId")
         public String dynamicTagRuleId;
@@ -228,14 +216,23 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        @NameInMap("GroupFounderTagKey")
-        public String groupFounderTagKey;
-
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        @NameInMap("ContactGroups")
-        public DescribeMonitorGroupsResponseBodyResourcesResourceContactGroups contactGroups;
+        @NameInMap("GroupFounderTagKey")
+        public String groupFounderTagKey;
+
+        @NameInMap("GroupFounderTagValue")
+        public String groupFounderTagValue;
+
+        @NameInMap("GroupId")
+        public Long groupId;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("ServiceId")
+        public String serviceId;
 
         @NameInMap("Tags")
         public DescribeMonitorGroupsResponseBodyResourcesResourceTags tags;
@@ -243,25 +240,12 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         @NameInMap("TemplateIds")
         public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateIds templateIds;
 
+        @NameInMap("Type")
+        public String type;
+
         public static DescribeMonitorGroupsResponseBodyResourcesResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeMonitorGroupsResponseBodyResourcesResource self = new DescribeMonitorGroupsResponseBodyResourcesResource();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeMonitorGroupsResponseBodyResourcesResource setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeMonitorGroupsResponseBodyResourcesResource setGroupFounderTagValue(String groupFounderTagValue) {
-            this.groupFounderTagValue = groupFounderTagValue;
-            return this;
-        }
-        public String getGroupFounderTagValue() {
-            return this.groupFounderTagValue;
         }
 
         public DescribeMonitorGroupsResponseBodyResourcesResource setBindUrl(String bindUrl) {
@@ -272,28 +256,12 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             return this.bindUrl;
         }
 
-        public DescribeMonitorGroupsResponseBodyResourcesResource setGroupName(String groupName) {
-            this.groupName = groupName;
+        public DescribeMonitorGroupsResponseBodyResourcesResource setContactGroups(DescribeMonitorGroupsResponseBodyResourcesResourceContactGroups contactGroups) {
+            this.contactGroups = contactGroups;
             return this;
         }
-        public String getGroupName() {
-            return this.groupName;
-        }
-
-        public DescribeMonitorGroupsResponseBodyResourcesResource setGroupId(Long groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public Long getGroupId() {
-            return this.groupId;
-        }
-
-        public DescribeMonitorGroupsResponseBodyResourcesResource setServiceId(String serviceId) {
-            this.serviceId = serviceId;
-            return this;
-        }
-        public String getServiceId() {
-            return this.serviceId;
+        public DescribeMonitorGroupsResponseBodyResourcesResourceContactGroups getContactGroups() {
+            return this.contactGroups;
         }
 
         public DescribeMonitorGroupsResponseBodyResourcesResource setDynamicTagRuleId(String dynamicTagRuleId) {
@@ -312,14 +280,6 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public DescribeMonitorGroupsResponseBodyResourcesResource setGroupFounderTagKey(String groupFounderTagKey) {
-            this.groupFounderTagKey = groupFounderTagKey;
-            return this;
-        }
-        public String getGroupFounderTagKey() {
-            return this.groupFounderTagKey;
-        }
-
         public DescribeMonitorGroupsResponseBodyResourcesResource setGmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
             return this;
@@ -328,12 +288,44 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public DescribeMonitorGroupsResponseBodyResourcesResource setContactGroups(DescribeMonitorGroupsResponseBodyResourcesResourceContactGroups contactGroups) {
-            this.contactGroups = contactGroups;
+        public DescribeMonitorGroupsResponseBodyResourcesResource setGroupFounderTagKey(String groupFounderTagKey) {
+            this.groupFounderTagKey = groupFounderTagKey;
             return this;
         }
-        public DescribeMonitorGroupsResponseBodyResourcesResourceContactGroups getContactGroups() {
-            return this.contactGroups;
+        public String getGroupFounderTagKey() {
+            return this.groupFounderTagKey;
+        }
+
+        public DescribeMonitorGroupsResponseBodyResourcesResource setGroupFounderTagValue(String groupFounderTagValue) {
+            this.groupFounderTagValue = groupFounderTagValue;
+            return this;
+        }
+        public String getGroupFounderTagValue() {
+            return this.groupFounderTagValue;
+        }
+
+        public DescribeMonitorGroupsResponseBodyResourcesResource setGroupId(Long groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public Long getGroupId() {
+            return this.groupId;
+        }
+
+        public DescribeMonitorGroupsResponseBodyResourcesResource setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public DescribeMonitorGroupsResponseBodyResourcesResource setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
         }
 
         public DescribeMonitorGroupsResponseBodyResourcesResource setTags(DescribeMonitorGroupsResponseBodyResourcesResourceTags tags) {
@@ -350,6 +342,14 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
         public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateIds getTemplateIds() {
             return this.templateIds;
+        }
+
+        public DescribeMonitorGroupsResponseBodyResourcesResource setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

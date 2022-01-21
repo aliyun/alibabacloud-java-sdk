@@ -10,14 +10,14 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("MonitorGroupCategories")
+    public DescribeMonitorGroupCategoriesResponseBodyMonitorGroupCategories monitorGroupCategories;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("MonitorGroupCategories")
-    public DescribeMonitorGroupCategoriesResponseBodyMonitorGroupCategories monitorGroupCategories;
 
     public static DescribeMonitorGroupCategoriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitorGroupCategoriesResponseBody self = new DescribeMonitorGroupCategoriesResponseBody();
@@ -40,6 +40,14 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
         return this.message;
     }
 
+    public DescribeMonitorGroupCategoriesResponseBody setMonitorGroupCategories(DescribeMonitorGroupCategoriesResponseBodyMonitorGroupCategories monitorGroupCategories) {
+        this.monitorGroupCategories = monitorGroupCategories;
+        return this;
+    }
+    public DescribeMonitorGroupCategoriesResponseBodyMonitorGroupCategories getMonitorGroupCategories() {
+        return this.monitorGroupCategories;
+    }
+
     public DescribeMonitorGroupCategoriesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -56,32 +64,16 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeMonitorGroupCategoriesResponseBody setMonitorGroupCategories(DescribeMonitorGroupCategoriesResponseBodyMonitorGroupCategories monitorGroupCategories) {
-        this.monitorGroupCategories = monitorGroupCategories;
-        return this;
-    }
-    public DescribeMonitorGroupCategoriesResponseBodyMonitorGroupCategories getMonitorGroupCategories() {
-        return this.monitorGroupCategories;
-    }
-
     public static class DescribeMonitorGroupCategoriesResponseBodyMonitorGroupCategoriesMonitorGroupCategoryCategoryItem extends TeaModel {
-        @NameInMap("Count")
-        public Integer count;
-
         @NameInMap("Category")
         public String category;
+
+        @NameInMap("Count")
+        public Integer count;
 
         public static DescribeMonitorGroupCategoriesResponseBodyMonitorGroupCategoriesMonitorGroupCategoryCategoryItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeMonitorGroupCategoriesResponseBodyMonitorGroupCategoriesMonitorGroupCategoryCategoryItem self = new DescribeMonitorGroupCategoriesResponseBodyMonitorGroupCategoriesMonitorGroupCategoryCategoryItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeMonitorGroupCategoriesResponseBodyMonitorGroupCategoriesMonitorGroupCategoryCategoryItem setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
         }
 
         public DescribeMonitorGroupCategoriesResponseBodyMonitorGroupCategoriesMonitorGroupCategoryCategoryItem setCategory(String category) {
@@ -90,6 +82,14 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
         }
         public String getCategory() {
             return this.category;
+        }
+
+        public DescribeMonitorGroupCategoriesResponseBodyMonitorGroupCategoriesMonitorGroupCategoryCategoryItem setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
         }
 
     }

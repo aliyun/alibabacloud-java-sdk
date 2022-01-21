@@ -13,11 +13,11 @@ public class CreateHostAvailabilityResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TaskId")
-    public Long taskId;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TaskId")
+    public Long taskId;
 
     public static CreateHostAvailabilityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateHostAvailabilityResponseBody self = new CreateHostAvailabilityResponseBody();
@@ -48,20 +48,20 @@ public class CreateHostAvailabilityResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateHostAvailabilityResponseBody setTaskId(Long taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public Long getTaskId() {
-        return this.taskId;
-    }
-
     public CreateHostAvailabilityResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public CreateHostAvailabilityResponseBody setTaskId(Long taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

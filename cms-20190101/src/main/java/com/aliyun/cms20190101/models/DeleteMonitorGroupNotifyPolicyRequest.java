@@ -4,26 +4,26 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupNotifyPolicyRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("GroupId")
+    public String groupId;
 
     @NameInMap("PolicyType")
     public String policyType;
 
-    @NameInMap("GroupId")
-    public String groupId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DeleteMonitorGroupNotifyPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMonitorGroupNotifyPolicyRequest self = new DeleteMonitorGroupNotifyPolicyRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteMonitorGroupNotifyPolicyRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DeleteMonitorGroupNotifyPolicyRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public DeleteMonitorGroupNotifyPolicyRequest setPolicyType(String policyType) {
@@ -34,12 +34,12 @@ public class DeleteMonitorGroupNotifyPolicyRequest extends TeaModel {
         return this.policyType;
     }
 
-    public DeleteMonitorGroupNotifyPolicyRequest setGroupId(String groupId) {
-        this.groupId = groupId;
+    public DeleteMonitorGroupNotifyPolicyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getGroupId() {
-        return this.groupId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

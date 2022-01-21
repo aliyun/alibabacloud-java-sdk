@@ -4,14 +4,8 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupMonitoringAgentProcessRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("GroupId")
     public String groupId;
-
-    @NameInMap("ProcessName")
-    public String processName;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -19,17 +13,15 @@ public class DescribeGroupMonitoringAgentProcessRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProcessName")
+    public String processName;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeGroupMonitoringAgentProcessRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGroupMonitoringAgentProcessRequest self = new DescribeGroupMonitoringAgentProcessRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeGroupMonitoringAgentProcessRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeGroupMonitoringAgentProcessRequest setGroupId(String groupId) {
@@ -38,14 +30,6 @@ public class DescribeGroupMonitoringAgentProcessRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
-    }
-
-    public DescribeGroupMonitoringAgentProcessRequest setProcessName(String processName) {
-        this.processName = processName;
-        return this;
-    }
-    public String getProcessName() {
-        return this.processName;
     }
 
     public DescribeGroupMonitoringAgentProcessRequest setPageNumber(Integer pageNumber) {
@@ -62,6 +46,22 @@ public class DescribeGroupMonitoringAgentProcessRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeGroupMonitoringAgentProcessRequest setProcessName(String processName) {
+        this.processName = processName;
+        return this;
+    }
+    public String getProcessName() {
+        return this.processName;
+    }
+
+    public DescribeGroupMonitoringAgentProcessRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

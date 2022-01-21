@@ -7,14 +7,14 @@ public class PutContactGroupRequest extends TeaModel {
     @NameInMap("ContactGroupName")
     public String contactGroupName;
 
+    @NameInMap("ContactNames")
+    public java.util.List<String> contactNames;
+
     @NameInMap("Describe")
     public String describe;
 
     @NameInMap("EnableSubscribed")
     public Boolean enableSubscribed;
-
-    @NameInMap("ContactNames")
-    public java.util.List<String> contactNames;
 
     public static PutContactGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         PutContactGroupRequest self = new PutContactGroupRequest();
@@ -27,6 +27,14 @@ public class PutContactGroupRequest extends TeaModel {
     }
     public String getContactGroupName() {
         return this.contactGroupName;
+    }
+
+    public PutContactGroupRequest setContactNames(java.util.List<String> contactNames) {
+        this.contactNames = contactNames;
+        return this;
+    }
+    public java.util.List<String> getContactNames() {
+        return this.contactNames;
     }
 
     public PutContactGroupRequest setDescribe(String describe) {
@@ -43,14 +51,6 @@ public class PutContactGroupRequest extends TeaModel {
     }
     public Boolean getEnableSubscribed() {
         return this.enableSubscribed;
-    }
-
-    public PutContactGroupRequest setContactNames(java.util.List<String> contactNames) {
-        this.contactNames = contactNames;
-        return this;
-    }
-    public java.util.List<String> getContactNames() {
-        return this.contactNames;
     }
 
 }

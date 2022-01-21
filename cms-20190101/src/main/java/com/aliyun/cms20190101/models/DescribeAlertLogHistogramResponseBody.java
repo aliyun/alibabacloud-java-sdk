@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertLogHistogramResponseBody extends TeaModel {
+    @NameInMap("AlertLogHistogramList")
+    public java.util.List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> alertLogHistogramList;
+
     @NameInMap("Code")
     public String code;
 
@@ -16,12 +19,17 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("AlertLogHistogramList")
-    public java.util.List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> alertLogHistogramList;
-
     public static DescribeAlertLogHistogramResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlertLogHistogramResponseBody self = new DescribeAlertLogHistogramResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAlertLogHistogramResponseBody setAlertLogHistogramList(java.util.List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> alertLogHistogramList) {
+        this.alertLogHistogramList = alertLogHistogramList;
+        return this;
+    }
+    public java.util.List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> getAlertLogHistogramList() {
+        return this.alertLogHistogramList;
     }
 
     public DescribeAlertLogHistogramResponseBody setCode(String code) {
@@ -56,27 +64,27 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeAlertLogHistogramResponseBody setAlertLogHistogramList(java.util.List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> alertLogHistogramList) {
-        this.alertLogHistogramList = alertLogHistogramList;
-        return this;
-    }
-    public java.util.List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> getAlertLogHistogramList() {
-        return this.alertLogHistogramList;
-    }
-
     public static class DescribeAlertLogHistogramResponseBodyAlertLogHistogramList extends TeaModel {
+        @NameInMap("Count")
+        public Integer count;
+
         @NameInMap("From")
         public Long from;
 
         @NameInMap("To")
         public Long to;
 
-        @NameInMap("Count")
-        public Integer count;
-
         public static DescribeAlertLogHistogramResponseBodyAlertLogHistogramList build(java.util.Map<String, ?> map) throws Exception {
             DescribeAlertLogHistogramResponseBodyAlertLogHistogramList self = new DescribeAlertLogHistogramResponseBodyAlertLogHistogramList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAlertLogHistogramResponseBodyAlertLogHistogramList setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
         }
 
         public DescribeAlertLogHistogramResponseBodyAlertLogHistogramList setFrom(Long from) {
@@ -93,14 +101,6 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         }
         public Long getTo() {
             return this.to;
-        }
-
-        public DescribeAlertLogHistogramResponseBodyAlertLogHistogramList setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
         }
 
     }

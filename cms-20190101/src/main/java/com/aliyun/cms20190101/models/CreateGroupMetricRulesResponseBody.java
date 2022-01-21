@@ -13,11 +13,11 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Resources")
     public CreateGroupMetricRulesResponseBodyResources resources;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static CreateGroupMetricRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateGroupMetricRulesResponseBody self = new CreateGroupMetricRulesResponseBody();
@@ -48,20 +48,20 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateGroupMetricRulesResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public CreateGroupMetricRulesResponseBody setResources(CreateGroupMetricRulesResponseBodyResources resources) {
         this.resources = resources;
         return this;
     }
     public CreateGroupMetricRulesResponseBodyResources getResources() {
         return this.resources;
+    }
+
+    public CreateGroupMetricRulesResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class CreateGroupMetricRulesResponseBodyResourcesAlertResult extends TeaModel {
@@ -71,14 +71,14 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
-        @NameInMap("Success")
-        public Boolean success;
+        @NameInMap("RuleId")
+        public String ruleId;
 
         @NameInMap("RuleName")
         public String ruleName;
 
-        @NameInMap("RuleId")
-        public String ruleId;
+        @NameInMap("Success")
+        public Boolean success;
 
         public static CreateGroupMetricRulesResponseBodyResourcesAlertResult build(java.util.Map<String, ?> map) throws Exception {
             CreateGroupMetricRulesResponseBodyResourcesAlertResult self = new CreateGroupMetricRulesResponseBodyResourcesAlertResult();
@@ -101,12 +101,12 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             return this.message;
         }
 
-        public CreateGroupMetricRulesResponseBodyResourcesAlertResult setSuccess(Boolean success) {
-            this.success = success;
+        public CreateGroupMetricRulesResponseBodyResourcesAlertResult setRuleId(String ruleId) {
+            this.ruleId = ruleId;
             return this;
         }
-        public Boolean getSuccess() {
-            return this.success;
+        public String getRuleId() {
+            return this.ruleId;
         }
 
         public CreateGroupMetricRulesResponseBodyResourcesAlertResult setRuleName(String ruleName) {
@@ -117,12 +117,12 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             return this.ruleName;
         }
 
-        public CreateGroupMetricRulesResponseBodyResourcesAlertResult setRuleId(String ruleId) {
-            this.ruleId = ruleId;
+        public CreateGroupMetricRulesResponseBodyResourcesAlertResult setSuccess(Boolean success) {
+            this.success = success;
             return this;
         }
-        public String getRuleId() {
-            return this.ruleId;
+        public Boolean getSuccess() {
+            return this.success;
         }
 
     }

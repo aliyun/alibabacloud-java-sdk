@@ -4,14 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyHostAvailabilityRequest extends TeaModel {
-    @NameInMap("TaskOption")
-    public ModifyHostAvailabilityRequestTaskOption taskOption;
-
     @NameInMap("AlertConfig")
     public ModifyHostAvailabilityRequestAlertConfig alertConfig;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("TaskOption")
+    public ModifyHostAvailabilityRequestTaskOption taskOption;
+
+    @NameInMap("AlertConfigEscalationList")
+    public java.util.List<ModifyHostAvailabilityRequestAlertConfigEscalationList> alertConfigEscalationList;
 
     @NameInMap("GroupId")
     public Long groupId;
@@ -19,29 +19,21 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    @NameInMap("InstanceList")
+    public java.util.List<String> instanceList;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("TaskName")
     public String taskName;
 
     @NameInMap("TaskScope")
     public String taskScope;
 
-    @NameInMap("AlertConfigEscalationList")
-    public java.util.List<ModifyHostAvailabilityRequestAlertConfigEscalationList> alertConfigEscalationList;
-
-    @NameInMap("InstanceList")
-    public java.util.List<String> instanceList;
-
     public static ModifyHostAvailabilityRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyHostAvailabilityRequest self = new ModifyHostAvailabilityRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyHostAvailabilityRequest setTaskOption(ModifyHostAvailabilityRequestTaskOption taskOption) {
-        this.taskOption = taskOption;
-        return this;
-    }
-    public ModifyHostAvailabilityRequestTaskOption getTaskOption() {
-        return this.taskOption;
     }
 
     public ModifyHostAvailabilityRequest setAlertConfig(ModifyHostAvailabilityRequestAlertConfig alertConfig) {
@@ -52,12 +44,20 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         return this.alertConfig;
     }
 
-    public ModifyHostAvailabilityRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifyHostAvailabilityRequest setTaskOption(ModifyHostAvailabilityRequestTaskOption taskOption) {
+        this.taskOption = taskOption;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public ModifyHostAvailabilityRequestTaskOption getTaskOption() {
+        return this.taskOption;
+    }
+
+    public ModifyHostAvailabilityRequest setAlertConfigEscalationList(java.util.List<ModifyHostAvailabilityRequestAlertConfigEscalationList> alertConfigEscalationList) {
+        this.alertConfigEscalationList = alertConfigEscalationList;
+        return this;
+    }
+    public java.util.List<ModifyHostAvailabilityRequestAlertConfigEscalationList> getAlertConfigEscalationList() {
+        return this.alertConfigEscalationList;
     }
 
     public ModifyHostAvailabilityRequest setGroupId(Long groupId) {
@@ -76,6 +76,22 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         return this.id;
     }
 
+    public ModifyHostAvailabilityRequest setInstanceList(java.util.List<String> instanceList) {
+        this.instanceList = instanceList;
+        return this;
+    }
+    public java.util.List<String> getInstanceList() {
+        return this.instanceList;
+    }
+
+    public ModifyHostAvailabilityRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ModifyHostAvailabilityRequest setTaskName(String taskName) {
         this.taskName = taskName;
         return this;
@@ -92,37 +108,72 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         return this.taskScope;
     }
 
-    public ModifyHostAvailabilityRequest setAlertConfigEscalationList(java.util.List<ModifyHostAvailabilityRequestAlertConfigEscalationList> alertConfigEscalationList) {
-        this.alertConfigEscalationList = alertConfigEscalationList;
-        return this;
-    }
-    public java.util.List<ModifyHostAvailabilityRequestAlertConfigEscalationList> getAlertConfigEscalationList() {
-        return this.alertConfigEscalationList;
-    }
+    public static class ModifyHostAvailabilityRequestAlertConfig extends TeaModel {
+        @NameInMap("EndTime")
+        public Integer endTime;
 
-    public ModifyHostAvailabilityRequest setInstanceList(java.util.List<String> instanceList) {
-        this.instanceList = instanceList;
-        return this;
-    }
-    public java.util.List<String> getInstanceList() {
-        return this.instanceList;
+        @NameInMap("NotifyType")
+        public Integer notifyType;
+
+        @NameInMap("SilenceTime")
+        public Integer silenceTime;
+
+        @NameInMap("StartTime")
+        public Integer startTime;
+
+        @NameInMap("WebHook")
+        public String webHook;
+
+        public static ModifyHostAvailabilityRequestAlertConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyHostAvailabilityRequestAlertConfig self = new ModifyHostAvailabilityRequestAlertConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyHostAvailabilityRequestAlertConfig setEndTime(Integer endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Integer getEndTime() {
+            return this.endTime;
+        }
+
+        public ModifyHostAvailabilityRequestAlertConfig setNotifyType(Integer notifyType) {
+            this.notifyType = notifyType;
+            return this;
+        }
+        public Integer getNotifyType() {
+            return this.notifyType;
+        }
+
+        public ModifyHostAvailabilityRequestAlertConfig setSilenceTime(Integer silenceTime) {
+            this.silenceTime = silenceTime;
+            return this;
+        }
+        public Integer getSilenceTime() {
+            return this.silenceTime;
+        }
+
+        public ModifyHostAvailabilityRequestAlertConfig setStartTime(Integer startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Integer getStartTime() {
+            return this.startTime;
+        }
+
+        public ModifyHostAvailabilityRequestAlertConfig setWebHook(String webHook) {
+            this.webHook = webHook;
+            return this;
+        }
+        public String getWebHook() {
+            return this.webHook;
+        }
+
     }
 
     public static class ModifyHostAvailabilityRequestTaskOption extends TeaModel {
-        @NameInMap("HttpURI")
-        public String httpURI;
-
-        @NameInMap("TelnetOrPingHost")
-        public String telnetOrPingHost;
-
-        @NameInMap("HttpResponseCharset")
-        public String httpResponseCharset;
-
-        @NameInMap("HttpPostContent")
-        public String httpPostContent;
-
-        @NameInMap("HttpResponseMatchContent")
-        public String httpResponseMatchContent;
+        @NameInMap("HttpHeader")
+        public String httpHeader;
 
         @NameInMap("HttpMethod")
         public String httpMethod;
@@ -130,55 +181,35 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         @NameInMap("HttpNegative")
         public Boolean httpNegative;
 
-        @NameInMap("HttpHeader")
-        public String httpHeader;
+        @NameInMap("HttpPostContent")
+        public String httpPostContent;
+
+        @NameInMap("HttpResponseCharset")
+        public String httpResponseCharset;
+
+        @NameInMap("HttpResponseMatchContent")
+        public String httpResponseMatchContent;
+
+        @NameInMap("HttpURI")
+        public String httpURI;
 
         @NameInMap("Interval")
         public Integer interval;
+
+        @NameInMap("TelnetOrPingHost")
+        public String telnetOrPingHost;
 
         public static ModifyHostAvailabilityRequestTaskOption build(java.util.Map<String, ?> map) throws Exception {
             ModifyHostAvailabilityRequestTaskOption self = new ModifyHostAvailabilityRequestTaskOption();
             return TeaModel.build(map, self);
         }
 
-        public ModifyHostAvailabilityRequestTaskOption setHttpURI(String httpURI) {
-            this.httpURI = httpURI;
+        public ModifyHostAvailabilityRequestTaskOption setHttpHeader(String httpHeader) {
+            this.httpHeader = httpHeader;
             return this;
         }
-        public String getHttpURI() {
-            return this.httpURI;
-        }
-
-        public ModifyHostAvailabilityRequestTaskOption setTelnetOrPingHost(String telnetOrPingHost) {
-            this.telnetOrPingHost = telnetOrPingHost;
-            return this;
-        }
-        public String getTelnetOrPingHost() {
-            return this.telnetOrPingHost;
-        }
-
-        public ModifyHostAvailabilityRequestTaskOption setHttpResponseCharset(String httpResponseCharset) {
-            this.httpResponseCharset = httpResponseCharset;
-            return this;
-        }
-        public String getHttpResponseCharset() {
-            return this.httpResponseCharset;
-        }
-
-        public ModifyHostAvailabilityRequestTaskOption setHttpPostContent(String httpPostContent) {
-            this.httpPostContent = httpPostContent;
-            return this;
-        }
-        public String getHttpPostContent() {
-            return this.httpPostContent;
-        }
-
-        public ModifyHostAvailabilityRequestTaskOption setHttpResponseMatchContent(String httpResponseMatchContent) {
-            this.httpResponseMatchContent = httpResponseMatchContent;
-            return this;
-        }
-        public String getHttpResponseMatchContent() {
-            return this.httpResponseMatchContent;
+        public String getHttpHeader() {
+            return this.httpHeader;
         }
 
         public ModifyHostAvailabilityRequestTaskOption setHttpMethod(String httpMethod) {
@@ -197,12 +228,36 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
             return this.httpNegative;
         }
 
-        public ModifyHostAvailabilityRequestTaskOption setHttpHeader(String httpHeader) {
-            this.httpHeader = httpHeader;
+        public ModifyHostAvailabilityRequestTaskOption setHttpPostContent(String httpPostContent) {
+            this.httpPostContent = httpPostContent;
             return this;
         }
-        public String getHttpHeader() {
-            return this.httpHeader;
+        public String getHttpPostContent() {
+            return this.httpPostContent;
+        }
+
+        public ModifyHostAvailabilityRequestTaskOption setHttpResponseCharset(String httpResponseCharset) {
+            this.httpResponseCharset = httpResponseCharset;
+            return this;
+        }
+        public String getHttpResponseCharset() {
+            return this.httpResponseCharset;
+        }
+
+        public ModifyHostAvailabilityRequestTaskOption setHttpResponseMatchContent(String httpResponseMatchContent) {
+            this.httpResponseMatchContent = httpResponseMatchContent;
+            return this;
+        }
+        public String getHttpResponseMatchContent() {
+            return this.httpResponseMatchContent;
+        }
+
+        public ModifyHostAvailabilityRequestTaskOption setHttpURI(String httpURI) {
+            this.httpURI = httpURI;
+            return this;
+        }
+        public String getHttpURI() {
+            return this.httpURI;
         }
 
         public ModifyHostAvailabilityRequestTaskOption setInterval(Integer interval) {
@@ -213,90 +268,43 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
             return this.interval;
         }
 
-    }
-
-    public static class ModifyHostAvailabilityRequestAlertConfig extends TeaModel {
-        @NameInMap("NotifyType")
-        public Integer notifyType;
-
-        @NameInMap("StartTime")
-        public Integer startTime;
-
-        @NameInMap("EndTime")
-        public Integer endTime;
-
-        @NameInMap("SilenceTime")
-        public Integer silenceTime;
-
-        @NameInMap("WebHook")
-        public String webHook;
-
-        public static ModifyHostAvailabilityRequestAlertConfig build(java.util.Map<String, ?> map) throws Exception {
-            ModifyHostAvailabilityRequestAlertConfig self = new ModifyHostAvailabilityRequestAlertConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public ModifyHostAvailabilityRequestAlertConfig setNotifyType(Integer notifyType) {
-            this.notifyType = notifyType;
+        public ModifyHostAvailabilityRequestTaskOption setTelnetOrPingHost(String telnetOrPingHost) {
+            this.telnetOrPingHost = telnetOrPingHost;
             return this;
         }
-        public Integer getNotifyType() {
-            return this.notifyType;
-        }
-
-        public ModifyHostAvailabilityRequestAlertConfig setStartTime(Integer startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Integer getStartTime() {
-            return this.startTime;
-        }
-
-        public ModifyHostAvailabilityRequestAlertConfig setEndTime(Integer endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public Integer getEndTime() {
-            return this.endTime;
-        }
-
-        public ModifyHostAvailabilityRequestAlertConfig setSilenceTime(Integer silenceTime) {
-            this.silenceTime = silenceTime;
-            return this;
-        }
-        public Integer getSilenceTime() {
-            return this.silenceTime;
-        }
-
-        public ModifyHostAvailabilityRequestAlertConfig setWebHook(String webHook) {
-            this.webHook = webHook;
-            return this;
-        }
-        public String getWebHook() {
-            return this.webHook;
+        public String getTelnetOrPingHost() {
+            return this.telnetOrPingHost;
         }
 
     }
 
     public static class ModifyHostAvailabilityRequestAlertConfigEscalationList extends TeaModel {
+        @NameInMap("Aggregate")
+        public String aggregate;
+
         @NameInMap("MetricName")
         public String metricName;
-
-        @NameInMap("Value")
-        public String value;
-
-        @NameInMap("Times")
-        public Integer times;
 
         @NameInMap("Operator")
         public String operator;
 
-        @NameInMap("Aggregate")
-        public String aggregate;
+        @NameInMap("Times")
+        public Integer times;
+
+        @NameInMap("Value")
+        public String value;
 
         public static ModifyHostAvailabilityRequestAlertConfigEscalationList build(java.util.Map<String, ?> map) throws Exception {
             ModifyHostAvailabilityRequestAlertConfigEscalationList self = new ModifyHostAvailabilityRequestAlertConfigEscalationList();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyHostAvailabilityRequestAlertConfigEscalationList setAggregate(String aggregate) {
+            this.aggregate = aggregate;
+            return this;
+        }
+        public String getAggregate() {
+            return this.aggregate;
         }
 
         public ModifyHostAvailabilityRequestAlertConfigEscalationList setMetricName(String metricName) {
@@ -307,12 +315,12 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
             return this.metricName;
         }
 
-        public ModifyHostAvailabilityRequestAlertConfigEscalationList setValue(String value) {
-            this.value = value;
+        public ModifyHostAvailabilityRequestAlertConfigEscalationList setOperator(String operator) {
+            this.operator = operator;
             return this;
         }
-        public String getValue() {
-            return this.value;
+        public String getOperator() {
+            return this.operator;
         }
 
         public ModifyHostAvailabilityRequestAlertConfigEscalationList setTimes(Integer times) {
@@ -323,20 +331,12 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
             return this.times;
         }
 
-        public ModifyHostAvailabilityRequestAlertConfigEscalationList setOperator(String operator) {
-            this.operator = operator;
+        public ModifyHostAvailabilityRequestAlertConfigEscalationList setValue(String value) {
+            this.value = value;
             return this;
         }
-        public String getOperator() {
-            return this.operator;
-        }
-
-        public ModifyHostAvailabilityRequestAlertConfigEscalationList setAggregate(String aggregate) {
-            this.aggregate = aggregate;
-            return this;
-        }
-        public String getAggregate() {
-            return this.aggregate;
+        public String getValue() {
+            return this.value;
         }
 
     }

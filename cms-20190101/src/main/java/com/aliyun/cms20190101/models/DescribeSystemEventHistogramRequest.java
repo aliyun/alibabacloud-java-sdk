@@ -4,26 +4,26 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSystemEventHistogramRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Product")
-    public String product;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("EventType")
     public String eventType;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("GroupId")
+    public String groupId;
 
     @NameInMap("Level")
     public String level;
 
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("Name")
+    public String name;
 
-    @NameInMap("GroupId")
-    public String groupId;
+    @NameInMap("Product")
+    public String product;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("SearchKeywords")
     public String searchKeywords;
@@ -31,28 +31,20 @@ public class DescribeSystemEventHistogramRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
+    @NameInMap("Status")
+    public String status;
 
     public static DescribeSystemEventHistogramRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSystemEventHistogramRequest self = new DescribeSystemEventHistogramRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSystemEventHistogramRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeSystemEventHistogramRequest setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeSystemEventHistogramRequest setProduct(String product) {
-        this.product = product;
-        return this;
-    }
-    public String getProduct() {
-        return this.product;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeSystemEventHistogramRequest setEventType(String eventType) {
@@ -63,12 +55,12 @@ public class DescribeSystemEventHistogramRequest extends TeaModel {
         return this.eventType;
     }
 
-    public DescribeSystemEventHistogramRequest setName(String name) {
-        this.name = name;
+    public DescribeSystemEventHistogramRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public DescribeSystemEventHistogramRequest setLevel(String level) {
@@ -79,20 +71,28 @@ public class DescribeSystemEventHistogramRequest extends TeaModel {
         return this.level;
     }
 
-    public DescribeSystemEventHistogramRequest setStatus(String status) {
-        this.status = status;
+    public DescribeSystemEventHistogramRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getName() {
+        return this.name;
     }
 
-    public DescribeSystemEventHistogramRequest setGroupId(String groupId) {
-        this.groupId = groupId;
+    public DescribeSystemEventHistogramRequest setProduct(String product) {
+        this.product = product;
         return this;
     }
-    public String getGroupId() {
-        return this.groupId;
+    public String getProduct() {
+        return this.product;
+    }
+
+    public DescribeSystemEventHistogramRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeSystemEventHistogramRequest setSearchKeywords(String searchKeywords) {
@@ -111,12 +111,12 @@ public class DescribeSystemEventHistogramRequest extends TeaModel {
         return this.startTime;
     }
 
-    public DescribeSystemEventHistogramRequest setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeSystemEventHistogramRequest setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
+    public String getStatus() {
+        return this.status;
     }
 
 }

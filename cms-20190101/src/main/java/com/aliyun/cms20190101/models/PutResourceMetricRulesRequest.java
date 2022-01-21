@@ -20,22 +20,90 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         return this.rules;
     }
 
-    public static class PutResourceMetricRulesRequestRulesEscalationsInfo extends TeaModel {
+    public static class PutResourceMetricRulesRequestRulesEscalationsCritical extends TeaModel {
+        @NameInMap("ComparisonOperator")
+        public String comparisonOperator;
+
+        @NameInMap("Statistics")
+        public String statistics;
+
         @NameInMap("Threshold")
         public String threshold;
 
         @NameInMap("Times")
         public Integer times;
 
+        public static PutResourceMetricRulesRequestRulesEscalationsCritical build(java.util.Map<String, ?> map) throws Exception {
+            PutResourceMetricRulesRequestRulesEscalationsCritical self = new PutResourceMetricRulesRequestRulesEscalationsCritical();
+            return TeaModel.build(map, self);
+        }
+
+        public PutResourceMetricRulesRequestRulesEscalationsCritical setComparisonOperator(String comparisonOperator) {
+            this.comparisonOperator = comparisonOperator;
+            return this;
+        }
+        public String getComparisonOperator() {
+            return this.comparisonOperator;
+        }
+
+        public PutResourceMetricRulesRequestRulesEscalationsCritical setStatistics(String statistics) {
+            this.statistics = statistics;
+            return this;
+        }
+        public String getStatistics() {
+            return this.statistics;
+        }
+
+        public PutResourceMetricRulesRequestRulesEscalationsCritical setThreshold(String threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+        public PutResourceMetricRulesRequestRulesEscalationsCritical setTimes(Integer times) {
+            this.times = times;
+            return this;
+        }
+        public Integer getTimes() {
+            return this.times;
+        }
+
+    }
+
+    public static class PutResourceMetricRulesRequestRulesEscalationsInfo extends TeaModel {
+        @NameInMap("ComparisonOperator")
+        public String comparisonOperator;
+
         @NameInMap("Statistics")
         public String statistics;
 
-        @NameInMap("ComparisonOperator")
-        public String comparisonOperator;
+        @NameInMap("Threshold")
+        public String threshold;
+
+        @NameInMap("Times")
+        public Integer times;
 
         public static PutResourceMetricRulesRequestRulesEscalationsInfo build(java.util.Map<String, ?> map) throws Exception {
             PutResourceMetricRulesRequestRulesEscalationsInfo self = new PutResourceMetricRulesRequestRulesEscalationsInfo();
             return TeaModel.build(map, self);
+        }
+
+        public PutResourceMetricRulesRequestRulesEscalationsInfo setComparisonOperator(String comparisonOperator) {
+            this.comparisonOperator = comparisonOperator;
+            return this;
+        }
+        public String getComparisonOperator() {
+            return this.comparisonOperator;
+        }
+
+        public PutResourceMetricRulesRequestRulesEscalationsInfo setStatistics(String statistics) {
+            this.statistics = statistics;
+            return this;
+        }
+        public String getStatistics() {
+            return this.statistics;
         }
 
         public PutResourceMetricRulesRequestRulesEscalationsInfo setThreshold(String threshold) {
@@ -54,48 +122,24 @@ public class PutResourceMetricRulesRequest extends TeaModel {
             return this.times;
         }
 
-        public PutResourceMetricRulesRequestRulesEscalationsInfo setStatistics(String statistics) {
-            this.statistics = statistics;
-            return this;
-        }
-        public String getStatistics() {
-            return this.statistics;
-        }
-
-        public PutResourceMetricRulesRequestRulesEscalationsInfo setComparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = comparisonOperator;
-            return this;
-        }
-        public String getComparisonOperator() {
-            return this.comparisonOperator;
-        }
-
     }
 
     public static class PutResourceMetricRulesRequestRulesEscalationsWarn extends TeaModel {
-        @NameInMap("Threshold")
-        public String threshold;
-
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
-
-        @NameInMap("Times")
-        public Integer times;
 
         @NameInMap("Statistics")
         public String statistics;
 
+        @NameInMap("Threshold")
+        public String threshold;
+
+        @NameInMap("Times")
+        public Integer times;
+
         public static PutResourceMetricRulesRequestRulesEscalationsWarn build(java.util.Map<String, ?> map) throws Exception {
             PutResourceMetricRulesRequestRulesEscalationsWarn self = new PutResourceMetricRulesRequestRulesEscalationsWarn();
             return TeaModel.build(map, self);
-        }
-
-        public PutResourceMetricRulesRequestRulesEscalationsWarn setThreshold(String threshold) {
-            this.threshold = threshold;
-            return this;
-        }
-        public String getThreshold() {
-            return this.threshold;
         }
 
         public PutResourceMetricRulesRequestRulesEscalationsWarn setComparisonOperator(String comparisonOperator) {
@@ -106,14 +150,6 @@ public class PutResourceMetricRulesRequest extends TeaModel {
             return this.comparisonOperator;
         }
 
-        public PutResourceMetricRulesRequestRulesEscalationsWarn setTimes(Integer times) {
-            this.times = times;
-            return this;
-        }
-        public Integer getTimes() {
-            return this.times;
-        }
-
         public PutResourceMetricRulesRequestRulesEscalationsWarn setStatistics(String statistics) {
             this.statistics = statistics;
             return this;
@@ -122,35 +158,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
             return this.statistics;
         }
 
-    }
-
-    public static class PutResourceMetricRulesRequestRulesEscalationsCritical extends TeaModel {
-        @NameInMap("Times")
-        public Integer times;
-
-        @NameInMap("Threshold")
-        public String threshold;
-
-        @NameInMap("Statistics")
-        public String statistics;
-
-        @NameInMap("ComparisonOperator")
-        public String comparisonOperator;
-
-        public static PutResourceMetricRulesRequestRulesEscalationsCritical build(java.util.Map<String, ?> map) throws Exception {
-            PutResourceMetricRulesRequestRulesEscalationsCritical self = new PutResourceMetricRulesRequestRulesEscalationsCritical();
-            return TeaModel.build(map, self);
-        }
-
-        public PutResourceMetricRulesRequestRulesEscalationsCritical setTimes(Integer times) {
-            this.times = times;
-            return this;
-        }
-        public Integer getTimes() {
-            return this.times;
-        }
-
-        public PutResourceMetricRulesRequestRulesEscalationsCritical setThreshold(String threshold) {
+        public PutResourceMetricRulesRequestRulesEscalationsWarn setThreshold(String threshold) {
             this.threshold = threshold;
             return this;
         }
@@ -158,25 +166,21 @@ public class PutResourceMetricRulesRequest extends TeaModel {
             return this.threshold;
         }
 
-        public PutResourceMetricRulesRequestRulesEscalationsCritical setStatistics(String statistics) {
-            this.statistics = statistics;
+        public PutResourceMetricRulesRequestRulesEscalationsWarn setTimes(Integer times) {
+            this.times = times;
             return this;
         }
-        public String getStatistics() {
-            return this.statistics;
-        }
-
-        public PutResourceMetricRulesRequestRulesEscalationsCritical setComparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = comparisonOperator;
-            return this;
-        }
-        public String getComparisonOperator() {
-            return this.comparisonOperator;
+        public Integer getTimes() {
+            return this.times;
         }
 
     }
 
     public static class PutResourceMetricRulesRequestRulesEscalations extends TeaModel {
+        @NameInMap("Critical")
+        @Validation(required = true)
+        public PutResourceMetricRulesRequestRulesEscalationsCritical critical;
+
         @NameInMap("Info")
         @Validation(required = true)
         public PutResourceMetricRulesRequestRulesEscalationsInfo info;
@@ -185,13 +189,17 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         @Validation(required = true)
         public PutResourceMetricRulesRequestRulesEscalationsWarn warn;
 
-        @NameInMap("Critical")
-        @Validation(required = true)
-        public PutResourceMetricRulesRequestRulesEscalationsCritical critical;
-
         public static PutResourceMetricRulesRequestRulesEscalations build(java.util.Map<String, ?> map) throws Exception {
             PutResourceMetricRulesRequestRulesEscalations self = new PutResourceMetricRulesRequestRulesEscalations();
             return TeaModel.build(map, self);
+        }
+
+        public PutResourceMetricRulesRequestRulesEscalations setCritical(PutResourceMetricRulesRequestRulesEscalationsCritical critical) {
+            this.critical = critical;
+            return this;
+        }
+        public PutResourceMetricRulesRequestRulesEscalationsCritical getCritical() {
+            return this.critical;
         }
 
         public PutResourceMetricRulesRequestRulesEscalations setInfo(PutResourceMetricRulesRequestRulesEscalationsInfo info) {
@@ -210,14 +218,6 @@ public class PutResourceMetricRulesRequest extends TeaModel {
             return this.warn;
         }
 
-        public PutResourceMetricRulesRequestRulesEscalations setCritical(PutResourceMetricRulesRequestRulesEscalationsCritical critical) {
-            this.critical = critical;
-            return this;
-        }
-        public PutResourceMetricRulesRequestRulesEscalationsCritical getCritical() {
-            return this.critical;
-        }
-
     }
 
     public static class PutResourceMetricRulesRequestRules extends TeaModel {
@@ -225,44 +225,47 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         @Validation(required = true)
         public PutResourceMetricRulesRequestRulesEscalations escalations;
 
-        @NameInMap("MetricName")
-        public String metricName;
+        @NameInMap("ContactGroups")
+        public String contactGroups;
 
         @NameInMap("EffectiveInterval")
         public String effectiveInterval;
 
+        @NameInMap("EmailSubject")
+        public String emailSubject;
+
+        @NameInMap("Interval")
+        public String interval;
+
+        @NameInMap("MetricName")
+        public String metricName;
+
+        @NameInMap("Namespace")
+        public String namespace;
+
+        @NameInMap("NoDataPolicy")
+        public String noDataPolicy;
+
         @NameInMap("NoEffectiveInterval")
         public String noEffectiveInterval;
+
+        @NameInMap("Period")
+        public String period;
+
+        @NameInMap("Resources")
+        public String resources;
 
         @NameInMap("RuleId")
         public String ruleId;
 
-        @NameInMap("Resources")
-        public String resources;
+        @NameInMap("RuleName")
+        public String ruleName;
 
         @NameInMap("SilenceTime")
         public Integer silenceTime;
 
         @NameInMap("Webhook")
         public String webhook;
-
-        @NameInMap("ContactGroups")
-        public String contactGroups;
-
-        @NameInMap("Namespace")
-        public String namespace;
-
-        @NameInMap("EmailSubject")
-        public String emailSubject;
-
-        @NameInMap("Period")
-        public String period;
-
-        @NameInMap("RuleName")
-        public String ruleName;
-
-        @NameInMap("Interval")
-        public String interval;
 
         public static PutResourceMetricRulesRequestRules build(java.util.Map<String, ?> map) throws Exception {
             PutResourceMetricRulesRequestRules self = new PutResourceMetricRulesRequestRules();
@@ -277,12 +280,12 @@ public class PutResourceMetricRulesRequest extends TeaModel {
             return this.escalations;
         }
 
-        public PutResourceMetricRulesRequestRules setMetricName(String metricName) {
-            this.metricName = metricName;
+        public PutResourceMetricRulesRequestRules setContactGroups(String contactGroups) {
+            this.contactGroups = contactGroups;
             return this;
         }
-        public String getMetricName() {
-            return this.metricName;
+        public String getContactGroups() {
+            return this.contactGroups;
         }
 
         public PutResourceMetricRulesRequestRules setEffectiveInterval(String effectiveInterval) {
@@ -293,12 +296,68 @@ public class PutResourceMetricRulesRequest extends TeaModel {
             return this.effectiveInterval;
         }
 
+        public PutResourceMetricRulesRequestRules setEmailSubject(String emailSubject) {
+            this.emailSubject = emailSubject;
+            return this;
+        }
+        public String getEmailSubject() {
+            return this.emailSubject;
+        }
+
+        public PutResourceMetricRulesRequestRules setInterval(String interval) {
+            this.interval = interval;
+            return this;
+        }
+        public String getInterval() {
+            return this.interval;
+        }
+
+        public PutResourceMetricRulesRequestRules setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        public PutResourceMetricRulesRequestRules setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public PutResourceMetricRulesRequestRules setNoDataPolicy(String noDataPolicy) {
+            this.noDataPolicy = noDataPolicy;
+            return this;
+        }
+        public String getNoDataPolicy() {
+            return this.noDataPolicy;
+        }
+
         public PutResourceMetricRulesRequestRules setNoEffectiveInterval(String noEffectiveInterval) {
             this.noEffectiveInterval = noEffectiveInterval;
             return this;
         }
         public String getNoEffectiveInterval() {
             return this.noEffectiveInterval;
+        }
+
+        public PutResourceMetricRulesRequestRules setPeriod(String period) {
+            this.period = period;
+            return this;
+        }
+        public String getPeriod() {
+            return this.period;
+        }
+
+        public PutResourceMetricRulesRequestRules setResources(String resources) {
+            this.resources = resources;
+            return this;
+        }
+        public String getResources() {
+            return this.resources;
         }
 
         public PutResourceMetricRulesRequestRules setRuleId(String ruleId) {
@@ -309,12 +368,12 @@ public class PutResourceMetricRulesRequest extends TeaModel {
             return this.ruleId;
         }
 
-        public PutResourceMetricRulesRequestRules setResources(String resources) {
-            this.resources = resources;
+        public PutResourceMetricRulesRequestRules setRuleName(String ruleName) {
+            this.ruleName = ruleName;
             return this;
         }
-        public String getResources() {
-            return this.resources;
+        public String getRuleName() {
+            return this.ruleName;
         }
 
         public PutResourceMetricRulesRequestRules setSilenceTime(Integer silenceTime) {
@@ -331,54 +390,6 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         }
         public String getWebhook() {
             return this.webhook;
-        }
-
-        public PutResourceMetricRulesRequestRules setContactGroups(String contactGroups) {
-            this.contactGroups = contactGroups;
-            return this;
-        }
-        public String getContactGroups() {
-            return this.contactGroups;
-        }
-
-        public PutResourceMetricRulesRequestRules setNamespace(String namespace) {
-            this.namespace = namespace;
-            return this;
-        }
-        public String getNamespace() {
-            return this.namespace;
-        }
-
-        public PutResourceMetricRulesRequestRules setEmailSubject(String emailSubject) {
-            this.emailSubject = emailSubject;
-            return this;
-        }
-        public String getEmailSubject() {
-            return this.emailSubject;
-        }
-
-        public PutResourceMetricRulesRequestRules setPeriod(String period) {
-            this.period = period;
-            return this;
-        }
-        public String getPeriod() {
-            return this.period;
-        }
-
-        public PutResourceMetricRulesRequestRules setRuleName(String ruleName) {
-            this.ruleName = ruleName;
-            return this;
-        }
-        public String getRuleName() {
-            return this.ruleName;
-        }
-
-        public PutResourceMetricRulesRequestRules setInterval(String interval) {
-            this.interval = interval;
-            return this;
-        }
-        public String getInterval() {
-            return this.interval;
         }
 
     }

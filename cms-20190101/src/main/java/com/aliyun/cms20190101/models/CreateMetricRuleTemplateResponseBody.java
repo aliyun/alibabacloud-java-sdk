@@ -7,6 +7,9 @@ public class CreateMetricRuleTemplateResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("Id")
+    public Long id;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class CreateMetricRuleTemplateResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Id")
-    public Long id;
 
     public static CreateMetricRuleTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateMetricRuleTemplateResponseBody self = new CreateMetricRuleTemplateResponseBody();
@@ -30,6 +30,14 @@ public class CreateMetricRuleTemplateResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
+    }
+
+    public CreateMetricRuleTemplateResponseBody setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public CreateMetricRuleTemplateResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class CreateMetricRuleTemplateResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreateMetricRuleTemplateResponseBody setId(Long id) {
-        this.id = id;
-        return this;
-    }
-    public Long getId() {
-        return this.id;
     }
 
 }

@@ -7,6 +7,9 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Contacts")
+    public DescribeContactListByContactGroupResponseBodyContacts contacts;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Contacts")
-    public DescribeContactListByContactGroupResponseBodyContacts contacts;
 
     public static DescribeContactListByContactGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeContactListByContactGroupResponseBody self = new DescribeContactListByContactGroupResponseBody();
@@ -30,6 +30,14 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeContactListByContactGroupResponseBody setContacts(DescribeContactListByContactGroupResponseBodyContacts contacts) {
+        this.contacts = contacts;
+        return this;
+    }
+    public DescribeContactListByContactGroupResponseBodyContacts getContacts() {
+        return this.contacts;
     }
 
     public DescribeContactListByContactGroupResponseBody setMessage(String message) {
@@ -56,23 +64,15 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeContactListByContactGroupResponseBody setContacts(DescribeContactListByContactGroupResponseBodyContacts contacts) {
-        this.contacts = contacts;
-        return this;
-    }
-    public DescribeContactListByContactGroupResponseBodyContacts getContacts() {
-        return this.contacts;
-    }
-
     public static class DescribeContactListByContactGroupResponseBodyContactsContactChannels extends TeaModel {
-        @NameInMap("Mail")
-        public String mail;
-
         @NameInMap("AliIM")
         public String aliIM;
 
         @NameInMap("DingWebHook")
         public String dingWebHook;
+
+        @NameInMap("Mail")
+        public String mail;
 
         @NameInMap("SMS")
         public String SMS;
@@ -80,14 +80,6 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
         public static DescribeContactListByContactGroupResponseBodyContactsContactChannels build(java.util.Map<String, ?> map) throws Exception {
             DescribeContactListByContactGroupResponseBodyContactsContactChannels self = new DescribeContactListByContactGroupResponseBodyContactsContactChannels();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeContactListByContactGroupResponseBodyContactsContactChannels setMail(String mail) {
-            this.mail = mail;
-            return this;
-        }
-        public String getMail() {
-            return this.mail;
         }
 
         public DescribeContactListByContactGroupResponseBodyContactsContactChannels setAliIM(String aliIM) {
@@ -106,6 +98,14 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             return this.dingWebHook;
         }
 
+        public DescribeContactListByContactGroupResponseBodyContactsContactChannels setMail(String mail) {
+            this.mail = mail;
+            return this;
+        }
+        public String getMail() {
+            return this.mail;
+        }
+
         public DescribeContactListByContactGroupResponseBodyContactsContactChannels setSMS(String SMS) {
             this.SMS = SMS;
             return this;
@@ -117,11 +117,8 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeContactListByContactGroupResponseBodyContactsContact extends TeaModel {
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Channels")
+        public DescribeContactListByContactGroupResponseBodyContactsContactChannels channels;
 
         @NameInMap("CreateTime")
         public Long createTime;
@@ -129,28 +126,23 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
         @NameInMap("Desc")
         public String desc;
 
-        @NameInMap("Channels")
-        public DescribeContactListByContactGroupResponseBodyContactsContactChannels channels;
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("UpdateTime")
+        public Long updateTime;
 
         public static DescribeContactListByContactGroupResponseBodyContactsContact build(java.util.Map<String, ?> map) throws Exception {
             DescribeContactListByContactGroupResponseBodyContactsContact self = new DescribeContactListByContactGroupResponseBodyContactsContact();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContactListByContactGroupResponseBodyContactsContact setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
+        public DescribeContactListByContactGroupResponseBodyContactsContact setChannels(DescribeContactListByContactGroupResponseBodyContactsContactChannels channels) {
+            this.channels = channels;
             return this;
         }
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public DescribeContactListByContactGroupResponseBodyContactsContact setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
+        public DescribeContactListByContactGroupResponseBodyContactsContactChannels getChannels() {
+            return this.channels;
         }
 
         public DescribeContactListByContactGroupResponseBodyContactsContact setCreateTime(Long createTime) {
@@ -169,12 +161,20 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             return this.desc;
         }
 
-        public DescribeContactListByContactGroupResponseBodyContactsContact setChannels(DescribeContactListByContactGroupResponseBodyContactsContactChannels channels) {
-            this.channels = channels;
+        public DescribeContactListByContactGroupResponseBodyContactsContact setName(String name) {
+            this.name = name;
             return this;
         }
-        public DescribeContactListByContactGroupResponseBodyContactsContactChannels getChannels() {
-            return this.channels;
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeContactListByContactGroupResponseBodyContactsContact setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
     }
