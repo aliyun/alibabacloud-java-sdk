@@ -4,17 +4,11 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class CreateQosCarResponseBody extends TeaModel {
-    @NameInMap("MinBandwidthAbs")
-    public Integer minBandwidthAbs;
-
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("QosCarId")
-    public String qosCarId;
+    @NameInMap("LimitType")
+    public String limitType;
 
     @NameInMap("MaxBandwidthAbs")
     public Integer maxBandwidthAbs;
@@ -22,32 +16,30 @@ public class CreateQosCarResponseBody extends TeaModel {
     @NameInMap("MaxBandwidthPercent")
     public Integer maxBandwidthPercent;
 
-    @NameInMap("Priority")
-    public Integer priority;
-
-    @NameInMap("QosId")
-    public String qosId;
-
-    @NameInMap("PercentSourceType")
-    public String percentSourceType;
+    @NameInMap("MinBandwidthAbs")
+    public Integer minBandwidthAbs;
 
     @NameInMap("MinBandwidthPercent")
     public Integer minBandwidthPercent;
 
-    @NameInMap("LimitType")
-    public String limitType;
+    @NameInMap("PercentSourceType")
+    public String percentSourceType;
+
+    @NameInMap("Priority")
+    public Integer priority;
+
+    @NameInMap("QosCarId")
+    public String qosCarId;
+
+    @NameInMap("QosId")
+    public String qosId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateQosCarResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateQosCarResponseBody self = new CreateQosCarResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateQosCarResponseBody setMinBandwidthAbs(Integer minBandwidthAbs) {
-        this.minBandwidthAbs = minBandwidthAbs;
-        return this;
-    }
-    public Integer getMinBandwidthAbs() {
-        return this.minBandwidthAbs;
     }
 
     public CreateQosCarResponseBody setDescription(String description) {
@@ -58,20 +50,12 @@ public class CreateQosCarResponseBody extends TeaModel {
         return this.description;
     }
 
-    public CreateQosCarResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateQosCarResponseBody setLimitType(String limitType) {
+        this.limitType = limitType;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateQosCarResponseBody setQosCarId(String qosCarId) {
-        this.qosCarId = qosCarId;
-        return this;
-    }
-    public String getQosCarId() {
-        return this.qosCarId;
+    public String getLimitType() {
+        return this.limitType;
     }
 
     public CreateQosCarResponseBody setMaxBandwidthAbs(Integer maxBandwidthAbs) {
@@ -90,28 +74,12 @@ public class CreateQosCarResponseBody extends TeaModel {
         return this.maxBandwidthPercent;
     }
 
-    public CreateQosCarResponseBody setPriority(Integer priority) {
-        this.priority = priority;
+    public CreateQosCarResponseBody setMinBandwidthAbs(Integer minBandwidthAbs) {
+        this.minBandwidthAbs = minBandwidthAbs;
         return this;
     }
-    public Integer getPriority() {
-        return this.priority;
-    }
-
-    public CreateQosCarResponseBody setQosId(String qosId) {
-        this.qosId = qosId;
-        return this;
-    }
-    public String getQosId() {
-        return this.qosId;
-    }
-
-    public CreateQosCarResponseBody setPercentSourceType(String percentSourceType) {
-        this.percentSourceType = percentSourceType;
-        return this;
-    }
-    public String getPercentSourceType() {
-        return this.percentSourceType;
+    public Integer getMinBandwidthAbs() {
+        return this.minBandwidthAbs;
     }
 
     public CreateQosCarResponseBody setMinBandwidthPercent(Integer minBandwidthPercent) {
@@ -122,12 +90,44 @@ public class CreateQosCarResponseBody extends TeaModel {
         return this.minBandwidthPercent;
     }
 
-    public CreateQosCarResponseBody setLimitType(String limitType) {
-        this.limitType = limitType;
+    public CreateQosCarResponseBody setPercentSourceType(String percentSourceType) {
+        this.percentSourceType = percentSourceType;
         return this;
     }
-    public String getLimitType() {
-        return this.limitType;
+    public String getPercentSourceType() {
+        return this.percentSourceType;
+    }
+
+    public CreateQosCarResponseBody setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
+    }
+
+    public CreateQosCarResponseBody setQosCarId(String qosCarId) {
+        this.qosCarId = qosCarId;
+        return this;
+    }
+    public String getQosCarId() {
+        return this.qosCarId;
+    }
+
+    public CreateQosCarResponseBody setQosId(String qosId) {
+        this.qosId = qosId;
+        return this;
+    }
+    public String getQosId() {
+        return this.qosId;
+    }
+
+    public CreateQosCarResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

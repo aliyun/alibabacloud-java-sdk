@@ -4,26 +4,18 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class GetCloudConnectNetworkUseLimitResponseBody extends TeaModel {
-    @NameInMap("UsedAmount")
-    public Integer usedAmount;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TotalAmount")
     public Integer totalAmount;
 
+    @NameInMap("UsedAmount")
+    public Integer usedAmount;
+
     public static GetCloudConnectNetworkUseLimitResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCloudConnectNetworkUseLimitResponseBody self = new GetCloudConnectNetworkUseLimitResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetCloudConnectNetworkUseLimitResponseBody setUsedAmount(Integer usedAmount) {
-        this.usedAmount = usedAmount;
-        return this;
-    }
-    public Integer getUsedAmount() {
-        return this.usedAmount;
     }
 
     public GetCloudConnectNetworkUseLimitResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class GetCloudConnectNetworkUseLimitResponseBody extends TeaModel {
     }
     public Integer getTotalAmount() {
         return this.totalAmount;
+    }
+
+    public GetCloudConnectNetworkUseLimitResponseBody setUsedAmount(Integer usedAmount) {
+        this.usedAmount = usedAmount;
+        return this;
+    }
+    public Integer getUsedAmount() {
+        return this.usedAmount;
     }
 
 }

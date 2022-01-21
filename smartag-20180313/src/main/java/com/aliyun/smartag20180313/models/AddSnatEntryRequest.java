@@ -4,11 +4,17 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class AddSnatEntryRequest extends TeaModel {
+    @NameInMap("CidrBlock")
+    public String cidrBlock;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,14 +22,8 @@ public class AddSnatEntryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
-
-    @NameInMap("CidrBlock")
-    public String cidrBlock;
 
     @NameInMap("SnatIp")
     public String snatIp;
@@ -31,6 +31,14 @@ public class AddSnatEntryRequest extends TeaModel {
     public static AddSnatEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         AddSnatEntryRequest self = new AddSnatEntryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddSnatEntryRequest setCidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
+        return this;
+    }
+    public String getCidrBlock() {
+        return this.cidrBlock;
     }
 
     public AddSnatEntryRequest setOwnerAccount(String ownerAccount) {
@@ -49,6 +57,14 @@ public class AddSnatEntryRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public AddSnatEntryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public AddSnatEntryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -65,28 +81,12 @@ public class AddSnatEntryRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public AddSnatEntryRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public AddSnatEntryRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
     }
     public String getSmartAGId() {
         return this.smartAGId;
-    }
-
-    public AddSnatEntryRequest setCidrBlock(String cidrBlock) {
-        this.cidrBlock = cidrBlock;
-        return this;
-    }
-    public String getCidrBlock() {
-        return this.cidrBlock;
     }
 
     public AddSnatEntryRequest setSnatIp(String snatIp) {

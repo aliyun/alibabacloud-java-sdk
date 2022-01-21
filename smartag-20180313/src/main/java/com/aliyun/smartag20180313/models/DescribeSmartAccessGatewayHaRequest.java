@@ -10,6 +10,9 @@ public class DescribeSmartAccessGatewayHaRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -18,9 +21,6 @@ public class DescribeSmartAccessGatewayHaRequest extends TeaModel {
 
     @NameInMap("SmartAGId")
     public String smartAGId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     public static DescribeSmartAccessGatewayHaRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSmartAccessGatewayHaRequest self = new DescribeSmartAccessGatewayHaRequest();
@@ -41,6 +41,14 @@ public class DescribeSmartAccessGatewayHaRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeSmartAccessGatewayHaRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeSmartAccessGatewayHaRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -65,14 +73,6 @@ public class DescribeSmartAccessGatewayHaRequest extends TeaModel {
     }
     public String getSmartAGId() {
         return this.smartAGId;
-    }
-
-    public DescribeSmartAccessGatewayHaRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

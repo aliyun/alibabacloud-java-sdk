@@ -4,8 +4,8 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ListDpiSignaturesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("DpiSignature")
+    public java.util.List<ListDpiSignaturesResponseBodyDpiSignature> dpiSignature;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -13,20 +13,20 @@ public class ListDpiSignaturesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DpiSignature")
-    public java.util.List<ListDpiSignaturesResponseBodyDpiSignature> dpiSignature;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListDpiSignaturesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDpiSignaturesResponseBody self = new ListDpiSignaturesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListDpiSignaturesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListDpiSignaturesResponseBody setDpiSignature(java.util.List<ListDpiSignaturesResponseBodyDpiSignature> dpiSignature) {
+        this.dpiSignature = dpiSignature;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public java.util.List<ListDpiSignaturesResponseBodyDpiSignature> getDpiSignature() {
+        return this.dpiSignature;
     }
 
     public ListDpiSignaturesResponseBody setNextToken(String nextToken) {
@@ -45,49 +45,33 @@ public class ListDpiSignaturesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListDpiSignaturesResponseBody setDpiSignature(java.util.List<ListDpiSignaturesResponseBodyDpiSignature> dpiSignature) {
-        this.dpiSignature = dpiSignature;
+    public ListDpiSignaturesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public java.util.List<ListDpiSignaturesResponseBodyDpiSignature> getDpiSignature() {
-        return this.dpiSignature;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListDpiSignaturesResponseBodyDpiSignature extends TeaModel {
-        @NameInMap("DpiSignatureId")
-        public String dpiSignatureId;
-
-        @NameInMap("MinSignatureDbVersion")
-        public String minSignatureDbVersion;
-
         @NameInMap("DpiGroupId")
         public String dpiGroupId;
 
-        @NameInMap("MinEngineVersion")
-        public String minEngineVersion;
+        @NameInMap("DpiSignatureId")
+        public String dpiSignatureId;
 
         @NameInMap("DpiSignatureName")
         public String dpiSignatureName;
 
+        @NameInMap("MinEngineVersion")
+        public String minEngineVersion;
+
+        @NameInMap("MinSignatureDbVersion")
+        public String minSignatureDbVersion;
+
         public static ListDpiSignaturesResponseBodyDpiSignature build(java.util.Map<String, ?> map) throws Exception {
             ListDpiSignaturesResponseBodyDpiSignature self = new ListDpiSignaturesResponseBodyDpiSignature();
             return TeaModel.build(map, self);
-        }
-
-        public ListDpiSignaturesResponseBodyDpiSignature setDpiSignatureId(String dpiSignatureId) {
-            this.dpiSignatureId = dpiSignatureId;
-            return this;
-        }
-        public String getDpiSignatureId() {
-            return this.dpiSignatureId;
-        }
-
-        public ListDpiSignaturesResponseBodyDpiSignature setMinSignatureDbVersion(String minSignatureDbVersion) {
-            this.minSignatureDbVersion = minSignatureDbVersion;
-            return this;
-        }
-        public String getMinSignatureDbVersion() {
-            return this.minSignatureDbVersion;
         }
 
         public ListDpiSignaturesResponseBodyDpiSignature setDpiGroupId(String dpiGroupId) {
@@ -98,12 +82,12 @@ public class ListDpiSignaturesResponseBody extends TeaModel {
             return this.dpiGroupId;
         }
 
-        public ListDpiSignaturesResponseBodyDpiSignature setMinEngineVersion(String minEngineVersion) {
-            this.minEngineVersion = minEngineVersion;
+        public ListDpiSignaturesResponseBodyDpiSignature setDpiSignatureId(String dpiSignatureId) {
+            this.dpiSignatureId = dpiSignatureId;
             return this;
         }
-        public String getMinEngineVersion() {
-            return this.minEngineVersion;
+        public String getDpiSignatureId() {
+            return this.dpiSignatureId;
         }
 
         public ListDpiSignaturesResponseBodyDpiSignature setDpiSignatureName(String dpiSignatureName) {
@@ -112,6 +96,22 @@ public class ListDpiSignaturesResponseBody extends TeaModel {
         }
         public String getDpiSignatureName() {
             return this.dpiSignatureName;
+        }
+
+        public ListDpiSignaturesResponseBodyDpiSignature setMinEngineVersion(String minEngineVersion) {
+            this.minEngineVersion = minEngineVersion;
+            return this;
+        }
+        public String getMinEngineVersion() {
+            return this.minEngineVersion;
+        }
+
+        public ListDpiSignaturesResponseBodyDpiSignature setMinSignatureDbVersion(String minSignatureDbVersion) {
+            this.minSignatureDbVersion = minSignatureDbVersion;
+            return this;
+        }
+        public String getMinSignatureDbVersion() {
+            return this.minSignatureDbVersion;
         }
 
     }

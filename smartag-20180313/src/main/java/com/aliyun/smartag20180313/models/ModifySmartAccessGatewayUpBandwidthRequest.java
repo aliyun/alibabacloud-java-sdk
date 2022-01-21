@@ -10,6 +10,9 @@ public class ModifySmartAccessGatewayUpBandwidthRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -19,14 +22,11 @@ public class ModifySmartAccessGatewayUpBandwidthRequest extends TeaModel {
     @NameInMap("SmartAGId")
     public String smartAGId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("UpBandwidth4G")
+    public Integer upBandwidth4G;
 
     @NameInMap("UpBandwidthWan")
     public Integer upBandwidthWan;
-
-    @NameInMap("UpBandwidth4G")
-    public Integer upBandwidth4G;
 
     public static ModifySmartAccessGatewayUpBandwidthRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySmartAccessGatewayUpBandwidthRequest self = new ModifySmartAccessGatewayUpBandwidthRequest();
@@ -47,6 +47,14 @@ public class ModifySmartAccessGatewayUpBandwidthRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifySmartAccessGatewayUpBandwidthRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifySmartAccessGatewayUpBandwidthRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -73,12 +81,12 @@ public class ModifySmartAccessGatewayUpBandwidthRequest extends TeaModel {
         return this.smartAGId;
     }
 
-    public ModifySmartAccessGatewayUpBandwidthRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifySmartAccessGatewayUpBandwidthRequest setUpBandwidth4G(Integer upBandwidth4G) {
+        this.upBandwidth4G = upBandwidth4G;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Integer getUpBandwidth4G() {
+        return this.upBandwidth4G;
     }
 
     public ModifySmartAccessGatewayUpBandwidthRequest setUpBandwidthWan(Integer upBandwidthWan) {
@@ -87,14 +95,6 @@ public class ModifySmartAccessGatewayUpBandwidthRequest extends TeaModel {
     }
     public Integer getUpBandwidthWan() {
         return this.upBandwidthWan;
-    }
-
-    public ModifySmartAccessGatewayUpBandwidthRequest setUpBandwidth4G(Integer upBandwidth4G) {
-        this.upBandwidth4G = upBandwidth4G;
-        return this;
-    }
-    public Integer getUpBandwidth4G() {
-        return this.upBandwidth4G;
     }
 
 }

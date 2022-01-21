@@ -4,48 +4,24 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeQosesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Qoses")
+    public DescribeQosesResponseBodyQoses qoses;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Qoses")
-    public DescribeQosesResponseBodyQoses qoses;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeQosesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeQosesResponseBody self = new DescribeQosesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeQosesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeQosesResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeQosesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeQosesResponseBody setPageNumber(Integer pageNumber) {
@@ -56,6 +32,14 @@ public class DescribeQosesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeQosesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeQosesResponseBody setQoses(DescribeQosesResponseBodyQoses qoses) {
         this.qoses = qoses;
         return this;
@@ -64,15 +48,25 @@ public class DescribeQosesResponseBody extends TeaModel {
         return this.qoses;
     }
 
+    public DescribeQosesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeQosesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeQosesResponseBodyQosesQos extends TeaModel {
         @NameInMap("QosDescription")
         public String qosDescription;
-
-        @NameInMap("SagCount")
-        public String sagCount;
-
-        @NameInMap("SmartAGIds")
-        public String smartAGIds;
 
         @NameInMap("QosId")
         public String qosId;
@@ -82,6 +76,12 @@ public class DescribeQosesResponseBody extends TeaModel {
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("SagCount")
+        public String sagCount;
+
+        @NameInMap("SmartAGIds")
+        public String smartAGIds;
 
         public static DescribeQosesResponseBodyQosesQos build(java.util.Map<String, ?> map) throws Exception {
             DescribeQosesResponseBodyQosesQos self = new DescribeQosesResponseBodyQosesQos();
@@ -94,22 +94,6 @@ public class DescribeQosesResponseBody extends TeaModel {
         }
         public String getQosDescription() {
             return this.qosDescription;
-        }
-
-        public DescribeQosesResponseBodyQosesQos setSagCount(String sagCount) {
-            this.sagCount = sagCount;
-            return this;
-        }
-        public String getSagCount() {
-            return this.sagCount;
-        }
-
-        public DescribeQosesResponseBodyQosesQos setSmartAGIds(String smartAGIds) {
-            this.smartAGIds = smartAGIds;
-            return this;
-        }
-        public String getSmartAGIds() {
-            return this.smartAGIds;
         }
 
         public DescribeQosesResponseBodyQosesQos setQosId(String qosId) {
@@ -134,6 +118,22 @@ public class DescribeQosesResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeQosesResponseBodyQosesQos setSagCount(String sagCount) {
+            this.sagCount = sagCount;
+            return this;
+        }
+        public String getSagCount() {
+            return this.sagCount;
+        }
+
+        public DescribeQosesResponseBodyQosesQos setSmartAGIds(String smartAGIds) {
+            this.smartAGIds = smartAGIds;
+            return this;
+        }
+        public String getSmartAGIds() {
+            return this.smartAGIds;
         }
 
     }

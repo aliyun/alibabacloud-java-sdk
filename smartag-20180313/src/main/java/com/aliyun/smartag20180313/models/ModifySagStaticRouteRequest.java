@@ -4,11 +4,23 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySagStaticRouteRequest extends TeaModel {
+    @NameInMap("DestinationCidr")
+    public String destinationCidr;
+
+    @NameInMap("NextHop")
+    public String nextHop;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PortName")
+    public String portName;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,23 +28,11 @@ public class ModifySagStaticRouteRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
 
     @NameInMap("SmartAGSn")
     public String smartAGSn;
-
-    @NameInMap("PortName")
-    public String portName;
-
-    @NameInMap("DestinationCidr")
-    public String destinationCidr;
-
-    @NameInMap("NextHop")
-    public String nextHop;
 
     @NameInMap("Vlan")
     public String vlan;
@@ -40,6 +40,22 @@ public class ModifySagStaticRouteRequest extends TeaModel {
     public static ModifySagStaticRouteRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySagStaticRouteRequest self = new ModifySagStaticRouteRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifySagStaticRouteRequest setDestinationCidr(String destinationCidr) {
+        this.destinationCidr = destinationCidr;
+        return this;
+    }
+    public String getDestinationCidr() {
+        return this.destinationCidr;
+    }
+
+    public ModifySagStaticRouteRequest setNextHop(String nextHop) {
+        this.nextHop = nextHop;
+        return this;
+    }
+    public String getNextHop() {
+        return this.nextHop;
     }
 
     public ModifySagStaticRouteRequest setOwnerAccount(String ownerAccount) {
@@ -58,6 +74,22 @@ public class ModifySagStaticRouteRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifySagStaticRouteRequest setPortName(String portName) {
+        this.portName = portName;
+        return this;
+    }
+    public String getPortName() {
+        return this.portName;
+    }
+
+    public ModifySagStaticRouteRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ModifySagStaticRouteRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -74,14 +106,6 @@ public class ModifySagStaticRouteRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifySagStaticRouteRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public ModifySagStaticRouteRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
@@ -96,30 +120,6 @@ public class ModifySagStaticRouteRequest extends TeaModel {
     }
     public String getSmartAGSn() {
         return this.smartAGSn;
-    }
-
-    public ModifySagStaticRouteRequest setPortName(String portName) {
-        this.portName = portName;
-        return this;
-    }
-    public String getPortName() {
-        return this.portName;
-    }
-
-    public ModifySagStaticRouteRequest setDestinationCidr(String destinationCidr) {
-        this.destinationCidr = destinationCidr;
-        return this;
-    }
-    public String getDestinationCidr() {
-        return this.destinationCidr;
-    }
-
-    public ModifySagStaticRouteRequest setNextHop(String nextHop) {
-        this.nextHop = nextHop;
-        return this;
-    }
-    public String getNextHop() {
-        return this.nextHop;
     }
 
     public ModifySagStaticRouteRequest setVlan(String vlan) {

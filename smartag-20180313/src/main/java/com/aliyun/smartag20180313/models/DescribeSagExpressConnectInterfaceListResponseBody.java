@@ -43,18 +43,26 @@ public class DescribeSagExpressConnectInterfaceListResponseBody extends TeaModel
     }
 
     public static class DescribeSagExpressConnectInterfaceListResponseBodyInterfaces extends TeaModel {
+        @NameInMap("IP")
+        public String IP;
+
         @NameInMap("Mask")
         public String mask;
 
         @NameInMap("Vlan")
         public String vlan;
 
-        @NameInMap("IP")
-        public String IP;
-
         public static DescribeSagExpressConnectInterfaceListResponseBodyInterfaces build(java.util.Map<String, ?> map) throws Exception {
             DescribeSagExpressConnectInterfaceListResponseBodyInterfaces self = new DescribeSagExpressConnectInterfaceListResponseBodyInterfaces();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSagExpressConnectInterfaceListResponseBodyInterfaces setIP(String IP) {
+            this.IP = IP;
+            return this;
+        }
+        public String getIP() {
+            return this.IP;
         }
 
         public DescribeSagExpressConnectInterfaceListResponseBodyInterfaces setMask(String mask) {
@@ -73,32 +81,40 @@ public class DescribeSagExpressConnectInterfaceListResponseBody extends TeaModel
             return this.vlan;
         }
 
-        public DescribeSagExpressConnectInterfaceListResponseBodyInterfaces setIP(String IP) {
-            this.IP = IP;
-            return this;
-        }
-        public String getIP() {
-            return this.IP;
-        }
-
     }
 
     public static class DescribeSagExpressConnectInterfaceListResponseBodyTaskStates extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         @NameInMap("State")
         public String state;
 
-        @NameInMap("ErrorCode")
-        public String errorCode;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
         public static DescribeSagExpressConnectInterfaceListResponseBodyTaskStates build(java.util.Map<String, ?> map) throws Exception {
             DescribeSagExpressConnectInterfaceListResponseBodyTaskStates self = new DescribeSagExpressConnectInterfaceListResponseBodyTaskStates();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSagExpressConnectInterfaceListResponseBodyTaskStates setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeSagExpressConnectInterfaceListResponseBodyTaskStates setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         public DescribeSagExpressConnectInterfaceListResponseBodyTaskStates setErrorMessage(String errorMessage) {
@@ -115,22 +131,6 @@ public class DescribeSagExpressConnectInterfaceListResponseBody extends TeaModel
         }
         public String getState() {
             return this.state;
-        }
-
-        public DescribeSagExpressConnectInterfaceListResponseBodyTaskStates setErrorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-        public String getErrorCode() {
-            return this.errorCode;
-        }
-
-        public DescribeSagExpressConnectInterfaceListResponseBodyTaskStates setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
     }

@@ -4,8 +4,11 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeACLAttributeResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("Acrs")
+    public DescribeACLAttributeResponseBodyAcrs acrs;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Acrs")
-    public DescribeACLAttributeResponseBodyAcrs acrs;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeACLAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeACLAttributeResponseBody self = new DescribeACLAttributeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeACLAttributeResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeACLAttributeResponseBody setAcrs(DescribeACLAttributeResponseBodyAcrs acrs) {
+        this.acrs = acrs;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public DescribeACLAttributeResponseBodyAcrs getAcrs() {
+        return this.acrs;
+    }
+
+    public DescribeACLAttributeResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeACLAttributeResponseBody setPageSize(Integer pageSize) {
@@ -48,39 +56,12 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeACLAttributeResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeACLAttributeResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeACLAttributeResponseBody setAcrs(DescribeACLAttributeResponseBodyAcrs acrs) {
-        this.acrs = acrs;
-        return this;
-    }
-    public DescribeACLAttributeResponseBodyAcrs getAcrs() {
-        return this.acrs;
-    }
-
-    public static class DescribeACLAttributeResponseBodyAcrsAcrDpiSignatureIds extends TeaModel {
-        @NameInMap("DpiSignatureId")
-        public java.util.List<String> dpiSignatureId;
-
-        public static DescribeACLAttributeResponseBodyAcrsAcrDpiSignatureIds build(java.util.Map<String, ?> map) throws Exception {
-            DescribeACLAttributeResponseBodyAcrsAcrDpiSignatureIds self = new DescribeACLAttributeResponseBodyAcrsAcrDpiSignatureIds();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeACLAttributeResponseBodyAcrsAcrDpiSignatureIds setDpiSignatureId(java.util.List<String> dpiSignatureId) {
-            this.dpiSignatureId = dpiSignatureId;
-            return this;
-        }
-        public java.util.List<String> getDpiSignatureId() {
-            return this.dpiSignatureId;
-        }
-
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeACLAttributeResponseBodyAcrsAcrDpiGroupIds extends TeaModel {
@@ -102,33 +83,34 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeACLAttributeResponseBodyAcrsAcrDpiSignatureIds extends TeaModel {
+        @NameInMap("DpiSignatureId")
+        public java.util.List<String> dpiSignatureId;
+
+        public static DescribeACLAttributeResponseBodyAcrsAcrDpiSignatureIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeACLAttributeResponseBodyAcrsAcrDpiSignatureIds self = new DescribeACLAttributeResponseBodyAcrsAcrDpiSignatureIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeACLAttributeResponseBodyAcrsAcrDpiSignatureIds setDpiSignatureId(java.util.List<String> dpiSignatureId) {
+            this.dpiSignatureId = dpiSignatureId;
+            return this;
+        }
+        public java.util.List<String> getDpiSignatureId() {
+            return this.dpiSignatureId;
+        }
+
+    }
+
     public static class DescribeACLAttributeResponseBodyAcrsAcr extends TeaModel {
-        @NameInMap("Direction")
-        public String direction;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("DpiSignatureIds")
-        public DescribeACLAttributeResponseBodyAcrsAcrDpiSignatureIds dpiSignatureIds;
-
-        @NameInMap("IpProtocol")
-        public String ipProtocol;
-
-        @NameInMap("Priority")
-        public Integer priority;
-
         @NameInMap("AclId")
         public String aclId;
 
-        @NameInMap("Policy")
-        public String policy;
+        @NameInMap("AcrId")
+        public String acrId;
 
         @NameInMap("Description")
         public String description;
-
-        @NameInMap("GmtCreate")
-        public Long gmtCreate;
 
         @NameInMap("DestCidr")
         public String destCidr;
@@ -136,11 +118,29 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
         @NameInMap("DestPortRange")
         public String destPortRange;
 
+        @NameInMap("Direction")
+        public String direction;
+
+        @NameInMap("DpiGroupIds")
+        public DescribeACLAttributeResponseBodyAcrsAcrDpiGroupIds dpiGroupIds;
+
+        @NameInMap("DpiSignatureIds")
+        public DescribeACLAttributeResponseBodyAcrsAcrDpiSignatureIds dpiSignatureIds;
+
+        @NameInMap("GmtCreate")
+        public Long gmtCreate;
+
+        @NameInMap("IpProtocol")
+        public String ipProtocol;
+
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("AcrId")
-        public String acrId;
+        @NameInMap("Policy")
+        public String policy;
+
+        @NameInMap("Priority")
+        public Integer priority;
 
         @NameInMap("SourceCidr")
         public String sourceCidr;
@@ -148,52 +148,12 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
         @NameInMap("SourcePortRange")
         public String sourcePortRange;
 
-        @NameInMap("DpiGroupIds")
-        public DescribeACLAttributeResponseBodyAcrsAcrDpiGroupIds dpiGroupIds;
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeACLAttributeResponseBodyAcrsAcr build(java.util.Map<String, ?> map) throws Exception {
             DescribeACLAttributeResponseBodyAcrsAcr self = new DescribeACLAttributeResponseBodyAcrsAcr();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeACLAttributeResponseBodyAcrsAcr setDirection(String direction) {
-            this.direction = direction;
-            return this;
-        }
-        public String getDirection() {
-            return this.direction;
-        }
-
-        public DescribeACLAttributeResponseBodyAcrsAcr setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeACLAttributeResponseBodyAcrsAcr setDpiSignatureIds(DescribeACLAttributeResponseBodyAcrsAcrDpiSignatureIds dpiSignatureIds) {
-            this.dpiSignatureIds = dpiSignatureIds;
-            return this;
-        }
-        public DescribeACLAttributeResponseBodyAcrsAcrDpiSignatureIds getDpiSignatureIds() {
-            return this.dpiSignatureIds;
-        }
-
-        public DescribeACLAttributeResponseBodyAcrsAcr setIpProtocol(String ipProtocol) {
-            this.ipProtocol = ipProtocol;
-            return this;
-        }
-        public String getIpProtocol() {
-            return this.ipProtocol;
-        }
-
-        public DescribeACLAttributeResponseBodyAcrsAcr setPriority(Integer priority) {
-            this.priority = priority;
-            return this;
-        }
-        public Integer getPriority() {
-            return this.priority;
         }
 
         public DescribeACLAttributeResponseBodyAcrsAcr setAclId(String aclId) {
@@ -204,12 +164,12 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             return this.aclId;
         }
 
-        public DescribeACLAttributeResponseBodyAcrsAcr setPolicy(String policy) {
-            this.policy = policy;
+        public DescribeACLAttributeResponseBodyAcrsAcr setAcrId(String acrId) {
+            this.acrId = acrId;
             return this;
         }
-        public String getPolicy() {
-            return this.policy;
+        public String getAcrId() {
+            return this.acrId;
         }
 
         public DescribeACLAttributeResponseBodyAcrsAcr setDescription(String description) {
@@ -218,14 +178,6 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public DescribeACLAttributeResponseBodyAcrsAcr setGmtCreate(Long gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public Long getGmtCreate() {
-            return this.gmtCreate;
         }
 
         public DescribeACLAttributeResponseBodyAcrsAcr setDestCidr(String destCidr) {
@@ -244,6 +196,46 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             return this.destPortRange;
         }
 
+        public DescribeACLAttributeResponseBodyAcrsAcr setDirection(String direction) {
+            this.direction = direction;
+            return this;
+        }
+        public String getDirection() {
+            return this.direction;
+        }
+
+        public DescribeACLAttributeResponseBodyAcrsAcr setDpiGroupIds(DescribeACLAttributeResponseBodyAcrsAcrDpiGroupIds dpiGroupIds) {
+            this.dpiGroupIds = dpiGroupIds;
+            return this;
+        }
+        public DescribeACLAttributeResponseBodyAcrsAcrDpiGroupIds getDpiGroupIds() {
+            return this.dpiGroupIds;
+        }
+
+        public DescribeACLAttributeResponseBodyAcrsAcr setDpiSignatureIds(DescribeACLAttributeResponseBodyAcrsAcrDpiSignatureIds dpiSignatureIds) {
+            this.dpiSignatureIds = dpiSignatureIds;
+            return this;
+        }
+        public DescribeACLAttributeResponseBodyAcrsAcrDpiSignatureIds getDpiSignatureIds() {
+            return this.dpiSignatureIds;
+        }
+
+        public DescribeACLAttributeResponseBodyAcrsAcr setGmtCreate(Long gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public Long getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public DescribeACLAttributeResponseBodyAcrsAcr setIpProtocol(String ipProtocol) {
+            this.ipProtocol = ipProtocol;
+            return this;
+        }
+        public String getIpProtocol() {
+            return this.ipProtocol;
+        }
+
         public DescribeACLAttributeResponseBodyAcrsAcr setName(String name) {
             this.name = name;
             return this;
@@ -252,12 +244,20 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeACLAttributeResponseBodyAcrsAcr setAcrId(String acrId) {
-            this.acrId = acrId;
+        public DescribeACLAttributeResponseBodyAcrsAcr setPolicy(String policy) {
+            this.policy = policy;
             return this;
         }
-        public String getAcrId() {
-            return this.acrId;
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        public DescribeACLAttributeResponseBodyAcrsAcr setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
         }
 
         public DescribeACLAttributeResponseBodyAcrsAcr setSourceCidr(String sourceCidr) {
@@ -276,12 +276,12 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             return this.sourcePortRange;
         }
 
-        public DescribeACLAttributeResponseBodyAcrsAcr setDpiGroupIds(DescribeACLAttributeResponseBodyAcrsAcrDpiGroupIds dpiGroupIds) {
-            this.dpiGroupIds = dpiGroupIds;
+        public DescribeACLAttributeResponseBodyAcrsAcr setType(String type) {
+            this.type = type;
             return this;
         }
-        public DescribeACLAttributeResponseBodyAcrsAcrDpiGroupIds getDpiGroupIds() {
-            return this.dpiGroupIds;
+        public String getType() {
+            return this.type;
         }
 
     }

@@ -4,11 +4,17 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ListSmartAGApiUnsupportedFeatureRequest extends TeaModel {
+    @NameInMap("OpenApiName")
+    public String openApiName;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,21 +22,23 @@ public class ListSmartAGApiUnsupportedFeatureRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("SerialNumber")
+    public String serialNumber;
 
     @NameInMap("SmartAGId")
     public String smartAGId;
 
-    @NameInMap("SerialNumber")
-    public String serialNumber;
-
-    @NameInMap("OpenApiName")
-    public String openApiName;
-
     public static ListSmartAGApiUnsupportedFeatureRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSmartAGApiUnsupportedFeatureRequest self = new ListSmartAGApiUnsupportedFeatureRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListSmartAGApiUnsupportedFeatureRequest setOpenApiName(String openApiName) {
+        this.openApiName = openApiName;
+        return this;
+    }
+    public String getOpenApiName() {
+        return this.openApiName;
     }
 
     public ListSmartAGApiUnsupportedFeatureRequest setOwnerAccount(String ownerAccount) {
@@ -49,6 +57,14 @@ public class ListSmartAGApiUnsupportedFeatureRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ListSmartAGApiUnsupportedFeatureRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ListSmartAGApiUnsupportedFeatureRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -65,22 +81,6 @@ public class ListSmartAGApiUnsupportedFeatureRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ListSmartAGApiUnsupportedFeatureRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ListSmartAGApiUnsupportedFeatureRequest setSmartAGId(String smartAGId) {
-        this.smartAGId = smartAGId;
-        return this;
-    }
-    public String getSmartAGId() {
-        return this.smartAGId;
-    }
-
     public ListSmartAGApiUnsupportedFeatureRequest setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -89,12 +89,12 @@ public class ListSmartAGApiUnsupportedFeatureRequest extends TeaModel {
         return this.serialNumber;
     }
 
-    public ListSmartAGApiUnsupportedFeatureRequest setOpenApiName(String openApiName) {
-        this.openApiName = openApiName;
+    public ListSmartAGApiUnsupportedFeatureRequest setSmartAGId(String smartAGId) {
+        this.smartAGId = smartAGId;
         return this;
     }
-    public String getOpenApiName() {
-        return this.openApiName;
+    public String getSmartAGId() {
+        return this.smartAGId;
     }
 
 }

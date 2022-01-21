@@ -10,14 +10,8 @@ public class ModifyQosRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("QosDescription")
+    public String qosDescription;
 
     @NameInMap("QosId")
     public String qosId;
@@ -25,8 +19,14 @@ public class ModifyQosRequest extends TeaModel {
     @NameInMap("QosName")
     public String qosName;
 
-    @NameInMap("QosDescription")
-    public String qosDescription;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyQosRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyQosRequest self = new ModifyQosRequest();
@@ -49,28 +49,12 @@ public class ModifyQosRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ModifyQosRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public ModifyQosRequest setQosDescription(String qosDescription) {
+        this.qosDescription = qosDescription;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyQosRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ModifyQosRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getQosDescription() {
+        return this.qosDescription;
     }
 
     public ModifyQosRequest setQosId(String qosId) {
@@ -89,12 +73,28 @@ public class ModifyQosRequest extends TeaModel {
         return this.qosName;
     }
 
-    public ModifyQosRequest setQosDescription(String qosDescription) {
-        this.qosDescription = qosDescription;
+    public ModifyQosRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getQosDescription() {
-        return this.qosDescription;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyQosRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyQosRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

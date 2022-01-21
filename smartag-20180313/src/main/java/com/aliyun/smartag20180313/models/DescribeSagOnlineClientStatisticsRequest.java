@@ -10,14 +10,14 @@ public class DescribeSagOnlineClientStatisticsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("SmartAGIds")
     public java.util.List<String> smartAGIds;
@@ -43,6 +43,14 @@ public class DescribeSagOnlineClientStatisticsRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeSagOnlineClientStatisticsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeSagOnlineClientStatisticsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -57,14 +65,6 @@ public class DescribeSagOnlineClientStatisticsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeSagOnlineClientStatisticsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeSagOnlineClientStatisticsRequest setSmartAGIds(java.util.List<String> smartAGIds) {

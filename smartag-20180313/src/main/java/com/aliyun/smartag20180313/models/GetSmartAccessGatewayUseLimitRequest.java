@@ -10,14 +10,14 @@ public class GetSmartAccessGatewayUseLimitRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     public static GetSmartAccessGatewayUseLimitRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSmartAccessGatewayUseLimitRequest self = new GetSmartAccessGatewayUseLimitRequest();
@@ -40,6 +40,14 @@ public class GetSmartAccessGatewayUseLimitRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public GetSmartAccessGatewayUseLimitRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public GetSmartAccessGatewayUseLimitRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -54,14 +62,6 @@ public class GetSmartAccessGatewayUseLimitRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public GetSmartAccessGatewayUseLimitRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

@@ -4,29 +4,29 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class UpdateSmartAGEnterpriseCodeRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("EnterpriseCode")
     public String enterpriseCode;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SmartAGId")
     public String smartAGId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
 
     public static UpdateSmartAGEnterpriseCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSmartAGEnterpriseCodeRequest self = new UpdateSmartAGEnterpriseCodeRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateSmartAGEnterpriseCodeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public UpdateSmartAGEnterpriseCodeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdateSmartAGEnterpriseCodeRequest setEnterpriseCode(String enterpriseCode) {
@@ -37,20 +37,20 @@ public class UpdateSmartAGEnterpriseCodeRequest extends TeaModel {
         return this.enterpriseCode;
     }
 
+    public UpdateSmartAGEnterpriseCodeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public UpdateSmartAGEnterpriseCodeRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
     }
     public String getSmartAGId() {
         return this.smartAGId;
-    }
-
-    public UpdateSmartAGEnterpriseCodeRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

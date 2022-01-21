@@ -4,8 +4,8 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class UpdateEnterpriseCodeRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("EnterpriseCode")
     public String enterpriseCode;
@@ -13,20 +13,20 @@ public class UpdateEnterpriseCodeRequest extends TeaModel {
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static UpdateEnterpriseCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEnterpriseCodeRequest self = new UpdateEnterpriseCodeRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateEnterpriseCodeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public UpdateEnterpriseCodeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdateEnterpriseCodeRequest setEnterpriseCode(String enterpriseCode) {
@@ -45,12 +45,12 @@ public class UpdateEnterpriseCodeRequest extends TeaModel {
         return this.isDefault;
     }
 
-    public UpdateEnterpriseCodeRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public UpdateEnterpriseCodeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

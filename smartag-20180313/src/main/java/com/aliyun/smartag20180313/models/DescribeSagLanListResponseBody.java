@@ -4,18 +4,26 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSagLanListResponseBody extends TeaModel {
+    @NameInMap("Lans")
+    public java.util.List<DescribeSagLanListResponseBodyLans> lans;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TaskStates")
     public java.util.List<DescribeSagLanListResponseBodyTaskStates> taskStates;
 
-    @NameInMap("Lans")
-    public java.util.List<DescribeSagLanListResponseBodyLans> lans;
-
     public static DescribeSagLanListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSagLanListResponseBody self = new DescribeSagLanListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSagLanListResponseBody setLans(java.util.List<DescribeSagLanListResponseBodyLans> lans) {
+        this.lans = lans;
+        return this;
+    }
+    public java.util.List<DescribeSagLanListResponseBodyLans> getLans() {
+        return this.lans;
     }
 
     public DescribeSagLanListResponseBody setRequestId(String requestId) {
@@ -34,75 +42,21 @@ public class DescribeSagLanListResponseBody extends TeaModel {
         return this.taskStates;
     }
 
-    public DescribeSagLanListResponseBody setLans(java.util.List<DescribeSagLanListResponseBodyLans> lans) {
-        this.lans = lans;
-        return this;
-    }
-    public java.util.List<DescribeSagLanListResponseBodyLans> getLans() {
-        return this.lans;
-    }
-
-    public static class DescribeSagLanListResponseBodyTaskStates extends TeaModel {
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("ErrorCode")
-        public String errorCode;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        public static DescribeSagLanListResponseBodyTaskStates build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSagLanListResponseBodyTaskStates self = new DescribeSagLanListResponseBodyTaskStates();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeSagLanListResponseBodyTaskStates setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
-        public DescribeSagLanListResponseBodyTaskStates setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
-        public DescribeSagLanListResponseBodyTaskStates setErrorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-        public String getErrorCode() {
-            return this.errorCode;
-        }
-
-        public DescribeSagLanListResponseBodyTaskStates setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-    }
-
     public static class DescribeSagLanListResponseBodyLans extends TeaModel {
+        @NameInMap("EndIp")
+        public String endIp;
+
+        @NameInMap("IP")
+        public String IP;
+
+        @NameInMap("IPType")
+        public String IPType;
+
         @NameInMap("Lease")
         public String lease;
 
         @NameInMap("Mask")
         public String mask;
-
-        @NameInMap("EndIp")
-        public String endIp;
 
         @NameInMap("PortName")
         public String portName;
@@ -110,15 +64,33 @@ public class DescribeSagLanListResponseBody extends TeaModel {
         @NameInMap("StartIp")
         public String startIp;
 
-        @NameInMap("IPType")
-        public String IPType;
-
-        @NameInMap("IP")
-        public String IP;
-
         public static DescribeSagLanListResponseBodyLans build(java.util.Map<String, ?> map) throws Exception {
             DescribeSagLanListResponseBodyLans self = new DescribeSagLanListResponseBodyLans();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSagLanListResponseBodyLans setEndIp(String endIp) {
+            this.endIp = endIp;
+            return this;
+        }
+        public String getEndIp() {
+            return this.endIp;
+        }
+
+        public DescribeSagLanListResponseBodyLans setIP(String IP) {
+            this.IP = IP;
+            return this;
+        }
+        public String getIP() {
+            return this.IP;
+        }
+
+        public DescribeSagLanListResponseBodyLans setIPType(String IPType) {
+            this.IPType = IPType;
+            return this;
+        }
+        public String getIPType() {
+            return this.IPType;
         }
 
         public DescribeSagLanListResponseBodyLans setLease(String lease) {
@@ -137,14 +109,6 @@ public class DescribeSagLanListResponseBody extends TeaModel {
             return this.mask;
         }
 
-        public DescribeSagLanListResponseBodyLans setEndIp(String endIp) {
-            this.endIp = endIp;
-            return this;
-        }
-        public String getEndIp() {
-            return this.endIp;
-        }
-
         public DescribeSagLanListResponseBodyLans setPortName(String portName) {
             this.portName = portName;
             return this;
@@ -161,20 +125,56 @@ public class DescribeSagLanListResponseBody extends TeaModel {
             return this.startIp;
         }
 
-        public DescribeSagLanListResponseBodyLans setIPType(String IPType) {
-            this.IPType = IPType;
-            return this;
-        }
-        public String getIPType() {
-            return this.IPType;
+    }
+
+    public static class DescribeSagLanListResponseBodyTaskStates extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("State")
+        public String state;
+
+        public static DescribeSagLanListResponseBodyTaskStates build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSagLanListResponseBodyTaskStates self = new DescribeSagLanListResponseBodyTaskStates();
+            return TeaModel.build(map, self);
         }
 
-        public DescribeSagLanListResponseBodyLans setIP(String IP) {
-            this.IP = IP;
+        public DescribeSagLanListResponseBodyTaskStates setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getIP() {
-            return this.IP;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeSagLanListResponseBodyTaskStates setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public DescribeSagLanListResponseBodyTaskStates setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeSagLanListResponseBodyTaskStates setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
     }

@@ -32,20 +32,20 @@ public class DescribeSagRouteListResponseBody extends TeaModel {
     }
 
     public static class DescribeSagRouteListResponseBodyRoutes extends TeaModel {
-        @NameInMap("NextHop")
-        public String nextHop;
-
-        @NameInMap("DestinationCidr")
-        public String destinationCidr;
+        @NameInMap("ConflictCidrs")
+        public java.util.List<String> conflictCidrs;
 
         @NameInMap("Cost")
         public String cost;
 
+        @NameInMap("DestinationCidr")
+        public String destinationCidr;
+
+        @NameInMap("NextHop")
+        public String nextHop;
+
         @NameInMap("PortName")
         public String portName;
-
-        @NameInMap("ConflictCidrs")
-        public java.util.List<String> conflictCidrs;
 
         @NameInMap("RouteProtocol")
         public String routeProtocol;
@@ -55,20 +55,12 @@ public class DescribeSagRouteListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeSagRouteListResponseBodyRoutes setNextHop(String nextHop) {
-            this.nextHop = nextHop;
+        public DescribeSagRouteListResponseBodyRoutes setConflictCidrs(java.util.List<String> conflictCidrs) {
+            this.conflictCidrs = conflictCidrs;
             return this;
         }
-        public String getNextHop() {
-            return this.nextHop;
-        }
-
-        public DescribeSagRouteListResponseBodyRoutes setDestinationCidr(String destinationCidr) {
-            this.destinationCidr = destinationCidr;
-            return this;
-        }
-        public String getDestinationCidr() {
-            return this.destinationCidr;
+        public java.util.List<String> getConflictCidrs() {
+            return this.conflictCidrs;
         }
 
         public DescribeSagRouteListResponseBodyRoutes setCost(String cost) {
@@ -79,20 +71,28 @@ public class DescribeSagRouteListResponseBody extends TeaModel {
             return this.cost;
         }
 
+        public DescribeSagRouteListResponseBodyRoutes setDestinationCidr(String destinationCidr) {
+            this.destinationCidr = destinationCidr;
+            return this;
+        }
+        public String getDestinationCidr() {
+            return this.destinationCidr;
+        }
+
+        public DescribeSagRouteListResponseBodyRoutes setNextHop(String nextHop) {
+            this.nextHop = nextHop;
+            return this;
+        }
+        public String getNextHop() {
+            return this.nextHop;
+        }
+
         public DescribeSagRouteListResponseBodyRoutes setPortName(String portName) {
             this.portName = portName;
             return this;
         }
         public String getPortName() {
             return this.portName;
-        }
-
-        public DescribeSagRouteListResponseBodyRoutes setConflictCidrs(java.util.List<String> conflictCidrs) {
-            this.conflictCidrs = conflictCidrs;
-            return this;
-        }
-        public java.util.List<String> getConflictCidrs() {
-            return this.conflictCidrs;
         }
 
         public DescribeSagRouteListResponseBodyRoutes setRouteProtocol(String routeProtocol) {

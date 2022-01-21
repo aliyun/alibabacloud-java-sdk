@@ -4,20 +4,20 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ClearSagRouteableAddressRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     @NameInMap("SagId")
     public String sagId;
@@ -27,12 +27,12 @@ public class ClearSagRouteableAddressRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ClearSagRouteableAddressRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ClearSagRouteableAddressRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ClearSagRouteableAddressRequest setOwnerId(Long ownerId) {
@@ -41,6 +41,14 @@ public class ClearSagRouteableAddressRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ClearSagRouteableAddressRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ClearSagRouteableAddressRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -57,14 +65,6 @@ public class ClearSagRouteableAddressRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ClearSagRouteableAddressRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
     public ClearSagRouteableAddressRequest setSagId(String sagId) {

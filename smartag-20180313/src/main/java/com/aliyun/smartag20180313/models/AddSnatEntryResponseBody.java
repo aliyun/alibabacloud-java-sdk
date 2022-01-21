@@ -4,23 +4,15 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class AddSnatEntryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static AddSnatEntryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddSnatEntryResponseBody self = new AddSnatEntryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AddSnatEntryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AddSnatEntryResponseBody setInstanceId(String instanceId) {
@@ -29,6 +21,14 @@ public class AddSnatEntryResponseBody extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public AddSnatEntryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

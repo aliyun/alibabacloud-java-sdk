@@ -10,23 +10,23 @@ public class DescribeGrantSagRulesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
 
     public static DescribeGrantSagRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGrantSagRulesRequest self = new DescribeGrantSagRulesRequest();
@@ -49,6 +49,30 @@ public class DescribeGrantSagRulesRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeGrantSagRulesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeGrantSagRulesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeGrantSagRulesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeGrantSagRulesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -65,36 +89,12 @@ public class DescribeGrantSagRulesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeGrantSagRulesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DescribeGrantSagRulesRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
     }
     public String getSmartAGId() {
         return this.smartAGId;
-    }
-
-    public DescribeGrantSagRulesRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeGrantSagRulesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
 }

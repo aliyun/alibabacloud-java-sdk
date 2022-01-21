@@ -4,11 +4,8 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySagRemoteAccessResponseBody extends TeaModel {
-    @NameInMap("SerialNumber")
-    public String serialNumber;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -16,8 +13,11 @@ public class ModifySagRemoteAccessResponseBody extends TeaModel {
     @NameInMap("RemoteAccessIp")
     public String remoteAccessIp;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("SerialNumber")
+    public String serialNumber;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,20 +27,12 @@ public class ModifySagRemoteAccessResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifySagRemoteAccessResponseBody setSerialNumber(String serialNumber) {
-        this.serialNumber = serialNumber;
+    public ModifySagRemoteAccessResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getSerialNumber() {
-        return this.serialNumber;
-    }
-
-    public ModifySagRemoteAccessResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCode() {
+        return this.code;
     }
 
     public ModifySagRemoteAccessResponseBody setMessage(String message) {
@@ -59,12 +51,20 @@ public class ModifySagRemoteAccessResponseBody extends TeaModel {
         return this.remoteAccessIp;
     }
 
-    public ModifySagRemoteAccessResponseBody setCode(String code) {
-        this.code = code;
+    public ModifySagRemoteAccessResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifySagRemoteAccessResponseBody setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+        return this;
+    }
+    public String getSerialNumber() {
+        return this.serialNumber;
     }
 
     public ModifySagRemoteAccessResponseBody setSuccess(Boolean success) {

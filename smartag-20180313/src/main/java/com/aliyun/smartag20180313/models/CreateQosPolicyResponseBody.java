@@ -7,26 +7,8 @@ public class CreateQosPolicyResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("QosPolicyId")
-    public String qosPolicyId;
-
-    @NameInMap("SourcePortRange")
-    public String sourcePortRange;
-
-    @NameInMap("SourceCidr")
-    public String sourceCidr;
-
-    @NameInMap("Priority")
-    public Integer priority;
-
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("DestCidr")
+    public String destCidr;
 
     @NameInMap("DestPortRange")
     public String destPortRange;
@@ -34,20 +16,38 @@ public class CreateQosPolicyResponseBody extends TeaModel {
     @NameInMap("DpiGroupIds")
     public CreateQosPolicyResponseBodyDpiGroupIds dpiGroupIds;
 
+    @NameInMap("DpiSignatureIds")
+    public CreateQosPolicyResponseBodyDpiSignatureIds dpiSignatureIds;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("IpProtocol")
+    public String ipProtocol;
+
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("DestCidr")
-    public String destCidr;
-
-    @NameInMap("DpiSignatureIds")
-    public CreateQosPolicyResponseBodyDpiSignatureIds dpiSignatureIds;
+    @NameInMap("Priority")
+    public Integer priority;
 
     @NameInMap("QosId")
     public String qosId;
 
-    @NameInMap("IpProtocol")
-    public String ipProtocol;
+    @NameInMap("QosPolicyId")
+    public String qosPolicyId;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("SourceCidr")
+    public String sourceCidr;
+
+    @NameInMap("SourcePortRange")
+    public String sourcePortRange;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static CreateQosPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateQosPolicyResponseBody self = new CreateQosPolicyResponseBody();
@@ -62,60 +62,12 @@ public class CreateQosPolicyResponseBody extends TeaModel {
         return this.description;
     }
 
-    public CreateQosPolicyResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
+    public CreateQosPolicyResponseBody setDestCidr(String destCidr) {
+        this.destCidr = destCidr;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public CreateQosPolicyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateQosPolicyResponseBody setQosPolicyId(String qosPolicyId) {
-        this.qosPolicyId = qosPolicyId;
-        return this;
-    }
-    public String getQosPolicyId() {
-        return this.qosPolicyId;
-    }
-
-    public CreateQosPolicyResponseBody setSourcePortRange(String sourcePortRange) {
-        this.sourcePortRange = sourcePortRange;
-        return this;
-    }
-    public String getSourcePortRange() {
-        return this.sourcePortRange;
-    }
-
-    public CreateQosPolicyResponseBody setSourceCidr(String sourceCidr) {
-        this.sourceCidr = sourceCidr;
-        return this;
-    }
-    public String getSourceCidr() {
-        return this.sourceCidr;
-    }
-
-    public CreateQosPolicyResponseBody setPriority(Integer priority) {
-        this.priority = priority;
-        return this;
-    }
-    public Integer getPriority() {
-        return this.priority;
-    }
-
-    public CreateQosPolicyResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
+    public String getDestCidr() {
+        return this.destCidr;
     }
 
     public CreateQosPolicyResponseBody setDestPortRange(String destPortRange) {
@@ -134,6 +86,30 @@ public class CreateQosPolicyResponseBody extends TeaModel {
         return this.dpiGroupIds;
     }
 
+    public CreateQosPolicyResponseBody setDpiSignatureIds(CreateQosPolicyResponseBodyDpiSignatureIds dpiSignatureIds) {
+        this.dpiSignatureIds = dpiSignatureIds;
+        return this;
+    }
+    public CreateQosPolicyResponseBodyDpiSignatureIds getDpiSignatureIds() {
+        return this.dpiSignatureIds;
+    }
+
+    public CreateQosPolicyResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public CreateQosPolicyResponseBody setIpProtocol(String ipProtocol) {
+        this.ipProtocol = ipProtocol;
+        return this;
+    }
+    public String getIpProtocol() {
+        return this.ipProtocol;
+    }
+
     public CreateQosPolicyResponseBody setName(String name) {
         this.name = name;
         return this;
@@ -142,20 +118,12 @@ public class CreateQosPolicyResponseBody extends TeaModel {
         return this.name;
     }
 
-    public CreateQosPolicyResponseBody setDestCidr(String destCidr) {
-        this.destCidr = destCidr;
+    public CreateQosPolicyResponseBody setPriority(Integer priority) {
+        this.priority = priority;
         return this;
     }
-    public String getDestCidr() {
-        return this.destCidr;
-    }
-
-    public CreateQosPolicyResponseBody setDpiSignatureIds(CreateQosPolicyResponseBodyDpiSignatureIds dpiSignatureIds) {
-        this.dpiSignatureIds = dpiSignatureIds;
-        return this;
-    }
-    public CreateQosPolicyResponseBodyDpiSignatureIds getDpiSignatureIds() {
-        return this.dpiSignatureIds;
+    public Integer getPriority() {
+        return this.priority;
     }
 
     public CreateQosPolicyResponseBody setQosId(String qosId) {
@@ -166,12 +134,44 @@ public class CreateQosPolicyResponseBody extends TeaModel {
         return this.qosId;
     }
 
-    public CreateQosPolicyResponseBody setIpProtocol(String ipProtocol) {
-        this.ipProtocol = ipProtocol;
+    public CreateQosPolicyResponseBody setQosPolicyId(String qosPolicyId) {
+        this.qosPolicyId = qosPolicyId;
         return this;
     }
-    public String getIpProtocol() {
-        return this.ipProtocol;
+    public String getQosPolicyId() {
+        return this.qosPolicyId;
+    }
+
+    public CreateQosPolicyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateQosPolicyResponseBody setSourceCidr(String sourceCidr) {
+        this.sourceCidr = sourceCidr;
+        return this;
+    }
+    public String getSourceCidr() {
+        return this.sourceCidr;
+    }
+
+    public CreateQosPolicyResponseBody setSourcePortRange(String sourcePortRange) {
+        this.sourcePortRange = sourcePortRange;
+        return this;
+    }
+    public String getSourcePortRange() {
+        return this.sourcePortRange;
+    }
+
+    public CreateQosPolicyResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public static class CreateQosPolicyResponseBodyDpiGroupIds extends TeaModel {

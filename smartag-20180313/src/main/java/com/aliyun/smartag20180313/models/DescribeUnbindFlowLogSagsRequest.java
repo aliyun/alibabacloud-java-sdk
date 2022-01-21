@@ -10,14 +10,14 @@ public class DescribeUnbindFlowLogSagsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     public static DescribeUnbindFlowLogSagsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUnbindFlowLogSagsRequest self = new DescribeUnbindFlowLogSagsRequest();
@@ -40,6 +40,14 @@ public class DescribeUnbindFlowLogSagsRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeUnbindFlowLogSagsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeUnbindFlowLogSagsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -54,14 +62,6 @@ public class DescribeUnbindFlowLogSagsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeUnbindFlowLogSagsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

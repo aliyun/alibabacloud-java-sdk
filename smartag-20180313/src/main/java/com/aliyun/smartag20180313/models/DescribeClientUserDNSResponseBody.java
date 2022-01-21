@@ -7,11 +7,11 @@ public class DescribeClientUserDNSResponseBody extends TeaModel {
     @NameInMap("AppDNS")
     public java.util.List<String> appDNS;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("RecoveredDNS")
     public java.util.List<String> recoveredDNS;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeClientUserDNSResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeClientUserDNSResponseBody self = new DescribeClientUserDNSResponseBody();
@@ -26,20 +26,20 @@ public class DescribeClientUserDNSResponseBody extends TeaModel {
         return this.appDNS;
     }
 
-    public DescribeClientUserDNSResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeClientUserDNSResponseBody setRecoveredDNS(java.util.List<String> recoveredDNS) {
         this.recoveredDNS = recoveredDNS;
         return this;
     }
     public java.util.List<String> getRecoveredDNS() {
         return this.recoveredDNS;
+    }
+
+    public DescribeClientUserDNSResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -4,21 +4,6 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifyACLRuleRequest extends TeaModel {
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("AclId")
     public String aclId;
 
@@ -28,23 +13,32 @@ public class ModifyACLRuleRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DestCidr")
+    public String destCidr;
+
+    @NameInMap("DestPortRange")
+    public String destPortRange;
+
     @NameInMap("Direction")
     public String direction;
 
-    @NameInMap("SourceCidr")
-    public String sourceCidr;
+    @NameInMap("DpiGroupIds")
+    public java.util.List<String> dpiGroupIds;
 
-    @NameInMap("DestCidr")
-    public String destCidr;
+    @NameInMap("DpiSignatureIds")
+    public java.util.List<String> dpiSignatureIds;
 
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
-    @NameInMap("SourcePortRange")
-    public String sourcePortRange;
+    @NameInMap("Name")
+    public String name;
 
-    @NameInMap("DestPortRange")
-    public String destPortRange;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Policy")
     public String policy;
@@ -52,61 +46,27 @@ public class ModifyACLRuleRequest extends TeaModel {
     @NameInMap("Priority")
     public Integer priority;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("SourceCidr")
+    public String sourceCidr;
+
+    @NameInMap("SourcePortRange")
+    public String sourcePortRange;
+
     @NameInMap("Type")
     public String type;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("DpiSignatureIds")
-    public java.util.List<String> dpiSignatureIds;
-
-    @NameInMap("DpiGroupIds")
-    public java.util.List<String> dpiGroupIds;
 
     public static ModifyACLRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyACLRuleRequest self = new ModifyACLRuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyACLRuleRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyACLRuleRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifyACLRuleRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyACLRuleRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ModifyACLRuleRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ModifyACLRuleRequest setAclId(String aclId) {
@@ -133,6 +93,22 @@ public class ModifyACLRuleRequest extends TeaModel {
         return this.description;
     }
 
+    public ModifyACLRuleRequest setDestCidr(String destCidr) {
+        this.destCidr = destCidr;
+        return this;
+    }
+    public String getDestCidr() {
+        return this.destCidr;
+    }
+
+    public ModifyACLRuleRequest setDestPortRange(String destPortRange) {
+        this.destPortRange = destPortRange;
+        return this;
+    }
+    public String getDestPortRange() {
+        return this.destPortRange;
+    }
+
     public ModifyACLRuleRequest setDirection(String direction) {
         this.direction = direction;
         return this;
@@ -141,20 +117,20 @@ public class ModifyACLRuleRequest extends TeaModel {
         return this.direction;
     }
 
-    public ModifyACLRuleRequest setSourceCidr(String sourceCidr) {
-        this.sourceCidr = sourceCidr;
+    public ModifyACLRuleRequest setDpiGroupIds(java.util.List<String> dpiGroupIds) {
+        this.dpiGroupIds = dpiGroupIds;
         return this;
     }
-    public String getSourceCidr() {
-        return this.sourceCidr;
+    public java.util.List<String> getDpiGroupIds() {
+        return this.dpiGroupIds;
     }
 
-    public ModifyACLRuleRequest setDestCidr(String destCidr) {
-        this.destCidr = destCidr;
+    public ModifyACLRuleRequest setDpiSignatureIds(java.util.List<String> dpiSignatureIds) {
+        this.dpiSignatureIds = dpiSignatureIds;
         return this;
     }
-    public String getDestCidr() {
-        return this.destCidr;
+    public java.util.List<String> getDpiSignatureIds() {
+        return this.dpiSignatureIds;
     }
 
     public ModifyACLRuleRequest setIpProtocol(String ipProtocol) {
@@ -165,20 +141,28 @@ public class ModifyACLRuleRequest extends TeaModel {
         return this.ipProtocol;
     }
 
-    public ModifyACLRuleRequest setSourcePortRange(String sourcePortRange) {
-        this.sourcePortRange = sourcePortRange;
+    public ModifyACLRuleRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getSourcePortRange() {
-        return this.sourcePortRange;
+    public String getName() {
+        return this.name;
     }
 
-    public ModifyACLRuleRequest setDestPortRange(String destPortRange) {
-        this.destPortRange = destPortRange;
+    public ModifyACLRuleRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getDestPortRange() {
-        return this.destPortRange;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifyACLRuleRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyACLRuleRequest setPolicy(String policy) {
@@ -197,36 +181,52 @@ public class ModifyACLRuleRequest extends TeaModel {
         return this.priority;
     }
 
+    public ModifyACLRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyACLRuleRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyACLRuleRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyACLRuleRequest setSourceCidr(String sourceCidr) {
+        this.sourceCidr = sourceCidr;
+        return this;
+    }
+    public String getSourceCidr() {
+        return this.sourceCidr;
+    }
+
+    public ModifyACLRuleRequest setSourcePortRange(String sourcePortRange) {
+        this.sourcePortRange = sourcePortRange;
+        return this;
+    }
+    public String getSourcePortRange() {
+        return this.sourcePortRange;
+    }
+
     public ModifyACLRuleRequest setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
-    }
-
-    public ModifyACLRuleRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public ModifyACLRuleRequest setDpiSignatureIds(java.util.List<String> dpiSignatureIds) {
-        this.dpiSignatureIds = dpiSignatureIds;
-        return this;
-    }
-    public java.util.List<String> getDpiSignatureIds() {
-        return this.dpiSignatureIds;
-    }
-
-    public ModifyACLRuleRequest setDpiGroupIds(java.util.List<String> dpiGroupIds) {
-        this.dpiGroupIds = dpiGroupIds;
-        return this;
-    }
-    public java.util.List<String> getDpiGroupIds() {
-        return this.dpiGroupIds;
     }
 
 }

@@ -4,11 +4,17 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class UnbindSmartAccessGatewayRequest extends TeaModel {
+    @NameInMap("CcnId")
+    public String ccnId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,14 +22,8 @@ public class UnbindSmartAccessGatewayRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CcnId")
-    public String ccnId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("SmartAGUid")
     public Long smartAGUid;
@@ -31,6 +31,14 @@ public class UnbindSmartAccessGatewayRequest extends TeaModel {
     public static UnbindSmartAccessGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindSmartAccessGatewayRequest self = new UnbindSmartAccessGatewayRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UnbindSmartAccessGatewayRequest setCcnId(String ccnId) {
+        this.ccnId = ccnId;
+        return this;
+    }
+    public String getCcnId() {
+        return this.ccnId;
     }
 
     public UnbindSmartAccessGatewayRequest setOwnerAccount(String ownerAccount) {
@@ -49,6 +57,14 @@ public class UnbindSmartAccessGatewayRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public UnbindSmartAccessGatewayRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public UnbindSmartAccessGatewayRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -65,28 +81,12 @@ public class UnbindSmartAccessGatewayRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public UnbindSmartAccessGatewayRequest setCcnId(String ccnId) {
-        this.ccnId = ccnId;
-        return this;
-    }
-    public String getCcnId() {
-        return this.ccnId;
-    }
-
     public UnbindSmartAccessGatewayRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
     }
     public String getSmartAGId() {
         return this.smartAGId;
-    }
-
-    public UnbindSmartAccessGatewayRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public UnbindSmartAccessGatewayRequest setSmartAGUid(Long smartAGUid) {

@@ -4,11 +4,17 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DisassociateACLRequest extends TeaModel {
+    @NameInMap("AclId")
+    public String aclId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,18 +22,20 @@ public class DisassociateACLRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("AclId")
-    public String aclId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
 
     public static DisassociateACLRequest build(java.util.Map<String, ?> map) throws Exception {
         DisassociateACLRequest self = new DisassociateACLRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DisassociateACLRequest setAclId(String aclId) {
+        this.aclId = aclId;
+        return this;
+    }
+    public String getAclId() {
+        return this.aclId;
     }
 
     public DisassociateACLRequest setOwnerAccount(String ownerAccount) {
@@ -46,6 +54,14 @@ public class DisassociateACLRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DisassociateACLRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DisassociateACLRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -60,22 +76,6 @@ public class DisassociateACLRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DisassociateACLRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DisassociateACLRequest setAclId(String aclId) {
-        this.aclId = aclId;
-        return this;
-    }
-    public String getAclId() {
-        return this.aclId;
     }
 
     public DisassociateACLRequest setSmartAGId(String smartAGId) {

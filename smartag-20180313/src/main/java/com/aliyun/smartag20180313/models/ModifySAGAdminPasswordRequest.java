@@ -10,23 +10,23 @@ public class ModifySAGAdminPasswordRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("Password")
+    public String password;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
 
     @NameInMap("SmartAGSn")
     public String smartAGSn;
-
-    @NameInMap("Password")
-    public String password;
 
     public static ModifySAGAdminPasswordRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySAGAdminPasswordRequest self = new ModifySAGAdminPasswordRequest();
@@ -49,6 +49,22 @@ public class ModifySAGAdminPasswordRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifySAGAdminPasswordRequest setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    public String getPassword() {
+        return this.password;
+    }
+
+    public ModifySAGAdminPasswordRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ModifySAGAdminPasswordRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -65,14 +81,6 @@ public class ModifySAGAdminPasswordRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifySAGAdminPasswordRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public ModifySAGAdminPasswordRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
@@ -87,14 +95,6 @@ public class ModifySAGAdminPasswordRequest extends TeaModel {
     }
     public String getSmartAGSn() {
         return this.smartAGSn;
-    }
-
-    public ModifySAGAdminPasswordRequest setPassword(String password) {
-        this.password = password;
-        return this;
-    }
-    public String getPassword() {
-        return this.password;
     }
 
 }

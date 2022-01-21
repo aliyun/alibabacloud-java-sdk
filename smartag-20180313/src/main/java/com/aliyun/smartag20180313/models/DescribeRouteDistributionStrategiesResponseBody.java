@@ -4,8 +4,8 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +13,23 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("Strategies")
     public DescribeRouteDistributionStrategiesResponseBodyStrategies strategies;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeRouteDistributionStrategiesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRouteDistributionStrategiesResponseBody self = new DescribeRouteDistributionStrategiesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRouteDistributionStrategiesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeRouteDistributionStrategiesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeRouteDistributionStrategiesResponseBody setPageSize(Integer pageSize) {
@@ -48,14 +48,6 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeRouteDistributionStrategiesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeRouteDistributionStrategiesResponseBody setStrategies(DescribeRouteDistributionStrategiesResponseBodyStrategies strategies) {
         this.strategies = strategies;
         return this;
@@ -64,18 +56,35 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
         return this.strategies;
     }
 
-    public static class DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+    public DescribeRouteDistributionStrategiesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
 
-        @NameInMap("StrategyPublishStatus")
-        public String strategyPublishStatus;
+    public static class DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy extends TeaModel {
+        @NameInMap("ConflictInfo")
+        public String conflictInfo;
+
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        @NameInMap("DestCidrBlock")
+        public String destCidrBlock;
+
+        @NameInMap("HcInstanceId")
+        public String hcInstanceId;
+
+        @NameInMap("IsConflict")
+        public Boolean isConflict;
 
         @NameInMap("RouteDistribution")
         public String routeDistribution;
 
-        @NameInMap("CreateTime")
-        public Long createTime;
+        @NameInMap("RouteSource")
+        public String routeSource;
 
         @NameInMap("SmartAGId")
         public String smartAGId;
@@ -83,40 +92,55 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
         @NameInMap("SourceType")
         public String sourceType;
 
-        @NameInMap("IsConflict")
-        public Boolean isConflict;
+        @NameInMap("Status")
+        public String status;
 
-        @NameInMap("DestCidrBlock")
-        public String destCidrBlock;
-
-        @NameInMap("ConflictInfo")
-        public String conflictInfo;
-
-        @NameInMap("HcInstanceId")
-        public String hcInstanceId;
-
-        @NameInMap("RouteSource")
-        public String routeSource;
+        @NameInMap("StrategyPublishStatus")
+        public String strategyPublishStatus;
 
         public static DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy build(java.util.Map<String, ?> map) throws Exception {
             DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy self = new DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy();
             return TeaModel.build(map, self);
         }
 
-        public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setStatus(String status) {
-            this.status = status;
+        public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setConflictInfo(String conflictInfo) {
+            this.conflictInfo = conflictInfo;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getConflictInfo() {
+            return this.conflictInfo;
         }
 
-        public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setStrategyPublishStatus(String strategyPublishStatus) {
-            this.strategyPublishStatus = strategyPublishStatus;
+        public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setCreateTime(Long createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getStrategyPublishStatus() {
-            return this.strategyPublishStatus;
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setDestCidrBlock(String destCidrBlock) {
+            this.destCidrBlock = destCidrBlock;
+            return this;
+        }
+        public String getDestCidrBlock() {
+            return this.destCidrBlock;
+        }
+
+        public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setHcInstanceId(String hcInstanceId) {
+            this.hcInstanceId = hcInstanceId;
+            return this;
+        }
+        public String getHcInstanceId() {
+            return this.hcInstanceId;
+        }
+
+        public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setIsConflict(Boolean isConflict) {
+            this.isConflict = isConflict;
+            return this;
+        }
+        public Boolean getIsConflict() {
+            return this.isConflict;
         }
 
         public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setRouteDistribution(String routeDistribution) {
@@ -127,12 +151,12 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
             return this.routeDistribution;
         }
 
-        public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setCreateTime(Long createTime) {
-            this.createTime = createTime;
+        public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setRouteSource(String routeSource) {
+            this.routeSource = routeSource;
             return this;
         }
-        public Long getCreateTime() {
-            return this.createTime;
+        public String getRouteSource() {
+            return this.routeSource;
         }
 
         public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setSmartAGId(String smartAGId) {
@@ -151,44 +175,20 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
             return this.sourceType;
         }
 
-        public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setIsConflict(Boolean isConflict) {
-            this.isConflict = isConflict;
+        public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public Boolean getIsConflict() {
-            return this.isConflict;
+        public String getStatus() {
+            return this.status;
         }
 
-        public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setDestCidrBlock(String destCidrBlock) {
-            this.destCidrBlock = destCidrBlock;
+        public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setStrategyPublishStatus(String strategyPublishStatus) {
+            this.strategyPublishStatus = strategyPublishStatus;
             return this;
         }
-        public String getDestCidrBlock() {
-            return this.destCidrBlock;
-        }
-
-        public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setConflictInfo(String conflictInfo) {
-            this.conflictInfo = conflictInfo;
-            return this;
-        }
-        public String getConflictInfo() {
-            return this.conflictInfo;
-        }
-
-        public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setHcInstanceId(String hcInstanceId) {
-            this.hcInstanceId = hcInstanceId;
-            return this;
-        }
-        public String getHcInstanceId() {
-            return this.hcInstanceId;
-        }
-
-        public DescribeRouteDistributionStrategiesResponseBodyStrategiesStrategy setRouteSource(String routeSource) {
-            this.routeSource = routeSource;
-            return this;
-        }
-        public String getRouteSource() {
-            return this.routeSource;
+        public String getStrategyPublishStatus() {
+            return this.strategyPublishStatus;
         }
 
     }

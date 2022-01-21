@@ -32,9 +32,6 @@ public class DescribeSagTrafficTopNResponseBody extends TeaModel {
     }
 
     public static class DescribeSagTrafficTopNResponseBodyTrafficTopN extends TeaModel {
-        @NameInMap("TrafficRate")
-        public String trafficRate;
-
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -44,17 +41,12 @@ public class DescribeSagTrafficTopNResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("TrafficRate")
+        public String trafficRate;
+
         public static DescribeSagTrafficTopNResponseBodyTrafficTopN build(java.util.Map<String, ?> map) throws Exception {
             DescribeSagTrafficTopNResponseBodyTrafficTopN self = new DescribeSagTrafficTopNResponseBodyTrafficTopN();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSagTrafficTopNResponseBodyTrafficTopN setTrafficRate(String trafficRate) {
-            this.trafficRate = trafficRate;
-            return this;
-        }
-        public String getTrafficRate() {
-            return this.trafficRate;
         }
 
         public DescribeSagTrafficTopNResponseBodyTrafficTopN setInstanceId(String instanceId) {
@@ -79,6 +71,14 @@ public class DescribeSagTrafficTopNResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeSagTrafficTopNResponseBodyTrafficTopN setTrafficRate(String trafficRate) {
+            this.trafficRate = trafficRate;
+            return this;
+        }
+        public String getTrafficRate() {
+            return this.trafficRate;
         }
 
     }

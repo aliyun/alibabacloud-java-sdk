@@ -4,11 +4,17 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class AssociateFlowLogRequest extends TeaModel {
+    @NameInMap("FlowLogId")
+    public String flowLogId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,18 +22,20 @@ public class AssociateFlowLogRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("FlowLogId")
-    public String flowLogId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
 
     public static AssociateFlowLogRequest build(java.util.Map<String, ?> map) throws Exception {
         AssociateFlowLogRequest self = new AssociateFlowLogRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AssociateFlowLogRequest setFlowLogId(String flowLogId) {
+        this.flowLogId = flowLogId;
+        return this;
+    }
+    public String getFlowLogId() {
+        return this.flowLogId;
     }
 
     public AssociateFlowLogRequest setOwnerAccount(String ownerAccount) {
@@ -46,6 +54,14 @@ public class AssociateFlowLogRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public AssociateFlowLogRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public AssociateFlowLogRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -60,22 +76,6 @@ public class AssociateFlowLogRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public AssociateFlowLogRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public AssociateFlowLogRequest setFlowLogId(String flowLogId) {
-        this.flowLogId = flowLogId;
-        return this;
-    }
-    public String getFlowLogId() {
-        return this.flowLogId;
     }
 
     public AssociateFlowLogRequest setSmartAGId(String smartAGId) {

@@ -4,11 +4,17 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class BindSmartAccessGatewayRequest extends TeaModel {
+    @NameInMap("CcnId")
+    public String ccnId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,14 +22,8 @@ public class BindSmartAccessGatewayRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CcnId")
-    public String ccnId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("SmartAGUid")
     public Long smartAGUid;
@@ -31,6 +31,14 @@ public class BindSmartAccessGatewayRequest extends TeaModel {
     public static BindSmartAccessGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         BindSmartAccessGatewayRequest self = new BindSmartAccessGatewayRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BindSmartAccessGatewayRequest setCcnId(String ccnId) {
+        this.ccnId = ccnId;
+        return this;
+    }
+    public String getCcnId() {
+        return this.ccnId;
     }
 
     public BindSmartAccessGatewayRequest setOwnerAccount(String ownerAccount) {
@@ -49,6 +57,14 @@ public class BindSmartAccessGatewayRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public BindSmartAccessGatewayRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public BindSmartAccessGatewayRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -65,28 +81,12 @@ public class BindSmartAccessGatewayRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public BindSmartAccessGatewayRequest setCcnId(String ccnId) {
-        this.ccnId = ccnId;
-        return this;
-    }
-    public String getCcnId() {
-        return this.ccnId;
-    }
-
     public BindSmartAccessGatewayRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
     }
     public String getSmartAGId() {
         return this.smartAGId;
-    }
-
-    public BindSmartAccessGatewayRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public BindSmartAccessGatewayRequest setSmartAGUid(Long smartAGUid) {

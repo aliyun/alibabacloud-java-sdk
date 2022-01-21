@@ -10,20 +10,20 @@ public class ModifySagRemoteAccessRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RemoteAccessIp")
+    public String remoteAccessIp;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SmartAGId")
-    public String smartAGId;
-
     @NameInMap("SerialNumber")
     public String serialNumber;
 
-    @NameInMap("RemoteAccessIp")
-    public String remoteAccessIp;
+    @NameInMap("SmartAGId")
+    public String smartAGId;
 
     public static ModifySagRemoteAccessRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySagRemoteAccessRequest self = new ModifySagRemoteAccessRequest();
@@ -46,6 +46,14 @@ public class ModifySagRemoteAccessRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifySagRemoteAccessRequest setRemoteAccessIp(String remoteAccessIp) {
+        this.remoteAccessIp = remoteAccessIp;
+        return this;
+    }
+    public String getRemoteAccessIp() {
+        return this.remoteAccessIp;
+    }
+
     public ModifySagRemoteAccessRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -62,14 +70,6 @@ public class ModifySagRemoteAccessRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifySagRemoteAccessRequest setSmartAGId(String smartAGId) {
-        this.smartAGId = smartAGId;
-        return this;
-    }
-    public String getSmartAGId() {
-        return this.smartAGId;
-    }
-
     public ModifySagRemoteAccessRequest setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -78,12 +78,12 @@ public class ModifySagRemoteAccessRequest extends TeaModel {
         return this.serialNumber;
     }
 
-    public ModifySagRemoteAccessRequest setRemoteAccessIp(String remoteAccessIp) {
-        this.remoteAccessIp = remoteAccessIp;
+    public ModifySagRemoteAccessRequest setSmartAGId(String smartAGId) {
+        this.smartAGId = smartAGId;
         return this;
     }
-    public String getRemoteAccessIp() {
-        return this.remoteAccessIp;
+    public String getSmartAGId() {
+        return this.smartAGId;
     }
 
 }

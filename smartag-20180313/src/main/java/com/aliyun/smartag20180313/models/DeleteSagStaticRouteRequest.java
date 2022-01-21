@@ -4,11 +4,20 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteSagStaticRouteRequest extends TeaModel {
+    @NameInMap("DestinationCidr")
+    public String destinationCidr;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PortName")
+    public String portName;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,20 +25,11 @@ public class DeleteSagStaticRouteRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
 
     @NameInMap("SmartAGSn")
     public String smartAGSn;
-
-    @NameInMap("PortName")
-    public String portName;
-
-    @NameInMap("DestinationCidr")
-    public String destinationCidr;
 
     @NameInMap("Vlan")
     public String vlan;
@@ -37,6 +37,14 @@ public class DeleteSagStaticRouteRequest extends TeaModel {
     public static DeleteSagStaticRouteRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSagStaticRouteRequest self = new DeleteSagStaticRouteRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSagStaticRouteRequest setDestinationCidr(String destinationCidr) {
+        this.destinationCidr = destinationCidr;
+        return this;
+    }
+    public String getDestinationCidr() {
+        return this.destinationCidr;
     }
 
     public DeleteSagStaticRouteRequest setOwnerAccount(String ownerAccount) {
@@ -55,6 +63,22 @@ public class DeleteSagStaticRouteRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DeleteSagStaticRouteRequest setPortName(String portName) {
+        this.portName = portName;
+        return this;
+    }
+    public String getPortName() {
+        return this.portName;
+    }
+
+    public DeleteSagStaticRouteRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DeleteSagStaticRouteRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -71,14 +95,6 @@ public class DeleteSagStaticRouteRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DeleteSagStaticRouteRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DeleteSagStaticRouteRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
@@ -93,22 +109,6 @@ public class DeleteSagStaticRouteRequest extends TeaModel {
     }
     public String getSmartAGSn() {
         return this.smartAGSn;
-    }
-
-    public DeleteSagStaticRouteRequest setPortName(String portName) {
-        this.portName = portName;
-        return this;
-    }
-    public String getPortName() {
-        return this.portName;
-    }
-
-    public DeleteSagStaticRouteRequest setDestinationCidr(String destinationCidr) {
-        this.destinationCidr = destinationCidr;
-        return this;
-    }
-    public String getDestinationCidr() {
-        return this.destinationCidr;
     }
 
     public DeleteSagStaticRouteRequest setVlan(String vlan) {

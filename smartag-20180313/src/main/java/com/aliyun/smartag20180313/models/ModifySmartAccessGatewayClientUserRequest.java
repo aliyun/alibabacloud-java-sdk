@@ -4,11 +4,20 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySmartAccessGatewayClientUserRequest extends TeaModel {
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
+
+    @NameInMap("Email")
+    public String email;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,24 +25,31 @@ public class ModifySmartAccessGatewayClientUserRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
 
     @NameInMap("UserName")
     public String userName;
 
-    @NameInMap("Bandwidth")
-    public Integer bandwidth;
-
-    @NameInMap("Email")
-    public String email;
-
     public static ModifySmartAccessGatewayClientUserRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySmartAccessGatewayClientUserRequest self = new ModifySmartAccessGatewayClientUserRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifySmartAccessGatewayClientUserRequest setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Integer getBandwidth() {
+        return this.bandwidth;
+    }
+
+    public ModifySmartAccessGatewayClientUserRequest setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    public String getEmail() {
+        return this.email;
     }
 
     public ModifySmartAccessGatewayClientUserRequest setOwnerAccount(String ownerAccount) {
@@ -52,6 +68,14 @@ public class ModifySmartAccessGatewayClientUserRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifySmartAccessGatewayClientUserRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ModifySmartAccessGatewayClientUserRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -68,14 +92,6 @@ public class ModifySmartAccessGatewayClientUserRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifySmartAccessGatewayClientUserRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public ModifySmartAccessGatewayClientUserRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
@@ -90,22 +106,6 @@ public class ModifySmartAccessGatewayClientUserRequest extends TeaModel {
     }
     public String getUserName() {
         return this.userName;
-    }
-
-    public ModifySmartAccessGatewayClientUserRequest setBandwidth(Integer bandwidth) {
-        this.bandwidth = bandwidth;
-        return this;
-    }
-    public Integer getBandwidth() {
-        return this.bandwidth;
-    }
-
-    public ModifySmartAccessGatewayClientUserRequest setEmail(String email) {
-        this.email = email;
-        return this;
-    }
-    public String getEmail() {
-        return this.email;
     }
 
 }

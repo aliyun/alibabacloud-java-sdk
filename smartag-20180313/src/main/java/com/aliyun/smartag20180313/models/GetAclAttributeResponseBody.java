@@ -4,29 +4,21 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class GetAclAttributeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AclId")
     public String aclId;
-
-    @NameInMap("ErrorConfigSmartAGCount")
-    public Integer errorConfigSmartAGCount;
 
     @NameInMap("AclName")
     public String aclName;
 
+    @NameInMap("ErrorConfigSmartAGCount")
+    public Integer errorConfigSmartAGCount;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static GetAclAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAclAttributeResponseBody self = new GetAclAttributeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetAclAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetAclAttributeResponseBody setAclId(String aclId) {
@@ -37,6 +29,14 @@ public class GetAclAttributeResponseBody extends TeaModel {
         return this.aclId;
     }
 
+    public GetAclAttributeResponseBody setAclName(String aclName) {
+        this.aclName = aclName;
+        return this;
+    }
+    public String getAclName() {
+        return this.aclName;
+    }
+
     public GetAclAttributeResponseBody setErrorConfigSmartAGCount(Integer errorConfigSmartAGCount) {
         this.errorConfigSmartAGCount = errorConfigSmartAGCount;
         return this;
@@ -45,12 +45,12 @@ public class GetAclAttributeResponseBody extends TeaModel {
         return this.errorConfigSmartAGCount;
     }
 
-    public GetAclAttributeResponseBody setAclName(String aclName) {
-        this.aclName = aclName;
+    public GetAclAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getAclName() {
-        return this.aclName;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

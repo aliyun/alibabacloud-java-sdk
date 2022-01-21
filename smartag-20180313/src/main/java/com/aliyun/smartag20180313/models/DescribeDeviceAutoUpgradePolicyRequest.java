@@ -10,20 +10,20 @@ public class DescribeDeviceAutoUpgradePolicyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("SerialNumber")
+    public String serialNumber;
 
     @NameInMap("SmartAGId")
     public String smartAGId;
-
-    @NameInMap("SerialNumber")
-    public String serialNumber;
 
     @NameInMap("VersionType")
     public String versionType;
@@ -49,6 +49,14 @@ public class DescribeDeviceAutoUpgradePolicyRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeDeviceAutoUpgradePolicyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeDeviceAutoUpgradePolicyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -65,12 +73,12 @@ public class DescribeDeviceAutoUpgradePolicyRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeDeviceAutoUpgradePolicyRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeDeviceAutoUpgradePolicyRequest setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getSerialNumber() {
+        return this.serialNumber;
     }
 
     public DescribeDeviceAutoUpgradePolicyRequest setSmartAGId(String smartAGId) {
@@ -79,14 +87,6 @@ public class DescribeDeviceAutoUpgradePolicyRequest extends TeaModel {
     }
     public String getSmartAGId() {
         return this.smartAGId;
-    }
-
-    public DescribeDeviceAutoUpgradePolicyRequest setSerialNumber(String serialNumber) {
-        this.serialNumber = serialNumber;
-        return this;
-    }
-    public String getSerialNumber() {
-        return this.serialNumber;
     }
 
     public DescribeDeviceAutoUpgradePolicyRequest setVersionType(String versionType) {

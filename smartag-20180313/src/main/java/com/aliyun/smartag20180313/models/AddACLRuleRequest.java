@@ -4,44 +4,38 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class AddACLRuleRequest extends TeaModel {
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("AclId")
     public String aclId;
 
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DestCidr")
+    public String destCidr;
+
+    @NameInMap("DestPortRange")
+    public String destPortRange;
+
     @NameInMap("Direction")
     public String direction;
 
-    @NameInMap("SourceCidr")
-    public String sourceCidr;
+    @NameInMap("DpiGroupIds")
+    public java.util.List<String> dpiGroupIds;
 
-    @NameInMap("DestCidr")
-    public String destCidr;
+    @NameInMap("DpiSignatureIds")
+    public java.util.List<String> dpiSignatureIds;
 
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
-    @NameInMap("SourcePortRange")
-    public String sourcePortRange;
+    @NameInMap("Name")
+    public String name;
 
-    @NameInMap("DestPortRange")
-    public String destPortRange;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Policy")
     public String policy;
@@ -49,61 +43,27 @@ public class AddACLRuleRequest extends TeaModel {
     @NameInMap("Priority")
     public Integer priority;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("SourceCidr")
+    public String sourceCidr;
+
+    @NameInMap("SourcePortRange")
+    public String sourcePortRange;
+
     @NameInMap("Type")
     public String type;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("DpiSignatureIds")
-    public java.util.List<String> dpiSignatureIds;
-
-    @NameInMap("DpiGroupIds")
-    public java.util.List<String> dpiGroupIds;
 
     public static AddACLRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         AddACLRuleRequest self = new AddACLRuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddACLRuleRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public AddACLRuleRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public AddACLRuleRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public AddACLRuleRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public AddACLRuleRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public AddACLRuleRequest setAclId(String aclId) {
@@ -122,6 +82,22 @@ public class AddACLRuleRequest extends TeaModel {
         return this.description;
     }
 
+    public AddACLRuleRequest setDestCidr(String destCidr) {
+        this.destCidr = destCidr;
+        return this;
+    }
+    public String getDestCidr() {
+        return this.destCidr;
+    }
+
+    public AddACLRuleRequest setDestPortRange(String destPortRange) {
+        this.destPortRange = destPortRange;
+        return this;
+    }
+    public String getDestPortRange() {
+        return this.destPortRange;
+    }
+
     public AddACLRuleRequest setDirection(String direction) {
         this.direction = direction;
         return this;
@@ -130,20 +106,20 @@ public class AddACLRuleRequest extends TeaModel {
         return this.direction;
     }
 
-    public AddACLRuleRequest setSourceCidr(String sourceCidr) {
-        this.sourceCidr = sourceCidr;
+    public AddACLRuleRequest setDpiGroupIds(java.util.List<String> dpiGroupIds) {
+        this.dpiGroupIds = dpiGroupIds;
         return this;
     }
-    public String getSourceCidr() {
-        return this.sourceCidr;
+    public java.util.List<String> getDpiGroupIds() {
+        return this.dpiGroupIds;
     }
 
-    public AddACLRuleRequest setDestCidr(String destCidr) {
-        this.destCidr = destCidr;
+    public AddACLRuleRequest setDpiSignatureIds(java.util.List<String> dpiSignatureIds) {
+        this.dpiSignatureIds = dpiSignatureIds;
         return this;
     }
-    public String getDestCidr() {
-        return this.destCidr;
+    public java.util.List<String> getDpiSignatureIds() {
+        return this.dpiSignatureIds;
     }
 
     public AddACLRuleRequest setIpProtocol(String ipProtocol) {
@@ -154,20 +130,28 @@ public class AddACLRuleRequest extends TeaModel {
         return this.ipProtocol;
     }
 
-    public AddACLRuleRequest setSourcePortRange(String sourcePortRange) {
-        this.sourcePortRange = sourcePortRange;
+    public AddACLRuleRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getSourcePortRange() {
-        return this.sourcePortRange;
+    public String getName() {
+        return this.name;
     }
 
-    public AddACLRuleRequest setDestPortRange(String destPortRange) {
-        this.destPortRange = destPortRange;
+    public AddACLRuleRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getDestPortRange() {
-        return this.destPortRange;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public AddACLRuleRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddACLRuleRequest setPolicy(String policy) {
@@ -186,36 +170,52 @@ public class AddACLRuleRequest extends TeaModel {
         return this.priority;
     }
 
+    public AddACLRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public AddACLRuleRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public AddACLRuleRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public AddACLRuleRequest setSourceCidr(String sourceCidr) {
+        this.sourceCidr = sourceCidr;
+        return this;
+    }
+    public String getSourceCidr() {
+        return this.sourceCidr;
+    }
+
+    public AddACLRuleRequest setSourcePortRange(String sourcePortRange) {
+        this.sourcePortRange = sourcePortRange;
+        return this;
+    }
+    public String getSourcePortRange() {
+        return this.sourcePortRange;
+    }
+
     public AddACLRuleRequest setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
-    }
-
-    public AddACLRuleRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public AddACLRuleRequest setDpiSignatureIds(java.util.List<String> dpiSignatureIds) {
-        this.dpiSignatureIds = dpiSignatureIds;
-        return this;
-    }
-    public java.util.List<String> getDpiSignatureIds() {
-        return this.dpiSignatureIds;
-    }
-
-    public AddACLRuleRequest setDpiGroupIds(java.util.List<String> dpiGroupIds) {
-        this.dpiGroupIds = dpiGroupIds;
-        return this;
-    }
-    public java.util.List<String> getDpiGroupIds() {
-        return this.dpiGroupIds;
     }
 
 }

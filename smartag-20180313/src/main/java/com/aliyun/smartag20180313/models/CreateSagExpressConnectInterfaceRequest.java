@@ -4,11 +4,23 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class CreateSagExpressConnectInterfaceRequest extends TeaModel {
+    @NameInMap("IP")
+    public String IP;
+
+    @NameInMap("Mask")
+    public String mask;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PortName")
+    public String portName;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,30 +28,34 @@ public class CreateSagExpressConnectInterfaceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
 
     @NameInMap("SmartAGSn")
     public String smartAGSn;
 
-    @NameInMap("PortName")
-    public String portName;
-
     @NameInMap("Vlan")
     public String vlan;
-
-    @NameInMap("IP")
-    public String IP;
-
-    @NameInMap("Mask")
-    public String mask;
 
     public static CreateSagExpressConnectInterfaceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSagExpressConnectInterfaceRequest self = new CreateSagExpressConnectInterfaceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSagExpressConnectInterfaceRequest setIP(String IP) {
+        this.IP = IP;
+        return this;
+    }
+    public String getIP() {
+        return this.IP;
+    }
+
+    public CreateSagExpressConnectInterfaceRequest setMask(String mask) {
+        this.mask = mask;
+        return this;
+    }
+    public String getMask() {
+        return this.mask;
     }
 
     public CreateSagExpressConnectInterfaceRequest setOwnerAccount(String ownerAccount) {
@@ -58,6 +74,22 @@ public class CreateSagExpressConnectInterfaceRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public CreateSagExpressConnectInterfaceRequest setPortName(String portName) {
+        this.portName = portName;
+        return this;
+    }
+    public String getPortName() {
+        return this.portName;
+    }
+
+    public CreateSagExpressConnectInterfaceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public CreateSagExpressConnectInterfaceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -72,14 +104,6 @@ public class CreateSagExpressConnectInterfaceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CreateSagExpressConnectInterfaceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateSagExpressConnectInterfaceRequest setSmartAGId(String smartAGId) {
@@ -98,36 +122,12 @@ public class CreateSagExpressConnectInterfaceRequest extends TeaModel {
         return this.smartAGSn;
     }
 
-    public CreateSagExpressConnectInterfaceRequest setPortName(String portName) {
-        this.portName = portName;
-        return this;
-    }
-    public String getPortName() {
-        return this.portName;
-    }
-
     public CreateSagExpressConnectInterfaceRequest setVlan(String vlan) {
         this.vlan = vlan;
         return this;
     }
     public String getVlan() {
         return this.vlan;
-    }
-
-    public CreateSagExpressConnectInterfaceRequest setIP(String IP) {
-        this.IP = IP;
-        return this;
-    }
-    public String getIP() {
-        return this.IP;
-    }
-
-    public CreateSagExpressConnectInterfaceRequest setMask(String mask) {
-        this.mask = mask;
-        return this;
-    }
-    public String getMask() {
-        return this.mask;
     }
 
 }

@@ -4,11 +4,26 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudConnectNetworksRequest extends TeaModel {
+    @NameInMap("CcnId")
+    public String ccnId;
+
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,27 +31,28 @@ public class DescribeCloudConnectNetworksRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("CcnId")
-    public String ccnId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("Tag")
     public java.util.List<DescribeCloudConnectNetworksRequestTag> tag;
 
     public static DescribeCloudConnectNetworksRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCloudConnectNetworksRequest self = new DescribeCloudConnectNetworksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCloudConnectNetworksRequest setCcnId(String ccnId) {
+        this.ccnId = ccnId;
+        return this;
+    }
+    public String getCcnId() {
+        return this.ccnId;
+    }
+
+    public DescribeCloudConnectNetworksRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public DescribeCloudConnectNetworksRequest setOwnerAccount(String ownerAccount) {
@@ -55,6 +71,30 @@ public class DescribeCloudConnectNetworksRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeCloudConnectNetworksRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeCloudConnectNetworksRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeCloudConnectNetworksRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeCloudConnectNetworksRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -69,46 +109,6 @@ public class DescribeCloudConnectNetworksRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeCloudConnectNetworksRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeCloudConnectNetworksRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public DescribeCloudConnectNetworksRequest setCcnId(String ccnId) {
-        this.ccnId = ccnId;
-        return this;
-    }
-    public String getCcnId() {
-        return this.ccnId;
-    }
-
-    public DescribeCloudConnectNetworksRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeCloudConnectNetworksRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
     public DescribeCloudConnectNetworksRequest setTag(java.util.List<DescribeCloudConnectNetworksRequestTag> tag) {

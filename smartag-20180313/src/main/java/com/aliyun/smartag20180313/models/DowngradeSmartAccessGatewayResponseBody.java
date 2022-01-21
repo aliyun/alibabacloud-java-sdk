@@ -4,23 +4,15 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DowngradeSmartAccessGatewayResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OrderId")
     public String orderId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DowngradeSmartAccessGatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DowngradeSmartAccessGatewayResponseBody self = new DowngradeSmartAccessGatewayResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DowngradeSmartAccessGatewayResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DowngradeSmartAccessGatewayResponseBody setOrderId(String orderId) {
@@ -29,6 +21,14 @@ public class DowngradeSmartAccessGatewayResponseBody extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public DowngradeSmartAccessGatewayResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

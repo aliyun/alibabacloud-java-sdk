@@ -4,8 +4,8 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnatEntriesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -16,20 +16,20 @@ public class DescribeSnatEntriesResponseBody extends TeaModel {
     @NameInMap("SnatEntries")
     public DescribeSnatEntriesResponseBodySnatEntries snatEntries;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeSnatEntriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnatEntriesResponseBody self = new DescribeSnatEntriesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSnatEntriesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeSnatEntriesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeSnatEntriesResponseBody setPageSize(Integer pageSize) {
@@ -56,12 +56,12 @@ public class DescribeSnatEntriesResponseBody extends TeaModel {
         return this.snatEntries;
     }
 
-    public DescribeSnatEntriesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeSnatEntriesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeSnatEntriesResponseBodySnatEntriesSnatEntry extends TeaModel {

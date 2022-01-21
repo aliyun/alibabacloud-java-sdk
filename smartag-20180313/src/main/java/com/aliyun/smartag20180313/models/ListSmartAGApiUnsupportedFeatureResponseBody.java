@@ -4,23 +4,15 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ListSmartAGApiUnsupportedFeatureResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Features")
     public java.util.List<ListSmartAGApiUnsupportedFeatureResponseBodyFeatures> features;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListSmartAGApiUnsupportedFeatureResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSmartAGApiUnsupportedFeatureResponseBody self = new ListSmartAGApiUnsupportedFeatureResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListSmartAGApiUnsupportedFeatureResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListSmartAGApiUnsupportedFeatureResponseBody setFeatures(java.util.List<ListSmartAGApiUnsupportedFeatureResponseBodyFeatures> features) {
@@ -29,6 +21,14 @@ public class ListSmartAGApiUnsupportedFeatureResponseBody extends TeaModel {
     }
     public java.util.List<ListSmartAGApiUnsupportedFeatureResponseBodyFeatures> getFeatures() {
         return this.features;
+    }
+
+    public ListSmartAGApiUnsupportedFeatureResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListSmartAGApiUnsupportedFeatureResponseBodyFeatures extends TeaModel {

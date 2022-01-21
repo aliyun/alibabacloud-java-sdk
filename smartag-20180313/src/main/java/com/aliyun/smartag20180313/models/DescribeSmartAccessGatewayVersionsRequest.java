@@ -10,14 +10,14 @@ public class DescribeSmartAccessGatewayVersionsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("SmartAGId")
     public String smartAGId;
@@ -49,6 +49,14 @@ public class DescribeSmartAccessGatewayVersionsRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeSmartAccessGatewayVersionsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeSmartAccessGatewayVersionsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -63,14 +71,6 @@ public class DescribeSmartAccessGatewayVersionsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeSmartAccessGatewayVersionsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeSmartAccessGatewayVersionsRequest setSmartAGId(String smartAGId) {

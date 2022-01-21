@@ -4,23 +4,15 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSagOnlineClientStatisticsResponseBody extends TeaModel {
-    @NameInMap("SagStatistics")
-    public DescribeSagOnlineClientStatisticsResponseBodySagStatistics sagStatistics;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("SagStatistics")
+    public DescribeSagOnlineClientStatisticsResponseBodySagStatistics sagStatistics;
 
     public static DescribeSagOnlineClientStatisticsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSagOnlineClientStatisticsResponseBody self = new DescribeSagOnlineClientStatisticsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSagOnlineClientStatisticsResponseBody setSagStatistics(DescribeSagOnlineClientStatisticsResponseBodySagStatistics sagStatistics) {
-        this.sagStatistics = sagStatistics;
-        return this;
-    }
-    public DescribeSagOnlineClientStatisticsResponseBodySagStatistics getSagStatistics() {
-        return this.sagStatistics;
     }
 
     public DescribeSagOnlineClientStatisticsResponseBody setRequestId(String requestId) {
@@ -31,24 +23,24 @@ public class DescribeSagOnlineClientStatisticsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class DescribeSagOnlineClientStatisticsResponseBodySagStatisticsStatistics extends TeaModel {
-        @NameInMap("SmartAGId")
-        public String smartAGId;
+    public DescribeSagOnlineClientStatisticsResponseBody setSagStatistics(DescribeSagOnlineClientStatisticsResponseBodySagStatistics sagStatistics) {
+        this.sagStatistics = sagStatistics;
+        return this;
+    }
+    public DescribeSagOnlineClientStatisticsResponseBodySagStatistics getSagStatistics() {
+        return this.sagStatistics;
+    }
 
+    public static class DescribeSagOnlineClientStatisticsResponseBodySagStatisticsStatistics extends TeaModel {
         @NameInMap("OnlineCount")
         public String onlineCount;
+
+        @NameInMap("SmartAGId")
+        public String smartAGId;
 
         public static DescribeSagOnlineClientStatisticsResponseBodySagStatisticsStatistics build(java.util.Map<String, ?> map) throws Exception {
             DescribeSagOnlineClientStatisticsResponseBodySagStatisticsStatistics self = new DescribeSagOnlineClientStatisticsResponseBodySagStatisticsStatistics();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSagOnlineClientStatisticsResponseBodySagStatisticsStatistics setSmartAGId(String smartAGId) {
-            this.smartAGId = smartAGId;
-            return this;
-        }
-        public String getSmartAGId() {
-            return this.smartAGId;
         }
 
         public DescribeSagOnlineClientStatisticsResponseBodySagStatisticsStatistics setOnlineCount(String onlineCount) {
@@ -57,6 +49,14 @@ public class DescribeSagOnlineClientStatisticsResponseBody extends TeaModel {
         }
         public String getOnlineCount() {
             return this.onlineCount;
+        }
+
+        public DescribeSagOnlineClientStatisticsResponseBodySagStatisticsStatistics setSmartAGId(String smartAGId) {
+            this.smartAGId = smartAGId;
+            return this;
+        }
+        public String getSmartAGId() {
+            return this.smartAGId;
         }
 
     }

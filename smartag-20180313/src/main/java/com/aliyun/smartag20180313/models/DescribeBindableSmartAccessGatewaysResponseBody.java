@@ -4,8 +4,8 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeBindableSmartAccessGatewaysResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +13,23 @@ public class DescribeBindableSmartAccessGatewaysResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("SmartAccessGateways")
     public DescribeBindableSmartAccessGatewaysResponseBodySmartAccessGateways smartAccessGateways;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeBindableSmartAccessGatewaysResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBindableSmartAccessGatewaysResponseBody self = new DescribeBindableSmartAccessGatewaysResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBindableSmartAccessGatewaysResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeBindableSmartAccessGatewaysResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeBindableSmartAccessGatewaysResponseBody setPageSize(Integer pageSize) {
@@ -48,14 +48,6 @@ public class DescribeBindableSmartAccessGatewaysResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeBindableSmartAccessGatewaysResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeBindableSmartAccessGatewaysResponseBody setSmartAccessGateways(DescribeBindableSmartAccessGatewaysResponseBodySmartAccessGateways smartAccessGateways) {
         this.smartAccessGateways = smartAccessGateways;
         return this;
@@ -64,12 +56,20 @@ public class DescribeBindableSmartAccessGatewaysResponseBody extends TeaModel {
         return this.smartAccessGateways;
     }
 
-    public static class DescribeBindableSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway extends TeaModel {
-        @NameInMap("SmartAGId")
-        public String smartAGId;
+    public DescribeBindableSmartAccessGatewaysResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
 
+    public static class DescribeBindableSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway extends TeaModel {
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("SmartAGId")
+        public String smartAGId;
 
         @NameInMap("SmartAGUid")
         public Long smartAGUid;
@@ -79,20 +79,20 @@ public class DescribeBindableSmartAccessGatewaysResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeBindableSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setSmartAGId(String smartAGId) {
-            this.smartAGId = smartAGId;
-            return this;
-        }
-        public String getSmartAGId() {
-            return this.smartAGId;
-        }
-
         public DescribeBindableSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeBindableSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setSmartAGId(String smartAGId) {
+            this.smartAGId = smartAGId;
+            return this;
+        }
+        public String getSmartAGId() {
+            return this.smartAGId;
         }
 
         public DescribeBindableSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setSmartAGUid(Long smartAGUid) {

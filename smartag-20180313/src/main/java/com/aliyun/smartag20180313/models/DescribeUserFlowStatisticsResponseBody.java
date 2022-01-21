@@ -4,23 +4,15 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserFlowStatisticsResponseBody extends TeaModel {
-    @NameInMap("SagStatistics")
-    public DescribeUserFlowStatisticsResponseBodySagStatistics sagStatistics;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("SagStatistics")
+    public DescribeUserFlowStatisticsResponseBodySagStatistics sagStatistics;
 
     public static DescribeUserFlowStatisticsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserFlowStatisticsResponseBody self = new DescribeUserFlowStatisticsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeUserFlowStatisticsResponseBody setSagStatistics(DescribeUserFlowStatisticsResponseBodySagStatistics sagStatistics) {
-        this.sagStatistics = sagStatistics;
-        return this;
-    }
-    public DescribeUserFlowStatisticsResponseBodySagStatistics getSagStatistics() {
-        return this.sagStatistics;
     }
 
     public DescribeUserFlowStatisticsResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class DescribeUserFlowStatisticsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeUserFlowStatisticsResponseBody setSagStatistics(DescribeUserFlowStatisticsResponseBodySagStatistics sagStatistics) {
+        this.sagStatistics = sagStatistics;
+        return this;
+    }
+    public DescribeUserFlowStatisticsResponseBodySagStatistics getSagStatistics() {
+        return this.sagStatistics;
     }
 
     public static class DescribeUserFlowStatisticsResponseBodySagStatisticsStatistics extends TeaModel {

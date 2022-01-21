@@ -4,11 +4,20 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class UpgradeSmartAccessGatewaySoftwareRequest extends TeaModel {
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    @NameInMap("DataPlan")
+    public Long dataPlan;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -19,21 +28,28 @@ public class UpgradeSmartAccessGatewaySoftwareRequest extends TeaModel {
     @NameInMap("SmartAGId")
     public String smartAGId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("AutoPay")
-    public Boolean autoPay;
-
-    @NameInMap("DataPlan")
-    public Long dataPlan;
-
     @NameInMap("UserCount")
     public Integer userCount;
 
     public static UpgradeSmartAccessGatewaySoftwareRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeSmartAccessGatewaySoftwareRequest self = new UpgradeSmartAccessGatewaySoftwareRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpgradeSmartAccessGatewaySoftwareRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public UpgradeSmartAccessGatewaySoftwareRequest setDataPlan(Long dataPlan) {
+        this.dataPlan = dataPlan;
+        return this;
+    }
+    public Long getDataPlan() {
+        return this.dataPlan;
     }
 
     public UpgradeSmartAccessGatewaySoftwareRequest setOwnerAccount(String ownerAccount) {
@@ -50,6 +66,14 @@ public class UpgradeSmartAccessGatewaySoftwareRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public UpgradeSmartAccessGatewaySoftwareRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UpgradeSmartAccessGatewaySoftwareRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -74,30 +98,6 @@ public class UpgradeSmartAccessGatewaySoftwareRequest extends TeaModel {
     }
     public String getSmartAGId() {
         return this.smartAGId;
-    }
-
-    public UpgradeSmartAccessGatewaySoftwareRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public UpgradeSmartAccessGatewaySoftwareRequest setAutoPay(Boolean autoPay) {
-        this.autoPay = autoPay;
-        return this;
-    }
-    public Boolean getAutoPay() {
-        return this.autoPay;
-    }
-
-    public UpgradeSmartAccessGatewaySoftwareRequest setDataPlan(Long dataPlan) {
-        this.dataPlan = dataPlan;
-        return this;
-    }
-    public Long getDataPlan() {
-        return this.dataPlan;
     }
 
     public UpgradeSmartAccessGatewaySoftwareRequest setUserCount(Integer userCount) {

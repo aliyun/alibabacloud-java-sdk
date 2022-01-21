@@ -4,8 +4,11 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ListEnterpriseCodeResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("EnterpriseCodes")
+    public java.util.List<ListEnterpriseCodeResponseBodyEnterpriseCodes> enterpriseCodes;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -13,23 +16,28 @@ public class ListEnterpriseCodeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
-    @NameInMap("EnterpriseCodes")
-    public java.util.List<ListEnterpriseCodeResponseBodyEnterpriseCodes> enterpriseCodes;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListEnterpriseCodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListEnterpriseCodeResponseBody self = new ListEnterpriseCodeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListEnterpriseCodeResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListEnterpriseCodeResponseBody setEnterpriseCodes(java.util.List<ListEnterpriseCodeResponseBodyEnterpriseCodes> enterpriseCodes) {
+        this.enterpriseCodes = enterpriseCodes;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public java.util.List<ListEnterpriseCodeResponseBodyEnterpriseCodes> getEnterpriseCodes() {
+        return this.enterpriseCodes;
+    }
+
+    public ListEnterpriseCodeResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListEnterpriseCodeResponseBody setNextToken(String nextToken) {
@@ -48,40 +56,24 @@ public class ListEnterpriseCodeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListEnterpriseCodeResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public ListEnterpriseCodeResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    public ListEnterpriseCodeResponseBody setEnterpriseCodes(java.util.List<ListEnterpriseCodeResponseBodyEnterpriseCodes> enterpriseCodes) {
-        this.enterpriseCodes = enterpriseCodes;
-        return this;
-    }
-    public java.util.List<ListEnterpriseCodeResponseBodyEnterpriseCodes> getEnterpriseCodes() {
-        return this.enterpriseCodes;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListEnterpriseCodeResponseBodyEnterpriseCodes extends TeaModel {
-        @NameInMap("IsDefault")
-        public Boolean isDefault;
-
         @NameInMap("EnterpriseCode")
         public String enterpriseCode;
+
+        @NameInMap("IsDefault")
+        public Boolean isDefault;
 
         public static ListEnterpriseCodeResponseBodyEnterpriseCodes build(java.util.Map<String, ?> map) throws Exception {
             ListEnterpriseCodeResponseBodyEnterpriseCodes self = new ListEnterpriseCodeResponseBodyEnterpriseCodes();
             return TeaModel.build(map, self);
-        }
-
-        public ListEnterpriseCodeResponseBodyEnterpriseCodes setIsDefault(Boolean isDefault) {
-            this.isDefault = isDefault;
-            return this;
-        }
-        public Boolean getIsDefault() {
-            return this.isDefault;
         }
 
         public ListEnterpriseCodeResponseBodyEnterpriseCodes setEnterpriseCode(String enterpriseCode) {
@@ -90,6 +82,14 @@ public class ListEnterpriseCodeResponseBody extends TeaModel {
         }
         public String getEnterpriseCode() {
             return this.enterpriseCode;
+        }
+
+        public ListEnterpriseCodeResponseBodyEnterpriseCodes setIsDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
+            return this;
+        }
+        public Boolean getIsDefault() {
+            return this.isDefault;
         }
 
     }

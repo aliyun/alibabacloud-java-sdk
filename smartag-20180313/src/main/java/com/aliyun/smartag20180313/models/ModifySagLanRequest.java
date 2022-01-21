@@ -4,11 +4,32 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySagLanRequest extends TeaModel {
+    @NameInMap("EndIp")
+    public String endIp;
+
+    @NameInMap("IP")
+    public String IP;
+
+    @NameInMap("IPType")
+    public String IPType;
+
+    @NameInMap("Lease")
+    public String lease;
+
+    @NameInMap("Mask")
+    public String mask;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PortName")
+    public String portName;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,39 +37,58 @@ public class ModifySagLanRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
 
     @NameInMap("SmartAGSn")
     public String smartAGSn;
 
-    @NameInMap("PortName")
-    public String portName;
-
-    @NameInMap("IPType")
-    public String IPType;
-
-    @NameInMap("IP")
-    public String IP;
-
-    @NameInMap("Mask")
-    public String mask;
-
     @NameInMap("StartIp")
     public String startIp;
-
-    @NameInMap("EndIp")
-    public String endIp;
-
-    @NameInMap("Lease")
-    public String lease;
 
     public static ModifySagLanRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySagLanRequest self = new ModifySagLanRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifySagLanRequest setEndIp(String endIp) {
+        this.endIp = endIp;
+        return this;
+    }
+    public String getEndIp() {
+        return this.endIp;
+    }
+
+    public ModifySagLanRequest setIP(String IP) {
+        this.IP = IP;
+        return this;
+    }
+    public String getIP() {
+        return this.IP;
+    }
+
+    public ModifySagLanRequest setIPType(String IPType) {
+        this.IPType = IPType;
+        return this;
+    }
+    public String getIPType() {
+        return this.IPType;
+    }
+
+    public ModifySagLanRequest setLease(String lease) {
+        this.lease = lease;
+        return this;
+    }
+    public String getLease() {
+        return this.lease;
+    }
+
+    public ModifySagLanRequest setMask(String mask) {
+        this.mask = mask;
+        return this;
+    }
+    public String getMask() {
+        return this.mask;
     }
 
     public ModifySagLanRequest setOwnerAccount(String ownerAccount) {
@@ -67,6 +107,22 @@ public class ModifySagLanRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifySagLanRequest setPortName(String portName) {
+        this.portName = portName;
+        return this;
+    }
+    public String getPortName() {
+        return this.portName;
+    }
+
+    public ModifySagLanRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ModifySagLanRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -81,14 +137,6 @@ public class ModifySagLanRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifySagLanRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ModifySagLanRequest setSmartAGId(String smartAGId) {
@@ -107,60 +155,12 @@ public class ModifySagLanRequest extends TeaModel {
         return this.smartAGSn;
     }
 
-    public ModifySagLanRequest setPortName(String portName) {
-        this.portName = portName;
-        return this;
-    }
-    public String getPortName() {
-        return this.portName;
-    }
-
-    public ModifySagLanRequest setIPType(String IPType) {
-        this.IPType = IPType;
-        return this;
-    }
-    public String getIPType() {
-        return this.IPType;
-    }
-
-    public ModifySagLanRequest setIP(String IP) {
-        this.IP = IP;
-        return this;
-    }
-    public String getIP() {
-        return this.IP;
-    }
-
-    public ModifySagLanRequest setMask(String mask) {
-        this.mask = mask;
-        return this;
-    }
-    public String getMask() {
-        return this.mask;
-    }
-
     public ModifySagLanRequest setStartIp(String startIp) {
         this.startIp = startIp;
         return this;
     }
     public String getStartIp() {
         return this.startIp;
-    }
-
-    public ModifySagLanRequest setEndIp(String endIp) {
-        this.endIp = endIp;
-        return this;
-    }
-    public String getEndIp() {
-        return this.endIp;
-    }
-
-    public ModifySagLanRequest setLease(String lease) {
-        this.lease = lease;
-        return this;
-    }
-    public String getLease() {
-        return this.lease;
     }
 
 }

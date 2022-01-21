@@ -4,11 +4,17 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteSnatEntryRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,18 +22,20 @@ public class DeleteSnatEntryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
 
     public static DeleteSnatEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSnatEntryRequest self = new DeleteSnatEntryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSnatEntryRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DeleteSnatEntryRequest setOwnerAccount(String ownerAccount) {
@@ -46,6 +54,14 @@ public class DeleteSnatEntryRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DeleteSnatEntryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DeleteSnatEntryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -62,28 +78,12 @@ public class DeleteSnatEntryRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DeleteSnatEntryRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DeleteSnatEntryRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
     }
     public String getSmartAGId() {
         return this.smartAGId;
-    }
-
-    public DeleteSnatEntryRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
 }
