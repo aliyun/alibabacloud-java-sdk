@@ -10,17 +10,17 @@ public class AssociateQosRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("QosId")
+    public String qosId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("QosId")
-    public String qosId;
 
     @NameInMap("SmartAGId")
     public String smartAGId;
@@ -46,6 +46,22 @@ public class AssociateQosRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public AssociateQosRequest setQosId(String qosId) {
+        this.qosId = qosId;
+        return this;
+    }
+    public String getQosId() {
+        return this.qosId;
+    }
+
+    public AssociateQosRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public AssociateQosRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -60,22 +76,6 @@ public class AssociateQosRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public AssociateQosRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public AssociateQosRequest setQosId(String qosId) {
-        this.qosId = qosId;
-        return this;
-    }
-    public String getQosId() {
-        return this.qosId;
     }
 
     public AssociateQosRequest setSmartAGId(String smartAGId) {

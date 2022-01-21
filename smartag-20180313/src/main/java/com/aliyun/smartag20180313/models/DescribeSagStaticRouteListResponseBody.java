@@ -43,11 +43,11 @@ public class DescribeSagStaticRouteListResponseBody extends TeaModel {
     }
 
     public static class DescribeSagStaticRouteListResponseBodyStaticRoutes extends TeaModel {
-        @NameInMap("NextHop")
-        public String nextHop;
-
         @NameInMap("DestinationCidr")
         public String destinationCidr;
+
+        @NameInMap("NextHop")
+        public String nextHop;
 
         @NameInMap("PortName")
         public String portName;
@@ -60,20 +60,20 @@ public class DescribeSagStaticRouteListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeSagStaticRouteListResponseBodyStaticRoutes setNextHop(String nextHop) {
-            this.nextHop = nextHop;
-            return this;
-        }
-        public String getNextHop() {
-            return this.nextHop;
-        }
-
         public DescribeSagStaticRouteListResponseBodyStaticRoutes setDestinationCidr(String destinationCidr) {
             this.destinationCidr = destinationCidr;
             return this;
         }
         public String getDestinationCidr() {
             return this.destinationCidr;
+        }
+
+        public DescribeSagStaticRouteListResponseBodyStaticRoutes setNextHop(String nextHop) {
+            this.nextHop = nextHop;
+            return this;
+        }
+        public String getNextHop() {
+            return this.nextHop;
         }
 
         public DescribeSagStaticRouteListResponseBodyStaticRoutes setPortName(String portName) {
@@ -95,21 +95,37 @@ public class DescribeSagStaticRouteListResponseBody extends TeaModel {
     }
 
     public static class DescribeSagStaticRouteListResponseBodyTaskStates extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         @NameInMap("State")
         public String state;
 
-        @NameInMap("ErrorCode")
-        public String errorCode;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
         public static DescribeSagStaticRouteListResponseBodyTaskStates build(java.util.Map<String, ?> map) throws Exception {
             DescribeSagStaticRouteListResponseBodyTaskStates self = new DescribeSagStaticRouteListResponseBodyTaskStates();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSagStaticRouteListResponseBodyTaskStates setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeSagStaticRouteListResponseBodyTaskStates setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         public DescribeSagStaticRouteListResponseBodyTaskStates setErrorMessage(String errorMessage) {
@@ -126,22 +142,6 @@ public class DescribeSagStaticRouteListResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public DescribeSagStaticRouteListResponseBodyTaskStates setErrorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-        public String getErrorCode() {
-            return this.errorCode;
-        }
-
-        public DescribeSagStaticRouteListResponseBodyTaskStates setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
     }

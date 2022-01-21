@@ -4,11 +4,23 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeGrantRulesRequest extends TeaModel {
+    @NameInMap("AssociatedCcnId")
+    public String associatedCcnId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,21 +28,17 @@ public class DescribeGrantRulesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("AssociatedCcnId")
-    public String associatedCcnId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     public static DescribeGrantRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGrantRulesRequest self = new DescribeGrantRulesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGrantRulesRequest setAssociatedCcnId(String associatedCcnId) {
+        this.associatedCcnId = associatedCcnId;
+        return this;
+    }
+    public String getAssociatedCcnId() {
+        return this.associatedCcnId;
     }
 
     public DescribeGrantRulesRequest setOwnerAccount(String ownerAccount) {
@@ -49,6 +57,30 @@ public class DescribeGrantRulesRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeGrantRulesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeGrantRulesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeGrantRulesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeGrantRulesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -63,38 +95,6 @@ public class DescribeGrantRulesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeGrantRulesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeGrantRulesRequest setAssociatedCcnId(String associatedCcnId) {
-        this.associatedCcnId = associatedCcnId;
-        return this;
-    }
-    public String getAssociatedCcnId() {
-        return this.associatedCcnId;
-    }
-
-    public DescribeGrantRulesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeGrantRulesRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
 }

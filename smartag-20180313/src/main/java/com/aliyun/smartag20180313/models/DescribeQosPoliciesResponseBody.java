@@ -4,56 +4,24 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeQosPoliciesResponseBody extends TeaModel {
-    @NameInMap("QosPolicies")
-    public DescribeQosPoliciesResponseBodyQosPolicies qosPolicies;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("QosPolicies")
+    public DescribeQosPoliciesResponseBodyQosPolicies qosPolicies;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeQosPoliciesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeQosPoliciesResponseBody self = new DescribeQosPoliciesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeQosPoliciesResponseBody setQosPolicies(DescribeQosPoliciesResponseBodyQosPolicies qosPolicies) {
-        this.qosPolicies = qosPolicies;
-        return this;
-    }
-    public DescribeQosPoliciesResponseBodyQosPolicies getQosPolicies() {
-        return this.qosPolicies;
-    }
-
-    public DescribeQosPoliciesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeQosPoliciesResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeQosPoliciesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeQosPoliciesResponseBody setPageNumber(Integer pageNumber) {
@@ -64,23 +32,36 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds extends TeaModel {
-        @NameInMap("DpiSignatureId")
-        public java.util.List<String> dpiSignatureId;
+    public DescribeQosPoliciesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
 
-        public static DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds build(java.util.Map<String, ?> map) throws Exception {
-            DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds self = new DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds();
-            return TeaModel.build(map, self);
-        }
+    public DescribeQosPoliciesResponseBody setQosPolicies(DescribeQosPoliciesResponseBodyQosPolicies qosPolicies) {
+        this.qosPolicies = qosPolicies;
+        return this;
+    }
+    public DescribeQosPoliciesResponseBodyQosPolicies getQosPolicies() {
+        return this.qosPolicies;
+    }
 
-        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds setDpiSignatureId(java.util.List<String> dpiSignatureId) {
-            this.dpiSignatureId = dpiSignatureId;
-            return this;
-        }
-        public java.util.List<String> getDpiSignatureId() {
-            return this.dpiSignatureId;
-        }
+    public DescribeQosPoliciesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public DescribeQosPoliciesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiGroupIds extends TeaModel {
@@ -102,25 +83,26 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds extends TeaModel {
+        @NameInMap("DpiSignatureId")
+        public java.util.List<String> dpiSignatureId;
+
+        public static DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds self = new DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds setDpiSignatureId(java.util.List<String> dpiSignatureId) {
+            this.dpiSignatureId = dpiSignatureId;
+            return this;
+        }
+        public java.util.List<String> getDpiSignatureId() {
+            return this.dpiSignatureId;
+        }
+
+    }
+
     public static class DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy extends TeaModel {
-        @NameInMap("DpiSignatureIds")
-        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds dpiSignatureIds;
-
-        @NameInMap("IpProtocol")
-        public String ipProtocol;
-
-        @NameInMap("QosId")
-        public String qosId;
-
-        @NameInMap("Priority")
-        public Integer priority;
-
-        @NameInMap("EndTime")
-        public String endTime;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
         @NameInMap("Description")
         public String description;
 
@@ -130,11 +112,29 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
         @NameInMap("DestPortRange")
         public String destPortRange;
 
-        @NameInMap("QosPolicyId")
-        public String qosPolicyId;
+        @NameInMap("DpiGroupIds")
+        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiGroupIds dpiGroupIds;
+
+        @NameInMap("DpiSignatureIds")
+        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds dpiSignatureIds;
+
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("IpProtocol")
+        public String ipProtocol;
 
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("QosId")
+        public String qosId;
+
+        @NameInMap("QosPolicyId")
+        public String qosPolicyId;
 
         @NameInMap("SourceCidr")
         public String sourceCidr;
@@ -142,60 +142,12 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
         @NameInMap("SourcePortRange")
         public String sourcePortRange;
 
-        @NameInMap("DpiGroupIds")
-        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiGroupIds dpiGroupIds;
+        @NameInMap("StartTime")
+        public String startTime;
 
         public static DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy build(java.util.Map<String, ?> map) throws Exception {
             DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy self = new DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setDpiSignatureIds(DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds dpiSignatureIds) {
-            this.dpiSignatureIds = dpiSignatureIds;
-            return this;
-        }
-        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds getDpiSignatureIds() {
-            return this.dpiSignatureIds;
-        }
-
-        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setIpProtocol(String ipProtocol) {
-            this.ipProtocol = ipProtocol;
-            return this;
-        }
-        public String getIpProtocol() {
-            return this.ipProtocol;
-        }
-
-        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setQosId(String qosId) {
-            this.qosId = qosId;
-            return this;
-        }
-        public String getQosId() {
-            return this.qosId;
-        }
-
-        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setPriority(Integer priority) {
-            this.priority = priority;
-            return this;
-        }
-        public Integer getPriority() {
-            return this.priority;
-        }
-
-        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
         }
 
         public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setDescription(String description) {
@@ -222,12 +174,36 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
             return this.destPortRange;
         }
 
-        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setQosPolicyId(String qosPolicyId) {
-            this.qosPolicyId = qosPolicyId;
+        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setDpiGroupIds(DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiGroupIds dpiGroupIds) {
+            this.dpiGroupIds = dpiGroupIds;
             return this;
         }
-        public String getQosPolicyId() {
-            return this.qosPolicyId;
+        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiGroupIds getDpiGroupIds() {
+            return this.dpiGroupIds;
+        }
+
+        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setDpiSignatureIds(DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds dpiSignatureIds) {
+            this.dpiSignatureIds = dpiSignatureIds;
+            return this;
+        }
+        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds getDpiSignatureIds() {
+            return this.dpiSignatureIds;
+        }
+
+        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setIpProtocol(String ipProtocol) {
+            this.ipProtocol = ipProtocol;
+            return this;
+        }
+        public String getIpProtocol() {
+            return this.ipProtocol;
         }
 
         public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setName(String name) {
@@ -236,6 +212,30 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setQosId(String qosId) {
+            this.qosId = qosId;
+            return this;
+        }
+        public String getQosId() {
+            return this.qosId;
+        }
+
+        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setQosPolicyId(String qosPolicyId) {
+            this.qosPolicyId = qosPolicyId;
+            return this;
+        }
+        public String getQosPolicyId() {
+            return this.qosPolicyId;
         }
 
         public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setSourceCidr(String sourceCidr) {
@@ -254,12 +254,12 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
             return this.sourcePortRange;
         }
 
-        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setDpiGroupIds(DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiGroupIds dpiGroupIds) {
-            this.dpiGroupIds = dpiGroupIds;
+        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiGroupIds getDpiGroupIds() {
-            return this.dpiGroupIds;
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }

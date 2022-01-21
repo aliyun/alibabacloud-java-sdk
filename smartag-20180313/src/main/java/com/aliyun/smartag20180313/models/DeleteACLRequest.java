@@ -4,11 +4,17 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteACLRequest extends TeaModel {
+    @NameInMap("AclId")
+    public String aclId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,15 +22,17 @@ public class DeleteACLRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("AclId")
-    public String aclId;
-
     public static DeleteACLRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteACLRequest self = new DeleteACLRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteACLRequest setAclId(String aclId) {
+        this.aclId = aclId;
+        return this;
+    }
+    public String getAclId() {
+        return this.aclId;
     }
 
     public DeleteACLRequest setOwnerAccount(String ownerAccount) {
@@ -43,6 +51,14 @@ public class DeleteACLRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DeleteACLRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DeleteACLRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -57,22 +73,6 @@ public class DeleteACLRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteACLRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteACLRequest setAclId(String aclId) {
-        this.aclId = aclId;
-        return this;
-    }
-    public String getAclId() {
-        return this.aclId;
     }
 
 }

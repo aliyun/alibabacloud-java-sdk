@@ -4,11 +4,17 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteRouteDistributionStrategyRequest extends TeaModel {
+    @NameInMap("DestCidrBlock")
+    public String destCidrBlock;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,24 +22,26 @@ public class DeleteRouteDistributionStrategyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("RouteSource")
+    public String routeSource;
 
     @NameInMap("SmartAGId")
     public String smartAGId;
 
-    @NameInMap("DestCidrBlock")
-    public String destCidrBlock;
-
     @NameInMap("SourceType")
     public String sourceType;
-
-    @NameInMap("RouteSource")
-    public String routeSource;
 
     public static DeleteRouteDistributionStrategyRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteRouteDistributionStrategyRequest self = new DeleteRouteDistributionStrategyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRouteDistributionStrategyRequest setDestCidrBlock(String destCidrBlock) {
+        this.destCidrBlock = destCidrBlock;
+        return this;
+    }
+    public String getDestCidrBlock() {
+        return this.destCidrBlock;
     }
 
     public DeleteRouteDistributionStrategyRequest setOwnerAccount(String ownerAccount) {
@@ -52,6 +60,14 @@ public class DeleteRouteDistributionStrategyRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DeleteRouteDistributionStrategyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DeleteRouteDistributionStrategyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -68,12 +84,12 @@ public class DeleteRouteDistributionStrategyRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DeleteRouteDistributionStrategyRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DeleteRouteDistributionStrategyRequest setRouteSource(String routeSource) {
+        this.routeSource = routeSource;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getRouteSource() {
+        return this.routeSource;
     }
 
     public DeleteRouteDistributionStrategyRequest setSmartAGId(String smartAGId) {
@@ -84,28 +100,12 @@ public class DeleteRouteDistributionStrategyRequest extends TeaModel {
         return this.smartAGId;
     }
 
-    public DeleteRouteDistributionStrategyRequest setDestCidrBlock(String destCidrBlock) {
-        this.destCidrBlock = destCidrBlock;
-        return this;
-    }
-    public String getDestCidrBlock() {
-        return this.destCidrBlock;
-    }
-
     public DeleteRouteDistributionStrategyRequest setSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     public String getSourceType() {
         return this.sourceType;
-    }
-
-    public DeleteRouteDistributionStrategyRequest setRouteSource(String routeSource) {
-        this.routeSource = routeSource;
-        return this;
-    }
-    public String getRouteSource() {
-        return this.routeSource;
     }
 
 }

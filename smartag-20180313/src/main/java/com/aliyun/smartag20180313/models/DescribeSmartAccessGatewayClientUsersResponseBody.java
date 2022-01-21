@@ -4,8 +4,8 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,8 +13,8 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("Users")
     public DescribeSmartAccessGatewayClientUsersResponseBodyUsers users;
@@ -24,12 +24,12 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
         return TeaModel.build(map, self);
     }
 
-    public DescribeSmartAccessGatewayClientUsersResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeSmartAccessGatewayClientUsersResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeSmartAccessGatewayClientUsersResponseBody setPageSize(Integer pageSize) {
@@ -48,12 +48,12 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
         return this.requestId;
     }
 
-    public DescribeSmartAccessGatewayClientUsersResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeSmartAccessGatewayClientUsersResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeSmartAccessGatewayClientUsersResponseBody setUsers(DescribeSmartAccessGatewayClientUsersResponseBodyUsers users) {
@@ -65,27 +65,38 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
     }
 
     public static class DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser extends TeaModel {
+        @NameInMap("AccelerateBandwidth")
+        public Long accelerateBandwidth;
+
         @NameInMap("Bandwidth")
         public Integer bandwidth;
-
-        @NameInMap("State")
-        public Integer state;
 
         @NameInMap("ClientIp")
         public String clientIp;
 
-        @NameInMap("UserName")
-        public String userName;
+        @NameInMap("IsStaticIp")
+        public Long isStaticIp;
+
+        @NameInMap("State")
+        public Integer state;
 
         @NameInMap("UserMail")
         public String userMail;
 
-        @NameInMap("AccelerateBandwidth")
-        public Long accelerateBandwidth;
+        @NameInMap("UserName")
+        public String userName;
 
         public static DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser build(java.util.Map<String, ?> map) throws Exception {
             DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser self = new DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser setAccelerateBandwidth(Long accelerateBandwidth) {
+            this.accelerateBandwidth = accelerateBandwidth;
+            return this;
+        }
+        public Long getAccelerateBandwidth() {
+            return this.accelerateBandwidth;
         }
 
         public DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser setBandwidth(Integer bandwidth) {
@@ -96,14 +107,6 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
             return this.bandwidth;
         }
 
-        public DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser setState(Integer state) {
-            this.state = state;
-            return this;
-        }
-        public Integer getState() {
-            return this.state;
-        }
-
         public DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser setClientIp(String clientIp) {
             this.clientIp = clientIp;
             return this;
@@ -112,12 +115,20 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
             return this.clientIp;
         }
 
-        public DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser setUserName(String userName) {
-            this.userName = userName;
+        public DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser setIsStaticIp(Long isStaticIp) {
+            this.isStaticIp = isStaticIp;
             return this;
         }
-        public String getUserName() {
-            return this.userName;
+        public Long getIsStaticIp() {
+            return this.isStaticIp;
+        }
+
+        public DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser setState(Integer state) {
+            this.state = state;
+            return this;
+        }
+        public Integer getState() {
+            return this.state;
         }
 
         public DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser setUserMail(String userMail) {
@@ -128,12 +139,12 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
             return this.userMail;
         }
 
-        public DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser setAccelerateBandwidth(Long accelerateBandwidth) {
-            this.accelerateBandwidth = accelerateBandwidth;
+        public DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser setUserName(String userName) {
+            this.userName = userName;
             return this;
         }
-        public Long getAccelerateBandwidth() {
-            return this.accelerateBandwidth;
+        public String getUserName() {
+            return this.userName;
         }
 
     }

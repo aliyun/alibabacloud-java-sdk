@@ -4,43 +4,27 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ListDpiConfigErrorRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("SmartAGId")
-    public String smartAGId;
-
     @NameInMap("DpiConfigType")
     public String dpiConfigType;
-
-    @NameInMap("RuleInstanceId")
-    public String ruleInstanceId;
-
-    @NameInMap("NextToken")
-    public String nextToken;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("RuleInstanceId")
+    public String ruleInstanceId;
+
+    @NameInMap("SmartAGId")
+    public String smartAGId;
+
     public static ListDpiConfigErrorRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDpiConfigErrorRequest self = new ListDpiConfigErrorRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListDpiConfigErrorRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ListDpiConfigErrorRequest setSmartAGId(String smartAGId) {
-        this.smartAGId = smartAGId;
-        return this;
-    }
-    public String getSmartAGId() {
-        return this.smartAGId;
     }
 
     public ListDpiConfigErrorRequest setDpiConfigType(String dpiConfigType) {
@@ -51,12 +35,12 @@ public class ListDpiConfigErrorRequest extends TeaModel {
         return this.dpiConfigType;
     }
 
-    public ListDpiConfigErrorRequest setRuleInstanceId(String ruleInstanceId) {
-        this.ruleInstanceId = ruleInstanceId;
+    public ListDpiConfigErrorRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
-    public String getRuleInstanceId() {
-        return this.ruleInstanceId;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListDpiConfigErrorRequest setNextToken(String nextToken) {
@@ -67,12 +51,28 @@ public class ListDpiConfigErrorRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListDpiConfigErrorRequest setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public ListDpiConfigErrorRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ListDpiConfigErrorRequest setRuleInstanceId(String ruleInstanceId) {
+        this.ruleInstanceId = ruleInstanceId;
+        return this;
+    }
+    public String getRuleInstanceId() {
+        return this.ruleInstanceId;
+    }
+
+    public ListDpiConfigErrorRequest setSmartAGId(String smartAGId) {
+        this.smartAGId = smartAGId;
+        return this;
+    }
+    public String getSmartAGId() {
+        return this.smartAGId;
     }
 
 }

@@ -4,26 +4,23 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeHealthCheckAttributeResponseBody extends TeaModel {
-    @NameInMap("SrcPort")
-    public Integer srcPort;
+    @NameInMap("CreateTime")
+    public Long createTime;
 
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DstIpAddr")
+    public String dstIpAddr;
 
-    @NameInMap("SrcIpAddr")
-    public String srcIpAddr;
-
-    @NameInMap("CreateTime")
-    public Long createTime;
+    @NameInMap("DstPort")
+    public Integer dstPort;
 
     @NameInMap("FailCountThreshold")
     public Integer failCountThreshold;
 
-    @NameInMap("DstPort")
-    public Integer dstPort;
+    @NameInMap("HcInstanceId")
+    public String hcInstanceId;
 
     @NameInMap("Name")
     public String name;
@@ -31,65 +28,36 @@ public class DescribeHealthCheckAttributeResponseBody extends TeaModel {
     @NameInMap("ProbeCount")
     public Integer probeCount;
 
-    @NameInMap("Type")
-    public String type;
+    @NameInMap("ProbeInterval")
+    public Integer probeInterval;
 
     @NameInMap("ProbeTimeout")
     public Integer probeTimeout;
 
-    @NameInMap("HcInstanceId")
-    public String hcInstanceId;
-
-    @NameInMap("RttThreshold")
-    public Integer rttThreshold;
-
-    @NameInMap("ProbeInterval")
-    public Integer probeInterval;
-
-    @NameInMap("SmartAGId")
-    public String smartAGId;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("RttFailThreshold")
     public Integer rttFailThreshold;
 
-    @NameInMap("DstIpAddr")
-    public String dstIpAddr;
+    @NameInMap("RttThreshold")
+    public Integer rttThreshold;
+
+    @NameInMap("SmartAGId")
+    public String smartAGId;
+
+    @NameInMap("SrcIpAddr")
+    public String srcIpAddr;
+
+    @NameInMap("SrcPort")
+    public Integer srcPort;
+
+    @NameInMap("Type")
+    public String type;
 
     public static DescribeHealthCheckAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeHealthCheckAttributeResponseBody self = new DescribeHealthCheckAttributeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeHealthCheckAttributeResponseBody setSrcPort(Integer srcPort) {
-        this.srcPort = srcPort;
-        return this;
-    }
-    public Integer getSrcPort() {
-        return this.srcPort;
-    }
-
-    public DescribeHealthCheckAttributeResponseBody setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public DescribeHealthCheckAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeHealthCheckAttributeResponseBody setSrcIpAddr(String srcIpAddr) {
-        this.srcIpAddr = srcIpAddr;
-        return this;
-    }
-    public String getSrcIpAddr() {
-        return this.srcIpAddr;
     }
 
     public DescribeHealthCheckAttributeResponseBody setCreateTime(Long createTime) {
@@ -100,12 +68,20 @@ public class DescribeHealthCheckAttributeResponseBody extends TeaModel {
         return this.createTime;
     }
 
-    public DescribeHealthCheckAttributeResponseBody setFailCountThreshold(Integer failCountThreshold) {
-        this.failCountThreshold = failCountThreshold;
+    public DescribeHealthCheckAttributeResponseBody setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public Integer getFailCountThreshold() {
-        return this.failCountThreshold;
+    public String getDescription() {
+        return this.description;
+    }
+
+    public DescribeHealthCheckAttributeResponseBody setDstIpAddr(String dstIpAddr) {
+        this.dstIpAddr = dstIpAddr;
+        return this;
+    }
+    public String getDstIpAddr() {
+        return this.dstIpAddr;
     }
 
     public DescribeHealthCheckAttributeResponseBody setDstPort(Integer dstPort) {
@@ -114,6 +90,22 @@ public class DescribeHealthCheckAttributeResponseBody extends TeaModel {
     }
     public Integer getDstPort() {
         return this.dstPort;
+    }
+
+    public DescribeHealthCheckAttributeResponseBody setFailCountThreshold(Integer failCountThreshold) {
+        this.failCountThreshold = failCountThreshold;
+        return this;
+    }
+    public Integer getFailCountThreshold() {
+        return this.failCountThreshold;
+    }
+
+    public DescribeHealthCheckAttributeResponseBody setHcInstanceId(String hcInstanceId) {
+        this.hcInstanceId = hcInstanceId;
+        return this;
+    }
+    public String getHcInstanceId() {
+        return this.hcInstanceId;
     }
 
     public DescribeHealthCheckAttributeResponseBody setName(String name) {
@@ -132,12 +124,12 @@ public class DescribeHealthCheckAttributeResponseBody extends TeaModel {
         return this.probeCount;
     }
 
-    public DescribeHealthCheckAttributeResponseBody setType(String type) {
-        this.type = type;
+    public DescribeHealthCheckAttributeResponseBody setProbeInterval(Integer probeInterval) {
+        this.probeInterval = probeInterval;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public Integer getProbeInterval() {
+        return this.probeInterval;
     }
 
     public DescribeHealthCheckAttributeResponseBody setProbeTimeout(Integer probeTimeout) {
@@ -148,36 +140,12 @@ public class DescribeHealthCheckAttributeResponseBody extends TeaModel {
         return this.probeTimeout;
     }
 
-    public DescribeHealthCheckAttributeResponseBody setHcInstanceId(String hcInstanceId) {
-        this.hcInstanceId = hcInstanceId;
+    public DescribeHealthCheckAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getHcInstanceId() {
-        return this.hcInstanceId;
-    }
-
-    public DescribeHealthCheckAttributeResponseBody setRttThreshold(Integer rttThreshold) {
-        this.rttThreshold = rttThreshold;
-        return this;
-    }
-    public Integer getRttThreshold() {
-        return this.rttThreshold;
-    }
-
-    public DescribeHealthCheckAttributeResponseBody setProbeInterval(Integer probeInterval) {
-        this.probeInterval = probeInterval;
-        return this;
-    }
-    public Integer getProbeInterval() {
-        return this.probeInterval;
-    }
-
-    public DescribeHealthCheckAttributeResponseBody setSmartAGId(String smartAGId) {
-        this.smartAGId = smartAGId;
-        return this;
-    }
-    public String getSmartAGId() {
-        return this.smartAGId;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeHealthCheckAttributeResponseBody setRttFailThreshold(Integer rttFailThreshold) {
@@ -188,12 +156,44 @@ public class DescribeHealthCheckAttributeResponseBody extends TeaModel {
         return this.rttFailThreshold;
     }
 
-    public DescribeHealthCheckAttributeResponseBody setDstIpAddr(String dstIpAddr) {
-        this.dstIpAddr = dstIpAddr;
+    public DescribeHealthCheckAttributeResponseBody setRttThreshold(Integer rttThreshold) {
+        this.rttThreshold = rttThreshold;
         return this;
     }
-    public String getDstIpAddr() {
-        return this.dstIpAddr;
+    public Integer getRttThreshold() {
+        return this.rttThreshold;
+    }
+
+    public DescribeHealthCheckAttributeResponseBody setSmartAGId(String smartAGId) {
+        this.smartAGId = smartAGId;
+        return this;
+    }
+    public String getSmartAGId() {
+        return this.smartAGId;
+    }
+
+    public DescribeHealthCheckAttributeResponseBody setSrcIpAddr(String srcIpAddr) {
+        this.srcIpAddr = srcIpAddr;
+        return this;
+    }
+    public String getSrcIpAddr() {
+        return this.srcIpAddr;
+    }
+
+    public DescribeHealthCheckAttributeResponseBody setSrcPort(Integer srcPort) {
+        this.srcPort = srcPort;
+        return this;
+    }
+    public Integer getSrcPort() {
+        return this.srcPort;
+    }
+
+    public DescribeHealthCheckAttributeResponseBody setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

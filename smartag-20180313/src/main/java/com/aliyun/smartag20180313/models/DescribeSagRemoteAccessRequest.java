@@ -10,20 +10,20 @@ public class DescribeSagRemoteAccessRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SmartAGId")
-    public String smartAGId;
-
     @NameInMap("SerialNumber")
     public String serialNumber;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("SmartAGId")
+    public String smartAGId;
 
     public static DescribeSagRemoteAccessRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSagRemoteAccessRequest self = new DescribeSagRemoteAccessRequest();
@@ -46,6 +46,14 @@ public class DescribeSagRemoteAccessRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeSagRemoteAccessRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeSagRemoteAccessRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -62,14 +70,6 @@ public class DescribeSagRemoteAccessRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeSagRemoteAccessRequest setSmartAGId(String smartAGId) {
-        this.smartAGId = smartAGId;
-        return this;
-    }
-    public String getSmartAGId() {
-        return this.smartAGId;
-    }
-
     public DescribeSagRemoteAccessRequest setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -78,12 +78,12 @@ public class DescribeSagRemoteAccessRequest extends TeaModel {
         return this.serialNumber;
     }
 
-    public DescribeSagRemoteAccessRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeSagRemoteAccessRequest setSmartAGId(String smartAGId) {
+        this.smartAGId = smartAGId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getSmartAGId() {
+        return this.smartAGId;
     }
 
 }

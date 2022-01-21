@@ -4,11 +4,11 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeUnbindFlowLogSagsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Count")
     public Integer count;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Sags")
     public DescribeUnbindFlowLogSagsResponseBodySags sags;
@@ -18,20 +18,20 @@ public class DescribeUnbindFlowLogSagsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeUnbindFlowLogSagsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeUnbindFlowLogSagsResponseBody setCount(Integer count) {
         this.count = count;
         return this;
     }
     public Integer getCount() {
         return this.count;
+    }
+
+    public DescribeUnbindFlowLogSagsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeUnbindFlowLogSagsResponseBody setSags(DescribeUnbindFlowLogSagsResponseBodySags sags) {
@@ -46,11 +46,11 @@ public class DescribeUnbindFlowLogSagsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("SmartAGId")
-        public String smartAGId;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("SmartAGId")
+        public String smartAGId;
 
         public static DescribeUnbindFlowLogSagsResponseBodySagsSag build(java.util.Map<String, ?> map) throws Exception {
             DescribeUnbindFlowLogSagsResponseBodySagsSag self = new DescribeUnbindFlowLogSagsResponseBodySagsSag();
@@ -65,20 +65,20 @@ public class DescribeUnbindFlowLogSagsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeUnbindFlowLogSagsResponseBodySagsSag setSmartAGId(String smartAGId) {
-            this.smartAGId = smartAGId;
-            return this;
-        }
-        public String getSmartAGId() {
-            return this.smartAGId;
-        }
-
         public DescribeUnbindFlowLogSagsResponseBodySagsSag setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeUnbindFlowLogSagsResponseBodySagsSag setSmartAGId(String smartAGId) {
+            this.smartAGId = smartAGId;
+            return this;
+        }
+        public String getSmartAGId() {
+            return this.smartAGId;
         }
 
     }

@@ -7,11 +7,11 @@ public class ListAccessPointsResponseBody extends TeaModel {
     @NameInMap("AccessPoints")
     public java.util.List<ListAccessPointsResponseBodyAccessPoints> accessPoints;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListAccessPointsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAccessPointsResponseBody self = new ListAccessPointsResponseBody();
@@ -26,14 +26,6 @@ public class ListAccessPointsResponseBody extends TeaModel {
         return this.accessPoints;
     }
 
-    public ListAccessPointsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
     public ListAccessPointsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -42,9 +34,17 @@ public class ListAccessPointsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListAccessPointsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListAccessPointsResponseBodyAccessPoints extends TeaModel {
-        @NameInMap("Longitude")
-        public String longitude;
+        @NameInMap("AccessPointId")
+        public Integer accessPointId;
 
         @NameInMap("ActiveSmartAGCount")
         public Integer activeSmartAGCount;
@@ -55,20 +55,20 @@ public class ListAccessPointsResponseBody extends TeaModel {
         @NameInMap("Latitude")
         public String latitude;
 
-        @NameInMap("AccessPointId")
-        public Integer accessPointId;
+        @NameInMap("Longitude")
+        public String longitude;
 
         public static ListAccessPointsResponseBodyAccessPoints build(java.util.Map<String, ?> map) throws Exception {
             ListAccessPointsResponseBodyAccessPoints self = new ListAccessPointsResponseBodyAccessPoints();
             return TeaModel.build(map, self);
         }
 
-        public ListAccessPointsResponseBodyAccessPoints setLongitude(String longitude) {
-            this.longitude = longitude;
+        public ListAccessPointsResponseBodyAccessPoints setAccessPointId(Integer accessPointId) {
+            this.accessPointId = accessPointId;
             return this;
         }
-        public String getLongitude() {
-            return this.longitude;
+        public Integer getAccessPointId() {
+            return this.accessPointId;
         }
 
         public ListAccessPointsResponseBodyAccessPoints setActiveSmartAGCount(Integer activeSmartAGCount) {
@@ -95,12 +95,12 @@ public class ListAccessPointsResponseBody extends TeaModel {
             return this.latitude;
         }
 
-        public ListAccessPointsResponseBodyAccessPoints setAccessPointId(Integer accessPointId) {
-            this.accessPointId = accessPointId;
+        public ListAccessPointsResponseBodyAccessPoints setLongitude(String longitude) {
+            this.longitude = longitude;
             return this;
         }
-        public Integer getAccessPointId() {
-            return this.accessPointId;
+        public String getLongitude() {
+            return this.longitude;
         }
 
     }

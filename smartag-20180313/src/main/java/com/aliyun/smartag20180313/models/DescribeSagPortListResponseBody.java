@@ -4,11 +4,11 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSagPortListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Ports")
     public java.util.List<DescribeSagPortListResponseBodyPorts> ports;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TaskStates")
     public java.util.List<DescribeSagPortListResponseBodyTaskStates> taskStates;
@@ -18,20 +18,20 @@ public class DescribeSagPortListResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeSagPortListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeSagPortListResponseBody setPorts(java.util.List<DescribeSagPortListResponseBodyPorts> ports) {
         this.ports = ports;
         return this;
     }
     public java.util.List<DescribeSagPortListResponseBodyPorts> getPorts() {
         return this.ports;
+    }
+
+    public DescribeSagPortListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeSagPortListResponseBody setTaskStates(java.util.List<DescribeSagPortListResponseBodyTaskStates> taskStates) {
@@ -43,8 +43,8 @@ public class DescribeSagPortListResponseBody extends TeaModel {
     }
 
     public static class DescribeSagPortListResponseBodyPorts extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("Mac")
+        public String mac;
 
         @NameInMap("PortName")
         public String portName;
@@ -52,20 +52,20 @@ public class DescribeSagPortListResponseBody extends TeaModel {
         @NameInMap("Role")
         public String role;
 
-        @NameInMap("Mac")
-        public String mac;
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeSagPortListResponseBodyPorts build(java.util.Map<String, ?> map) throws Exception {
             DescribeSagPortListResponseBodyPorts self = new DescribeSagPortListResponseBodyPorts();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSagPortListResponseBodyPorts setStatus(String status) {
-            this.status = status;
+        public DescribeSagPortListResponseBodyPorts setMac(String mac) {
+            this.mac = mac;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getMac() {
+            return this.mac;
         }
 
         public DescribeSagPortListResponseBodyPorts setPortName(String portName) {
@@ -84,32 +84,48 @@ public class DescribeSagPortListResponseBody extends TeaModel {
             return this.role;
         }
 
-        public DescribeSagPortListResponseBodyPorts setMac(String mac) {
-            this.mac = mac;
+        public DescribeSagPortListResponseBodyPorts setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getMac() {
-            return this.mac;
+        public String getStatus() {
+            return this.status;
         }
 
     }
 
     public static class DescribeSagPortListResponseBodyTaskStates extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         @NameInMap("State")
         public String state;
 
-        @NameInMap("ErrorCode")
-        public String errorCode;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
         public static DescribeSagPortListResponseBodyTaskStates build(java.util.Map<String, ?> map) throws Exception {
             DescribeSagPortListResponseBodyTaskStates self = new DescribeSagPortListResponseBodyTaskStates();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSagPortListResponseBodyTaskStates setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeSagPortListResponseBodyTaskStates setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         public DescribeSagPortListResponseBodyTaskStates setErrorMessage(String errorMessage) {
@@ -126,22 +142,6 @@ public class DescribeSagPortListResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public DescribeSagPortListResponseBodyTaskStates setErrorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-        public String getErrorCode() {
-            return this.errorCode;
-        }
-
-        public DescribeSagPortListResponseBodyTaskStates setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
     }

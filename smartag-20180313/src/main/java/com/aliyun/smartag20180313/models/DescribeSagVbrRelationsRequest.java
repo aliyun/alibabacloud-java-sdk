@@ -10,20 +10,20 @@ public class DescribeSagVbrRelationsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("VbrInstanceIds")
+    public java.util.List<String> vbrInstanceIds;
 
     @NameInMap("VbrRegionId")
     public String vbrRegionId;
-
-    @NameInMap("VbrInstanceIds")
-    public java.util.List<String> vbrInstanceIds;
 
     public static DescribeSagVbrRelationsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSagVbrRelationsRequest self = new DescribeSagVbrRelationsRequest();
@@ -46,6 +46,14 @@ public class DescribeSagVbrRelationsRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeSagVbrRelationsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeSagVbrRelationsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -62,12 +70,12 @@ public class DescribeSagVbrRelationsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeSagVbrRelationsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeSagVbrRelationsRequest setVbrInstanceIds(java.util.List<String> vbrInstanceIds) {
+        this.vbrInstanceIds = vbrInstanceIds;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public java.util.List<String> getVbrInstanceIds() {
+        return this.vbrInstanceIds;
     }
 
     public DescribeSagVbrRelationsRequest setVbrRegionId(String vbrRegionId) {
@@ -76,14 +84,6 @@ public class DescribeSagVbrRelationsRequest extends TeaModel {
     }
     public String getVbrRegionId() {
         return this.vbrRegionId;
-    }
-
-    public DescribeSagVbrRelationsRequest setVbrInstanceIds(java.util.List<String> vbrInstanceIds) {
-        this.vbrInstanceIds = vbrInstanceIds;
-        return this;
-    }
-    public java.util.List<String> getVbrInstanceIds() {
-        return this.vbrInstanceIds;
     }
 
 }

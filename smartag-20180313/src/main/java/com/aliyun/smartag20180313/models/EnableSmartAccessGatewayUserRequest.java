@@ -10,20 +10,20 @@ public class EnableSmartAccessGatewayUserRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("UserName")
-    public String userName;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("UserName")
+    public String userName;
 
     public static EnableSmartAccessGatewayUserRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableSmartAccessGatewayUserRequest self = new EnableSmartAccessGatewayUserRequest();
@@ -46,6 +46,14 @@ public class EnableSmartAccessGatewayUserRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public EnableSmartAccessGatewayUserRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public EnableSmartAccessGatewayUserRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -62,14 +70,6 @@ public class EnableSmartAccessGatewayUserRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public EnableSmartAccessGatewayUserRequest setUserName(String userName) {
-        this.userName = userName;
-        return this;
-    }
-    public String getUserName() {
-        return this.userName;
-    }
-
     public EnableSmartAccessGatewayUserRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
@@ -78,12 +78,12 @@ public class EnableSmartAccessGatewayUserRequest extends TeaModel {
         return this.smartAGId;
     }
 
-    public EnableSmartAccessGatewayUserRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public EnableSmartAccessGatewayUserRequest setUserName(String userName) {
+        this.userName = userName;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getUserName() {
+        return this.userName;
     }
 
 }

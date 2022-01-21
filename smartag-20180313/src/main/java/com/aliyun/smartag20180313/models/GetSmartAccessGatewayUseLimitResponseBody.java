@@ -4,26 +4,18 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class GetSmartAccessGatewayUseLimitResponseBody extends TeaModel {
-    @NameInMap("UsedAmount")
-    public Integer usedAmount;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TotalAmount")
     public Integer totalAmount;
 
+    @NameInMap("UsedAmount")
+    public Integer usedAmount;
+
     public static GetSmartAccessGatewayUseLimitResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSmartAccessGatewayUseLimitResponseBody self = new GetSmartAccessGatewayUseLimitResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetSmartAccessGatewayUseLimitResponseBody setUsedAmount(Integer usedAmount) {
-        this.usedAmount = usedAmount;
-        return this;
-    }
-    public Integer getUsedAmount() {
-        return this.usedAmount;
     }
 
     public GetSmartAccessGatewayUseLimitResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class GetSmartAccessGatewayUseLimitResponseBody extends TeaModel {
     }
     public Integer getTotalAmount() {
         return this.totalAmount;
+    }
+
+    public GetSmartAccessGatewayUseLimitResponseBody setUsedAmount(Integer usedAmount) {
+        this.usedAmount = usedAmount;
+        return this;
+    }
+    public Integer getUsedAmount() {
+        return this.usedAmount;
     }
 
 }

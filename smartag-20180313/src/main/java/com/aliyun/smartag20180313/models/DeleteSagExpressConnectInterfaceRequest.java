@@ -10,23 +10,23 @@ public class DeleteSagExpressConnectInterfaceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PortName")
+    public String portName;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
 
     @NameInMap("SmartAGSn")
     public String smartAGSn;
-
-    @NameInMap("PortName")
-    public String portName;
 
     @NameInMap("Vlan")
     public String vlan;
@@ -52,6 +52,22 @@ public class DeleteSagExpressConnectInterfaceRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DeleteSagExpressConnectInterfaceRequest setPortName(String portName) {
+        this.portName = portName;
+        return this;
+    }
+    public String getPortName() {
+        return this.portName;
+    }
+
+    public DeleteSagExpressConnectInterfaceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DeleteSagExpressConnectInterfaceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -68,14 +84,6 @@ public class DeleteSagExpressConnectInterfaceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DeleteSagExpressConnectInterfaceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DeleteSagExpressConnectInterfaceRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
@@ -90,14 +98,6 @@ public class DeleteSagExpressConnectInterfaceRequest extends TeaModel {
     }
     public String getSmartAGSn() {
         return this.smartAGSn;
-    }
-
-    public DeleteSagExpressConnectInterfaceRequest setPortName(String portName) {
-        this.portName = portName;
-        return this;
-    }
-    public String getPortName() {
-        return this.portName;
     }
 
     public DeleteSagExpressConnectInterfaceRequest setVlan(String vlan) {

@@ -7,20 +7,20 @@ public class CreateSmartAccessGatewayResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("OrderId")
     public String orderId;
 
-    @NameInMap("SmartAGId")
-    public String smartAGId;
-
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("SmartAGId")
+    public String smartAGId;
 
     public static CreateSmartAccessGatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSmartAccessGatewayResponseBody self = new CreateSmartAccessGatewayResponseBody();
@@ -35,12 +35,12 @@ public class CreateSmartAccessGatewayResponseBody extends TeaModel {
         return this.description;
     }
 
-    public CreateSmartAccessGatewayResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateSmartAccessGatewayResponseBody setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getName() {
+        return this.name;
     }
 
     public CreateSmartAccessGatewayResponseBody setOrderId(String orderId) {
@@ -51,20 +51,12 @@ public class CreateSmartAccessGatewayResponseBody extends TeaModel {
         return this.orderId;
     }
 
-    public CreateSmartAccessGatewayResponseBody setSmartAGId(String smartAGId) {
-        this.smartAGId = smartAGId;
+    public CreateSmartAccessGatewayResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getSmartAGId() {
-        return this.smartAGId;
-    }
-
-    public CreateSmartAccessGatewayResponseBody setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateSmartAccessGatewayResponseBody setResourceGroupId(String resourceGroupId) {
@@ -73,6 +65,14 @@ public class CreateSmartAccessGatewayResponseBody extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateSmartAccessGatewayResponseBody setSmartAGId(String smartAGId) {
+        this.smartAGId = smartAGId;
+        return this;
+    }
+    public String getSmartAGId() {
+        return this.smartAGId;
     }
 
 }

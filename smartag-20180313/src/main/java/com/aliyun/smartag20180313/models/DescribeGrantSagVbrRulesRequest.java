@@ -10,26 +10,26 @@ public class DescribeGrantSagVbrRulesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
 
     @NameInMap("VbrInstanceId")
     public String vbrInstanceId;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
 
     public static DescribeGrantSagVbrRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGrantSagVbrRulesRequest self = new DescribeGrantSagVbrRulesRequest();
@@ -52,6 +52,30 @@ public class DescribeGrantSagVbrRulesRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeGrantSagVbrRulesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeGrantSagVbrRulesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeGrantSagVbrRulesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeGrantSagVbrRulesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -68,14 +92,6 @@ public class DescribeGrantSagVbrRulesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeGrantSagVbrRulesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DescribeGrantSagVbrRulesRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
@@ -90,22 +106,6 @@ public class DescribeGrantSagVbrRulesRequest extends TeaModel {
     }
     public String getVbrInstanceId() {
         return this.vbrInstanceId;
-    }
-
-    public DescribeGrantSagVbrRulesRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeGrantSagVbrRulesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
 }

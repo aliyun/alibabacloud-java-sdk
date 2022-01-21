@@ -4,11 +4,20 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class EnableSmartAGDpiMonitorRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,75 +25,18 @@ public class EnableSmartAGDpiMonitorRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("SmartAGId")
-    public String smartAGId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("DryRun")
-    public Boolean dryRun;
+    @NameInMap("SlsLogStore")
+    public String slsLogStore;
 
     @NameInMap("SlsProjectName")
     public String slsProjectName;
 
-    @NameInMap("SlsLogStore")
-    public String slsLogStore;
+    @NameInMap("SmartAGId")
+    public String smartAGId;
 
     public static EnableSmartAGDpiMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableSmartAGDpiMonitorRequest self = new EnableSmartAGDpiMonitorRequest();
         return TeaModel.build(map, self);
-    }
-
-    public EnableSmartAGDpiMonitorRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public EnableSmartAGDpiMonitorRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public EnableSmartAGDpiMonitorRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public EnableSmartAGDpiMonitorRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public EnableSmartAGDpiMonitorRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public EnableSmartAGDpiMonitorRequest setSmartAGId(String smartAGId) {
-        this.smartAGId = smartAGId;
-        return this;
-    }
-    public String getSmartAGId() {
-        return this.smartAGId;
     }
 
     public EnableSmartAGDpiMonitorRequest setClientToken(String clientToken) {
@@ -103,12 +55,44 @@ public class EnableSmartAGDpiMonitorRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public EnableSmartAGDpiMonitorRequest setSlsProjectName(String slsProjectName) {
-        this.slsProjectName = slsProjectName;
+    public EnableSmartAGDpiMonitorRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getSlsProjectName() {
-        return this.slsProjectName;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public EnableSmartAGDpiMonitorRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public EnableSmartAGDpiMonitorRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public EnableSmartAGDpiMonitorRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public EnableSmartAGDpiMonitorRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public EnableSmartAGDpiMonitorRequest setSlsLogStore(String slsLogStore) {
@@ -117,6 +101,22 @@ public class EnableSmartAGDpiMonitorRequest extends TeaModel {
     }
     public String getSlsLogStore() {
         return this.slsLogStore;
+    }
+
+    public EnableSmartAGDpiMonitorRequest setSlsProjectName(String slsProjectName) {
+        this.slsProjectName = slsProjectName;
+        return this;
+    }
+    public String getSlsProjectName() {
+        return this.slsProjectName;
+    }
+
+    public EnableSmartAGDpiMonitorRequest setSmartAGId(String smartAGId) {
+        this.smartAGId = smartAGId;
+        return this;
+    }
+    public String getSmartAGId() {
+        return this.smartAGId;
     }
 
 }

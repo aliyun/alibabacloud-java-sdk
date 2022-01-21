@@ -10,17 +10,17 @@ public class GrantSagInstanceToVbrRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("VbrUid")
-    public Long vbrUid;
+    @NameInMap("SmartAGId")
+    public String smartAGId;
 
     @NameInMap("VbrInstanceId")
     public String vbrInstanceId;
@@ -28,8 +28,8 @@ public class GrantSagInstanceToVbrRequest extends TeaModel {
     @NameInMap("VbrRegionId")
     public String vbrRegionId;
 
-    @NameInMap("SmartAGId")
-    public String smartAGId;
+    @NameInMap("VbrUid")
+    public Long vbrUid;
 
     public static GrantSagInstanceToVbrRequest build(java.util.Map<String, ?> map) throws Exception {
         GrantSagInstanceToVbrRequest self = new GrantSagInstanceToVbrRequest();
@@ -52,6 +52,14 @@ public class GrantSagInstanceToVbrRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public GrantSagInstanceToVbrRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public GrantSagInstanceToVbrRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -68,20 +76,12 @@ public class GrantSagInstanceToVbrRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public GrantSagInstanceToVbrRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public GrantSagInstanceToVbrRequest setSmartAGId(String smartAGId) {
+        this.smartAGId = smartAGId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public GrantSagInstanceToVbrRequest setVbrUid(Long vbrUid) {
-        this.vbrUid = vbrUid;
-        return this;
-    }
-    public Long getVbrUid() {
-        return this.vbrUid;
+    public String getSmartAGId() {
+        return this.smartAGId;
     }
 
     public GrantSagInstanceToVbrRequest setVbrInstanceId(String vbrInstanceId) {
@@ -100,12 +100,12 @@ public class GrantSagInstanceToVbrRequest extends TeaModel {
         return this.vbrRegionId;
     }
 
-    public GrantSagInstanceToVbrRequest setSmartAGId(String smartAGId) {
-        this.smartAGId = smartAGId;
+    public GrantSagInstanceToVbrRequest setVbrUid(Long vbrUid) {
+        this.vbrUid = vbrUid;
         return this;
     }
-    public String getSmartAGId() {
-        return this.smartAGId;
+    public Long getVbrUid() {
+        return this.vbrUid;
     }
 
 }

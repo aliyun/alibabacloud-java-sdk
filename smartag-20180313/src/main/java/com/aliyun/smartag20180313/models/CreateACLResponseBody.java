@@ -4,11 +4,11 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class CreateACLResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AclId")
     public String aclId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -18,20 +18,20 @@ public class CreateACLResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateACLResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateACLResponseBody setAclId(String aclId) {
         this.aclId = aclId;
         return this;
     }
     public String getAclId() {
         return this.aclId;
+    }
+
+    public CreateACLResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateACLResponseBody setResourceGroupId(String resourceGroupId) {

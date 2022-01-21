@@ -4,11 +4,11 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class CreateQosResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("QosId")
     public String qosId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -18,20 +18,20 @@ public class CreateQosResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateQosResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateQosResponseBody setQosId(String qosId) {
         this.qosId = qosId;
         return this;
     }
     public String getQosId() {
         return this.qosId;
+    }
+
+    public CreateQosResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateQosResponseBody setResourceGroupId(String resourceGroupId) {

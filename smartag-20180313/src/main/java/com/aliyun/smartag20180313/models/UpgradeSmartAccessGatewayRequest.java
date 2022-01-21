@@ -4,11 +4,20 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class UpgradeSmartAccessGatewayRequest extends TeaModel {
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    @NameInMap("BandWidthSpec")
+    public Long bandWidthSpec;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -19,18 +28,25 @@ public class UpgradeSmartAccessGatewayRequest extends TeaModel {
     @NameInMap("SmartAGId")
     public String smartAGId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("BandWidthSpec")
-    public Long bandWidthSpec;
-
-    @NameInMap("AutoPay")
-    public Boolean autoPay;
-
     public static UpgradeSmartAccessGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeSmartAccessGatewayRequest self = new UpgradeSmartAccessGatewayRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpgradeSmartAccessGatewayRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public UpgradeSmartAccessGatewayRequest setBandWidthSpec(Long bandWidthSpec) {
+        this.bandWidthSpec = bandWidthSpec;
+        return this;
+    }
+    public Long getBandWidthSpec() {
+        return this.bandWidthSpec;
     }
 
     public UpgradeSmartAccessGatewayRequest setOwnerAccount(String ownerAccount) {
@@ -47,6 +63,14 @@ public class UpgradeSmartAccessGatewayRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public UpgradeSmartAccessGatewayRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UpgradeSmartAccessGatewayRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -71,30 +95,6 @@ public class UpgradeSmartAccessGatewayRequest extends TeaModel {
     }
     public String getSmartAGId() {
         return this.smartAGId;
-    }
-
-    public UpgradeSmartAccessGatewayRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public UpgradeSmartAccessGatewayRequest setBandWidthSpec(Long bandWidthSpec) {
-        this.bandWidthSpec = bandWidthSpec;
-        return this;
-    }
-    public Long getBandWidthSpec() {
-        return this.bandWidthSpec;
-    }
-
-    public UpgradeSmartAccessGatewayRequest setAutoPay(Boolean autoPay) {
-        this.autoPay = autoPay;
-        return this;
-    }
-    public Boolean getAutoPay() {
-        return this.autoPay;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSagDropTopNResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DropTopN")
     public java.util.List<DescribeSagDropTopNResponseBodyDropTopN> dropTopN;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeSagDropTopNResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSagDropTopNResponseBody self = new DescribeSagDropTopNResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSagDropTopNResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeSagDropTopNResponseBody setDropTopN(java.util.List<DescribeSagDropTopNResponseBodyDropTopN> dropTopN) {
@@ -29,6 +21,14 @@ public class DescribeSagDropTopNResponseBody extends TeaModel {
     }
     public java.util.List<DescribeSagDropTopNResponseBodyDropTopN> getDropTopN() {
         return this.dropTopN;
+    }
+
+    public DescribeSagDropTopNResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeSagDropTopNResponseBodyDropTopN extends TeaModel {

@@ -4,8 +4,8 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowLogSagsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +13,23 @@ public class DescribeFlowLogSagsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("Sags")
     public DescribeFlowLogSagsResponseBodySags sags;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeFlowLogSagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFlowLogSagsResponseBody self = new DescribeFlowLogSagsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeFlowLogSagsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeFlowLogSagsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeFlowLogSagsResponseBody setPageSize(Integer pageSize) {
@@ -48,14 +48,6 @@ public class DescribeFlowLogSagsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeFlowLogSagsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeFlowLogSagsResponseBody setSags(DescribeFlowLogSagsResponseBodySags sags) {
         this.sags = sags;
         return this;
@@ -64,15 +56,23 @@ public class DescribeFlowLogSagsResponseBody extends TeaModel {
         return this.sags;
     }
 
+    public DescribeFlowLogSagsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeFlowLogSagsResponseBodySagsSag extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("SmartAGId")
-        public String smartAGId;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("SmartAGId")
+        public String smartAGId;
 
         public static DescribeFlowLogSagsResponseBodySagsSag build(java.util.Map<String, ?> map) throws Exception {
             DescribeFlowLogSagsResponseBodySagsSag self = new DescribeFlowLogSagsResponseBodySagsSag();
@@ -87,20 +87,20 @@ public class DescribeFlowLogSagsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeFlowLogSagsResponseBodySagsSag setSmartAGId(String smartAGId) {
-            this.smartAGId = smartAGId;
-            return this;
-        }
-        public String getSmartAGId() {
-            return this.smartAGId;
-        }
-
         public DescribeFlowLogSagsResponseBodySagsSag setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeFlowLogSagsResponseBodySagsSag setSmartAGId(String smartAGId) {
+            this.smartAGId = smartAGId;
+            return this;
+        }
+        public String getSmartAGId() {
+            return this.smartAGId;
         }
 
     }

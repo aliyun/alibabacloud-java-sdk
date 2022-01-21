@@ -4,11 +4,23 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySmartAccessGatewayRequest extends TeaModel {
+    @NameInMap("CidrBlock")
+    public String cidrBlock;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,30 +28,42 @@ public class ModifySmartAccessGatewayRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SmartAGId")
-    public String smartAGId;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("CidrBlock")
-    public String cidrBlock;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("RoutingStrategy")
+    public String routingStrategy;
 
     @NameInMap("SecurityLockThreshold")
     public Integer securityLockThreshold;
 
-    @NameInMap("RoutingStrategy")
-    public String routingStrategy;
+    @NameInMap("SmartAGId")
+    public String smartAGId;
 
     public static ModifySmartAccessGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySmartAccessGatewayRequest self = new ModifySmartAccessGatewayRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifySmartAccessGatewayRequest setCidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
+        return this;
+    }
+    public String getCidrBlock() {
+        return this.cidrBlock;
+    }
+
+    public ModifySmartAccessGatewayRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifySmartAccessGatewayRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ModifySmartAccessGatewayRequest setOwnerAccount(String ownerAccount) {
@@ -58,6 +82,14 @@ public class ModifySmartAccessGatewayRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifySmartAccessGatewayRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ModifySmartAccessGatewayRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -74,44 +106,12 @@ public class ModifySmartAccessGatewayRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifySmartAccessGatewayRequest setSmartAGId(String smartAGId) {
-        this.smartAGId = smartAGId;
+    public ModifySmartAccessGatewayRequest setRoutingStrategy(String routingStrategy) {
+        this.routingStrategy = routingStrategy;
         return this;
     }
-    public String getSmartAGId() {
-        return this.smartAGId;
-    }
-
-    public ModifySmartAccessGatewayRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public ModifySmartAccessGatewayRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public ModifySmartAccessGatewayRequest setCidrBlock(String cidrBlock) {
-        this.cidrBlock = cidrBlock;
-        return this;
-    }
-    public String getCidrBlock() {
-        return this.cidrBlock;
-    }
-
-    public ModifySmartAccessGatewayRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getRoutingStrategy() {
+        return this.routingStrategy;
     }
 
     public ModifySmartAccessGatewayRequest setSecurityLockThreshold(Integer securityLockThreshold) {
@@ -122,12 +122,12 @@ public class ModifySmartAccessGatewayRequest extends TeaModel {
         return this.securityLockThreshold;
     }
 
-    public ModifySmartAccessGatewayRequest setRoutingStrategy(String routingStrategy) {
-        this.routingStrategy = routingStrategy;
+    public ModifySmartAccessGatewayRequest setSmartAGId(String smartAGId) {
+        this.smartAGId = smartAGId;
         return this;
     }
-    public String getRoutingStrategy() {
-        return this.routingStrategy;
+    public String getSmartAGId() {
+        return this.smartAGId;
     }
 
 }

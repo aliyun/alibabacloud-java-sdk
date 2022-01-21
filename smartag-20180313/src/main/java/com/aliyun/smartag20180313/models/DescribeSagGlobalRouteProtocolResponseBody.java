@@ -4,11 +4,11 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSagGlobalRouteProtocolResponseBody extends TeaModel {
-    @NameInMap("RouteProtocol")
-    public String routeProtocol;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("RouteProtocol")
+    public String routeProtocol;
 
     @NameInMap("TaskStates")
     public java.util.List<DescribeSagGlobalRouteProtocolResponseBodyTaskStates> taskStates;
@@ -18,20 +18,20 @@ public class DescribeSagGlobalRouteProtocolResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeSagGlobalRouteProtocolResponseBody setRouteProtocol(String routeProtocol) {
-        this.routeProtocol = routeProtocol;
-        return this;
-    }
-    public String getRouteProtocol() {
-        return this.routeProtocol;
-    }
-
     public DescribeSagGlobalRouteProtocolResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeSagGlobalRouteProtocolResponseBody setRouteProtocol(String routeProtocol) {
+        this.routeProtocol = routeProtocol;
+        return this;
+    }
+    public String getRouteProtocol() {
+        return this.routeProtocol;
     }
 
     public DescribeSagGlobalRouteProtocolResponseBody setTaskStates(java.util.List<DescribeSagGlobalRouteProtocolResponseBodyTaskStates> taskStates) {
@@ -43,21 +43,37 @@ public class DescribeSagGlobalRouteProtocolResponseBody extends TeaModel {
     }
 
     public static class DescribeSagGlobalRouteProtocolResponseBodyTaskStates extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         @NameInMap("State")
         public String state;
 
-        @NameInMap("ErrorCode")
-        public String errorCode;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
         public static DescribeSagGlobalRouteProtocolResponseBodyTaskStates build(java.util.Map<String, ?> map) throws Exception {
             DescribeSagGlobalRouteProtocolResponseBodyTaskStates self = new DescribeSagGlobalRouteProtocolResponseBodyTaskStates();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSagGlobalRouteProtocolResponseBodyTaskStates setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeSagGlobalRouteProtocolResponseBodyTaskStates setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         public DescribeSagGlobalRouteProtocolResponseBodyTaskStates setErrorMessage(String errorMessage) {
@@ -74,22 +90,6 @@ public class DescribeSagGlobalRouteProtocolResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public DescribeSagGlobalRouteProtocolResponseBodyTaskStates setErrorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-        public String getErrorCode() {
-            return this.errorCode;
-        }
-
-        public DescribeSagGlobalRouteProtocolResponseBodyTaskStates setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
     }

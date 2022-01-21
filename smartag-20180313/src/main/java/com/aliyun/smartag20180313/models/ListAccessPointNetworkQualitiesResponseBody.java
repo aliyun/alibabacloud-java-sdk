@@ -32,18 +32,26 @@ public class ListAccessPointNetworkQualitiesResponseBody extends TeaModel {
     }
 
     public static class ListAccessPointNetworkQualitiesResponseBodyAccessPointNetworkQualities extends TeaModel {
+        @NameInMap("Id")
+        public Integer id;
+
         @NameInMap("Loss")
         public String loss;
 
         @NameInMap("Rtt")
         public String rtt;
 
-        @NameInMap("Id")
-        public Integer id;
-
         public static ListAccessPointNetworkQualitiesResponseBodyAccessPointNetworkQualities build(java.util.Map<String, ?> map) throws Exception {
             ListAccessPointNetworkQualitiesResponseBodyAccessPointNetworkQualities self = new ListAccessPointNetworkQualitiesResponseBodyAccessPointNetworkQualities();
             return TeaModel.build(map, self);
+        }
+
+        public ListAccessPointNetworkQualitiesResponseBodyAccessPointNetworkQualities setId(Integer id) {
+            this.id = id;
+            return this;
+        }
+        public Integer getId() {
+            return this.id;
         }
 
         public ListAccessPointNetworkQualitiesResponseBodyAccessPointNetworkQualities setLoss(String loss) {
@@ -60,14 +68,6 @@ public class ListAccessPointNetworkQualitiesResponseBody extends TeaModel {
         }
         public String getRtt() {
             return this.rtt;
-        }
-
-        public ListAccessPointNetworkQualitiesResponseBodyAccessPointNetworkQualities setId(Integer id) {
-            this.id = id;
-            return this;
-        }
-        public Integer getId() {
-            return this.id;
         }
 
     }

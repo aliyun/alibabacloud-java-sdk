@@ -43,21 +43,37 @@ public class DescribeSagWanSnatResponseBody extends TeaModel {
     }
 
     public static class DescribeSagWanSnatResponseBodyTaskStates extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         @NameInMap("State")
         public String state;
 
-        @NameInMap("ErrorCode")
-        public String errorCode;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
         public static DescribeSagWanSnatResponseBodyTaskStates build(java.util.Map<String, ?> map) throws Exception {
             DescribeSagWanSnatResponseBodyTaskStates self = new DescribeSagWanSnatResponseBodyTaskStates();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSagWanSnatResponseBodyTaskStates setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeSagWanSnatResponseBodyTaskStates setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         public DescribeSagWanSnatResponseBodyTaskStates setErrorMessage(String errorMessage) {
@@ -74,22 +90,6 @@ public class DescribeSagWanSnatResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public DescribeSagWanSnatResponseBodyTaskStates setErrorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-        public String getErrorCode() {
-            return this.errorCode;
-        }
-
-        public DescribeSagWanSnatResponseBodyTaskStates setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
     }

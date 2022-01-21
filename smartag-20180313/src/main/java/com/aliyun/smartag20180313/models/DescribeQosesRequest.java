@@ -10,14 +10,11 @@ public class DescribeQosesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("QosIds")
     public String qosIds;
@@ -25,11 +22,14 @@ public class DescribeQosesRequest extends TeaModel {
     @NameInMap("QosName")
     public String qosName;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribeQosesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeQosesRequest self = new DescribeQosesRequest();
@@ -52,28 +52,20 @@ public class DescribeQosesRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeQosesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public DescribeQosesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
-    public DescribeQosesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public DescribeQosesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeQosesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeQosesRequest setQosIds(String qosIds) {
@@ -92,20 +84,28 @@ public class DescribeQosesRequest extends TeaModel {
         return this.qosName;
     }
 
-    public DescribeQosesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeQosesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public DescribeQosesRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeQosesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeQosesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

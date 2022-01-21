@@ -4,11 +4,17 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ProbeAccessPointNetworkQualityRequest extends TeaModel {
+    @NameInMap("AccessPointIds")
+    public java.util.List<Integer> accessPointIds;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,18 +22,20 @@ public class ProbeAccessPointNetworkQualityRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
-
-    @NameInMap("AccessPointIds")
-    public java.util.List<Integer> accessPointIds;
 
     public static ProbeAccessPointNetworkQualityRequest build(java.util.Map<String, ?> map) throws Exception {
         ProbeAccessPointNetworkQualityRequest self = new ProbeAccessPointNetworkQualityRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ProbeAccessPointNetworkQualityRequest setAccessPointIds(java.util.List<Integer> accessPointIds) {
+        this.accessPointIds = accessPointIds;
+        return this;
+    }
+    public java.util.List<Integer> getAccessPointIds() {
+        return this.accessPointIds;
     }
 
     public ProbeAccessPointNetworkQualityRequest setOwnerAccount(String ownerAccount) {
@@ -46,6 +54,14 @@ public class ProbeAccessPointNetworkQualityRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ProbeAccessPointNetworkQualityRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ProbeAccessPointNetworkQualityRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -62,28 +78,12 @@ public class ProbeAccessPointNetworkQualityRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ProbeAccessPointNetworkQualityRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public ProbeAccessPointNetworkQualityRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
     }
     public String getSmartAGId() {
         return this.smartAGId;
-    }
-
-    public ProbeAccessPointNetworkQualityRequest setAccessPointIds(java.util.List<Integer> accessPointIds) {
-        this.accessPointIds = accessPointIds;
-        return this;
-    }
-    public java.util.List<Integer> getAccessPointIds() {
-        return this.accessPointIds;
     }
 
 }

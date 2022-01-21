@@ -7,8 +7,8 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
     @NameInMap("CloudConnectNetworks")
     public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworks cloudConnectNetworks;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -16,8 +16,8 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeCloudConnectNetworksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCloudConnectNetworksResponseBody self = new DescribeCloudConnectNetworksResponseBody();
@@ -32,12 +32,12 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         return this.cloudConnectNetworks;
     }
 
-    public DescribeCloudConnectNetworksResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeCloudConnectNetworksResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeCloudConnectNetworksResponseBody setPageSize(Integer pageSize) {
@@ -56,12 +56,12 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCloudConnectNetworksResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeCloudConnectNetworksResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkTagsTag extends TeaModel {
@@ -114,8 +114,8 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork extends TeaModel {
-        @NameInMap("CreateTime")
-        public Long createTime;
+        @NameInMap("AssociatedCenId")
+        public String associatedCenId;
 
         @NameInMap("AssociatedCenOwnerId")
         public String associatedCenOwnerId;
@@ -123,29 +123,23 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         @NameInMap("AssociatedCloudBoxCount")
         public String associatedCloudBoxCount;
 
-        @NameInMap("Tags")
-        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkTags tags;
-
-        @NameInMap("InterworkingStatus")
-        public String interworkingStatus;
+        @NameInMap("AvailableCloudBoxCount")
+        public String availableCloudBoxCount;
 
         @NameInMap("CcnId")
         public String ccnId;
 
-        @NameInMap("AvailableCloudBoxCount")
-        public String availableCloudBoxCount;
-
         @NameInMap("CidrBlock")
         public String cidrBlock;
+
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("SnatCidrBlock")
-        public String snatCidrBlock;
-
-        @NameInMap("AssociatedCenId")
-        public String associatedCenId;
+        @NameInMap("InterworkingStatus")
+        public String interworkingStatus;
 
         @NameInMap("Name")
         public String name;
@@ -153,17 +147,23 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("SnatCidrBlock")
+        public String snatCidrBlock;
+
+        @NameInMap("Tags")
+        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkTags tags;
+
         public static DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork build(java.util.Map<String, ?> map) throws Exception {
             DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork self = new DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setCreateTime(Long createTime) {
-            this.createTime = createTime;
+        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setAssociatedCenId(String associatedCenId) {
+            this.associatedCenId = associatedCenId;
             return this;
         }
-        public Long getCreateTime() {
-            return this.createTime;
+        public String getAssociatedCenId() {
+            return this.associatedCenId;
         }
 
         public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setAssociatedCenOwnerId(String associatedCenOwnerId) {
@@ -182,20 +182,12 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             return this.associatedCloudBoxCount;
         }
 
-        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setTags(DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkTags tags) {
-            this.tags = tags;
+        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setAvailableCloudBoxCount(String availableCloudBoxCount) {
+            this.availableCloudBoxCount = availableCloudBoxCount;
             return this;
         }
-        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkTags getTags() {
-            return this.tags;
-        }
-
-        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setInterworkingStatus(String interworkingStatus) {
-            this.interworkingStatus = interworkingStatus;
-            return this;
-        }
-        public String getInterworkingStatus() {
-            return this.interworkingStatus;
+        public String getAvailableCloudBoxCount() {
+            return this.availableCloudBoxCount;
         }
 
         public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setCcnId(String ccnId) {
@@ -206,20 +198,20 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             return this.ccnId;
         }
 
-        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setAvailableCloudBoxCount(String availableCloudBoxCount) {
-            this.availableCloudBoxCount = availableCloudBoxCount;
-            return this;
-        }
-        public String getAvailableCloudBoxCount() {
-            return this.availableCloudBoxCount;
-        }
-
         public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setCidrBlock(String cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
         public String getCidrBlock() {
             return this.cidrBlock;
+        }
+
+        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setDescription(String description) {
@@ -230,20 +222,12 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setSnatCidrBlock(String snatCidrBlock) {
-            this.snatCidrBlock = snatCidrBlock;
+        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setInterworkingStatus(String interworkingStatus) {
+            this.interworkingStatus = interworkingStatus;
             return this;
         }
-        public String getSnatCidrBlock() {
-            return this.snatCidrBlock;
-        }
-
-        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setAssociatedCenId(String associatedCenId) {
-            this.associatedCenId = associatedCenId;
-            return this;
-        }
-        public String getAssociatedCenId() {
-            return this.associatedCenId;
+        public String getInterworkingStatus() {
+            return this.interworkingStatus;
         }
 
         public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setName(String name) {
@@ -260,6 +244,22 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setSnatCidrBlock(String snatCidrBlock) {
+            this.snatCidrBlock = snatCidrBlock;
+            return this;
+        }
+        public String getSnatCidrBlock() {
+            return this.snatCidrBlock;
+        }
+
+        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setTags(DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkTags getTags() {
+            return this.tags;
         }
 
     }

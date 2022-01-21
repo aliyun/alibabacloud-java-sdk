@@ -10,17 +10,17 @@ public class DeleteQosRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("QosId")
+    public String qosId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("QosId")
-    public String qosId;
 
     public static DeleteQosRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteQosRequest self = new DeleteQosRequest();
@@ -43,6 +43,22 @@ public class DeleteQosRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DeleteQosRequest setQosId(String qosId) {
+        this.qosId = qosId;
+        return this;
+    }
+    public String getQosId() {
+        return this.qosId;
+    }
+
+    public DeleteQosRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DeleteQosRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -57,22 +73,6 @@ public class DeleteQosRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteQosRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteQosRequest setQosId(String qosId) {
-        this.qosId = qosId;
-        return this;
-    }
-    public String getQosId() {
-        return this.qosId;
     }
 
 }

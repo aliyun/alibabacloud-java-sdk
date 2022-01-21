@@ -4,50 +4,14 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSmartAccessGatewaysRequest extends TeaModel {
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AclIds")
+    public String aclIds;
 
     @NameInMap("AssociatedCcnId")
     public String associatedCcnId;
 
-    @NameInMap("SmartAGId")
-    public String smartAGId;
-
-    @NameInMap("Status")
-    public String status;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("SerialNumber")
-    public String serialNumber;
-
-    @NameInMap("AclIds")
-    public String aclIds;
-
-    @NameInMap("UnboundAclIds")
-    public String unboundAclIds;
-
-    @NameInMap("InstanceType")
-    public String instanceType;
+    @NameInMap("BusinessState")
+    public String businessState;
 
     @NameInMap("CanAssociateQos")
     public Boolean canAssociateQos;
@@ -55,120 +19,60 @@ public class DescribeSmartAccessGatewaysRequest extends TeaModel {
     @NameInMap("HardwareType")
     public String hardwareType;
 
-    @NameInMap("SoftwareVersion")
-    public String softwareVersion;
+    @NameInMap("InstanceType")
+    public String instanceType;
 
-    @NameInMap("VersionComparator")
-    public String versionComparator;
+    @NameInMap("Name")
+    public String name;
 
-    @NameInMap("BusinessState")
-    public String businessState;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("SerialNumber")
+    public String serialNumber;
+
+    @NameInMap("SmartAGId")
+    public String smartAGId;
+
     @NameInMap("SmartAGIds")
     public java.util.List<String> smartAGIds;
+
+    @NameInMap("SoftwareVersion")
+    public String softwareVersion;
+
+    @NameInMap("Status")
+    public String status;
+
+    @NameInMap("UnboundAclIds")
+    public String unboundAclIds;
+
+    @NameInMap("VersionComparator")
+    public String versionComparator;
 
     public static DescribeSmartAccessGatewaysRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSmartAccessGatewaysRequest self = new DescribeSmartAccessGatewaysRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSmartAccessGatewaysRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeSmartAccessGatewaysRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeSmartAccessGatewaysRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeSmartAccessGatewaysRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeSmartAccessGatewaysRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeSmartAccessGatewaysRequest setAssociatedCcnId(String associatedCcnId) {
-        this.associatedCcnId = associatedCcnId;
-        return this;
-    }
-    public String getAssociatedCcnId() {
-        return this.associatedCcnId;
-    }
-
-    public DescribeSmartAccessGatewaysRequest setSmartAGId(String smartAGId) {
-        this.smartAGId = smartAGId;
-        return this;
-    }
-    public String getSmartAGId() {
-        return this.smartAGId;
-    }
-
-    public DescribeSmartAccessGatewaysRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public DescribeSmartAccessGatewaysRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public DescribeSmartAccessGatewaysRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeSmartAccessGatewaysRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeSmartAccessGatewaysRequest setSerialNumber(String serialNumber) {
-        this.serialNumber = serialNumber;
-        return this;
-    }
-    public String getSerialNumber() {
-        return this.serialNumber;
     }
 
     public DescribeSmartAccessGatewaysRequest setAclIds(String aclIds) {
@@ -179,20 +83,20 @@ public class DescribeSmartAccessGatewaysRequest extends TeaModel {
         return this.aclIds;
     }
 
-    public DescribeSmartAccessGatewaysRequest setUnboundAclIds(String unboundAclIds) {
-        this.unboundAclIds = unboundAclIds;
+    public DescribeSmartAccessGatewaysRequest setAssociatedCcnId(String associatedCcnId) {
+        this.associatedCcnId = associatedCcnId;
         return this;
     }
-    public String getUnboundAclIds() {
-        return this.unboundAclIds;
+    public String getAssociatedCcnId() {
+        return this.associatedCcnId;
     }
 
-    public DescribeSmartAccessGatewaysRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
+    public DescribeSmartAccessGatewaysRequest setBusinessState(String businessState) {
+        this.businessState = businessState;
         return this;
     }
-    public String getInstanceType() {
-        return this.instanceType;
+    public String getBusinessState() {
+        return this.businessState;
     }
 
     public DescribeSmartAccessGatewaysRequest setCanAssociateQos(Boolean canAssociateQos) {
@@ -211,28 +115,60 @@ public class DescribeSmartAccessGatewaysRequest extends TeaModel {
         return this.hardwareType;
     }
 
-    public DescribeSmartAccessGatewaysRequest setSoftwareVersion(String softwareVersion) {
-        this.softwareVersion = softwareVersion;
+    public DescribeSmartAccessGatewaysRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
         return this;
     }
-    public String getSoftwareVersion() {
-        return this.softwareVersion;
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
-    public DescribeSmartAccessGatewaysRequest setVersionComparator(String versionComparator) {
-        this.versionComparator = versionComparator;
+    public DescribeSmartAccessGatewaysRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getVersionComparator() {
-        return this.versionComparator;
+    public String getName() {
+        return this.name;
     }
 
-    public DescribeSmartAccessGatewaysRequest setBusinessState(String businessState) {
-        this.businessState = businessState;
+    public DescribeSmartAccessGatewaysRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getBusinessState() {
-        return this.businessState;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeSmartAccessGatewaysRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeSmartAccessGatewaysRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeSmartAccessGatewaysRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeSmartAccessGatewaysRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeSmartAccessGatewaysRequest setResourceGroupId(String resourceGroupId) {
@@ -243,12 +179,76 @@ public class DescribeSmartAccessGatewaysRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public DescribeSmartAccessGatewaysRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeSmartAccessGatewaysRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeSmartAccessGatewaysRequest setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+        return this;
+    }
+    public String getSerialNumber() {
+        return this.serialNumber;
+    }
+
+    public DescribeSmartAccessGatewaysRequest setSmartAGId(String smartAGId) {
+        this.smartAGId = smartAGId;
+        return this;
+    }
+    public String getSmartAGId() {
+        return this.smartAGId;
+    }
+
     public DescribeSmartAccessGatewaysRequest setSmartAGIds(java.util.List<String> smartAGIds) {
         this.smartAGIds = smartAGIds;
         return this;
     }
     public java.util.List<String> getSmartAGIds() {
         return this.smartAGIds;
+    }
+
+    public DescribeSmartAccessGatewaysRequest setSoftwareVersion(String softwareVersion) {
+        this.softwareVersion = softwareVersion;
+        return this;
+    }
+    public String getSoftwareVersion() {
+        return this.softwareVersion;
+    }
+
+    public DescribeSmartAccessGatewaysRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public DescribeSmartAccessGatewaysRequest setUnboundAclIds(String unboundAclIds) {
+        this.unboundAclIds = unboundAclIds;
+        return this;
+    }
+    public String getUnboundAclIds() {
+        return this.unboundAclIds;
+    }
+
+    public DescribeSmartAccessGatewaysRequest setVersionComparator(String versionComparator) {
+        this.versionComparator = versionComparator;
+        return this;
+    }
+    public String getVersionComparator() {
+        return this.versionComparator;
     }
 
 }

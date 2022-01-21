@@ -4,29 +4,17 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifyACLRuleResponseBody extends TeaModel {
-    @NameInMap("Policy")
-    public String policy;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("SourcePortRange")
-    public String sourcePortRange;
-
-    @NameInMap("SourceCidr")
-    public String sourceCidr;
-
-    @NameInMap("Priority")
-    public Integer priority;
-
     @NameInMap("AclId")
     public String aclId;
 
     @NameInMap("AcrId")
     public String acrId;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("DestCidr")
+    public String destCidr;
 
     @NameInMap("DestPortRange")
     public String destPortRange;
@@ -37,72 +25,36 @@ public class ModifyACLRuleResponseBody extends TeaModel {
     @NameInMap("DpiGroupIds")
     public ModifyACLRuleResponseBodyDpiGroupIds dpiGroupIds;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("DpiSignatureIds")
+    public ModifyACLRuleResponseBodyDpiSignatureIds dpiSignatureIds;
 
     @NameInMap("GmtCreate")
     public Long gmtCreate;
 
-    @NameInMap("DestCidr")
-    public String destCidr;
-
-    @NameInMap("DpiSignatureIds")
-    public ModifyACLRuleResponseBodyDpiSignatureIds dpiSignatureIds;
-
     @NameInMap("IpProtocol")
     public String ipProtocol;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("Policy")
+    public String policy;
+
+    @NameInMap("Priority")
+    public Integer priority;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("SourceCidr")
+    public String sourceCidr;
+
+    @NameInMap("SourcePortRange")
+    public String sourcePortRange;
 
     public static ModifyACLRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyACLRuleResponseBody self = new ModifyACLRuleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyACLRuleResponseBody setPolicy(String policy) {
-        this.policy = policy;
-        return this;
-    }
-    public String getPolicy() {
-        return this.policy;
-    }
-
-    public ModifyACLRuleResponseBody setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public ModifyACLRuleResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ModifyACLRuleResponseBody setSourcePortRange(String sourcePortRange) {
-        this.sourcePortRange = sourcePortRange;
-        return this;
-    }
-    public String getSourcePortRange() {
-        return this.sourcePortRange;
-    }
-
-    public ModifyACLRuleResponseBody setSourceCidr(String sourceCidr) {
-        this.sourceCidr = sourceCidr;
-        return this;
-    }
-    public String getSourceCidr() {
-        return this.sourceCidr;
-    }
-
-    public ModifyACLRuleResponseBody setPriority(Integer priority) {
-        this.priority = priority;
-        return this;
-    }
-    public Integer getPriority() {
-        return this.priority;
     }
 
     public ModifyACLRuleResponseBody setAclId(String aclId) {
@@ -119,6 +71,22 @@ public class ModifyACLRuleResponseBody extends TeaModel {
     }
     public String getAcrId() {
         return this.acrId;
+    }
+
+    public ModifyACLRuleResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyACLRuleResponseBody setDestCidr(String destCidr) {
+        this.destCidr = destCidr;
+        return this;
+    }
+    public String getDestCidr() {
+        return this.destCidr;
     }
 
     public ModifyACLRuleResponseBody setDestPortRange(String destPortRange) {
@@ -145,12 +113,12 @@ public class ModifyACLRuleResponseBody extends TeaModel {
         return this.dpiGroupIds;
     }
 
-    public ModifyACLRuleResponseBody setName(String name) {
-        this.name = name;
+    public ModifyACLRuleResponseBody setDpiSignatureIds(ModifyACLRuleResponseBodyDpiSignatureIds dpiSignatureIds) {
+        this.dpiSignatureIds = dpiSignatureIds;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public ModifyACLRuleResponseBodyDpiSignatureIds getDpiSignatureIds() {
+        return this.dpiSignatureIds;
     }
 
     public ModifyACLRuleResponseBody setGmtCreate(Long gmtCreate) {
@@ -161,28 +129,60 @@ public class ModifyACLRuleResponseBody extends TeaModel {
         return this.gmtCreate;
     }
 
-    public ModifyACLRuleResponseBody setDestCidr(String destCidr) {
-        this.destCidr = destCidr;
-        return this;
-    }
-    public String getDestCidr() {
-        return this.destCidr;
-    }
-
-    public ModifyACLRuleResponseBody setDpiSignatureIds(ModifyACLRuleResponseBodyDpiSignatureIds dpiSignatureIds) {
-        this.dpiSignatureIds = dpiSignatureIds;
-        return this;
-    }
-    public ModifyACLRuleResponseBodyDpiSignatureIds getDpiSignatureIds() {
-        return this.dpiSignatureIds;
-    }
-
     public ModifyACLRuleResponseBody setIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
     }
     public String getIpProtocol() {
         return this.ipProtocol;
+    }
+
+    public ModifyACLRuleResponseBody setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public ModifyACLRuleResponseBody setPolicy(String policy) {
+        this.policy = policy;
+        return this;
+    }
+    public String getPolicy() {
+        return this.policy;
+    }
+
+    public ModifyACLRuleResponseBody setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
+    }
+
+    public ModifyACLRuleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyACLRuleResponseBody setSourceCidr(String sourceCidr) {
+        this.sourceCidr = sourceCidr;
+        return this;
+    }
+    public String getSourceCidr() {
+        return this.sourceCidr;
+    }
+
+    public ModifyACLRuleResponseBody setSourcePortRange(String sourcePortRange) {
+        this.sourcePortRange = sourcePortRange;
+        return this;
+    }
+    public String getSourcePortRange() {
+        return this.sourcePortRange;
     }
 
     public static class ModifyACLRuleResponseBodyDpiGroupIds extends TeaModel {

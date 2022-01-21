@@ -4,26 +4,26 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteEnterpriseCodeRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("EnterpriseCode")
     public String enterpriseCode;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DeleteEnterpriseCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteEnterpriseCodeRequest self = new DeleteEnterpriseCodeRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteEnterpriseCodeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DeleteEnterpriseCodeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DeleteEnterpriseCodeRequest setEnterpriseCode(String enterpriseCode) {
@@ -34,12 +34,12 @@ public class DeleteEnterpriseCodeRequest extends TeaModel {
         return this.enterpriseCode;
     }
 
-    public DeleteEnterpriseCodeRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public DeleteEnterpriseCodeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

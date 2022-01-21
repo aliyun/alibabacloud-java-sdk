@@ -4,46 +4,30 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
-    @NameInMap("DeviceLevelBackupState")
-    public String deviceLevelBackupState;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("BackupDeviceId")
     public String backupDeviceId;
 
-    @NameInMap("LinkBackupInfoList")
-    public DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoList linkBackupInfoList;
-
-    @NameInMap("SmartAGId")
-    public String smartAGId;
+    @NameInMap("DeviceLevelBackupState")
+    public String deviceLevelBackupState;
 
     @NameInMap("DeviceLevelBackupType")
     public String deviceLevelBackupType;
 
+    @NameInMap("LinkBackupInfoList")
+    public DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoList linkBackupInfoList;
+
     @NameInMap("MainDeviceId")
     public String mainDeviceId;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("SmartAGId")
+    public String smartAGId;
 
     public static DescribeSmartAccessGatewayHaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSmartAccessGatewayHaResponseBody self = new DescribeSmartAccessGatewayHaResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSmartAccessGatewayHaResponseBody setDeviceLevelBackupState(String deviceLevelBackupState) {
-        this.deviceLevelBackupState = deviceLevelBackupState;
-        return this;
-    }
-    public String getDeviceLevelBackupState() {
-        return this.deviceLevelBackupState;
-    }
-
-    public DescribeSmartAccessGatewayHaResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeSmartAccessGatewayHaResponseBody setBackupDeviceId(String backupDeviceId) {
@@ -54,20 +38,12 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
         return this.backupDeviceId;
     }
 
-    public DescribeSmartAccessGatewayHaResponseBody setLinkBackupInfoList(DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoList linkBackupInfoList) {
-        this.linkBackupInfoList = linkBackupInfoList;
+    public DescribeSmartAccessGatewayHaResponseBody setDeviceLevelBackupState(String deviceLevelBackupState) {
+        this.deviceLevelBackupState = deviceLevelBackupState;
         return this;
     }
-    public DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoList getLinkBackupInfoList() {
-        return this.linkBackupInfoList;
-    }
-
-    public DescribeSmartAccessGatewayHaResponseBody setSmartAGId(String smartAGId) {
-        this.smartAGId = smartAGId;
-        return this;
-    }
-    public String getSmartAGId() {
-        return this.smartAGId;
+    public String getDeviceLevelBackupState() {
+        return this.deviceLevelBackupState;
     }
 
     public DescribeSmartAccessGatewayHaResponseBody setDeviceLevelBackupType(String deviceLevelBackupType) {
@@ -78,6 +54,14 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
         return this.deviceLevelBackupType;
     }
 
+    public DescribeSmartAccessGatewayHaResponseBody setLinkBackupInfoList(DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoList linkBackupInfoList) {
+        this.linkBackupInfoList = linkBackupInfoList;
+        return this;
+    }
+    public DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoList getLinkBackupInfoList() {
+        return this.linkBackupInfoList;
+    }
+
     public DescribeSmartAccessGatewayHaResponseBody setMainDeviceId(String mainDeviceId) {
         this.mainDeviceId = mainDeviceId;
         return this;
@@ -86,9 +70,25 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
         return this.mainDeviceId;
     }
 
+    public DescribeSmartAccessGatewayHaResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeSmartAccessGatewayHaResponseBody setSmartAGId(String smartAGId) {
+        this.smartAGId = smartAGId;
+        return this;
+    }
+    public String getSmartAGId() {
+        return this.smartAGId;
+    }
+
     public static class DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoListLinkBackupInfoList extends TeaModel {
-        @NameInMap("MainLinkId")
-        public String mainLinkId;
+        @NameInMap("BackupLinkId")
+        public String backupLinkId;
 
         @NameInMap("BackupLinkState")
         public String backupLinkState;
@@ -96,26 +96,26 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
         @NameInMap("LinkLevelBackupState")
         public String linkLevelBackupState;
 
-        @NameInMap("BackupLinkId")
-        public String backupLinkId;
+        @NameInMap("LinkLevelBackupType")
+        public String linkLevelBackupType;
+
+        @NameInMap("MainLinkId")
+        public String mainLinkId;
 
         @NameInMap("MainLinkState")
         public String mainLinkState;
-
-        @NameInMap("LinkLevelBackupType")
-        public String linkLevelBackupType;
 
         public static DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoListLinkBackupInfoList build(java.util.Map<String, ?> map) throws Exception {
             DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoListLinkBackupInfoList self = new DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoListLinkBackupInfoList();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoListLinkBackupInfoList setMainLinkId(String mainLinkId) {
-            this.mainLinkId = mainLinkId;
+        public DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoListLinkBackupInfoList setBackupLinkId(String backupLinkId) {
+            this.backupLinkId = backupLinkId;
             return this;
         }
-        public String getMainLinkId() {
-            return this.mainLinkId;
+        public String getBackupLinkId() {
+            return this.backupLinkId;
         }
 
         public DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoListLinkBackupInfoList setBackupLinkState(String backupLinkState) {
@@ -134,12 +134,20 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
             return this.linkLevelBackupState;
         }
 
-        public DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoListLinkBackupInfoList setBackupLinkId(String backupLinkId) {
-            this.backupLinkId = backupLinkId;
+        public DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoListLinkBackupInfoList setLinkLevelBackupType(String linkLevelBackupType) {
+            this.linkLevelBackupType = linkLevelBackupType;
             return this;
         }
-        public String getBackupLinkId() {
-            return this.backupLinkId;
+        public String getLinkLevelBackupType() {
+            return this.linkLevelBackupType;
+        }
+
+        public DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoListLinkBackupInfoList setMainLinkId(String mainLinkId) {
+            this.mainLinkId = mainLinkId;
+            return this;
+        }
+        public String getMainLinkId() {
+            return this.mainLinkId;
         }
 
         public DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoListLinkBackupInfoList setMainLinkState(String mainLinkState) {
@@ -148,14 +156,6 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
         }
         public String getMainLinkState() {
             return this.mainLinkState;
-        }
-
-        public DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoListLinkBackupInfoList setLinkLevelBackupType(String linkLevelBackupType) {
-            this.linkLevelBackupType = linkLevelBackupType;
-            return this;
-        }
-        public String getLinkLevelBackupType() {
-            return this.linkLevelBackupType;
         }
 
     }

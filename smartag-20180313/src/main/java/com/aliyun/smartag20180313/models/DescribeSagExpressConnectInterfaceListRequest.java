@@ -10,23 +10,23 @@ public class DescribeSagExpressConnectInterfaceListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PortName")
+    public String portName;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
 
     @NameInMap("SmartAGSn")
     public String smartAGSn;
-
-    @NameInMap("PortName")
-    public String portName;
 
     public static DescribeSagExpressConnectInterfaceListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSagExpressConnectInterfaceListRequest self = new DescribeSagExpressConnectInterfaceListRequest();
@@ -49,6 +49,22 @@ public class DescribeSagExpressConnectInterfaceListRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeSagExpressConnectInterfaceListRequest setPortName(String portName) {
+        this.portName = portName;
+        return this;
+    }
+    public String getPortName() {
+        return this.portName;
+    }
+
+    public DescribeSagExpressConnectInterfaceListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeSagExpressConnectInterfaceListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -65,14 +81,6 @@ public class DescribeSagExpressConnectInterfaceListRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeSagExpressConnectInterfaceListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DescribeSagExpressConnectInterfaceListRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
@@ -87,14 +95,6 @@ public class DescribeSagExpressConnectInterfaceListRequest extends TeaModel {
     }
     public String getSmartAGSn() {
         return this.smartAGSn;
-    }
-
-    public DescribeSagExpressConnectInterfaceListRequest setPortName(String portName) {
-        this.portName = portName;
-        return this;
-    }
-    public String getPortName() {
-        return this.portName;
     }
 
 }

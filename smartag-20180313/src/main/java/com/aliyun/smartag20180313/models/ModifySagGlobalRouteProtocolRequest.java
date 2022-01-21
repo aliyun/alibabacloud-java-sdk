@@ -10,23 +10,23 @@ public class ModifySagGlobalRouteProtocolRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("RouteProtocol")
+    public String routeProtocol;
 
     @NameInMap("SmartAGId")
     public String smartAGId;
 
     @NameInMap("SmartAGSn")
     public String smartAGSn;
-
-    @NameInMap("RouteProtocol")
-    public String routeProtocol;
 
     public static ModifySagGlobalRouteProtocolRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySagGlobalRouteProtocolRequest self = new ModifySagGlobalRouteProtocolRequest();
@@ -49,6 +49,14 @@ public class ModifySagGlobalRouteProtocolRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifySagGlobalRouteProtocolRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ModifySagGlobalRouteProtocolRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -65,12 +73,12 @@ public class ModifySagGlobalRouteProtocolRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifySagGlobalRouteProtocolRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifySagGlobalRouteProtocolRequest setRouteProtocol(String routeProtocol) {
+        this.routeProtocol = routeProtocol;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getRouteProtocol() {
+        return this.routeProtocol;
     }
 
     public ModifySagGlobalRouteProtocolRequest setSmartAGId(String smartAGId) {
@@ -87,14 +95,6 @@ public class ModifySagGlobalRouteProtocolRequest extends TeaModel {
     }
     public String getSmartAGSn() {
         return this.smartAGSn;
-    }
-
-    public ModifySagGlobalRouteProtocolRequest setRouteProtocol(String routeProtocol) {
-        this.routeProtocol = routeProtocol;
-        return this;
-    }
-    public String getRouteProtocol() {
-        return this.routeProtocol;
     }
 
 }

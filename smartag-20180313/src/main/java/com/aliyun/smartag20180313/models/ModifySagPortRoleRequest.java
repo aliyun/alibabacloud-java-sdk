@@ -10,26 +10,26 @@ public class ModifySagPortRoleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PortName")
+    public String portName;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Role")
+    public String role;
 
     @NameInMap("SmartAGId")
     public String smartAGId;
 
     @NameInMap("SmartAGSn")
     public String smartAGSn;
-
-    @NameInMap("PortName")
-    public String portName;
-
-    @NameInMap("Role")
-    public String role;
 
     public static ModifySagPortRoleRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySagPortRoleRequest self = new ModifySagPortRoleRequest();
@@ -52,6 +52,22 @@ public class ModifySagPortRoleRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifySagPortRoleRequest setPortName(String portName) {
+        this.portName = portName;
+        return this;
+    }
+    public String getPortName() {
+        return this.portName;
+    }
+
+    public ModifySagPortRoleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ModifySagPortRoleRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -68,12 +84,12 @@ public class ModifySagPortRoleRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifySagPortRoleRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifySagPortRoleRequest setRole(String role) {
+        this.role = role;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getRole() {
+        return this.role;
     }
 
     public ModifySagPortRoleRequest setSmartAGId(String smartAGId) {
@@ -90,22 +106,6 @@ public class ModifySagPortRoleRequest extends TeaModel {
     }
     public String getSmartAGSn() {
         return this.smartAGSn;
-    }
-
-    public ModifySagPortRoleRequest setPortName(String portName) {
-        this.portName = portName;
-        return this;
-    }
-    public String getPortName() {
-        return this.portName;
-    }
-
-    public ModifySagPortRoleRequest setRole(String role) {
-        this.role = role;
-        return this;
-    }
-    public String getRole() {
-        return this.role;
     }
 
 }

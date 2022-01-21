@@ -4,11 +4,17 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteCloudConnectNetworkRequest extends TeaModel {
+    @NameInMap("CcnId")
+    public String ccnId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,15 +22,17 @@ public class DeleteCloudConnectNetworkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CcnId")
-    public String ccnId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static DeleteCloudConnectNetworkRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCloudConnectNetworkRequest self = new DeleteCloudConnectNetworkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteCloudConnectNetworkRequest setCcnId(String ccnId) {
+        this.ccnId = ccnId;
+        return this;
+    }
+    public String getCcnId() {
+        return this.ccnId;
     }
 
     public DeleteCloudConnectNetworkRequest setOwnerAccount(String ownerAccount) {
@@ -43,6 +51,14 @@ public class DeleteCloudConnectNetworkRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DeleteCloudConnectNetworkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DeleteCloudConnectNetworkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -57,22 +73,6 @@ public class DeleteCloudConnectNetworkRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteCloudConnectNetworkRequest setCcnId(String ccnId) {
-        this.ccnId = ccnId;
-        return this;
-    }
-    public String getCcnId() {
-        return this.ccnId;
-    }
-
-    public DeleteCloudConnectNetworkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

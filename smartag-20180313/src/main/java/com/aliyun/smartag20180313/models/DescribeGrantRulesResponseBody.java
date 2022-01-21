@@ -4,8 +4,11 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeGrantRulesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("GrantRules")
+    public DescribeGrantRulesResponseBodyGrantRules grantRules;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class DescribeGrantRulesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("GrantRules")
-    public DescribeGrantRulesResponseBodyGrantRules grantRules;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeGrantRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGrantRulesResponseBody self = new DescribeGrantRulesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeGrantRulesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeGrantRulesResponseBody setGrantRules(DescribeGrantRulesResponseBodyGrantRules grantRules) {
+        this.grantRules = grantRules;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public DescribeGrantRulesResponseBodyGrantRules getGrantRules() {
+        return this.grantRules;
+    }
+
+    public DescribeGrantRulesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeGrantRulesResponseBody setPageSize(Integer pageSize) {
@@ -48,23 +56,21 @@ public class DescribeGrantRulesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeGrantRulesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeGrantRulesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeGrantRulesResponseBody setGrantRules(DescribeGrantRulesResponseBodyGrantRules grantRules) {
-        this.grantRules = grantRules;
-        return this;
-    }
-    public DescribeGrantRulesResponseBodyGrantRules getGrantRules() {
-        return this.grantRules;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeGrantRulesResponseBodyGrantRulesGrantRule extends TeaModel {
+        @NameInMap("CcnInstanceId")
+        public String ccnInstanceId;
+
+        @NameInMap("CcnUid")
+        public Long ccnUid;
+
         @NameInMap("CenInstanceId")
         public String cenInstanceId;
 
@@ -74,27 +80,37 @@ public class DescribeGrantRulesResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        @NameInMap("GmtModified")
+        public Long gmtModified;
+
         @NameInMap("GrantRuleId")
         public String grantRuleId;
 
         @NameInMap("GrantTrafficService")
         public Boolean grantTrafficService;
 
-        @NameInMap("GmtModified")
-        public Long gmtModified;
-
-        @NameInMap("CcnUid")
-        public Long ccnUid;
-
         @NameInMap("RegionId")
         public String regionId;
-
-        @NameInMap("CcnInstanceId")
-        public String ccnInstanceId;
 
         public static DescribeGrantRulesResponseBodyGrantRulesGrantRule build(java.util.Map<String, ?> map) throws Exception {
             DescribeGrantRulesResponseBodyGrantRulesGrantRule self = new DescribeGrantRulesResponseBodyGrantRulesGrantRule();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeGrantRulesResponseBodyGrantRulesGrantRule setCcnInstanceId(String ccnInstanceId) {
+            this.ccnInstanceId = ccnInstanceId;
+            return this;
+        }
+        public String getCcnInstanceId() {
+            return this.ccnInstanceId;
+        }
+
+        public DescribeGrantRulesResponseBodyGrantRulesGrantRule setCcnUid(Long ccnUid) {
+            this.ccnUid = ccnUid;
+            return this;
+        }
+        public Long getCcnUid() {
+            return this.ccnUid;
         }
 
         public DescribeGrantRulesResponseBodyGrantRulesGrantRule setCenInstanceId(String cenInstanceId) {
@@ -121,6 +137,14 @@ public class DescribeGrantRulesResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
+        public DescribeGrantRulesResponseBodyGrantRulesGrantRule setGmtModified(Long gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public Long getGmtModified() {
+            return this.gmtModified;
+        }
+
         public DescribeGrantRulesResponseBodyGrantRulesGrantRule setGrantRuleId(String grantRuleId) {
             this.grantRuleId = grantRuleId;
             return this;
@@ -137,36 +161,12 @@ public class DescribeGrantRulesResponseBody extends TeaModel {
             return this.grantTrafficService;
         }
 
-        public DescribeGrantRulesResponseBodyGrantRulesGrantRule setGmtModified(Long gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public Long getGmtModified() {
-            return this.gmtModified;
-        }
-
-        public DescribeGrantRulesResponseBodyGrantRulesGrantRule setCcnUid(Long ccnUid) {
-            this.ccnUid = ccnUid;
-            return this;
-        }
-        public Long getCcnUid() {
-            return this.ccnUid;
-        }
-
         public DescribeGrantRulesResponseBodyGrantRulesGrantRule setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
-        }
-
-        public DescribeGrantRulesResponseBodyGrantRulesGrantRule setCcnInstanceId(String ccnInstanceId) {
-            this.ccnInstanceId = ccnInstanceId;
-            return this;
-        }
-        public String getCcnInstanceId() {
-            return this.ccnInstanceId;
         }
 
     }

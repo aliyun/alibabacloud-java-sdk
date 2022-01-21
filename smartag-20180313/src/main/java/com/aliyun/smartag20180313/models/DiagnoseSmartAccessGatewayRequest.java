@@ -4,20 +4,14 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DiagnoseSmartAccessGatewayRequest extends TeaModel {
-    @NameInMap("SmartAGId")
-    public String smartAGId;
-
-    @NameInMap("SmartAGSn")
-    public String smartAGSn;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -25,33 +19,23 @@ public class DiagnoseSmartAccessGatewayRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SmartAGId")
+    public String smartAGId;
+
+    @NameInMap("SmartAGSn")
+    public String smartAGSn;
+
     public static DiagnoseSmartAccessGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         DiagnoseSmartAccessGatewayRequest self = new DiagnoseSmartAccessGatewayRequest();
         return TeaModel.build(map, self);
     }
 
-    public DiagnoseSmartAccessGatewayRequest setSmartAGId(String smartAGId) {
-        this.smartAGId = smartAGId;
+    public DiagnoseSmartAccessGatewayRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getSmartAGId() {
-        return this.smartAGId;
-    }
-
-    public DiagnoseSmartAccessGatewayRequest setSmartAGSn(String smartAGSn) {
-        this.smartAGSn = smartAGSn;
-        return this;
-    }
-    public String getSmartAGSn() {
-        return this.smartAGSn;
-    }
-
-    public DiagnoseSmartAccessGatewayRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DiagnoseSmartAccessGatewayRequest setOwnerId(Long ownerId) {
@@ -62,12 +46,12 @@ public class DiagnoseSmartAccessGatewayRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DiagnoseSmartAccessGatewayRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DiagnoseSmartAccessGatewayRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DiagnoseSmartAccessGatewayRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -84,6 +68,22 @@ public class DiagnoseSmartAccessGatewayRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DiagnoseSmartAccessGatewayRequest setSmartAGId(String smartAGId) {
+        this.smartAGId = smartAGId;
+        return this;
+    }
+    public String getSmartAGId() {
+        return this.smartAGId;
+    }
+
+    public DiagnoseSmartAccessGatewayRequest setSmartAGSn(String smartAGSn) {
+        this.smartAGSn = smartAGSn;
+        return this;
+    }
+    public String getSmartAGSn() {
+        return this.smartAGSn;
     }
 
 }

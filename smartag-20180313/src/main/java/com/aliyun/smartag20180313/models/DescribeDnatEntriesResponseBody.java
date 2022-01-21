@@ -4,8 +4,11 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnatEntriesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("DnatEntries")
+    public DescribeDnatEntriesResponseBodyDnatEntries dnatEntries;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class DescribeDnatEntriesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("DnatEntries")
-    public DescribeDnatEntriesResponseBodyDnatEntries dnatEntries;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeDnatEntriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDnatEntriesResponseBody self = new DescribeDnatEntriesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDnatEntriesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeDnatEntriesResponseBody setDnatEntries(DescribeDnatEntriesResponseBodyDnatEntries dnatEntries) {
+        this.dnatEntries = dnatEntries;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public DescribeDnatEntriesResponseBodyDnatEntries getDnatEntries() {
+        return this.dnatEntries;
+    }
+
+    public DescribeDnatEntriesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDnatEntriesResponseBody setPageSize(Integer pageSize) {
@@ -48,28 +56,23 @@ public class DescribeDnatEntriesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDnatEntriesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDnatEntriesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeDnatEntriesResponseBody setDnatEntries(DescribeDnatEntriesResponseBodyDnatEntries dnatEntries) {
-        this.dnatEntries = dnatEntries;
-        return this;
-    }
-    public DescribeDnatEntriesResponseBodyDnatEntries getDnatEntries() {
-        return this.dnatEntries;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeDnatEntriesResponseBodyDnatEntriesDnatEntry extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("DnatEntryId")
+        public String dnatEntryId;
 
-        @NameInMap("SagId")
-        public String sagId;
+        @NameInMap("ExternalIp")
+        public String externalIp;
+
+        @NameInMap("ExternalPort")
+        public String externalPort;
 
         @NameInMap("InternalIp")
         public String internalIp;
@@ -80,34 +83,39 @@ public class DescribeDnatEntriesResponseBody extends TeaModel {
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
-        @NameInMap("ExternalPort")
-        public String externalPort;
+        @NameInMap("SagId")
+        public String sagId;
 
-        @NameInMap("DnatEntryId")
-        public String dnatEntryId;
-
-        @NameInMap("ExternalIp")
-        public String externalIp;
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeDnatEntriesResponseBodyDnatEntriesDnatEntry build(java.util.Map<String, ?> map) throws Exception {
             DescribeDnatEntriesResponseBodyDnatEntriesDnatEntry self = new DescribeDnatEntriesResponseBodyDnatEntriesDnatEntry();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDnatEntriesResponseBodyDnatEntriesDnatEntry setType(String type) {
-            this.type = type;
+        public DescribeDnatEntriesResponseBodyDnatEntriesDnatEntry setDnatEntryId(String dnatEntryId) {
+            this.dnatEntryId = dnatEntryId;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getDnatEntryId() {
+            return this.dnatEntryId;
         }
 
-        public DescribeDnatEntriesResponseBodyDnatEntriesDnatEntry setSagId(String sagId) {
-            this.sagId = sagId;
+        public DescribeDnatEntriesResponseBodyDnatEntriesDnatEntry setExternalIp(String externalIp) {
+            this.externalIp = externalIp;
             return this;
         }
-        public String getSagId() {
-            return this.sagId;
+        public String getExternalIp() {
+            return this.externalIp;
+        }
+
+        public DescribeDnatEntriesResponseBodyDnatEntriesDnatEntry setExternalPort(String externalPort) {
+            this.externalPort = externalPort;
+            return this;
+        }
+        public String getExternalPort() {
+            return this.externalPort;
         }
 
         public DescribeDnatEntriesResponseBodyDnatEntriesDnatEntry setInternalIp(String internalIp) {
@@ -134,28 +142,20 @@ public class DescribeDnatEntriesResponseBody extends TeaModel {
             return this.ipProtocol;
         }
 
-        public DescribeDnatEntriesResponseBodyDnatEntriesDnatEntry setExternalPort(String externalPort) {
-            this.externalPort = externalPort;
+        public DescribeDnatEntriesResponseBodyDnatEntriesDnatEntry setSagId(String sagId) {
+            this.sagId = sagId;
             return this;
         }
-        public String getExternalPort() {
-            return this.externalPort;
+        public String getSagId() {
+            return this.sagId;
         }
 
-        public DescribeDnatEntriesResponseBodyDnatEntriesDnatEntry setDnatEntryId(String dnatEntryId) {
-            this.dnatEntryId = dnatEntryId;
+        public DescribeDnatEntriesResponseBodyDnatEntriesDnatEntry setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getDnatEntryId() {
-            return this.dnatEntryId;
-        }
-
-        public DescribeDnatEntriesResponseBodyDnatEntriesDnatEntry setExternalIp(String externalIp) {
-            this.externalIp = externalIp;
-            return this;
-        }
-        public String getExternalIp() {
-            return this.externalIp;
+        public String getType() {
+            return this.type;
         }
 
     }

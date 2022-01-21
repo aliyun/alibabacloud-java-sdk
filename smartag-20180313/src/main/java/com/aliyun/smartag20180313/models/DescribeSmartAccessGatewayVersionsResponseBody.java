@@ -32,29 +32,21 @@ public class DescribeSmartAccessGatewayVersionsResponseBody extends TeaModel {
     }
 
     public static class DescribeSmartAccessGatewayVersionsResponseBodySmartAGVersionsSmartAGVersion extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("CreateTime")
         public Long createTime;
 
-        @NameInMap("VersionName")
-        public String versionName;
+        @NameInMap("Type")
+        public String type;
 
         @NameInMap("VersionCode")
         public String versionCode;
 
+        @NameInMap("VersionName")
+        public String versionName;
+
         public static DescribeSmartAccessGatewayVersionsResponseBodySmartAGVersionsSmartAGVersion build(java.util.Map<String, ?> map) throws Exception {
             DescribeSmartAccessGatewayVersionsResponseBodySmartAGVersionsSmartAGVersion self = new DescribeSmartAccessGatewayVersionsResponseBodySmartAGVersionsSmartAGVersion();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSmartAccessGatewayVersionsResponseBodySmartAGVersionsSmartAGVersion setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public DescribeSmartAccessGatewayVersionsResponseBodySmartAGVersionsSmartAGVersion setCreateTime(Long createTime) {
@@ -65,12 +57,12 @@ public class DescribeSmartAccessGatewayVersionsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeSmartAccessGatewayVersionsResponseBodySmartAGVersionsSmartAGVersion setVersionName(String versionName) {
-            this.versionName = versionName;
+        public DescribeSmartAccessGatewayVersionsResponseBodySmartAGVersionsSmartAGVersion setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getVersionName() {
-            return this.versionName;
+        public String getType() {
+            return this.type;
         }
 
         public DescribeSmartAccessGatewayVersionsResponseBodySmartAGVersionsSmartAGVersion setVersionCode(String versionCode) {
@@ -79,6 +71,14 @@ public class DescribeSmartAccessGatewayVersionsResponseBody extends TeaModel {
         }
         public String getVersionCode() {
             return this.versionCode;
+        }
+
+        public DescribeSmartAccessGatewayVersionsResponseBodySmartAGVersionsSmartAGVersion setVersionName(String versionName) {
+            this.versionName = versionName;
+            return this;
+        }
+        public String getVersionName() {
+            return this.versionName;
         }
 
     }

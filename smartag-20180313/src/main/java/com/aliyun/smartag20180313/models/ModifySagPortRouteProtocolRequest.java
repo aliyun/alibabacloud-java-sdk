@@ -10,14 +10,26 @@ public class ModifySagPortRouteProtocolRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PortName")
+    public String portName;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("RemoteAs")
+    public String remoteAs;
+
+    @NameInMap("RemoteIp")
+    public String remoteIp;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("RouteProtocol")
+    public String routeProtocol;
 
     @NameInMap("SmartAGId")
     public String smartAGId;
@@ -25,20 +37,8 @@ public class ModifySagPortRouteProtocolRequest extends TeaModel {
     @NameInMap("SmartAGSn")
     public String smartAGSn;
 
-    @NameInMap("PortName")
-    public String portName;
-
     @NameInMap("Vlan")
     public String vlan;
-
-    @NameInMap("RouteProtocol")
-    public String routeProtocol;
-
-    @NameInMap("RemoteIp")
-    public String remoteIp;
-
-    @NameInMap("RemoteAs")
-    public String remoteAs;
 
     public static ModifySagPortRouteProtocolRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySagPortRouteProtocolRequest self = new ModifySagPortRouteProtocolRequest();
@@ -61,6 +61,38 @@ public class ModifySagPortRouteProtocolRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifySagPortRouteProtocolRequest setPortName(String portName) {
+        this.portName = portName;
+        return this;
+    }
+    public String getPortName() {
+        return this.portName;
+    }
+
+    public ModifySagPortRouteProtocolRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifySagPortRouteProtocolRequest setRemoteAs(String remoteAs) {
+        this.remoteAs = remoteAs;
+        return this;
+    }
+    public String getRemoteAs() {
+        return this.remoteAs;
+    }
+
+    public ModifySagPortRouteProtocolRequest setRemoteIp(String remoteIp) {
+        this.remoteIp = remoteIp;
+        return this;
+    }
+    public String getRemoteIp() {
+        return this.remoteIp;
+    }
+
     public ModifySagPortRouteProtocolRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -77,12 +109,12 @@ public class ModifySagPortRouteProtocolRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifySagPortRouteProtocolRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifySagPortRouteProtocolRequest setRouteProtocol(String routeProtocol) {
+        this.routeProtocol = routeProtocol;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getRouteProtocol() {
+        return this.routeProtocol;
     }
 
     public ModifySagPortRouteProtocolRequest setSmartAGId(String smartAGId) {
@@ -101,44 +133,12 @@ public class ModifySagPortRouteProtocolRequest extends TeaModel {
         return this.smartAGSn;
     }
 
-    public ModifySagPortRouteProtocolRequest setPortName(String portName) {
-        this.portName = portName;
-        return this;
-    }
-    public String getPortName() {
-        return this.portName;
-    }
-
     public ModifySagPortRouteProtocolRequest setVlan(String vlan) {
         this.vlan = vlan;
         return this;
     }
     public String getVlan() {
         return this.vlan;
-    }
-
-    public ModifySagPortRouteProtocolRequest setRouteProtocol(String routeProtocol) {
-        this.routeProtocol = routeProtocol;
-        return this;
-    }
-    public String getRouteProtocol() {
-        return this.routeProtocol;
-    }
-
-    public ModifySagPortRouteProtocolRequest setRemoteIp(String remoteIp) {
-        this.remoteIp = remoteIp;
-        return this;
-    }
-    public String getRemoteIp() {
-        return this.remoteIp;
-    }
-
-    public ModifySagPortRouteProtocolRequest setRemoteAs(String remoteAs) {
-        this.remoteAs = remoteAs;
-        return this;
-    }
-    public String getRemoteAs() {
-        return this.remoteAs;
     }
 
 }

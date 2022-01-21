@@ -32,26 +32,26 @@ public class DescribeSagVbrRelationsResponseBody extends TeaModel {
     }
 
     public static class DescribeSagVbrRelationsResponseBodySagVbrRelations extends TeaModel {
-        @NameInMap("VbrInstanceId")
-        public String vbrInstanceId;
+        @NameInMap("SagInstanceId")
+        public String sagInstanceId;
 
         @NameInMap("SagUid")
         public String sagUid;
 
-        @NameInMap("SagInstanceId")
-        public String sagInstanceId;
+        @NameInMap("VbrInstanceId")
+        public String vbrInstanceId;
 
         public static DescribeSagVbrRelationsResponseBodySagVbrRelations build(java.util.Map<String, ?> map) throws Exception {
             DescribeSagVbrRelationsResponseBodySagVbrRelations self = new DescribeSagVbrRelationsResponseBodySagVbrRelations();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSagVbrRelationsResponseBodySagVbrRelations setVbrInstanceId(String vbrInstanceId) {
-            this.vbrInstanceId = vbrInstanceId;
+        public DescribeSagVbrRelationsResponseBodySagVbrRelations setSagInstanceId(String sagInstanceId) {
+            this.sagInstanceId = sagInstanceId;
             return this;
         }
-        public String getVbrInstanceId() {
-            return this.vbrInstanceId;
+        public String getSagInstanceId() {
+            return this.sagInstanceId;
         }
 
         public DescribeSagVbrRelationsResponseBodySagVbrRelations setSagUid(String sagUid) {
@@ -62,12 +62,12 @@ public class DescribeSagVbrRelationsResponseBody extends TeaModel {
             return this.sagUid;
         }
 
-        public DescribeSagVbrRelationsResponseBodySagVbrRelations setSagInstanceId(String sagInstanceId) {
-            this.sagInstanceId = sagInstanceId;
+        public DescribeSagVbrRelationsResponseBodySagVbrRelations setVbrInstanceId(String vbrInstanceId) {
+            this.vbrInstanceId = vbrInstanceId;
             return this;
         }
-        public String getSagInstanceId() {
-            return this.sagInstanceId;
+        public String getVbrInstanceId() {
+            return this.vbrInstanceId;
         }
 
     }

@@ -4,11 +4,17 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteHealthCheckRequest extends TeaModel {
+    @NameInMap("HcInstanceId")
+    public String hcInstanceId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,15 +22,17 @@ public class DeleteHealthCheckRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("HcInstanceId")
-    public String hcInstanceId;
-
     public static DeleteHealthCheckRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteHealthCheckRequest self = new DeleteHealthCheckRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteHealthCheckRequest setHcInstanceId(String hcInstanceId) {
+        this.hcInstanceId = hcInstanceId;
+        return this;
+    }
+    public String getHcInstanceId() {
+        return this.hcInstanceId;
     }
 
     public DeleteHealthCheckRequest setOwnerAccount(String ownerAccount) {
@@ -43,6 +51,14 @@ public class DeleteHealthCheckRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DeleteHealthCheckRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DeleteHealthCheckRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -57,22 +73,6 @@ public class DeleteHealthCheckRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteHealthCheckRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteHealthCheckRequest setHcInstanceId(String hcInstanceId) {
-        this.hcInstanceId = hcInstanceId;
-        return this;
-    }
-    public String getHcInstanceId() {
-        return this.hcInstanceId;
     }
 
 }

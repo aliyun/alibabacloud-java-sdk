@@ -4,23 +4,15 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserOnlineClientStatisticsResponseBody extends TeaModel {
-    @NameInMap("UserStatistics")
-    public DescribeUserOnlineClientStatisticsResponseBodyUserStatistics userStatistics;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("UserStatistics")
+    public DescribeUserOnlineClientStatisticsResponseBodyUserStatistics userStatistics;
 
     public static DescribeUserOnlineClientStatisticsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserOnlineClientStatisticsResponseBody self = new DescribeUserOnlineClientStatisticsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeUserOnlineClientStatisticsResponseBody setUserStatistics(DescribeUserOnlineClientStatisticsResponseBodyUserStatistics userStatistics) {
-        this.userStatistics = userStatistics;
-        return this;
-    }
-    public DescribeUserOnlineClientStatisticsResponseBodyUserStatistics getUserStatistics() {
-        return this.userStatistics;
     }
 
     public DescribeUserOnlineClientStatisticsResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class DescribeUserOnlineClientStatisticsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeUserOnlineClientStatisticsResponseBody setUserStatistics(DescribeUserOnlineClientStatisticsResponseBodyUserStatistics userStatistics) {
+        this.userStatistics = userStatistics;
+        return this;
+    }
+    public DescribeUserOnlineClientStatisticsResponseBodyUserStatistics getUserStatistics() {
+        return this.userStatistics;
     }
 
     public static class DescribeUserOnlineClientStatisticsResponseBodyUserStatisticsStatistics extends TeaModel {

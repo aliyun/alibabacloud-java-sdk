@@ -4,11 +4,20 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteACLRuleRequest extends TeaModel {
+    @NameInMap("AclId")
+    public String aclId;
+
+    @NameInMap("AcrId")
+    public String acrId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,18 +25,25 @@ public class DeleteACLRuleRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("AclId")
-    public String aclId;
-
-    @NameInMap("AcrId")
-    public String acrId;
-
     public static DeleteACLRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteACLRuleRequest self = new DeleteACLRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteACLRuleRequest setAclId(String aclId) {
+        this.aclId = aclId;
+        return this;
+    }
+    public String getAclId() {
+        return this.aclId;
+    }
+
+    public DeleteACLRuleRequest setAcrId(String acrId) {
+        this.acrId = acrId;
+        return this;
+    }
+    public String getAcrId() {
+        return this.acrId;
     }
 
     public DeleteACLRuleRequest setOwnerAccount(String ownerAccount) {
@@ -46,6 +62,14 @@ public class DeleteACLRuleRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DeleteACLRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DeleteACLRuleRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -60,30 +84,6 @@ public class DeleteACLRuleRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteACLRuleRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteACLRuleRequest setAclId(String aclId) {
-        this.aclId = aclId;
-        return this;
-    }
-    public String getAclId() {
-        return this.aclId;
-    }
-
-    public DeleteACLRuleRequest setAcrId(String acrId) {
-        this.acrId = acrId;
-        return this;
-    }
-    public String getAcrId() {
-        return this.acrId;
     }
 
 }

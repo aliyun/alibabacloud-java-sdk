@@ -4,11 +4,26 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class GrantInstanceToCbnRequest extends TeaModel {
+    @NameInMap("CcnInstanceId")
+    public String ccnInstanceId;
+
+    @NameInMap("CenInstanceId")
+    public String cenInstanceId;
+
+    @NameInMap("CenUid")
+    public Long cenUid;
+
+    @NameInMap("GrantTrafficService")
+    public Boolean grantTrafficService;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,64 +31,9 @@ public class GrantInstanceToCbnRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CenUid")
-    public Long cenUid;
-
-    @NameInMap("CcnInstanceId")
-    public String ccnInstanceId;
-
-    @NameInMap("CenInstanceId")
-    public String cenInstanceId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("GrantTrafficService")
-    public Boolean grantTrafficService;
-
     public static GrantInstanceToCbnRequest build(java.util.Map<String, ?> map) throws Exception {
         GrantInstanceToCbnRequest self = new GrantInstanceToCbnRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GrantInstanceToCbnRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public GrantInstanceToCbnRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public GrantInstanceToCbnRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public GrantInstanceToCbnRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public GrantInstanceToCbnRequest setCenUid(Long cenUid) {
-        this.cenUid = cenUid;
-        return this;
-    }
-    public Long getCenUid() {
-        return this.cenUid;
     }
 
     public GrantInstanceToCbnRequest setCcnInstanceId(String ccnInstanceId) {
@@ -92,12 +52,12 @@ public class GrantInstanceToCbnRequest extends TeaModel {
         return this.cenInstanceId;
     }
 
-    public GrantInstanceToCbnRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public GrantInstanceToCbnRequest setCenUid(Long cenUid) {
+        this.cenUid = cenUid;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Long getCenUid() {
+        return this.cenUid;
     }
 
     public GrantInstanceToCbnRequest setGrantTrafficService(Boolean grantTrafficService) {
@@ -106,6 +66,46 @@ public class GrantInstanceToCbnRequest extends TeaModel {
     }
     public Boolean getGrantTrafficService() {
         return this.grantTrafficService;
+    }
+
+    public GrantInstanceToCbnRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public GrantInstanceToCbnRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public GrantInstanceToCbnRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public GrantInstanceToCbnRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public GrantInstanceToCbnRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

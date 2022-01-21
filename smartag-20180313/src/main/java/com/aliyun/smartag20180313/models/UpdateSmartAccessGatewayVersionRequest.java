@@ -10,23 +10,23 @@ public class UpdateSmartAccessGatewayVersionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SerialNumber")
+    public String serialNumber;
+
     @NameInMap("SmartAGId")
     public String smartAGId;
 
     @NameInMap("VersionCode")
     public String versionCode;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("SerialNumber")
-    public String serialNumber;
 
     @NameInMap("VersionType")
     public String versionType;
@@ -52,6 +52,14 @@ public class UpdateSmartAccessGatewayVersionRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public UpdateSmartAccessGatewayVersionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public UpdateSmartAccessGatewayVersionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -68,6 +76,14 @@ public class UpdateSmartAccessGatewayVersionRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public UpdateSmartAccessGatewayVersionRequest setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+        return this;
+    }
+    public String getSerialNumber() {
+        return this.serialNumber;
+    }
+
     public UpdateSmartAccessGatewayVersionRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
@@ -82,22 +98,6 @@ public class UpdateSmartAccessGatewayVersionRequest extends TeaModel {
     }
     public String getVersionCode() {
         return this.versionCode;
-    }
-
-    public UpdateSmartAccessGatewayVersionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public UpdateSmartAccessGatewayVersionRequest setSerialNumber(String serialNumber) {
-        this.serialNumber = serialNumber;
-        return this;
-    }
-    public String getSerialNumber() {
-        return this.serialNumber;
     }
 
     public UpdateSmartAccessGatewayVersionRequest setVersionType(String versionType) {

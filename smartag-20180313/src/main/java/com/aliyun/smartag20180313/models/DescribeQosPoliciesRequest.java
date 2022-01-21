@@ -4,20 +4,23 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeQosPoliciesRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Priority")
+    public Integer priority;
 
     @NameInMap("QosId")
     public String qosId;
@@ -25,21 +28,26 @@ public class DescribeQosPoliciesRequest extends TeaModel {
     @NameInMap("QosPolicyId")
     public String qosPolicyId;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Priority")
-    public Integer priority;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribeQosPoliciesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeQosPoliciesRequest self = new DescribeQosPoliciesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeQosPoliciesRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public DescribeQosPoliciesRequest setOwnerAccount(String ownerAccount) {
@@ -58,28 +66,28 @@ public class DescribeQosPoliciesRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeQosPoliciesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public DescribeQosPoliciesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
-    public DescribeQosPoliciesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public DescribeQosPoliciesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
-    public DescribeQosPoliciesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeQosPoliciesRequest setPriority(Integer priority) {
+        this.priority = priority;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Integer getPriority() {
+        return this.priority;
     }
 
     public DescribeQosPoliciesRequest setQosId(String qosId) {
@@ -98,36 +106,28 @@ public class DescribeQosPoliciesRequest extends TeaModel {
         return this.qosPolicyId;
     }
 
-    public DescribeQosPoliciesRequest setDescription(String description) {
-        this.description = description;
+    public DescribeQosPoliciesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public DescribeQosPoliciesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeQosPoliciesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public DescribeQosPoliciesRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeQosPoliciesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeQosPoliciesRequest setPriority(Integer priority) {
-        this.priority = priority;
-        return this;
-    }
-    public Integer getPriority() {
-        return this.priority;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

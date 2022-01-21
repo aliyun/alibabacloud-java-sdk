@@ -4,8 +4,11 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySmartAccessGatewayClientUserResponseBody extends TeaModel {
-    @NameInMap("UserName")
-    public String userName;
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
+
+    @NameInMap("ClientIp")
+    public String clientIp;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,23 +16,28 @@ public class ModifySmartAccessGatewayClientUserResponseBody extends TeaModel {
     @NameInMap("UserMail")
     public String userMail;
 
-    @NameInMap("Bandwidth")
-    public Integer bandwidth;
-
-    @NameInMap("ClientIp")
-    public String clientIp;
+    @NameInMap("UserName")
+    public String userName;
 
     public static ModifySmartAccessGatewayClientUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifySmartAccessGatewayClientUserResponseBody self = new ModifySmartAccessGatewayClientUserResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifySmartAccessGatewayClientUserResponseBody setUserName(String userName) {
-        this.userName = userName;
+    public ModifySmartAccessGatewayClientUserResponseBody setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
         return this;
     }
-    public String getUserName() {
-        return this.userName;
+    public Integer getBandwidth() {
+        return this.bandwidth;
+    }
+
+    public ModifySmartAccessGatewayClientUserResponseBody setClientIp(String clientIp) {
+        this.clientIp = clientIp;
+        return this;
+    }
+    public String getClientIp() {
+        return this.clientIp;
     }
 
     public ModifySmartAccessGatewayClientUserResponseBody setRequestId(String requestId) {
@@ -48,20 +56,12 @@ public class ModifySmartAccessGatewayClientUserResponseBody extends TeaModel {
         return this.userMail;
     }
 
-    public ModifySmartAccessGatewayClientUserResponseBody setBandwidth(Integer bandwidth) {
-        this.bandwidth = bandwidth;
+    public ModifySmartAccessGatewayClientUserResponseBody setUserName(String userName) {
+        this.userName = userName;
         return this;
     }
-    public Integer getBandwidth() {
-        return this.bandwidth;
-    }
-
-    public ModifySmartAccessGatewayClientUserResponseBody setClientIp(String clientIp) {
-        this.clientIp = clientIp;
-        return this;
-    }
-    public String getClientIp() {
-        return this.clientIp;
+    public String getUserName() {
+        return this.userName;
     }
 
 }

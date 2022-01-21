@@ -7,14 +7,14 @@ public class DescribeSagRouteProtocolBgpResponseBody extends TeaModel {
     @NameInMap("HoldTime")
     public Integer holdTime;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("KeepAlive")
     public Integer keepAlive;
 
     @NameInMap("LocalAs")
     public Integer localAs;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("RouterId")
     public String routerId;
@@ -35,14 +35,6 @@ public class DescribeSagRouteProtocolBgpResponseBody extends TeaModel {
         return this.holdTime;
     }
 
-    public DescribeSagRouteProtocolBgpResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeSagRouteProtocolBgpResponseBody setKeepAlive(Integer keepAlive) {
         this.keepAlive = keepAlive;
         return this;
@@ -57,6 +49,14 @@ public class DescribeSagRouteProtocolBgpResponseBody extends TeaModel {
     }
     public Integer getLocalAs() {
         return this.localAs;
+    }
+
+    public DescribeSagRouteProtocolBgpResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeSagRouteProtocolBgpResponseBody setRouterId(String routerId) {
@@ -76,21 +76,37 @@ public class DescribeSagRouteProtocolBgpResponseBody extends TeaModel {
     }
 
     public static class DescribeSagRouteProtocolBgpResponseBodyTaskStates extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         @NameInMap("State")
         public String state;
 
-        @NameInMap("ErrorCode")
-        public String errorCode;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
         public static DescribeSagRouteProtocolBgpResponseBodyTaskStates build(java.util.Map<String, ?> map) throws Exception {
             DescribeSagRouteProtocolBgpResponseBodyTaskStates self = new DescribeSagRouteProtocolBgpResponseBodyTaskStates();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSagRouteProtocolBgpResponseBodyTaskStates setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeSagRouteProtocolBgpResponseBodyTaskStates setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         public DescribeSagRouteProtocolBgpResponseBodyTaskStates setErrorMessage(String errorMessage) {
@@ -107,22 +123,6 @@ public class DescribeSagRouteProtocolBgpResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public DescribeSagRouteProtocolBgpResponseBodyTaskStates setErrorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-        public String getErrorCode() {
-            return this.errorCode;
-        }
-
-        public DescribeSagRouteProtocolBgpResponseBodyTaskStates setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
     }

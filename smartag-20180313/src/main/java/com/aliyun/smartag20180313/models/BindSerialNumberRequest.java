@@ -10,20 +10,20 @@ public class BindSerialNumberRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("SerialNumber")
+    public String serialNumber;
 
     @NameInMap("SmartAGId")
     public String smartAGId;
-
-    @NameInMap("SerialNumber")
-    public String serialNumber;
 
     public static BindSerialNumberRequest build(java.util.Map<String, ?> map) throws Exception {
         BindSerialNumberRequest self = new BindSerialNumberRequest();
@@ -46,6 +46,14 @@ public class BindSerialNumberRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public BindSerialNumberRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public BindSerialNumberRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -62,12 +70,12 @@ public class BindSerialNumberRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public BindSerialNumberRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public BindSerialNumberRequest setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getSerialNumber() {
+        return this.serialNumber;
     }
 
     public BindSerialNumberRequest setSmartAGId(String smartAGId) {
@@ -76,14 +84,6 @@ public class BindSerialNumberRequest extends TeaModel {
     }
     public String getSmartAGId() {
         return this.smartAGId;
-    }
-
-    public BindSerialNumberRequest setSerialNumber(String serialNumber) {
-        this.serialNumber = serialNumber;
-        return this;
-    }
-    public String getSerialNumber() {
-        return this.serialNumber;
     }
 
 }

@@ -4,8 +4,11 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeGrantSagRulesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("GrantRules")
+    public DescribeGrantSagRulesResponseBodyGrantRules grantRules;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class DescribeGrantSagRulesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("GrantRules")
-    public DescribeGrantSagRulesResponseBodyGrantRules grantRules;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeGrantSagRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGrantSagRulesResponseBody self = new DescribeGrantSagRulesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeGrantSagRulesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeGrantSagRulesResponseBody setGrantRules(DescribeGrantSagRulesResponseBodyGrantRules grantRules) {
+        this.grantRules = grantRules;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public DescribeGrantSagRulesResponseBodyGrantRules getGrantRules() {
+        return this.grantRules;
+    }
+
+    public DescribeGrantSagRulesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeGrantSagRulesResponseBody setPageSize(Integer pageSize) {
@@ -48,28 +56,23 @@ public class DescribeGrantSagRulesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeGrantSagRulesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeGrantSagRulesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeGrantSagRulesResponseBody setGrantRules(DescribeGrantSagRulesResponseBodyGrantRules grantRules) {
-        this.grantRules = grantRules;
-        return this;
-    }
-    public DescribeGrantSagRulesResponseBodyGrantRules getGrantRules() {
-        return this.grantRules;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeGrantSagRulesResponseBodyGrantRulesGrantRule extends TeaModel {
+        @NameInMap("CcnInstanceId")
+        public String ccnInstanceId;
+
+        @NameInMap("CcnUid")
+        public Long ccnUid;
+
         @NameInMap("CreateTime")
         public Long createTime;
-
-        @NameInMap("SmartAGId")
-        public String smartAGId;
 
         @NameInMap("GrantTrafficService")
         public Boolean grantTrafficService;
@@ -77,15 +80,28 @@ public class DescribeGrantSagRulesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("CcnUid")
-        public Long ccnUid;
-
-        @NameInMap("CcnInstanceId")
-        public String ccnInstanceId;
+        @NameInMap("SmartAGId")
+        public String smartAGId;
 
         public static DescribeGrantSagRulesResponseBodyGrantRulesGrantRule build(java.util.Map<String, ?> map) throws Exception {
             DescribeGrantSagRulesResponseBodyGrantRulesGrantRule self = new DescribeGrantSagRulesResponseBodyGrantRulesGrantRule();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeGrantSagRulesResponseBodyGrantRulesGrantRule setCcnInstanceId(String ccnInstanceId) {
+            this.ccnInstanceId = ccnInstanceId;
+            return this;
+        }
+        public String getCcnInstanceId() {
+            return this.ccnInstanceId;
+        }
+
+        public DescribeGrantSagRulesResponseBodyGrantRulesGrantRule setCcnUid(Long ccnUid) {
+            this.ccnUid = ccnUid;
+            return this;
+        }
+        public Long getCcnUid() {
+            return this.ccnUid;
         }
 
         public DescribeGrantSagRulesResponseBodyGrantRulesGrantRule setCreateTime(Long createTime) {
@@ -94,14 +110,6 @@ public class DescribeGrantSagRulesResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
-        }
-
-        public DescribeGrantSagRulesResponseBodyGrantRulesGrantRule setSmartAGId(String smartAGId) {
-            this.smartAGId = smartAGId;
-            return this;
-        }
-        public String getSmartAGId() {
-            return this.smartAGId;
         }
 
         public DescribeGrantSagRulesResponseBodyGrantRulesGrantRule setGrantTrafficService(Boolean grantTrafficService) {
@@ -120,20 +128,12 @@ public class DescribeGrantSagRulesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeGrantSagRulesResponseBodyGrantRulesGrantRule setCcnUid(Long ccnUid) {
-            this.ccnUid = ccnUid;
+        public DescribeGrantSagRulesResponseBodyGrantRulesGrantRule setSmartAGId(String smartAGId) {
+            this.smartAGId = smartAGId;
             return this;
         }
-        public Long getCcnUid() {
-            return this.ccnUid;
-        }
-
-        public DescribeGrantSagRulesResponseBodyGrantRulesGrantRule setCcnInstanceId(String ccnInstanceId) {
-            this.ccnInstanceId = ccnInstanceId;
-            return this;
-        }
-        public String getCcnInstanceId() {
-            return this.ccnInstanceId;
+        public String getSmartAGId() {
+            return this.smartAGId;
         }
 
     }

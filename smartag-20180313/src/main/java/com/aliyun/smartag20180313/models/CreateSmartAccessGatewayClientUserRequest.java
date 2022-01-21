@@ -4,11 +4,23 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class CreateSmartAccessGatewayClientUserRequest extends TeaModel {
+    @NameInMap("Bandwidth")
+    public Long bandwidth;
+
+    @NameInMap("ClientIp")
+    public String clientIp;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Password")
+    public String password;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,30 +28,34 @@ public class CreateSmartAccessGatewayClientUserRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
-
-    @NameInMap("UserName")
-    public String userName;
-
-    @NameInMap("ClientIp")
-    public String clientIp;
 
     @NameInMap("UserMail")
     public String userMail;
 
-    @NameInMap("Bandwidth")
-    public Long bandwidth;
-
-    @NameInMap("Password")
-    public String password;
+    @NameInMap("UserName")
+    public String userName;
 
     public static CreateSmartAccessGatewayClientUserRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSmartAccessGatewayClientUserRequest self = new CreateSmartAccessGatewayClientUserRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSmartAccessGatewayClientUserRequest setBandwidth(Long bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Long getBandwidth() {
+        return this.bandwidth;
+    }
+
+    public CreateSmartAccessGatewayClientUserRequest setClientIp(String clientIp) {
+        this.clientIp = clientIp;
+        return this;
+    }
+    public String getClientIp() {
+        return this.clientIp;
     }
 
     public CreateSmartAccessGatewayClientUserRequest setOwnerAccount(String ownerAccount) {
@@ -58,6 +74,22 @@ public class CreateSmartAccessGatewayClientUserRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public CreateSmartAccessGatewayClientUserRequest setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    public String getPassword() {
+        return this.password;
+    }
+
+    public CreateSmartAccessGatewayClientUserRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public CreateSmartAccessGatewayClientUserRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -74,36 +106,12 @@ public class CreateSmartAccessGatewayClientUserRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateSmartAccessGatewayClientUserRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public CreateSmartAccessGatewayClientUserRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
     }
     public String getSmartAGId() {
         return this.smartAGId;
-    }
-
-    public CreateSmartAccessGatewayClientUserRequest setUserName(String userName) {
-        this.userName = userName;
-        return this;
-    }
-    public String getUserName() {
-        return this.userName;
-    }
-
-    public CreateSmartAccessGatewayClientUserRequest setClientIp(String clientIp) {
-        this.clientIp = clientIp;
-        return this;
-    }
-    public String getClientIp() {
-        return this.clientIp;
     }
 
     public CreateSmartAccessGatewayClientUserRequest setUserMail(String userMail) {
@@ -114,20 +122,12 @@ public class CreateSmartAccessGatewayClientUserRequest extends TeaModel {
         return this.userMail;
     }
 
-    public CreateSmartAccessGatewayClientUserRequest setBandwidth(Long bandwidth) {
-        this.bandwidth = bandwidth;
+    public CreateSmartAccessGatewayClientUserRequest setUserName(String userName) {
+        this.userName = userName;
         return this;
     }
-    public Long getBandwidth() {
-        return this.bandwidth;
-    }
-
-    public CreateSmartAccessGatewayClientUserRequest setPassword(String password) {
-        this.password = password;
-        return this;
-    }
-    public String getPassword() {
-        return this.password;
+    public String getUserName() {
+        return this.userName;
     }
 
 }

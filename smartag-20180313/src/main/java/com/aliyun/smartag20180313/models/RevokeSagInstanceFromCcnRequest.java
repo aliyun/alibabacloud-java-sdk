@@ -4,11 +4,17 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class RevokeSagInstanceFromCcnRequest extends TeaModel {
+    @NameInMap("CcnInstanceId")
+    public String ccnInstanceId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,18 +22,20 @@ public class RevokeSagInstanceFromCcnRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
-
-    @NameInMap("CcnInstanceId")
-    public String ccnInstanceId;
 
     public static RevokeSagInstanceFromCcnRequest build(java.util.Map<String, ?> map) throws Exception {
         RevokeSagInstanceFromCcnRequest self = new RevokeSagInstanceFromCcnRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RevokeSagInstanceFromCcnRequest setCcnInstanceId(String ccnInstanceId) {
+        this.ccnInstanceId = ccnInstanceId;
+        return this;
+    }
+    public String getCcnInstanceId() {
+        return this.ccnInstanceId;
     }
 
     public RevokeSagInstanceFromCcnRequest setOwnerAccount(String ownerAccount) {
@@ -46,6 +54,14 @@ public class RevokeSagInstanceFromCcnRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public RevokeSagInstanceFromCcnRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public RevokeSagInstanceFromCcnRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -62,28 +78,12 @@ public class RevokeSagInstanceFromCcnRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public RevokeSagInstanceFromCcnRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public RevokeSagInstanceFromCcnRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
     }
     public String getSmartAGId() {
         return this.smartAGId;
-    }
-
-    public RevokeSagInstanceFromCcnRequest setCcnInstanceId(String ccnInstanceId) {
-        this.ccnInstanceId = ccnInstanceId;
-        return this;
-    }
-    public String getCcnInstanceId() {
-        return this.ccnInstanceId;
     }
 
 }

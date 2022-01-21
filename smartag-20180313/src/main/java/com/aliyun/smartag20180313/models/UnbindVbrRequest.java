@@ -10,26 +10,26 @@ public class UnbindVbrRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
+
+    @NameInMap("SmartAGUid")
+    public Long smartAGUid;
 
     @NameInMap("VbrId")
     public String vbrId;
 
     @NameInMap("VbrRegionId")
     public String vbrRegionId;
-
-    @NameInMap("SmartAGUid")
-    public Long smartAGUid;
 
     public static UnbindVbrRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindVbrRequest self = new UnbindVbrRequest();
@@ -52,6 +52,14 @@ public class UnbindVbrRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public UnbindVbrRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public UnbindVbrRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -68,20 +76,20 @@ public class UnbindVbrRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public UnbindVbrRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public UnbindVbrRequest setSmartAGId(String smartAGId) {
         this.smartAGId = smartAGId;
         return this;
     }
     public String getSmartAGId() {
         return this.smartAGId;
+    }
+
+    public UnbindVbrRequest setSmartAGUid(Long smartAGUid) {
+        this.smartAGUid = smartAGUid;
+        return this;
+    }
+    public Long getSmartAGUid() {
+        return this.smartAGUid;
     }
 
     public UnbindVbrRequest setVbrId(String vbrId) {
@@ -98,14 +106,6 @@ public class UnbindVbrRequest extends TeaModel {
     }
     public String getVbrRegionId() {
         return this.vbrRegionId;
-    }
-
-    public UnbindVbrRequest setSmartAGUid(Long smartAGUid) {
-        this.smartAGUid = smartAGUid;
-        return this;
-    }
-    public Long getSmartAGUid() {
-        return this.smartAGUid;
     }
 
 }

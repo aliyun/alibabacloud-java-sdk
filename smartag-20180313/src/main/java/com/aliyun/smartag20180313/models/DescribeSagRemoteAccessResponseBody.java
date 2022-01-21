@@ -4,20 +4,20 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSagRemoteAccessResponseBody extends TeaModel {
-    @NameInMap("RemoteAccesses")
-    public DescribeSagRemoteAccessResponseBodyRemoteAccesses remoteAccesses;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("RemoteAccesses")
+    public DescribeSagRemoteAccessResponseBodyRemoteAccesses remoteAccesses;
 
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SmartAGId")
     public String smartAGId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,12 +27,12 @@ public class DescribeSagRemoteAccessResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeSagRemoteAccessResponseBody setRemoteAccesses(DescribeSagRemoteAccessResponseBodyRemoteAccesses remoteAccesses) {
-        this.remoteAccesses = remoteAccesses;
+    public DescribeSagRemoteAccessResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public DescribeSagRemoteAccessResponseBodyRemoteAccesses getRemoteAccesses() {
-        return this.remoteAccesses;
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeSagRemoteAccessResponseBody setMessage(String message) {
@@ -41,6 +41,14 @@ public class DescribeSagRemoteAccessResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public DescribeSagRemoteAccessResponseBody setRemoteAccesses(DescribeSagRemoteAccessResponseBodyRemoteAccesses remoteAccesses) {
+        this.remoteAccesses = remoteAccesses;
+        return this;
+    }
+    public DescribeSagRemoteAccessResponseBodyRemoteAccesses getRemoteAccesses() {
+        return this.remoteAccesses;
     }
 
     public DescribeSagRemoteAccessResponseBody setRequestId(String requestId) {
@@ -59,14 +67,6 @@ public class DescribeSagRemoteAccessResponseBody extends TeaModel {
         return this.smartAGId;
     }
 
-    public DescribeSagRemoteAccessResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeSagRemoteAccessResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -76,23 +76,15 @@ public class DescribeSagRemoteAccessResponseBody extends TeaModel {
     }
 
     public static class DescribeSagRemoteAccessResponseBodyRemoteAccessesRemoteAccess extends TeaModel {
-        @NameInMap("SerialNumber")
-        public String serialNumber;
-
         @NameInMap("RemoteAccessIp")
         public String remoteAccessIp;
+
+        @NameInMap("SerialNumber")
+        public String serialNumber;
 
         public static DescribeSagRemoteAccessResponseBodyRemoteAccessesRemoteAccess build(java.util.Map<String, ?> map) throws Exception {
             DescribeSagRemoteAccessResponseBodyRemoteAccessesRemoteAccess self = new DescribeSagRemoteAccessResponseBodyRemoteAccessesRemoteAccess();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSagRemoteAccessResponseBodyRemoteAccessesRemoteAccess setSerialNumber(String serialNumber) {
-            this.serialNumber = serialNumber;
-            return this;
-        }
-        public String getSerialNumber() {
-            return this.serialNumber;
         }
 
         public DescribeSagRemoteAccessResponseBodyRemoteAccessesRemoteAccess setRemoteAccessIp(String remoteAccessIp) {
@@ -101,6 +93,14 @@ public class DescribeSagRemoteAccessResponseBody extends TeaModel {
         }
         public String getRemoteAccessIp() {
             return this.remoteAccessIp;
+        }
+
+        public DescribeSagRemoteAccessResponseBodyRemoteAccessesRemoteAccess setSerialNumber(String serialNumber) {
+            this.serialNumber = serialNumber;
+            return this;
+        }
+        public String getSerialNumber() {
+            return this.serialNumber;
         }
 
     }

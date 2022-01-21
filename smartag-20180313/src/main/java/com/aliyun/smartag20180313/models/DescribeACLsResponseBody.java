@@ -4,8 +4,11 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeACLsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("Acls")
+    public DescribeACLsResponseBodyAcls acls;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class DescribeACLsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Acls")
-    public DescribeACLsResponseBodyAcls acls;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeACLsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeACLsResponseBody self = new DescribeACLsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeACLsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeACLsResponseBody setAcls(DescribeACLsResponseBodyAcls acls) {
+        this.acls = acls;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public DescribeACLsResponseBodyAcls getAcls() {
+        return this.acls;
+    }
+
+    public DescribeACLsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeACLsResponseBody setPageSize(Integer pageSize) {
@@ -48,26 +56,15 @@ public class DescribeACLsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeACLsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeACLsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeACLsResponseBody setAcls(DescribeACLsResponseBodyAcls acls) {
-        this.acls = acls;
-        return this;
-    }
-    public DescribeACLsResponseBodyAcls getAcls() {
-        return this.acls;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeACLsResponseBodyAclsAcl extends TeaModel {
-        @NameInMap("SagCount")
-        public String sagCount;
-
         @NameInMap("AclId")
         public String aclId;
 
@@ -77,17 +74,12 @@ public class DescribeACLsResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("SagCount")
+        public String sagCount;
+
         public static DescribeACLsResponseBodyAclsAcl build(java.util.Map<String, ?> map) throws Exception {
             DescribeACLsResponseBodyAclsAcl self = new DescribeACLsResponseBodyAclsAcl();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeACLsResponseBodyAclsAcl setSagCount(String sagCount) {
-            this.sagCount = sagCount;
-            return this;
-        }
-        public String getSagCount() {
-            return this.sagCount;
         }
 
         public DescribeACLsResponseBodyAclsAcl setAclId(String aclId) {
@@ -112,6 +104,14 @@ public class DescribeACLsResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeACLsResponseBodyAclsAcl setSagCount(String sagCount) {
+            this.sagCount = sagCount;
+            return this;
+        }
+        public String getSagCount() {
+            return this.sagCount;
         }
 
     }

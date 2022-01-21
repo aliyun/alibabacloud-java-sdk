@@ -4,11 +4,20 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifyRouteDistributionStrategyRequest extends TeaModel {
+    @NameInMap("DestCidrBlock")
+    public String destCidrBlock;
+
+    @NameInMap("HcInstanceId")
+    public String hcInstanceId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,30 +25,37 @@ public class ModifyRouteDistributionStrategyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("SmartAGId")
-    public String smartAGId;
-
-    @NameInMap("HcInstanceId")
-    public String hcInstanceId;
-
-    @NameInMap("SourceType")
-    public String sourceType;
-
-    @NameInMap("DestCidrBlock")
-    public String destCidrBlock;
+    @NameInMap("RouteDistribution")
+    public String routeDistribution;
 
     @NameInMap("RouteSource")
     public String routeSource;
 
-    @NameInMap("RouteDistribution")
-    public String routeDistribution;
+    @NameInMap("SmartAGId")
+    public String smartAGId;
+
+    @NameInMap("SourceType")
+    public String sourceType;
 
     public static ModifyRouteDistributionStrategyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyRouteDistributionStrategyRequest self = new ModifyRouteDistributionStrategyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyRouteDistributionStrategyRequest setDestCidrBlock(String destCidrBlock) {
+        this.destCidrBlock = destCidrBlock;
+        return this;
+    }
+    public String getDestCidrBlock() {
+        return this.destCidrBlock;
+    }
+
+    public ModifyRouteDistributionStrategyRequest setHcInstanceId(String hcInstanceId) {
+        this.hcInstanceId = hcInstanceId;
+        return this;
+    }
+    public String getHcInstanceId() {
+        return this.hcInstanceId;
     }
 
     public ModifyRouteDistributionStrategyRequest setOwnerAccount(String ownerAccount) {
@@ -58,6 +74,14 @@ public class ModifyRouteDistributionStrategyRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifyRouteDistributionStrategyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ModifyRouteDistributionStrategyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -74,44 +98,12 @@ public class ModifyRouteDistributionStrategyRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyRouteDistributionStrategyRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifyRouteDistributionStrategyRequest setRouteDistribution(String routeDistribution) {
+        this.routeDistribution = routeDistribution;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyRouteDistributionStrategyRequest setSmartAGId(String smartAGId) {
-        this.smartAGId = smartAGId;
-        return this;
-    }
-    public String getSmartAGId() {
-        return this.smartAGId;
-    }
-
-    public ModifyRouteDistributionStrategyRequest setHcInstanceId(String hcInstanceId) {
-        this.hcInstanceId = hcInstanceId;
-        return this;
-    }
-    public String getHcInstanceId() {
-        return this.hcInstanceId;
-    }
-
-    public ModifyRouteDistributionStrategyRequest setSourceType(String sourceType) {
-        this.sourceType = sourceType;
-        return this;
-    }
-    public String getSourceType() {
-        return this.sourceType;
-    }
-
-    public ModifyRouteDistributionStrategyRequest setDestCidrBlock(String destCidrBlock) {
-        this.destCidrBlock = destCidrBlock;
-        return this;
-    }
-    public String getDestCidrBlock() {
-        return this.destCidrBlock;
+    public String getRouteDistribution() {
+        return this.routeDistribution;
     }
 
     public ModifyRouteDistributionStrategyRequest setRouteSource(String routeSource) {
@@ -122,12 +114,20 @@ public class ModifyRouteDistributionStrategyRequest extends TeaModel {
         return this.routeSource;
     }
 
-    public ModifyRouteDistributionStrategyRequest setRouteDistribution(String routeDistribution) {
-        this.routeDistribution = routeDistribution;
+    public ModifyRouteDistributionStrategyRequest setSmartAGId(String smartAGId) {
+        this.smartAGId = smartAGId;
         return this;
     }
-    public String getRouteDistribution() {
-        return this.routeDistribution;
+    public String getSmartAGId() {
+        return this.smartAGId;
+    }
+
+    public ModifyRouteDistributionStrategyRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
     }
 
 }
