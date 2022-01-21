@@ -4,18 +4,23 @@ package com.aliyun.ddi20200617.models;
 import com.aliyun.tea.*;
 
 public class ListFlowClusterResponseBody extends TeaModel {
+    // 集群列表。
     @NameInMap("Clusters")
     public ListFlowClusterResponseBodyClusters clusters;
 
+    // 当前页码，从1开始。
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // 分页查询时每页行数。
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
+    // 总数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +70,15 @@ public class ListFlowClusterResponseBody extends TeaModel {
     }
 
     public static class ListFlowClusterResponseBodyClustersClusterInfoFailReason extends TeaModel {
+        // 错误码。
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        // 错误原因。
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        // 请求ID。
         @NameInMap("RequestId")
         public String requestId;
 
@@ -106,12 +114,15 @@ public class ListFlowClusterResponseBody extends TeaModel {
     }
 
     public static class ListFlowClusterResponseBodyClustersClusterInfoOrderTaskInfo extends TeaModel {
+        // 当前数量。
         @NameInMap("CurrentCount")
         public Integer currentCount;
 
+        // 订单列表。
         @NameInMap("OrderIdList")
         public String orderIdList;
 
+        // 目标数量。
         @NameInMap("TargetCount")
         public Integer targetCount;
 
@@ -147,48 +158,63 @@ public class ListFlowClusterResponseBody extends TeaModel {
     }
 
     public static class ListFlowClusterResponseBodyClustersClusterInfo extends TeaModel {
+        // 付费类型。PostPaid: 按量付费，PrePaid：包年包月集群。
         @NameInMap("ChargeType")
         public String chargeType;
 
+        // 资源。
         @NameInMap("CreateResource")
         public String createResource;
 
+        // 创建时间。
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // 过期时间。
         @NameInMap("ExpiredTime")
         public Long expiredTime;
 
+        // 集群失败原因。
         @NameInMap("FailReason")
         public ListFlowClusterResponseBodyClustersClusterInfoFailReason failReason;
 
+        // 是否有未完成订单。
         @NameInMap("HasUncompletedOrder")
         public Boolean hasUncompletedOrder;
 
+        // 集群ID。
         @NameInMap("Id")
         public String id;
 
+        // 保留字段。
         @NameInMap("K8sClusterId")
         public String k8sClusterId;
 
+        // 集群名字。
         @NameInMap("Name")
         public String name;
 
+        // 订单列表
         @NameInMap("OrderList")
         public String orderList;
 
+        // 订单任务信息。
         @NameInMap("OrderTaskInfo")
         public ListFlowClusterResponseBodyClustersClusterInfoOrderTaskInfo orderTaskInfo;
 
+        // 包年包月时间（包月数有：1、2、3、4、5、6、7、8、9、12、24、36）。ChargeType=PrePaid 时，必填。
         @NameInMap("Period")
         public Integer period;
 
+        // 运行时间，单位：秒。
         @NameInMap("RunningTime")
         public Integer runningTime;
 
+        // 集群状态。
         @NameInMap("Status")
         public String status;
 
+        // 集群类型。
         @NameInMap("Type")
         public String type;
 

@@ -4,9 +4,11 @@ package com.aliyun.ddi20200617.models;
 import com.aliyun.tea.*;
 
 public class CloneFlowJobResponseBody extends TeaModel {
+    // 新产生的作业ID。
     @NameInMap("Id")
     public String id;
 
+    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 

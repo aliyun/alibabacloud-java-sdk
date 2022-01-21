@@ -4,15 +4,19 @@ package com.aliyun.ddi20200617.models;
 import com.aliyun.tea.*;
 
 public class SubmitFlowResponseBody extends TeaModel {
+    // 过期参数。
     @NameInMap("Data")
     public String data;
 
+    // 工作流实例ID。
     @NameInMap("Id")
     public String id;
 
+    // 过期参数。
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 

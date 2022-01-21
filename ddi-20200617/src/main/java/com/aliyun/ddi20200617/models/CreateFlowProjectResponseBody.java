@@ -4,9 +4,11 @@ package com.aliyun.ddi20200617.models;
 import com.aliyun.tea.*;
 
 public class CreateFlowProjectResponseBody extends TeaModel {
+    // 项目ID
     @NameInMap("Id")
     public String id;
 
+    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

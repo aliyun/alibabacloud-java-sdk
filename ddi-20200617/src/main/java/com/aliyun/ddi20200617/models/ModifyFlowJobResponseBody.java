@@ -4,9 +4,11 @@ package com.aliyun.ddi20200617.models;
 import com.aliyun.tea.*;
 
 public class ModifyFlowJobResponseBody extends TeaModel {
+    // API调用结果：true（修改成功），false（修改失败）
     @NameInMap("Data")
     public Boolean data;
 
+    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 

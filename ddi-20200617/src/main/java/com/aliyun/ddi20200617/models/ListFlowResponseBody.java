@@ -4,18 +4,23 @@ package com.aliyun.ddi20200617.models;
 import com.aliyun.tea.*;
 
 public class ListFlowResponseBody extends TeaModel {
+    // 工作流列表
     @NameInMap("Flow")
     public ListFlowResponseBodyFlow flow;
 
+    // 页码。
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // 每页数量。
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
+    // 总数。
     @NameInMap("Total")
     public Integer total;
 

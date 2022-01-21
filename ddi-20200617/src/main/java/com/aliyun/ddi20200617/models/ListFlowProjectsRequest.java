@@ -4,24 +4,31 @@ package com.aliyun.ddi20200617.models;
 import com.aliyun.tea.*;
 
 public class ListFlowProjectsRequest extends TeaModel {
+    // 项目名称，用于过滤项目
     @NameInMap("Name")
     public String name;
 
+    // 页码，用于分页
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // 每页数量
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // 产品类型。固定值DATABIRCKS_DATAINSIGHT
     @NameInMap("ProductType")
     public String productType;
 
+    // 项目ID。您可以调用ListFlowProjects查看项目的ID
     @NameInMap("ProjectId")
     public String projectId;
 
+    // 地域ID
     @NameInMap("RegionId")
     public String regionId;
 
+    // 资源组ID
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

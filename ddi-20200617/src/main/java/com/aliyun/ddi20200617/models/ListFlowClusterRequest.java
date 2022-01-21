@@ -4,18 +4,23 @@ package com.aliyun.ddi20200617.models;
 import com.aliyun.tea.*;
 
 public class ListFlowClusterRequest extends TeaModel {
+    // 当前页码，从1开始。
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // 分页查询时设置的每页行数。
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // 项目ID。您可以调用ListFlowProject查看项目的ID。
     @NameInMap("ProjectId")
     public String projectId;
 
+    // 地域ID。您可以调用DescribeRegions查看最新的阿里云地域列表。
     @NameInMap("RegionId")
     public String regionId;
 
+    // 资源组ID。您可以调用ListResourceGroups查看资源组ID。
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

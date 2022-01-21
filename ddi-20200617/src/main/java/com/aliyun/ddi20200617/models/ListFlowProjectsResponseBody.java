@@ -4,18 +4,23 @@ package com.aliyun.ddi20200617.models;
 import com.aliyun.tea.*;
 
 public class ListFlowProjectsResponseBody extends TeaModel {
+    // 页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // 每页数量
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // 项目列表
     @NameInMap("Projects")
     public ListFlowProjectsResponseBodyProjects projects;
 
+    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
+    // 总数
     @NameInMap("Total")
     public Integer total;
 
@@ -65,21 +70,27 @@ public class ListFlowProjectsResponseBody extends TeaModel {
     }
 
     public static class ListFlowProjectsResponseBodyProjectsProject extends TeaModel {
+        // 项目描述
         @NameInMap("Description")
         public String description;
 
+        // 创建时间戳
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        // 修改时间戳
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        // 项目ID
         @NameInMap("Id")
         public String id;
 
+        // 项目名称
         @NameInMap("Name")
         public String name;
 
+        // 主账号ID
         @NameInMap("UserId")
         public String userId;
 

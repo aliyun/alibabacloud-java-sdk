@@ -4,60 +4,79 @@ package com.aliyun.ddi20200617.models;
 import com.aliyun.tea.*;
 
 public class ModifyFlowJobRequest extends TeaModel {
+    // 保留参数。
     @NameInMap("AlertConf")
     public String alertConf;
 
+    // 集群ID。您可以调用ListClusters查看集群的ID。
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // 自定义变量。
     @NameInMap("CustomVariables")
     public String customVariables;
 
+    // 修改后的作业描述。
     @NameInMap("Description")
     public String description;
 
+    // 环境变量设置。
     @NameInMap("EnvConf")
     public String envConf;
 
+    // 失败策略，可能的取值：CONTINUE（提过本次作业），STOP（停止作业）
     @NameInMap("FailAct")
     public String failAct;
 
+    // 需要修改的作业的ID。
     @NameInMap("Id")
     public String id;
 
+    // Knox的用户密码，执行Zeppelin Notebook时必须提供。
     @NameInMap("KnoxPassword")
     public String knoxPassword;
 
+    // Knox的用户名，执行Zeppelin Notebook时必须提供。
     @NameInMap("KnoxUser")
     public String knoxUser;
 
+    // 模型模式，取值如下：  YARN：将作业包装成一个Launcher提交至YARN中执行，LOCAL：作业直接在机器上以进程方式运行。
     @NameInMap("Mode")
     public String mode;
 
+    // 监控配置，仅SPARK_STREAMING类型作业支持监控配置。
     @NameInMap("MonitorConf")
     public String monitorConf;
 
+    // 修改后的作业名称。
     @NameInMap("Name")
     public String name;
 
+    // 参数设置。
     @NameInMap("ParamConf")
     public String paramConf;
 
+    // 作业内容。如果是spark作业，该参数的内容会作为spark-submit的参数。
     @NameInMap("Params")
     public String params;
 
+    // 项目ID。您可以调用ListFlowProject查看项目的ID。
     @NameInMap("ProjectId")
     public String projectId;
 
+    // 地域ID。您可以调用DescribeRegions查看最新的阿里云地域列表。
     @NameInMap("RegionId")
     public String regionId;
 
+    // 保留参数。
     @NameInMap("ResourceList")
     public java.util.List<ModifyFlowJobRequestResourceList> resourceList;
 
+    // 重试策略，保留参数。
     @NameInMap("RetryPolicy")
     public String retryPolicy;
 
+    // 运行配置，取值如下：priority（优先级），userName（任务的Linux提交用户），memory（内存，单位为MB），cores（核数）
     @NameInMap("RunConf")
     public String runConf;
 
@@ -219,9 +238,11 @@ public class ModifyFlowJobRequest extends TeaModel {
     }
 
     public static class ModifyFlowJobRequestResourceList extends TeaModel {
+        // 保留参数。
         @NameInMap("Alias")
         public String alias;
 
+        // 保留参数。
         @NameInMap("Path")
         public String path;
 
