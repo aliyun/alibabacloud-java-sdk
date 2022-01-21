@@ -4,12 +4,15 @@ package com.aliyun.ddi20200617.models;
 import com.aliyun.tea.*;
 
 public class ResumeFlowRequest extends TeaModel {
+    // 工作流实例ID。您可以调用ListFlowInstance查看工作流ID。
     @NameInMap("FlowInstanceId")
     public String flowInstanceId;
 
+    // 项目ID。您可以调用ListFlowProject查看项目的ID。
     @NameInMap("ProjectId")
     public String projectId;
 
+    // 区域ID。您可以调用DescribeRegions查看最新的阿里云地域列表。
     @NameInMap("RegionId")
     public String regionId;
 

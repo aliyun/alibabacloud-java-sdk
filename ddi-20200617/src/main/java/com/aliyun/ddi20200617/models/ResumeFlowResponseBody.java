@@ -4,9 +4,11 @@ package com.aliyun.ddi20200617.models;
 import com.aliyun.tea.*;
 
 public class ResumeFlowResponseBody extends TeaModel {
+    // 返回执行结果。
     @NameInMap("Data")
     public Boolean data;
 
+    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 

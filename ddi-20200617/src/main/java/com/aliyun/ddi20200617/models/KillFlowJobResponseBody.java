@@ -4,9 +4,11 @@ package com.aliyun.ddi20200617.models;
 import com.aliyun.tea.*;
 
 public class KillFlowJobResponseBody extends TeaModel {
+    // 返回执行结果，包含如下：true（执行成功），false（执行失败）
     @NameInMap("Data")
     public Boolean data;
 
+    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 

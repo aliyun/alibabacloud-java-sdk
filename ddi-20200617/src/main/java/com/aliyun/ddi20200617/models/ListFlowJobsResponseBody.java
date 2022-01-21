@@ -7,15 +7,19 @@ public class ListFlowJobsResponseBody extends TeaModel {
     @NameInMap("JobList")
     public ListFlowJobsResponseBodyJobList jobList;
 
+    // 当前页数。
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // 每页的作业数量。
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
+    // 作业数量。
     @NameInMap("Total")
     public Integer total;
 
@@ -65,9 +69,11 @@ public class ListFlowJobsResponseBody extends TeaModel {
     }
 
     public static class ListFlowJobsResponseBodyJobListJobResourceListResource extends TeaModel {
+        // 保留参数。
         @NameInMap("Alias")
         public String alias;
 
+        // 保留参数。
         @NameInMap("Path")
         public String path;
 
@@ -114,66 +120,86 @@ public class ListFlowJobsResponseBody extends TeaModel {
     }
 
     public static class ListFlowJobsResponseBodyJobListJob extends TeaModel {
+        // 是否临时查询。
         @NameInMap("Adhoc")
         public String adhoc;
 
+        // 报警配置。
         @NameInMap("AlertConf")
         public String alertConf;
 
+        // 作业所在目录ID。
         @NameInMap("CategoryId")
         public String categoryId;
 
+        // 自定义变量。
         @NameInMap("CustomVariables")
         public String customVariables;
 
+        // 作业的描述。
         @NameInMap("Description")
         public String description;
 
+        // 环境变量设置。
         @NameInMap("EnvConf")
         public String envConf;
 
+        // 失败策略，可能的取值：CONTINUE（提过本次作业），STOP（停止作业）
         @NameInMap("FailAct")
         public String failAct;
 
+        // 创建时间。
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        // 最后修改时间。
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        // 作业ID。
         @NameInMap("Id")
         public String id;
 
+        // 最后一次执行的实例ID。
         @NameInMap("LastInstanceDetail")
         public String lastInstanceDetail;
 
+        // 最大重试次数。
         @NameInMap("MaxRetry")
         public Integer maxRetry;
 
+        // 模型模式，取值如下：  YARN：将作业包装成一个Launcher提交至YARN中执行，LOCAL：作业直接在机器上以进程方式运行。
         @NameInMap("Mode")
         public String mode;
 
+        // 监控配置，仅SPARK_STREAMING类型作业支持监控配置。
         @NameInMap("MonitorConf")
         public String monitorConf;
 
+        // 作业名称。
         @NameInMap("Name")
         public String name;
 
+        // 参数设置。
         @NameInMap("ParamConf")
         public String paramConf;
 
+        // 作业内容。
         @NameInMap("Params")
         public String params;
 
         @NameInMap("ResourceList")
         public ListFlowJobsResponseBodyJobListJobResourceList resourceList;
 
+        // 重试间隔 0~300（秒）。
         @NameInMap("RetryInterval")
         public Long retryInterval;
 
+        // 运行配置，取值如下：priority（优先级），userName（任务的Linux提交用户），memory（内存，单位为MB），cores（核数）
         @NameInMap("RunConf")
         public String runConf;
 
+        // 作业的类型，可能的取值有：SPARK，SPARK_STREAMING，ZEPPELIN
         @NameInMap("Type")
         public String type;
 

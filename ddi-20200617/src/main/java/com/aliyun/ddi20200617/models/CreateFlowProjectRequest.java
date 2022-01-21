@@ -7,18 +7,23 @@ public class CreateFlowProjectRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // 项目描述
     @NameInMap("Description")
     public String description;
 
+    // 项目名称
     @NameInMap("Name")
     public String name;
 
+    // 产品类型，固定值DATABRICKS_DATAINSIGHT
     @NameInMap("ProductType")
     public String productType;
 
+    // 地域ID
     @NameInMap("RegionId")
     public String regionId;
 
+    // 资源组ID
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

@@ -4,84 +4,110 @@ package com.aliyun.ddi20200617.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowJobResponseBody extends TeaModel {
+    // 是否临时查询。
     @NameInMap("Adhoc")
     public String adhoc;
 
+    // 报警配置。
     @NameInMap("AlertConf")
     public String alertConf;
 
+    // 作业所在目录ID。
     @NameInMap("CategoryId")
     public String categoryId;
 
+    // 自定义变量。
     @NameInMap("CustomVariables")
     public String customVariables;
 
+    // 作业的描述。
     @NameInMap("Description")
     public String description;
 
+    // 保留参数。
     @NameInMap("EditLockDetail")
     public String editLockDetail;
 
+    // 环境变量设置。
     @NameInMap("EnvConf")
     public String envConf;
 
+    // 失败策略，可能的取值：CONTINUE（提过本次作业），STOP（停止作业）
     @NameInMap("FailAct")
     public String failAct;
 
+    // 创建时间。
     @NameInMap("GmtCreate")
     public Long gmtCreate;
 
+    // 最后修改时间。
     @NameInMap("GmtModified")
     public Long gmtModified;
 
+    // 作业ID。
     @NameInMap("Id")
     public String id;
 
+    // Knox的用户密码，执行Zeppelin Notebook时必须提供。
     @NameInMap("KnoxPassword")
     public String knoxPassword;
 
+    // Knox的用户名，执行Zeppelin Notebook时必须提供。
     @NameInMap("KnoxUser")
     public String knoxUser;
 
+    // 最后一次执行的实例ID。
     @NameInMap("LastInstanceId")
     public String lastInstanceId;
 
+    // 最大重试次数。
     @NameInMap("MaxRetry")
     public Integer maxRetry;
 
+    // 保留参数。
     @NameInMap("MaxRunningTimeSec")
     public Long maxRunningTimeSec;
 
+    // 模型模式，取值如下：  YARN：将作业包装成一个Launcher提交至YARN中执行，LOCAL：作业直接在机器上以进程方式运行。
     @NameInMap("Mode")
     public String mode;
 
+    // 监控配置，仅SPARK_STREAMING类型作业支持监控配置。
     @NameInMap("MonitorConf")
     public String monitorConf;
 
+    // 作业名称。
     @NameInMap("Name")
     public String name;
 
+    // 参数设置。
     @NameInMap("ParamConf")
     public String paramConf;
 
+    // 作业内容。
     @NameInMap("Params")
     public String params;
 
+    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ResourceList")
     public DescribeFlowJobResponseBodyResourceList resourceList;
 
+    // 重试间隔 0~300（秒）。
     @NameInMap("RetryInterval")
     public Long retryInterval;
 
+    // 重试策略，保留参数。
     @NameInMap("RetryPolicy")
     public String retryPolicy;
 
+    // 运行配置，取值如下：priority（优先级），userName（任务的Linux提交用户），memory（内存，单位为MB），cores（核数）
     @NameInMap("RunConf")
     public String runConf;
 
+    // 作业的类型，可能的取值有：SPARK，SPARK_STREAMING，ZEPPELIN
     @NameInMap("Type")
     public String type;
 
@@ -307,9 +333,11 @@ public class DescribeFlowJobResponseBody extends TeaModel {
     }
 
     public static class DescribeFlowJobResponseBodyResourceListResource extends TeaModel {
+        // 保留参数。
         @NameInMap("Alias")
         public String alias;
 
+        // 保留参数。
         @NameInMap("Path")
         public String path;
 

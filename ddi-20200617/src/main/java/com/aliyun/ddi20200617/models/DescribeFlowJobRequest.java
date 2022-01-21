@@ -4,12 +4,15 @@ package com.aliyun.ddi20200617.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowJobRequest extends TeaModel {
+    // 作业ID。您可以调用ListFlowJob查看作业ID。
     @NameInMap("Id")
     public String id;
 
+    // 项目ID。您可以调用ListFlowProject查看项目的ID。
     @NameInMap("ProjectId")
     public String projectId;
 
+    // 地域ID。您可以调用DescribeRegions查看最新的阿里云地域列表。
     @NameInMap("RegionId")
     public String regionId;
 

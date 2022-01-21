@@ -4,15 +4,19 @@ package com.aliyun.ddi20200617.models;
 import com.aliyun.tea.*;
 
 public class SubmitFlowRequest extends TeaModel {
+    // 配置信息{"key":"value"}格式。  本示例中cyctime表示实际调度运行的时间（长整型时间戳）。
     @NameInMap("Conf")
     public String conf;
 
+    // 工作流ID。您可以调用ListFlowInstance查看工作流ID。
     @NameInMap("FlowId")
     public String flowId;
 
+    // 项目ID。您可以调用ListFlowProject查看项目的ID。
     @NameInMap("ProjectId")
     public String projectId;
 
+    // 地域ID。您可以调用DescribeRegions查看最新的阿里云地域列表。
     @NameInMap("RegionId")
     public String regionId;
 
