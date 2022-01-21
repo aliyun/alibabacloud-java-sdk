@@ -84,6 +84,9 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
         @NameInMap("SqlType")
         public String sqlType;
 
+        @NameInMap("TableNames")
+        public String tableNames;
+
         public static ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList build(java.util.Map<String, ?> map) throws Exception {
             ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList self = new ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList();
             return TeaModel.build(map, self);
@@ -135,6 +138,14 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
         }
         public String getSqlType() {
             return this.sqlType;
+        }
+
+        public ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList setTableNames(String tableNames) {
+            this.tableNames = tableNames;
+            return this;
+        }
+        public String getTableNames() {
+            return this.tableNames;
         }
 
     }
