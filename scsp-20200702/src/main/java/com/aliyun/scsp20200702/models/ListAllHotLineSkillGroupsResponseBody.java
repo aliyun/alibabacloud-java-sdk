@@ -108,6 +108,9 @@ public class ListAllHotLineSkillGroupsResponseBody extends TeaModel {
         @NameInMap("ConnId")
         public String connId;
 
+        @NameInMap("CustomerPhone")
+        public String customerPhone;
+
         @NameInMap("DisplayName")
         public String displayName;
 
@@ -152,6 +155,14 @@ public class ListAllHotLineSkillGroupsResponseBody extends TeaModel {
         }
         public String getConnId() {
             return this.connId;
+        }
+
+        public ListAllHotLineSkillGroupsResponseBodyDataSkillGroupAgentsAgents setCustomerPhone(String customerPhone) {
+            this.customerPhone = customerPhone;
+            return this;
+        }
+        public String getCustomerPhone() {
+            return this.customerPhone;
         }
 
         public ListAllHotLineSkillGroupsResponseBodyDataSkillGroupAgentsAgents setDisplayName(String displayName) {

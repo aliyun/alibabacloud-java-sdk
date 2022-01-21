@@ -1,3 +1,6 @@
+2022-01-21 Version: 1.9.17
+- Publish agent monitor Servicer.
+
 2022-01-12 Version: 1.9.16
 - Publish agent monitor Servicer.
 
