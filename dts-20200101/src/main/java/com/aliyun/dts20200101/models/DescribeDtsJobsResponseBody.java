@@ -25,9 +25,6 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    @NameInMap("JobType")
-    public String jobType;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -102,14 +99,6 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
-    }
-
-    public DescribeDtsJobsResponseBody setJobType(String jobType) {
-        this.jobType = jobType;
-        return this;
-    }
-    public String getJobType() {
-        return this.jobType;
     }
 
     public DescribeDtsJobsResponseBody setPageNumber(Integer pageNumber) {
@@ -1786,6 +1775,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        // DTS任务类型
+        @NameInMap("JobType")
+        public String jobType;
+
         @NameInMap("MigrationMode")
         public DescribeDtsJobsResponseBodyDtsJobListMigrationMode migrationMode;
 
@@ -1985,6 +1978,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setJobType(String jobType) {
+            this.jobType = jobType;
+            return this;
+        }
+        public String getJobType() {
+            return this.jobType;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setMigrationMode(DescribeDtsJobsResponseBodyDtsJobListMigrationMode migrationMode) {
@@ -3719,6 +3720,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        // DtsJob类型
+        @NameInMap("JobType")
+        public String jobType;
+
         @NameInMap("MigrationMode")
         public DescribeDtsJobsResponseBodyEtlDemoListMigrationMode migrationMode;
 
@@ -3918,6 +3923,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        public DescribeDtsJobsResponseBodyEtlDemoList setJobType(String jobType) {
+            this.jobType = jobType;
+            return this;
+        }
+        public String getJobType() {
+            return this.jobType;
         }
 
         public DescribeDtsJobsResponseBodyEtlDemoList setMigrationMode(DescribeDtsJobsResponseBodyEtlDemoListMigrationMode migrationMode) {
