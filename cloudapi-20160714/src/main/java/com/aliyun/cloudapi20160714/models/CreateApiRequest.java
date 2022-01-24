@@ -16,6 +16,12 @@ public class CreateApiRequest extends TeaModel {
     @NameInMap("AuthType")
     public String authType;
 
+    @NameInMap("BackendEnable")
+    public Boolean backendEnable;
+
+    @NameInMap("BackendId")
+    public String backendId;
+
     @NameInMap("ConstantParameters")
     public String constantParameters;
 
@@ -114,6 +120,22 @@ public class CreateApiRequest extends TeaModel {
     }
     public String getAuthType() {
         return this.authType;
+    }
+
+    public CreateApiRequest setBackendEnable(Boolean backendEnable) {
+        this.backendEnable = backendEnable;
+        return this;
+    }
+    public Boolean getBackendEnable() {
+        return this.backendEnable;
+    }
+
+    public CreateApiRequest setBackendId(String backendId) {
+        this.backendId = backendId;
+        return this;
+    }
+    public String getBackendId() {
+        return this.backendId;
     }
 
     public CreateApiRequest setConstantParameters(String constantParameters) {

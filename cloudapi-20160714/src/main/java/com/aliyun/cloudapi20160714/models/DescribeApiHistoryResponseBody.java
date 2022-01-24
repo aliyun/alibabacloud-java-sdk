@@ -19,6 +19,12 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
     @NameInMap("AuthType")
     public String authType;
 
+    @NameInMap("BackendConfig")
+    public DescribeApiHistoryResponseBodyBackendConfig backendConfig;
+
+    @NameInMap("BackendEnable")
+    public Boolean backendEnable;
+
     @NameInMap("ConstantParameters")
     public DescribeApiHistoryResponseBodyConstantParameters constantParameters;
 
@@ -146,6 +152,22 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
     }
     public String getAuthType() {
         return this.authType;
+    }
+
+    public DescribeApiHistoryResponseBody setBackendConfig(DescribeApiHistoryResponseBodyBackendConfig backendConfig) {
+        this.backendConfig = backendConfig;
+        return this;
+    }
+    public DescribeApiHistoryResponseBodyBackendConfig getBackendConfig() {
+        return this.backendConfig;
+    }
+
+    public DescribeApiHistoryResponseBody setBackendEnable(Boolean backendEnable) {
+        this.backendEnable = backendEnable;
+        return this;
+    }
+    public Boolean getBackendEnable() {
+        return this.backendEnable;
     }
 
     public DescribeApiHistoryResponseBody setConstantParameters(DescribeApiHistoryResponseBodyConstantParameters constantParameters) {
@@ -370,6 +392,47 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
     }
     public String getWebSocketApiType() {
         return this.webSocketApiType;
+    }
+
+    public static class DescribeApiHistoryResponseBodyBackendConfig extends TeaModel {
+        @NameInMap("BackendId")
+        public String backendId;
+
+        @NameInMap("BackendName")
+        public String backendName;
+
+        @NameInMap("BackendType")
+        public String backendType;
+
+        public static DescribeApiHistoryResponseBodyBackendConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApiHistoryResponseBodyBackendConfig self = new DescribeApiHistoryResponseBodyBackendConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApiHistoryResponseBodyBackendConfig setBackendId(String backendId) {
+            this.backendId = backendId;
+            return this;
+        }
+        public String getBackendId() {
+            return this.backendId;
+        }
+
+        public DescribeApiHistoryResponseBodyBackendConfig setBackendName(String backendName) {
+            this.backendName = backendName;
+            return this;
+        }
+        public String getBackendName() {
+            return this.backendName;
+        }
+
+        public DescribeApiHistoryResponseBodyBackendConfig setBackendType(String backendType) {
+            this.backendType = backendType;
+            return this;
+        }
+        public String getBackendType() {
+            return this.backendType;
+        }
+
     }
 
     public static class DescribeApiHistoryResponseBodyConstantParametersConstantParameter extends TeaModel {
