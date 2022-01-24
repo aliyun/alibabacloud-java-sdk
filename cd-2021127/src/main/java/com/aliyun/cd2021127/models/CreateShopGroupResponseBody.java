@@ -81,4 +81,48 @@ public class CreateShopGroupResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class BatchCreateShopGroupResponseBodyData extends TeaModel {
+        // 错误码
+        @NameInMap("Code")
+        public String code;
+
+        // 错误信息
+        @NameInMap("Message")
+        public String message;
+
+        // 门店组ID
+        @NameInMap("ShopGroupId")
+        public String shopGroupId;
+
+        public static BatchCreateShopGroupResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            BatchCreateShopGroupResponseBodyData self = new BatchCreateShopGroupResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public BatchCreateShopGroupResponseBodyData setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public BatchCreateShopGroupResponseBodyData setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public BatchCreateShopGroupResponseBodyData setShopGroupId(String shopGroupId) {
+            this.shopGroupId = shopGroupId;
+            return this;
+        }
+        public String getShopGroupId() {
+            return this.shopGroupId;
+        }
+
+    }
+
 }

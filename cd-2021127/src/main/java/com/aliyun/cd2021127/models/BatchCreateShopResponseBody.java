@@ -3,14 +3,14 @@ package com.aliyun.cd2021127.models;
 
 import com.aliyun.tea.*;
 
-public class CreateShopResponseBody extends TeaModel {
+public class BatchCreateShopResponseBody extends TeaModel {
     // 状态码
     @NameInMap("Code")
     public String code;
 
     // 业务数据
     @NameInMap("Data")
-    public java.util.List<String> data;
+    public java.util.List<BatchCreateShopResponseBodyData> data;
 
     // http状态码
     @NameInMap("HttpStatusCode")
@@ -28,12 +28,12 @@ public class CreateShopResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static CreateShopResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateShopResponseBody self = new CreateShopResponseBody();
+    public static BatchCreateShopResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        BatchCreateShopResponseBody self = new BatchCreateShopResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateShopResponseBody setCode(String code) {
+    public BatchCreateShopResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -41,15 +41,15 @@ public class CreateShopResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateShopResponseBody setData(java.util.List<String> data) {
+    public BatchCreateShopResponseBody setData(java.util.List<BatchCreateShopResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public java.util.List<String> getData() {
+    public java.util.List<BatchCreateShopResponseBodyData> getData() {
         return this.data;
     }
 
-    public CreateShopResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public BatchCreateShopResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -57,7 +57,7 @@ public class CreateShopResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public CreateShopResponseBody setMessage(String message) {
+    public BatchCreateShopResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -65,7 +65,7 @@ public class CreateShopResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateShopResponseBody setRequestId(String requestId) {
+    public BatchCreateShopResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -73,7 +73,7 @@ public class CreateShopResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateShopResponseBody setSuccess(Boolean success) {
+    public BatchCreateShopResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

@@ -1,3 +1,6 @@
+2022-01-24 Version: 1.0.7
+- Add BatchCreateShop,BatchCreateShopGroup,AddShopsToGroup,RemoveShopsFromGroup API.
+
 2022-01-13 Version: 1.0.6
 - Add ListShop,GetShop,UpdateShop,ListShopGroup,GetShopGroup API.
 
