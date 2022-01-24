@@ -19,6 +19,12 @@ public class DescribeApiResponseBody extends TeaModel {
     @NameInMap("AuthType")
     public String authType;
 
+    @NameInMap("BackendConfig")
+    public DescribeApiResponseBodyBackendConfig backendConfig;
+
+    @NameInMap("BackendEnable")
+    public Boolean backendEnable;
+
     @NameInMap("ConstantParameters")
     public DescribeApiResponseBodyConstantParameters constantParameters;
 
@@ -149,6 +155,22 @@ public class DescribeApiResponseBody extends TeaModel {
     }
     public String getAuthType() {
         return this.authType;
+    }
+
+    public DescribeApiResponseBody setBackendConfig(DescribeApiResponseBodyBackendConfig backendConfig) {
+        this.backendConfig = backendConfig;
+        return this;
+    }
+    public DescribeApiResponseBodyBackendConfig getBackendConfig() {
+        return this.backendConfig;
+    }
+
+    public DescribeApiResponseBody setBackendEnable(Boolean backendEnable) {
+        this.backendEnable = backendEnable;
+        return this;
+    }
+    public Boolean getBackendEnable() {
+        return this.backendEnable;
     }
 
     public DescribeApiResponseBody setConstantParameters(DescribeApiResponseBodyConstantParameters constantParameters) {
@@ -381,6 +403,47 @@ public class DescribeApiResponseBody extends TeaModel {
     }
     public String getWebSocketApiType() {
         return this.webSocketApiType;
+    }
+
+    public static class DescribeApiResponseBodyBackendConfig extends TeaModel {
+        @NameInMap("BackendId")
+        public String backendId;
+
+        @NameInMap("BackendName")
+        public String backendName;
+
+        @NameInMap("BackendType")
+        public String backendType;
+
+        public static DescribeApiResponseBodyBackendConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApiResponseBodyBackendConfig self = new DescribeApiResponseBodyBackendConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApiResponseBodyBackendConfig setBackendId(String backendId) {
+            this.backendId = backendId;
+            return this;
+        }
+        public String getBackendId() {
+            return this.backendId;
+        }
+
+        public DescribeApiResponseBodyBackendConfig setBackendName(String backendName) {
+            this.backendName = backendName;
+            return this;
+        }
+        public String getBackendName() {
+            return this.backendName;
+        }
+
+        public DescribeApiResponseBodyBackendConfig setBackendType(String backendType) {
+            this.backendType = backendType;
+            return this;
+        }
+        public String getBackendType() {
+            return this.backendType;
+        }
+
     }
 
     public static class DescribeApiResponseBodyConstantParametersConstantParameter extends TeaModel {
