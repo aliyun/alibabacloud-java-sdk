@@ -8,6 +8,10 @@ public class DoIntentionResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("body")
+    @Validation(required = true)
+    public java.util.Map<String, ?> body;
+
     public static DoIntentionResponse build(java.util.Map<String, ?> map) throws Exception {
         DoIntentionResponse self = new DoIntentionResponse();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class DoIntentionResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public DoIntentionResponse setBody(java.util.Map<String, ?> body) {
+        this.body = body;
+        return this;
+    }
+    public java.util.Map<String, ?> getBody() {
+        return this.body;
     }
 
 }
