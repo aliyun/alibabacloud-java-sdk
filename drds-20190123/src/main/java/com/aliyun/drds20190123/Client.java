@@ -1162,43 +1162,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDrdsDbRdsNameListWithOptions(request, runtime);
     }
 
-    public DescribeDrdsDbTasksResponse describeDrdsDbTasksWithOptions(DescribeDrdsDbTasksRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
-            query.put("DbName", request.dbName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.drdsInstanceId)) {
-            query.put("DrdsInstanceId", request.drdsInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
-            query.put("TaskType", request.taskType);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeDrdsDbTasks"),
-            new TeaPair("version", "2019-01-23"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDrdsDbTasksResponse());
-    }
-
-    public DescribeDrdsDbTasksResponse describeDrdsDbTasks(DescribeDrdsDbTasksRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeDrdsDbTasksWithOptions(request, runtime);
-    }
-
     public DescribeDrdsInstanceResponse describeDrdsInstanceWithOptions(DescribeDrdsInstanceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2273,59 +2236,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeShardTaskInfoResponse describeShardTaskInfo(DescribeShardTaskInfoRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeShardTaskInfoWithOptions(request, runtime);
-    }
-
-    public DescribeShardTaskListResponse describeShardTaskListWithOptions(DescribeShardTaskListRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
-            query.put("CurrentPage", request.currentPage);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
-            query.put("DbName", request.dbName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.drdsInstanceId)) {
-            query.put("DrdsInstanceId", request.drdsInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
-            query.put("Query", request.query);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
-            query.put("TaskType", request.taskType);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeShardTaskList"),
-            new TeaPair("version", "2019-01-23"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeShardTaskListResponse());
-    }
-
-    public DescribeShardTaskListResponse describeShardTaskList(DescribeShardTaskListRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeShardTaskListWithOptions(request, runtime);
     }
 
     public DescribeSqlFlashbakTaskResponse describeSqlFlashbakTaskWithOptions(DescribeSqlFlashbakTaskRequest request, RuntimeOptions runtime) throws Exception {
