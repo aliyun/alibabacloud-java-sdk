@@ -3,21 +3,21 @@ package com.aliyun.dysmsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class GetOSSInfoForCardTemplateResponse extends TeaModel {
+public class QuerySendStatisticsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetOSSInfoForCardTemplateResponseBody body;
+    public QuerySendStatisticsResponseBody body;
 
-    public static GetOSSInfoForCardTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetOSSInfoForCardTemplateResponse self = new GetOSSInfoForCardTemplateResponse();
+    public static QuerySendStatisticsResponse build(java.util.Map<String, ?> map) throws Exception {
+        QuerySendStatisticsResponse self = new QuerySendStatisticsResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetOSSInfoForCardTemplateResponse setHeaders(java.util.Map<String, String> headers) {
+    public QuerySendStatisticsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class GetOSSInfoForCardTemplateResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetOSSInfoForCardTemplateResponse setBody(GetOSSInfoForCardTemplateResponseBody body) {
+    public QuerySendStatisticsResponse setBody(QuerySendStatisticsResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetOSSInfoForCardTemplateResponseBody getBody() {
+    public QuerySendStatisticsResponseBody getBody() {
         return this.body;
     }
 

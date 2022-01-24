@@ -3,21 +3,21 @@ package com.aliyun.dysmsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class CreateCardSmsTemplateResponse extends TeaModel {
+public class QuerySmsSignListResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreateCardSmsTemplateResponseBody body;
+    public QuerySmsSignListResponseBody body;
 
-    public static CreateCardSmsTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateCardSmsTemplateResponse self = new CreateCardSmsTemplateResponse();
+    public static QuerySmsSignListResponse build(java.util.Map<String, ?> map) throws Exception {
+        QuerySmsSignListResponse self = new QuerySmsSignListResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateCardSmsTemplateResponse setHeaders(java.util.Map<String, String> headers) {
+    public QuerySmsSignListResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class CreateCardSmsTemplateResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateCardSmsTemplateResponse setBody(CreateCardSmsTemplateResponseBody body) {
+    public QuerySmsSignListResponse setBody(QuerySmsSignListResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateCardSmsTemplateResponseBody getBody() {
+    public QuerySmsSignListResponseBody getBody() {
         return this.body;
     }
 
