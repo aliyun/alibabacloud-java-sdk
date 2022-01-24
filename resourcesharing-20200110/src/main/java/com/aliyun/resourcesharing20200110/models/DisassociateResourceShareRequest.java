@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DisassociateResourceShareRequest extends TeaModel {
     @NameInMap("ResourceShareId")
-    @Validation(required = true)
     public String resourceShareId;
 
     @NameInMap("Resources")
