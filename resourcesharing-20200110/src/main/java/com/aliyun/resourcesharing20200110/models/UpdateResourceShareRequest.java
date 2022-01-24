@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateResourceShareRequest extends TeaModel {
     @NameInMap("ResourceShareId")
-    @Validation(required = true)
     public String resourceShareId;
 
     @NameInMap("ResourceShareName")
-    @Validation(required = true)
     public String resourceShareName;
 
     public static UpdateResourceShareRequest build(java.util.Map<String, ?> map) throws Exception {

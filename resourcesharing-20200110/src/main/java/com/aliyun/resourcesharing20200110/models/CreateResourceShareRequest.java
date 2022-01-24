@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateResourceShareRequest extends TeaModel {
     @NameInMap("ResourceShareName")
-    @Validation(required = true)
     public String resourceShareName;
 
     @NameInMap("Resources")
