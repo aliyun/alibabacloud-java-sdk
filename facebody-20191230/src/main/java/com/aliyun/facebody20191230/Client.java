@@ -50,8 +50,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.imagesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.images, "Images", "json");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            body.put("DbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraData)) {
+            body.put("ExtraData", request.extraData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imagesShrink)) {
+            body.put("Images", request.imagesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.personId)) {
+            body.put("PersonId", request.personId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "AddBodyTrace"),
@@ -74,8 +91,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public AddFaceResponse addFaceWithOptions(AddFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            body.put("DbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityId)) {
+            body.put("EntityId", request.entityId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraData)) {
+            body.put("ExtraData", request.extraData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
+            body.put("ImageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualityScoreThreshold)) {
+            body.put("QualityScoreThreshold", request.qualityScoreThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.similarityScoreThresholdBetweenEntity)) {
+            body.put("SimilarityScoreThresholdBetweenEntity", request.similarityScoreThresholdBetweenEntity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.similarityScoreThresholdInEntity)) {
+            body.put("SimilarityScoreThresholdInEntity", request.similarityScoreThresholdInEntity);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "AddFace"),
@@ -172,8 +218,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public AddFaceEntityResponse addFaceEntityWithOptions(AddFaceEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            body.put("DbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityId)) {
+            body.put("EntityId", request.entityId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
+            body.put("Labels", request.labels);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "AddFaceEntity"),
@@ -196,8 +255,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public AddFaceImageTemplateResponse addFaceImageTemplateWithOptions(AddFaceImageTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("UserId", request.userId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "AddFaceImageTemplate"),
@@ -300,8 +368,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.facesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.faces, "Faces", "json");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            body.put("DbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityId)) {
+            body.put("EntityId", request.entityId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.facesShrink)) {
+            body.put("Faces", request.facesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualityScoreThreshold)) {
+            body.put("QualityScoreThreshold", request.qualityScoreThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.similarityScoreThresholdBetweenEntity)) {
+            body.put("SimilarityScoreThresholdBetweenEntity", request.similarityScoreThresholdBetweenEntity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.similarityScoreThresholdInEntity)) {
+            body.put("SimilarityScoreThresholdInEntity", request.similarityScoreThresholdInEntity);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "BatchAddFaces"),
@@ -342,8 +435,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.poseListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.poseList, "PoseList", "json");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ageRangeShrink)) {
+            body.put("AgeRange", request.ageRangeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyBoxesShrink)) {
+            body.put("BodyBoxes", request.bodyBoxesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.custom)) {
+            body.put("Custom", request.custom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceListShrink)) {
+            body.put("FaceList", request.faceListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.femaleLiquifyDegree)) {
+            body.put("FemaleLiquifyDegree", request.femaleLiquifyDegree);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isPregnant)) {
+            body.put("IsPregnant", request.isPregnant);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lengthenDegree)) {
+            body.put("LengthenDegree", request.lengthenDegree);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maleLiquifyDegree)) {
+            body.put("MaleLiquifyDegree", request.maleLiquifyDegree);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalHeight)) {
+            body.put("OriginalHeight", request.originalHeight);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalWidth)) {
+            body.put("OriginalWidth", request.originalWidth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.poseListShrink)) {
+            body.put("PoseList", request.poseListShrink);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "BeautifyBody"),
@@ -440,8 +582,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public BlurFaceResponse blurFaceWithOptions(BlurFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "BlurFace"),
@@ -538,8 +685,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public BodyPostureResponse bodyPostureWithOptions(BodyPostureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "BodyPosture"),
@@ -636,8 +788,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CompareFaceResponse compareFaceWithOptions(CompareFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageDataA)) {
+            body.put("ImageDataA", request.imageDataA);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageDataB)) {
+            body.put("ImageDataB", request.imageDataB);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLA)) {
+            body.put("ImageURLA", request.imageURLA);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLB)) {
+            body.put("ImageURLB", request.imageURLB);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualityScoreThreshold)) {
+            body.put("QualityScoreThreshold", request.qualityScoreThreshold);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CompareFace"),
@@ -660,8 +833,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CountCrowdResponse countCrowdWithOptions(CountCrowdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isShow)) {
+            body.put("IsShow", request.isShow);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CountCrowd"),
@@ -758,8 +940,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateBodyDbResponse createBodyDbWithOptions(CreateBodyDbRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateBodyDb"),
@@ -782,8 +969,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateBodyPersonResponse createBodyPersonWithOptions(CreateBodyPersonRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            body.put("DbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateBodyPerson"),
@@ -806,8 +1002,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateFaceDbResponse createFaceDbWithOptions(CreateFaceDbRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateFaceDb"),
@@ -830,8 +1031,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteBodyDbResponse deleteBodyDbWithOptions(DeleteBodyDbRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteBodyDb"),
@@ -854,8 +1060,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteBodyPersonResponse deleteBodyPersonWithOptions(DeleteBodyPersonRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            body.put("DbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.personId)) {
+            body.put("PersonId", request.personId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteBodyPerson"),
@@ -878,8 +1093,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteFaceResponse deleteFaceWithOptions(DeleteFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            body.put("DbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceId)) {
+            body.put("FaceId", request.faceId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteFace"),
@@ -902,8 +1126,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteFaceDbResponse deleteFaceDbWithOptions(DeleteFaceDbRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteFaceDb"),
@@ -926,8 +1155,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteFaceEntityResponse deleteFaceEntityWithOptions(DeleteFaceEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            body.put("DbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityId)) {
+            body.put("EntityId", request.entityId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteFaceEntity"),
@@ -950,8 +1188,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteFaceImageTemplateResponse deleteFaceImageTemplateWithOptions(DeleteFaceImageTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            body.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("UserId", request.userId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteFaceImageTemplate"),
@@ -974,8 +1221,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DetectBodyCountResponse detectBodyCountWithOptions(DetectBodyCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DetectBodyCount"),
@@ -1072,8 +1324,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DetectCelebrityResponse detectCelebrityWithOptions(DetectCelebrityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DetectCelebrity"),
@@ -1170,8 +1427,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DetectChefCapResponse detectChefCapWithOptions(DetectChefCapRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DetectChefCap"),
@@ -1268,8 +1530,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DetectFaceResponse detectFaceWithOptions(DetectFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.landmark)) {
+            body.put("Landmark", request.landmark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxFaceNumber)) {
+            body.put("MaxFaceNumber", request.maxFaceNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pose)) {
+            body.put("Pose", request.pose);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quality)) {
+            body.put("Quality", request.quality);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DetectFace"),
@@ -1366,8 +1649,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DetectIPCPedestrianResponse detectIPCPedestrianWithOptions(DetectIPCPedestrianRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.height)) {
+            body.put("Height", request.height);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageData)) {
+            body.put("ImageData", request.imageData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.width)) {
+            body.put("Width", request.width);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DetectIPCPedestrian"),
@@ -1464,8 +1764,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DetectLivingFaceResponse detectLivingFaceWithOptions(DetectLivingFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tasks)) {
+            body.put("Tasks", request.tasks);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DetectLivingFace"),
@@ -1486,108 +1791,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detectLivingFaceWithOptions(request, runtime);
     }
 
-    public DetectMaskResponse detectMaskWithOptions(DetectMaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DetectMask"),
-            new TeaPair("version", "2019-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DetectMaskResponse());
-    }
-
-    public DetectMaskResponse detectMask(DetectMaskRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.detectMaskWithOptions(request, runtime);
-    }
-
-    public DetectMaskResponse detectMaskAdvance(DetectMaskAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        // Step 0: init client
-        String accessKeyId = _credential.getAccessKeyId();
-        String accessKeySecret = _credential.getAccessKeySecret();
-        String securityToken = _credential.getSecurityToken();
-        String credentialType = _credential.getType();
-        String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
-            openPlatformEndpoint = "openplatform.aliyuncs.com";
-        }
-
-        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
-            credentialType = "access_key";
-        }
-
-        com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", accessKeyId),
-            new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("securityToken", securityToken),
-            new TeaPair("type", credentialType),
-            new TeaPair("endpoint", openPlatformEndpoint),
-            new TeaPair("protocol", _protocol),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
-        AuthorizeFileUploadRequest authRequest = AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
-            new TeaPair("product", "facebody"),
-            new TeaPair("regionId", _regionId)
-        ));
-        AuthorizeFileUploadResponse authResponse = new AuthorizeFileUploadResponse();
-        com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("type", "access_key"),
-            new TeaPair("protocol", _protocol),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.oss.Client ossClient = null;
-        FileField fileObj = new FileField();
-        PostObjectRequest.PostObjectRequestHeader ossHeader = new PostObjectRequest.PostObjectRequestHeader();
-        PostObjectRequest uploadRequest = new PostObjectRequest();
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
-        DetectMaskRequest detectMaskReq = new DetectMaskRequest();
-        com.aliyun.openapiutil.Client.convert(request, detectMaskReq);
-        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
-            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-            ossConfig.accessKeyId = authResponse.accessKeyId;
-            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-            ossClient = new com.aliyun.oss.Client(ossConfig);
-            fileObj = FileField.build(TeaConverter.buildMap(
-                new TeaPair("filename", authResponse.objectKey),
-                new TeaPair("content", request.imageURLObject),
-                new TeaPair("contentType", "")
-            ));
-            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-                new TeaPair("accessKeyId", authResponse.accessKeyId),
-                new TeaPair("policy", authResponse.encodedPolicy),
-                new TeaPair("signature", authResponse.signature),
-                new TeaPair("key", authResponse.objectKey),
-                new TeaPair("file", fileObj),
-                new TeaPair("successActionStatus", "201")
-            ));
-            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-                new TeaPair("bucketName", authResponse.bucket),
-                new TeaPair("header", ossHeader)
-            ));
-            ossClient.postObject(uploadRequest, ossRuntime);
-            detectMaskReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        }
-
-        DetectMaskResponse detectMaskResp = this.detectMaskWithOptions(detectMaskReq, runtime);
-        return detectMaskResp;
-    }
-
     public DetectPedestrianResponse detectPedestrianWithOptions(DetectPedestrianRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DetectPedestrian"),
@@ -1690,8 +1902,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.detectRegionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.detectRegion, "DetectRegion", "json");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.detectRegionShrink)) {
+            body.put("DetectRegion", request.detectRegionShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionType)) {
+            body.put("RegionType", request.regionType);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DetectPedestrianIntrusion"),
@@ -1788,8 +2013,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DetectVideoLivingFaceResponse detectVideoLivingFaceWithOptions(DetectVideoLivingFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.videoUrl)) {
+            body.put("VideoUrl", request.videoUrl);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DetectVideoLivingFace"),
@@ -1886,8 +2116,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public EnhanceFaceResponse enhanceFaceWithOptions(EnhanceFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "EnhanceFace"),
@@ -1984,8 +2219,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ExtractFingerPrintResponse extractFingerPrintWithOptions(ExtractFingerPrintRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageData)) {
+            body.put("ImageData", request.imageData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ExtractFingerPrint"),
@@ -2082,8 +2326,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ExtractPedestrianFeatureAttrResponse extractPedestrianFeatureAttrWithOptions(ExtractPedestrianFeatureAttrRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            body.put("Mode", request.mode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceVersion)) {
+            body.put("ServiceVersion", request.serviceVersion);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ExtractPedestrianFeatureAttr"),
@@ -2180,8 +2437,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ExtractPedestrianFeatureAttributeResponse extractPedestrianFeatureAttributeWithOptions(ExtractPedestrianFeatureAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            body.put("Mode", request.mode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.urlList)) {
+            body.put("UrlList", request.urlList);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ExtractPedestrianFeatureAttribute"),
@@ -2204,8 +2474,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public FaceBeautyResponse faceBeautyWithOptions(FaceBeautyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sharp)) {
+            body.put("Sharp", request.sharp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smooth)) {
+            body.put("Smooth", request.smooth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.white)) {
+            body.put("White", request.white);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "FaceBeauty"),
@@ -2302,8 +2589,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public FaceFilterResponse faceFilterWithOptions(FaceFilterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strength)) {
+            body.put("Strength", request.strength);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "FaceFilter"),
@@ -2400,8 +2700,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public FaceMakeupResponse faceMakeupWithOptions(FaceMakeupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.makeupType)) {
+            body.put("MakeupType", request.makeupType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strength)) {
+            body.put("Strength", request.strength);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "FaceMakeup"),
@@ -2498,8 +2815,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public FaceTidyupResponse faceTidyupWithOptions(FaceTidyupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shapeType)) {
+            body.put("ShapeType", request.shapeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strength)) {
+            body.put("Strength", request.strength);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "FaceTidyup"),
@@ -2596,8 +2926,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GenRealPersonVerificationTokenResponse genRealPersonVerificationTokenWithOptions(GenRealPersonVerificationTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certificateName)) {
+            body.put("CertificateName", request.certificateName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certificateNumber)) {
+            body.put("CertificateNumber", request.certificateNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metaInfo)) {
+            body.put("MetaInfo", request.metaInfo);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GenRealPersonVerificationToken"),
@@ -2621,11 +2964,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenerateHumanAnimeStyleResponse generateHumanAnimeStyleWithOptions(GenerateHumanAnimeStyleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AlgoType", request.algoType);
-        query.put("ImageURL", request.imageURL);
+        if (!com.aliyun.teautil.Common.isUnset(request.algoType)) {
+            query.put("AlgoType", request.algoType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            query.put("ImageURL", request.imageURL);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GenerateHumanAnimeStyle"),
@@ -2635,7 +2983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateHumanAnimeStyleResponse());
@@ -2722,8 +3070,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GenerateHumanSketchStyleResponse generateHumanSketchStyleWithOptions(GenerateHumanSketchStyleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.returnType)) {
+            body.put("ReturnType", request.returnType);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GenerateHumanSketchStyle"),
@@ -2832,7 +3189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetBodyPersonResponse());
@@ -2845,8 +3202,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetFaceEntityResponse getFaceEntityWithOptions(GetFaceEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            body.put("DbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityId)) {
+            body.put("EntityId", request.entityId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetFaceEntity"),
@@ -2869,8 +3235,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetRealPersonVerificationResultResponse getRealPersonVerificationResultWithOptions(GetRealPersonVerificationResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.materialHash)) {
+            body.put("MaterialHash", request.materialHash);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.verificationToken)) {
+            body.put("VerificationToken", request.verificationToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetRealPersonVerificationResult"),
@@ -2893,8 +3268,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public HandPostureResponse handPostureWithOptions(HandPostureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "HandPosture"),
@@ -2991,8 +3371,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public LiquifyFaceResponse liquifyFaceWithOptions(LiquifyFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slimDegree)) {
+            body.put("SlimDegree", request.slimDegree);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "LiquifyFace"),
@@ -3101,7 +3490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListBodyDbsResponse());
@@ -3126,7 +3515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListBodyPersonResponse());
@@ -3147,7 +3536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListFaceDbsResponse());
@@ -3160,8 +3549,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListFaceEntitiesResponse listFaceEntitiesWithOptions(ListFaceEntitiesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            body.put("DbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityIdPrefix)) {
+            body.put("EntityIdPrefix", request.entityIdPrefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
+            body.put("Labels", request.labels);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            body.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            body.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            body.put("Token", request.token);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListFaceEntities"),
@@ -3184,8 +3602,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public MergeImageFaceResponse mergeImageFaceWithOptions(MergeImageFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            body.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("UserId", request.userId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "MergeImageFace"),
@@ -3282,8 +3713,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public MonitorExaminationResponse monitorExaminationWithOptions(MonitorExaminationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "MonitorExamination"),
@@ -3380,8 +3820,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public PedestrianDetectAttributeResponse pedestrianDetectAttributeWithOptions(PedestrianDetectAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PedestrianDetectAttribute"),
@@ -3490,7 +3935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryFaceImageTemplateResponse());
@@ -3503,8 +3948,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public RecognizeActionResponse recognizeActionWithOptions(RecognizeActionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.URLList)) {
+            body.put("URLList", request.URLList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoData)) {
+            body.put("VideoData", request.videoData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoUrl)) {
+            body.put("VideoUrl", request.videoUrl);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RecognizeAction"),
@@ -3527,8 +3989,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public RecognizeExpressionResponse recognizeExpressionWithOptions(RecognizeExpressionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RecognizeExpression"),
@@ -3625,8 +4092,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public RecognizeFaceResponse recognizeFaceWithOptions(RecognizeFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.age)) {
+            body.put("Age", request.age);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.beauty)) {
+            body.put("Beauty", request.beauty);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expression)) {
+            body.put("Expression", request.expression);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gender)) {
+            body.put("Gender", request.gender);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.glass)) {
+            body.put("Glass", request.glass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hat)) {
+            body.put("Hat", request.hat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mask)) {
+            body.put("Mask", request.mask);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxFaceNumber)) {
+            body.put("MaxFaceNumber", request.maxFaceNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quality)) {
+            body.put("Quality", request.quality);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RecognizeFace"),
@@ -3723,8 +4231,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public RecognizeHandGestureResponse recognizeHandGestureWithOptions(RecognizeHandGestureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gestureType)) {
+            body.put("GestureType", request.gestureType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RecognizeHandGesture"),
@@ -3821,8 +4342,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public RecognizePublicFaceResponse recognizePublicFaceWithOptions(RecognizePublicFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.task)) {
+            body.put("Task", request.task);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RecognizePublicFace"),
@@ -3845,8 +4371,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public RetouchBodyResponse retouchBodyWithOptions(RetouchBodyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lengthenDegree)) {
+            body.put("LengthenDegree", request.lengthenDegree);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slimDegree)) {
+            body.put("SlimDegree", request.slimDegree);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RetouchBody"),
@@ -3943,8 +4482,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public RetouchSkinResponse retouchSkinWithOptions(RetouchSkinRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retouchDegree)) {
+            body.put("RetouchDegree", request.retouchDegree);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whiteningDegree)) {
+            body.put("WhiteningDegree", request.whiteningDegree);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RetouchSkin"),
@@ -4047,8 +4599,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.imagesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.images, "Images", "json");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            body.put("DbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imagesShrink)) {
+            body.put("Images", request.imagesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minScore)) {
+            body.put("MinScore", request.minScore);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SearchBodyTrace"),
@@ -4071,8 +4640,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public SearchFaceResponse searchFaceWithOptions(SearchFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            body.put("DbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbNames)) {
+            body.put("DbNames", request.dbNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
+            body.put("ImageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxFaceNum)) {
+            body.put("MaxFaceNum", request.maxFaceNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualityScoreThreshold)) {
+            body.put("QualityScoreThreshold", request.qualityScoreThreshold);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SearchFace"),
@@ -4169,8 +4763,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public SwapFacialFeaturesResponse swapFacialFeaturesWithOptions(SwapFacialFeaturesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.editPart)) {
+            body.put("EditPart", request.editPart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceImageData)) {
+            body.put("SourceImageData", request.sourceImageData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceImageURL)) {
+            body.put("SourceImageURL", request.sourceImageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetImageData)) {
+            body.put("TargetImageData", request.targetImageData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetImageURL)) {
+            body.put("TargetImageURL", request.targetImageURL);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SwapFacialFeatures"),
@@ -4193,8 +4808,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateFaceEntityResponse updateFaceEntityWithOptions(UpdateFaceEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            body.put("DbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityId)) {
+            body.put("EntityId", request.entityId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
+            body.put("Labels", request.labels);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateFaceEntity"),
@@ -4217,8 +4845,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public VerifyFaceMaskResponse verifyFaceMaskWithOptions(VerifyFaceMaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageData)) {
+            body.put("ImageData", request.imageData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
+            body.put("ImageURL", request.imageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.refData)) {
+            body.put("RefData", request.refData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.refUrl)) {
+            body.put("RefUrl", request.refUrl);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "VerifyFaceMask"),
