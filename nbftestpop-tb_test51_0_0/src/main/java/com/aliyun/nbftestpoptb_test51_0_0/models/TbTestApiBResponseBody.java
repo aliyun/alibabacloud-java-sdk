@@ -23,7 +23,7 @@ public class TbTestApiBResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("result")
-    public String result;
+    public TbTestApiBResponseBodyResult result;
 
     @NameInMap("success")
     public Boolean success;
@@ -87,11 +87,11 @@ public class TbTestApiBResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public TbTestApiBResponseBody setResult(String result) {
+    public TbTestApiBResponseBody setResult(TbTestApiBResponseBodyResult result) {
         this.result = result;
         return this;
     }
-    public String getResult() {
+    public TbTestApiBResponseBodyResult getResult() {
         return this.result;
     }
 
@@ -117,6 +117,25 @@ public class TbTestApiBResponseBody extends TeaModel {
     }
     public Integer getTotalPage() {
         return this.totalPage;
+    }
+
+    public static class TbTestApiBResponseBodyResult extends TeaModel {
+        @NameInMap("test")
+        public String test;
+
+        public static TbTestApiBResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
+            TbTestApiBResponseBodyResult self = new TbTestApiBResponseBodyResult();
+            return TeaModel.build(map, self);
+        }
+
+        public TbTestApiBResponseBodyResult setTest(String test) {
+            this.test = test;
+            return this;
+        }
+        public String getTest() {
+            return this.test;
+        }
+
     }
 
 }
