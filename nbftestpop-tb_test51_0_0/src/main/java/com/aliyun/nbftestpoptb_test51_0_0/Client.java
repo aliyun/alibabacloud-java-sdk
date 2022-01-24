@@ -78,6 +78,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TbTestApiBResponse tbTestApiBWithOptions(TbTestApiBRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.dto))) {
+            body.put("dto", request.dto);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             body.put("id", request.id);
         }

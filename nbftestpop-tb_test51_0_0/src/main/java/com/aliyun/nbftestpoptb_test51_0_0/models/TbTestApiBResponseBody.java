@@ -120,12 +120,45 @@ public class TbTestApiBResponseBody extends TeaModel {
     }
 
     public static class TbTestApiBResponseBodyResult extends TeaModel {
+        @NameInMap("big")
+        public Float big;
+
+        @NameInMap("date")
+        public Long date;
+
+        @NameInMap("dou")
+        public Float dou;
+
         @NameInMap("test")
         public String test;
 
         public static TbTestApiBResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             TbTestApiBResponseBodyResult self = new TbTestApiBResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public TbTestApiBResponseBodyResult setBig(Float big) {
+            this.big = big;
+            return this;
+        }
+        public Float getBig() {
+            return this.big;
+        }
+
+        public TbTestApiBResponseBodyResult setDate(Long date) {
+            this.date = date;
+            return this;
+        }
+        public Long getDate() {
+            return this.date;
+        }
+
+        public TbTestApiBResponseBodyResult setDou(Float dou) {
+            this.dou = dou;
+            return this;
+        }
+        public Float getDou() {
+            return this.dou;
         }
 
         public TbTestApiBResponseBodyResult setTest(String test) {
