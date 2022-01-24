@@ -10,6 +10,9 @@ public class ListInstanceVncUrlResponseBody extends TeaModel {
     @NameInMap("VncUrl")
     public String vncUrl;
 
+    @NameInMap("WebRtcToken")
+    public String webRtcToken;
+
     public static ListInstanceVncUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceVncUrlResponseBody self = new ListInstanceVncUrlResponseBody();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ListInstanceVncUrlResponseBody extends TeaModel {
     }
     public String getVncUrl() {
         return this.vncUrl;
+    }
+
+    public ListInstanceVncUrlResponseBody setWebRtcToken(String webRtcToken) {
+        this.webRtcToken = webRtcToken;
+        return this;
+    }
+    public String getWebRtcToken() {
+        return this.webRtcToken;
     }
 
 }
