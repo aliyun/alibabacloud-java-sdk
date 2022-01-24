@@ -3,14 +3,14 @@ package com.aliyun.cd2021127.models;
 
 import com.aliyun.tea.*;
 
-public class CreateShopResponseBody extends TeaModel {
+public class BatchCreateShopGroupResponseBody extends TeaModel {
     // 状态码
     @NameInMap("Code")
     public String code;
 
     // 业务数据
     @NameInMap("Data")
-    public java.util.List<String> data;
+    public java.util.List<BatchCreateShopGroupResponseBodyData> data;
 
     // http状态码
     @NameInMap("HttpStatusCode")
@@ -28,12 +28,12 @@ public class CreateShopResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static CreateShopResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateShopResponseBody self = new CreateShopResponseBody();
+    public static BatchCreateShopGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        BatchCreateShopGroupResponseBody self = new BatchCreateShopGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateShopResponseBody setCode(String code) {
+    public BatchCreateShopGroupResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -41,15 +41,15 @@ public class CreateShopResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateShopResponseBody setData(java.util.List<String> data) {
+    public BatchCreateShopGroupResponseBody setData(java.util.List<BatchCreateShopGroupResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public java.util.List<String> getData() {
+    public java.util.List<BatchCreateShopGroupResponseBodyData> getData() {
         return this.data;
     }
 
-    public CreateShopResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public BatchCreateShopGroupResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -57,7 +57,7 @@ public class CreateShopResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public CreateShopResponseBody setMessage(String message) {
+    public BatchCreateShopGroupResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -65,7 +65,7 @@ public class CreateShopResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateShopResponseBody setRequestId(String requestId) {
+    public BatchCreateShopGroupResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -73,7 +73,7 @@ public class CreateShopResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateShopResponseBody setSuccess(Boolean success) {
+    public BatchCreateShopGroupResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -81,7 +81,7 @@ public class CreateShopResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class BatchCreateShopResponseBodyData extends TeaModel {
+    public static class BatchCreateShopGroupResponseBodyData extends TeaModel {
         // 错误码
         @NameInMap("Code")
         public String code;
@@ -90,16 +90,16 @@ public class CreateShopResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
-        // 门店ID
-        @NameInMap("ShopId")
-        public String shopId;
+        // 门店组ID
+        @NameInMap("ShopGroupId")
+        public String shopGroupId;
 
-        public static BatchCreateShopResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            BatchCreateShopResponseBodyData self = new BatchCreateShopResponseBodyData();
+        public static BatchCreateShopGroupResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            BatchCreateShopGroupResponseBodyData self = new BatchCreateShopGroupResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public BatchCreateShopResponseBodyData setCode(String code) {
+        public BatchCreateShopGroupResponseBodyData setCode(String code) {
             this.code = code;
             return this;
         }
@@ -107,7 +107,7 @@ public class CreateShopResponseBody extends TeaModel {
             return this.code;
         }
 
-        public BatchCreateShopResponseBodyData setMessage(String message) {
+        public BatchCreateShopGroupResponseBodyData setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -115,12 +115,12 @@ public class CreateShopResponseBody extends TeaModel {
             return this.message;
         }
 
-        public BatchCreateShopResponseBodyData setShopId(String shopId) {
-            this.shopId = shopId;
+        public BatchCreateShopGroupResponseBodyData setShopGroupId(String shopGroupId) {
+            this.shopGroupId = shopGroupId;
             return this;
         }
-        public String getShopId() {
-            return this.shopId;
+        public String getShopGroupId() {
+            return this.shopGroupId;
         }
 
     }
