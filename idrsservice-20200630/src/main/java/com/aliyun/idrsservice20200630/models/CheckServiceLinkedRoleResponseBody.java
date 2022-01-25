@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class CheckServiceLinkedRoleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public CheckServiceLinkedRoleResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public CheckServiceLinkedRoleResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static CheckServiceLinkedRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CheckServiceLinkedRoleResponseBody self = new CheckServiceLinkedRoleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CheckServiceLinkedRoleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CheckServiceLinkedRoleResponseBody setData(CheckServiceLinkedRoleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CheckServiceLinkedRoleResponseBodyData getData() {
+        return this.data;
     }
 
     public CheckServiceLinkedRoleResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CheckServiceLinkedRoleResponseBody setData(CheckServiceLinkedRoleResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CheckServiceLinkedRoleResponseBodyData getData() {
-        return this.data;
-    }
-
-    public CheckServiceLinkedRoleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class CheckServiceLinkedRoleResponseBodyData extends TeaModel {

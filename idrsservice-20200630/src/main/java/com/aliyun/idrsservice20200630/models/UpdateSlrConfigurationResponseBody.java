@@ -4,18 +4,26 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class UpdateSlrConfigurationResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     public static UpdateSlrConfigurationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateSlrConfigurationResponseBody self = new UpdateSlrConfigurationResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateSlrConfigurationResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public UpdateSlrConfigurationResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class UpdateSlrConfigurationResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UpdateSlrConfigurationResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

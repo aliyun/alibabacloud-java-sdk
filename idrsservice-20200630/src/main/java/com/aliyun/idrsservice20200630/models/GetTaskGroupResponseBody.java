@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class GetTaskGroupResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetTaskGroupResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetTaskGroupResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static GetTaskGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTaskGroupResponseBody self = new GetTaskGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetTaskGroupResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetTaskGroupResponseBody setData(GetTaskGroupResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetTaskGroupResponseBodyData getData() {
+        return this.data;
     }
 
     public GetTaskGroupResponseBody setMessage(String message) {
@@ -37,43 +53,18 @@ public class GetTaskGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetTaskGroupResponseBody setData(GetTaskGroupResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetTaskGroupResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetTaskGroupResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class GetTaskGroupResponseBodyData extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("CompletedTasks")
         public Integer completedTasks;
-
-        @NameInMap("TotalTasks")
-        public Integer totalTasks;
 
         @NameInMap("CreatedAt")
         public String createdAt;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("TaskIds")
-        public java.util.List<String> taskIds;
-
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("RuleId")
         public String ruleId;
@@ -81,17 +72,18 @@ public class GetTaskGroupResponseBody extends TeaModel {
         @NameInMap("RuleName")
         public String ruleName;
 
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TaskIds")
+        public java.util.List<String> taskIds;
+
+        @NameInMap("TotalTasks")
+        public Integer totalTasks;
+
         public static GetTaskGroupResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetTaskGroupResponseBodyData self = new GetTaskGroupResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetTaskGroupResponseBodyData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public GetTaskGroupResponseBodyData setCompletedTasks(Integer completedTasks) {
@@ -102,14 +94,6 @@ public class GetTaskGroupResponseBody extends TeaModel {
             return this.completedTasks;
         }
 
-        public GetTaskGroupResponseBodyData setTotalTasks(Integer totalTasks) {
-            this.totalTasks = totalTasks;
-            return this;
-        }
-        public Integer getTotalTasks() {
-            return this.totalTasks;
-        }
-
         public GetTaskGroupResponseBodyData setCreatedAt(String createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -118,28 +102,20 @@ public class GetTaskGroupResponseBody extends TeaModel {
             return this.createdAt;
         }
 
-        public GetTaskGroupResponseBodyData setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public GetTaskGroupResponseBodyData setTaskIds(java.util.List<String> taskIds) {
-            this.taskIds = taskIds;
-            return this;
-        }
-        public java.util.List<String> getTaskIds() {
-            return this.taskIds;
-        }
-
         public GetTaskGroupResponseBodyData setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public GetTaskGroupResponseBodyData setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public GetTaskGroupResponseBodyData setRuleId(String ruleId) {
@@ -156,6 +132,30 @@ public class GetTaskGroupResponseBody extends TeaModel {
         }
         public String getRuleName() {
             return this.ruleName;
+        }
+
+        public GetTaskGroupResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetTaskGroupResponseBodyData setTaskIds(java.util.List<String> taskIds) {
+            this.taskIds = taskIds;
+            return this;
+        }
+        public java.util.List<String> getTaskIds() {
+            return this.taskIds;
+        }
+
+        public GetTaskGroupResponseBodyData setTotalTasks(Integer totalTasks) {
+            this.totalTasks = totalTasks;
+            return this;
+        }
+        public Integer getTotalTasks() {
+            return this.totalTasks;
         }
 
     }

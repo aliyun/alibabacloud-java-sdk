@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class ListDetectProcessesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ListDetectProcessesResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public ListDetectProcessesResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static ListDetectProcessesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDetectProcessesResponseBody self = new ListDetectProcessesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListDetectProcessesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListDetectProcessesResponseBody setData(ListDetectProcessesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListDetectProcessesResponseBodyData getData() {
+        return this.data;
     }
 
     public ListDetectProcessesResponseBody setMessage(String message) {
@@ -37,109 +53,45 @@ public class ListDetectProcessesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListDetectProcessesResponseBody setData(ListDetectProcessesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListDetectProcessesResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListDetectProcessesResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class ListDetectProcessesResponseBodyDataItems extends TeaModel {
-        @NameInMap("Draft")
-        public String draft;
+        @NameInMap("Content")
+        public String content;
 
-        @NameInMap("FileUrl")
-        public String fileUrl;
+        // 发布时间
+        @NameInMap("ContentAt")
+        public String contentAt;
 
         @NameInMap("CreatedAt")
         public String createdAt;
 
-        @NameInMap("Md5")
-        public String md5;
+        @NameInMap("Draft")
+        public String draft;
 
-        @NameInMap("UpdatedAt")
-        public String updatedAt;
+        // 保存时间
+        @NameInMap("DraftAt")
+        public String draftAt;
 
-        @NameInMap("NewVersion")
-        public Boolean newVersion;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Content")
-        public String content;
+        @NameInMap("FileUrl")
+        public String fileUrl;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("Md5")
+        public String md5;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("NewVersion")
+        public Boolean newVersion;
+
+        @NameInMap("UpdatedAt")
+        public String updatedAt;
+
         public static ListDetectProcessesResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             ListDetectProcessesResponseBodyDataItems self = new ListDetectProcessesResponseBodyDataItems();
             return TeaModel.build(map, self);
-        }
-
-        public ListDetectProcessesResponseBodyDataItems setDraft(String draft) {
-            this.draft = draft;
-            return this;
-        }
-        public String getDraft() {
-            return this.draft;
-        }
-
-        public ListDetectProcessesResponseBodyDataItems setFileUrl(String fileUrl) {
-            this.fileUrl = fileUrl;
-            return this;
-        }
-        public String getFileUrl() {
-            return this.fileUrl;
-        }
-
-        public ListDetectProcessesResponseBodyDataItems setCreatedAt(String createdAt) {
-            this.createdAt = createdAt;
-            return this;
-        }
-        public String getCreatedAt() {
-            return this.createdAt;
-        }
-
-        public ListDetectProcessesResponseBodyDataItems setMd5(String md5) {
-            this.md5 = md5;
-            return this;
-        }
-        public String getMd5() {
-            return this.md5;
-        }
-
-        public ListDetectProcessesResponseBodyDataItems setUpdatedAt(String updatedAt) {
-            this.updatedAt = updatedAt;
-            return this;
-        }
-        public String getUpdatedAt() {
-            return this.updatedAt;
-        }
-
-        public ListDetectProcessesResponseBodyDataItems setNewVersion(Boolean newVersion) {
-            this.newVersion = newVersion;
-            return this;
-        }
-        public Boolean getNewVersion() {
-            return this.newVersion;
-        }
-
-        public ListDetectProcessesResponseBodyDataItems setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public ListDetectProcessesResponseBodyDataItems setContent(String content) {
@@ -150,6 +102,46 @@ public class ListDetectProcessesResponseBody extends TeaModel {
             return this.content;
         }
 
+        public ListDetectProcessesResponseBodyDataItems setContentAt(String contentAt) {
+            this.contentAt = contentAt;
+            return this;
+        }
+        public String getContentAt() {
+            return this.contentAt;
+        }
+
+        public ListDetectProcessesResponseBodyDataItems setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
+            return this;
+        }
+        public String getCreatedAt() {
+            return this.createdAt;
+        }
+
+        public ListDetectProcessesResponseBodyDataItems setDraft(String draft) {
+            this.draft = draft;
+            return this;
+        }
+        public String getDraft() {
+            return this.draft;
+        }
+
+        public ListDetectProcessesResponseBodyDataItems setDraftAt(String draftAt) {
+            this.draftAt = draftAt;
+            return this;
+        }
+        public String getDraftAt() {
+            return this.draftAt;
+        }
+
+        public ListDetectProcessesResponseBodyDataItems setFileUrl(String fileUrl) {
+            this.fileUrl = fileUrl;
+            return this;
+        }
+        public String getFileUrl() {
+            return this.fileUrl;
+        }
+
         public ListDetectProcessesResponseBodyDataItems setId(String id) {
             this.id = id;
             return this;
@@ -158,17 +150,49 @@ public class ListDetectProcessesResponseBody extends TeaModel {
             return this.id;
         }
 
+        public ListDetectProcessesResponseBodyDataItems setMd5(String md5) {
+            this.md5 = md5;
+            return this;
+        }
+        public String getMd5() {
+            return this.md5;
+        }
+
+        public ListDetectProcessesResponseBodyDataItems setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListDetectProcessesResponseBodyDataItems setNewVersion(Boolean newVersion) {
+            this.newVersion = newVersion;
+            return this;
+        }
+        public Boolean getNewVersion() {
+            return this.newVersion;
+        }
+
+        public ListDetectProcessesResponseBodyDataItems setUpdatedAt(String updatedAt) {
+            this.updatedAt = updatedAt;
+            return this;
+        }
+        public String getUpdatedAt() {
+            return this.updatedAt;
+        }
+
     }
 
     public static class ListDetectProcessesResponseBodyData extends TeaModel {
         @NameInMap("Items")
         public java.util.List<ListDetectProcessesResponseBodyDataItems> items;
 
-        @NameInMap("TotalPages")
-        public Integer totalPages;
-
         @NameInMap("TotalElements")
         public Long totalElements;
+
+        @NameInMap("TotalPages")
+        public Integer totalPages;
 
         public static ListDetectProcessesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListDetectProcessesResponseBodyData self = new ListDetectProcessesResponseBodyData();
@@ -183,20 +207,20 @@ public class ListDetectProcessesResponseBody extends TeaModel {
             return this.items;
         }
 
-        public ListDetectProcessesResponseBodyData setTotalPages(Integer totalPages) {
-            this.totalPages = totalPages;
-            return this;
-        }
-        public Integer getTotalPages() {
-            return this.totalPages;
-        }
-
         public ListDetectProcessesResponseBodyData setTotalElements(Long totalElements) {
             this.totalElements = totalElements;
             return this;
         }
         public Long getTotalElements() {
             return this.totalElements;
+        }
+
+        public ListDetectProcessesResponseBodyData setTotalPages(Integer totalPages) {
+            this.totalPages = totalPages;
+            return this;
+        }
+        public Integer getTotalPages() {
+            return this.totalPages;
         }
 
     }

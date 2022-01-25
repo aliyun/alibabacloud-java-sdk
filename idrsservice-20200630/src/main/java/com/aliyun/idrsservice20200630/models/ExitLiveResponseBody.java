@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class ExitLiveResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ExitLiveResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public ExitLiveResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static ExitLiveResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ExitLiveResponseBody self = new ExitLiveResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ExitLiveResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ExitLiveResponseBody setData(ExitLiveResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ExitLiveResponseBodyData getData() {
+        return this.data;
     }
 
     public ExitLiveResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class ExitLiveResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ExitLiveResponseBody setData(ExitLiveResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ExitLiveResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ExitLiveResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class ExitLiveResponseBodyData extends TeaModel {

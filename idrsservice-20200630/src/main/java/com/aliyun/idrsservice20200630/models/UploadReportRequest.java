@@ -1,0 +1,145 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.idrsservice20200630.models;
+
+import com.aliyun.tea.*;
+
+public class UploadReportRequest extends TeaModel {
+    @NameInMap("AppId")
+    public String appId;
+
+    @NameInMap("ClientVersion")
+    public String clientVersion;
+
+    @NameInMap("DepartmentId")
+    public String departmentId;
+
+    @NameInMap("DetectProcessId")
+    public String detectProcessId;
+
+    @NameInMap("Duration")
+    public Long duration;
+
+    @NameInMap("MetaUrl")
+    public String metaUrl;
+
+    // yyyy-MM-dd hh:mm:ss
+    @NameInMap("RecordAt")
+    public String recordAt;
+
+    @NameInMap("ResultUrl")
+    public String resultUrl;
+
+    @NameInMap("RoomId")
+    public String roomId;
+
+    @NameInMap("Type")
+    public String type;
+
+    @NameInMap("UserId")
+    public String userId;
+
+    @NameInMap("VideoUrl")
+    public String videoUrl;
+
+    public static UploadReportRequest build(java.util.Map<String, ?> map) throws Exception {
+        UploadReportRequest self = new UploadReportRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public UploadReportRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public UploadReportRequest setClientVersion(String clientVersion) {
+        this.clientVersion = clientVersion;
+        return this;
+    }
+    public String getClientVersion() {
+        return this.clientVersion;
+    }
+
+    public UploadReportRequest setDepartmentId(String departmentId) {
+        this.departmentId = departmentId;
+        return this;
+    }
+    public String getDepartmentId() {
+        return this.departmentId;
+    }
+
+    public UploadReportRequest setDetectProcessId(String detectProcessId) {
+        this.detectProcessId = detectProcessId;
+        return this;
+    }
+    public String getDetectProcessId() {
+        return this.detectProcessId;
+    }
+
+    public UploadReportRequest setDuration(Long duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Long getDuration() {
+        return this.duration;
+    }
+
+    public UploadReportRequest setMetaUrl(String metaUrl) {
+        this.metaUrl = metaUrl;
+        return this;
+    }
+    public String getMetaUrl() {
+        return this.metaUrl;
+    }
+
+    public UploadReportRequest setRecordAt(String recordAt) {
+        this.recordAt = recordAt;
+        return this;
+    }
+    public String getRecordAt() {
+        return this.recordAt;
+    }
+
+    public UploadReportRequest setResultUrl(String resultUrl) {
+        this.resultUrl = resultUrl;
+        return this;
+    }
+    public String getResultUrl() {
+        return this.resultUrl;
+    }
+
+    public UploadReportRequest setRoomId(String roomId) {
+        this.roomId = roomId;
+        return this;
+    }
+    public String getRoomId() {
+        return this.roomId;
+    }
+
+    public UploadReportRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
+    public UploadReportRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
+    }
+
+    public UploadReportRequest setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
+        return this;
+    }
+    public String getVideoUrl() {
+        return this.videoUrl;
+    }
+
+}

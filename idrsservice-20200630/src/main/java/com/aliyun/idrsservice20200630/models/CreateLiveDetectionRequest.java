@@ -4,24 +4,32 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateLiveDetectionRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("LiveId")
     public String liveId;
-
-    @NameInMap("UserId")
-    public String userId;
-
-    @NameInMap("RuleId")
-    public String ruleId;
 
     @NameInMap("MetaUrl")
     public String metaUrl;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("RuleId")
+    public String ruleId;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static CreateLiveDetectionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLiveDetectionRequest self = new CreateLiveDetectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLiveDetectionRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateLiveDetectionRequest setLiveId(String liveId) {
@@ -32,12 +40,12 @@ public class CreateLiveDetectionRequest extends TeaModel {
         return this.liveId;
     }
 
-    public CreateLiveDetectionRequest setUserId(String userId) {
-        this.userId = userId;
+    public CreateLiveDetectionRequest setMetaUrl(String metaUrl) {
+        this.metaUrl = metaUrl;
         return this;
     }
-    public String getUserId() {
-        return this.userId;
+    public String getMetaUrl() {
+        return this.metaUrl;
     }
 
     public CreateLiveDetectionRequest setRuleId(String ruleId) {
@@ -48,20 +56,12 @@ public class CreateLiveDetectionRequest extends TeaModel {
         return this.ruleId;
     }
 
-    public CreateLiveDetectionRequest setMetaUrl(String metaUrl) {
-        this.metaUrl = metaUrl;
+    public CreateLiveDetectionRequest setUserId(String userId) {
+        this.userId = userId;
         return this;
     }
-    public String getMetaUrl() {
-        return this.metaUrl;
-    }
-
-    public CreateLiveDetectionRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getUserId() {
+        return this.userId;
     }
 
 }

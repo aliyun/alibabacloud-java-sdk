@@ -7,14 +7,14 @@ public class UpdateDepartmentRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Id")
+    public String id;
+
     @NameInMap("Label")
     public String label;
 
     @NameInMap("Name")
     public String name;
-
-    @NameInMap("Id")
-    public String id;
 
     public static UpdateDepartmentRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDepartmentRequest self = new UpdateDepartmentRequest();
@@ -27,6 +27,14 @@ public class UpdateDepartmentRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateDepartmentRequest setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
     public UpdateDepartmentRequest setLabel(String label) {
@@ -43,14 +51,6 @@ public class UpdateDepartmentRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public UpdateDepartmentRequest setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
     }
 
 }

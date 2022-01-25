@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class GetStatisticsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetStatisticsResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetStatisticsResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static GetStatisticsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetStatisticsResponseBody self = new GetStatisticsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetStatisticsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetStatisticsResponseBody setData(GetStatisticsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetStatisticsResponseBodyData getData() {
+        return this.data;
     }
 
     public GetStatisticsResponseBody setMessage(String message) {
@@ -37,25 +53,9 @@ public class GetStatisticsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetStatisticsResponseBody setData(GetStatisticsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetStatisticsResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetStatisticsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class GetStatisticsResponseBodyDataItemsDetail extends TeaModel {
-        @NameInMap("DepartmentName")
-        public String departmentName;
+        @NameInMap("ClientCount")
+        public Long clientCount;
 
         @NameInMap("CloudCount")
         public Long cloudCount;
@@ -63,23 +63,23 @@ public class GetStatisticsResponseBody extends TeaModel {
         @NameInMap("DepartmentId")
         public String departmentId;
 
+        @NameInMap("DepartmentName")
+        public String departmentName;
+
         @NameInMap("Month")
         public Integer month;
-
-        @NameInMap("ClientCount")
-        public Long clientCount;
 
         public static GetStatisticsResponseBodyDataItemsDetail build(java.util.Map<String, ?> map) throws Exception {
             GetStatisticsResponseBodyDataItemsDetail self = new GetStatisticsResponseBodyDataItemsDetail();
             return TeaModel.build(map, self);
         }
 
-        public GetStatisticsResponseBodyDataItemsDetail setDepartmentName(String departmentName) {
-            this.departmentName = departmentName;
+        public GetStatisticsResponseBodyDataItemsDetail setClientCount(Long clientCount) {
+            this.clientCount = clientCount;
             return this;
         }
-        public String getDepartmentName() {
-            return this.departmentName;
+        public Long getClientCount() {
+            return this.clientCount;
         }
 
         public GetStatisticsResponseBodyDataItemsDetail setCloudCount(Long cloudCount) {
@@ -98,6 +98,14 @@ public class GetStatisticsResponseBody extends TeaModel {
             return this.departmentId;
         }
 
+        public GetStatisticsResponseBodyDataItemsDetail setDepartmentName(String departmentName) {
+            this.departmentName = departmentName;
+            return this;
+        }
+        public String getDepartmentName() {
+            return this.departmentName;
+        }
+
         public GetStatisticsResponseBodyDataItemsDetail setMonth(Integer month) {
             this.month = month;
             return this;
@@ -106,59 +114,27 @@ public class GetStatisticsResponseBody extends TeaModel {
             return this.month;
         }
 
-        public GetStatisticsResponseBodyDataItemsDetail setClientCount(Long clientCount) {
-            this.clientCount = clientCount;
-            return this;
-        }
-        public Long getClientCount() {
-            return this.clientCount;
-        }
-
     }
 
     public static class GetStatisticsResponseBodyDataItems extends TeaModel {
-        @NameInMap("DepartmentName")
-        public String departmentName;
+        @NameInMap("ClientCount")
+        public Long clientCount;
 
         @NameInMap("CloudCount")
         public Long cloudCount;
 
-        @NameInMap("Month")
-        public String month;
-
-        @NameInMap("ClientCount")
-        public Long clientCount;
+        @NameInMap("DepartmentName")
+        public String departmentName;
 
         @NameInMap("Detail")
         public java.util.List<GetStatisticsResponseBodyDataItemsDetail> detail;
 
+        @NameInMap("Month")
+        public String month;
+
         public static GetStatisticsResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             GetStatisticsResponseBodyDataItems self = new GetStatisticsResponseBodyDataItems();
             return TeaModel.build(map, self);
-        }
-
-        public GetStatisticsResponseBodyDataItems setDepartmentName(String departmentName) {
-            this.departmentName = departmentName;
-            return this;
-        }
-        public String getDepartmentName() {
-            return this.departmentName;
-        }
-
-        public GetStatisticsResponseBodyDataItems setCloudCount(Long cloudCount) {
-            this.cloudCount = cloudCount;
-            return this;
-        }
-        public Long getCloudCount() {
-            return this.cloudCount;
-        }
-
-        public GetStatisticsResponseBodyDataItems setMonth(String month) {
-            this.month = month;
-            return this;
-        }
-        public String getMonth() {
-            return this.month;
         }
 
         public GetStatisticsResponseBodyDataItems setClientCount(Long clientCount) {
@@ -169,12 +145,36 @@ public class GetStatisticsResponseBody extends TeaModel {
             return this.clientCount;
         }
 
+        public GetStatisticsResponseBodyDataItems setCloudCount(Long cloudCount) {
+            this.cloudCount = cloudCount;
+            return this;
+        }
+        public Long getCloudCount() {
+            return this.cloudCount;
+        }
+
+        public GetStatisticsResponseBodyDataItems setDepartmentName(String departmentName) {
+            this.departmentName = departmentName;
+            return this;
+        }
+        public String getDepartmentName() {
+            return this.departmentName;
+        }
+
         public GetStatisticsResponseBodyDataItems setDetail(java.util.List<GetStatisticsResponseBodyDataItemsDetail> detail) {
             this.detail = detail;
             return this;
         }
         public java.util.List<GetStatisticsResponseBodyDataItemsDetail> getDetail() {
             return this.detail;
+        }
+
+        public GetStatisticsResponseBodyDataItems setMonth(String month) {
+            this.month = month;
+            return this;
+        }
+        public String getMonth() {
+            return this.month;
         }
 
     }

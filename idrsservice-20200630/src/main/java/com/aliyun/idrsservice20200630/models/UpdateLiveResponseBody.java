@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public UpdateLiveResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public UpdateLiveResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static UpdateLiveResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateLiveResponseBody self = new UpdateLiveResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateLiveResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public UpdateLiveResponseBody setData(UpdateLiveResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public UpdateLiveResponseBodyData getData() {
+        return this.data;
     }
 
     public UpdateLiveResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class UpdateLiveResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UpdateLiveResponseBody setData(UpdateLiveResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public UpdateLiveResponseBodyData getData() {
-        return this.data;
-    }
-
-    public UpdateLiveResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class UpdateLiveResponseBodyData extends TeaModel {

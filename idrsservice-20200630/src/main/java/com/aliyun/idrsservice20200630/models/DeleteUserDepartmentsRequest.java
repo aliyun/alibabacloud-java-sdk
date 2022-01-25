@@ -4,23 +4,15 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class DeleteUserDepartmentsRequest extends TeaModel {
-    @NameInMap("UserId")
-    public java.util.List<String> userId;
-
     @NameInMap("DepartmentId")
     public java.util.List<String> departmentId;
+
+    @NameInMap("UserId")
+    public java.util.List<String> userId;
 
     public static DeleteUserDepartmentsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteUserDepartmentsRequest self = new DeleteUserDepartmentsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteUserDepartmentsRequest setUserId(java.util.List<String> userId) {
-        this.userId = userId;
-        return this;
-    }
-    public java.util.List<String> getUserId() {
-        return this.userId;
     }
 
     public DeleteUserDepartmentsRequest setDepartmentId(java.util.List<String> departmentId) {
@@ -29,6 +21,14 @@ public class DeleteUserDepartmentsRequest extends TeaModel {
     }
     public java.util.List<String> getDepartmentId() {
         return this.departmentId;
+    }
+
+    public DeleteUserDepartmentsRequest setUserId(java.util.List<String> userId) {
+        this.userId = userId;
+        return this;
+    }
+    public java.util.List<String> getUserId() {
+        return this.userId;
     }
 
 }

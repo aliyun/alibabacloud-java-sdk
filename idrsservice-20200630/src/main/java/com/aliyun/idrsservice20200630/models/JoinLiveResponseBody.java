@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class JoinLiveResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public JoinLiveResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public JoinLiveResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static JoinLiveResponseBody build(java.util.Map<String, ?> map) throws Exception {
         JoinLiveResponseBody self = new JoinLiveResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public JoinLiveResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public JoinLiveResponseBody setData(JoinLiveResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public JoinLiveResponseBodyData getData() {
+        return this.data;
     }
 
     public JoinLiveResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class JoinLiveResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public JoinLiveResponseBody setData(JoinLiveResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public JoinLiveResponseBodyData getData() {
-        return this.data;
-    }
-
-    public JoinLiveResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class JoinLiveResponseBodyDataTokenDataTurn extends TeaModel {
@@ -84,17 +84,8 @@ public class JoinLiveResponseBody extends TeaModel {
     }
 
     public static class JoinLiveResponseBodyDataTokenData extends TeaModel {
-        @NameInMap("Turn")
-        public JoinLiveResponseBodyDataTokenDataTurn turn;
-
-        @NameInMap("Token")
-        public String token;
-
         @NameInMap("AppId")
         public String appId;
-
-        @NameInMap("Nonce")
-        public String nonce;
 
         @NameInMap("Gslb")
         public java.util.List<String> gslb;
@@ -102,31 +93,24 @@ public class JoinLiveResponseBody extends TeaModel {
         @NameInMap("LiveId")
         public String liveId;
 
-        @NameInMap("UserId")
-        public String userId;
+        @NameInMap("Nonce")
+        public String nonce;
 
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        @NameInMap("Token")
+        public String token;
+
+        @NameInMap("Turn")
+        public JoinLiveResponseBodyDataTokenDataTurn turn;
+
+        @NameInMap("UserId")
+        public String userId;
+
         public static JoinLiveResponseBodyDataTokenData build(java.util.Map<String, ?> map) throws Exception {
             JoinLiveResponseBodyDataTokenData self = new JoinLiveResponseBodyDataTokenData();
             return TeaModel.build(map, self);
-        }
-
-        public JoinLiveResponseBodyDataTokenData setTurn(JoinLiveResponseBodyDataTokenDataTurn turn) {
-            this.turn = turn;
-            return this;
-        }
-        public JoinLiveResponseBodyDataTokenDataTurn getTurn() {
-            return this.turn;
-        }
-
-        public JoinLiveResponseBodyDataTokenData setToken(String token) {
-            this.token = token;
-            return this;
-        }
-        public String getToken() {
-            return this.token;
         }
 
         public JoinLiveResponseBodyDataTokenData setAppId(String appId) {
@@ -135,14 +119,6 @@ public class JoinLiveResponseBody extends TeaModel {
         }
         public String getAppId() {
             return this.appId;
-        }
-
-        public JoinLiveResponseBodyDataTokenData setNonce(String nonce) {
-            this.nonce = nonce;
-            return this;
-        }
-        public String getNonce() {
-            return this.nonce;
         }
 
         public JoinLiveResponseBodyDataTokenData setGslb(java.util.List<String> gslb) {
@@ -161,12 +137,12 @@ public class JoinLiveResponseBody extends TeaModel {
             return this.liveId;
         }
 
-        public JoinLiveResponseBodyDataTokenData setUserId(String userId) {
-            this.userId = userId;
+        public JoinLiveResponseBodyDataTokenData setNonce(String nonce) {
+            this.nonce = nonce;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public String getNonce() {
+            return this.nonce;
         }
 
         public JoinLiveResponseBodyDataTokenData setTimestamp(Long timestamp) {
@@ -175,6 +151,30 @@ public class JoinLiveResponseBody extends TeaModel {
         }
         public Long getTimestamp() {
             return this.timestamp;
+        }
+
+        public JoinLiveResponseBodyDataTokenData setToken(String token) {
+            this.token = token;
+            return this;
+        }
+        public String getToken() {
+            return this.token;
+        }
+
+        public JoinLiveResponseBodyDataTokenData setTurn(JoinLiveResponseBodyDataTokenDataTurn turn) {
+            this.turn = turn;
+            return this;
+        }
+        public JoinLiveResponseBodyDataTokenDataTurn getTurn() {
+            return this.turn;
+        }
+
+        public JoinLiveResponseBodyDataTokenData setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

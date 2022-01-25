@@ -7,6 +7,12 @@ public class CreateTaskGroupRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Day")
+    public java.util.List<Integer> day;
+
     @NameInMap("ExpireAt")
     public String expireAt;
 
@@ -25,11 +31,8 @@ public class CreateTaskGroupRequest extends TeaModel {
     @NameInMap("TriggerPeriod")
     public String triggerPeriod;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("Day")
-    public java.util.List<Integer> day;
+    @NameInMap("VideoMetaUrl")
+    public java.util.List<String> videoMetaUrl;
 
     @NameInMap("VideoUrl")
     public java.util.List<String> videoUrl;
@@ -45,6 +48,22 @@ public class CreateTaskGroupRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public CreateTaskGroupRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateTaskGroupRequest setDay(java.util.List<Integer> day) {
+        this.day = day;
+        return this;
+    }
+    public java.util.List<Integer> getDay() {
+        return this.day;
     }
 
     public CreateTaskGroupRequest setExpireAt(String expireAt) {
@@ -95,20 +114,12 @@ public class CreateTaskGroupRequest extends TeaModel {
         return this.triggerPeriod;
     }
 
-    public CreateTaskGroupRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateTaskGroupRequest setVideoMetaUrl(java.util.List<String> videoMetaUrl) {
+        this.videoMetaUrl = videoMetaUrl;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreateTaskGroupRequest setDay(java.util.List<Integer> day) {
-        this.day = day;
-        return this;
-    }
-    public java.util.List<Integer> getDay() {
-        return this.day;
+    public java.util.List<String> getVideoMetaUrl() {
+        return this.videoMetaUrl;
     }
 
     public CreateTaskGroupRequest setVideoUrl(java.util.List<String> videoUrl) {

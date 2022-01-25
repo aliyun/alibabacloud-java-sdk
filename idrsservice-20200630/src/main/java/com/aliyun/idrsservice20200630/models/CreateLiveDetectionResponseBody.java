@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateLiveDetectionResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public CreateLiveDetectionResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public CreateLiveDetectionResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static CreateLiveDetectionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateLiveDetectionResponseBody self = new CreateLiveDetectionResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLiveDetectionResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateLiveDetectionResponseBody setData(CreateLiveDetectionResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateLiveDetectionResponseBodyData getData() {
+        return this.data;
     }
 
     public CreateLiveDetectionResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class CreateLiveDetectionResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateLiveDetectionResponseBody setData(CreateLiveDetectionResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateLiveDetectionResponseBodyData getData() {
-        return this.data;
-    }
-
-    public CreateLiveDetectionResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class CreateLiveDetectionResponseBodyData extends TeaModel {

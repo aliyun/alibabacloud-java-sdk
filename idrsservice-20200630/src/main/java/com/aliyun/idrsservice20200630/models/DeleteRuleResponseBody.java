@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class DeleteRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public DeleteRuleResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public DeleteRuleResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static DeleteRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteRuleResponseBody self = new DeleteRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DeleteRuleResponseBody setData(DeleteRuleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DeleteRuleResponseBodyData getData() {
+        return this.data;
     }
 
     public DeleteRuleResponseBody setMessage(String message) {
@@ -37,54 +53,22 @@ public class DeleteRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteRuleResponseBody setData(DeleteRuleResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DeleteRuleResponseBodyData getData() {
-        return this.data;
-    }
-
-    public DeleteRuleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class DeleteRuleResponseBodyData extends TeaModel {
-        @NameInMap("CreatedAt")
-        public String createdAt;
-
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("CreatedAt")
+        public String createdAt;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("Name")
+        public String name;
+
         public static DeleteRuleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DeleteRuleResponseBodyData self = new DeleteRuleResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DeleteRuleResponseBodyData setCreatedAt(String createdAt) {
-            this.createdAt = createdAt;
-            return this;
-        }
-        public String getCreatedAt() {
-            return this.createdAt;
-        }
-
-        public DeleteRuleResponseBodyData setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public DeleteRuleResponseBodyData setContent(String content) {
@@ -95,12 +79,28 @@ public class DeleteRuleResponseBody extends TeaModel {
             return this.content;
         }
 
+        public DeleteRuleResponseBodyData setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
+            return this;
+        }
+        public String getCreatedAt() {
+            return this.createdAt;
+        }
+
         public DeleteRuleResponseBodyData setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public DeleteRuleResponseBodyData setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

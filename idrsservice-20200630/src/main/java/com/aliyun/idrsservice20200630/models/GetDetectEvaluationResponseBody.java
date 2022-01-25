@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class GetDetectEvaluationResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public java.util.List<GetDetectEvaluationResponseBodyData> data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public java.util.List<GetDetectEvaluationResponseBodyData> data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static GetDetectEvaluationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDetectEvaluationResponseBody self = new GetDetectEvaluationResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetDetectEvaluationResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetDetectEvaluationResponseBody setData(java.util.List<GetDetectEvaluationResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetDetectEvaluationResponseBodyData> getData() {
+        return this.data;
     }
 
     public GetDetectEvaluationResponseBody setMessage(String message) {
@@ -37,26 +53,7 @@ public class GetDetectEvaluationResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetDetectEvaluationResponseBody setData(java.util.List<GetDetectEvaluationResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<GetDetectEvaluationResponseBodyData> getData() {
-        return this.data;
-    }
-
-    public GetDetectEvaluationResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class GetDetectEvaluationResponseBodyDataEvaluationItemList extends TeaModel {
-        @NameInMap("SuccessRate")
-        public String successRate;
-
         @NameInMap("HandleCount")
         public Integer handleCount;
 
@@ -66,17 +63,12 @@ public class GetDetectEvaluationResponseBody extends TeaModel {
         @NameInMap("SuccessCount")
         public Integer successCount;
 
+        @NameInMap("SuccessRate")
+        public String successRate;
+
         public static GetDetectEvaluationResponseBodyDataEvaluationItemList build(java.util.Map<String, ?> map) throws Exception {
             GetDetectEvaluationResponseBodyDataEvaluationItemList self = new GetDetectEvaluationResponseBodyDataEvaluationItemList();
             return TeaModel.build(map, self);
-        }
-
-        public GetDetectEvaluationResponseBodyDataEvaluationItemList setSuccessRate(String successRate) {
-            this.successRate = successRate;
-            return this;
-        }
-        public String getSuccessRate() {
-            return this.successRate;
         }
 
         public GetDetectEvaluationResponseBodyDataEvaluationItemList setHandleCount(Integer handleCount) {
@@ -101,6 +93,14 @@ public class GetDetectEvaluationResponseBody extends TeaModel {
         }
         public Integer getSuccessCount() {
             return this.successCount;
+        }
+
+        public GetDetectEvaluationResponseBodyDataEvaluationItemList setSuccessRate(String successRate) {
+            this.successRate = successRate;
+            return this;
+        }
+        public String getSuccessRate() {
+            return this.successRate;
         }
 
     }
