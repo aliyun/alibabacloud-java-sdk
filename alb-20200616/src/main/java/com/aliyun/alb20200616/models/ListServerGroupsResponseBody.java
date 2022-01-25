@@ -354,6 +354,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("ServerGroupType")
         public String serverGroupType;
 
+        // 服务器名称
+        @NameInMap("ServiceName")
+        public String serviceName;
+
         // 会话保持配置
         @NameInMap("StickySessionConfig")
         public ListServerGroupsResponseBodyServerGroupsStickySessionConfig stickySessionConfig;
@@ -461,6 +465,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
         public String getServerGroupType() {
             return this.serverGroupType;
+        }
+
+        public ListServerGroupsResponseBodyServerGroups setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
         }
 
         public ListServerGroupsResponseBodyServerGroups setStickySessionConfig(ListServerGroupsResponseBodyServerGroupsStickySessionConfig stickySessionConfig) {

@@ -137,6 +137,38 @@ public class CreateRuleRequest extends TeaModel {
 
     }
 
+    public static class CreateRuleRequestRuleActionsForwardGroupConfigServerGroupStickySession extends TeaModel {
+        // 是否开启会话保持
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        // 超时时间
+        @NameInMap("Timeout")
+        public Integer timeout;
+
+        public static CreateRuleRequestRuleActionsForwardGroupConfigServerGroupStickySession build(java.util.Map<String, ?> map) throws Exception {
+            CreateRuleRequestRuleActionsForwardGroupConfigServerGroupStickySession self = new CreateRuleRequestRuleActionsForwardGroupConfigServerGroupStickySession();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRuleRequestRuleActionsForwardGroupConfigServerGroupStickySession setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public CreateRuleRequestRuleActionsForwardGroupConfigServerGroupStickySession setTimeout(Integer timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+        public Integer getTimeout() {
+            return this.timeout;
+        }
+
+    }
+
     public static class CreateRuleRequestRuleActionsForwardGroupConfigServerGroupTuples extends TeaModel {
         // 服务器组标识
         @NameInMap("ServerGroupId")
@@ -158,6 +190,10 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleActionsForwardGroupConfig extends TeaModel {
+        // 服务器组之间会话保持
+        @NameInMap("ServerGroupStickySession")
+        public CreateRuleRequestRuleActionsForwardGroupConfigServerGroupStickySession serverGroupStickySession;
+
         // 转发到的目的服务器组列表
         @NameInMap("ServerGroupTuples")
         public java.util.List<CreateRuleRequestRuleActionsForwardGroupConfigServerGroupTuples> serverGroupTuples;
@@ -165,6 +201,14 @@ public class CreateRuleRequest extends TeaModel {
         public static CreateRuleRequestRuleActionsForwardGroupConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateRuleRequestRuleActionsForwardGroupConfig self = new CreateRuleRequestRuleActionsForwardGroupConfig();
             return TeaModel.build(map, self);
+        }
+
+        public CreateRuleRequestRuleActionsForwardGroupConfig setServerGroupStickySession(CreateRuleRequestRuleActionsForwardGroupConfigServerGroupStickySession serverGroupStickySession) {
+            this.serverGroupStickySession = serverGroupStickySession;
+            return this;
+        }
+        public CreateRuleRequestRuleActionsForwardGroupConfigServerGroupStickySession getServerGroupStickySession() {
+            return this.serverGroupStickySession;
         }
 
         public CreateRuleRequestRuleActionsForwardGroupConfig setServerGroupTuples(java.util.List<CreateRuleRequestRuleActionsForwardGroupConfigServerGroupTuples> serverGroupTuples) {
@@ -345,6 +389,95 @@ public class CreateRuleRequest extends TeaModel {
 
     }
 
+    public static class CreateRuleRequestRuleActionsTrafficLimitConfig extends TeaModel {
+        @NameInMap("QPS")
+        public Integer QPS;
+
+        public static CreateRuleRequestRuleActionsTrafficLimitConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateRuleRequestRuleActionsTrafficLimitConfig self = new CreateRuleRequestRuleActionsTrafficLimitConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRuleRequestRuleActionsTrafficLimitConfig setQPS(Integer QPS) {
+            this.QPS = QPS;
+            return this;
+        }
+        public Integer getQPS() {
+            return this.QPS;
+        }
+
+    }
+
+    public static class CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples extends TeaModel {
+        @NameInMap("ServerGroupId")
+        public String serverGroupId;
+
+        public static CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples build(java.util.Map<String, ?> map) throws Exception {
+            CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples self = new CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples setServerGroupId(String serverGroupId) {
+            this.serverGroupId = serverGroupId;
+            return this;
+        }
+        public String getServerGroupId() {
+            return this.serverGroupId;
+        }
+
+    }
+
+    public static class CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig extends TeaModel {
+        @NameInMap("ServerGroupTuples")
+        public java.util.List<CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> serverGroupTuples;
+
+        public static CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig self = new CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig setServerGroupTuples(java.util.List<CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> serverGroupTuples) {
+            this.serverGroupTuples = serverGroupTuples;
+            return this;
+        }
+        public java.util.List<CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> getServerGroupTuples() {
+            return this.serverGroupTuples;
+        }
+
+    }
+
+    public static class CreateRuleRequestRuleActionsTrafficMirrorConfig extends TeaModel {
+        // 镜像至服务器组
+        @NameInMap("MirrorGroupConfig")
+        public CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig mirrorGroupConfig;
+
+        // 镜像目标类型
+        @NameInMap("TargetType")
+        public String targetType;
+
+        public static CreateRuleRequestRuleActionsTrafficMirrorConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateRuleRequestRuleActionsTrafficMirrorConfig self = new CreateRuleRequestRuleActionsTrafficMirrorConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRuleRequestRuleActionsTrafficMirrorConfig setMirrorGroupConfig(CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig mirrorGroupConfig) {
+            this.mirrorGroupConfig = mirrorGroupConfig;
+            return this;
+        }
+        public CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig getMirrorGroupConfig() {
+            return this.mirrorGroupConfig;
+        }
+
+        public CreateRuleRequestRuleActionsTrafficMirrorConfig setTargetType(String targetType) {
+            this.targetType = targetType;
+            return this;
+        }
+        public String getTargetType() {
+            return this.targetType;
+        }
+
+    }
+
     public static class CreateRuleRequestRuleActions extends TeaModel {
         // 返回固定内容动作配置
         @NameInMap("FixedResponseConfig")
@@ -369,6 +502,14 @@ public class CreateRuleRequest extends TeaModel {
         // 内部重定向动作配置
         @NameInMap("RewriteConfig")
         public CreateRuleRequestRuleActionsRewriteConfig rewriteConfig;
+
+        // 流量限速
+        @NameInMap("TrafficLimitConfig")
+        public CreateRuleRequestRuleActionsTrafficLimitConfig trafficLimitConfig;
+
+        // 流量镜像
+        @NameInMap("TrafficMirrorConfig")
+        public CreateRuleRequestRuleActionsTrafficMirrorConfig trafficMirrorConfig;
 
         // 转发规则动作类型
         @NameInMap("Type")
@@ -425,6 +566,22 @@ public class CreateRuleRequest extends TeaModel {
         }
         public CreateRuleRequestRuleActionsRewriteConfig getRewriteConfig() {
             return this.rewriteConfig;
+        }
+
+        public CreateRuleRequestRuleActions setTrafficLimitConfig(CreateRuleRequestRuleActionsTrafficLimitConfig trafficLimitConfig) {
+            this.trafficLimitConfig = trafficLimitConfig;
+            return this;
+        }
+        public CreateRuleRequestRuleActionsTrafficLimitConfig getTrafficLimitConfig() {
+            return this.trafficLimitConfig;
+        }
+
+        public CreateRuleRequestRuleActions setTrafficMirrorConfig(CreateRuleRequestRuleActionsTrafficMirrorConfig trafficMirrorConfig) {
+            this.trafficMirrorConfig = trafficMirrorConfig;
+            return this;
+        }
+        public CreateRuleRequestRuleActionsTrafficMirrorConfig getTrafficMirrorConfig() {
+            return this.trafficMirrorConfig;
         }
 
         public CreateRuleRequestRuleActions setType(String type) {
@@ -633,6 +790,26 @@ public class CreateRuleRequest extends TeaModel {
 
     }
 
+    public static class CreateRuleRequestRuleConditionsSourceIpConfig extends TeaModel {
+        // 基于源IP业务流量匹配
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static CreateRuleRequestRuleConditionsSourceIpConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateRuleRequestRuleConditionsSourceIpConfig self = new CreateRuleRequestRuleConditionsSourceIpConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRuleRequestRuleConditionsSourceIpConfig setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
     public static class CreateRuleRequestRuleConditions extends TeaModel {
         // Cookie条件配置
         @NameInMap("CookieConfig")
@@ -657,6 +834,10 @@ public class CreateRuleRequest extends TeaModel {
         // 查询字符串条件配置
         @NameInMap("QueryStringConfig")
         public CreateRuleRequestRuleConditionsQueryStringConfig queryStringConfig;
+
+        // 基于源IP业务流量匹配
+        @NameInMap("SourceIpConfig")
+        public CreateRuleRequestRuleConditionsSourceIpConfig sourceIpConfig;
 
         // 条件类型
         @NameInMap("Type")
@@ -713,6 +894,14 @@ public class CreateRuleRequest extends TeaModel {
         }
         public CreateRuleRequestRuleConditionsQueryStringConfig getQueryStringConfig() {
             return this.queryStringConfig;
+        }
+
+        public CreateRuleRequestRuleConditions setSourceIpConfig(CreateRuleRequestRuleConditionsSourceIpConfig sourceIpConfig) {
+            this.sourceIpConfig = sourceIpConfig;
+            return this;
+        }
+        public CreateRuleRequestRuleConditionsSourceIpConfig getSourceIpConfig() {
+            return this.sourceIpConfig;
         }
 
         public CreateRuleRequestRuleConditions setType(String type) {

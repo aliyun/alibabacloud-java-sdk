@@ -36,6 +36,10 @@ public class CreateServerGroupRequest extends TeaModel {
     @NameInMap("ServerGroupType")
     public String serverGroupType;
 
+    // 服务器名称
+    @NameInMap("ServiceName")
+    public String serviceName;
+
     // 会话保持配置
     @NameInMap("StickySessionConfig")
     public CreateServerGroupRequestStickySessionConfig stickySessionConfig;
@@ -111,6 +115,14 @@ public class CreateServerGroupRequest extends TeaModel {
     }
     public String getServerGroupType() {
         return this.serverGroupType;
+    }
+
+    public CreateServerGroupRequest setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
+    public String getServiceName() {
+        return this.serviceName;
     }
 
     public CreateServerGroupRequest setStickySessionConfig(CreateServerGroupRequestStickySessionConfig stickySessionConfig) {
