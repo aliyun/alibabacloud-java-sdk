@@ -28,6 +28,10 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     @NameInMap("ServerGroupName")
     public String serverGroupName;
 
+    // 服务器名称
+    @NameInMap("ServiceName")
+    public String serviceName;
+
     // 会话保持配置
     @NameInMap("StickySessionConfig")
     public UpdateServerGroupAttributeRequestStickySessionConfig stickySessionConfig;
@@ -83,6 +87,14 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     }
     public String getServerGroupName() {
         return this.serverGroupName;
+    }
+
+    public UpdateServerGroupAttributeRequest setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
+    public String getServiceName() {
+        return this.serviceName;
     }
 
     public UpdateServerGroupAttributeRequest setStickySessionConfig(UpdateServerGroupAttributeRequestStickySessionConfig stickySessionConfig) {

@@ -137,6 +137,38 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     }
 
+    public static class UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupStickySession extends TeaModel {
+        // 是否开启会话保持
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        // 超时时间
+        @NameInMap("Timeout")
+        public Integer timeout;
+
+        public static UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupStickySession build(java.util.Map<String, ?> map) throws Exception {
+            UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupStickySession self = new UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupStickySession();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupStickySession setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupStickySession setTimeout(Integer timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+        public Integer getTimeout() {
+            return this.timeout;
+        }
+
+    }
+
     public static class UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupTuples extends TeaModel {
         // 服务器组标识
         @NameInMap("ServerGroupId")
@@ -158,6 +190,10 @@ public class UpdateRuleAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRuleAttributeRequestRuleActionsForwardGroupConfig extends TeaModel {
+        // 服务器组之间会话保持
+        @NameInMap("ServerGroupStickySession")
+        public UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupStickySession serverGroupStickySession;
+
         // 转发到的目的服务器组列表
         @NameInMap("ServerGroupTuples")
         public java.util.List<UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupTuples> serverGroupTuples;
@@ -165,6 +201,14 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         public static UpdateRuleAttributeRequestRuleActionsForwardGroupConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateRuleAttributeRequestRuleActionsForwardGroupConfig self = new UpdateRuleAttributeRequestRuleActionsForwardGroupConfig();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateRuleAttributeRequestRuleActionsForwardGroupConfig setServerGroupStickySession(UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupStickySession serverGroupStickySession) {
+            this.serverGroupStickySession = serverGroupStickySession;
+            return this;
+        }
+        public UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupStickySession getServerGroupStickySession() {
+            return this.serverGroupStickySession;
         }
 
         public UpdateRuleAttributeRequestRuleActionsForwardGroupConfig setServerGroupTuples(java.util.List<UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupTuples> serverGroupTuples) {
@@ -345,6 +389,95 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     }
 
+    public static class UpdateRuleAttributeRequestRuleActionsTrafficLimitConfig extends TeaModel {
+        @NameInMap("QPS")
+        public Integer QPS;
+
+        public static UpdateRuleAttributeRequestRuleActionsTrafficLimitConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateRuleAttributeRequestRuleActionsTrafficLimitConfig self = new UpdateRuleAttributeRequestRuleActionsTrafficLimitConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateRuleAttributeRequestRuleActionsTrafficLimitConfig setQPS(Integer QPS) {
+            this.QPS = QPS;
+            return this;
+        }
+        public Integer getQPS() {
+            return this.QPS;
+        }
+
+    }
+
+    public static class UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples extends TeaModel {
+        @NameInMap("ServerGroupId")
+        public String serverGroupId;
+
+        public static UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples build(java.util.Map<String, ?> map) throws Exception {
+            UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples self = new UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples setServerGroupId(String serverGroupId) {
+            this.serverGroupId = serverGroupId;
+            return this;
+        }
+        public String getServerGroupId() {
+            return this.serverGroupId;
+        }
+
+    }
+
+    public static class UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig extends TeaModel {
+        @NameInMap("ServerGroupTuples")
+        public java.util.List<UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> serverGroupTuples;
+
+        public static UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig self = new UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig setServerGroupTuples(java.util.List<UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> serverGroupTuples) {
+            this.serverGroupTuples = serverGroupTuples;
+            return this;
+        }
+        public java.util.List<UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> getServerGroupTuples() {
+            return this.serverGroupTuples;
+        }
+
+    }
+
+    public static class UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfig extends TeaModel {
+        // 镜像至服务器组
+        @NameInMap("MirrorGroupConfig")
+        public UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig mirrorGroupConfig;
+
+        // 镜像目标类型
+        @NameInMap("TargetType")
+        public String targetType;
+
+        public static UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfig self = new UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfig setMirrorGroupConfig(UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig mirrorGroupConfig) {
+            this.mirrorGroupConfig = mirrorGroupConfig;
+            return this;
+        }
+        public UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig getMirrorGroupConfig() {
+            return this.mirrorGroupConfig;
+        }
+
+        public UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfig setTargetType(String targetType) {
+            this.targetType = targetType;
+            return this;
+        }
+        public String getTargetType() {
+            return this.targetType;
+        }
+
+    }
+
     public static class UpdateRuleAttributeRequestRuleActions extends TeaModel {
         // 返回固定内容动作配置
         @NameInMap("FixedResponseConfig")
@@ -369,6 +502,14 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         // 内部重定向动作配置
         @NameInMap("RewriteConfig")
         public UpdateRuleAttributeRequestRuleActionsRewriteConfig rewriteConfig;
+
+        // 流量限速
+        @NameInMap("TrafficLimitConfig")
+        public UpdateRuleAttributeRequestRuleActionsTrafficLimitConfig trafficLimitConfig;
+
+        // 流量镜像
+        @NameInMap("TrafficMirrorConfig")
+        public UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfig trafficMirrorConfig;
 
         // 转发规则动作类型
         @NameInMap("Type")
@@ -425,6 +566,22 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         }
         public UpdateRuleAttributeRequestRuleActionsRewriteConfig getRewriteConfig() {
             return this.rewriteConfig;
+        }
+
+        public UpdateRuleAttributeRequestRuleActions setTrafficLimitConfig(UpdateRuleAttributeRequestRuleActionsTrafficLimitConfig trafficLimitConfig) {
+            this.trafficLimitConfig = trafficLimitConfig;
+            return this;
+        }
+        public UpdateRuleAttributeRequestRuleActionsTrafficLimitConfig getTrafficLimitConfig() {
+            return this.trafficLimitConfig;
+        }
+
+        public UpdateRuleAttributeRequestRuleActions setTrafficMirrorConfig(UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfig trafficMirrorConfig) {
+            this.trafficMirrorConfig = trafficMirrorConfig;
+            return this;
+        }
+        public UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfig getTrafficMirrorConfig() {
+            return this.trafficMirrorConfig;
         }
 
         public UpdateRuleAttributeRequestRuleActions setType(String type) {
@@ -633,6 +790,26 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     }
 
+    public static class UpdateRuleAttributeRequestRuleConditionsSourceIpConfig extends TeaModel {
+        // 基于源IP业务流量匹配
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static UpdateRuleAttributeRequestRuleConditionsSourceIpConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateRuleAttributeRequestRuleConditionsSourceIpConfig self = new UpdateRuleAttributeRequestRuleConditionsSourceIpConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateRuleAttributeRequestRuleConditionsSourceIpConfig setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
     public static class UpdateRuleAttributeRequestRuleConditions extends TeaModel {
         // Cookie条件配置
         @NameInMap("CookieConfig")
@@ -657,6 +834,10 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         // 查询字符串条件配置
         @NameInMap("QueryStringConfig")
         public UpdateRuleAttributeRequestRuleConditionsQueryStringConfig queryStringConfig;
+
+        // 基于源IP业务流量匹配
+        @NameInMap("SourceIpConfig")
+        public UpdateRuleAttributeRequestRuleConditionsSourceIpConfig sourceIpConfig;
 
         // 条件类型
         @NameInMap("Type")
@@ -713,6 +894,14 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         }
         public UpdateRuleAttributeRequestRuleConditionsQueryStringConfig getQueryStringConfig() {
             return this.queryStringConfig;
+        }
+
+        public UpdateRuleAttributeRequestRuleConditions setSourceIpConfig(UpdateRuleAttributeRequestRuleConditionsSourceIpConfig sourceIpConfig) {
+            this.sourceIpConfig = sourceIpConfig;
+            return this;
+        }
+        public UpdateRuleAttributeRequestRuleConditionsSourceIpConfig getSourceIpConfig() {
+            return this.sourceIpConfig;
         }
 
         public UpdateRuleAttributeRequestRuleConditions setType(String type) {
