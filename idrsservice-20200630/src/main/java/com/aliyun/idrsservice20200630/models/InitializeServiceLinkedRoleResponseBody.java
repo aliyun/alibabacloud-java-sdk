@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class InitializeServiceLinkedRoleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public InitializeServiceLinkedRoleResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public InitializeServiceLinkedRoleResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static InitializeServiceLinkedRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InitializeServiceLinkedRoleResponseBody self = new InitializeServiceLinkedRoleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public InitializeServiceLinkedRoleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public InitializeServiceLinkedRoleResponseBody setData(InitializeServiceLinkedRoleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public InitializeServiceLinkedRoleResponseBodyData getData() {
+        return this.data;
     }
 
     public InitializeServiceLinkedRoleResponseBody setMessage(String message) {
@@ -37,40 +53,16 @@ public class InitializeServiceLinkedRoleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public InitializeServiceLinkedRoleResponseBody setData(InitializeServiceLinkedRoleResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public InitializeServiceLinkedRoleResponseBodyData getData() {
-        return this.data;
-    }
-
-    public InitializeServiceLinkedRoleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class InitializeServiceLinkedRoleResponseBodyData extends TeaModel {
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
         @NameInMap("CreateSuccess")
         public Boolean createSuccess;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
 
         public static InitializeServiceLinkedRoleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             InitializeServiceLinkedRoleResponseBodyData self = new InitializeServiceLinkedRoleResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public InitializeServiceLinkedRoleResponseBodyData setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
         }
 
         public InitializeServiceLinkedRoleResponseBodyData setCreateSuccess(Boolean createSuccess) {
@@ -79,6 +71,14 @@ public class InitializeServiceLinkedRoleResponseBody extends TeaModel {
         }
         public Boolean getCreateSuccess() {
             return this.createSuccess;
+        }
+
+        public InitializeServiceLinkedRoleResponseBodyData setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
     }

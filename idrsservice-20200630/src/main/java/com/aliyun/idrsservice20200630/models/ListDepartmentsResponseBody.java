@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class ListDepartmentsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ListDepartmentsResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public ListDepartmentsResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static ListDepartmentsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDepartmentsResponseBody self = new ListDepartmentsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListDepartmentsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListDepartmentsResponseBody setData(ListDepartmentsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListDepartmentsResponseBodyData getData() {
+        return this.data;
     }
 
     public ListDepartmentsResponseBody setMessage(String message) {
@@ -37,40 +53,16 @@ public class ListDepartmentsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListDepartmentsResponseBody setData(ListDepartmentsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListDepartmentsResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListDepartmentsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class ListDepartmentsResponseBodyDataItemsAdministrators extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         public static ListDepartmentsResponseBodyDataItemsAdministrators build(java.util.Map<String, ?> map) throws Exception {
             ListDepartmentsResponseBodyDataItemsAdministrators self = new ListDepartmentsResponseBodyDataItemsAdministrators();
             return TeaModel.build(map, self);
-        }
-
-        public ListDepartmentsResponseBodyDataItemsAdministrators setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public ListDepartmentsResponseBodyDataItemsAdministrators setId(String id) {
@@ -81,38 +73,38 @@ public class ListDepartmentsResponseBody extends TeaModel {
             return this.id;
         }
 
+        public ListDepartmentsResponseBodyDataItemsAdministrators setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
     }
 
     public static class ListDepartmentsResponseBodyDataItems extends TeaModel {
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("Administrators")
         public java.util.List<ListDepartmentsResponseBodyDataItemsAdministrators> administrators;
 
         @NameInMap("CreatedAt")
         public String createdAt;
 
-        @NameInMap("UpdatedAt")
-        public String updatedAt;
-
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("UpdatedAt")
+        public String updatedAt;
+
         public static ListDepartmentsResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             ListDepartmentsResponseBodyDataItems self = new ListDepartmentsResponseBodyDataItems();
             return TeaModel.build(map, self);
-        }
-
-        public ListDepartmentsResponseBodyDataItems setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public ListDepartmentsResponseBodyDataItems setAdministrators(java.util.List<ListDepartmentsResponseBodyDataItemsAdministrators> administrators) {
@@ -131,20 +123,12 @@ public class ListDepartmentsResponseBody extends TeaModel {
             return this.createdAt;
         }
 
-        public ListDepartmentsResponseBodyDataItems setUpdatedAt(String updatedAt) {
-            this.updatedAt = updatedAt;
+        public ListDepartmentsResponseBodyDataItems setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getUpdatedAt() {
-            return this.updatedAt;
-        }
-
-        public ListDepartmentsResponseBodyDataItems setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
+        public String getDescription() {
+            return this.description;
         }
 
         public ListDepartmentsResponseBodyDataItems setId(String id) {
@@ -155,17 +139,33 @@ public class ListDepartmentsResponseBody extends TeaModel {
             return this.id;
         }
 
+        public ListDepartmentsResponseBodyDataItems setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListDepartmentsResponseBodyDataItems setUpdatedAt(String updatedAt) {
+            this.updatedAt = updatedAt;
+            return this;
+        }
+        public String getUpdatedAt() {
+            return this.updatedAt;
+        }
+
     }
 
     public static class ListDepartmentsResponseBodyData extends TeaModel {
         @NameInMap("Items")
         public java.util.List<ListDepartmentsResponseBodyDataItems> items;
 
-        @NameInMap("TotalPages")
-        public Integer totalPages;
-
         @NameInMap("TotalElements")
         public Long totalElements;
+
+        @NameInMap("TotalPages")
+        public Integer totalPages;
 
         public static ListDepartmentsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListDepartmentsResponseBodyData self = new ListDepartmentsResponseBodyData();
@@ -180,20 +180,20 @@ public class ListDepartmentsResponseBody extends TeaModel {
             return this.items;
         }
 
-        public ListDepartmentsResponseBodyData setTotalPages(Integer totalPages) {
-            this.totalPages = totalPages;
-            return this;
-        }
-        public Integer getTotalPages() {
-            return this.totalPages;
-        }
-
         public ListDepartmentsResponseBodyData setTotalElements(Long totalElements) {
             this.totalElements = totalElements;
             return this;
         }
         public Long getTotalElements() {
             return this.totalElements;
+        }
+
+        public ListDepartmentsResponseBodyData setTotalPages(Integer totalPages) {
+            this.totalPages = totalPages;
+            return this;
+        }
+        public Integer getTotalPages() {
+            return this.totalPages;
         }
 
     }

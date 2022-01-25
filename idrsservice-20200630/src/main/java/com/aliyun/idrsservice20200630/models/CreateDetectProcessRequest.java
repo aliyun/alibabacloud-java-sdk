@@ -4,26 +4,26 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateDetectProcessRequest extends TeaModel {
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("Content")
+    public String content;
 
     @NameInMap("Draft")
     public String draft;
 
-    @NameInMap("Content")
-    public String content;
+    @NameInMap("Name")
+    public String name;
 
     public static CreateDetectProcessRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDetectProcessRequest self = new CreateDetectProcessRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDetectProcessRequest setName(String name) {
-        this.name = name;
+    public CreateDetectProcessRequest setContent(String content) {
+        this.content = content;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getContent() {
+        return this.content;
     }
 
     public CreateDetectProcessRequest setDraft(String draft) {
@@ -34,12 +34,12 @@ public class CreateDetectProcessRequest extends TeaModel {
         return this.draft;
     }
 
-    public CreateDetectProcessRequest setContent(String content) {
-        this.content = content;
+    public CreateDetectProcessRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getContent() {
-        return this.content;
+    public String getName() {
+        return this.name;
     }
 
 }

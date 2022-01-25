@@ -4,6 +4,12 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateLiveRequest extends TeaModel {
+    @NameInMap("AppId")
+    public String appId;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("Name")
     public String name;
 
@@ -13,15 +19,25 @@ public class CreateLiveRequest extends TeaModel {
     @NameInMap("UserId")
     public String userId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("AppId")
-    public String appId;
-
     public static CreateLiveRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLiveRequest self = new CreateLiveRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLiveRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public CreateLiveRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateLiveRequest setName(String name) {
@@ -46,22 +62,6 @@ public class CreateLiveRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public CreateLiveRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreateLiveRequest setAppId(String appId) {
-        this.appId = appId;
-        return this;
-    }
-    public String getAppId() {
-        return this.appId;
     }
 
 }

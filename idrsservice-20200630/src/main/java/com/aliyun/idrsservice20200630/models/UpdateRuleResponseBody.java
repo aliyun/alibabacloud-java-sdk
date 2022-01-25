@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class UpdateRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public UpdateRuleResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public UpdateRuleResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static UpdateRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateRuleResponseBody self = new UpdateRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public UpdateRuleResponseBody setData(UpdateRuleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public UpdateRuleResponseBodyData getData() {
+        return this.data;
     }
 
     public UpdateRuleResponseBody setMessage(String message) {
@@ -37,54 +53,22 @@ public class UpdateRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateRuleResponseBody setData(UpdateRuleResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public UpdateRuleResponseBodyData getData() {
-        return this.data;
-    }
-
-    public UpdateRuleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class UpdateRuleResponseBodyData extends TeaModel {
-        @NameInMap("CreatedAt")
-        public String createdAt;
-
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("CreatedAt")
+        public String createdAt;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("Name")
+        public String name;
+
         public static UpdateRuleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             UpdateRuleResponseBodyData self = new UpdateRuleResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateRuleResponseBodyData setCreatedAt(String createdAt) {
-            this.createdAt = createdAt;
-            return this;
-        }
-        public String getCreatedAt() {
-            return this.createdAt;
-        }
-
-        public UpdateRuleResponseBodyData setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public UpdateRuleResponseBodyData setContent(String content) {
@@ -95,12 +79,28 @@ public class UpdateRuleResponseBody extends TeaModel {
             return this.content;
         }
 
+        public UpdateRuleResponseBodyData setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
+            return this;
+        }
+        public String getCreatedAt() {
+            return this.createdAt;
+        }
+
         public UpdateRuleResponseBodyData setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public UpdateRuleResponseBodyData setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

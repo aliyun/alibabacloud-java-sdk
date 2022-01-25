@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class DeleteAppResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public java.util.Map<String, ?> data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public java.util.Map<String, ?> data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static DeleteAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteAppResponseBody self = new DeleteAppResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteAppResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DeleteAppResponseBody setData(java.util.Map<String, ?> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.Map<String, ?> getData() {
+        return this.data;
     }
 
     public DeleteAppResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class DeleteAppResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteAppResponseBody setData(java.util.Map<String, ?> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.Map<String, ?> getData() {
-        return this.data;
-    }
-
-    public DeleteAppResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

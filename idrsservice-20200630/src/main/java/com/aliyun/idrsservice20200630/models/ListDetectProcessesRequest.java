@@ -4,14 +4,14 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class ListDetectProcessesRequest extends TeaModel {
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("Name")
-    public String name;
 
     @NameInMap("PublishStatus")
     public Boolean publishStatus;
@@ -19,6 +19,14 @@ public class ListDetectProcessesRequest extends TeaModel {
     public static ListDetectProcessesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDetectProcessesRequest self = new ListDetectProcessesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDetectProcessesRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListDetectProcessesRequest setPageIndex(Integer pageIndex) {
@@ -35,14 +43,6 @@ public class ListDetectProcessesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListDetectProcessesRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public ListDetectProcessesRequest setPublishStatus(Boolean publishStatus) {

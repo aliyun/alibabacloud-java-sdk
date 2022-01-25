@@ -4,6 +4,9 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateDepartmentRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("Description")
     public String description;
 
@@ -13,12 +16,17 @@ public class CreateDepartmentRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static CreateDepartmentRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDepartmentRequest self = new CreateDepartmentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDepartmentRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateDepartmentRequest setDescription(String description) {
@@ -43,14 +51,6 @@ public class CreateDepartmentRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public CreateDepartmentRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

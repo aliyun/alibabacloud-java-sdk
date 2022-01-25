@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class GetServiceConfigurationResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetServiceConfigurationResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetServiceConfigurationResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static GetServiceConfigurationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetServiceConfigurationResponseBody self = new GetServiceConfigurationResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetServiceConfigurationResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetServiceConfigurationResponseBody setData(GetServiceConfigurationResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetServiceConfigurationResponseBodyData getData() {
+        return this.data;
     }
 
     public GetServiceConfigurationResponseBody setMessage(String message) {
@@ -37,34 +53,21 @@ public class GetServiceConfigurationResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetServiceConfigurationResponseBody setData(GetServiceConfigurationResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetServiceConfigurationResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetServiceConfigurationResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class GetServiceConfigurationResponseBodyData extends TeaModel {
+        @NameInMap("ClientQueueSize")
+        public Integer clientQueueSize;
+
         @NameInMap("LiveRecordAll")
         public Boolean liveRecordAll;
+
+        @NameInMap("LiveRecordEveryOne")
+        public Boolean liveRecordEveryOne;
 
         @NameInMap("LiveRecordLayout")
         public Integer liveRecordLayout;
 
         @NameInMap("LiveRecordMaxClient")
         public Integer liveRecordMaxClient;
-
-        @NameInMap("LiveRecordEveryOne")
-        public Boolean liveRecordEveryOne;
 
         @NameInMap("LiveRecordTaskProfile")
         public String liveRecordTaskProfile;
@@ -75,12 +78,17 @@ public class GetServiceConfigurationResponseBody extends TeaModel {
         @NameInMap("TaskItemQueueSize")
         public Integer taskItemQueueSize;
 
-        @NameInMap("ClientQueueSize")
-        public Integer clientQueueSize;
-
         public static GetServiceConfigurationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetServiceConfigurationResponseBodyData self = new GetServiceConfigurationResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetServiceConfigurationResponseBodyData setClientQueueSize(Integer clientQueueSize) {
+            this.clientQueueSize = clientQueueSize;
+            return this;
+        }
+        public Integer getClientQueueSize() {
+            return this.clientQueueSize;
         }
 
         public GetServiceConfigurationResponseBodyData setLiveRecordAll(Boolean liveRecordAll) {
@@ -89,6 +97,14 @@ public class GetServiceConfigurationResponseBody extends TeaModel {
         }
         public Boolean getLiveRecordAll() {
             return this.liveRecordAll;
+        }
+
+        public GetServiceConfigurationResponseBodyData setLiveRecordEveryOne(Boolean liveRecordEveryOne) {
+            this.liveRecordEveryOne = liveRecordEveryOne;
+            return this;
+        }
+        public Boolean getLiveRecordEveryOne() {
+            return this.liveRecordEveryOne;
         }
 
         public GetServiceConfigurationResponseBodyData setLiveRecordLayout(Integer liveRecordLayout) {
@@ -105,14 +121,6 @@ public class GetServiceConfigurationResponseBody extends TeaModel {
         }
         public Integer getLiveRecordMaxClient() {
             return this.liveRecordMaxClient;
-        }
-
-        public GetServiceConfigurationResponseBodyData setLiveRecordEveryOne(Boolean liveRecordEveryOne) {
-            this.liveRecordEveryOne = liveRecordEveryOne;
-            return this;
-        }
-        public Boolean getLiveRecordEveryOne() {
-            return this.liveRecordEveryOne;
         }
 
         public GetServiceConfigurationResponseBodyData setLiveRecordTaskProfile(String liveRecordTaskProfile) {
@@ -137,14 +145,6 @@ public class GetServiceConfigurationResponseBody extends TeaModel {
         }
         public Integer getTaskItemQueueSize() {
             return this.taskItemQueueSize;
-        }
-
-        public GetServiceConfigurationResponseBodyData setClientQueueSize(Integer clientQueueSize) {
-            this.clientQueueSize = clientQueueSize;
-            return this;
-        }
-        public Integer getClientQueueSize() {
-            return this.clientQueueSize;
         }
 
     }

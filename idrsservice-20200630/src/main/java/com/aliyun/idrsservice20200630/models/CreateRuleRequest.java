@@ -4,26 +4,26 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateRuleRequest extends TeaModel {
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("Content")
     public String content;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("Name")
+    public String name;
 
     public static CreateRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRuleRequest self = new CreateRuleRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateRuleRequest setName(String name) {
-        this.name = name;
+    public CreateRuleRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateRuleRequest setContent(String content) {
@@ -34,12 +34,12 @@ public class CreateRuleRequest extends TeaModel {
         return this.content;
     }
 
-    public CreateRuleRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateRuleRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getName() {
+        return this.name;
     }
 
 }

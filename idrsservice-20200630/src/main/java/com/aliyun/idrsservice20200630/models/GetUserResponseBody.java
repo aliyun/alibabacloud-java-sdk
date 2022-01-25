@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetUserResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetUserResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static GetUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetUserResponseBody self = new GetUserResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetUserResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetUserResponseBody setData(GetUserResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetUserResponseBodyData getData() {
+        return this.data;
     }
 
     public GetUserResponseBody setMessage(String message) {
@@ -37,22 +53,6 @@ public class GetUserResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetUserResponseBody setData(GetUserResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetUserResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetUserResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class GetUserResponseBodyDataDepartments extends TeaModel {
         @NameInMap("Description")
         public String description;
@@ -60,14 +60,14 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("GmtModified")
         public String gmtModified;
 
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         public static GetUserResponseBodyDataDepartments build(java.util.Map<String, ?> map) throws Exception {
             GetUserResponseBodyDataDepartments self = new GetUserResponseBodyDataDepartments();
@@ -90,14 +90,6 @@ public class GetUserResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public GetUserResponseBodyDataDepartments setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public GetUserResponseBodyDataDepartments setGmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
             return this;
@@ -114,35 +106,43 @@ public class GetUserResponseBody extends TeaModel {
             return this.id;
         }
 
+        public GetUserResponseBodyDataDepartments setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
     }
 
     public static class GetUserResponseBodyData extends TeaModel {
-        @NameInMap("Email")
-        public String email;
-
-        @NameInMap("PhoneNumber")
-        public String phoneNumber;
+        @NameInMap("CreatedAt")
+        public String createdAt;
 
         @NameInMap("Departments")
         public java.util.List<GetUserResponseBodyDataDepartments> departments;
 
-        @NameInMap("CreatedAt")
-        public String createdAt;
+        @NameInMap("Email")
+        public String email;
 
-        @NameInMap("UpdatedAt")
-        public String updatedAt;
-
-        @NameInMap("Source")
-        public String source;
-
-        @NameInMap("Role")
-        public String role;
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("PhoneNumber")
+        public String phoneNumber;
+
+        @NameInMap("Role")
+        public String role;
+
+        @NameInMap("Source")
+        public String source;
+
+        @NameInMap("UpdatedAt")
+        public String updatedAt;
 
         @NameInMap("Username")
         public String username;
@@ -150,30 +150,6 @@ public class GetUserResponseBody extends TeaModel {
         public static GetUserResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetUserResponseBodyData self = new GetUserResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetUserResponseBodyData setEmail(String email) {
-            this.email = email;
-            return this;
-        }
-        public String getEmail() {
-            return this.email;
-        }
-
-        public GetUserResponseBodyData setPhoneNumber(String phoneNumber) {
-            this.phoneNumber = phoneNumber;
-            return this;
-        }
-        public String getPhoneNumber() {
-            return this.phoneNumber;
-        }
-
-        public GetUserResponseBodyData setDepartments(java.util.List<GetUserResponseBodyDataDepartments> departments) {
-            this.departments = departments;
-            return this;
-        }
-        public java.util.List<GetUserResponseBodyDataDepartments> getDepartments() {
-            return this.departments;
         }
 
         public GetUserResponseBodyData setCreatedAt(String createdAt) {
@@ -184,28 +160,28 @@ public class GetUserResponseBody extends TeaModel {
             return this.createdAt;
         }
 
-        public GetUserResponseBodyData setUpdatedAt(String updatedAt) {
-            this.updatedAt = updatedAt;
+        public GetUserResponseBodyData setDepartments(java.util.List<GetUserResponseBodyDataDepartments> departments) {
+            this.departments = departments;
             return this;
         }
-        public String getUpdatedAt() {
-            return this.updatedAt;
+        public java.util.List<GetUserResponseBodyDataDepartments> getDepartments() {
+            return this.departments;
         }
 
-        public GetUserResponseBodyData setSource(String source) {
-            this.source = source;
+        public GetUserResponseBodyData setEmail(String email) {
+            this.email = email;
             return this;
         }
-        public String getSource() {
-            return this.source;
+        public String getEmail() {
+            return this.email;
         }
 
-        public GetUserResponseBodyData setRole(String role) {
-            this.role = role;
+        public GetUserResponseBodyData setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getRole() {
-            return this.role;
+        public String getId() {
+            return this.id;
         }
 
         public GetUserResponseBodyData setName(String name) {
@@ -216,12 +192,36 @@ public class GetUserResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetUserResponseBodyData setId(String id) {
-            this.id = id;
+        public GetUserResponseBodyData setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getPhoneNumber() {
+            return this.phoneNumber;
+        }
+
+        public GetUserResponseBodyData setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+        public GetUserResponseBodyData setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public GetUserResponseBodyData setUpdatedAt(String updatedAt) {
+            this.updatedAt = updatedAt;
+            return this;
+        }
+        public String getUpdatedAt() {
+            return this.updatedAt;
         }
 
         public GetUserResponseBodyData setUsername(String username) {

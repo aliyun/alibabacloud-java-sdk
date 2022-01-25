@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class GetAppResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetAppResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetAppResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static GetAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAppResponseBody self = new GetAppResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetAppResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetAppResponseBody setData(GetAppResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetAppResponseBodyData getData() {
+        return this.data;
     }
 
     public GetAppResponseBody setMessage(String message) {
@@ -37,23 +53,10 @@ public class GetAppResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetAppResponseBody setData(GetAppResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetAppResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetAppResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class GetAppResponseBodyData extends TeaModel {
+        @NameInMap("Config")
+        public String config;
+
         @NameInMap("CreatedAt")
         public Integer createdAt;
 
@@ -66,6 +69,14 @@ public class GetAppResponseBody extends TeaModel {
         public static GetAppResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAppResponseBodyData self = new GetAppResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetAppResponseBodyData setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
         }
 
         public GetAppResponseBodyData setCreatedAt(Integer createdAt) {

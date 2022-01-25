@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class ListTaskGroupsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ListTaskGroupsResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public ListTaskGroupsResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static ListTaskGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTaskGroupsResponseBody self = new ListTaskGroupsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListTaskGroupsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListTaskGroupsResponseBody setData(ListTaskGroupsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListTaskGroupsResponseBodyData getData() {
+        return this.data;
     }
 
     public ListTaskGroupsResponseBody setMessage(String message) {
@@ -37,43 +53,18 @@ public class ListTaskGroupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTaskGroupsResponseBody setData(ListTaskGroupsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListTaskGroupsResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListTaskGroupsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class ListTaskGroupsResponseBodyDataItems extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("CompletedTasks")
         public Integer completedTasks;
-
-        @NameInMap("TotalTasks")
-        public Integer totalTasks;
 
         @NameInMap("CreatedAt")
         public String createdAt;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("TaskIds")
-        public java.util.List<String> taskIds;
-
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("RuleId")
         public String ruleId;
@@ -81,17 +72,18 @@ public class ListTaskGroupsResponseBody extends TeaModel {
         @NameInMap("RuleName")
         public String ruleName;
 
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TaskIds")
+        public java.util.List<String> taskIds;
+
+        @NameInMap("TotalTasks")
+        public Integer totalTasks;
+
         public static ListTaskGroupsResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             ListTaskGroupsResponseBodyDataItems self = new ListTaskGroupsResponseBodyDataItems();
             return TeaModel.build(map, self);
-        }
-
-        public ListTaskGroupsResponseBodyDataItems setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public ListTaskGroupsResponseBodyDataItems setCompletedTasks(Integer completedTasks) {
@@ -102,14 +94,6 @@ public class ListTaskGroupsResponseBody extends TeaModel {
             return this.completedTasks;
         }
 
-        public ListTaskGroupsResponseBodyDataItems setTotalTasks(Integer totalTasks) {
-            this.totalTasks = totalTasks;
-            return this;
-        }
-        public Integer getTotalTasks() {
-            return this.totalTasks;
-        }
-
         public ListTaskGroupsResponseBodyDataItems setCreatedAt(String createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -118,28 +102,20 @@ public class ListTaskGroupsResponseBody extends TeaModel {
             return this.createdAt;
         }
 
-        public ListTaskGroupsResponseBodyDataItems setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListTaskGroupsResponseBodyDataItems setTaskIds(java.util.List<String> taskIds) {
-            this.taskIds = taskIds;
-            return this;
-        }
-        public java.util.List<String> getTaskIds() {
-            return this.taskIds;
-        }
-
         public ListTaskGroupsResponseBodyDataItems setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public ListTaskGroupsResponseBodyDataItems setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public ListTaskGroupsResponseBodyDataItems setRuleId(String ruleId) {
@@ -158,17 +134,41 @@ public class ListTaskGroupsResponseBody extends TeaModel {
             return this.ruleName;
         }
 
+        public ListTaskGroupsResponseBodyDataItems setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListTaskGroupsResponseBodyDataItems setTaskIds(java.util.List<String> taskIds) {
+            this.taskIds = taskIds;
+            return this;
+        }
+        public java.util.List<String> getTaskIds() {
+            return this.taskIds;
+        }
+
+        public ListTaskGroupsResponseBodyDataItems setTotalTasks(Integer totalTasks) {
+            this.totalTasks = totalTasks;
+            return this;
+        }
+        public Integer getTotalTasks() {
+            return this.totalTasks;
+        }
+
     }
 
     public static class ListTaskGroupsResponseBodyData extends TeaModel {
         @NameInMap("Items")
         public java.util.List<ListTaskGroupsResponseBodyDataItems> items;
 
-        @NameInMap("TotalPages")
-        public Integer totalPages;
-
         @NameInMap("TotalElements")
         public Long totalElements;
+
+        @NameInMap("TotalPages")
+        public Integer totalPages;
 
         public static ListTaskGroupsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListTaskGroupsResponseBodyData self = new ListTaskGroupsResponseBodyData();
@@ -183,20 +183,20 @@ public class ListTaskGroupsResponseBody extends TeaModel {
             return this.items;
         }
 
-        public ListTaskGroupsResponseBodyData setTotalPages(Integer totalPages) {
-            this.totalPages = totalPages;
-            return this;
-        }
-        public Integer getTotalPages() {
-            return this.totalPages;
-        }
-
         public ListTaskGroupsResponseBodyData setTotalElements(Long totalElements) {
             this.totalElements = totalElements;
             return this;
         }
         public Long getTotalElements() {
             return this.totalElements;
+        }
+
+        public ListTaskGroupsResponseBodyData setTotalPages(Integer totalPages) {
+            this.totalPages = totalPages;
+            return this;
+        }
+        public Integer getTotalPages() {
+            return this.totalPages;
         }
 
     }

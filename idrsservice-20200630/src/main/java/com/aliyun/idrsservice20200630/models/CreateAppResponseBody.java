@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateAppResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public CreateAppResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public CreateAppResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static CreateAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateAppResponseBody self = new CreateAppResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAppResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateAppResponseBody setData(CreateAppResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateAppResponseBodyData getData() {
+        return this.data;
     }
 
     public CreateAppResponseBody setMessage(String message) {
@@ -37,41 +53,33 @@ public class CreateAppResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateAppResponseBody setData(CreateAppResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateAppResponseBodyData getData() {
-        return this.data;
-    }
-
-    public CreateAppResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class CreateAppResponseBodyData extends TeaModel {
+        @NameInMap("CreatedAt")
+        public String createdAt;
+
         @NameInMap("CreatorName")
         public String creatorName;
 
         @NameInMap("Disabled")
         public Boolean disabled;
 
-        @NameInMap("CreatedAt")
-        public String createdAt;
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Id")
-        public String id;
-
         public static CreateAppResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateAppResponseBodyData self = new CreateAppResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CreateAppResponseBodyData setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
+            return this;
+        }
+        public String getCreatedAt() {
+            return this.createdAt;
         }
 
         public CreateAppResponseBodyData setCreatorName(String creatorName) {
@@ -90,12 +98,12 @@ public class CreateAppResponseBody extends TeaModel {
             return this.disabled;
         }
 
-        public CreateAppResponseBodyData setCreatedAt(String createdAt) {
-            this.createdAt = createdAt;
+        public CreateAppResponseBodyData setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getCreatedAt() {
-            return this.createdAt;
+        public String getId() {
+            return this.id;
         }
 
         public CreateAppResponseBodyData setName(String name) {
@@ -104,14 +112,6 @@ public class CreateAppResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
-        }
-
-        public CreateAppResponseBodyData setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
         }
 
     }

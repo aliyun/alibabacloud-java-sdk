@@ -4,21 +4,37 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class UpdateDetectProcessResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public UpdateDetectProcessResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public UpdateDetectProcessResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static UpdateDetectProcessResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateDetectProcessResponseBody self = new UpdateDetectProcessResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateDetectProcessResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public UpdateDetectProcessResponseBody setData(UpdateDetectProcessResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public UpdateDetectProcessResponseBodyData getData() {
+        return this.data;
     }
 
     public UpdateDetectProcessResponseBody setMessage(String message) {
@@ -37,28 +53,18 @@ public class UpdateDetectProcessResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateDetectProcessResponseBody setData(UpdateDetectProcessResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public UpdateDetectProcessResponseBodyData getData() {
-        return this.data;
-    }
-
-    public UpdateDetectProcessResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class UpdateDetectProcessResponseBodyData extends TeaModel {
-        @NameInMap("Draft")
-        public String draft;
+        @NameInMap("Content")
+        public String content;
 
         @NameInMap("CreatedAt")
         public String createdAt;
+
+        @NameInMap("Draft")
+        public String draft;
+
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("Md5")
         public String md5;
@@ -66,15 +72,25 @@ public class UpdateDetectProcessResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Content")
-        public String content;
-
-        @NameInMap("Id")
-        public String id;
-
         public static UpdateDetectProcessResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             UpdateDetectProcessResponseBodyData self = new UpdateDetectProcessResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateDetectProcessResponseBodyData setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public UpdateDetectProcessResponseBodyData setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
+            return this;
+        }
+        public String getCreatedAt() {
+            return this.createdAt;
         }
 
         public UpdateDetectProcessResponseBodyData setDraft(String draft) {
@@ -85,12 +101,12 @@ public class UpdateDetectProcessResponseBody extends TeaModel {
             return this.draft;
         }
 
-        public UpdateDetectProcessResponseBodyData setCreatedAt(String createdAt) {
-            this.createdAt = createdAt;
+        public UpdateDetectProcessResponseBodyData setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getCreatedAt() {
-            return this.createdAt;
+        public String getId() {
+            return this.id;
         }
 
         public UpdateDetectProcessResponseBodyData setMd5(String md5) {
@@ -107,22 +123,6 @@ public class UpdateDetectProcessResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
-        }
-
-        public UpdateDetectProcessResponseBodyData setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
-        public UpdateDetectProcessResponseBodyData setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
         }
 
     }

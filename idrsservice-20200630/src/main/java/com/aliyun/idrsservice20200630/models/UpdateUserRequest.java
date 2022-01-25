@@ -7,6 +7,9 @@ public class UpdateUserRequest extends TeaModel {
     @NameInMap("Email")
     public String email;
 
+    @NameInMap("Id")
+    public String id;
+
     @NameInMap("Name")
     public String name;
 
@@ -15,9 +18,6 @@ public class UpdateUserRequest extends TeaModel {
 
     @NameInMap("Role")
     public String role;
-
-    @NameInMap("Id")
-    public String id;
 
     public static UpdateUserRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateUserRequest self = new UpdateUserRequest();
@@ -30,6 +30,14 @@ public class UpdateUserRequest extends TeaModel {
     }
     public String getEmail() {
         return this.email;
+    }
+
+    public UpdateUserRequest setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
     public UpdateUserRequest setName(String name) {
@@ -54,14 +62,6 @@ public class UpdateUserRequest extends TeaModel {
     }
     public String getRole() {
         return this.role;
-    }
-
-    public UpdateUserRequest setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
     }
 
 }

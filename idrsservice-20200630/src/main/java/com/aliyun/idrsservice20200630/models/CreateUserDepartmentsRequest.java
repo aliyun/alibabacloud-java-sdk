@@ -4,23 +4,26 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateUserDepartmentsRequest extends TeaModel {
-    @NameInMap("UserId")
-    public java.util.List<String> userId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("DepartmentId")
     public java.util.List<String> departmentId;
+
+    @NameInMap("UserId")
+    public java.util.List<String> userId;
 
     public static CreateUserDepartmentsRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUserDepartmentsRequest self = new CreateUserDepartmentsRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateUserDepartmentsRequest setUserId(java.util.List<String> userId) {
-        this.userId = userId;
+    public CreateUserDepartmentsRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public java.util.List<String> getUserId() {
-        return this.userId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateUserDepartmentsRequest setDepartmentId(java.util.List<String> departmentId) {
@@ -29,6 +32,14 @@ public class CreateUserDepartmentsRequest extends TeaModel {
     }
     public java.util.List<String> getDepartmentId() {
         return this.departmentId;
+    }
+
+    public CreateUserDepartmentsRequest setUserId(java.util.List<String> userId) {
+        this.userId = userId;
+        return this;
+    }
+    public java.util.List<String> getUserId() {
+        return this.userId;
     }
 
 }
