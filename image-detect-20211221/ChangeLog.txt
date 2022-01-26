@@ -1,3 +1,6 @@
+2022-01-26 Version: 1.0.1
+- API update, add response field.
+
 2022-01-21 Version: 1.0.0
 - API init.
 
