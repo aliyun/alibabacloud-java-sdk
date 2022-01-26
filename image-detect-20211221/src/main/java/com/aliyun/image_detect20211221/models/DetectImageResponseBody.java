@@ -66,15 +66,29 @@ public class DetectImageResponseBody extends TeaModel {
     }
 
     public static class DetectImageResponseBodyResponseDataInfo extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
         @NameInMap("Conf")
         public Double conf;
 
         @NameInMap("Direction")
         public String direction;
 
+        @NameInMap("Well")
+        public String well;
+
         public static DetectImageResponseBodyResponseDataInfo build(java.util.Map<String, ?> map) throws Exception {
             DetectImageResponseBodyResponseDataInfo self = new DetectImageResponseBodyResponseDataInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DetectImageResponseBodyResponseDataInfo setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public DetectImageResponseBodyResponseDataInfo setConf(Double conf) {
@@ -93,14 +107,22 @@ public class DetectImageResponseBody extends TeaModel {
             return this.direction;
         }
 
+        public DetectImageResponseBodyResponseDataInfo setWell(String well) {
+            this.well = well;
+            return this;
+        }
+        public String getWell() {
+            return this.well;
+        }
+
     }
 
     public static class DetectImageResponseBodyResponseDataResults extends TeaModel {
-        @NameInMap("Category")
-        public java.util.List<String> category;
+        @NameInMap("CategoryList")
+        public java.util.List<String> categoryList;
 
-        @NameInMap("Conf")
-        public java.util.List<Double> conf;
+        @NameInMap("ConfList")
+        public java.util.List<Double> confList;
 
         @NameInMap("Direction")
         public String direction;
@@ -116,20 +138,20 @@ public class DetectImageResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DetectImageResponseBodyResponseDataResults setCategory(java.util.List<String> category) {
-            this.category = category;
+        public DetectImageResponseBodyResponseDataResults setCategoryList(java.util.List<String> categoryList) {
+            this.categoryList = categoryList;
             return this;
         }
-        public java.util.List<String> getCategory() {
-            return this.category;
+        public java.util.List<String> getCategoryList() {
+            return this.categoryList;
         }
 
-        public DetectImageResponseBodyResponseDataResults setConf(java.util.List<Double> conf) {
-            this.conf = conf;
+        public DetectImageResponseBodyResponseDataResults setConfList(java.util.List<Double> confList) {
+            this.confList = confList;
             return this;
         }
-        public java.util.List<Double> getConf() {
-            return this.conf;
+        public java.util.List<Double> getConfList() {
+            return this.confList;
         }
 
         public DetectImageResponseBodyResponseDataResults setDirection(String direction) {
