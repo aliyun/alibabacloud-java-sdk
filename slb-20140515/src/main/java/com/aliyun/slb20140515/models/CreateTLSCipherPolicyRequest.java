@@ -28,9 +28,6 @@ public class CreateTLSCipherPolicyRequest extends TeaModel {
     @NameInMap("TLSVersions")
     public java.util.List<String> TLSVersions;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
     public static CreateTLSCipherPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTLSCipherPolicyRequest self = new CreateTLSCipherPolicyRequest();
         return TeaModel.build(map, self);
@@ -98,14 +95,6 @@ public class CreateTLSCipherPolicyRequest extends TeaModel {
     }
     public java.util.List<String> getTLSVersions() {
         return this.TLSVersions;
-    }
-
-    public CreateTLSCipherPolicyRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
     }
 
 }

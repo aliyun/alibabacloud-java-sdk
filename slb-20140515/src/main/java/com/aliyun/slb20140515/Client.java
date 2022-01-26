@@ -1366,10 +1366,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TLSVersions", request.TLSVersions);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.accessKeyId)) {
-            query.put("access_key_id", request.accessKeyId);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1874,10 +1870,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.TLSCipherPolicyId)) {
             query.put("TLSCipherPolicyId", request.TLSCipherPolicyId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.accessKeyId)) {
-            query.put("access_key_id", request.accessKeyId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -3405,10 +3397,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.TLSCipherPolicyId)) {
             query.put("TLSCipherPolicyId", request.TLSCipherPolicyId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.accessKeyId)) {
-            query.put("access_key_id", request.accessKeyId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -5327,10 +5315,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.TLSVersions)) {
             query.put("TLSVersions", request.TLSVersions);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.accessKeyId)) {
-            query.put("access_key_id", request.accessKeyId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

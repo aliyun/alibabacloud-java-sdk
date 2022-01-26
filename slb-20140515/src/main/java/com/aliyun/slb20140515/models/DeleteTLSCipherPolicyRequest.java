@@ -22,9 +22,6 @@ public class DeleteTLSCipherPolicyRequest extends TeaModel {
     @NameInMap("TLSCipherPolicyId")
     public String TLSCipherPolicyId;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
     public static DeleteTLSCipherPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteTLSCipherPolicyRequest self = new DeleteTLSCipherPolicyRequest();
         return TeaModel.build(map, self);
@@ -76,14 +73,6 @@ public class DeleteTLSCipherPolicyRequest extends TeaModel {
     }
     public String getTLSCipherPolicyId() {
         return this.TLSCipherPolicyId;
-    }
-
-    public DeleteTLSCipherPolicyRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
     }
 
 }
