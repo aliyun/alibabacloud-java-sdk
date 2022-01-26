@@ -34,9 +34,6 @@ public class ListTLSCipherPoliciesRequest extends TeaModel {
     @NameInMap("TLSCipherPolicyId")
     public String TLSCipherPolicyId;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
     public static ListTLSCipherPoliciesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTLSCipherPoliciesRequest self = new ListTLSCipherPoliciesRequest();
         return TeaModel.build(map, self);
@@ -120,14 +117,6 @@ public class ListTLSCipherPoliciesRequest extends TeaModel {
     }
     public String getTLSCipherPolicyId() {
         return this.TLSCipherPolicyId;
-    }
-
-    public ListTLSCipherPoliciesRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
     }
 
 }
