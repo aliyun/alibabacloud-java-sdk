@@ -150,8 +150,8 @@ public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
     }
 
     public static class GetDiagnoseResultForSingleCardResponseBodyErrorResult extends TeaModel {
-        @NameInMap("ErrorDes")
-        public String errorDes;
+        @NameInMap("ErrorDesc")
+        public String errorDesc;
 
         @NameInMap("ErrorLevel")
         public String errorLevel;
@@ -167,12 +167,12 @@ public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetDiagnoseResultForSingleCardResponseBodyErrorResult setErrorDes(String errorDes) {
-            this.errorDes = errorDes;
+        public GetDiagnoseResultForSingleCardResponseBodyErrorResult setErrorDesc(String errorDesc) {
+            this.errorDesc = errorDesc;
             return this;
         }
-        public String getErrorDes() {
-            return this.errorDes;
+        public String getErrorDesc() {
+            return this.errorDesc;
         }
 
         public GetDiagnoseResultForSingleCardResponseBodyErrorResult setErrorLevel(String errorLevel) {
