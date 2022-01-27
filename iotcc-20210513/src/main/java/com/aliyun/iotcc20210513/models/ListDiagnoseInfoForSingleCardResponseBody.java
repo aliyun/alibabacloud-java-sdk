@@ -11,10 +11,13 @@ public class ListDiagnoseInfoForSingleCardResponseBody extends TeaModel {
     public Long maxResults;
 
     @NameInMap("NextToken")
-    public Long nextToken;
+    public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static ListDiagnoseInfoForSingleCardResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDiagnoseInfoForSingleCardResponseBody self = new ListDiagnoseInfoForSingleCardResponseBody();
@@ -37,11 +40,11 @@ public class ListDiagnoseInfoForSingleCardResponseBody extends TeaModel {
         return this.maxResults;
     }
 
-    public ListDiagnoseInfoForSingleCardResponseBody setNextToken(Long nextToken) {
+    public ListDiagnoseInfoForSingleCardResponseBody setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
-    public Long getNextToken() {
+    public String getNextToken() {
         return this.nextToken;
     }
 
@@ -51,6 +54,14 @@ public class ListDiagnoseInfoForSingleCardResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListDiagnoseInfoForSingleCardResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListDiagnoseInfoForSingleCardResponseBodyDiagnoseInfo extends TeaModel {
@@ -63,6 +74,9 @@ public class ListDiagnoseInfoForSingleCardResponseBody extends TeaModel {
         @NameInMap("Destination")
         public String destination;
 
+        @NameInMap("DiagnoseTime")
+        public Long diagnoseTime;
+
         @NameInMap("EndTime")
         public Long endTime;
 
@@ -74,6 +88,9 @@ public class ListDiagnoseInfoForSingleCardResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("TaskId")
+        public String taskId;
 
         public static ListDiagnoseInfoForSingleCardResponseBodyDiagnoseInfo build(java.util.Map<String, ?> map) throws Exception {
             ListDiagnoseInfoForSingleCardResponseBodyDiagnoseInfo self = new ListDiagnoseInfoForSingleCardResponseBodyDiagnoseInfo();
@@ -102,6 +119,14 @@ public class ListDiagnoseInfoForSingleCardResponseBody extends TeaModel {
         }
         public String getDestination() {
             return this.destination;
+        }
+
+        public ListDiagnoseInfoForSingleCardResponseBodyDiagnoseInfo setDiagnoseTime(Long diagnoseTime) {
+            this.diagnoseTime = diagnoseTime;
+            return this;
+        }
+        public Long getDiagnoseTime() {
+            return this.diagnoseTime;
         }
 
         public ListDiagnoseInfoForSingleCardResponseBodyDiagnoseInfo setEndTime(Long endTime) {
@@ -134,6 +159,14 @@ public class ListDiagnoseInfoForSingleCardResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListDiagnoseInfoForSingleCardResponseBodyDiagnoseInfo setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
         }
 
     }
