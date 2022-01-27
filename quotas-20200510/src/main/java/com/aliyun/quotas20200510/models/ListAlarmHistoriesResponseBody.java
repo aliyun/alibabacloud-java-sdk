@@ -4,8 +4,11 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListAlarmHistoriesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("AlarmHistories")
+    public java.util.List<ListAlarmHistoriesResponseBodyAlarmHistories> alarmHistories;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -13,23 +16,28 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
-    @NameInMap("AlarmHistories")
-    public java.util.List<ListAlarmHistoriesResponseBodyAlarmHistories> alarmHistories;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListAlarmHistoriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAlarmHistoriesResponseBody self = new ListAlarmHistoriesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListAlarmHistoriesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListAlarmHistoriesResponseBody setAlarmHistories(java.util.List<ListAlarmHistoriesResponseBodyAlarmHistories> alarmHistories) {
+        this.alarmHistories = alarmHistories;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public java.util.List<ListAlarmHistoriesResponseBodyAlarmHistories> getAlarmHistories() {
+        return this.alarmHistories;
+    }
+
+    public ListAlarmHistoriesResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListAlarmHistoriesResponseBody setNextToken(String nextToken) {
@@ -48,85 +56,45 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListAlarmHistoriesResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public ListAlarmHistoriesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    public ListAlarmHistoriesResponseBody setAlarmHistories(java.util.List<ListAlarmHistoriesResponseBodyAlarmHistories> alarmHistories) {
-        this.alarmHistories = alarmHistories;
-        return this;
-    }
-    public java.util.List<ListAlarmHistoriesResponseBodyAlarmHistories> getAlarmHistories() {
-        return this.alarmHistories;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListAlarmHistoriesResponseBodyAlarmHistories extends TeaModel {
-        @NameInMap("QuotaUsage")
-        public Float quotaUsage;
-
-        @NameInMap("ThresholdPercent")
-        public Float thresholdPercent;
+        @NameInMap("AlarmName")
+        public String alarmName;
 
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("QuotaActionCode")
-        public String quotaActionCode;
-
-        @NameInMap("AlarmName")
-        public String alarmName;
+        @NameInMap("NotifyChannels")
+        public java.util.List<String> notifyChannels;
 
         @NameInMap("NotifyTarget")
         public String notifyTarget;
 
-        @NameInMap("NotifyChannels")
-        public java.util.List<String> notifyChannels;
+        @NameInMap("ProductCode")
+        public String productCode;
+
+        @NameInMap("QuotaActionCode")
+        public String quotaActionCode;
+
+        @NameInMap("QuotaUsage")
+        public Float quotaUsage;
 
         @NameInMap("Threshold")
         public Float threshold;
 
-        @NameInMap("ProductCode")
-        public String productCode;
+        @NameInMap("ThresholdPercent")
+        public Float thresholdPercent;
 
         public static ListAlarmHistoriesResponseBodyAlarmHistories build(java.util.Map<String, ?> map) throws Exception {
             ListAlarmHistoriesResponseBodyAlarmHistories self = new ListAlarmHistoriesResponseBodyAlarmHistories();
             return TeaModel.build(map, self);
-        }
-
-        public ListAlarmHistoriesResponseBodyAlarmHistories setQuotaUsage(Float quotaUsage) {
-            this.quotaUsage = quotaUsage;
-            return this;
-        }
-        public Float getQuotaUsage() {
-            return this.quotaUsage;
-        }
-
-        public ListAlarmHistoriesResponseBodyAlarmHistories setThresholdPercent(Float thresholdPercent) {
-            this.thresholdPercent = thresholdPercent;
-            return this;
-        }
-        public Float getThresholdPercent() {
-            return this.thresholdPercent;
-        }
-
-        public ListAlarmHistoriesResponseBodyAlarmHistories setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public ListAlarmHistoriesResponseBodyAlarmHistories setQuotaActionCode(String quotaActionCode) {
-            this.quotaActionCode = quotaActionCode;
-            return this;
-        }
-        public String getQuotaActionCode() {
-            return this.quotaActionCode;
         }
 
         public ListAlarmHistoriesResponseBodyAlarmHistories setAlarmName(String alarmName) {
@@ -137,12 +105,12 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             return this.alarmName;
         }
 
-        public ListAlarmHistoriesResponseBodyAlarmHistories setNotifyTarget(String notifyTarget) {
-            this.notifyTarget = notifyTarget;
+        public ListAlarmHistoriesResponseBodyAlarmHistories setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getNotifyTarget() {
-            return this.notifyTarget;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListAlarmHistoriesResponseBodyAlarmHistories setNotifyChannels(java.util.List<String> notifyChannels) {
@@ -153,12 +121,12 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             return this.notifyChannels;
         }
 
-        public ListAlarmHistoriesResponseBodyAlarmHistories setThreshold(Float threshold) {
-            this.threshold = threshold;
+        public ListAlarmHistoriesResponseBodyAlarmHistories setNotifyTarget(String notifyTarget) {
+            this.notifyTarget = notifyTarget;
             return this;
         }
-        public Float getThreshold() {
-            return this.threshold;
+        public String getNotifyTarget() {
+            return this.notifyTarget;
         }
 
         public ListAlarmHistoriesResponseBodyAlarmHistories setProductCode(String productCode) {
@@ -167,6 +135,38 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         }
         public String getProductCode() {
             return this.productCode;
+        }
+
+        public ListAlarmHistoriesResponseBodyAlarmHistories setQuotaActionCode(String quotaActionCode) {
+            this.quotaActionCode = quotaActionCode;
+            return this;
+        }
+        public String getQuotaActionCode() {
+            return this.quotaActionCode;
+        }
+
+        public ListAlarmHistoriesResponseBodyAlarmHistories setQuotaUsage(Float quotaUsage) {
+            this.quotaUsage = quotaUsage;
+            return this;
+        }
+        public Float getQuotaUsage() {
+            return this.quotaUsage;
+        }
+
+        public ListAlarmHistoriesResponseBodyAlarmHistories setThreshold(Float threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public Float getThreshold() {
+            return this.threshold;
+        }
+
+        public ListAlarmHistoriesResponseBodyAlarmHistories setThresholdPercent(Float thresholdPercent) {
+            this.thresholdPercent = thresholdPercent;
+            return this;
+        }
+        public Float getThresholdPercent() {
+            return this.thresholdPercent;
         }
 
     }

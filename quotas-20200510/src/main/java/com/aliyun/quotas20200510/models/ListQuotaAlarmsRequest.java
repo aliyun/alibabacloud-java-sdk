@@ -4,17 +4,17 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListQuotaAlarmsRequest extends TeaModel {
-    @NameInMap("NextToken")
-    public String nextToken;
+    @NameInMap("AlarmName")
+    public String alarmName;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     @NameInMap("ProductCode")
     public String productCode;
-
-    @NameInMap("AlarmName")
-    public String alarmName;
 
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
@@ -27,12 +27,12 @@ public class ListQuotaAlarmsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListQuotaAlarmsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public ListQuotaAlarmsRequest setAlarmName(String alarmName) {
+        this.alarmName = alarmName;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public String getAlarmName() {
+        return this.alarmName;
     }
 
     public ListQuotaAlarmsRequest setMaxResults(Integer maxResults) {
@@ -43,20 +43,20 @@ public class ListQuotaAlarmsRequest extends TeaModel {
         return this.maxResults;
     }
 
+    public ListQuotaAlarmsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public ListQuotaAlarmsRequest setProductCode(String productCode) {
         this.productCode = productCode;
         return this;
     }
     public String getProductCode() {
         return this.productCode;
-    }
-
-    public ListQuotaAlarmsRequest setAlarmName(String alarmName) {
-        this.alarmName = alarmName;
-        return this;
-    }
-    public String getAlarmName() {
-        return this.alarmName;
     }
 
     public ListQuotaAlarmsRequest setQuotaActionCode(String quotaActionCode) {
