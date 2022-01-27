@@ -195,7 +195,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
 
     public static class GetInstanceInspectionsResponseBodyDataListBaseInspection extends TeaModel {
         @NameInMap("Data")
-        public String data;
+        public java.util.Map<String, ?> data;
 
         @NameInMap("EndTime")
         public Long endTime;
@@ -210,7 +210,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         public Integer score;
 
         @NameInMap("ScoreMap")
-        public String scoreMap;
+        public java.util.Map<String, ?> scoreMap;
 
         @NameInMap("StartTime")
         public Long startTime;
@@ -220,11 +220,11 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspection setData(String data) {
+        public GetInstanceInspectionsResponseBodyDataListBaseInspection setData(java.util.Map<String, ?> data) {
             this.data = data;
             return this;
         }
-        public String getData() {
+        public java.util.Map<String, ?> getData() {
             return this.data;
         }
 
@@ -260,11 +260,11 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.score;
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspection setScoreMap(String scoreMap) {
+        public GetInstanceInspectionsResponseBodyDataListBaseInspection setScoreMap(java.util.Map<String, ?> scoreMap) {
             this.scoreMap = scoreMap;
             return this;
         }
-        public String getScoreMap() {
+        public java.util.Map<String, ?> getScoreMap() {
             return this.scoreMap;
         }
 
