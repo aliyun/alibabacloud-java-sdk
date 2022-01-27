@@ -1,3 +1,6 @@
+2022-01-27 Version: 1.0.3
+- Query price and convert.
+
 2021-11-01 Version: 1.0.2
 - Support multi languages.
 

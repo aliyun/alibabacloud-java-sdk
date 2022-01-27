@@ -104,6 +104,10 @@ public class CreateInstanceRequest extends TeaModel {
         @NameInMap("PricingCycle")
         public String pricingCycle;
 
+        // 优惠券code
+        @NameInMap("PromotionCode")
+        public String promotionCode;
+
         @NameInMap("Region")
         public String region;
 
@@ -112,6 +116,10 @@ public class CreateInstanceRequest extends TeaModel {
 
         @NameInMap("Storage")
         public CreateInstanceRequestCreateInstanceRequestStorage storage;
+
+        // 是否使用优惠券
+        @NameInMap("UsePromotionCode")
+        public Boolean usePromotionCode;
 
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
@@ -167,6 +175,14 @@ public class CreateInstanceRequest extends TeaModel {
             return this.pricingCycle;
         }
 
+        public CreateInstanceRequestCreateInstanceRequest setPromotionCode(String promotionCode) {
+            this.promotionCode = promotionCode;
+            return this;
+        }
+        public String getPromotionCode() {
+            return this.promotionCode;
+        }
+
         public CreateInstanceRequestCreateInstanceRequest setRegion(String region) {
             this.region = region;
             return this;
@@ -189,6 +205,14 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public CreateInstanceRequestCreateInstanceRequestStorage getStorage() {
             return this.storage;
+        }
+
+        public CreateInstanceRequestCreateInstanceRequest setUsePromotionCode(Boolean usePromotionCode) {
+            this.usePromotionCode = usePromotionCode;
+            return this;
+        }
+        public Boolean getUsePromotionCode() {
+            return this.usePromotionCode;
         }
 
         public CreateInstanceRequestCreateInstanceRequest setVSwitchIds(java.util.List<String> vSwitchIds) {

@@ -176,6 +176,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ResourceCreateTime")
         public Long resourceCreateTime;
 
+        // 超期时间
+        @NameInMap("ResourceExpiredTime")
+        public Long resourceExpiredTime;
+
         @NameInMap("ResourceId")
         public String resourceId;
 
@@ -256,6 +260,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Long getResourceCreateTime() {
             return this.resourceCreateTime;
+        }
+
+        public DescribeInstancesResponseBodyInstances setResourceExpiredTime(Long resourceExpiredTime) {
+            this.resourceExpiredTime = resourceExpiredTime;
+            return this;
+        }
+        public Long getResourceExpiredTime() {
+            return this.resourceExpiredTime;
         }
 
         public DescribeInstancesResponseBodyInstances setResourceId(String resourceId) {
