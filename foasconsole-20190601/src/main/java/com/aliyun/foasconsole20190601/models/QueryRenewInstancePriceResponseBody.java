@@ -3,10 +3,10 @@ package com.aliyun.foasconsole20190601.models;
 
 import com.aliyun.tea.*;
 
-public class QueryConvertInstancePriceResponseBody extends TeaModel {
+public class QueryRenewInstancePriceResponseBody extends TeaModel {
     // 价格信息，包括价格和优惠规则。
     @NameInMap("PriceInfo")
-    public QueryConvertInstancePriceResponseBodyPriceInfo priceInfo;
+    public QueryRenewInstancePriceResponseBodyPriceInfo priceInfo;
 
     // 请求id
     @NameInMap("RequestId")
@@ -16,20 +16,20 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static QueryConvertInstancePriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        QueryConvertInstancePriceResponseBody self = new QueryConvertInstancePriceResponseBody();
+    public static QueryRenewInstancePriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        QueryRenewInstancePriceResponseBody self = new QueryRenewInstancePriceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QueryConvertInstancePriceResponseBody setPriceInfo(QueryConvertInstancePriceResponseBodyPriceInfo priceInfo) {
+    public QueryRenewInstancePriceResponseBody setPriceInfo(QueryRenewInstancePriceResponseBodyPriceInfo priceInfo) {
         this.priceInfo = priceInfo;
         return this;
     }
-    public QueryConvertInstancePriceResponseBodyPriceInfo getPriceInfo() {
+    public QueryRenewInstancePriceResponseBodyPriceInfo getPriceInfo() {
         return this.priceInfo;
     }
 
-    public QueryConvertInstancePriceResponseBody setRequestId(String requestId) {
+    public QueryRenewInstancePriceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -37,7 +37,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryConvertInstancePriceResponseBody setSuccess(Boolean success) {
+    public QueryRenewInstancePriceResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -45,7 +45,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class QueryConvertInstancePriceResponseBodyPriceInfoOptionalPromotions extends TeaModel {
+    public static class QueryRenewInstancePriceResponseBodyPriceInfoOptionalPromotions extends TeaModel {
         // 优惠券描述
         @NameInMap("PromotionDesc")
         public String promotionDesc;
@@ -61,12 +61,12 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         @NameInMap("Selected")
         public Boolean selected;
 
-        public static QueryConvertInstancePriceResponseBodyPriceInfoOptionalPromotions build(java.util.Map<String, ?> map) throws Exception {
-            QueryConvertInstancePriceResponseBodyPriceInfoOptionalPromotions self = new QueryConvertInstancePriceResponseBodyPriceInfoOptionalPromotions();
+        public static QueryRenewInstancePriceResponseBodyPriceInfoOptionalPromotions build(java.util.Map<String, ?> map) throws Exception {
+            QueryRenewInstancePriceResponseBodyPriceInfoOptionalPromotions self = new QueryRenewInstancePriceResponseBodyPriceInfoOptionalPromotions();
             return TeaModel.build(map, self);
         }
 
-        public QueryConvertInstancePriceResponseBodyPriceInfoOptionalPromotions setPromotionDesc(String promotionDesc) {
+        public QueryRenewInstancePriceResponseBodyPriceInfoOptionalPromotions setPromotionDesc(String promotionDesc) {
             this.promotionDesc = promotionDesc;
             return this;
         }
@@ -74,7 +74,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             return this.promotionDesc;
         }
 
-        public QueryConvertInstancePriceResponseBodyPriceInfoOptionalPromotions setPromotionName(String promotionName) {
+        public QueryRenewInstancePriceResponseBodyPriceInfoOptionalPromotions setPromotionName(String promotionName) {
             this.promotionName = promotionName;
             return this;
         }
@@ -82,7 +82,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             return this.promotionName;
         }
 
-        public QueryConvertInstancePriceResponseBodyPriceInfoOptionalPromotions setPromotionOptionNo(String promotionOptionNo) {
+        public QueryRenewInstancePriceResponseBodyPriceInfoOptionalPromotions setPromotionOptionNo(String promotionOptionNo) {
             this.promotionOptionNo = promotionOptionNo;
             return this;
         }
@@ -90,7 +90,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             return this.promotionOptionNo;
         }
 
-        public QueryConvertInstancePriceResponseBodyPriceInfoOptionalPromotions setSelected(Boolean selected) {
+        public QueryRenewInstancePriceResponseBodyPriceInfoOptionalPromotions setSelected(Boolean selected) {
             this.selected = selected;
             return this;
         }
@@ -100,7 +100,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
 
     }
 
-    public static class QueryConvertInstancePriceResponseBodyPriceInfoRules extends TeaModel {
+    public static class QueryRenewInstancePriceResponseBodyPriceInfoRules extends TeaModel {
         // 活动规则描述。
         @NameInMap("Description")
         public String description;
@@ -109,12 +109,12 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         @NameInMap("RuleId")
         public Long ruleId;
 
-        public static QueryConvertInstancePriceResponseBodyPriceInfoRules build(java.util.Map<String, ?> map) throws Exception {
-            QueryConvertInstancePriceResponseBodyPriceInfoRules self = new QueryConvertInstancePriceResponseBodyPriceInfoRules();
+        public static QueryRenewInstancePriceResponseBodyPriceInfoRules build(java.util.Map<String, ?> map) throws Exception {
+            QueryRenewInstancePriceResponseBodyPriceInfoRules self = new QueryRenewInstancePriceResponseBodyPriceInfoRules();
             return TeaModel.build(map, self);
         }
 
-        public QueryConvertInstancePriceResponseBodyPriceInfoRules setDescription(String description) {
+        public QueryRenewInstancePriceResponseBodyPriceInfoRules setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -122,7 +122,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             return this.description;
         }
 
-        public QueryConvertInstancePriceResponseBodyPriceInfoRules setRuleId(Long ruleId) {
+        public QueryRenewInstancePriceResponseBodyPriceInfoRules setRuleId(Long ruleId) {
             this.ruleId = ruleId;
             return this;
         }
@@ -132,7 +132,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
 
     }
 
-    public static class QueryConvertInstancePriceResponseBodyPriceInfo extends TeaModel {
+    public static class QueryRenewInstancePriceResponseBodyPriceInfo extends TeaModel {
         // 错误码
         @NameInMap("Code")
         public String code;
@@ -150,7 +150,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         public String message;
 
         @NameInMap("OptionalPromotions")
-        public java.util.List<QueryConvertInstancePriceResponseBodyPriceInfoOptionalPromotions> optionalPromotions;
+        public java.util.List<QueryRenewInstancePriceResponseBodyPriceInfoOptionalPromotions> optionalPromotions;
 
         // 原价
         @NameInMap("OriginalAmount")
@@ -158,18 +158,18 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
 
         // 活动规则。
         @NameInMap("Rules")
-        public java.util.List<QueryConvertInstancePriceResponseBodyPriceInfoRules> rules;
+        public java.util.List<QueryRenewInstancePriceResponseBodyPriceInfoRules> rules;
 
         // 最终价，为原价减去折扣。
         @NameInMap("TradeAmount")
         public Float tradeAmount;
 
-        public static QueryConvertInstancePriceResponseBodyPriceInfo build(java.util.Map<String, ?> map) throws Exception {
-            QueryConvertInstancePriceResponseBodyPriceInfo self = new QueryConvertInstancePriceResponseBodyPriceInfo();
+        public static QueryRenewInstancePriceResponseBodyPriceInfo build(java.util.Map<String, ?> map) throws Exception {
+            QueryRenewInstancePriceResponseBodyPriceInfo self = new QueryRenewInstancePriceResponseBodyPriceInfo();
             return TeaModel.build(map, self);
         }
 
-        public QueryConvertInstancePriceResponseBodyPriceInfo setCode(String code) {
+        public QueryRenewInstancePriceResponseBodyPriceInfo setCode(String code) {
             this.code = code;
             return this;
         }
@@ -177,7 +177,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             return this.code;
         }
 
-        public QueryConvertInstancePriceResponseBodyPriceInfo setCurrency(String currency) {
+        public QueryRenewInstancePriceResponseBodyPriceInfo setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
@@ -185,7 +185,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             return this.currency;
         }
 
-        public QueryConvertInstancePriceResponseBodyPriceInfo setDiscountAmount(Float discountAmount) {
+        public QueryRenewInstancePriceResponseBodyPriceInfo setDiscountAmount(Float discountAmount) {
             this.discountAmount = discountAmount;
             return this;
         }
@@ -193,7 +193,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             return this.discountAmount;
         }
 
-        public QueryConvertInstancePriceResponseBodyPriceInfo setMessage(String message) {
+        public QueryRenewInstancePriceResponseBodyPriceInfo setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -201,15 +201,15 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             return this.message;
         }
 
-        public QueryConvertInstancePriceResponseBodyPriceInfo setOptionalPromotions(java.util.List<QueryConvertInstancePriceResponseBodyPriceInfoOptionalPromotions> optionalPromotions) {
+        public QueryRenewInstancePriceResponseBodyPriceInfo setOptionalPromotions(java.util.List<QueryRenewInstancePriceResponseBodyPriceInfoOptionalPromotions> optionalPromotions) {
             this.optionalPromotions = optionalPromotions;
             return this;
         }
-        public java.util.List<QueryConvertInstancePriceResponseBodyPriceInfoOptionalPromotions> getOptionalPromotions() {
+        public java.util.List<QueryRenewInstancePriceResponseBodyPriceInfoOptionalPromotions> getOptionalPromotions() {
             return this.optionalPromotions;
         }
 
-        public QueryConvertInstancePriceResponseBodyPriceInfo setOriginalAmount(Float originalAmount) {
+        public QueryRenewInstancePriceResponseBodyPriceInfo setOriginalAmount(Float originalAmount) {
             this.originalAmount = originalAmount;
             return this;
         }
@@ -217,15 +217,15 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             return this.originalAmount;
         }
 
-        public QueryConvertInstancePriceResponseBodyPriceInfo setRules(java.util.List<QueryConvertInstancePriceResponseBodyPriceInfoRules> rules) {
+        public QueryRenewInstancePriceResponseBodyPriceInfo setRules(java.util.List<QueryRenewInstancePriceResponseBodyPriceInfoRules> rules) {
             this.rules = rules;
             return this;
         }
-        public java.util.List<QueryConvertInstancePriceResponseBodyPriceInfoRules> getRules() {
+        public java.util.List<QueryRenewInstancePriceResponseBodyPriceInfoRules> getRules() {
             return this.rules;
         }
 
-        public QueryConvertInstancePriceResponseBodyPriceInfo setTradeAmount(Float tradeAmount) {
+        public QueryRenewInstancePriceResponseBodyPriceInfo setTradeAmount(Float tradeAmount) {
             this.tradeAmount = tradeAmount;
             return this;
         }
