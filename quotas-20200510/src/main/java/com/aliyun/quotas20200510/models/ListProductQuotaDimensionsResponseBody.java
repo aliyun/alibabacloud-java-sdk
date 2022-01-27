@@ -4,56 +4,24 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListProductQuotaDimensionsResponseBody extends TeaModel {
-    @NameInMap("QuotaDimensions")
-    public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensions> quotaDimensions;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("QuotaDimensions")
+    public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensions> quotaDimensions;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListProductQuotaDimensionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListProductQuotaDimensionsResponseBody self = new ListProductQuotaDimensionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListProductQuotaDimensionsResponseBody setQuotaDimensions(java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensions> quotaDimensions) {
-        this.quotaDimensions = quotaDimensions;
-        return this;
-    }
-    public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensions> getQuotaDimensions() {
-        return this.quotaDimensions;
-    }
-
-    public ListProductQuotaDimensionsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListProductQuotaDimensionsResponseBody setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ListProductQuotaDimensionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListProductQuotaDimensionsResponseBody setMaxResults(Integer maxResults) {
@@ -64,15 +32,77 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         return this.maxResults;
     }
 
+    public ListProductQuotaDimensionsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListProductQuotaDimensionsResponseBody setQuotaDimensions(java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensions> quotaDimensions) {
+        this.quotaDimensions = quotaDimensions;
+        return this;
+    }
+    public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensions> getQuotaDimensions() {
+        return this.quotaDimensions;
+    }
+
+    public ListProductQuotaDimensionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListProductQuotaDimensionsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail build(java.util.Map<String, ?> map) throws Exception {
+            ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail self = new ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListProductQuotaDimensionsResponseBodyQuotaDimensions extends TeaModel {
-        @NameInMap("Requisite")
-        public Boolean requisite;
+        @NameInMap("DependentDimensions")
+        public java.util.List<String> dependentDimensions;
 
         @NameInMap("DimensionKey")
         public String dimensionKey;
 
-        @NameInMap("DependentDimensions")
-        public java.util.List<String> dependentDimensions;
+        @NameInMap("DimensionValueDetail")
+        public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail> dimensionValueDetail;
 
         @NameInMap("DimensionValues")
         public java.util.List<String> dimensionValues;
@@ -80,17 +110,20 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Requisite")
+        public Boolean requisite;
+
         public static ListProductQuotaDimensionsResponseBodyQuotaDimensions build(java.util.Map<String, ?> map) throws Exception {
             ListProductQuotaDimensionsResponseBodyQuotaDimensions self = new ListProductQuotaDimensionsResponseBodyQuotaDimensions();
             return TeaModel.build(map, self);
         }
 
-        public ListProductQuotaDimensionsResponseBodyQuotaDimensions setRequisite(Boolean requisite) {
-            this.requisite = requisite;
+        public ListProductQuotaDimensionsResponseBodyQuotaDimensions setDependentDimensions(java.util.List<String> dependentDimensions) {
+            this.dependentDimensions = dependentDimensions;
             return this;
         }
-        public Boolean getRequisite() {
-            return this.requisite;
+        public java.util.List<String> getDependentDimensions() {
+            return this.dependentDimensions;
         }
 
         public ListProductQuotaDimensionsResponseBodyQuotaDimensions setDimensionKey(String dimensionKey) {
@@ -101,12 +134,12 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             return this.dimensionKey;
         }
 
-        public ListProductQuotaDimensionsResponseBodyQuotaDimensions setDependentDimensions(java.util.List<String> dependentDimensions) {
-            this.dependentDimensions = dependentDimensions;
+        public ListProductQuotaDimensionsResponseBodyQuotaDimensions setDimensionValueDetail(java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail> dimensionValueDetail) {
+            this.dimensionValueDetail = dimensionValueDetail;
             return this;
         }
-        public java.util.List<String> getDependentDimensions() {
-            return this.dependentDimensions;
+        public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail> getDimensionValueDetail() {
+            return this.dimensionValueDetail;
         }
 
         public ListProductQuotaDimensionsResponseBodyQuotaDimensions setDimensionValues(java.util.List<String> dimensionValues) {
@@ -123,6 +156,14 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListProductQuotaDimensionsResponseBodyQuotaDimensions setRequisite(Boolean requisite) {
+            this.requisite = requisite;
+            return this;
+        }
+        public Boolean getRequisite() {
+            return this.requisite;
         }
 
     }

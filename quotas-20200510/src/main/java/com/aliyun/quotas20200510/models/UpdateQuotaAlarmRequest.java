@@ -16,6 +16,9 @@ public class UpdateQuotaAlarmRequest extends TeaModel {
     @NameInMap("ThresholdPercent")
     public Float thresholdPercent;
 
+    @NameInMap("ThresholdType")
+    public String thresholdType;
+
     @NameInMap("WebHook")
     public String webHook;
 
@@ -54,6 +57,14 @@ public class UpdateQuotaAlarmRequest extends TeaModel {
     }
     public Float getThresholdPercent() {
         return this.thresholdPercent;
+    }
+
+    public UpdateQuotaAlarmRequest setThresholdType(String thresholdType) {
+        this.thresholdType = thresholdType;
+        return this;
+    }
+    public String getThresholdType() {
+        return this.thresholdType;
     }
 
     public UpdateQuotaAlarmRequest setWebHook(String webHook) {

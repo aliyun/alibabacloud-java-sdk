@@ -4,26 +4,26 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class GetProductQuotaDimensionRequest extends TeaModel {
-    @NameInMap("ProductCode")
-    public String productCode;
+    @NameInMap("DependentDimensions")
+    public java.util.List<GetProductQuotaDimensionRequestDependentDimensions> dependentDimensions;
 
     @NameInMap("DimensionKey")
     public String dimensionKey;
 
-    @NameInMap("DependentDimensions")
-    public java.util.List<GetProductQuotaDimensionRequestDependentDimensions> dependentDimensions;
+    @NameInMap("ProductCode")
+    public String productCode;
 
     public static GetProductQuotaDimensionRequest build(java.util.Map<String, ?> map) throws Exception {
         GetProductQuotaDimensionRequest self = new GetProductQuotaDimensionRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetProductQuotaDimensionRequest setProductCode(String productCode) {
-        this.productCode = productCode;
+    public GetProductQuotaDimensionRequest setDependentDimensions(java.util.List<GetProductQuotaDimensionRequestDependentDimensions> dependentDimensions) {
+        this.dependentDimensions = dependentDimensions;
         return this;
     }
-    public String getProductCode() {
-        return this.productCode;
+    public java.util.List<GetProductQuotaDimensionRequestDependentDimensions> getDependentDimensions() {
+        return this.dependentDimensions;
     }
 
     public GetProductQuotaDimensionRequest setDimensionKey(String dimensionKey) {
@@ -34,12 +34,12 @@ public class GetProductQuotaDimensionRequest extends TeaModel {
         return this.dimensionKey;
     }
 
-    public GetProductQuotaDimensionRequest setDependentDimensions(java.util.List<GetProductQuotaDimensionRequestDependentDimensions> dependentDimensions) {
-        this.dependentDimensions = dependentDimensions;
+    public GetProductQuotaDimensionRequest setProductCode(String productCode) {
+        this.productCode = productCode;
         return this;
     }
-    public java.util.List<GetProductQuotaDimensionRequestDependentDimensions> getDependentDimensions() {
-        return this.dependentDimensions;
+    public String getProductCode() {
+        return this.productCode;
     }
 
     public static class GetProductQuotaDimensionRequestDependentDimensions extends TeaModel {

@@ -4,11 +4,17 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListQuotaApplicationsRequest extends TeaModel {
-    @NameInMap("NextToken")
-    public String nextToken;
+    @NameInMap("Dimensions")
+    public java.util.List<ListQuotaApplicationsRequestDimensions> dimensions;
+
+    @NameInMap("KeyWord")
+    public String keyWord;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("ProductCode")
     public String productCode;
@@ -16,26 +22,31 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
 
+    @NameInMap("QuotaCategory")
+    public String quotaCategory;
+
     @NameInMap("Status")
     public String status;
-
-    @NameInMap("KeyWord")
-    public String keyWord;
-
-    @NameInMap("Dimensions")
-    public java.util.List<ListQuotaApplicationsRequestDimensions> dimensions;
 
     public static ListQuotaApplicationsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListQuotaApplicationsRequest self = new ListQuotaApplicationsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListQuotaApplicationsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public ListQuotaApplicationsRequest setDimensions(java.util.List<ListQuotaApplicationsRequestDimensions> dimensions) {
+        this.dimensions = dimensions;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public java.util.List<ListQuotaApplicationsRequestDimensions> getDimensions() {
+        return this.dimensions;
+    }
+
+    public ListQuotaApplicationsRequest setKeyWord(String keyWord) {
+        this.keyWord = keyWord;
+        return this;
+    }
+    public String getKeyWord() {
+        return this.keyWord;
     }
 
     public ListQuotaApplicationsRequest setMaxResults(Integer maxResults) {
@@ -44,6 +55,14 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListQuotaApplicationsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListQuotaApplicationsRequest setProductCode(String productCode) {
@@ -62,28 +81,20 @@ public class ListQuotaApplicationsRequest extends TeaModel {
         return this.quotaActionCode;
     }
 
+    public ListQuotaApplicationsRequest setQuotaCategory(String quotaCategory) {
+        this.quotaCategory = quotaCategory;
+        return this;
+    }
+    public String getQuotaCategory() {
+        return this.quotaCategory;
+    }
+
     public ListQuotaApplicationsRequest setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public ListQuotaApplicationsRequest setKeyWord(String keyWord) {
-        this.keyWord = keyWord;
-        return this;
-    }
-    public String getKeyWord() {
-        return this.keyWord;
-    }
-
-    public ListQuotaApplicationsRequest setDimensions(java.util.List<ListQuotaApplicationsRequestDimensions> dimensions) {
-        this.dimensions = dimensions;
-        return this;
-    }
-    public java.util.List<ListQuotaApplicationsRequestDimensions> getDimensions() {
-        return this.dimensions;
     }
 
     public static class ListQuotaApplicationsRequestDimensions extends TeaModel {

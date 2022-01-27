@@ -4,23 +4,15 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class GetQuotaAlarmResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("QuotaAlarm")
     public GetQuotaAlarmResponseBodyQuotaAlarm quotaAlarm;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetQuotaAlarmResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetQuotaAlarmResponseBody self = new GetQuotaAlarmResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetQuotaAlarmResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetQuotaAlarmResponseBody setQuotaAlarm(GetQuotaAlarmResponseBodyQuotaAlarm quotaAlarm) {
@@ -31,27 +23,38 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
         return this.quotaAlarm;
     }
 
+    public GetQuotaAlarmResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class GetQuotaAlarmResponseBodyQuotaAlarm extends TeaModel {
-        @NameInMap("ThresholdPercent")
-        public Float thresholdPercent;
-
-        @NameInMap("QuotaDimension")
-        public java.util.Map<String, ?> quotaDimension;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("QuotaActionCode")
-        public String quotaActionCode;
+        @NameInMap("AlarmId")
+        public String alarmId;
 
         @NameInMap("AlarmName")
         public String alarmName;
 
-        @NameInMap("NotifyTarget")
-        public String notifyTarget;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
+
+        @NameInMap("NotifyTarget")
+        public String notifyTarget;
+
+        @NameInMap("ProductCode")
+        public String productCode;
+
+        @NameInMap("QuotaActionCode")
+        public String quotaActionCode;
+
+        @NameInMap("QuotaDimension")
+        public java.util.Map<String, ?> quotaDimension;
 
         @NameInMap("QuotaUsage")
         public Float quotaUsage;
@@ -59,50 +62,26 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
         @NameInMap("QuotaValue")
         public Float quotaValue;
 
-        @NameInMap("AlarmId")
-        public String alarmId;
-
         @NameInMap("Threshold")
         public Float threshold;
 
-        @NameInMap("ProductCode")
-        public String productCode;
+        @NameInMap("ThresholdPercent")
+        public Float thresholdPercent;
+
+        @NameInMap("ThresholdType")
+        public String thresholdType;
 
         public static GetQuotaAlarmResponseBodyQuotaAlarm build(java.util.Map<String, ?> map) throws Exception {
             GetQuotaAlarmResponseBodyQuotaAlarm self = new GetQuotaAlarmResponseBodyQuotaAlarm();
             return TeaModel.build(map, self);
         }
 
-        public GetQuotaAlarmResponseBodyQuotaAlarm setThresholdPercent(Float thresholdPercent) {
-            this.thresholdPercent = thresholdPercent;
+        public GetQuotaAlarmResponseBodyQuotaAlarm setAlarmId(String alarmId) {
+            this.alarmId = alarmId;
             return this;
         }
-        public Float getThresholdPercent() {
-            return this.thresholdPercent;
-        }
-
-        public GetQuotaAlarmResponseBodyQuotaAlarm setQuotaDimension(java.util.Map<String, ?> quotaDimension) {
-            this.quotaDimension = quotaDimension;
-            return this;
-        }
-        public java.util.Map<String, ?> getQuotaDimension() {
-            return this.quotaDimension;
-        }
-
-        public GetQuotaAlarmResponseBodyQuotaAlarm setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public GetQuotaAlarmResponseBodyQuotaAlarm setQuotaActionCode(String quotaActionCode) {
-            this.quotaActionCode = quotaActionCode;
-            return this;
-        }
-        public String getQuotaActionCode() {
-            return this.quotaActionCode;
+        public String getAlarmId() {
+            return this.alarmId;
         }
 
         public GetQuotaAlarmResponseBodyQuotaAlarm setAlarmName(String alarmName) {
@@ -113,12 +92,12 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             return this.alarmName;
         }
 
-        public GetQuotaAlarmResponseBodyQuotaAlarm setNotifyTarget(String notifyTarget) {
-            this.notifyTarget = notifyTarget;
+        public GetQuotaAlarmResponseBodyQuotaAlarm setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getNotifyTarget() {
-            return this.notifyTarget;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public GetQuotaAlarmResponseBodyQuotaAlarm setNotifyChannels(java.util.List<String> notifyChannels) {
@@ -127,6 +106,38 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
         }
         public java.util.List<String> getNotifyChannels() {
             return this.notifyChannels;
+        }
+
+        public GetQuotaAlarmResponseBodyQuotaAlarm setNotifyTarget(String notifyTarget) {
+            this.notifyTarget = notifyTarget;
+            return this;
+        }
+        public String getNotifyTarget() {
+            return this.notifyTarget;
+        }
+
+        public GetQuotaAlarmResponseBodyQuotaAlarm setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
+        }
+
+        public GetQuotaAlarmResponseBodyQuotaAlarm setQuotaActionCode(String quotaActionCode) {
+            this.quotaActionCode = quotaActionCode;
+            return this;
+        }
+        public String getQuotaActionCode() {
+            return this.quotaActionCode;
+        }
+
+        public GetQuotaAlarmResponseBodyQuotaAlarm setQuotaDimension(java.util.Map<String, ?> quotaDimension) {
+            this.quotaDimension = quotaDimension;
+            return this;
+        }
+        public java.util.Map<String, ?> getQuotaDimension() {
+            return this.quotaDimension;
         }
 
         public GetQuotaAlarmResponseBodyQuotaAlarm setQuotaUsage(Float quotaUsage) {
@@ -145,14 +156,6 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             return this.quotaValue;
         }
 
-        public GetQuotaAlarmResponseBodyQuotaAlarm setAlarmId(String alarmId) {
-            this.alarmId = alarmId;
-            return this;
-        }
-        public String getAlarmId() {
-            return this.alarmId;
-        }
-
         public GetQuotaAlarmResponseBodyQuotaAlarm setThreshold(Float threshold) {
             this.threshold = threshold;
             return this;
@@ -161,12 +164,20 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             return this.threshold;
         }
 
-        public GetQuotaAlarmResponseBodyQuotaAlarm setProductCode(String productCode) {
-            this.productCode = productCode;
+        public GetQuotaAlarmResponseBodyQuotaAlarm setThresholdPercent(Float thresholdPercent) {
+            this.thresholdPercent = thresholdPercent;
             return this;
         }
-        public String getProductCode() {
-            return this.productCode;
+        public Float getThresholdPercent() {
+            return this.thresholdPercent;
+        }
+
+        public GetQuotaAlarmResponseBodyQuotaAlarm setThresholdType(String thresholdType) {
+            this.thresholdType = thresholdType;
+            return this;
+        }
+        public String getThresholdType() {
+            return this.thresholdType;
         }
 
     }
