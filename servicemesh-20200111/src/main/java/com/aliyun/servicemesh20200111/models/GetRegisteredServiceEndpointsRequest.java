@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetRegisteredServiceEndpointsRequest extends TeaModel {
+    @NameInMap("ClusterIds")
+    public String clusterIds;
+
     @NameInMap("Name")
     public String name;
 
@@ -13,9 +16,20 @@ public class GetRegisteredServiceEndpointsRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
+    @NameInMap("ServiceType")
+    public String serviceType;
+
     public static GetRegisteredServiceEndpointsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRegisteredServiceEndpointsRequest self = new GetRegisteredServiceEndpointsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetRegisteredServiceEndpointsRequest setClusterIds(String clusterIds) {
+        this.clusterIds = clusterIds;
+        return this;
+    }
+    public String getClusterIds() {
+        return this.clusterIds;
     }
 
     public GetRegisteredServiceEndpointsRequest setName(String name) {
@@ -40,6 +54,14 @@ public class GetRegisteredServiceEndpointsRequest extends TeaModel {
     }
     public String getServiceMeshId() {
         return this.serviceMeshId;
+    }
+
+    public GetRegisteredServiceEndpointsRequest setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+        return this;
+    }
+    public String getServiceType() {
+        return this.serviceType;
     }
 
 }
