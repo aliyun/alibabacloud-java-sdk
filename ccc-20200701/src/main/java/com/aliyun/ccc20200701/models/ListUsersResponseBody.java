@@ -180,6 +180,15 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyDataList extends TeaModel {
+        @NameInMap("DeviceExt")
+        public String deviceExt;
+
+        @NameInMap("DeviceId")
+        public String deviceId;
+
+        @NameInMap("DeviceState")
+        public String deviceState;
+
         @NameInMap("DisplayId")
         public String displayId;
 
@@ -188,6 +197,9 @@ public class ListUsersResponseBody extends TeaModel {
 
         @NameInMap("Email")
         public String email;
+
+        @NameInMap("Extension")
+        public String extension;
 
         @NameInMap("LoginName")
         public String loginName;
@@ -224,6 +236,30 @@ public class ListUsersResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListUsersResponseBodyDataList setDeviceExt(String deviceExt) {
+            this.deviceExt = deviceExt;
+            return this;
+        }
+        public String getDeviceExt() {
+            return this.deviceExt;
+        }
+
+        public ListUsersResponseBodyDataList setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
+        public ListUsersResponseBodyDataList setDeviceState(String deviceState) {
+            this.deviceState = deviceState;
+            return this;
+        }
+        public String getDeviceState() {
+            return this.deviceState;
+        }
+
         public ListUsersResponseBodyDataList setDisplayId(String displayId) {
             this.displayId = displayId;
             return this;
@@ -246,6 +282,14 @@ public class ListUsersResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public ListUsersResponseBodyDataList setExtension(String extension) {
+            this.extension = extension;
+            return this;
+        }
+        public String getExtension() {
+            return this.extension;
         }
 
         public ListUsersResponseBodyDataList setLoginName(String loginName) {

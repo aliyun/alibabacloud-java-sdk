@@ -3797,6 +3797,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.registerDeviceWithOptions(request, runtime);
     }
 
+    public RegisterDevicesResponse registerDevicesWithOptions(RegisterDevicesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
+            query.put("DeviceId", request.deviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userIdListJson)) {
+            query.put("UserIdListJson", request.userIdListJson);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RegisterDevices"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterDevicesResponse());
+    }
+
+    public RegisterDevicesResponse registerDevices(RegisterDevicesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.registerDevicesWithOptions(request, runtime);
+    }
+
     public ReleaseCallResponse releaseCallWithOptions(ReleaseCallRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();

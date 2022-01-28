@@ -378,6 +378,9 @@ public class ReleaseCallResponseBody extends TeaModel {
         @NameInMap("CallContext")
         public ReleaseCallResponseBodyDataCallContext callContext;
 
+        @NameInMap("ContextId")
+        public Long contextId;
+
         @NameInMap("UserContext")
         public ReleaseCallResponseBodyDataUserContext userContext;
 
@@ -392,6 +395,14 @@ public class ReleaseCallResponseBody extends TeaModel {
         }
         public ReleaseCallResponseBodyDataCallContext getCallContext() {
             return this.callContext;
+        }
+
+        public ReleaseCallResponseBodyData setContextId(Long contextId) {
+            this.contextId = contextId;
+            return this;
+        }
+        public Long getContextId() {
+            return this.contextId;
         }
 
         public ReleaseCallResponseBodyData setUserContext(ReleaseCallResponseBodyDataUserContext userContext) {
