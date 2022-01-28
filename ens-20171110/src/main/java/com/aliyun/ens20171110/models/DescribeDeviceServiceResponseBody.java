@@ -204,6 +204,9 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         @NameInMap("ISP")
         public String ISP;
 
+        @NameInMap("ImageID")
+        public String imageID;
+
         @NameInMap("Mac")
         public String mac;
 
@@ -254,6 +257,14 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         }
         public String getISP() {
             return this.ISP;
+        }
+
+        public DescribeDeviceServiceResponseBodyResourceDetailInfos setImageID(String imageID) {
+            this.imageID = imageID;
+            return this;
+        }
+        public String getImageID() {
+            return this.imageID;
         }
 
         public DescribeDeviceServiceResponseBodyResourceDetailInfos setMac(String mac) {

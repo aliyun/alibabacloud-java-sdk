@@ -46,6 +46,9 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("NetworkId")
     public String networkId;
 
+    @NameInMap("PayType")
+    public String payType;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -168,6 +171,14 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
     public String getNetworkId() {
         return this.networkId;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setPayType(String payType) {
+        this.payType = payType;
+        return this;
+    }
+    public String getPayType() {
+        return this.payType;
     }
 
     public DescribeLoadBalancerAttributeResponseBody setRequestId(String requestId) {

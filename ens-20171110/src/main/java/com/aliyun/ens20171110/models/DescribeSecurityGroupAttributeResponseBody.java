@@ -68,6 +68,9 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("DestCidrIp")
         public String destCidrIp;
 
@@ -103,6 +106,14 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setDestCidrIp(String destCidrIp) {

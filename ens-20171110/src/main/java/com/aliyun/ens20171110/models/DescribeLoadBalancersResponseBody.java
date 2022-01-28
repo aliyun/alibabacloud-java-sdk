@@ -90,6 +90,9 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         @NameInMap("NetworkId")
         public String networkId;
 
+        @NameInMap("PayType")
+        public String payType;
+
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -160,6 +163,14 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
         public String getNetworkId() {
             return this.networkId;
+        }
+
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
         }
 
         public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setVSwitchId(String vSwitchId) {
