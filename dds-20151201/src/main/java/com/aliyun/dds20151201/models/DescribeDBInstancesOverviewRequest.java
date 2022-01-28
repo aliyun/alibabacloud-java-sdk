@@ -31,6 +31,9 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -127,6 +130,14 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeDBInstancesOverviewRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeDBInstancesOverviewRequest setResourceGroupId(String resourceGroupId) {

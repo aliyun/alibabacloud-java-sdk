@@ -439,6 +439,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EngineVersion", request.engineVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hiddenZoneId)) {
+            query.put("HiddenZoneId", request.hiddenZoneId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
             query.put("NetworkType", request.networkType);
         }
@@ -481,6 +485,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.restoreTime)) {
             query.put("RestoreTime", request.restoreTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secondaryZoneId)) {
+            query.put("SecondaryZoneId", request.secondaryZoneId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityIPList)) {
@@ -2367,6 +2375,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
@@ -4079,6 +4091,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyAuditPolicyResponse modifyAuditPolicyWithOptions(ModifyAuditPolicyRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.auditLogSwitchSource)) {
+            query.put("AuditLogSwitchSource", request.auditLogSwitchSource);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.auditStatus)) {
             query.put("AuditStatus", request.auditStatus);
         }
@@ -4105,6 +4121,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
             query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceType)) {
+            query.put("ServiceType", request.serviceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.storagePeriod)) {

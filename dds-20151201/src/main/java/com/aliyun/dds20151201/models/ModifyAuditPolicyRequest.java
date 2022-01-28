@@ -4,6 +4,9 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyAuditPolicyRequest extends TeaModel {
+    @NameInMap("AuditLogSwitchSource")
+    public String auditLogSwitchSource;
+
     @NameInMap("AuditStatus")
     public String auditStatus;
 
@@ -25,12 +28,23 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("ServiceType")
+    public String serviceType;
+
     @NameInMap("StoragePeriod")
     public Integer storagePeriod;
 
     public static ModifyAuditPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAuditPolicyRequest self = new ModifyAuditPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyAuditPolicyRequest setAuditLogSwitchSource(String auditLogSwitchSource) {
+        this.auditLogSwitchSource = auditLogSwitchSource;
+        return this;
+    }
+    public String getAuditLogSwitchSource() {
+        return this.auditLogSwitchSource;
     }
 
     public ModifyAuditPolicyRequest setAuditStatus(String auditStatus) {
@@ -87,6 +101,14 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public ModifyAuditPolicyRequest setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+        return this;
+    }
+    public String getServiceType() {
+        return this.serviceType;
     }
 
     public ModifyAuditPolicyRequest setStoragePeriod(Integer storagePeriod) {

@@ -46,6 +46,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    @NameInMap("HiddenZoneId")
+    public String hiddenZoneId;
+
     @NameInMap("NetworkType")
     public String networkType;
 
@@ -78,6 +81,9 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     @NameInMap("RestoreTime")
     public String restoreTime;
+
+    @NameInMap("SecondaryZoneId")
+    public String secondaryZoneId;
 
     @NameInMap("SecurityIPList")
     public String securityIPList;
@@ -217,6 +223,14 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.engineVersion;
     }
 
+    public CreateDBInstanceRequest setHiddenZoneId(String hiddenZoneId) {
+        this.hiddenZoneId = hiddenZoneId;
+        return this;
+    }
+    public String getHiddenZoneId() {
+        return this.hiddenZoneId;
+    }
+
     public CreateDBInstanceRequest setNetworkType(String networkType) {
         this.networkType = networkType;
         return this;
@@ -303,6 +317,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getRestoreTime() {
         return this.restoreTime;
+    }
+
+    public CreateDBInstanceRequest setSecondaryZoneId(String secondaryZoneId) {
+        this.secondaryZoneId = secondaryZoneId;
+        return this;
+    }
+    public String getSecondaryZoneId() {
+        return this.secondaryZoneId;
     }
 
     public CreateDBInstanceRequest setSecurityIPList(String securityIPList) {
