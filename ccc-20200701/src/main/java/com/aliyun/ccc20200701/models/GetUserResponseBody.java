@@ -76,6 +76,15 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyData extends TeaModel {
+        @NameInMap("DeviceExt")
+        public String deviceExt;
+
+        @NameInMap("DeviceId")
+        public String deviceId;
+
+        @NameInMap("DeviceState")
+        public String deviceState;
+
         @NameInMap("DisplayName")
         public String displayName;
 
@@ -109,6 +118,30 @@ public class GetUserResponseBody extends TeaModel {
         public static GetUserResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetUserResponseBodyData self = new GetUserResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetUserResponseBodyData setDeviceExt(String deviceExt) {
+            this.deviceExt = deviceExt;
+            return this;
+        }
+        public String getDeviceExt() {
+            return this.deviceExt;
+        }
+
+        public GetUserResponseBodyData setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
+        public GetUserResponseBodyData setDeviceState(String deviceState) {
+            this.deviceState = deviceState;
+            return this;
+        }
+        public String getDeviceState() {
+            return this.deviceState;
         }
 
         public GetUserResponseBodyData setDisplayName(String displayName) {

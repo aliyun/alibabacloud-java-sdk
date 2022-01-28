@@ -79,8 +79,14 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         @NameInMap("AgentServerUrl")
         public String agentServerUrl;
 
+        @NameInMap("DeviceExt")
+        public String deviceExt;
+
         @NameInMap("DeviceId")
         public String deviceId;
+
+        @NameInMap("DeviceState")
+        public String deviceState;
 
         @NameInMap("DisplayName")
         public String displayName;
@@ -91,6 +97,9 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         @NameInMap("Signature")
         public String signature;
 
+        @NameInMap("Signature2")
+        public String signature2;
+
         @NameInMap("SipServerUrl")
         public String sipServerUrl;
 
@@ -99,6 +108,9 @@ public class GetLoginDetailsResponseBody extends TeaModel {
 
         @NameInMap("UserKey")
         public String userKey;
+
+        @NameInMap("UserKey2")
+        public String userKey2;
 
         @NameInMap("WorkMode")
         public String workMode;
@@ -116,12 +128,28 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             return this.agentServerUrl;
         }
 
+        public GetLoginDetailsResponseBodyData setDeviceExt(String deviceExt) {
+            this.deviceExt = deviceExt;
+            return this;
+        }
+        public String getDeviceExt() {
+            return this.deviceExt;
+        }
+
         public GetLoginDetailsResponseBodyData setDeviceId(String deviceId) {
             this.deviceId = deviceId;
             return this;
         }
         public String getDeviceId() {
             return this.deviceId;
+        }
+
+        public GetLoginDetailsResponseBodyData setDeviceState(String deviceState) {
+            this.deviceState = deviceState;
+            return this;
+        }
+        public String getDeviceState() {
+            return this.deviceState;
         }
 
         public GetLoginDetailsResponseBodyData setDisplayName(String displayName) {
@@ -148,6 +176,14 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             return this.signature;
         }
 
+        public GetLoginDetailsResponseBodyData setSignature2(String signature2) {
+            this.signature2 = signature2;
+            return this;
+        }
+        public String getSignature2() {
+            return this.signature2;
+        }
+
         public GetLoginDetailsResponseBodyData setSipServerUrl(String sipServerUrl) {
             this.sipServerUrl = sipServerUrl;
             return this;
@@ -170,6 +206,14 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         }
         public String getUserKey() {
             return this.userKey;
+        }
+
+        public GetLoginDetailsResponseBodyData setUserKey2(String userKey2) {
+            this.userKey2 = userKey2;
+            return this;
+        }
+        public String getUserKey2() {
+            return this.userKey2;
         }
 
         public GetLoginDetailsResponseBodyData setWorkMode(String workMode) {
