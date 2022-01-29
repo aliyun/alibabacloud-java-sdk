@@ -4,21 +4,20 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class DeleteProjectRequest extends TeaModel {
-    // 项目id
-    @NameInMap("projectId")
-    public String projectId;
+    @NameInMap("identifier")
+    public String identifier;
 
     public static DeleteProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteProjectRequest self = new DeleteProjectRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteProjectRequest setProjectId(String projectId) {
-        this.projectId = projectId;
+    public DeleteProjectRequest setIdentifier(String identifier) {
+        this.identifier = identifier;
         return this;
     }
-    public String getProjectId() {
-        return this.projectId;
+    public String getIdentifier() {
+        return this.identifier;
     }
 
 }

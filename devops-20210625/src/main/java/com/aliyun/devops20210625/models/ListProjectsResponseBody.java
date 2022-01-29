@@ -3,7 +3,7 @@ package com.aliyun.devops20210625.models;
 
 import com.aliyun.tea.*;
 
-public class CreateProjectResponseBody extends TeaModel {
+public class ListProjectsResponseBody extends TeaModel {
     // 错误码
     @NameInMap("errorCode")
     public String errorCode;
@@ -12,9 +12,17 @@ public class CreateProjectResponseBody extends TeaModel {
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    // 每页数量
+    @NameInMap("maxResults")
+    public Long maxResults;
+
+    // 分页Token，没有下一页则为空
+    @NameInMap("nextToken")
+    public String nextToken;
+
     // 项目信息
-    @NameInMap("project")
-    public CreateProjectResponseBodyProject project;
+    @NameInMap("projects")
+    public java.util.List<ListProjectsResponseBodyProjects> projects;
 
     // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
@@ -24,12 +32,16 @@ public class CreateProjectResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    public static CreateProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateProjectResponseBody self = new CreateProjectResponseBody();
+    // 总数
+    @NameInMap("totalCount")
+    public Long totalCount;
+
+    public static ListProjectsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListProjectsResponseBody self = new ListProjectsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateProjectResponseBody setErrorCode(String errorCode) {
+    public ListProjectsResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -37,7 +49,7 @@ public class CreateProjectResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public CreateProjectResponseBody setErrorMsg(String errorMsg) {
+    public ListProjectsResponseBody setErrorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
         return this;
     }
@@ -45,15 +57,31 @@ public class CreateProjectResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public CreateProjectResponseBody setProject(CreateProjectResponseBodyProject project) {
-        this.project = project;
+    public ListProjectsResponseBody setMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
-    public CreateProjectResponseBodyProject getProject() {
-        return this.project;
+    public Long getMaxResults() {
+        return this.maxResults;
     }
 
-    public CreateProjectResponseBody setRequestId(String requestId) {
+    public ListProjectsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListProjectsResponseBody setProjects(java.util.List<ListProjectsResponseBodyProjects> projects) {
+        this.projects = projects;
+        return this;
+    }
+    public java.util.List<ListProjectsResponseBodyProjects> getProjects() {
+        return this.projects;
+    }
+
+    public ListProjectsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -61,7 +89,7 @@ public class CreateProjectResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateProjectResponseBody setSuccess(Boolean success) {
+    public ListProjectsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -69,18 +97,30 @@ public class CreateProjectResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class CreateProjectResponseBodyProject extends TeaModel {
-        // 空间大类id
+    public ListProjectsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class ListProjectsResponseBodyProjects extends TeaModel {
+        // 类型
         @NameInMap("categoryIdentifier")
         public String categoryIdentifier;
 
-        // 创建人id
+        // 创建人
         @NameInMap("creator")
         public String creator;
 
         // 自定义编号
         @NameInMap("customCode")
         public String customCode;
+
+        // 删除时间
+        @NameInMap("deleteTime")
+        public Long deleteTime;
 
         // 描述信息
         @NameInMap("description")
@@ -90,11 +130,7 @@ public class CreateProjectResponseBody extends TeaModel {
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
-        // 修改时间
-        @NameInMap("gmtModified")
-        public Long gmtModified;
-
-        // 图标
+        // 项目封面
         @NameInMap("icon")
         public String icon;
 
@@ -102,44 +138,32 @@ public class CreateProjectResponseBody extends TeaModel {
         @NameInMap("identifier")
         public String identifier;
 
-        // 项目状态
+        // 逻辑状态
         @NameInMap("logicalStatus")
         public String logicalStatus;
-
-        // 修改人
-        @NameInMap("modifier")
-        public String modifier;
 
         // 项目名称
         @NameInMap("name")
         public String name;
 
-        // 企业id
-        @NameInMap("organizationIdentifier")
-        public String organizationIdentifier;
-
-        // 可见范围
+        // 公开还是私有
         @NameInMap("scope")
         public String scope;
-
-        // 状态id
-        @NameInMap("statusIdentifier")
-        public String statusIdentifier;
 
         // 状态阶段
         @NameInMap("statusStageIdentifier")
         public String statusStageIdentifier;
 
-        // 空间小类id
+        // 类型id
         @NameInMap("typeIdentifier")
         public String typeIdentifier;
 
-        public static CreateProjectResponseBodyProject build(java.util.Map<String, ?> map) throws Exception {
-            CreateProjectResponseBodyProject self = new CreateProjectResponseBodyProject();
+        public static ListProjectsResponseBodyProjects build(java.util.Map<String, ?> map) throws Exception {
+            ListProjectsResponseBodyProjects self = new ListProjectsResponseBodyProjects();
             return TeaModel.build(map, self);
         }
 
-        public CreateProjectResponseBodyProject setCategoryIdentifier(String categoryIdentifier) {
+        public ListProjectsResponseBodyProjects setCategoryIdentifier(String categoryIdentifier) {
             this.categoryIdentifier = categoryIdentifier;
             return this;
         }
@@ -147,7 +171,7 @@ public class CreateProjectResponseBody extends TeaModel {
             return this.categoryIdentifier;
         }
 
-        public CreateProjectResponseBodyProject setCreator(String creator) {
+        public ListProjectsResponseBodyProjects setCreator(String creator) {
             this.creator = creator;
             return this;
         }
@@ -155,7 +179,7 @@ public class CreateProjectResponseBody extends TeaModel {
             return this.creator;
         }
 
-        public CreateProjectResponseBodyProject setCustomCode(String customCode) {
+        public ListProjectsResponseBodyProjects setCustomCode(String customCode) {
             this.customCode = customCode;
             return this;
         }
@@ -163,7 +187,15 @@ public class CreateProjectResponseBody extends TeaModel {
             return this.customCode;
         }
 
-        public CreateProjectResponseBodyProject setDescription(String description) {
+        public ListProjectsResponseBodyProjects setDeleteTime(Long deleteTime) {
+            this.deleteTime = deleteTime;
+            return this;
+        }
+        public Long getDeleteTime() {
+            return this.deleteTime;
+        }
+
+        public ListProjectsResponseBodyProjects setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -171,7 +203,7 @@ public class CreateProjectResponseBody extends TeaModel {
             return this.description;
         }
 
-        public CreateProjectResponseBodyProject setGmtCreate(Long gmtCreate) {
+        public ListProjectsResponseBodyProjects setGmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
@@ -179,15 +211,7 @@ public class CreateProjectResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public CreateProjectResponseBodyProject setGmtModified(Long gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public Long getGmtModified() {
-            return this.gmtModified;
-        }
-
-        public CreateProjectResponseBodyProject setIcon(String icon) {
+        public ListProjectsResponseBodyProjects setIcon(String icon) {
             this.icon = icon;
             return this;
         }
@@ -195,7 +219,7 @@ public class CreateProjectResponseBody extends TeaModel {
             return this.icon;
         }
 
-        public CreateProjectResponseBodyProject setIdentifier(String identifier) {
+        public ListProjectsResponseBodyProjects setIdentifier(String identifier) {
             this.identifier = identifier;
             return this;
         }
@@ -203,7 +227,7 @@ public class CreateProjectResponseBody extends TeaModel {
             return this.identifier;
         }
 
-        public CreateProjectResponseBodyProject setLogicalStatus(String logicalStatus) {
+        public ListProjectsResponseBodyProjects setLogicalStatus(String logicalStatus) {
             this.logicalStatus = logicalStatus;
             return this;
         }
@@ -211,15 +235,7 @@ public class CreateProjectResponseBody extends TeaModel {
             return this.logicalStatus;
         }
 
-        public CreateProjectResponseBodyProject setModifier(String modifier) {
-            this.modifier = modifier;
-            return this;
-        }
-        public String getModifier() {
-            return this.modifier;
-        }
-
-        public CreateProjectResponseBodyProject setName(String name) {
+        public ListProjectsResponseBodyProjects setName(String name) {
             this.name = name;
             return this;
         }
@@ -227,15 +243,7 @@ public class CreateProjectResponseBody extends TeaModel {
             return this.name;
         }
 
-        public CreateProjectResponseBodyProject setOrganizationIdentifier(String organizationIdentifier) {
-            this.organizationIdentifier = organizationIdentifier;
-            return this;
-        }
-        public String getOrganizationIdentifier() {
-            return this.organizationIdentifier;
-        }
-
-        public CreateProjectResponseBodyProject setScope(String scope) {
+        public ListProjectsResponseBodyProjects setScope(String scope) {
             this.scope = scope;
             return this;
         }
@@ -243,15 +251,7 @@ public class CreateProjectResponseBody extends TeaModel {
             return this.scope;
         }
 
-        public CreateProjectResponseBodyProject setStatusIdentifier(String statusIdentifier) {
-            this.statusIdentifier = statusIdentifier;
-            return this;
-        }
-        public String getStatusIdentifier() {
-            return this.statusIdentifier;
-        }
-
-        public CreateProjectResponseBodyProject setStatusStageIdentifier(String statusStageIdentifier) {
+        public ListProjectsResponseBodyProjects setStatusStageIdentifier(String statusStageIdentifier) {
             this.statusStageIdentifier = statusStageIdentifier;
             return this;
         }
@@ -259,7 +259,7 @@ public class CreateProjectResponseBody extends TeaModel {
             return this.statusStageIdentifier;
         }
 
-        public CreateProjectResponseBodyProject setTypeIdentifier(String typeIdentifier) {
+        public ListProjectsResponseBodyProjects setTypeIdentifier(String typeIdentifier) {
             this.typeIdentifier = typeIdentifier;
             return this;
         }
