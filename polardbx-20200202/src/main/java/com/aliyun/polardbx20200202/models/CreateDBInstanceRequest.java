@@ -34,11 +34,23 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("PrimaryDBInstanceName")
     public String primaryDBInstanceName;
 
+    @NameInMap("PrimaryZone")
+    public String primaryZone;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("SecondaryZone")
+    public String secondaryZone;
+
+    @NameInMap("TertiaryZone")
+    public String tertiaryZone;
+
+    @NameInMap("TopologyType")
+    public String topologyType;
 
     @NameInMap("UsedTime")
     public Integer usedTime;
@@ -137,6 +149,14 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.primaryDBInstanceName;
     }
 
+    public CreateDBInstanceRequest setPrimaryZone(String primaryZone) {
+        this.primaryZone = primaryZone;
+        return this;
+    }
+    public String getPrimaryZone() {
+        return this.primaryZone;
+    }
+
     public CreateDBInstanceRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -151,6 +171,30 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateDBInstanceRequest setSecondaryZone(String secondaryZone) {
+        this.secondaryZone = secondaryZone;
+        return this;
+    }
+    public String getSecondaryZone() {
+        return this.secondaryZone;
+    }
+
+    public CreateDBInstanceRequest setTertiaryZone(String tertiaryZone) {
+        this.tertiaryZone = tertiaryZone;
+        return this;
+    }
+    public String getTertiaryZone() {
+        return this.tertiaryZone;
+    }
+
+    public CreateDBInstanceRequest setTopologyType(String topologyType) {
+        this.topologyType = topologyType;
+        return this;
+    }
+    public String getTopologyType() {
+        return this.topologyType;
     }
 
     public CreateDBInstanceRequest setUsedTime(Integer usedTime) {

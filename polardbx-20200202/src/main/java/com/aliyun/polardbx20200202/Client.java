@@ -441,12 +441,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PrimaryDBInstanceName", request.primaryDBInstanceName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.primaryZone)) {
+            query.put("PrimaryZone", request.primaryZone);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secondaryZone)) {
+            query.put("SecondaryZone", request.secondaryZone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tertiaryZone)) {
+            query.put("TertiaryZone", request.tertiaryZone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topologyType)) {
+            query.put("TopologyType", request.topologyType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
@@ -1889,6 +1905,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
