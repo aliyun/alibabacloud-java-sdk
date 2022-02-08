@@ -7,8 +7,14 @@ public class CreateRateRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    @NameInMap("CustomerLabels")
+    public String customerLabels;
+
     @NameInMap("OrderId")
     public String orderId;
+
+    @NameInMap("PackageVersion")
+    public String packageVersion;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -29,12 +35,28 @@ public class CreateRateRequest extends TeaModel {
         return this.content;
     }
 
+    public CreateRateRequest setCustomerLabels(String customerLabels) {
+        this.customerLabels = customerLabels;
+        return this;
+    }
+    public String getCustomerLabels() {
+        return this.customerLabels;
+    }
+
     public CreateRateRequest setOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public CreateRateRequest setPackageVersion(String packageVersion) {
+        this.packageVersion = packageVersion;
+        return this;
+    }
+    public String getPackageVersion() {
+        return this.packageVersion;
     }
 
     public CreateRateRequest setRequestId(String requestId) {
