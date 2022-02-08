@@ -1,3 +1,6 @@
+2022-02-08 Version: 2.1.1
+- Generated java 2020-02-02 for polardbx.
+
 2022-01-12 Version: 2.1.0
 - New API- GetDrdsDbRdsRelationInfo, which can get private RDS list under certain DB out of DRDS instance ID and DB name.
 

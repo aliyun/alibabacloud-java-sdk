@@ -31,6 +31,36 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsAzoneRoleList extends TeaModel {
+        @NameInMap("Azone")
+        public String azone;
+
+        @NameInMap("Role")
+        public String role;
+
+        public static DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsAzoneRoleList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsAzoneRoleList self = new DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsAzoneRoleList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsAzoneRoleList setAzone(String azone) {
+            this.azone = azone;
+            return this;
+        }
+        public String getAzone() {
+            return this.azone;
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsAzoneRoleList setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+    }
+
     public static class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsConnectionIp extends TeaModel {
         @NameInMap("ConnectionString")
         public String connectionString;
@@ -73,6 +103,15 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems extends TeaModel {
+        @NameInMap("Activated")
+        public Boolean activated;
+
+        @NameInMap("Azone")
+        public String azone;
+
+        @NameInMap("AzoneRoleList")
+        public java.util.List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsAzoneRoleList> azoneRoleList;
+
         @NameInMap("CharacterType")
         public String characterType;
 
@@ -127,9 +166,39 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("MaxIops")
         public Integer maxIops;
 
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("Role")
+        public String role;
+
         public static DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems self = new DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setActivated(Boolean activated) {
+            this.activated = activated;
+            return this;
+        }
+        public Boolean getActivated() {
+            return this.activated;
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setAzone(String azone) {
+            this.azone = azone;
+            return this;
+        }
+        public String getAzone() {
+            return this.azone;
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setAzoneRoleList(java.util.List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsAzoneRoleList> azoneRoleList) {
+            this.azoneRoleList = azoneRoleList;
+            return this;
+        }
+        public java.util.List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsAzoneRoleList> getAzoneRoleList() {
+            return this.azoneRoleList;
         }
 
         public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setCharacterType(String characterType) {
@@ -274,6 +343,22 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         }
         public Integer getMaxIops() {
             return this.maxIops;
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
         }
 
     }
