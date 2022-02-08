@@ -214,8 +214,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Content", request.content);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customerLabels)) {
+            query.put("CustomerLabels", request.customerLabels);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
             query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.packageVersion)) {
+            query.put("PackageVersion", request.packageVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
