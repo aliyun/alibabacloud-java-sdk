@@ -72,23 +72,4 @@ public class GetMobileResponseBody extends TeaModel {
 
     }
 
-    public static class JyGetMobileResponseBodyGetMobileResultData extends TeaModel {
-        @NameInMap("Mobile")
-        public String mobile;
-
-        public static JyGetMobileResponseBodyGetMobileResultData build(java.util.Map<String, ?> map) throws Exception {
-            JyGetMobileResponseBodyGetMobileResultData self = new JyGetMobileResponseBodyGetMobileResultData();
-            return TeaModel.build(map, self);
-        }
-
-        public JyGetMobileResponseBodyGetMobileResultData setMobile(String mobile) {
-            this.mobile = mobile;
-            return this;
-        }
-        public String getMobile() {
-            return this.mobile;
-        }
-
-    }
-
 }
