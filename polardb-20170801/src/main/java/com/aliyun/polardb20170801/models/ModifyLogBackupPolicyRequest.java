@@ -4,6 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyLogBackupPolicyRequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("LogBackupRetentionPeriod")
+    public String logBackupRetentionPeriod;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +22,33 @@ public class ModifyLogBackupPolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("LogBackupRetentionPeriod")
-    public String logBackupRetentionPeriod;
-
     public static ModifyLogBackupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyLogBackupPolicyRequest self = new ModifyLogBackupPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyLogBackupPolicyRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public ModifyLogBackupPolicyRequest setLogBackupRetentionPeriod(String logBackupRetentionPeriod) {
+        this.logBackupRetentionPeriod = logBackupRetentionPeriod;
+        return this;
+    }
+    public String getLogBackupRetentionPeriod() {
+        return this.logBackupRetentionPeriod;
+    }
+
+    public ModifyLogBackupPolicyRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyLogBackupPolicyRequest setOwnerId(Long ownerId) {
@@ -49,30 +73,6 @@ public class ModifyLogBackupPolicyRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyLogBackupPolicyRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyLogBackupPolicyRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public ModifyLogBackupPolicyRequest setLogBackupRetentionPeriod(String logBackupRetentionPeriod) {
-        this.logBackupRetentionPeriod = logBackupRetentionPeriod;
-        return this;
-    }
-    public String getLogBackupRetentionPeriod() {
-        return this.logBackupRetentionPeriod;
     }
 
 }

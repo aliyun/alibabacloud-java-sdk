@@ -4,18 +4,26 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogBackupPolicyResponseBody extends TeaModel {
+    @NameInMap("EnableBackupLog")
+    public Integer enableBackupLog;
+
     @NameInMap("LogBackupRetentionPeriod")
     public Integer logBackupRetentionPeriod;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("EnableBackupLog")
-    public Integer enableBackupLog;
-
     public static DescribeLogBackupPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogBackupPolicyResponseBody self = new DescribeLogBackupPolicyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLogBackupPolicyResponseBody setEnableBackupLog(Integer enableBackupLog) {
+        this.enableBackupLog = enableBackupLog;
+        return this;
+    }
+    public Integer getEnableBackupLog() {
+        return this.enableBackupLog;
     }
 
     public DescribeLogBackupPolicyResponseBody setLogBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
@@ -32,14 +40,6 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeLogBackupPolicyResponseBody setEnableBackupLog(Integer enableBackupLog) {
-        this.enableBackupLog = enableBackupLog;
-        return this;
-    }
-    public Integer getEnableBackupLog() {
-        return this.enableBackupLog;
     }
 
 }

@@ -4,6 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteBackupRequest extends TeaModel {
+    @NameInMap("BackupId")
+    public String backupId;
+
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +22,33 @@ public class DeleteBackupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("BackupId")
-    public String backupId;
-
     public static DeleteBackupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteBackupRequest self = new DeleteBackupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteBackupRequest setBackupId(String backupId) {
+        this.backupId = backupId;
+        return this;
+    }
+    public String getBackupId() {
+        return this.backupId;
+    }
+
+    public DeleteBackupRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public DeleteBackupRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteBackupRequest setOwnerId(Long ownerId) {
@@ -49,30 +73,6 @@ public class DeleteBackupRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteBackupRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DeleteBackupRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public DeleteBackupRequest setBackupId(String backupId) {
-        this.backupId = backupId;
-        return this;
-    }
-    public String getBackupId() {
-        return this.backupId;
     }
 
 }

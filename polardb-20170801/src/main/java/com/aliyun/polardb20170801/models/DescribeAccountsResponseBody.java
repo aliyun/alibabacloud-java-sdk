@@ -4,21 +4,37 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
+    @NameInMap("Accounts")
+    public java.util.List<DescribeAccountsResponseBodyAccounts> accounts;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Accounts")
-    public java.util.List<DescribeAccountsResponseBodyAccounts> accounts;
-
     public static DescribeAccountsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccountsResponseBody self = new DescribeAccountsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAccountsResponseBody setAccounts(java.util.List<DescribeAccountsResponseBodyAccounts> accounts) {
+        this.accounts = accounts;
+        return this;
+    }
+    public java.util.List<DescribeAccountsResponseBodyAccounts> getAccounts() {
+        return this.accounts;
+    }
+
+    public DescribeAccountsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeAccountsResponseBody setPageRecordCount(Integer pageRecordCount) {
@@ -37,40 +53,16 @@ public class DescribeAccountsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeAccountsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeAccountsResponseBody setAccounts(java.util.List<DescribeAccountsResponseBodyAccounts> accounts) {
-        this.accounts = accounts;
-        return this;
-    }
-    public java.util.List<DescribeAccountsResponseBodyAccounts> getAccounts() {
-        return this.accounts;
-    }
-
     public static class DescribeAccountsResponseBodyAccountsDatabasePrivileges extends TeaModel {
-        @NameInMap("DBName")
-        public String DBName;
-
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
+
+        @NameInMap("DBName")
+        public String DBName;
 
         public static DescribeAccountsResponseBodyAccountsDatabasePrivileges build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccountsResponseBodyAccountsDatabasePrivileges self = new DescribeAccountsResponseBodyAccountsDatabasePrivileges();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAccountsResponseBodyAccountsDatabasePrivileges setDBName(String DBName) {
-            this.DBName = DBName;
-            return this;
-        }
-        public String getDBName() {
-            return this.DBName;
         }
 
         public DescribeAccountsResponseBodyAccountsDatabasePrivileges setAccountPrivilege(String accountPrivilege) {
@@ -81,23 +73,19 @@ public class DescribeAccountsResponseBody extends TeaModel {
             return this.accountPrivilege;
         }
 
+        public DescribeAccountsResponseBodyAccountsDatabasePrivileges setDBName(String DBName) {
+            this.DBName = DBName;
+            return this;
+        }
+        public String getDBName() {
+            return this.DBName;
+        }
+
     }
 
     public static class DescribeAccountsResponseBodyAccounts extends TeaModel {
-        @NameInMap("AccountStatus")
-        public String accountStatus;
-
-        @NameInMap("DatabasePrivileges")
-        public java.util.List<DescribeAccountsResponseBodyAccountsDatabasePrivileges> databasePrivileges;
-
         @NameInMap("AccountDescription")
         public String accountDescription;
-
-        @NameInMap("AccountPasswordValidTime")
-        public String accountPasswordValidTime;
-
-        @NameInMap("AccountType")
-        public String accountType;
 
         @NameInMap("AccountLockState")
         public String accountLockState;
@@ -105,25 +93,21 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("AccountName")
         public String accountName;
 
+        @NameInMap("AccountPasswordValidTime")
+        public String accountPasswordValidTime;
+
+        @NameInMap("AccountStatus")
+        public String accountStatus;
+
+        @NameInMap("AccountType")
+        public String accountType;
+
+        @NameInMap("DatabasePrivileges")
+        public java.util.List<DescribeAccountsResponseBodyAccountsDatabasePrivileges> databasePrivileges;
+
         public static DescribeAccountsResponseBodyAccounts build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccountsResponseBodyAccounts self = new DescribeAccountsResponseBodyAccounts();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAccountsResponseBodyAccounts setAccountStatus(String accountStatus) {
-            this.accountStatus = accountStatus;
-            return this;
-        }
-        public String getAccountStatus() {
-            return this.accountStatus;
-        }
-
-        public DescribeAccountsResponseBodyAccounts setDatabasePrivileges(java.util.List<DescribeAccountsResponseBodyAccountsDatabasePrivileges> databasePrivileges) {
-            this.databasePrivileges = databasePrivileges;
-            return this;
-        }
-        public java.util.List<DescribeAccountsResponseBodyAccountsDatabasePrivileges> getDatabasePrivileges() {
-            return this.databasePrivileges;
         }
 
         public DescribeAccountsResponseBodyAccounts setAccountDescription(String accountDescription) {
@@ -132,22 +116,6 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
         public String getAccountDescription() {
             return this.accountDescription;
-        }
-
-        public DescribeAccountsResponseBodyAccounts setAccountPasswordValidTime(String accountPasswordValidTime) {
-            this.accountPasswordValidTime = accountPasswordValidTime;
-            return this;
-        }
-        public String getAccountPasswordValidTime() {
-            return this.accountPasswordValidTime;
-        }
-
-        public DescribeAccountsResponseBodyAccounts setAccountType(String accountType) {
-            this.accountType = accountType;
-            return this;
-        }
-        public String getAccountType() {
-            return this.accountType;
         }
 
         public DescribeAccountsResponseBodyAccounts setAccountLockState(String accountLockState) {
@@ -164,6 +132,38 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
         public String getAccountName() {
             return this.accountName;
+        }
+
+        public DescribeAccountsResponseBodyAccounts setAccountPasswordValidTime(String accountPasswordValidTime) {
+            this.accountPasswordValidTime = accountPasswordValidTime;
+            return this;
+        }
+        public String getAccountPasswordValidTime() {
+            return this.accountPasswordValidTime;
+        }
+
+        public DescribeAccountsResponseBodyAccounts setAccountStatus(String accountStatus) {
+            this.accountStatus = accountStatus;
+            return this;
+        }
+        public String getAccountStatus() {
+            return this.accountStatus;
+        }
+
+        public DescribeAccountsResponseBodyAccounts setAccountType(String accountType) {
+            this.accountType = accountType;
+            return this;
+        }
+        public String getAccountType() {
+            return this.accountType;
+        }
+
+        public DescribeAccountsResponseBodyAccounts setDatabasePrivileges(java.util.List<DescribeAccountsResponseBodyAccountsDatabasePrivileges> databasePrivileges) {
+            this.databasePrivileges = databasePrivileges;
+            return this;
+        }
+        public java.util.List<DescribeAccountsResponseBodyAccountsDatabasePrivileges> getDatabasePrivileges() {
+            return this.databasePrivileges;
         }
 
     }

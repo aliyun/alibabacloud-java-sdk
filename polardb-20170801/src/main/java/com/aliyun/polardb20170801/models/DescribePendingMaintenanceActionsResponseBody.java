@@ -32,23 +32,15 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
     }
 
     public static class DescribePendingMaintenanceActionsResponseBodyTypeList extends TeaModel {
-        @NameInMap("TaskType")
-        public String taskType;
-
         @NameInMap("Count")
         public Integer count;
+
+        @NameInMap("TaskType")
+        public String taskType;
 
         public static DescribePendingMaintenanceActionsResponseBodyTypeList build(java.util.Map<String, ?> map) throws Exception {
             DescribePendingMaintenanceActionsResponseBodyTypeList self = new DescribePendingMaintenanceActionsResponseBodyTypeList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePendingMaintenanceActionsResponseBodyTypeList setTaskType(String taskType) {
-            this.taskType = taskType;
-            return this;
-        }
-        public String getTaskType() {
-            return this.taskType;
         }
 
         public DescribePendingMaintenanceActionsResponseBodyTypeList setCount(Integer count) {
@@ -57,6 +49,14 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
         }
         public Integer getCount() {
             return this.count;
+        }
+
+        public DescribePendingMaintenanceActionsResponseBodyTypeList setTaskType(String taskType) {
+            this.taskType = taskType;
+            return this;
+        }
+        public String getTaskType() {
+            return this.taskType;
         }
 
     }

@@ -4,6 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBLinksRequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("DBLinkName")
+    public String DBLinkName;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +22,33 @@ public class DescribeDBLinksRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("DBLinkName")
-    public String DBLinkName;
-
     public static DescribeDBLinksRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBLinksRequest self = new DescribeDBLinksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBLinksRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public DescribeDBLinksRequest setDBLinkName(String DBLinkName) {
+        this.DBLinkName = DBLinkName;
+        return this;
+    }
+    public String getDBLinkName() {
+        return this.DBLinkName;
+    }
+
+    public DescribeDBLinksRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeDBLinksRequest setOwnerId(Long ownerId) {
@@ -49,30 +73,6 @@ public class DescribeDBLinksRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeDBLinksRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeDBLinksRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public DescribeDBLinksRequest setDBLinkName(String DBLinkName) {
-        this.DBLinkName = DBLinkName;
-        return this;
-    }
-    public String getDBLinkName() {
-        return this.DBLinkName;
     }
 
 }

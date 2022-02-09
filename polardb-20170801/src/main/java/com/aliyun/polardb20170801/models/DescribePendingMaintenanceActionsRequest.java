@@ -4,11 +4,17 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribePendingMaintenanceActionsRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("IsHistory")
+    public Integer isHistory;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,26 +22,28 @@ public class DescribePendingMaintenanceActionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("IsHistory")
-    public Integer isHistory;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DescribePendingMaintenanceActionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePendingMaintenanceActionsRequest self = new DescribePendingMaintenanceActionsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribePendingMaintenanceActionsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribePendingMaintenanceActionsRequest setIsHistory(Integer isHistory) {
+        this.isHistory = isHistory;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public Integer getIsHistory() {
+        return this.isHistory;
+    }
+
+    public DescribePendingMaintenanceActionsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribePendingMaintenanceActionsRequest setOwnerId(Long ownerId) {
@@ -44,6 +52,14 @@ public class DescribePendingMaintenanceActionsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribePendingMaintenanceActionsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribePendingMaintenanceActionsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -62,28 +78,12 @@ public class DescribePendingMaintenanceActionsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribePendingMaintenanceActionsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribePendingMaintenanceActionsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribePendingMaintenanceActionsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribePendingMaintenanceActionsRequest setIsHistory(Integer isHistory) {
-        this.isHistory = isHistory;
-        return this;
-    }
-    public Integer getIsHistory() {
-        return this.isHistory;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

@@ -4,48 +4,24 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterParametersResponseBody extends TeaModel {
-    @NameInMap("RunningParameters")
-    public DescribeDBClusterParametersResponseBodyRunningParameters runningParameters;
+    @NameInMap("DBType")
+    public String DBType;
 
     @NameInMap("DBVersion")
     public String DBVersion;
 
+    @NameInMap("Engine")
+    public String engine;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DBType")
-    public String DBType;
-
-    @NameInMap("Engine")
-    public String engine;
+    @NameInMap("RunningParameters")
+    public DescribeDBClusterParametersResponseBodyRunningParameters runningParameters;
 
     public static DescribeDBClusterParametersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterParametersResponseBody self = new DescribeDBClusterParametersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBClusterParametersResponseBody setRunningParameters(DescribeDBClusterParametersResponseBodyRunningParameters runningParameters) {
-        this.runningParameters = runningParameters;
-        return this;
-    }
-    public DescribeDBClusterParametersResponseBodyRunningParameters getRunningParameters() {
-        return this.runningParameters;
-    }
-
-    public DescribeDBClusterParametersResponseBody setDBVersion(String DBVersion) {
-        this.DBVersion = DBVersion;
-        return this;
-    }
-    public String getDBVersion() {
-        return this.DBVersion;
-    }
-
-    public DescribeDBClusterParametersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDBClusterParametersResponseBody setDBType(String DBType) {
@@ -56,12 +32,36 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         return this.DBType;
     }
 
+    public DescribeDBClusterParametersResponseBody setDBVersion(String DBVersion) {
+        this.DBVersion = DBVersion;
+        return this;
+    }
+    public String getDBVersion() {
+        return this.DBVersion;
+    }
+
     public DescribeDBClusterParametersResponseBody setEngine(String engine) {
         this.engine = engine;
         return this;
     }
     public String getEngine() {
         return this.engine;
+    }
+
+    public DescribeDBClusterParametersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDBClusterParametersResponseBody setRunningParameters(DescribeDBClusterParametersResponseBodyRunningParameters runningParameters) {
+        this.runningParameters = runningParameters;
+        return this;
+    }
+    public DescribeDBClusterParametersResponseBodyRunningParameters getRunningParameters() {
+        return this.runningParameters;
     }
 
     public static class DescribeDBClusterParametersResponseBodyRunningParametersParameter extends TeaModel {
@@ -71,26 +71,26 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         @NameInMap("DataType")
         public String dataType;
 
-        @NameInMap("ParameterName")
-        public String parameterName;
-
-        @NameInMap("ParameterValue")
-        public String parameterValue;
+        @NameInMap("DefaultParameterValue")
+        public String defaultParameterValue;
 
         @NameInMap("ForceRestart")
         public Boolean forceRestart;
 
+        @NameInMap("IsModifiable")
+        public Boolean isModifiable;
+
         @NameInMap("ParameterDescription")
         public String parameterDescription;
+
+        @NameInMap("ParameterName")
+        public String parameterName;
 
         @NameInMap("ParameterStatus")
         public String parameterStatus;
 
-        @NameInMap("DefaultParameterValue")
-        public String defaultParameterValue;
-
-        @NameInMap("IsModifiable")
-        public Boolean isModifiable;
+        @NameInMap("ParameterValue")
+        public String parameterValue;
 
         public static DescribeDBClusterParametersResponseBodyRunningParametersParameter build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterParametersResponseBodyRunningParametersParameter self = new DescribeDBClusterParametersResponseBodyRunningParametersParameter();
@@ -113,20 +113,12 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             return this.dataType;
         }
 
-        public DescribeDBClusterParametersResponseBodyRunningParametersParameter setParameterName(String parameterName) {
-            this.parameterName = parameterName;
+        public DescribeDBClusterParametersResponseBodyRunningParametersParameter setDefaultParameterValue(String defaultParameterValue) {
+            this.defaultParameterValue = defaultParameterValue;
             return this;
         }
-        public String getParameterName() {
-            return this.parameterName;
-        }
-
-        public DescribeDBClusterParametersResponseBodyRunningParametersParameter setParameterValue(String parameterValue) {
-            this.parameterValue = parameterValue;
-            return this;
-        }
-        public String getParameterValue() {
-            return this.parameterValue;
+        public String getDefaultParameterValue() {
+            return this.defaultParameterValue;
         }
 
         public DescribeDBClusterParametersResponseBodyRunningParametersParameter setForceRestart(Boolean forceRestart) {
@@ -137,12 +129,28 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             return this.forceRestart;
         }
 
+        public DescribeDBClusterParametersResponseBodyRunningParametersParameter setIsModifiable(Boolean isModifiable) {
+            this.isModifiable = isModifiable;
+            return this;
+        }
+        public Boolean getIsModifiable() {
+            return this.isModifiable;
+        }
+
         public DescribeDBClusterParametersResponseBodyRunningParametersParameter setParameterDescription(String parameterDescription) {
             this.parameterDescription = parameterDescription;
             return this;
         }
         public String getParameterDescription() {
             return this.parameterDescription;
+        }
+
+        public DescribeDBClusterParametersResponseBodyRunningParametersParameter setParameterName(String parameterName) {
+            this.parameterName = parameterName;
+            return this;
+        }
+        public String getParameterName() {
+            return this.parameterName;
         }
 
         public DescribeDBClusterParametersResponseBodyRunningParametersParameter setParameterStatus(String parameterStatus) {
@@ -153,20 +161,12 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             return this.parameterStatus;
         }
 
-        public DescribeDBClusterParametersResponseBodyRunningParametersParameter setDefaultParameterValue(String defaultParameterValue) {
-            this.defaultParameterValue = defaultParameterValue;
+        public DescribeDBClusterParametersResponseBodyRunningParametersParameter setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
             return this;
         }
-        public String getDefaultParameterValue() {
-            return this.defaultParameterValue;
-        }
-
-        public DescribeDBClusterParametersResponseBodyRunningParametersParameter setIsModifiable(Boolean isModifiable) {
-            this.isModifiable = isModifiable;
-            return this;
-        }
-        public Boolean getIsModifiable() {
-            return this.isModifiable;
+        public String getParameterValue() {
+            return this.parameterValue;
         }
 
     }

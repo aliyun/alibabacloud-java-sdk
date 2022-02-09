@@ -4,8 +4,11 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupLogsResponseBody extends TeaModel {
-    @NameInMap("TotalRecordCount")
-    public String totalRecordCount;
+    @NameInMap("Items")
+    public DescribeBackupLogsResponseBodyItems items;
+
+    @NameInMap("PageNumber")
+    public String pageNumber;
 
     @NameInMap("PageRecordCount")
     public String pageRecordCount;
@@ -13,23 +16,28 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public String pageNumber;
-
-    @NameInMap("Items")
-    public DescribeBackupLogsResponseBodyItems items;
+    @NameInMap("TotalRecordCount")
+    public String totalRecordCount;
 
     public static DescribeBackupLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupLogsResponseBody self = new DescribeBackupLogsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupLogsResponseBody setTotalRecordCount(String totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
+    public DescribeBackupLogsResponseBody setItems(DescribeBackupLogsResponseBodyItems items) {
+        this.items = items;
         return this;
     }
-    public String getTotalRecordCount() {
-        return this.totalRecordCount;
+    public DescribeBackupLogsResponseBodyItems getItems() {
+        return this.items;
+    }
+
+    public DescribeBackupLogsResponseBody setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeBackupLogsResponseBody setPageRecordCount(String pageRecordCount) {
@@ -48,25 +56,32 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeBackupLogsResponseBody setPageNumber(String pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeBackupLogsResponseBody setTotalRecordCount(String totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
         return this;
     }
-    public String getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeBackupLogsResponseBody setItems(DescribeBackupLogsResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeBackupLogsResponseBodyItems getItems() {
-        return this.items;
+    public String getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public static class DescribeBackupLogsResponseBodyItemsBackupLog extends TeaModel {
+        @NameInMap("BackupLogEndTime")
+        public String backupLogEndTime;
+
         @NameInMap("BackupLogId")
         public String backupLogId;
+
+        @NameInMap("BackupLogName")
+        public String backupLogName;
+
+        @NameInMap("BackupLogSize")
+        public String backupLogSize;
+
+        @NameInMap("BackupLogStartTime")
+        public String backupLogStartTime;
+
+        @NameInMap("DownloadLink")
+        public String downloadLink;
 
         @NameInMap("IntranetDownloadLink")
         public String intranetDownloadLink;
@@ -74,24 +89,17 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         @NameInMap("LinkExpiredTime")
         public String linkExpiredTime;
 
-        @NameInMap("BackupLogStartTime")
-        public String backupLogStartTime;
-
-        @NameInMap("BackupLogEndTime")
-        public String backupLogEndTime;
-
-        @NameInMap("DownloadLink")
-        public String downloadLink;
-
-        @NameInMap("BackupLogSize")
-        public String backupLogSize;
-
-        @NameInMap("BackupLogName")
-        public String backupLogName;
-
         public static DescribeBackupLogsResponseBodyItemsBackupLog build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupLogsResponseBodyItemsBackupLog self = new DescribeBackupLogsResponseBodyItemsBackupLog();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeBackupLogsResponseBodyItemsBackupLog setBackupLogEndTime(String backupLogEndTime) {
+            this.backupLogEndTime = backupLogEndTime;
+            return this;
+        }
+        public String getBackupLogEndTime() {
+            return this.backupLogEndTime;
         }
 
         public DescribeBackupLogsResponseBodyItemsBackupLog setBackupLogId(String backupLogId) {
@@ -100,6 +108,38 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         }
         public String getBackupLogId() {
             return this.backupLogId;
+        }
+
+        public DescribeBackupLogsResponseBodyItemsBackupLog setBackupLogName(String backupLogName) {
+            this.backupLogName = backupLogName;
+            return this;
+        }
+        public String getBackupLogName() {
+            return this.backupLogName;
+        }
+
+        public DescribeBackupLogsResponseBodyItemsBackupLog setBackupLogSize(String backupLogSize) {
+            this.backupLogSize = backupLogSize;
+            return this;
+        }
+        public String getBackupLogSize() {
+            return this.backupLogSize;
+        }
+
+        public DescribeBackupLogsResponseBodyItemsBackupLog setBackupLogStartTime(String backupLogStartTime) {
+            this.backupLogStartTime = backupLogStartTime;
+            return this;
+        }
+        public String getBackupLogStartTime() {
+            return this.backupLogStartTime;
+        }
+
+        public DescribeBackupLogsResponseBodyItemsBackupLog setDownloadLink(String downloadLink) {
+            this.downloadLink = downloadLink;
+            return this;
+        }
+        public String getDownloadLink() {
+            return this.downloadLink;
         }
 
         public DescribeBackupLogsResponseBodyItemsBackupLog setIntranetDownloadLink(String intranetDownloadLink) {
@@ -116,46 +156,6 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         }
         public String getLinkExpiredTime() {
             return this.linkExpiredTime;
-        }
-
-        public DescribeBackupLogsResponseBodyItemsBackupLog setBackupLogStartTime(String backupLogStartTime) {
-            this.backupLogStartTime = backupLogStartTime;
-            return this;
-        }
-        public String getBackupLogStartTime() {
-            return this.backupLogStartTime;
-        }
-
-        public DescribeBackupLogsResponseBodyItemsBackupLog setBackupLogEndTime(String backupLogEndTime) {
-            this.backupLogEndTime = backupLogEndTime;
-            return this;
-        }
-        public String getBackupLogEndTime() {
-            return this.backupLogEndTime;
-        }
-
-        public DescribeBackupLogsResponseBodyItemsBackupLog setDownloadLink(String downloadLink) {
-            this.downloadLink = downloadLink;
-            return this;
-        }
-        public String getDownloadLink() {
-            return this.downloadLink;
-        }
-
-        public DescribeBackupLogsResponseBodyItemsBackupLog setBackupLogSize(String backupLogSize) {
-            this.backupLogSize = backupLogSize;
-            return this;
-        }
-        public String getBackupLogSize() {
-            return this.backupLogSize;
-        }
-
-        public DescribeBackupLogsResponseBodyItemsBackupLog setBackupLogName(String backupLogName) {
-            this.backupLogName = backupLogName;
-            return this;
-        }
-        public String getBackupLogName() {
-            return this.backupLogName;
         }
 
     }

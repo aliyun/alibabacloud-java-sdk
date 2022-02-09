@@ -4,8 +4,17 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("Engine")
+    public String engine;
+
+    @NameInMap("Items")
+    public DescribeSlowLogRecordsResponseBodyItems items;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
@@ -13,29 +22,44 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("Items")
-    public DescribeSlowLogRecordsResponseBodyItems items;
-
-    @NameInMap("Engine")
-    public String engine;
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     public static DescribeSlowLogRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSlowLogRecordsResponseBody self = new DescribeSlowLogRecordsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSlowLogRecordsResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
+    public DescribeSlowLogRecordsResponseBody setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
         return this;
     }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public DescribeSlowLogRecordsResponseBody setEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String getEngine() {
+        return this.engine;
+    }
+
+    public DescribeSlowLogRecordsResponseBody setItems(DescribeSlowLogRecordsResponseBodyItems items) {
+        this.items = items;
+        return this;
+    }
+    public DescribeSlowLogRecordsResponseBodyItems getItems() {
+        return this.items;
+    }
+
+    public DescribeSlowLogRecordsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeSlowLogRecordsResponseBody setPageRecordCount(Integer pageRecordCount) {
@@ -54,69 +78,64 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSlowLogRecordsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeSlowLogRecordsResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeSlowLogRecordsResponseBody setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public DescribeSlowLogRecordsResponseBody setItems(DescribeSlowLogRecordsResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeSlowLogRecordsResponseBodyItems getItems() {
-        return this.items;
-    }
-
-    public DescribeSlowLogRecordsResponseBody setEngine(String engine) {
-        this.engine = engine;
-        return this;
-    }
-    public String getEngine() {
-        return this.engine;
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public static class DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord extends TeaModel {
+        @NameInMap("DBName")
+        public String DBName;
+
+        @NameInMap("DBNodeId")
+        public String DBNodeId;
+
         @NameInMap("ExecutionStartTime")
         public String executionStartTime;
 
         @NameInMap("HostAddress")
         public String hostAddress;
 
-        @NameInMap("QueryTimes")
-        public Long queryTimes;
-
-        @NameInMap("SQLText")
-        public String SQLText;
-
-        @NameInMap("ReturnRowCounts")
-        public Long returnRowCounts;
+        @NameInMap("LockTimes")
+        public Long lockTimes;
 
         @NameInMap("ParseRowCounts")
         public Long parseRowCounts;
 
-        @NameInMap("DBName")
-        public String DBName;
+        @NameInMap("QueryTimeMS")
+        public Long queryTimeMS;
 
-        @NameInMap("LockTimes")
-        public Long lockTimes;
+        @NameInMap("QueryTimes")
+        public Long queryTimes;
 
-        @NameInMap("DBNodeId")
-        public String DBNodeId;
+        @NameInMap("ReturnRowCounts")
+        public Long returnRowCounts;
+
+        @NameInMap("SQLText")
+        public String SQLText;
 
         public static DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord build(java.util.Map<String, ?> map) throws Exception {
             DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord self = new DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setDBName(String DBName) {
+            this.DBName = DBName;
+            return this;
+        }
+        public String getDBName() {
+            return this.DBName;
+        }
+
+        public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setDBNodeId(String DBNodeId) {
+            this.DBNodeId = DBNodeId;
+            return this;
+        }
+        public String getDBNodeId() {
+            return this.DBNodeId;
         }
 
         public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setExecutionStartTime(String executionStartTime) {
@@ -135,28 +154,12 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             return this.hostAddress;
         }
 
-        public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setQueryTimes(Long queryTimes) {
-            this.queryTimes = queryTimes;
+        public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setLockTimes(Long lockTimes) {
+            this.lockTimes = lockTimes;
             return this;
         }
-        public Long getQueryTimes() {
-            return this.queryTimes;
-        }
-
-        public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setSQLText(String SQLText) {
-            this.SQLText = SQLText;
-            return this;
-        }
-        public String getSQLText() {
-            return this.SQLText;
-        }
-
-        public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setReturnRowCounts(Long returnRowCounts) {
-            this.returnRowCounts = returnRowCounts;
-            return this;
-        }
-        public Long getReturnRowCounts() {
-            return this.returnRowCounts;
+        public Long getLockTimes() {
+            return this.lockTimes;
         }
 
         public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setParseRowCounts(Long parseRowCounts) {
@@ -167,28 +170,36 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             return this.parseRowCounts;
         }
 
-        public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setDBName(String DBName) {
-            this.DBName = DBName;
+        public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setQueryTimeMS(Long queryTimeMS) {
+            this.queryTimeMS = queryTimeMS;
             return this;
         }
-        public String getDBName() {
-            return this.DBName;
+        public Long getQueryTimeMS() {
+            return this.queryTimeMS;
         }
 
-        public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setLockTimes(Long lockTimes) {
-            this.lockTimes = lockTimes;
+        public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setQueryTimes(Long queryTimes) {
+            this.queryTimes = queryTimes;
             return this;
         }
-        public Long getLockTimes() {
-            return this.lockTimes;
+        public Long getQueryTimes() {
+            return this.queryTimes;
         }
 
-        public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setDBNodeId(String DBNodeId) {
-            this.DBNodeId = DBNodeId;
+        public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setReturnRowCounts(Long returnRowCounts) {
+            this.returnRowCounts = returnRowCounts;
             return this;
         }
-        public String getDBNodeId() {
-            return this.DBNodeId;
+        public Long getReturnRowCounts() {
+            return this.returnRowCounts;
+        }
+
+        public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setSQLText(String SQLText) {
+            this.SQLText = SQLText;
+            return this;
+        }
+        public String getSQLText() {
+            return this.SQLText;
         }
 
     }

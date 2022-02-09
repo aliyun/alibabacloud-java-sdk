@@ -4,8 +4,8 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInitializeVariableResponseBody extends TeaModel {
-    @NameInMap("Variables")
-    public DescribeDBInitializeVariableResponseBodyVariables variables;
+    @NameInMap("DBType")
+    public String DBType;
 
     @NameInMap("DBVersion")
     public String DBVersion;
@@ -13,20 +13,20 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DBType")
-    public String DBType;
+    @NameInMap("Variables")
+    public DescribeDBInitializeVariableResponseBodyVariables variables;
 
     public static DescribeDBInitializeVariableResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInitializeVariableResponseBody self = new DescribeDBInitializeVariableResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInitializeVariableResponseBody setVariables(DescribeDBInitializeVariableResponseBodyVariables variables) {
-        this.variables = variables;
+    public DescribeDBInitializeVariableResponseBody setDBType(String DBType) {
+        this.DBType = DBType;
         return this;
     }
-    public DescribeDBInitializeVariableResponseBodyVariables getVariables() {
-        return this.variables;
+    public String getDBType() {
+        return this.DBType;
     }
 
     public DescribeDBInitializeVariableResponseBody setDBVersion(String DBVersion) {
@@ -45,12 +45,12 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDBInitializeVariableResponseBody setDBType(String DBType) {
-        this.DBType = DBType;
+    public DescribeDBInitializeVariableResponseBody setVariables(DescribeDBInitializeVariableResponseBodyVariables variables) {
+        this.variables = variables;
         return this;
     }
-    public String getDBType() {
-        return this.DBType;
+    public DescribeDBInitializeVariableResponseBodyVariables getVariables() {
+        return this.variables;
     }
 
     public static class DescribeDBInitializeVariableResponseBodyVariablesVariable extends TeaModel {

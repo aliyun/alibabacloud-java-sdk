@@ -4,8 +4,11 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
-    @NameInMap("PerformanceKeys")
-    public DescribeDBClusterPerformanceResponseBodyPerformanceKeys performanceKeys;
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("DBType")
+    public String DBType;
 
     @NameInMap("DBVersion")
     public String DBVersion;
@@ -13,61 +16,18 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("PerformanceKeys")
+    public DescribeDBClusterPerformanceResponseBodyPerformanceKeys performanceKeys;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("DBType")
-    public String DBType;
-
     public static DescribeDBClusterPerformanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterPerformanceResponseBody self = new DescribeDBClusterPerformanceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBClusterPerformanceResponseBody setPerformanceKeys(DescribeDBClusterPerformanceResponseBodyPerformanceKeys performanceKeys) {
-        this.performanceKeys = performanceKeys;
-        return this;
-    }
-    public DescribeDBClusterPerformanceResponseBodyPerformanceKeys getPerformanceKeys() {
-        return this.performanceKeys;
-    }
-
-    public DescribeDBClusterPerformanceResponseBody setDBVersion(String DBVersion) {
-        this.DBVersion = DBVersion;
-        return this;
-    }
-    public String getDBVersion() {
-        return this.DBVersion;
-    }
-
-    public DescribeDBClusterPerformanceResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDBClusterPerformanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDBClusterPerformanceResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDBClusterPerformanceResponseBody setDBClusterId(String DBClusterId) {
@@ -86,24 +46,56 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         return this.DBType;
     }
 
-    public static class DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue extends TeaModel {
-        @NameInMap("Value")
-        public String value;
+    public DescribeDBClusterPerformanceResponseBody setDBVersion(String DBVersion) {
+        this.DBVersion = DBVersion;
+        return this;
+    }
+    public String getDBVersion() {
+        return this.DBVersion;
+    }
 
+    public DescribeDBClusterPerformanceResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeDBClusterPerformanceResponseBody setPerformanceKeys(DescribeDBClusterPerformanceResponseBodyPerformanceKeys performanceKeys) {
+        this.performanceKeys = performanceKeys;
+        return this;
+    }
+    public DescribeDBClusterPerformanceResponseBodyPerformanceKeys getPerformanceKeys() {
+        return this.performanceKeys;
+    }
+
+    public DescribeDBClusterPerformanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDBClusterPerformanceResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public static class DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue extends TeaModel {
         @NameInMap("Timestamp")
         public Long timestamp;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue self = new DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue setTimestamp(Long timestamp) {
@@ -112,6 +104,14 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
         public Long getTimestamp() {
             return this.timestamp;
+        }
+
+        public DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -136,29 +136,29 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItem extends TeaModel {
-        @NameInMap("MetricName")
-        public String metricName;
+        @NameInMap("DBNodeId")
+        public String DBNodeId;
 
         @NameInMap("Measurement")
         public String measurement;
 
+        @NameInMap("MetricName")
+        public String metricName;
+
         @NameInMap("Points")
         public DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPoints points;
-
-        @NameInMap("DBNodeId")
-        public String DBNodeId;
 
         public static DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItem self = new DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItem();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItem setMetricName(String metricName) {
-            this.metricName = metricName;
+        public DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItem setDBNodeId(String DBNodeId) {
+            this.DBNodeId = DBNodeId;
             return this;
         }
-        public String getMetricName() {
-            return this.metricName;
+        public String getDBNodeId() {
+            return this.DBNodeId;
         }
 
         public DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItem setMeasurement(String measurement) {
@@ -169,20 +169,20 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             return this.measurement;
         }
 
+        public DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItem setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
+        }
+
         public DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItem setPoints(DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPoints points) {
             this.points = points;
             return this;
         }
         public DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPoints getPoints() {
             return this.points;
-        }
-
-        public DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItem setDBNodeId(String DBNodeId) {
-            this.DBNodeId = DBNodeId;
-            return this;
-        }
-        public String getDBNodeId() {
-            return this.DBNodeId;
         }
 
     }

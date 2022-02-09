@@ -4,29 +4,21 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDatabasesResponseBody extends TeaModel {
-    @NameInMap("PageRecordCount")
-    public Integer pageRecordCount;
-
     @NameInMap("Databases")
     public DescribeDatabasesResponseBodyDatabases databases;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("PageRecordCount")
+    public Integer pageRecordCount;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeDatabasesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDatabasesResponseBody self = new DescribeDatabasesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDatabasesResponseBody setPageRecordCount(Integer pageRecordCount) {
-        this.pageRecordCount = pageRecordCount;
-        return this;
-    }
-    public Integer getPageRecordCount() {
-        return this.pageRecordCount;
     }
 
     public DescribeDatabasesResponseBody setDatabases(DescribeDatabasesResponseBodyDatabases databases) {
@@ -37,14 +29,6 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         return this.databases;
     }
 
-    public DescribeDatabasesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDatabasesResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -53,38 +37,46 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccount extends TeaModel {
-        @NameInMap("PrivilegeStatus")
-        public String privilegeStatus;
+    public DescribeDatabasesResponseBody setPageRecordCount(Integer pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
+        return this;
+    }
+    public Integer getPageRecordCount() {
+        return this.pageRecordCount;
+    }
 
-        @NameInMap("AccountStatus")
-        public String accountStatus;
+    public DescribeDatabasesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccount extends TeaModel {
+        @NameInMap("AccountName")
+        public String accountName;
 
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
 
-        @NameInMap("AccountName")
-        public String accountName;
+        @NameInMap("AccountStatus")
+        public String accountStatus;
+
+        @NameInMap("PrivilegeStatus")
+        public String privilegeStatus;
 
         public static DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccount build(java.util.Map<String, ?> map) throws Exception {
             DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccount self = new DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccount();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccount setPrivilegeStatus(String privilegeStatus) {
-            this.privilegeStatus = privilegeStatus;
+        public DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccount setAccountName(String accountName) {
+            this.accountName = accountName;
             return this;
         }
-        public String getPrivilegeStatus() {
-            return this.privilegeStatus;
-        }
-
-        public DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccount setAccountStatus(String accountStatus) {
-            this.accountStatus = accountStatus;
-            return this;
-        }
-        public String getAccountStatus() {
-            return this.accountStatus;
+        public String getAccountName() {
+            return this.accountName;
         }
 
         public DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccount setAccountPrivilege(String accountPrivilege) {
@@ -95,12 +87,20 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             return this.accountPrivilege;
         }
 
-        public DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccount setAccountName(String accountName) {
-            this.accountName = accountName;
+        public DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccount setAccountStatus(String accountStatus) {
+            this.accountStatus = accountStatus;
             return this;
         }
-        public String getAccountName() {
-            return this.accountName;
+        public String getAccountStatus() {
+            return this.accountStatus;
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccount setPrivilegeStatus(String privilegeStatus) {
+            this.privilegeStatus = privilegeStatus;
+            return this;
+        }
+        public String getPrivilegeStatus() {
+            return this.privilegeStatus;
         }
 
     }
@@ -125,59 +125,35 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     }
 
     public static class DescribeDatabasesResponseBodyDatabasesDatabase extends TeaModel {
-        @NameInMap("DBDescription")
-        public String DBDescription;
-
-        @NameInMap("DBStatus")
-        public String DBStatus;
-
-        @NameInMap("DBName")
-        public String DBName;
-
-        @NameInMap("Engine")
-        public String engine;
+        @NameInMap("Accounts")
+        public DescribeDatabasesResponseBodyDatabasesDatabaseAccounts accounts;
 
         @NameInMap("CharacterSetName")
         public String characterSetName;
 
-        @NameInMap("Accounts")
-        public DescribeDatabasesResponseBodyDatabasesDatabaseAccounts accounts;
+        @NameInMap("DBDescription")
+        public String DBDescription;
+
+        @NameInMap("DBName")
+        public String DBName;
+
+        @NameInMap("DBStatus")
+        public String DBStatus;
+
+        @NameInMap("Engine")
+        public String engine;
 
         public static DescribeDatabasesResponseBodyDatabasesDatabase build(java.util.Map<String, ?> map) throws Exception {
             DescribeDatabasesResponseBodyDatabasesDatabase self = new DescribeDatabasesResponseBodyDatabasesDatabase();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDatabasesResponseBodyDatabasesDatabase setDBDescription(String DBDescription) {
-            this.DBDescription = DBDescription;
+        public DescribeDatabasesResponseBodyDatabasesDatabase setAccounts(DescribeDatabasesResponseBodyDatabasesDatabaseAccounts accounts) {
+            this.accounts = accounts;
             return this;
         }
-        public String getDBDescription() {
-            return this.DBDescription;
-        }
-
-        public DescribeDatabasesResponseBodyDatabasesDatabase setDBStatus(String DBStatus) {
-            this.DBStatus = DBStatus;
-            return this;
-        }
-        public String getDBStatus() {
-            return this.DBStatus;
-        }
-
-        public DescribeDatabasesResponseBodyDatabasesDatabase setDBName(String DBName) {
-            this.DBName = DBName;
-            return this;
-        }
-        public String getDBName() {
-            return this.DBName;
-        }
-
-        public DescribeDatabasesResponseBodyDatabasesDatabase setEngine(String engine) {
-            this.engine = engine;
-            return this;
-        }
-        public String getEngine() {
-            return this.engine;
+        public DescribeDatabasesResponseBodyDatabasesDatabaseAccounts getAccounts() {
+            return this.accounts;
         }
 
         public DescribeDatabasesResponseBodyDatabasesDatabase setCharacterSetName(String characterSetName) {
@@ -188,12 +164,36 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             return this.characterSetName;
         }
 
-        public DescribeDatabasesResponseBodyDatabasesDatabase setAccounts(DescribeDatabasesResponseBodyDatabasesDatabaseAccounts accounts) {
-            this.accounts = accounts;
+        public DescribeDatabasesResponseBodyDatabasesDatabase setDBDescription(String DBDescription) {
+            this.DBDescription = DBDescription;
             return this;
         }
-        public DescribeDatabasesResponseBodyDatabasesDatabaseAccounts getAccounts() {
-            return this.accounts;
+        public String getDBDescription() {
+            return this.DBDescription;
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabase setDBName(String DBName) {
+            this.DBName = DBName;
+            return this;
+        }
+        public String getDBName() {
+            return this.DBName;
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabase setDBStatus(String DBStatus) {
+            this.DBStatus = DBStatus;
+            return this;
+        }
+        public String getDBStatus() {
+            return this.DBStatus;
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabase setEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+        public String getEngine() {
+            return this.engine;
         }
 
     }

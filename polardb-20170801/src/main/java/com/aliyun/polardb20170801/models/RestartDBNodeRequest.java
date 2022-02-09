@@ -4,6 +4,12 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class RestartDBNodeRequest extends TeaModel {
+    @NameInMap("DBNodeId")
+    public String DBNodeId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class RestartDBNodeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBNodeId")
-    public String DBNodeId;
-
     public static RestartDBNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         RestartDBNodeRequest self = new RestartDBNodeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RestartDBNodeRequest setDBNodeId(String DBNodeId) {
+        this.DBNodeId = DBNodeId;
+        return this;
+    }
+    public String getDBNodeId() {
+        return this.DBNodeId;
+    }
+
+    public RestartDBNodeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public RestartDBNodeRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class RestartDBNodeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public RestartDBNodeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public RestartDBNodeRequest setDBNodeId(String DBNodeId) {
-        this.DBNodeId = DBNodeId;
-        return this;
-    }
-    public String getDBNodeId() {
-        return this.DBNodeId;
     }
 
 }

@@ -4,26 +4,29 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterVersionResponseBody extends TeaModel {
-    @NameInMap("IsLatestVersion")
-    public String isLatestVersion;
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
 
-    @NameInMap("DBVersion")
-    public String DBVersion;
+    @NameInMap("DBLatestVersion")
+    public String DBLatestVersion;
+
+    @NameInMap("DBMinorVersion")
+    public String DBMinorVersion;
 
     @NameInMap("DBRevisionVersion")
     public String DBRevisionVersion;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DBVersion")
+    public String DBVersion;
 
     @NameInMap("DBVersionStatus")
     public String DBVersionStatus;
 
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
+    @NameInMap("IsLatestVersion")
+    public String isLatestVersion;
 
-    @NameInMap("DBMinorVersion")
-    public String DBMinorVersion;
+    @NameInMap("ProxyLatestVersion")
+    public String proxyLatestVersion;
 
     @NameInMap("ProxyRevisionVersion")
     public String proxyRevisionVersion;
@@ -31,55 +34,12 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     @NameInMap("ProxyVersionStatus")
     public String proxyVersionStatus;
 
-    @NameInMap("ProxyLatestVersion")
-    public String proxyLatestVersion;
-
-    @NameInMap("DBLatestVersion")
-    public String DBLatestVersion;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDBClusterVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterVersionResponseBody self = new DescribeDBClusterVersionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBClusterVersionResponseBody setIsLatestVersion(String isLatestVersion) {
-        this.isLatestVersion = isLatestVersion;
-        return this;
-    }
-    public String getIsLatestVersion() {
-        return this.isLatestVersion;
-    }
-
-    public DescribeDBClusterVersionResponseBody setDBVersion(String DBVersion) {
-        this.DBVersion = DBVersion;
-        return this;
-    }
-    public String getDBVersion() {
-        return this.DBVersion;
-    }
-
-    public DescribeDBClusterVersionResponseBody setDBRevisionVersion(String DBRevisionVersion) {
-        this.DBRevisionVersion = DBRevisionVersion;
-        return this;
-    }
-    public String getDBRevisionVersion() {
-        return this.DBRevisionVersion;
-    }
-
-    public DescribeDBClusterVersionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDBClusterVersionResponseBody setDBVersionStatus(String DBVersionStatus) {
-        this.DBVersionStatus = DBVersionStatus;
-        return this;
-    }
-    public String getDBVersionStatus() {
-        return this.DBVersionStatus;
     }
 
     public DescribeDBClusterVersionResponseBody setDBClusterId(String DBClusterId) {
@@ -90,12 +50,60 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         return this.DBClusterId;
     }
 
+    public DescribeDBClusterVersionResponseBody setDBLatestVersion(String DBLatestVersion) {
+        this.DBLatestVersion = DBLatestVersion;
+        return this;
+    }
+    public String getDBLatestVersion() {
+        return this.DBLatestVersion;
+    }
+
     public DescribeDBClusterVersionResponseBody setDBMinorVersion(String DBMinorVersion) {
         this.DBMinorVersion = DBMinorVersion;
         return this;
     }
     public String getDBMinorVersion() {
         return this.DBMinorVersion;
+    }
+
+    public DescribeDBClusterVersionResponseBody setDBRevisionVersion(String DBRevisionVersion) {
+        this.DBRevisionVersion = DBRevisionVersion;
+        return this;
+    }
+    public String getDBRevisionVersion() {
+        return this.DBRevisionVersion;
+    }
+
+    public DescribeDBClusterVersionResponseBody setDBVersion(String DBVersion) {
+        this.DBVersion = DBVersion;
+        return this;
+    }
+    public String getDBVersion() {
+        return this.DBVersion;
+    }
+
+    public DescribeDBClusterVersionResponseBody setDBVersionStatus(String DBVersionStatus) {
+        this.DBVersionStatus = DBVersionStatus;
+        return this;
+    }
+    public String getDBVersionStatus() {
+        return this.DBVersionStatus;
+    }
+
+    public DescribeDBClusterVersionResponseBody setIsLatestVersion(String isLatestVersion) {
+        this.isLatestVersion = isLatestVersion;
+        return this;
+    }
+    public String getIsLatestVersion() {
+        return this.isLatestVersion;
+    }
+
+    public DescribeDBClusterVersionResponseBody setProxyLatestVersion(String proxyLatestVersion) {
+        this.proxyLatestVersion = proxyLatestVersion;
+        return this;
+    }
+    public String getProxyLatestVersion() {
+        return this.proxyLatestVersion;
     }
 
     public DescribeDBClusterVersionResponseBody setProxyRevisionVersion(String proxyRevisionVersion) {
@@ -114,20 +122,12 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         return this.proxyVersionStatus;
     }
 
-    public DescribeDBClusterVersionResponseBody setProxyLatestVersion(String proxyLatestVersion) {
-        this.proxyLatestVersion = proxyLatestVersion;
+    public DescribeDBClusterVersionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getProxyLatestVersion() {
-        return this.proxyLatestVersion;
-    }
-
-    public DescribeDBClusterVersionResponseBody setDBLatestVersion(String DBLatestVersion) {
-        this.DBLatestVersion = DBLatestVersion;
-        return this;
-    }
-    public String getDBLatestVersion() {
-        return this.DBLatestVersion;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

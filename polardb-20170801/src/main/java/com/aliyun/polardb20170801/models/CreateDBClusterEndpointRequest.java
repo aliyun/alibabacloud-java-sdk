@@ -4,20 +4,20 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateDBClusterEndpointRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AutoAddNewNodes")
+    public String autoAddNewNodes;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("DBClusterId")
     public String DBClusterId;
+
+    @NameInMap("DBEndpointDescription")
+    public String DBEndpointDescription;
+
+    @NameInMap("EndpointConfig")
+    public String endpointConfig;
 
     @NameInMap("EndpointType")
     public String endpointType;
@@ -25,56 +25,40 @@ public class CreateDBClusterEndpointRequest extends TeaModel {
     @NameInMap("Nodes")
     public String nodes;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("ReadWriteMode")
     public String readWriteMode;
 
-    @NameInMap("AutoAddNewNodes")
-    public String autoAddNewNodes;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("EndpointConfig")
-    public String endpointConfig;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("DBEndpointDescription")
-    public String DBEndpointDescription;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static CreateDBClusterEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBClusterEndpointRequest self = new CreateDBClusterEndpointRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDBClusterEndpointRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public CreateDBClusterEndpointRequest setAutoAddNewNodes(String autoAddNewNodes) {
+        this.autoAddNewNodes = autoAddNewNodes;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAutoAddNewNodes() {
+        return this.autoAddNewNodes;
     }
 
-    public CreateDBClusterEndpointRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public CreateDBClusterEndpointRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public CreateDBClusterEndpointRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CreateDBClusterEndpointRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateDBClusterEndpointRequest setDBClusterId(String DBClusterId) {
@@ -83,6 +67,22 @@ public class CreateDBClusterEndpointRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public CreateDBClusterEndpointRequest setDBEndpointDescription(String DBEndpointDescription) {
+        this.DBEndpointDescription = DBEndpointDescription;
+        return this;
+    }
+    public String getDBEndpointDescription() {
+        return this.DBEndpointDescription;
+    }
+
+    public CreateDBClusterEndpointRequest setEndpointConfig(String endpointConfig) {
+        this.endpointConfig = endpointConfig;
+        return this;
+    }
+    public String getEndpointConfig() {
+        return this.endpointConfig;
     }
 
     public CreateDBClusterEndpointRequest setEndpointType(String endpointType) {
@@ -101,6 +101,22 @@ public class CreateDBClusterEndpointRequest extends TeaModel {
         return this.nodes;
     }
 
+    public CreateDBClusterEndpointRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public CreateDBClusterEndpointRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public CreateDBClusterEndpointRequest setReadWriteMode(String readWriteMode) {
         this.readWriteMode = readWriteMode;
         return this;
@@ -109,36 +125,20 @@ public class CreateDBClusterEndpointRequest extends TeaModel {
         return this.readWriteMode;
     }
 
-    public CreateDBClusterEndpointRequest setAutoAddNewNodes(String autoAddNewNodes) {
-        this.autoAddNewNodes = autoAddNewNodes;
+    public CreateDBClusterEndpointRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getAutoAddNewNodes() {
-        return this.autoAddNewNodes;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public CreateDBClusterEndpointRequest setEndpointConfig(String endpointConfig) {
-        this.endpointConfig = endpointConfig;
+    public CreateDBClusterEndpointRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getEndpointConfig() {
-        return this.endpointConfig;
-    }
-
-    public CreateDBClusterEndpointRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreateDBClusterEndpointRequest setDBEndpointDescription(String DBEndpointDescription) {
-        this.DBEndpointDescription = DBEndpointDescription;
-        return this;
-    }
-    public String getDBEndpointDescription() {
-        return this.DBEndpointDescription;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

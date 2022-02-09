@@ -4,11 +4,26 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetaListRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("BackupId")
+    public String backupId;
+
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("GetDbName")
+    public String getDbName;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,38 +31,47 @@ public class DescribeMetaListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("BackupId")
-    public String backupId;
-
     @NameInMap("RestoreTime")
     public String restoreTime;
 
-    @NameInMap("GetDbName")
-    public String getDbName;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DescribeMetaListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetaListRequest self = new DescribeMetaListRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeMetaListRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeMetaListRequest setBackupId(String backupId) {
+        this.backupId = backupId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getBackupId() {
+        return this.backupId;
+    }
+
+    public DescribeMetaListRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public DescribeMetaListRequest setGetDbName(String getDbName) {
+        this.getDbName = getDbName;
+        return this;
+    }
+    public String getGetDbName() {
+        return this.getDbName;
+    }
+
+    public DescribeMetaListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeMetaListRequest setOwnerId(Long ownerId) {
@@ -56,6 +80,22 @@ public class DescribeMetaListRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeMetaListRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeMetaListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeMetaListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -74,30 +114,6 @@ public class DescribeMetaListRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeMetaListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeMetaListRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public DescribeMetaListRequest setBackupId(String backupId) {
-        this.backupId = backupId;
-        return this;
-    }
-    public String getBackupId() {
-        return this.backupId;
-    }
-
     public DescribeMetaListRequest setRestoreTime(String restoreTime) {
         this.restoreTime = restoreTime;
         return this;
@@ -106,28 +122,12 @@ public class DescribeMetaListRequest extends TeaModel {
         return this.restoreTime;
     }
 
-    public DescribeMetaListRequest setGetDbName(String getDbName) {
-        this.getDbName = getDbName;
+    public DescribeMetaListRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getGetDbName() {
-        return this.getDbName;
-    }
-
-    public DescribeMetaListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeMetaListRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }
