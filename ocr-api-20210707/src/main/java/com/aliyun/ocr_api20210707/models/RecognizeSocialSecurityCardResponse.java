@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ocr_api20210707.models;
+
+import com.aliyun.tea.*;
+
+public class RecognizeSocialSecurityCardResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public RecognizeSocialSecurityCardResponseBody body;
+
+    public static RecognizeSocialSecurityCardResponse build(java.util.Map<String, ?> map) throws Exception {
+        RecognizeSocialSecurityCardResponse self = new RecognizeSocialSecurityCardResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public RecognizeSocialSecurityCardResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public RecognizeSocialSecurityCardResponse setBody(RecognizeSocialSecurityCardResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public RecognizeSocialSecurityCardResponseBody getBody() {
+        return this.body;
+    }
+
+}

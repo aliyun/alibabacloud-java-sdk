@@ -8,6 +8,10 @@ public class RecognizeEduPaperStructedRequest extends TeaModel {
     @NameInMap("NeedRotate")
     public Boolean needRotate;
 
+    // 学科类型
+    @NameInMap("Subject")
+    public String subject;
+
     // 图片链接（长度不超 2048，不支持 base64）
     @NameInMap("Url")
     public String url;
@@ -27,6 +31,14 @@ public class RecognizeEduPaperStructedRequest extends TeaModel {
     }
     public Boolean getNeedRotate() {
         return this.needRotate;
+    }
+
+    public RecognizeEduPaperStructedRequest setSubject(String subject) {
+        this.subject = subject;
+        return this;
+    }
+    public String getSubject() {
+        return this.subject;
     }
 
     public RecognizeEduPaperStructedRequest setUrl(String url) {
