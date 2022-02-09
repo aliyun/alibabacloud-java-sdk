@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyPortDetailRequest extends TeaModel {
+    @NameInMap("BindIp")
+    public String bindIp;
+
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -25,6 +28,14 @@ public class DescribePropertyPortDetailRequest extends TeaModel {
     public static DescribePropertyPortDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePropertyPortDetailRequest self = new DescribePropertyPortDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePropertyPortDetailRequest setBindIp(String bindIp) {
+        this.bindIp = bindIp;
+        return this;
+    }
+    public String getBindIp() {
+        return this.bindIp;
     }
 
     public DescribePropertyPortDetailRequest setCurrentPage(Integer currentPage) {

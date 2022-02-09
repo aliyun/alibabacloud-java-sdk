@@ -122,14 +122,32 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         @NameInMap("Ip")
         public String ip;
 
+        @NameInMap("IsCouldLogin")
+        public Integer isCouldLogin;
+
+        @NameInMap("IsPasswdExpired")
+        public Integer isPasswdExpired;
+
+        @NameInMap("IsPasswdLocked")
+        public Integer isPasswdLocked;
+
         @NameInMap("IsRoot")
         public String isRoot;
+
+        @NameInMap("IsSudoer")
+        public Integer isSudoer;
+
+        @NameInMap("IsUserExpired")
+        public Integer isUserExpired;
 
         @NameInMap("LastLoginIp")
         public String lastLoginIp;
 
         @NameInMap("LastLoginTime")
         public String lastLoginTime;
+
+        @NameInMap("LastLoginTimeDt")
+        public Long lastLoginTimeDt;
 
         @NameInMap("LastLoginTimestamp")
         public Long lastLoginTimestamp;
@@ -223,12 +241,52 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             return this.ip;
         }
 
+        public DescribePropertyUserDetailResponseBodyPropertys setIsCouldLogin(Integer isCouldLogin) {
+            this.isCouldLogin = isCouldLogin;
+            return this;
+        }
+        public Integer getIsCouldLogin() {
+            return this.isCouldLogin;
+        }
+
+        public DescribePropertyUserDetailResponseBodyPropertys setIsPasswdExpired(Integer isPasswdExpired) {
+            this.isPasswdExpired = isPasswdExpired;
+            return this;
+        }
+        public Integer getIsPasswdExpired() {
+            return this.isPasswdExpired;
+        }
+
+        public DescribePropertyUserDetailResponseBodyPropertys setIsPasswdLocked(Integer isPasswdLocked) {
+            this.isPasswdLocked = isPasswdLocked;
+            return this;
+        }
+        public Integer getIsPasswdLocked() {
+            return this.isPasswdLocked;
+        }
+
         public DescribePropertyUserDetailResponseBodyPropertys setIsRoot(String isRoot) {
             this.isRoot = isRoot;
             return this;
         }
         public String getIsRoot() {
             return this.isRoot;
+        }
+
+        public DescribePropertyUserDetailResponseBodyPropertys setIsSudoer(Integer isSudoer) {
+            this.isSudoer = isSudoer;
+            return this;
+        }
+        public Integer getIsSudoer() {
+            return this.isSudoer;
+        }
+
+        public DescribePropertyUserDetailResponseBodyPropertys setIsUserExpired(Integer isUserExpired) {
+            this.isUserExpired = isUserExpired;
+            return this;
+        }
+        public Integer getIsUserExpired() {
+            return this.isUserExpired;
         }
 
         public DescribePropertyUserDetailResponseBodyPropertys setLastLoginIp(String lastLoginIp) {
@@ -245,6 +303,14 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         }
         public String getLastLoginTime() {
             return this.lastLoginTime;
+        }
+
+        public DescribePropertyUserDetailResponseBodyPropertys setLastLoginTimeDt(Long lastLoginTimeDt) {
+            this.lastLoginTimeDt = lastLoginTimeDt;
+            return this;
+        }
+        public Long getLastLoginTimeDt() {
+            return this.lastLoginTimeDt;
         }
 
         public DescribePropertyUserDetailResponseBodyPropertys setLastLoginTimestamp(Long lastLoginTimestamp) {

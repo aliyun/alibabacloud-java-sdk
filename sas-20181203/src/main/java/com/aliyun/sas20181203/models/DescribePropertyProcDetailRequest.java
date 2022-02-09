@@ -16,6 +16,12 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProcTimeEnd")
+    public Long procTimeEnd;
+
+    @NameInMap("ProcTimeStart")
+    public Long procTimeStart;
+
     @NameInMap("Remark")
     public String remark;
 
@@ -60,6 +66,22 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribePropertyProcDetailRequest setProcTimeEnd(Long procTimeEnd) {
+        this.procTimeEnd = procTimeEnd;
+        return this;
+    }
+    public Long getProcTimeEnd() {
+        return this.procTimeEnd;
+    }
+
+    public DescribePropertyProcDetailRequest setProcTimeStart(Long procTimeStart) {
+        this.procTimeStart = procTimeStart;
+        return this;
+    }
+    public Long getProcTimeStart() {
+        return this.procTimeStart;
     }
 
     public DescribePropertyProcDetailRequest setRemark(String remark) {

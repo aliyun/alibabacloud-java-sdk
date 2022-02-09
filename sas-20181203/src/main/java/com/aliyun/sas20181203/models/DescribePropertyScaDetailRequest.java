@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyScaDetailRequest extends TeaModel {
+    @NameInMap("Biz")
+    public String biz;
+
     @NameInMap("BizType")
     public String bizType;
 
@@ -19,11 +22,29 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Pid")
+    public String pid;
+
+    @NameInMap("Port")
+    public String port;
+
+    @NameInMap("ProcessStartedEnd")
+    public Long processStartedEnd;
+
+    @NameInMap("ProcessStartedStart")
+    public Long processStartedStart;
+
     @NameInMap("Remark")
     public String remark;
 
     @NameInMap("ScaName")
     public String scaName;
+
+    @NameInMap("ScaNamePattern")
+    public String scaNamePattern;
+
+    @NameInMap("ScaVersion")
+    public String scaVersion;
 
     @NameInMap("SearchInfo")
     public String searchInfo;
@@ -37,12 +58,23 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     @NameInMap("SearchItemSub")
     public String searchItemSub;
 
+    @NameInMap("User")
+    public String user;
+
     @NameInMap("Uuid")
     public String uuid;
 
     public static DescribePropertyScaDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePropertyScaDetailRequest self = new DescribePropertyScaDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePropertyScaDetailRequest setBiz(String biz) {
+        this.biz = biz;
+        return this;
+    }
+    public String getBiz() {
+        return this.biz;
     }
 
     public DescribePropertyScaDetailRequest setBizType(String bizType) {
@@ -85,6 +117,38 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribePropertyScaDetailRequest setPid(String pid) {
+        this.pid = pid;
+        return this;
+    }
+    public String getPid() {
+        return this.pid;
+    }
+
+    public DescribePropertyScaDetailRequest setPort(String port) {
+        this.port = port;
+        return this;
+    }
+    public String getPort() {
+        return this.port;
+    }
+
+    public DescribePropertyScaDetailRequest setProcessStartedEnd(Long processStartedEnd) {
+        this.processStartedEnd = processStartedEnd;
+        return this;
+    }
+    public Long getProcessStartedEnd() {
+        return this.processStartedEnd;
+    }
+
+    public DescribePropertyScaDetailRequest setProcessStartedStart(Long processStartedStart) {
+        this.processStartedStart = processStartedStart;
+        return this;
+    }
+    public Long getProcessStartedStart() {
+        return this.processStartedStart;
+    }
+
     public DescribePropertyScaDetailRequest setRemark(String remark) {
         this.remark = remark;
         return this;
@@ -99,6 +163,22 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     }
     public String getScaName() {
         return this.scaName;
+    }
+
+    public DescribePropertyScaDetailRequest setScaNamePattern(String scaNamePattern) {
+        this.scaNamePattern = scaNamePattern;
+        return this;
+    }
+    public String getScaNamePattern() {
+        return this.scaNamePattern;
+    }
+
+    public DescribePropertyScaDetailRequest setScaVersion(String scaVersion) {
+        this.scaVersion = scaVersion;
+        return this;
+    }
+    public String getScaVersion() {
+        return this.scaVersion;
     }
 
     public DescribePropertyScaDetailRequest setSearchInfo(String searchInfo) {
@@ -131,6 +211,14 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     }
     public String getSearchItemSub() {
         return this.searchItemSub;
+    }
+
+    public DescribePropertyScaDetailRequest setUser(String user) {
+        this.user = user;
+        return this;
+    }
+    public String getUser() {
+        return this.user;
     }
 
     public DescribePropertyScaDetailRequest setUuid(String uuid) {

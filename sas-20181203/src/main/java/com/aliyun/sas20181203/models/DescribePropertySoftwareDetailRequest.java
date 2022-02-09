@@ -7,6 +7,12 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("InstallTimeEnd")
+    public Long installTimeEnd;
+
+    @NameInMap("InstallTimeStart")
+    public Long installTimeStart;
+
     @NameInMap("Name")
     public String name;
 
@@ -36,6 +42,22 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribePropertySoftwareDetailRequest setInstallTimeEnd(Long installTimeEnd) {
+        this.installTimeEnd = installTimeEnd;
+        return this;
+    }
+    public Long getInstallTimeEnd() {
+        return this.installTimeEnd;
+    }
+
+    public DescribePropertySoftwareDetailRequest setInstallTimeStart(Long installTimeStart) {
+        this.installTimeStart = installTimeStart;
+        return this;
+    }
+    public Long getInstallTimeStart() {
+        return this.installTimeStart;
     }
 
     public DescribePropertySoftwareDetailRequest setName(String name) {

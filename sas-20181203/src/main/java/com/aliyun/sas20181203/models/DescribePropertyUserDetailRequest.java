@@ -10,6 +10,12 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     @NameInMap("IsRoot")
     public String isRoot;
 
+    @NameInMap("LastLoginTimeEnd")
+    public Long lastLoginTimeEnd;
+
+    @NameInMap("LastLoginTimeStart")
+    public Long lastLoginTimeStart;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -41,6 +47,22 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     }
     public String getIsRoot() {
         return this.isRoot;
+    }
+
+    public DescribePropertyUserDetailRequest setLastLoginTimeEnd(Long lastLoginTimeEnd) {
+        this.lastLoginTimeEnd = lastLoginTimeEnd;
+        return this;
+    }
+    public Long getLastLoginTimeEnd() {
+        return this.lastLoginTimeEnd;
+    }
+
+    public DescribePropertyUserDetailRequest setLastLoginTimeStart(Long lastLoginTimeStart) {
+        this.lastLoginTimeStart = lastLoginTimeStart;
+        return this;
+    }
+    public Long getLastLoginTimeStart() {
+        return this.lastLoginTimeStart;
     }
 
     public DescribePropertyUserDetailRequest setPageSize(Integer pageSize) {
