@@ -104,6 +104,9 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         @NameInMap("InstallTime")
         public String installTime;
 
+        @NameInMap("InstallTimeDt")
+        public Long installTimeDt;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -158,6 +161,14 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         }
         public String getInstallTime() {
             return this.installTime;
+        }
+
+        public DescribePropertySoftwareDetailResponseBodyPropertys setInstallTimeDt(Long installTimeDt) {
+            this.installTimeDt = installTimeDt;
+            return this;
+        }
+        public Long getInstallTimeDt() {
+            return this.installTimeDt;
         }
 
         public DescribePropertySoftwareDetailResponseBodyPropertys setInstanceId(String instanceId) {

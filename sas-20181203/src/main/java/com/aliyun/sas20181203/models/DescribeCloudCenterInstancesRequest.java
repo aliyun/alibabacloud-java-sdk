@@ -19,6 +19,9 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     @NameInMap("MachineTypes")
     public String machineTypes;
 
+    @NameInMap("NoGroupTrace")
+    public Boolean noGroupTrace;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -68,6 +71,14 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     }
     public String getMachineTypes() {
         return this.machineTypes;
+    }
+
+    public DescribeCloudCenterInstancesRequest setNoGroupTrace(Boolean noGroupTrace) {
+        this.noGroupTrace = noGroupTrace;
+        return this;
+    }
+    public Boolean getNoGroupTrace() {
+        return this.noGroupTrace;
     }
 
     public DescribeCloudCenterInstancesRequest setPageSize(Integer pageSize) {

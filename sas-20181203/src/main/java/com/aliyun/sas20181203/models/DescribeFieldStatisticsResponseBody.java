@@ -44,6 +44,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("GroupCount")
         public Integer groupCount;
 
+        @NameInMap("HuaweiInstanceCount")
+        public Integer huaweiInstanceCount;
+
         @NameInMap("IdcInstanceCount")
         public Integer idcInstanceCount;
 
@@ -121,6 +124,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
         public Integer getGroupCount() {
             return this.groupCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setHuaweiInstanceCount(Integer huaweiInstanceCount) {
+            this.huaweiInstanceCount = huaweiInstanceCount;
+            return this;
+        }
+        public Integer getHuaweiInstanceCount() {
+            return this.huaweiInstanceCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setIdcInstanceCount(Integer idcInstanceCount) {

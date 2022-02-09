@@ -119,6 +119,9 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        @NameInMap("IsPackage")
+        public Integer isPackage;
+
         @NameInMap("Md5")
         public String md5;
 
@@ -136,6 +139,12 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
 
         @NameInMap("StartTime")
         public String startTime;
+
+        @NameInMap("StartTimeDt")
+        public Long startTimeDt;
+
+        @NameInMap("State")
+        public String state;
 
         @NameInMap("User")
         public String user;
@@ -212,6 +221,14 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             return this.intranetIp;
         }
 
+        public DescribePropertyProcDetailResponseBodyPropertys setIsPackage(Integer isPackage) {
+            this.isPackage = isPackage;
+            return this;
+        }
+        public Integer getIsPackage() {
+            return this.isPackage;
+        }
+
         public DescribePropertyProcDetailResponseBodyPropertys setMd5(String md5) {
             this.md5 = md5;
             return this;
@@ -258,6 +275,22 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         }
         public String getStartTime() {
             return this.startTime;
+        }
+
+        public DescribePropertyProcDetailResponseBodyPropertys setStartTimeDt(Long startTimeDt) {
+            this.startTimeDt = startTimeDt;
+            return this;
+        }
+        public Long getStartTimeDt() {
+            return this.startTimeDt;
+        }
+
+        public DescribePropertyProcDetailResponseBodyPropertys setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
         public DescribePropertyProcDetailResponseBodyPropertys setUser(String user) {
