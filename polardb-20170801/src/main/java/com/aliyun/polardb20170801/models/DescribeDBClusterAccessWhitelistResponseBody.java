@@ -4,26 +4,26 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DBClusterSecurityGroups")
+    public DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups DBClusterSecurityGroups;
 
     @NameInMap("Items")
     public DescribeDBClusterAccessWhitelistResponseBodyItems items;
 
-    @NameInMap("DBClusterSecurityGroups")
-    public DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups DBClusterSecurityGroups;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDBClusterAccessWhitelistResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterAccessWhitelistResponseBody self = new DescribeDBClusterAccessWhitelistResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBClusterAccessWhitelistResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDBClusterAccessWhitelistResponseBody setDBClusterSecurityGroups(DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups DBClusterSecurityGroups) {
+        this.DBClusterSecurityGroups = DBClusterSecurityGroups;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups getDBClusterSecurityGroups() {
+        return this.DBClusterSecurityGroups;
     }
 
     public DescribeDBClusterAccessWhitelistResponseBody setItems(DescribeDBClusterAccessWhitelistResponseBodyItems items) {
@@ -34,12 +34,61 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
         return this.items;
     }
 
-    public DescribeDBClusterAccessWhitelistResponseBody setDBClusterSecurityGroups(DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups DBClusterSecurityGroups) {
-        this.DBClusterSecurityGroups = DBClusterSecurityGroups;
+    public DescribeDBClusterAccessWhitelistResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups getDBClusterSecurityGroups() {
-        return this.DBClusterSecurityGroups;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup extends TeaModel {
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("SecurityGroupName")
+        public String securityGroupName;
+
+        public static DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup self = new DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup setSecurityGroupName(String securityGroupName) {
+            this.securityGroupName = securityGroupName;
+            return this;
+        }
+        public String getSecurityGroupName() {
+            return this.securityGroupName;
+        }
+
+    }
+
+    public static class DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups extends TeaModel {
+        @NameInMap("DBClusterSecurityGroup")
+        public java.util.List<DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup> DBClusterSecurityGroup;
+
+        public static DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups self = new DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups setDBClusterSecurityGroup(java.util.List<DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup> DBClusterSecurityGroup) {
+            this.DBClusterSecurityGroup = DBClusterSecurityGroup;
+            return this;
+        }
+        public java.util.List<DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup> getDBClusterSecurityGroup() {
+            return this.DBClusterSecurityGroup;
+        }
+
     }
 
     public static class DescribeDBClusterAccessWhitelistResponseBodyItemsDBClusterIPArray extends TeaModel {
@@ -98,55 +147,6 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDBClusterAccessWhitelistResponseBodyItemsDBClusterIPArray> getDBClusterIPArray() {
             return this.DBClusterIPArray;
-        }
-
-    }
-
-    public static class DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup extends TeaModel {
-        @NameInMap("SecurityGroupId")
-        public String securityGroupId;
-
-        @NameInMap("SecurityGroupName")
-        public String securityGroupName;
-
-        public static DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup self = new DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup setSecurityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
-        }
-
-        public DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup setSecurityGroupName(String securityGroupName) {
-            this.securityGroupName = securityGroupName;
-            return this;
-        }
-        public String getSecurityGroupName() {
-            return this.securityGroupName;
-        }
-
-    }
-
-    public static class DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups extends TeaModel {
-        @NameInMap("DBClusterSecurityGroup")
-        public java.util.List<DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup> DBClusterSecurityGroup;
-
-        public static DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups self = new DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups setDBClusterSecurityGroup(java.util.List<DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup> DBClusterSecurityGroup) {
-            this.DBClusterSecurityGroup = DBClusterSecurityGroup;
-            return this;
-        }
-        public java.util.List<DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup> getDBClusterSecurityGroup() {
-            return this.DBClusterSecurityGroup;
         }
 
     }

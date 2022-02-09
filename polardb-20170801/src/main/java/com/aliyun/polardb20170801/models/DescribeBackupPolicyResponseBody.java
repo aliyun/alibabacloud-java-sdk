@@ -4,65 +4,41 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("PreferredBackupPeriod")
-    public String preferredBackupPeriod;
-
-    @NameInMap("DataLevel1BackupRetentionPeriod")
-    public String dataLevel1BackupRetentionPeriod;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PreferredBackupTime")
-    public String preferredBackupTime;
+    @NameInMap("BackupFrequency")
+    public String backupFrequency;
 
     @NameInMap("BackupRetentionPolicyOnClusterDeletion")
     public String backupRetentionPolicyOnClusterDeletion;
 
-    @NameInMap("PreferredNextBackupTime")
-    public String preferredNextBackupTime;
+    @NameInMap("DataLevel1BackupRetentionPeriod")
+    public String dataLevel1BackupRetentionPeriod;
 
     @NameInMap("DataLevel2BackupRetentionPeriod")
     public String dataLevel2BackupRetentionPeriod;
 
-    @NameInMap("BackupFrequency")
-    public String backupFrequency;
+    @NameInMap("PreferredBackupPeriod")
+    public String preferredBackupPeriod;
+
+    @NameInMap("PreferredBackupTime")
+    public String preferredBackupTime;
+
+    @NameInMap("PreferredNextBackupTime")
+    public String preferredNextBackupTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeBackupPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupPolicyResponseBody self = new DescribeBackupPolicyResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupPolicyResponseBody setPreferredBackupPeriod(String preferredBackupPeriod) {
-        this.preferredBackupPeriod = preferredBackupPeriod;
+    public DescribeBackupPolicyResponseBody setBackupFrequency(String backupFrequency) {
+        this.backupFrequency = backupFrequency;
         return this;
     }
-    public String getPreferredBackupPeriod() {
-        return this.preferredBackupPeriod;
-    }
-
-    public DescribeBackupPolicyResponseBody setDataLevel1BackupRetentionPeriod(String dataLevel1BackupRetentionPeriod) {
-        this.dataLevel1BackupRetentionPeriod = dataLevel1BackupRetentionPeriod;
-        return this;
-    }
-    public String getDataLevel1BackupRetentionPeriod() {
-        return this.dataLevel1BackupRetentionPeriod;
-    }
-
-    public DescribeBackupPolicyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeBackupPolicyResponseBody setPreferredBackupTime(String preferredBackupTime) {
-        this.preferredBackupTime = preferredBackupTime;
-        return this;
-    }
-    public String getPreferredBackupTime() {
-        return this.preferredBackupTime;
+    public String getBackupFrequency() {
+        return this.backupFrequency;
     }
 
     public DescribeBackupPolicyResponseBody setBackupRetentionPolicyOnClusterDeletion(String backupRetentionPolicyOnClusterDeletion) {
@@ -73,12 +49,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return this.backupRetentionPolicyOnClusterDeletion;
     }
 
-    public DescribeBackupPolicyResponseBody setPreferredNextBackupTime(String preferredNextBackupTime) {
-        this.preferredNextBackupTime = preferredNextBackupTime;
+    public DescribeBackupPolicyResponseBody setDataLevel1BackupRetentionPeriod(String dataLevel1BackupRetentionPeriod) {
+        this.dataLevel1BackupRetentionPeriod = dataLevel1BackupRetentionPeriod;
         return this;
     }
-    public String getPreferredNextBackupTime() {
-        return this.preferredNextBackupTime;
+    public String getDataLevel1BackupRetentionPeriod() {
+        return this.dataLevel1BackupRetentionPeriod;
     }
 
     public DescribeBackupPolicyResponseBody setDataLevel2BackupRetentionPeriod(String dataLevel2BackupRetentionPeriod) {
@@ -89,12 +65,36 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return this.dataLevel2BackupRetentionPeriod;
     }
 
-    public DescribeBackupPolicyResponseBody setBackupFrequency(String backupFrequency) {
-        this.backupFrequency = backupFrequency;
+    public DescribeBackupPolicyResponseBody setPreferredBackupPeriod(String preferredBackupPeriod) {
+        this.preferredBackupPeriod = preferredBackupPeriod;
         return this;
     }
-    public String getBackupFrequency() {
-        return this.backupFrequency;
+    public String getPreferredBackupPeriod() {
+        return this.preferredBackupPeriod;
+    }
+
+    public DescribeBackupPolicyResponseBody setPreferredBackupTime(String preferredBackupTime) {
+        this.preferredBackupTime = preferredBackupTime;
+        return this;
+    }
+    public String getPreferredBackupTime() {
+        return this.preferredBackupTime;
+    }
+
+    public DescribeBackupPolicyResponseBody setPreferredNextBackupTime(String preferredNextBackupTime) {
+        this.preferredNextBackupTime = preferredNextBackupTime;
+        return this;
+    }
+    public String getPreferredNextBackupTime() {
+        return this.preferredNextBackupTime;
+    }
+
+    public DescribeBackupPolicyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -4,6 +4,21 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateDBEndpointAddressRequest extends TeaModel {
+    @NameInMap("ConnectionStringPrefix")
+    public String connectionStringPrefix;
+
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("DBEndpointId")
+    public String DBEndpointId;
+
+    @NameInMap("NetType")
+    public String netType;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,24 +28,49 @@ public class CreateDBEndpointAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("DBEndpointId")
-    public String DBEndpointId;
-
-    @NameInMap("ConnectionStringPrefix")
-    public String connectionStringPrefix;
-
-    @NameInMap("NetType")
-    public String netType;
-
     public static CreateDBEndpointAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBEndpointAddressRequest self = new CreateDBEndpointAddressRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDBEndpointAddressRequest setConnectionStringPrefix(String connectionStringPrefix) {
+        this.connectionStringPrefix = connectionStringPrefix;
+        return this;
+    }
+    public String getConnectionStringPrefix() {
+        return this.connectionStringPrefix;
+    }
+
+    public CreateDBEndpointAddressRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public CreateDBEndpointAddressRequest setDBEndpointId(String DBEndpointId) {
+        this.DBEndpointId = DBEndpointId;
+        return this;
+    }
+    public String getDBEndpointId() {
+        return this.DBEndpointId;
+    }
+
+    public CreateDBEndpointAddressRequest setNetType(String netType) {
+        this.netType = netType;
+        return this;
+    }
+    public String getNetType() {
+        return this.netType;
+    }
+
+    public CreateDBEndpointAddressRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateDBEndpointAddressRequest setOwnerId(Long ownerId) {
@@ -55,46 +95,6 @@ public class CreateDBEndpointAddressRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CreateDBEndpointAddressRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CreateDBEndpointAddressRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public CreateDBEndpointAddressRequest setDBEndpointId(String DBEndpointId) {
-        this.DBEndpointId = DBEndpointId;
-        return this;
-    }
-    public String getDBEndpointId() {
-        return this.DBEndpointId;
-    }
-
-    public CreateDBEndpointAddressRequest setConnectionStringPrefix(String connectionStringPrefix) {
-        this.connectionStringPrefix = connectionStringPrefix;
-        return this;
-    }
-    public String getConnectionStringPrefix() {
-        return this.connectionStringPrefix;
-    }
-
-    public CreateDBEndpointAddressRequest setNetType(String netType) {
-        this.netType = netType;
-        return this;
-    }
-    public String getNetType() {
-        return this.netType;
     }
 
 }

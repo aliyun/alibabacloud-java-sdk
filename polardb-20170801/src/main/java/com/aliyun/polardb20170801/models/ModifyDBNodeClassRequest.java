@@ -4,8 +4,29 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBNodeClassRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("DBNodeTargetClass")
+    public String DBNodeTargetClass;
+
+    @NameInMap("ModifyType")
+    public String modifyType;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PlannedEndTime")
+    public String plannedEndTime;
+
+    @NameInMap("PlannedStartTime")
+    public String plannedStartTime;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,30 +34,49 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("ModifyType")
-    public String modifyType;
-
-    @NameInMap("DBNodeTargetClass")
-    public String DBNodeTargetClass;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("PlannedStartTime")
-    public String plannedStartTime;
-
-    @NameInMap("PlannedEndTime")
-    public String plannedEndTime;
-
     public static ModifyDBNodeClassRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBNodeClassRequest self = new ModifyDBNodeClassRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBNodeClassRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyDBNodeClassRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public ModifyDBNodeClassRequest setDBNodeTargetClass(String DBNodeTargetClass) {
+        this.DBNodeTargetClass = DBNodeTargetClass;
+        return this;
+    }
+    public String getDBNodeTargetClass() {
+        return this.DBNodeTargetClass;
+    }
+
+    public ModifyDBNodeClassRequest setModifyType(String modifyType) {
+        this.modifyType = modifyType;
+        return this;
+    }
+    public String getModifyType() {
+        return this.modifyType;
+    }
+
+    public ModifyDBNodeClassRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyDBNodeClassRequest setOwnerId(Long ownerId) {
@@ -45,6 +85,22 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyDBNodeClassRequest setPlannedEndTime(String plannedEndTime) {
+        this.plannedEndTime = plannedEndTime;
+        return this;
+    }
+    public String getPlannedEndTime() {
+        return this.plannedEndTime;
+    }
+
+    public ModifyDBNodeClassRequest setPlannedStartTime(String plannedStartTime) {
+        this.plannedStartTime = plannedStartTime;
+        return this;
+    }
+    public String getPlannedStartTime() {
+        return this.plannedStartTime;
     }
 
     public ModifyDBNodeClassRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -61,62 +117,6 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyDBNodeClassRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyDBNodeClassRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public ModifyDBNodeClassRequest setModifyType(String modifyType) {
-        this.modifyType = modifyType;
-        return this;
-    }
-    public String getModifyType() {
-        return this.modifyType;
-    }
-
-    public ModifyDBNodeClassRequest setDBNodeTargetClass(String DBNodeTargetClass) {
-        this.DBNodeTargetClass = DBNodeTargetClass;
-        return this;
-    }
-    public String getDBNodeTargetClass() {
-        return this.DBNodeTargetClass;
-    }
-
-    public ModifyDBNodeClassRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public ModifyDBNodeClassRequest setPlannedStartTime(String plannedStartTime) {
-        this.plannedStartTime = plannedStartTime;
-        return this;
-    }
-    public String getPlannedStartTime() {
-        return this.plannedStartTime;
-    }
-
-    public ModifyDBNodeClassRequest setPlannedEndTime(String plannedEndTime) {
-        this.plannedEndTime = plannedEndTime;
-        return this;
-    }
-    public String getPlannedEndTime() {
-        return this.plannedEndTime;
     }
 
 }

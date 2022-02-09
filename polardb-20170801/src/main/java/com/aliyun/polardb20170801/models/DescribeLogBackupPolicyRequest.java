@@ -4,6 +4,12 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogBackupPolicyRequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class DescribeLogBackupPolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
     public static DescribeLogBackupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogBackupPolicyRequest self = new DescribeLogBackupPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLogBackupPolicyRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public DescribeLogBackupPolicyRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeLogBackupPolicyRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class DescribeLogBackupPolicyRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeLogBackupPolicyRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeLogBackupPolicyRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
     }
 
 }

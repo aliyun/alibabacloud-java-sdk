@@ -4,6 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CloseDBClusterMigrationRequest extends TeaModel {
+    @NameInMap("ContinueEnableBinlog")
+    public Boolean continueEnableBinlog;
+
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +22,33 @@ public class CloseDBClusterMigrationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("ContinueEnableBinlog")
-    public Boolean continueEnableBinlog;
-
     public static CloseDBClusterMigrationRequest build(java.util.Map<String, ?> map) throws Exception {
         CloseDBClusterMigrationRequest self = new CloseDBClusterMigrationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CloseDBClusterMigrationRequest setContinueEnableBinlog(Boolean continueEnableBinlog) {
+        this.continueEnableBinlog = continueEnableBinlog;
+        return this;
+    }
+    public Boolean getContinueEnableBinlog() {
+        return this.continueEnableBinlog;
+    }
+
+    public CloseDBClusterMigrationRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public CloseDBClusterMigrationRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CloseDBClusterMigrationRequest setOwnerId(Long ownerId) {
@@ -49,30 +73,6 @@ public class CloseDBClusterMigrationRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CloseDBClusterMigrationRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CloseDBClusterMigrationRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public CloseDBClusterMigrationRequest setContinueEnableBinlog(Boolean continueEnableBinlog) {
-        this.continueEnableBinlog = continueEnableBinlog;
-        return this;
-    }
-    public Boolean getContinueEnableBinlog() {
-        return this.continueEnableBinlog;
     }
 
 }

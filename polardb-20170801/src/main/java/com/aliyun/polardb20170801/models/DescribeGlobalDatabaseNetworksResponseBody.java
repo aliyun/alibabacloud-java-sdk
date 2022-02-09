@@ -4,8 +4,11 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
+    @NameInMap("Items")
+    public java.util.List<DescribeGlobalDatabaseNetworksResponseBodyItems> items;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
@@ -13,23 +16,28 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Items")
-    public java.util.List<DescribeGlobalDatabaseNetworksResponseBodyItems> items;
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     public static DescribeGlobalDatabaseNetworksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGlobalDatabaseNetworksResponseBody self = new DescribeGlobalDatabaseNetworksResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeGlobalDatabaseNetworksResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
+    public DescribeGlobalDatabaseNetworksResponseBody setItems(java.util.List<DescribeGlobalDatabaseNetworksResponseBodyItems> items) {
+        this.items = items;
         return this;
     }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
+    public java.util.List<DescribeGlobalDatabaseNetworksResponseBodyItems> getItems() {
+        return this.items;
+    }
+
+    public DescribeGlobalDatabaseNetworksResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeGlobalDatabaseNetworksResponseBody setPageRecordCount(Integer pageRecordCount) {
@@ -48,31 +56,23 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeGlobalDatabaseNetworksResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeGlobalDatabaseNetworksResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeGlobalDatabaseNetworksResponseBody setItems(java.util.List<DescribeGlobalDatabaseNetworksResponseBodyItems> items) {
-        this.items = items;
-        return this;
-    }
-    public java.util.List<DescribeGlobalDatabaseNetworksResponseBodyItems> getItems() {
-        return this.items;
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public static class DescribeGlobalDatabaseNetworksResponseBodyItemsDBClusters extends TeaModel {
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
-        @NameInMap("Role")
-        public String role;
-
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("Role")
+        public String role;
 
         public static DescribeGlobalDatabaseNetworksResponseBodyItemsDBClusters build(java.util.Map<String, ?> map) throws Exception {
             DescribeGlobalDatabaseNetworksResponseBodyItemsDBClusters self = new DescribeGlobalDatabaseNetworksResponseBodyItemsDBClusters();
@@ -87,14 +87,6 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             return this.DBClusterId;
         }
 
-        public DescribeGlobalDatabaseNetworksResponseBodyItemsDBClusters setRole(String role) {
-            this.role = role;
-            return this;
-        }
-        public String getRole() {
-            return this.role;
-        }
-
         public DescribeGlobalDatabaseNetworksResponseBodyItemsDBClusters setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -103,20 +95,19 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeGlobalDatabaseNetworksResponseBodyItemsDBClusters setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
     }
 
     public static class DescribeGlobalDatabaseNetworksResponseBodyItems extends TeaModel {
-        @NameInMap("DBVersion")
-        public String DBVersion;
-
-        @NameInMap("GDNId")
-        public String GDNId;
-
         @NameInMap("CreateTime")
         public String createTime;
-
-        @NameInMap("GDNStatus")
-        public String GDNStatus;
 
         @NameInMap("DBClusters")
         public java.util.List<DescribeGlobalDatabaseNetworksResponseBodyItemsDBClusters> DBClusters;
@@ -124,28 +115,21 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         @NameInMap("DBType")
         public String DBType;
 
+        @NameInMap("DBVersion")
+        public String DBVersion;
+
         @NameInMap("GDNDescription")
         public String GDNDescription;
+
+        @NameInMap("GDNId")
+        public String GDNId;
+
+        @NameInMap("GDNStatus")
+        public String GDNStatus;
 
         public static DescribeGlobalDatabaseNetworksResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeGlobalDatabaseNetworksResponseBodyItems self = new DescribeGlobalDatabaseNetworksResponseBodyItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeGlobalDatabaseNetworksResponseBodyItems setDBVersion(String DBVersion) {
-            this.DBVersion = DBVersion;
-            return this;
-        }
-        public String getDBVersion() {
-            return this.DBVersion;
-        }
-
-        public DescribeGlobalDatabaseNetworksResponseBodyItems setGDNId(String GDNId) {
-            this.GDNId = GDNId;
-            return this;
-        }
-        public String getGDNId() {
-            return this.GDNId;
         }
 
         public DescribeGlobalDatabaseNetworksResponseBodyItems setCreateTime(String createTime) {
@@ -154,14 +138,6 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
-        }
-
-        public DescribeGlobalDatabaseNetworksResponseBodyItems setGDNStatus(String GDNStatus) {
-            this.GDNStatus = GDNStatus;
-            return this;
-        }
-        public String getGDNStatus() {
-            return this.GDNStatus;
         }
 
         public DescribeGlobalDatabaseNetworksResponseBodyItems setDBClusters(java.util.List<DescribeGlobalDatabaseNetworksResponseBodyItemsDBClusters> DBClusters) {
@@ -180,12 +156,36 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             return this.DBType;
         }
 
+        public DescribeGlobalDatabaseNetworksResponseBodyItems setDBVersion(String DBVersion) {
+            this.DBVersion = DBVersion;
+            return this;
+        }
+        public String getDBVersion() {
+            return this.DBVersion;
+        }
+
         public DescribeGlobalDatabaseNetworksResponseBodyItems setGDNDescription(String GDNDescription) {
             this.GDNDescription = GDNDescription;
             return this;
         }
         public String getGDNDescription() {
             return this.GDNDescription;
+        }
+
+        public DescribeGlobalDatabaseNetworksResponseBodyItems setGDNId(String GDNId) {
+            this.GDNId = GDNId;
+            return this;
+        }
+        public String getGDNId() {
+            return this.GDNId;
+        }
+
+        public DescribeGlobalDatabaseNetworksResponseBodyItems setGDNStatus(String GDNStatus) {
+            this.GDNStatus = GDNStatus;
+            return this;
+        }
+        public String getGDNStatus() {
+            return this.GDNStatus;
         }
 
     }

@@ -4,8 +4,11 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
-    @NameInMap("TotalRecordCount")
-    public String totalRecordCount;
+    @NameInMap("Items")
+    public DescribeBackupsResponseBodyItems items;
+
+    @NameInMap("PageNumber")
+    public String pageNumber;
 
     @NameInMap("PageRecordCount")
     public String pageRecordCount;
@@ -13,23 +16,28 @@ public class DescribeBackupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public String pageNumber;
-
-    @NameInMap("Items")
-    public DescribeBackupsResponseBodyItems items;
+    @NameInMap("TotalRecordCount")
+    public String totalRecordCount;
 
     public static DescribeBackupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupsResponseBody self = new DescribeBackupsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupsResponseBody setTotalRecordCount(String totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
+    public DescribeBackupsResponseBody setItems(DescribeBackupsResponseBodyItems items) {
+        this.items = items;
         return this;
     }
-    public String getTotalRecordCount() {
-        return this.totalRecordCount;
+    public DescribeBackupsResponseBodyItems getItems() {
+        return this.items;
+    }
+
+    public DescribeBackupsResponseBody setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeBackupsResponseBody setPageRecordCount(String pageRecordCount) {
@@ -48,28 +56,32 @@ public class DescribeBackupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeBackupsResponseBody setPageNumber(String pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeBackupsResponseBody setTotalRecordCount(String totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
         return this;
     }
-    public String getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeBackupsResponseBody setItems(DescribeBackupsResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeBackupsResponseBodyItems getItems() {
-        return this.items;
+    public String getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public static class DescribeBackupsResponseBodyItemsBackup extends TeaModel {
+        @NameInMap("BackupEndTime")
+        public String backupEndTime;
+
+        @NameInMap("BackupId")
+        public String backupId;
+
+        @NameInMap("BackupMethod")
+        public String backupMethod;
+
+        @NameInMap("BackupMode")
+        public String backupMode;
+
         @NameInMap("BackupSetSize")
         public String backupSetSize;
 
-        @NameInMap("ConsistentTime")
-        public String consistentTime;
+        @NameInMap("BackupStartTime")
+        public String backupStartTime;
 
         @NameInMap("BackupStatus")
         public String backupStatus;
@@ -77,81 +89,21 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("BackupType")
         public String backupType;
 
-        @NameInMap("BackupStartTime")
-        public String backupStartTime;
+        @NameInMap("BackupsLevel")
+        public String backupsLevel;
 
-        @NameInMap("IsAvail")
-        public String isAvail;
-
-        @NameInMap("BackupEndTime")
-        public String backupEndTime;
-
-        @NameInMap("BackupId")
-        public String backupId;
+        @NameInMap("ConsistentTime")
+        public String consistentTime;
 
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
-        @NameInMap("BackupsLevel")
-        public String backupsLevel;
-
-        @NameInMap("BackupMode")
-        public String backupMode;
-
-        @NameInMap("BackupMethod")
-        public String backupMethod;
+        @NameInMap("IsAvail")
+        public String isAvail;
 
         public static DescribeBackupsResponseBodyItemsBackup build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupsResponseBodyItemsBackup self = new DescribeBackupsResponseBodyItemsBackup();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupSetSize(String backupSetSize) {
-            this.backupSetSize = backupSetSize;
-            return this;
-        }
-        public String getBackupSetSize() {
-            return this.backupSetSize;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setConsistentTime(String consistentTime) {
-            this.consistentTime = consistentTime;
-            return this;
-        }
-        public String getConsistentTime() {
-            return this.consistentTime;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupStatus(String backupStatus) {
-            this.backupStatus = backupStatus;
-            return this;
-        }
-        public String getBackupStatus() {
-            return this.backupStatus;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupType(String backupType) {
-            this.backupType = backupType;
-            return this;
-        }
-        public String getBackupType() {
-            return this.backupType;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupStartTime(String backupStartTime) {
-            this.backupStartTime = backupStartTime;
-            return this;
-        }
-        public String getBackupStartTime() {
-            return this.backupStartTime;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setIsAvail(String isAvail) {
-            this.isAvail = isAvail;
-            return this;
-        }
-        public String getIsAvail() {
-            return this.isAvail;
         }
 
         public DescribeBackupsResponseBodyItemsBackup setBackupEndTime(String backupEndTime) {
@@ -170,20 +122,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.backupId;
         }
 
-        public DescribeBackupsResponseBodyItemsBackup setDBClusterId(String DBClusterId) {
-            this.DBClusterId = DBClusterId;
+        public DescribeBackupsResponseBodyItemsBackup setBackupMethod(String backupMethod) {
+            this.backupMethod = backupMethod;
             return this;
         }
-        public String getDBClusterId() {
-            return this.DBClusterId;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupsLevel(String backupsLevel) {
-            this.backupsLevel = backupsLevel;
-            return this;
-        }
-        public String getBackupsLevel() {
-            return this.backupsLevel;
+        public String getBackupMethod() {
+            return this.backupMethod;
         }
 
         public DescribeBackupsResponseBodyItemsBackup setBackupMode(String backupMode) {
@@ -194,12 +138,68 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.backupMode;
         }
 
-        public DescribeBackupsResponseBodyItemsBackup setBackupMethod(String backupMethod) {
-            this.backupMethod = backupMethod;
+        public DescribeBackupsResponseBodyItemsBackup setBackupSetSize(String backupSetSize) {
+            this.backupSetSize = backupSetSize;
             return this;
         }
-        public String getBackupMethod() {
-            return this.backupMethod;
+        public String getBackupSetSize() {
+            return this.backupSetSize;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupStartTime(String backupStartTime) {
+            this.backupStartTime = backupStartTime;
+            return this;
+        }
+        public String getBackupStartTime() {
+            return this.backupStartTime;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupStatus(String backupStatus) {
+            this.backupStatus = backupStatus;
+            return this;
+        }
+        public String getBackupStatus() {
+            return this.backupStatus;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupType(String backupType) {
+            this.backupType = backupType;
+            return this;
+        }
+        public String getBackupType() {
+            return this.backupType;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupsLevel(String backupsLevel) {
+            this.backupsLevel = backupsLevel;
+            return this;
+        }
+        public String getBackupsLevel() {
+            return this.backupsLevel;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setConsistentTime(String consistentTime) {
+            this.consistentTime = consistentTime;
+            return this;
+        }
+        public String getConsistentTime() {
+            return this.consistentTime;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setDBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+        public String getDBClusterId() {
+            return this.DBClusterId;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setIsAvail(String isAvail) {
+            this.isAvail = isAvail;
+            return this;
+        }
+        public String getIsAvail() {
+            return this.isAvail;
         }
 
     }

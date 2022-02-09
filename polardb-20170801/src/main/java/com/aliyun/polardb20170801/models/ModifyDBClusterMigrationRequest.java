@@ -4,8 +4,14 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterMigrationRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("NewMasterInstanceId")
+    public String newMasterInstanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,17 +22,11 @@ public class ModifyDBClusterMigrationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("SourceRDSDBInstanceId")
     public String sourceRDSDBInstanceId;
-
-    @NameInMap("NewMasterInstanceId")
-    public String newMasterInstanceId;
 
     @NameInMap("SwapConnectionString")
     public String swapConnectionString;
@@ -36,12 +36,28 @@ public class ModifyDBClusterMigrationRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyDBClusterMigrationRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyDBClusterMigrationRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public ModifyDBClusterMigrationRequest setNewMasterInstanceId(String newMasterInstanceId) {
+        this.newMasterInstanceId = newMasterInstanceId;
+        return this;
+    }
+    public String getNewMasterInstanceId() {
+        return this.newMasterInstanceId;
+    }
+
+    public ModifyDBClusterMigrationRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyDBClusterMigrationRequest setOwnerId(Long ownerId) {
@@ -68,20 +84,12 @@ public class ModifyDBClusterMigrationRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyDBClusterMigrationRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyDBClusterMigrationRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyDBClusterMigrationRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public ModifyDBClusterMigrationRequest setSourceRDSDBInstanceId(String sourceRDSDBInstanceId) {
@@ -90,14 +98,6 @@ public class ModifyDBClusterMigrationRequest extends TeaModel {
     }
     public String getSourceRDSDBInstanceId() {
         return this.sourceRDSDBInstanceId;
-    }
-
-    public ModifyDBClusterMigrationRequest setNewMasterInstanceId(String newMasterInstanceId) {
-        this.newMasterInstanceId = newMasterInstanceId;
-        return this;
-    }
-    public String getNewMasterInstanceId() {
-        return this.newMasterInstanceId;
     }
 
     public ModifyDBClusterMigrationRequest setSwapConnectionString(String swapConnectionString) {

@@ -4,29 +4,14 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterMigrationResponseBody extends TeaModel {
-    @NameInMap("DBClusterEndpointList")
-    public java.util.List<DescribeDBClusterMigrationResponseBodyDBClusterEndpointList> DBClusterEndpointList;
-
     @NameInMap("Comment")
     public String comment;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ExpiredTime")
-    public String expiredTime;
+    @NameInMap("DBClusterEndpointList")
+    public java.util.List<DescribeDBClusterMigrationResponseBodyDBClusterEndpointList> DBClusterEndpointList;
 
     @NameInMap("DBClusterId")
     public String DBClusterId;
-
-    @NameInMap("Topologies")
-    public String topologies;
-
-    @NameInMap("RdsReadWriteMode")
-    public String rdsReadWriteMode;
-
-    @NameInMap("SourceRDSDBInstanceId")
-    public String sourceRDSDBInstanceId;
 
     @NameInMap("DBClusterReadWriteMode")
     public String DBClusterReadWriteMode;
@@ -34,23 +19,30 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     @NameInMap("DelayedSeconds")
     public Integer delayedSeconds;
 
+    @NameInMap("ExpiredTime")
+    public String expiredTime;
+
     @NameInMap("MigrationStatus")
     public String migrationStatus;
 
     @NameInMap("RdsEndpointList")
     public java.util.List<DescribeDBClusterMigrationResponseBodyRdsEndpointList> rdsEndpointList;
 
+    @NameInMap("RdsReadWriteMode")
+    public String rdsReadWriteMode;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("SourceRDSDBInstanceId")
+    public String sourceRDSDBInstanceId;
+
+    @NameInMap("Topologies")
+    public String topologies;
+
     public static DescribeDBClusterMigrationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterMigrationResponseBody self = new DescribeDBClusterMigrationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBClusterMigrationResponseBody setDBClusterEndpointList(java.util.List<DescribeDBClusterMigrationResponseBodyDBClusterEndpointList> DBClusterEndpointList) {
-        this.DBClusterEndpointList = DBClusterEndpointList;
-        return this;
-    }
-    public java.util.List<DescribeDBClusterMigrationResponseBodyDBClusterEndpointList> getDBClusterEndpointList() {
-        return this.DBClusterEndpointList;
     }
 
     public DescribeDBClusterMigrationResponseBody setComment(String comment) {
@@ -61,20 +53,12 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         return this.comment;
     }
 
-    public DescribeDBClusterMigrationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDBClusterMigrationResponseBody setDBClusterEndpointList(java.util.List<DescribeDBClusterMigrationResponseBodyDBClusterEndpointList> DBClusterEndpointList) {
+        this.DBClusterEndpointList = DBClusterEndpointList;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDBClusterMigrationResponseBody setExpiredTime(String expiredTime) {
-        this.expiredTime = expiredTime;
-        return this;
-    }
-    public String getExpiredTime() {
-        return this.expiredTime;
+    public java.util.List<DescribeDBClusterMigrationResponseBodyDBClusterEndpointList> getDBClusterEndpointList() {
+        return this.DBClusterEndpointList;
     }
 
     public DescribeDBClusterMigrationResponseBody setDBClusterId(String DBClusterId) {
@@ -83,30 +67,6 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
-    }
-
-    public DescribeDBClusterMigrationResponseBody setTopologies(String topologies) {
-        this.topologies = topologies;
-        return this;
-    }
-    public String getTopologies() {
-        return this.topologies;
-    }
-
-    public DescribeDBClusterMigrationResponseBody setRdsReadWriteMode(String rdsReadWriteMode) {
-        this.rdsReadWriteMode = rdsReadWriteMode;
-        return this;
-    }
-    public String getRdsReadWriteMode() {
-        return this.rdsReadWriteMode;
-    }
-
-    public DescribeDBClusterMigrationResponseBody setSourceRDSDBInstanceId(String sourceRDSDBInstanceId) {
-        this.sourceRDSDBInstanceId = sourceRDSDBInstanceId;
-        return this;
-    }
-    public String getSourceRDSDBInstanceId() {
-        return this.sourceRDSDBInstanceId;
     }
 
     public DescribeDBClusterMigrationResponseBody setDBClusterReadWriteMode(String DBClusterReadWriteMode) {
@@ -125,6 +85,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         return this.delayedSeconds;
     }
 
+    public DescribeDBClusterMigrationResponseBody setExpiredTime(String expiredTime) {
+        this.expiredTime = expiredTime;
+        return this;
+    }
+    public String getExpiredTime() {
+        return this.expiredTime;
+    }
+
     public DescribeDBClusterMigrationResponseBody setMigrationStatus(String migrationStatus) {
         this.migrationStatus = migrationStatus;
         return this;
@@ -141,12 +109,44 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         return this.rdsEndpointList;
     }
 
-    public static class DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems extends TeaModel {
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
+    public DescribeDBClusterMigrationResponseBody setRdsReadWriteMode(String rdsReadWriteMode) {
+        this.rdsReadWriteMode = rdsReadWriteMode;
+        return this;
+    }
+    public String getRdsReadWriteMode() {
+        return this.rdsReadWriteMode;
+    }
 
+    public DescribeDBClusterMigrationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDBClusterMigrationResponseBody setSourceRDSDBInstanceId(String sourceRDSDBInstanceId) {
+        this.sourceRDSDBInstanceId = sourceRDSDBInstanceId;
+        return this;
+    }
+    public String getSourceRDSDBInstanceId() {
+        return this.sourceRDSDBInstanceId;
+    }
+
+    public DescribeDBClusterMigrationResponseBody setTopologies(String topologies) {
+        this.topologies = topologies;
+        return this;
+    }
+    public String getTopologies() {
+        return this.topologies;
+    }
+
+    public static class DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems extends TeaModel {
         @NameInMap("ConnectionString")
         public String connectionString;
+
+        @NameInMap("IPAddress")
+        public String IPAddress;
 
         @NameInMap("NetType")
         public String netType;
@@ -157,20 +157,12 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         @NameInMap("VPCId")
         public String VPCId;
 
-        @NameInMap("IPAddress")
-        public String IPAddress;
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
 
         public static DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems self = new DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
         }
 
         public DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems setConnectionString(String connectionString) {
@@ -179,6 +171,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
         public String getConnectionString() {
             return this.connectionString;
+        }
+
+        public DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems setIPAddress(String IPAddress) {
+            this.IPAddress = IPAddress;
+            return this;
+        }
+        public String getIPAddress() {
+            return this.IPAddress;
         }
 
         public DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems setNetType(String netType) {
@@ -205,12 +205,12 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             return this.VPCId;
         }
 
-        public DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems setIPAddress(String IPAddress) {
-            this.IPAddress = IPAddress;
+        public DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
             return this;
         }
-        public String getIPAddress() {
-            return this.IPAddress;
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
     }
@@ -257,11 +257,11 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems extends TeaModel {
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
-
         @NameInMap("ConnectionString")
         public String connectionString;
+
+        @NameInMap("IPAddress")
+        public String IPAddress;
 
         @NameInMap("NetType")
         public String netType;
@@ -272,20 +272,12 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         @NameInMap("VPCId")
         public String VPCId;
 
-        @NameInMap("IPAddress")
-        public String IPAddress;
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
 
         public static DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems self = new DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
         }
 
         public DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems setConnectionString(String connectionString) {
@@ -294,6 +286,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
         public String getConnectionString() {
             return this.connectionString;
+        }
+
+        public DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems setIPAddress(String IPAddress) {
+            this.IPAddress = IPAddress;
+            return this;
+        }
+        public String getIPAddress() {
+            return this.IPAddress;
         }
 
         public DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems setNetType(String netType) {
@@ -320,12 +320,12 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             return this.VPCId;
         }
 
-        public DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems setIPAddress(String IPAddress) {
-            this.IPAddress = IPAddress;
+        public DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
             return this;
         }
-        public String getIPAddress() {
-            return this.IPAddress;
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
     }

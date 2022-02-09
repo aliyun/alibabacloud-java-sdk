@@ -4,6 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteDBLinkRequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("DBLinkName")
+    public String DBLinkName;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +22,33 @@ public class DeleteDBLinkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("DBLinkName")
-    public String DBLinkName;
-
     public static DeleteDBLinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDBLinkRequest self = new DeleteDBLinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteDBLinkRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public DeleteDBLinkRequest setDBLinkName(String DBLinkName) {
+        this.DBLinkName = DBLinkName;
+        return this;
+    }
+    public String getDBLinkName() {
+        return this.DBLinkName;
+    }
+
+    public DeleteDBLinkRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteDBLinkRequest setOwnerId(Long ownerId) {
@@ -49,30 +73,6 @@ public class DeleteDBLinkRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteDBLinkRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DeleteDBLinkRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public DeleteDBLinkRequest setDBLinkName(String DBLinkName) {
-        this.DBLinkName = DBLinkName;
-        return this;
-    }
-    public String getDBLinkName() {
-        return this.DBLinkName;
     }
 
 }

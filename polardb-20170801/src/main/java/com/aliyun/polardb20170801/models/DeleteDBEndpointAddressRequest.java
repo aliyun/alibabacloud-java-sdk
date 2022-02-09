@@ -4,18 +4,6 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteDBEndpointAddressRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -25,41 +13,21 @@ public class DeleteDBEndpointAddressRequest extends TeaModel {
     @NameInMap("NetType")
     public String netType;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static DeleteDBEndpointAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDBEndpointAddressRequest self = new DeleteDBEndpointAddressRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteDBEndpointAddressRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DeleteDBEndpointAddressRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DeleteDBEndpointAddressRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DeleteDBEndpointAddressRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
     public DeleteDBEndpointAddressRequest setDBClusterId(String DBClusterId) {
@@ -84,6 +52,38 @@ public class DeleteDBEndpointAddressRequest extends TeaModel {
     }
     public String getNetType() {
         return this.netType;
+    }
+
+    public DeleteDBEndpointAddressRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DeleteDBEndpointAddressRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteDBEndpointAddressRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DeleteDBEndpointAddressRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

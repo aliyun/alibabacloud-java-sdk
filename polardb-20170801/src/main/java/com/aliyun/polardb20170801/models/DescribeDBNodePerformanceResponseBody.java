@@ -4,8 +4,11 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBNodePerformanceResponseBody extends TeaModel {
-    @NameInMap("PerformanceKeys")
-    public DescribeDBNodePerformanceResponseBodyPerformanceKeys performanceKeys;
+    @NameInMap("DBNodeId")
+    public String DBNodeId;
+
+    @NameInMap("DBType")
+    public String DBType;
 
     @NameInMap("DBVersion")
     public String DBVersion;
@@ -13,29 +16,34 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("PerformanceKeys")
+    public DescribeDBNodePerformanceResponseBodyPerformanceKeys performanceKeys;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("DBType")
-    public String DBType;
-
-    @NameInMap("DBNodeId")
-    public String DBNodeId;
-
     public static DescribeDBNodePerformanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBNodePerformanceResponseBody self = new DescribeDBNodePerformanceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBNodePerformanceResponseBody setPerformanceKeys(DescribeDBNodePerformanceResponseBodyPerformanceKeys performanceKeys) {
-        this.performanceKeys = performanceKeys;
+    public DescribeDBNodePerformanceResponseBody setDBNodeId(String DBNodeId) {
+        this.DBNodeId = DBNodeId;
         return this;
     }
-    public DescribeDBNodePerformanceResponseBodyPerformanceKeys getPerformanceKeys() {
-        return this.performanceKeys;
+    public String getDBNodeId() {
+        return this.DBNodeId;
+    }
+
+    public DescribeDBNodePerformanceResponseBody setDBType(String DBType) {
+        this.DBType = DBType;
+        return this;
+    }
+    public String getDBType() {
+        return this.DBType;
     }
 
     public DescribeDBNodePerformanceResponseBody setDBVersion(String DBVersion) {
@@ -54,6 +62,14 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeDBNodePerformanceResponseBody setPerformanceKeys(DescribeDBNodePerformanceResponseBodyPerformanceKeys performanceKeys) {
+        this.performanceKeys = performanceKeys;
+        return this;
+    }
+    public DescribeDBNodePerformanceResponseBodyPerformanceKeys getPerformanceKeys() {
+        return this.performanceKeys;
+    }
+
     public DescribeDBNodePerformanceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -70,40 +86,16 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         return this.startTime;
     }
 
-    public DescribeDBNodePerformanceResponseBody setDBType(String DBType) {
-        this.DBType = DBType;
-        return this;
-    }
-    public String getDBType() {
-        return this.DBType;
-    }
-
-    public DescribeDBNodePerformanceResponseBody setDBNodeId(String DBNodeId) {
-        this.DBNodeId = DBNodeId;
-        return this;
-    }
-    public String getDBNodeId() {
-        return this.DBNodeId;
-    }
-
     public static class DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("Timestamp")
         public Long timestamp;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue self = new DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue setTimestamp(Long timestamp) {
@@ -112,6 +104,14 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         }
         public Long getTimestamp() {
             return this.timestamp;
+        }
+
+        public DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -136,11 +136,11 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItem extends TeaModel {
-        @NameInMap("MetricName")
-        public String metricName;
-
         @NameInMap("Measurement")
         public String measurement;
+
+        @NameInMap("MetricName")
+        public String metricName;
 
         @NameInMap("Points")
         public DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItemPoints points;
@@ -150,20 +150,20 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItem setMetricName(String metricName) {
-            this.metricName = metricName;
-            return this;
-        }
-        public String getMetricName() {
-            return this.metricName;
-        }
-
         public DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItem setMeasurement(String measurement) {
             this.measurement = measurement;
             return this;
         }
         public String getMeasurement() {
             return this.measurement;
+        }
+
+        public DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItem setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
         }
 
         public DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItem setPoints(DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItemPoints points) {

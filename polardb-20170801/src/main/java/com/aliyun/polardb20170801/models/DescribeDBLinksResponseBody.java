@@ -4,26 +4,26 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBLinksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DBInstanceName")
+    public String DBInstanceName;
 
     @NameInMap("DBLinkInfos")
     public java.util.List<DescribeDBLinksResponseBodyDBLinkInfos> DBLinkInfos;
 
-    @NameInMap("DBInstanceName")
-    public String DBInstanceName;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDBLinksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBLinksResponseBody self = new DescribeDBLinksResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBLinksResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDBLinksResponseBody setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
     }
 
     public DescribeDBLinksResponseBody setDBLinkInfos(java.util.List<DescribeDBLinksResponseBodyDBLinkInfos> DBLinkInfos) {
@@ -34,12 +34,12 @@ public class DescribeDBLinksResponseBody extends TeaModel {
         return this.DBLinkInfos;
     }
 
-    public DescribeDBLinksResponseBody setDBInstanceName(String DBInstanceName) {
-        this.DBInstanceName = DBInstanceName;
+    public DescribeDBLinksResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getDBInstanceName() {
-        return this.DBInstanceName;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeDBLinksResponseBodyDBLinkInfos extends TeaModel {
@@ -52,14 +52,14 @@ public class DescribeDBLinksResponseBody extends TeaModel {
         @NameInMap("SourceDBName")
         public String sourceDBName;
 
-        @NameInMap("TargetDBName")
-        public String targetDBName;
+        @NameInMap("TargetAccount")
+        public String targetAccount;
 
         @NameInMap("TargetDBInstanceName")
         public String targetDBInstanceName;
 
-        @NameInMap("TargetAccount")
-        public String targetAccount;
+        @NameInMap("TargetDBName")
+        public String targetDBName;
 
         public static DescribeDBLinksResponseBodyDBLinkInfos build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBLinksResponseBodyDBLinkInfos self = new DescribeDBLinksResponseBodyDBLinkInfos();
@@ -90,12 +90,12 @@ public class DescribeDBLinksResponseBody extends TeaModel {
             return this.sourceDBName;
         }
 
-        public DescribeDBLinksResponseBodyDBLinkInfos setTargetDBName(String targetDBName) {
-            this.targetDBName = targetDBName;
+        public DescribeDBLinksResponseBodyDBLinkInfos setTargetAccount(String targetAccount) {
+            this.targetAccount = targetAccount;
             return this;
         }
-        public String getTargetDBName() {
-            return this.targetDBName;
+        public String getTargetAccount() {
+            return this.targetAccount;
         }
 
         public DescribeDBLinksResponseBodyDBLinkInfos setTargetDBInstanceName(String targetDBInstanceName) {
@@ -106,12 +106,12 @@ public class DescribeDBLinksResponseBody extends TeaModel {
             return this.targetDBInstanceName;
         }
 
-        public DescribeDBLinksResponseBodyDBLinkInfos setTargetAccount(String targetAccount) {
-            this.targetAccount = targetAccount;
+        public DescribeDBLinksResponseBodyDBLinkInfos setTargetDBName(String targetDBName) {
+            this.targetDBName = targetDBName;
             return this;
         }
-        public String getTargetAccount() {
-            return this.targetAccount;
+        public String getTargetDBName() {
+            return this.targetDBName;
         }
 
     }

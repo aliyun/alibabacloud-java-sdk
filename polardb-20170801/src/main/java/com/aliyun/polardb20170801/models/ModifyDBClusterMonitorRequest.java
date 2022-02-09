@@ -4,8 +4,17 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterMonitorRequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Period")
+    public String period;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,18 +22,25 @@ public class ModifyDBClusterMonitorRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("Period")
-    public String period;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static ModifyDBClusterMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterMonitorRequest self = new ModifyDBClusterMonitorRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBClusterMonitorRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public ModifyDBClusterMonitorRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyDBClusterMonitorRequest setOwnerId(Long ownerId) {
@@ -33,6 +49,14 @@ public class ModifyDBClusterMonitorRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyDBClusterMonitorRequest setPeriod(String period) {
+        this.period = period;
+        return this;
+    }
+    public String getPeriod() {
+        return this.period;
     }
 
     public ModifyDBClusterMonitorRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -49,30 +73,6 @@ public class ModifyDBClusterMonitorRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyDBClusterMonitorRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public ModifyDBClusterMonitorRequest setPeriod(String period) {
-        this.period = period;
-        return this;
-    }
-    public String getPeriod() {
-        return this.period;
-    }
-
-    public ModifyDBClusterMonitorRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

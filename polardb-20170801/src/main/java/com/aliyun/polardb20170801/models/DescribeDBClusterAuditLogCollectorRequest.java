@@ -4,6 +4,12 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterAuditLogCollectorRequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class DescribeDBClusterAuditLogCollectorRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DescribeDBClusterAuditLogCollectorRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterAuditLogCollectorRequest self = new DescribeDBClusterAuditLogCollectorRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBClusterAuditLogCollectorRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public DescribeDBClusterAuditLogCollectorRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeDBClusterAuditLogCollectorRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class DescribeDBClusterAuditLogCollectorRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeDBClusterAuditLogCollectorRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public DescribeDBClusterAuditLogCollectorRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

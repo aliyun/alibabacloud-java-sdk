@@ -4,6 +4,18 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterTDERequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("EncryptNewTables")
+    public String encryptNewTables;
+
+    @NameInMap("EncryptionKey")
+    public String encryptionKey;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,27 +25,47 @@ public class ModifyDBClusterTDERequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
+    @NameInMap("RoleArn")
+    public String roleArn;
 
     @NameInMap("TDEStatus")
     public String TDEStatus;
 
-    @NameInMap("RoleArn")
-    public String roleArn;
-
-    @NameInMap("EncryptionKey")
-    public String encryptionKey;
-
-    @NameInMap("EncryptNewTables")
-    public String encryptNewTables;
-
     public static ModifyDBClusterTDERequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterTDERequest self = new ModifyDBClusterTDERequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBClusterTDERequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public ModifyDBClusterTDERequest setEncryptNewTables(String encryptNewTables) {
+        this.encryptNewTables = encryptNewTables;
+        return this;
+    }
+    public String getEncryptNewTables() {
+        return this.encryptNewTables;
+    }
+
+    public ModifyDBClusterTDERequest setEncryptionKey(String encryptionKey) {
+        this.encryptionKey = encryptionKey;
+        return this;
+    }
+    public String getEncryptionKey() {
+        return this.encryptionKey;
+    }
+
+    public ModifyDBClusterTDERequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyDBClusterTDERequest setOwnerId(Long ownerId) {
@@ -60,30 +92,6 @@ public class ModifyDBClusterTDERequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyDBClusterTDERequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyDBClusterTDERequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public ModifyDBClusterTDERequest setTDEStatus(String TDEStatus) {
-        this.TDEStatus = TDEStatus;
-        return this;
-    }
-    public String getTDEStatus() {
-        return this.TDEStatus;
-    }
-
     public ModifyDBClusterTDERequest setRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -92,20 +100,12 @@ public class ModifyDBClusterTDERequest extends TeaModel {
         return this.roleArn;
     }
 
-    public ModifyDBClusterTDERequest setEncryptionKey(String encryptionKey) {
-        this.encryptionKey = encryptionKey;
+    public ModifyDBClusterTDERequest setTDEStatus(String TDEStatus) {
+        this.TDEStatus = TDEStatus;
         return this;
     }
-    public String getEncryptionKey() {
-        return this.encryptionKey;
-    }
-
-    public ModifyDBClusterTDERequest setEncryptNewTables(String encryptNewTables) {
-        this.encryptNewTables = encryptNewTables;
-        return this;
-    }
-    public String getEncryptNewTables() {
-        return this.encryptNewTables;
+    public String getTDEStatus() {
+        return this.TDEStatus;
     }
 
 }

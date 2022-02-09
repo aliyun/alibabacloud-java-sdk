@@ -4,26 +4,18 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeCharacterSetNameResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CharacterSetNameItems")
     public DescribeCharacterSetNameResponseBodyCharacterSetNameItems characterSetNameItems;
 
     @NameInMap("Engine")
     public String engine;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeCharacterSetNameResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCharacterSetNameResponseBody self = new DescribeCharacterSetNameResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCharacterSetNameResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeCharacterSetNameResponseBody setCharacterSetNameItems(DescribeCharacterSetNameResponseBodyCharacterSetNameItems characterSetNameItems) {
@@ -40,6 +32,14 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
     }
     public String getEngine() {
         return this.engine;
+    }
+
+    public DescribeCharacterSetNameResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeCharacterSetNameResponseBodyCharacterSetNameItems extends TeaModel {

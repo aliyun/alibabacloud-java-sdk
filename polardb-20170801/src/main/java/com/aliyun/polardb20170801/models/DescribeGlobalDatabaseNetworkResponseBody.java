@@ -4,44 +4,36 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
-    @NameInMap("GDNStatus")
-    public String GDNStatus;
-
     @NameInMap("Connections")
     public java.util.List<DescribeGlobalDatabaseNetworkResponseBodyConnections> connections;
-
-    @NameInMap("DBVersion")
-    public String DBVersion;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("GDNId")
-    public String GDNId;
 
     @NameInMap("CreateTime")
     public String createTime;
 
+    @NameInMap("DBClusters")
+    public java.util.List<DescribeGlobalDatabaseNetworkResponseBodyDBClusters> DBClusters;
+
     @NameInMap("DBType")
     public String DBType;
+
+    @NameInMap("DBVersion")
+    public String DBVersion;
 
     @NameInMap("GDNDescription")
     public String GDNDescription;
 
-    @NameInMap("DBClusters")
-    public java.util.List<DescribeGlobalDatabaseNetworkResponseBodyDBClusters> DBClusters;
+    @NameInMap("GDNId")
+    public String GDNId;
+
+    @NameInMap("GDNStatus")
+    public String GDNStatus;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeGlobalDatabaseNetworkResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGlobalDatabaseNetworkResponseBody self = new DescribeGlobalDatabaseNetworkResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeGlobalDatabaseNetworkResponseBody setGDNStatus(String GDNStatus) {
-        this.GDNStatus = GDNStatus;
-        return this;
-    }
-    public String getGDNStatus() {
-        return this.GDNStatus;
     }
 
     public DescribeGlobalDatabaseNetworkResponseBody setConnections(java.util.List<DescribeGlobalDatabaseNetworkResponseBodyConnections> connections) {
@@ -52,36 +44,20 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         return this.connections;
     }
 
-    public DescribeGlobalDatabaseNetworkResponseBody setDBVersion(String DBVersion) {
-        this.DBVersion = DBVersion;
-        return this;
-    }
-    public String getDBVersion() {
-        return this.DBVersion;
-    }
-
-    public DescribeGlobalDatabaseNetworkResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeGlobalDatabaseNetworkResponseBody setGDNId(String GDNId) {
-        this.GDNId = GDNId;
-        return this;
-    }
-    public String getGDNId() {
-        return this.GDNId;
-    }
-
     public DescribeGlobalDatabaseNetworkResponseBody setCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
     }
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    public DescribeGlobalDatabaseNetworkResponseBody setDBClusters(java.util.List<DescribeGlobalDatabaseNetworkResponseBodyDBClusters> DBClusters) {
+        this.DBClusters = DBClusters;
+        return this;
+    }
+    public java.util.List<DescribeGlobalDatabaseNetworkResponseBodyDBClusters> getDBClusters() {
+        return this.DBClusters;
     }
 
     public DescribeGlobalDatabaseNetworkResponseBody setDBType(String DBType) {
@@ -92,6 +68,14 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         return this.DBType;
     }
 
+    public DescribeGlobalDatabaseNetworkResponseBody setDBVersion(String DBVersion) {
+        this.DBVersion = DBVersion;
+        return this;
+    }
+    public String getDBVersion() {
+        return this.DBVersion;
+    }
+
     public DescribeGlobalDatabaseNetworkResponseBody setGDNDescription(String GDNDescription) {
         this.GDNDescription = GDNDescription;
         return this;
@@ -100,12 +84,28 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         return this.GDNDescription;
     }
 
-    public DescribeGlobalDatabaseNetworkResponseBody setDBClusters(java.util.List<DescribeGlobalDatabaseNetworkResponseBodyDBClusters> DBClusters) {
-        this.DBClusters = DBClusters;
+    public DescribeGlobalDatabaseNetworkResponseBody setGDNId(String GDNId) {
+        this.GDNId = GDNId;
         return this;
     }
-    public java.util.List<DescribeGlobalDatabaseNetworkResponseBodyDBClusters> getDBClusters() {
-        return this.DBClusters;
+    public String getGDNId() {
+        return this.GDNId;
+    }
+
+    public DescribeGlobalDatabaseNetworkResponseBody setGDNStatus(String GDNStatus) {
+        this.GDNStatus = GDNStatus;
+        return this;
+    }
+    public String getGDNStatus() {
+        return this.GDNStatus;
+    }
+
+    public DescribeGlobalDatabaseNetworkResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeGlobalDatabaseNetworkResponseBodyConnections extends TeaModel {
@@ -149,76 +149,48 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeGlobalDatabaseNetworkResponseBodyDBClusters extends TeaModel {
-        @NameInMap("ReplicaLag")
-        public String replicaLag;
-
-        @NameInMap("ExpireTime")
-        public String expireTime;
-
-        @NameInMap("Expired")
-        public String expired;
+    public static class DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes extends TeaModel {
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("DBNodeClass")
         public String DBNodeClass;
 
-        @NameInMap("PayType")
-        public String payType;
+        @NameInMap("DBNodeId")
+        public String DBNodeId;
 
-        @NameInMap("DBType")
-        public String DBType;
+        @NameInMap("DBNodeRole")
+        public String DBNodeRole;
 
-        @NameInMap("RegionId")
-        public String regionId;
+        @NameInMap("DBNodeStatus")
+        public String DBNodeStatus;
 
-        @NameInMap("DBVersion")
-        public String DBVersion;
+        @NameInMap("FailoverPriority")
+        public Integer failoverPriority;
 
-        @NameInMap("DBClusterId")
-        public String DBClusterId;
+        @NameInMap("MaxConnections")
+        public Integer maxConnections;
 
-        @NameInMap("DBClusterStatus")
-        public String DBClusterStatus;
+        @NameInMap("MaxIOPS")
+        public Integer maxIOPS;
 
-        @NameInMap("StorageUsed")
-        public String storageUsed;
+        @NameInMap("ZoneId")
+        public String zoneId;
 
-        @NameInMap("DBClusterDescription")
-        public String DBClusterDescription;
-
-        @NameInMap("Role")
-        public String role;
-
-        public static DescribeGlobalDatabaseNetworkResponseBodyDBClusters build(java.util.Map<String, ?> map) throws Exception {
-            DescribeGlobalDatabaseNetworkResponseBodyDBClusters self = new DescribeGlobalDatabaseNetworkResponseBodyDBClusters();
+        public static DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes self = new DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes();
             return TeaModel.build(map, self);
         }
 
-        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setReplicaLag(String replicaLag) {
-            this.replicaLag = replicaLag;
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public String getReplicaLag() {
-            return this.replicaLag;
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
-        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
-            return this;
-        }
-        public String getExpireTime() {
-            return this.expireTime;
-        }
-
-        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setExpired(String expired) {
-            this.expired = expired;
-            return this;
-        }
-        public String getExpired() {
-            return this.expired;
-        }
-
-        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setDBNodeClass(String DBNodeClass) {
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes setDBNodeClass(String DBNodeClass) {
             this.DBNodeClass = DBNodeClass;
             return this;
         }
@@ -226,36 +198,118 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             return this.DBNodeClass;
         }
 
-        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setPayType(String payType) {
-            this.payType = payType;
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes setDBNodeId(String DBNodeId) {
+            this.DBNodeId = DBNodeId;
             return this;
         }
-        public String getPayType() {
-            return this.payType;
+        public String getDBNodeId() {
+            return this.DBNodeId;
         }
 
-        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setDBType(String DBType) {
-            this.DBType = DBType;
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes setDBNodeRole(String DBNodeRole) {
+            this.DBNodeRole = DBNodeRole;
             return this;
         }
-        public String getDBType() {
-            return this.DBType;
+        public String getDBNodeRole() {
+            return this.DBNodeRole;
         }
 
-        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setRegionId(String regionId) {
-            this.regionId = regionId;
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes setDBNodeStatus(String DBNodeStatus) {
+            this.DBNodeStatus = DBNodeStatus;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
+        public String getDBNodeStatus() {
+            return this.DBNodeStatus;
         }
 
-        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setDBVersion(String DBVersion) {
-            this.DBVersion = DBVersion;
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes setFailoverPriority(Integer failoverPriority) {
+            this.failoverPriority = failoverPriority;
             return this;
         }
-        public String getDBVersion() {
-            return this.DBVersion;
+        public Integer getFailoverPriority() {
+            return this.failoverPriority;
+        }
+
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes setMaxConnections(Integer maxConnections) {
+            this.maxConnections = maxConnections;
+            return this;
+        }
+        public Integer getMaxConnections() {
+            return this.maxConnections;
+        }
+
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes setMaxIOPS(Integer maxIOPS) {
+            this.maxIOPS = maxIOPS;
+            return this;
+        }
+        public Integer getMaxIOPS() {
+            return this.maxIOPS;
+        }
+
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
+    public static class DescribeGlobalDatabaseNetworkResponseBodyDBClusters extends TeaModel {
+        @NameInMap("DBClusterDescription")
+        public String DBClusterDescription;
+
+        @NameInMap("DBClusterId")
+        public String DBClusterId;
+
+        @NameInMap("DBClusterStatus")
+        public String DBClusterStatus;
+
+        @NameInMap("DBNodeClass")
+        public String DBNodeClass;
+
+        @NameInMap("DBNodes")
+        public java.util.List<DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes> DBNodes;
+
+        @NameInMap("DBType")
+        public String DBType;
+
+        @NameInMap("DBVersion")
+        public String DBVersion;
+
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
+        @NameInMap("Expired")
+        public String expired;
+
+        @NameInMap("PayType")
+        public String payType;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("ReplicaLag")
+        public String replicaLag;
+
+        @NameInMap("Role")
+        public String role;
+
+        @NameInMap("StorageUsed")
+        public String storageUsed;
+
+        public static DescribeGlobalDatabaseNetworkResponseBodyDBClusters build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGlobalDatabaseNetworkResponseBodyDBClusters self = new DescribeGlobalDatabaseNetworkResponseBodyDBClusters();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setDBClusterDescription(String DBClusterDescription) {
+            this.DBClusterDescription = DBClusterDescription;
+            return this;
+        }
+        public String getDBClusterDescription() {
+            return this.DBClusterDescription;
         }
 
         public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setDBClusterId(String DBClusterId) {
@@ -274,20 +328,76 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             return this.DBClusterStatus;
         }
 
-        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setStorageUsed(String storageUsed) {
-            this.storageUsed = storageUsed;
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setDBNodeClass(String DBNodeClass) {
+            this.DBNodeClass = DBNodeClass;
             return this;
         }
-        public String getStorageUsed() {
-            return this.storageUsed;
+        public String getDBNodeClass() {
+            return this.DBNodeClass;
         }
 
-        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setDBClusterDescription(String DBClusterDescription) {
-            this.DBClusterDescription = DBClusterDescription;
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setDBNodes(java.util.List<DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes> DBNodes) {
+            this.DBNodes = DBNodes;
             return this;
         }
-        public String getDBClusterDescription() {
-            return this.DBClusterDescription;
+        public java.util.List<DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes> getDBNodes() {
+            return this.DBNodes;
+        }
+
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setDBType(String DBType) {
+            this.DBType = DBType;
+            return this;
+        }
+        public String getDBType() {
+            return this.DBType;
+        }
+
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setDBVersion(String DBVersion) {
+            this.DBVersion = DBVersion;
+            return this;
+        }
+        public String getDBVersion() {
+            return this.DBVersion;
+        }
+
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setExpired(String expired) {
+            this.expired = expired;
+            return this;
+        }
+        public String getExpired() {
+            return this.expired;
+        }
+
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
+        }
+
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setReplicaLag(String replicaLag) {
+            this.replicaLag = replicaLag;
+            return this;
+        }
+        public String getReplicaLag() {
+            return this.replicaLag;
         }
 
         public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setRole(String role) {
@@ -296,6 +406,14 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         }
         public String getRole() {
             return this.role;
+        }
+
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setStorageUsed(String storageUsed) {
+            this.storageUsed = storageUsed;
+            return this;
+        }
+        public String getStorageUsed() {
+            return this.storageUsed;
         }
 
     }

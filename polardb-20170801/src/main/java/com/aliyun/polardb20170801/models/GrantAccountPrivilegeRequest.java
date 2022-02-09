@@ -4,6 +4,21 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class GrantAccountPrivilegeRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
+    @NameInMap("AccountPrivilege")
+    public String accountPrivilege;
+
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("DBName")
+    public String DBName;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,24 +28,49 @@ public class GrantAccountPrivilegeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("AccountName")
-    public String accountName;
-
-    @NameInMap("DBName")
-    public String DBName;
-
-    @NameInMap("AccountPrivilege")
-    public String accountPrivilege;
-
     public static GrantAccountPrivilegeRequest build(java.util.Map<String, ?> map) throws Exception {
         GrantAccountPrivilegeRequest self = new GrantAccountPrivilegeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GrantAccountPrivilegeRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
+    }
+
+    public GrantAccountPrivilegeRequest setAccountPrivilege(String accountPrivilege) {
+        this.accountPrivilege = accountPrivilege;
+        return this;
+    }
+    public String getAccountPrivilege() {
+        return this.accountPrivilege;
+    }
+
+    public GrantAccountPrivilegeRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public GrantAccountPrivilegeRequest setDBName(String DBName) {
+        this.DBName = DBName;
+        return this;
+    }
+    public String getDBName() {
+        return this.DBName;
+    }
+
+    public GrantAccountPrivilegeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public GrantAccountPrivilegeRequest setOwnerId(Long ownerId) {
@@ -55,46 +95,6 @@ public class GrantAccountPrivilegeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public GrantAccountPrivilegeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public GrantAccountPrivilegeRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public GrantAccountPrivilegeRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
-    }
-
-    public GrantAccountPrivilegeRequest setDBName(String DBName) {
-        this.DBName = DBName;
-        return this;
-    }
-    public String getDBName() {
-        return this.DBName;
-    }
-
-    public GrantAccountPrivilegeRequest setAccountPrivilege(String accountPrivilege) {
-        this.accountPrivilege = accountPrivilege;
-        return this;
-    }
-    public String getAccountPrivilege() {
-        return this.accountPrivilege;
     }
 
 }

@@ -4,8 +4,14 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyGlobalDatabaseNetworkRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("GDNDescription")
+    public String GDNDescription;
+
+    @NameInMap("GDNId")
+    public String GDNId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,26 +22,36 @@ public class ModifyGlobalDatabaseNetworkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("GDNId")
-    public String GDNId;
-
-    @NameInMap("GDNDescription")
-    public String GDNDescription;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifyGlobalDatabaseNetworkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyGlobalDatabaseNetworkRequest self = new ModifyGlobalDatabaseNetworkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyGlobalDatabaseNetworkRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyGlobalDatabaseNetworkRequest setGDNDescription(String GDNDescription) {
+        this.GDNDescription = GDNDescription;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getGDNDescription() {
+        return this.GDNDescription;
+    }
+
+    public ModifyGlobalDatabaseNetworkRequest setGDNId(String GDNId) {
+        this.GDNId = GDNId;
+        return this;
+    }
+    public String getGDNId() {
+        return this.GDNId;
+    }
+
+    public ModifyGlobalDatabaseNetworkRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyGlobalDatabaseNetworkRequest setOwnerId(Long ownerId) {
@@ -62,28 +78,12 @@ public class ModifyGlobalDatabaseNetworkRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyGlobalDatabaseNetworkRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyGlobalDatabaseNetworkRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyGlobalDatabaseNetworkRequest setGDNId(String GDNId) {
-        this.GDNId = GDNId;
-        return this;
-    }
-    public String getGDNId() {
-        return this.GDNId;
-    }
-
-    public ModifyGlobalDatabaseNetworkRequest setGDNDescription(String GDNDescription) {
-        this.GDNDescription = GDNDescription;
-        return this;
-    }
-    public String getGDNDescription() {
-        return this.GDNDescription;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

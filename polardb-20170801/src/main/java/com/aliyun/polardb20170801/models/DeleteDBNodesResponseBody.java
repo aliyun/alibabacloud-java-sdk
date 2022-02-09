@@ -4,26 +4,18 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteDBNodesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     @NameInMap("OrderId")
     public String orderId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DeleteDBNodesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteDBNodesResponseBody self = new DeleteDBNodesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteDBNodesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeleteDBNodesResponseBody setDBClusterId(String DBClusterId) {
@@ -40,6 +32,14 @@ public class DeleteDBNodesResponseBody extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public DeleteDBNodesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

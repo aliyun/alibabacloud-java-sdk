@@ -4,8 +4,11 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
+    @NameInMap("Items")
+    public DescribeDBClustersWithBackupsResponseBodyItems items;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
@@ -13,23 +16,28 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Items")
-    public DescribeDBClustersWithBackupsResponseBodyItems items;
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     public static DescribeDBClustersWithBackupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClustersWithBackupsResponseBody self = new DescribeDBClustersWithBackupsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBClustersWithBackupsResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
+    public DescribeDBClustersWithBackupsResponseBody setItems(DescribeDBClustersWithBackupsResponseBodyItems items) {
+        this.items = items;
         return this;
     }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
+    public DescribeDBClustersWithBackupsResponseBodyItems getItems() {
+        return this.items;
+    }
+
+    public DescribeDBClustersWithBackupsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDBClustersWithBackupsResponseBody setPageRecordCount(Integer pageRecordCount) {
@@ -48,40 +56,29 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDBClustersWithBackupsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDBClustersWithBackupsResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeDBClustersWithBackupsResponseBody setItems(DescribeDBClustersWithBackupsResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeDBClustersWithBackupsResponseBodyItems getItems() {
-        return this.items;
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public static class DescribeDBClustersWithBackupsResponseBodyItemsDBCluster extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("DeletedTime")
-        public String deletedTime;
-
-        @NameInMap("ExpireTime")
-        public String expireTime;
-
-        @NameInMap("Expired")
-        public String expired;
-
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("PayType")
-        public String payType;
+        @NameInMap("DBClusterDescription")
+        public String DBClusterDescription;
+
+        @NameInMap("DBClusterId")
+        public String DBClusterId;
+
+        @NameInMap("DBClusterNetworkType")
+        public String DBClusterNetworkType;
+
+        @NameInMap("DBClusterStatus")
+        public String DBClusterStatus;
 
         @NameInMap("DBNodeClass")
         public String DBNodeClass;
@@ -89,74 +86,45 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         @NameInMap("DBType")
         public String DBType;
 
-        @NameInMap("LockMode")
-        public String lockMode;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
         @NameInMap("DBVersion")
         public String DBVersion;
+
+        @NameInMap("DeletedTime")
+        public String deletedTime;
 
         @NameInMap("DeletionLock")
         public Integer deletionLock;
 
-        @NameInMap("DBClusterId")
-        public String DBClusterId;
+        @NameInMap("Engine")
+        public String engine;
 
-        @NameInMap("DBClusterStatus")
-        public String DBClusterStatus;
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
+        @NameInMap("Expired")
+        public String expired;
 
         @NameInMap("IsDeleted")
         public Integer isDeleted;
 
-        @NameInMap("DBClusterNetworkType")
-        public String DBClusterNetworkType;
+        @NameInMap("LockMode")
+        public String lockMode;
 
-        @NameInMap("DBClusterDescription")
-        public String DBClusterDescription;
+        @NameInMap("PayType")
+        public String payType;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
 
         @NameInMap("ZoneId")
         public String zoneId;
 
-        @NameInMap("Engine")
-        public String engine;
-
         public static DescribeDBClustersWithBackupsResponseBodyItemsDBCluster build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClustersWithBackupsResponseBodyItemsDBCluster self = new DescribeDBClustersWithBackupsResponseBodyItemsDBCluster();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setDeletedTime(String deletedTime) {
-            this.deletedTime = deletedTime;
-            return this;
-        }
-        public String getDeletedTime() {
-            return this.deletedTime;
-        }
-
-        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
-            return this;
-        }
-        public String getExpireTime() {
-            return this.expireTime;
-        }
-
-        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setExpired(String expired) {
-            this.expired = expired;
-            return this;
-        }
-        public String getExpired() {
-            return this.expired;
         }
 
         public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setCreateTime(String createTime) {
@@ -167,12 +135,36 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setPayType(String payType) {
-            this.payType = payType;
+        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setDBClusterDescription(String DBClusterDescription) {
+            this.DBClusterDescription = DBClusterDescription;
             return this;
         }
-        public String getPayType() {
-            return this.payType;
+        public String getDBClusterDescription() {
+            return this.DBClusterDescription;
+        }
+
+        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setDBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+        public String getDBClusterId() {
+            return this.DBClusterId;
+        }
+
+        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setDBClusterNetworkType(String DBClusterNetworkType) {
+            this.DBClusterNetworkType = DBClusterNetworkType;
+            return this;
+        }
+        public String getDBClusterNetworkType() {
+            return this.DBClusterNetworkType;
+        }
+
+        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setDBClusterStatus(String DBClusterStatus) {
+            this.DBClusterStatus = DBClusterStatus;
+            return this;
+        }
+        public String getDBClusterStatus() {
+            return this.DBClusterStatus;
         }
 
         public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setDBNodeClass(String DBNodeClass) {
@@ -191,28 +183,20 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             return this.DBType;
         }
 
-        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setLockMode(String lockMode) {
-            this.lockMode = lockMode;
-            return this;
-        }
-        public String getLockMode() {
-            return this.lockMode;
-        }
-
-        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
         public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setDBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
             return this;
         }
         public String getDBVersion() {
             return this.DBVersion;
+        }
+
+        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setDeletedTime(String deletedTime) {
+            this.deletedTime = deletedTime;
+            return this;
+        }
+        public String getDeletedTime() {
+            return this.deletedTime;
         }
 
         public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setDeletionLock(Integer deletionLock) {
@@ -223,20 +207,28 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             return this.deletionLock;
         }
 
-        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setDBClusterId(String DBClusterId) {
-            this.DBClusterId = DBClusterId;
+        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setEngine(String engine) {
+            this.engine = engine;
             return this;
         }
-        public String getDBClusterId() {
-            return this.DBClusterId;
+        public String getEngine() {
+            return this.engine;
         }
 
-        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setDBClusterStatus(String DBClusterStatus) {
-            this.DBClusterStatus = DBClusterStatus;
+        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
             return this;
         }
-        public String getDBClusterStatus() {
-            return this.DBClusterStatus;
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setExpired(String expired) {
+            this.expired = expired;
+            return this;
+        }
+        public String getExpired() {
+            return this.expired;
         }
 
         public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setIsDeleted(Integer isDeleted) {
@@ -247,20 +239,36 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             return this.isDeleted;
         }
 
-        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setDBClusterNetworkType(String DBClusterNetworkType) {
-            this.DBClusterNetworkType = DBClusterNetworkType;
+        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setLockMode(String lockMode) {
+            this.lockMode = lockMode;
             return this;
         }
-        public String getDBClusterNetworkType() {
-            return this.DBClusterNetworkType;
+        public String getLockMode() {
+            return this.lockMode;
         }
 
-        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setDBClusterDescription(String DBClusterDescription) {
-            this.DBClusterDescription = DBClusterDescription;
+        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setPayType(String payType) {
+            this.payType = payType;
             return this;
         }
-        public String getDBClusterDescription() {
-            return this.DBClusterDescription;
+        public String getPayType() {
+            return this.payType;
+        }
+
+        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
         public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setZoneId(String zoneId) {
@@ -269,14 +277,6 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
-        }
-
-        public DescribeDBClustersWithBackupsResponseBodyItemsDBCluster setEngine(String engine) {
-            this.engine = engine;
-            return this;
-        }
-        public String getEngine() {
-            return this.engine;
         }
 
     }

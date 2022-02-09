@@ -4,23 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupTasksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Items")
     public DescribeBackupTasksResponseBodyItems items;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeBackupTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupTasksResponseBody self = new DescribeBackupTasksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBackupTasksResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeBackupTasksResponseBody setItems(DescribeBackupTasksResponseBodyItems items) {
@@ -31,21 +23,29 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         return this.items;
     }
 
+    public DescribeBackupTasksResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeBackupTasksResponseBodyItemsBackupJob extends TeaModel {
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("Process")
-        public String process;
-
         @NameInMap("BackupJobId")
         public String backupJobId;
+
+        @NameInMap("BackupProgressStatus")
+        public String backupProgressStatus;
 
         @NameInMap("JobMode")
         public String jobMode;
 
-        @NameInMap("BackupProgressStatus")
-        public String backupProgressStatus;
+        @NameInMap("Process")
+        public String process;
+
+        @NameInMap("StartTime")
+        public String startTime;
 
         @NameInMap("TaskAction")
         public String taskAction;
@@ -53,22 +53,6 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public static DescribeBackupTasksResponseBodyItemsBackupJob build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupTasksResponseBodyItemsBackupJob self = new DescribeBackupTasksResponseBodyItemsBackupJob();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBackupTasksResponseBodyItemsBackupJob setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public DescribeBackupTasksResponseBodyItemsBackupJob setProcess(String process) {
-            this.process = process;
-            return this;
-        }
-        public String getProcess() {
-            return this.process;
         }
 
         public DescribeBackupTasksResponseBodyItemsBackupJob setBackupJobId(String backupJobId) {
@@ -79,6 +63,14 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             return this.backupJobId;
         }
 
+        public DescribeBackupTasksResponseBodyItemsBackupJob setBackupProgressStatus(String backupProgressStatus) {
+            this.backupProgressStatus = backupProgressStatus;
+            return this;
+        }
+        public String getBackupProgressStatus() {
+            return this.backupProgressStatus;
+        }
+
         public DescribeBackupTasksResponseBodyItemsBackupJob setJobMode(String jobMode) {
             this.jobMode = jobMode;
             return this;
@@ -87,12 +79,20 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             return this.jobMode;
         }
 
-        public DescribeBackupTasksResponseBodyItemsBackupJob setBackupProgressStatus(String backupProgressStatus) {
-            this.backupProgressStatus = backupProgressStatus;
+        public DescribeBackupTasksResponseBodyItemsBackupJob setProcess(String process) {
+            this.process = process;
             return this;
         }
-        public String getBackupProgressStatus() {
-            return this.backupProgressStatus;
+        public String getProcess() {
+            return this.process;
+        }
+
+        public DescribeBackupTasksResponseBodyItemsBackupJob setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
         public DescribeBackupTasksResponseBodyItemsBackupJob setTaskAction(String taskAction) {

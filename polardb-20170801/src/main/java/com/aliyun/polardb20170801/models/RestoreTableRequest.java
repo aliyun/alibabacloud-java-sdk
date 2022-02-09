@@ -4,8 +4,14 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class RestoreTableRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("BackupId")
+    public String backupId;
+
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,32 +22,42 @@ public class RestoreTableRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("RestoreTime")
+    public String restoreTime;
 
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("TableMeta")
     public String tableMeta;
-
-    @NameInMap("BackupId")
-    public String backupId;
-
-    @NameInMap("RestoreTime")
-    public String restoreTime;
 
     public static RestoreTableRequest build(java.util.Map<String, ?> map) throws Exception {
         RestoreTableRequest self = new RestoreTableRequest();
         return TeaModel.build(map, self);
     }
 
-    public RestoreTableRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public RestoreTableRequest setBackupId(String backupId) {
+        this.backupId = backupId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getBackupId() {
+        return this.backupId;
+    }
+
+    public RestoreTableRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public RestoreTableRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public RestoreTableRequest setOwnerId(Long ownerId) {
@@ -68,20 +84,20 @@ public class RestoreTableRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public RestoreTableRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public RestoreTableRequest setRestoreTime(String restoreTime) {
+        this.restoreTime = restoreTime;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getRestoreTime() {
+        return this.restoreTime;
     }
 
-    public RestoreTableRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
+    public RestoreTableRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getDBClusterId() {
-        return this.DBClusterId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public RestoreTableRequest setTableMeta(String tableMeta) {
@@ -90,22 +106,6 @@ public class RestoreTableRequest extends TeaModel {
     }
     public String getTableMeta() {
         return this.tableMeta;
-    }
-
-    public RestoreTableRequest setBackupId(String backupId) {
-        this.backupId = backupId;
-        return this;
-    }
-    public String getBackupId() {
-        return this.backupId;
-    }
-
-    public RestoreTableRequest setRestoreTime(String restoreTime) {
-        this.restoreTime = restoreTime;
-        return this;
-    }
-    public String getRestoreTime() {
-        return this.restoreTime;
     }
 
 }

@@ -4,11 +4,11 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetaListResponseBody extends TeaModel {
-    @NameInMap("TotalPageCount")
-    public String totalPageCount;
+    @NameInMap("Items")
+    public java.util.List<DescribeMetaListResponseBodyItems> items;
 
-    @NameInMap("TotalRecordCount")
-    public String totalRecordCount;
+    @NameInMap("PageNumber")
+    public String pageNumber;
 
     @NameInMap("PageSize")
     public String pageSize;
@@ -16,31 +16,31 @@ public class DescribeMetaListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public String pageNumber;
+    @NameInMap("TotalPageCount")
+    public String totalPageCount;
 
-    @NameInMap("Items")
-    public java.util.List<DescribeMetaListResponseBodyItems> items;
+    @NameInMap("TotalRecordCount")
+    public String totalRecordCount;
 
     public static DescribeMetaListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetaListResponseBody self = new DescribeMetaListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeMetaListResponseBody setTotalPageCount(String totalPageCount) {
-        this.totalPageCount = totalPageCount;
+    public DescribeMetaListResponseBody setItems(java.util.List<DescribeMetaListResponseBodyItems> items) {
+        this.items = items;
         return this;
     }
-    public String getTotalPageCount() {
-        return this.totalPageCount;
+    public java.util.List<DescribeMetaListResponseBodyItems> getItems() {
+        return this.items;
     }
 
-    public DescribeMetaListResponseBody setTotalRecordCount(String totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
+    public DescribeMetaListResponseBody setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getTotalRecordCount() {
-        return this.totalRecordCount;
+    public String getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeMetaListResponseBody setPageSize(String pageSize) {
@@ -59,20 +59,20 @@ public class DescribeMetaListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeMetaListResponseBody setPageNumber(String pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeMetaListResponseBody setTotalPageCount(String totalPageCount) {
+        this.totalPageCount = totalPageCount;
         return this;
     }
-    public String getPageNumber() {
-        return this.pageNumber;
+    public String getTotalPageCount() {
+        return this.totalPageCount;
     }
 
-    public DescribeMetaListResponseBody setItems(java.util.List<DescribeMetaListResponseBodyItems> items) {
-        this.items = items;
+    public DescribeMetaListResponseBody setTotalRecordCount(String totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
         return this;
     }
-    public java.util.List<DescribeMetaListResponseBodyItems> getItems() {
-        return this.items;
+    public String getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public static class DescribeMetaListResponseBodyItems extends TeaModel {

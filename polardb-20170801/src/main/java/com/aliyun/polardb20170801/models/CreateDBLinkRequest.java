@@ -4,17 +4,8 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateDBLinkRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -22,20 +13,35 @@ public class CreateDBLinkRequest extends TeaModel {
     @NameInMap("DBLinkName")
     public String DBLinkName;
 
-    @NameInMap("TargetDBInstanceName")
-    public String targetDBInstanceName;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("SourceDBName")
+    public String sourceDBName;
 
     @NameInMap("TargetDBAccount")
     public String targetDBAccount;
 
-    @NameInMap("TargetDBPasswd")
-    public String targetDBPasswd;
+    @NameInMap("TargetDBInstanceName")
+    public String targetDBInstanceName;
 
     @NameInMap("TargetDBName")
     public String targetDBName;
 
-    @NameInMap("SourceDBName")
-    public String sourceDBName;
+    @NameInMap("TargetDBPasswd")
+    public String targetDBPasswd;
 
     @NameInMap("TargetIp")
     public String targetIp;
@@ -46,47 +52,17 @@ public class CreateDBLinkRequest extends TeaModel {
     @NameInMap("VpcId")
     public String vpcId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static CreateDBLinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBLinkRequest self = new CreateDBLinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDBLinkRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public CreateDBLinkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CreateDBLinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public CreateDBLinkRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CreateDBLinkRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateDBLinkRequest setDBClusterId(String DBClusterId) {
@@ -105,12 +81,52 @@ public class CreateDBLinkRequest extends TeaModel {
         return this.DBLinkName;
     }
 
-    public CreateDBLinkRequest setTargetDBInstanceName(String targetDBInstanceName) {
-        this.targetDBInstanceName = targetDBInstanceName;
+    public CreateDBLinkRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getTargetDBInstanceName() {
-        return this.targetDBInstanceName;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public CreateDBLinkRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateDBLinkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateDBLinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateDBLinkRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateDBLinkRequest setSourceDBName(String sourceDBName) {
+        this.sourceDBName = sourceDBName;
+        return this;
+    }
+    public String getSourceDBName() {
+        return this.sourceDBName;
     }
 
     public CreateDBLinkRequest setTargetDBAccount(String targetDBAccount) {
@@ -121,12 +137,12 @@ public class CreateDBLinkRequest extends TeaModel {
         return this.targetDBAccount;
     }
 
-    public CreateDBLinkRequest setTargetDBPasswd(String targetDBPasswd) {
-        this.targetDBPasswd = targetDBPasswd;
+    public CreateDBLinkRequest setTargetDBInstanceName(String targetDBInstanceName) {
+        this.targetDBInstanceName = targetDBInstanceName;
         return this;
     }
-    public String getTargetDBPasswd() {
-        return this.targetDBPasswd;
+    public String getTargetDBInstanceName() {
+        return this.targetDBInstanceName;
     }
 
     public CreateDBLinkRequest setTargetDBName(String targetDBName) {
@@ -137,12 +153,12 @@ public class CreateDBLinkRequest extends TeaModel {
         return this.targetDBName;
     }
 
-    public CreateDBLinkRequest setSourceDBName(String sourceDBName) {
-        this.sourceDBName = sourceDBName;
+    public CreateDBLinkRequest setTargetDBPasswd(String targetDBPasswd) {
+        this.targetDBPasswd = targetDBPasswd;
         return this;
     }
-    public String getSourceDBName() {
-        return this.sourceDBName;
+    public String getTargetDBPasswd() {
+        return this.targetDBPasswd;
     }
 
     public CreateDBLinkRequest setTargetIp(String targetIp) {
@@ -167,22 +183,6 @@ public class CreateDBLinkRequest extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
-    }
-
-    public CreateDBLinkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateDBLinkRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

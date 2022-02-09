@@ -4,6 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterAuditLogCollectorRequest extends TeaModel {
+    @NameInMap("CollectorStatus")
+    public String collectorStatus;
+
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +22,33 @@ public class ModifyDBClusterAuditLogCollectorRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("CollectorStatus")
-    public String collectorStatus;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static ModifyDBClusterAuditLogCollectorRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterAuditLogCollectorRequest self = new ModifyDBClusterAuditLogCollectorRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBClusterAuditLogCollectorRequest setCollectorStatus(String collectorStatus) {
+        this.collectorStatus = collectorStatus;
+        return this;
+    }
+    public String getCollectorStatus() {
+        return this.collectorStatus;
+    }
+
+    public ModifyDBClusterAuditLogCollectorRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public ModifyDBClusterAuditLogCollectorRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyDBClusterAuditLogCollectorRequest setOwnerId(Long ownerId) {
@@ -49,30 +73,6 @@ public class ModifyDBClusterAuditLogCollectorRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyDBClusterAuditLogCollectorRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public ModifyDBClusterAuditLogCollectorRequest setCollectorStatus(String collectorStatus) {
-        this.collectorStatus = collectorStatus;
-        return this;
-    }
-    public String getCollectorStatus() {
-        return this.collectorStatus;
-    }
-
-    public ModifyDBClusterAuditLogCollectorRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

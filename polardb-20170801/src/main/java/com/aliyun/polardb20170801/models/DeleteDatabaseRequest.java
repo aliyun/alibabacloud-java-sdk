@@ -4,6 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteDatabaseRequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("DBName")
+    public String DBName;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +22,33 @@ public class DeleteDatabaseRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("DBName")
-    public String DBName;
-
     public static DeleteDatabaseRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDatabaseRequest self = new DeleteDatabaseRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteDatabaseRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public DeleteDatabaseRequest setDBName(String DBName) {
+        this.DBName = DBName;
+        return this;
+    }
+    public String getDBName() {
+        return this.DBName;
+    }
+
+    public DeleteDatabaseRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteDatabaseRequest setOwnerId(Long ownerId) {
@@ -49,30 +73,6 @@ public class DeleteDatabaseRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteDatabaseRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DeleteDatabaseRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public DeleteDatabaseRequest setDBName(String DBName) {
-        this.DBName = DBName;
-        return this;
-    }
-    public String getDBName() {
-        return this.DBName;
     }
 
 }

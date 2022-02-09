@@ -4,8 +4,23 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBClusterMinorVersionRequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("FromTimeService")
+    public Boolean fromTimeService;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PlannedEndTime")
+    public String plannedEndTime;
+
+    @NameInMap("PlannedStartTime")
+    public String plannedStartTime;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,24 +28,33 @@ public class UpgradeDBClusterMinorVersionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("PlannedStartTime")
-    public String plannedStartTime;
-
-    @NameInMap("PlannedEndTime")
-    public String plannedEndTime;
-
-    @NameInMap("FromTimeService")
-    public Boolean fromTimeService;
-
     public static UpgradeDBClusterMinorVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBClusterMinorVersionRequest self = new UpgradeDBClusterMinorVersionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpgradeDBClusterMinorVersionRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public UpgradeDBClusterMinorVersionRequest setFromTimeService(Boolean fromTimeService) {
+        this.fromTimeService = fromTimeService;
+        return this;
+    }
+    public Boolean getFromTimeService() {
+        return this.fromTimeService;
+    }
+
+    public UpgradeDBClusterMinorVersionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public UpgradeDBClusterMinorVersionRequest setOwnerId(Long ownerId) {
@@ -39,6 +63,22 @@ public class UpgradeDBClusterMinorVersionRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public UpgradeDBClusterMinorVersionRequest setPlannedEndTime(String plannedEndTime) {
+        this.plannedEndTime = plannedEndTime;
+        return this;
+    }
+    public String getPlannedEndTime() {
+        return this.plannedEndTime;
+    }
+
+    public UpgradeDBClusterMinorVersionRequest setPlannedStartTime(String plannedStartTime) {
+        this.plannedStartTime = plannedStartTime;
+        return this;
+    }
+    public String getPlannedStartTime() {
+        return this.plannedStartTime;
     }
 
     public UpgradeDBClusterMinorVersionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -55,46 +95,6 @@ public class UpgradeDBClusterMinorVersionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public UpgradeDBClusterMinorVersionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public UpgradeDBClusterMinorVersionRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public UpgradeDBClusterMinorVersionRequest setPlannedStartTime(String plannedStartTime) {
-        this.plannedStartTime = plannedStartTime;
-        return this;
-    }
-    public String getPlannedStartTime() {
-        return this.plannedStartTime;
-    }
-
-    public UpgradeDBClusterMinorVersionRequest setPlannedEndTime(String plannedEndTime) {
-        this.plannedEndTime = plannedEndTime;
-        return this;
-    }
-    public String getPlannedEndTime() {
-        return this.plannedEndTime;
-    }
-
-    public UpgradeDBClusterMinorVersionRequest setFromTimeService(Boolean fromTimeService) {
-        this.fromTimeService = fromTimeService;
-        return this;
-    }
-    public Boolean getFromTimeService() {
-        return this.fromTimeService;
     }
 
 }

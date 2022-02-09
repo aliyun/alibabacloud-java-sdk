@@ -4,24 +4,16 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterGroupsResponseBody extends TeaModel {
+    @NameInMap("ParameterGroups")
+    public java.util.List<DescribeParameterGroupsResponseBodyParameterGroups> parameterGroups;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ParameterGroups")
-    public java.util.List<DescribeParameterGroupsResponseBodyParameterGroups> parameterGroups;
-
     public static DescribeParameterGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeParameterGroupsResponseBody self = new DescribeParameterGroupsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeParameterGroupsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeParameterGroupsResponseBody setParameterGroups(java.util.List<DescribeParameterGroupsResponseBodyParameterGroups> parameterGroups) {
@@ -32,21 +24,26 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         return this.parameterGroups;
     }
 
+    public DescribeParameterGroupsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeParameterGroupsResponseBodyParameterGroups extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("DBType")
         public String DBType;
 
         @NameInMap("DBVersion")
         public String DBVersion;
 
-        @NameInMap("ParameterGroupName")
-        public String parameterGroupName;
-
         @NameInMap("ForceRestart")
         public String forceRestart;
-
-        @NameInMap("ParameterGroupType")
-        public String parameterGroupType;
 
         @NameInMap("ParameterCounts")
         public Long parameterCounts;
@@ -54,15 +51,26 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         @NameInMap("ParameterGroupDesc")
         public String parameterGroupDesc;
 
-        @NameInMap("CreateTime")
-        public String createTime;
-
         @NameInMap("ParameterGroupId")
         public String parameterGroupId;
+
+        @NameInMap("ParameterGroupName")
+        public String parameterGroupName;
+
+        @NameInMap("ParameterGroupType")
+        public String parameterGroupType;
 
         public static DescribeParameterGroupsResponseBodyParameterGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribeParameterGroupsResponseBodyParameterGroups self = new DescribeParameterGroupsResponseBodyParameterGroups();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeParameterGroupsResponseBodyParameterGroups setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeParameterGroupsResponseBodyParameterGroups setDBType(String DBType) {
@@ -81,28 +89,12 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             return this.DBVersion;
         }
 
-        public DescribeParameterGroupsResponseBodyParameterGroups setParameterGroupName(String parameterGroupName) {
-            this.parameterGroupName = parameterGroupName;
-            return this;
-        }
-        public String getParameterGroupName() {
-            return this.parameterGroupName;
-        }
-
         public DescribeParameterGroupsResponseBodyParameterGroups setForceRestart(String forceRestart) {
             this.forceRestart = forceRestart;
             return this;
         }
         public String getForceRestart() {
             return this.forceRestart;
-        }
-
-        public DescribeParameterGroupsResponseBodyParameterGroups setParameterGroupType(String parameterGroupType) {
-            this.parameterGroupType = parameterGroupType;
-            return this;
-        }
-        public String getParameterGroupType() {
-            return this.parameterGroupType;
         }
 
         public DescribeParameterGroupsResponseBodyParameterGroups setParameterCounts(Long parameterCounts) {
@@ -121,20 +113,28 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             return this.parameterGroupDesc;
         }
 
-        public DescribeParameterGroupsResponseBodyParameterGroups setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
         public DescribeParameterGroupsResponseBodyParameterGroups setParameterGroupId(String parameterGroupId) {
             this.parameterGroupId = parameterGroupId;
             return this;
         }
         public String getParameterGroupId() {
             return this.parameterGroupId;
+        }
+
+        public DescribeParameterGroupsResponseBodyParameterGroups setParameterGroupName(String parameterGroupName) {
+            this.parameterGroupName = parameterGroupName;
+            return this;
+        }
+        public String getParameterGroupName() {
+            return this.parameterGroupName;
+        }
+
+        public DescribeParameterGroupsResponseBodyParameterGroups setParameterGroupType(String parameterGroupType) {
+            this.parameterGroupType = parameterGroupType;
+            return this;
+        }
+        public String getParameterGroupType() {
+            return this.parameterGroupType;
         }
 
     }
