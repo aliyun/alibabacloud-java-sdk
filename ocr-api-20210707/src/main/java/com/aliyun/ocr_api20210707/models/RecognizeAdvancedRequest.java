@@ -12,13 +12,29 @@ public class RecognizeAdvancedRequest extends TeaModel {
     @NameInMap("NeedSortPage")
     public Boolean needSortPage;
 
+    // 是否需要去除印章功能，默认不需要。true：需要 false：不需要
+    @NameInMap("NoStamp")
+    public Boolean noStamp;
+
     // 是否输出单字识别结果
     @NameInMap("OutputCharInfo")
     public Boolean outputCharInfo;
 
+    // 是否需要图案检测功能，默认不需要。true：需要 false：不需要
+    @NameInMap("OutputFigure")
+    public Boolean outputFigure;
+
     // 是否输出表格识别结果，包含单元格信息
     @NameInMap("OutputTable")
     public Boolean outputTable;
+
+    // 是否需要分段功能，默认不需要。true：需要 false：不需要
+    @NameInMap("Paragraph")
+    public Boolean paragraph;
+
+    // 是否需要成行返回功能，默认不需要
+    @NameInMap("Row")
+    public Boolean row;
 
     // 图片链接（长度不超 2048，不支持 base64）
     @NameInMap("Url")
@@ -49,6 +65,14 @@ public class RecognizeAdvancedRequest extends TeaModel {
         return this.needSortPage;
     }
 
+    public RecognizeAdvancedRequest setNoStamp(Boolean noStamp) {
+        this.noStamp = noStamp;
+        return this;
+    }
+    public Boolean getNoStamp() {
+        return this.noStamp;
+    }
+
     public RecognizeAdvancedRequest setOutputCharInfo(Boolean outputCharInfo) {
         this.outputCharInfo = outputCharInfo;
         return this;
@@ -57,12 +81,36 @@ public class RecognizeAdvancedRequest extends TeaModel {
         return this.outputCharInfo;
     }
 
+    public RecognizeAdvancedRequest setOutputFigure(Boolean outputFigure) {
+        this.outputFigure = outputFigure;
+        return this;
+    }
+    public Boolean getOutputFigure() {
+        return this.outputFigure;
+    }
+
     public RecognizeAdvancedRequest setOutputTable(Boolean outputTable) {
         this.outputTable = outputTable;
         return this;
     }
     public Boolean getOutputTable() {
         return this.outputTable;
+    }
+
+    public RecognizeAdvancedRequest setParagraph(Boolean paragraph) {
+        this.paragraph = paragraph;
+        return this;
+    }
+    public Boolean getParagraph() {
+        return this.paragraph;
+    }
+
+    public RecognizeAdvancedRequest setRow(Boolean row) {
+        this.row = row;
+        return this;
+    }
+    public Boolean getRow() {
+        return this.row;
     }
 
     public RecognizeAdvancedRequest setUrl(String url) {

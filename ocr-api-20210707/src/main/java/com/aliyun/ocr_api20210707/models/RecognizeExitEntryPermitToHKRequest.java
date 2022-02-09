@@ -3,8 +3,8 @@ package com.aliyun.ocr_api20210707.models;
 
 import com.aliyun.tea.*;
 
-public class RecognizeIdcardRequest extends TeaModel {
-    // 是否需要图案检测功能，默认不需要
+public class RecognizeExitEntryPermitToHKRequest extends TeaModel {
+    // 图案坐标信息输出，针对结构化，如身份证人脸头像
     @NameInMap("OutputFigure")
     public Boolean outputFigure;
 
@@ -16,12 +16,12 @@ public class RecognizeIdcardRequest extends TeaModel {
     @NameInMap("body")
     public java.io.InputStream body;
 
-    public static RecognizeIdcardRequest build(java.util.Map<String, ?> map) throws Exception {
-        RecognizeIdcardRequest self = new RecognizeIdcardRequest();
+    public static RecognizeExitEntryPermitToHKRequest build(java.util.Map<String, ?> map) throws Exception {
+        RecognizeExitEntryPermitToHKRequest self = new RecognizeExitEntryPermitToHKRequest();
         return TeaModel.build(map, self);
     }
 
-    public RecognizeIdcardRequest setOutputFigure(Boolean outputFigure) {
+    public RecognizeExitEntryPermitToHKRequest setOutputFigure(Boolean outputFigure) {
         this.outputFigure = outputFigure;
         return this;
     }
@@ -29,7 +29,7 @@ public class RecognizeIdcardRequest extends TeaModel {
         return this.outputFigure;
     }
 
-    public RecognizeIdcardRequest setUrl(String url) {
+    public RecognizeExitEntryPermitToHKRequest setUrl(String url) {
         this.url = url;
         return this;
     }
@@ -37,7 +37,7 @@ public class RecognizeIdcardRequest extends TeaModel {
         return this.url;
     }
 
-    public RecognizeIdcardRequest setBody(java.io.InputStream body) {
+    public RecognizeExitEntryPermitToHKRequest setBody(java.io.InputStream body) {
         this.body = body;
         return this;
     }
