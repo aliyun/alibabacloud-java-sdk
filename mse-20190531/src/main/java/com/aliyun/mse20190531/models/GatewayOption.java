@@ -4,6 +4,14 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GatewayOption extends TeaModel {
+    // 是否禁用http
+    @NameInMap("DisableHttp2Alpn")
+    public Boolean disableHttp2Alpn;
+
+    // 是否开启硬件加速
+    @NameInMap("EnableHardwareAcceleration")
+    public Boolean enableHardwareAcceleration;
+
     // 日志配置详情
     @NameInMap("LogConfigDetails")
     public GatewayOptionLogConfigDetails logConfigDetails;
@@ -15,6 +23,22 @@ public class GatewayOption extends TeaModel {
     public static GatewayOption build(java.util.Map<String, ?> map) throws Exception {
         GatewayOption self = new GatewayOption();
         return TeaModel.build(map, self);
+    }
+
+    public GatewayOption setDisableHttp2Alpn(Boolean disableHttp2Alpn) {
+        this.disableHttp2Alpn = disableHttp2Alpn;
+        return this;
+    }
+    public Boolean getDisableHttp2Alpn() {
+        return this.disableHttp2Alpn;
+    }
+
+    public GatewayOption setEnableHardwareAcceleration(Boolean enableHardwareAcceleration) {
+        this.enableHardwareAcceleration = enableHardwareAcceleration;
+        return this;
+    }
+    public Boolean getEnableHardwareAcceleration() {
+        return this.enableHardwareAcceleration;
     }
 
     public GatewayOption setLogConfigDetails(GatewayOptionLogConfigDetails logConfigDetails) {

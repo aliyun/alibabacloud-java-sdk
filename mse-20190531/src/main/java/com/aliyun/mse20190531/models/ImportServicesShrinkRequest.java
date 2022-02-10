@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ImportServicesShrinkRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
@@ -20,6 +23,14 @@ public class ImportServicesShrinkRequest extends TeaModel {
     public static ImportServicesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportServicesShrinkRequest self = new ImportServicesShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ImportServicesShrinkRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public ImportServicesShrinkRequest setGatewayUniqueId(String gatewayUniqueId) {

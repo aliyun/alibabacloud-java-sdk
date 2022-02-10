@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddGatewayRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     // 是否企业安全组类型
     @NameInMap("EnterpriseSecurityGroup")
     public Boolean enterpriseSecurityGroup;
@@ -47,6 +50,14 @@ public class AddGatewayRequest extends TeaModel {
     public static AddGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         AddGatewayRequest self = new AddGatewayRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddGatewayRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public AddGatewayRequest setEnterpriseSecurityGroup(Boolean enterpriseSecurityGroup) {

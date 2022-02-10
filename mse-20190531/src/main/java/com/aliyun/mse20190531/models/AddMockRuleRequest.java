@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddMockRuleRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("ConsumerAppIds")
     public String consumerAppIds;
 
@@ -40,6 +43,14 @@ public class AddMockRuleRequest extends TeaModel {
     public static AddMockRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         AddMockRuleRequest self = new AddMockRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddMockRuleRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public AddMockRuleRequest setConsumerAppIds(String consumerAppIds) {

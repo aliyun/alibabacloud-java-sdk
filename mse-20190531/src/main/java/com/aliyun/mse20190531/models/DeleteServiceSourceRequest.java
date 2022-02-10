@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteServiceSourceRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
@@ -13,6 +16,14 @@ public class DeleteServiceSourceRequest extends TeaModel {
     public static DeleteServiceSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteServiceSourceRequest self = new DeleteServiceSourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteServiceSourceRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public DeleteServiceSourceRequest setGatewayUniqueId(String gatewayUniqueId) {
