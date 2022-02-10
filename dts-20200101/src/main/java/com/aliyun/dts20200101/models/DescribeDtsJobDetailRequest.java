@@ -13,6 +13,10 @@ public class DescribeDtsJobDetailRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    // 是否返回所有的同步子任务
+    @NameInMap("SyncSubJobHistory")
+    public Boolean syncSubJobHistory;
+
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 
@@ -43,6 +47,14 @@ public class DescribeDtsJobDetailRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDtsJobDetailRequest setSyncSubJobHistory(Boolean syncSubJobHistory) {
+        this.syncSubJobHistory = syncSubJobHistory;
+        return this;
+    }
+    public Boolean getSyncSubJobHistory() {
+        return this.syncSubJobHistory;
     }
 
     public DescribeDtsJobDetailRequest setSynchronizationDirection(String synchronizationDirection) {

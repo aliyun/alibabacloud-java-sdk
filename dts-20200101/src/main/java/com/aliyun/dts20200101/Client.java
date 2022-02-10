@@ -1899,6 +1899,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.syncSubJobHistory)) {
+            query.put("SyncSubJobHistory", request.syncSubJobHistory);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.synchronizationDirection)) {
             query.put("SynchronizationDirection", request.synchronizationDirection);
         }
