@@ -35,6 +35,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddAuthResourceResponse addAuthResourceWithOptions(AddAuthResourceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.authId)) {
             query.put("AuthId", request.authId);
         }
@@ -76,6 +80,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddBlackWhiteListResponse addBlackWhiteListWithOptions(AddBlackWhiteListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.content)) {
             query.put("Content", request.content);
         }
@@ -125,6 +133,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddGatewayResponse addGatewayWithOptions(AddGatewayRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enterpriseSecurityGroup)) {
             query.put("EnterpriseSecurityGroup", request.enterpriseSecurityGroup);
         }
@@ -190,6 +202,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddGatewayDomainResponse addGatewayDomainWithOptions(AddGatewayDomainRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.certIdentifier)) {
             query.put("CertIdentifier", request.certIdentifier);
         }
@@ -235,6 +251,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddGatewayServiceVersionResponse addGatewayServiceVersionWithOptions(AddGatewayServiceVersionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayUniqueId)) {
             query.put("GatewayUniqueId", request.gatewayUniqueId);
         }
@@ -272,6 +292,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddGatewaySlbResponse addGatewaySlbWithOptions(AddGatewaySlbRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayUniqueId)) {
             query.put("GatewayUniqueId", request.gatewayUniqueId);
         }
@@ -309,6 +333,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddMockRuleResponse addMockRuleWithOptions(AddMockRuleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.consumerAppIds)) {
             query.put("ConsumerAppIds", request.consumerAppIds);
         }
@@ -403,6 +431,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddServiceSourceResponse addServiceSourceWithOptions(AddServiceSourceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.address)) {
             query.put("Address", request.address);
         }
@@ -621,6 +653,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateClusterResponse createClusterWithOptions(CreateClusterRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterSpecification)) {
             query.put("ClusterSpecification", request.clusterSpecification);
         }
@@ -828,6 +864,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateNacosInstanceResponse createNacosInstanceWithOptions(CreateNacosInstanceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterName)) {
             query.put("ClusterName", request.clusterName);
         }
@@ -899,6 +939,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateNacosServiceResponse createNacosServiceWithOptions(CreateNacosServiceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("ClusterId", request.clusterId);
         }
@@ -1179,6 +1223,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteGatewayServiceVersionResponse deleteGatewayServiceVersionWithOptions(DeleteGatewayServiceVersionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayUniqueId)) {
             query.put("GatewayUniqueId", request.gatewayUniqueId);
         }
@@ -1611,6 +1659,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetGatewayOptionResponse getGatewayOptionWithOptions(GetGatewayOptionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
             query.put("GatewayId", request.gatewayId);
         }
@@ -1706,6 +1758,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetGovernanceKubernetesClusterListResponse getGovernanceKubernetesClusterListWithOptions(GetGovernanceKubernetesClusterListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("ClusterId", request.clusterId);
         }
@@ -1747,6 +1803,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetImageResponse getImageWithOptions(GetImageRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.versionCode)) {
             query.put("VersionCode", request.versionCode);
         }
@@ -2082,6 +2142,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayUniqueId)) {
             query.put("GatewayUniqueId", request.gatewayUniqueId);
         }
@@ -2499,6 +2563,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.descSort)) {
             query.put("DescSort", request.descSort);
         }
@@ -2575,6 +2643,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.descSort)) {
             query.put("DescSort", request.descSort);
         }
@@ -3035,6 +3107,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryClusterDetailResponse queryClusterDetailWithOptions(QueryClusterDetailRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -3152,8 +3228,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryConfigWithOptions(request, runtime);
     }
 
-    public QueryGatewayRegionResponse queryGatewayRegionWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
+    public QueryGatewayRegionResponse queryGatewayRegionWithOptions(QueryGatewayRegionRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryGatewayRegion"),
             new TeaPair("version", "2019-05-31"),
@@ -3168,9 +3248,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryGatewayRegionResponse());
     }
 
-    public QueryGatewayRegionResponse queryGatewayRegion() throws Exception {
+    public QueryGatewayRegionResponse queryGatewayRegion(QueryGatewayRegionRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.queryGatewayRegionWithOptions(runtime);
+        return this.queryGatewayRegionWithOptions(request, runtime);
     }
 
     public QueryGatewayTypeResponse queryGatewayTypeWithOptions(QueryGatewayTypeRequest request, RuntimeOptions runtime) throws Exception {
@@ -3301,6 +3381,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RestartClusterResponse restartClusterWithOptions(RestartClusterRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("ClusterId", request.clusterId);
         }
@@ -3490,6 +3574,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateBlackWhiteListResponse updateBlackWhiteListWithOptions(UpdateBlackWhiteListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.content)) {
             query.put("Content", request.content);
         }
@@ -3580,6 +3668,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateConfigResponse updateConfigWithOptions(UpdateConfigRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autopurgePurgeInterval)) {
             query.put("AutopurgePurgeInterval", request.autopurgePurgeInterval);
         }
@@ -3736,6 +3828,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateGatewayDomainResponse updateGatewayDomainWithOptions(UpdateGatewayDomainRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.certIdentifier)) {
             query.put("CertIdentifier", request.certIdentifier);
         }
@@ -3812,6 +3908,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
             query.put("GatewayId", request.gatewayId);
         }
@@ -3849,6 +3949,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateGatewayRouteHTTPRewriteResponse updateGatewayRouteHTTPRewriteWithOptions(UpdateGatewayRouteHTTPRewriteRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
             query.put("GatewayId", request.gatewayId);
         }
@@ -3890,6 +3994,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateGatewayServiceVersionResponse updateGatewayServiceVersionWithOptions(UpdateGatewayServiceVersionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayUniqueId)) {
             query.put("GatewayUniqueId", request.gatewayUniqueId);
         }
@@ -3927,6 +4035,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateImageResponse updateImageWithOptions(UpdateImageRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("ClusterId", request.clusterId);
         }
@@ -3960,6 +4072,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateNacosClusterResponse updateNacosClusterWithOptions(UpdateNacosClusterRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.checkPort)) {
             query.put("CheckPort", request.checkPort);
         }
@@ -4169,6 +4285,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateNacosServiceResponse updateNacosServiceWithOptions(UpdateNacosServiceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("ClusterId", request.clusterId);
         }

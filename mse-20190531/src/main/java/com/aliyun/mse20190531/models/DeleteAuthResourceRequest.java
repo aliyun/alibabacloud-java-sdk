@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteAuthResourceRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
@@ -13,6 +16,14 @@ public class DeleteAuthResourceRequest extends TeaModel {
     public static DeleteAuthResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAuthResourceRequest self = new DeleteAuthResourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteAuthResourceRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public DeleteAuthResourceRequest setGatewayUniqueId(String gatewayUniqueId) {

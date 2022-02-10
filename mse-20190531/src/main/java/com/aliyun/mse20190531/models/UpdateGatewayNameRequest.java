@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayNameRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
@@ -13,6 +16,14 @@ public class UpdateGatewayNameRequest extends TeaModel {
     public static UpdateGatewayNameRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateGatewayNameRequest self = new UpdateGatewayNameRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateGatewayNameRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public UpdateGatewayNameRequest setGatewayUniqueId(String gatewayUniqueId) {

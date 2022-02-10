@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddAuthResourceRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("AuthId")
     public Long authId;
 
@@ -19,6 +22,14 @@ public class AddAuthResourceRequest extends TeaModel {
     public static AddAuthResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         AddAuthResourceRequest self = new AddAuthResourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddAuthResourceRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public AddAuthResourceRequest setAuthId(Long authId) {
