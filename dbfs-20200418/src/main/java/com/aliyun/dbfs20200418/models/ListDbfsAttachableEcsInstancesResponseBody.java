@@ -38,6 +38,12 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
         @NameInMap("OSName")
         public String OSName;
 
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         @NameInMap("label")
         public String label;
 
@@ -63,6 +69,22 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
         }
         public String getOSName() {
             return this.OSName;
+        }
+
+        public ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
         public ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo setLabel(String label) {
