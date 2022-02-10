@@ -7,6 +7,12 @@ public class CreatePlanOrderRequest extends TeaModel {
     @NameInMap("areaCode")
     public Integer areaCode;
 
+    @NameInMap("atomLevel")
+    public Integer atomLevel;
+
+    @NameInMap("autoLevel")
+    public Integer autoLevel;
+
     @NameInMap("inboundDeadline")
     public String inboundDeadline;
 
@@ -42,6 +48,22 @@ public class CreatePlanOrderRequest extends TeaModel {
     }
     public Integer getAreaCode() {
         return this.areaCode;
+    }
+
+    public CreatePlanOrderRequest setAtomLevel(Integer atomLevel) {
+        this.atomLevel = atomLevel;
+        return this;
+    }
+    public Integer getAtomLevel() {
+        return this.atomLevel;
+    }
+
+    public CreatePlanOrderRequest setAutoLevel(Integer autoLevel) {
+        this.autoLevel = autoLevel;
+        return this;
+    }
+    public Integer getAutoLevel() {
+        return this.autoLevel;
     }
 
     public CreatePlanOrderRequest setInboundDeadline(String inboundDeadline) {

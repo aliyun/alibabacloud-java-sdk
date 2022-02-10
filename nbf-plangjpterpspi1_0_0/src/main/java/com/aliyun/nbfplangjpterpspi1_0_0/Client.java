@@ -45,6 +45,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("areaCode", request.areaCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.atomLevel)) {
+            body.put("atomLevel", request.atomLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoLevel)) {
+            body.put("autoLevel", request.autoLevel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.inboundDeadline)) {
             body.put("inboundDeadline", request.inboundDeadline);
         }
