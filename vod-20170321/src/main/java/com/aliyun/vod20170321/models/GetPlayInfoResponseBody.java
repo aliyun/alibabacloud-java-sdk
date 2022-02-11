@@ -43,6 +43,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
     }
 
     public static class GetPlayInfoResponseBodyPlayInfoListPlayInfo extends TeaModel {
+        // 颜色位深
+        @NameInMap("BitDepth")
+        public Integer bitDepth;
+
         @NameInMap("Bitrate")
         public String bitrate;
 
@@ -107,6 +111,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public static GetPlayInfoResponseBodyPlayInfoListPlayInfo build(java.util.Map<String, ?> map) throws Exception {
             GetPlayInfoResponseBodyPlayInfoListPlayInfo self = new GetPlayInfoResponseBodyPlayInfoListPlayInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetPlayInfoResponseBodyPlayInfoListPlayInfo setBitDepth(Integer bitDepth) {
+            this.bitDepth = bitDepth;
+            return this;
+        }
+        public Integer getBitDepth() {
+            return this.bitDepth;
         }
 
         public GetPlayInfoResponseBodyPlayInfoListPlayInfo setBitrate(String bitrate) {
