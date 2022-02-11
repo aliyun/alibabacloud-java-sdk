@@ -74,6 +74,9 @@ public class ListDiagnoseInfoForSingleCardResponseBody extends TeaModel {
         @NameInMap("Destination")
         public String destination;
 
+        @NameInMap("DestinationType")
+        public String destinationType;
+
         @NameInMap("DiagnoseTime")
         public Long diagnoseTime;
 
@@ -85,6 +88,12 @@ public class ListDiagnoseInfoForSingleCardResponseBody extends TeaModel {
 
         @NameInMap("IoTCloudConnectorId")
         public String ioTCloudConnectorId;
+
+        @NameInMap("Source")
+        public String source;
+
+        @NameInMap("SourceType")
+        public String sourceType;
 
         @NameInMap("Status")
         public String status;
@@ -121,6 +130,14 @@ public class ListDiagnoseInfoForSingleCardResponseBody extends TeaModel {
             return this.destination;
         }
 
+        public ListDiagnoseInfoForSingleCardResponseBodyDiagnoseInfo setDestinationType(String destinationType) {
+            this.destinationType = destinationType;
+            return this;
+        }
+        public String getDestinationType() {
+            return this.destinationType;
+        }
+
         public ListDiagnoseInfoForSingleCardResponseBodyDiagnoseInfo setDiagnoseTime(Long diagnoseTime) {
             this.diagnoseTime = diagnoseTime;
             return this;
@@ -151,6 +168,22 @@ public class ListDiagnoseInfoForSingleCardResponseBody extends TeaModel {
         }
         public String getIoTCloudConnectorId() {
             return this.ioTCloudConnectorId;
+        }
+
+        public ListDiagnoseInfoForSingleCardResponseBodyDiagnoseInfo setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public ListDiagnoseInfoForSingleCardResponseBodyDiagnoseInfo setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
         }
 
         public ListDiagnoseInfoForSingleCardResponseBodyDiagnoseInfo setStatus(String status) {
