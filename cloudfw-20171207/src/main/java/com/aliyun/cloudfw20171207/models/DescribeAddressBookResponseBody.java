@@ -107,9 +107,6 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("Global")
-        public Integer global;
-
         @NameInMap("GroupName")
         public String groupName;
 
@@ -163,14 +160,6 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public DescribeAddressBookResponseBodyAcls setGlobal(Integer global) {
-            this.global = global;
-            return this;
-        }
-        public Integer getGlobal() {
-            return this.global;
         }
 
         public DescribeAddressBookResponseBodyAcls setGroupName(String groupName) {
