@@ -1,3 +1,6 @@
+2022-02-14 Version: 1.8.6
+- Update NAT Firewall APIs.
+
 2022-01-20 Version: 1.8.5
 - Update NAT Firewall APIs.
 
