@@ -44,6 +44,10 @@ public class ListIncidentsRequest extends TeaModel {
     @NameInMap("relationServiceId")
     public Long relationServiceId;
 
+    // 流转规则名字
+    @NameInMap("ruleName")
+    public String ruleName;
+
     public static ListIncidentsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListIncidentsRequest self = new ListIncidentsRequest();
         return TeaModel.build(map, self);
@@ -127,6 +131,14 @@ public class ListIncidentsRequest extends TeaModel {
     }
     public Long getRelationServiceId() {
         return this.relationServiceId;
+    }
+
+    public ListIncidentsRequest setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+    public String getRuleName() {
+        return this.ruleName;
     }
 
 }

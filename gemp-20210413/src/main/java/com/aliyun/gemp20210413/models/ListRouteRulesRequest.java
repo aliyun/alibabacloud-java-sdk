@@ -16,6 +16,10 @@ public class ListRouteRulesRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    // 路由类型：0触发事件 1仅触发报警 r
+    @NameInMap("routeType")
+    public Long routeType;
+
     // 规则名称
     @NameInMap("ruleName")
     public byte[] ruleName;
@@ -51,6 +55,14 @@ public class ListRouteRulesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListRouteRulesRequest setRouteType(Long routeType) {
+        this.routeType = routeType;
+        return this;
+    }
+    public Long getRouteType() {
+        return this.routeType;
     }
 
     public ListRouteRulesRequest setRuleName(byte[] ruleName) {

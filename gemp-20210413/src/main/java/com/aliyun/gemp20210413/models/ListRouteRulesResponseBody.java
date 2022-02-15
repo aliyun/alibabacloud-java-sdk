@@ -98,6 +98,10 @@ public class ListRouteRulesResponseBody extends TeaModel {
         @NameInMap("matchCount")
         public Long matchCount;
 
+        // 监控源名称
+        @NameInMap("monitorSourceNames")
+        public String monitorSourceNames;
+
         // 关联服务ID
         @NameInMap("relatedServiceId")
         public Long relatedServiceId;
@@ -193,6 +197,14 @@ public class ListRouteRulesResponseBody extends TeaModel {
         }
         public Long getMatchCount() {
             return this.matchCount;
+        }
+
+        public ListRouteRulesResponseBodyData setMonitorSourceNames(String monitorSourceNames) {
+            this.monitorSourceNames = monitorSourceNames;
+            return this;
+        }
+        public String getMonitorSourceNames() {
+            return this.monitorSourceNames;
         }
 
         public ListRouteRulesResponseBodyData setRelatedServiceId(Long relatedServiceId) {

@@ -78,6 +78,10 @@ public class ListAlertsResponseBody extends TeaModel {
         @NameInMap("alertLevel")
         public String alertLevel;
 
+        // 报警编号
+        @NameInMap("alertNumber")
+        public String alertNumber;
+
         // 报警源
         @NameInMap("alertSourceName")
         public String alertSourceName;
@@ -97,6 +101,10 @@ public class ListAlertsResponseBody extends TeaModel {
         // 关联流转规则ID
         @NameInMap("routeRuleId")
         public Long routeRuleId;
+
+        // 流转规则名字
+        @NameInMap("routeRuleName")
+        public String routeRuleName;
 
         // 收敛量
         @NameInMap("sourceEventCount")
@@ -125,6 +133,14 @@ public class ListAlertsResponseBody extends TeaModel {
         }
         public String getAlertLevel() {
             return this.alertLevel;
+        }
+
+        public ListAlertsResponseBodyData setAlertNumber(String alertNumber) {
+            this.alertNumber = alertNumber;
+            return this;
+        }
+        public String getAlertNumber() {
+            return this.alertNumber;
         }
 
         public ListAlertsResponseBodyData setAlertSourceName(String alertSourceName) {
@@ -165,6 +181,14 @@ public class ListAlertsResponseBody extends TeaModel {
         }
         public Long getRouteRuleId() {
             return this.routeRuleId;
+        }
+
+        public ListAlertsResponseBodyData setRouteRuleName(String routeRuleName) {
+            this.routeRuleName = routeRuleName;
+            return this;
+        }
+        public String getRouteRuleName() {
+            return this.routeRuleName;
         }
 
         public ListAlertsResponseBodyData setSourceEventCount(Long sourceEventCount) {

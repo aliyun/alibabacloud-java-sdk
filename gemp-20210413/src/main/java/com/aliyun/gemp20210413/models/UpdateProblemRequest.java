@@ -32,6 +32,10 @@ public class UpdateProblemRequest extends TeaModel {
     @NameInMap("progressSummary")
     public String progressSummary;
 
+    // 进展摘要富文本id
+    @NameInMap("progressSummaryRichTextId")
+    public Long progressSummaryRichTextId;
+
     // 所属服务
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
@@ -99,6 +103,14 @@ public class UpdateProblemRequest extends TeaModel {
     }
     public String getProgressSummary() {
         return this.progressSummary;
+    }
+
+    public UpdateProblemRequest setProgressSummaryRichTextId(Long progressSummaryRichTextId) {
+        this.progressSummaryRichTextId = progressSummaryRichTextId;
+        return this;
+    }
+    public Long getProgressSummaryRichTextId() {
+        return this.progressSummaryRichTextId;
     }
 
     public UpdateProblemRequest setRelatedServiceId(Long relatedServiceId) {

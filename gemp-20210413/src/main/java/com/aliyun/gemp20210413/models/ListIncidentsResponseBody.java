@@ -124,6 +124,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         @NameInMap("routeRuleId")
         public Long routeRuleId;
 
+        // 流转规则
         @NameInMap("routeRuleName")
         public String routeRuleName;
 

@@ -78,10 +78,15 @@ public class GetRouteRuleResponseBody extends TeaModel {
     }
 
     public static class GetRouteRuleResponseBodyDataEventRouteChildRules extends TeaModel {
+        // 子条件计算关系，0-与，1-或
+        @NameInMap("childConditionRelation")
+        public Long childConditionRelation;
+
         // 子规则ID
         @NameInMap("childRouteRuleId")
         public Long childRouteRuleId;
 
+        // 条件
         @NameInMap("conditions")
         public java.util.List<GetRouteRuleResponseBodyDataEventRouteChildRulesConditions> conditions;
 
@@ -108,6 +113,14 @@ public class GetRouteRuleResponseBody extends TeaModel {
         public static GetRouteRuleResponseBodyDataEventRouteChildRules build(java.util.Map<String, ?> map) throws Exception {
             GetRouteRuleResponseBodyDataEventRouteChildRules self = new GetRouteRuleResponseBodyDataEventRouteChildRules();
             return TeaModel.build(map, self);
+        }
+
+        public GetRouteRuleResponseBodyDataEventRouteChildRules setChildConditionRelation(Long childConditionRelation) {
+            this.childConditionRelation = childConditionRelation;
+            return this;
+        }
+        public Long getChildConditionRelation() {
+            return this.childConditionRelation;
         }
 
         public GetRouteRuleResponseBodyDataEventRouteChildRules setChildRouteRuleId(Long childRouteRuleId) {
@@ -180,6 +193,10 @@ public class GetRouteRuleResponseBody extends TeaModel {
         // 事件分派对象类型 SERVICEGROUP 服务组  USER 单个用户
         @NameInMap("assignObjectType")
         public String assignObjectType;
+
+        // 子规则关系，0与，1或
+        @NameInMap("childRuleRelation")
+        public String childRuleRelation;
 
         // 创建时间
         @NameInMap("createTime")
@@ -268,6 +285,14 @@ public class GetRouteRuleResponseBody extends TeaModel {
         }
         public String getAssignObjectType() {
             return this.assignObjectType;
+        }
+
+        public GetRouteRuleResponseBodyData setChildRuleRelation(String childRuleRelation) {
+            this.childRuleRelation = childRuleRelation;
+            return this;
+        }
+        public String getChildRuleRelation() {
+            return this.childRuleRelation;
         }
 
         public GetRouteRuleResponseBodyData setCreateTime(String createTime) {

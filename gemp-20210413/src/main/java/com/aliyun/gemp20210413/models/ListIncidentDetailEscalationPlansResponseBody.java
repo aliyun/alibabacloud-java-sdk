@@ -77,6 +77,38 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
 
     }
 
+    public static class ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanServiceGroupList extends TeaModel {
+        // 服务组id
+        @NameInMap("id")
+        public Long id;
+
+        // 服务组名称
+        @NameInMap("name")
+        public String name;
+
+        public static ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanServiceGroupList build(java.util.Map<String, ?> map) throws Exception {
+            ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanServiceGroupList self = new ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanServiceGroupList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanServiceGroupList setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanServiceGroupList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlan extends TeaModel {
         // 升级策略类型 UN_ACKNOWLEDGE
         @NameInMap("escalationPlanType")
@@ -93,6 +125,10 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
         // 延迟时间
         @NameInMap("noticeTime")
         public Long noticeTime;
+
+        // 通知群
+        @NameInMap("serviceGroupList")
+        public java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanServiceGroupList> serviceGroupList;
 
         // 开始时间
         @NameInMap("startTime")
@@ -137,6 +173,14 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
         }
         public Long getNoticeTime() {
             return this.noticeTime;
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlan setServiceGroupList(java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanServiceGroupList> serviceGroupList) {
+            this.serviceGroupList = serviceGroupList;
+            return this;
+        }
+        public java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanServiceGroupList> getServiceGroupList() {
+            return this.serviceGroupList;
         }
 
         public ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlan setStartTime(Long startTime) {
@@ -201,6 +245,38 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
 
     }
 
+    public static class ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlanServiceGroupList extends TeaModel {
+        // 服务组id
+        @NameInMap("id")
+        public Long id;
+
+        // 服务组名称
+        @NameInMap("name")
+        public String name;
+
+        public static ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlanServiceGroupList build(java.util.Map<String, ?> map) throws Exception {
+            ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlanServiceGroupList self = new ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlanServiceGroupList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlanServiceGroupList setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlanServiceGroupList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlan extends TeaModel {
         // 升级策略类型 UN_ACKNOWLEDGE
         @NameInMap("escalationPlanType")
@@ -217,6 +293,10 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
         // 延迟时间
         @NameInMap("noticeTime")
         public Integer noticeTime;
+
+        // 消息群
+        @NameInMap("serviceGroupList")
+        public java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlanServiceGroupList> serviceGroupList;
 
         // 开始时间
         @NameInMap("startTime")
@@ -261,6 +341,14 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
         }
         public Integer getNoticeTime() {
             return this.noticeTime;
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlan setServiceGroupList(java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlanServiceGroupList> serviceGroupList) {
+            this.serviceGroupList = serviceGroupList;
+            return this;
+        }
+        public java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlanServiceGroupList> getServiceGroupList() {
+            return this.serviceGroupList;
         }
 
         public ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlan setStartTime(Long startTime) {

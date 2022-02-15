@@ -12,6 +12,10 @@ public class UpdateRouteRuleRequest extends TeaModel {
     @NameInMap("assignObjectType")
     public String assignObjectType;
 
+    // AND
+    @NameInMap("childRuleRelation")
+    public String childRuleRelation;
+
     // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
@@ -79,6 +83,14 @@ public class UpdateRouteRuleRequest extends TeaModel {
     }
     public String getAssignObjectType() {
         return this.assignObjectType;
+    }
+
+    public UpdateRouteRuleRequest setChildRuleRelation(String childRuleRelation) {
+        this.childRuleRelation = childRuleRelation;
+        return this;
+    }
+    public String getChildRuleRelation() {
+        return this.childRuleRelation;
     }
 
     public UpdateRouteRuleRequest setClientToken(String clientToken) {
@@ -222,6 +234,10 @@ public class UpdateRouteRuleRequest extends TeaModel {
     }
 
     public static class UpdateRouteRuleRequestRouteChildRules extends TeaModel {
+        // 子条件计算关系
+        @NameInMap("childConditionRelation")
+        public Long childConditionRelation;
+
         // 子规则ID 不填表示新增
         @NameInMap("childRouteRuleId")
         public Long childRouteRuleId;
@@ -241,6 +257,14 @@ public class UpdateRouteRuleRequest extends TeaModel {
         public static UpdateRouteRuleRequestRouteChildRules build(java.util.Map<String, ?> map) throws Exception {
             UpdateRouteRuleRequestRouteChildRules self = new UpdateRouteRuleRequestRouteChildRules();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateRouteRuleRequestRouteChildRules setChildConditionRelation(Long childConditionRelation) {
+            this.childConditionRelation = childConditionRelation;
+            return this;
+        }
+        public Long getChildConditionRelation() {
+            return this.childConditionRelation;
         }
 
         public UpdateRouteRuleRequestRouteChildRules setChildRouteRuleId(Long childRouteRuleId) {
