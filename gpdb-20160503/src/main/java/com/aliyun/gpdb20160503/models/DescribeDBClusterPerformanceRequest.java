@@ -13,6 +13,12 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     @NameInMap("Key")
     public String key;
 
+    @NameInMap("NodeType")
+    public String nodeType;
+
+    @NameInMap("Nodes")
+    public String nodes;
+
     @NameInMap("StartTime")
     public String startTime;
 
@@ -43,6 +49,22 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     }
     public String getKey() {
         return this.key;
+    }
+
+    public DescribeDBClusterPerformanceRequest setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String getNodeType() {
+        return this.nodeType;
+    }
+
+    public DescribeDBClusterPerformanceRequest setNodes(String nodes) {
+        this.nodes = nodes;
+        return this;
+    }
+    public String getNodes() {
+        return this.nodes;
     }
 
     public DescribeDBClusterPerformanceRequest setStartTime(String startTime) {

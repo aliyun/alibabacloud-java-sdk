@@ -7,6 +7,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DBInstanceCategory")
+    public String DBInstanceCategory;
+
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
@@ -16,6 +19,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("DBInstanceGroupCount")
     public String DBInstanceGroupCount;
 
+    @NameInMap("DBInstanceMode")
+    public String DBInstanceMode;
+
     @NameInMap("Engine")
     public String engine;
 
@@ -24,6 +30,12 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
+
+    @NameInMap("InstanceSpec")
+    public String instanceSpec;
+
+    @NameInMap("MasterNodeNum")
+    public String masterNodeNum;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -42,6 +54,18 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     @NameInMap("SecurityIPList")
     public String securityIPList;
+
+    @NameInMap("SegNodeNum")
+    public String segNodeNum;
+
+    @NameInMap("SegStorageType")
+    public String segStorageType;
+
+    @NameInMap("StorageSize")
+    public Long storageSize;
+
+    @NameInMap("StorageType")
+    public String storageType;
 
     @NameInMap("UsedTime")
     public String usedTime;
@@ -68,6 +92,14 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateDBInstanceRequest setDBInstanceCategory(String DBInstanceCategory) {
+        this.DBInstanceCategory = DBInstanceCategory;
+        return this;
+    }
+    public String getDBInstanceCategory() {
+        return this.DBInstanceCategory;
+    }
+
     public CreateDBInstanceRequest setDBInstanceClass(String DBInstanceClass) {
         this.DBInstanceClass = DBInstanceClass;
         return this;
@@ -92,6 +124,14 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.DBInstanceGroupCount;
     }
 
+    public CreateDBInstanceRequest setDBInstanceMode(String DBInstanceMode) {
+        this.DBInstanceMode = DBInstanceMode;
+        return this;
+    }
+    public String getDBInstanceMode() {
+        return this.DBInstanceMode;
+    }
+
     public CreateDBInstanceRequest setEngine(String engine) {
         this.engine = engine;
         return this;
@@ -114,6 +154,22 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getInstanceNetworkType() {
         return this.instanceNetworkType;
+    }
+
+    public CreateDBInstanceRequest setInstanceSpec(String instanceSpec) {
+        this.instanceSpec = instanceSpec;
+        return this;
+    }
+    public String getInstanceSpec() {
+        return this.instanceSpec;
+    }
+
+    public CreateDBInstanceRequest setMasterNodeNum(String masterNodeNum) {
+        this.masterNodeNum = masterNodeNum;
+        return this;
+    }
+    public String getMasterNodeNum() {
+        return this.masterNodeNum;
     }
 
     public CreateDBInstanceRequest setOwnerId(Long ownerId) {
@@ -162,6 +218,38 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getSecurityIPList() {
         return this.securityIPList;
+    }
+
+    public CreateDBInstanceRequest setSegNodeNum(String segNodeNum) {
+        this.segNodeNum = segNodeNum;
+        return this;
+    }
+    public String getSegNodeNum() {
+        return this.segNodeNum;
+    }
+
+    public CreateDBInstanceRequest setSegStorageType(String segStorageType) {
+        this.segStorageType = segStorageType;
+        return this;
+    }
+    public String getSegStorageType() {
+        return this.segStorageType;
+    }
+
+    public CreateDBInstanceRequest setStorageSize(Long storageSize) {
+        this.storageSize = storageSize;
+        return this;
+    }
+    public Long getStorageSize() {
+        return this.storageSize;
+    }
+
+    public CreateDBInstanceRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
     public CreateDBInstanceRequest setUsedTime(String usedTime) {
