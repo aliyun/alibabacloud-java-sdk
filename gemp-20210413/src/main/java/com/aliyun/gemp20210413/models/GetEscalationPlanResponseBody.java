@@ -97,7 +97,43 @@ public class GetEscalationPlanResponseBody extends TeaModel {
 
     }
 
+    public static class GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesServiceGroups extends TeaModel {
+        // 服务组id
+        @NameInMap("id")
+        public Long id;
+
+        // 服务组名称
+        @NameInMap("serviceGroupName")
+        public String serviceGroupName;
+
+        public static GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesServiceGroups build(java.util.Map<String, ?> map) throws Exception {
+            GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesServiceGroups self = new GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesServiceGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesServiceGroups setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesServiceGroups setServiceGroupName(String serviceGroupName) {
+            this.serviceGroupName = serviceGroupName;
+            return this;
+        }
+        public String getServiceGroupName() {
+            return this.serviceGroupName;
+        }
+
+    }
+
     public static class GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategies extends TeaModel {
+        // 是否支持群通知
+        @NameInMap("enableWebhook")
+        public Boolean enableWebhook;
+
         // 升级计划类型
         @NameInMap("escalationPlanType")
         public String escalationPlanType;
@@ -114,9 +150,21 @@ public class GetEscalationPlanResponseBody extends TeaModel {
         @NameInMap("noticeTime")
         public Long noticeTime;
 
+        // 服务组列表
+        @NameInMap("serviceGroups")
+        public java.util.List<GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesServiceGroups> serviceGroups;
+
         public static GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategies build(java.util.Map<String, ?> map) throws Exception {
             GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategies self = new GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategies();
             return TeaModel.build(map, self);
+        }
+
+        public GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategies setEnableWebhook(Boolean enableWebhook) {
+            this.enableWebhook = enableWebhook;
+            return this;
+        }
+        public Boolean getEnableWebhook() {
+            return this.enableWebhook;
         }
 
         public GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategies setEscalationPlanType(String escalationPlanType) {
@@ -149,6 +197,14 @@ public class GetEscalationPlanResponseBody extends TeaModel {
         }
         public Long getNoticeTime() {
             return this.noticeTime;
+        }
+
+        public GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategies setServiceGroups(java.util.List<GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesServiceGroups> serviceGroups) {
+            this.serviceGroups = serviceGroups;
+            return this;
+        }
+        public java.util.List<GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesServiceGroups> getServiceGroups() {
+            return this.serviceGroups;
         }
 
     }

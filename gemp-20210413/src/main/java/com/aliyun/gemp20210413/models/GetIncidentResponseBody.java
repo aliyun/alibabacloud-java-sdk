@@ -88,6 +88,10 @@ public class GetIncidentResponseBody extends TeaModel {
         @NameInMap("isUpgrade")
         public Boolean isUpgrade;
 
+        // 通知渠道
+        @NameInMap("notifyChannels")
+        public java.util.List<String> notifyChannels;
+
         // 故障Id
         @NameInMap("problemId")
         public Long problemId;
@@ -99,6 +103,14 @@ public class GetIncidentResponseBody extends TeaModel {
         // 关联服务描述
         @NameInMap("relatedServiceDescription")
         public String relatedServiceDescription;
+
+        // 关联服服务id
+        @NameInMap("relatedServiceGroupId")
+        public Long relatedServiceGroupId;
+
+        // 关联服务组名称
+        @NameInMap("relatedServiceGroupName")
+        public String relatedServiceGroupName;
 
         // 关联服务ID
         @NameInMap("relatedServiceId")
@@ -233,6 +245,14 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.isUpgrade;
         }
 
+        public GetIncidentResponseBodyData setNotifyChannels(java.util.List<String> notifyChannels) {
+            this.notifyChannels = notifyChannels;
+            return this;
+        }
+        public java.util.List<String> getNotifyChannels() {
+            return this.notifyChannels;
+        }
+
         public GetIncidentResponseBodyData setProblemId(Long problemId) {
             this.problemId = problemId;
             return this;
@@ -255,6 +275,22 @@ public class GetIncidentResponseBody extends TeaModel {
         }
         public String getRelatedServiceDescription() {
             return this.relatedServiceDescription;
+        }
+
+        public GetIncidentResponseBodyData setRelatedServiceGroupId(Long relatedServiceGroupId) {
+            this.relatedServiceGroupId = relatedServiceGroupId;
+            return this;
+        }
+        public Long getRelatedServiceGroupId() {
+            return this.relatedServiceGroupId;
+        }
+
+        public GetIncidentResponseBodyData setRelatedServiceGroupName(String relatedServiceGroupName) {
+            this.relatedServiceGroupName = relatedServiceGroupName;
+            return this;
+        }
+        public String getRelatedServiceGroupName() {
+            return this.relatedServiceGroupName;
         }
 
         public GetIncidentResponseBodyData setRelatedServiceId(Long relatedServiceId) {

@@ -32,6 +32,10 @@ public class ListAlertsRequest extends TeaModel {
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
 
+    // 流转规则名字
+    @NameInMap("ruleName")
+    public String ruleName;
+
     // 开始时间
     @NameInMap("startTime")
     public String startTime;
@@ -95,6 +99,14 @@ public class ListAlertsRequest extends TeaModel {
     }
     public Long getRelatedServiceId() {
         return this.relatedServiceId;
+    }
+
+    public ListAlertsRequest setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+    public String getRuleName() {
+        return this.ruleName;
     }
 
     public ListAlertsRequest setStartTime(String startTime) {

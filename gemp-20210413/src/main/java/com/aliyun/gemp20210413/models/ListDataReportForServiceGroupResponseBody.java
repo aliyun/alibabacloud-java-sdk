@@ -74,6 +74,10 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
         @NameInMap("escalationIncidentCount")
         public Long escalationIncidentCount;
 
+        // 事件完结数
+        @NameInMap("finishIncidentCount")
+        public Long finishIncidentCount;
+
         // 完结率
         @NameInMap("finishProportion")
         public String finishProportion;
@@ -117,6 +121,14 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
         }
         public Long getEscalationIncidentCount() {
             return this.escalationIncidentCount;
+        }
+
+        public ListDataReportForServiceGroupResponseBodyData setFinishIncidentCount(Long finishIncidentCount) {
+            this.finishIncidentCount = finishIncidentCount;
+            return this;
+        }
+        public Long getFinishIncidentCount() {
+            return this.finishIncidentCount;
         }
 
         public ListDataReportForServiceGroupResponseBodyData setFinishProportion(String finishProportion) {

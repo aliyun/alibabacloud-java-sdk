@@ -12,6 +12,10 @@ public class CreateServiceGroupRequest extends TeaModel {
     @NameInMap("enableWebhook")
     public String enableWebhook;
 
+    // 监控源消息模版
+    @NameInMap("monitorSourceTemplates")
+    public java.util.List<CreateServiceGroupRequestMonitorSourceTemplates> monitorSourceTemplates;
+
     // 服务描述
     @NameInMap("serviceGroupDescription")
     public String serviceGroupDescription;
@@ -53,6 +57,14 @@ public class CreateServiceGroupRequest extends TeaModel {
         return this.enableWebhook;
     }
 
+    public CreateServiceGroupRequest setMonitorSourceTemplates(java.util.List<CreateServiceGroupRequestMonitorSourceTemplates> monitorSourceTemplates) {
+        this.monitorSourceTemplates = monitorSourceTemplates;
+        return this;
+    }
+    public java.util.List<CreateServiceGroupRequestMonitorSourceTemplates> getMonitorSourceTemplates() {
+        return this.monitorSourceTemplates;
+    }
+
     public CreateServiceGroupRequest setServiceGroupDescription(String serviceGroupDescription) {
         this.serviceGroupDescription = serviceGroupDescription;
         return this;
@@ -91,6 +103,62 @@ public class CreateServiceGroupRequest extends TeaModel {
     }
     public String getWebhookType() {
         return this.webhookType;
+    }
+
+    public static class CreateServiceGroupRequestMonitorSourceTemplates extends TeaModel {
+        // 监控源ID
+        @NameInMap("monitorSourceId")
+        public Long monitorSourceId;
+
+        // 监控源名字
+        @NameInMap("monitorSourceName")
+        public String monitorSourceName;
+
+        // 模板内容
+        @NameInMap("templateContent")
+        public String templateContent;
+
+        // 消息模版ID
+        @NameInMap("templateId")
+        public Long templateId;
+
+        public static CreateServiceGroupRequestMonitorSourceTemplates build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceGroupRequestMonitorSourceTemplates self = new CreateServiceGroupRequestMonitorSourceTemplates();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceGroupRequestMonitorSourceTemplates setMonitorSourceId(Long monitorSourceId) {
+            this.monitorSourceId = monitorSourceId;
+            return this;
+        }
+        public Long getMonitorSourceId() {
+            return this.monitorSourceId;
+        }
+
+        public CreateServiceGroupRequestMonitorSourceTemplates setMonitorSourceName(String monitorSourceName) {
+            this.monitorSourceName = monitorSourceName;
+            return this;
+        }
+        public String getMonitorSourceName() {
+            return this.monitorSourceName;
+        }
+
+        public CreateServiceGroupRequestMonitorSourceTemplates setTemplateContent(String templateContent) {
+            this.templateContent = templateContent;
+            return this;
+        }
+        public String getTemplateContent() {
+            return this.templateContent;
+        }
+
+        public CreateServiceGroupRequestMonitorSourceTemplates setTemplateId(Long templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public Long getTemplateId() {
+            return this.templateId;
+        }
+
     }
 
 }

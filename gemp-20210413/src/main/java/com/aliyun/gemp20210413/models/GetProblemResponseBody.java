@@ -522,6 +522,10 @@ public class GetProblemResponseBody extends TeaModel {
         @NameInMap("progressSummary")
         public String progressSummary;
 
+        // 进展摘要富文本id
+        @NameInMap("progressSummaryRichTextId")
+        public Long progressSummaryRichTextId;
+
         // 恢复时间
         @NameInMap("recoveryTime")
         public String recoveryTime;
@@ -729,6 +733,14 @@ public class GetProblemResponseBody extends TeaModel {
         }
         public String getProgressSummary() {
             return this.progressSummary;
+        }
+
+        public GetProblemResponseBodyData setProgressSummaryRichTextId(Long progressSummaryRichTextId) {
+            this.progressSummaryRichTextId = progressSummaryRichTextId;
+            return this;
+        }
+        public Long getProgressSummaryRichTextId() {
+            return this.progressSummaryRichTextId;
         }
 
         public GetProblemResponseBodyData setRecoveryTime(String recoveryTime) {

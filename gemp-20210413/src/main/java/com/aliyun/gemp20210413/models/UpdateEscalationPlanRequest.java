@@ -114,6 +114,10 @@ public class UpdateEscalationPlanRequest extends TeaModel {
     }
 
     public static class UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanStrategies extends TeaModel {
+        // 是否支持群通知
+        @NameInMap("enableWebhook")
+        public Boolean enableWebhook;
+
         // 通知渠道
         @NameInMap("noticeChannels")
         public java.util.List<String> noticeChannels;
@@ -126,9 +130,21 @@ public class UpdateEscalationPlanRequest extends TeaModel {
         @NameInMap("noticeTime")
         public Long noticeTime;
 
+        // 服务组id
+        @NameInMap("serviceGroupIds")
+        public java.util.List<Long> serviceGroupIds;
+
         public static UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanStrategies build(java.util.Map<String, ?> map) throws Exception {
             UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanStrategies self = new UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanStrategies();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanStrategies setEnableWebhook(Boolean enableWebhook) {
+            this.enableWebhook = enableWebhook;
+            return this;
+        }
+        public Boolean getEnableWebhook() {
+            return this.enableWebhook;
         }
 
         public UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanStrategies setNoticeChannels(java.util.List<String> noticeChannels) {
@@ -153,6 +169,14 @@ public class UpdateEscalationPlanRequest extends TeaModel {
         }
         public Long getNoticeTime() {
             return this.noticeTime;
+        }
+
+        public UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanStrategies setServiceGroupIds(java.util.List<Long> serviceGroupIds) {
+            this.serviceGroupIds = serviceGroupIds;
+            return this;
+        }
+        public java.util.List<Long> getServiceGroupIds() {
+            return this.serviceGroupIds;
         }
 
     }

@@ -12,6 +12,10 @@ public class CreateRouteRuleRequest extends TeaModel {
     @NameInMap("assignObjectType")
     public String assignObjectType;
 
+    // 子规则关系AND,OR
+    @NameInMap("childRuleRelation")
+    public String childRuleRelation;
+
     // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
@@ -79,6 +83,14 @@ public class CreateRouteRuleRequest extends TeaModel {
     }
     public String getAssignObjectType() {
         return this.assignObjectType;
+    }
+
+    public CreateRouteRuleRequest setChildRuleRelation(String childRuleRelation) {
+        this.childRuleRelation = childRuleRelation;
+        return this;
+    }
+    public String getChildRuleRelation() {
+        return this.childRuleRelation;
     }
 
     public CreateRouteRuleRequest setClientToken(String clientToken) {
@@ -222,6 +234,10 @@ public class CreateRouteRuleRequest extends TeaModel {
     }
 
     public static class CreateRouteRuleRequestRouteChildRules extends TeaModel {
+        // 0-与，1-或
+        @NameInMap("childConditionRelation")
+        public Long childConditionRelation;
+
         // 条件
         @NameInMap("conditions")
         public java.util.List<CreateRouteRuleRequestRouteChildRulesConditions> conditions;
@@ -233,6 +249,14 @@ public class CreateRouteRuleRequest extends TeaModel {
         public static CreateRouteRuleRequestRouteChildRules build(java.util.Map<String, ?> map) throws Exception {
             CreateRouteRuleRequestRouteChildRules self = new CreateRouteRuleRequestRouteChildRules();
             return TeaModel.build(map, self);
+        }
+
+        public CreateRouteRuleRequestRouteChildRules setChildConditionRelation(Long childConditionRelation) {
+            this.childConditionRelation = childConditionRelation;
+            return this;
+        }
+        public Long getChildConditionRelation() {
+            return this.childConditionRelation;
         }
 
         public CreateRouteRuleRequestRouteChildRules setConditions(java.util.List<CreateRouteRuleRequestRouteChildRulesConditions> conditions) {
