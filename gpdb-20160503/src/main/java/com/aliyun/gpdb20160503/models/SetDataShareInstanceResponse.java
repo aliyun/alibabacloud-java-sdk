@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.gpdb20160503.models;
+
+import com.aliyun.tea.*;
+
+public class SetDataShareInstanceResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public SetDataShareInstanceResponseBody body;
+
+    public static SetDataShareInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
+        SetDataShareInstanceResponse self = new SetDataShareInstanceResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public SetDataShareInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public SetDataShareInstanceResponse setBody(SetDataShareInstanceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SetDataShareInstanceResponseBody getBody() {
+        return this.body;
+    }
+
+}

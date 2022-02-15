@@ -138,6 +138,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("DBInstanceStorage")
         public Long DBInstanceStorage;
 
+        @NameInMap("EncryptionKey")
+        public String encryptionKey;
+
+        @NameInMap("EncryptionType")
+        public String encryptionType;
+
         @NameInMap("Engine")
         public String engine;
 
@@ -216,8 +222,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("StorageUnit")
         public String storageUnit;
 
+        @NameInMap("SupportRestore")
+        public Boolean supportRestore;
+
         @NameInMap("Tags")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTags tags;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
 
         @NameInMap("VpcId")
         public String vpcId;
@@ -380,6 +392,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Long getDBInstanceStorage() {
             return this.DBInstanceStorage;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setEncryptionKey(String encryptionKey) {
+            this.encryptionKey = encryptionKey;
+            return this;
+        }
+        public String getEncryptionKey() {
+            return this.encryptionKey;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setEncryptionType(String encryptionType) {
+            this.encryptionType = encryptionType;
+            return this;
+        }
+        public String getEncryptionType() {
+            return this.encryptionType;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setEngine(String engine) {
@@ -590,12 +618,28 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.storageUnit;
         }
 
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setSupportRestore(Boolean supportRestore) {
+            this.supportRestore = supportRestore;
+            return this;
+        }
+        public Boolean getSupportRestore() {
+            return this.supportRestore;
+        }
+
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setTags(DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTags tags) {
             this.tags = tags;
             return this;
         }
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTags getTags() {
             return this.tags;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setVpcId(String vpcId) {
