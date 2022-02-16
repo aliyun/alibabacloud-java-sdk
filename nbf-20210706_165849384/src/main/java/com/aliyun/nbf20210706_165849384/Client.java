@@ -123,6 +123,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("extFields", request.extFields);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.gmtCreate)) {
+            body.put("gmtCreate", request.gmtCreate);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.inboundType)) {
             body.put("inboundType", request.inboundType);
         }
