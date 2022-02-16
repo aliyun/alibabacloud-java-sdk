@@ -22,8 +22,8 @@ public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
     @NameInMap("ErrorResult")
     public java.util.List<GetDiagnoseResultForSingleCardResponseBodyErrorResult> errorResult;
 
-    @NameInMap("Iccid")
-    public String iccid;
+    @NameInMap("IccId")
+    public String iccId;
 
     @NameInMap("IoTCloudConnectorId")
     public String ioTCloudConnectorId;
@@ -87,12 +87,12 @@ public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
         return this.errorResult;
     }
 
-    public GetDiagnoseResultForSingleCardResponseBody setIccid(String iccid) {
-        this.iccid = iccid;
+    public GetDiagnoseResultForSingleCardResponseBody setIccId(String iccId) {
+        this.iccId = iccId;
         return this;
     }
-    public String getIccid() {
-        return this.iccid;
+    public String getIccId() {
+        return this.iccId;
     }
 
     public GetDiagnoseResultForSingleCardResponseBody setIoTCloudConnectorId(String ioTCloudConnectorId) {

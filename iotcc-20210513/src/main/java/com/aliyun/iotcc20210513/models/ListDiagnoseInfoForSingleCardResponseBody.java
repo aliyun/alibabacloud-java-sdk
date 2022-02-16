@@ -83,8 +83,8 @@ public class ListDiagnoseInfoForSingleCardResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public Long endTime;
 
-        @NameInMap("Iccid")
-        public String iccid;
+        @NameInMap("IccId")
+        public String iccId;
 
         @NameInMap("IoTCloudConnectorId")
         public String ioTCloudConnectorId;
@@ -154,12 +154,12 @@ public class ListDiagnoseInfoForSingleCardResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public ListDiagnoseInfoForSingleCardResponseBodyDiagnoseInfo setIccid(String iccid) {
-            this.iccid = iccid;
+        public ListDiagnoseInfoForSingleCardResponseBodyDiagnoseInfo setIccId(String iccId) {
+            this.iccId = iccId;
             return this;
         }
-        public String getIccid() {
-            return this.iccid;
+        public String getIccId() {
+            return this.iccId;
         }
 
         public ListDiagnoseInfoForSingleCardResponseBodyDiagnoseInfo setIoTCloudConnectorId(String ioTCloudConnectorId) {
