@@ -72,12 +72,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SendBatchMessageResponse sendBatchMessageWithOptions(SendBatchMessageRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.batchFlag)) {
+            body.put("BatchFlag", request.batchFlag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extendInfo)) {
+            body.put("ExtendInfo", request.extendInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idType)) {
+            body.put("IdType", request.idType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.phoneNumberJson)) {
             body.put("PhoneNumberJson", request.phoneNumberJson);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.signNameJson)) {
             body.put("SignNameJson", request.signNameJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.specificChannel)) {
+            body.put("SpecificChannel", request.specificChannel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
