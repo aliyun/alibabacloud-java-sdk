@@ -568,39 +568,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteDatabaseWithOptions(request, runtime);
     }
 
-    public DeleteInstanceSPInfoResponse deleteInstanceSPInfoWithOptions(DeleteInstanceSPInfoRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
-            query.put("DBInstanceId", request.DBInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceInfos)) {
-            query.put("DBInstanceInfos", request.DBInstanceInfos);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteInstanceSPInfo"),
-            new TeaPair("version", "2016-05-03"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceSPInfoResponse());
-    }
-
-    public DeleteInstanceSPInfoResponse deleteInstanceSPInfo(DeleteInstanceSPInfoRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.deleteInstanceSPInfoWithOptions(request, runtime);
-    }
-
     public DescribeAccountsResponse describeAccountsWithOptions(DescribeAccountsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -731,39 +698,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDBClusterNodeResponse describeDBClusterNode(DescribeDBClusterNodeRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeDBClusterNodeWithOptions(request, runtime);
-    }
-
-    public DescribeDBClusterNodesResponse describeDBClusterNodesWithOptions(DescribeDBClusterNodesRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
-            query.put("DBInstanceId", request.DBInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
-            query.put("NodeType", request.nodeType);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeDBClusterNodes"),
-            new TeaPair("version", "2016-05-03"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBClusterNodesResponse());
-    }
-
-    public DescribeDBClusterNodesResponse describeDBClusterNodes(DescribeDBClusterNodesRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeDBClusterNodesWithOptions(request, runtime);
     }
 
     public DescribeDBClusterPerformanceResponse describeDBClusterPerformanceWithOptions(DescribeDBClusterPerformanceRequest request, RuntimeOptions runtime) throws Exception {
@@ -937,6 +871,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDBInstanceOnECSAttributeResponse describeDBInstanceOnECSAttribute(DescribeDBInstanceOnECSAttributeRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeDBInstanceOnECSAttributeWithOptions(request, runtime);
+    }
+
+    public DescribeDBInstancePerformanceResponse describeDBInstancePerformanceWithOptions(DescribeDBInstancePerformanceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.key)) {
+            query.put("Key", request.key);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDBInstancePerformance"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBInstancePerformanceResponse());
+    }
+
+    public DescribeDBInstancePerformanceResponse describeDBInstancePerformance(DescribeDBInstancePerformanceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeDBInstancePerformanceWithOptions(request, runtime);
     }
 
     public DescribeDBInstanceSQLPatternsResponse describeDBInstanceSQLPatternsWithOptions(DescribeDBInstanceSQLPatternsRequest request, RuntimeOptions runtime) throws Exception {
@@ -1557,39 +1532,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSQLCollectorPolicyResponse describeSQLCollectorPolicy(DescribeSQLCollectorPolicyRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeSQLCollectorPolicyWithOptions(request, runtime);
-    }
-
-    public DescribeSQLLogResponse describeSQLLogWithOptions(DescribeSQLLogRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
-            query.put("DBInstanceId", request.DBInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.queryId)) {
-            query.put("QueryId", request.queryId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeSQLLog"),
-            new TeaPair("version", "2016-05-03"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSQLLogResponse());
-    }
-
-    public DescribeSQLLogResponse describeSQLLog(DescribeSQLLogRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeSQLLogWithOptions(request, runtime);
     }
 
     public DescribeSQLLogByQueryIdResponse describeSQLLogByQueryIdWithOptions(DescribeSQLLogByQueryIdRequest request, RuntimeOptions runtime) throws Exception {
