@@ -10,6 +10,9 @@ public class GetBlackWhiteListRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("IsWhite")
+    public Boolean isWhite;
+
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -35,6 +38,14 @@ public class GetBlackWhiteListRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
+    }
+
+    public GetBlackWhiteListRequest setIsWhite(Boolean isWhite) {
+        this.isWhite = isWhite;
+        return this;
+    }
+    public Boolean getIsWhite() {
+        return this.isWhite;
     }
 
     public GetBlackWhiteListRequest setResourceType(String resourceType) {
