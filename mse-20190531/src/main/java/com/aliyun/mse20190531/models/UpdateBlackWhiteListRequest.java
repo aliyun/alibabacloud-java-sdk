@@ -16,6 +16,9 @@ public class UpdateBlackWhiteListRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    @NameInMap("IsWhite")
+    public Boolean isWhite;
+
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -60,6 +63,14 @@ public class UpdateBlackWhiteListRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public UpdateBlackWhiteListRequest setIsWhite(Boolean isWhite) {
+        this.isWhite = isWhite;
+        return this;
+    }
+    public Boolean getIsWhite() {
+        return this.isWhite;
     }
 
     public UpdateBlackWhiteListRequest setResourceType(String resourceType) {

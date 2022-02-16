@@ -2395,6 +2395,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcceptLanguage", request.acceptLanguage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.connectType)) {
+            query.put("ConnectType", request.connectType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -3181,6 +3185,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcceptLanguage", request.acceptLanguage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.connectType)) {
+            query.put("ConnectType", request.connectType);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3588,6 +3596,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isWhite)) {
+            query.put("IsWhite", request.isWhite);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
