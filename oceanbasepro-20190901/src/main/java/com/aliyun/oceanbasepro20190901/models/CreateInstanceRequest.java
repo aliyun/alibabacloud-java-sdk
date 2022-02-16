@@ -32,6 +32,10 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    // 实例所在的企业资源组ID
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     // Oceanbase集群的系列  - normal（默认）：高可用版本  - basic：基础版本
     @NameInMap("Series")
     public String series;
@@ -99,6 +103,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getPeriodUnit() {
         return this.periodUnit;
+    }
+
+    public CreateInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateInstanceRequest setSeries(String series) {

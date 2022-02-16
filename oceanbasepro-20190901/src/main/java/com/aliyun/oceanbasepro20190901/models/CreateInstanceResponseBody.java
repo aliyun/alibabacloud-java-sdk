@@ -41,6 +41,14 @@ public class CreateInstanceResponseBody extends TeaModel {
         @NameInMap("OrderId")
         public String orderId;
 
+        // 资源组ID
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        // 订单成交价
+        @NameInMap("TradePrice")
+        public Float tradePrice;
+
         public static CreateInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateInstanceResponseBodyData self = new CreateInstanceResponseBodyData();
             return TeaModel.build(map, self);
@@ -60,6 +68,22 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
         public String getOrderId() {
             return this.orderId;
+        }
+
+        public CreateInstanceResponseBodyData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public CreateInstanceResponseBodyData setTradePrice(Float tradePrice) {
+            this.tradePrice = tradePrice;
+            return this;
+        }
+        public Float getTradePrice() {
+            return this.tradePrice;
         }
 
     }

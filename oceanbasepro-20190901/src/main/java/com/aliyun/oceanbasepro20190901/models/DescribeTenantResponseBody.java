@@ -418,6 +418,10 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("EnableClogService")
         public Boolean enableClogService;
 
+        // 是否可开启租户公网地址。
+        @NameInMap("EnableInternetAddressService")
+        public Boolean enableInternetAddressService;
+
         // 租户的主可用区。
         @NameInMap("PrimaryZone")
         public String primaryZone;
@@ -505,6 +509,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public Boolean getEnableClogService() {
             return this.enableClogService;
+        }
+
+        public DescribeTenantResponseBodyTenant setEnableInternetAddressService(Boolean enableInternetAddressService) {
+            this.enableInternetAddressService = enableInternetAddressService;
+            return this;
+        }
+        public Boolean getEnableInternetAddressService() {
+            return this.enableInternetAddressService;
         }
 
         public DescribeTenantResponseBodyTenant setPrimaryZone(String primaryZone) {
