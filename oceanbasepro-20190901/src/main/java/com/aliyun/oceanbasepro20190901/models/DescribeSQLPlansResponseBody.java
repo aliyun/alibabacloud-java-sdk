@@ -49,6 +49,9 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
         @NameInMap("FirstLoadTimeUTCString")
         public String firstLoadTimeUTCString;
 
+        @NameInMap("ForcedOutlineId")
+        public Long forcedOutlineId;
+
         // 命中次数
         @NameInMap("HitCount")
         public Integer hitCount;
@@ -132,6 +135,14 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
         }
         public String getFirstLoadTimeUTCString() {
             return this.firstLoadTimeUTCString;
+        }
+
+        public DescribeSQLPlansResponseBodySQLPlans setForcedOutlineId(Long forcedOutlineId) {
+            this.forcedOutlineId = forcedOutlineId;
+            return this;
+        }
+        public Long getForcedOutlineId() {
+            return this.forcedOutlineId;
         }
 
         public DescribeSQLPlansResponseBodySQLPlans setHitCount(Integer hitCount) {

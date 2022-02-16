@@ -24,6 +24,10 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    // 查询列表的删选关键字。
+    @NameInMap("SearchKey")
+    public String searchKey;
+
     public static DescribeInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesRequest self = new DescribeInstancesRequest();
         return TeaModel.build(map, self);
@@ -67,6 +71,14 @@ public class DescribeInstancesRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public DescribeInstancesRequest setSearchKey(String searchKey) {
+        this.searchKey = searchKey;
+        return this;
+    }
+    public String getSearchKey() {
+        return this.searchKey;
     }
 
 }

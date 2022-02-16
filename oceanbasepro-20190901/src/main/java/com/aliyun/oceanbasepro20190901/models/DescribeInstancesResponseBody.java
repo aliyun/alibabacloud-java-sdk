@@ -310,6 +310,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        // 集群的白名单信息。（待废弃）
+        @NameInMap("SecurityIps")
+        public java.util.List<String> securityIps;
+
         // Oceanbase集群的系列 - NORMAL：高可用版本 - BASIC：基础版本
         @NameInMap("Series")
         public String series;
@@ -325,6 +329,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         // Observer版本信息。
         @NameInMap("Version")
         public String version;
+
+        @NameInMap("VpcId")
+        public String vpcId;
 
         public static DescribeInstancesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstances self = new DescribeInstancesResponseBodyInstances();
@@ -483,6 +490,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
+        public DescribeInstancesResponseBodyInstances setSecurityIps(java.util.List<String> securityIps) {
+            this.securityIps = securityIps;
+            return this;
+        }
+        public java.util.List<String> getSecurityIps() {
+            return this.securityIps;
+        }
+
         public DescribeInstancesResponseBodyInstances setSeries(String series) {
             this.series = series;
             return this;
@@ -513,6 +528,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public DescribeInstancesResponseBodyInstances setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }
