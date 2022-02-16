@@ -20,6 +20,10 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
     @NameInMap("extFields")
     public String extFields;
 
+    // 预约单创建时间
+    @NameInMap("gmtCreate")
+    public String gmtCreate;
+
     // 出入库方式
     @NameInMap("inboundType")
     public String inboundType;
@@ -99,6 +103,14 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
     }
     public String getExtFields() {
         return this.extFields;
+    }
+
+    public AscpAppointOrderCreatedErpSpiRequest setGmtCreate(String gmtCreate) {
+        this.gmtCreate = gmtCreate;
+        return this;
+    }
+    public String getGmtCreate() {
+        return this.gmtCreate;
     }
 
     public AscpAppointOrderCreatedErpSpiRequest setInboundType(String inboundType) {
