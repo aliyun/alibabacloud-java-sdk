@@ -33,21 +33,46 @@ public class GetUserByTokenResponseBody extends TeaModel {
     }
 
     public static class GetUserByTokenResponseBodyUser extends TeaModel {
+        @NameInMap("AdDomain")
+        public String adDomain;
+
+        @NameInMap("Email")
+        public String email;
+
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Email")
-        public String email;
+        @NameInMap("OfficeSiteId")
+        public String officeSiteId;
 
         @NameInMap("TenantId")
         public String tenantId;
 
+        @NameInMap("Type")
+        public String type;
+
         public static GetUserByTokenResponseBodyUser build(java.util.Map<String, ?> map) throws Exception {
             GetUserByTokenResponseBodyUser self = new GetUserByTokenResponseBodyUser();
             return TeaModel.build(map, self);
+        }
+
+        public GetUserByTokenResponseBodyUser setAdDomain(String adDomain) {
+            this.adDomain = adDomain;
+            return this;
+        }
+        public String getAdDomain() {
+            return this.adDomain;
+        }
+
+        public GetUserByTokenResponseBodyUser setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
         }
 
         public GetUserByTokenResponseBodyUser setId(Long id) {
@@ -66,12 +91,12 @@ public class GetUserByTokenResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetUserByTokenResponseBodyUser setEmail(String email) {
-            this.email = email;
+        public GetUserByTokenResponseBodyUser setOfficeSiteId(String officeSiteId) {
+            this.officeSiteId = officeSiteId;
             return this;
         }
-        public String getEmail() {
-            return this.email;
+        public String getOfficeSiteId() {
+            return this.officeSiteId;
         }
 
         public GetUserByTokenResponseBodyUser setTenantId(String tenantId) {
@@ -80,6 +105,14 @@ public class GetUserByTokenResponseBody extends TeaModel {
         }
         public String getTenantId() {
             return this.tenantId;
+        }
+
+        public GetUserByTokenResponseBodyUser setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
