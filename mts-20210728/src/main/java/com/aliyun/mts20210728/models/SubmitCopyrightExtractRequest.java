@@ -12,6 +12,10 @@ public class SubmitCopyrightExtractRequest extends TeaModel {
     @NameInMap("Input")
     public String input;
 
+    // url链接
+    @NameInMap("Url")
+    public String url;
+
     // 用户数据
     @NameInMap("UserData")
     public String userData;
@@ -35,6 +39,14 @@ public class SubmitCopyrightExtractRequest extends TeaModel {
     }
     public String getInput() {
         return this.input;
+    }
+
+    public SubmitCopyrightExtractRequest setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
     }
 
     public SubmitCopyrightExtractRequest setUserData(String userData) {
