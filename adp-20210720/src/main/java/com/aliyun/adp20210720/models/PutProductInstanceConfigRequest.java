@@ -40,6 +40,9 @@ public class PutProductInstanceConfigRequest extends TeaModel {
     @NameInMap("value")
     public String value;
 
+    @NameInMap("valueType")
+    public String valueType;
+
     public static PutProductInstanceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         PutProductInstanceConfigRequest self = new PutProductInstanceConfigRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class PutProductInstanceConfigRequest extends TeaModel {
     }
     public String getValue() {
         return this.value;
+    }
+
+    public PutProductInstanceConfigRequest setValueType(String valueType) {
+        this.valueType = valueType;
+        return this;
+    }
+    public String getValueType() {
+        return this.valueType;
     }
 
 }

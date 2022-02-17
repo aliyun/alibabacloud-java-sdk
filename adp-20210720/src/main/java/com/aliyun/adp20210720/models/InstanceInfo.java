@@ -20,6 +20,10 @@ public class InstanceInfo extends TeaModel {
     @NameInMap("dataDisk")
     public java.util.List<Disk> dataDisk;
 
+    // diskConfigAnnotations
+    @NameInMap("diskConfigAnnotations")
+    public java.util.Map<String, String> diskConfigAnnotations;
+
     // hostName
     @NameInMap("hostName")
     public String hostName;
@@ -127,6 +131,14 @@ public class InstanceInfo extends TeaModel {
     }
     public java.util.List<Disk> getDataDisk() {
         return this.dataDisk;
+    }
+
+    public InstanceInfo setDiskConfigAnnotations(java.util.Map<String, String> diskConfigAnnotations) {
+        this.diskConfigAnnotations = diskConfigAnnotations;
+        return this;
+    }
+    public java.util.Map<String, String> getDiskConfigAnnotations() {
+        return this.diskConfigAnnotations;
     }
 
     public InstanceInfo setHostName(String hostName) {

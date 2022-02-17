@@ -51,6 +51,9 @@ public class GetFoundationVersionResponseBody extends TeaModel {
         @NameInMap("features")
         public java.util.List<String> features;
 
+        @NameInMap("labels")
+        public String labels;
+
         // name，目前仅能是 “ADP 底座“
         @NameInMap("name")
         public String name;
@@ -94,6 +97,14 @@ public class GetFoundationVersionResponseBody extends TeaModel {
         }
         public java.util.List<String> getFeatures() {
             return this.features;
+        }
+
+        public GetFoundationVersionResponseBodyData setLabels(String labels) {
+            this.labels = labels;
+            return this;
+        }
+        public String getLabels() {
+            return this.labels;
         }
 
         public GetFoundationVersionResponseBodyData setName(String name) {

@@ -16,6 +16,10 @@ public class FoundationVersion extends TeaModel {
     @NameInMap("features")
     public java.util.List<String> features;
 
+    // 标签
+    @NameInMap("labels")
+    public String labels;
+
     // name，目前仅能是 “ADP 底座“
     @NameInMap("name")
     public String name;
@@ -71,6 +75,14 @@ public class FoundationVersion extends TeaModel {
     }
     public java.util.List<String> getFeatures() {
         return this.features;
+    }
+
+    public FoundationVersion setLabels(String labels) {
+        this.labels = labels;
+        return this;
+    }
+    public String getLabels() {
+        return this.labels;
     }
 
     public FoundationVersion setName(String name) {
