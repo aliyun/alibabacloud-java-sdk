@@ -13,6 +13,9 @@ public class ListAuthorizationRulesRequest extends TeaModel {
     @NameInMap("AuthorizationRuleStatus")
     public java.util.List<String> authorizationRuleStatus;
 
+    @NameInMap("AuthorizationRuleType")
+    public String authorizationRuleType;
+
     @NameInMap("Destination")
     public java.util.List<String> destination;
 
@@ -61,6 +64,14 @@ public class ListAuthorizationRulesRequest extends TeaModel {
     }
     public java.util.List<String> getAuthorizationRuleStatus() {
         return this.authorizationRuleStatus;
+    }
+
+    public ListAuthorizationRulesRequest setAuthorizationRuleType(String authorizationRuleType) {
+        this.authorizationRuleType = authorizationRuleType;
+        return this;
+    }
+    public String getAuthorizationRuleType() {
+        return this.authorizationRuleType;
     }
 
     public ListAuthorizationRulesRequest setDestination(java.util.List<String> destination) {
