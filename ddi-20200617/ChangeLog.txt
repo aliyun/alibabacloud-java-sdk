@@ -1,3 +1,6 @@
+2022-02-17 Version: 1.0.6
+- Add flow API.
+
 2022-01-21 Version: 1.0.5
 - Add flow API.
 
