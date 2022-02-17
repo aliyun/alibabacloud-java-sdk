@@ -7,11 +7,11 @@ public class CreateDNSServiceRuleRequest extends TeaModel {
     @NameInMap("AuthorizationRuleDescription")
     public String authorizationRuleDescription;
 
-    @NameInMap("AuthorizationRuleName")
-    public String authorizationRuleName;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("DNSServiceRuleName")
+    public String DNSServiceRuleName;
 
     @NameInMap("Destination")
     public String destination;
@@ -44,20 +44,20 @@ public class CreateDNSServiceRuleRequest extends TeaModel {
         return this.authorizationRuleDescription;
     }
 
-    public CreateDNSServiceRuleRequest setAuthorizationRuleName(String authorizationRuleName) {
-        this.authorizationRuleName = authorizationRuleName;
-        return this;
-    }
-    public String getAuthorizationRuleName() {
-        return this.authorizationRuleName;
-    }
-
     public CreateDNSServiceRuleRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateDNSServiceRuleRequest setDNSServiceRuleName(String DNSServiceRuleName) {
+        this.DNSServiceRuleName = DNSServiceRuleName;
+        return this;
+    }
+    public String getDNSServiceRuleName() {
+        return this.DNSServiceRuleName;
     }
 
     public CreateDNSServiceRuleRequest setDestination(String destination) {
