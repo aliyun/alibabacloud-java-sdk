@@ -91,6 +91,9 @@ public class ListProductInstanceConfigsResponseBody extends TeaModel {
         @NameInMap("value")
         public String value;
 
+        @NameInMap("valueType")
+        public String valueType;
+
         @NameInMap("vendorType")
         public String vendorType;
 
@@ -225,6 +228,14 @@ public class ListProductInstanceConfigsResponseBody extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+        public ListProductInstanceConfigsResponseBodyDataList setValueType(String valueType) {
+            this.valueType = valueType;
+            return this;
+        }
+        public String getValueType() {
+            return this.valueType;
         }
 
         public ListProductInstanceConfigsResponseBodyDataList setVendorType(String vendorType) {

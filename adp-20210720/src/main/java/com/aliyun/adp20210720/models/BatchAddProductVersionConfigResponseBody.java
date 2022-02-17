@@ -3,21 +3,19 @@ package com.aliyun.adp20210720.models;
 
 import com.aliyun.tea.*;
 
-public class AuthorizeProductVersionResponseBody extends TeaModel {
-    // 错误码
+public class BatchAddProductVersionConfigResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
-    // 错误信息
     @NameInMap("msg")
     public String msg;
 
-    public static AuthorizeProductVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        AuthorizeProductVersionResponseBody self = new AuthorizeProductVersionResponseBody();
+    public static BatchAddProductVersionConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        BatchAddProductVersionConfigResponseBody self = new BatchAddProductVersionConfigResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AuthorizeProductVersionResponseBody setCode(String code) {
+    public BatchAddProductVersionConfigResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -25,7 +23,7 @@ public class AuthorizeProductVersionResponseBody extends TeaModel {
         return this.code;
     }
 
-    public AuthorizeProductVersionResponseBody setMsg(String msg) {
+    public BatchAddProductVersionConfigResponseBody setMsg(String msg) {
         this.msg = msg;
         return this;
     }

@@ -24,6 +24,10 @@ public class UpdateProductVersionConfigRequest extends TeaModel {
     @NameInMap("value")
     public String value;
 
+    // value类型
+    @NameInMap("valueType")
+    public String valueType;
+
     public static UpdateProductVersionConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProductVersionConfigRequest self = new UpdateProductVersionConfigRequest();
         return TeaModel.build(map, self);
@@ -67,6 +71,14 @@ public class UpdateProductVersionConfigRequest extends TeaModel {
     }
     public String getValue() {
         return this.value;
+    }
+
+    public UpdateProductVersionConfigRequest setValueType(String valueType) {
+        this.valueType = valueType;
+        return this;
+    }
+    public String getValueType() {
+        return this.valueType;
     }
 
 }
