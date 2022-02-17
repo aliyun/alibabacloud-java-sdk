@@ -353,12 +353,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDNSServiceRuleResponse createDNSServiceRuleWithOptions(CreateDNSServiceRuleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleDescription)) {
-            query.put("AuthorizationRuleDescription", request.authorizationRuleDescription);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DNSServiceRuleDescription)) {
+            query.put("DNSServiceRuleDescription", request.DNSServiceRuleDescription);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.DNSServiceRuleName)) {
@@ -1595,6 +1595,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AuthorizationRuleStatus", request.authorizationRuleStatus);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleType)) {
+            query.put("AuthorizationRuleType", request.authorizationRuleType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.destination)) {
             query.put("Destination", request.destination);
         }
@@ -2704,10 +2708,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateDNSServiceRuleAttributeResponse updateDNSServiceRuleAttributeWithOptions(UpdateDNSServiceRuleAttributeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleName)) {
-            query.put("AuthorizationRuleName", request.authorizationRuleName);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -2718,6 +2718,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.DNSServiceRuleId)) {
             query.put("DNSServiceRuleId", request.DNSServiceRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DNSServiceRuleName)) {
+            query.put("DNSServiceRuleName", request.DNSServiceRuleName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.destination)) {
