@@ -20,6 +20,14 @@ public class SubmitTraceAbRequest extends TeaModel {
     @NameInMap("Output")
     public String output;
 
+    // 嵌入水印开始时间
+    @NameInMap("StartTime")
+    public Long startTime;
+
+    // 嵌入水印总时长
+    @NameInMap("TotalTime")
+    public Long totalTime;
+
     // 外部url链接(Input和url二选一)
     @NameInMap("Url")
     public String url;
@@ -63,6 +71,22 @@ public class SubmitTraceAbRequest extends TeaModel {
     }
     public String getOutput() {
         return this.output;
+    }
+
+    public SubmitTraceAbRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    public SubmitTraceAbRequest setTotalTime(Long totalTime) {
+        this.totalTime = totalTime;
+        return this;
+    }
+    public Long getTotalTime() {
+        return this.totalTime;
     }
 
     public SubmitTraceAbRequest setUrl(String url) {
