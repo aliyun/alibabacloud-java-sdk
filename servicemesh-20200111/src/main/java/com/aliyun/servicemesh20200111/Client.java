@@ -176,6 +176,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addVMIntoServiceMeshWithOptions(request, runtime);
     }
 
+    public CreateASMGatewayResponse createASMGatewayWithOptions(CreateASMGatewayRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            body.put("Body", request.body);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.istioGatewayName)) {
+            body.put("IstioGatewayName", request.istioGatewayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateASMGateway"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateASMGatewayResponse());
+    }
+
+    public CreateASMGatewayResponse createASMGateway(CreateASMGatewayRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createASMGatewayWithOptions(request, runtime);
+    }
+
     public CreateExtensionProviderResponse createExtensionProviderWithOptions(CreateExtensionProviderRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2439,6 +2476,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetServiceRegistrySourceResponse setServiceRegistrySource(SetServiceRegistrySourceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.setServiceRegistrySourceWithOptions(request, runtime);
+    }
+
+    public UpdateASMGatewayResponse updateASMGatewayWithOptions(UpdateASMGatewayRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            body.put("Body", request.body);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.istioGatewayName)) {
+            body.put("IstioGatewayName", request.istioGatewayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateASMGateway"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateASMGatewayResponse());
+    }
+
+    public UpdateASMGatewayResponse updateASMGateway(UpdateASMGatewayRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateASMGatewayWithOptions(request, runtime);
     }
 
     public UpdateASMGatewayImportedServicesResponse updateASMGatewayImportedServicesWithOptions(UpdateASMGatewayImportedServicesRequest request, RuntimeOptions runtime) throws Exception {
