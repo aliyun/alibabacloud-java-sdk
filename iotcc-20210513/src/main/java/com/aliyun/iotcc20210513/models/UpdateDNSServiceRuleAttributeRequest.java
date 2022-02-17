@@ -4,14 +4,14 @@ package com.aliyun.iotcc20210513.models;
 import com.aliyun.tea.*;
 
 public class UpdateDNSServiceRuleAttributeRequest extends TeaModel {
-    @NameInMap("AuthorizationRuleDescription")
-    public String authorizationRuleDescription;
-
     @NameInMap("AuthorizationRuleName")
     public String authorizationRuleName;
 
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("DNSServiceRuleDescription")
+    public String DNSServiceRuleDescription;
 
     @NameInMap("DNSServiceRuleId")
     public String DNSServiceRuleId;
@@ -39,14 +39,6 @@ public class UpdateDNSServiceRuleAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateDNSServiceRuleAttributeRequest setAuthorizationRuleDescription(String authorizationRuleDescription) {
-        this.authorizationRuleDescription = authorizationRuleDescription;
-        return this;
-    }
-    public String getAuthorizationRuleDescription() {
-        return this.authorizationRuleDescription;
-    }
-
     public UpdateDNSServiceRuleAttributeRequest setAuthorizationRuleName(String authorizationRuleName) {
         this.authorizationRuleName = authorizationRuleName;
         return this;
@@ -61,6 +53,14 @@ public class UpdateDNSServiceRuleAttributeRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateDNSServiceRuleAttributeRequest setDNSServiceRuleDescription(String DNSServiceRuleDescription) {
+        this.DNSServiceRuleDescription = DNSServiceRuleDescription;
+        return this;
+    }
+    public String getDNSServiceRuleDescription() {
+        return this.DNSServiceRuleDescription;
     }
 
     public UpdateDNSServiceRuleAttributeRequest setDNSServiceRuleId(String DNSServiceRuleId) {
