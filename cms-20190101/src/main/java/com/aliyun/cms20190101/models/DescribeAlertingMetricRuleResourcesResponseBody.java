@@ -75,12 +75,100 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
         return this.total;
     }
 
+    public static class DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionListExpressionList extends TeaModel {
+        @NameInMap("ComparisonOperator")
+        public String comparisonOperator;
+
+        @NameInMap("MetricName")
+        public String metricName;
+
+        @NameInMap("Period")
+        public String period;
+
+        @NameInMap("Statistics")
+        public String statistics;
+
+        @NameInMap("Threshold")
+        public String threshold;
+
+        public static DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionListExpressionList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionListExpressionList self = new DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionListExpressionList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionListExpressionList setComparisonOperator(String comparisonOperator) {
+            this.comparisonOperator = comparisonOperator;
+            return this;
+        }
+        public String getComparisonOperator() {
+            return this.comparisonOperator;
+        }
+
+        public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionListExpressionList setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionListExpressionList setPeriod(String period) {
+            this.period = period;
+            return this;
+        }
+        public String getPeriod() {
+            return this.period;
+        }
+
+        public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionListExpressionList setStatistics(String statistics) {
+            this.statistics = statistics;
+            return this;
+        }
+        public String getStatistics() {
+            return this.statistics;
+        }
+
+        public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionListExpressionList setThreshold(String threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+    }
+
+    public static class DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionList extends TeaModel {
+        @NameInMap("ExpressionList")
+        public java.util.List<DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionListExpressionList> expressionList;
+
+        public static DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionList self = new DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionList setExpressionList(java.util.List<DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionListExpressionList> expressionList) {
+            this.expressionList = expressionList;
+            return this;
+        }
+        public java.util.List<DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionListExpressionList> getExpressionList() {
+            return this.expressionList;
+        }
+
+    }
+
     public static class DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResource extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         @NameInMap("Expression")
         public String expression;
+
+        @NameInMap("ExpressionList")
+        public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionList expressionList;
+
+        @NameInMap("ExpressionListJoin")
+        public String expressionListJoin;
 
         @NameInMap("Level")
         public Integer level;
@@ -116,6 +204,22 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
         }
         public String getExpression() {
             return this.expression;
+        }
+
+        public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResource setExpressionList(DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionList expressionList) {
+            this.expressionList = expressionList;
+            return this;
+        }
+        public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionList getExpressionList() {
+            return this.expressionList;
+        }
+
+        public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResource setExpressionListJoin(String expressionListJoin) {
+            this.expressionListJoin = expressionListJoin;
+            return this;
+        }
+        public String getExpressionListJoin() {
+            return this.expressionListJoin;
         }
 
         public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResource setLevel(Integer level) {

@@ -113,6 +113,9 @@ public class PutEventRuleRequest extends TeaModel {
         @NameInMap("Product")
         public String product;
 
+        @NameInMap("SQLFilter")
+        public String SQLFilter;
+
         @NameInMap("StatusList")
         public java.util.List<String> statusList;
 
@@ -159,6 +162,14 @@ public class PutEventRuleRequest extends TeaModel {
         }
         public String getProduct() {
             return this.product;
+        }
+
+        public PutEventRuleRequestEventPattern setSQLFilter(String SQLFilter) {
+            this.SQLFilter = SQLFilter;
+            return this;
+        }
+        public String getSQLFilter() {
+            return this.SQLFilter;
         }
 
         public PutEventRuleRequestEventPattern setStatusList(java.util.List<String> statusList) {

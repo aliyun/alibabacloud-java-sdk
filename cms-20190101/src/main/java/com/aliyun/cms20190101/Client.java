@@ -2903,6 +2903,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableState", request.enableState);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.groupBy)) {
+            query.put("GroupBy", request.groupBy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             query.put("GroupId", request.groupId);
         }
@@ -3709,59 +3713,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeProjectMetaWithOptions(request, runtime);
     }
 
-    public DescribeSiteInstantMonitorLogResponse describeSiteInstantMonitorLogWithOptions(DescribeSiteInstantMonitorLogRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
-            query.put("EndTime", request.endTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
-            query.put("Filter", request.filter);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.length)) {
-            query.put("Length", request.length);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.metricName)) {
-            query.put("MetricName", request.metricName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
-            query.put("NextToken", request.nextToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
-            query.put("StartTime", request.startTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.taskIds)) {
-            query.put("TaskIds", request.taskIds);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeSiteInstantMonitorLog"),
-            new TeaPair("version", "2019-01-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSiteInstantMonitorLogResponse());
-    }
-
-    public DescribeSiteInstantMonitorLogResponse describeSiteInstantMonitorLog(DescribeSiteInstantMonitorLogRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeSiteInstantMonitorLogWithOptions(request, runtime);
-    }
-
     public DescribeSiteMonitorAttributeResponse describeSiteMonitorAttributeWithOptions(DescribeSiteMonitorAttributeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3850,6 +3801,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSiteMonitorDataResponse describeSiteMonitorData(DescribeSiteMonitorDataRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeSiteMonitorDataWithOptions(request, runtime);
+    }
+
+    public DescribeSiteMonitorISPCityListResponse describeSiteMonitorISPCityListWithOptions(DescribeSiteMonitorISPCityListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.city)) {
+            query.put("City", request.city);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.IPV4)) {
+            query.put("IPV4", request.IPV4);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.IPV6)) {
+            query.put("IPV6", request.IPV6);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isp)) {
+            query.put("Isp", request.isp);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSiteMonitorISPCityList"),
+            new TeaPair("version", "2019-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSiteMonitorISPCityListResponse());
+    }
+
+    public DescribeSiteMonitorISPCityListResponse describeSiteMonitorISPCityList(DescribeSiteMonitorISPCityListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeSiteMonitorISPCityListWithOptions(request, runtime);
     }
 
     public DescribeSiteMonitorListResponse describeSiteMonitorListWithOptions(DescribeSiteMonitorListRequest request, RuntimeOptions runtime) throws Exception {
@@ -4210,6 +4202,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSystemEventHistogramResponse describeSystemEventHistogram(DescribeSystemEventHistogramRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeSystemEventHistogramWithOptions(request, runtime);
+    }
+
+    public DescribeSystemEventMetaListResponse describeSystemEventMetaListWithOptions(DescribeSystemEventMetaListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = new OpenApiRequest();
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSystemEventMetaList"),
+            new TeaPair("version", "2019-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSystemEventMetaListResponse());
+    }
+
+    public DescribeSystemEventMetaListResponse describeSystemEventMetaList(DescribeSystemEventMetaListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeSystemEventMetaListWithOptions(request, runtime);
     }
 
     public DescribeTagKeyListResponse describeTagKeyListWithOptions(DescribeTagKeyListRequest request, RuntimeOptions runtime) throws Exception {
