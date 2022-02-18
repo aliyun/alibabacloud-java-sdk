@@ -200,6 +200,9 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         @NameInMap("Product")
         public String product;
 
+        @NameInMap("SQLFilter")
+        public String SQLFilter;
+
         public static DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern self = new DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern();
             return TeaModel.build(map, self);
@@ -251,6 +254,14 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         }
         public String getProduct() {
             return this.product;
+        }
+
+        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern setSQLFilter(String SQLFilter) {
+            this.SQLFilter = SQLFilter;
+            return this;
+        }
+        public String getSQLFilter() {
+            return this.SQLFilter;
         }
 
     }

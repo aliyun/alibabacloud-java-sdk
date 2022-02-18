@@ -250,6 +250,9 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        @NameInMap("ContactGroups")
+        public String contactGroups;
+
         @NameInMap("Dimensions")
         public String dimensions;
 
@@ -308,6 +311,14 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         }
         public String getCategory() {
             return this.category;
+        }
+
+        public CreateGroupMetricRulesRequestGroupMetricRules setContactGroups(String contactGroups) {
+            this.contactGroups = contactGroups;
+            return this;
+        }
+        public String getContactGroups() {
+            return this.contactGroups;
         }
 
         public CreateGroupMetricRulesRequestGroupMetricRules setDimensions(String dimensions) {
