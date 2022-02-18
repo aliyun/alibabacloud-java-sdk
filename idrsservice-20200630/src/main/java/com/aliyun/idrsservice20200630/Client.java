@@ -543,6 +543,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndAt", request.endAt);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.feeId)) {
+            query.put("FeeId", request.feeId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             query.put("Type", request.type);
         }
@@ -1415,6 +1419,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getRecordResultWithOptions(request, runtime);
     }
 
+    public GetRecordsByFeeIdResponse getRecordsByFeeIdWithOptions(GetRecordsByFeeIdRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.feeId)) {
+            body.put("FeeId", request.feeId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRecordsByFeeId"),
+            new TeaPair("version", "2020-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRecordsByFeeIdResponse());
+    }
+
+    public GetRecordsByFeeIdResponse getRecordsByFeeId(GetRecordsByFeeIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getRecordsByFeeIdWithOptions(request, runtime);
+    }
+
     public GetRuleResponse getRuleWithOptions(GetRuleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1566,6 +1599,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetStatisticsResponse getStatistics(GetStatisticsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getStatisticsWithOptions(request, runtime);
+    }
+
+    public GetStatisticsRecordsByFeeIdResponse getStatisticsRecordsByFeeIdWithOptions(GetStatisticsRecordsByFeeIdRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.feeId)) {
+            body.put("FeeId", request.feeId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetStatisticsRecordsByFeeId"),
+            new TeaPair("version", "2020-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetStatisticsRecordsByFeeIdResponse());
+    }
+
+    public GetStatisticsRecordsByFeeIdResponse getStatisticsRecordsByFeeId(GetStatisticsRecordsByFeeIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getStatisticsRecordsByFeeIdWithOptions(request, runtime);
     }
 
     public GetTaskResponse getTaskWithOptions(GetTaskRequest request, RuntimeOptions runtime) throws Exception {
@@ -3164,6 +3226,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
             query.put("Duration", request.duration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.feeId)) {
+            query.put("FeeId", request.feeId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.metaUrl)) {

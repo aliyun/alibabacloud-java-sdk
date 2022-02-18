@@ -63,6 +63,9 @@ public class GetAppResponseBody extends TeaModel {
         @NameInMap("Disabled")
         public String disabled;
 
+        @NameInMap("FeeId")
+        public String feeId;
+
         @NameInMap("Name")
         public String name;
 
@@ -93,6 +96,14 @@ public class GetAppResponseBody extends TeaModel {
         }
         public String getDisabled() {
             return this.disabled;
+        }
+
+        public GetAppResponseBodyData setFeeId(String feeId) {
+            this.feeId = feeId;
+            return this;
+        }
+        public String getFeeId() {
+            return this.feeId;
         }
 
         public GetAppResponseBodyData setName(String name) {
