@@ -19,6 +19,9 @@ public class UploadReportRequest extends TeaModel {
     @NameInMap("Duration")
     public Long duration;
 
+    @NameInMap("FeeId")
+    public String feeId;
+
     @NameInMap("MetaUrl")
     public String metaUrl;
 
@@ -84,6 +87,14 @@ public class UploadReportRequest extends TeaModel {
     }
     public Long getDuration() {
         return this.duration;
+    }
+
+    public UploadReportRequest setFeeId(String feeId) {
+        this.feeId = feeId;
+        return this;
+    }
+    public String getFeeId() {
+        return this.feeId;
     }
 
     public UploadReportRequest setMetaUrl(String metaUrl) {

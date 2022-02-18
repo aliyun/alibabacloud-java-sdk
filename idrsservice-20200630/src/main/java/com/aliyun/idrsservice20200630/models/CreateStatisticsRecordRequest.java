@@ -25,6 +25,9 @@ public class CreateStatisticsRecordRequest extends TeaModel {
     @NameInMap("EndAt")
     public String endAt;
 
+    @NameInMap("FeeId")
+    public String feeId;
+
     @NameInMap("Type")
     public String type;
 
@@ -87,6 +90,14 @@ public class CreateStatisticsRecordRequest extends TeaModel {
     }
     public String getEndAt() {
         return this.endAt;
+    }
+
+    public CreateStatisticsRecordRequest setFeeId(String feeId) {
+        this.feeId = feeId;
+        return this;
+    }
+    public String getFeeId() {
+        return this.feeId;
     }
 
     public CreateStatisticsRecordRequest setType(String type) {
