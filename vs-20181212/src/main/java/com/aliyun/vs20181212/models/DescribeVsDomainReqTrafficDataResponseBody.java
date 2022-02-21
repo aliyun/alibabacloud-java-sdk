@@ -4,59 +4,27 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainReqTrafficDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("DataInterval")
-    public String dataInterval;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("ReqTrafficDataPerInterval")
     public DescribeVsDomainReqTrafficDataResponseBodyReqTrafficDataPerInterval reqTrafficDataPerInterval;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeVsDomainReqTrafficDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsDomainReqTrafficDataResponseBody self = new DescribeVsDomainReqTrafficDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsDomainReqTrafficDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeVsDomainReqTrafficDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeVsDomainReqTrafficDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeVsDomainReqTrafficDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DescribeVsDomainReqTrafficDataResponseBody setDataInterval(String dataInterval) {
@@ -67,12 +35,44 @@ public class DescribeVsDomainReqTrafficDataResponseBody extends TeaModel {
         return this.dataInterval;
     }
 
+    public DescribeVsDomainReqTrafficDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeVsDomainReqTrafficDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public DescribeVsDomainReqTrafficDataResponseBody setReqTrafficDataPerInterval(DescribeVsDomainReqTrafficDataResponseBodyReqTrafficDataPerInterval reqTrafficDataPerInterval) {
         this.reqTrafficDataPerInterval = reqTrafficDataPerInterval;
         return this;
     }
     public DescribeVsDomainReqTrafficDataResponseBodyReqTrafficDataPerInterval getReqTrafficDataPerInterval() {
         return this.reqTrafficDataPerInterval;
+    }
+
+    public DescribeVsDomainReqTrafficDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeVsDomainReqTrafficDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public static class DescribeVsDomainReqTrafficDataResponseBodyReqTrafficDataPerIntervalDataModule extends TeaModel {

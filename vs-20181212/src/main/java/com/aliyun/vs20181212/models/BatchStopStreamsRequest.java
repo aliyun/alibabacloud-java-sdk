@@ -4,11 +4,11 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchStopStreamsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("Id")
     public String id;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("StartTime")
     public String startTime;
@@ -18,20 +18,20 @@ public class BatchStopStreamsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public BatchStopStreamsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public BatchStopStreamsRequest setId(String id) {
         this.id = id;
         return this;
     }
     public String getId() {
         return this.id;
+    }
+
+    public BatchStopStreamsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public BatchStopStreamsRequest setStartTime(String startTime) {

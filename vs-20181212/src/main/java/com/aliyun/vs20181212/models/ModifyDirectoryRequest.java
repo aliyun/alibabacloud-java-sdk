@@ -4,8 +4,8 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ModifyDirectoryRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("Id")
     public String id;
@@ -13,20 +13,20 @@ public class ModifyDirectoryRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static ModifyDirectoryRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDirectoryRequest self = new ModifyDirectoryRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDirectoryRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ModifyDirectoryRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getDescription() {
+        return this.description;
     }
 
     public ModifyDirectoryRequest setId(String id) {
@@ -45,12 +45,12 @@ public class ModifyDirectoryRequest extends TeaModel {
         return this.name;
     }
 
-    public ModifyDirectoryRequest setDescription(String description) {
-        this.description = description;
+    public ModifyDirectoryRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeStreamsResponseBody extends TeaModel {
+    @NameInMap("PageCount")
+    public Long pageCount;
+
     @NameInMap("PageNum")
     public Long pageNum;
 
@@ -13,18 +16,23 @@ public class DescribeStreamsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
-    @NameInMap("PageCount")
-    public Long pageCount;
-
     @NameInMap("Streams")
     public java.util.List<DescribeStreamsResponseBodyStreams> streams;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeStreamsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeStreamsResponseBody self = new DescribeStreamsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeStreamsResponseBody setPageCount(Long pageCount) {
+        this.pageCount = pageCount;
+        return this;
+    }
+    public Long getPageCount() {
+        return this.pageCount;
     }
 
     public DescribeStreamsResponseBody setPageNum(Long pageNum) {
@@ -51,22 +59,6 @@ public class DescribeStreamsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeStreamsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeStreamsResponseBody setPageCount(Long pageCount) {
-        this.pageCount = pageCount;
-        return this;
-    }
-    public Long getPageCount() {
-        return this.pageCount;
-    }
-
     public DescribeStreamsResponseBody setStreams(java.util.List<DescribeStreamsResponseBodyStreams> streams) {
         this.streams = streams;
         return this;
@@ -75,9 +67,38 @@ public class DescribeStreamsResponseBody extends TeaModel {
         return this.streams;
     }
 
+    public DescribeStreamsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeStreamsResponseBodyStreams extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("App")
+        public String app;
+
+        @NameInMap("CreatedTime")
+        public String createdTime;
+
+        @NameInMap("DeviceId")
+        public String deviceId;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("Height")
+        public Integer height;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("PlayDomain")
         public String playDomain;
@@ -85,47 +106,82 @@ public class DescribeStreamsResponseBody extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
-        @NameInMap("DeviceId")
-        public String deviceId;
-
-        @NameInMap("Height")
-        public Integer height;
-
-        @NameInMap("GroupId")
-        public String groupId;
-
-        @NameInMap("App")
-        public String app;
-
-        @NameInMap("Width")
-        public Integer width;
-
-        @NameInMap("Enabled")
-        public Boolean enabled;
-
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("PushDomain")
         public String pushDomain;
 
-        @NameInMap("CreatedTime")
-        public String createdTime;
+        @NameInMap("Status")
+        public String status;
 
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("Width")
+        public Integer width;
 
         public static DescribeStreamsResponseBodyStreams build(java.util.Map<String, ?> map) throws Exception {
             DescribeStreamsResponseBodyStreams self = new DescribeStreamsResponseBodyStreams();
             return TeaModel.build(map, self);
         }
 
-        public DescribeStreamsResponseBodyStreams setStatus(String status) {
-            this.status = status;
+        public DescribeStreamsResponseBodyStreams setApp(String app) {
+            this.app = app;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getApp() {
+            return this.app;
+        }
+
+        public DescribeStreamsResponseBodyStreams setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
+            return this;
+        }
+        public String getCreatedTime() {
+            return this.createdTime;
+        }
+
+        public DescribeStreamsResponseBodyStreams setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
+        public DescribeStreamsResponseBodyStreams setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public DescribeStreamsResponseBodyStreams setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public DescribeStreamsResponseBodyStreams setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        public DescribeStreamsResponseBodyStreams setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeStreamsResponseBodyStreams setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public DescribeStreamsResponseBodyStreams setPlayDomain(String playDomain) {
@@ -144,62 +200,6 @@ public class DescribeStreamsResponseBody extends TeaModel {
             return this.protocol;
         }
 
-        public DescribeStreamsResponseBodyStreams setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
-        }
-
-        public DescribeStreamsResponseBodyStreams setHeight(Integer height) {
-            this.height = height;
-            return this;
-        }
-        public Integer getHeight() {
-            return this.height;
-        }
-
-        public DescribeStreamsResponseBodyStreams setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
-        public DescribeStreamsResponseBodyStreams setApp(String app) {
-            this.app = app;
-            return this;
-        }
-        public String getApp() {
-            return this.app;
-        }
-
-        public DescribeStreamsResponseBodyStreams setWidth(Integer width) {
-            this.width = width;
-            return this;
-        }
-        public Integer getWidth() {
-            return this.width;
-        }
-
-        public DescribeStreamsResponseBodyStreams setEnabled(Boolean enabled) {
-            this.enabled = enabled;
-            return this;
-        }
-        public Boolean getEnabled() {
-            return this.enabled;
-        }
-
-        public DescribeStreamsResponseBodyStreams setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public DescribeStreamsResponseBodyStreams setPushDomain(String pushDomain) {
             this.pushDomain = pushDomain;
             return this;
@@ -208,20 +208,20 @@ public class DescribeStreamsResponseBody extends TeaModel {
             return this.pushDomain;
         }
 
-        public DescribeStreamsResponseBodyStreams setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
+        public DescribeStreamsResponseBodyStreams setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getCreatedTime() {
-            return this.createdTime;
+        public String getStatus() {
+            return this.status;
         }
 
-        public DescribeStreamsResponseBodyStreams setId(String id) {
-            this.id = id;
+        public DescribeStreamsResponseBodyStreams setWidth(Integer width) {
+            this.width = width;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public Integer getWidth() {
+            return this.width;
         }
 
     }

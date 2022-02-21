@@ -32,23 +32,15 @@ public class BatchUnbindPurchasedDevicesResponseBody extends TeaModel {
     }
 
     public static class BatchUnbindPurchasedDevicesResponseBodyResults extends TeaModel {
-        @NameInMap("Error")
-        public String error;
-
         @NameInMap("DeviceId")
         public String deviceId;
+
+        @NameInMap("Error")
+        public String error;
 
         public static BatchUnbindPurchasedDevicesResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             BatchUnbindPurchasedDevicesResponseBodyResults self = new BatchUnbindPurchasedDevicesResponseBodyResults();
             return TeaModel.build(map, self);
-        }
-
-        public BatchUnbindPurchasedDevicesResponseBodyResults setError(String error) {
-            this.error = error;
-            return this;
-        }
-        public String getError() {
-            return this.error;
         }
 
         public BatchUnbindPurchasedDevicesResponseBodyResults setDeviceId(String deviceId) {
@@ -57,6 +49,14 @@ public class BatchUnbindPurchasedDevicesResponseBody extends TeaModel {
         }
         public String getDeviceId() {
             return this.deviceId;
+        }
+
+        public BatchUnbindPurchasedDevicesResponseBodyResults setError(String error) {
+            this.error = error;
+            return this;
+        }
+        public String getError() {
+            return this.error;
         }
 
     }

@@ -4,11 +4,11 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class StopMoveRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("Id")
     public String id;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Pan")
     public Boolean pan;
@@ -19,20 +19,9 @@ public class StopMoveRequest extends TeaModel {
     @NameInMap("Zoom")
     public Boolean zoom;
 
-    @NameInMap("SubProtocol")
-    public String subProtocol;
-
     public static StopMoveRequest build(java.util.Map<String, ?> map) throws Exception {
         StopMoveRequest self = new StopMoveRequest();
         return TeaModel.build(map, self);
-    }
-
-    public StopMoveRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public StopMoveRequest setId(String id) {
@@ -41,6 +30,14 @@ public class StopMoveRequest extends TeaModel {
     }
     public String getId() {
         return this.id;
+    }
+
+    public StopMoveRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public StopMoveRequest setPan(Boolean pan) {
@@ -65,14 +62,6 @@ public class StopMoveRequest extends TeaModel {
     }
     public Boolean getZoom() {
         return this.zoom;
-    }
-
-    public StopMoveRequest setSubProtocol(String subProtocol) {
-        this.subProtocol = subProtocol;
-        return this;
-    }
-    public String getSubProtocol() {
-        return this.subProtocol;
     }
 
 }

@@ -4,6 +4,12 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribePurchasedDevicesResponseBody extends TeaModel {
+    @NameInMap("Devices")
+    public java.util.List<DescribePurchasedDevicesResponseBodyDevices> devices;
+
+    @NameInMap("PageCount")
+    public Long pageCount;
+
     @NameInMap("PageNum")
     public Long pageNum;
 
@@ -16,15 +22,25 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    @NameInMap("PageCount")
-    public Long pageCount;
-
-    @NameInMap("Devices")
-    public java.util.List<DescribePurchasedDevicesResponseBodyDevices> devices;
-
     public static DescribePurchasedDevicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePurchasedDevicesResponseBody self = new DescribePurchasedDevicesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePurchasedDevicesResponseBody setDevices(java.util.List<DescribePurchasedDevicesResponseBodyDevices> devices) {
+        this.devices = devices;
+        return this;
+    }
+    public java.util.List<DescribePurchasedDevicesResponseBodyDevices> getDevices() {
+        return this.devices;
+    }
+
+    public DescribePurchasedDevicesResponseBody setPageCount(Long pageCount) {
+        this.pageCount = pageCount;
+        return this;
+    }
+    public Long getPageCount() {
+        return this.pageCount;
     }
 
     public DescribePurchasedDevicesResponseBody setPageNum(Long pageNum) {
@@ -59,37 +75,12 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribePurchasedDevicesResponseBody setPageCount(Long pageCount) {
-        this.pageCount = pageCount;
-        return this;
-    }
-    public Long getPageCount() {
-        return this.pageCount;
-    }
-
-    public DescribePurchasedDevicesResponseBody setDevices(java.util.List<DescribePurchasedDevicesResponseBodyDevices> devices) {
-        this.devices = devices;
-        return this;
-    }
-    public java.util.List<DescribePurchasedDevicesResponseBodyDevices> getDevices() {
-        return this.devices;
-    }
-
     public static class DescribePurchasedDevicesResponseBodyDevices extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("SubType")
-        public String subType;
-
-        @NameInMap("Vendor")
-        public String vendor;
+        @NameInMap("CreatedTime")
+        public String createdTime;
 
         @NameInMap("Description")
         public String description;
-
-        @NameInMap("RegisterCode")
-        public String registerCode;
 
         @NameInMap("GroupId")
         public String groupId;
@@ -97,48 +88,41 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
-        @NameInMap("Region")
-        public String region;
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("CreatedTime")
-        public String createdTime;
-
-        @NameInMap("Id")
-        public String id;
-
         @NameInMap("OrderId")
         public String orderId;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("RegisterCode")
+        public String registerCode;
+
+        @NameInMap("SubType")
+        public String subType;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Vendor")
+        public String vendor;
 
         public static DescribePurchasedDevicesResponseBodyDevices build(java.util.Map<String, ?> map) throws Exception {
             DescribePurchasedDevicesResponseBodyDevices self = new DescribePurchasedDevicesResponseBodyDevices();
             return TeaModel.build(map, self);
         }
 
-        public DescribePurchasedDevicesResponseBodyDevices setType(String type) {
-            this.type = type;
+        public DescribePurchasedDevicesResponseBodyDevices setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
             return this;
         }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribePurchasedDevicesResponseBodyDevices setSubType(String subType) {
-            this.subType = subType;
-            return this;
-        }
-        public String getSubType() {
-            return this.subType;
-        }
-
-        public DescribePurchasedDevicesResponseBodyDevices setVendor(String vendor) {
-            this.vendor = vendor;
-            return this;
-        }
-        public String getVendor() {
-            return this.vendor;
+        public String getCreatedTime() {
+            return this.createdTime;
         }
 
         public DescribePurchasedDevicesResponseBodyDevices setDescription(String description) {
@@ -147,14 +131,6 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public DescribePurchasedDevicesResponseBodyDevices setRegisterCode(String registerCode) {
-            this.registerCode = registerCode;
-            return this;
-        }
-        public String getRegisterCode() {
-            return this.registerCode;
         }
 
         public DescribePurchasedDevicesResponseBodyDevices setGroupId(String groupId) {
@@ -173,12 +149,12 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
             return this.groupName;
         }
 
-        public DescribePurchasedDevicesResponseBodyDevices setRegion(String region) {
-            this.region = region;
+        public DescribePurchasedDevicesResponseBodyDevices setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getRegion() {
-            return this.region;
+        public String getId() {
+            return this.id;
         }
 
         public DescribePurchasedDevicesResponseBodyDevices setName(String name) {
@@ -189,28 +165,52 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribePurchasedDevicesResponseBodyDevices setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
-            return this;
-        }
-        public String getCreatedTime() {
-            return this.createdTime;
-        }
-
-        public DescribePurchasedDevicesResponseBodyDevices setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
         public DescribePurchasedDevicesResponseBodyDevices setOrderId(String orderId) {
             this.orderId = orderId;
             return this;
         }
         public String getOrderId() {
             return this.orderId;
+        }
+
+        public DescribePurchasedDevicesResponseBodyDevices setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribePurchasedDevicesResponseBodyDevices setRegisterCode(String registerCode) {
+            this.registerCode = registerCode;
+            return this;
+        }
+        public String getRegisterCode() {
+            return this.registerCode;
+        }
+
+        public DescribePurchasedDevicesResponseBodyDevices setSubType(String subType) {
+            this.subType = subType;
+            return this;
+        }
+        public String getSubType() {
+            return this.subType;
+        }
+
+        public DescribePurchasedDevicesResponseBodyDevices setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribePurchasedDevicesResponseBodyDevices setVendor(String vendor) {
+            this.vendor = vendor;
+            return this;
+        }
+        public String getVendor() {
+            return this.vendor;
         }
 
     }

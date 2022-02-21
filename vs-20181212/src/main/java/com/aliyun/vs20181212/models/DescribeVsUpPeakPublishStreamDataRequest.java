@@ -4,24 +4,48 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsUpPeakPublishStreamDataRequest extends TeaModel {
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("DomainSwitch")
+    public String domainSwitch;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("DomainSwitch")
-    public String domainSwitch;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
     public static DescribeVsUpPeakPublishStreamDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsUpPeakPublishStreamDataRequest self = new DescribeVsUpPeakPublishStreamDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVsUpPeakPublishStreamDataRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeVsUpPeakPublishStreamDataRequest setDomainSwitch(String domainSwitch) {
+        this.domainSwitch = domainSwitch;
+        return this;
+    }
+    public String getDomainSwitch() {
+        return this.domainSwitch;
+    }
+
+    public DescribeVsUpPeakPublishStreamDataRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeVsUpPeakPublishStreamDataRequest setOwnerId(Long ownerId) {
@@ -38,30 +62,6 @@ public class DescribeVsUpPeakPublishStreamDataRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeVsUpPeakPublishStreamDataRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeVsUpPeakPublishStreamDataRequest setDomainSwitch(String domainSwitch) {
-        this.domainSwitch = domainSwitch;
-        return this;
-    }
-    public String getDomainSwitch() {
-        return this.domainSwitch;
-    }
-
-    public DescribeVsUpPeakPublishStreamDataRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
 }

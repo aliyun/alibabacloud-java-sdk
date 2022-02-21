@@ -4,32 +4,32 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateDeviceAlarmResponseBody extends TeaModel {
-    @NameInMap("Url")
-    public String url;
+    @NameInMap("AlarmDelay")
+    public Long alarmDelay;
 
     @NameInMap("AlarmId")
     public String alarmId;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Expire")
     public Long expire;
 
-    @NameInMap("AlarmDelay")
-    public Long alarmDelay;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Url")
+    public String url;
 
     public static CreateDeviceAlarmResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDeviceAlarmResponseBody self = new CreateDeviceAlarmResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateDeviceAlarmResponseBody setUrl(String url) {
-        this.url = url;
+    public CreateDeviceAlarmResponseBody setAlarmDelay(Long alarmDelay) {
+        this.alarmDelay = alarmDelay;
         return this;
     }
-    public String getUrl() {
-        return this.url;
+    public Long getAlarmDelay() {
+        return this.alarmDelay;
     }
 
     public CreateDeviceAlarmResponseBody setAlarmId(String alarmId) {
@@ -40,14 +40,6 @@ public class CreateDeviceAlarmResponseBody extends TeaModel {
         return this.alarmId;
     }
 
-    public CreateDeviceAlarmResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateDeviceAlarmResponseBody setExpire(Long expire) {
         this.expire = expire;
         return this;
@@ -56,12 +48,20 @@ public class CreateDeviceAlarmResponseBody extends TeaModel {
         return this.expire;
     }
 
-    public CreateDeviceAlarmResponseBody setAlarmDelay(Long alarmDelay) {
-        this.alarmDelay = alarmDelay;
+    public CreateDeviceAlarmResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Long getAlarmDelay() {
-        return this.alarmDelay;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateDeviceAlarmResponseBody setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
     }
 
 }

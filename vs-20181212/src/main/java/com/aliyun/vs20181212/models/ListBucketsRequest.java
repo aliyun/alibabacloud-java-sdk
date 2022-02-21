@@ -4,17 +4,14 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListBucketsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("Prefix")
-    public String prefix;
-
     @NameInMap("Keyword")
     public String keyword;
 
     @NameInMap("Marker")
     public String marker;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -22,25 +19,12 @@ public class ListBucketsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Prefix")
+    public String prefix;
+
     public static ListBucketsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListBucketsRequest self = new ListBucketsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListBucketsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ListBucketsRequest setPrefix(String prefix) {
-        this.prefix = prefix;
-        return this;
-    }
-    public String getPrefix() {
-        return this.prefix;
     }
 
     public ListBucketsRequest setKeyword(String keyword) {
@@ -59,6 +43,14 @@ public class ListBucketsRequest extends TeaModel {
         return this.marker;
     }
 
+    public ListBucketsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public ListBucketsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -73,6 +65,14 @@ public class ListBucketsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListBucketsRequest setPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    public String getPrefix() {
+        return this.prefix;
     }
 
 }

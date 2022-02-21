@@ -4,6 +4,12 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class UnbindTemplateRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("InstanceType")
+    public String instanceType;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class UnbindTemplateRequest extends TeaModel {
     @NameInMap("TemplateType")
     public String templateType;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("InstanceType")
-    public String instanceType;
-
     public static UnbindTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindTemplateRequest self = new UnbindTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UnbindTemplateRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public UnbindTemplateRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public UnbindTemplateRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class UnbindTemplateRequest extends TeaModel {
     }
     public String getTemplateType() {
         return this.templateType;
-    }
-
-    public UnbindTemplateRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public UnbindTemplateRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public String getInstanceType() {
-        return this.instanceType;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LiveStreamsNotifyConfig")
     public DescribeVsStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig liveStreamsNotifyConfig;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeVsStreamsNotifyUrlConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsStreamsNotifyUrlConfigResponseBody self = new DescribeVsStreamsNotifyUrlConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsStreamsNotifyUrlConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeVsStreamsNotifyUrlConfigResponseBody setLiveStreamsNotifyConfig(DescribeVsStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig liveStreamsNotifyConfig) {
@@ -31,12 +23,20 @@ public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
         return this.liveStreamsNotifyConfig;
     }
 
-    public static class DescribeVsStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig extends TeaModel {
-        @NameInMap("AuthType")
-        public String authType;
+    public DescribeVsStreamsNotifyUrlConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeVsStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig extends TeaModel {
         @NameInMap("AuthKey")
         public String authKey;
+
+        @NameInMap("AuthType")
+        public String authType;
 
         @NameInMap("DomainName")
         public String domainName;
@@ -49,20 +49,20 @@ public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeVsStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig setAuthType(String authType) {
-            this.authType = authType;
-            return this;
-        }
-        public String getAuthType() {
-            return this.authType;
-        }
-
         public DescribeVsStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig setAuthKey(String authKey) {
             this.authKey = authKey;
             return this;
         }
         public String getAuthKey() {
             return this.authKey;
+        }
+
+        public DescribeVsStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig setAuthType(String authType) {
+            this.authType = authType;
+            return this;
+        }
+        public String getAuthType() {
+            return this.authType;
         }
 
         public DescribeVsStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig setDomainName(String domainName) {

@@ -4,8 +4,8 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ContinuousAdjustRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("Focus")
+    public String focus;
 
     @NameInMap("Id")
     public String id;
@@ -13,23 +13,20 @@ public class ContinuousAdjustRequest extends TeaModel {
     @NameInMap("Iris")
     public String iris;
 
-    @NameInMap("Focus")
-    public String focus;
-
-    @NameInMap("SubProtocol")
-    public String subProtocol;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static ContinuousAdjustRequest build(java.util.Map<String, ?> map) throws Exception {
         ContinuousAdjustRequest self = new ContinuousAdjustRequest();
         return TeaModel.build(map, self);
     }
 
-    public ContinuousAdjustRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ContinuousAdjustRequest setFocus(String focus) {
+        this.focus = focus;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getFocus() {
+        return this.focus;
     }
 
     public ContinuousAdjustRequest setId(String id) {
@@ -48,20 +45,12 @@ public class ContinuousAdjustRequest extends TeaModel {
         return this.iris;
     }
 
-    public ContinuousAdjustRequest setFocus(String focus) {
-        this.focus = focus;
+    public ContinuousAdjustRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getFocus() {
-        return this.focus;
-    }
-
-    public ContinuousAdjustRequest setSubProtocol(String subProtocol) {
-        this.subProtocol = subProtocol;
-        return this;
-    }
-    public String getSubProtocol() {
-        return this.subProtocol;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

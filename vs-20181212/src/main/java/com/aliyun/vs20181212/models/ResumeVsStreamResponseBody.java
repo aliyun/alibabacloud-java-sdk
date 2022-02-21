@@ -40,8 +40,8 @@ public class ResumeVsStreamResponseBody extends TeaModel {
     }
 
     public static class BatchResumeVsStreamResponseBodyResumeResultResumeResultInfo extends TeaModel {
-        @NameInMap("Result")
-        public String result;
+        @NameInMap("Channels")
+        public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfoChannels channels;
 
         @NameInMap("Count")
         public Integer count;
@@ -49,20 +49,20 @@ public class ResumeVsStreamResponseBody extends TeaModel {
         @NameInMap("Detail")
         public String detail;
 
-        @NameInMap("Channels")
-        public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfoChannels channels;
+        @NameInMap("Result")
+        public String result;
 
         public static BatchResumeVsStreamResponseBodyResumeResultResumeResultInfo build(java.util.Map<String, ?> map) throws Exception {
             BatchResumeVsStreamResponseBodyResumeResultResumeResultInfo self = new BatchResumeVsStreamResponseBodyResumeResultResumeResultInfo();
             return TeaModel.build(map, self);
         }
 
-        public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfo setResult(String result) {
-            this.result = result;
+        public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfo setChannels(BatchResumeVsStreamResponseBodyResumeResultResumeResultInfoChannels channels) {
+            this.channels = channels;
             return this;
         }
-        public String getResult() {
-            return this.result;
+        public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfoChannels getChannels() {
+            return this.channels;
         }
 
         public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfo setCount(Integer count) {
@@ -81,12 +81,12 @@ public class ResumeVsStreamResponseBody extends TeaModel {
             return this.detail;
         }
 
-        public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfo setChannels(BatchResumeVsStreamResponseBodyResumeResultResumeResultInfoChannels channels) {
-            this.channels = channels;
+        public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfo setResult(String result) {
+            this.result = result;
             return this;
         }
-        public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfoChannels getChannels() {
-            return this.channels;
+        public String getResult() {
+            return this.result;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsCertificateDetailRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("CertName")
     public String certName;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static DescribeVsCertificateDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsCertificateDetailRequest self = new DescribeVsCertificateDetailRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsCertificateDetailRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeVsCertificateDetailRequest setCertName(String certName) {
@@ -29,6 +21,14 @@ public class DescribeVsCertificateDetailRequest extends TeaModel {
     }
     public String getCertName() {
         return this.certName;
+    }
+
+    public DescribeVsCertificateDetailRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

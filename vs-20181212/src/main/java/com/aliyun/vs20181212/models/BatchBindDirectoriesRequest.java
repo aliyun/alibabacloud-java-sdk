@@ -4,26 +4,26 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchBindDirectoriesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("DeviceId")
+    public String deviceId;
 
     @NameInMap("DirectoryId")
     public String directoryId;
 
-    @NameInMap("DeviceId")
-    public String deviceId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static BatchBindDirectoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchBindDirectoriesRequest self = new BatchBindDirectoriesRequest();
         return TeaModel.build(map, self);
     }
 
-    public BatchBindDirectoriesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public BatchBindDirectoriesRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getDeviceId() {
+        return this.deviceId;
     }
 
     public BatchBindDirectoriesRequest setDirectoryId(String directoryId) {
@@ -34,12 +34,12 @@ public class BatchBindDirectoriesRequest extends TeaModel {
         return this.directoryId;
     }
 
-    public BatchBindDirectoriesRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
+    public BatchBindDirectoriesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getDeviceId() {
-        return this.deviceId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

@@ -4,26 +4,26 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeviceURLResponseBody extends TeaModel {
-    @NameInMap("Url")
-    public String url;
+    @NameInMap("ExpireTime")
+    public Long expireTime;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ExpireTime")
-    public Long expireTime;
+    @NameInMap("Url")
+    public String url;
 
     public static DescribeDeviceURLResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeviceURLResponseBody self = new DescribeDeviceURLResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDeviceURLResponseBody setUrl(String url) {
-        this.url = url;
+    public DescribeDeviceURLResponseBody setExpireTime(Long expireTime) {
+        this.expireTime = expireTime;
         return this;
     }
-    public String getUrl() {
-        return this.url;
+    public Long getExpireTime() {
+        return this.expireTime;
     }
 
     public DescribeDeviceURLResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class DescribeDeviceURLResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDeviceURLResponseBody setExpireTime(Long expireTime) {
-        this.expireTime = expireTime;
+    public DescribeDeviceURLResponseBody setUrl(String url) {
+        this.url = url;
         return this;
     }
-    public Long getExpireTime() {
-        return this.expireTime;
+    public String getUrl() {
+        return this.url;
     }
 
 }

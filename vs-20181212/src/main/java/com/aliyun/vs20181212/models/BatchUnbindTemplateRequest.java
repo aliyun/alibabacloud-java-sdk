@@ -4,6 +4,12 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchUnbindTemplateRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("InstanceType")
+    public String instanceType;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class BatchUnbindTemplateRequest extends TeaModel {
     @NameInMap("TemplateType")
     public String templateType;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("InstanceType")
-    public String instanceType;
-
     public static BatchUnbindTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchUnbindTemplateRequest self = new BatchUnbindTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchUnbindTemplateRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public BatchUnbindTemplateRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public BatchUnbindTemplateRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class BatchUnbindTemplateRequest extends TeaModel {
     }
     public String getTemplateType() {
         return this.templateType;
-    }
-
-    public BatchUnbindTemplateRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public BatchUnbindTemplateRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public String getInstanceType() {
-        return this.instanceType;
     }
 
 }

@@ -4,8 +4,8 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribePurchasedDevicesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("GroupId")
+    public String groupId;
 
     @NameInMap("Id")
     public String id;
@@ -13,17 +13,14 @@ public class DescribePurchasedDevicesRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Type")
-    public String type;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
-    @NameInMap("SubType")
-    public String subType;
+    @NameInMap("PageNum")
+    public Long pageNum;
 
-    @NameInMap("GroupId")
-    public String groupId;
-
-    @NameInMap("Vendor")
-    public String vendor;
+    @NameInMap("PageSize")
+    public Long pageSize;
 
     @NameInMap("SortBy")
     public String sortBy;
@@ -31,23 +28,26 @@ public class DescribePurchasedDevicesRequest extends TeaModel {
     @NameInMap("SortDirection")
     public String sortDirection;
 
-    @NameInMap("PageSize")
-    public Long pageSize;
+    @NameInMap("SubType")
+    public String subType;
 
-    @NameInMap("PageNum")
-    public Long pageNum;
+    @NameInMap("Type")
+    public String type;
+
+    @NameInMap("Vendor")
+    public String vendor;
 
     public static DescribePurchasedDevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePurchasedDevicesRequest self = new DescribePurchasedDevicesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribePurchasedDevicesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribePurchasedDevicesRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public DescribePurchasedDevicesRequest setId(String id) {
@@ -66,36 +66,28 @@ public class DescribePurchasedDevicesRequest extends TeaModel {
         return this.name;
     }
 
-    public DescribePurchasedDevicesRequest setType(String type) {
-        this.type = type;
+    public DescribePurchasedDevicesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
-    public DescribePurchasedDevicesRequest setSubType(String subType) {
-        this.subType = subType;
+    public DescribePurchasedDevicesRequest setPageNum(Long pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getSubType() {
-        return this.subType;
+    public Long getPageNum() {
+        return this.pageNum;
     }
 
-    public DescribePurchasedDevicesRequest setGroupId(String groupId) {
-        this.groupId = groupId;
+    public DescribePurchasedDevicesRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getGroupId() {
-        return this.groupId;
-    }
-
-    public DescribePurchasedDevicesRequest setVendor(String vendor) {
-        this.vendor = vendor;
-        return this;
-    }
-    public String getVendor() {
-        return this.vendor;
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public DescribePurchasedDevicesRequest setSortBy(String sortBy) {
@@ -114,20 +106,28 @@ public class DescribePurchasedDevicesRequest extends TeaModel {
         return this.sortDirection;
     }
 
-    public DescribePurchasedDevicesRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
+    public DescribePurchasedDevicesRequest setSubType(String subType) {
+        this.subType = subType;
         return this;
     }
-    public Long getPageSize() {
-        return this.pageSize;
+    public String getSubType() {
+        return this.subType;
     }
 
-    public DescribePurchasedDevicesRequest setPageNum(Long pageNum) {
-        this.pageNum = pageNum;
+    public DescribePurchasedDevicesRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public Long getPageNum() {
-        return this.pageNum;
+    public String getType() {
+        return this.type;
+    }
+
+    public DescribePurchasedDevicesRequest setVendor(String vendor) {
+        this.vendor = vendor;
+        return this;
+    }
+    public String getVendor() {
+        return this.vendor;
     }
 
 }

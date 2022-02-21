@@ -4,17 +4,8 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountStatResponseBody extends TeaModel {
-    @NameInMap("TemplateNum")
-    public Long templateNum;
-
     @NameInMap("GroupLimit")
     public Long groupLimit;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("TemplateLimit")
-    public Long templateLimit;
 
     @NameInMap("GroupNum")
     public Long groupNum;
@@ -22,17 +13,18 @@ public class DescribeAccountStatResponseBody extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TemplateLimit")
+    public Long templateLimit;
+
+    @NameInMap("TemplateNum")
+    public Long templateNum;
+
     public static DescribeAccountStatResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccountStatResponseBody self = new DescribeAccountStatResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAccountStatResponseBody setTemplateNum(Long templateNum) {
-        this.templateNum = templateNum;
-        return this;
-    }
-    public Long getTemplateNum() {
-        return this.templateNum;
     }
 
     public DescribeAccountStatResponseBody setGroupLimit(Long groupLimit) {
@@ -41,6 +33,22 @@ public class DescribeAccountStatResponseBody extends TeaModel {
     }
     public Long getGroupLimit() {
         return this.groupLimit;
+    }
+
+    public DescribeAccountStatResponseBody setGroupNum(Long groupNum) {
+        this.groupNum = groupNum;
+        return this;
+    }
+    public Long getGroupNum() {
+        return this.groupNum;
+    }
+
+    public DescribeAccountStatResponseBody setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
     public DescribeAccountStatResponseBody setRequestId(String requestId) {
@@ -59,20 +67,12 @@ public class DescribeAccountStatResponseBody extends TeaModel {
         return this.templateLimit;
     }
 
-    public DescribeAccountStatResponseBody setGroupNum(Long groupNum) {
-        this.groupNum = groupNum;
+    public DescribeAccountStatResponseBody setTemplateNum(Long templateNum) {
+        this.templateNum = templateNum;
         return this;
     }
-    public Long getGroupNum() {
-        return this.groupNum;
-    }
-
-    public DescribeAccountStatResponseBody setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
+    public Long getTemplateNum() {
+        return this.templateNum;
     }
 
 }

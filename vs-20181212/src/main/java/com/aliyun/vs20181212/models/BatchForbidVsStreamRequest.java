@@ -4,14 +4,14 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchForbidVsStreamRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("Channel")
+    public String channel;
+
+    @NameInMap("ControlStreamAction")
+    public String controlStreamAction;
 
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("Channel")
-    public String channel;
 
     @NameInMap("LiveStreamType")
     public String liveStreamType;
@@ -19,8 +19,8 @@ public class BatchForbidVsStreamRequest extends TeaModel {
     @NameInMap("Oneshot")
     public String oneshot;
 
-    @NameInMap("ControlStreamAction")
-    public String controlStreamAction;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("ResumeTime")
     public String resumeTime;
@@ -30,12 +30,20 @@ public class BatchForbidVsStreamRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public BatchForbidVsStreamRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public BatchForbidVsStreamRequest setChannel(String channel) {
+        this.channel = channel;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getChannel() {
+        return this.channel;
+    }
+
+    public BatchForbidVsStreamRequest setControlStreamAction(String controlStreamAction) {
+        this.controlStreamAction = controlStreamAction;
+        return this;
+    }
+    public String getControlStreamAction() {
+        return this.controlStreamAction;
     }
 
     public BatchForbidVsStreamRequest setDomainName(String domainName) {
@@ -44,14 +52,6 @@ public class BatchForbidVsStreamRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public BatchForbidVsStreamRequest setChannel(String channel) {
-        this.channel = channel;
-        return this;
-    }
-    public String getChannel() {
-        return this.channel;
     }
 
     public BatchForbidVsStreamRequest setLiveStreamType(String liveStreamType) {
@@ -70,12 +70,12 @@ public class BatchForbidVsStreamRequest extends TeaModel {
         return this.oneshot;
     }
 
-    public BatchForbidVsStreamRequest setControlStreamAction(String controlStreamAction) {
-        this.controlStreamAction = controlStreamAction;
+    public BatchForbidVsStreamRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getControlStreamAction() {
-        return this.controlStreamAction;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public BatchForbidVsStreamRequest setResumeTime(String resumeTime) {

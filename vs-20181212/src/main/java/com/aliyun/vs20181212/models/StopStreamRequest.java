@@ -4,14 +4,14 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class StopStreamRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("Id")
     public String id;
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("StartTime")
     public String startTime;
@@ -19,14 +19,6 @@ public class StopStreamRequest extends TeaModel {
     public static StopStreamRequest build(java.util.Map<String, ?> map) throws Exception {
         StopStreamRequest self = new StopStreamRequest();
         return TeaModel.build(map, self);
-    }
-
-    public StopStreamRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public StopStreamRequest setId(String id) {
@@ -43,6 +35,14 @@ public class StopStreamRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public StopStreamRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public StopStreamRequest setStartTime(String startTime) {

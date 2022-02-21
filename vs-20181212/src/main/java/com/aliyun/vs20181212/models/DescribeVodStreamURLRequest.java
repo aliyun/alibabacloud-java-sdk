@@ -7,11 +7,11 @@ public class DescribeVodStreamURLRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("Url")
-    public String url;
-
     @NameInMap("TxId")
     public String txId;
+
+    @NameInMap("Url")
+    public String url;
 
     public static DescribeVodStreamURLRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodStreamURLRequest self = new DescribeVodStreamURLRequest();
@@ -26,20 +26,20 @@ public class DescribeVodStreamURLRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeVodStreamURLRequest setUrl(String url) {
-        this.url = url;
-        return this;
-    }
-    public String getUrl() {
-        return this.url;
-    }
-
     public DescribeVodStreamURLRequest setTxId(String txId) {
         this.txId = txId;
         return this;
     }
     public String getTxId() {
         return this.txId;
+    }
+
+    public DescribeVodStreamURLRequest setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
     }
 
 }

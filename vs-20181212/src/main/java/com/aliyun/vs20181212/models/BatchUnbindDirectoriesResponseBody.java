@@ -32,26 +32,26 @@ public class BatchUnbindDirectoriesResponseBody extends TeaModel {
     }
 
     public static class BatchUnbindDirectoriesResponseBodyResults extends TeaModel {
-        @NameInMap("Error")
-        public String error;
+        @NameInMap("DeviceId")
+        public String deviceId;
 
         @NameInMap("DirectoryId")
         public String directoryId;
 
-        @NameInMap("DeviceId")
-        public String deviceId;
+        @NameInMap("Error")
+        public String error;
 
         public static BatchUnbindDirectoriesResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             BatchUnbindDirectoriesResponseBodyResults self = new BatchUnbindDirectoriesResponseBodyResults();
             return TeaModel.build(map, self);
         }
 
-        public BatchUnbindDirectoriesResponseBodyResults setError(String error) {
-            this.error = error;
+        public BatchUnbindDirectoriesResponseBodyResults setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
             return this;
         }
-        public String getError() {
-            return this.error;
+        public String getDeviceId() {
+            return this.deviceId;
         }
 
         public BatchUnbindDirectoriesResponseBodyResults setDirectoryId(String directoryId) {
@@ -62,12 +62,12 @@ public class BatchUnbindDirectoriesResponseBody extends TeaModel {
             return this.directoryId;
         }
 
-        public BatchUnbindDirectoriesResponseBodyResults setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
+        public BatchUnbindDirectoriesResponseBodyResults setError(String error) {
+            this.error = error;
             return this;
         }
-        public String getDeviceId() {
-            return this.deviceId;
+        public String getError() {
+            return this.error;
         }
 
     }

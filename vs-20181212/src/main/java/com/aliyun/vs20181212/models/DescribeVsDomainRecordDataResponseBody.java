@@ -4,56 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainRecordDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("RecordDataPerInterval")
+    public DescribeVsDomainRecordDataResponseBodyRecordDataPerInterval recordDataPerInterval;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
-    @NameInMap("RecordDataPerInterval")
-    public DescribeVsDomainRecordDataResponseBodyRecordDataPerInterval recordDataPerInterval;
-
     public static DescribeVsDomainRecordDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsDomainRecordDataResponseBody self = new DescribeVsDomainRecordDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsDomainRecordDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeVsDomainRecordDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeVsDomainRecordDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeVsDomainRecordDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DescribeVsDomainRecordDataResponseBody setRecordDataPerInterval(DescribeVsDomainRecordDataResponseBodyRecordDataPerInterval recordDataPerInterval) {
@@ -64,9 +23,20 @@ public class DescribeVsDomainRecordDataResponseBody extends TeaModel {
         return this.recordDataPerInterval;
     }
 
+    public DescribeVsDomainRecordDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeVsDomainRecordDataResponseBodyRecordDataPerIntervalDataModule extends TeaModel {
         @NameInMap("RecordValue")
         public String recordValue;
+
+        @NameInMap("StreamCountValue")
+        public String streamCountValue;
 
         @NameInMap("TimeStamp")
         public String timeStamp;
@@ -82,6 +52,14 @@ public class DescribeVsDomainRecordDataResponseBody extends TeaModel {
         }
         public String getRecordValue() {
             return this.recordValue;
+        }
+
+        public DescribeVsDomainRecordDataResponseBodyRecordDataPerIntervalDataModule setStreamCountValue(String streamCountValue) {
+            this.streamCountValue = streamCountValue;
+            return this;
+        }
+        public String getStreamCountValue() {
+            return this.streamCountValue;
         }
 
         public DescribeVsDomainRecordDataResponseBodyRecordDataPerIntervalDataModule setTimeStamp(String timeStamp) {

@@ -4,59 +4,27 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainReqBpsDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("DataInterval")
-    public String dataInterval;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("ReqBpsDataPerInterval")
     public DescribeVsDomainReqBpsDataResponseBodyReqBpsDataPerInterval reqBpsDataPerInterval;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeVsDomainReqBpsDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsDomainReqBpsDataResponseBody self = new DescribeVsDomainReqBpsDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsDomainReqBpsDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeVsDomainReqBpsDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeVsDomainReqBpsDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeVsDomainReqBpsDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DescribeVsDomainReqBpsDataResponseBody setDataInterval(String dataInterval) {
@@ -67,6 +35,22 @@ public class DescribeVsDomainReqBpsDataResponseBody extends TeaModel {
         return this.dataInterval;
     }
 
+    public DescribeVsDomainReqBpsDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeVsDomainReqBpsDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public DescribeVsDomainReqBpsDataResponseBody setReqBpsDataPerInterval(DescribeVsDomainReqBpsDataResponseBodyReqBpsDataPerInterval reqBpsDataPerInterval) {
         this.reqBpsDataPerInterval = reqBpsDataPerInterval;
         return this;
@@ -75,24 +59,32 @@ public class DescribeVsDomainReqBpsDataResponseBody extends TeaModel {
         return this.reqBpsDataPerInterval;
     }
 
-    public static class DescribeVsDomainReqBpsDataResponseBodyReqBpsDataPerIntervalDataModule extends TeaModel {
-        @NameInMap("TimeStamp")
-        public String timeStamp;
+    public DescribeVsDomainReqBpsDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public DescribeVsDomainReqBpsDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public static class DescribeVsDomainReqBpsDataResponseBodyReqBpsDataPerIntervalDataModule extends TeaModel {
         @NameInMap("ReqBpsValue")
         public String reqBpsValue;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
 
         public static DescribeVsDomainReqBpsDataResponseBodyReqBpsDataPerIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeVsDomainReqBpsDataResponseBodyReqBpsDataPerIntervalDataModule self = new DescribeVsDomainReqBpsDataResponseBodyReqBpsDataPerIntervalDataModule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVsDomainReqBpsDataResponseBodyReqBpsDataPerIntervalDataModule setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
         }
 
         public DescribeVsDomainReqBpsDataResponseBodyReqBpsDataPerIntervalDataModule setReqBpsValue(String reqBpsValue) {
@@ -101,6 +93,14 @@ public class DescribeVsDomainReqBpsDataResponseBody extends TeaModel {
         }
         public String getReqBpsValue() {
             return this.reqBpsValue;
+        }
+
+        public DescribeVsDomainReqBpsDataResponseBodyReqBpsDataPerIntervalDataModule setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

@@ -4,14 +4,14 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ModifyDeviceCaptureRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("Id")
     public String id;
 
     @NameInMap("Image")
     public Integer image;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Video")
     public Integer video;
@@ -19,14 +19,6 @@ public class ModifyDeviceCaptureRequest extends TeaModel {
     public static ModifyDeviceCaptureRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDeviceCaptureRequest self = new ModifyDeviceCaptureRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyDeviceCaptureRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public ModifyDeviceCaptureRequest setId(String id) {
@@ -43,6 +35,14 @@ public class ModifyDeviceCaptureRequest extends TeaModel {
     }
     public Integer getImage() {
         return this.image;
+    }
+
+    public ModifyDeviceCaptureRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyDeviceCaptureRequest setVideo(Integer video) {

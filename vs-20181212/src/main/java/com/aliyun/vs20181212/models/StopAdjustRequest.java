@@ -4,8 +4,8 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class StopAdjustRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("Focus")
+    public Boolean focus;
 
     @NameInMap("Id")
     public String id;
@@ -13,23 +13,20 @@ public class StopAdjustRequest extends TeaModel {
     @NameInMap("Iris")
     public Boolean iris;
 
-    @NameInMap("Focus")
-    public Boolean focus;
-
-    @NameInMap("SubProtocol")
-    public String subProtocol;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static StopAdjustRequest build(java.util.Map<String, ?> map) throws Exception {
         StopAdjustRequest self = new StopAdjustRequest();
         return TeaModel.build(map, self);
     }
 
-    public StopAdjustRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public StopAdjustRequest setFocus(Boolean focus) {
+        this.focus = focus;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public Boolean getFocus() {
+        return this.focus;
     }
 
     public StopAdjustRequest setId(String id) {
@@ -48,20 +45,12 @@ public class StopAdjustRequest extends TeaModel {
         return this.iris;
     }
 
-    public StopAdjustRequest setFocus(Boolean focus) {
-        this.focus = focus;
+    public StopAdjustRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public Boolean getFocus() {
-        return this.focus;
-    }
-
-    public StopAdjustRequest setSubProtocol(String subProtocol) {
-        this.subProtocol = subProtocol;
-        return this;
-    }
-    public String getSubProtocol() {
-        return this.subProtocol;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

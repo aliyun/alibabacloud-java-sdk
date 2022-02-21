@@ -4,23 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeStreamVodListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Records")
     public java.util.List<DescribeStreamVodListResponseBodyRecords> records;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeStreamVodListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeStreamVodListResponseBody self = new DescribeStreamVodListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeStreamVodListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeStreamVodListResponseBody setRecords(java.util.List<DescribeStreamVodListResponseBodyRecords> records) {
@@ -29,6 +21,14 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
     }
     public java.util.List<DescribeStreamVodListResponseBodyRecords> getRecords() {
         return this.records;
+    }
+
+    public DescribeStreamVodListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeStreamVodListResponseBodyRecords extends TeaModel {

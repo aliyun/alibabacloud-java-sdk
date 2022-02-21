@@ -4,11 +4,20 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeDirectoriesRequest extends TeaModel {
+    @NameInMap("GroupId")
+    public String groupId;
+
+    @NameInMap("NoPagination")
+    public Boolean noPagination;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("GroupId")
-    public String groupId;
+    @NameInMap("PageNum")
+    public Long pageNum;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
 
     @NameInMap("ParentId")
     public String parentId;
@@ -19,18 +28,25 @@ public class DescribeDirectoriesRequest extends TeaModel {
     @NameInMap("SortDirection")
     public String sortDirection;
 
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    @NameInMap("PageNum")
-    public Long pageNum;
-
-    @NameInMap("NoPagination")
-    public Boolean noPagination;
-
     public static DescribeDirectoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDirectoriesRequest self = new DescribeDirectoriesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDirectoriesRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public DescribeDirectoriesRequest setNoPagination(Boolean noPagination) {
+        this.noPagination = noPagination;
+        return this;
+    }
+    public Boolean getNoPagination() {
+        return this.noPagination;
     }
 
     public DescribeDirectoriesRequest setOwnerId(Long ownerId) {
@@ -41,12 +57,20 @@ public class DescribeDirectoriesRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeDirectoriesRequest setGroupId(String groupId) {
-        this.groupId = groupId;
+    public DescribeDirectoriesRequest setPageNum(Long pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getGroupId() {
-        return this.groupId;
+    public Long getPageNum() {
+        return this.pageNum;
+    }
+
+    public DescribeDirectoriesRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeDirectoriesRequest setParentId(String parentId) {
@@ -71,30 +95,6 @@ public class DescribeDirectoriesRequest extends TeaModel {
     }
     public String getSortDirection() {
         return this.sortDirection;
-    }
-
-    public DescribeDirectoriesRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeDirectoriesRequest setPageNum(Long pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public Long getPageNum() {
-        return this.pageNum;
-    }
-
-    public DescribeDirectoriesRequest setNoPagination(Boolean noPagination) {
-        this.noPagination = noPagination;
-        return this;
-    }
-    public Boolean getNoPagination() {
-        return this.noPagination;
     }
 
 }

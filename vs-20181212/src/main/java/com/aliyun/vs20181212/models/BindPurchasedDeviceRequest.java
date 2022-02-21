@@ -4,21 +4,37 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BindPurchasedDeviceRequest extends TeaModel {
+    @NameInMap("DeviceId")
+    public String deviceId;
+
+    @NameInMap("GroupId")
+    public String groupId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("Region")
     public String region;
 
-    @NameInMap("GroupId")
-    public String groupId;
-
-    @NameInMap("DeviceId")
-    public String deviceId;
-
     public static BindPurchasedDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         BindPurchasedDeviceRequest self = new BindPurchasedDeviceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BindPurchasedDeviceRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
+    }
+
+    public BindPurchasedDeviceRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public BindPurchasedDeviceRequest setOwnerId(Long ownerId) {
@@ -35,22 +51,6 @@ public class BindPurchasedDeviceRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
-    }
-
-    public BindPurchasedDeviceRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
-    }
-
-    public BindPurchasedDeviceRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-        return this;
-    }
-    public String getDeviceId() {
-        return this.deviceId;
     }
 
 }

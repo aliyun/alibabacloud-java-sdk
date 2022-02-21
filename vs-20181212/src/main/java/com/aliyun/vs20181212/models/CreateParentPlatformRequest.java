@@ -4,17 +4,20 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateParentPlatformRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AutoStart")
+    public Boolean autoStart;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("ClientAuth")
+    public Boolean clientAuth;
+
+    @NameInMap("ClientPassword")
+    public String clientPassword;
+
+    @NameInMap("ClientUsername")
+    public String clientUsername;
 
     @NameInMap("Description")
     public String description;
-
-    @NameInMap("Protocol")
-    public String protocol;
 
     @NameInMap("GbId")
     public String gbId;
@@ -22,40 +25,53 @@ public class CreateParentPlatformRequest extends TeaModel {
     @NameInMap("Ip")
     public String ip;
 
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("Port")
     public Long port;
 
-    @NameInMap("ClientAuth")
-    public Boolean clientAuth;
-
-    @NameInMap("ClientUsername")
-    public String clientUsername;
-
-    @NameInMap("ClientPassword")
-    public String clientPassword;
-
-    @NameInMap("AutoStart")
-    public Boolean autoStart;
+    @NameInMap("Protocol")
+    public String protocol;
 
     public static CreateParentPlatformRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateParentPlatformRequest self = new CreateParentPlatformRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateParentPlatformRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public CreateParentPlatformRequest setAutoStart(Boolean autoStart) {
+        this.autoStart = autoStart;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public Boolean getAutoStart() {
+        return this.autoStart;
     }
 
-    public CreateParentPlatformRequest setName(String name) {
-        this.name = name;
+    public CreateParentPlatformRequest setClientAuth(Boolean clientAuth) {
+        this.clientAuth = clientAuth;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public Boolean getClientAuth() {
+        return this.clientAuth;
+    }
+
+    public CreateParentPlatformRequest setClientPassword(String clientPassword) {
+        this.clientPassword = clientPassword;
+        return this;
+    }
+    public String getClientPassword() {
+        return this.clientPassword;
+    }
+
+    public CreateParentPlatformRequest setClientUsername(String clientUsername) {
+        this.clientUsername = clientUsername;
+        return this;
+    }
+    public String getClientUsername() {
+        return this.clientUsername;
     }
 
     public CreateParentPlatformRequest setDescription(String description) {
@@ -64,14 +80,6 @@ public class CreateParentPlatformRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public CreateParentPlatformRequest setProtocol(String protocol) {
-        this.protocol = protocol;
-        return this;
-    }
-    public String getProtocol() {
-        return this.protocol;
     }
 
     public CreateParentPlatformRequest setGbId(String gbId) {
@@ -90,6 +98,22 @@ public class CreateParentPlatformRequest extends TeaModel {
         return this.ip;
     }
 
+    public CreateParentPlatformRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateParentPlatformRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public CreateParentPlatformRequest setPort(Long port) {
         this.port = port;
         return this;
@@ -98,36 +122,12 @@ public class CreateParentPlatformRequest extends TeaModel {
         return this.port;
     }
 
-    public CreateParentPlatformRequest setClientAuth(Boolean clientAuth) {
-        this.clientAuth = clientAuth;
+    public CreateParentPlatformRequest setProtocol(String protocol) {
+        this.protocol = protocol;
         return this;
     }
-    public Boolean getClientAuth() {
-        return this.clientAuth;
-    }
-
-    public CreateParentPlatformRequest setClientUsername(String clientUsername) {
-        this.clientUsername = clientUsername;
-        return this;
-    }
-    public String getClientUsername() {
-        return this.clientUsername;
-    }
-
-    public CreateParentPlatformRequest setClientPassword(String clientPassword) {
-        this.clientPassword = clientPassword;
-        return this;
-    }
-    public String getClientPassword() {
-        return this.clientPassword;
-    }
-
-    public CreateParentPlatformRequest setAutoStart(Boolean autoStart) {
-        this.autoStart = autoStart;
-        return this;
-    }
-    public Boolean getAutoStart() {
-        return this.autoStart;
+    public String getProtocol() {
+        return this.protocol;
     }
 
 }

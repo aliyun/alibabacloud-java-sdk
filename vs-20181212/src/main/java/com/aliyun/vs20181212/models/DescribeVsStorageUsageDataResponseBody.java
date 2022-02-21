@@ -32,18 +32,26 @@ public class DescribeVsStorageUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVsStorageUsageDataResponseBodyStorageUsageStorageUsageDataModule extends TeaModel {
+        @NameInMap("Bucket")
+        public String bucket;
+
         @NameInMap("StorageDataValue")
         public Integer storageDataValue;
 
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        @NameInMap("Bucket")
-        public String bucket;
-
         public static DescribeVsStorageUsageDataResponseBodyStorageUsageStorageUsageDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeVsStorageUsageDataResponseBodyStorageUsageStorageUsageDataModule self = new DescribeVsStorageUsageDataResponseBodyStorageUsageStorageUsageDataModule();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeVsStorageUsageDataResponseBodyStorageUsageStorageUsageDataModule setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
         }
 
         public DescribeVsStorageUsageDataResponseBodyStorageUsageStorageUsageDataModule setStorageDataValue(Integer storageDataValue) {
@@ -60,14 +68,6 @@ public class DescribeVsStorageUsageDataResponseBody extends TeaModel {
         }
         public String getTimeStamp() {
             return this.timeStamp;
-        }
-
-        public DescribeVsStorageUsageDataResponseBodyStorageUsageStorageUsageDataModule setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
         }
 
     }

@@ -4,26 +4,26 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class UnbindDirectoryRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("DeviceId")
+    public String deviceId;
 
     @NameInMap("DirectoryId")
     public String directoryId;
 
-    @NameInMap("DeviceId")
-    public String deviceId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static UnbindDirectoryRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindDirectoryRequest self = new UnbindDirectoryRequest();
         return TeaModel.build(map, self);
     }
 
-    public UnbindDirectoryRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public UnbindDirectoryRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getDeviceId() {
+        return this.deviceId;
     }
 
     public UnbindDirectoryRequest setDirectoryId(String directoryId) {
@@ -34,12 +34,12 @@ public class UnbindDirectoryRequest extends TeaModel {
         return this.directoryId;
     }
 
-    public UnbindDirectoryRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
+    public UnbindDirectoryRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getDeviceId() {
-        return this.deviceId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

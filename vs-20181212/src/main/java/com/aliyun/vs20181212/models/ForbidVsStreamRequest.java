@@ -4,17 +4,14 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ForbidVsStreamRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("AppName")
     public String appName;
 
-    @NameInMap("StreamName")
-    public String streamName;
+    @NameInMap("ControlStreamAction")
+    public String controlStreamAction;
+
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("LiveStreamType")
     public String liveStreamType;
@@ -22,31 +19,18 @@ public class ForbidVsStreamRequest extends TeaModel {
     @NameInMap("Oneshot")
     public String oneshot;
 
-    @NameInMap("ControlStreamAction")
-    public String controlStreamAction;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("ResumeTime")
     public String resumeTime;
 
+    @NameInMap("StreamName")
+    public String streamName;
+
     public static ForbidVsStreamRequest build(java.util.Map<String, ?> map) throws Exception {
         ForbidVsStreamRequest self = new ForbidVsStreamRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ForbidVsStreamRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ForbidVsStreamRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public ForbidVsStreamRequest setAppName(String appName) {
@@ -57,12 +41,20 @@ public class ForbidVsStreamRequest extends TeaModel {
         return this.appName;
     }
 
-    public ForbidVsStreamRequest setStreamName(String streamName) {
-        this.streamName = streamName;
+    public ForbidVsStreamRequest setControlStreamAction(String controlStreamAction) {
+        this.controlStreamAction = controlStreamAction;
         return this;
     }
-    public String getStreamName() {
-        return this.streamName;
+    public String getControlStreamAction() {
+        return this.controlStreamAction;
+    }
+
+    public ForbidVsStreamRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public ForbidVsStreamRequest setLiveStreamType(String liveStreamType) {
@@ -81,12 +73,12 @@ public class ForbidVsStreamRequest extends TeaModel {
         return this.oneshot;
     }
 
-    public ForbidVsStreamRequest setControlStreamAction(String controlStreamAction) {
-        this.controlStreamAction = controlStreamAction;
+    public ForbidVsStreamRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getControlStreamAction() {
-        return this.controlStreamAction;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ForbidVsStreamRequest setResumeTime(String resumeTime) {
@@ -95,6 +87,14 @@ public class ForbidVsStreamRequest extends TeaModel {
     }
     public String getResumeTime() {
         return this.resumeTime;
+    }
+
+    public ForbidVsStreamRequest setStreamName(String streamName) {
+        this.streamName = streamName;
+        return this;
+    }
+    public String getStreamName() {
+        return this.streamName;
     }
 
 }
