@@ -34,11 +34,11 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
     }
 
     public static class DescribeKubernetesVersionMetadataResponseBodyImages extends TeaModel {
-        // 镜像ID。	
+        // 镜像ID。
         @NameInMap("image_id")
         public String imageId;
 
-        // 镜像名称。	
+        // 镜像名称。
         @NameInMap("image_name")
         public String imageName;
 
@@ -50,7 +50,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         @NameInMap("os_version")
         public String osVersion;
 
-        // 镜像类型。	
+        // 镜像类型。
         @NameInMap("image_type")
         public String imageType;
 
@@ -126,23 +126,23 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
     }
 
     public static class DescribeKubernetesVersionMetadataResponseBody extends TeaModel {
-        // Kubernetes版本特性。	
+        // Kubernetes版本特性。
         @NameInMap("capabilities")
         public java.util.Map<String, ?> capabilities;
 
-        // ECS系统镜像列表。	
+        // ECS系统镜像列表。
         @NameInMap("images")
         public java.util.List<DescribeKubernetesVersionMetadataResponseBodyImages> images;
 
-        // Kubernetes版本元数据信息。	
+        // Kubernetes版本元数据信息。
         @NameInMap("meta_data")
         public java.util.Map<String, ?> metaData;
 
-        // 容器运行时详情。	
+        // 容器运行时详情。
         @NameInMap("runtimes")
         public java.util.List<Runtime> runtimes;
 
-        // Kubernetes版本。	
+        // Kubernetes版本。
         @NameInMap("version")
         public String version;
 

@@ -34,7 +34,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
     }
 
     public static class DescribeTemplateAttributeResponseBody extends TeaModel {
-        // 编排模板ID，模板每次修改，这个ID都会改变。	
+        // 编排模板ID，模板每次修改，这个ID都会改变。
         @NameInMap("id")
         public String id;
 
@@ -42,11 +42,11 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         @NameInMap("acl")
         public String acl;
 
-        // 编排模板名称。	
+        // 编排模板名称。
         @NameInMap("name")
         public String name;
 
-        // 编排模板内容。	
+        // 编排模板内容。
         @NameInMap("template")
         public String template;
 
@@ -62,7 +62,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         @NameInMap("tags")
         public String tags;
 
-        // 编排模板ID，该ID唯一不随更新而改变。	
+        // 编排模板ID，该ID唯一不随更新而改变。
         @NameInMap("template_with_hist_id")
         public String templateWithHistId;
 
@@ -70,7 +70,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         @NameInMap("created")
         public String created;
 
-        // 编排模板修改时间。	
+        // 编排模板修改时间。
         @NameInMap("updated")
         public String updated;
 

@@ -38,11 +38,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("is_bond_eip")
         public Boolean isBondEip;
 
-        // 最大节点数	
+        // 最大节点数
         @NameInMap("max_instances")
         public Long maxInstances;
 
-        // 最小节点数	
+        // 最小节点数
         @NameInMap("min_instances")
         public Long minInstances;
 
@@ -182,11 +182,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsKubernetesConfig extends TeaModel {
-        // 是否开启云监控	
+        // 是否开启云监控
         @NameInMap("cms_enabled")
         public Boolean cmsEnabled;
 
-        // CPU管理策略	
+        // CPU管理策略
         @NameInMap("cpu_policy")
         public String cpuPolicy;
 
@@ -198,11 +198,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("node_name_mode")
         public String nodeNameMode;
 
-        // 容器运行时	
+        // 容器运行时
         @NameInMap("runtime")
         public String runtime;
 
-        // 容器运行时版本	
+        // 容器运行时版本
         @NameInMap("runtime_version")
         public String runtimeVersion;
 
@@ -522,11 +522,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup extends TeaModel {
-        // 自动续费	
+        // 自动续费
         @NameInMap("auto_renew")
         public Boolean autoRenew;
 
-        // 自动付费时长	
+        // 自动付费时长
         @NameInMap("auto_renew_period")
         public Long autoRenewPeriod;
 
@@ -534,7 +534,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("compensate_with_on_demand")
         public Boolean compensateWithOnDemand;
 
-        // 数据盘配置	
+        // 数据盘配置
         @NameInMap("data_disks")
         public java.util.List<DataDisk> dataDisks;
 
@@ -546,15 +546,15 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("desired_size")
         public Long desiredSize;
 
-        // 镜像ID	
+        // 镜像ID
         @NameInMap("image_id")
         public String imageId;
 
-        // 节点付费类型	
+        // 节点付费类型
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
 
-        // 节点类型	
+        // 节点类型
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
 
@@ -586,11 +586,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("on_demand_percentage_above_base_capacity")
         public Long onDemandPercentageAboveBaseCapacity;
 
-        // 包年包月时长	
+        // 包年包月时长
         @NameInMap("period")
         public Long period;
 
-        // 自动付费周期	
+        // 自动付费周期
         @NameInMap("period_unit")
         public String periodUnit;
 
@@ -598,19 +598,19 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("platform")
         public String platform;
 
-        // RAM 角色名称	
+        // RAM 角色名称
         @NameInMap("ram_policy")
         public String ramPolicy;
 
-        // RDS列表	
+        // RDS列表
         @NameInMap("rds_instances")
         public java.util.List<String> rdsInstances;
 
-        // 扩容组ID	
+        // 扩容组ID
         @NameInMap("scaling_group_id")
         public String scalingGroupId;
 
-        // 扩容节点策略	
+        // 扩容节点策略
         @NameInMap("scaling_policy")
         public String scalingPolicy;
 
@@ -638,7 +638,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("spot_strategy")
         public String spotStrategy;
 
-        // 系统盘类型。	
+        // 系统盘类型。
         @NameInMap("system_disk_category")
         public String systemDiskCategory;
 
@@ -646,11 +646,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("system_disk_performance_level")
         public String systemDiskPerformanceLevel;
 
-        // 系统盘大小	
+        // 系统盘大小
         @NameInMap("system_disk_size")
         public Long systemDiskSize;
 
-        // 节点标签	
+        // 节点标签
         @NameInMap("tags")
         public java.util.List<Tag> tags;
 
@@ -938,19 +938,19 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsStatus extends TeaModel {
-        // 失败的节点数	
+        // 失败的节点数
         @NameInMap("failed_nodes")
         public Long failedNodes;
 
-        // 处于健康状态的节点数	
+        // 处于健康状态的节点数
         @NameInMap("healthy_nodes")
         public Long healthyNodes;
 
-        // 正在创建的节点数	
+        // 正在创建的节点数
         @NameInMap("initial_nodes")
         public Long initialNodes;
 
-        // 离线节点数	
+        // 离线节点数
         @NameInMap("offline_nodes")
         public Long offlineNodes;
 
@@ -958,15 +958,15 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("removing_nodes")
         public Long removingNodes;
 
-        // 正在工作节点数	
+        // 正在工作节点数
         @NameInMap("serving_nodes")
         public Long servingNodes;
 
-        // 节点池状态	
+        // 节点池状态
         @NameInMap("state")
         public String state;
 
-        // 节点总数	
+        // 节点总数
         @NameInMap("total_nodes")
         public Long totalNodes;
 
@@ -1042,7 +1042,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsTeeConfig extends TeaModel {
-        // 是否为加密计算节点池	
+        // 是否为加密计算节点池
         @NameInMap("tee_enable")
         public Boolean teeEnable;
 
