@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMonitorResponseBody extends TeaModel {
     @NameInMap("Data")
-    public String data;
+    public java.util.List<QueryMonitorResponseBodyData> data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -24,11 +24,11 @@ public class QueryMonitorResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryMonitorResponseBody setData(String data) {
+    public QueryMonitorResponseBody setData(java.util.List<QueryMonitorResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public java.util.List<QueryMonitorResponseBodyData> getData() {
         return this.data;
     }
 
@@ -62,6 +62,47 @@ public class QueryMonitorResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class QueryMonitorResponseBodyData extends TeaModel {
+        @NameInMap("clusterNamePrefix")
+        public String clusterNamePrefix;
+
+        @NameInMap("podName")
+        public String podName;
+
+        @NameInMap("values")
+        public java.util.List<java.util.Map<String, ?>> values;
+
+        public static QueryMonitorResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            QueryMonitorResponseBodyData self = new QueryMonitorResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMonitorResponseBodyData setClusterNamePrefix(String clusterNamePrefix) {
+            this.clusterNamePrefix = clusterNamePrefix;
+            return this;
+        }
+        public String getClusterNamePrefix() {
+            return this.clusterNamePrefix;
+        }
+
+        public QueryMonitorResponseBodyData setPodName(String podName) {
+            this.podName = podName;
+            return this;
+        }
+        public String getPodName() {
+            return this.podName;
+        }
+
+        public QueryMonitorResponseBodyData setValues(java.util.List<java.util.Map<String, ?>> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<java.util.Map<String, ?>> getValues() {
+            return this.values;
+        }
+
     }
 
 }
