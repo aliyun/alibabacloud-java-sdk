@@ -1152,8 +1152,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("action", request.action);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
-            body.put("namespace", request.namespace);
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaces)) {
+            body.put("namespaces", request.namespaces);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
@@ -3003,6 +3003,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveWorkflowResponse());
+    }
+
+    public RepairClusterNodePoolResponse repairClusterNodePool(String clusterId, String nodepoolId, RepairClusterNodePoolRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.repairClusterNodePoolWithOptions(clusterId, nodepoolId, request, headers, runtime);
+    }
+
+    public RepairClusterNodePoolResponse repairClusterNodePoolWithOptions(String clusterId, String nodepoolId, RepairClusterNodePoolRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
+        nodepoolId = com.aliyun.openapiutil.Client.getEncodeParam(nodepoolId);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nodes)) {
+            body.put("nodes", request.nodes);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RepairClusterNodePool"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + clusterId + "/nodepools/" + nodepoolId + "/repair"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RepairClusterNodePoolResponse());
     }
 
     public ResumeComponentUpgradeResponse resumeComponentUpgrade(String clusterid, String componentid) throws Exception {

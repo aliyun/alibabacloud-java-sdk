@@ -8,9 +8,9 @@ public class DeployPolicyInstanceRequest extends TeaModel {
     @NameInMap("action")
     public String action;
 
-    // 策略实例实施范围
-    @NameInMap("namespace")
-    public String namespace;
+    // 策略实例实施范围（限定命名空间）。默认 [] 代表集群所有命名空间。
+    @NameInMap("namespaces")
+    public java.util.List<String> namespaces;
 
     // 当前规则实例的配置参数
     @NameInMap("parameters")
@@ -29,12 +29,12 @@ public class DeployPolicyInstanceRequest extends TeaModel {
         return this.action;
     }
 
-    public DeployPolicyInstanceRequest setNamespace(String namespace) {
-        this.namespace = namespace;
+    public DeployPolicyInstanceRequest setNamespaces(java.util.List<String> namespaces) {
+        this.namespaces = namespaces;
         return this;
     }
-    public String getNamespace() {
-        return this.namespace;
+    public java.util.List<String> getNamespaces() {
+        return this.namespaces;
     }
 
     public DeployPolicyInstanceRequest setParameters(java.util.Map<String, ?> parameters) {
