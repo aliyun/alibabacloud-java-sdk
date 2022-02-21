@@ -1,3 +1,6 @@
+2022-02-21 Version: 1.0.5
+- Fix describe resouce api.
+
 2022-02-21 Version: 1.0.4
 - Add describe resouce log api.
 
