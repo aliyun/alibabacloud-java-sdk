@@ -19,9 +19,6 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("ConnectionType")
     public String connectionType;
 
-    @NameInMap("DiskCapacity")
-    public Integer diskCapacity;
-
     @NameInMap("DiskType")
     public String diskType;
 
@@ -99,14 +96,6 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getConnectionType() {
         return this.connectionType;
-    }
-
-    public CreateClusterRequest setDiskCapacity(Integer diskCapacity) {
-        this.diskCapacity = diskCapacity;
-        return this;
-    }
-    public Integer getDiskCapacity() {
-        return this.diskCapacity;
     }
 
     public CreateClusterRequest setDiskType(String diskType) {
