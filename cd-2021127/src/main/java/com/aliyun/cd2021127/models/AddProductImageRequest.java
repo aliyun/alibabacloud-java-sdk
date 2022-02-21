@@ -12,6 +12,9 @@ public class AddProductImageRequest extends TeaModel {
     @NameInMap("ProductImageList")
     public java.util.List<AddProductImageRequestProductImageList> productImageList;
 
+    @NameInMap("ProductName")
+    public String productName;
+
     public static AddProductImageRequest build(java.util.Map<String, ?> map) throws Exception {
         AddProductImageRequest self = new AddProductImageRequest();
         return TeaModel.build(map, self);
@@ -33,7 +36,21 @@ public class AddProductImageRequest extends TeaModel {
         return this.productImageList;
     }
 
+    public AddProductImageRequest setProductName(String productName) {
+        this.productName = productName;
+        return this;
+    }
+    public String getProductName() {
+        return this.productName;
+    }
+
     public static class AddProductImageRequestProductImageList extends TeaModel {
+        @NameInMap("ProductImageCutout")
+        public Boolean productImageCutout;
+
+        @NameInMap("ProductImageLabels")
+        public java.util.List<String> productImageLabels;
+
         // 商品图片类型（默认平拍：horizontal）-选填
         @NameInMap("ProductImageType")
         public String productImageType;
@@ -45,6 +62,22 @@ public class AddProductImageRequest extends TeaModel {
         public static AddProductImageRequestProductImageList build(java.util.Map<String, ?> map) throws Exception {
             AddProductImageRequestProductImageList self = new AddProductImageRequestProductImageList();
             return TeaModel.build(map, self);
+        }
+
+        public AddProductImageRequestProductImageList setProductImageCutout(Boolean productImageCutout) {
+            this.productImageCutout = productImageCutout;
+            return this;
+        }
+        public Boolean getProductImageCutout() {
+            return this.productImageCutout;
+        }
+
+        public AddProductImageRequestProductImageList setProductImageLabels(java.util.List<String> productImageLabels) {
+            this.productImageLabels = productImageLabels;
+            return this;
+        }
+        public java.util.List<String> getProductImageLabels() {
+            return this.productImageLabels;
         }
 
         public AddProductImageRequestProductImageList setProductImageType(String productImageType) {

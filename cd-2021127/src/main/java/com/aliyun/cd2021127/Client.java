@@ -55,6 +55,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ProductImageList", request.productImageListShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.productName)) {
+            body.put("ProductName", request.productName);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))

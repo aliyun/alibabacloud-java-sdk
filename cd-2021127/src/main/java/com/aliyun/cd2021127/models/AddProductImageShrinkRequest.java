@@ -12,6 +12,9 @@ public class AddProductImageShrinkRequest extends TeaModel {
     @NameInMap("ProductImageList")
     public String productImageListShrink;
 
+    @NameInMap("ProductName")
+    public String productName;
+
     public static AddProductImageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         AddProductImageShrinkRequest self = new AddProductImageShrinkRequest();
         return TeaModel.build(map, self);
@@ -31,6 +34,14 @@ public class AddProductImageShrinkRequest extends TeaModel {
     }
     public String getProductImageListShrink() {
         return this.productImageListShrink;
+    }
+
+    public AddProductImageShrinkRequest setProductName(String productName) {
+        this.productName = productName;
+        return this;
+    }
+    public String getProductName() {
+        return this.productName;
     }
 
 }
