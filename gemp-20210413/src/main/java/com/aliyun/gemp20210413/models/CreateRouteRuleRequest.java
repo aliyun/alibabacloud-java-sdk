@@ -54,7 +54,7 @@ public class CreateRouteRuleRequest extends TeaModel {
 
     // 规则名称
     @NameInMap("ruleName")
-    public byte[] ruleName;
+    public String ruleName;
 
     // 时间窗口
     @NameInMap("timeWindow")
@@ -165,11 +165,11 @@ public class CreateRouteRuleRequest extends TeaModel {
         return this.routeType;
     }
 
-    public CreateRouteRuleRequest setRuleName(byte[] ruleName) {
+    public CreateRouteRuleRequest setRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
     }
-    public byte[] getRuleName() {
+    public String getRuleName() {
         return this.ruleName;
     }
 
