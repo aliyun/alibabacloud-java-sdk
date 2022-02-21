@@ -4,29 +4,21 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainRegionDataRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeVsDomainRegionDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsDomainRegionDataRequest self = new DescribeVsDomainRegionDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsDomainRegionDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeVsDomainRegionDataRequest setDomainName(String domainName) {
@@ -37,20 +29,28 @@ public class DescribeVsDomainRegionDataRequest extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeVsDomainRegionDataRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeVsDomainRegionDataRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeVsDomainRegionDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeVsDomainRegionDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

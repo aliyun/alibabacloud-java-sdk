@@ -7,11 +7,11 @@ public class DescribePresetsResponseBody extends TeaModel {
     @NameInMap("Id")
     public String id;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Presets")
     public java.util.List<DescribePresetsResponseBodyPresets> presets;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribePresetsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePresetsResponseBody self = new DescribePresetsResponseBody();
@@ -26,14 +26,6 @@ public class DescribePresetsResponseBody extends TeaModel {
         return this.id;
     }
 
-    public DescribePresetsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribePresetsResponseBody setPresets(java.util.List<DescribePresetsResponseBodyPresets> presets) {
         this.presets = presets;
         return this;
@@ -42,24 +34,24 @@ public class DescribePresetsResponseBody extends TeaModel {
         return this.presets;
     }
 
-    public static class DescribePresetsResponseBodyPresets extends TeaModel {
-        @NameInMap("Name")
-        public String name;
+    public DescribePresetsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribePresetsResponseBodyPresets extends TeaModel {
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         public static DescribePresetsResponseBodyPresets build(java.util.Map<String, ?> map) throws Exception {
             DescribePresetsResponseBodyPresets self = new DescribePresetsResponseBodyPresets();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePresetsResponseBodyPresets setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public DescribePresetsResponseBodyPresets setId(String id) {
@@ -68,6 +60,14 @@ public class DescribePresetsResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public DescribePresetsResponseBodyPresets setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

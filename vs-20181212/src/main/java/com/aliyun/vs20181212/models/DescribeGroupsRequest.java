@@ -4,23 +4,29 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("Id")
     public String id;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Region")
-    public String region;
 
     @NameInMap("InProtocol")
     public String inProtocol;
 
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("IncludeStats")
+    public Boolean includeStats;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PageNum")
+    public Long pageNum;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
+    @NameInMap("Region")
+    public String region;
 
     @NameInMap("SortBy")
     public String sortBy;
@@ -28,26 +34,12 @@ public class DescribeGroupsRequest extends TeaModel {
     @NameInMap("SortDirection")
     public String sortDirection;
 
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    @NameInMap("PageNum")
-    public Long pageNum;
-
-    @NameInMap("IncludeStats")
-    public Boolean includeStats;
+    @NameInMap("Status")
+    public String status;
 
     public static DescribeGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGroupsRequest self = new DescribeGroupsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeGroupsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeGroupsRequest setId(String id) {
@@ -58,22 +50,6 @@ public class DescribeGroupsRequest extends TeaModel {
         return this.id;
     }
 
-    public DescribeGroupsRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public DescribeGroupsRequest setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
-    }
-
     public DescribeGroupsRequest setInProtocol(String inProtocol) {
         this.inProtocol = inProtocol;
         return this;
@@ -82,12 +58,52 @@ public class DescribeGroupsRequest extends TeaModel {
         return this.inProtocol;
     }
 
-    public DescribeGroupsRequest setStatus(String status) {
-        this.status = status;
+    public DescribeGroupsRequest setIncludeStats(Boolean includeStats) {
+        this.includeStats = includeStats;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public Boolean getIncludeStats() {
+        return this.includeStats;
+    }
+
+    public DescribeGroupsRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public DescribeGroupsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeGroupsRequest setPageNum(Long pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Long getPageNum() {
+        return this.pageNum;
+    }
+
+    public DescribeGroupsRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeGroupsRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
     public DescribeGroupsRequest setSortBy(String sortBy) {
@@ -106,28 +122,12 @@ public class DescribeGroupsRequest extends TeaModel {
         return this.sortDirection;
     }
 
-    public DescribeGroupsRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
+    public DescribeGroupsRequest setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeGroupsRequest setPageNum(Long pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public Long getPageNum() {
-        return this.pageNum;
-    }
-
-    public DescribeGroupsRequest setIncludeStats(Boolean includeStats) {
-        this.includeStats = includeStats;
-        return this;
-    }
-    public Boolean getIncludeStats() {
-        return this.includeStats;
+    public String getStatus() {
+        return this.status;
     }
 
 }

@@ -4,11 +4,17 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceRecordsResponseBody extends TeaModel {
+    @NameInMap("PageCount")
+    public Long pageCount;
+
     @NameInMap("PageNum")
     public Long pageNum;
 
     @NameInMap("PageSize")
     public Long pageSize;
+
+    @NameInMap("Records")
+    public java.util.List<ListDeviceRecordsResponseBodyRecords> records;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,15 +22,17 @@ public class ListDeviceRecordsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    @NameInMap("PageCount")
-    public Long pageCount;
-
-    @NameInMap("Records")
-    public java.util.List<ListDeviceRecordsResponseBodyRecords> records;
-
     public static ListDeviceRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDeviceRecordsResponseBody self = new ListDeviceRecordsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListDeviceRecordsResponseBody setPageCount(Long pageCount) {
+        this.pageCount = pageCount;
+        return this;
+    }
+    public Long getPageCount() {
+        return this.pageCount;
     }
 
     public ListDeviceRecordsResponseBody setPageNum(Long pageNum) {
@@ -43,6 +51,14 @@ public class ListDeviceRecordsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public ListDeviceRecordsResponseBody setRecords(java.util.List<ListDeviceRecordsResponseBodyRecords> records) {
+        this.records = records;
+        return this;
+    }
+    public java.util.List<ListDeviceRecordsResponseBodyRecords> getRecords() {
+        return this.records;
+    }
+
     public ListDeviceRecordsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -59,37 +75,21 @@ public class ListDeviceRecordsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListDeviceRecordsResponseBody setPageCount(Long pageCount) {
-        this.pageCount = pageCount;
-        return this;
-    }
-    public Long getPageCount() {
-        return this.pageCount;
-    }
-
-    public ListDeviceRecordsResponseBody setRecords(java.util.List<ListDeviceRecordsResponseBodyRecords> records) {
-        this.records = records;
-        return this;
-    }
-    public java.util.List<ListDeviceRecordsResponseBodyRecords> getRecords() {
-        return this.records;
-    }
-
     public static class ListDeviceRecordsResponseBodyRecords extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("RecordType")
-        public String recordType;
+        @NameInMap("FileSize")
+        public Long fileSize;
 
         @NameInMap("Filename")
         public String filename;
 
-        @NameInMap("FileSize")
-        public Long fileSize;
+        @NameInMap("RecordType")
+        public String recordType;
+
+        @NameInMap("StartTime")
+        public String startTime;
 
         public static ListDeviceRecordsResponseBodyRecords build(java.util.Map<String, ?> map) throws Exception {
             ListDeviceRecordsResponseBodyRecords self = new ListDeviceRecordsResponseBodyRecords();
@@ -104,20 +104,12 @@ public class ListDeviceRecordsResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public ListDeviceRecordsResponseBodyRecords setStartTime(String startTime) {
-            this.startTime = startTime;
+        public ListDeviceRecordsResponseBodyRecords setFileSize(Long fileSize) {
+            this.fileSize = fileSize;
             return this;
         }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public ListDeviceRecordsResponseBodyRecords setRecordType(String recordType) {
-            this.recordType = recordType;
-            return this;
-        }
-        public String getRecordType() {
-            return this.recordType;
+        public Long getFileSize() {
+            return this.fileSize;
         }
 
         public ListDeviceRecordsResponseBodyRecords setFilename(String filename) {
@@ -128,12 +120,20 @@ public class ListDeviceRecordsResponseBody extends TeaModel {
             return this.filename;
         }
 
-        public ListDeviceRecordsResponseBodyRecords setFileSize(Long fileSize) {
-            this.fileSize = fileSize;
+        public ListDeviceRecordsResponseBodyRecords setRecordType(String recordType) {
+            this.recordType = recordType;
             return this;
         }
-        public Long getFileSize() {
-            return this.fileSize;
+        public String getRecordType() {
+            return this.recordType;
+        }
+
+        public ListDeviceRecordsResponseBodyRecords setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }

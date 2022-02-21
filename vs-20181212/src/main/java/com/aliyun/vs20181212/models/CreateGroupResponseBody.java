@@ -10,14 +10,14 @@ public class CreateGroupResponseBody extends TeaModel {
     @NameInMap("GbIp")
     public String gbIp;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("GbPort")
     public Long gbPort;
 
     @NameInMap("Id")
     public String id;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateGroupResponseBody self = new CreateGroupResponseBody();
@@ -40,14 +40,6 @@ public class CreateGroupResponseBody extends TeaModel {
         return this.gbIp;
     }
 
-    public CreateGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateGroupResponseBody setGbPort(Long gbPort) {
         this.gbPort = gbPort;
         return this;
@@ -62,6 +54,14 @@ public class CreateGroupResponseBody extends TeaModel {
     }
     public String getId() {
         return this.id;
+    }
+
+    public CreateGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

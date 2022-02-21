@@ -4,11 +4,8 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchBindTemplateRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("TemplateId")
-    public String templateId;
+    @NameInMap("ApplyAll")
+    public Boolean applyAll;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -16,31 +13,26 @@ public class BatchBindTemplateRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
-    @NameInMap("ApplyAll")
-    public Boolean applyAll;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Replace")
     public Boolean replace;
+
+    @NameInMap("TemplateId")
+    public String templateId;
 
     public static BatchBindTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchBindTemplateRequest self = new BatchBindTemplateRequest();
         return TeaModel.build(map, self);
     }
 
-    public BatchBindTemplateRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public BatchBindTemplateRequest setApplyAll(Boolean applyAll) {
+        this.applyAll = applyAll;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public BatchBindTemplateRequest setTemplateId(String templateId) {
-        this.templateId = templateId;
-        return this;
-    }
-    public String getTemplateId() {
-        return this.templateId;
+    public Boolean getApplyAll() {
+        return this.applyAll;
     }
 
     public BatchBindTemplateRequest setInstanceId(String instanceId) {
@@ -59,12 +51,12 @@ public class BatchBindTemplateRequest extends TeaModel {
         return this.instanceType;
     }
 
-    public BatchBindTemplateRequest setApplyAll(Boolean applyAll) {
-        this.applyAll = applyAll;
+    public BatchBindTemplateRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public Boolean getApplyAll() {
-        return this.applyAll;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public BatchBindTemplateRequest setReplace(Boolean replace) {
@@ -73,6 +65,14 @@ public class BatchBindTemplateRequest extends TeaModel {
     }
     public Boolean getReplace() {
         return this.replace;
+    }
+
+    public BatchBindTemplateRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
     }
 
 }

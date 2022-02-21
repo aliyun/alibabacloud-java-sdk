@@ -4,18 +4,26 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchUnbindParentPlatformDevicesRequest extends TeaModel {
+    @NameInMap("DeviceId")
+    public String deviceId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("ParentPlatformId")
     public String parentPlatformId;
 
-    @NameInMap("DeviceId")
-    public String deviceId;
-
     public static BatchUnbindParentPlatformDevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchUnbindParentPlatformDevicesRequest self = new BatchUnbindParentPlatformDevicesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchUnbindParentPlatformDevicesRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
     }
 
     public BatchUnbindParentPlatformDevicesRequest setOwnerId(Long ownerId) {
@@ -32,14 +40,6 @@ public class BatchUnbindParentPlatformDevicesRequest extends TeaModel {
     }
     public String getParentPlatformId() {
         return this.parentPlatformId;
-    }
-
-    public BatchUnbindParentPlatformDevicesRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-        return this;
-    }
-    public String getDeviceId() {
-        return this.deviceId;
     }
 
 }

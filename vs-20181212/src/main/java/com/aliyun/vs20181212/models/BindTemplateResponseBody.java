@@ -4,14 +4,14 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BindTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("InstanceType")
     public String instanceType;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TemplateId")
     public String templateId;
@@ -19,14 +19,6 @@ public class BindTemplateResponseBody extends TeaModel {
     public static BindTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BindTemplateResponseBody self = new BindTemplateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public BindTemplateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public BindTemplateResponseBody setInstanceId(String instanceId) {
@@ -43,6 +35,14 @@ public class BindTemplateResponseBody extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public BindTemplateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public BindTemplateResponseBody setTemplateId(String templateId) {

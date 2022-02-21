@@ -35,11 +35,11 @@ public class BatchStartDevicesResponseBody extends TeaModel {
         @NameInMap("Error")
         public String error;
 
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         public static BatchStartDevicesResponseBodyResultsStreams build(java.util.Map<String, ?> map) throws Exception {
             BatchStartDevicesResponseBodyResultsStreams self = new BatchStartDevicesResponseBodyResultsStreams();
@@ -54,20 +54,20 @@ public class BatchStartDevicesResponseBody extends TeaModel {
             return this.error;
         }
 
-        public BatchStartDevicesResponseBodyResultsStreams setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public BatchStartDevicesResponseBodyResultsStreams setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public BatchStartDevicesResponseBodyResultsStreams setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

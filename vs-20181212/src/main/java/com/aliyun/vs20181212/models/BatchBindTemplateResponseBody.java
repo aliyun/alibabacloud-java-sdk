@@ -4,23 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchBindTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Bindings")
     public java.util.List<BatchBindTemplateResponseBodyBindings> bindings;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static BatchBindTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchBindTemplateResponseBody self = new BatchBindTemplateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public BatchBindTemplateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public BatchBindTemplateResponseBody setBindings(java.util.List<BatchBindTemplateResponseBodyBindings> bindings) {
@@ -29,6 +21,14 @@ public class BatchBindTemplateResponseBody extends TeaModel {
     }
     public java.util.List<BatchBindTemplateResponseBodyBindings> getBindings() {
         return this.bindings;
+    }
+
+    public BatchBindTemplateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class BatchBindTemplateResponseBodyBindings extends TeaModel {

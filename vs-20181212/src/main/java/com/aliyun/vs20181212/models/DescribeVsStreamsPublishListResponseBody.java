@@ -4,14 +4,14 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
-    @NameInMap("TotalPage")
-    public Integer totalPage;
-
     @NameInMap("PageNum")
     public Integer pageNum;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("PublishInfo")
+    public DescribeVsStreamsPublishListResponseBodyPublishInfo publishInfo;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -19,20 +19,12 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
     @NameInMap("TotalNum")
     public Integer totalNum;
 
-    @NameInMap("PublishInfo")
-    public DescribeVsStreamsPublishListResponseBodyPublishInfo publishInfo;
+    @NameInMap("TotalPage")
+    public Integer totalPage;
 
     public static DescribeVsStreamsPublishListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsStreamsPublishListResponseBody self = new DescribeVsStreamsPublishListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsStreamsPublishListResponseBody setTotalPage(Integer totalPage) {
-        this.totalPage = totalPage;
-        return this;
-    }
-    public Integer getTotalPage() {
-        return this.totalPage;
     }
 
     public DescribeVsStreamsPublishListResponseBody setPageNum(Integer pageNum) {
@@ -51,6 +43,14 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeVsStreamsPublishListResponseBody setPublishInfo(DescribeVsStreamsPublishListResponseBodyPublishInfo publishInfo) {
+        this.publishInfo = publishInfo;
+        return this;
+    }
+    public DescribeVsStreamsPublishListResponseBodyPublishInfo getPublishInfo() {
+        return this.publishInfo;
+    }
+
     public DescribeVsStreamsPublishListResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -67,38 +67,29 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
         return this.totalNum;
     }
 
-    public DescribeVsStreamsPublishListResponseBody setPublishInfo(DescribeVsStreamsPublishListResponseBodyPublishInfo publishInfo) {
-        this.publishInfo = publishInfo;
+    public DescribeVsStreamsPublishListResponseBody setTotalPage(Integer totalPage) {
+        this.totalPage = totalPage;
         return this;
     }
-    public DescribeVsStreamsPublishListResponseBodyPublishInfo getPublishInfo() {
-        return this.publishInfo;
+    public Integer getTotalPage() {
+        return this.totalPage;
     }
 
     public static class DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo extends TeaModel {
-        @NameInMap("EdgeNodeAddr")
-        public String edgeNodeAddr;
+        @NameInMap("AppName")
+        public String appName;
 
-        @NameInMap("PublishUrl")
-        public String publishUrl;
-
-        @NameInMap("StreamName")
-        public String streamName;
+        @NameInMap("ClientAddr")
+        public String clientAddr;
 
         @NameInMap("DomainName")
         public String domainName;
 
-        @NameInMap("StopTime")
-        public String stopTime;
-
-        @NameInMap("TranscodeId")
-        public String transcodeId;
+        @NameInMap("EdgeNodeAddr")
+        public String edgeNodeAddr;
 
         @NameInMap("PublishDomain")
         public String publishDomain;
-
-        @NameInMap("AppName")
-        public String appName;
 
         @NameInMap("PublishTime")
         public String publishTime;
@@ -106,42 +97,43 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
         @NameInMap("PublishType")
         public String publishType;
 
-        @NameInMap("Transcoded")
-        public String transcoded;
+        @NameInMap("PublishUrl")
+        public String publishUrl;
 
-        @NameInMap("ClientAddr")
-        public String clientAddr;
+        @NameInMap("StopTime")
+        public String stopTime;
+
+        @NameInMap("StreamName")
+        public String streamName;
 
         @NameInMap("StreamUrl")
         public String streamUrl;
+
+        @NameInMap("TranscodeId")
+        public String transcodeId;
+
+        @NameInMap("Transcoded")
+        public String transcoded;
 
         public static DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo self = new DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setEdgeNodeAddr(String edgeNodeAddr) {
-            this.edgeNodeAddr = edgeNodeAddr;
+        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setAppName(String appName) {
+            this.appName = appName;
             return this;
         }
-        public String getEdgeNodeAddr() {
-            return this.edgeNodeAddr;
+        public String getAppName() {
+            return this.appName;
         }
 
-        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setPublishUrl(String publishUrl) {
-            this.publishUrl = publishUrl;
+        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setClientAddr(String clientAddr) {
+            this.clientAddr = clientAddr;
             return this;
         }
-        public String getPublishUrl() {
-            return this.publishUrl;
-        }
-
-        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setStreamName(String streamName) {
-            this.streamName = streamName;
-            return this;
-        }
-        public String getStreamName() {
-            return this.streamName;
+        public String getClientAddr() {
+            return this.clientAddr;
         }
 
         public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setDomainName(String domainName) {
@@ -152,20 +144,12 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
             return this.domainName;
         }
 
-        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setStopTime(String stopTime) {
-            this.stopTime = stopTime;
+        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setEdgeNodeAddr(String edgeNodeAddr) {
+            this.edgeNodeAddr = edgeNodeAddr;
             return this;
         }
-        public String getStopTime() {
-            return this.stopTime;
-        }
-
-        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setTranscodeId(String transcodeId) {
-            this.transcodeId = transcodeId;
-            return this;
-        }
-        public String getTranscodeId() {
-            return this.transcodeId;
+        public String getEdgeNodeAddr() {
+            return this.edgeNodeAddr;
         }
 
         public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setPublishDomain(String publishDomain) {
@@ -174,14 +158,6 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
         }
         public String getPublishDomain() {
             return this.publishDomain;
-        }
-
-        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setAppName(String appName) {
-            this.appName = appName;
-            return this;
-        }
-        public String getAppName() {
-            return this.appName;
         }
 
         public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setPublishTime(String publishTime) {
@@ -200,20 +176,28 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
             return this.publishType;
         }
 
-        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setTranscoded(String transcoded) {
-            this.transcoded = transcoded;
+        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setPublishUrl(String publishUrl) {
+            this.publishUrl = publishUrl;
             return this;
         }
-        public String getTranscoded() {
-            return this.transcoded;
+        public String getPublishUrl() {
+            return this.publishUrl;
         }
 
-        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setClientAddr(String clientAddr) {
-            this.clientAddr = clientAddr;
+        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setStopTime(String stopTime) {
+            this.stopTime = stopTime;
             return this;
         }
-        public String getClientAddr() {
-            return this.clientAddr;
+        public String getStopTime() {
+            return this.stopTime;
+        }
+
+        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setStreamName(String streamName) {
+            this.streamName = streamName;
+            return this;
+        }
+        public String getStreamName() {
+            return this.streamName;
         }
 
         public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setStreamUrl(String streamUrl) {
@@ -222,6 +206,22 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
         }
         public String getStreamUrl() {
             return this.streamUrl;
+        }
+
+        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setTranscodeId(String transcodeId) {
+            this.transcodeId = transcodeId;
+            return this;
+        }
+        public String getTranscodeId() {
+            return this.transcodeId;
+        }
+
+        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setTranscoded(String transcoded) {
+            this.transcoded = transcoded;
+            return this;
+        }
+        public String getTranscoded() {
+            return this.transcoded;
         }
 
     }

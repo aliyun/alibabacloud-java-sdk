@@ -4,23 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DeleteDeviceRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("Id")
     public String id;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static DeleteDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDeviceRequest self = new DeleteDeviceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteDeviceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DeleteDeviceRequest setId(String id) {
@@ -29,6 +21,14 @@ public class DeleteDeviceRequest extends TeaModel {
     }
     public String getId() {
         return this.id;
+    }
+
+    public DeleteDeviceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

@@ -4,20 +4,20 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainUvDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("DataInterval")
-    public String dataInterval;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("UvDataInterval")
     public DescribeVsDomainUvDataResponseBodyUvDataInterval uvDataInterval;
@@ -27,28 +27,12 @@ public class DescribeVsDomainUvDataResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeVsDomainUvDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeVsDomainUvDataResponseBody setDataInterval(String dataInterval) {
+        this.dataInterval = dataInterval;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeVsDomainUvDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeVsDomainUvDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getDataInterval() {
+        return this.dataInterval;
     }
 
     public DescribeVsDomainUvDataResponseBody setDomainName(String domainName) {
@@ -59,12 +43,28 @@ public class DescribeVsDomainUvDataResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeVsDomainUvDataResponseBody setDataInterval(String dataInterval) {
-        this.dataInterval = dataInterval;
+    public DescribeVsDomainUvDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getDataInterval() {
-        return this.dataInterval;
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeVsDomainUvDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeVsDomainUvDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeVsDomainUvDataResponseBody setUvDataInterval(DescribeVsDomainUvDataResponseBodyUvDataInterval uvDataInterval) {
@@ -76,23 +76,15 @@ public class DescribeVsDomainUvDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainUvDataResponseBodyUvDataIntervalUsageData extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeVsDomainUvDataResponseBodyUvDataIntervalUsageData build(java.util.Map<String, ?> map) throws Exception {
             DescribeVsDomainUvDataResponseBodyUvDataIntervalUsageData self = new DescribeVsDomainUvDataResponseBodyUvDataIntervalUsageData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVsDomainUvDataResponseBodyUvDataIntervalUsageData setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DescribeVsDomainUvDataResponseBodyUvDataIntervalUsageData setTimeStamp(String timeStamp) {
@@ -101,6 +93,14 @@ public class DescribeVsDomainUvDataResponseBody extends TeaModel {
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeVsDomainUvDataResponseBodyUvDataIntervalUsageData setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

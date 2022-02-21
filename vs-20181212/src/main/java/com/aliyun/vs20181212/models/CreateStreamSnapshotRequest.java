@@ -4,26 +4,18 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateStreamSnapshotRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("Id")
     public String id;
 
     @NameInMap("Location")
     public String location;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     public static CreateStreamSnapshotRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStreamSnapshotRequest self = new CreateStreamSnapshotRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateStreamSnapshotRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public CreateStreamSnapshotRequest setId(String id) {
@@ -40,6 +32,14 @@ public class CreateStreamSnapshotRequest extends TeaModel {
     }
     public String getLocation() {
         return this.location;
+    }
+
+    public CreateStreamSnapshotRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

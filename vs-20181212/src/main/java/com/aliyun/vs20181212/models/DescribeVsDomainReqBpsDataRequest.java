@@ -4,14 +4,8 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainReqBpsDataRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -25,17 +19,15 @@ public class DescribeVsDomainReqBpsDataRequest extends TeaModel {
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeVsDomainReqBpsDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsDomainReqBpsDataRequest self = new DescribeVsDomainReqBpsDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsDomainReqBpsDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeVsDomainReqBpsDataRequest setDomainName(String domainName) {
@@ -44,14 +36,6 @@ public class DescribeVsDomainReqBpsDataRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeVsDomainReqBpsDataRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeVsDomainReqBpsDataRequest setEndTime(String endTime) {
@@ -84,6 +68,22 @@ public class DescribeVsDomainReqBpsDataRequest extends TeaModel {
     }
     public String getLocationNameEn() {
         return this.locationNameEn;
+    }
+
+    public DescribeVsDomainReqBpsDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeVsDomainReqBpsDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

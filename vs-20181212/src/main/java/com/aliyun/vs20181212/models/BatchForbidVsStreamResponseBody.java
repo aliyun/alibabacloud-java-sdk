@@ -4,23 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchForbidVsStreamResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ForbidResult")
     public BatchForbidVsStreamResponseBodyForbidResult forbidResult;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static BatchForbidVsStreamResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchForbidVsStreamResponseBody self = new BatchForbidVsStreamResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public BatchForbidVsStreamResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public BatchForbidVsStreamResponseBody setForbidResult(BatchForbidVsStreamResponseBodyForbidResult forbidResult) {
@@ -29,6 +21,14 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
     }
     public BatchForbidVsStreamResponseBodyForbidResult getForbidResult() {
         return this.forbidResult;
+    }
+
+    public BatchForbidVsStreamResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class BatchForbidVsStreamResponseBodyForbidResultForbidResultInfoChannels extends TeaModel {
@@ -51,8 +51,8 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
     }
 
     public static class BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo extends TeaModel {
-        @NameInMap("Result")
-        public String result;
+        @NameInMap("Channels")
+        public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfoChannels channels;
 
         @NameInMap("Count")
         public Integer count;
@@ -60,20 +60,20 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
         @NameInMap("Detail")
         public String detail;
 
-        @NameInMap("Channels")
-        public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfoChannels channels;
+        @NameInMap("Result")
+        public String result;
 
         public static BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo build(java.util.Map<String, ?> map) throws Exception {
             BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo self = new BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo();
             return TeaModel.build(map, self);
         }
 
-        public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo setResult(String result) {
-            this.result = result;
+        public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo setChannels(BatchForbidVsStreamResponseBodyForbidResultForbidResultInfoChannels channels) {
+            this.channels = channels;
             return this;
         }
-        public String getResult() {
-            return this.result;
+        public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfoChannels getChannels() {
+            return this.channels;
         }
 
         public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo setCount(Integer count) {
@@ -92,12 +92,12 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
             return this.detail;
         }
 
-        public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo setChannels(BatchForbidVsStreamResponseBodyForbidResultForbidResultInfoChannels channels) {
-            this.channels = channels;
+        public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo setResult(String result) {
+            this.result = result;
             return this;
         }
-        public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfoChannels getChannels() {
-            return this.channels;
+        public String getResult() {
+            return this.result;
         }
 
     }

@@ -4,58 +4,42 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsStreamsPublishListRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
-
-    @NameInMap("StreamName")
-    public String streamName;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("StreamType")
-    public String streamType;
-
-    @NameInMap("QueryType")
-    public String queryType;
 
     @NameInMap("OrderBy")
     public String orderBy;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("QueryType")
+    public String queryType;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("StreamName")
+    public String streamName;
+
+    @NameInMap("StreamType")
+    public String streamType;
+
     public static DescribeVsStreamsPublishListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsStreamsPublishListRequest self = new DescribeVsStreamsPublishListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsStreamsPublishListRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeVsStreamsPublishListRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DescribeVsStreamsPublishListRequest setAppName(String appName) {
@@ -66,20 +50,12 @@ public class DescribeVsStreamsPublishListRequest extends TeaModel {
         return this.appName;
     }
 
-    public DescribeVsStreamsPublishListRequest setStreamName(String streamName) {
-        this.streamName = streamName;
+    public DescribeVsStreamsPublishListRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getStreamName() {
-        return this.streamName;
-    }
-
-    public DescribeVsStreamsPublishListRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DescribeVsStreamsPublishListRequest setEndTime(String endTime) {
@@ -90,12 +66,20 @@ public class DescribeVsStreamsPublishListRequest extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeVsStreamsPublishListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeVsStreamsPublishListRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
+    public DescribeVsStreamsPublishListRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeVsStreamsPublishListRequest setPageNumber(Integer pageNumber) {
@@ -106,12 +90,12 @@ public class DescribeVsStreamsPublishListRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeVsStreamsPublishListRequest setStreamType(String streamType) {
-        this.streamType = streamType;
+    public DescribeVsStreamsPublishListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getStreamType() {
-        return this.streamType;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeVsStreamsPublishListRequest setQueryType(String queryType) {
@@ -122,12 +106,28 @@ public class DescribeVsStreamsPublishListRequest extends TeaModel {
         return this.queryType;
     }
 
-    public DescribeVsStreamsPublishListRequest setOrderBy(String orderBy) {
-        this.orderBy = orderBy;
+    public DescribeVsStreamsPublishListRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getOrderBy() {
-        return this.orderBy;
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeVsStreamsPublishListRequest setStreamName(String streamName) {
+        this.streamName = streamName;
+        return this;
+    }
+    public String getStreamName() {
+        return this.streamName;
+    }
+
+    public DescribeVsStreamsPublishListRequest setStreamType(String streamType) {
+        this.streamType = streamType;
+        return this;
+    }
+    public String getStreamType() {
+        return this.streamType;
     }
 
 }

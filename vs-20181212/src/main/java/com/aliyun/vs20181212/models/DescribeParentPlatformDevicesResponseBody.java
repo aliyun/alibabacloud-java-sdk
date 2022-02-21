@@ -4,6 +4,12 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
+    @NameInMap("Devices")
+    public java.util.List<DescribeParentPlatformDevicesResponseBodyDevices> devices;
+
+    @NameInMap("PageCount")
+    public Long pageCount;
+
     @NameInMap("PageNum")
     public Long pageNum;
 
@@ -16,15 +22,25 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    @NameInMap("PageCount")
-    public Long pageCount;
-
-    @NameInMap("Devices")
-    public java.util.List<DescribeParentPlatformDevicesResponseBodyDevices> devices;
-
     public static DescribeParentPlatformDevicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeParentPlatformDevicesResponseBody self = new DescribeParentPlatformDevicesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeParentPlatformDevicesResponseBody setDevices(java.util.List<DescribeParentPlatformDevicesResponseBodyDevices> devices) {
+        this.devices = devices;
+        return this;
+    }
+    public java.util.List<DescribeParentPlatformDevicesResponseBodyDevices> getDevices() {
+        return this.devices;
+    }
+
+    public DescribeParentPlatformDevicesResponseBody setPageCount(Long pageCount) {
+        this.pageCount = pageCount;
+        return this;
+    }
+    public Long getPageCount() {
+        return this.pageCount;
     }
 
     public DescribeParentPlatformDevicesResponseBody setPageNum(Long pageNum) {
@@ -59,49 +75,25 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeParentPlatformDevicesResponseBody setPageCount(Long pageCount) {
-        this.pageCount = pageCount;
-        return this;
-    }
-    public Long getPageCount() {
-        return this.pageCount;
-    }
-
-    public DescribeParentPlatformDevicesResponseBody setDevices(java.util.List<DescribeParentPlatformDevicesResponseBodyDevices> devices) {
-        this.devices = devices;
-        return this;
-    }
-    public java.util.List<DescribeParentPlatformDevicesResponseBodyDevices> getDevices() {
-        return this.devices;
-    }
-
     public static class DescribeParentPlatformDevicesResponseBodyDevices extends TeaModel {
-        @NameInMap("ParentId")
-        public String parentId;
-
         @NameInMap("GbId")
         public String gbId;
 
         @NameInMap("GroupId")
         public String groupId;
 
+        @NameInMap("Id")
+        public String id;
+
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("ParentId")
+        public String parentId;
 
         public static DescribeParentPlatformDevicesResponseBodyDevices build(java.util.Map<String, ?> map) throws Exception {
             DescribeParentPlatformDevicesResponseBodyDevices self = new DescribeParentPlatformDevicesResponseBodyDevices();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeParentPlatformDevicesResponseBodyDevices setParentId(String parentId) {
-            this.parentId = parentId;
-            return this;
-        }
-        public String getParentId() {
-            return this.parentId;
         }
 
         public DescribeParentPlatformDevicesResponseBodyDevices setGbId(String gbId) {
@@ -120,6 +112,14 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
             return this.groupId;
         }
 
+        public DescribeParentPlatformDevicesResponseBodyDevices setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
         public DescribeParentPlatformDevicesResponseBodyDevices setName(String name) {
             this.name = name;
             return this;
@@ -128,12 +128,12 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeParentPlatformDevicesResponseBodyDevices setId(String id) {
-            this.id = id;
+        public DescribeParentPlatformDevicesResponseBodyDevices setParentId(String parentId) {
+            this.parentId = parentId;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getParentId() {
+            return this.parentId;
         }
 
     }

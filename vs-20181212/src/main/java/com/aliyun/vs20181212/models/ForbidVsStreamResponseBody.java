@@ -40,8 +40,8 @@ public class ForbidVsStreamResponseBody extends TeaModel {
     }
 
     public static class BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo extends TeaModel {
-        @NameInMap("Result")
-        public String result;
+        @NameInMap("Channels")
+        public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfoChannels channels;
 
         @NameInMap("Count")
         public Integer count;
@@ -49,20 +49,20 @@ public class ForbidVsStreamResponseBody extends TeaModel {
         @NameInMap("Detail")
         public String detail;
 
-        @NameInMap("Channels")
-        public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfoChannels channels;
+        @NameInMap("Result")
+        public String result;
 
         public static BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo build(java.util.Map<String, ?> map) throws Exception {
             BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo self = new BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo();
             return TeaModel.build(map, self);
         }
 
-        public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo setResult(String result) {
-            this.result = result;
+        public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo setChannels(BatchForbidVsStreamResponseBodyForbidResultForbidResultInfoChannels channels) {
+            this.channels = channels;
             return this;
         }
-        public String getResult() {
-            return this.result;
+        public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfoChannels getChannels() {
+            return this.channels;
         }
 
         public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo setCount(Integer count) {
@@ -81,12 +81,12 @@ public class ForbidVsStreamResponseBody extends TeaModel {
             return this.detail;
         }
 
-        public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo setChannels(BatchForbidVsStreamResponseBodyForbidResultForbidResultInfoChannels channels) {
-            this.channels = channels;
+        public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo setResult(String result) {
+            this.result = result;
             return this;
         }
-        public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfoChannels getChannels() {
-            return this.channels;
+        public String getResult() {
+            return this.result;
         }
 
     }

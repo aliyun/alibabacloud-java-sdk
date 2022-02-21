@@ -4,23 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DescribeVsUpPeakPublishStreamDatas")
     public DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatas describeVsUpPeakPublishStreamDatas;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeVsUpPeakPublishStreamDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsUpPeakPublishStreamDataResponseBody self = new DescribeVsUpPeakPublishStreamDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsUpPeakPublishStreamDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeVsUpPeakPublishStreamDataResponseBody setDescribeVsUpPeakPublishStreamDatas(DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatas describeVsUpPeakPublishStreamDatas) {
@@ -31,15 +23,17 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
         return this.describeVsUpPeakPublishStreamDatas;
     }
 
-    public static class DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData extends TeaModel {
-        @NameInMap("QueryTime")
-        public String queryTime;
+    public DescribeVsUpPeakPublishStreamDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData extends TeaModel {
         @NameInMap("BandWidth")
         public String bandWidth;
-
-        @NameInMap("StatName")
-        public String statName;
 
         @NameInMap("PeakTime")
         public String peakTime;
@@ -47,17 +41,15 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
         @NameInMap("PublishStreamNum")
         public Integer publishStreamNum;
 
+        @NameInMap("QueryTime")
+        public String queryTime;
+
+        @NameInMap("StatName")
+        public String statName;
+
         public static DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData build(java.util.Map<String, ?> map) throws Exception {
             DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData self = new DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData setQueryTime(String queryTime) {
-            this.queryTime = queryTime;
-            return this;
-        }
-        public String getQueryTime() {
-            return this.queryTime;
         }
 
         public DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData setBandWidth(String bandWidth) {
@@ -66,14 +58,6 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
         }
         public String getBandWidth() {
             return this.bandWidth;
-        }
-
-        public DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData setStatName(String statName) {
-            this.statName = statName;
-            return this;
-        }
-        public String getStatName() {
-            return this.statName;
         }
 
         public DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData setPeakTime(String peakTime) {
@@ -90,6 +74,22 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
         }
         public Integer getPublishStreamNum() {
             return this.publishStreamNum;
+        }
+
+        public DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData setQueryTime(String queryTime) {
+            this.queryTime = queryTime;
+            return this;
+        }
+        public String getQueryTime() {
+            return this.queryTime;
+        }
+
+        public DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData setStatName(String statName) {
+            this.statName = statName;
+            return this;
+        }
+        public String getStatName() {
+            return this.statName;
         }
 
     }

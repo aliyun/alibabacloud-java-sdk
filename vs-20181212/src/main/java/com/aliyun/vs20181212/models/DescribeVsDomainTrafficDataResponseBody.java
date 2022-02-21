@@ -4,20 +4,20 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainTrafficDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("DataInterval")
-    public String dataInterval;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("TrafficDataPerInterval")
     public DescribeVsDomainTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
@@ -27,28 +27,12 @@ public class DescribeVsDomainTrafficDataResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeVsDomainTrafficDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeVsDomainTrafficDataResponseBody setDataInterval(String dataInterval) {
+        this.dataInterval = dataInterval;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeVsDomainTrafficDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeVsDomainTrafficDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getDataInterval() {
+        return this.dataInterval;
     }
 
     public DescribeVsDomainTrafficDataResponseBody setDomainName(String domainName) {
@@ -59,12 +43,28 @@ public class DescribeVsDomainTrafficDataResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeVsDomainTrafficDataResponseBody setDataInterval(String dataInterval) {
-        this.dataInterval = dataInterval;
+    public DescribeVsDomainTrafficDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getDataInterval() {
-        return this.dataInterval;
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeVsDomainTrafficDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeVsDomainTrafficDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeVsDomainTrafficDataResponseBody setTrafficDataPerInterval(DescribeVsDomainTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval) {
@@ -76,23 +76,15 @@ public class DescribeVsDomainTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
-        @NameInMap("TrafficValue")
-        public String trafficValue;
-
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("TrafficValue")
+        public String trafficValue;
 
         public static DescribeVsDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeVsDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule self = new DescribeVsDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVsDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule setTrafficValue(String trafficValue) {
-            this.trafficValue = trafficValue;
-            return this;
-        }
-        public String getTrafficValue() {
-            return this.trafficValue;
         }
 
         public DescribeVsDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule setTimeStamp(String timeStamp) {
@@ -101,6 +93,14 @@ public class DescribeVsDomainTrafficDataResponseBody extends TeaModel {
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeVsDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule setTrafficValue(String trafficValue) {
+            this.trafficValue = trafficValue;
+            return this;
+        }
+        public String getTrafficValue() {
+            return this.trafficValue;
         }
 
     }

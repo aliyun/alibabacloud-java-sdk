@@ -4,29 +4,21 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class StartTransferStreamRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("Id")
     public String id;
 
-    @NameInMap("Url")
-    public String url;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Transcode")
     public String transcode;
 
+    @NameInMap("Url")
+    public String url;
+
     public static StartTransferStreamRequest build(java.util.Map<String, ?> map) throws Exception {
         StartTransferStreamRequest self = new StartTransferStreamRequest();
         return TeaModel.build(map, self);
-    }
-
-    public StartTransferStreamRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public StartTransferStreamRequest setId(String id) {
@@ -37,12 +29,12 @@ public class StartTransferStreamRequest extends TeaModel {
         return this.id;
     }
 
-    public StartTransferStreamRequest setUrl(String url) {
-        this.url = url;
+    public StartTransferStreamRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getUrl() {
-        return this.url;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public StartTransferStreamRequest setTranscode(String transcode) {
@@ -51,6 +43,14 @@ public class StartTransferStreamRequest extends TeaModel {
     }
     public String getTranscode() {
         return this.transcode;
+    }
+
+    public StartTransferStreamRequest setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
     }
 
 }

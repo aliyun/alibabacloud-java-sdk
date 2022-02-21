@@ -4,14 +4,8 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainTrafficDataRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -25,17 +19,15 @@ public class DescribeVsDomainTrafficDataRequest extends TeaModel {
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeVsDomainTrafficDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsDomainTrafficDataRequest self = new DescribeVsDomainTrafficDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsDomainTrafficDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeVsDomainTrafficDataRequest setDomainName(String domainName) {
@@ -44,14 +36,6 @@ public class DescribeVsDomainTrafficDataRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeVsDomainTrafficDataRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeVsDomainTrafficDataRequest setEndTime(String endTime) {
@@ -84,6 +68,22 @@ public class DescribeVsDomainTrafficDataRequest extends TeaModel {
     }
     public String getLocationNameEn() {
         return this.locationNameEn;
+    }
+
+    public DescribeVsDomainTrafficDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeVsDomainTrafficDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

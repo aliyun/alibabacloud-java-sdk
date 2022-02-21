@@ -7,17 +7,17 @@ public class DescribeDeviceGatewayResponseBody extends TeaModel {
     @NameInMap("Host")
     public String host;
 
-    @NameInMap("Token")
-    public String token;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Port")
     public Long port;
 
     @NameInMap("Protocol")
     public String protocol;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Token")
+    public String token;
 
     public static DescribeDeviceGatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeviceGatewayResponseBody self = new DescribeDeviceGatewayResponseBody();
@@ -30,22 +30,6 @@ public class DescribeDeviceGatewayResponseBody extends TeaModel {
     }
     public String getHost() {
         return this.host;
-    }
-
-    public DescribeDeviceGatewayResponseBody setToken(String token) {
-        this.token = token;
-        return this;
-    }
-    public String getToken() {
-        return this.token;
-    }
-
-    public DescribeDeviceGatewayResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDeviceGatewayResponseBody setPort(Long port) {
@@ -62,6 +46,22 @@ public class DescribeDeviceGatewayResponseBody extends TeaModel {
     }
     public String getProtocol() {
         return this.protocol;
+    }
+
+    public DescribeDeviceGatewayResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDeviceGatewayResponseBody setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
     }
 
 }

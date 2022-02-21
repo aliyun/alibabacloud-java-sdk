@@ -4,23 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsPullStreamInfoConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static DescribeVsPullStreamInfoConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsPullStreamInfoConfigRequest self = new DescribeVsPullStreamInfoConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsPullStreamInfoConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeVsPullStreamInfoConfigRequest setDomainName(String domainName) {
@@ -29,6 +21,14 @@ public class DescribeVsPullStreamInfoConfigRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public DescribeVsPullStreamInfoConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

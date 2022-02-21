@@ -35,9 +35,6 @@ public class BatchUnbindTemplatesResponseBody extends TeaModel {
         @NameInMap("Error")
         public String error;
 
-        @NameInMap("TemplateType")
-        public String templateType;
-
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -46,6 +43,9 @@ public class BatchUnbindTemplatesResponseBody extends TeaModel {
 
         @NameInMap("TemplateId")
         public String templateId;
+
+        @NameInMap("TemplateType")
+        public String templateType;
 
         public static BatchUnbindTemplatesResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             BatchUnbindTemplatesResponseBodyResults self = new BatchUnbindTemplatesResponseBodyResults();
@@ -58,14 +58,6 @@ public class BatchUnbindTemplatesResponseBody extends TeaModel {
         }
         public String getError() {
             return this.error;
-        }
-
-        public BatchUnbindTemplatesResponseBodyResults setTemplateType(String templateType) {
-            this.templateType = templateType;
-            return this;
-        }
-        public String getTemplateType() {
-            return this.templateType;
         }
 
         public BatchUnbindTemplatesResponseBodyResults setInstanceId(String instanceId) {
@@ -90,6 +82,14 @@ public class BatchUnbindTemplatesResponseBody extends TeaModel {
         }
         public String getTemplateId() {
             return this.templateId;
+        }
+
+        public BatchUnbindTemplatesResponseBodyResults setTemplateType(String templateType) {
+            this.templateType = templateType;
+            return this;
+        }
+        public String getTemplateType() {
+            return this.templateType;
         }
 
     }

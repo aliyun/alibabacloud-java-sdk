@@ -4,20 +4,17 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class UploadDeviceRecordRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DeviceId")
     public String deviceId;
 
-    @NameInMap("StreamId")
-    public String streamId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("SearchCriteria")
     public String searchCriteria;
 
-    @NameInMap("UploadType")
-    public String uploadType;
+    @NameInMap("StreamId")
+    public String streamId;
 
     @NameInMap("UploadId")
     public String uploadId;
@@ -28,17 +25,12 @@ public class UploadDeviceRecordRequest extends TeaModel {
     @NameInMap("UploadParams")
     public String uploadParams;
 
+    @NameInMap("UploadType")
+    public String uploadType;
+
     public static UploadDeviceRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadDeviceRecordRequest self = new UploadDeviceRecordRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UploadDeviceRecordRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public UploadDeviceRecordRequest setDeviceId(String deviceId) {
@@ -49,12 +41,12 @@ public class UploadDeviceRecordRequest extends TeaModel {
         return this.deviceId;
     }
 
-    public UploadDeviceRecordRequest setStreamId(String streamId) {
-        this.streamId = streamId;
+    public UploadDeviceRecordRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getStreamId() {
-        return this.streamId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public UploadDeviceRecordRequest setSearchCriteria(String searchCriteria) {
@@ -65,12 +57,12 @@ public class UploadDeviceRecordRequest extends TeaModel {
         return this.searchCriteria;
     }
 
-    public UploadDeviceRecordRequest setUploadType(String uploadType) {
-        this.uploadType = uploadType;
+    public UploadDeviceRecordRequest setStreamId(String streamId) {
+        this.streamId = streamId;
         return this;
     }
-    public String getUploadType() {
-        return this.uploadType;
+    public String getStreamId() {
+        return this.streamId;
     }
 
     public UploadDeviceRecordRequest setUploadId(String uploadId) {
@@ -95,6 +87,14 @@ public class UploadDeviceRecordRequest extends TeaModel {
     }
     public String getUploadParams() {
         return this.uploadParams;
+    }
+
+    public UploadDeviceRecordRequest setUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    public String getUploadType() {
+        return this.uploadType;
     }
 
 }

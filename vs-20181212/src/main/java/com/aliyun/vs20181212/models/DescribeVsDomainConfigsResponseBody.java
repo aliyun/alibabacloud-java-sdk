@@ -4,23 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainConfigsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DomainConfigs")
     public java.util.List<DescribeVsDomainConfigsResponseBodyDomainConfigs> domainConfigs;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeVsDomainConfigsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsDomainConfigsResponseBody self = new DescribeVsDomainConfigsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsDomainConfigsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeVsDomainConfigsResponseBody setDomainConfigs(java.util.List<DescribeVsDomainConfigsResponseBodyDomainConfigs> domainConfigs) {
@@ -29,6 +21,14 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
     }
     public java.util.List<DescribeVsDomainConfigsResponseBodyDomainConfigs> getDomainConfigs() {
         return this.domainConfigs;
+    }
+
+    public DescribeVsDomainConfigsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeVsDomainConfigsResponseBodyDomainConfigsFunctionArgs extends TeaModel {
@@ -62,29 +62,21 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainConfigsResponseBodyDomainConfigs extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("ConfigId")
         public String configId;
-
-        @NameInMap("FunctionName")
-        public String functionName;
 
         @NameInMap("FunctionArgs")
         public java.util.List<DescribeVsDomainConfigsResponseBodyDomainConfigsFunctionArgs> functionArgs;
 
+        @NameInMap("FunctionName")
+        public String functionName;
+
+        @NameInMap("Status")
+        public String status;
+
         public static DescribeVsDomainConfigsResponseBodyDomainConfigs build(java.util.Map<String, ?> map) throws Exception {
             DescribeVsDomainConfigsResponseBodyDomainConfigs self = new DescribeVsDomainConfigsResponseBodyDomainConfigs();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVsDomainConfigsResponseBodyDomainConfigs setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeVsDomainConfigsResponseBodyDomainConfigs setConfigId(String configId) {
@@ -95,6 +87,14 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
             return this.configId;
         }
 
+        public DescribeVsDomainConfigsResponseBodyDomainConfigs setFunctionArgs(java.util.List<DescribeVsDomainConfigsResponseBodyDomainConfigsFunctionArgs> functionArgs) {
+            this.functionArgs = functionArgs;
+            return this;
+        }
+        public java.util.List<DescribeVsDomainConfigsResponseBodyDomainConfigsFunctionArgs> getFunctionArgs() {
+            return this.functionArgs;
+        }
+
         public DescribeVsDomainConfigsResponseBodyDomainConfigs setFunctionName(String functionName) {
             this.functionName = functionName;
             return this;
@@ -103,12 +103,12 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
             return this.functionName;
         }
 
-        public DescribeVsDomainConfigsResponseBodyDomainConfigs setFunctionArgs(java.util.List<DescribeVsDomainConfigsResponseBodyDomainConfigsFunctionArgs> functionArgs) {
-            this.functionArgs = functionArgs;
+        public DescribeVsDomainConfigsResponseBodyDomainConfigs setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public java.util.List<DescribeVsDomainConfigsResponseBodyDomainConfigsFunctionArgs> getFunctionArgs() {
-            return this.functionArgs;
+        public String getStatus() {
+            return this.status;
         }
 
     }

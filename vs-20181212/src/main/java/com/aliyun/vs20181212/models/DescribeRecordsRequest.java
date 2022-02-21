@@ -4,20 +4,17 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordsRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public String endTime;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("Type")
-    public String type;
+    @NameInMap("PageNum")
+    public Long pageNum;
 
-    @NameInMap("StreamId")
-    public String streamId;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
+    @NameInMap("PageSize")
+    public Long pageSize;
 
     @NameInMap("PrivateBucket")
     public Boolean privateBucket;
@@ -28,15 +25,26 @@ public class DescribeRecordsRequest extends TeaModel {
     @NameInMap("SortDirection")
     public String sortDirection;
 
-    @NameInMap("PageSize")
-    public Long pageSize;
+    @NameInMap("StartTime")
+    public String startTime;
 
-    @NameInMap("PageNum")
-    public Long pageNum;
+    @NameInMap("StreamId")
+    public String streamId;
+
+    @NameInMap("Type")
+    public String type;
 
     public static DescribeRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRecordsRequest self = new DescribeRecordsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRecordsRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeRecordsRequest setOwnerId(Long ownerId) {
@@ -47,36 +55,20 @@ public class DescribeRecordsRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeRecordsRequest setType(String type) {
-        this.type = type;
+    public DescribeRecordsRequest setPageNum(Long pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public Long getPageNum() {
+        return this.pageNum;
     }
 
-    public DescribeRecordsRequest setStreamId(String streamId) {
-        this.streamId = streamId;
+    public DescribeRecordsRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getStreamId() {
-        return this.streamId;
-    }
-
-    public DescribeRecordsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeRecordsRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeRecordsRequest setPrivateBucket(Boolean privateBucket) {
@@ -103,20 +95,28 @@ public class DescribeRecordsRequest extends TeaModel {
         return this.sortDirection;
     }
 
-    public DescribeRecordsRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
+    public DescribeRecordsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public Long getPageSize() {
-        return this.pageSize;
+    public String getStartTime() {
+        return this.startTime;
     }
 
-    public DescribeRecordsRequest setPageNum(Long pageNum) {
-        this.pageNum = pageNum;
+    public DescribeRecordsRequest setStreamId(String streamId) {
+        this.streamId = streamId;
         return this;
     }
-    public Long getPageNum() {
-        return this.pageNum;
+    public String getStreamId() {
+        return this.streamId;
+    }
+
+    public DescribeRecordsRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

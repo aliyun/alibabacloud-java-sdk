@@ -4,35 +4,41 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeDevicesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("Id")
-    public String id;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Type")
-    public String type;
-
-    @NameInMap("GroupId")
-    public String groupId;
-
-    @NameInMap("ParentId")
-    public String parentId;
-
     @NameInMap("DirectoryId")
     public String directoryId;
+
+    @NameInMap("Dsn")
+    public String dsn;
 
     @NameInMap("GbId")
     public String gbId;
 
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("GroupId")
+    public String groupId;
 
-    @NameInMap("Vendor")
-    public String vendor;
+    @NameInMap("Id")
+    public String id;
+
+    @NameInMap("IncludeDirectory")
+    public Boolean includeDirectory;
+
+    @NameInMap("IncludeStats")
+    public Boolean includeStats;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PageNum")
+    public Long pageNum;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
+    @NameInMap("ParentId")
+    public String parentId;
 
     @NameInMap("SortBy")
     public String sortBy;
@@ -40,69 +46,18 @@ public class DescribeDevicesRequest extends TeaModel {
     @NameInMap("SortDirection")
     public String sortDirection;
 
-    @NameInMap("PageSize")
-    public Long pageSize;
+    @NameInMap("Status")
+    public String status;
 
-    @NameInMap("PageNum")
-    public Long pageNum;
+    @NameInMap("Type")
+    public String type;
 
-    @NameInMap("IncludeStats")
-    public Boolean includeStats;
-
-    @NameInMap("IncludeDirectory")
-    public Boolean includeDirectory;
+    @NameInMap("Vendor")
+    public String vendor;
 
     public static DescribeDevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDevicesRequest self = new DescribeDevicesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDevicesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeDevicesRequest setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
-    }
-
-    public DescribeDevicesRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public DescribeDevicesRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public DescribeDevicesRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
-    }
-
-    public DescribeDevicesRequest setParentId(String parentId) {
-        this.parentId = parentId;
-        return this;
-    }
-    public String getParentId() {
-        return this.parentId;
     }
 
     public DescribeDevicesRequest setDirectoryId(String directoryId) {
@@ -113,6 +68,14 @@ public class DescribeDevicesRequest extends TeaModel {
         return this.directoryId;
     }
 
+    public DescribeDevicesRequest setDsn(String dsn) {
+        this.dsn = dsn;
+        return this;
+    }
+    public String getDsn() {
+        return this.dsn;
+    }
+
     public DescribeDevicesRequest setGbId(String gbId) {
         this.gbId = gbId;
         return this;
@@ -121,20 +84,76 @@ public class DescribeDevicesRequest extends TeaModel {
         return this.gbId;
     }
 
-    public DescribeDevicesRequest setStatus(String status) {
-        this.status = status;
+    public DescribeDevicesRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getGroupId() {
+        return this.groupId;
     }
 
-    public DescribeDevicesRequest setVendor(String vendor) {
-        this.vendor = vendor;
+    public DescribeDevicesRequest setId(String id) {
+        this.id = id;
         return this;
     }
-    public String getVendor() {
-        return this.vendor;
+    public String getId() {
+        return this.id;
+    }
+
+    public DescribeDevicesRequest setIncludeDirectory(Boolean includeDirectory) {
+        this.includeDirectory = includeDirectory;
+        return this;
+    }
+    public Boolean getIncludeDirectory() {
+        return this.includeDirectory;
+    }
+
+    public DescribeDevicesRequest setIncludeStats(Boolean includeStats) {
+        this.includeStats = includeStats;
+        return this;
+    }
+    public Boolean getIncludeStats() {
+        return this.includeStats;
+    }
+
+    public DescribeDevicesRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public DescribeDevicesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeDevicesRequest setPageNum(Long pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Long getPageNum() {
+        return this.pageNum;
+    }
+
+    public DescribeDevicesRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeDevicesRequest setParentId(String parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    public String getParentId() {
+        return this.parentId;
     }
 
     public DescribeDevicesRequest setSortBy(String sortBy) {
@@ -153,36 +172,28 @@ public class DescribeDevicesRequest extends TeaModel {
         return this.sortDirection;
     }
 
-    public DescribeDevicesRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
+    public DescribeDevicesRequest setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public Long getPageSize() {
-        return this.pageSize;
+    public String getStatus() {
+        return this.status;
     }
 
-    public DescribeDevicesRequest setPageNum(Long pageNum) {
-        this.pageNum = pageNum;
+    public DescribeDevicesRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public Long getPageNum() {
-        return this.pageNum;
+    public String getType() {
+        return this.type;
     }
 
-    public DescribeDevicesRequest setIncludeStats(Boolean includeStats) {
-        this.includeStats = includeStats;
+    public DescribeDevicesRequest setVendor(String vendor) {
+        this.vendor = vendor;
         return this;
     }
-    public Boolean getIncludeStats() {
-        return this.includeStats;
-    }
-
-    public DescribeDevicesRequest setIncludeDirectory(Boolean includeDirectory) {
-        this.includeDirectory = includeDirectory;
-        return this;
-    }
-    public Boolean getIncludeDirectory() {
-        return this.includeDirectory;
+    public String getVendor() {
+        return this.vendor;
     }
 
 }

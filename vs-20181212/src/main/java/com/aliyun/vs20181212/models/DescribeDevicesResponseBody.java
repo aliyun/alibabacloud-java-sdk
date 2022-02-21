@@ -4,6 +4,12 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeDevicesResponseBody extends TeaModel {
+    @NameInMap("Devices")
+    public java.util.List<DescribeDevicesResponseBodyDevices> devices;
+
+    @NameInMap("PageCount")
+    public Long pageCount;
+
     @NameInMap("PageNum")
     public Long pageNum;
 
@@ -16,15 +22,25 @@ public class DescribeDevicesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    @NameInMap("PageCount")
-    public Long pageCount;
-
-    @NameInMap("Devices")
-    public java.util.List<DescribeDevicesResponseBodyDevices> devices;
-
     public static DescribeDevicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDevicesResponseBody self = new DescribeDevicesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDevicesResponseBody setDevices(java.util.List<DescribeDevicesResponseBodyDevices> devices) {
+        this.devices = devices;
+        return this;
+    }
+    public java.util.List<DescribeDevicesResponseBodyDevices> getDevices() {
+        return this.devices;
+    }
+
+    public DescribeDevicesResponseBody setPageCount(Long pageCount) {
+        this.pageCount = pageCount;
+        return this;
+    }
+    public Long getPageCount() {
+        return this.pageCount;
     }
 
     public DescribeDevicesResponseBody setPageNum(Long pageNum) {
@@ -59,88 +75,9 @@ public class DescribeDevicesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeDevicesResponseBody setPageCount(Long pageCount) {
-        this.pageCount = pageCount;
-        return this;
-    }
-    public Long getPageCount() {
-        return this.pageCount;
-    }
-
-    public DescribeDevicesResponseBody setDevices(java.util.List<DescribeDevicesResponseBodyDevices> devices) {
-        this.devices = devices;
-        return this;
-    }
-    public java.util.List<DescribeDevicesResponseBodyDevices> getDevices() {
-        return this.devices;
-    }
-
-    public static class DescribeDevicesResponseBodyDevicesStats extends TeaModel {
-        @NameInMap("FailedNum")
-        public Long failedNum;
-
-        @NameInMap("StreamNum")
-        public Long streamNum;
-
-        @NameInMap("ChannelNum")
-        public Long channelNum;
-
-        @NameInMap("OnlineNum")
-        public Long onlineNum;
-
-        @NameInMap("OfflineNum")
-        public Long offlineNum;
-
-        public static DescribeDevicesResponseBodyDevicesStats build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDevicesResponseBodyDevicesStats self = new DescribeDevicesResponseBodyDevicesStats();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDevicesResponseBodyDevicesStats setFailedNum(Long failedNum) {
-            this.failedNum = failedNum;
-            return this;
-        }
-        public Long getFailedNum() {
-            return this.failedNum;
-        }
-
-        public DescribeDevicesResponseBodyDevicesStats setStreamNum(Long streamNum) {
-            this.streamNum = streamNum;
-            return this;
-        }
-        public Long getStreamNum() {
-            return this.streamNum;
-        }
-
-        public DescribeDevicesResponseBodyDevicesStats setChannelNum(Long channelNum) {
-            this.channelNum = channelNum;
-            return this;
-        }
-        public Long getChannelNum() {
-            return this.channelNum;
-        }
-
-        public DescribeDevicesResponseBodyDevicesStats setOnlineNum(Long onlineNum) {
-            this.onlineNum = onlineNum;
-            return this;
-        }
-        public Long getOnlineNum() {
-            return this.onlineNum;
-        }
-
-        public DescribeDevicesResponseBodyDevicesStats setOfflineNum(Long offlineNum) {
-            this.offlineNum = offlineNum;
-            return this;
-        }
-        public Long getOfflineNum() {
-            return this.offlineNum;
-        }
-
-    }
-
     public static class DescribeDevicesResponseBodyDevicesDirectory extends TeaModel {
-        @NameInMap("ParentId")
-        public String parentId;
+        @NameInMap("CreatedTime")
+        public String createdTime;
 
         @NameInMap("Description")
         public String description;
@@ -148,26 +85,26 @@ public class DescribeDevicesResponseBody extends TeaModel {
         @NameInMap("GroupId")
         public String groupId;
 
+        @NameInMap("Id")
+        public String id;
+
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("CreatedTime")
-        public String createdTime;
-
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("ParentId")
+        public String parentId;
 
         public static DescribeDevicesResponseBodyDevicesDirectory build(java.util.Map<String, ?> map) throws Exception {
             DescribeDevicesResponseBodyDevicesDirectory self = new DescribeDevicesResponseBodyDevicesDirectory();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDevicesResponseBodyDevicesDirectory setParentId(String parentId) {
-            this.parentId = parentId;
+        public DescribeDevicesResponseBodyDevicesDirectory setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
             return this;
         }
-        public String getParentId() {
-            return this.parentId;
+        public String getCreatedTime() {
+            return this.createdTime;
         }
 
         public DescribeDevicesResponseBodyDevicesDirectory setDescription(String description) {
@@ -186,22 +123,6 @@ public class DescribeDevicesResponseBody extends TeaModel {
             return this.groupId;
         }
 
-        public DescribeDevicesResponseBodyDevicesDirectory setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeDevicesResponseBodyDevicesDirectory setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
-            return this;
-        }
-        public String getCreatedTime() {
-            return this.createdTime;
-        }
-
         public DescribeDevicesResponseBodyDevicesDirectory setId(String id) {
             this.id = id;
             return this;
@@ -210,47 +131,99 @@ public class DescribeDevicesResponseBody extends TeaModel {
             return this.id;
         }
 
+        public DescribeDevicesResponseBodyDevicesDirectory setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeDevicesResponseBodyDevicesDirectory setParentId(String parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public String getParentId() {
+            return this.parentId;
+        }
+
+    }
+
+    public static class DescribeDevicesResponseBodyDevicesStats extends TeaModel {
+        @NameInMap("ChannelNum")
+        public Long channelNum;
+
+        @NameInMap("FailedNum")
+        public Long failedNum;
+
+        @NameInMap("OfflineNum")
+        public Long offlineNum;
+
+        @NameInMap("OnlineNum")
+        public Long onlineNum;
+
+        @NameInMap("StreamNum")
+        public Long streamNum;
+
+        public static DescribeDevicesResponseBodyDevicesStats build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDevicesResponseBodyDevicesStats self = new DescribeDevicesResponseBodyDevicesStats();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDevicesResponseBodyDevicesStats setChannelNum(Long channelNum) {
+            this.channelNum = channelNum;
+            return this;
+        }
+        public Long getChannelNum() {
+            return this.channelNum;
+        }
+
+        public DescribeDevicesResponseBodyDevicesStats setFailedNum(Long failedNum) {
+            this.failedNum = failedNum;
+            return this;
+        }
+        public Long getFailedNum() {
+            return this.failedNum;
+        }
+
+        public DescribeDevicesResponseBodyDevicesStats setOfflineNum(Long offlineNum) {
+            this.offlineNum = offlineNum;
+            return this;
+        }
+        public Long getOfflineNum() {
+            return this.offlineNum;
+        }
+
+        public DescribeDevicesResponseBodyDevicesStats setOnlineNum(Long onlineNum) {
+            this.onlineNum = onlineNum;
+            return this;
+        }
+        public Long getOnlineNum() {
+            return this.onlineNum;
+        }
+
+        public DescribeDevicesResponseBodyDevicesStats setStreamNum(Long streamNum) {
+            this.streamNum = streamNum;
+            return this;
+        }
+        public Long getStreamNum() {
+            return this.streamNum;
+        }
+
     }
 
     public static class DescribeDevicesResponseBodyDevices extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("AlarmMethod")
         public String alarmMethod;
 
-        @NameInMap("Dsn")
-        public String dsn;
-
-        @NameInMap("Port")
-        public Long port;
-
-        @NameInMap("PosInterval")
-        public Long posInterval;
-
-        @NameInMap("ParentId")
-        public String parentId;
-
-        @NameInMap("Password")
-        public String password;
+        @NameInMap("AutoDirectory")
+        public Boolean autoDirectory;
 
         @NameInMap("AutoPos")
         public Boolean autoPos;
 
-        @NameInMap("Params")
-        public String params;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("Enabled")
-        public Boolean enabled;
-
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("AutoStart")
+        public Boolean autoStart;
 
         @NameInMap("ChannelSyncTime")
         public String channelSyncTime;
@@ -258,26 +231,20 @@ public class DescribeDevicesResponseBody extends TeaModel {
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Directory")
+        public DescribeDevicesResponseBodyDevicesDirectory directory;
+
         @NameInMap("DirectoryId")
         public String directoryId;
 
-        @NameInMap("RegisteredTime")
-        public String registeredTime;
+        @NameInMap("Dsn")
+        public String dsn;
 
-        @NameInMap("Protocol")
-        public String protocol;
-
-        @NameInMap("Ip")
-        public String ip;
-
-        @NameInMap("Url")
-        public String url;
-
-        @NameInMap("AutoStart")
-        public Boolean autoStart;
-
-        @NameInMap("Vendor")
-        public String vendor;
+        @NameInMap("Enabled")
+        public Boolean enabled;
 
         @NameInMap("GbId")
         public String gbId;
@@ -285,43 +252,63 @@ public class DescribeDevicesResponseBody extends TeaModel {
         @NameInMap("GroupId")
         public String groupId;
 
-        @NameInMap("Longitude")
-        public String longitude;
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Ip")
+        public String ip;
 
         @NameInMap("Latitude")
         public String latitude;
 
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("Longitude")
+        public String longitude;
 
-        @NameInMap("Username")
-        public String username;
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Params")
+        public String params;
+
+        @NameInMap("ParentId")
+        public String parentId;
+
+        @NameInMap("Password")
+        public String password;
+
+        @NameInMap("Port")
+        public Long port;
+
+        @NameInMap("PosInterval")
+        public Long posInterval;
+
+        @NameInMap("Protocol")
+        public String protocol;
+
+        @NameInMap("RegisteredTime")
+        public String registeredTime;
 
         @NameInMap("Stats")
         public DescribeDevicesResponseBodyDevicesStats stats;
 
-        @NameInMap("Directory")
-        public DescribeDevicesResponseBodyDevicesDirectory directory;
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Url")
+        public String url;
+
+        @NameInMap("Username")
+        public String username;
+
+        @NameInMap("Vendor")
+        public String vendor;
 
         public static DescribeDevicesResponseBodyDevices build(java.util.Map<String, ?> map) throws Exception {
             DescribeDevicesResponseBodyDevices self = new DescribeDevicesResponseBodyDevices();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDevicesResponseBodyDevices setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeDevicesResponseBodyDevices setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeDevicesResponseBodyDevices setAlarmMethod(String alarmMethod) {
@@ -332,44 +319,12 @@ public class DescribeDevicesResponseBody extends TeaModel {
             return this.alarmMethod;
         }
 
-        public DescribeDevicesResponseBodyDevices setDsn(String dsn) {
-            this.dsn = dsn;
+        public DescribeDevicesResponseBodyDevices setAutoDirectory(Boolean autoDirectory) {
+            this.autoDirectory = autoDirectory;
             return this;
         }
-        public String getDsn() {
-            return this.dsn;
-        }
-
-        public DescribeDevicesResponseBodyDevices setPort(Long port) {
-            this.port = port;
-            return this;
-        }
-        public Long getPort() {
-            return this.port;
-        }
-
-        public DescribeDevicesResponseBodyDevices setPosInterval(Long posInterval) {
-            this.posInterval = posInterval;
-            return this;
-        }
-        public Long getPosInterval() {
-            return this.posInterval;
-        }
-
-        public DescribeDevicesResponseBodyDevices setParentId(String parentId) {
-            this.parentId = parentId;
-            return this;
-        }
-        public String getParentId() {
-            return this.parentId;
-        }
-
-        public DescribeDevicesResponseBodyDevices setPassword(String password) {
-            this.password = password;
-            return this;
-        }
-        public String getPassword() {
-            return this.password;
+        public Boolean getAutoDirectory() {
+            return this.autoDirectory;
         }
 
         public DescribeDevicesResponseBodyDevices setAutoPos(Boolean autoPos) {
@@ -380,36 +335,12 @@ public class DescribeDevicesResponseBody extends TeaModel {
             return this.autoPos;
         }
 
-        public DescribeDevicesResponseBodyDevices setParams(String params) {
-            this.params = params;
+        public DescribeDevicesResponseBodyDevices setAutoStart(Boolean autoStart) {
+            this.autoStart = autoStart;
             return this;
         }
-        public String getParams() {
-            return this.params;
-        }
-
-        public DescribeDevicesResponseBodyDevices setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeDevicesResponseBodyDevices setEnabled(Boolean enabled) {
-            this.enabled = enabled;
-            return this;
-        }
-        public Boolean getEnabled() {
-            return this.enabled;
-        }
-
-        public DescribeDevicesResponseBodyDevices setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
+        public Boolean getAutoStart() {
+            return this.autoStart;
         }
 
         public DescribeDevicesResponseBodyDevices setChannelSyncTime(String channelSyncTime) {
@@ -428,6 +359,22 @@ public class DescribeDevicesResponseBody extends TeaModel {
             return this.createdTime;
         }
 
+        public DescribeDevicesResponseBodyDevices setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeDevicesResponseBodyDevices setDirectory(DescribeDevicesResponseBodyDevicesDirectory directory) {
+            this.directory = directory;
+            return this;
+        }
+        public DescribeDevicesResponseBodyDevicesDirectory getDirectory() {
+            return this.directory;
+        }
+
         public DescribeDevicesResponseBodyDevices setDirectoryId(String directoryId) {
             this.directoryId = directoryId;
             return this;
@@ -436,52 +383,20 @@ public class DescribeDevicesResponseBody extends TeaModel {
             return this.directoryId;
         }
 
-        public DescribeDevicesResponseBodyDevices setRegisteredTime(String registeredTime) {
-            this.registeredTime = registeredTime;
+        public DescribeDevicesResponseBodyDevices setDsn(String dsn) {
+            this.dsn = dsn;
             return this;
         }
-        public String getRegisteredTime() {
-            return this.registeredTime;
+        public String getDsn() {
+            return this.dsn;
         }
 
-        public DescribeDevicesResponseBodyDevices setProtocol(String protocol) {
-            this.protocol = protocol;
+        public DescribeDevicesResponseBodyDevices setEnabled(Boolean enabled) {
+            this.enabled = enabled;
             return this;
         }
-        public String getProtocol() {
-            return this.protocol;
-        }
-
-        public DescribeDevicesResponseBodyDevices setIp(String ip) {
-            this.ip = ip;
-            return this;
-        }
-        public String getIp() {
-            return this.ip;
-        }
-
-        public DescribeDevicesResponseBodyDevices setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
-        public DescribeDevicesResponseBodyDevices setAutoStart(Boolean autoStart) {
-            this.autoStart = autoStart;
-            return this;
-        }
-        public Boolean getAutoStart() {
-            return this.autoStart;
-        }
-
-        public DescribeDevicesResponseBodyDevices setVendor(String vendor) {
-            this.vendor = vendor;
-            return this;
-        }
-        public String getVendor() {
-            return this.vendor;
+        public Boolean getEnabled() {
+            return this.enabled;
         }
 
         public DescribeDevicesResponseBodyDevices setGbId(String gbId) {
@@ -500,12 +415,20 @@ public class DescribeDevicesResponseBody extends TeaModel {
             return this.groupId;
         }
 
-        public DescribeDevicesResponseBodyDevices setLongitude(String longitude) {
-            this.longitude = longitude;
+        public DescribeDevicesResponseBodyDevices setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getLongitude() {
-            return this.longitude;
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeDevicesResponseBodyDevices setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
         }
 
         public DescribeDevicesResponseBodyDevices setLatitude(String latitude) {
@@ -516,20 +439,76 @@ public class DescribeDevicesResponseBody extends TeaModel {
             return this.latitude;
         }
 
-        public DescribeDevicesResponseBodyDevices setId(String id) {
-            this.id = id;
+        public DescribeDevicesResponseBodyDevices setLongitude(String longitude) {
+            this.longitude = longitude;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getLongitude() {
+            return this.longitude;
         }
 
-        public DescribeDevicesResponseBodyDevices setUsername(String username) {
-            this.username = username;
+        public DescribeDevicesResponseBodyDevices setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getUsername() {
-            return this.username;
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeDevicesResponseBodyDevices setParams(String params) {
+            this.params = params;
+            return this;
+        }
+        public String getParams() {
+            return this.params;
+        }
+
+        public DescribeDevicesResponseBodyDevices setParentId(String parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public String getParentId() {
+            return this.parentId;
+        }
+
+        public DescribeDevicesResponseBodyDevices setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
+        }
+
+        public DescribeDevicesResponseBodyDevices setPort(Long port) {
+            this.port = port;
+            return this;
+        }
+        public Long getPort() {
+            return this.port;
+        }
+
+        public DescribeDevicesResponseBodyDevices setPosInterval(Long posInterval) {
+            this.posInterval = posInterval;
+            return this;
+        }
+        public Long getPosInterval() {
+            return this.posInterval;
+        }
+
+        public DescribeDevicesResponseBodyDevices setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public DescribeDevicesResponseBodyDevices setRegisteredTime(String registeredTime) {
+            this.registeredTime = registeredTime;
+            return this;
+        }
+        public String getRegisteredTime() {
+            return this.registeredTime;
         }
 
         public DescribeDevicesResponseBodyDevices setStats(DescribeDevicesResponseBodyDevicesStats stats) {
@@ -540,12 +519,44 @@ public class DescribeDevicesResponseBody extends TeaModel {
             return this.stats;
         }
 
-        public DescribeDevicesResponseBodyDevices setDirectory(DescribeDevicesResponseBodyDevicesDirectory directory) {
-            this.directory = directory;
+        public DescribeDevicesResponseBodyDevices setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public DescribeDevicesResponseBodyDevicesDirectory getDirectory() {
-            return this.directory;
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeDevicesResponseBodyDevices setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeDevicesResponseBodyDevices setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public DescribeDevicesResponseBodyDevices setUsername(String username) {
+            this.username = username;
+            return this;
+        }
+        public String getUsername() {
+            return this.username;
+        }
+
+        public DescribeDevicesResponseBodyDevices setVendor(String vendor) {
+            this.vendor = vendor;
+            return this;
+        }
+        public String getVendor() {
+            return this.vendor;
         }
 
     }

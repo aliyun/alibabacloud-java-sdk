@@ -4,26 +4,18 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchDeleteVsDomainConfigsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainNames")
     public String domainNames;
 
     @NameInMap("FunctionNames")
     public String functionNames;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     public static BatchDeleteVsDomainConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchDeleteVsDomainConfigsRequest self = new BatchDeleteVsDomainConfigsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchDeleteVsDomainConfigsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public BatchDeleteVsDomainConfigsRequest setDomainNames(String domainNames) {
@@ -40,6 +32,14 @@ public class BatchDeleteVsDomainConfigsRequest extends TeaModel {
     }
     public String getFunctionNames() {
         return this.functionNames;
+    }
+
+    public BatchDeleteVsDomainConfigsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

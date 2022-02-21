@@ -4,17 +4,20 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeTemplatesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("Id")
     public String id;
 
-    @NameInMap("Type")
-    public String type;
-
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PageNum")
+    public Long pageNum;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
 
     @NameInMap("SortBy")
     public String sortBy;
@@ -22,23 +25,12 @@ public class DescribeTemplatesRequest extends TeaModel {
     @NameInMap("SortDirection")
     public String sortDirection;
 
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    @NameInMap("PageNum")
-    public Long pageNum;
+    @NameInMap("Type")
+    public String type;
 
     public static DescribeTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTemplatesRequest self = new DescribeTemplatesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeTemplatesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeTemplatesRequest setId(String id) {
@@ -49,20 +41,36 @@ public class DescribeTemplatesRequest extends TeaModel {
         return this.id;
     }
 
-    public DescribeTemplatesRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
     public DescribeTemplatesRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeTemplatesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeTemplatesRequest setPageNum(Long pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Long getPageNum() {
+        return this.pageNum;
+    }
+
+    public DescribeTemplatesRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeTemplatesRequest setSortBy(String sortBy) {
@@ -81,20 +89,12 @@ public class DescribeTemplatesRequest extends TeaModel {
         return this.sortDirection;
     }
 
-    public DescribeTemplatesRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
+    public DescribeTemplatesRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeTemplatesRequest setPageNum(Long pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public Long getPageNum() {
-        return this.pageNum;
+    public String getType() {
+        return this.type;
     }
 
 }

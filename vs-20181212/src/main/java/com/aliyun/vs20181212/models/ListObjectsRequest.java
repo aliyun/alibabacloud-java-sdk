@@ -4,11 +4,11 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListObjectsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("BucketName")
     public String bucketName;
+
+    @NameInMap("ContinuationToken")
+    public String continuationToken;
 
     @NameInMap("Delimiter")
     public String delimiter;
@@ -22,11 +22,11 @@ public class ListObjectsRequest extends TeaModel {
     @NameInMap("MaxKeys")
     public Integer maxKeys;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("Prefix")
     public String prefix;
-
-    @NameInMap("ContinuationToken")
-    public String continuationToken;
 
     @NameInMap("StartAfter")
     public String startAfter;
@@ -36,20 +36,20 @@ public class ListObjectsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListObjectsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public ListObjectsRequest setBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
     }
     public String getBucketName() {
         return this.bucketName;
+    }
+
+    public ListObjectsRequest setContinuationToken(String continuationToken) {
+        this.continuationToken = continuationToken;
+        return this;
+    }
+    public String getContinuationToken() {
+        return this.continuationToken;
     }
 
     public ListObjectsRequest setDelimiter(String delimiter) {
@@ -84,20 +84,20 @@ public class ListObjectsRequest extends TeaModel {
         return this.maxKeys;
     }
 
+    public ListObjectsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public ListObjectsRequest setPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     public String getPrefix() {
         return this.prefix;
-    }
-
-    public ListObjectsRequest setContinuationToken(String continuationToken) {
-        this.continuationToken = continuationToken;
-        return this;
-    }
-    public String getContinuationToken() {
-        return this.continuationToken;
     }
 
     public ListObjectsRequest setStartAfter(String startAfter) {

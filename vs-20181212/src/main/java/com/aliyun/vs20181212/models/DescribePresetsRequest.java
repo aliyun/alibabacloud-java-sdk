@@ -4,26 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribePresetsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("Id")
     public String id;
 
-    @NameInMap("SubProtocol")
-    public String subProtocol;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static DescribePresetsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePresetsRequest self = new DescribePresetsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePresetsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribePresetsRequest setId(String id) {
@@ -34,12 +23,12 @@ public class DescribePresetsRequest extends TeaModel {
         return this.id;
     }
 
-    public DescribePresetsRequest setSubProtocol(String subProtocol) {
-        this.subProtocol = subProtocol;
+    public DescribePresetsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getSubProtocol() {
-        return this.subProtocol;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

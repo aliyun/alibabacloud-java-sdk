@@ -4,29 +4,21 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeviceChannelsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("Id")
     public String id;
 
-    @NameInMap("PageSize")
-    public Long pageSize;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNum")
     public Long pageNum;
 
+    @NameInMap("PageSize")
+    public Long pageSize;
+
     public static DescribeDeviceChannelsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeviceChannelsRequest self = new DescribeDeviceChannelsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDeviceChannelsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDeviceChannelsRequest setId(String id) {
@@ -37,12 +29,12 @@ public class DescribeDeviceChannelsRequest extends TeaModel {
         return this.id;
     }
 
-    public DescribeDeviceChannelsRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
+    public DescribeDeviceChannelsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public Long getPageSize() {
-        return this.pageSize;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeDeviceChannelsRequest setPageNum(Long pageNum) {
@@ -51,6 +43,14 @@ public class DescribeDeviceChannelsRequest extends TeaModel {
     }
     public Long getPageNum() {
         return this.pageNum;
+    }
+
+    public DescribeDeviceChannelsRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
 }

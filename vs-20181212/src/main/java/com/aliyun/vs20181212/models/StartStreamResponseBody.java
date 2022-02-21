@@ -4,26 +4,26 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class StartStreamResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Id")
+    public String id;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Id")
-    public String id;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static StartStreamResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartStreamResponseBody self = new StartStreamResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public StartStreamResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StartStreamResponseBody setId(String id) {
+        this.id = id;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getId() {
+        return this.id;
     }
 
     public StartStreamResponseBody setName(String name) {
@@ -34,12 +34,12 @@ public class StartStreamResponseBody extends TeaModel {
         return this.name;
     }
 
-    public StartStreamResponseBody setId(String id) {
-        this.id = id;
+    public StartStreamResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getId() {
-        return this.id;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsPullStreamInfoConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LiveAppRecordList")
     public DescribeVsPullStreamInfoConfigResponseBodyLiveAppRecordList liveAppRecordList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeVsPullStreamInfoConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsPullStreamInfoConfigResponseBody self = new DescribeVsPullStreamInfoConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsPullStreamInfoConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeVsPullStreamInfoConfigResponseBody setLiveAppRecordList(DescribeVsPullStreamInfoConfigResponseBodyLiveAppRecordList liveAppRecordList) {
@@ -31,12 +23,23 @@ public class DescribeVsPullStreamInfoConfigResponseBody extends TeaModel {
         return this.liveAppRecordList;
     }
 
-    public static class DescribeVsPullStreamInfoConfigResponseBodyLiveAppRecordListLiveAppRecord extends TeaModel {
-        @NameInMap("EndTime")
-        public String endTime;
+    public DescribeVsPullStreamInfoConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeVsPullStreamInfoConfigResponseBodyLiveAppRecordListLiveAppRecord extends TeaModel {
         @NameInMap("AppName")
         public String appName;
+
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("EndTime")
+        public String endTime;
 
         @NameInMap("SourceUrl")
         public String sourceUrl;
@@ -47,20 +50,9 @@ public class DescribeVsPullStreamInfoConfigResponseBody extends TeaModel {
         @NameInMap("StreamName")
         public String streamName;
 
-        @NameInMap("DomainName")
-        public String domainName;
-
         public static DescribeVsPullStreamInfoConfigResponseBodyLiveAppRecordListLiveAppRecord build(java.util.Map<String, ?> map) throws Exception {
             DescribeVsPullStreamInfoConfigResponseBodyLiveAppRecordListLiveAppRecord self = new DescribeVsPullStreamInfoConfigResponseBodyLiveAppRecordListLiveAppRecord();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVsPullStreamInfoConfigResponseBodyLiveAppRecordListLiveAppRecord setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
         }
 
         public DescribeVsPullStreamInfoConfigResponseBodyLiveAppRecordListLiveAppRecord setAppName(String appName) {
@@ -69,6 +61,22 @@ public class DescribeVsPullStreamInfoConfigResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public DescribeVsPullStreamInfoConfigResponseBodyLiveAppRecordListLiveAppRecord setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        public DescribeVsPullStreamInfoConfigResponseBodyLiveAppRecordListLiveAppRecord setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public DescribeVsPullStreamInfoConfigResponseBodyLiveAppRecordListLiveAppRecord setSourceUrl(String sourceUrl) {
@@ -93,14 +101,6 @@ public class DescribeVsPullStreamInfoConfigResponseBody extends TeaModel {
         }
         public String getStreamName() {
             return this.streamName;
-        }
-
-        public DescribeVsPullStreamInfoConfigResponseBodyLiveAppRecordListLiveAppRecord setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
         }
 
     }

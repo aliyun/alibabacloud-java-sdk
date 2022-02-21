@@ -4,8 +4,8 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
-    @NameInMap("TotalPage")
-    public Integer totalPage;
+    @NameInMap("OnlineInfo")
+    public DescribeVsStreamsOnlineListResponseBodyOnlineInfo onlineInfo;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -19,20 +19,20 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
     @NameInMap("TotalNum")
     public Integer totalNum;
 
-    @NameInMap("OnlineInfo")
-    public DescribeVsStreamsOnlineListResponseBodyOnlineInfo onlineInfo;
+    @NameInMap("TotalPage")
+    public Integer totalPage;
 
     public static DescribeVsStreamsOnlineListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsStreamsOnlineListResponseBody self = new DescribeVsStreamsOnlineListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeVsStreamsOnlineListResponseBody setTotalPage(Integer totalPage) {
-        this.totalPage = totalPage;
+    public DescribeVsStreamsOnlineListResponseBody setOnlineInfo(DescribeVsStreamsOnlineListResponseBodyOnlineInfo onlineInfo) {
+        this.onlineInfo = onlineInfo;
         return this;
     }
-    public Integer getTotalPage() {
-        return this.totalPage;
+    public DescribeVsStreamsOnlineListResponseBodyOnlineInfo getOnlineInfo() {
+        return this.onlineInfo;
     }
 
     public DescribeVsStreamsOnlineListResponseBody setPageNum(Integer pageNum) {
@@ -67,20 +67,26 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
         return this.totalNum;
     }
 
-    public DescribeVsStreamsOnlineListResponseBody setOnlineInfo(DescribeVsStreamsOnlineListResponseBodyOnlineInfo onlineInfo) {
-        this.onlineInfo = onlineInfo;
+    public DescribeVsStreamsOnlineListResponseBody setTotalPage(Integer totalPage) {
+        this.totalPage = totalPage;
         return this;
     }
-    public DescribeVsStreamsOnlineListResponseBodyOnlineInfo getOnlineInfo() {
-        return this.onlineInfo;
+    public Integer getTotalPage() {
+        return this.totalPage;
     }
 
     public static class DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo extends TeaModel {
-        @NameInMap("PublishTime")
-        public String publishTime;
-
         @NameInMap("AppName")
         public String appName;
+
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("PublishDomain")
+        public String publishDomain;
+
+        @NameInMap("PublishTime")
+        public String publishTime;
 
         @NameInMap("PublishType")
         public String publishType;
@@ -88,32 +94,18 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
         @NameInMap("PublishUrl")
         public String publishUrl;
 
-        @NameInMap("Transcoded")
-        public String transcoded;
-
         @NameInMap("StreamName")
         public String streamName;
-
-        @NameInMap("DomainName")
-        public String domainName;
 
         @NameInMap("TranscodeId")
         public String transcodeId;
 
-        @NameInMap("PublishDomain")
-        public String publishDomain;
+        @NameInMap("Transcoded")
+        public String transcoded;
 
         public static DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo self = new DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setPublishTime(String publishTime) {
-            this.publishTime = publishTime;
-            return this;
-        }
-        public String getPublishTime() {
-            return this.publishTime;
         }
 
         public DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setAppName(String appName) {
@@ -122,6 +114,30 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        public DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setPublishDomain(String publishDomain) {
+            this.publishDomain = publishDomain;
+            return this;
+        }
+        public String getPublishDomain() {
+            return this.publishDomain;
+        }
+
+        public DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setPublishTime(String publishTime) {
+            this.publishTime = publishTime;
+            return this;
+        }
+        public String getPublishTime() {
+            return this.publishTime;
         }
 
         public DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setPublishType(String publishType) {
@@ -140,28 +156,12 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
             return this.publishUrl;
         }
 
-        public DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setTranscoded(String transcoded) {
-            this.transcoded = transcoded;
-            return this;
-        }
-        public String getTranscoded() {
-            return this.transcoded;
-        }
-
         public DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setStreamName(String streamName) {
             this.streamName = streamName;
             return this;
         }
         public String getStreamName() {
             return this.streamName;
-        }
-
-        public DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
         }
 
         public DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setTranscodeId(String transcodeId) {
@@ -172,12 +172,12 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
             return this.transcodeId;
         }
 
-        public DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setPublishDomain(String publishDomain) {
-            this.publishDomain = publishDomain;
+        public DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setTranscoded(String transcoded) {
+            this.transcoded = transcoded;
             return this;
         }
-        public String getPublishDomain() {
-            return this.publishDomain;
+        public String getTranscoded() {
+            return this.transcoded;
         }
 
     }

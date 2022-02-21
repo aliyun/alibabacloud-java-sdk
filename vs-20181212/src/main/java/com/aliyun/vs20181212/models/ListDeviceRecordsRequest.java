@@ -4,35 +4,27 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceRecordsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DeviceId")
     public String deviceId;
 
-    @NameInMap("StreamId")
-    public String streamId;
-
-    @NameInMap("SearchCriteria")
-    public String searchCriteria;
-
-    @NameInMap("PageSize")
-    public Long pageSize;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNum")
     public Long pageNum;
 
+    @NameInMap("PageSize")
+    public Long pageSize;
+
+    @NameInMap("SearchCriteria")
+    public String searchCriteria;
+
+    @NameInMap("StreamId")
+    public String streamId;
+
     public static ListDeviceRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDeviceRecordsRequest self = new ListDeviceRecordsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListDeviceRecordsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public ListDeviceRecordsRequest setDeviceId(String deviceId) {
@@ -43,20 +35,20 @@ public class ListDeviceRecordsRequest extends TeaModel {
         return this.deviceId;
     }
 
-    public ListDeviceRecordsRequest setStreamId(String streamId) {
-        this.streamId = streamId;
+    public ListDeviceRecordsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getStreamId() {
-        return this.streamId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
-    public ListDeviceRecordsRequest setSearchCriteria(String searchCriteria) {
-        this.searchCriteria = searchCriteria;
+    public ListDeviceRecordsRequest setPageNum(Long pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getSearchCriteria() {
-        return this.searchCriteria;
+    public Long getPageNum() {
+        return this.pageNum;
     }
 
     public ListDeviceRecordsRequest setPageSize(Long pageSize) {
@@ -67,12 +59,20 @@ public class ListDeviceRecordsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListDeviceRecordsRequest setPageNum(Long pageNum) {
-        this.pageNum = pageNum;
+    public ListDeviceRecordsRequest setSearchCriteria(String searchCriteria) {
+        this.searchCriteria = searchCriteria;
         return this;
     }
-    public Long getPageNum() {
-        return this.pageNum;
+    public String getSearchCriteria() {
+        return this.searchCriteria;
+    }
+
+    public ListDeviceRecordsRequest setStreamId(String streamId) {
+        this.streamId = streamId;
+        return this;
+    }
+    public String getStreamId() {
+        return this.streamId;
     }
 
 }

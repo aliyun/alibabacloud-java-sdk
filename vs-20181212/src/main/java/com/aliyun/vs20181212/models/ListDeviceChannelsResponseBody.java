@@ -4,6 +4,12 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceChannelsResponseBody extends TeaModel {
+    @NameInMap("Channels")
+    public java.util.List<ListDeviceChannelsResponseBodyChannels> channels;
+
+    @NameInMap("PageCount")
+    public Long pageCount;
+
     @NameInMap("PageNum")
     public Long pageNum;
 
@@ -16,15 +22,25 @@ public class ListDeviceChannelsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    @NameInMap("PageCount")
-    public Long pageCount;
-
-    @NameInMap("Channels")
-    public java.util.List<ListDeviceChannelsResponseBodyChannels> channels;
-
     public static ListDeviceChannelsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDeviceChannelsResponseBody self = new ListDeviceChannelsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListDeviceChannelsResponseBody setChannels(java.util.List<ListDeviceChannelsResponseBodyChannels> channels) {
+        this.channels = channels;
+        return this;
+    }
+    public java.util.List<ListDeviceChannelsResponseBodyChannels> getChannels() {
+        return this.channels;
+    }
+
+    public ListDeviceChannelsResponseBody setPageCount(Long pageCount) {
+        this.pageCount = pageCount;
+        return this;
+    }
+    public Long getPageCount() {
+        return this.pageCount;
     }
 
     public ListDeviceChannelsResponseBody setPageNum(Long pageNum) {
@@ -59,28 +75,12 @@ public class ListDeviceChannelsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListDeviceChannelsResponseBody setPageCount(Long pageCount) {
-        this.pageCount = pageCount;
-        return this;
-    }
-    public Long getPageCount() {
-        return this.pageCount;
-    }
-
-    public ListDeviceChannelsResponseBody setChannels(java.util.List<ListDeviceChannelsResponseBodyChannels> channels) {
-        this.channels = channels;
-        return this;
-    }
-    public java.util.List<ListDeviceChannelsResponseBodyChannels> getChannels() {
-        return this.channels;
-    }
-
     public static class ListDeviceChannelsResponseBodyChannels extends TeaModel {
         @NameInMap("ChannelId")
         public Long channelId;
 
-        @NameInMap("Params")
-        public String params;
+        @NameInMap("DeviceId")
+        public String deviceId;
 
         @NameInMap("DeviceStatus")
         public String deviceStatus;
@@ -88,8 +88,8 @@ public class ListDeviceChannelsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("DeviceId")
-        public String deviceId;
+        @NameInMap("Params")
+        public String params;
 
         public static ListDeviceChannelsResponseBodyChannels build(java.util.Map<String, ?> map) throws Exception {
             ListDeviceChannelsResponseBodyChannels self = new ListDeviceChannelsResponseBodyChannels();
@@ -104,12 +104,12 @@ public class ListDeviceChannelsResponseBody extends TeaModel {
             return this.channelId;
         }
 
-        public ListDeviceChannelsResponseBodyChannels setParams(String params) {
-            this.params = params;
+        public ListDeviceChannelsResponseBodyChannels setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
             return this;
         }
-        public String getParams() {
-            return this.params;
+        public String getDeviceId() {
+            return this.deviceId;
         }
 
         public ListDeviceChannelsResponseBodyChannels setDeviceStatus(String deviceStatus) {
@@ -128,12 +128,12 @@ public class ListDeviceChannelsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListDeviceChannelsResponseBodyChannels setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
+        public ListDeviceChannelsResponseBodyChannels setParams(String params) {
+            this.params = params;
             return this;
         }
-        public String getDeviceId() {
-            return this.deviceId;
+        public String getParams() {
+            return this.params;
         }
 
     }
