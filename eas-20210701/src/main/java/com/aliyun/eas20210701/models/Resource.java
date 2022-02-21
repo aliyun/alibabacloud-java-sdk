@@ -18,7 +18,7 @@ public class Resource extends TeaModel {
 
     // 资源组自定义数据
     @NameInMap("ExtraData")
-    public java.util.Map<String, ?> extraData;
+    public String extraData;
 
     // 资源组GPU个数
     @NameInMap("GpuCount")
@@ -89,11 +89,11 @@ public class Resource extends TeaModel {
         return this.createTime;
     }
 
-    public Resource setExtraData(java.util.Map<String, ?> extraData) {
+    public Resource setExtraData(String extraData) {
         this.extraData = extraData;
         return this;
     }
-    public java.util.Map<String, ?> getExtraData() {
+    public String getExtraData() {
         return this.extraData;
     }
 
