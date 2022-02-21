@@ -1,3 +1,6 @@
+2022-02-21 Version: 1.0.4
+- Add describe resouce log api.
+
 2021-12-09 Version: 1.0.3
 - Add accesstoken to service struct.
 
