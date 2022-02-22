@@ -3,65 +3,58 @@ package com.aliyun.eas20210701.models;
 
 import com.aliyun.tea.*;
 
-public class Resource extends TeaModel {
-    // 资源组所在的集群
+public class DescribeResourceResponseBody extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // 资源组CPU数量
     @NameInMap("CpuCount")
     public Integer cpuCount;
 
-    // 资源组创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 资源组自定义数据
     @NameInMap("ExtraData")
-    public java.util.Map<String, ?> extraData;
+    public String extraData;
 
-    // 资源组GPU个数
     @NameInMap("GpuCount")
     public Integer gpuCount;
 
-    // 资源组实例个数
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 
-    // 资源组摘要信息
     @NameInMap("Message")
     public String message;
 
-    // 资源组按量付费实例个数
+    @NameInMap("OwnerUid")
+    public String ownerUid;
+
     @NameInMap("PostPaidInstanceCount")
     public Integer postPaidInstanceCount;
 
-    // 资源组预付费实例个数
     @NameInMap("PrePaidInstanceCount")
     public Integer prePaidInstanceCount;
 
-    // 资源组ID
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("ResourceId")
     public String resourceId;
 
-    // 资源组名字
     @NameInMap("ResourceName")
     public String resourceName;
 
-    // 资源组的状态
     @NameInMap("Status")
     public String status;
 
-    // 资源组更新时间
     @NameInMap("UpdateTime")
     public String updateTime;
 
-    public static Resource build(java.util.Map<String, ?> map) throws Exception {
-        Resource self = new Resource();
+    public static DescribeResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribeResourceResponseBody self = new DescribeResourceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public Resource setClusterId(String clusterId) {
+    public DescribeResourceResponseBody setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
@@ -69,7 +62,7 @@ public class Resource extends TeaModel {
         return this.clusterId;
     }
 
-    public Resource setCpuCount(Integer cpuCount) {
+    public DescribeResourceResponseBody setCpuCount(Integer cpuCount) {
         this.cpuCount = cpuCount;
         return this;
     }
@@ -77,7 +70,7 @@ public class Resource extends TeaModel {
         return this.cpuCount;
     }
 
-    public Resource setCreateTime(String createTime) {
+    public DescribeResourceResponseBody setCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
     }
@@ -85,15 +78,15 @@ public class Resource extends TeaModel {
         return this.createTime;
     }
 
-    public Resource setExtraData(java.util.Map<String, ?> extraData) {
+    public DescribeResourceResponseBody setExtraData(String extraData) {
         this.extraData = extraData;
         return this;
     }
-    public java.util.Map<String, ?> getExtraData() {
+    public String getExtraData() {
         return this.extraData;
     }
 
-    public Resource setGpuCount(Integer gpuCount) {
+    public DescribeResourceResponseBody setGpuCount(Integer gpuCount) {
         this.gpuCount = gpuCount;
         return this;
     }
@@ -101,7 +94,7 @@ public class Resource extends TeaModel {
         return this.gpuCount;
     }
 
-    public Resource setInstanceCount(Integer instanceCount) {
+    public DescribeResourceResponseBody setInstanceCount(Integer instanceCount) {
         this.instanceCount = instanceCount;
         return this;
     }
@@ -109,7 +102,7 @@ public class Resource extends TeaModel {
         return this.instanceCount;
     }
 
-    public Resource setMessage(String message) {
+    public DescribeResourceResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -117,7 +110,15 @@ public class Resource extends TeaModel {
         return this.message;
     }
 
-    public Resource setPostPaidInstanceCount(Integer postPaidInstanceCount) {
+    public DescribeResourceResponseBody setOwnerUid(String ownerUid) {
+        this.ownerUid = ownerUid;
+        return this;
+    }
+    public String getOwnerUid() {
+        return this.ownerUid;
+    }
+
+    public DescribeResourceResponseBody setPostPaidInstanceCount(Integer postPaidInstanceCount) {
         this.postPaidInstanceCount = postPaidInstanceCount;
         return this;
     }
@@ -125,7 +126,7 @@ public class Resource extends TeaModel {
         return this.postPaidInstanceCount;
     }
 
-    public Resource setPrePaidInstanceCount(Integer prePaidInstanceCount) {
+    public DescribeResourceResponseBody setPrePaidInstanceCount(Integer prePaidInstanceCount) {
         this.prePaidInstanceCount = prePaidInstanceCount;
         return this;
     }
@@ -133,7 +134,15 @@ public class Resource extends TeaModel {
         return this.prePaidInstanceCount;
     }
 
-    public Resource setResourceId(String resourceId) {
+    public DescribeResourceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeResourceResponseBody setResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
@@ -141,7 +150,7 @@ public class Resource extends TeaModel {
         return this.resourceId;
     }
 
-    public Resource setResourceName(String resourceName) {
+    public DescribeResourceResponseBody setResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
@@ -149,7 +158,7 @@ public class Resource extends TeaModel {
         return this.resourceName;
     }
 
-    public Resource setStatus(String status) {
+    public DescribeResourceResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
@@ -157,7 +166,7 @@ public class Resource extends TeaModel {
         return this.status;
     }
 
-    public Resource setUpdateTime(String updateTime) {
+    public DescribeResourceResponseBody setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }

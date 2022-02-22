@@ -311,6 +311,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceAutoScalerResponse());
     }
 
+    public CreateServiceCronScalerResponse createServiceCronScaler(String ClusterId, String ServiceName, CreateServiceCronScalerRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createServiceCronScalerWithOptions(ClusterId, ServiceName, request, headers, runtime);
+    }
+
+    public CreateServiceCronScalerResponse createServiceCronScalerWithOptions(String ClusterId, String ServiceName, CreateServiceCronScalerRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
+        ServiceName = com.aliyun.openapiutil.Client.getEncodeParam(ServiceName);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeDates)) {
+            body.put("ExcludeDates", request.excludeDates);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scaleJobs)) {
+            body.put("ScaleJobs", request.scaleJobs);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateServiceCronScaler"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/services/" + ClusterId + "/" + ServiceName + "/cronscaler"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceCronScalerResponse());
+    }
+
     public CreateServiceMirrorResponse createServiceMirror(String ClusterId, String ServiceName, CreateServiceMirrorRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -513,6 +550,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceAutoScalerResponse());
+    }
+
+    public DeleteServiceCronScalerResponse deleteServiceCronScaler(String ClusterId, String ServiceName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteServiceCronScalerWithOptions(ClusterId, ServiceName, headers, runtime);
+    }
+
+    public DeleteServiceCronScalerResponse deleteServiceCronScalerWithOptions(String ClusterId, String ServiceName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
+        ServiceName = com.aliyun.openapiutil.Client.getEncodeParam(ServiceName);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteServiceCronScaler"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/services/" + ClusterId + "/" + ServiceName + "/cronscaler"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceCronScalerResponse());
     }
 
     public DeleteServiceInstancesResponse deleteServiceInstances(String ClusterId, String ServiceName, DeleteServiceInstancesRequest request) throws Exception {
@@ -726,6 +789,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeServiceAutoScalerResponse());
+    }
+
+    public DescribeServiceCronScalerResponse describeServiceCronScaler(String ClusterId, String ServiceName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeServiceCronScalerWithOptions(ClusterId, ServiceName, headers, runtime);
+    }
+
+    public DescribeServiceCronScalerResponse describeServiceCronScalerWithOptions(String ClusterId, String ServiceName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
+        ServiceName = com.aliyun.openapiutil.Client.getEncodeParam(ServiceName);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeServiceCronScaler"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/services/" + ClusterId + "/" + ServiceName + "/cronscaler"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeServiceCronScalerResponse());
     }
 
     public DescribeServiceLogResponse describeServiceLog(String ClusterId, String ServiceName, DescribeServiceLogRequest request) throws Exception {
@@ -1268,6 +1357,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceAutoScalerResponse());
+    }
+
+    public UpdateServiceCronScalerResponse updateServiceCronScaler(String ClusterId, String ServiceName, UpdateServiceCronScalerRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateServiceCronScalerWithOptions(ClusterId, ServiceName, request, headers, runtime);
+    }
+
+    public UpdateServiceCronScalerResponse updateServiceCronScalerWithOptions(String ClusterId, String ServiceName, UpdateServiceCronScalerRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
+        ServiceName = com.aliyun.openapiutil.Client.getEncodeParam(ServiceName);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeDates)) {
+            body.put("ExcludeDates", request.excludeDates);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scaleJobs)) {
+            body.put("ScaleJobs", request.scaleJobs);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateServiceCronScaler"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/services/" + ClusterId + "/" + ServiceName + "/cronscaler"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceCronScalerResponse());
     }
 
     public UpdateServiceMirrorResponse updateServiceMirror(String ClusterId, String ServiceName, UpdateServiceMirrorRequest request) throws Exception {
