@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>polardb20170801</artifactId>
-  <version>2.0.2</version>
+  <version>2.0.3</version>
   <packaging>jar</packaging>
   <name>polardb20170801</name>
   <description>Alibaba Cloud ApsaraDB for POLARDB (20170801) SDK for Java
@@ -156,6 +156,10 @@
                 <relocation>
                   <pattern>com.sun</pattern>
                   <shadedPattern>com.aliyun.polardb20170801.external.com.sun</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache</pattern>
+                  <shadedPattern>com.aliyun.polardb20170801.external.org.apache</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>

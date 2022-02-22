@@ -34,6 +34,9 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SubCategory")
+    public String subCategory;
+
     public static ModifyDBNodeClassRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBNodeClassRequest self = new ModifyDBNodeClassRequest();
         return TeaModel.build(map, self);
@@ -117,6 +120,14 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyDBNodeClassRequest setSubCategory(String subCategory) {
+        this.subCategory = subCategory;
+        return this;
+    }
+    public String getSubCategory() {
+        return this.subCategory;
     }
 
 }
