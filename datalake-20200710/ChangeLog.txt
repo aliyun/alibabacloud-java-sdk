@@ -1,3 +1,6 @@
+2022-02-22 Version: 2.0.2
+- Add some new features.
+
 2022-01-11 Version: 2.0.1
 - Add some new features.
 

@@ -16,7 +16,7 @@ public class ListTablesResponseBody extends TeaModel {
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
-    //  RequestId
+    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 

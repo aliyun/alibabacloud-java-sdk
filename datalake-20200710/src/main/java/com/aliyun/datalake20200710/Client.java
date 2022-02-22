@@ -720,6 +720,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CheckConnectivityResponse());
     }
 
+    public CheckPermissionsResponse checkPermissions(CheckPermissionsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.checkPermissionsWithOptions(request, headers, runtime);
+    }
+
+    public CheckPermissionsResponse checkPermissionsWithOptions(CheckPermissionsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.body)))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckPermissions"),
+            new TeaPair("version", "2020-07-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/metastore/auth/permissions/check"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckPermissionsResponse());
+    }
+
     public CreateBlueprintInstanceResponse createBlueprintInstance(CreateBlueprintInstanceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         CreateBlueprintInstanceHeaders headers = new CreateBlueprintInstanceHeaders();
@@ -2815,6 +2841,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTableColumnStatisticsResponse());
+    }
+
+    public GetTableProfileResponse getTableProfile(GetTableProfileRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getTableProfileWithOptions(request, headers, runtime);
+    }
+
+    public GetTableProfileResponse getTableProfileWithOptions(GetTableProfileRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogId)) {
+            query.put("CatalogId", request.catalogId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseName)) {
+            query.put("DatabaseName", request.databaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTableProfile"),
+            new TeaPair("version", "2020-07-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/webapi/metastorehouse/catalog/database/tableprofile"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTableProfileResponse());
     }
 
     public GetTableVersionResponse getTableVersion(GetTableVersionRequest request) throws Exception {
