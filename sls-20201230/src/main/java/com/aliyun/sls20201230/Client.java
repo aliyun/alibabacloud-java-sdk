@@ -70,7 +70,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateConsumerGroupResponse());
     }
@@ -81,16 +81,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createLogStoreWithOptions(project, request, headers, runtime);
     }
 
-    public CreateLogStoreResponse createLogStoreWithOptions(String project, CreateLogStoreRequest tmpReq, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
+    public CreateLogStoreResponse createLogStoreWithOptions(String project, CreateLogStoreRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
-        CreateLogStoreShrinkRequest request = new CreateLogStoreShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.encryptConf))) {
-            request.encryptConfShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.encryptConf), "encrypt_conf", "json");
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appendMeta)) {
             body.put("appendMeta", request.appendMeta);
@@ -104,8 +98,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("enable_tracking", request.enableTracking);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.encryptConfShrink)) {
-            body.put("encrypt_conf", request.encryptConfShrink);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.encryptConf))) {
+            body.put("encrypt_conf", request.encryptConf);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.logstoreName)) {
@@ -138,7 +132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateLogStoreResponse());
     }
@@ -173,7 +167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateProjectResponse());
     }
@@ -220,7 +214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateSavedSearchResponse());
     }
@@ -249,7 +243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteConsumerGroupResponse());
     }
@@ -276,7 +270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteProjectResponse());
     }
@@ -304,7 +298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteSavedSearchResponse());
     }
@@ -578,7 +572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateConsumerGroupResponse());
     }
@@ -589,17 +583,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateLogStoreWithOptions(project, logstore, request, headers, runtime);
     }
 
-    public UpdateLogStoreResponse updateLogStoreWithOptions(String project, String logstore, UpdateLogStoreRequest tmpReq, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
+    public UpdateLogStoreResponse updateLogStoreWithOptions(String project, String logstore, UpdateLogStoreRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
         logstore = com.aliyun.openapiutil.Client.getEncodeParam(logstore);
-        UpdateLogStoreShrinkRequest request = new UpdateLogStoreShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.encryptConf))) {
-            request.encryptConfShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.encryptConf), "encrypt_conf", "json");
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appendMeta)) {
             body.put("appendMeta", request.appendMeta);
@@ -613,8 +601,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("enable_tracking", request.enableTracking);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.encryptConfShrink)) {
-            body.put("encrypt_conf", request.encryptConfShrink);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.encryptConf))) {
+            body.put("encrypt_conf", request.encryptConf);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logstore)) {
+            body.put("logstore", request.logstore);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.logstoreName)) {
@@ -647,7 +639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateLogStoreResponse());
     }
@@ -681,7 +673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateProjectResponse());
     }

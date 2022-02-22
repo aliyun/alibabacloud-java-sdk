@@ -16,6 +16,9 @@ public class UpdateLogStoreRequest extends TeaModel {
     @NameInMap("encrypt_conf")
     public EncryptConf encryptConf;
 
+    @NameInMap("logstore")
+    public String logstore;
+
     @NameInMap("logstoreName")
     public String logstoreName;
 
@@ -63,6 +66,14 @@ public class UpdateLogStoreRequest extends TeaModel {
     }
     public EncryptConf getEncryptConf() {
         return this.encryptConf;
+    }
+
+    public UpdateLogStoreRequest setLogstore(String logstore) {
+        this.logstore = logstore;
+        return this;
+    }
+    public String getLogstore() {
+        return this.logstore;
     }
 
     public UpdateLogStoreRequest setLogstoreName(String logstoreName) {

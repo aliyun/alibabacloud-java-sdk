@@ -16,10 +16,6 @@ public class Shard extends TeaModel {
     @NameInMap("inclusiveBeginKey")
     public String inclusiveBeginKey;
 
-    // serverIp
-    @NameInMap("serverIp")
-    public String serverIp;
-
     // shard id
     @NameInMap("shardId")
     public Integer shardId;
@@ -55,14 +51,6 @@ public class Shard extends TeaModel {
     }
     public String getInclusiveBeginKey() {
         return this.inclusiveBeginKey;
-    }
-
-    public Shard setServerIp(String serverIp) {
-        this.serverIp = serverIp;
-        return this;
-    }
-    public String getServerIp() {
-        return this.serverIp;
     }
 
     public Shard setShardId(Integer shardId) {
