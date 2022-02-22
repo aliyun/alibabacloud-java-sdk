@@ -3,19 +3,20 @@ package com.aliyun.cdt20210813.models;
 
 import com.aliyun.tea.*;
 
-public class GetCdtCbServiceStatusResponseBody extends TeaModel {
+public class GetCdtInternetServiceStatusResponseBody extends TeaModel {
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    public static GetCdtCbServiceStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetCdtCbServiceStatusResponseBody self = new GetCdtCbServiceStatusResponseBody();
+    public static GetCdtInternetServiceStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetCdtInternetServiceStatusResponseBody self = new GetCdtInternetServiceStatusResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetCdtCbServiceStatusResponseBody setEnabled(Boolean enabled) {
+    public GetCdtInternetServiceStatusResponseBody setEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
@@ -23,7 +24,7 @@ public class GetCdtCbServiceStatusResponseBody extends TeaModel {
         return this.enabled;
     }
 
-    public GetCdtCbServiceStatusResponseBody setRequestId(String requestId) {
+    public GetCdtInternetServiceStatusResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
