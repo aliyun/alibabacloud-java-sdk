@@ -3,21 +3,21 @@ package com.aliyun.eas20210701.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeResourceResponse extends TeaModel {
+public class DescribeServiceCronScalerResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeResourceResponseBody body;
+    public DescribeServiceCronScalerResponseBody body;
 
-    public static DescribeResourceResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeResourceResponse self = new DescribeResourceResponse();
+    public static DescribeServiceCronScalerResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeServiceCronScalerResponse self = new DescribeServiceCronScalerResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeResourceResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeServiceCronScalerResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DescribeResourceResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeResourceResponse setBody(DescribeResourceResponseBody body) {
+    public DescribeServiceCronScalerResponse setBody(DescribeServiceCronScalerResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeResourceResponseBody getBody() {
+    public DescribeServiceCronScalerResponseBody getBody() {
         return this.body;
     }
 
