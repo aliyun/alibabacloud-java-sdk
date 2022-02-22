@@ -13,6 +13,9 @@ public class GetTemplateResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Interface")
+    public String _interface;
+
     @NameInMap("OwnerId")
     public String ownerId;
 
@@ -82,6 +85,14 @@ public class GetTemplateResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public GetTemplateResponseBody set_interface(String _interface) {
+        this._interface = _interface;
+        return this;
+    }
+    public String get_interface() {
+        return this._interface;
     }
 
     public GetTemplateResponseBody setOwnerId(String ownerId) {
