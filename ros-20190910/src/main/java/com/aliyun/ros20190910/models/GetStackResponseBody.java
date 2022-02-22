@@ -19,6 +19,9 @@ public class GetStackResponseBody extends TeaModel {
     @NameInMap("DriftDetectionTime")
     public String driftDetectionTime;
 
+    @NameInMap("Interface")
+    public String _interface;
+
     @NameInMap("Log")
     public GetStackResponseBodyLog log;
 
@@ -137,6 +140,14 @@ public class GetStackResponseBody extends TeaModel {
     }
     public String getDriftDetectionTime() {
         return this.driftDetectionTime;
+    }
+
+    public GetStackResponseBody set_interface(String _interface) {
+        this._interface = _interface;
+        return this;
+    }
+    public String get_interface() {
+        return this._interface;
     }
 
     public GetStackResponseBody setLog(GetStackResponseBodyLog log) {
