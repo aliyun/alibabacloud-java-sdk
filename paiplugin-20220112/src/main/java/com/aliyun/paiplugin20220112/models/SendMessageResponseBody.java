@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class SendMessageResponseBody extends TeaModel {
     // 返回数据
     @NameInMap("Data")
-    public String data;
+    public SendMessageResponseBodyData data;
 
     // 错误码
     @NameInMap("ErrorCode")
@@ -21,11 +21,11 @@ public class SendMessageResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SendMessageResponseBody setData(String data) {
+    public SendMessageResponseBody setData(SendMessageResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public SendMessageResponseBodyData getData() {
         return this.data;
     }
 
@@ -43,6 +43,66 @@ public class SendMessageResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public static class SendMessageResponseBodyDataMessages extends TeaModel {
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("PhoneNumber")
+        public String phoneNumber;
+
+        public static SendMessageResponseBodyDataMessages build(java.util.Map<String, ?> map) throws Exception {
+            SendMessageResponseBodyDataMessages self = new SendMessageResponseBodyDataMessages();
+            return TeaModel.build(map, self);
+        }
+
+        public SendMessageResponseBodyDataMessages setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public SendMessageResponseBodyDataMessages setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+        public String getPhoneNumber() {
+            return this.phoneNumber;
+        }
+
+    }
+
+    public static class SendMessageResponseBodyData extends TeaModel {
+        @NameInMap("Messages")
+        public java.util.List<SendMessageResponseBodyDataMessages> messages;
+
+        @NameInMap("RequestId")
+        public String requestId;
+
+        public static SendMessageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            SendMessageResponseBodyData self = new SendMessageResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public SendMessageResponseBodyData setMessages(java.util.List<SendMessageResponseBodyDataMessages> messages) {
+            this.messages = messages;
+            return this;
+        }
+        public java.util.List<SendMessageResponseBodyDataMessages> getMessages() {
+            return this.messages;
+        }
+
+        public SendMessageResponseBodyData setRequestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+        public String getRequestId() {
+            return this.requestId;
+        }
+
     }
 
 }
