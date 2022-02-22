@@ -4,23 +4,15 @@ package com.aliyun.cdt20210813.models;
 import com.aliyun.tea.*;
 
 public class OpenCdtCbServiceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OrderId")
     public String orderId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static OpenCdtCbServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         OpenCdtCbServiceResponseBody self = new OpenCdtCbServiceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public OpenCdtCbServiceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public OpenCdtCbServiceResponseBody setOrderId(String orderId) {
@@ -29,6 +21,14 @@ public class OpenCdtCbServiceResponseBody extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public OpenCdtCbServiceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
