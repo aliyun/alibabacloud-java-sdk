@@ -787,50 +787,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListMessagesResponse listMessagesWithOptions(ListMessagesRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.datetime)) {
-            body.put("Datetime", request.datetime);
+            query.put("Datetime", request.datetime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
-            body.put("GroupId", request.groupId);
+            query.put("GroupId", request.groupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.messageId)) {
-            body.put("MessageId", request.messageId);
+            query.put("MessageId", request.messageId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
+            query.put("PageNumber", request.pageNumber);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
+            query.put("PageSize", request.pageSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.phoneNumber)) {
-            body.put("PhoneNumber", request.phoneNumber);
+            query.put("PhoneNumber", request.phoneNumber);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
+            query.put("RequestId", request.requestId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scheduleId)) {
-            body.put("ScheduleId", request.scheduleId);
+            query.put("ScheduleId", request.scheduleId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.signature)) {
-            body.put("Signature", request.signature);
+            query.put("Signature", request.signature);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
-            body.put("TemplateCode", request.templateCode);
+            query.put("TemplateCode", request.templateCode);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListMessages"),
