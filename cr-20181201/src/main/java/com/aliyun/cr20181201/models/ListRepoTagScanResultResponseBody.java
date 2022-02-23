@@ -90,8 +90,14 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         @NameInMap("AddedBy")
         public String addedBy;
 
+        @NameInMap("AliasName")
+        public String aliasName;
+
         @NameInMap("CveLink")
         public String cveLink;
+
+        @NameInMap("CveLocation")
+        public String cveLocation;
 
         @NameInMap("CveName")
         public String cveName;
@@ -104,6 +110,9 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
 
         @NameInMap("FixCmd")
         public String fixCmd;
+
+        @NameInMap("ScanType")
+        public String scanType;
 
         @NameInMap("Severity")
         public String severity;
@@ -130,12 +139,28 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             return this.addedBy;
         }
 
+        public ListRepoTagScanResultResponseBodyVulnerabilities setAliasName(String aliasName) {
+            this.aliasName = aliasName;
+            return this;
+        }
+        public String getAliasName() {
+            return this.aliasName;
+        }
+
         public ListRepoTagScanResultResponseBodyVulnerabilities setCveLink(String cveLink) {
             this.cveLink = cveLink;
             return this;
         }
         public String getCveLink() {
             return this.cveLink;
+        }
+
+        public ListRepoTagScanResultResponseBodyVulnerabilities setCveLocation(String cveLocation) {
+            this.cveLocation = cveLocation;
+            return this;
+        }
+        public String getCveLocation() {
+            return this.cveLocation;
         }
 
         public ListRepoTagScanResultResponseBodyVulnerabilities setCveName(String cveName) {
@@ -168,6 +193,14 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         }
         public String getFixCmd() {
             return this.fixCmd;
+        }
+
+        public ListRepoTagScanResultResponseBodyVulnerabilities setScanType(String scanType) {
+            this.scanType = scanType;
+            return this;
+        }
+        public String getScanType() {
+            return this.scanType;
         }
 
         public ListRepoTagScanResultResponseBodyVulnerabilities setSeverity(String severity) {
