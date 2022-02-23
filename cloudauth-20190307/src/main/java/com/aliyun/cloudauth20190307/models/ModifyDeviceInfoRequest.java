@@ -8,6 +8,7 @@ public class ModifyDeviceInfoRequest extends TeaModel {
     public String bizType;
 
     @NameInMap("DeviceId")
+    @Validation(required = true)
     public String deviceId;
 
     @NameInMap("Duration")

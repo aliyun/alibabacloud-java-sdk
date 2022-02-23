@@ -4,6 +4,9 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class InitFaceVerifyRequest extends TeaModel {
+    @NameInMap("AuthId")
+    public String authId;
+
     @NameInMap("CallbackToken")
     public String callbackToken;
 
@@ -58,9 +61,6 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ReturnUrl")
     public String returnUrl;
 
@@ -73,6 +73,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     public static InitFaceVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
         InitFaceVerifyRequest self = new InitFaceVerifyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InitFaceVerifyRequest setAuthId(String authId) {
+        this.authId = authId;
+        return this;
+    }
+    public String getAuthId() {
+        return this.authId;
     }
 
     public InitFaceVerifyRequest setCallbackToken(String callbackToken) {
@@ -217,14 +225,6 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public String getProductCode() {
         return this.productCode;
-    }
-
-    public InitFaceVerifyRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public InitFaceVerifyRequest setReturnUrl(String returnUrl) {
