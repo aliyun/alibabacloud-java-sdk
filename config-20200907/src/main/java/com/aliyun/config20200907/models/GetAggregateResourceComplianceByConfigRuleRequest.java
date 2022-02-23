@@ -13,6 +13,9 @@ public class GetAggregateResourceComplianceByConfigRuleRequest extends TeaModel 
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static GetAggregateResourceComplianceByConfigRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAggregateResourceComplianceByConfigRuleRequest self = new GetAggregateResourceComplianceByConfigRuleRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class GetAggregateResourceComplianceByConfigRuleRequest extends TeaModel 
     }
     public String getConfigRuleId() {
         return this.configRuleId;
+    }
+
+    public GetAggregateResourceComplianceByConfigRuleRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }
