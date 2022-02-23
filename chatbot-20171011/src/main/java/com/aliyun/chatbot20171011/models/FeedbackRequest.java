@@ -4,6 +4,10 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class FeedbackRequest extends TeaModel {
+    // 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+    @NameInMap("AgentKey")
+    public String agentKey;
+
     @NameInMap("Feedback")
     public String feedback;
 
@@ -19,6 +23,14 @@ public class FeedbackRequest extends TeaModel {
     public static FeedbackRequest build(java.util.Map<String, ?> map) throws Exception {
         FeedbackRequest self = new FeedbackRequest();
         return TeaModel.build(map, self);
+    }
+
+    public FeedbackRequest setAgentKey(String agentKey) {
+        this.agentKey = agentKey;
+        return this;
+    }
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     public FeedbackRequest setFeedback(String feedback) {

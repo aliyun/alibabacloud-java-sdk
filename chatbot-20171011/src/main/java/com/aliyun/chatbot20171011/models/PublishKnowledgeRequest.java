@@ -4,6 +4,10 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PublishKnowledgeRequest extends TeaModel {
+    // 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+    @NameInMap("AgentKey")
+    public String agentKey;
+
     @NameInMap("Async")
     public Boolean async;
 
@@ -13,6 +17,14 @@ public class PublishKnowledgeRequest extends TeaModel {
     public static PublishKnowledgeRequest build(java.util.Map<String, ?> map) throws Exception {
         PublishKnowledgeRequest self = new PublishKnowledgeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PublishKnowledgeRequest setAgentKey(String agentKey) {
+        this.agentKey = agentKey;
+        return this;
+    }
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     public PublishKnowledgeRequest setAsync(Boolean async) {
