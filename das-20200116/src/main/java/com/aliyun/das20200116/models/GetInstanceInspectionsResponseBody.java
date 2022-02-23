@@ -64,7 +64,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance extends TeaModel {
+    public static class GetInstanceInspectionsResponseBodyDataListInstance extends TeaModel {
         @NameInMap("AccountId")
         public String accountId;
 
@@ -98,12 +98,12 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
-        public static GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance build(java.util.Map<String, ?> map) throws Exception {
-            GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance self = new GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance();
+        public static GetInstanceInspectionsResponseBodyDataListInstance build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceInspectionsResponseBodyDataListInstance self = new GetInstanceInspectionsResponseBodyDataListInstance();
             return TeaModel.build(map, self);
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance setAccountId(String accountId) {
+        public GetInstanceInspectionsResponseBodyDataListInstance setAccountId(String accountId) {
             this.accountId = accountId;
             return this;
         }
@@ -111,7 +111,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.accountId;
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance setEngine(String engine) {
+        public GetInstanceInspectionsResponseBodyDataListInstance setEngine(String engine) {
             this.engine = engine;
             return this;
         }
@@ -119,7 +119,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.engine;
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance setEngineVersion(String engineVersion) {
+        public GetInstanceInspectionsResponseBodyDataListInstance setEngineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
@@ -127,7 +127,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.engineVersion;
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance setInstanceArea(String instanceArea) {
+        public GetInstanceInspectionsResponseBodyDataListInstance setInstanceArea(String instanceArea) {
             this.instanceArea = instanceArea;
             return this;
         }
@@ -135,7 +135,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.instanceArea;
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance setInstanceClass(String instanceClass) {
+        public GetInstanceInspectionsResponseBodyDataListInstance setInstanceClass(String instanceClass) {
             this.instanceClass = instanceClass;
             return this;
         }
@@ -143,7 +143,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.instanceClass;
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance setInstanceId(String instanceId) {
+        public GetInstanceInspectionsResponseBodyDataListInstance setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -151,7 +151,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance setNetworkType(String networkType) {
+        public GetInstanceInspectionsResponseBodyDataListInstance setNetworkType(String networkType) {
             this.networkType = networkType;
             return this;
         }
@@ -159,7 +159,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.networkType;
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance setNodeId(String nodeId) {
+        public GetInstanceInspectionsResponseBodyDataListInstance setNodeId(String nodeId) {
             this.nodeId = nodeId;
             return this;
         }
@@ -167,7 +167,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.nodeId;
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance setRegion(String region) {
+        public GetInstanceInspectionsResponseBodyDataListInstance setRegion(String region) {
             this.region = region;
             return this;
         }
@@ -175,7 +175,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.region;
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance setUuid(String uuid) {
+        public GetInstanceInspectionsResponseBodyDataListInstance setUuid(String uuid) {
             this.uuid = uuid;
             return this;
         }
@@ -183,7 +183,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.uuid;
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance setVpcId(String vpcId) {
+        public GetInstanceInspectionsResponseBodyDataListInstance setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -193,7 +193,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
 
     }
 
-    public static class GetInstanceInspectionsResponseBodyDataListBaseInspection extends TeaModel {
+    public static class GetInstanceInspectionsResponseBodyDataList extends TeaModel {
         @NameInMap("Data")
         public java.util.Map<String, ?> data;
 
@@ -204,7 +204,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         public Long gmtCreate;
 
         @NameInMap("Instance")
-        public GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance instance;
+        public GetInstanceInspectionsResponseBodyDataListInstance instance;
 
         @NameInMap("Score")
         public Integer score;
@@ -215,12 +215,12 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         @NameInMap("StartTime")
         public Long startTime;
 
-        public static GetInstanceInspectionsResponseBodyDataListBaseInspection build(java.util.Map<String, ?> map) throws Exception {
-            GetInstanceInspectionsResponseBodyDataListBaseInspection self = new GetInstanceInspectionsResponseBodyDataListBaseInspection();
+        public static GetInstanceInspectionsResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceInspectionsResponseBodyDataList self = new GetInstanceInspectionsResponseBodyDataList();
             return TeaModel.build(map, self);
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspection setData(java.util.Map<String, ?> data) {
+        public GetInstanceInspectionsResponseBodyDataList setData(java.util.Map<String, ?> data) {
             this.data = data;
             return this;
         }
@@ -228,7 +228,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.data;
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspection setEndTime(Long endTime) {
+        public GetInstanceInspectionsResponseBodyDataList setEndTime(Long endTime) {
             this.endTime = endTime;
             return this;
         }
@@ -236,7 +236,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspection setGmtCreate(Long gmtCreate) {
+        public GetInstanceInspectionsResponseBodyDataList setGmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
@@ -244,15 +244,15 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspection setInstance(GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance instance) {
+        public GetInstanceInspectionsResponseBodyDataList setInstance(GetInstanceInspectionsResponseBodyDataListInstance instance) {
             this.instance = instance;
             return this;
         }
-        public GetInstanceInspectionsResponseBodyDataListBaseInspectionInstance getInstance() {
+        public GetInstanceInspectionsResponseBodyDataListInstance getInstance() {
             return this.instance;
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspection setScore(Integer score) {
+        public GetInstanceInspectionsResponseBodyDataList setScore(Integer score) {
             this.score = score;
             return this;
         }
@@ -260,7 +260,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.score;
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspection setScoreMap(java.util.Map<String, ?> scoreMap) {
+        public GetInstanceInspectionsResponseBodyDataList setScoreMap(java.util.Map<String, ?> scoreMap) {
             this.scoreMap = scoreMap;
             return this;
         }
@@ -268,7 +268,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.scoreMap;
         }
 
-        public GetInstanceInspectionsResponseBodyDataListBaseInspection setStartTime(Long startTime) {
+        public GetInstanceInspectionsResponseBodyDataList setStartTime(Long startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -278,28 +278,9 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
 
     }
 
-    public static class GetInstanceInspectionsResponseBodyDataList extends TeaModel {
-        @NameInMap("BaseInspection")
-        public java.util.List<GetInstanceInspectionsResponseBodyDataListBaseInspection> baseInspection;
-
-        public static GetInstanceInspectionsResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
-            GetInstanceInspectionsResponseBodyDataList self = new GetInstanceInspectionsResponseBodyDataList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetInstanceInspectionsResponseBodyDataList setBaseInspection(java.util.List<GetInstanceInspectionsResponseBodyDataListBaseInspection> baseInspection) {
-            this.baseInspection = baseInspection;
-            return this;
-        }
-        public java.util.List<GetInstanceInspectionsResponseBodyDataListBaseInspection> getBaseInspection() {
-            return this.baseInspection;
-        }
-
-    }
-
     public static class GetInstanceInspectionsResponseBodyData extends TeaModel {
         @NameInMap("List")
-        public GetInstanceInspectionsResponseBodyDataList list;
+        public java.util.List<GetInstanceInspectionsResponseBodyDataList> list;
 
         @NameInMap("PageNo")
         public Long pageNo;
@@ -315,11 +296,11 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetInstanceInspectionsResponseBodyData setList(GetInstanceInspectionsResponseBodyDataList list) {
+        public GetInstanceInspectionsResponseBodyData setList(java.util.List<GetInstanceInspectionsResponseBodyDataList> list) {
             this.list = list;
             return this;
         }
-        public GetInstanceInspectionsResponseBodyDataList getList() {
+        public java.util.List<GetInstanceInspectionsResponseBodyDataList> getList() {
             return this.list;
         }
 

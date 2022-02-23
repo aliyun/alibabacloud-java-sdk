@@ -4,14 +4,11 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetAsyncErrorRequestStatResultRequest extends TeaModel {
-    @NameInMap("ConsoleContext")
-    public String consoleContext;
-
     @NameInMap("DbName")
     public String dbName;
 
     @NameInMap("End")
-    public String end;
+    public Long end;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -19,26 +16,15 @@ public class GetAsyncErrorRequestStatResultRequest extends TeaModel {
     @NameInMap("NodeId")
     public String nodeId;
 
-    @NameInMap("Role")
-    public String role;
-
     @NameInMap("SqlIdList")
     public String sqlIdList;
 
     @NameInMap("Start")
-    public String start;
+    public Long start;
 
     public static GetAsyncErrorRequestStatResultRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAsyncErrorRequestStatResultRequest self = new GetAsyncErrorRequestStatResultRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetAsyncErrorRequestStatResultRequest setConsoleContext(String consoleContext) {
-        this.consoleContext = consoleContext;
-        return this;
-    }
-    public String getConsoleContext() {
-        return this.consoleContext;
     }
 
     public GetAsyncErrorRequestStatResultRequest setDbName(String dbName) {
@@ -49,11 +35,11 @@ public class GetAsyncErrorRequestStatResultRequest extends TeaModel {
         return this.dbName;
     }
 
-    public GetAsyncErrorRequestStatResultRequest setEnd(String end) {
+    public GetAsyncErrorRequestStatResultRequest setEnd(Long end) {
         this.end = end;
         return this;
     }
-    public String getEnd() {
+    public Long getEnd() {
         return this.end;
     }
 
@@ -73,14 +59,6 @@ public class GetAsyncErrorRequestStatResultRequest extends TeaModel {
         return this.nodeId;
     }
 
-    public GetAsyncErrorRequestStatResultRequest setRole(String role) {
-        this.role = role;
-        return this;
-    }
-    public String getRole() {
-        return this.role;
-    }
-
     public GetAsyncErrorRequestStatResultRequest setSqlIdList(String sqlIdList) {
         this.sqlIdList = sqlIdList;
         return this;
@@ -89,11 +67,11 @@ public class GetAsyncErrorRequestStatResultRequest extends TeaModel {
         return this.sqlIdList;
     }
 
-    public GetAsyncErrorRequestStatResultRequest setStart(String start) {
+    public GetAsyncErrorRequestStatResultRequest setStart(Long start) {
         this.start = start;
         return this;
     }
-    public String getStart() {
+    public Long getStart() {
         return this.start;
     }
 
