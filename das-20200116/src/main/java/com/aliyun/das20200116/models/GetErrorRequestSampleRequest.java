@@ -4,14 +4,11 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetErrorRequestSampleRequest extends TeaModel {
-    @NameInMap("ConsoleContext")
-    public String consoleContext;
-
     @NameInMap("DbName")
     public String dbName;
 
     @NameInMap("End")
-    public String end;
+    public Long end;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -19,26 +16,15 @@ public class GetErrorRequestSampleRequest extends TeaModel {
     @NameInMap("NodeId")
     public String nodeId;
 
-    @NameInMap("Role")
-    public String role;
-
     @NameInMap("SqlId")
     public String sqlId;
 
     @NameInMap("Start")
-    public String start;
+    public Long start;
 
     public static GetErrorRequestSampleRequest build(java.util.Map<String, ?> map) throws Exception {
         GetErrorRequestSampleRequest self = new GetErrorRequestSampleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetErrorRequestSampleRequest setConsoleContext(String consoleContext) {
-        this.consoleContext = consoleContext;
-        return this;
-    }
-    public String getConsoleContext() {
-        return this.consoleContext;
     }
 
     public GetErrorRequestSampleRequest setDbName(String dbName) {
@@ -49,11 +35,11 @@ public class GetErrorRequestSampleRequest extends TeaModel {
         return this.dbName;
     }
 
-    public GetErrorRequestSampleRequest setEnd(String end) {
+    public GetErrorRequestSampleRequest setEnd(Long end) {
         this.end = end;
         return this;
     }
-    public String getEnd() {
+    public Long getEnd() {
         return this.end;
     }
 
@@ -73,14 +59,6 @@ public class GetErrorRequestSampleRequest extends TeaModel {
         return this.nodeId;
     }
 
-    public GetErrorRequestSampleRequest setRole(String role) {
-        this.role = role;
-        return this;
-    }
-    public String getRole() {
-        return this.role;
-    }
-
     public GetErrorRequestSampleRequest setSqlId(String sqlId) {
         this.sqlId = sqlId;
         return this;
@@ -89,11 +67,11 @@ public class GetErrorRequestSampleRequest extends TeaModel {
         return this.sqlId;
     }
 
-    public GetErrorRequestSampleRequest setStart(String start) {
+    public GetErrorRequestSampleRequest setStart(Long start) {
         this.start = start;
         return this;
     }
-    public String getStart() {
+    public Long getStart() {
         return this.start;
     }
 

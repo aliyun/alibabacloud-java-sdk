@@ -4,11 +4,8 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetAsyncErrorRequestListByCodeRequest extends TeaModel {
-    @NameInMap("ConsoleContext")
-    public String consoleContext;
-
     @NameInMap("End")
-    public String end;
+    public Long end;
 
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -20,26 +17,18 @@ public class GetAsyncErrorRequestListByCodeRequest extends TeaModel {
     public String nodeId;
 
     @NameInMap("Start")
-    public String start;
+    public Long start;
 
     public static GetAsyncErrorRequestListByCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAsyncErrorRequestListByCodeRequest self = new GetAsyncErrorRequestListByCodeRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetAsyncErrorRequestListByCodeRequest setConsoleContext(String consoleContext) {
-        this.consoleContext = consoleContext;
-        return this;
-    }
-    public String getConsoleContext() {
-        return this.consoleContext;
-    }
-
-    public GetAsyncErrorRequestListByCodeRequest setEnd(String end) {
+    public GetAsyncErrorRequestListByCodeRequest setEnd(Long end) {
         this.end = end;
         return this;
     }
-    public String getEnd() {
+    public Long getEnd() {
         return this.end;
     }
 
@@ -67,11 +56,11 @@ public class GetAsyncErrorRequestListByCodeRequest extends TeaModel {
         return this.nodeId;
     }
 
-    public GetAsyncErrorRequestListByCodeRequest setStart(String start) {
+    public GetAsyncErrorRequestListByCodeRequest setStart(Long start) {
         this.start = start;
         return this;
     }
-    public String getStart() {
+    public Long getStart() {
         return this.start;
     }
 
