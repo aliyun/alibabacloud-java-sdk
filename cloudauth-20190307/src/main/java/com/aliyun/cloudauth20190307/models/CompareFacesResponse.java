@@ -4,33 +4,101 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CompareFacesResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Code")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String code;
 
-    @NameInMap("body")
+    @NameInMap("Message")
     @Validation(required = true)
-    public CompareFacesResponseBody body;
+    public String message;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
+    @NameInMap("Success")
+    @Validation(required = true)
+    public Boolean success;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public CompareFacesResponseData data;
 
     public static CompareFacesResponse build(java.util.Map<String, ?> map) throws Exception {
         CompareFacesResponse self = new CompareFacesResponse();
         return TeaModel.build(map, self);
     }
 
-    public CompareFacesResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CompareFacesResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getCode() {
+        return this.code;
     }
 
-    public CompareFacesResponse setBody(CompareFacesResponseBody body) {
-        this.body = body;
+    public CompareFacesResponse setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public CompareFacesResponseBody getBody() {
-        return this.body;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public CompareFacesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CompareFacesResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public CompareFacesResponse setData(CompareFacesResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public CompareFacesResponseData getData() {
+        return this.data;
+    }
+
+    public static class CompareFacesResponseData extends TeaModel {
+        @NameInMap("ConfidenceThresholds")
+        @Validation(required = true)
+        public String confidenceThresholds;
+
+        @NameInMap("SimilarityScore")
+        @Validation(required = true)
+        public Float similarityScore;
+
+        public static CompareFacesResponseData build(java.util.Map<String, ?> map) throws Exception {
+            CompareFacesResponseData self = new CompareFacesResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public CompareFacesResponseData setConfidenceThresholds(String confidenceThresholds) {
+            this.confidenceThresholds = confidenceThresholds;
+            return this;
+        }
+        public String getConfidenceThresholds() {
+            return this.confidenceThresholds;
+        }
+
+        public CompareFacesResponseData setSimilarityScore(Float similarityScore) {
+            this.similarityScore = similarityScore;
+            return this;
+        }
+        public Float getSimilarityScore() {
+            return this.similarityScore;
+        }
+
     }
 
 }

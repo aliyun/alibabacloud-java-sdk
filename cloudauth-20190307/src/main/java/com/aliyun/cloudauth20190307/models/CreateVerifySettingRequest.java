@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateVerifySettingRequest extends TeaModel {
     @NameInMap("BizName")
+    @Validation(required = true)
     public String bizName;
 
     @NameInMap("BizType")
+    @Validation(required = true)
     public String bizType;
 
     @NameInMap("GuideStep")
@@ -20,6 +22,7 @@ public class CreateVerifySettingRequest extends TeaModel {
     public Boolean resultStep;
 
     @NameInMap("Solution")
+    @Validation(required = true)
     public String solution;
 
     public static CreateVerifySettingRequest build(java.util.Map<String, ?> map) throws Exception {

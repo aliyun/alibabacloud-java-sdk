@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class VerifyMaterialRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizType")
+    @Validation(required = true)
     public String bizType;
 
     @NameInMap("FaceImageUrl")
+    @Validation(required = true)
     public String faceImageUrl;
 
     @NameInMap("IdCardBackImageUrl")
@@ -20,13 +23,12 @@ public class VerifyMaterialRequest extends TeaModel {
     public String idCardFrontImageUrl;
 
     @NameInMap("IdCardNumber")
+    @Validation(required = true)
     public String idCardNumber;
 
     @NameInMap("Name")
+    @Validation(required = true)
     public String name;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("UserId")
     public String userId;
@@ -90,14 +92,6 @@ public class VerifyMaterialRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public VerifyMaterialRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public VerifyMaterialRequest setUserId(String userId) {

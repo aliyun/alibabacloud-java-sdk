@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifySDKRequest extends TeaModel {
     @NameInMap("TaskId")
+    @Validation(required = true)
     public String taskId;
 
     public static DescribeVerifySDKRequest build(java.util.Map<String, ?> map) throws Exception {
