@@ -2809,6 +2809,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Digest", request.digest);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.filterValue)) {
+            query.put("FilterValue", request.filterValue);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -2829,12 +2833,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ScanTaskId", request.scanTaskId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.scanType)) {
+            query.put("ScanType", request.scanType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.severity)) {
             query.put("Severity", request.severity);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vulQueryKey)) {
+            query.put("VulQueryKey", request.vulQueryKey);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
