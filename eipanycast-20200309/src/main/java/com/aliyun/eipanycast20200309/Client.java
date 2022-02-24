@@ -35,13 +35,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AllocateAnycastEipAddressResponse allocateAnycastEipAddressWithOptions(AllocateAnycastEipAddressRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("Bandwidth", request.bandwidth);
-        query.put("ClientToken", request.clientToken);
-        query.put("Description", request.description);
-        query.put("InstanceChargeType", request.instanceChargeType);
-        query.put("InternetChargeType", request.internetChargeType);
-        query.put("Name", request.name);
-        query.put("ServiceLocation", request.serviceLocation);
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidth)) {
+            query.put("Bandwidth", request.bandwidth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceChargeType)) {
+            query.put("InstanceChargeType", request.instanceChargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.internetChargeType)) {
+            query.put("InternetChargeType", request.internetChargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceLocation)) {
+            query.put("ServiceLocation", request.serviceLocation);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -67,15 +88,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AssociateAnycastEipAddressResponse associateAnycastEipAddressWithOptions(AssociateAnycastEipAddressRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AnycastId", request.anycastId);
-        query.put("AssociationMode", request.associationMode);
-        query.put("BindInstanceId", request.bindInstanceId);
-        query.put("BindInstanceRegionId", request.bindInstanceRegionId);
-        query.put("BindInstanceType", request.bindInstanceType);
-        query.put("ClientToken", request.clientToken);
-        query.put("DryRun", request.dryRun);
-        query.put("PopLocations", request.popLocations);
-        query.put("PrivateIpAddress", request.privateIpAddress);
+        if (!com.aliyun.teautil.Common.isUnset(request.anycastId)) {
+            query.put("AnycastId", request.anycastId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.associationMode)) {
+            query.put("AssociationMode", request.associationMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bindInstanceId)) {
+            query.put("BindInstanceId", request.bindInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bindInstanceRegionId)) {
+            query.put("BindInstanceRegionId", request.bindInstanceRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bindInstanceType)) {
+            query.put("BindInstanceType", request.bindInstanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.popLocations)) {
+            query.put("PopLocations", request.popLocations);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privateIpAddress)) {
+            query.put("PrivateIpAddress", request.privateIpAddress);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -101,9 +149,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAnycastEipAddressResponse describeAnycastEipAddressWithOptions(DescribeAnycastEipAddressRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AnycastId", request.anycastId);
-        query.put("BindInstanceId", request.bindInstanceId);
-        query.put("Ip", request.ip);
+        if (!com.aliyun.teautil.Common.isUnset(request.anycastId)) {
+            query.put("AnycastId", request.anycastId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bindInstanceId)) {
+            query.put("BindInstanceId", request.bindInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ip)) {
+            query.put("Ip", request.ip);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -129,7 +186,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAnycastPopLocationsResponse describeAnycastPopLocationsWithOptions(DescribeAnycastPopLocationsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("ServiceLocation", request.serviceLocation);
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceLocation)) {
+            query.put("ServiceLocation", request.serviceLocation);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -155,7 +215,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAnycastServerRegionsResponse describeAnycastServerRegionsWithOptions(DescribeAnycastServerRegionsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("ServiceLocation", request.serviceLocation);
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceLocation)) {
+            query.put("ServiceLocation", request.serviceLocation);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -181,17 +244,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAnycastEipAddressesResponse listAnycastEipAddressesWithOptions(ListAnycastEipAddressesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AnycastEipAddress", request.anycastEipAddress);
-        query.put("AnycastId", request.anycastId);
-        query.put("BindInstanceIds", request.bindInstanceIds);
-        query.put("BusinessStatus", request.businessStatus);
-        query.put("InstanceChargeType", request.instanceChargeType);
-        query.put("InternetChargeType", request.internetChargeType);
-        query.put("MaxResults", request.maxResults);
-        query.put("Name", request.name);
-        query.put("NextToken", request.nextToken);
-        query.put("ServiceLocation", request.serviceLocation);
-        query.put("Status", request.status);
+        if (!com.aliyun.teautil.Common.isUnset(request.anycastEipAddress)) {
+            query.put("AnycastEipAddress", request.anycastEipAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.anycastId)) {
+            query.put("AnycastId", request.anycastId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bindInstanceIds)) {
+            query.put("BindInstanceIds", request.bindInstanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessStatus)) {
+            query.put("BusinessStatus", request.businessStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceChargeType)) {
+            query.put("InstanceChargeType", request.instanceChargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.internetChargeType)) {
+            query.put("InternetChargeType", request.internetChargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceLocation)) {
+            query.put("ServiceLocation", request.serviceLocation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -217,9 +313,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyAnycastEipAddressAttributeResponse modifyAnycastEipAddressAttributeWithOptions(ModifyAnycastEipAddressAttributeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AnycastId", request.anycastId);
-        query.put("Description", request.description);
-        query.put("Name", request.name);
+        if (!com.aliyun.teautil.Common.isUnset(request.anycastId)) {
+            query.put("AnycastId", request.anycastId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -245,8 +350,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyAnycastEipAddressSpecResponse modifyAnycastEipAddressSpecWithOptions(ModifyAnycastEipAddressSpecRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AnycastId", request.anycastId);
-        query.put("Bandwidth", request.bandwidth);
+        if (!com.aliyun.teautil.Common.isUnset(request.anycastId)) {
+            query.put("AnycastId", request.anycastId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidth)) {
+            query.put("Bandwidth", request.bandwidth);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -272,8 +383,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ReleaseAnycastEipAddressResponse releaseAnycastEipAddressWithOptions(ReleaseAnycastEipAddressRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AnycastId", request.anycastId);
-        query.put("ClientToken", request.clientToken);
+        if (!com.aliyun.teautil.Common.isUnset(request.anycastId)) {
+            query.put("AnycastId", request.anycastId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -299,13 +416,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UnassociateAnycastEipAddressResponse unassociateAnycastEipAddressWithOptions(UnassociateAnycastEipAddressRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AnycastId", request.anycastId);
-        query.put("BindInstanceId", request.bindInstanceId);
-        query.put("BindInstanceRegionId", request.bindInstanceRegionId);
-        query.put("BindInstanceType", request.bindInstanceType);
-        query.put("ClientToken", request.clientToken);
-        query.put("DryRun", request.dryRun);
-        query.put("PrivateIpAddress", request.privateIpAddress);
+        if (!com.aliyun.teautil.Common.isUnset(request.anycastId)) {
+            query.put("AnycastId", request.anycastId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bindInstanceId)) {
+            query.put("BindInstanceId", request.bindInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bindInstanceRegionId)) {
+            query.put("BindInstanceRegionId", request.bindInstanceRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bindInstanceType)) {
+            query.put("BindInstanceType", request.bindInstanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privateIpAddress)) {
+            query.put("PrivateIpAddress", request.privateIpAddress);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -331,13 +469,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAnycastEipAddressAssociationsResponse updateAnycastEipAddressAssociationsWithOptions(UpdateAnycastEipAddressAssociationsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AnycastId", request.anycastId);
-        query.put("AssociationMode", request.associationMode);
-        query.put("BindInstanceId", request.bindInstanceId);
-        query.put("ClientToken", request.clientToken);
-        query.put("DryRun", request.dryRun);
-        query.put("PopLocationAddList", request.popLocationAddList);
-        query.put("PopLocationDeleteList", request.popLocationDeleteList);
+        if (!com.aliyun.teautil.Common.isUnset(request.anycastId)) {
+            query.put("AnycastId", request.anycastId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.associationMode)) {
+            query.put("AssociationMode", request.associationMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bindInstanceId)) {
+            query.put("BindInstanceId", request.bindInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.popLocationAddList)) {
+            query.put("PopLocationAddList", request.popLocationAddList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.popLocationDeleteList)) {
+            query.put("PopLocationDeleteList", request.popLocationDeleteList);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
