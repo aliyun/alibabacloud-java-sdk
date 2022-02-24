@@ -220,30 +220,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateResourceLogResponse());
     }
 
-    public CreateRoleResponse createRole() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createRoleWithOptions(headers, runtime);
-    }
-
-    public CreateRoleResponse createRoleWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateRole"),
-            new TeaPair("version", "2021-07-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/role"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRoleResponse());
-    }
-
     public CreateServiceResponse createService(CreateServiceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -713,30 +689,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeResourceLogResponse());
-    }
-
-    public DescribeRoleResponse describeRole() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeRoleWithOptions(headers, runtime);
-    }
-
-    public DescribeRoleResponse describeRoleWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeRole"),
-            new TeaPair("version", "2021-07-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/role"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRoleResponse());
     }
 
     public DescribeServiceResponse describeService(String ClusterId, String ServiceName) throws Exception {
