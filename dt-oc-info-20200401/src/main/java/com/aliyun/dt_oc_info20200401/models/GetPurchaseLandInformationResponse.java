@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dt_oc_info20200401.models;
+
+import com.aliyun.tea.*;
+
+public class GetPurchaseLandInformationResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public GetPurchaseLandInformationResponseBody body;
+
+    public static GetPurchaseLandInformationResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetPurchaseLandInformationResponse self = new GetPurchaseLandInformationResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public GetPurchaseLandInformationResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetPurchaseLandInformationResponse setBody(GetPurchaseLandInformationResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetPurchaseLandInformationResponseBody getBody() {
+        return this.body;
+    }
+
+}
