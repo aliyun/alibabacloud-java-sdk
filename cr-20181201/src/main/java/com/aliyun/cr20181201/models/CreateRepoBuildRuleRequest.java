@@ -4,6 +4,9 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateRepoBuildRuleRequest extends TeaModel {
+    @NameInMap("BuildArgs")
+    public java.util.List<String> buildArgs;
+
     @NameInMap("DockerfileLocation")
     public String dockerfileLocation;
 
@@ -15,6 +18,9 @@ public class CreateRepoBuildRuleRequest extends TeaModel {
 
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("Platforms")
+    public java.util.List<String> platforms;
 
     @NameInMap("PushName")
     public String pushName;
@@ -28,6 +34,14 @@ public class CreateRepoBuildRuleRequest extends TeaModel {
     public static CreateRepoBuildRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRepoBuildRuleRequest self = new CreateRepoBuildRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRepoBuildRuleRequest setBuildArgs(java.util.List<String> buildArgs) {
+        this.buildArgs = buildArgs;
+        return this;
+    }
+    public java.util.List<String> getBuildArgs() {
+        return this.buildArgs;
     }
 
     public CreateRepoBuildRuleRequest setDockerfileLocation(String dockerfileLocation) {
@@ -60,6 +74,14 @@ public class CreateRepoBuildRuleRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateRepoBuildRuleRequest setPlatforms(java.util.List<String> platforms) {
+        this.platforms = platforms;
+        return this;
+    }
+    public java.util.List<String> getPlatforms() {
+        return this.platforms;
     }
 
     public CreateRepoBuildRuleRequest setPushName(String pushName) {

@@ -408,6 +408,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateRepoBuildRuleResponse createRepoBuildRuleWithOptions(CreateRepoBuildRuleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.buildArgs)) {
+            query.put("BuildArgs", request.buildArgs);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dockerfileLocation)) {
             query.put("DockerfileLocation", request.dockerfileLocation);
         }
@@ -422,6 +426,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platforms)) {
+            query.put("Platforms", request.platforms);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pushName)) {
