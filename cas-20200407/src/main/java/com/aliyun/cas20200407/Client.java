@@ -86,7 +86,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CancelCertificateForPackageRequestResponse cancelCertificateForPackageRequestWithOptions(CancelCertificateForPackageRequestRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("OrderId", request.orderId);
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -112,7 +115,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CancelOrderRequestResponse cancelOrderRequestWithOptions(CancelOrderRequestRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("OrderId", request.orderId);
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -138,14 +144,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCertificateForPackageRequestResponse createCertificateForPackageRequestWithOptions(CreateCertificateForPackageRequestRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("CompanyName", request.companyName);
-        query.put("Csr", request.csr);
-        query.put("Domain", request.domain);
-        query.put("Email", request.email);
-        query.put("Phone", request.phone);
-        query.put("ProductCode", request.productCode);
-        query.put("Username", request.username);
-        query.put("ValidateType", request.validateType);
+        if (!com.aliyun.teautil.Common.isUnset(request.companyName)) {
+            query.put("CompanyName", request.companyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.csr)) {
+            query.put("Csr", request.csr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            query.put("Phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            query.put("Username", request.username);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validateType)) {
+            query.put("ValidateType", request.validateType);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -171,12 +201,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCertificateRequestResponse createCertificateRequestWithOptions(CreateCertificateRequestRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("Domain", request.domain);
-        query.put("Email", request.email);
-        query.put("Phone", request.phone);
-        query.put("ProductCode", request.productCode);
-        query.put("Username", request.username);
-        query.put("ValidateType", request.validateType);
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            query.put("Phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            query.put("Username", request.username);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validateType)) {
+            query.put("ValidateType", request.validateType);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -202,12 +250,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCertificateWithCsrRequestResponse createCertificateWithCsrRequestWithOptions(CreateCertificateWithCsrRequestRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("Csr", request.csr);
-        query.put("Email", request.email);
-        query.put("Phone", request.phone);
-        query.put("ProductCode", request.productCode);
-        query.put("Username", request.username);
-        query.put("ValidateType", request.validateType);
+        if (!com.aliyun.teautil.Common.isUnset(request.csr)) {
+            query.put("Csr", request.csr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            query.put("Phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            query.put("Username", request.username);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validateType)) {
+            query.put("ValidateType", request.validateType);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -233,7 +299,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCertificateRequestResponse deleteCertificateRequestWithOptions(DeleteCertificateRequestRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("OrderId", request.orderId);
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -259,7 +328,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCertificateStateResponse describeCertificateStateWithOptions(DescribeCertificateStateRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("OrderId", request.orderId);
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -285,7 +357,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribePackageStateResponse describePackageStateWithOptions(DescribePackageStateRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("ProductCode", request.productCode);
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -308,11 +383,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describePackageStateWithOptions(request, runtime);
     }
 
+    public ListUserCertificateOrderResponse listUserCertificateOrderWithOptions(ListUserCertificateOrderRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showSize)) {
+            query.put("ShowSize", request.showSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUserCertificateOrder"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserCertificateOrderResponse());
+    }
+
+    public ListUserCertificateOrderResponse listUserCertificateOrder(ListUserCertificateOrderRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listUserCertificateOrderWithOptions(request, runtime);
+    }
+
     public RenewCertificateOrderForPackageRequestResponse renewCertificateOrderForPackageRequestWithOptions(RenewCertificateOrderForPackageRequestRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("Csr", request.csr);
-        query.put("OrderId", request.orderId);
+        if (!com.aliyun.teautil.Common.isUnset(request.csr)) {
+            query.put("Csr", request.csr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
