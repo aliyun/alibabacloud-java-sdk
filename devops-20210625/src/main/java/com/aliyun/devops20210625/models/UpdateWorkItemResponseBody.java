@@ -130,6 +130,10 @@ public class UpdateWorkItemResponseBody extends TeaModel {
         @NameInMap("status")
         public String status;
 
+        // 状态id
+        @NameInMap("statusIdentifier")
+        public String statusIdentifier;
+
         // 状态阶段id
         @NameInMap("statusStageIdentifier")
         public String statusStageIdentifier;
@@ -269,6 +273,14 @@ public class UpdateWorkItemResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public UpdateWorkItemResponseBodyWorkitem setStatusIdentifier(String statusIdentifier) {
+            this.statusIdentifier = statusIdentifier;
+            return this;
+        }
+        public String getStatusIdentifier() {
+            return this.statusIdentifier;
         }
 
         public UpdateWorkItemResponseBodyWorkitem setStatusStageIdentifier(String statusStageIdentifier) {

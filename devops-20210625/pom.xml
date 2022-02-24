@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>devops20210625</artifactId>
-  <version>1.1.9</version>
+  <version>1.1.10</version>
   <packaging>jar</packaging>
   <name>devops20210625</name>
   <description>Alibaba Cloud devops (20210625) SDK for Java
@@ -145,6 +145,10 @@
                 <relocation>
                   <pattern>com.sun</pattern>
                   <shadedPattern>com.aliyun.devops20210625.external.com.sun</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache</pattern>
+                  <shadedPattern>com.aliyun.devops20210625.external.org.apache</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>

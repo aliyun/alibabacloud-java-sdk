@@ -69,6 +69,190 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         return this.workitem;
     }
 
+    public static class GetWorkItemInfoResponseBodyWorkitemCustomFieldsValueList extends TeaModel {
+        // 根据语言环境获取当前展示的值
+        @NameInMap("displayValue")
+        public String displayValue;
+
+        // 字段值为对象类型时，值所对应的对象的唯一标识 例如：option表中的id
+        @NameInMap("identifier")
+        public String identifier;
+
+        // 展示级别，数字范围1~9，数字越大，颜色越浅。
+        @NameInMap("level")
+        public Long level;
+
+        // 字段值
+        @NameInMap("value")
+        public String value;
+
+        // 字段英文值，目前只有列表类有英文值
+        @NameInMap("valueEn")
+        public String valueEn;
+
+        public static GetWorkItemInfoResponseBodyWorkitemCustomFieldsValueList build(java.util.Map<String, ?> map) throws Exception {
+            GetWorkItemInfoResponseBodyWorkitemCustomFieldsValueList self = new GetWorkItemInfoResponseBodyWorkitemCustomFieldsValueList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemCustomFieldsValueList setDisplayValue(String displayValue) {
+            this.displayValue = displayValue;
+            return this;
+        }
+        public String getDisplayValue() {
+            return this.displayValue;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemCustomFieldsValueList setIdentifier(String identifier) {
+            this.identifier = identifier;
+            return this;
+        }
+        public String getIdentifier() {
+            return this.identifier;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemCustomFieldsValueList setLevel(Long level) {
+            this.level = level;
+            return this;
+        }
+        public Long getLevel() {
+            return this.level;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemCustomFieldsValueList setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemCustomFieldsValueList setValueEn(String valueEn) {
+            this.valueEn = valueEn;
+            return this;
+        }
+        public String getValueEn() {
+            return this.valueEn;
+        }
+
+    }
+
+    public static class GetWorkItemInfoResponseBodyWorkitemCustomFields extends TeaModel {
+        // 字段的className，便于数据查询
+        @NameInMap("fieldClassName")
+        public String fieldClassName;
+
+        // 字段格式，便于查询数据
+        @NameInMap("fieldFormat")
+        public String fieldFormat;
+
+        // 字段的唯一标识
+        @NameInMap("fieldIdentifier")
+        public String fieldIdentifier;
+
+        // 展示级别，数字范围1~9，数字越大，颜色越浅。
+        @NameInMap("level")
+        public Long level;
+
+        // 值对象列表
+        @NameInMap("objectValue")
+        public String objectValue;
+
+        // 自定义字段值的position
+        @NameInMap("position")
+        public Long position;
+
+        // 字段值，写入时使用
+        @NameInMap("value")
+        public String value;
+
+        // 值对象列表，查询时使用
+        @NameInMap("valueList")
+        public java.util.List<GetWorkItemInfoResponseBodyWorkitemCustomFieldsValueList> valueList;
+
+        // 工作项的唯一标识
+        @NameInMap("workitemIdentifier")
+        public String workitemIdentifier;
+
+        public static GetWorkItemInfoResponseBodyWorkitemCustomFields build(java.util.Map<String, ?> map) throws Exception {
+            GetWorkItemInfoResponseBodyWorkitemCustomFields self = new GetWorkItemInfoResponseBodyWorkitemCustomFields();
+            return TeaModel.build(map, self);
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemCustomFields setFieldClassName(String fieldClassName) {
+            this.fieldClassName = fieldClassName;
+            return this;
+        }
+        public String getFieldClassName() {
+            return this.fieldClassName;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemCustomFields setFieldFormat(String fieldFormat) {
+            this.fieldFormat = fieldFormat;
+            return this;
+        }
+        public String getFieldFormat() {
+            return this.fieldFormat;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemCustomFields setFieldIdentifier(String fieldIdentifier) {
+            this.fieldIdentifier = fieldIdentifier;
+            return this;
+        }
+        public String getFieldIdentifier() {
+            return this.fieldIdentifier;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemCustomFields setLevel(Long level) {
+            this.level = level;
+            return this;
+        }
+        public Long getLevel() {
+            return this.level;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemCustomFields setObjectValue(String objectValue) {
+            this.objectValue = objectValue;
+            return this;
+        }
+        public String getObjectValue() {
+            return this.objectValue;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemCustomFields setPosition(Long position) {
+            this.position = position;
+            return this;
+        }
+        public Long getPosition() {
+            return this.position;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemCustomFields setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemCustomFields setValueList(java.util.List<GetWorkItemInfoResponseBodyWorkitemCustomFieldsValueList> valueList) {
+            this.valueList = valueList;
+            return this;
+        }
+        public java.util.List<GetWorkItemInfoResponseBodyWorkitemCustomFieldsValueList> getValueList() {
+            return this.valueList;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemCustomFields setWorkitemIdentifier(String workitemIdentifier) {
+            this.workitemIdentifier = workitemIdentifier;
+            return this;
+        }
+        public String getWorkitemIdentifier() {
+            return this.workitemIdentifier;
+        }
+
+    }
+
     public static class GetWorkItemInfoResponseBodyWorkitem extends TeaModel {
         // 负责人
         @NameInMap("assignedTo")
@@ -81,6 +265,10 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         // 创建人
         @NameInMap("creator")
         public String creator;
+
+        // 自定义字段列表
+        @NameInMap("customFields")
+        public java.util.List<GetWorkItemInfoResponseBodyWorkitemCustomFields> customFields;
 
         // 工作项内容
         @NameInMap("document")
@@ -110,6 +298,10 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         @NameInMap("parentIdentifier")
         public String parentIdentifier;
 
+        // 参与人aliyunPk id列表
+        @NameInMap("participant")
+        public java.util.List<String> participant;
+
         // 编号
         @NameInMap("serialNumber")
         public String serialNumber;
@@ -126,9 +318,17 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         @NameInMap("spaceType")
         public String spaceType;
 
+        // 关联的迭代id
+        @NameInMap("sprint")
+        public java.util.List<String> sprint;
+
         // 状态名称
         @NameInMap("status")
         public String status;
+
+        // 状态id
+        @NameInMap("statusIdentifier")
+        public String statusIdentifier;
 
         // 状态阶段id
         @NameInMap("statusStageIdentifier")
@@ -138,9 +338,21 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         @NameInMap("subject")
         public String subject;
 
+        // 标签id列表
+        @NameInMap("tag")
+        public java.util.List<String> tag;
+
+        // 抄送人的aliyunPk id列表
+        @NameInMap("tracker")
+        public java.util.List<String> tracker;
+
         // 状态更新时间
         @NameInMap("updateStatusAt")
         public Long updateStatusAt;
+
+        // 验证者的aliyunPk id列表
+        @NameInMap("verifier")
+        public java.util.List<String> verifier;
 
         // 工作项类型id
         @NameInMap("workitemTypeIdentifier")
@@ -173,6 +385,14 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         }
         public String getCreator() {
             return this.creator;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitem setCustomFields(java.util.List<GetWorkItemInfoResponseBodyWorkitemCustomFields> customFields) {
+            this.customFields = customFields;
+            return this;
+        }
+        public java.util.List<GetWorkItemInfoResponseBodyWorkitemCustomFields> getCustomFields() {
+            return this.customFields;
         }
 
         public GetWorkItemInfoResponseBodyWorkitem setDocument(String document) {
@@ -231,6 +451,14 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             return this.parentIdentifier;
         }
 
+        public GetWorkItemInfoResponseBodyWorkitem setParticipant(java.util.List<String> participant) {
+            this.participant = participant;
+            return this;
+        }
+        public java.util.List<String> getParticipant() {
+            return this.participant;
+        }
+
         public GetWorkItemInfoResponseBodyWorkitem setSerialNumber(String serialNumber) {
             this.serialNumber = serialNumber;
             return this;
@@ -263,12 +491,28 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             return this.spaceType;
         }
 
+        public GetWorkItemInfoResponseBodyWorkitem setSprint(java.util.List<String> sprint) {
+            this.sprint = sprint;
+            return this;
+        }
+        public java.util.List<String> getSprint() {
+            return this.sprint;
+        }
+
         public GetWorkItemInfoResponseBodyWorkitem setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitem setStatusIdentifier(String statusIdentifier) {
+            this.statusIdentifier = statusIdentifier;
+            return this;
+        }
+        public String getStatusIdentifier() {
+            return this.statusIdentifier;
         }
 
         public GetWorkItemInfoResponseBodyWorkitem setStatusStageIdentifier(String statusStageIdentifier) {
@@ -287,12 +531,36 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             return this.subject;
         }
 
+        public GetWorkItemInfoResponseBodyWorkitem setTag(java.util.List<String> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<String> getTag() {
+            return this.tag;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitem setTracker(java.util.List<String> tracker) {
+            this.tracker = tracker;
+            return this;
+        }
+        public java.util.List<String> getTracker() {
+            return this.tracker;
+        }
+
         public GetWorkItemInfoResponseBodyWorkitem setUpdateStatusAt(Long updateStatusAt) {
             this.updateStatusAt = updateStatusAt;
             return this;
         }
         public Long getUpdateStatusAt() {
             return this.updateStatusAt;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitem setVerifier(java.util.List<String> verifier) {
+            this.verifier = verifier;
+            return this;
+        }
+        public java.util.List<String> getVerifier() {
+            return this.verifier;
         }
 
         public GetWorkItemInfoResponseBodyWorkitem setWorkitemTypeIdentifier(String workitemTypeIdentifier) {
