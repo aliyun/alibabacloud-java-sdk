@@ -3,7 +3,7 @@ package com.aliyun.devops20210625.models;
 
 import com.aliyun.tea.*;
 
-public class CreateWorkitemResponseBody extends TeaModel {
+public class ListWorkitemsResponseBody extends TeaModel {
     // 错误码
     @NameInMap("errorCode")
     public String errorCode;
@@ -11,6 +11,14 @@ public class CreateWorkitemResponseBody extends TeaModel {
     // 错误信息
     @NameInMap("errorMsg")
     public String errorMsg;
+
+    // 每页数量
+    @NameInMap("maxResults")
+    public Long maxResults;
+
+    // 分页Token，没有下一页则为空
+    @NameInMap("nextToken")
+    public String nextToken;
 
     // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
@@ -20,16 +28,20 @@ public class CreateWorkitemResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    // 工作项信息
-    @NameInMap("workitem")
-    public CreateWorkitemResponseBodyWorkitem workitem;
+    // 总数
+    @NameInMap("totalCount")
+    public Long totalCount;
 
-    public static CreateWorkitemResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateWorkitemResponseBody self = new CreateWorkitemResponseBody();
+    // 工作项信息
+    @NameInMap("workitems")
+    public java.util.List<ListWorkitemsResponseBodyWorkitems> workitems;
+
+    public static ListWorkitemsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListWorkitemsResponseBody self = new ListWorkitemsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateWorkitemResponseBody setErrorCode(String errorCode) {
+    public ListWorkitemsResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -37,7 +49,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public CreateWorkitemResponseBody setErrorMsg(String errorMsg) {
+    public ListWorkitemsResponseBody setErrorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
         return this;
     }
@@ -45,7 +57,23 @@ public class CreateWorkitemResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public CreateWorkitemResponseBody setRequestId(String requestId) {
+    public ListWorkitemsResponseBody setMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Long getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListWorkitemsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListWorkitemsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -53,7 +81,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateWorkitemResponseBody setSuccess(Boolean success) {
+    public ListWorkitemsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -61,16 +89,24 @@ public class CreateWorkitemResponseBody extends TeaModel {
         return this.success;
     }
 
-    public CreateWorkitemResponseBody setWorkitem(CreateWorkitemResponseBodyWorkitem workitem) {
-        this.workitem = workitem;
+    public ListWorkitemsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public CreateWorkitemResponseBodyWorkitem getWorkitem() {
-        return this.workitem;
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
-    public static class CreateWorkitemResponseBodyWorkitem extends TeaModel {
-        // 负责人
+    public ListWorkitemsResponseBody setWorkitems(java.util.List<ListWorkitemsResponseBodyWorkitems> workitems) {
+        this.workitems = workitems;
+        return this;
+    }
+    public java.util.List<ListWorkitemsResponseBodyWorkitems> getWorkitems() {
+        return this.workitems;
+    }
+
+    public static class ListWorkitemsResponseBodyWorkitems extends TeaModel {
+        // 负责人aliyunPk
         @NameInMap("assignedTo")
         public String assignedTo;
 
@@ -78,7 +114,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
         @NameInMap("categoryIdentifier")
         public String categoryIdentifier;
 
-        // 创建人
+        // 创建人aliyunPK
         @NameInMap("creator")
         public String creator;
 
@@ -102,7 +138,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
         @NameInMap("logicalStatus")
         public String logicalStatus;
 
-        // 修改人
+        // 修改人aliyunPK
         @NameInMap("modifier")
         public String modifier;
 
@@ -130,7 +166,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
         @NameInMap("status")
         public String status;
 
-        // 状态唯一标识id
+        // 状态唯一标识
         @NameInMap("statusIdentifier")
         public String statusIdentifier;
 
@@ -150,12 +186,12 @@ public class CreateWorkitemResponseBody extends TeaModel {
         @NameInMap("workitemTypeIdentifier")
         public String workitemTypeIdentifier;
 
-        public static CreateWorkitemResponseBodyWorkitem build(java.util.Map<String, ?> map) throws Exception {
-            CreateWorkitemResponseBodyWorkitem self = new CreateWorkitemResponseBodyWorkitem();
+        public static ListWorkitemsResponseBodyWorkitems build(java.util.Map<String, ?> map) throws Exception {
+            ListWorkitemsResponseBodyWorkitems self = new ListWorkitemsResponseBodyWorkitems();
             return TeaModel.build(map, self);
         }
 
-        public CreateWorkitemResponseBodyWorkitem setAssignedTo(String assignedTo) {
+        public ListWorkitemsResponseBodyWorkitems setAssignedTo(String assignedTo) {
             this.assignedTo = assignedTo;
             return this;
         }
@@ -163,7 +199,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.assignedTo;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setCategoryIdentifier(String categoryIdentifier) {
+        public ListWorkitemsResponseBodyWorkitems setCategoryIdentifier(String categoryIdentifier) {
             this.categoryIdentifier = categoryIdentifier;
             return this;
         }
@@ -171,7 +207,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.categoryIdentifier;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setCreator(String creator) {
+        public ListWorkitemsResponseBodyWorkitems setCreator(String creator) {
             this.creator = creator;
             return this;
         }
@@ -179,7 +215,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.creator;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setDocument(String document) {
+        public ListWorkitemsResponseBodyWorkitems setDocument(String document) {
             this.document = document;
             return this;
         }
@@ -187,7 +223,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.document;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setGmtCreate(Long gmtCreate) {
+        public ListWorkitemsResponseBodyWorkitems setGmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
@@ -195,7 +231,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setGmtModified(Long gmtModified) {
+        public ListWorkitemsResponseBodyWorkitems setGmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
             return this;
         }
@@ -203,7 +239,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setIdentifier(String identifier) {
+        public ListWorkitemsResponseBodyWorkitems setIdentifier(String identifier) {
             this.identifier = identifier;
             return this;
         }
@@ -211,7 +247,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.identifier;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setLogicalStatus(String logicalStatus) {
+        public ListWorkitemsResponseBodyWorkitems setLogicalStatus(String logicalStatus) {
             this.logicalStatus = logicalStatus;
             return this;
         }
@@ -219,7 +255,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.logicalStatus;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setModifier(String modifier) {
+        public ListWorkitemsResponseBodyWorkitems setModifier(String modifier) {
             this.modifier = modifier;
             return this;
         }
@@ -227,7 +263,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.modifier;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setParentIdentifier(String parentIdentifier) {
+        public ListWorkitemsResponseBodyWorkitems setParentIdentifier(String parentIdentifier) {
             this.parentIdentifier = parentIdentifier;
             return this;
         }
@@ -235,7 +271,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.parentIdentifier;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setSerialNumber(String serialNumber) {
+        public ListWorkitemsResponseBodyWorkitems setSerialNumber(String serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
@@ -243,7 +279,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.serialNumber;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setSpaceIdentifier(String spaceIdentifier) {
+        public ListWorkitemsResponseBodyWorkitems setSpaceIdentifier(String spaceIdentifier) {
             this.spaceIdentifier = spaceIdentifier;
             return this;
         }
@@ -251,7 +287,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.spaceIdentifier;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setSpaceName(String spaceName) {
+        public ListWorkitemsResponseBodyWorkitems setSpaceName(String spaceName) {
             this.spaceName = spaceName;
             return this;
         }
@@ -259,7 +295,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.spaceName;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setSpaceType(String spaceType) {
+        public ListWorkitemsResponseBodyWorkitems setSpaceType(String spaceType) {
             this.spaceType = spaceType;
             return this;
         }
@@ -267,7 +303,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.spaceType;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setStatus(String status) {
+        public ListWorkitemsResponseBodyWorkitems setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -275,7 +311,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.status;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setStatusIdentifier(String statusIdentifier) {
+        public ListWorkitemsResponseBodyWorkitems setStatusIdentifier(String statusIdentifier) {
             this.statusIdentifier = statusIdentifier;
             return this;
         }
@@ -283,7 +319,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.statusIdentifier;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setStatusStageIdentifier(String statusStageIdentifier) {
+        public ListWorkitemsResponseBodyWorkitems setStatusStageIdentifier(String statusStageIdentifier) {
             this.statusStageIdentifier = statusStageIdentifier;
             return this;
         }
@@ -291,7 +327,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.statusStageIdentifier;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setSubject(String subject) {
+        public ListWorkitemsResponseBodyWorkitems setSubject(String subject) {
             this.subject = subject;
             return this;
         }
@@ -299,7 +335,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.subject;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setUpdateStatusAt(Long updateStatusAt) {
+        public ListWorkitemsResponseBodyWorkitems setUpdateStatusAt(Long updateStatusAt) {
             this.updateStatusAt = updateStatusAt;
             return this;
         }
@@ -307,7 +343,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             return this.updateStatusAt;
         }
 
-        public CreateWorkitemResponseBodyWorkitem setWorkitemTypeIdentifier(String workitemTypeIdentifier) {
+        public ListWorkitemsResponseBodyWorkitems setWorkitemTypeIdentifier(String workitemTypeIdentifier) {
             this.workitemTypeIdentifier = workitemTypeIdentifier;
             return this;
         }
