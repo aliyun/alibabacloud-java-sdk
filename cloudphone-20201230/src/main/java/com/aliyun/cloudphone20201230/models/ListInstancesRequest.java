@@ -46,6 +46,9 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("ShowWebRtcToken")
+    public Boolean showWebRtcToken;
+
     @NameInMap("Status")
     public String status;
 
@@ -167,6 +170,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ListInstancesRequest setShowWebRtcToken(Boolean showWebRtcToken) {
+        this.showWebRtcToken = showWebRtcToken;
+        return this;
+    }
+    public Boolean getShowWebRtcToken() {
+        return this.showWebRtcToken;
     }
 
     public ListInstancesRequest setStatus(String status) {
