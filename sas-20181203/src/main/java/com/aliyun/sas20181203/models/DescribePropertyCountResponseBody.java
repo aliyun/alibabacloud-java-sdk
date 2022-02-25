@@ -4,11 +4,17 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyCountResponseBody extends TeaModel {
-    @NameInMap("AutoRun")
-    public Integer autoRun;
+    @NameInMap("Autorun")
+    public Integer autorun;
 
     @NameInMap("Cron")
     public Integer cron;
+
+    @NameInMap("Database")
+    public Integer database;
+
+    @NameInMap("Lkm")
+    public Integer lkm;
 
     @NameInMap("Port")
     public Integer port;
@@ -28,17 +34,23 @@ public class DescribePropertyCountResponseBody extends TeaModel {
     @NameInMap("User")
     public Integer user;
 
+    @NameInMap("Web")
+    public Integer web;
+
+    @NameInMap("Webserver")
+    public Integer webserver;
+
     public static DescribePropertyCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePropertyCountResponseBody self = new DescribePropertyCountResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribePropertyCountResponseBody setAutoRun(Integer autoRun) {
-        this.autoRun = autoRun;
+    public DescribePropertyCountResponseBody setAutorun(Integer autorun) {
+        this.autorun = autorun;
         return this;
     }
-    public Integer getAutoRun() {
-        return this.autoRun;
+    public Integer getAutorun() {
+        return this.autorun;
     }
 
     public DescribePropertyCountResponseBody setCron(Integer cron) {
@@ -47,6 +59,22 @@ public class DescribePropertyCountResponseBody extends TeaModel {
     }
     public Integer getCron() {
         return this.cron;
+    }
+
+    public DescribePropertyCountResponseBody setDatabase(Integer database) {
+        this.database = database;
+        return this;
+    }
+    public Integer getDatabase() {
+        return this.database;
+    }
+
+    public DescribePropertyCountResponseBody setLkm(Integer lkm) {
+        this.lkm = lkm;
+        return this;
+    }
+    public Integer getLkm() {
+        return this.lkm;
     }
 
     public DescribePropertyCountResponseBody setPort(Integer port) {
@@ -95,6 +123,22 @@ public class DescribePropertyCountResponseBody extends TeaModel {
     }
     public Integer getUser() {
         return this.user;
+    }
+
+    public DescribePropertyCountResponseBody setWeb(Integer web) {
+        this.web = web;
+        return this;
+    }
+    public Integer getWeb() {
+        return this.web;
+    }
+
+    public DescribePropertyCountResponseBody setWebserver(Integer webserver) {
+        this.webserver = webserver;
+        return this;
+    }
+    public Integer getWebserver() {
+        return this.webserver;
     }
 
 }
