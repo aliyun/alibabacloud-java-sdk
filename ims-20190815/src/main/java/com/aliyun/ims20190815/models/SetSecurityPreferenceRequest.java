@@ -13,6 +13,9 @@ public class SetSecurityPreferenceRequest extends TeaModel {
     @NameInMap("AllowUserToManageMFADevices")
     public Boolean allowUserToManageMFADevices;
 
+    @NameInMap("AllowUserToManagePersonalDingTalk")
+    public Boolean allowUserToManagePersonalDingTalk;
+
     @NameInMap("EnableSaveMFATicket")
     public Boolean enableSaveMFATicket;
 
@@ -24,9 +27,6 @@ public class SetSecurityPreferenceRequest extends TeaModel {
 
     @NameInMap("LoginSessionDuration")
     public Integer loginSessionDuration;
-
-    @NameInMap("VerificationTypes")
-    public java.util.List<String> verificationTypes;
 
     public static SetSecurityPreferenceRequest build(java.util.Map<String, ?> map) throws Exception {
         SetSecurityPreferenceRequest self = new SetSecurityPreferenceRequest();
@@ -55,6 +55,14 @@ public class SetSecurityPreferenceRequest extends TeaModel {
     }
     public Boolean getAllowUserToManageMFADevices() {
         return this.allowUserToManageMFADevices;
+    }
+
+    public SetSecurityPreferenceRequest setAllowUserToManagePersonalDingTalk(Boolean allowUserToManagePersonalDingTalk) {
+        this.allowUserToManagePersonalDingTalk = allowUserToManagePersonalDingTalk;
+        return this;
+    }
+    public Boolean getAllowUserToManagePersonalDingTalk() {
+        return this.allowUserToManagePersonalDingTalk;
     }
 
     public SetSecurityPreferenceRequest setEnableSaveMFATicket(Boolean enableSaveMFATicket) {
@@ -87,14 +95,6 @@ public class SetSecurityPreferenceRequest extends TeaModel {
     }
     public Integer getLoginSessionDuration() {
         return this.loginSessionDuration;
-    }
-
-    public SetSecurityPreferenceRequest setVerificationTypes(java.util.List<String> verificationTypes) {
-        this.verificationTypes = verificationTypes;
-        return this;
-    }
-    public java.util.List<String> getVerificationTypes() {
-        return this.verificationTypes;
     }
 
 }

@@ -132,21 +132,21 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
 
     }
 
-    public static class SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference extends TeaModel {
-        @NameInMap("VerificationTypes")
-        public java.util.List<String> verificationTypes;
+    public static class SetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference extends TeaModel {
+        @NameInMap("AllowUserToManagePersonalDingTalk")
+        public Boolean allowUserToManagePersonalDingTalk;
 
-        public static SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference build(java.util.Map<String, ?> map) throws Exception {
-            SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference self = new SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference();
+        public static SetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference build(java.util.Map<String, ?> map) throws Exception {
+            SetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference self = new SetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference();
             return TeaModel.build(map, self);
         }
 
-        public SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference setVerificationTypes(java.util.List<String> verificationTypes) {
-            this.verificationTypes = verificationTypes;
+        public SetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference setAllowUserToManagePersonalDingTalk(Boolean allowUserToManagePersonalDingTalk) {
+            this.allowUserToManagePersonalDingTalk = allowUserToManagePersonalDingTalk;
             return this;
         }
-        public java.util.List<String> getVerificationTypes() {
-            return this.verificationTypes;
+        public Boolean getAllowUserToManagePersonalDingTalk() {
+            return this.allowUserToManagePersonalDingTalk;
         }
 
     }
@@ -161,8 +161,8 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         @NameInMap("MFAPreference")
         public SetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference MFAPreference;
 
-        @NameInMap("VerificationPreference")
-        public SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference verificationPreference;
+        @NameInMap("PersonalInfoPreference")
+        public SetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference personalInfoPreference;
 
         public static SetSecurityPreferenceResponseBodySecurityPreference build(java.util.Map<String, ?> map) throws Exception {
             SetSecurityPreferenceResponseBodySecurityPreference self = new SetSecurityPreferenceResponseBodySecurityPreference();
@@ -193,12 +193,12 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
             return this.MFAPreference;
         }
 
-        public SetSecurityPreferenceResponseBodySecurityPreference setVerificationPreference(SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference verificationPreference) {
-            this.verificationPreference = verificationPreference;
+        public SetSecurityPreferenceResponseBodySecurityPreference setPersonalInfoPreference(SetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference personalInfoPreference) {
+            this.personalInfoPreference = personalInfoPreference;
             return this;
         }
-        public SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference getVerificationPreference() {
-            return this.verificationPreference;
+        public SetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference getPersonalInfoPreference() {
+            return this.personalInfoPreference;
         }
 
     }
