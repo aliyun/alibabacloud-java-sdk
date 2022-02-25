@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRequestDiagnosisPageRequest extends TeaModel {
     @NameInMap("EndTime")
-    public String endTime;
+    public Long endTime;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -14,24 +14,24 @@ public class GetRequestDiagnosisPageRequest extends TeaModel {
     public String nodeId;
 
     @NameInMap("PageNo")
-    public String pageNo;
+    public Integer pageNo;
 
     @NameInMap("PageSize")
-    public String pageSize;
+    public Integer pageSize;
 
     @NameInMap("StartTime")
-    public String startTime;
+    public Long startTime;
 
     public static GetRequestDiagnosisPageRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRequestDiagnosisPageRequest self = new GetRequestDiagnosisPageRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetRequestDiagnosisPageRequest setEndTime(String endTime) {
+    public GetRequestDiagnosisPageRequest setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
     }
-    public String getEndTime() {
+    public Long getEndTime() {
         return this.endTime;
     }
 
@@ -51,27 +51,27 @@ public class GetRequestDiagnosisPageRequest extends TeaModel {
         return this.nodeId;
     }
 
-    public GetRequestDiagnosisPageRequest setPageNo(String pageNo) {
+    public GetRequestDiagnosisPageRequest setPageNo(Integer pageNo) {
         this.pageNo = pageNo;
         return this;
     }
-    public String getPageNo() {
+    public Integer getPageNo() {
         return this.pageNo;
     }
 
-    public GetRequestDiagnosisPageRequest setPageSize(String pageSize) {
+    public GetRequestDiagnosisPageRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
-    public GetRequestDiagnosisPageRequest setStartTime(String startTime) {
+    public GetRequestDiagnosisPageRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
-    public String getStartTime() {
+    public Long getStartTime() {
         return this.startTime;
     }
 
