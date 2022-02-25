@@ -327,6 +327,9 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         @NameInMap("MemberUid")
         public String memberUid;
 
+        @NameInMap("PrecheckStatus")
+        public String precheckStatus;
+
         @NameInMap("RegionStatus")
         public String regionStatus;
 
@@ -398,6 +401,14 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         }
         public String getMemberUid() {
             return this.memberUid;
+        }
+
+        public DescribeVpcFirewallCenListResponseBodyVpcFirewalls setPrecheckStatus(String precheckStatus) {
+            this.precheckStatus = precheckStatus;
+            return this;
+        }
+        public String getPrecheckStatus() {
+            return this.precheckStatus;
         }
 
         public DescribeVpcFirewallCenListResponseBodyVpcFirewalls setRegionStatus(String regionStatus) {
