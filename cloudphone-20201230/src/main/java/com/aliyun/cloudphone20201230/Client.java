@@ -941,6 +941,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.showWebRtcToken)) {
+            query.put("ShowWebRtcToken", request.showWebRtcToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
         }

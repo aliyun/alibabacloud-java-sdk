@@ -1,3 +1,6 @@
+2022-02-25 Version: 1.0.4
+- Update ListInstances.
+
 2022-01-24 Version: 1.0.3
 - Release RenewInstances Api.
 

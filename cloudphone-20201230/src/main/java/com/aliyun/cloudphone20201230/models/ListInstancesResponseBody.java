@@ -201,6 +201,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("VpcAttributes")
         public ListInstancesResponseBodyInstancesInstanceVpcAttributes vpcAttributes;
 
+        @NameInMap("WebRtcToken")
+        public String webRtcToken;
+
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -351,6 +354,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public ListInstancesResponseBodyInstancesInstanceVpcAttributes getVpcAttributes() {
             return this.vpcAttributes;
+        }
+
+        public ListInstancesResponseBodyInstancesInstance setWebRtcToken(String webRtcToken) {
+            this.webRtcToken = webRtcToken;
+            return this;
+        }
+        public String getWebRtcToken() {
+            return this.webRtcToken;
         }
 
         public ListInstancesResponseBodyInstancesInstance setZoneId(String zoneId) {
