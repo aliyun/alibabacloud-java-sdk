@@ -38,6 +38,9 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
         @NameInMap("ClientIds")
         public String clientIds;
 
+        @NameInMap("CreateDate")
+        public String createDate;
+
         @NameInMap("Description")
         public String description;
 
@@ -55,6 +58,9 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
 
         @NameInMap("OIDCProviderName")
         public String OIDCProviderName;
+
+        @NameInMap("UpdateDate")
+        public String updateDate;
 
         public static RemoveClientIdFromOIDCProviderResponseBodyOIDCProvider build(java.util.Map<String, ?> map) throws Exception {
             RemoveClientIdFromOIDCProviderResponseBodyOIDCProvider self = new RemoveClientIdFromOIDCProviderResponseBodyOIDCProvider();
@@ -75,6 +81,14 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
         }
         public String getClientIds() {
             return this.clientIds;
+        }
+
+        public RemoveClientIdFromOIDCProviderResponseBodyOIDCProvider setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
         }
 
         public RemoveClientIdFromOIDCProviderResponseBodyOIDCProvider setDescription(String description) {
@@ -123,6 +137,14 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
         }
         public String getOIDCProviderName() {
             return this.OIDCProviderName;
+        }
+
+        public RemoveClientIdFromOIDCProviderResponseBodyOIDCProvider setUpdateDate(String updateDate) {
+            this.updateDate = updateDate;
+            return this;
+        }
+        public String getUpdateDate() {
+            return this.updateDate;
         }
 
     }

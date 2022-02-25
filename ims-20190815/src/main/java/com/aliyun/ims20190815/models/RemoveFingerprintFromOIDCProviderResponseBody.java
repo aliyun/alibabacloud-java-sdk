@@ -38,6 +38,9 @@ public class RemoveFingerprintFromOIDCProviderResponseBody extends TeaModel {
         @NameInMap("ClientIds")
         public String clientIds;
 
+        @NameInMap("CreateDate")
+        public String createDate;
+
         @NameInMap("Description")
         public String description;
 
@@ -55,6 +58,9 @@ public class RemoveFingerprintFromOIDCProviderResponseBody extends TeaModel {
 
         @NameInMap("OIDCProviderName")
         public String OIDCProviderName;
+
+        @NameInMap("UpdateDate")
+        public String updateDate;
 
         public static RemoveFingerprintFromOIDCProviderResponseBodyOIDCProvider build(java.util.Map<String, ?> map) throws Exception {
             RemoveFingerprintFromOIDCProviderResponseBodyOIDCProvider self = new RemoveFingerprintFromOIDCProviderResponseBodyOIDCProvider();
@@ -75,6 +81,14 @@ public class RemoveFingerprintFromOIDCProviderResponseBody extends TeaModel {
         }
         public String getClientIds() {
             return this.clientIds;
+        }
+
+        public RemoveFingerprintFromOIDCProviderResponseBodyOIDCProvider setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
         }
 
         public RemoveFingerprintFromOIDCProviderResponseBodyOIDCProvider setDescription(String description) {
@@ -123,6 +137,14 @@ public class RemoveFingerprintFromOIDCProviderResponseBody extends TeaModel {
         }
         public String getOIDCProviderName() {
             return this.OIDCProviderName;
+        }
+
+        public RemoveFingerprintFromOIDCProviderResponseBodyOIDCProvider setUpdateDate(String updateDate) {
+            this.updateDate = updateDate;
+            return this;
+        }
+        public String getUpdateDate() {
+            return this.updateDate;
         }
 
     }
