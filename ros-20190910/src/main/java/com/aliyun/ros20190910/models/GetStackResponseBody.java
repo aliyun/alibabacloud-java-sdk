@@ -55,6 +55,12 @@ public class GetStackResponseBody extends TeaModel {
     @NameInMap("RootStackId")
     public String rootStackId;
 
+    @NameInMap("ServiceManaged")
+    public Boolean serviceManaged;
+
+    @NameInMap("ServiceName")
+    public String serviceName;
+
     @NameInMap("StackDriftStatus")
     public String stackDriftStatus;
 
@@ -236,6 +242,22 @@ public class GetStackResponseBody extends TeaModel {
     }
     public String getRootStackId() {
         return this.rootStackId;
+    }
+
+    public GetStackResponseBody setServiceManaged(Boolean serviceManaged) {
+        this.serviceManaged = serviceManaged;
+        return this;
+    }
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
+    }
+
+    public GetStackResponseBody setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
+    public String getServiceName() {
+        return this.serviceName;
     }
 
     public GetStackResponseBody setStackDriftStatus(String stackDriftStatus) {

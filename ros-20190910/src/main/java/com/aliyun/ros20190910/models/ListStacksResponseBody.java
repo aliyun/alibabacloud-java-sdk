@@ -113,6 +113,12 @@ public class ListStacksResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("ServiceManaged")
+        public Boolean serviceManaged;
+
+        @NameInMap("ServiceName")
+        public String serviceName;
+
         @NameInMap("StackDriftStatus")
         public String stackDriftStatus;
 
@@ -191,6 +197,22 @@ public class ListStacksResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public ListStacksResponseBodyStacks setServiceManaged(Boolean serviceManaged) {
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+        public Boolean getServiceManaged() {
+            return this.serviceManaged;
+        }
+
+        public ListStacksResponseBodyStacks setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
         }
 
         public ListStacksResponseBodyStacks setStackDriftStatus(String stackDriftStatus) {
