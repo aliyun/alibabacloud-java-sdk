@@ -86,6 +86,9 @@ public class CreateRobotRequest extends TeaModel {
         @NameInMap("SellerNick")
         public String sellerNick;
 
+        @NameInMap("ShopId")
+        public String shopId;
+
         // 签约时间
         @NameInMap("SignDate")
         public Long signDate;
@@ -133,6 +136,14 @@ public class CreateRobotRequest extends TeaModel {
         }
         public String getSellerNick() {
             return this.sellerNick;
+        }
+
+        public CreateRobotRequestRobotDTO setShopId(String shopId) {
+            this.shopId = shopId;
+            return this;
+        }
+        public String getShopId() {
+            return this.shopId;
         }
 
         public CreateRobotRequestRobotDTO setSignDate(Long signDate) {

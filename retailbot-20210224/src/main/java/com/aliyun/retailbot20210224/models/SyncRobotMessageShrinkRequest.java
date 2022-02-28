@@ -4,6 +4,10 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class SyncRobotMessageShrinkRequest extends TeaModel {
+    // 答案正文
+    @NameInMap("Answer")
+    public String answer;
+
     // 回复给买家的答案ID
     @NameInMap("AnswerId")
     public String answerId;
@@ -43,6 +47,14 @@ public class SyncRobotMessageShrinkRequest extends TeaModel {
     public static SyncRobotMessageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SyncRobotMessageShrinkRequest self = new SyncRobotMessageShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SyncRobotMessageShrinkRequest setAnswer(String answer) {
+        this.answer = answer;
+        return this;
+    }
+    public String getAnswer() {
+        return this.answer;
     }
 
     public SyncRobotMessageShrinkRequest setAnswerId(String answerId) {

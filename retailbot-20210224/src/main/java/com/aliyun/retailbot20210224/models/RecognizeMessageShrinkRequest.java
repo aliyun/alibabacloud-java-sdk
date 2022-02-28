@@ -40,7 +40,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
     @NameInMap("Orders")
     public String ordersShrink;
 
-    // 指定行业包
+    // 调用知识包指令
     @NameInMap("Packages")
     public String packagesShrink;
 

@@ -1711,6 +1711,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.answer)) {
+            body.put("Answer", request.answer);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.answerId)) {
             body.put("AnswerId", request.answerId);
         }

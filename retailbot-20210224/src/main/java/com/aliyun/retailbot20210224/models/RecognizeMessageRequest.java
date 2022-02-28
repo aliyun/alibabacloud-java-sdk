@@ -40,7 +40,7 @@ public class RecognizeMessageRequest extends TeaModel {
     @NameInMap("Orders")
     public java.util.List<RecognizeMessageRequestOrders> orders;
 
-    // 指定行业包
+    // 调用知识包指令
     @NameInMap("Packages")
     public java.util.List<RecognizeMessageRequestPackages> packages;
 

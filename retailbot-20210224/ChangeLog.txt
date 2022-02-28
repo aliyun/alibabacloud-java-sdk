@@ -1,3 +1,6 @@
+2022-02-28 Version: 2.3.0
+- Supported multi channel.
+
 2021-12-29 Version: 2.2.2
 - Add SceneSource.
 
