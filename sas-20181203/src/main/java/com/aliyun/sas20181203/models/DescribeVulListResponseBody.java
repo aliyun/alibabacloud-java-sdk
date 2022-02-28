@@ -162,11 +162,17 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("MatchDetail")
         public String matchDetail;
 
+        @NameInMap("MatchList")
+        public String matchList;
+
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Path")
         public String path;
+
+        @NameInMap("Pid")
+        public String pid;
 
         @NameInMap("UpdateCmd")
         public String updateCmd;
@@ -211,6 +217,14 @@ public class DescribeVulListResponseBody extends TeaModel {
             return this.matchDetail;
         }
 
+        public DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setMatchList(String matchList) {
+            this.matchList = matchList;
+            return this;
+        }
+        public String getMatchList() {
+            return this.matchList;
+        }
+
         public DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setName(String name) {
             this.name = name;
             return this;
@@ -225,6 +239,14 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
         public String getPath() {
             return this.path;
+        }
+
+        public DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setPid(String pid) {
+            this.pid = pid;
+            return this;
+        }
+        public String getPid() {
+            return this.pid;
         }
 
         public DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setUpdateCmd(String updateCmd) {
