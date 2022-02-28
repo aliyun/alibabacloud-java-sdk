@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateFileRequest extends TeaModel {
+    @NameInMap("AdvancedSettings")
+    public String advancedSettings;
+
     @NameInMap("AutoParsing")
     public Boolean autoParsing;
 
@@ -76,12 +79,23 @@ public class CreateFileRequest extends TeaModel {
     @NameInMap("StartEffectDate")
     public Long startEffectDate;
 
+    @NameInMap("StartImmediately")
+    public Boolean startImmediately;
+
     @NameInMap("Stop")
     public Boolean stop;
 
     public static CreateFileRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFileRequest self = new CreateFileRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateFileRequest setAdvancedSettings(String advancedSettings) {
+        this.advancedSettings = advancedSettings;
+        return this;
+    }
+    public String getAdvancedSettings() {
+        return this.advancedSettings;
     }
 
     public CreateFileRequest setAutoParsing(Boolean autoParsing) {
@@ -274,6 +288,14 @@ public class CreateFileRequest extends TeaModel {
     }
     public Long getStartEffectDate() {
         return this.startEffectDate;
+    }
+
+    public CreateFileRequest setStartImmediately(Boolean startImmediately) {
+        this.startImmediately = startImmediately;
+        return this;
+    }
+    public Boolean getStartImmediately() {
+        return this.startImmediately;
     }
 
     public CreateFileRequest setStop(Boolean stop) {
