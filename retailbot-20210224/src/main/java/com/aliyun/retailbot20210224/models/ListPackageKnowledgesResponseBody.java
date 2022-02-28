@@ -97,7 +97,7 @@ public class ListPackageKnowledgesResponseBody extends TeaModel {
         @NameInMap("SimilarQuestionTitle")
         public String similarQuestionTitle;
 
-        // "similar":相似问法，"sample":例句，"keyword":关键字
+        // "similar":场景正负例句，"sample":场景示例问法，"keyword":场景关键词
         @NameInMap("SimilarQuestionType")
         public String similarQuestionType;
 
@@ -357,7 +357,7 @@ public class ListPackageKnowledgesResponseBody extends TeaModel {
         @NameInMap("SceneKey")
         public String sceneKey;
 
-        // 示例问法、正负例句、正负关键字
+        // 场景问法
         @NameInMap("SimilarQuestions")
         public java.util.List<ListPackageKnowledgesResponseBodyKnowledgesSimilarQuestions> similarQuestions;
 
