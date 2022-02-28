@@ -106,6 +106,9 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         @NameInMap("AutoEnableService")
         public Boolean autoEnableService;
 
+        @NameInMap("DependentServiceNames")
+        public java.util.List<String> dependentServiceNames;
+
         @NameInMap("EnableURL")
         public String enableURL;
 
@@ -132,6 +135,14 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         }
         public Boolean getAutoEnableService() {
             return this.autoEnableService;
+        }
+
+        public GetServiceProvisionsResponseBodyServiceProvisions setDependentServiceNames(java.util.List<String> dependentServiceNames) {
+            this.dependentServiceNames = dependentServiceNames;
+            return this;
+        }
+        public java.util.List<String> getDependentServiceNames() {
+            return this.dependentServiceNames;
         }
 
         public GetServiceProvisionsResponseBodyServiceProvisions setEnableURL(String enableURL) {
