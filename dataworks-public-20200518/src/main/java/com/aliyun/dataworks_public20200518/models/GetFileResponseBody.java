@@ -76,6 +76,9 @@ public class GetFileResponseBody extends TeaModel {
     }
 
     public static class GetFileResponseBodyDataFile extends TeaModel {
+        @NameInMap("AdvancedSettings")
+        public String advancedSettings;
+
         @NameInMap("AutoParsing")
         public Boolean autoParsing;
 
@@ -142,6 +145,14 @@ public class GetFileResponseBody extends TeaModel {
         public static GetFileResponseBodyDataFile build(java.util.Map<String, ?> map) throws Exception {
             GetFileResponseBodyDataFile self = new GetFileResponseBodyDataFile();
             return TeaModel.build(map, self);
+        }
+
+        public GetFileResponseBodyDataFile setAdvancedSettings(String advancedSettings) {
+            this.advancedSettings = advancedSettings;
+            return this;
+        }
+        public String getAdvancedSettings() {
+            return this.advancedSettings;
         }
 
         public GetFileResponseBodyDataFile setAutoParsing(Boolean autoParsing) {
@@ -417,6 +428,9 @@ public class GetFileResponseBody extends TeaModel {
         @NameInMap("StartEffectDate")
         public Long startEffectDate;
 
+        @NameInMap("StartImmediately")
+        public Boolean startImmediately;
+
         @NameInMap("Stop")
         public Boolean stop;
 
@@ -535,6 +549,14 @@ public class GetFileResponseBody extends TeaModel {
         }
         public Long getStartEffectDate() {
             return this.startEffectDate;
+        }
+
+        public GetFileResponseBodyDataNodeConfiguration setStartImmediately(Boolean startImmediately) {
+            this.startImmediately = startImmediately;
+            return this;
+        }
+        public Boolean getStartImmediately() {
+            return this.startImmediately;
         }
 
         public GetFileResponseBodyDataNodeConfiguration setStop(Boolean stop) {
