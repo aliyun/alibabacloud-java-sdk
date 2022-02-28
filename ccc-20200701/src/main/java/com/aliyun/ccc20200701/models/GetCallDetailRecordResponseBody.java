@@ -243,6 +243,9 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         @NameInMap("FlowId")
         public String flowId;
 
+        @NameInMap("FlowType")
+        public String flowType;
+
         public static GetCallDetailRecordResponseBodyDataIvrEvents build(java.util.Map<String, ?> map) throws Exception {
             GetCallDetailRecordResponseBodyDataIvrEvents self = new GetCallDetailRecordResponseBodyDataIvrEvents();
             return TeaModel.build(map, self);
@@ -262,6 +265,14 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
         public String getFlowId() {
             return this.flowId;
+        }
+
+        public GetCallDetailRecordResponseBodyDataIvrEvents setFlowType(String flowType) {
+            this.flowType = flowType;
+            return this;
+        }
+        public String getFlowType() {
+            return this.flowType;
         }
 
     }

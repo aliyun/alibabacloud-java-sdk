@@ -4,6 +4,9 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ModifyUserRequest extends TeaModel {
+    @NameInMap("DisplayId")
+    public String displayId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -22,6 +25,14 @@ public class ModifyUserRequest extends TeaModel {
     public static ModifyUserRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyUserRequest self = new ModifyUserRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyUserRequest setDisplayId(String displayId) {
+        this.displayId = displayId;
+        return this;
+    }
+    public String getDisplayId() {
+        return this.displayId;
     }
 
     public ModifyUserRequest setInstanceId(String instanceId) {
