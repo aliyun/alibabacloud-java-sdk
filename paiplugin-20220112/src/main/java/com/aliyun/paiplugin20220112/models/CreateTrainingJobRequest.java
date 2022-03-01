@@ -4,19 +4,19 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateTrainingJobRequest extends TeaModel {
-    // 关联算法
+    // 关联算法Id。
     @NameInMap("Algorithm")
     public String algorithm;
 
-    // 训练任务名称
+    // 训练任务名称。
     @NameInMap("Name")
     public String name;
 
-    // 备注
+    // 备注。
     @NameInMap("Remark")
     public String remark;
 
-    // 用户配置
+    // 用户配置。
     @NameInMap("UserConfig")
     public String userConfig;
 

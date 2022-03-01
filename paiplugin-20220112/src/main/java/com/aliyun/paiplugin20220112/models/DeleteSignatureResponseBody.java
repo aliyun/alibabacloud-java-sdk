@@ -16,6 +16,10 @@ public class DeleteSignatureResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DeleteSignatureResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteSignatureResponseBody self = new DeleteSignatureResponseBody();
         return TeaModel.build(map, self);
@@ -43,6 +47,14 @@ public class DeleteSignatureResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public DeleteSignatureResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

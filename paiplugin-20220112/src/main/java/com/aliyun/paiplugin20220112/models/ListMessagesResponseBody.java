@@ -16,6 +16,10 @@ public class ListMessagesResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ListMessagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListMessagesResponseBody self = new ListMessagesResponseBody();
         return TeaModel.build(map, self);
@@ -43,6 +47,14 @@ public class ListMessagesResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public ListMessagesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListMessagesResponseBodyDataMessages extends TeaModel {

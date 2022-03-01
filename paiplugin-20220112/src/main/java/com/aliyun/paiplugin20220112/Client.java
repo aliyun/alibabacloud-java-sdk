@@ -32,6 +32,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * 注册人群
+    
+     */
     public CreateGroupResponse createGroup(CreateGroupRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -53,8 +57,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Filter", request.filter);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.inferenceJob)) {
-            body.put("InferenceJob", request.inferenceJob);
+        if (!com.aliyun.teautil.Common.isUnset(request.inferenceJobId)) {
+            body.put("InferenceJobId", request.inferenceJobId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -103,6 +107,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGroupResponse());
     }
 
+    /**
+     * 注册推理任务
+    
+     */
     public CreateInferenceJobResponse createInferenceJob(CreateInferenceJobRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -150,6 +158,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInferenceJobResponse());
     }
 
+    /**
+     * 注册触达计划
+    
+     */
     public CreateScheduleResponse createSchedule(CreateScheduleRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -187,8 +199,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("RepeatTimes", request.repeatTimes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            body.put("SignName", request.signName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.signatureId)) {
             body.put("SignatureId", request.signatureId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            body.put("TemplateCode", request.templateCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
@@ -213,6 +233,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateScheduleResponse());
     }
 
+    /**
+     * 注册签名。
+    
+     */
     public CreateSignatureResponse createSignature(CreateSignatureRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -248,6 +272,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSignatureResponse());
     }
 
+    /**
+     * 注册模板
+    
+     */
     public CreateTemplateResponse createTemplate(CreateTemplateRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -295,6 +323,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTemplateResponse());
     }
 
+    /**
+     * 注册训练任务
+    
+     */
     public CreateTrainingJobResponse createTrainingJob(CreateTrainingJobRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -338,6 +370,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTrainingJobResponse());
     }
 
+    /**
+     * 删除人群
+    
+     */
     public DeleteGroupResponse deleteGroup(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -363,6 +399,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteGroupResponse());
     }
 
+    /**
+     * 删除推理任务
+    
+     */
     public DeleteInferenceJobResponse deleteInferenceJob(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -388,6 +428,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInferenceJobResponse());
     }
 
+    /**
+     * 删除触达计划
+    
+     */
     public DeleteScheduleResponse deleteSchedule(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -413,6 +457,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteScheduleResponse());
     }
 
+    /**
+     * 删除签名。
+    
+     */
     public DeleteSignatureResponse deleteSignature(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -438,6 +486,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSignatureResponse());
     }
 
+    /**
+     * 删除模板
+    
+     */
     public DeleteTemplateResponse deleteTemplate(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -463,6 +515,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTemplateResponse());
     }
 
+    /**
+     * 删除训练任务
+    
+     */
     public DeleteTrainingJobResponse deleteTrainingJob(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -488,6 +544,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTrainingJobResponse());
     }
 
+    /**
+     * 获取算法详情
+     */
+    public GetAlgorithmResponse getAlgorithm(String Id) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAlgorithmWithOptions(Id, headers, runtime);
+    }
+
+    public GetAlgorithmResponse getAlgorithmWithOptions(String Id, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        Id = com.aliyun.openapiutil.Client.getEncodeParam(Id);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAlgorithm"),
+            new TeaPair("version", "2022-01-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/algorithms/" + Id + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAlgorithmResponse());
+    }
+
+    /**
+     * 获取人群
+    默认返回所有人群信息
+     */
     public GetGroupResponse getGroup(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -513,6 +601,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetGroupResponse());
     }
 
+    /**
+     * 获取推理任务
+    默认返回所有推理任务信息
+     */
     public GetInferenceJobResponse getInferenceJob(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -538,6 +630,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetInferenceJobResponse());
     }
 
+    /**
+     * 获取触达计划详情。
+    
+     */
     public GetScheduleResponse getSchedule(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -563,6 +659,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetScheduleResponse());
     }
 
+    /**
+     * 获取签名详情
+     */
     public GetSignatureResponse getSignature(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -588,6 +687,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetSignatureResponse());
     }
 
+    /**
+     * 获取模板
+    默认返回所有模板信息
+    ![模板列表](https://intranetproxy.alipay.com/skylark/lark/0/2021/png/302991/1615264998427-d2943cfb-106a-421d-b4a4-f06307b4d9be.png)
+     */
     public GetTemplateResponse getTemplate(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -613,6 +717,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTemplateResponse());
     }
 
+    /**
+     * 获取训练任务
+    默认返回所有训练任务信息
+     */
     public GetTrainingJobResponse getTrainingJob(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -638,6 +746,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTrainingJobResponse());
     }
 
+    /**
+     * 获取算法列表
+     */
+    public ListAlgorithmsResponse listAlgorithms(ListAlgorithmsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAlgorithmsWithOptions(request, headers, runtime);
+    }
+
+    public ListAlgorithmsResponse listAlgorithmsWithOptions(ListAlgorithmsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAlgorithms"),
+            new TeaPair("version", "2022-01-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/algorithms"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAlgorithmsResponse());
+    }
+
+    /**
+     * 获取人群列表
+     */
     public ListGroupsResponse listGroups(ListGroupsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -689,6 +846,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListGroupsResponse());
     }
 
+    /**
+     * 获取推理任务列表
+     */
     public ListInferenceJobsResponse listInferenceJobs(ListInferenceJobsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -736,6 +896,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListInferenceJobsResponse());
     }
 
+    /**
+     * 获取用户短信发送统计
+     */
     public ListMessageMetricsResponse listMessageMetrics(ListMessageMetricsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -779,6 +942,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListMessageMetricsResponse());
     }
 
+    /**
+     * 查询短信发送详情
+     */
     public ListMessagesResponse listMessages(ListMessagesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -846,6 +1012,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListMessagesResponse());
     }
 
+    /**
+     * 获取触达计划列表。
+     */
     public ListSchedulesResponse listSchedules(ListSchedulesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -932,6 +1101,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSignaturesResponse());
     }
 
+    /**
+     * 获取模板列表
+    默认返回所有模板信息
+     */
     public ListTemplatesResponse listTemplates(ListTemplatesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -983,6 +1156,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTemplatesResponse());
     }
 
+    /**
+     * 获取训练任务列表
+     */
     public ListTrainingJobsResponse listTrainingJobs(ListTrainingJobsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1030,6 +1206,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTrainingJobsResponse());
     }
 
+    /**
+     * 发送短信
+     */
     public SendMessageResponse sendMessage(SendMessageRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();

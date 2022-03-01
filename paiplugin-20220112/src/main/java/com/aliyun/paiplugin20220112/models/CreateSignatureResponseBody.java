@@ -16,6 +16,10 @@ public class CreateSignatureResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static CreateSignatureResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSignatureResponseBody self = new CreateSignatureResponseBody();
         return TeaModel.build(map, self);
@@ -45,6 +49,14 @@ public class CreateSignatureResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public CreateSignatureResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class CreateSignatureResponseBodyData extends TeaModel {
         // 创建时间 (UTC+8)。
         @NameInMap("CreatedTime")
@@ -58,10 +70,10 @@ public class CreateSignatureResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        // 签名审核状态。取值：
-        // - 0：审核中
-        // - 1：审核通过
-        // - 2：审核不通过
+        // 签名审核状态。
+        // - 0：审核中。
+        // - 1：审核通过。
+        // - 2：审核不通过。
         @NameInMap("Status")
         public Integer status;
 

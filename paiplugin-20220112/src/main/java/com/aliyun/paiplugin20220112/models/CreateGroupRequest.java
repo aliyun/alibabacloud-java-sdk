@@ -4,7 +4,7 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupRequest extends TeaModel {
-    // 算法名称
+    // 算法
     @NameInMap("Algorithm")
     public String algorithm;
 
@@ -16,9 +16,9 @@ public class CreateGroupRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
-    // 推理任务
-    @NameInMap("InferenceJob")
-    public String inferenceJob;
+    // 预测任务Id
+    @NameInMap("InferenceJobId")
+    public String inferenceJobId;
 
     // 人群名称
     @NameInMap("Name")
@@ -82,12 +82,12 @@ public class CreateGroupRequest extends TeaModel {
         return this.filter;
     }
 
-    public CreateGroupRequest setInferenceJob(String inferenceJob) {
-        this.inferenceJob = inferenceJob;
+    public CreateGroupRequest setInferenceJobId(String inferenceJobId) {
+        this.inferenceJobId = inferenceJobId;
         return this;
     }
-    public String getInferenceJob() {
-        return this.inferenceJob;
+    public String getInferenceJobId() {
+        return this.inferenceJobId;
     }
 
     public CreateGroupRequest setName(String name) {

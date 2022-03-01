@@ -16,6 +16,10 @@ public class ListGroupsResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ListGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListGroupsResponseBody self = new ListGroupsResponseBody();
         return TeaModel.build(map, self);
@@ -45,8 +49,16 @@ public class ListGroupsResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public ListGroupsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListGroupsResponseBodyDataGroups extends TeaModel {
-        // 算法名称
+        // 算法
         @NameInMap("Algorithm")
         public String algorithm;
 
@@ -70,9 +82,9 @@ public class ListGroupsResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
-        // 推理任务
-        @NameInMap("InferenceJob")
-        public String inferenceJob;
+        // 预测任务Id
+        @NameInMap("InferenceJobId")
+        public String inferenceJobId;
 
         // 人群名称
         @NameInMap("Name")
@@ -168,12 +180,12 @@ public class ListGroupsResponseBody extends TeaModel {
             return this.id;
         }
 
-        public ListGroupsResponseBodyDataGroups setInferenceJob(String inferenceJob) {
-            this.inferenceJob = inferenceJob;
+        public ListGroupsResponseBodyDataGroups setInferenceJobId(String inferenceJobId) {
+            this.inferenceJobId = inferenceJobId;
             return this;
         }
-        public String getInferenceJob() {
-            return this.inferenceJob;
+        public String getInferenceJobId() {
+            return this.inferenceJobId;
         }
 
         public ListGroupsResponseBodyDataGroups setName(String name) {

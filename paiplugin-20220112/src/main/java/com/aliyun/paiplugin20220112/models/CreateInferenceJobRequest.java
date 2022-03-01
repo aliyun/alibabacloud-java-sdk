@@ -4,23 +4,23 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateInferenceJobRequest extends TeaModel {
-    // 关联算法
+    // 关联算法。
     @NameInMap("Algorithm")
     public String algorithm;
 
-    // 训练任务名称
+    // 预测任务名称。
     @NameInMap("Name")
     public String name;
 
-    // 备注
+    // 备注。
     @NameInMap("Remark")
     public String remark;
 
-    // 关联训练任务
+    // 关联训练任务。
     @NameInMap("TrainingJobId")
     public String trainingJobId;
 
-    // 用户配置
+    // 用户配置。
     @NameInMap("UserConfig")
     public String userConfig;
 
