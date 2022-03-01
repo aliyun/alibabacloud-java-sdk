@@ -85,6 +85,9 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("DeviceState")
         public String deviceState;
 
+        @NameInMap("DisplayId")
+        public String displayId;
+
         @NameInMap("DisplayName")
         public String displayName;
 
@@ -142,6 +145,14 @@ public class GetUserResponseBody extends TeaModel {
         }
         public String getDeviceState() {
             return this.deviceState;
+        }
+
+        public GetUserResponseBodyData setDisplayId(String displayId) {
+            this.displayId = displayId;
+            return this;
+        }
+        public String getDisplayId() {
+            return this.displayId;
         }
 
         public GetUserResponseBodyData setDisplayName(String displayName) {
