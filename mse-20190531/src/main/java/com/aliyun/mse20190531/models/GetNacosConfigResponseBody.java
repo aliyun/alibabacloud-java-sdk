@@ -86,6 +86,9 @@ public class GetNacosConfigResponseBody extends TeaModel {
         @NameInMap("Group")
         public String group;
 
+        @NameInMap("Id")
+        public String id;
+
         @NameInMap("Md5")
         public String md5;
 
@@ -154,6 +157,14 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
         public String getGroup() {
             return this.group;
+        }
+
+        public GetNacosConfigResponseBodyConfiguration setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public GetNacosConfigResponseBodyConfiguration setMd5(String md5) {

@@ -146,6 +146,9 @@ public class PullServicesResponseBody extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
+        @NameInMap("NamespaceShowName")
+        public String namespaceShowName;
+
         @NameInMap("Services")
         public java.util.List<PullServicesResponseBodyDataServices> services;
 
@@ -168,6 +171,14 @@ public class PullServicesResponseBody extends TeaModel {
         }
         public String getNamespace() {
             return this.namespace;
+        }
+
+        public PullServicesResponseBodyData setNamespaceShowName(String namespaceShowName) {
+            this.namespaceShowName = namespaceShowName;
+            return this;
+        }
+        public String getNamespaceShowName() {
+            return this.namespaceShowName;
         }
 
         public PullServicesResponseBodyData setServices(java.util.List<PullServicesResponseBodyDataServices> services) {
