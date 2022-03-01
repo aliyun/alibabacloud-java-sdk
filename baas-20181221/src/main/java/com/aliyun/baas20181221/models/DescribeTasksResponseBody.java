@@ -4,9 +4,6 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
@@ -16,23 +13,18 @@ public class DescribeTasksResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeTasksResponseBodyResult> result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTasksResponseBody self = new DescribeTasksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeTasksResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeTasksResponseBody setDynamicCode(String dynamicCode) {
@@ -59,12 +51,12 @@ public class DescribeTasksResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DescribeTasksResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeTasksResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeTasksResponseBody setResult(java.util.List<DescribeTasksResponseBodyResult> result) {
@@ -75,9 +67,29 @@ public class DescribeTasksResponseBody extends TeaModel {
         return this.result;
     }
 
+    public DescribeTasksResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class DescribeTasksResponseBodyResult extends TeaModel {
         @NameInMap("Action")
         public String action;
+
+        @NameInMap("Handled")
+        public Boolean handled;
+
+        @NameInMap("OperationType")
+        public String operationType;
+
+        @NameInMap("RequestTime")
+        public Long requestTime;
+
+        @NameInMap("ResponseTime")
+        public String responseTime;
 
         @NameInMap("Result")
         public String result;
@@ -85,23 +97,11 @@ public class DescribeTasksResponseBody extends TeaModel {
         @NameInMap("Sender")
         public String sender;
 
-        @NameInMap("OperationType")
-        public String operationType;
-
-        @NameInMap("Handled")
-        public Boolean handled;
-
-        @NameInMap("ResponseTime")
-        public String responseTime;
-
         @NameInMap("Target")
         public String target;
 
         @NameInMap("TaskId")
         public Integer taskId;
-
-        @NameInMap("RequestTime")
-        public Long requestTime;
 
         public static DescribeTasksResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeTasksResponseBodyResult self = new DescribeTasksResponseBodyResult();
@@ -114,6 +114,38 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
         public String getAction() {
             return this.action;
+        }
+
+        public DescribeTasksResponseBodyResult setHandled(Boolean handled) {
+            this.handled = handled;
+            return this;
+        }
+        public Boolean getHandled() {
+            return this.handled;
+        }
+
+        public DescribeTasksResponseBodyResult setOperationType(String operationType) {
+            this.operationType = operationType;
+            return this;
+        }
+        public String getOperationType() {
+            return this.operationType;
+        }
+
+        public DescribeTasksResponseBodyResult setRequestTime(Long requestTime) {
+            this.requestTime = requestTime;
+            return this;
+        }
+        public Long getRequestTime() {
+            return this.requestTime;
+        }
+
+        public DescribeTasksResponseBodyResult setResponseTime(String responseTime) {
+            this.responseTime = responseTime;
+            return this;
+        }
+        public String getResponseTime() {
+            return this.responseTime;
         }
 
         public DescribeTasksResponseBodyResult setResult(String result) {
@@ -132,30 +164,6 @@ public class DescribeTasksResponseBody extends TeaModel {
             return this.sender;
         }
 
-        public DescribeTasksResponseBodyResult setOperationType(String operationType) {
-            this.operationType = operationType;
-            return this;
-        }
-        public String getOperationType() {
-            return this.operationType;
-        }
-
-        public DescribeTasksResponseBodyResult setHandled(Boolean handled) {
-            this.handled = handled;
-            return this;
-        }
-        public Boolean getHandled() {
-            return this.handled;
-        }
-
-        public DescribeTasksResponseBodyResult setResponseTime(String responseTime) {
-            this.responseTime = responseTime;
-            return this;
-        }
-        public String getResponseTime() {
-            return this.responseTime;
-        }
-
         public DescribeTasksResponseBodyResult setTarget(String target) {
             this.target = target;
             return this;
@@ -170,14 +178,6 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
         public Integer getTaskId() {
             return this.taskId;
-        }
-
-        public DescribeTasksResponseBodyResult setRequestTime(Long requestTime) {
-            this.requestTime = requestTime;
-            return this;
-        }
-        public Long getRequestTime() {
-            return this.requestTime;
         }
 
     }

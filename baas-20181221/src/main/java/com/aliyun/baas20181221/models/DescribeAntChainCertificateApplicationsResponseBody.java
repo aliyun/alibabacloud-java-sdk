@@ -31,62 +31,21 @@ public class DescribeAntChainCertificateApplicationsResponseBody extends TeaMode
         return this.result;
     }
 
-    public static class DescribeAntChainCertificateApplicationsResponseBodyResultPagination extends TeaModel {
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
-        @NameInMap("PageNumber")
-        public Integer pageNumber;
-
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
-        public static DescribeAntChainCertificateApplicationsResponseBodyResultPagination build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAntChainCertificateApplicationsResponseBodyResultPagination self = new DescribeAntChainCertificateApplicationsResponseBodyResultPagination();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAntChainCertificateApplicationsResponseBodyResultPagination setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
-        }
-
-        public DescribeAntChainCertificateApplicationsResponseBodyResultPagination setPageNumber(Integer pageNumber) {
-            this.pageNumber = pageNumber;
-            return this;
-        }
-        public Integer getPageNumber() {
-            return this.pageNumber;
-        }
-
-        public DescribeAntChainCertificateApplicationsResponseBodyResultPagination setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
-    }
-
     public static class DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications extends TeaModel {
+        @NameInMap("AntChainId")
+        public String antChainId;
+
+        @NameInMap("Bid")
+        public String bid;
+
+        @NameInMap("Createtime")
+        public Long createtime;
+
         @NameInMap("Status")
         public String status;
 
         @NameInMap("Updatetime")
         public Long updatetime;
-
-        @NameInMap("Createtime")
-        public Long createtime;
-
-        @NameInMap("Bid")
-        public String bid;
-
-        @NameInMap("AntChainId")
-        public String antChainId;
 
         @NameInMap("Username")
         public String username;
@@ -94,6 +53,30 @@ public class DescribeAntChainCertificateApplicationsResponseBody extends TeaMode
         public static DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications build(java.util.Map<String, ?> map) throws Exception {
             DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications self = new DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications setAntChainId(String antChainId) {
+            this.antChainId = antChainId;
+            return this;
+        }
+        public String getAntChainId() {
+            return this.antChainId;
+        }
+
+        public DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications setBid(String bid) {
+            this.bid = bid;
+            return this;
+        }
+        public String getBid() {
+            return this.bid;
+        }
+
+        public DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications setCreatetime(Long createtime) {
+            this.createtime = createtime;
+            return this;
+        }
+        public Long getCreatetime() {
+            return this.createtime;
         }
 
         public DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications setStatus(String status) {
@@ -112,30 +95,6 @@ public class DescribeAntChainCertificateApplicationsResponseBody extends TeaMode
             return this.updatetime;
         }
 
-        public DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications setCreatetime(Long createtime) {
-            this.createtime = createtime;
-            return this;
-        }
-        public Long getCreatetime() {
-            return this.createtime;
-        }
-
-        public DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications setBid(String bid) {
-            this.bid = bid;
-            return this;
-        }
-        public String getBid() {
-            return this.bid;
-        }
-
-        public DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications setAntChainId(String antChainId) {
-            this.antChainId = antChainId;
-            return this;
-        }
-        public String getAntChainId() {
-            return this.antChainId;
-        }
-
         public DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications setUsername(String username) {
             this.username = username;
             return this;
@@ -146,24 +105,57 @@ public class DescribeAntChainCertificateApplicationsResponseBody extends TeaMode
 
     }
 
-    public static class DescribeAntChainCertificateApplicationsResponseBodyResult extends TeaModel {
-        @NameInMap("Pagination")
-        public DescribeAntChainCertificateApplicationsResponseBodyResultPagination pagination;
+    public static class DescribeAntChainCertificateApplicationsResponseBodyResultPagination extends TeaModel {
+        @NameInMap("PageNumber")
+        public Integer pageNumber;
 
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
+        public static DescribeAntChainCertificateApplicationsResponseBodyResultPagination build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAntChainCertificateApplicationsResponseBodyResultPagination self = new DescribeAntChainCertificateApplicationsResponseBodyResultPagination();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAntChainCertificateApplicationsResponseBodyResultPagination setPageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        public DescribeAntChainCertificateApplicationsResponseBodyResultPagination setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public DescribeAntChainCertificateApplicationsResponseBodyResultPagination setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+    }
+
+    public static class DescribeAntChainCertificateApplicationsResponseBodyResult extends TeaModel {
         @NameInMap("CertificateApplications")
         public java.util.List<DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications> certificateApplications;
+
+        @NameInMap("Pagination")
+        public DescribeAntChainCertificateApplicationsResponseBodyResultPagination pagination;
 
         public static DescribeAntChainCertificateApplicationsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeAntChainCertificateApplicationsResponseBodyResult self = new DescribeAntChainCertificateApplicationsResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAntChainCertificateApplicationsResponseBodyResult setPagination(DescribeAntChainCertificateApplicationsResponseBodyResultPagination pagination) {
-            this.pagination = pagination;
-            return this;
-        }
-        public DescribeAntChainCertificateApplicationsResponseBodyResultPagination getPagination() {
-            return this.pagination;
         }
 
         public DescribeAntChainCertificateApplicationsResponseBodyResult setCertificateApplications(java.util.List<DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications> certificateApplications) {
@@ -172,6 +164,14 @@ public class DescribeAntChainCertificateApplicationsResponseBody extends TeaMode
         }
         public java.util.List<DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications> getCertificateApplications() {
             return this.certificateApplications;
+        }
+
+        public DescribeAntChainCertificateApplicationsResponseBodyResult setPagination(DescribeAntChainCertificateApplicationsResponseBodyResultPagination pagination) {
+            this.pagination = pagination;
+            return this;
+        }
+        public DescribeAntChainCertificateApplicationsResponseBodyResultPagination getPagination() {
+            return this.pagination;
         }
 
     }

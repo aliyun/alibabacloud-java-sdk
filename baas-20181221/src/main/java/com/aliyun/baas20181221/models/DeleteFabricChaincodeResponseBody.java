@@ -4,11 +4,11 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DeleteFabricChaincodeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -18,20 +18,20 @@ public class DeleteFabricChaincodeResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteFabricChaincodeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DeleteFabricChaincodeResponseBody setErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
     }
     public Integer getErrorCode() {
         return this.errorCode;
+    }
+
+    public DeleteFabricChaincodeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DeleteFabricChaincodeResponseBody setSuccess(Boolean success) {

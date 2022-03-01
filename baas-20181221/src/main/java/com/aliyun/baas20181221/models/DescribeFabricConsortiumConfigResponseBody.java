@@ -4,29 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricConsortiumConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public DescribeFabricConsortiumConfigResponseBodyResult result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeFabricConsortiumConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFabricConsortiumConfigResponseBody self = new DescribeFabricConsortiumConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFabricConsortiumConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeFabricConsortiumConfigResponseBody setErrorCode(Integer errorCode) {
@@ -37,12 +29,12 @@ public class DescribeFabricConsortiumConfigResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DescribeFabricConsortiumConfigResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeFabricConsortiumConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeFabricConsortiumConfigResponseBody setResult(DescribeFabricConsortiumConfigResponseBodyResult result) {
@@ -51,6 +43,14 @@ public class DescribeFabricConsortiumConfigResponseBody extends TeaModel {
     }
     public DescribeFabricConsortiumConfigResponseBodyResult getResult() {
         return this.result;
+    }
+
+    public DescribeFabricConsortiumConfigResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DescribeFabricConsortiumConfigResponseBodyResult extends TeaModel {

@@ -4,18 +4,26 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DownloadFabricOrganizationSDKRequest extends TeaModel {
+    @NameInMap("Location")
+    public String location;
+
     @NameInMap("OrganizationId")
     public String organizationId;
 
     @NameInMap("Username")
     public String username;
 
-    @NameInMap("Location")
-    public String location;
-
     public static DownloadFabricOrganizationSDKRequest build(java.util.Map<String, ?> map) throws Exception {
         DownloadFabricOrganizationSDKRequest self = new DownloadFabricOrganizationSDKRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DownloadFabricOrganizationSDKRequest setLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    public String getLocation() {
+        return this.location;
     }
 
     public DownloadFabricOrganizationSDKRequest setOrganizationId(String organizationId) {
@@ -32,14 +40,6 @@ public class DownloadFabricOrganizationSDKRequest extends TeaModel {
     }
     public String getUsername() {
         return this.username;
-    }
-
-    public DownloadFabricOrganizationSDKRequest setLocation(String location) {
-        this.location = location;
-        return this;
-    }
-    public String getLocation() {
-        return this.location;
     }
 
 }

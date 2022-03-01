@@ -4,14 +4,11 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateFabricConsortiumRequest extends TeaModel {
-    @NameInMap("Location")
-    public String location;
+    @NameInMap("ChannelPolicy")
+    public String channelPolicy;
 
-    @NameInMap("OrdererType")
-    public String ordererType;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
+    @NameInMap("ConsortiumDescription")
+    public String consortiumDescription;
 
     @NameInMap("ConsortiumName")
     public String consortiumName;
@@ -19,57 +16,52 @@ public class CreateFabricConsortiumRequest extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
-    @NameInMap("ConsortiumDescription")
-    public String consortiumDescription;
+    @NameInMap("Location")
+    public String location;
 
-    @NameInMap("ChannelPolicy")
-    public String channelPolicy;
-
-    @NameInMap("SpecName")
-    public String specName;
+    @NameInMap("OrdererType")
+    public String ordererType;
 
     @NameInMap("OrderersCount")
     public Integer orderersCount;
 
-    @NameInMap("PeersCount")
-    public Integer peersCount;
-
-    @NameInMap("PaymentDurationUnit")
-    public String paymentDurationUnit;
+    @NameInMap("Organization")
+    public java.util.List<CreateFabricConsortiumRequestOrganization> organization;
 
     @NameInMap("PaymentDuration")
     public Integer paymentDuration;
 
-    @NameInMap("Organization")
-    public java.util.List<CreateFabricConsortiumRequestOrganization> organization;
+    @NameInMap("PaymentDurationUnit")
+    public String paymentDurationUnit;
+
+    @NameInMap("PeersCount")
+    public Integer peersCount;
+
+    @NameInMap("SpecName")
+    public String specName;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static CreateFabricConsortiumRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFabricConsortiumRequest self = new CreateFabricConsortiumRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateFabricConsortiumRequest setLocation(String location) {
-        this.location = location;
+    public CreateFabricConsortiumRequest setChannelPolicy(String channelPolicy) {
+        this.channelPolicy = channelPolicy;
         return this;
     }
-    public String getLocation() {
-        return this.location;
+    public String getChannelPolicy() {
+        return this.channelPolicy;
     }
 
-    public CreateFabricConsortiumRequest setOrdererType(String ordererType) {
-        this.ordererType = ordererType;
+    public CreateFabricConsortiumRequest setConsortiumDescription(String consortiumDescription) {
+        this.consortiumDescription = consortiumDescription;
         return this;
     }
-    public String getOrdererType() {
-        return this.ordererType;
-    }
-
-    public CreateFabricConsortiumRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
+    public String getConsortiumDescription() {
+        return this.consortiumDescription;
     }
 
     public CreateFabricConsortiumRequest setConsortiumName(String consortiumName) {
@@ -88,28 +80,20 @@ public class CreateFabricConsortiumRequest extends TeaModel {
         return this.domain;
     }
 
-    public CreateFabricConsortiumRequest setConsortiumDescription(String consortiumDescription) {
-        this.consortiumDescription = consortiumDescription;
+    public CreateFabricConsortiumRequest setLocation(String location) {
+        this.location = location;
         return this;
     }
-    public String getConsortiumDescription() {
-        return this.consortiumDescription;
+    public String getLocation() {
+        return this.location;
     }
 
-    public CreateFabricConsortiumRequest setChannelPolicy(String channelPolicy) {
-        this.channelPolicy = channelPolicy;
+    public CreateFabricConsortiumRequest setOrdererType(String ordererType) {
+        this.ordererType = ordererType;
         return this;
     }
-    public String getChannelPolicy() {
-        return this.channelPolicy;
-    }
-
-    public CreateFabricConsortiumRequest setSpecName(String specName) {
-        this.specName = specName;
-        return this;
-    }
-    public String getSpecName() {
-        return this.specName;
+    public String getOrdererType() {
+        return this.ordererType;
     }
 
     public CreateFabricConsortiumRequest setOrderersCount(Integer orderersCount) {
@@ -120,20 +104,12 @@ public class CreateFabricConsortiumRequest extends TeaModel {
         return this.orderersCount;
     }
 
-    public CreateFabricConsortiumRequest setPeersCount(Integer peersCount) {
-        this.peersCount = peersCount;
+    public CreateFabricConsortiumRequest setOrganization(java.util.List<CreateFabricConsortiumRequestOrganization> organization) {
+        this.organization = organization;
         return this;
     }
-    public Integer getPeersCount() {
-        return this.peersCount;
-    }
-
-    public CreateFabricConsortiumRequest setPaymentDurationUnit(String paymentDurationUnit) {
-        this.paymentDurationUnit = paymentDurationUnit;
-        return this;
-    }
-    public String getPaymentDurationUnit() {
-        return this.paymentDurationUnit;
+    public java.util.List<CreateFabricConsortiumRequestOrganization> getOrganization() {
+        return this.organization;
     }
 
     public CreateFabricConsortiumRequest setPaymentDuration(Integer paymentDuration) {
@@ -144,12 +120,36 @@ public class CreateFabricConsortiumRequest extends TeaModel {
         return this.paymentDuration;
     }
 
-    public CreateFabricConsortiumRequest setOrganization(java.util.List<CreateFabricConsortiumRequestOrganization> organization) {
-        this.organization = organization;
+    public CreateFabricConsortiumRequest setPaymentDurationUnit(String paymentDurationUnit) {
+        this.paymentDurationUnit = paymentDurationUnit;
         return this;
     }
-    public java.util.List<CreateFabricConsortiumRequestOrganization> getOrganization() {
-        return this.organization;
+    public String getPaymentDurationUnit() {
+        return this.paymentDurationUnit;
+    }
+
+    public CreateFabricConsortiumRequest setPeersCount(Integer peersCount) {
+        this.peersCount = peersCount;
+        return this;
+    }
+    public Integer getPeersCount() {
+        return this.peersCount;
+    }
+
+    public CreateFabricConsortiumRequest setSpecName(String specName) {
+        this.specName = specName;
+        return this;
+    }
+    public String getSpecName() {
+        return this.specName;
+    }
+
+    public CreateFabricConsortiumRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
     public static class CreateFabricConsortiumRequestOrganization extends TeaModel {

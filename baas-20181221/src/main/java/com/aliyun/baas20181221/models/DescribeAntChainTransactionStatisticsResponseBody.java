@@ -32,11 +32,11 @@ public class DescribeAntChainTransactionStatisticsResponseBody extends TeaModel 
     }
 
     public static class DescribeAntChainTransactionStatisticsResponseBodyResult extends TeaModel {
+        @NameInMap("AntChainId")
+        public String antChainId;
+
         @NameInMap("CreatTime")
         public Long creatTime;
-
-        @NameInMap("TransCount")
-        public Long transCount;
 
         @NameInMap("Dt")
         public String dt;
@@ -44,12 +44,20 @@ public class DescribeAntChainTransactionStatisticsResponseBody extends TeaModel 
         @NameInMap("LastSumBlockHeight")
         public Long lastSumBlockHeight;
 
-        @NameInMap("AntChainId")
-        public String antChainId;
+        @NameInMap("TransCount")
+        public Long transCount;
 
         public static DescribeAntChainTransactionStatisticsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeAntChainTransactionStatisticsResponseBodyResult self = new DescribeAntChainTransactionStatisticsResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAntChainTransactionStatisticsResponseBodyResult setAntChainId(String antChainId) {
+            this.antChainId = antChainId;
+            return this;
+        }
+        public String getAntChainId() {
+            return this.antChainId;
         }
 
         public DescribeAntChainTransactionStatisticsResponseBodyResult setCreatTime(Long creatTime) {
@@ -58,14 +66,6 @@ public class DescribeAntChainTransactionStatisticsResponseBody extends TeaModel 
         }
         public Long getCreatTime() {
             return this.creatTime;
-        }
-
-        public DescribeAntChainTransactionStatisticsResponseBodyResult setTransCount(Long transCount) {
-            this.transCount = transCount;
-            return this;
-        }
-        public Long getTransCount() {
-            return this.transCount;
         }
 
         public DescribeAntChainTransactionStatisticsResponseBodyResult setDt(String dt) {
@@ -84,12 +84,12 @@ public class DescribeAntChainTransactionStatisticsResponseBody extends TeaModel 
             return this.lastSumBlockHeight;
         }
 
-        public DescribeAntChainTransactionStatisticsResponseBodyResult setAntChainId(String antChainId) {
-            this.antChainId = antChainId;
+        public DescribeAntChainTransactionStatisticsResponseBodyResult setTransCount(Long transCount) {
+            this.transCount = transCount;
             return this;
         }
-        public String getAntChainId() {
-            return this.antChainId;
+        public Long getTransCount() {
+            return this.transCount;
         }
 
     }

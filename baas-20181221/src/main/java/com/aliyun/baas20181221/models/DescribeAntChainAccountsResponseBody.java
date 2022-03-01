@@ -31,59 +31,18 @@ public class DescribeAntChainAccountsResponseBody extends TeaModel {
         return this.result;
     }
 
-    public static class DescribeAntChainAccountsResponseBodyResultPagination extends TeaModel {
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
-        @NameInMap("PageNumber")
-        public Integer pageNumber;
-
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
-        public static DescribeAntChainAccountsResponseBodyResultPagination build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAntChainAccountsResponseBodyResultPagination self = new DescribeAntChainAccountsResponseBodyResultPagination();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAntChainAccountsResponseBodyResultPagination setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
-        }
-
-        public DescribeAntChainAccountsResponseBodyResultPagination setPageNumber(Integer pageNumber) {
-            this.pageNumber = pageNumber;
-            return this;
-        }
-        public Integer getPageNumber() {
-            return this.pageNumber;
-        }
-
-        public DescribeAntChainAccountsResponseBodyResultPagination setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
-    }
-
     public static class DescribeAntChainAccountsResponseBodyResultAccounts extends TeaModel {
-        @NameInMap("AccountPublicKey")
-        public String accountPublicKey;
-
         @NameInMap("Account")
         public String account;
 
-        @NameInMap("AccountStatus")
-        public String accountStatus;
+        @NameInMap("AccountPublicKey")
+        public String accountPublicKey;
 
         @NameInMap("AccountRecoveryKey")
         public String accountRecoveryKey;
+
+        @NameInMap("AccountStatus")
+        public String accountStatus;
 
         @NameInMap("AntChainId")
         public String antChainId;
@@ -91,14 +50,6 @@ public class DescribeAntChainAccountsResponseBody extends TeaModel {
         public static DescribeAntChainAccountsResponseBodyResultAccounts build(java.util.Map<String, ?> map) throws Exception {
             DescribeAntChainAccountsResponseBodyResultAccounts self = new DescribeAntChainAccountsResponseBodyResultAccounts();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAntChainAccountsResponseBodyResultAccounts setAccountPublicKey(String accountPublicKey) {
-            this.accountPublicKey = accountPublicKey;
-            return this;
-        }
-        public String getAccountPublicKey() {
-            return this.accountPublicKey;
         }
 
         public DescribeAntChainAccountsResponseBodyResultAccounts setAccount(String account) {
@@ -109,12 +60,12 @@ public class DescribeAntChainAccountsResponseBody extends TeaModel {
             return this.account;
         }
 
-        public DescribeAntChainAccountsResponseBodyResultAccounts setAccountStatus(String accountStatus) {
-            this.accountStatus = accountStatus;
+        public DescribeAntChainAccountsResponseBodyResultAccounts setAccountPublicKey(String accountPublicKey) {
+            this.accountPublicKey = accountPublicKey;
             return this;
         }
-        public String getAccountStatus() {
-            return this.accountStatus;
+        public String getAccountPublicKey() {
+            return this.accountPublicKey;
         }
 
         public DescribeAntChainAccountsResponseBodyResultAccounts setAccountRecoveryKey(String accountRecoveryKey) {
@@ -123,6 +74,14 @@ public class DescribeAntChainAccountsResponseBody extends TeaModel {
         }
         public String getAccountRecoveryKey() {
             return this.accountRecoveryKey;
+        }
+
+        public DescribeAntChainAccountsResponseBodyResultAccounts setAccountStatus(String accountStatus) {
+            this.accountStatus = accountStatus;
+            return this;
+        }
+        public String getAccountStatus() {
+            return this.accountStatus;
         }
 
         public DescribeAntChainAccountsResponseBodyResultAccounts setAntChainId(String antChainId) {
@@ -135,24 +94,57 @@ public class DescribeAntChainAccountsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeAntChainAccountsResponseBodyResult extends TeaModel {
-        @NameInMap("Pagination")
-        public DescribeAntChainAccountsResponseBodyResultPagination pagination;
+    public static class DescribeAntChainAccountsResponseBodyResultPagination extends TeaModel {
+        @NameInMap("PageNumber")
+        public Integer pageNumber;
 
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
+        public static DescribeAntChainAccountsResponseBodyResultPagination build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAntChainAccountsResponseBodyResultPagination self = new DescribeAntChainAccountsResponseBodyResultPagination();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAntChainAccountsResponseBodyResultPagination setPageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        public DescribeAntChainAccountsResponseBodyResultPagination setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public DescribeAntChainAccountsResponseBodyResultPagination setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+    }
+
+    public static class DescribeAntChainAccountsResponseBodyResult extends TeaModel {
         @NameInMap("Accounts")
         public java.util.List<DescribeAntChainAccountsResponseBodyResultAccounts> accounts;
+
+        @NameInMap("Pagination")
+        public DescribeAntChainAccountsResponseBodyResultPagination pagination;
 
         public static DescribeAntChainAccountsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeAntChainAccountsResponseBodyResult self = new DescribeAntChainAccountsResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAntChainAccountsResponseBodyResult setPagination(DescribeAntChainAccountsResponseBodyResultPagination pagination) {
-            this.pagination = pagination;
-            return this;
-        }
-        public DescribeAntChainAccountsResponseBodyResultPagination getPagination() {
-            return this.pagination;
         }
 
         public DescribeAntChainAccountsResponseBodyResult setAccounts(java.util.List<DescribeAntChainAccountsResponseBodyResultAccounts> accounts) {
@@ -161,6 +153,14 @@ public class DescribeAntChainAccountsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeAntChainAccountsResponseBodyResultAccounts> getAccounts() {
             return this.accounts;
+        }
+
+        public DescribeAntChainAccountsResponseBodyResult setPagination(DescribeAntChainAccountsResponseBodyResultPagination pagination) {
+            this.pagination = pagination;
+            return this;
+        }
+        public DescribeAntChainAccountsResponseBodyResultPagination getPagination() {
+            return this.pagination;
         }
 
     }

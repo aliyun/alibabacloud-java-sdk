@@ -4,23 +4,17 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateFabricOrganizationRequest extends TeaModel {
-    @NameInMap("OrganizationName")
-    public String organizationName;
-
-    @NameInMap("Location")
-    public String location;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("Domain")
     public String domain;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("Location")
+    public String location;
 
-    @NameInMap("SpecName")
-    public String specName;
-
-    @NameInMap("PeersCount")
-    public Integer peersCount;
+    @NameInMap("OrganizationName")
+    public String organizationName;
 
     @NameInMap("PaymentDuration")
     public Integer paymentDuration;
@@ -28,33 +22,15 @@ public class CreateFabricOrganizationRequest extends TeaModel {
     @NameInMap("PaymentDurationUnit")
     public String paymentDurationUnit;
 
+    @NameInMap("PeersCount")
+    public Integer peersCount;
+
+    @NameInMap("SpecName")
+    public String specName;
+
     public static CreateFabricOrganizationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFabricOrganizationRequest self = new CreateFabricOrganizationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateFabricOrganizationRequest setOrganizationName(String organizationName) {
-        this.organizationName = organizationName;
-        return this;
-    }
-    public String getOrganizationName() {
-        return this.organizationName;
-    }
-
-    public CreateFabricOrganizationRequest setLocation(String location) {
-        this.location = location;
-        return this;
-    }
-    public String getLocation() {
-        return this.location;
-    }
-
-    public CreateFabricOrganizationRequest setDomain(String domain) {
-        this.domain = domain;
-        return this;
-    }
-    public String getDomain() {
-        return this.domain;
     }
 
     public CreateFabricOrganizationRequest setDescription(String description) {
@@ -65,20 +41,28 @@ public class CreateFabricOrganizationRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateFabricOrganizationRequest setSpecName(String specName) {
-        this.specName = specName;
+    public CreateFabricOrganizationRequest setDomain(String domain) {
+        this.domain = domain;
         return this;
     }
-    public String getSpecName() {
-        return this.specName;
+    public String getDomain() {
+        return this.domain;
     }
 
-    public CreateFabricOrganizationRequest setPeersCount(Integer peersCount) {
-        this.peersCount = peersCount;
+    public CreateFabricOrganizationRequest setLocation(String location) {
+        this.location = location;
         return this;
     }
-    public Integer getPeersCount() {
-        return this.peersCount;
+    public String getLocation() {
+        return this.location;
+    }
+
+    public CreateFabricOrganizationRequest setOrganizationName(String organizationName) {
+        this.organizationName = organizationName;
+        return this;
+    }
+    public String getOrganizationName() {
+        return this.organizationName;
     }
 
     public CreateFabricOrganizationRequest setPaymentDuration(Integer paymentDuration) {
@@ -95,6 +79,22 @@ public class CreateFabricOrganizationRequest extends TeaModel {
     }
     public String getPaymentDurationUnit() {
         return this.paymentDurationUnit;
+    }
+
+    public CreateFabricOrganizationRequest setPeersCount(Integer peersCount) {
+        this.peersCount = peersCount;
+        return this;
+    }
+    public Integer getPeersCount() {
+        return this.peersCount;
+    }
+
+    public CreateFabricOrganizationRequest setSpecName(String specName) {
+        this.specName = specName;
+        return this;
+    }
+    public String getSpecName() {
+        return this.specName;
     }
 
 }

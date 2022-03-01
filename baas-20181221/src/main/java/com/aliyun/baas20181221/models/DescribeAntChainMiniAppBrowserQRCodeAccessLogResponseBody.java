@@ -32,23 +32,15 @@ public class DescribeAntChainMiniAppBrowserQRCodeAccessLogResponseBody extends T
     }
 
     public static class DescribeAntChainMiniAppBrowserQRCodeAccessLogResponseBodyResult extends TeaModel {
-        @NameInMap("AccessCount")
-        public Long accessCount;
-
         @NameInMap("AccessAlipayAccountCount")
         public Long accessAlipayAccountCount;
+
+        @NameInMap("AccessCount")
+        public Long accessCount;
 
         public static DescribeAntChainMiniAppBrowserQRCodeAccessLogResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeAntChainMiniAppBrowserQRCodeAccessLogResponseBodyResult self = new DescribeAntChainMiniAppBrowserQRCodeAccessLogResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAntChainMiniAppBrowserQRCodeAccessLogResponseBodyResult setAccessCount(Long accessCount) {
-            this.accessCount = accessCount;
-            return this;
-        }
-        public Long getAccessCount() {
-            return this.accessCount;
         }
 
         public DescribeAntChainMiniAppBrowserQRCodeAccessLogResponseBodyResult setAccessAlipayAccountCount(Long accessAlipayAccountCount) {
@@ -57,6 +49,14 @@ public class DescribeAntChainMiniAppBrowserQRCodeAccessLogResponseBody extends T
         }
         public Long getAccessAlipayAccountCount() {
             return this.accessAlipayAccountCount;
+        }
+
+        public DescribeAntChainMiniAppBrowserQRCodeAccessLogResponseBodyResult setAccessCount(Long accessCount) {
+            this.accessCount = accessCount;
+            return this;
+        }
+        public Long getAccessCount() {
+            return this.accessCount;
         }
 
     }

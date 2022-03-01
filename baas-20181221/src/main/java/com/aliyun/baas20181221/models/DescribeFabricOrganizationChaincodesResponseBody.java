@@ -4,29 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricOrganizationChaincodesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeFabricOrganizationChaincodesResponseBodyResult> result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeFabricOrganizationChaincodesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFabricOrganizationChaincodesResponseBody self = new DescribeFabricOrganizationChaincodesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFabricOrganizationChaincodesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeFabricOrganizationChaincodesResponseBody setErrorCode(Integer errorCode) {
@@ -37,12 +29,12 @@ public class DescribeFabricOrganizationChaincodesResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DescribeFabricOrganizationChaincodesResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeFabricOrganizationChaincodesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeFabricOrganizationChaincodesResponseBody setResult(java.util.List<DescribeFabricOrganizationChaincodesResponseBodyResult> result) {
@@ -53,36 +45,26 @@ public class DescribeFabricOrganizationChaincodesResponseBody extends TeaModel {
         return this.result;
     }
 
+    public DescribeFabricOrganizationChaincodesResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class DescribeFabricOrganizationChaincodesResponseBodyResult extends TeaModel {
-        @NameInMap("EndorsePolicy")
-        public String endorsePolicy;
-
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
         @NameInMap("ChaincodeId")
         public String chaincodeId;
-
-        @NameInMap("Message")
-        public String message;
 
         @NameInMap("ChaincodeName")
         public String chaincodeName;
 
-        @NameInMap("Installed")
-        public String installed;
-
-        @NameInMap("Creator")
-        public String creator;
-
-        @NameInMap("DeployTime")
-        public String deployTime;
-
         @NameInMap("ChaincodeVersion")
         public String chaincodeVersion;
+
+        @NameInMap("ChannelId")
+        public String channelId;
 
         @NameInMap("ChannelName")
         public String channelName;
@@ -90,36 +72,30 @@ public class DescribeFabricOrganizationChaincodesResponseBody extends TeaModel {
         @NameInMap("ConsortiumId")
         public String consortiumId;
 
-        @NameInMap("ChannelId")
-        public String channelId;
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("Creator")
+        public String creator;
+
+        @NameInMap("DeployTime")
+        public String deployTime;
+
+        @NameInMap("EndorsePolicy")
+        public String endorsePolicy;
+
+        @NameInMap("Installed")
+        public String installed;
+
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("State")
+        public String state;
 
         public static DescribeFabricOrganizationChaincodesResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeFabricOrganizationChaincodesResponseBodyResult self = new DescribeFabricOrganizationChaincodesResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeFabricOrganizationChaincodesResponseBodyResult setEndorsePolicy(String endorsePolicy) {
-            this.endorsePolicy = endorsePolicy;
-            return this;
-        }
-        public String getEndorsePolicy() {
-            return this.endorsePolicy;
-        }
-
-        public DescribeFabricOrganizationChaincodesResponseBodyResult setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
-        public DescribeFabricOrganizationChaincodesResponseBodyResult setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
         public DescribeFabricOrganizationChaincodesResponseBodyResult setChaincodeId(String chaincodeId) {
@@ -130,14 +106,6 @@ public class DescribeFabricOrganizationChaincodesResponseBody extends TeaModel {
             return this.chaincodeId;
         }
 
-        public DescribeFabricOrganizationChaincodesResponseBodyResult setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
         public DescribeFabricOrganizationChaincodesResponseBodyResult setChaincodeName(String chaincodeName) {
             this.chaincodeName = chaincodeName;
             return this;
@@ -146,36 +114,20 @@ public class DescribeFabricOrganizationChaincodesResponseBody extends TeaModel {
             return this.chaincodeName;
         }
 
-        public DescribeFabricOrganizationChaincodesResponseBodyResult setInstalled(String installed) {
-            this.installed = installed;
-            return this;
-        }
-        public String getInstalled() {
-            return this.installed;
-        }
-
-        public DescribeFabricOrganizationChaincodesResponseBodyResult setCreator(String creator) {
-            this.creator = creator;
-            return this;
-        }
-        public String getCreator() {
-            return this.creator;
-        }
-
-        public DescribeFabricOrganizationChaincodesResponseBodyResult setDeployTime(String deployTime) {
-            this.deployTime = deployTime;
-            return this;
-        }
-        public String getDeployTime() {
-            return this.deployTime;
-        }
-
         public DescribeFabricOrganizationChaincodesResponseBodyResult setChaincodeVersion(String chaincodeVersion) {
             this.chaincodeVersion = chaincodeVersion;
             return this;
         }
         public String getChaincodeVersion() {
             return this.chaincodeVersion;
+        }
+
+        public DescribeFabricOrganizationChaincodesResponseBodyResult setChannelId(String channelId) {
+            this.channelId = channelId;
+            return this;
+        }
+        public String getChannelId() {
+            return this.channelId;
         }
 
         public DescribeFabricOrganizationChaincodesResponseBodyResult setChannelName(String channelName) {
@@ -194,12 +146,60 @@ public class DescribeFabricOrganizationChaincodesResponseBody extends TeaModel {
             return this.consortiumId;
         }
 
-        public DescribeFabricOrganizationChaincodesResponseBodyResult setChannelId(String channelId) {
-            this.channelId = channelId;
+        public DescribeFabricOrganizationChaincodesResponseBodyResult setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getChannelId() {
-            return this.channelId;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeFabricOrganizationChaincodesResponseBodyResult setCreator(String creator) {
+            this.creator = creator;
+            return this;
+        }
+        public String getCreator() {
+            return this.creator;
+        }
+
+        public DescribeFabricOrganizationChaincodesResponseBodyResult setDeployTime(String deployTime) {
+            this.deployTime = deployTime;
+            return this;
+        }
+        public String getDeployTime() {
+            return this.deployTime;
+        }
+
+        public DescribeFabricOrganizationChaincodesResponseBodyResult setEndorsePolicy(String endorsePolicy) {
+            this.endorsePolicy = endorsePolicy;
+            return this;
+        }
+        public String getEndorsePolicy() {
+            return this.endorsePolicy;
+        }
+
+        public DescribeFabricOrganizationChaincodesResponseBodyResult setInstalled(String installed) {
+            this.installed = installed;
+            return this;
+        }
+        public String getInstalled() {
+            return this.installed;
+        }
+
+        public DescribeFabricOrganizationChaincodesResponseBodyResult setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public DescribeFabricOrganizationChaincodesResponseBodyResult setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
     }

@@ -4,29 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricPeerLogsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public String result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeFabricPeerLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFabricPeerLogsResponseBody self = new DescribeFabricPeerLogsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFabricPeerLogsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeFabricPeerLogsResponseBody setErrorCode(Integer errorCode) {
@@ -37,12 +29,12 @@ public class DescribeFabricPeerLogsResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DescribeFabricPeerLogsResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeFabricPeerLogsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeFabricPeerLogsResponseBody setResult(String result) {
@@ -51,6 +43,14 @@ public class DescribeFabricPeerLogsResponseBody extends TeaModel {
     }
     public String getResult() {
         return this.result;
+    }
+
+    public DescribeFabricPeerLogsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

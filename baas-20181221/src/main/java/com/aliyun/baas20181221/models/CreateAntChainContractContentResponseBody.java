@@ -32,81 +32,33 @@ public class CreateAntChainContractContentResponseBody extends TeaModel {
     }
 
     public static class CreateAntChainContractContentResponseBodyResult extends TeaModel {
-        @NameInMap("ContentName")
-        public String contentName;
-
-        @NameInMap("ParentContentId")
-        public String parentContentId;
-
-        @NameInMap("UpdateTime")
-        public String updateTime;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("ProjectId")
-        public String projectId;
-
-        @NameInMap("IsDirectory")
-        public Boolean isDirectory;
-
         @NameInMap("Content")
         public String content;
 
         @NameInMap("ContentId")
         public String contentId;
 
+        @NameInMap("ContentName")
+        public String contentName;
+
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("IsDirectory")
+        public Boolean isDirectory;
+
+        @NameInMap("ParentContentId")
+        public String parentContentId;
+
+        @NameInMap("ProjectId")
+        public String projectId;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
         public static CreateAntChainContractContentResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             CreateAntChainContractContentResponseBodyResult self = new CreateAntChainContractContentResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public CreateAntChainContractContentResponseBodyResult setContentName(String contentName) {
-            this.contentName = contentName;
-            return this;
-        }
-        public String getContentName() {
-            return this.contentName;
-        }
-
-        public CreateAntChainContractContentResponseBodyResult setParentContentId(String parentContentId) {
-            this.parentContentId = parentContentId;
-            return this;
-        }
-        public String getParentContentId() {
-            return this.parentContentId;
-        }
-
-        public CreateAntChainContractContentResponseBodyResult setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public CreateAntChainContractContentResponseBodyResult setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public CreateAntChainContractContentResponseBodyResult setProjectId(String projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public String getProjectId() {
-            return this.projectId;
-        }
-
-        public CreateAntChainContractContentResponseBodyResult setIsDirectory(Boolean isDirectory) {
-            this.isDirectory = isDirectory;
-            return this;
-        }
-        public Boolean getIsDirectory() {
-            return this.isDirectory;
         }
 
         public CreateAntChainContractContentResponseBodyResult setContent(String content) {
@@ -123,6 +75,54 @@ public class CreateAntChainContractContentResponseBody extends TeaModel {
         }
         public String getContentId() {
             return this.contentId;
+        }
+
+        public CreateAntChainContractContentResponseBodyResult setContentName(String contentName) {
+            this.contentName = contentName;
+            return this;
+        }
+        public String getContentName() {
+            return this.contentName;
+        }
+
+        public CreateAntChainContractContentResponseBodyResult setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public CreateAntChainContractContentResponseBodyResult setIsDirectory(Boolean isDirectory) {
+            this.isDirectory = isDirectory;
+            return this;
+        }
+        public Boolean getIsDirectory() {
+            return this.isDirectory;
+        }
+
+        public CreateAntChainContractContentResponseBodyResult setParentContentId(String parentContentId) {
+            this.parentContentId = parentContentId;
+            return this;
+        }
+        public String getParentContentId() {
+            return this.parentContentId;
+        }
+
+        public CreateAntChainContractContentResponseBodyResult setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        public CreateAntChainContractContentResponseBodyResult setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }

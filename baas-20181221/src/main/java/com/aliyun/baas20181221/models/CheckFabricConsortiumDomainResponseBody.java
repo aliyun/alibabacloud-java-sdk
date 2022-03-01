@@ -4,29 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CheckFabricConsortiumDomainResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public CheckFabricConsortiumDomainResponseBodyResult result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static CheckFabricConsortiumDomainResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CheckFabricConsortiumDomainResponseBody self = new CheckFabricConsortiumDomainResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CheckFabricConsortiumDomainResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CheckFabricConsortiumDomainResponseBody setErrorCode(Integer errorCode) {
@@ -37,12 +29,12 @@ public class CheckFabricConsortiumDomainResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public CheckFabricConsortiumDomainResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CheckFabricConsortiumDomainResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CheckFabricConsortiumDomainResponseBody setResult(CheckFabricConsortiumDomainResponseBodyResult result) {
@@ -53,15 +45,23 @@ public class CheckFabricConsortiumDomainResponseBody extends TeaModel {
         return this.result;
     }
 
+    public CheckFabricConsortiumDomainResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class CheckFabricConsortiumDomainResponseBodyResult extends TeaModel {
         @NameInMap("Domain")
         public String domain;
 
-        @NameInMap("Valid")
-        public Boolean valid;
-
         @NameInMap("Prompt")
         public String prompt;
+
+        @NameInMap("Valid")
+        public Boolean valid;
 
         public static CheckFabricConsortiumDomainResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             CheckFabricConsortiumDomainResponseBodyResult self = new CheckFabricConsortiumDomainResponseBodyResult();
@@ -76,20 +76,20 @@ public class CheckFabricConsortiumDomainResponseBody extends TeaModel {
             return this.domain;
         }
 
-        public CheckFabricConsortiumDomainResponseBodyResult setValid(Boolean valid) {
-            this.valid = valid;
-            return this;
-        }
-        public Boolean getValid() {
-            return this.valid;
-        }
-
         public CheckFabricConsortiumDomainResponseBodyResult setPrompt(String prompt) {
             this.prompt = prompt;
             return this;
         }
         public String getPrompt() {
             return this.prompt;
+        }
+
+        public CheckFabricConsortiumDomainResponseBodyResult setValid(Boolean valid) {
+            this.valid = valid;
+            return this;
+        }
+        public Boolean getValid() {
+            return this.valid;
         }
 
     }

@@ -32,40 +32,24 @@ public class DescribeAntChainMembersResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainMembersResponseBodyResultMembers extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("MemberName")
-        public String memberName;
-
         @NameInMap("JoinTime")
         public Long joinTime;
 
         @NameInMap("MemberId")
         public String memberId;
 
+        @NameInMap("MemberName")
+        public String memberName;
+
         @NameInMap("Role")
         public String role;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeAntChainMembersResponseBodyResultMembers build(java.util.Map<String, ?> map) throws Exception {
             DescribeAntChainMembersResponseBodyResultMembers self = new DescribeAntChainMembersResponseBodyResultMembers();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAntChainMembersResponseBodyResultMembers setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeAntChainMembersResponseBodyResultMembers setMemberName(String memberName) {
-            this.memberName = memberName;
-            return this;
-        }
-        public String getMemberName() {
-            return this.memberName;
         }
 
         public DescribeAntChainMembersResponseBodyResultMembers setJoinTime(Long joinTime) {
@@ -84,6 +68,14 @@ public class DescribeAntChainMembersResponseBody extends TeaModel {
             return this.memberId;
         }
 
+        public DescribeAntChainMembersResponseBodyResultMembers setMemberName(String memberName) {
+            this.memberName = memberName;
+            return this;
+        }
+        public String getMemberName() {
+            return this.memberName;
+        }
+
         public DescribeAntChainMembersResponseBodyResultMembers setRole(String role) {
             this.role = role;
             return this;
@@ -92,14 +84,22 @@ public class DescribeAntChainMembersResponseBody extends TeaModel {
             return this.role;
         }
 
+        public DescribeAntChainMembersResponseBodyResultMembers setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class DescribeAntChainMembersResponseBodyResultPagination extends TeaModel {
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
         @NameInMap("PageNumber")
         public Integer pageNumber;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
 
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -109,20 +109,20 @@ public class DescribeAntChainMembersResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeAntChainMembersResponseBodyResultPagination setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
-        }
-
         public DescribeAntChainMembersResponseBodyResultPagination setPageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
             return this;
         }
         public Integer getPageNumber() {
             return this.pageNumber;
+        }
+
+        public DescribeAntChainMembersResponseBodyResultPagination setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
         }
 
         public DescribeAntChainMembersResponseBodyResultPagination setTotalCount(Integer totalCount) {

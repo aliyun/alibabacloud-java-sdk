@@ -4,6 +4,9 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CopyAntChainContractProjectRequest extends TeaModel {
+    @NameInMap("ProjectDescription")
+    public String projectDescription;
+
     @NameInMap("ProjectId")
     public String projectId;
 
@@ -13,12 +16,17 @@ public class CopyAntChainContractProjectRequest extends TeaModel {
     @NameInMap("ProjectVersion")
     public String projectVersion;
 
-    @NameInMap("ProjectDescription")
-    public String projectDescription;
-
     public static CopyAntChainContractProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         CopyAntChainContractProjectRequest self = new CopyAntChainContractProjectRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CopyAntChainContractProjectRequest setProjectDescription(String projectDescription) {
+        this.projectDescription = projectDescription;
+        return this;
+    }
+    public String getProjectDescription() {
+        return this.projectDescription;
     }
 
     public CopyAntChainContractProjectRequest setProjectId(String projectId) {
@@ -43,14 +51,6 @@ public class CopyAntChainContractProjectRequest extends TeaModel {
     }
     public String getProjectVersion() {
         return this.projectVersion;
-    }
-
-    public CopyAntChainContractProjectRequest setProjectDescription(String projectDescription) {
-        this.projectDescription = projectDescription;
-        return this;
-    }
-    public String getProjectDescription() {
-        return this.projectDescription;
     }
 
 }

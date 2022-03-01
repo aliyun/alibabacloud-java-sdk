@@ -4,11 +4,11 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricOrganizationRequest extends TeaModel {
-    @NameInMap("OrganizationId")
-    public String organizationId;
-
     @NameInMap("Location")
     public String location;
+
+    @NameInMap("OrganizationId")
+    public String organizationId;
 
     @NameInMap("Tag")
     public java.util.List<DescribeFabricOrganizationRequestTag> tag;
@@ -18,20 +18,20 @@ public class DescribeFabricOrganizationRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeFabricOrganizationRequest setOrganizationId(String organizationId) {
-        this.organizationId = organizationId;
-        return this;
-    }
-    public String getOrganizationId() {
-        return this.organizationId;
-    }
-
     public DescribeFabricOrganizationRequest setLocation(String location) {
         this.location = location;
         return this;
     }
     public String getLocation() {
         return this.location;
+    }
+
+    public DescribeFabricOrganizationRequest setOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    public String getOrganizationId() {
+        return this.organizationId;
     }
 
     public DescribeFabricOrganizationRequest setTag(java.util.List<DescribeFabricOrganizationRequestTag> tag) {

@@ -32,61 +32,45 @@ public class DescribeAntChainTransactionResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainTransactionResponseBodyResultTransaction extends TeaModel {
-        @NameInMap("Hash")
-        public String hash;
-
-        @NameInMap("From")
-        public String from;
-
         @NameInMap("Data")
         public String data;
-
-        @NameInMap("Nonce")
-        public String nonce;
-
-        @NameInMap("To")
-        public String to;
-
-        @NameInMap("Timestamp")
-        public Long timestamp;
-
-        @NameInMap("Gas")
-        public String gas;
-
-        @NameInMap("Period")
-        public Long period;
-
-        @NameInMap("Value")
-        public String value;
 
         @NameInMap("Extentions")
         public java.util.List<String> extentions;
 
-        @NameInMap("TxType")
-        public String txType;
+        @NameInMap("From")
+        public String from;
+
+        @NameInMap("Gas")
+        public String gas;
+
+        @NameInMap("Hash")
+        public String hash;
+
+        @NameInMap("Nonce")
+        public String nonce;
+
+        @NameInMap("Period")
+        public Long period;
 
         @NameInMap("Signatures")
         public java.util.List<String> signatures;
 
+        @NameInMap("Timestamp")
+        public Long timestamp;
+
+        @NameInMap("To")
+        public String to;
+
+        @NameInMap("TxType")
+        public String txType;
+
+        @NameInMap("Value")
+        public String value;
+
         public static DescribeAntChainTransactionResponseBodyResultTransaction build(java.util.Map<String, ?> map) throws Exception {
             DescribeAntChainTransactionResponseBodyResultTransaction self = new DescribeAntChainTransactionResponseBodyResultTransaction();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAntChainTransactionResponseBodyResultTransaction setHash(String hash) {
-            this.hash = hash;
-            return this;
-        }
-        public String getHash() {
-            return this.hash;
-        }
-
-        public DescribeAntChainTransactionResponseBodyResultTransaction setFrom(String from) {
-            this.from = from;
-            return this;
-        }
-        public String getFrom() {
-            return this.from;
         }
 
         public DescribeAntChainTransactionResponseBodyResultTransaction setData(String data) {
@@ -97,28 +81,20 @@ public class DescribeAntChainTransactionResponseBody extends TeaModel {
             return this.data;
         }
 
-        public DescribeAntChainTransactionResponseBodyResultTransaction setNonce(String nonce) {
-            this.nonce = nonce;
+        public DescribeAntChainTransactionResponseBodyResultTransaction setExtentions(java.util.List<String> extentions) {
+            this.extentions = extentions;
             return this;
         }
-        public String getNonce() {
-            return this.nonce;
+        public java.util.List<String> getExtentions() {
+            return this.extentions;
         }
 
-        public DescribeAntChainTransactionResponseBodyResultTransaction setTo(String to) {
-            this.to = to;
+        public DescribeAntChainTransactionResponseBodyResultTransaction setFrom(String from) {
+            this.from = from;
             return this;
         }
-        public String getTo() {
-            return this.to;
-        }
-
-        public DescribeAntChainTransactionResponseBodyResultTransaction setTimestamp(Long timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public Long getTimestamp() {
-            return this.timestamp;
+        public String getFrom() {
+            return this.from;
         }
 
         public DescribeAntChainTransactionResponseBodyResultTransaction setGas(String gas) {
@@ -129,36 +105,28 @@ public class DescribeAntChainTransactionResponseBody extends TeaModel {
             return this.gas;
         }
 
+        public DescribeAntChainTransactionResponseBodyResultTransaction setHash(String hash) {
+            this.hash = hash;
+            return this;
+        }
+        public String getHash() {
+            return this.hash;
+        }
+
+        public DescribeAntChainTransactionResponseBodyResultTransaction setNonce(String nonce) {
+            this.nonce = nonce;
+            return this;
+        }
+        public String getNonce() {
+            return this.nonce;
+        }
+
         public DescribeAntChainTransactionResponseBodyResultTransaction setPeriod(Long period) {
             this.period = period;
             return this;
         }
         public Long getPeriod() {
             return this.period;
-        }
-
-        public DescribeAntChainTransactionResponseBodyResultTransaction setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-        public DescribeAntChainTransactionResponseBodyResultTransaction setExtentions(java.util.List<String> extentions) {
-            this.extentions = extentions;
-            return this;
-        }
-        public java.util.List<String> getExtentions() {
-            return this.extentions;
-        }
-
-        public DescribeAntChainTransactionResponseBodyResultTransaction setTxType(String txType) {
-            this.txType = txType;
-            return this;
-        }
-        public String getTxType() {
-            return this.txType;
         }
 
         public DescribeAntChainTransactionResponseBodyResultTransaction setSignatures(java.util.List<String> signatures) {
@@ -169,23 +137,55 @@ public class DescribeAntChainTransactionResponseBody extends TeaModel {
             return this.signatures;
         }
 
+        public DescribeAntChainTransactionResponseBodyResultTransaction setTimestamp(Long timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Long getTimestamp() {
+            return this.timestamp;
+        }
+
+        public DescribeAntChainTransactionResponseBodyResultTransaction setTo(String to) {
+            this.to = to;
+            return this;
+        }
+        public String getTo() {
+            return this.to;
+        }
+
+        public DescribeAntChainTransactionResponseBodyResultTransaction setTxType(String txType) {
+            this.txType = txType;
+            return this;
+        }
+        public String getTxType() {
+            return this.txType;
+        }
+
+        public DescribeAntChainTransactionResponseBodyResultTransaction setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class DescribeAntChainTransactionResponseBodyResult extends TeaModel {
-        @NameInMap("Hash")
-        public String hash;
-
-        @NameInMap("BlockVersion")
-        public String blockVersion;
+        @NameInMap("BlockHash")
+        public String blockHash;
 
         @NameInMap("BlockHeight")
         public Long blockHeight;
 
+        @NameInMap("BlockVersion")
+        public String blockVersion;
+
         @NameInMap("CreateTime")
         public Long createTime;
 
-        @NameInMap("BlockHash")
-        public String blockHash;
+        @NameInMap("Hash")
+        public String hash;
 
         @NameInMap("Transaction")
         public DescribeAntChainTransactionResponseBodyResultTransaction transaction;
@@ -195,20 +195,12 @@ public class DescribeAntChainTransactionResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeAntChainTransactionResponseBodyResult setHash(String hash) {
-            this.hash = hash;
+        public DescribeAntChainTransactionResponseBodyResult setBlockHash(String blockHash) {
+            this.blockHash = blockHash;
             return this;
         }
-        public String getHash() {
-            return this.hash;
-        }
-
-        public DescribeAntChainTransactionResponseBodyResult setBlockVersion(String blockVersion) {
-            this.blockVersion = blockVersion;
-            return this;
-        }
-        public String getBlockVersion() {
-            return this.blockVersion;
+        public String getBlockHash() {
+            return this.blockHash;
         }
 
         public DescribeAntChainTransactionResponseBodyResult setBlockHeight(Long blockHeight) {
@@ -219,6 +211,14 @@ public class DescribeAntChainTransactionResponseBody extends TeaModel {
             return this.blockHeight;
         }
 
+        public DescribeAntChainTransactionResponseBodyResult setBlockVersion(String blockVersion) {
+            this.blockVersion = blockVersion;
+            return this;
+        }
+        public String getBlockVersion() {
+            return this.blockVersion;
+        }
+
         public DescribeAntChainTransactionResponseBodyResult setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
@@ -227,12 +227,12 @@ public class DescribeAntChainTransactionResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeAntChainTransactionResponseBodyResult setBlockHash(String blockHash) {
-            this.blockHash = blockHash;
+        public DescribeAntChainTransactionResponseBodyResult setHash(String hash) {
+            this.hash = hash;
             return this;
         }
-        public String getBlockHash() {
-            return this.blockHash;
+        public String getHash() {
+            return this.hash;
         }
 
         public DescribeAntChainTransactionResponseBodyResult setTransaction(DescribeAntChainTransactionResponseBodyResultTransaction transaction) {

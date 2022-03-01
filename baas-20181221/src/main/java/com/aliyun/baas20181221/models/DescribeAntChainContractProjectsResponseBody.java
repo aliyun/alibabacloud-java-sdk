@@ -31,56 +31,15 @@ public class DescribeAntChainContractProjectsResponseBody extends TeaModel {
         return this.result;
     }
 
-    public static class DescribeAntChainContractProjectsResponseBodyResultPagination extends TeaModel {
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
-        @NameInMap("PageNumber")
-        public Integer pageNumber;
-
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
-        public static DescribeAntChainContractProjectsResponseBodyResultPagination build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAntChainContractProjectsResponseBodyResultPagination self = new DescribeAntChainContractProjectsResponseBodyResultPagination();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAntChainContractProjectsResponseBodyResultPagination setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
-        }
-
-        public DescribeAntChainContractProjectsResponseBodyResultPagination setPageNumber(Integer pageNumber) {
-            this.pageNumber = pageNumber;
-            return this;
-        }
-        public Integer getPageNumber() {
-            return this.pageNumber;
-        }
-
-        public DescribeAntChainContractProjectsResponseBodyResultPagination setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
-    }
-
     public static class DescribeAntChainContractProjectsResponseBodyResultContractProjects extends TeaModel {
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
         @NameInMap("ConsortiumId")
         public String consortiumId;
 
         @NameInMap("CreateTime")
         public Long createTime;
+
+        @NameInMap("ProjectDescription")
+        public String projectDescription;
 
         @NameInMap("ProjectId")
         public String projectId;
@@ -91,20 +50,12 @@ public class DescribeAntChainContractProjectsResponseBody extends TeaModel {
         @NameInMap("ProjectVersion")
         public String projectVersion;
 
-        @NameInMap("ProjectDescription")
-        public String projectDescription;
+        @NameInMap("UpdateTime")
+        public Long updateTime;
 
         public static DescribeAntChainContractProjectsResponseBodyResultContractProjects build(java.util.Map<String, ?> map) throws Exception {
             DescribeAntChainContractProjectsResponseBodyResultContractProjects self = new DescribeAntChainContractProjectsResponseBodyResultContractProjects();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAntChainContractProjectsResponseBodyResultContractProjects setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
         }
 
         public DescribeAntChainContractProjectsResponseBodyResultContractProjects setConsortiumId(String consortiumId) {
@@ -121,6 +72,14 @@ public class DescribeAntChainContractProjectsResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeAntChainContractProjectsResponseBodyResultContractProjects setProjectDescription(String projectDescription) {
+            this.projectDescription = projectDescription;
+            return this;
+        }
+        public String getProjectDescription() {
+            return this.projectDescription;
         }
 
         public DescribeAntChainContractProjectsResponseBodyResultContractProjects setProjectId(String projectId) {
@@ -147,34 +106,67 @@ public class DescribeAntChainContractProjectsResponseBody extends TeaModel {
             return this.projectVersion;
         }
 
-        public DescribeAntChainContractProjectsResponseBodyResultContractProjects setProjectDescription(String projectDescription) {
-            this.projectDescription = projectDescription;
+        public DescribeAntChainContractProjectsResponseBodyResultContractProjects setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public String getProjectDescription() {
-            return this.projectDescription;
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
+    }
+
+    public static class DescribeAntChainContractProjectsResponseBodyResultPagination extends TeaModel {
+        @NameInMap("PageNumber")
+        public Integer pageNumber;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
+        public static DescribeAntChainContractProjectsResponseBodyResultPagination build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAntChainContractProjectsResponseBodyResultPagination self = new DescribeAntChainContractProjectsResponseBodyResultPagination();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAntChainContractProjectsResponseBodyResultPagination setPageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        public DescribeAntChainContractProjectsResponseBodyResultPagination setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public DescribeAntChainContractProjectsResponseBodyResultPagination setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }
 
     public static class DescribeAntChainContractProjectsResponseBodyResult extends TeaModel {
-        @NameInMap("Pagination")
-        public DescribeAntChainContractProjectsResponseBodyResultPagination pagination;
-
         @NameInMap("ContractProjects")
         public java.util.List<DescribeAntChainContractProjectsResponseBodyResultContractProjects> contractProjects;
+
+        @NameInMap("Pagination")
+        public DescribeAntChainContractProjectsResponseBodyResultPagination pagination;
 
         public static DescribeAntChainContractProjectsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeAntChainContractProjectsResponseBodyResult self = new DescribeAntChainContractProjectsResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAntChainContractProjectsResponseBodyResult setPagination(DescribeAntChainContractProjectsResponseBodyResultPagination pagination) {
-            this.pagination = pagination;
-            return this;
-        }
-        public DescribeAntChainContractProjectsResponseBodyResultPagination getPagination() {
-            return this.pagination;
         }
 
         public DescribeAntChainContractProjectsResponseBodyResult setContractProjects(java.util.List<DescribeAntChainContractProjectsResponseBodyResultContractProjects> contractProjects) {
@@ -183,6 +175,14 @@ public class DescribeAntChainContractProjectsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeAntChainContractProjectsResponseBodyResultContractProjects> getContractProjects() {
             return this.contractProjects;
+        }
+
+        public DescribeAntChainContractProjectsResponseBodyResult setPagination(DescribeAntChainContractProjectsResponseBodyResultPagination pagination) {
+            this.pagination = pagination;
+            return this;
+        }
+        public DescribeAntChainContractProjectsResponseBodyResultPagination getPagination() {
+            return this.pagination;
         }
 
     }

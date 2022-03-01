@@ -32,14 +32,17 @@ public class DescribeAntChainConsortiumsResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainConsortiumsResponseBodyResultAntConsortiums extends TeaModel {
+        @NameInMap("ChainNum")
+        public Long chainNum;
+
         @NameInMap("ConsortiumDescription")
         public String consortiumDescription;
 
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("ConsortiumId")
         public String consortiumId;
+
+        @NameInMap("ConsortiumName")
+        public String consortiumName;
 
         @NameInMap("CreateTime")
         public Long createTime;
@@ -50,15 +53,20 @@ public class DescribeAntChainConsortiumsResponseBody extends TeaModel {
         @NameInMap("Role")
         public String role;
 
-        @NameInMap("ConsortiumName")
-        public String consortiumName;
-
-        @NameInMap("ChainNum")
-        public Long chainNum;
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeAntChainConsortiumsResponseBodyResultAntConsortiums build(java.util.Map<String, ?> map) throws Exception {
             DescribeAntChainConsortiumsResponseBodyResultAntConsortiums self = new DescribeAntChainConsortiumsResponseBodyResultAntConsortiums();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAntChainConsortiumsResponseBodyResultAntConsortiums setChainNum(Long chainNum) {
+            this.chainNum = chainNum;
+            return this;
+        }
+        public Long getChainNum() {
+            return this.chainNum;
         }
 
         public DescribeAntChainConsortiumsResponseBodyResultAntConsortiums setConsortiumDescription(String consortiumDescription) {
@@ -69,20 +77,20 @@ public class DescribeAntChainConsortiumsResponseBody extends TeaModel {
             return this.consortiumDescription;
         }
 
-        public DescribeAntChainConsortiumsResponseBodyResultAntConsortiums setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
         public DescribeAntChainConsortiumsResponseBodyResultAntConsortiums setConsortiumId(String consortiumId) {
             this.consortiumId = consortiumId;
             return this;
         }
         public String getConsortiumId() {
             return this.consortiumId;
+        }
+
+        public DescribeAntChainConsortiumsResponseBodyResultAntConsortiums setConsortiumName(String consortiumName) {
+            this.consortiumName = consortiumName;
+            return this;
+        }
+        public String getConsortiumName() {
+            return this.consortiumName;
         }
 
         public DescribeAntChainConsortiumsResponseBodyResultAntConsortiums setCreateTime(Long createTime) {
@@ -109,30 +117,22 @@ public class DescribeAntChainConsortiumsResponseBody extends TeaModel {
             return this.role;
         }
 
-        public DescribeAntChainConsortiumsResponseBodyResultAntConsortiums setConsortiumName(String consortiumName) {
-            this.consortiumName = consortiumName;
+        public DescribeAntChainConsortiumsResponseBodyResultAntConsortiums setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getConsortiumName() {
-            return this.consortiumName;
-        }
-
-        public DescribeAntChainConsortiumsResponseBodyResultAntConsortiums setChainNum(Long chainNum) {
-            this.chainNum = chainNum;
-            return this;
-        }
-        public Long getChainNum() {
-            return this.chainNum;
+        public String getStatus() {
+            return this.status;
         }
 
     }
 
     public static class DescribeAntChainConsortiumsResponseBodyResultPagination extends TeaModel {
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
         @NameInMap("PageNumber")
         public Integer pageNumber;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
 
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -142,20 +142,20 @@ public class DescribeAntChainConsortiumsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeAntChainConsortiumsResponseBodyResultPagination setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
-        }
-
         public DescribeAntChainConsortiumsResponseBodyResultPagination setPageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
             return this;
         }
         public Integer getPageNumber() {
             return this.pageNumber;
+        }
+
+        public DescribeAntChainConsortiumsResponseBodyResultPagination setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
         }
 
         public DescribeAntChainConsortiumsResponseBodyResultPagination setTotalCount(Integer totalCount) {

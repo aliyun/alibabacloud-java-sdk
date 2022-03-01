@@ -4,11 +4,11 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class UpgradeFabricChaincodeRequest extends TeaModel {
-    @NameInMap("OrganizationId")
-    public String organizationId;
-
     @NameInMap("ChaincodeId")
     public String chaincodeId;
+
+    @NameInMap("CollectionConfig")
+    public String collectionConfig;
 
     @NameInMap("EndorsePolicy")
     public String endorsePolicy;
@@ -16,20 +16,12 @@ public class UpgradeFabricChaincodeRequest extends TeaModel {
     @NameInMap("Location")
     public String location;
 
-    @NameInMap("CollectionConfig")
-    public String collectionConfig;
+    @NameInMap("OrganizationId")
+    public String organizationId;
 
     public static UpgradeFabricChaincodeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeFabricChaincodeRequest self = new UpgradeFabricChaincodeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpgradeFabricChaincodeRequest setOrganizationId(String organizationId) {
-        this.organizationId = organizationId;
-        return this;
-    }
-    public String getOrganizationId() {
-        return this.organizationId;
     }
 
     public UpgradeFabricChaincodeRequest setChaincodeId(String chaincodeId) {
@@ -38,6 +30,14 @@ public class UpgradeFabricChaincodeRequest extends TeaModel {
     }
     public String getChaincodeId() {
         return this.chaincodeId;
+    }
+
+    public UpgradeFabricChaincodeRequest setCollectionConfig(String collectionConfig) {
+        this.collectionConfig = collectionConfig;
+        return this;
+    }
+    public String getCollectionConfig() {
+        return this.collectionConfig;
     }
 
     public UpgradeFabricChaincodeRequest setEndorsePolicy(String endorsePolicy) {
@@ -56,12 +56,12 @@ public class UpgradeFabricChaincodeRequest extends TeaModel {
         return this.location;
     }
 
-    public UpgradeFabricChaincodeRequest setCollectionConfig(String collectionConfig) {
-        this.collectionConfig = collectionConfig;
+    public UpgradeFabricChaincodeRequest setOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
-    public String getCollectionConfig() {
-        return this.collectionConfig;
+    public String getOrganizationId() {
+        return this.organizationId;
     }
 
 }

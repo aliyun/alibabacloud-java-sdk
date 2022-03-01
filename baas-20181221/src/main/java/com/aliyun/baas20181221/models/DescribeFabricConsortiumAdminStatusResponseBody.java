@@ -4,29 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricConsortiumAdminStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeFabricConsortiumAdminStatusResponseBodyResult> result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeFabricConsortiumAdminStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFabricConsortiumAdminStatusResponseBody self = new DescribeFabricConsortiumAdminStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFabricConsortiumAdminStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeFabricConsortiumAdminStatusResponseBody setErrorCode(Integer errorCode) {
@@ -37,12 +29,12 @@ public class DescribeFabricConsortiumAdminStatusResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DescribeFabricConsortiumAdminStatusResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeFabricConsortiumAdminStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeFabricConsortiumAdminStatusResponseBody setResult(java.util.List<DescribeFabricConsortiumAdminStatusResponseBodyResult> result) {
@@ -53,24 +45,24 @@ public class DescribeFabricConsortiumAdminStatusResponseBody extends TeaModel {
         return this.result;
     }
 
-    public static class DescribeFabricConsortiumAdminStatusResponseBodyResult extends TeaModel {
-        @NameInMap("ConsortiumId")
-        public String consortiumId;
+    public DescribeFabricConsortiumAdminStatusResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
 
+    public static class DescribeFabricConsortiumAdminStatusResponseBodyResult extends TeaModel {
         @NameInMap("ConsortiumAdministrator")
         public Boolean consortiumAdministrator;
+
+        @NameInMap("ConsortiumId")
+        public String consortiumId;
 
         public static DescribeFabricConsortiumAdminStatusResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeFabricConsortiumAdminStatusResponseBodyResult self = new DescribeFabricConsortiumAdminStatusResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeFabricConsortiumAdminStatusResponseBodyResult setConsortiumId(String consortiumId) {
-            this.consortiumId = consortiumId;
-            return this;
-        }
-        public String getConsortiumId() {
-            return this.consortiumId;
         }
 
         public DescribeFabricConsortiumAdminStatusResponseBodyResult setConsortiumAdministrator(Boolean consortiumAdministrator) {
@@ -79,6 +71,14 @@ public class DescribeFabricConsortiumAdminStatusResponseBody extends TeaModel {
         }
         public Boolean getConsortiumAdministrator() {
             return this.consortiumAdministrator;
+        }
+
+        public DescribeFabricConsortiumAdminStatusResponseBodyResult setConsortiumId(String consortiumId) {
+            this.consortiumId = consortiumId;
+            return this;
+        }
+        public String getConsortiumId() {
+            return this.consortiumId;
         }
 
     }

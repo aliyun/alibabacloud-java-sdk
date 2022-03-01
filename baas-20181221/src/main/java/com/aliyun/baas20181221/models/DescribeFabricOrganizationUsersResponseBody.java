@@ -4,29 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricOrganizationUsersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeFabricOrganizationUsersResponseBodyResult> result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeFabricOrganizationUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFabricOrganizationUsersResponseBody self = new DescribeFabricOrganizationUsersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFabricOrganizationUsersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeFabricOrganizationUsersResponseBody setErrorCode(Integer errorCode) {
@@ -37,12 +29,12 @@ public class DescribeFabricOrganizationUsersResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DescribeFabricOrganizationUsersResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeFabricOrganizationUsersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeFabricOrganizationUsersResponseBody setResult(java.util.List<DescribeFabricOrganizationUsersResponseBodyResult> result) {
@@ -53,27 +45,32 @@ public class DescribeFabricOrganizationUsersResponseBody extends TeaModel {
         return this.result;
     }
 
-    public static class DescribeFabricOrganizationUsersResponseBodyResult extends TeaModel {
-        @NameInMap("ExpireTime")
-        public String expireTime;
+    public DescribeFabricOrganizationUsersResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
 
+    public static class DescribeFabricOrganizationUsersResponseBodyResult extends TeaModel {
         @NameInMap("Attrs")
         public String attrs;
 
         @NameInMap("CallerBid")
         public String callerBid;
 
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("FullName")
-        public String fullName;
-
         @NameInMap("CallerUid")
         public Long callerUid;
 
-        @NameInMap("Username")
-        public String username;
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
+        @NameInMap("FullName")
+        public String fullName;
 
         @NameInMap("OrganizationId")
         public String organizationId;
@@ -81,17 +78,12 @@ public class DescribeFabricOrganizationUsersResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("Username")
+        public String username;
+
         public static DescribeFabricOrganizationUsersResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeFabricOrganizationUsersResponseBodyResult self = new DescribeFabricOrganizationUsersResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeFabricOrganizationUsersResponseBodyResult setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
-            return this;
-        }
-        public String getExpireTime() {
-            return this.expireTime;
         }
 
         public DescribeFabricOrganizationUsersResponseBodyResult setAttrs(String attrs) {
@@ -110,22 +102,6 @@ public class DescribeFabricOrganizationUsersResponseBody extends TeaModel {
             return this.callerBid;
         }
 
-        public DescribeFabricOrganizationUsersResponseBodyResult setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public DescribeFabricOrganizationUsersResponseBodyResult setFullName(String fullName) {
-            this.fullName = fullName;
-            return this;
-        }
-        public String getFullName() {
-            return this.fullName;
-        }
-
         public DescribeFabricOrganizationUsersResponseBodyResult setCallerUid(Long callerUid) {
             this.callerUid = callerUid;
             return this;
@@ -134,12 +110,28 @@ public class DescribeFabricOrganizationUsersResponseBody extends TeaModel {
             return this.callerUid;
         }
 
-        public DescribeFabricOrganizationUsersResponseBodyResult setUsername(String username) {
-            this.username = username;
+        public DescribeFabricOrganizationUsersResponseBodyResult setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getUsername() {
-            return this.username;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeFabricOrganizationUsersResponseBodyResult setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        public DescribeFabricOrganizationUsersResponseBodyResult setFullName(String fullName) {
+            this.fullName = fullName;
+            return this;
+        }
+        public String getFullName() {
+            return this.fullName;
         }
 
         public DescribeFabricOrganizationUsersResponseBodyResult setOrganizationId(String organizationId) {
@@ -156,6 +148,14 @@ public class DescribeFabricOrganizationUsersResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeFabricOrganizationUsersResponseBodyResult setUsername(String username) {
+            this.username = username;
+            return this;
+        }
+        public String getUsername() {
+            return this.username;
         }
 
     }

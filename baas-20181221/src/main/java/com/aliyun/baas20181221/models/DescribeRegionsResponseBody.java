@@ -4,14 +4,14 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
 
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -21,12 +21,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeRegionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeRegionsResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
     public DescribeRegionsResponseBody setRegions(java.util.List<DescribeRegionsResponseBodyRegions> regions) {
@@ -37,12 +37,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.regions;
     }
 
-    public DescribeRegionsResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
+    public DescribeRegionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getErrorCode() {
-        return this.errorCode;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeRegionsResponseBody setSuccess(Boolean success) {

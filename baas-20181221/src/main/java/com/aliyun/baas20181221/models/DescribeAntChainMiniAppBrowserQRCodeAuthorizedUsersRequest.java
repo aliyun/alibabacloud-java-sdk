@@ -7,14 +7,14 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest extends 
     @NameInMap("AntChainId")
     public String antChainId;
 
-    @NameInMap("QRCodeType")
-    public String QRCodeType;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("QRCodeType")
+    public String QRCodeType;
 
     public static DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest self = new DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest();
@@ -29,12 +29,12 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest extends 
         return this.antChainId;
     }
 
-    public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest setQRCodeType(String QRCodeType) {
-        this.QRCodeType = QRCodeType;
+    public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getQRCodeType() {
-        return this.QRCodeType;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest setPageSize(Integer pageSize) {
@@ -45,12 +45,12 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest extends 
         return this.pageSize;
     }
 
-    public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest setQRCodeType(String QRCodeType) {
+        this.QRCodeType = QRCodeType;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getQRCodeType() {
+        return this.QRCodeType;
     }
 
 }

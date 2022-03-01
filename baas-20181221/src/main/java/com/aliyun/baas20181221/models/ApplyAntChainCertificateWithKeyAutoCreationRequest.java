@@ -7,17 +7,14 @@ public class ApplyAntChainCertificateWithKeyAutoCreationRequest extends TeaModel
     @NameInMap("AntChainId")
     public String antChainId;
 
+    @NameInMap("CommonName")
+    public String commonName;
+
     @NameInMap("ConsortiumId")
     public String consortiumId;
 
-    @NameInMap("Password")
-    public String password;
-
     @NameInMap("CountryName")
     public String countryName;
-
-    @NameInMap("StateOrProvinceName")
-    public String stateOrProvinceName;
 
     @NameInMap("LocalityName")
     public String localityName;
@@ -28,8 +25,11 @@ public class ApplyAntChainCertificateWithKeyAutoCreationRequest extends TeaModel
     @NameInMap("OrganizationUnitName")
     public String organizationUnitName;
 
-    @NameInMap("CommonName")
-    public String commonName;
+    @NameInMap("Password")
+    public String password;
+
+    @NameInMap("StateOrProvinceName")
+    public String stateOrProvinceName;
 
     public static ApplyAntChainCertificateWithKeyAutoCreationRequest build(java.util.Map<String, ?> map) throws Exception {
         ApplyAntChainCertificateWithKeyAutoCreationRequest self = new ApplyAntChainCertificateWithKeyAutoCreationRequest();
@@ -44,6 +44,14 @@ public class ApplyAntChainCertificateWithKeyAutoCreationRequest extends TeaModel
         return this.antChainId;
     }
 
+    public ApplyAntChainCertificateWithKeyAutoCreationRequest setCommonName(String commonName) {
+        this.commonName = commonName;
+        return this;
+    }
+    public String getCommonName() {
+        return this.commonName;
+    }
+
     public ApplyAntChainCertificateWithKeyAutoCreationRequest setConsortiumId(String consortiumId) {
         this.consortiumId = consortiumId;
         return this;
@@ -52,28 +60,12 @@ public class ApplyAntChainCertificateWithKeyAutoCreationRequest extends TeaModel
         return this.consortiumId;
     }
 
-    public ApplyAntChainCertificateWithKeyAutoCreationRequest setPassword(String password) {
-        this.password = password;
-        return this;
-    }
-    public String getPassword() {
-        return this.password;
-    }
-
     public ApplyAntChainCertificateWithKeyAutoCreationRequest setCountryName(String countryName) {
         this.countryName = countryName;
         return this;
     }
     public String getCountryName() {
         return this.countryName;
-    }
-
-    public ApplyAntChainCertificateWithKeyAutoCreationRequest setStateOrProvinceName(String stateOrProvinceName) {
-        this.stateOrProvinceName = stateOrProvinceName;
-        return this;
-    }
-    public String getStateOrProvinceName() {
-        return this.stateOrProvinceName;
     }
 
     public ApplyAntChainCertificateWithKeyAutoCreationRequest setLocalityName(String localityName) {
@@ -100,12 +92,20 @@ public class ApplyAntChainCertificateWithKeyAutoCreationRequest extends TeaModel
         return this.organizationUnitName;
     }
 
-    public ApplyAntChainCertificateWithKeyAutoCreationRequest setCommonName(String commonName) {
-        this.commonName = commonName;
+    public ApplyAntChainCertificateWithKeyAutoCreationRequest setPassword(String password) {
+        this.password = password;
         return this;
     }
-    public String getCommonName() {
-        return this.commonName;
+    public String getPassword() {
+        return this.password;
+    }
+
+    public ApplyAntChainCertificateWithKeyAutoCreationRequest setStateOrProvinceName(String stateOrProvinceName) {
+        this.stateOrProvinceName = stateOrProvinceName;
+        return this;
+    }
+    public String getStateOrProvinceName() {
+        return this.stateOrProvinceName;
     }
 
 }

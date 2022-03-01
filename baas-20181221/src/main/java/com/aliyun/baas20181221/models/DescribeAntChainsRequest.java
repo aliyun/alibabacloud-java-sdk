@@ -4,26 +4,26 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainsRequest extends TeaModel {
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("ConsortiumId")
+    public String consortiumId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("ConsortiumId")
-    public String consortiumId;
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static DescribeAntChainsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAntChainsRequest self = new DescribeAntChainsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAntChainsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeAntChainsRequest setConsortiumId(String consortiumId) {
+        this.consortiumId = consortiumId;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getConsortiumId() {
+        return this.consortiumId;
     }
 
     public DescribeAntChainsRequest setPageNumber(Integer pageNumber) {
@@ -34,12 +34,12 @@ public class DescribeAntChainsRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeAntChainsRequest setConsortiumId(String consortiumId) {
-        this.consortiumId = consortiumId;
+    public DescribeAntChainsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getConsortiumId() {
-        return this.consortiumId;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

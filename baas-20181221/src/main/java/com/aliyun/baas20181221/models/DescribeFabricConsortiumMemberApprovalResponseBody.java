@@ -4,29 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricConsortiumMemberApprovalResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeFabricConsortiumMemberApprovalResponseBodyResult> result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeFabricConsortiumMemberApprovalResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFabricConsortiumMemberApprovalResponseBody self = new DescribeFabricConsortiumMemberApprovalResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFabricConsortiumMemberApprovalResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeFabricConsortiumMemberApprovalResponseBody setErrorCode(Integer errorCode) {
@@ -37,12 +29,12 @@ public class DescribeFabricConsortiumMemberApprovalResponseBody extends TeaModel
         return this.errorCode;
     }
 
-    public DescribeFabricConsortiumMemberApprovalResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeFabricConsortiumMemberApprovalResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeFabricConsortiumMemberApprovalResponseBody setResult(java.util.List<DescribeFabricConsortiumMemberApprovalResponseBodyResult> result) {
@@ -53,21 +45,23 @@ public class DescribeFabricConsortiumMemberApprovalResponseBody extends TeaModel
         return this.result;
     }
 
+    public DescribeFabricConsortiumMemberApprovalResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class DescribeFabricConsortiumMemberApprovalResponseBodyResult extends TeaModel {
-        @NameInMap("ConsortiumId")
-        public String consortiumId;
-
-        @NameInMap("State")
-        public String state;
-
         @NameInMap("ChannelCreatePolicy")
         public String channelCreatePolicy;
 
         @NameInMap("ConfirmTime")
         public String confirmTime;
 
-        @NameInMap("OrganizationName")
-        public String organizationName;
+        @NameInMap("ConsortiumId")
+        public String consortiumId;
 
         @NameInMap("ConsortiumName")
         public String consortiumName;
@@ -78,25 +72,15 @@ public class DescribeFabricConsortiumMemberApprovalResponseBody extends TeaModel
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        @NameInMap("OrganizationName")
+        public String organizationName;
+
+        @NameInMap("State")
+        public String state;
+
         public static DescribeFabricConsortiumMemberApprovalResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeFabricConsortiumMemberApprovalResponseBodyResult self = new DescribeFabricConsortiumMemberApprovalResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeFabricConsortiumMemberApprovalResponseBodyResult setConsortiumId(String consortiumId) {
-            this.consortiumId = consortiumId;
-            return this;
-        }
-        public String getConsortiumId() {
-            return this.consortiumId;
-        }
-
-        public DescribeFabricConsortiumMemberApprovalResponseBodyResult setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
         }
 
         public DescribeFabricConsortiumMemberApprovalResponseBodyResult setChannelCreatePolicy(String channelCreatePolicy) {
@@ -115,12 +99,12 @@ public class DescribeFabricConsortiumMemberApprovalResponseBody extends TeaModel
             return this.confirmTime;
         }
 
-        public DescribeFabricConsortiumMemberApprovalResponseBodyResult setOrganizationName(String organizationName) {
-            this.organizationName = organizationName;
+        public DescribeFabricConsortiumMemberApprovalResponseBodyResult setConsortiumId(String consortiumId) {
+            this.consortiumId = consortiumId;
             return this;
         }
-        public String getOrganizationName() {
-            return this.organizationName;
+        public String getConsortiumId() {
+            return this.consortiumId;
         }
 
         public DescribeFabricConsortiumMemberApprovalResponseBodyResult setConsortiumName(String consortiumName) {
@@ -145,6 +129,22 @@ public class DescribeFabricConsortiumMemberApprovalResponseBody extends TeaModel
         }
         public String getOrganizationId() {
             return this.organizationId;
+        }
+
+        public DescribeFabricConsortiumMemberApprovalResponseBodyResult setOrganizationName(String organizationName) {
+            this.organizationName = organizationName;
+            return this;
+        }
+        public String getOrganizationName() {
+            return this.organizationName;
+        }
+
+        public DescribeFabricConsortiumMemberApprovalResponseBodyResult setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
     }

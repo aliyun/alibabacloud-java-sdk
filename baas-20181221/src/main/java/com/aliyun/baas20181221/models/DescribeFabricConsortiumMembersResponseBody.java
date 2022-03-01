@@ -4,29 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricConsortiumMembersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeFabricConsortiumMembersResponseBodyResult> result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeFabricConsortiumMembersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFabricConsortiumMembersResponseBody self = new DescribeFabricConsortiumMembersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFabricConsortiumMembersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeFabricConsortiumMembersResponseBody setErrorCode(Integer errorCode) {
@@ -37,12 +29,12 @@ public class DescribeFabricConsortiumMembersResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DescribeFabricConsortiumMembersResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeFabricConsortiumMembersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeFabricConsortiumMembersResponseBody setResult(java.util.List<DescribeFabricConsortiumMembersResponseBodyResult> result) {
@@ -53,18 +45,23 @@ public class DescribeFabricConsortiumMembersResponseBody extends TeaModel {
         return this.result;
     }
 
+    public DescribeFabricConsortiumMembersResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class DescribeFabricConsortiumMembersResponseBodyResult extends TeaModel {
-        @NameInMap("Domain")
-        public String domain;
+        @NameInMap("ConsortiumId")
+        public String consortiumId;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("ConsortiumId")
-        public String consortiumId;
-
-        @NameInMap("OrganizationName")
-        public String organizationName;
+        @NameInMap("Domain")
+        public String domain;
 
         @NameInMap("JoinedTime")
         public String joinedTime;
@@ -72,25 +69,12 @@ public class DescribeFabricConsortiumMembersResponseBody extends TeaModel {
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        @NameInMap("OrganizationName")
+        public String organizationName;
+
         public static DescribeFabricConsortiumMembersResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeFabricConsortiumMembersResponseBodyResult self = new DescribeFabricConsortiumMembersResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeFabricConsortiumMembersResponseBodyResult setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
-        public DescribeFabricConsortiumMembersResponseBodyResult setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public DescribeFabricConsortiumMembersResponseBodyResult setConsortiumId(String consortiumId) {
@@ -101,12 +85,20 @@ public class DescribeFabricConsortiumMembersResponseBody extends TeaModel {
             return this.consortiumId;
         }
 
-        public DescribeFabricConsortiumMembersResponseBodyResult setOrganizationName(String organizationName) {
-            this.organizationName = organizationName;
+        public DescribeFabricConsortiumMembersResponseBodyResult setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getOrganizationName() {
-            return this.organizationName;
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeFabricConsortiumMembersResponseBodyResult setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
         }
 
         public DescribeFabricConsortiumMembersResponseBodyResult setJoinedTime(String joinedTime) {
@@ -123,6 +115,14 @@ public class DescribeFabricConsortiumMembersResponseBody extends TeaModel {
         }
         public String getOrganizationId() {
             return this.organizationId;
+        }
+
+        public DescribeFabricConsortiumMembersResponseBodyResult setOrganizationName(String organizationName) {
+            this.organizationName = organizationName;
+            return this;
+        }
+        public String getOrganizationName() {
+            return this.organizationName;
         }
 
     }

@@ -32,14 +32,14 @@ public class CopyAntChainContractProjectResponseBody extends TeaModel {
     }
 
     public static class CopyAntChainContractProjectResponseBodyResult extends TeaModel {
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
         @NameInMap("ConsortiumId")
         public String consortiumId;
 
         @NameInMap("CreateTime")
         public Long createTime;
+
+        @NameInMap("ProjectDescription")
+        public String projectDescription;
 
         @NameInMap("ProjectId")
         public String projectId;
@@ -50,20 +50,12 @@ public class CopyAntChainContractProjectResponseBody extends TeaModel {
         @NameInMap("ProjectVersion")
         public String projectVersion;
 
-        @NameInMap("ProjectDescription")
-        public String projectDescription;
+        @NameInMap("UpdateTime")
+        public Long updateTime;
 
         public static CopyAntChainContractProjectResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             CopyAntChainContractProjectResponseBodyResult self = new CopyAntChainContractProjectResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public CopyAntChainContractProjectResponseBodyResult setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
         }
 
         public CopyAntChainContractProjectResponseBodyResult setConsortiumId(String consortiumId) {
@@ -80,6 +72,14 @@ public class CopyAntChainContractProjectResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public CopyAntChainContractProjectResponseBodyResult setProjectDescription(String projectDescription) {
+            this.projectDescription = projectDescription;
+            return this;
+        }
+        public String getProjectDescription() {
+            return this.projectDescription;
         }
 
         public CopyAntChainContractProjectResponseBodyResult setProjectId(String projectId) {
@@ -106,12 +106,12 @@ public class CopyAntChainContractProjectResponseBody extends TeaModel {
             return this.projectVersion;
         }
 
-        public CopyAntChainContractProjectResponseBodyResult setProjectDescription(String projectDescription) {
-            this.projectDescription = projectDescription;
+        public CopyAntChainContractProjectResponseBodyResult setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public String getProjectDescription() {
-            return this.projectDescription;
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
     }

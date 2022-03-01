@@ -7,14 +7,14 @@ public class DescribeAntChainCertificateApplicationsRequest extends TeaModel {
     @NameInMap("AntChainId")
     public String antChainId;
 
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("Status")
+    public String status;
 
     public static DescribeAntChainCertificateApplicationsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAntChainCertificateApplicationsRequest self = new DescribeAntChainCertificateApplicationsRequest();
@@ -29,12 +29,12 @@ public class DescribeAntChainCertificateApplicationsRequest extends TeaModel {
         return this.antChainId;
     }
 
-    public DescribeAntChainCertificateApplicationsRequest setStatus(String status) {
-        this.status = status;
+    public DescribeAntChainCertificateApplicationsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeAntChainCertificateApplicationsRequest setPageSize(Integer pageSize) {
@@ -45,12 +45,12 @@ public class DescribeAntChainCertificateApplicationsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeAntChainCertificateApplicationsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeAntChainCertificateApplicationsRequest setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getStatus() {
+        return this.status;
     }
 
 }

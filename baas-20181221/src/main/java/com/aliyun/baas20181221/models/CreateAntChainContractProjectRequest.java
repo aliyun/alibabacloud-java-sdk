@@ -7,14 +7,14 @@ public class CreateAntChainContractProjectRequest extends TeaModel {
     @NameInMap("ConsortiumId")
     public String consortiumId;
 
+    @NameInMap("ProjectDescription")
+    public String projectDescription;
+
     @NameInMap("ProjectName")
     public String projectName;
 
     @NameInMap("ProjectVersion")
     public String projectVersion;
-
-    @NameInMap("ProjectDescription")
-    public String projectDescription;
 
     public static CreateAntChainContractProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAntChainContractProjectRequest self = new CreateAntChainContractProjectRequest();
@@ -27,6 +27,14 @@ public class CreateAntChainContractProjectRequest extends TeaModel {
     }
     public String getConsortiumId() {
         return this.consortiumId;
+    }
+
+    public CreateAntChainContractProjectRequest setProjectDescription(String projectDescription) {
+        this.projectDescription = projectDescription;
+        return this;
+    }
+    public String getProjectDescription() {
+        return this.projectDescription;
     }
 
     public CreateAntChainContractProjectRequest setProjectName(String projectName) {
@@ -43,14 +51,6 @@ public class CreateAntChainContractProjectRequest extends TeaModel {
     }
     public String getProjectVersion() {
         return this.projectVersion;
-    }
-
-    public CreateAntChainContractProjectRequest setProjectDescription(String projectDescription) {
-        this.projectDescription = projectDescription;
-        return this;
-    }
-    public String getProjectDescription() {
-        return this.projectDescription;
     }
 
 }

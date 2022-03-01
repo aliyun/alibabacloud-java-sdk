@@ -4,11 +4,11 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class AcceptFabricInvitationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -18,20 +18,20 @@ public class AcceptFabricInvitationResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AcceptFabricInvitationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public AcceptFabricInvitationResponseBody setErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
     }
     public Integer getErrorCode() {
         return this.errorCode;
+    }
+
+    public AcceptFabricInvitationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public AcceptFabricInvitationResponseBody setSuccess(Boolean success) {

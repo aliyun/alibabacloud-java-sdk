@@ -4,8 +4,8 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricExplorerRequest extends TeaModel {
-    @NameInMap("OrganizationId")
-    public String organizationId;
+    @NameInMap("ExBody")
+    public String exBody;
 
     @NameInMap("ExMethod")
     public String exMethod;
@@ -13,20 +13,20 @@ public class DescribeFabricExplorerRequest extends TeaModel {
     @NameInMap("ExUrl")
     public String exUrl;
 
-    @NameInMap("ExBody")
-    public String exBody;
+    @NameInMap("OrganizationId")
+    public String organizationId;
 
     public static DescribeFabricExplorerRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFabricExplorerRequest self = new DescribeFabricExplorerRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeFabricExplorerRequest setOrganizationId(String organizationId) {
-        this.organizationId = organizationId;
+    public DescribeFabricExplorerRequest setExBody(String exBody) {
+        this.exBody = exBody;
         return this;
     }
-    public String getOrganizationId() {
-        return this.organizationId;
+    public String getExBody() {
+        return this.exBody;
     }
 
     public DescribeFabricExplorerRequest setExMethod(String exMethod) {
@@ -45,12 +45,12 @@ public class DescribeFabricExplorerRequest extends TeaModel {
         return this.exUrl;
     }
 
-    public DescribeFabricExplorerRequest setExBody(String exBody) {
-        this.exBody = exBody;
+    public DescribeFabricExplorerRequest setOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
-    public String getExBody() {
-        return this.exBody;
+    public String getOrganizationId() {
+        return this.organizationId;
     }
 
 }

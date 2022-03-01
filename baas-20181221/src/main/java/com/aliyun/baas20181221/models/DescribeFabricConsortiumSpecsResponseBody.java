@@ -4,29 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricConsortiumSpecsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeFabricConsortiumSpecsResponseBodyResult> result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeFabricConsortiumSpecsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFabricConsortiumSpecsResponseBody self = new DescribeFabricConsortiumSpecsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFabricConsortiumSpecsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeFabricConsortiumSpecsResponseBody setErrorCode(Integer errorCode) {
@@ -37,12 +29,12 @@ public class DescribeFabricConsortiumSpecsResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DescribeFabricConsortiumSpecsResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeFabricConsortiumSpecsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeFabricConsortiumSpecsResponseBody setResult(java.util.List<DescribeFabricConsortiumSpecsResponseBodyResult> result) {
@@ -53,19 +45,35 @@ public class DescribeFabricConsortiumSpecsResponseBody extends TeaModel {
         return this.result;
     }
 
+    public DescribeFabricConsortiumSpecsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class DescribeFabricConsortiumSpecsResponseBodyResult extends TeaModel {
+        @NameInMap("Enable")
+        public Boolean enable;
+
         @NameInMap("SpecName")
         public String specName;
 
         @NameInMap("SpecTitle")
         public String specTitle;
 
-        @NameInMap("Enable")
-        public Boolean enable;
-
         public static DescribeFabricConsortiumSpecsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeFabricConsortiumSpecsResponseBodyResult self = new DescribeFabricConsortiumSpecsResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeFabricConsortiumSpecsResponseBodyResult setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
         }
 
         public DescribeFabricConsortiumSpecsResponseBodyResult setSpecName(String specName) {
@@ -82,14 +90,6 @@ public class DescribeFabricConsortiumSpecsResponseBody extends TeaModel {
         }
         public String getSpecTitle() {
             return this.specTitle;
-        }
-
-        public DescribeFabricConsortiumSpecsResponseBodyResult setEnable(Boolean enable) {
-            this.enable = enable;
-            return this;
-        }
-        public Boolean getEnable() {
-            return this.enable;
         }
 
     }
