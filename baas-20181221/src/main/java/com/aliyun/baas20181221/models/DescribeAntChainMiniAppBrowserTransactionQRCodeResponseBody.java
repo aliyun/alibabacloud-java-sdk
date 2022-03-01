@@ -32,21 +32,29 @@ public class DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBody extends
     }
 
     public static class DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBodyResult extends TeaModel {
+        @NameInMap("AntChainId")
+        public String antChainId;
+
         @NameInMap("Base64QRCodePNG")
         public String base64QRCodePNG;
-
-        @NameInMap("TransactionHash")
-        public String transactionHash;
 
         @NameInMap("QRCodeContent")
         public String QRCodeContent;
 
-        @NameInMap("AntChainId")
-        public String antChainId;
+        @NameInMap("TransactionHash")
+        public String transactionHash;
 
         public static DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBodyResult self = new DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBodyResult setAntChainId(String antChainId) {
+            this.antChainId = antChainId;
+            return this;
+        }
+        public String getAntChainId() {
+            return this.antChainId;
         }
 
         public DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBodyResult setBase64QRCodePNG(String base64QRCodePNG) {
@@ -57,14 +65,6 @@ public class DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBody extends
             return this.base64QRCodePNG;
         }
 
-        public DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBodyResult setTransactionHash(String transactionHash) {
-            this.transactionHash = transactionHash;
-            return this;
-        }
-        public String getTransactionHash() {
-            return this.transactionHash;
-        }
-
         public DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBodyResult setQRCodeContent(String QRCodeContent) {
             this.QRCodeContent = QRCodeContent;
             return this;
@@ -73,12 +73,12 @@ public class DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBody extends
             return this.QRCodeContent;
         }
 
-        public DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBodyResult setAntChainId(String antChainId) {
-            this.antChainId = antChainId;
+        public DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBodyResult setTransactionHash(String transactionHash) {
+            this.transactionHash = transactionHash;
             return this;
         }
-        public String getAntChainId() {
-            return this.antChainId;
+        public String getTransactionHash() {
+            return this.transactionHash;
         }
 
     }

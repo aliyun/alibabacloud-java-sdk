@@ -4,11 +4,8 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateAntChainContractContentRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public String projectId;
-
-    @NameInMap("ParentContentId")
-    public String parentContentId;
+    @NameInMap("Content")
+    public String content;
 
     @NameInMap("ContentName")
     public String contentName;
@@ -16,28 +13,23 @@ public class CreateAntChainContractContentRequest extends TeaModel {
     @NameInMap("IsDirectory")
     public Boolean isDirectory;
 
-    @NameInMap("Content")
-    public String content;
+    @NameInMap("ParentContentId")
+    public String parentContentId;
+
+    @NameInMap("ProjectId")
+    public String projectId;
 
     public static CreateAntChainContractContentRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAntChainContractContentRequest self = new CreateAntChainContractContentRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateAntChainContractContentRequest setProjectId(String projectId) {
-        this.projectId = projectId;
+    public CreateAntChainContractContentRequest setContent(String content) {
+        this.content = content;
         return this;
     }
-    public String getProjectId() {
-        return this.projectId;
-    }
-
-    public CreateAntChainContractContentRequest setParentContentId(String parentContentId) {
-        this.parentContentId = parentContentId;
-        return this;
-    }
-    public String getParentContentId() {
-        return this.parentContentId;
+    public String getContent() {
+        return this.content;
     }
 
     public CreateAntChainContractContentRequest setContentName(String contentName) {
@@ -56,12 +48,20 @@ public class CreateAntChainContractContentRequest extends TeaModel {
         return this.isDirectory;
     }
 
-    public CreateAntChainContractContentRequest setContent(String content) {
-        this.content = content;
+    public CreateAntChainContractContentRequest setParentContentId(String parentContentId) {
+        this.parentContentId = parentContentId;
         return this;
     }
-    public String getContent() {
-        return this.content;
+    public String getParentContentId() {
+        return this.parentContentId;
+    }
+
+    public CreateAntChainContractContentRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
     }
 
 }

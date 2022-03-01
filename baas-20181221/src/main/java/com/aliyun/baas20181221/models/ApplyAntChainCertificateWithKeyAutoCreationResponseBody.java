@@ -35,11 +35,11 @@ public class ApplyAntChainCertificateWithKeyAutoCreationResponseBody extends Tea
         @NameInMap("CaCrtUrl")
         public String caCrtUrl;
 
-        @NameInMap("SdkUrl")
-        public String sdkUrl;
-
         @NameInMap("ClientCrtUrl")
         public String clientCrtUrl;
+
+        @NameInMap("SdkUrl")
+        public String sdkUrl;
 
         @NameInMap("TrustCaUrl")
         public String trustCaUrl;
@@ -57,20 +57,20 @@ public class ApplyAntChainCertificateWithKeyAutoCreationResponseBody extends Tea
             return this.caCrtUrl;
         }
 
-        public ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResultDownloadPath setSdkUrl(String sdkUrl) {
-            this.sdkUrl = sdkUrl;
-            return this;
-        }
-        public String getSdkUrl() {
-            return this.sdkUrl;
-        }
-
         public ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResultDownloadPath setClientCrtUrl(String clientCrtUrl) {
             this.clientCrtUrl = clientCrtUrl;
             return this;
         }
         public String getClientCrtUrl() {
             return this.clientCrtUrl;
+        }
+
+        public ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResultDownloadPath setSdkUrl(String sdkUrl) {
+            this.sdkUrl = sdkUrl;
+            return this;
+        }
+        public String getSdkUrl() {
+            return this.sdkUrl;
         }
 
         public ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResultDownloadPath setTrustCaUrl(String trustCaUrl) {
@@ -84,23 +84,15 @@ public class ApplyAntChainCertificateWithKeyAutoCreationResponseBody extends Tea
     }
 
     public static class ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResult extends TeaModel {
-        @NameInMap("PrivateKey")
-        public String privateKey;
-
         @NameInMap("DownloadPath")
         public ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResultDownloadPath downloadPath;
+
+        @NameInMap("PrivateKey")
+        public String privateKey;
 
         public static ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResult self = new ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResult setPrivateKey(String privateKey) {
-            this.privateKey = privateKey;
-            return this;
-        }
-        public String getPrivateKey() {
-            return this.privateKey;
         }
 
         public ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResult setDownloadPath(ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResultDownloadPath downloadPath) {
@@ -109,6 +101,14 @@ public class ApplyAntChainCertificateWithKeyAutoCreationResponseBody extends Tea
         }
         public ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResultDownloadPath getDownloadPath() {
             return this.downloadPath;
+        }
+
+        public ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResult setPrivateKey(String privateKey) {
+            this.privateKey = privateKey;
+            return this;
+        }
+        public String getPrivateKey() {
+            return this.privateKey;
         }
 
     }

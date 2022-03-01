@@ -4,29 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeEthereumDeletableResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public DescribeEthereumDeletableResponseBodyResult result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeEthereumDeletableResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEthereumDeletableResponseBody self = new DescribeEthereumDeletableResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeEthereumDeletableResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeEthereumDeletableResponseBody setErrorCode(Integer errorCode) {
@@ -37,12 +29,12 @@ public class DescribeEthereumDeletableResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DescribeEthereumDeletableResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeEthereumDeletableResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeEthereumDeletableResponseBody setResult(DescribeEthereumDeletableResponseBodyResult result) {
@@ -51,6 +43,14 @@ public class DescribeEthereumDeletableResponseBody extends TeaModel {
     }
     public DescribeEthereumDeletableResponseBodyResult getResult() {
         return this.result;
+    }
+
+    public DescribeEthereumDeletableResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DescribeEthereumDeletableResponseBodyResult extends TeaModel {

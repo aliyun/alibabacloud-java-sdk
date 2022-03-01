@@ -7,11 +7,11 @@ public class DescribeFabricOrdererLogsRequest extends TeaModel {
     @NameInMap("ConsortiumId")
     public String consortiumId;
 
-    @NameInMap("OrdererName")
-    public String ordererName;
-
     @NameInMap("Lines")
     public String lines;
+
+    @NameInMap("OrdererName")
+    public String ordererName;
 
     public static DescribeFabricOrdererLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFabricOrdererLogsRequest self = new DescribeFabricOrdererLogsRequest();
@@ -26,20 +26,20 @@ public class DescribeFabricOrdererLogsRequest extends TeaModel {
         return this.consortiumId;
     }
 
-    public DescribeFabricOrdererLogsRequest setOrdererName(String ordererName) {
-        this.ordererName = ordererName;
-        return this;
-    }
-    public String getOrdererName() {
-        return this.ordererName;
-    }
-
     public DescribeFabricOrdererLogsRequest setLines(String lines) {
         this.lines = lines;
         return this;
     }
     public String getLines() {
         return this.lines;
+    }
+
+    public DescribeFabricOrdererLogsRequest setOrdererName(String ordererName) {
+        this.ordererName = ordererName;
+        return this;
+    }
+    public String getOrdererName() {
+        return this.ordererName;
     }
 
 }

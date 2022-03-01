@@ -31,6 +31,36 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBody ext
         return this.result;
     }
 
+    public static class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList extends TeaModel {
+        @NameInMap("GmtAuthorized")
+        public String gmtAuthorized;
+
+        @NameInMap("Phone")
+        public String phone;
+
+        public static DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList self = new DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList setGmtAuthorized(String gmtAuthorized) {
+            this.gmtAuthorized = gmtAuthorized;
+            return this;
+        }
+        public String getGmtAuthorized() {
+            return this.gmtAuthorized;
+        }
+
+        public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList setPhone(String phone) {
+            this.phone = phone;
+            return this;
+        }
+        public String getPhone() {
+            return this.phone;
+        }
+
+    }
+
     public static class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultPagination extends TeaModel {
         @NameInMap("PageNumber")
         public Integer pageNumber;
@@ -72,42 +102,9 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBody ext
 
     }
 
-    public static class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList extends TeaModel {
-        @NameInMap("GmtAuthorized")
-        public String gmtAuthorized;
-
-        @NameInMap("Phone")
-        public String phone;
-
-        public static DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList self = new DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList setGmtAuthorized(String gmtAuthorized) {
-            this.gmtAuthorized = gmtAuthorized;
-            return this;
-        }
-        public String getGmtAuthorized() {
-            return this.gmtAuthorized;
-        }
-
-        public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList setPhone(String phone) {
-            this.phone = phone;
-            return this;
-        }
-        public String getPhone() {
-            return this.phone;
-        }
-
-    }
-
     public static class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResult extends TeaModel {
-        @NameInMap("QRCodeType")
-        public String QRCodeType;
-
-        @NameInMap("Pagination")
-        public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultPagination pagination;
+        @NameInMap("AntChainId")
+        public String antChainId;
 
         @NameInMap("AuthorizationType")
         public String authorizationType;
@@ -115,28 +112,23 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBody ext
         @NameInMap("AuthorizedUserList")
         public java.util.List<DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList> authorizedUserList;
 
-        @NameInMap("AntChainId")
-        public String antChainId;
+        @NameInMap("Pagination")
+        public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultPagination pagination;
+
+        @NameInMap("QRCodeType")
+        public String QRCodeType;
 
         public static DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResult self = new DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResult setQRCodeType(String QRCodeType) {
-            this.QRCodeType = QRCodeType;
+        public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResult setAntChainId(String antChainId) {
+            this.antChainId = antChainId;
             return this;
         }
-        public String getQRCodeType() {
-            return this.QRCodeType;
-        }
-
-        public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResult setPagination(DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultPagination pagination) {
-            this.pagination = pagination;
-            return this;
-        }
-        public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultPagination getPagination() {
-            return this.pagination;
+        public String getAntChainId() {
+            return this.antChainId;
         }
 
         public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResult setAuthorizationType(String authorizationType) {
@@ -155,12 +147,20 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBody ext
             return this.authorizedUserList;
         }
 
-        public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResult setAntChainId(String antChainId) {
-            this.antChainId = antChainId;
+        public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResult setPagination(DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultPagination pagination) {
+            this.pagination = pagination;
             return this;
         }
-        public String getAntChainId() {
-            return this.antChainId;
+        public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultPagination getPagination() {
+            return this.pagination;
+        }
+
+        public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResult setQRCodeType(String QRCodeType) {
+            this.QRCodeType = QRCodeType;
+            return this;
+        }
+        public String getQRCodeType() {
+            return this.QRCodeType;
         }
 
     }

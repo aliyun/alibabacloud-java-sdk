@@ -4,29 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricOrdererLogsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public String result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeFabricOrdererLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFabricOrdererLogsResponseBody self = new DescribeFabricOrdererLogsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFabricOrdererLogsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeFabricOrdererLogsResponseBody setErrorCode(Integer errorCode) {
@@ -37,12 +29,12 @@ public class DescribeFabricOrdererLogsResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DescribeFabricOrdererLogsResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeFabricOrdererLogsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeFabricOrdererLogsResponseBody setResult(String result) {
@@ -51,6 +43,14 @@ public class DescribeFabricOrdererLogsResponseBody extends TeaModel {
     }
     public String getResult() {
         return this.result;
+    }
+
+    public DescribeFabricOrdererLogsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

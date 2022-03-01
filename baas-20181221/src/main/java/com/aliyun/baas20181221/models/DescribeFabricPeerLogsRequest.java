@@ -4,18 +4,26 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricPeerLogsRequest extends TeaModel {
+    @NameInMap("Lines")
+    public String lines;
+
     @NameInMap("OrganizationId")
     public String organizationId;
 
     @NameInMap("PeerName")
     public String peerName;
 
-    @NameInMap("Lines")
-    public String lines;
-
     public static DescribeFabricPeerLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFabricPeerLogsRequest self = new DescribeFabricPeerLogsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeFabricPeerLogsRequest setLines(String lines) {
+        this.lines = lines;
+        return this;
+    }
+    public String getLines() {
+        return this.lines;
     }
 
     public DescribeFabricPeerLogsRequest setOrganizationId(String organizationId) {
@@ -32,14 +40,6 @@ public class DescribeFabricPeerLogsRequest extends TeaModel {
     }
     public String getPeerName() {
         return this.peerName;
-    }
-
-    public DescribeFabricPeerLogsRequest setLines(String lines) {
-        this.lines = lines;
-        return this;
-    }
-    public String getLines() {
-        return this.lines;
     }
 
 }

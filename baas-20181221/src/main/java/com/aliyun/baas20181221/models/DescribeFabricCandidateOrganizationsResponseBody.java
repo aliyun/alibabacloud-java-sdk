@@ -4,29 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricCandidateOrganizationsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeFabricCandidateOrganizationsResponseBodyResult> result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeFabricCandidateOrganizationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFabricCandidateOrganizationsResponseBody self = new DescribeFabricCandidateOrganizationsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFabricCandidateOrganizationsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeFabricCandidateOrganizationsResponseBody setErrorCode(Integer errorCode) {
@@ -37,12 +29,12 @@ public class DescribeFabricCandidateOrganizationsResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DescribeFabricCandidateOrganizationsResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeFabricCandidateOrganizationsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeFabricCandidateOrganizationsResponseBody setResult(java.util.List<DescribeFabricCandidateOrganizationsResponseBodyResult> result) {
@@ -53,38 +45,30 @@ public class DescribeFabricCandidateOrganizationsResponseBody extends TeaModel {
         return this.result;
     }
 
+    public DescribeFabricCandidateOrganizationsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class DescribeFabricCandidateOrganizationsResponseBodyResult extends TeaModel {
-        @NameInMap("ServiceState")
-        public String serviceState;
-
-        @NameInMap("OrganizationName")
-        public String organizationName;
-
         @NameInMap("ClusterState")
         public String clusterState;
 
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        @NameInMap("OrganizationName")
+        public String organizationName;
+
+        @NameInMap("ServiceState")
+        public String serviceState;
+
         public static DescribeFabricCandidateOrganizationsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeFabricCandidateOrganizationsResponseBodyResult self = new DescribeFabricCandidateOrganizationsResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeFabricCandidateOrganizationsResponseBodyResult setServiceState(String serviceState) {
-            this.serviceState = serviceState;
-            return this;
-        }
-        public String getServiceState() {
-            return this.serviceState;
-        }
-
-        public DescribeFabricCandidateOrganizationsResponseBodyResult setOrganizationName(String organizationName) {
-            this.organizationName = organizationName;
-            return this;
-        }
-        public String getOrganizationName() {
-            return this.organizationName;
         }
 
         public DescribeFabricCandidateOrganizationsResponseBodyResult setClusterState(String clusterState) {
@@ -101,6 +85,22 @@ public class DescribeFabricCandidateOrganizationsResponseBody extends TeaModel {
         }
         public String getOrganizationId() {
             return this.organizationId;
+        }
+
+        public DescribeFabricCandidateOrganizationsResponseBodyResult setOrganizationName(String organizationName) {
+            this.organizationName = organizationName;
+            return this;
+        }
+        public String getOrganizationName() {
+            return this.organizationName;
+        }
+
+        public DescribeFabricCandidateOrganizationsResponseBodyResult setServiceState(String serviceState) {
+            this.serviceState = serviceState;
+            return this;
+        }
+        public String getServiceState() {
+            return this.serviceState;
         }
 
     }

@@ -4,29 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricOrganizationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public DescribeFabricOrganizationResponseBodyResult result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeFabricOrganizationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFabricOrganizationResponseBody self = new DescribeFabricOrganizationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFabricOrganizationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeFabricOrganizationResponseBody setErrorCode(Integer errorCode) {
@@ -37,12 +29,12 @@ public class DescribeFabricOrganizationResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DescribeFabricOrganizationResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeFabricOrganizationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeFabricOrganizationResponseBody setResult(DescribeFabricOrganizationResponseBodyResult result) {
@@ -51,6 +43,14 @@ public class DescribeFabricOrganizationResponseBody extends TeaModel {
     }
     public DescribeFabricOrganizationResponseBodyResult getResult() {
         return this.result;
+    }
+
+    public DescribeFabricOrganizationResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DescribeFabricOrganizationResponseBodyResultTags extends TeaModel {
@@ -84,26 +84,38 @@ public class DescribeFabricOrganizationResponseBody extends TeaModel {
     }
 
     public static class DescribeFabricOrganizationResponseBodyResult extends TeaModel {
-        @NameInMap("Domain")
-        public String domain;
+        @NameInMap("CANAME")
+        public String CANAME;
 
-        @NameInMap("PeerCount")
-        public Integer peerCount;
+        @NameInMap("CAUrl")
+        public String CAUrl;
 
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("CodeName")
+        public String codeName;
 
         @NameInMap("ConsortiumCount")
         public Integer consortiumCount;
 
-        @NameInMap("Tags")
-        public java.util.List<DescribeFabricOrganizationResponseBodyResultTags> tags;
+        @NameInMap("CreateTime")
+        public String createTime;
 
-        @NameInMap("SpecName")
-        public String specName;
+        @NameInMap("Domain")
+        public String domain;
+
+        @NameInMap("MSP")
+        public String MSP;
+
+        @NameInMap("OrganizationDescription")
+        public String organizationDescription;
+
+        @NameInMap("OrganizationId")
+        public String organizationId;
+
+        @NameInMap("OrganizationName")
+        public String organizationName;
+
+        @NameInMap("OwnerBid")
+        public String ownerBid;
 
         @NameInMap("OwnerName")
         public String ownerName;
@@ -111,77 +123,57 @@ public class DescribeFabricOrganizationResponseBody extends TeaModel {
         @NameInMap("OwnerUid")
         public Long ownerUid;
 
-        @NameInMap("CodeName")
-        public String codeName;
-
-        @NameInMap("OwnerBid")
-        public String ownerBid;
-
-        @NameInMap("OrganizationDescription")
-        public String organizationDescription;
+        @NameInMap("PeerCount")
+        public Integer peerCount;
 
         @NameInMap("RegionId")
         public String regionId;
 
-        @NameInMap("OrganizationId")
-        public String organizationId;
-
-        @NameInMap("MSP")
-        public String MSP;
-
         @NameInMap("RequestId")
         public String requestId;
 
-        @NameInMap("CAUrl")
-        public String CAUrl;
+        @NameInMap("SpecName")
+        public String specName;
 
-        @NameInMap("CANAME")
-        public String CANAME;
+        @NameInMap("State")
+        public String state;
 
-        @NameInMap("ZoneId")
-        public String zoneId;
+        @NameInMap("Tags")
+        public java.util.List<DescribeFabricOrganizationResponseBodyResultTags> tags;
 
         @NameInMap("UserCount")
         public Integer userCount;
 
-        @NameInMap("OrganizationName")
-        public String organizationName;
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeFabricOrganizationResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeFabricOrganizationResponseBodyResult self = new DescribeFabricOrganizationResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public DescribeFabricOrganizationResponseBodyResult setDomain(String domain) {
-            this.domain = domain;
+        public DescribeFabricOrganizationResponseBodyResult setCANAME(String CANAME) {
+            this.CANAME = CANAME;
             return this;
         }
-        public String getDomain() {
-            return this.domain;
+        public String getCANAME() {
+            return this.CANAME;
         }
 
-        public DescribeFabricOrganizationResponseBodyResult setPeerCount(Integer peerCount) {
-            this.peerCount = peerCount;
+        public DescribeFabricOrganizationResponseBodyResult setCAUrl(String CAUrl) {
+            this.CAUrl = CAUrl;
             return this;
         }
-        public Integer getPeerCount() {
-            return this.peerCount;
+        public String getCAUrl() {
+            return this.CAUrl;
         }
 
-        public DescribeFabricOrganizationResponseBodyResult setState(String state) {
-            this.state = state;
+        public DescribeFabricOrganizationResponseBodyResult setCodeName(String codeName) {
+            this.codeName = codeName;
             return this;
         }
-        public String getState() {
-            return this.state;
-        }
-
-        public DescribeFabricOrganizationResponseBodyResult setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
+        public String getCodeName() {
+            return this.codeName;
         }
 
         public DescribeFabricOrganizationResponseBodyResult setConsortiumCount(Integer consortiumCount) {
@@ -192,20 +184,60 @@ public class DescribeFabricOrganizationResponseBody extends TeaModel {
             return this.consortiumCount;
         }
 
-        public DescribeFabricOrganizationResponseBodyResult setTags(java.util.List<DescribeFabricOrganizationResponseBodyResultTags> tags) {
-            this.tags = tags;
+        public DescribeFabricOrganizationResponseBodyResult setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public java.util.List<DescribeFabricOrganizationResponseBodyResultTags> getTags() {
-            return this.tags;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
-        public DescribeFabricOrganizationResponseBodyResult setSpecName(String specName) {
-            this.specName = specName;
+        public DescribeFabricOrganizationResponseBodyResult setDomain(String domain) {
+            this.domain = domain;
             return this;
         }
-        public String getSpecName() {
-            return this.specName;
+        public String getDomain() {
+            return this.domain;
+        }
+
+        public DescribeFabricOrganizationResponseBodyResult setMSP(String MSP) {
+            this.MSP = MSP;
+            return this;
+        }
+        public String getMSP() {
+            return this.MSP;
+        }
+
+        public DescribeFabricOrganizationResponseBodyResult setOrganizationDescription(String organizationDescription) {
+            this.organizationDescription = organizationDescription;
+            return this;
+        }
+        public String getOrganizationDescription() {
+            return this.organizationDescription;
+        }
+
+        public DescribeFabricOrganizationResponseBodyResult setOrganizationId(String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+        public String getOrganizationId() {
+            return this.organizationId;
+        }
+
+        public DescribeFabricOrganizationResponseBodyResult setOrganizationName(String organizationName) {
+            this.organizationName = organizationName;
+            return this;
+        }
+        public String getOrganizationName() {
+            return this.organizationName;
+        }
+
+        public DescribeFabricOrganizationResponseBodyResult setOwnerBid(String ownerBid) {
+            this.ownerBid = ownerBid;
+            return this;
+        }
+        public String getOwnerBid() {
+            return this.ownerBid;
         }
 
         public DescribeFabricOrganizationResponseBodyResult setOwnerName(String ownerName) {
@@ -224,28 +256,12 @@ public class DescribeFabricOrganizationResponseBody extends TeaModel {
             return this.ownerUid;
         }
 
-        public DescribeFabricOrganizationResponseBodyResult setCodeName(String codeName) {
-            this.codeName = codeName;
+        public DescribeFabricOrganizationResponseBodyResult setPeerCount(Integer peerCount) {
+            this.peerCount = peerCount;
             return this;
         }
-        public String getCodeName() {
-            return this.codeName;
-        }
-
-        public DescribeFabricOrganizationResponseBodyResult setOwnerBid(String ownerBid) {
-            this.ownerBid = ownerBid;
-            return this;
-        }
-        public String getOwnerBid() {
-            return this.ownerBid;
-        }
-
-        public DescribeFabricOrganizationResponseBodyResult setOrganizationDescription(String organizationDescription) {
-            this.organizationDescription = organizationDescription;
-            return this;
-        }
-        public String getOrganizationDescription() {
-            return this.organizationDescription;
+        public Integer getPeerCount() {
+            return this.peerCount;
         }
 
         public DescribeFabricOrganizationResponseBodyResult setRegionId(String regionId) {
@@ -256,22 +272,6 @@ public class DescribeFabricOrganizationResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeFabricOrganizationResponseBodyResult setOrganizationId(String organizationId) {
-            this.organizationId = organizationId;
-            return this;
-        }
-        public String getOrganizationId() {
-            return this.organizationId;
-        }
-
-        public DescribeFabricOrganizationResponseBodyResult setMSP(String MSP) {
-            this.MSP = MSP;
-            return this;
-        }
-        public String getMSP() {
-            return this.MSP;
-        }
-
         public DescribeFabricOrganizationResponseBodyResult setRequestId(String requestId) {
             this.requestId = requestId;
             return this;
@@ -280,28 +280,28 @@ public class DescribeFabricOrganizationResponseBody extends TeaModel {
             return this.requestId;
         }
 
-        public DescribeFabricOrganizationResponseBodyResult setCAUrl(String CAUrl) {
-            this.CAUrl = CAUrl;
+        public DescribeFabricOrganizationResponseBodyResult setSpecName(String specName) {
+            this.specName = specName;
             return this;
         }
-        public String getCAUrl() {
-            return this.CAUrl;
+        public String getSpecName() {
+            return this.specName;
         }
 
-        public DescribeFabricOrganizationResponseBodyResult setCANAME(String CANAME) {
-            this.CANAME = CANAME;
+        public DescribeFabricOrganizationResponseBodyResult setState(String state) {
+            this.state = state;
             return this;
         }
-        public String getCANAME() {
-            return this.CANAME;
+        public String getState() {
+            return this.state;
         }
 
-        public DescribeFabricOrganizationResponseBodyResult setZoneId(String zoneId) {
-            this.zoneId = zoneId;
+        public DescribeFabricOrganizationResponseBodyResult setTags(java.util.List<DescribeFabricOrganizationResponseBodyResultTags> tags) {
+            this.tags = tags;
             return this;
         }
-        public String getZoneId() {
-            return this.zoneId;
+        public java.util.List<DescribeFabricOrganizationResponseBodyResultTags> getTags() {
+            return this.tags;
         }
 
         public DescribeFabricOrganizationResponseBodyResult setUserCount(Integer userCount) {
@@ -312,12 +312,12 @@ public class DescribeFabricOrganizationResponseBody extends TeaModel {
             return this.userCount;
         }
 
-        public DescribeFabricOrganizationResponseBodyResult setOrganizationName(String organizationName) {
-            this.organizationName = organizationName;
+        public DescribeFabricOrganizationResponseBodyResult setZoneId(String zoneId) {
+            this.zoneId = zoneId;
             return this;
         }
-        public String getOrganizationName() {
-            return this.organizationName;
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

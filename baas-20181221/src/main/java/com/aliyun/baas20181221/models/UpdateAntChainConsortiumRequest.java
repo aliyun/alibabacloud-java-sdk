@@ -4,18 +4,26 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class UpdateAntChainConsortiumRequest extends TeaModel {
+    @NameInMap("ConsortiumDescription")
+    public String consortiumDescription;
+
     @NameInMap("ConsortiumId")
     public String consortiumId;
 
     @NameInMap("ConsortiumName")
     public String consortiumName;
 
-    @NameInMap("ConsortiumDescription")
-    public String consortiumDescription;
-
     public static UpdateAntChainConsortiumRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAntChainConsortiumRequest self = new UpdateAntChainConsortiumRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAntChainConsortiumRequest setConsortiumDescription(String consortiumDescription) {
+        this.consortiumDescription = consortiumDescription;
+        return this;
+    }
+    public String getConsortiumDescription() {
+        return this.consortiumDescription;
     }
 
     public UpdateAntChainConsortiumRequest setConsortiumId(String consortiumId) {
@@ -32,14 +40,6 @@ public class UpdateAntChainConsortiumRequest extends TeaModel {
     }
     public String getConsortiumName() {
         return this.consortiumName;
-    }
-
-    public UpdateAntChainConsortiumRequest setConsortiumDescription(String consortiumDescription) {
-        this.consortiumDescription = consortiumDescription;
-        return this;
-    }
-    public String getConsortiumDescription() {
-        return this.consortiumDescription;
     }
 
 }

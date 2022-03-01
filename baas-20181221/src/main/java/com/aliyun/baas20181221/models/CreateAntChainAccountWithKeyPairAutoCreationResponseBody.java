@@ -32,20 +32,20 @@ public class CreateAntChainAccountWithKeyPairAutoCreationResponseBody extends Te
     }
 
     public static class CreateAntChainAccountWithKeyPairAutoCreationResponseBodyResult extends TeaModel {
-        @NameInMap("AccountPublicKey")
-        public String accountPublicKey;
-
         @NameInMap("Account")
         public String account;
+
+        @NameInMap("AccountPrivateKey")
+        public String accountPrivateKey;
+
+        @NameInMap("AccountPublicKey")
+        public String accountPublicKey;
 
         @NameInMap("AccountRecoverPrivateKey")
         public String accountRecoverPrivateKey;
 
         @NameInMap("AccountRecoverPublicKey")
         public String accountRecoverPublicKey;
-
-        @NameInMap("AccountPrivateKey")
-        public String accountPrivateKey;
 
         @NameInMap("AntChainId")
         public String antChainId;
@@ -55,20 +55,28 @@ public class CreateAntChainAccountWithKeyPairAutoCreationResponseBody extends Te
             return TeaModel.build(map, self);
         }
 
-        public CreateAntChainAccountWithKeyPairAutoCreationResponseBodyResult setAccountPublicKey(String accountPublicKey) {
-            this.accountPublicKey = accountPublicKey;
-            return this;
-        }
-        public String getAccountPublicKey() {
-            return this.accountPublicKey;
-        }
-
         public CreateAntChainAccountWithKeyPairAutoCreationResponseBodyResult setAccount(String account) {
             this.account = account;
             return this;
         }
         public String getAccount() {
             return this.account;
+        }
+
+        public CreateAntChainAccountWithKeyPairAutoCreationResponseBodyResult setAccountPrivateKey(String accountPrivateKey) {
+            this.accountPrivateKey = accountPrivateKey;
+            return this;
+        }
+        public String getAccountPrivateKey() {
+            return this.accountPrivateKey;
+        }
+
+        public CreateAntChainAccountWithKeyPairAutoCreationResponseBodyResult setAccountPublicKey(String accountPublicKey) {
+            this.accountPublicKey = accountPublicKey;
+            return this;
+        }
+        public String getAccountPublicKey() {
+            return this.accountPublicKey;
         }
 
         public CreateAntChainAccountWithKeyPairAutoCreationResponseBodyResult setAccountRecoverPrivateKey(String accountRecoverPrivateKey) {
@@ -85,14 +93,6 @@ public class CreateAntChainAccountWithKeyPairAutoCreationResponseBody extends Te
         }
         public String getAccountRecoverPublicKey() {
             return this.accountRecoverPublicKey;
-        }
-
-        public CreateAntChainAccountWithKeyPairAutoCreationResponseBodyResult setAccountPrivateKey(String accountPrivateKey) {
-            this.accountPrivateKey = accountPrivateKey;
-            return this;
-        }
-        public String getAccountPrivateKey() {
-            return this.accountPrivateKey;
         }
 
         public CreateAntChainAccountWithKeyPairAutoCreationResponseBodyResult setAntChainId(String antChainId) {

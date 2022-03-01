@@ -7,11 +7,11 @@ public class DescribeAntChainTransactionStatisticsRequest extends TeaModel {
     @NameInMap("AntChainId")
     public String antChainId;
 
-    @NameInMap("Start")
-    public Long start;
-
     @NameInMap("End")
     public Long end;
+
+    @NameInMap("Start")
+    public Long start;
 
     public static DescribeAntChainTransactionStatisticsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAntChainTransactionStatisticsRequest self = new DescribeAntChainTransactionStatisticsRequest();
@@ -26,20 +26,20 @@ public class DescribeAntChainTransactionStatisticsRequest extends TeaModel {
         return this.antChainId;
     }
 
-    public DescribeAntChainTransactionStatisticsRequest setStart(Long start) {
-        this.start = start;
-        return this;
-    }
-    public Long getStart() {
-        return this.start;
-    }
-
     public DescribeAntChainTransactionStatisticsRequest setEnd(Long end) {
         this.end = end;
         return this;
     }
     public Long getEnd() {
         return this.end;
+    }
+
+    public DescribeAntChainTransactionStatisticsRequest setStart(Long start) {
+        this.start = start;
+        return this;
+    }
+    public Long getStart() {
+        return this.start;
     }
 
 }

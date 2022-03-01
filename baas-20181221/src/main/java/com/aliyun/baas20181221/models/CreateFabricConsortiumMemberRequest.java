@@ -4,11 +4,11 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateFabricConsortiumMemberRequest extends TeaModel {
-    @NameInMap("ConsortiumId")
-    public String consortiumId;
-
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("ConsortiumId")
+    public String consortiumId;
 
     @NameInMap("Organization")
     public java.util.List<CreateFabricConsortiumMemberRequestOrganization> organization;
@@ -18,20 +18,20 @@ public class CreateFabricConsortiumMemberRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateFabricConsortiumMemberRequest setConsortiumId(String consortiumId) {
-        this.consortiumId = consortiumId;
-        return this;
-    }
-    public String getConsortiumId() {
-        return this.consortiumId;
-    }
-
     public CreateFabricConsortiumMemberRequest setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CreateFabricConsortiumMemberRequest setConsortiumId(String consortiumId) {
+        this.consortiumId = consortiumId;
+        return this;
+    }
+    public String getConsortiumId() {
+        return this.consortiumId;
     }
 
     public CreateFabricConsortiumMemberRequest setOrganization(java.util.List<CreateFabricConsortiumMemberRequestOrganization> organization) {

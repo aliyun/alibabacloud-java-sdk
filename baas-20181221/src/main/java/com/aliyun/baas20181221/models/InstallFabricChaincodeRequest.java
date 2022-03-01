@@ -4,26 +4,18 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class InstallFabricChaincodeRequest extends TeaModel {
-    @NameInMap("OrganizationId")
-    public String organizationId;
-
     @NameInMap("ChaincodeId")
     public String chaincodeId;
 
     @NameInMap("Location")
     public String location;
 
+    @NameInMap("OrganizationId")
+    public String organizationId;
+
     public static InstallFabricChaincodeRequest build(java.util.Map<String, ?> map) throws Exception {
         InstallFabricChaincodeRequest self = new InstallFabricChaincodeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public InstallFabricChaincodeRequest setOrganizationId(String organizationId) {
-        this.organizationId = organizationId;
-        return this;
-    }
-    public String getOrganizationId() {
-        return this.organizationId;
     }
 
     public InstallFabricChaincodeRequest setChaincodeId(String chaincodeId) {
@@ -40,6 +32,14 @@ public class InstallFabricChaincodeRequest extends TeaModel {
     }
     public String getLocation() {
         return this.location;
+    }
+
+    public InstallFabricChaincodeRequest setOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    public String getOrganizationId() {
+        return this.organizationId;
     }
 
 }

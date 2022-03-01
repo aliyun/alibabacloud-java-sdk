@@ -7,11 +7,11 @@ public class DescribeAntChainContractProjectsRequest extends TeaModel {
     @NameInMap("ConsortiumId")
     public String consortiumId;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static DescribeAntChainContractProjectsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAntChainContractProjectsRequest self = new DescribeAntChainContractProjectsRequest();
@@ -26,20 +26,20 @@ public class DescribeAntChainContractProjectsRequest extends TeaModel {
         return this.consortiumId;
     }
 
-    public DescribeAntChainContractProjectsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public DescribeAntChainContractProjectsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeAntChainContractProjectsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

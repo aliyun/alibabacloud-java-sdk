@@ -4,11 +4,11 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class InstantiateFabricChaincodeRequest extends TeaModel {
-    @NameInMap("OrganizationId")
-    public String organizationId;
-
     @NameInMap("ChaincodeId")
     public String chaincodeId;
+
+    @NameInMap("CollectionConfig")
+    public String collectionConfig;
 
     @NameInMap("EndorsePolicy")
     public String endorsePolicy;
@@ -16,20 +16,12 @@ public class InstantiateFabricChaincodeRequest extends TeaModel {
     @NameInMap("Location")
     public String location;
 
-    @NameInMap("CollectionConfig")
-    public String collectionConfig;
+    @NameInMap("OrganizationId")
+    public String organizationId;
 
     public static InstantiateFabricChaincodeRequest build(java.util.Map<String, ?> map) throws Exception {
         InstantiateFabricChaincodeRequest self = new InstantiateFabricChaincodeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public InstantiateFabricChaincodeRequest setOrganizationId(String organizationId) {
-        this.organizationId = organizationId;
-        return this;
-    }
-    public String getOrganizationId() {
-        return this.organizationId;
     }
 
     public InstantiateFabricChaincodeRequest setChaincodeId(String chaincodeId) {
@@ -38,6 +30,14 @@ public class InstantiateFabricChaincodeRequest extends TeaModel {
     }
     public String getChaincodeId() {
         return this.chaincodeId;
+    }
+
+    public InstantiateFabricChaincodeRequest setCollectionConfig(String collectionConfig) {
+        this.collectionConfig = collectionConfig;
+        return this;
+    }
+    public String getCollectionConfig() {
+        return this.collectionConfig;
     }
 
     public InstantiateFabricChaincodeRequest setEndorsePolicy(String endorsePolicy) {
@@ -56,12 +56,12 @@ public class InstantiateFabricChaincodeRequest extends TeaModel {
         return this.location;
     }
 
-    public InstantiateFabricChaincodeRequest setCollectionConfig(String collectionConfig) {
-        this.collectionConfig = collectionConfig;
+    public InstantiateFabricChaincodeRequest setOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
-    public String getCollectionConfig() {
-        return this.collectionConfig;
+    public String getOrganizationId() {
+        return this.organizationId;
     }
 
 }

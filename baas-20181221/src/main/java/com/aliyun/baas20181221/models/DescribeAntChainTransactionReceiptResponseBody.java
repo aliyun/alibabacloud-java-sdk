@@ -35,14 +35,14 @@ public class DescribeAntChainTransactionReceiptResponseBody extends TeaModel {
         @NameInMap("Data")
         public String data;
 
-        @NameInMap("Result")
-        public Long result;
+        @NameInMap("GasUsed")
+        public String gasUsed;
 
         @NameInMap("Logs")
         public java.util.List<String> logs;
 
-        @NameInMap("GasUsed")
-        public String gasUsed;
+        @NameInMap("Result")
+        public Long result;
 
         public static DescribeAntChainTransactionReceiptResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeAntChainTransactionReceiptResponseBodyResult self = new DescribeAntChainTransactionReceiptResponseBodyResult();
@@ -57,12 +57,12 @@ public class DescribeAntChainTransactionReceiptResponseBody extends TeaModel {
             return this.data;
         }
 
-        public DescribeAntChainTransactionReceiptResponseBodyResult setResult(Long result) {
-            this.result = result;
+        public DescribeAntChainTransactionReceiptResponseBodyResult setGasUsed(String gasUsed) {
+            this.gasUsed = gasUsed;
             return this;
         }
-        public Long getResult() {
-            return this.result;
+        public String getGasUsed() {
+            return this.gasUsed;
         }
 
         public DescribeAntChainTransactionReceiptResponseBodyResult setLogs(java.util.List<String> logs) {
@@ -73,12 +73,12 @@ public class DescribeAntChainTransactionReceiptResponseBody extends TeaModel {
             return this.logs;
         }
 
-        public DescribeAntChainTransactionReceiptResponseBodyResult setGasUsed(String gasUsed) {
-            this.gasUsed = gasUsed;
+        public DescribeAntChainTransactionReceiptResponseBodyResult setResult(Long result) {
+            this.result = result;
             return this;
         }
-        public String getGasUsed() {
-            return this.gasUsed;
+        public Long getResult() {
+            return this.result;
         }
 
     }

@@ -35,6 +35,9 @@ public class DescribeAntChainContractProjectContentTreeResponseBody extends TeaM
         @NameInMap("Children")
         public java.util.List<java.util.Map<String, ?>> children;
 
+        @NameInMap("ProjectDescription")
+        public String projectDescription;
+
         @NameInMap("ProjectId")
         public String projectId;
 
@@ -43,9 +46,6 @@ public class DescribeAntChainContractProjectContentTreeResponseBody extends TeaM
 
         @NameInMap("ProjectVersion")
         public String projectVersion;
-
-        @NameInMap("ProjectDescription")
-        public String projectDescription;
 
         public static DescribeAntChainContractProjectContentTreeResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeAntChainContractProjectContentTreeResponseBodyResult self = new DescribeAntChainContractProjectContentTreeResponseBodyResult();
@@ -58,6 +58,14 @@ public class DescribeAntChainContractProjectContentTreeResponseBody extends TeaM
         }
         public java.util.List<java.util.Map<String, ?>> getChildren() {
             return this.children;
+        }
+
+        public DescribeAntChainContractProjectContentTreeResponseBodyResult setProjectDescription(String projectDescription) {
+            this.projectDescription = projectDescription;
+            return this;
+        }
+        public String getProjectDescription() {
+            return this.projectDescription;
         }
 
         public DescribeAntChainContractProjectContentTreeResponseBodyResult setProjectId(String projectId) {
@@ -82,14 +90,6 @@ public class DescribeAntChainContractProjectContentTreeResponseBody extends TeaM
         }
         public String getProjectVersion() {
             return this.projectVersion;
-        }
-
-        public DescribeAntChainContractProjectContentTreeResponseBodyResult setProjectDescription(String projectDescription) {
-            this.projectDescription = projectDescription;
-            return this;
-        }
-        public String getProjectDescription() {
-            return this.projectDescription;
         }
 
     }

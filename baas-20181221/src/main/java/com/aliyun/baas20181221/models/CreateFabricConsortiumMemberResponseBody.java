@@ -4,29 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateFabricConsortiumMemberResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public Boolean result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static CreateFabricConsortiumMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateFabricConsortiumMemberResponseBody self = new CreateFabricConsortiumMemberResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateFabricConsortiumMemberResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateFabricConsortiumMemberResponseBody setErrorCode(Integer errorCode) {
@@ -37,12 +29,12 @@ public class CreateFabricConsortiumMemberResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public CreateFabricConsortiumMemberResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateFabricConsortiumMemberResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateFabricConsortiumMemberResponseBody setResult(Boolean result) {
@@ -51,6 +43,14 @@ public class CreateFabricConsortiumMemberResponseBody extends TeaModel {
     }
     public Boolean getResult() {
         return this.result;
+    }
+
+    public CreateFabricConsortiumMemberResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

@@ -4,26 +4,18 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class UpdateAntChainMemberRequest extends TeaModel {
-    @NameInMap("MemberName")
-    public String memberName;
-
     @NameInMap("ConsortiumId")
     public String consortiumId;
 
     @NameInMap("MemberId")
     public String memberId;
 
+    @NameInMap("MemberName")
+    public String memberName;
+
     public static UpdateAntChainMemberRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAntChainMemberRequest self = new UpdateAntChainMemberRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateAntChainMemberRequest setMemberName(String memberName) {
-        this.memberName = memberName;
-        return this;
-    }
-    public String getMemberName() {
-        return this.memberName;
     }
 
     public UpdateAntChainMemberRequest setConsortiumId(String consortiumId) {
@@ -40,6 +32,14 @@ public class UpdateAntChainMemberRequest extends TeaModel {
     }
     public String getMemberId() {
         return this.memberId;
+    }
+
+    public UpdateAntChainMemberRequest setMemberName(String memberName) {
+        this.memberName = memberName;
+        return this;
+    }
+    public String getMemberName() {
+        return this.memberName;
     }
 
 }

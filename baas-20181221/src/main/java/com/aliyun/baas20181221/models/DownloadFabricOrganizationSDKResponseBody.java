@@ -4,29 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DownloadFabricOrganizationSDKResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DownloadFabricOrganizationSDKResponseBodyResult> result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DownloadFabricOrganizationSDKResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DownloadFabricOrganizationSDKResponseBody self = new DownloadFabricOrganizationSDKResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DownloadFabricOrganizationSDKResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DownloadFabricOrganizationSDKResponseBody setErrorCode(Integer errorCode) {
@@ -37,12 +29,12 @@ public class DownloadFabricOrganizationSDKResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DownloadFabricOrganizationSDKResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DownloadFabricOrganizationSDKResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DownloadFabricOrganizationSDKResponseBody setResult(java.util.List<DownloadFabricOrganizationSDKResponseBodyResult> result) {
@@ -53,24 +45,24 @@ public class DownloadFabricOrganizationSDKResponseBody extends TeaModel {
         return this.result;
     }
 
-    public static class DownloadFabricOrganizationSDKResponseBodyResult extends TeaModel {
-        @NameInMap("Path")
-        public String path;
+    public DownloadFabricOrganizationSDKResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
 
+    public static class DownloadFabricOrganizationSDKResponseBodyResult extends TeaModel {
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("Path")
+        public String path;
 
         public static DownloadFabricOrganizationSDKResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DownloadFabricOrganizationSDKResponseBodyResult self = new DownloadFabricOrganizationSDKResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DownloadFabricOrganizationSDKResponseBodyResult setPath(String path) {
-            this.path = path;
-            return this;
-        }
-        public String getPath() {
-            return this.path;
         }
 
         public DownloadFabricOrganizationSDKResponseBodyResult setContent(String content) {
@@ -79,6 +71,14 @@ public class DownloadFabricOrganizationSDKResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public DownloadFabricOrganizationSDKResponseBodyResult setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
         }
 
     }

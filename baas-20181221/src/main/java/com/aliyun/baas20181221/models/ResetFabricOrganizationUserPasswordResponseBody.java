@@ -4,29 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class ResetFabricOrganizationUserPasswordResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public ResetFabricOrganizationUserPasswordResponseBodyResult result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static ResetFabricOrganizationUserPasswordResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ResetFabricOrganizationUserPasswordResponseBody self = new ResetFabricOrganizationUserPasswordResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ResetFabricOrganizationUserPasswordResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ResetFabricOrganizationUserPasswordResponseBody setErrorCode(Integer errorCode) {
@@ -37,12 +29,12 @@ public class ResetFabricOrganizationUserPasswordResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ResetFabricOrganizationUserPasswordResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public ResetFabricOrganizationUserPasswordResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ResetFabricOrganizationUserPasswordResponseBody setResult(ResetFabricOrganizationUserPasswordResponseBodyResult result) {
@@ -53,44 +45,36 @@ public class ResetFabricOrganizationUserPasswordResponseBody extends TeaModel {
         return this.result;
     }
 
+    public ResetFabricOrganizationUserPasswordResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class ResetFabricOrganizationUserPasswordResponseBodyResult extends TeaModel {
-        @NameInMap("Password")
-        public String password;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("ExpireTime")
         public String expireTime;
 
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("Fullname")
+        public String fullname;
 
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        @NameInMap("Password")
+        public String password;
+
         @NameInMap("Username")
         public String username;
-
-        @NameInMap("Fullname")
-        public String fullname;
 
         public static ResetFabricOrganizationUserPasswordResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ResetFabricOrganizationUserPasswordResponseBodyResult self = new ResetFabricOrganizationUserPasswordResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public ResetFabricOrganizationUserPasswordResponseBodyResult setPassword(String password) {
-            this.password = password;
-            return this;
-        }
-        public String getPassword() {
-            return this.password;
-        }
-
-        public ResetFabricOrganizationUserPasswordResponseBodyResult setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
-            return this;
-        }
-        public String getExpireTime() {
-            return this.expireTime;
         }
 
         public ResetFabricOrganizationUserPasswordResponseBodyResult setCreateTime(String createTime) {
@@ -101,20 +85,12 @@ public class ResetFabricOrganizationUserPasswordResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ResetFabricOrganizationUserPasswordResponseBodyResult setOrganizationId(String organizationId) {
-            this.organizationId = organizationId;
+        public ResetFabricOrganizationUserPasswordResponseBodyResult setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
             return this;
         }
-        public String getOrganizationId() {
-            return this.organizationId;
-        }
-
-        public ResetFabricOrganizationUserPasswordResponseBodyResult setUsername(String username) {
-            this.username = username;
-            return this;
-        }
-        public String getUsername() {
-            return this.username;
+        public String getExpireTime() {
+            return this.expireTime;
         }
 
         public ResetFabricOrganizationUserPasswordResponseBodyResult setFullname(String fullname) {
@@ -123,6 +99,30 @@ public class ResetFabricOrganizationUserPasswordResponseBody extends TeaModel {
         }
         public String getFullname() {
             return this.fullname;
+        }
+
+        public ResetFabricOrganizationUserPasswordResponseBodyResult setOrganizationId(String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+        public String getOrganizationId() {
+            return this.organizationId;
+        }
+
+        public ResetFabricOrganizationUserPasswordResponseBodyResult setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
+        }
+
+        public ResetFabricOrganizationUserPasswordResponseBodyResult setUsername(String username) {
+            this.username = username;
+            return this;
+        }
+        public String getUsername() {
+            return this.username;
         }
 
     }

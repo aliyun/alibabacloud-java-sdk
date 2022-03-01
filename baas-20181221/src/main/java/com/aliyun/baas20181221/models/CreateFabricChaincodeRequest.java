@@ -4,20 +4,11 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateFabricChaincodeRequest extends TeaModel {
-    @NameInMap("OrganizationId")
-    public String organizationId;
-
     @NameInMap("ChannelId")
     public String channelId;
 
     @NameInMap("ConsortiumId")
     public String consortiumId;
-
-    @NameInMap("OssBucket")
-    public String ossBucket;
-
-    @NameInMap("OssUrl")
-    public String ossUrl;
 
     @NameInMap("EndorsePolicy")
     public String endorsePolicy;
@@ -25,17 +16,18 @@ public class CreateFabricChaincodeRequest extends TeaModel {
     @NameInMap("Location")
     public String location;
 
+    @NameInMap("OrganizationId")
+    public String organizationId;
+
+    @NameInMap("OssBucket")
+    public String ossBucket;
+
+    @NameInMap("OssUrl")
+    public String ossUrl;
+
     public static CreateFabricChaincodeRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFabricChaincodeRequest self = new CreateFabricChaincodeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateFabricChaincodeRequest setOrganizationId(String organizationId) {
-        this.organizationId = organizationId;
-        return this;
-    }
-    public String getOrganizationId() {
-        return this.organizationId;
     }
 
     public CreateFabricChaincodeRequest setChannelId(String channelId) {
@@ -54,22 +46,6 @@ public class CreateFabricChaincodeRequest extends TeaModel {
         return this.consortiumId;
     }
 
-    public CreateFabricChaincodeRequest setOssBucket(String ossBucket) {
-        this.ossBucket = ossBucket;
-        return this;
-    }
-    public String getOssBucket() {
-        return this.ossBucket;
-    }
-
-    public CreateFabricChaincodeRequest setOssUrl(String ossUrl) {
-        this.ossUrl = ossUrl;
-        return this;
-    }
-    public String getOssUrl() {
-        return this.ossUrl;
-    }
-
     public CreateFabricChaincodeRequest setEndorsePolicy(String endorsePolicy) {
         this.endorsePolicy = endorsePolicy;
         return this;
@@ -84,6 +60,30 @@ public class CreateFabricChaincodeRequest extends TeaModel {
     }
     public String getLocation() {
         return this.location;
+    }
+
+    public CreateFabricChaincodeRequest setOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    public String getOrganizationId() {
+        return this.organizationId;
+    }
+
+    public CreateFabricChaincodeRequest setOssBucket(String ossBucket) {
+        this.ossBucket = ossBucket;
+        return this;
+    }
+    public String getOssBucket() {
+        return this.ossBucket;
+    }
+
+    public CreateFabricChaincodeRequest setOssUrl(String ossUrl) {
+        this.ossUrl = ossUrl;
+        return this;
+    }
+    public String getOssUrl() {
+        return this.ossUrl;
     }
 
 }

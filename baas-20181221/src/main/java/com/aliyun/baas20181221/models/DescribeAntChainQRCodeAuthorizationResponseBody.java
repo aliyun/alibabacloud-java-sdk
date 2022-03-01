@@ -32,26 +32,26 @@ public class DescribeAntChainQRCodeAuthorizationResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainQRCodeAuthorizationResponseBodyResult extends TeaModel {
-        @NameInMap("QRCodeType")
-        public String QRCodeType;
+        @NameInMap("AntChainId")
+        public String antChainId;
 
         @NameInMap("AuthorizationType")
         public String authorizationType;
 
-        @NameInMap("AntChainId")
-        public String antChainId;
+        @NameInMap("QRCodeType")
+        public String QRCodeType;
 
         public static DescribeAntChainQRCodeAuthorizationResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeAntChainQRCodeAuthorizationResponseBodyResult self = new DescribeAntChainQRCodeAuthorizationResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAntChainQRCodeAuthorizationResponseBodyResult setQRCodeType(String QRCodeType) {
-            this.QRCodeType = QRCodeType;
+        public DescribeAntChainQRCodeAuthorizationResponseBodyResult setAntChainId(String antChainId) {
+            this.antChainId = antChainId;
             return this;
         }
-        public String getQRCodeType() {
-            return this.QRCodeType;
+        public String getAntChainId() {
+            return this.antChainId;
         }
 
         public DescribeAntChainQRCodeAuthorizationResponseBodyResult setAuthorizationType(String authorizationType) {
@@ -62,12 +62,12 @@ public class DescribeAntChainQRCodeAuthorizationResponseBody extends TeaModel {
             return this.authorizationType;
         }
 
-        public DescribeAntChainQRCodeAuthorizationResponseBodyResult setAntChainId(String antChainId) {
-            this.antChainId = antChainId;
+        public DescribeAntChainQRCodeAuthorizationResponseBodyResult setQRCodeType(String QRCodeType) {
+            this.QRCodeType = QRCodeType;
             return this;
         }
-        public String getAntChainId() {
-            return this.antChainId;
+        public String getQRCodeType() {
+            return this.QRCodeType;
         }
 
     }

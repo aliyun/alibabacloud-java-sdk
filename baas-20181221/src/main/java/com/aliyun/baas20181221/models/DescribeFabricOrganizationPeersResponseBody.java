@@ -4,29 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricOrganizationPeersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeFabricOrganizationPeersResponseBodyResult> result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeFabricOrganizationPeersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFabricOrganizationPeersResponseBody self = new DescribeFabricOrganizationPeersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFabricOrganizationPeersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeFabricOrganizationPeersResponseBody setErrorCode(Integer errorCode) {
@@ -37,12 +29,12 @@ public class DescribeFabricOrganizationPeersResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DescribeFabricOrganizationPeersResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeFabricOrganizationPeersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeFabricOrganizationPeersResponseBody setResult(java.util.List<DescribeFabricOrganizationPeersResponseBodyResult> result) {
@@ -53,61 +45,45 @@ public class DescribeFabricOrganizationPeersResponseBody extends TeaModel {
         return this.result;
     }
 
+    public DescribeFabricOrganizationPeersResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class DescribeFabricOrganizationPeersResponseBodyResult extends TeaModel {
-        @NameInMap("UpdateTime")
-        public String updateTime;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("Domain")
         public String domain;
 
-        @NameInMap("InternetIp")
-        public String internetIp;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("IsAnchor")
-        public Boolean isAnchor;
-
         @NameInMap("InstanceType")
         public String instanceType;
 
-        @NameInMap("Port")
-        public Integer port;
-
-        @NameInMap("OrganizationPeerName")
-        public String organizationPeerName;
+        @NameInMap("InternetIp")
+        public String internetIp;
 
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        @NameInMap("IsAnchor")
+        public Boolean isAnchor;
+
+        @NameInMap("OrganizationPeerName")
+        public String organizationPeerName;
+
+        @NameInMap("Port")
+        public Integer port;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
         public static DescribeFabricOrganizationPeersResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeFabricOrganizationPeersResponseBodyResult self = new DescribeFabricOrganizationPeersResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeFabricOrganizationPeersResponseBodyResult setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public DescribeFabricOrganizationPeersResponseBodyResult setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
-        public DescribeFabricOrganizationPeersResponseBodyResult setInternetIp(String internetIp) {
-            this.internetIp = internetIp;
-            return this;
-        }
-        public String getInternetIp() {
-            return this.internetIp;
         }
 
         public DescribeFabricOrganizationPeersResponseBodyResult setCreateTime(String createTime) {
@@ -118,12 +94,12 @@ public class DescribeFabricOrganizationPeersResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeFabricOrganizationPeersResponseBodyResult setIsAnchor(Boolean isAnchor) {
-            this.isAnchor = isAnchor;
+        public DescribeFabricOrganizationPeersResponseBodyResult setDomain(String domain) {
+            this.domain = domain;
             return this;
         }
-        public Boolean getIsAnchor() {
-            return this.isAnchor;
+        public String getDomain() {
+            return this.domain;
         }
 
         public DescribeFabricOrganizationPeersResponseBodyResult setInstanceType(String instanceType) {
@@ -134,12 +110,28 @@ public class DescribeFabricOrganizationPeersResponseBody extends TeaModel {
             return this.instanceType;
         }
 
-        public DescribeFabricOrganizationPeersResponseBodyResult setPort(Integer port) {
-            this.port = port;
+        public DescribeFabricOrganizationPeersResponseBodyResult setInternetIp(String internetIp) {
+            this.internetIp = internetIp;
             return this;
         }
-        public Integer getPort() {
-            return this.port;
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
+        public DescribeFabricOrganizationPeersResponseBodyResult setIntranetIp(String intranetIp) {
+            this.intranetIp = intranetIp;
+            return this;
+        }
+        public String getIntranetIp() {
+            return this.intranetIp;
+        }
+
+        public DescribeFabricOrganizationPeersResponseBodyResult setIsAnchor(Boolean isAnchor) {
+            this.isAnchor = isAnchor;
+            return this;
+        }
+        public Boolean getIsAnchor() {
+            return this.isAnchor;
         }
 
         public DescribeFabricOrganizationPeersResponseBodyResult setOrganizationPeerName(String organizationPeerName) {
@@ -150,12 +142,20 @@ public class DescribeFabricOrganizationPeersResponseBody extends TeaModel {
             return this.organizationPeerName;
         }
 
-        public DescribeFabricOrganizationPeersResponseBodyResult setIntranetIp(String intranetIp) {
-            this.intranetIp = intranetIp;
+        public DescribeFabricOrganizationPeersResponseBodyResult setPort(Integer port) {
+            this.port = port;
             return this;
         }
-        public String getIntranetIp() {
-            return this.intranetIp;
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public DescribeFabricOrganizationPeersResponseBodyResult setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }

@@ -4,35 +4,27 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricExplorerResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DynamicCode")
     public String dynamicCode;
-
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
 
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public String result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeFabricExplorerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFabricExplorerResponseBody self = new DescribeFabricExplorerResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFabricExplorerResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeFabricExplorerResponseBody setDynamicCode(String dynamicCode) {
@@ -43,14 +35,6 @@ public class DescribeFabricExplorerResponseBody extends TeaModel {
         return this.dynamicCode;
     }
 
-    public DescribeFabricExplorerResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
-    }
-
     public DescribeFabricExplorerResponseBody setDynamicMessage(String dynamicMessage) {
         this.dynamicMessage = dynamicMessage;
         return this;
@@ -59,12 +43,20 @@ public class DescribeFabricExplorerResponseBody extends TeaModel {
         return this.dynamicMessage;
     }
 
-    public DescribeFabricExplorerResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeFabricExplorerResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public Integer getErrorCode() {
+        return this.errorCode;
+    }
+
+    public DescribeFabricExplorerResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeFabricExplorerResponseBody setResult(String result) {
@@ -73,6 +65,14 @@ public class DescribeFabricExplorerResponseBody extends TeaModel {
     }
     public String getResult() {
         return this.result;
+    }
+
+    public DescribeFabricExplorerResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

@@ -35,11 +35,11 @@ public class DescribeAntChainDownloadPathsResponseBody extends TeaModel {
         @NameInMap("CaCrtUrl")
         public String caCrtUrl;
 
-        @NameInMap("SdkUrl")
-        public String sdkUrl;
-
         @NameInMap("ClientCrtUrl")
         public String clientCrtUrl;
+
+        @NameInMap("SdkUrl")
+        public String sdkUrl;
 
         @NameInMap("TrustCaUrl")
         public String trustCaUrl;
@@ -57,20 +57,20 @@ public class DescribeAntChainDownloadPathsResponseBody extends TeaModel {
             return this.caCrtUrl;
         }
 
-        public DescribeAntChainDownloadPathsResponseBodyResult setSdkUrl(String sdkUrl) {
-            this.sdkUrl = sdkUrl;
-            return this;
-        }
-        public String getSdkUrl() {
-            return this.sdkUrl;
-        }
-
         public DescribeAntChainDownloadPathsResponseBodyResult setClientCrtUrl(String clientCrtUrl) {
             this.clientCrtUrl = clientCrtUrl;
             return this;
         }
         public String getClientCrtUrl() {
             return this.clientCrtUrl;
+        }
+
+        public DescribeAntChainDownloadPathsResponseBodyResult setSdkUrl(String sdkUrl) {
+            this.sdkUrl = sdkUrl;
+            return this;
+        }
+        public String getSdkUrl() {
+            return this.sdkUrl;
         }
 
         public DescribeAntChainDownloadPathsResponseBodyResult setTrustCaUrl(String trustCaUrl) {

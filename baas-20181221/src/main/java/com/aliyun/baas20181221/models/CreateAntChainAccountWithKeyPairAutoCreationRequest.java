@@ -4,11 +4,11 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateAntChainAccountWithKeyPairAutoCreationRequest extends TeaModel {
-    @NameInMap("AntChainId")
-    public String antChainId;
-
     @NameInMap("Account")
     public String account;
+
+    @NameInMap("AntChainId")
+    public String antChainId;
 
     @NameInMap("Password")
     public String password;
@@ -21,20 +21,20 @@ public class CreateAntChainAccountWithKeyPairAutoCreationRequest extends TeaMode
         return TeaModel.build(map, self);
     }
 
-    public CreateAntChainAccountWithKeyPairAutoCreationRequest setAntChainId(String antChainId) {
-        this.antChainId = antChainId;
-        return this;
-    }
-    public String getAntChainId() {
-        return this.antChainId;
-    }
-
     public CreateAntChainAccountWithKeyPairAutoCreationRequest setAccount(String account) {
         this.account = account;
         return this;
     }
     public String getAccount() {
         return this.account;
+    }
+
+    public CreateAntChainAccountWithKeyPairAutoCreationRequest setAntChainId(String antChainId) {
+        this.antChainId = antChainId;
+        return this;
+    }
+    public String getAntChainId() {
+        return this.antChainId;
     }
 
     public CreateAntChainAccountWithKeyPairAutoCreationRequest setPassword(String password) {
