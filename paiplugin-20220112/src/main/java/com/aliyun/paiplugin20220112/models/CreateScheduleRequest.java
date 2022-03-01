@@ -40,11 +40,19 @@ public class CreateScheduleRequest extends TeaModel {
     @NameInMap("RepeatTimes")
     public Integer repeatTimes;
 
-    // 签名Id。
+    // 签名。
+    @NameInMap("SignName")
+    public String signName;
+
+    // 签名Id，或指定签名。
     @NameInMap("SignatureId")
     public String signatureId;
 
-    // 模板Id。
+    // 模板Code。
+    @NameInMap("TemplateCode")
+    public String templateCode;
+
+    // 模板Id，或指定模板Code。
     @NameInMap("TemplateId")
     public String templateId;
 
@@ -109,12 +117,28 @@ public class CreateScheduleRequest extends TeaModel {
         return this.repeatTimes;
     }
 
+    public CreateScheduleRequest setSignName(String signName) {
+        this.signName = signName;
+        return this;
+    }
+    public String getSignName() {
+        return this.signName;
+    }
+
     public CreateScheduleRequest setSignatureId(String signatureId) {
         this.signatureId = signatureId;
         return this;
     }
     public String getSignatureId() {
         return this.signatureId;
+    }
+
+    public CreateScheduleRequest setTemplateCode(String templateCode) {
+        this.templateCode = templateCode;
+        return this;
+    }
+    public String getTemplateCode() {
+        return this.templateCode;
     }
 
     public CreateScheduleRequest setTemplateId(String templateId) {

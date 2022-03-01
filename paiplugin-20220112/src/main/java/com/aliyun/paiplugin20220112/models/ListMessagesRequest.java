@@ -4,7 +4,7 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListMessagesRequest extends TeaModel {
-    // 发送日期，格式为20220101
+    // 发送日期，格式为20220101。
     @NameInMap("Datetime")
     public String datetime;
 

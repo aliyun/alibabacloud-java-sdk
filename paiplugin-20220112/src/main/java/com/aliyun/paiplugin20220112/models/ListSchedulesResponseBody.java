@@ -16,6 +16,10 @@ public class ListSchedulesResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ListSchedulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSchedulesResponseBody self = new ListSchedulesResponseBody();
         return TeaModel.build(map, self);
@@ -43,6 +47,14 @@ public class ListSchedulesResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public ListSchedulesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListSchedulesResponseBodyDataSchedules extends TeaModel {
@@ -90,7 +102,11 @@ public class ListSchedulesResponseBody extends TeaModel {
         @NameInMap("RepeatTimes")
         public Integer repeatTimes;
 
-        // 签名Id。
+        // 签名。
+        @NameInMap("SignName")
+        public String signName;
+
+        // 签名Id，或指定签名。
         @NameInMap("SignatureId")
         public String signatureId;
 
@@ -104,7 +120,11 @@ public class ListSchedulesResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
-        // 模板Id。
+        // 模板Code。
+        @NameInMap("TemplateCode")
+        public String templateCode;
+
+        // 模板Id，或指定模板Code。
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -189,6 +209,14 @@ public class ListSchedulesResponseBody extends TeaModel {
             return this.repeatTimes;
         }
 
+        public ListSchedulesResponseBodyDataSchedules setSignName(String signName) {
+            this.signName = signName;
+            return this;
+        }
+        public String getSignName() {
+            return this.signName;
+        }
+
         public ListSchedulesResponseBodyDataSchedules setSignatureId(String signatureId) {
             this.signatureId = signatureId;
             return this;
@@ -203,6 +231,14 @@ public class ListSchedulesResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public ListSchedulesResponseBodyDataSchedules setTemplateCode(String templateCode) {
+            this.templateCode = templateCode;
+            return this;
+        }
+        public String getTemplateCode() {
+            return this.templateCode;
         }
 
         public ListSchedulesResponseBodyDataSchedules setTemplateId(String templateId) {

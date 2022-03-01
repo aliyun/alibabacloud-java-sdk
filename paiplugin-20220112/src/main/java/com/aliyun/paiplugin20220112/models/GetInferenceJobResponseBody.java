@@ -16,6 +16,10 @@ public class GetInferenceJobResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static GetInferenceJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInferenceJobResponseBody self = new GetInferenceJobResponseBody();
         return TeaModel.build(map, self);
@@ -45,48 +49,56 @@ public class GetInferenceJobResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public GetInferenceJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class GetInferenceJobResponseBodyData extends TeaModel {
-        // 关联算法
+        // 关联算法。
         @NameInMap("Algorithm")
         public String algorithm;
 
-        // 创建时间 (UTC+8)
+        // 创建时间 (UTC+8)。
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        // 关联人群Id，如果任务失败则人群无效
+        // 关联人群Id，如果任务失败则人群无效。
         @NameInMap("GroupId")
         public String groupId;
 
-        // 训练任务日志
+        // 预测任务日志。
         @NameInMap("History")
         public String history;
 
-        // 训练任务Id
+        // 预测任务Id。
         @NameInMap("Id")
         public String id;
 
-        // 训练任务名称
+        // 预测任务名称。
         @NameInMap("Name")
         public String name;
 
-        // 备注
+        // 备注。
         @NameInMap("Remark")
         public String remark;
 
-        // 训练任务状态
+        // 预测任务状态。
         @NameInMap("Status")
         public Integer status;
 
-        // 关联训练任务
+        // 关联训练任务。
         @NameInMap("TrainingJobId")
         public String trainingJobId;
 
-        // 更新时间 (UTC+8)
+        // 更新时间 (UTC+8)。
         @NameInMap("UpdatedTime")
         public String updatedTime;
 
-        // 用户配置
+        // 用户配置。
         @NameInMap("UserConfig")
         public String userConfig;
 

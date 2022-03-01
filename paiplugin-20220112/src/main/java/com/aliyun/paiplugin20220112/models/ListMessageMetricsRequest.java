@@ -4,7 +4,7 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListMessageMetricsRequest extends TeaModel {
-    // 结束日期
+    // 结束日期，格式20220102。
     @NameInMap("EndDate")
     public String endDate;
 
@@ -16,7 +16,7 @@ public class ListMessageMetricsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 开始日期
+    // 开始日期，格式20220102。
     @NameInMap("StartDate")
     public String startDate;
 

@@ -4,7 +4,7 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListInferenceJobsRequest extends TeaModel {
-    // 训练任务名称过滤，使用%name%模糊匹配
+    // 预测任务名称过滤。
     @NameInMap("Name")
     public String name;
 
@@ -16,11 +16,16 @@ public class ListInferenceJobsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 训练任务备注过滤，使用%name%模糊匹配
+    // 预测任务备注过滤。
     @NameInMap("Remark")
     public String remark;
 
-    // 训练任务状态过滤
+    // 预测任务状态过滤。
+    // - 0: 队列中。
+    // - 1: 已提交。
+    // - 2: 运行中。
+    // - 3: 成功。
+    // - 4: 失败。
     @NameInMap("Status")
     public Integer status;
 

@@ -16,6 +16,10 @@ public class CreateTemplateResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static CreateTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateTemplateResponseBody self = new CreateTemplateResponseBody();
         return TeaModel.build(map, self);
@@ -45,24 +49,32 @@ public class CreateTemplateResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public CreateTemplateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class CreateTemplateResponseBodyData extends TeaModel {
-        // 模板内容，长度:2-30
+        // 模板内容。
         @NameInMap("Content")
         public String content;
 
-        // 创建时间 (UTC+8)
+        // 创建时间 (UTC+8)。
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        // 申请说明
+        // 申请说明。
         @NameInMap("Description")
         public String description;
 
-        // Id UUId
+        // Id。
         @NameInMap("Id")
         public String id;
 
-        // 签名名称
+        // 签名名称。
         @NameInMap("Name")
         public String name;
 
@@ -70,22 +82,22 @@ public class CreateTemplateResponseBody extends TeaModel {
         @NameInMap("Reason")
         public String reason;
 
-        // 签名Id
+        // 签名Id。
         @NameInMap("SignatureId")
         public String signatureId;
 
-        // 审核状态
-        // - 0 : 审核中
-        // - 1 : 审核通过
-        // - 2 : 审核不通过
+        // 审核状态。
+        // - 0 : 审核中。
+        // - 1 : 审核通过。
+        // - 2 : 审核不通过。
         @NameInMap("Status")
         public Integer status;
 
-        // 模板Code
+        // 模板Code。
         @NameInMap("TemplateCode")
         public String templateCode;
 
-        // 模板类型：
+        // 模板类型。
         // 0：验证码。
         // 1：短信通知。
         // 2：推广短信。
@@ -93,7 +105,7 @@ public class CreateTemplateResponseBody extends TeaModel {
         @NameInMap("Type")
         public Integer type;
 
-        // 更新时间 (UTC+8)
+        // 更新时间 (UTC+8)。
         @NameInMap("UpdatedTime")
         public String updatedTime;
 

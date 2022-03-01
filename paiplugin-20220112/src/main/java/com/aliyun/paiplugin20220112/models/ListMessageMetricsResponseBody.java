@@ -16,6 +16,10 @@ public class ListMessageMetricsResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ListMessageMetricsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListMessageMetricsResponseBody self = new ListMessageMetricsResponseBody();
         return TeaModel.build(map, self);
@@ -45,28 +49,36 @@ public class ListMessageMetricsResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public ListMessageMetricsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListMessageMetricsResponseBodyDataMetrics extends TeaModel {
-        // 日期
+        // 发送日期。
         @NameInMap("Date")
         public String date;
 
-        // 失败
+        // 发送失败。
         @NameInMap("Fail")
         public Integer fail;
 
-        // 挂起
+        // 发送中。
         @NameInMap("Pending")
         public Integer pending;
 
-        // 非失败率
+        // 发送成功率。
         @NameInMap("Rate")
         public Float rate;
 
-        // 成功
+        // 发送成功。
         @NameInMap("Success")
         public Integer success;
 
-        // 总计
+        // 总计短信数量。
         @NameInMap("Total")
         public Integer total;
 
@@ -126,7 +138,7 @@ public class ListMessageMetricsResponseBody extends TeaModel {
     }
 
     public static class ListMessageMetricsResponseBodyData extends TeaModel {
-        // 统计数据列表
+        // 统计数据列表。
         @NameInMap("Metrics")
         public java.util.List<ListMessageMetricsResponseBodyDataMetrics> metrics;
 
@@ -138,7 +150,7 @@ public class ListMessageMetricsResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 总统计数量
+        // 总统计数量。
         @NameInMap("TotalCount")
         public Integer totalCount;
 

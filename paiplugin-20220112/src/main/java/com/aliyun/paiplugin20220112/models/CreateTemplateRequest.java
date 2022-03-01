@@ -4,23 +4,23 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateRequest extends TeaModel {
-    // 模板内容，请注意控制总字数在70个字以内，超出部分按长短信收费，按67个字为单位记一条短信，必须在结尾添加”回T退订“
+    // 模板内容，请注意控制总字数在70个字以内，超出部分按长短信收费，按67个字为单位记一条短信，必须在结尾添加”回T退订“。
     @NameInMap("Content")
     public String content;
 
-    // 申请说明
+    // 申请说明。
     @NameInMap("Description")
     public String description;
 
-    // 模板名称
+    // 模板名称。
     @NameInMap("Name")
     public String name;
 
-    // 签名Id
+    // 签名Id。
     @NameInMap("SignatureId")
     public String signatureId;
 
-    // 模板类型：
+    // 模板类型。
     // 0：验证码。
     // 1：短信通知。
     // 2：推广短信。

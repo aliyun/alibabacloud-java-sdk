@@ -16,6 +16,10 @@ public class DeleteScheduleResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DeleteScheduleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteScheduleResponseBody self = new DeleteScheduleResponseBody();
         return TeaModel.build(map, self);
@@ -43,6 +47,14 @@ public class DeleteScheduleResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public DeleteScheduleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -4,11 +4,11 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesRequest extends TeaModel {
-    // 内容类型过滤，使用%content%模糊匹配
+    // 内容类型过滤。
     @NameInMap("Content")
     public String content;
 
-    // 模板名称过滤，使用%name%模糊匹配
+    // 模板名称过滤。
     @NameInMap("Name")
     public String name;
 
@@ -20,11 +20,11 @@ public class ListTemplatesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 审核状态过滤
+    // 审核状态过滤。
     @NameInMap("Status")
     public Integer status;
 
-    // 模板类型过滤
+    // 模板类型过滤。
     @NameInMap("Type")
     public Integer type;
 
