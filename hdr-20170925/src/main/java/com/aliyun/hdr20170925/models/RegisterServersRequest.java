@@ -4,15 +4,15 @@ package com.aliyun.hdr20170925.models;
 import com.aliyun.tea.*;
 
 public class RegisterServersRequest extends TeaModel {
+    // 代理服务端口，默认9080
     @NameInMap("AgentPort")
     public Integer agentPort;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
+    // 注册服务器信息
     @NameInMap("ServerInstancesInfo")
     public String serverInstancesInfo;
 
+    // 站点对ID
     @NameInMap("SitePairId")
     public String sitePairId;
 
@@ -27,14 +27,6 @@ public class RegisterServersRequest extends TeaModel {
     }
     public Integer getAgentPort() {
         return this.agentPort;
-    }
-
-    public RegisterServersRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public RegisterServersRequest setServerInstancesInfo(String serverInstancesInfo) {
