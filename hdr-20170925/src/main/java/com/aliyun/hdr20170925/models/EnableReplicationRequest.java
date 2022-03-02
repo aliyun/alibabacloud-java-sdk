@@ -4,55 +4,33 @@ package com.aliyun.hdr20170925.models;
 import com.aliyun.tea.*;
 
 public class EnableReplicationRequest extends TeaModel {
-    @NameInMap("AppConsistentPointPolicy")
-    public String appConsistentPointPolicy;
-
-    @NameInMap("AutoResynchronize")
-    public Boolean autoResynchronize;
-
+    // 恢复点策略
     @NameInMap("CrashConsistentPointPolicy")
     public String crashConsistentPointPolicy;
 
+    // 恢复网络VSwitch ID
     @NameInMap("RecoveryNetwork")
     public String recoveryNetwork;
 
+    // 复制网络VSwitch ID
     @NameInMap("ReplicationNetwork")
     public String replicationNetwork;
 
+    // 复影实例是否使用ESSD云盘
     @NameInMap("ReplicationUseEssd")
     public Boolean replicationUseEssd;
 
+    // 复影实例是否使用SSD云盘
     @NameInMap("ReplicationUseSsd")
     public Boolean replicationUseSsd;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
+    // 受保护服务器ID
     @NameInMap("ServerId")
     public String serverId;
-
-    @NameInMap("ShadowInstanceType")
-    public String shadowInstanceType;
 
     public static EnableReplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableReplicationRequest self = new EnableReplicationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public EnableReplicationRequest setAppConsistentPointPolicy(String appConsistentPointPolicy) {
-        this.appConsistentPointPolicy = appConsistentPointPolicy;
-        return this;
-    }
-    public String getAppConsistentPointPolicy() {
-        return this.appConsistentPointPolicy;
-    }
-
-    public EnableReplicationRequest setAutoResynchronize(Boolean autoResynchronize) {
-        this.autoResynchronize = autoResynchronize;
-        return this;
-    }
-    public Boolean getAutoResynchronize() {
-        return this.autoResynchronize;
     }
 
     public EnableReplicationRequest setCrashConsistentPointPolicy(String crashConsistentPointPolicy) {
@@ -95,28 +73,12 @@ public class EnableReplicationRequest extends TeaModel {
         return this.replicationUseSsd;
     }
 
-    public EnableReplicationRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public EnableReplicationRequest setServerId(String serverId) {
         this.serverId = serverId;
         return this;
     }
     public String getServerId() {
         return this.serverId;
-    }
-
-    public EnableReplicationRequest setShadowInstanceType(String shadowInstanceType) {
-        this.shadowInstanceType = shadowInstanceType;
-        return this;
-    }
-    public String getShadowInstanceType() {
-        return this.shadowInstanceType;
     }
 
 }
