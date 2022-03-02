@@ -8,15 +8,15 @@ public class ListSignaturesResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListSignaturesResponseBodyData data;
 
-    // 错误码
+    // 错误码。
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息
+    // 错误信息。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID
+    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 

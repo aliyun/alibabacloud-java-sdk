@@ -8,15 +8,15 @@ public class ListMessagesResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListMessagesResponseBodyData data;
 
-    // 错误码
+    // 错误码。
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息
+    // 错误信息。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID
+    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -86,7 +86,7 @@ public class ListMessagesResponseBody extends TeaModel {
         @NameInMap("Signature")
         public String signature;
 
-        // 短信发送状态
+        // 短信发送状态。
         // - 0 : 发送中。
         // - 1 : 发送成功。
         // - 2 : 发送失败。

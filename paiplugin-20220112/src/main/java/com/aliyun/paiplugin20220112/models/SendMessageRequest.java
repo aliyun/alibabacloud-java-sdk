@@ -4,7 +4,7 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class SendMessageRequest extends TeaModel {
-    // 人群ID，用于关联人群。
+    // 人群Id，用于关联人群。
     @NameInMap("GroupId")
     public String groupId;
 
@@ -16,7 +16,7 @@ public class SendMessageRequest extends TeaModel {
     @NameInMap("PhoneNumbers")
     public java.util.List<String> phoneNumbers;
 
-    // 发送计划ID，用于关联发送计划。
+    // 发送计划Id，用于关联发送计划。
     @NameInMap("ScheduleId")
     public String scheduleId;
 
@@ -24,7 +24,7 @@ public class SendMessageRequest extends TeaModel {
     @NameInMap("SignName")
     public String signName;
 
-    // 签名ID，同时只能指定签名名称或签名ID其中之一。
+    // 签名Id，同时只能指定签名名称或签名Id其中之一。
     @NameInMap("SignatureId")
     public String signatureId;
 
@@ -36,7 +36,7 @@ public class SendMessageRequest extends TeaModel {
     @NameInMap("TemplateCode")
     public String templateCode;
 
-    // 模板ID，同时只能指定模板Code或模板ID其中之一。
+    // 模板Id，同时只能指定模板Code或模板Id其中之一。
     @NameInMap("TemplateId")
     public String templateId;
 

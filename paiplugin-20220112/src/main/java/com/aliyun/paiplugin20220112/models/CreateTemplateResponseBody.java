@@ -8,15 +8,15 @@ public class CreateTemplateResponseBody extends TeaModel {
     @NameInMap("Data")
     public CreateTemplateResponseBodyData data;
 
-    // 错误码
+    // 错误码。
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息
+    // 错误信息。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID
+    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -101,7 +101,6 @@ public class CreateTemplateResponseBody extends TeaModel {
         // 0：验证码。
         // 1：短信通知。
         // 2：推广短信。
-        // 3：国际/港澳台消息。
         @NameInMap("Type")
         public Integer type;
 

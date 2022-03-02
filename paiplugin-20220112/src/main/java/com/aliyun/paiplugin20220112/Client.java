@@ -35,6 +35,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 注册人群
     
+     * @tags 人群
      */
     public CreateGroupResponse createGroup(CreateGroupRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -110,6 +111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 注册推理任务
     
+     * @tags 推理任务
      */
     public CreateInferenceJobResponse createInferenceJob(CreateInferenceJobRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -161,6 +163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 注册触达计划
     
+     * @tags 触达计划
      */
     public CreateScheduleResponse createSchedule(CreateScheduleRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -236,6 +239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 注册签名。
     
+     * @tags 签名
      */
     public CreateSignatureResponse createSignature(CreateSignatureRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -275,6 +279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 注册模板
     
+     * @tags 模板
      */
     public CreateTemplateResponse createTemplate(CreateTemplateRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -326,6 +331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 注册训练任务
     
+     * @tags 训练任务
      */
     public CreateTrainingJobResponse createTrainingJob(CreateTrainingJobRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -373,6 +379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 删除人群
     
+     * @tags 人群
      */
     public DeleteGroupResponse deleteGroup(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -402,6 +409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 删除推理任务
     
+     * @tags 推理任务
      */
     public DeleteInferenceJobResponse deleteInferenceJob(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -431,6 +439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 删除触达计划
     
+     * @tags 触达计划
      */
     public DeleteScheduleResponse deleteSchedule(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -460,6 +469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 删除签名。
     
+     * @tags 签名
      */
     public DeleteSignatureResponse deleteSignature(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -489,6 +499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 删除模板
     
+     * @tags 模板
      */
     public DeleteTemplateResponse deleteTemplate(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -518,6 +529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 删除训练任务
     
+     * @tags 训练任务
      */
     public DeleteTrainingJobResponse deleteTrainingJob(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -546,6 +558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * 获取算法详情
+     * @tags 算法
      */
     public GetAlgorithmResponse getAlgorithm(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -575,6 +588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 获取人群
     默认返回所有人群信息
+     * @tags 人群
      */
     public GetGroupResponse getGroup(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -604,6 +618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 获取推理任务
     默认返回所有推理任务信息
+     * @tags 推理任务
      */
     public GetInferenceJobResponse getInferenceJob(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -633,6 +648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 获取触达计划详情。
     
+     * @tags 触达计划
      */
     public GetScheduleResponse getSchedule(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -661,6 +677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * 获取签名详情
+     * @tags 签名
      */
     public GetSignatureResponse getSignature(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -691,6 +708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * 获取模板
     默认返回所有模板信息
     ![模板列表](https://intranetproxy.alipay.com/skylark/lark/0/2021/png/302991/1615264998427-d2943cfb-106a-421d-b4a4-f06307b4d9be.png)
+     * @tags 模板
      */
     public GetTemplateResponse getTemplate(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -720,6 +738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 获取训练任务
     默认返回所有训练任务信息
+     * @tags 训练任务
      */
     public GetTrainingJobResponse getTrainingJob(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -748,6 +767,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * 获取算法列表
+     * @tags 算法
      */
     public ListAlgorithmsResponse listAlgorithms(ListAlgorithmsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -794,6 +814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * 获取人群列表
+     * @tags 人群
      */
     public ListGroupsResponse listGroups(ListGroupsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -848,6 +869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * 获取推理任务列表
+     * @tags 推理任务
      */
     public ListInferenceJobsResponse listInferenceJobs(ListInferenceJobsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -898,6 +920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * 获取用户短信发送统计
+     * @tags 短信
      */
     public ListMessageMetricsResponse listMessageMetrics(ListMessageMetricsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -912,6 +935,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndDate", request.endDate);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
@@ -920,8 +947,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleId)) {
+            query.put("ScheduleId", request.scheduleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signature)) {
+            query.put("Signature", request.signature);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signatureId)) {
+            query.put("SignatureId", request.signatureId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
             query.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            query.put("TemplateCode", request.templateCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -944,6 +991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * 查询短信发送详情
+     * @tags 短信
      */
     public ListMessagesResponse listMessages(ListMessagesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -990,8 +1038,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Signature", request.signature);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.signatureId)) {
+            query.put("SignatureId", request.signatureId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
             query.put("TemplateCode", request.templateCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1014,6 +1074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * 获取触达计划列表。
+     * @tags 触达计划
      */
     public ListSchedulesResponse listSchedules(ListSchedulesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -1058,6 +1119,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSchedulesResponse());
     }
 
+    /**
+     * 获取签名列表
+     * @tags 签名
+     */
     public ListSignaturesResponse listSignatures(ListSignaturesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1104,6 +1169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 获取模板列表
     默认返回所有模板信息
+     * @tags 模板
      */
     public ListTemplatesResponse listTemplates(ListTemplatesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -1158,6 +1224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * 获取训练任务列表
+     * @tags 训练任务
      */
     public ListTrainingJobsResponse listTrainingJobs(ListTrainingJobsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -1208,6 +1275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * 发送短信
+     * @tags 短信
      */
     public SendMessageResponse sendMessage(SendMessageRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
