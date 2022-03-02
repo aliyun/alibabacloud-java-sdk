@@ -40,9 +40,24 @@ public class ListMessagesRequest extends TeaModel {
     @NameInMap("Signature")
     public String signature;
 
+    // 签名Id，同时只能指定签名名称或签名Id其中之一。
+    @NameInMap("SignatureId")
+    public String signatureId;
+
+    // 短信发送状态。
+    // - 0 : 发送中。
+    // - 1 : 发送成功。
+    // - 2 : 发送失败。
+    @NameInMap("Status")
+    public Integer status;
+
     // 模板号。
     @NameInMap("TemplateCode")
     public String templateCode;
+
+    // 模板Id，同时只能指定模板Code或模板Id其中之一。
+    @NameInMap("TemplateId")
+    public String templateId;
 
     public static ListMessagesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMessagesRequest self = new ListMessagesRequest();
@@ -121,12 +136,36 @@ public class ListMessagesRequest extends TeaModel {
         return this.signature;
     }
 
+    public ListMessagesRequest setSignatureId(String signatureId) {
+        this.signatureId = signatureId;
+        return this;
+    }
+    public String getSignatureId() {
+        return this.signatureId;
+    }
+
+    public ListMessagesRequest setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
+    }
+
     public ListMessagesRequest setTemplateCode(String templateCode) {
         this.templateCode = templateCode;
         return this;
     }
     public String getTemplateCode() {
         return this.templateCode;
+    }
+
+    public ListMessagesRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
     }
 
 }

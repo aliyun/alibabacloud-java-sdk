@@ -24,7 +24,6 @@ public class CreateTemplateRequest extends TeaModel {
     // 0：验证码。
     // 1：短信通知。
     // 2：推广短信。
-    // 3：国际/港澳台消息。
     @NameInMap("Type")
     public Integer type;
 
