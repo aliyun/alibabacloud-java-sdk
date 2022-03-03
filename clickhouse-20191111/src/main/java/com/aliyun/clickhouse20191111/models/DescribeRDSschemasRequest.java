@@ -25,6 +25,9 @@ public class DescribeRDSschemasRequest extends TeaModel {
     @NameInMap("RdsUserName")
     public String rdsUserName;
 
+    @NameInMap("RdsVpcUrl")
+    public String rdsVpcUrl;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -90,6 +93,14 @@ public class DescribeRDSschemasRequest extends TeaModel {
     }
     public String getRdsUserName() {
         return this.rdsUserName;
+    }
+
+    public DescribeRDSschemasRequest setRdsVpcUrl(String rdsVpcUrl) {
+        this.rdsVpcUrl = rdsVpcUrl;
+        return this;
+    }
+    public String getRdsVpcUrl() {
+        return this.rdsVpcUrl;
     }
 
     public DescribeRDSschemasRequest setResourceOwnerAccount(String resourceOwnerAccount) {

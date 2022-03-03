@@ -192,6 +192,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("PublicConnectionString")
         public String publicConnectionString;
 
+        @NameInMap("PublicIpAddr")
+        public String publicIpAddr;
+
         @NameInMap("PublicPort")
         public String publicPort;
 
@@ -224,6 +227,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         @NameInMap("VpcId")
         public String vpcId;
+
+        @NameInMap("VpcIpAddr")
+        public String vpcIpAddr;
 
         @NameInMap("ZoneId")
         public String zoneId;
@@ -449,6 +455,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             return this.publicConnectionString;
         }
 
+        public DescribeDBClusterAttributeResponseBodyDBCluster setPublicIpAddr(String publicIpAddr) {
+            this.publicIpAddr = publicIpAddr;
+            return this;
+        }
+        public String getPublicIpAddr() {
+            return this.publicIpAddr;
+        }
+
         public DescribeDBClusterAttributeResponseBodyDBCluster setPublicPort(String publicPort) {
             this.publicPort = publicPort;
             return this;
@@ -535,6 +549,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setVpcIpAddr(String vpcIpAddr) {
+            this.vpcIpAddr = vpcIpAddr;
+            return this;
+        }
+        public String getVpcIpAddr() {
+            return this.vpcIpAddr;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBCluster setZoneId(String zoneId) {

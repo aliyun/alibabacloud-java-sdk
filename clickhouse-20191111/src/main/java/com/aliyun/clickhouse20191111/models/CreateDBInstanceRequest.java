@@ -37,6 +37,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("EncryptionType")
     public String encryptionType;
 
+    @NameInMap("OpenMonitor")
+    public Boolean openMonitor;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -161,6 +164,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getEncryptionType() {
         return this.encryptionType;
+    }
+
+    public CreateDBInstanceRequest setOpenMonitor(Boolean openMonitor) {
+        this.openMonitor = openMonitor;
+        return this;
+    }
+    public Boolean getOpenMonitor() {
+        return this.openMonitor;
     }
 
     public CreateDBInstanceRequest setOwnerAccount(String ownerAccount) {

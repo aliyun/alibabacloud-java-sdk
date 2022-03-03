@@ -44,6 +44,9 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         @NameInMap("RdsUserName")
         public String rdsUserName;
 
+        @NameInMap("RdsVpcUrl")
+        public String rdsVpcUrl;
+
         @NameInMap("SynDb")
         public String synDb;
 
@@ -85,6 +88,14 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         }
         public String getRdsUserName() {
             return this.rdsUserName;
+        }
+
+        public DescribeSynDbsResponseBodySynDbs setRdsVpcUrl(String rdsVpcUrl) {
+            this.rdsVpcUrl = rdsVpcUrl;
+            return this;
+        }
+        public String getRdsVpcUrl() {
+            return this.rdsVpcUrl;
         }
 
         public DescribeSynDbsResponseBodySynDbs setSynDb(String synDb) {

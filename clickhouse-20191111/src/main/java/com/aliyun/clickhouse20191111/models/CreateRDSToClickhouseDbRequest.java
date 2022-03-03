@@ -40,6 +40,9 @@ public class CreateRDSToClickhouseDbRequest extends TeaModel {
     @NameInMap("RdsVpcId")
     public String rdsVpcId;
 
+    @NameInMap("RdsVpcUrl")
+    public String rdsVpcUrl;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -151,6 +154,14 @@ public class CreateRDSToClickhouseDbRequest extends TeaModel {
     }
     public String getRdsVpcId() {
         return this.rdsVpcId;
+    }
+
+    public CreateRDSToClickhouseDbRequest setRdsVpcUrl(String rdsVpcUrl) {
+        this.rdsVpcUrl = rdsVpcUrl;
+        return this;
+    }
+    public String getRdsVpcUrl() {
+        return this.rdsVpcUrl;
     }
 
     public CreateRDSToClickhouseDbRequest setResourceOwnerAccount(String resourceOwnerAccount) {

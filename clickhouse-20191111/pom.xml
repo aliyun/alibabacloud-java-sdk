@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>clickhouse20191111</artifactId>
-  <version>3.1.0</version>
+  <version>3.1.1</version>
   <packaging>jar</packaging>
   <name>clickhouse20191111</name>
   <description>Alibaba Cloud ClickHouse (20191111) SDK for Java
@@ -156,6 +156,10 @@
                 <relocation>
                   <pattern>com.sun</pattern>
                   <shadedPattern>com.aliyun.clickhouse20191111.external.com.sun</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache</pattern>
+                  <shadedPattern>com.aliyun.clickhouse20191111.external.org.apache</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>
