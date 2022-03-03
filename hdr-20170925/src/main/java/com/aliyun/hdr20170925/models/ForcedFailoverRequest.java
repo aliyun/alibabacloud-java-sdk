@@ -55,9 +55,6 @@ public class ForcedFailoverRequest extends TeaModel {
     @NameInMap("ServerId")
     public String serverId;
 
-    @NameInMap("UserUid")
-    public Long userUid;
-
     public static ForcedFailoverRequest build(java.util.Map<String, ?> map) throws Exception {
         ForcedFailoverRequest self = new ForcedFailoverRequest();
         return TeaModel.build(map, self);
@@ -197,14 +194,6 @@ public class ForcedFailoverRequest extends TeaModel {
     }
     public String getServerId() {
         return this.serverId;
-    }
-
-    public ForcedFailoverRequest setUserUid(Long userUid) {
-        this.userUid = userUid;
-        return this;
-    }
-    public Long getUserUid() {
-        return this.userUid;
     }
 
 }

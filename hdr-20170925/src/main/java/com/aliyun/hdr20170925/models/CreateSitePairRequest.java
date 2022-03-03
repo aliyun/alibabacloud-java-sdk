@@ -4,15 +4,6 @@ package com.aliyun.hdr20170925.models;
 import com.aliyun.tea.*;
 
 public class CreateSitePairRequest extends TeaModel {
-    @NameInMap("CloudSiteName")
-    public String cloudSiteName;
-
-    @NameInMap("LocalGatewayName")
-    public String localGatewayName;
-
-    @NameInMap("LocalSiteName")
-    public String localSiteName;
-
     @NameInMap("PrimarySiteName")
     public String primarySiteName;
 
@@ -52,30 +43,6 @@ public class CreateSitePairRequest extends TeaModel {
     public static CreateSitePairRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSitePairRequest self = new CreateSitePairRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateSitePairRequest setCloudSiteName(String cloudSiteName) {
-        this.cloudSiteName = cloudSiteName;
-        return this;
-    }
-    public String getCloudSiteName() {
-        return this.cloudSiteName;
-    }
-
-    public CreateSitePairRequest setLocalGatewayName(String localGatewayName) {
-        this.localGatewayName = localGatewayName;
-        return this;
-    }
-    public String getLocalGatewayName() {
-        return this.localGatewayName;
-    }
-
-    public CreateSitePairRequest setLocalSiteName(String localSiteName) {
-        this.localSiteName = localSiteName;
-        return this;
-    }
-    public String getLocalSiteName() {
-        return this.localSiteName;
     }
 
     public CreateSitePairRequest setPrimarySiteName(String primarySiteName) {

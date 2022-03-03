@@ -110,9 +110,6 @@ public class DescribeTasksResponseBody extends TeaModel {
         @NameInMap("StatusCode")
         public String statusCode;
 
-        @NameInMap("StatusParams")
-        public String statusParams;
-
         @NameInMap("TargetName")
         public String targetName;
 
@@ -157,14 +154,6 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
         public String getStatusCode() {
             return this.statusCode;
-        }
-
-        public DescribeTasksResponseBodyTasksTask setStatusParams(String statusParams) {
-            this.statusParams = statusParams;
-            return this;
-        }
-        public String getStatusParams() {
-            return this.statusParams;
         }
 
         public DescribeTasksResponseBodyTasksTask setTargetName(String targetName) {

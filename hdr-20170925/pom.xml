@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>hdr20170925</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
   <name>hdr20170925</name>
   <description>Alibaba Cloud Hybrid Disaster Recovery (20170925) SDK for Java

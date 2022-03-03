@@ -40,9 +40,6 @@ public class DescribeAvailableInstanceTypesRequest extends TeaModel {
     @NameInMap("UserClient")
     public Boolean userClient;
 
-    @NameInMap("UserUid")
-    public Long userUid;
-
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -145,14 +142,6 @@ public class DescribeAvailableInstanceTypesRequest extends TeaModel {
     }
     public Boolean getUserClient() {
         return this.userClient;
-    }
-
-    public DescribeAvailableInstanceTypesRequest setUserUid(Long userUid) {
-        this.userUid = userUid;
-        return this;
-    }
-    public Long getUserUid() {
-        return this.userUid;
     }
 
     public DescribeAvailableInstanceTypesRequest setZoneId(String zoneId) {

@@ -4,14 +4,8 @@ package com.aliyun.hdr20170925.models;
 import com.aliyun.tea.*;
 
 public class CreateSitePairResponseBody extends TeaModel {
-    @NameInMap("BucketName")
-    public String bucketName;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("GatewayId")
-    public String gatewayId;
 
     @NameInMap("Message")
     public String message;
@@ -31,20 +25,9 @@ public class CreateSitePairResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Uid")
-    public Long uid;
-
     public static CreateSitePairResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSitePairResponseBody self = new CreateSitePairResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateSitePairResponseBody setBucketName(String bucketName) {
-        this.bucketName = bucketName;
-        return this;
-    }
-    public String getBucketName() {
-        return this.bucketName;
     }
 
     public CreateSitePairResponseBody setCode(String code) {
@@ -53,14 +36,6 @@ public class CreateSitePairResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public CreateSitePairResponseBody setGatewayId(String gatewayId) {
-        this.gatewayId = gatewayId;
-        return this;
-    }
-    public String getGatewayId() {
-        return this.gatewayId;
     }
 
     public CreateSitePairResponseBody setMessage(String message) {
@@ -109,14 +84,6 @@ public class CreateSitePairResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreateSitePairResponseBody setUid(Long uid) {
-        this.uid = uid;
-        return this;
-    }
-    public Long getUid() {
-        return this.uid;
     }
 
 }

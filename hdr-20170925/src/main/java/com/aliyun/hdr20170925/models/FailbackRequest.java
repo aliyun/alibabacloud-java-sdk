@@ -4,20 +4,8 @@ package com.aliyun.hdr20170925.models;
 import com.aliyun.tea.*;
 
 public class FailbackRequest extends TeaModel {
-    @NameInMap("RecoveryComputeResource")
-    public String recoveryComputeResource;
-
     @NameInMap("RecoveryCpu")
     public Integer recoveryCpu;
-
-    @NameInMap("RecoveryDatastore")
-    public String recoveryDatastore;
-
-    @NameInMap("RecoveryDns")
-    public String recoveryDns;
-
-    @NameInMap("RecoveryGateway")
-    public String recoveryGateway;
 
     @NameInMap("RecoveryInfrastructureId")
     public String recoveryInfrastructureId;
@@ -31,14 +19,8 @@ public class FailbackRequest extends TeaModel {
     @NameInMap("RecoveryIpAddress")
     public String recoveryIpAddress;
 
-    @NameInMap("RecoveryLocation")
-    public String recoveryLocation;
-
     @NameInMap("RecoveryMemory")
     public Long recoveryMemory;
-
-    @NameInMap("RecoveryNetMask")
-    public String recoveryNetMask;
 
     @NameInMap("RecoveryNetwork")
     public String recoveryNetwork;
@@ -64,20 +46,9 @@ public class FailbackRequest extends TeaModel {
     @NameInMap("ServerId")
     public String serverId;
 
-    @NameInMap("UserUid")
-    public Long userUid;
-
     public static FailbackRequest build(java.util.Map<String, ?> map) throws Exception {
         FailbackRequest self = new FailbackRequest();
         return TeaModel.build(map, self);
-    }
-
-    public FailbackRequest setRecoveryComputeResource(String recoveryComputeResource) {
-        this.recoveryComputeResource = recoveryComputeResource;
-        return this;
-    }
-    public String getRecoveryComputeResource() {
-        return this.recoveryComputeResource;
     }
 
     public FailbackRequest setRecoveryCpu(Integer recoveryCpu) {
@@ -86,30 +57,6 @@ public class FailbackRequest extends TeaModel {
     }
     public Integer getRecoveryCpu() {
         return this.recoveryCpu;
-    }
-
-    public FailbackRequest setRecoveryDatastore(String recoveryDatastore) {
-        this.recoveryDatastore = recoveryDatastore;
-        return this;
-    }
-    public String getRecoveryDatastore() {
-        return this.recoveryDatastore;
-    }
-
-    public FailbackRequest setRecoveryDns(String recoveryDns) {
-        this.recoveryDns = recoveryDns;
-        return this;
-    }
-    public String getRecoveryDns() {
-        return this.recoveryDns;
-    }
-
-    public FailbackRequest setRecoveryGateway(String recoveryGateway) {
-        this.recoveryGateway = recoveryGateway;
-        return this;
-    }
-    public String getRecoveryGateway() {
-        return this.recoveryGateway;
     }
 
     public FailbackRequest setRecoveryInfrastructureId(String recoveryInfrastructureId) {
@@ -144,28 +91,12 @@ public class FailbackRequest extends TeaModel {
         return this.recoveryIpAddress;
     }
 
-    public FailbackRequest setRecoveryLocation(String recoveryLocation) {
-        this.recoveryLocation = recoveryLocation;
-        return this;
-    }
-    public String getRecoveryLocation() {
-        return this.recoveryLocation;
-    }
-
     public FailbackRequest setRecoveryMemory(Long recoveryMemory) {
         this.recoveryMemory = recoveryMemory;
         return this;
     }
     public Long getRecoveryMemory() {
         return this.recoveryMemory;
-    }
-
-    public FailbackRequest setRecoveryNetMask(String recoveryNetMask) {
-        this.recoveryNetMask = recoveryNetMask;
-        return this;
-    }
-    public String getRecoveryNetMask() {
-        return this.recoveryNetMask;
     }
 
     public FailbackRequest setRecoveryNetwork(String recoveryNetwork) {
@@ -230,14 +161,6 @@ public class FailbackRequest extends TeaModel {
     }
     public String getServerId() {
         return this.serverId;
-    }
-
-    public FailbackRequest setUserUid(Long userUid) {
-        this.userUid = userUid;
-        return this;
-    }
-    public Long getUserUid() {
-        return this.userUid;
     }
 
 }

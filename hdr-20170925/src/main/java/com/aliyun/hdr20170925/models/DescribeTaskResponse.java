@@ -3,21 +3,21 @@ package com.aliyun.hdr20170925.models;
 
 import com.aliyun.tea.*;
 
-public class ReversedRegisterServerResponse extends TeaModel {
+public class DescribeTaskResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public ReversedRegisterServerResponseBody body;
+    public DescribeTaskResponseBody body;
 
-    public static ReversedRegisterServerResponse build(java.util.Map<String, ?> map) throws Exception {
-        ReversedRegisterServerResponse self = new ReversedRegisterServerResponse();
+    public static DescribeTaskResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeTaskResponse self = new DescribeTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public ReversedRegisterServerResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeTaskResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class ReversedRegisterServerResponse extends TeaModel {
         return this.headers;
     }
 
-    public ReversedRegisterServerResponse setBody(ReversedRegisterServerResponseBody body) {
+    public DescribeTaskResponse setBody(DescribeTaskResponseBody body) {
         this.body = body;
         return this;
     }
-    public ReversedRegisterServerResponseBody getBody() {
+    public DescribeTaskResponseBody getBody() {
         return this.body;
     }
 

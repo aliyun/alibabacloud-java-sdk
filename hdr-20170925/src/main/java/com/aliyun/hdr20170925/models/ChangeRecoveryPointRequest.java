@@ -55,9 +55,6 @@ public class ChangeRecoveryPointRequest extends TeaModel {
     @NameInMap("ServerId")
     public String serverId;
 
-    @NameInMap("UserUid")
-    public Long userUid;
-
     public static ChangeRecoveryPointRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeRecoveryPointRequest self = new ChangeRecoveryPointRequest();
         return TeaModel.build(map, self);
@@ -197,14 +194,6 @@ public class ChangeRecoveryPointRequest extends TeaModel {
     }
     public String getServerId() {
         return this.serverId;
-    }
-
-    public ChangeRecoveryPointRequest setUserUid(Long userUid) {
-        this.userUid = userUid;
-        return this;
-    }
-    public Long getUserUid() {
-        return this.userUid;
     }
 
 }

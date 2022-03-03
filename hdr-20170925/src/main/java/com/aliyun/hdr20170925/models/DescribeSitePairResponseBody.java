@@ -4,20 +4,11 @@ package com.aliyun.hdr20170925.models;
 import com.aliyun.tea.*;
 
 public class DescribeSitePairResponseBody extends TeaModel {
-    @NameInMap("BucketName")
-    public String bucketName;
-
-    @NameInMap("CloudSiteName")
-    public String cloudSiteName;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("CreatedTime")
     public Long createdTime;
-
-    @NameInMap("LocalSiteName")
-    public String localSiteName;
 
     @NameInMap("Message")
     public String message;
@@ -54,22 +45,6 @@ public class DescribeSitePairResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeSitePairResponseBody setBucketName(String bucketName) {
-        this.bucketName = bucketName;
-        return this;
-    }
-    public String getBucketName() {
-        return this.bucketName;
-    }
-
-    public DescribeSitePairResponseBody setCloudSiteName(String cloudSiteName) {
-        this.cloudSiteName = cloudSiteName;
-        return this;
-    }
-    public String getCloudSiteName() {
-        return this.cloudSiteName;
-    }
-
     public DescribeSitePairResponseBody setCode(String code) {
         this.code = code;
         return this;
@@ -84,14 +59,6 @@ public class DescribeSitePairResponseBody extends TeaModel {
     }
     public Long getCreatedTime() {
         return this.createdTime;
-    }
-
-    public DescribeSitePairResponseBody setLocalSiteName(String localSiteName) {
-        this.localSiteName = localSiteName;
-        return this;
-    }
-    public String getLocalSiteName() {
-        return this.localSiteName;
     }
 
     public DescribeSitePairResponseBody setMessage(String message) {
