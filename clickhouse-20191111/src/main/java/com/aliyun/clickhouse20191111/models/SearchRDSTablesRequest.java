@@ -25,6 +25,9 @@ public class SearchRDSTablesRequest extends TeaModel {
     @NameInMap("RdsUserName")
     public String rdsUserName;
 
+    @NameInMap("RdsVpcUrl")
+    public String rdsVpcUrl;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -93,6 +96,14 @@ public class SearchRDSTablesRequest extends TeaModel {
     }
     public String getRdsUserName() {
         return this.rdsUserName;
+    }
+
+    public SearchRDSTablesRequest setRdsVpcUrl(String rdsVpcUrl) {
+        this.rdsVpcUrl = rdsVpcUrl;
+        return this;
+    }
+    public String getRdsVpcUrl() {
+        return this.rdsVpcUrl;
     }
 
     public SearchRDSTablesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
