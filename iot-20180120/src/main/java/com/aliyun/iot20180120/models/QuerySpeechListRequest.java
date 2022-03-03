@@ -4,6 +4,9 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySpeechListRequest extends TeaModel {
+    @NameInMap("AudioFormat")
+    public String audioFormat;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -19,6 +22,14 @@ public class QuerySpeechListRequest extends TeaModel {
     public static QuerySpeechListRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySpeechListRequest self = new QuerySpeechListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySpeechListRequest setAudioFormat(String audioFormat) {
+        this.audioFormat = audioFormat;
+        return this;
+    }
+    public String getAudioFormat() {
+        return this.audioFormat;
     }
 
     public QuerySpeechListRequest setIotInstanceId(String iotInstanceId) {

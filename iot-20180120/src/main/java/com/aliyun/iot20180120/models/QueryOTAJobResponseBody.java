@@ -136,6 +136,9 @@ public class QueryOTAJobResponseBody extends TeaModel {
         @NameInMap("DestVersion")
         public String destVersion;
 
+        @NameInMap("DownloadProtocol")
+        public String downloadProtocol;
+
         @NameInMap("DynamicMode")
         public Integer dynamicMode;
 
@@ -144,6 +147,12 @@ public class QueryOTAJobResponseBody extends TeaModel {
 
         @NameInMap("GrayPercent")
         public String grayPercent;
+
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("GroupName")
+        public String groupName;
 
         @NameInMap("JobDesc")
         public String jobDesc;
@@ -159,6 +168,9 @@ public class QueryOTAJobResponseBody extends TeaModel {
 
         @NameInMap("MaximumPerMinute")
         public Integer maximumPerMinute;
+
+        @NameInMap("MultiModuleMode")
+        public Boolean multiModuleMode;
 
         @NameInMap("Name")
         public String name;
@@ -227,6 +239,14 @@ public class QueryOTAJobResponseBody extends TeaModel {
             return this.destVersion;
         }
 
+        public QueryOTAJobResponseBodyData setDownloadProtocol(String downloadProtocol) {
+            this.downloadProtocol = downloadProtocol;
+            return this;
+        }
+        public String getDownloadProtocol() {
+            return this.downloadProtocol;
+        }
+
         public QueryOTAJobResponseBodyData setDynamicMode(Integer dynamicMode) {
             this.dynamicMode = dynamicMode;
             return this;
@@ -249,6 +269,22 @@ public class QueryOTAJobResponseBody extends TeaModel {
         }
         public String getGrayPercent() {
             return this.grayPercent;
+        }
+
+        public QueryOTAJobResponseBodyData setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public QueryOTAJobResponseBodyData setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
         }
 
         public QueryOTAJobResponseBodyData setJobDesc(String jobDesc) {
@@ -289,6 +325,14 @@ public class QueryOTAJobResponseBody extends TeaModel {
         }
         public Integer getMaximumPerMinute() {
             return this.maximumPerMinute;
+        }
+
+        public QueryOTAJobResponseBodyData setMultiModuleMode(Boolean multiModuleMode) {
+            this.multiModuleMode = multiModuleMode;
+            return this;
+        }
+        public Boolean getMultiModuleMode() {
+            return this.multiModuleMode;
         }
 
         public QueryOTAJobResponseBodyData setName(String name) {

@@ -77,18 +77,18 @@ public class DeleteTopicRouteTableResponseBody extends TeaModel {
 
     public static class DeleteTopicRouteTableResponseBodyFailureTopics extends TeaModel {
         @NameInMap("Topic")
-        public java.util.List<java.util.Map<String, String>> topic;
+        public java.util.List<java.util.Map<String, ?>> topic;
 
         public static DeleteTopicRouteTableResponseBodyFailureTopics build(java.util.Map<String, ?> map) throws Exception {
             DeleteTopicRouteTableResponseBodyFailureTopics self = new DeleteTopicRouteTableResponseBodyFailureTopics();
             return TeaModel.build(map, self);
         }
 
-        public DeleteTopicRouteTableResponseBodyFailureTopics setTopic(java.util.List<java.util.Map<String, String>> topic) {
+        public DeleteTopicRouteTableResponseBodyFailureTopics setTopic(java.util.List<java.util.Map<String, ?>> topic) {
             this.topic = topic;
             return this;
         }
-        public java.util.List<java.util.Map<String, String>> getTopic() {
+        public java.util.List<java.util.Map<String, ?>> getTopic() {
             return this.topic;
         }
 

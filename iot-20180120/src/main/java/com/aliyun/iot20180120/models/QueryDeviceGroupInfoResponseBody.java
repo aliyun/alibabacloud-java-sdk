@@ -74,6 +74,9 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
         @NameInMap("DeviceOnline")
         public Integer deviceOnline;
 
+        @NameInMap("DynamicGroupExpression")
+        public String dynamicGroupExpression;
+
         @NameInMap("GroupDesc")
         public String groupDesc;
 
@@ -113,6 +116,14 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
         }
         public Integer getDeviceOnline() {
             return this.deviceOnline;
+        }
+
+        public QueryDeviceGroupInfoResponseBodyData setDynamicGroupExpression(String dynamicGroupExpression) {
+            this.dynamicGroupExpression = dynamicGroupExpression;
+            return this;
+        }
+        public String getDynamicGroupExpression() {
+            return this.dynamicGroupExpression;
         }
 
         public QueryDeviceGroupInfoResponseBodyData setGroupDesc(String groupDesc) {

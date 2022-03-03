@@ -7,17 +7,29 @@ public class CreateOTAStaticUpgradeJobRequest extends TeaModel {
     @NameInMap("DnListFileUrl")
     public String dnListFileUrl;
 
+    @NameInMap("DownloadProtocol")
+    public String downloadProtocol;
+
     @NameInMap("FirmwareId")
     public String firmwareId;
 
     @NameInMap("GrayPercent")
     public String grayPercent;
 
+    @NameInMap("GroupId")
+    public String groupId;
+
+    @NameInMap("GroupType")
+    public String groupType;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("MaximumPerMinute")
     public Integer maximumPerMinute;
+
+    @NameInMap("MultiModuleMode")
+    public Boolean multiModuleMode;
 
     @NameInMap("NeedConfirm")
     public Boolean needConfirm;
@@ -71,6 +83,14 @@ public class CreateOTAStaticUpgradeJobRequest extends TeaModel {
         return this.dnListFileUrl;
     }
 
+    public CreateOTAStaticUpgradeJobRequest setDownloadProtocol(String downloadProtocol) {
+        this.downloadProtocol = downloadProtocol;
+        return this;
+    }
+    public String getDownloadProtocol() {
+        return this.downloadProtocol;
+    }
+
     public CreateOTAStaticUpgradeJobRequest setFirmwareId(String firmwareId) {
         this.firmwareId = firmwareId;
         return this;
@@ -87,6 +107,22 @@ public class CreateOTAStaticUpgradeJobRequest extends TeaModel {
         return this.grayPercent;
     }
 
+    public CreateOTAStaticUpgradeJobRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public CreateOTAStaticUpgradeJobRequest setGroupType(String groupType) {
+        this.groupType = groupType;
+        return this;
+    }
+    public String getGroupType() {
+        return this.groupType;
+    }
+
     public CreateOTAStaticUpgradeJobRequest setIotInstanceId(String iotInstanceId) {
         this.iotInstanceId = iotInstanceId;
         return this;
@@ -101,6 +137,14 @@ public class CreateOTAStaticUpgradeJobRequest extends TeaModel {
     }
     public Integer getMaximumPerMinute() {
         return this.maximumPerMinute;
+    }
+
+    public CreateOTAStaticUpgradeJobRequest setMultiModuleMode(Boolean multiModuleMode) {
+        this.multiModuleMode = multiModuleMode;
+        return this;
+    }
+    public Boolean getMultiModuleMode() {
+        return this.multiModuleMode;
     }
 
     public CreateOTAStaticUpgradeJobRequest setNeedConfirm(Boolean needConfirm) {

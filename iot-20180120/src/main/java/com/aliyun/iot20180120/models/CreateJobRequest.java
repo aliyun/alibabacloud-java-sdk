@@ -14,22 +14,22 @@ public class CreateJobRequest extends TeaModel {
     public String jobDocument;
 
     @NameInMap("JobFile")
-    public String jobFile;
+    public java.util.Map<String, ?> jobFile;
 
     @NameInMap("JobName")
     public String jobName;
 
     @NameInMap("RolloutConfig")
-    public String rolloutConfig;
+    public java.util.Map<String, ?> rolloutConfig;
 
     @NameInMap("ScheduledTime")
     public Long scheduledTime;
 
     @NameInMap("TargetConfig")
-    public String targetConfig;
+    public java.util.Map<String, ?> targetConfig;
 
     @NameInMap("TimeoutConfig")
-    public String timeoutConfig;
+    public java.util.Map<String, ?> timeoutConfig;
 
     @NameInMap("Type")
     public String type;
@@ -63,11 +63,11 @@ public class CreateJobRequest extends TeaModel {
         return this.jobDocument;
     }
 
-    public CreateJobRequest setJobFile(String jobFile) {
+    public CreateJobRequest setJobFile(java.util.Map<String, ?> jobFile) {
         this.jobFile = jobFile;
         return this;
     }
-    public String getJobFile() {
+    public java.util.Map<String, ?> getJobFile() {
         return this.jobFile;
     }
 
@@ -79,11 +79,11 @@ public class CreateJobRequest extends TeaModel {
         return this.jobName;
     }
 
-    public CreateJobRequest setRolloutConfig(String rolloutConfig) {
+    public CreateJobRequest setRolloutConfig(java.util.Map<String, ?> rolloutConfig) {
         this.rolloutConfig = rolloutConfig;
         return this;
     }
-    public String getRolloutConfig() {
+    public java.util.Map<String, ?> getRolloutConfig() {
         return this.rolloutConfig;
     }
 
@@ -95,19 +95,19 @@ public class CreateJobRequest extends TeaModel {
         return this.scheduledTime;
     }
 
-    public CreateJobRequest setTargetConfig(String targetConfig) {
+    public CreateJobRequest setTargetConfig(java.util.Map<String, ?> targetConfig) {
         this.targetConfig = targetConfig;
         return this;
     }
-    public String getTargetConfig() {
+    public java.util.Map<String, ?> getTargetConfig() {
         return this.targetConfig;
     }
 
-    public CreateJobRequest setTimeoutConfig(String timeoutConfig) {
+    public CreateJobRequest setTimeoutConfig(java.util.Map<String, ?> timeoutConfig) {
         this.timeoutConfig = timeoutConfig;
         return this;
     }
-    public String getTimeoutConfig() {
+    public java.util.Map<String, ?> getTimeoutConfig() {
         return this.timeoutConfig;
     }
 

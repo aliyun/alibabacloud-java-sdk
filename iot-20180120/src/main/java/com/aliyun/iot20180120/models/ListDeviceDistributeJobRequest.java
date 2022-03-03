@@ -16,6 +16,9 @@ public class ListDeviceDistributeJobRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProductKey")
+    public String productKey;
+
     @NameInMap("Status")
     public Integer status;
 
@@ -57,6 +60,14 @@ public class ListDeviceDistributeJobRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListDeviceDistributeJobRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
     }
 
     public ListDeviceDistributeJobRequest setStatus(Integer status) {

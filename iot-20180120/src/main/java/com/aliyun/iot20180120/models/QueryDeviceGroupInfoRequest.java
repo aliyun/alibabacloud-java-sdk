@@ -7,6 +7,9 @@ public class QueryDeviceGroupInfoRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("GroupType")
+    public String groupType;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -21,6 +24,14 @@ public class QueryDeviceGroupInfoRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public QueryDeviceGroupInfoRequest setGroupType(String groupType) {
+        this.groupType = groupType;
+        return this;
+    }
+    public String getGroupType() {
+        return this.groupType;
     }
 
     public QueryDeviceGroupInfoRequest setIotInstanceId(String iotInstanceId) {

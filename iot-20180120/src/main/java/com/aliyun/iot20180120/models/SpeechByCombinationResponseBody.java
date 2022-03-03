@@ -54,6 +54,9 @@ public class SpeechByCombinationResponseBody extends TeaModel {
     }
 
     public static class SyncSpeechByCombinationResponseBodyData extends TeaModel {
+        @NameInMap("Detail")
+        public String detail;
+
         @NameInMap("DeviceErrorCode")
         public String deviceErrorCode;
 
@@ -75,6 +78,14 @@ public class SpeechByCombinationResponseBody extends TeaModel {
         public static SyncSpeechByCombinationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             SyncSpeechByCombinationResponseBodyData self = new SyncSpeechByCombinationResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public SyncSpeechByCombinationResponseBodyData setDetail(String detail) {
+            this.detail = detail;
+            return this;
+        }
+        public String getDetail() {
+            return this.detail;
         }
 
         public SyncSpeechByCombinationResponseBodyData setDeviceErrorCode(String deviceErrorCode) {

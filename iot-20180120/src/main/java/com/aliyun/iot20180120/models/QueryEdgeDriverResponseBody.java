@@ -83,6 +83,9 @@ public class QueryEdgeDriverResponseBody extends TeaModel {
         @NameInMap("GmtModifiedTimestamp")
         public Long gmtModifiedTimestamp;
 
+        @NameInMap("IsApply")
+        public Boolean isApply;
+
         @NameInMap("IsBuiltIn")
         public Boolean isBuiltIn;
 
@@ -143,6 +146,14 @@ public class QueryEdgeDriverResponseBody extends TeaModel {
         }
         public Long getGmtModifiedTimestamp() {
             return this.gmtModifiedTimestamp;
+        }
+
+        public QueryEdgeDriverResponseBodyDataDriverList setIsApply(Boolean isApply) {
+            this.isApply = isApply;
+            return this;
+        }
+        public Boolean getIsApply() {
+            return this.isApply;
         }
 
         public QueryEdgeDriverResponseBodyDataDriverList setIsBuiltIn(Boolean isBuiltIn) {

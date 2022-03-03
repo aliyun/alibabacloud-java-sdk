@@ -118,6 +118,9 @@ public class QueryDeviceGroupListResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
+        @NameInMap("GroupType")
+        public String groupType;
+
         @NameInMap("UtcCreate")
         public String utcCreate;
 
@@ -148,6 +151,14 @@ public class QueryDeviceGroupListResponseBody extends TeaModel {
         }
         public String getGroupName() {
             return this.groupName;
+        }
+
+        public QueryDeviceGroupListResponseBodyDataGroupInfo setGroupType(String groupType) {
+            this.groupType = groupType;
+            return this;
+        }
+        public String getGroupType() {
+            return this.groupType;
         }
 
         public QueryDeviceGroupListResponseBodyDataGroupInfo setUtcCreate(String utcCreate) {

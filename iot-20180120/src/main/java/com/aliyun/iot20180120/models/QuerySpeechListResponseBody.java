@@ -136,6 +136,9 @@ public class QuerySpeechListResponseBody extends TeaModel {
     }
 
     public static class QuerySpeechListResponseBodyDataListItems extends TeaModel {
+        @NameInMap("AudioFormat")
+        public String audioFormat;
+
         @NameInMap("BizCode")
         public String bizCode;
 
@@ -157,6 +160,14 @@ public class QuerySpeechListResponseBody extends TeaModel {
         public static QuerySpeechListResponseBodyDataListItems build(java.util.Map<String, ?> map) throws Exception {
             QuerySpeechListResponseBodyDataListItems self = new QuerySpeechListResponseBodyDataListItems();
             return TeaModel.build(map, self);
+        }
+
+        public QuerySpeechListResponseBodyDataListItems setAudioFormat(String audioFormat) {
+            this.audioFormat = audioFormat;
+            return this;
+        }
+        public String getAudioFormat() {
+            return this.audioFormat;
         }
 
         public QuerySpeechListResponseBodyDataListItems setBizCode(String bizCode) {

@@ -64,6 +64,69 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class QueryOTAFirmwareResponseBodyFirmwareInfoMultiFiles extends TeaModel {
+        @NameInMap("FileMd5")
+        public String fileMd5;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("SignValue")
+        public String signValue;
+
+        @NameInMap("Size")
+        public Integer size;
+
+        @NameInMap("Url")
+        public String url;
+
+        public static QueryOTAFirmwareResponseBodyFirmwareInfoMultiFiles build(java.util.Map<String, ?> map) throws Exception {
+            QueryOTAFirmwareResponseBodyFirmwareInfoMultiFiles self = new QueryOTAFirmwareResponseBodyFirmwareInfoMultiFiles();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryOTAFirmwareResponseBodyFirmwareInfoMultiFiles setFileMd5(String fileMd5) {
+            this.fileMd5 = fileMd5;
+            return this;
+        }
+        public String getFileMd5() {
+            return this.fileMd5;
+        }
+
+        public QueryOTAFirmwareResponseBodyFirmwareInfoMultiFiles setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public QueryOTAFirmwareResponseBodyFirmwareInfoMultiFiles setSignValue(String signValue) {
+            this.signValue = signValue;
+            return this;
+        }
+        public String getSignValue() {
+            return this.signValue;
+        }
+
+        public QueryOTAFirmwareResponseBodyFirmwareInfoMultiFiles setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public QueryOTAFirmwareResponseBodyFirmwareInfoMultiFiles setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
     public static class QueryOTAFirmwareResponseBodyFirmwareInfo extends TeaModel {
         @NameInMap("DestVersion")
         public String destVersion;
@@ -88,6 +151,9 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
 
         @NameInMap("ModuleName")
         public String moduleName;
+
+        @NameInMap("MultiFiles")
+        public java.util.List<QueryOTAFirmwareResponseBodyFirmwareInfoMultiFiles> multiFiles;
 
         @NameInMap("ProductKey")
         public String productKey;
@@ -186,6 +252,14 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
         }
         public String getModuleName() {
             return this.moduleName;
+        }
+
+        public QueryOTAFirmwareResponseBodyFirmwareInfo setMultiFiles(java.util.List<QueryOTAFirmwareResponseBodyFirmwareInfoMultiFiles> multiFiles) {
+            this.multiFiles = multiFiles;
+            return this;
+        }
+        public java.util.List<QueryOTAFirmwareResponseBodyFirmwareInfoMultiFiles> getMultiFiles() {
+            return this.multiFiles;
         }
 
         public QueryOTAFirmwareResponseBodyFirmwareInfo setProductKey(String productKey) {

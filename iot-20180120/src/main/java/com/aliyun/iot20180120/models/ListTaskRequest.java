@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTaskRequest extends TeaModel {
     @NameInMap("Device")
-    public String device;
+    public java.util.Map<String, ?> device;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
@@ -27,11 +27,11 @@ public class ListTaskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListTaskRequest setDevice(String device) {
+    public ListTaskRequest setDevice(java.util.Map<String, ?> device) {
         this.device = device;
         return this;
     }
-    public String getDevice() {
+    public java.util.Map<String, ?> getDevice() {
         return this.device;
     }
 

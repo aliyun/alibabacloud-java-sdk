@@ -10,6 +10,9 @@ public class UpdateDeviceGroupRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("GroupType")
+    public String groupType;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -32,6 +35,14 @@ public class UpdateDeviceGroupRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public UpdateDeviceGroupRequest setGroupType(String groupType) {
+        this.groupType = groupType;
+        return this;
+    }
+    public String getGroupType() {
+        return this.groupType;
     }
 
     public UpdateDeviceGroupRequest setIotInstanceId(String iotInstanceId) {
