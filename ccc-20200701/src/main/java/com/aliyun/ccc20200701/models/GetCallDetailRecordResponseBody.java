@@ -65,6 +65,9 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
     }
 
     public static class GetCallDetailRecordResponseBodyDataAgentEventsEventSequence extends TeaModel {
+        @NameInMap("Duration")
+        public Long duration;
+
         @NameInMap("Event")
         public String event;
 
@@ -74,6 +77,14 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public static GetCallDetailRecordResponseBodyDataAgentEventsEventSequence build(java.util.Map<String, ?> map) throws Exception {
             GetCallDetailRecordResponseBodyDataAgentEventsEventSequence self = new GetCallDetailRecordResponseBodyDataAgentEventsEventSequence();
             return TeaModel.build(map, self);
+        }
+
+        public GetCallDetailRecordResponseBodyDataAgentEventsEventSequence setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
         }
 
         public GetCallDetailRecordResponseBodyDataAgentEventsEventSequence setEvent(String event) {
