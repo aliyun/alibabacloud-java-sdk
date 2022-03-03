@@ -107,9 +107,6 @@ public class DescribeServersResponseBody extends TeaModel {
         @NameInMap("Alias")
         public String alias;
 
-        @NameInMap("AppConsistentPointPolicy")
-        public String appConsistentPointPolicy;
-
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
@@ -179,12 +176,6 @@ public class DescribeServersResponseBody extends TeaModel {
         @NameInMap("RecoveryCpu")
         public Integer recoveryCpu;
 
-        @NameInMap("RecoveryInfrastructureId")
-        public String recoveryInfrastructureId;
-
-        @NameInMap("RecoveryInfrastructureType")
-        public String recoveryInfrastructureType;
-
         @NameInMap("RecoveryInstanceName")
         public String recoveryInstanceName;
 
@@ -218,32 +209,11 @@ public class DescribeServersResponseBody extends TeaModel {
         @NameInMap("RecoveryUseSsd")
         public Boolean recoveryUseSsd;
 
-        @NameInMap("ReplicationComputeResource")
-        public String replicationComputeResource;
-
-        @NameInMap("ReplicationDatastore")
-        public String replicationDatastore;
-
-        @NameInMap("ReplicationDns")
-        public String replicationDns;
-
-        @NameInMap("ReplicationGateway")
-        public String replicationGateway;
-
         @NameInMap("ReplicationInfrastructureId")
         public String replicationInfrastructureId;
 
         @NameInMap("ReplicationInfrastructureType")
         public String replicationInfrastructureType;
-
-        @NameInMap("ReplicationIpAddress")
-        public String replicationIpAddress;
-
-        @NameInMap("ReplicationLocation")
-        public String replicationLocation;
-
-        @NameInMap("ReplicationNetMask")
-        public String replicationNetMask;
 
         @NameInMap("ReplicationNetwork")
         public String replicationNetwork;
@@ -293,9 +263,6 @@ public class DescribeServersResponseBody extends TeaModel {
         @NameInMap("TestRecoveredIpAddress")
         public String testRecoveredIpAddress;
 
-        @NameInMap("UpgradeStatus")
-        public String upgradeStatus;
-
         public static DescribeServersResponseBodyServersServer build(java.util.Map<String, ?> map) throws Exception {
             DescribeServersResponseBodyServersServer self = new DescribeServersResponseBodyServersServer();
             return TeaModel.build(map, self);
@@ -323,14 +290,6 @@ public class DescribeServersResponseBody extends TeaModel {
         }
         public String getAlias() {
             return this.alias;
-        }
-
-        public DescribeServersResponseBodyServersServer setAppConsistentPointPolicy(String appConsistentPointPolicy) {
-            this.appConsistentPointPolicy = appConsistentPointPolicy;
-            return this;
-        }
-        public String getAppConsistentPointPolicy() {
-            return this.appConsistentPointPolicy;
         }
 
         public DescribeServersResponseBodyServersServer setConnectionStatus(String connectionStatus) {
@@ -517,22 +476,6 @@ public class DescribeServersResponseBody extends TeaModel {
             return this.recoveryCpu;
         }
 
-        public DescribeServersResponseBodyServersServer setRecoveryInfrastructureId(String recoveryInfrastructureId) {
-            this.recoveryInfrastructureId = recoveryInfrastructureId;
-            return this;
-        }
-        public String getRecoveryInfrastructureId() {
-            return this.recoveryInfrastructureId;
-        }
-
-        public DescribeServersResponseBodyServersServer setRecoveryInfrastructureType(String recoveryInfrastructureType) {
-            this.recoveryInfrastructureType = recoveryInfrastructureType;
-            return this;
-        }
-        public String getRecoveryInfrastructureType() {
-            return this.recoveryInfrastructureType;
-        }
-
         public DescribeServersResponseBodyServersServer setRecoveryInstanceName(String recoveryInstanceName) {
             this.recoveryInstanceName = recoveryInstanceName;
             return this;
@@ -621,38 +564,6 @@ public class DescribeServersResponseBody extends TeaModel {
             return this.recoveryUseSsd;
         }
 
-        public DescribeServersResponseBodyServersServer setReplicationComputeResource(String replicationComputeResource) {
-            this.replicationComputeResource = replicationComputeResource;
-            return this;
-        }
-        public String getReplicationComputeResource() {
-            return this.replicationComputeResource;
-        }
-
-        public DescribeServersResponseBodyServersServer setReplicationDatastore(String replicationDatastore) {
-            this.replicationDatastore = replicationDatastore;
-            return this;
-        }
-        public String getReplicationDatastore() {
-            return this.replicationDatastore;
-        }
-
-        public DescribeServersResponseBodyServersServer setReplicationDns(String replicationDns) {
-            this.replicationDns = replicationDns;
-            return this;
-        }
-        public String getReplicationDns() {
-            return this.replicationDns;
-        }
-
-        public DescribeServersResponseBodyServersServer setReplicationGateway(String replicationGateway) {
-            this.replicationGateway = replicationGateway;
-            return this;
-        }
-        public String getReplicationGateway() {
-            return this.replicationGateway;
-        }
-
         public DescribeServersResponseBodyServersServer setReplicationInfrastructureId(String replicationInfrastructureId) {
             this.replicationInfrastructureId = replicationInfrastructureId;
             return this;
@@ -667,30 +578,6 @@ public class DescribeServersResponseBody extends TeaModel {
         }
         public String getReplicationInfrastructureType() {
             return this.replicationInfrastructureType;
-        }
-
-        public DescribeServersResponseBodyServersServer setReplicationIpAddress(String replicationIpAddress) {
-            this.replicationIpAddress = replicationIpAddress;
-            return this;
-        }
-        public String getReplicationIpAddress() {
-            return this.replicationIpAddress;
-        }
-
-        public DescribeServersResponseBodyServersServer setReplicationLocation(String replicationLocation) {
-            this.replicationLocation = replicationLocation;
-            return this;
-        }
-        public String getReplicationLocation() {
-            return this.replicationLocation;
-        }
-
-        public DescribeServersResponseBodyServersServer setReplicationNetMask(String replicationNetMask) {
-            this.replicationNetMask = replicationNetMask;
-            return this;
-        }
-        public String getReplicationNetMask() {
-            return this.replicationNetMask;
         }
 
         public DescribeServersResponseBodyServersServer setReplicationNetwork(String replicationNetwork) {
@@ -819,14 +706,6 @@ public class DescribeServersResponseBody extends TeaModel {
         }
         public String getTestRecoveredIpAddress() {
             return this.testRecoveredIpAddress;
-        }
-
-        public DescribeServersResponseBodyServersServer setUpgradeStatus(String upgradeStatus) {
-            this.upgradeStatus = upgradeStatus;
-            return this;
-        }
-        public String getUpgradeStatus() {
-            return this.upgradeStatus;
         }
 
     }

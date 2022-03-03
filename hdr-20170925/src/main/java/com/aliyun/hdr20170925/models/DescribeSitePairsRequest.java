@@ -10,14 +10,8 @@ public class DescribeSitePairsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("SitePairType")
     public String sitePairType;
-
-    @NameInMap("UserUid")
-    public Long userUid;
 
     public static DescribeSitePairsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSitePairsRequest self = new DescribeSitePairsRequest();
@@ -40,28 +34,12 @@ public class DescribeSitePairsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeSitePairsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public DescribeSitePairsRequest setSitePairType(String sitePairType) {
         this.sitePairType = sitePairType;
         return this;
     }
     public String getSitePairType() {
         return this.sitePairType;
-    }
-
-    public DescribeSitePairsRequest setUserUid(Long userUid) {
-        this.userUid = userUid;
-        return this;
-    }
-    public Long getUserUid() {
-        return this.userUid;
     }
 
 }

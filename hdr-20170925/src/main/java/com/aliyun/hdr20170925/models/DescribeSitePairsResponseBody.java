@@ -150,12 +150,6 @@ public class DescribeSitePairsResponseBody extends TeaModel {
     }
 
     public static class DescribeSitePairsResponseBodySitePairsSitePair extends TeaModel {
-        @NameInMap("BucketName")
-        public String bucketName;
-
-        @NameInMap("BucketSize")
-        public Long bucketSize;
-
         @NameInMap("CloudSiteName")
         public String cloudSiteName;
 
@@ -189,31 +183,12 @@ public class DescribeSitePairsResponseBody extends TeaModel {
         @NameInMap("SitePairType")
         public String sitePairType;
 
-        @NameInMap("UpgradeStatus")
-        public String upgradeStatus;
-
         @NameInMap("Version")
         public String version;
 
         public static DescribeSitePairsResponseBodySitePairsSitePair build(java.util.Map<String, ?> map) throws Exception {
             DescribeSitePairsResponseBodySitePairsSitePair self = new DescribeSitePairsResponseBodySitePairsSitePair();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSitePairsResponseBodySitePairsSitePair setBucketName(String bucketName) {
-            this.bucketName = bucketName;
-            return this;
-        }
-        public String getBucketName() {
-            return this.bucketName;
-        }
-
-        public DescribeSitePairsResponseBodySitePairsSitePair setBucketSize(Long bucketSize) {
-            this.bucketSize = bucketSize;
-            return this;
-        }
-        public Long getBucketSize() {
-            return this.bucketSize;
         }
 
         public DescribeSitePairsResponseBodySitePairsSitePair setCloudSiteName(String cloudSiteName) {
@@ -302,14 +277,6 @@ public class DescribeSitePairsResponseBody extends TeaModel {
         }
         public String getSitePairType() {
             return this.sitePairType;
-        }
-
-        public DescribeSitePairsResponseBodySitePairsSitePair setUpgradeStatus(String upgradeStatus) {
-            this.upgradeStatus = upgradeStatus;
-            return this;
-        }
-        public String getUpgradeStatus() {
-            return this.upgradeStatus;
         }
 
         public DescribeSitePairsResponseBodySitePairsSitePair setVersion(String version) {
