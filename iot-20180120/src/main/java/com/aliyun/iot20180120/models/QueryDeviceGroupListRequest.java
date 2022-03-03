@@ -10,6 +10,9 @@ public class QueryDeviceGroupListRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    @NameInMap("GroupTypes")
+    public java.util.List<String> groupTypes;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -38,6 +41,14 @@ public class QueryDeviceGroupListRequest extends TeaModel {
     }
     public String getGroupName() {
         return this.groupName;
+    }
+
+    public QueryDeviceGroupListRequest setGroupTypes(java.util.List<String> groupTypes) {
+        this.groupTypes = groupTypes;
+        return this;
+    }
+    public java.util.List<String> getGroupTypes() {
+        return this.groupTypes;
     }
 
     public QueryDeviceGroupListRequest setIotInstanceId(String iotInstanceId) {

@@ -7,6 +7,9 @@ public class PrintByTemplateRequest extends TeaModel {
     @NameInMap("DeviceName")
     public String deviceName;
 
+    @NameInMap("HistoryPrintTopic")
+    public Boolean historyPrintTopic;
+
     @NameInMap("IotId")
     public String iotId;
 
@@ -18,9 +21,6 @@ public class PrintByTemplateRequest extends TeaModel {
 
     @NameInMap("ProductKey")
     public String productKey;
-
-    @NameInMap("ProjectCode")
-    public String projectCode;
 
     @NameInMap("TemplateBizCode")
     public String templateBizCode;
@@ -36,6 +36,14 @@ public class PrintByTemplateRequest extends TeaModel {
     }
     public String getDeviceName() {
         return this.deviceName;
+    }
+
+    public PrintByTemplateRequest setHistoryPrintTopic(Boolean historyPrintTopic) {
+        this.historyPrintTopic = historyPrintTopic;
+        return this;
+    }
+    public Boolean getHistoryPrintTopic() {
+        return this.historyPrintTopic;
     }
 
     public PrintByTemplateRequest setIotId(String iotId) {
@@ -68,14 +76,6 @@ public class PrintByTemplateRequest extends TeaModel {
     }
     public String getProductKey() {
         return this.productKey;
-    }
-
-    public PrintByTemplateRequest setProjectCode(String projectCode) {
-        this.projectCode = projectCode;
-        return this;
-    }
-    public String getProjectCode() {
-        return this.projectCode;
     }
 
     public PrintByTemplateRequest setTemplateBizCode(String templateBizCode) {

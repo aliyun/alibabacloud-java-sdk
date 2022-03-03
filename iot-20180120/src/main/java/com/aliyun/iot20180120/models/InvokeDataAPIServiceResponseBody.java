@@ -85,18 +85,18 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
 
     public static class InvokeDataAPIServiceResponseBodyDataResultList extends TeaModel {
         @NameInMap("ResultList")
-        public java.util.List<java.util.Map<String, String>> resultList;
+        public java.util.List<java.util.Map<String, ?>> resultList;
 
         public static InvokeDataAPIServiceResponseBodyDataResultList build(java.util.Map<String, ?> map) throws Exception {
             InvokeDataAPIServiceResponseBodyDataResultList self = new InvokeDataAPIServiceResponseBodyDataResultList();
             return TeaModel.build(map, self);
         }
 
-        public InvokeDataAPIServiceResponseBodyDataResultList setResultList(java.util.List<java.util.Map<String, String>> resultList) {
+        public InvokeDataAPIServiceResponseBodyDataResultList setResultList(java.util.List<java.util.Map<String, ?>> resultList) {
             this.resultList = resultList;
             return this;
         }
-        public java.util.List<java.util.Map<String, String>> getResultList() {
+        public java.util.List<java.util.Map<String, ?>> getResultList() {
             return this.resultList;
         }
 
@@ -117,6 +117,9 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
 
         @NameInMap("ResultList")
         public InvokeDataAPIServiceResponseBodyDataResultList resultList;
+
+        @NameInMap("TotalSize")
+        public Integer totalSize;
 
         public static InvokeDataAPIServiceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             InvokeDataAPIServiceResponseBodyData self = new InvokeDataAPIServiceResponseBodyData();
@@ -161,6 +164,14 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
         }
         public InvokeDataAPIServiceResponseBodyDataResultList getResultList() {
             return this.resultList;
+        }
+
+        public InvokeDataAPIServiceResponseBodyData setTotalSize(Integer totalSize) {
+            this.totalSize = totalSize;
+            return this;
+        }
+        public Integer getTotalSize() {
+            return this.totalSize;
         }
 
     }

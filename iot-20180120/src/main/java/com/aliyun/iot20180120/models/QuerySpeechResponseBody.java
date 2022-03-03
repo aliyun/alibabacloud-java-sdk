@@ -64,12 +64,48 @@ public class QuerySpeechResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class QuerySpeechResponseBodyDataSoundCodeConfig extends TeaModel {
+        @NameInMap("AdditionalDuration")
+        public Integer additionalDuration;
+
+        @NameInMap("SoundCodeContent")
+        public String soundCodeContent;
+
+        public static QuerySpeechResponseBodyDataSoundCodeConfig build(java.util.Map<String, ?> map) throws Exception {
+            QuerySpeechResponseBodyDataSoundCodeConfig self = new QuerySpeechResponseBodyDataSoundCodeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public QuerySpeechResponseBodyDataSoundCodeConfig setAdditionalDuration(Integer additionalDuration) {
+            this.additionalDuration = additionalDuration;
+            return this;
+        }
+        public Integer getAdditionalDuration() {
+            return this.additionalDuration;
+        }
+
+        public QuerySpeechResponseBodyDataSoundCodeConfig setSoundCodeContent(String soundCodeContent) {
+            this.soundCodeContent = soundCodeContent;
+            return this;
+        }
+        public String getSoundCodeContent() {
+            return this.soundCodeContent;
+        }
+
+    }
+
     public static class QuerySpeechResponseBodyData extends TeaModel {
         @NameInMap("AudioFormat")
         public String audioFormat;
 
         @NameInMap("BizCode")
         public String bizCode;
+
+        @NameInMap("EnableSoundCode")
+        public Boolean enableSoundCode;
+
+        @NameInMap("SoundCodeConfig")
+        public QuerySpeechResponseBodyDataSoundCodeConfig soundCodeConfig;
 
         @NameInMap("SpeechCode")
         public String speechCode;
@@ -108,6 +144,22 @@ public class QuerySpeechResponseBody extends TeaModel {
         }
         public String getBizCode() {
             return this.bizCode;
+        }
+
+        public QuerySpeechResponseBodyData setEnableSoundCode(Boolean enableSoundCode) {
+            this.enableSoundCode = enableSoundCode;
+            return this;
+        }
+        public Boolean getEnableSoundCode() {
+            return this.enableSoundCode;
+        }
+
+        public QuerySpeechResponseBodyData setSoundCodeConfig(QuerySpeechResponseBodyDataSoundCodeConfig soundCodeConfig) {
+            this.soundCodeConfig = soundCodeConfig;
+            return this;
+        }
+        public QuerySpeechResponseBodyDataSoundCodeConfig getSoundCodeConfig() {
+            return this.soundCodeConfig;
         }
 
         public QuerySpeechResponseBodyData setSpeechCode(String speechCode) {

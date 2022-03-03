@@ -4,6 +4,9 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateOTAVerifyJobRequest extends TeaModel {
+    @NameInMap("DownloadProtocol")
+    public String downloadProtocol;
+
     @NameInMap("FirmwareId")
     public String firmwareId;
 
@@ -19,6 +22,9 @@ public class CreateOTAVerifyJobRequest extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateOTAVerifyJobRequestTag> tag;
+
     @NameInMap("TargetDeviceName")
     public java.util.List<String> targetDeviceName;
 
@@ -28,6 +34,14 @@ public class CreateOTAVerifyJobRequest extends TeaModel {
     public static CreateOTAVerifyJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOTAVerifyJobRequest self = new CreateOTAVerifyJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateOTAVerifyJobRequest setDownloadProtocol(String downloadProtocol) {
+        this.downloadProtocol = downloadProtocol;
+        return this;
+    }
+    public String getDownloadProtocol() {
+        return this.downloadProtocol;
     }
 
     public CreateOTAVerifyJobRequest setFirmwareId(String firmwareId) {
@@ -70,6 +84,14 @@ public class CreateOTAVerifyJobRequest extends TeaModel {
         return this.productKey;
     }
 
+    public CreateOTAVerifyJobRequest setTag(java.util.List<CreateOTAVerifyJobRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateOTAVerifyJobRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateOTAVerifyJobRequest setTargetDeviceName(java.util.List<String> targetDeviceName) {
         this.targetDeviceName = targetDeviceName;
         return this;
@@ -84,6 +106,36 @@ public class CreateOTAVerifyJobRequest extends TeaModel {
     }
     public Integer getTimeoutInMinutes() {
         return this.timeoutInMinutes;
+    }
+
+    public static class CreateOTAVerifyJobRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateOTAVerifyJobRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateOTAVerifyJobRequestTag self = new CreateOTAVerifyJobRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateOTAVerifyJobRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateOTAVerifyJobRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

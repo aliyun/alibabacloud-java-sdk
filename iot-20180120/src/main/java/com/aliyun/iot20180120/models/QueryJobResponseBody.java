@@ -109,6 +109,9 @@ public class QueryJobResponseBody extends TeaModel {
         @NameInMap("MaximumPerMinute")
         public Integer maximumPerMinute;
 
+        @NameInMap("MessageQoS")
+        public String messageQoS;
+
         public static QueryJobResponseBodyDataRolloutConfig build(java.util.Map<String, ?> map) throws Exception {
             QueryJobResponseBodyDataRolloutConfig self = new QueryJobResponseBodyDataRolloutConfig();
             return TeaModel.build(map, self);
@@ -120,6 +123,14 @@ public class QueryJobResponseBody extends TeaModel {
         }
         public Integer getMaximumPerMinute() {
             return this.maximumPerMinute;
+        }
+
+        public QueryJobResponseBodyDataRolloutConfig setMessageQoS(String messageQoS) {
+            this.messageQoS = messageQoS;
+            return this;
+        }
+        public String getMessageQoS() {
+            return this.messageQoS;
         }
 
     }

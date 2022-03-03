@@ -118,6 +118,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addDataForApiSourceWithOptions(request, runtime);
     }
 
+    public BatchAddDataForApiSourceResponse batchAddDataForApiSourceWithOptions(BatchAddDataForApiSourceRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchAddDataForApiSourceShrinkRequest request = new BatchAddDataForApiSourceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.contentList)) {
+            request.contentListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.contentList, "ContentList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
+            query.put("ApiId", request.apiId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contentListShrink)) {
+            query.put("ContentList", request.contentListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchAddDataForApiSource"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchAddDataForApiSourceResponse());
+    }
+
+    public BatchAddDataForApiSourceResponse batchAddDataForApiSource(BatchAddDataForApiSourceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.batchAddDataForApiSourceWithOptions(request, runtime);
+    }
+
     public BatchAddDeviceGroupRelationsResponse batchAddDeviceGroupRelationsWithOptions(BatchAddDeviceGroupRelationsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -239,8 +282,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public BatchBindDevicesIntoProjectResponse batchBindDevicesIntoProjectWithOptions(BatchBindDevicesIntoProjectRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.devices)) {
+            body.put("Devices", request.devices);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.devices)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "BatchBindDevicesIntoProject"),
@@ -263,8 +319,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public BatchBindProductsIntoProjectResponse batchBindProductsIntoProjectWithOptions(BatchBindProductsIntoProjectRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKeys)) {
+            body.put("ProductKeys", request.productKeys);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.iotInstanceId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "BatchBindProductsIntoProject"),
@@ -1022,8 +1091,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public BatchUnbindProjectDevicesResponse batchUnbindProjectDevicesWithOptions(BatchUnbindProjectDevicesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.devices)) {
+            body.put("Devices", request.devices);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.devices)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "BatchUnbindProjectDevices"),
@@ -1046,8 +1128,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public BatchUnbindProjectProductsResponse batchUnbindProjectProductsWithOptions(BatchUnbindProjectProductsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKeys)) {
+            body.put("ProductKeys", request.productKeys);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.iotInstanceId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "BatchUnbindProjectProducts"),
@@ -1544,6 +1639,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.clearEdgeInstanceDriverConfigsWithOptions(request, runtime);
     }
 
+    public CloseDeviceTunnelResponse closeDeviceTunnelWithOptions(CloseDeviceTunnelRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tunnelId)) {
+            query.put("TunnelId", request.tunnelId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CloseDeviceTunnel"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CloseDeviceTunnelResponse());
+    }
+
+    public CloseDeviceTunnelResponse closeDeviceTunnel(CloseDeviceTunnelRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.closeDeviceTunnelWithOptions(request, runtime);
+    }
+
     public CloseEdgeInstanceDeploymentResponse closeEdgeInstanceDeploymentWithOptions(CloseEdgeInstanceDeploymentRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1727,8 +1855,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateDataAPIServiceResponse createDataAPIServiceWithOptions(CreateDataAPIServiceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiPath)) {
+            body.put("ApiPath", request.apiPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desc)) {
+            body.put("Desc", request.desc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("DisplayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originSql)) {
+            body.put("OriginSql", request.originSql);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestParam)) {
+            body.put("RequestParam", request.requestParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseParam)) {
+            body.put("ResponseParam", request.responseParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateSql)) {
+            body.put("TemplateSql", request.templateSql);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.apiPath)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateDataAPIService"),
@@ -1751,8 +1912,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateDeviceDistributeJobResponse createDeviceDistributeJobWithOptions(CreateDeviceDistributeJobRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            body.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            body.put("ProductKey", request.productKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceInstanceId)) {
+            body.put("SourceInstanceId", request.sourceInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategy)) {
+            body.put("Strategy", request.strategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetAliyunId)) {
+            body.put("TargetAliyunId", request.targetAliyunId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetInstanceConfig)) {
+            body.put("TargetInstanceConfig", request.targetInstanceConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetUid)) {
+            body.put("TargetUid", request.targetUid);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.deviceName)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateDeviceDistributeJob"),
@@ -1771,6 +1961,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDeviceDistributeJobResponse createDeviceDistributeJob(CreateDeviceDistributeJobRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createDeviceDistributeJobWithOptions(request, runtime);
+    }
+
+    public CreateDeviceDynamicGroupResponse createDeviceDynamicGroupWithOptions(CreateDeviceDynamicGroupRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dynamicGroupExpression)) {
+            query.put("DynamicGroupExpression", request.dynamicGroupExpression);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupDesc)) {
+            query.put("GroupDesc", request.groupDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            query.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDeviceDynamicGroup"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDeviceDynamicGroupResponse());
+    }
+
+    public CreateDeviceDynamicGroupResponse createDeviceDynamicGroup(CreateDeviceDynamicGroupRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createDeviceDynamicGroupWithOptions(request, runtime);
     }
 
     public CreateDeviceGroupResponse createDeviceGroupWithOptions(CreateDeviceGroupRequest request, RuntimeOptions runtime) throws Exception {
@@ -1812,6 +2043,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDeviceGroupResponse createDeviceGroup(CreateDeviceGroupRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createDeviceGroupWithOptions(request, runtime);
+    }
+
+    public CreateDeviceTunnelResponse createDeviceTunnelWithOptions(CreateDeviceTunnelRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            query.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotId)) {
+            query.put("IotId", request.iotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            query.put("ProductKey", request.productKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.udi)) {
+            query.put("Udi", request.udi);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDeviceTunnel"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDeviceTunnelResponse());
+    }
+
+    public CreateDeviceTunnelResponse createDeviceTunnel(CreateDeviceTunnelRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createDeviceTunnelWithOptions(request, runtime);
     }
 
     public CreateEdgeDriverResponse createEdgeDriverWithOptions(CreateEdgeDriverRequest request, RuntimeOptions runtime) throws Exception {
@@ -2161,8 +2441,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createEdgeOssPreSignedAddressWithOptions(request, runtime);
     }
 
-    public CreateJobResponse createJobWithOptions(CreateJobRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateJobResponse createJobWithOptions(CreateJobRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateJobShrinkRequest request = new CreateJobShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.jobFile)) {
+            request.jobFileShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.jobFile, "JobFile", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rolloutConfig)) {
+            request.rolloutConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rolloutConfig, "RolloutConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.targetConfig)) {
+            request.targetConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.targetConfig, "TargetConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.timeoutConfig)) {
+            request.timeoutConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.timeoutConfig, "TimeoutConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
@@ -2176,28 +2474,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("JobDocument", request.jobDocument);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.jobFile)) {
-            query.put("JobFile", request.jobFile);
+        if (!com.aliyun.teautil.Common.isUnset(request.jobFileShrink)) {
+            query.put("JobFile", request.jobFileShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobName)) {
             query.put("JobName", request.jobName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.rolloutConfig)) {
-            query.put("RolloutConfig", request.rolloutConfig);
+        if (!com.aliyun.teautil.Common.isUnset(request.rolloutConfigShrink)) {
+            query.put("RolloutConfig", request.rolloutConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scheduledTime)) {
             query.put("ScheduledTime", request.scheduledTime);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.targetConfig)) {
-            query.put("TargetConfig", request.targetConfig);
+        if (!com.aliyun.teautil.Common.isUnset(request.targetConfigShrink)) {
+            query.put("TargetConfig", request.targetConfigShrink);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.timeoutConfig)) {
-            query.put("TimeoutConfig", request.timeoutConfig);
+        if (!com.aliyun.teautil.Common.isUnset(request.timeoutConfigShrink)) {
+            query.put("TimeoutConfig", request.timeoutConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
@@ -2266,6 +2564,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateOTADynamicUpgradeJobResponse createOTADynamicUpgradeJobWithOptions(CreateOTADynamicUpgradeJobRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.downloadProtocol)) {
+            query.put("DownloadProtocol", request.downloadProtocol);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dynamicMode)) {
             query.put("DynamicMode", request.dynamicMode);
         }
@@ -2274,12 +2576,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FirmwareId", request.firmwareId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupType)) {
+            query.put("GroupType", request.groupType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
             query.put("IotInstanceId", request.iotInstanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maximumPerMinute)) {
             query.put("MaximumPerMinute", request.maximumPerMinute);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.multiModuleMode)) {
+            query.put("MultiModuleMode", request.multiModuleMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.needConfirm)) {
@@ -2373,6 +2687,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.moduleName)) {
             query.put("ModuleName", request.moduleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.multiFiles)) {
+            query.put("MultiFiles", request.multiFiles);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.needToVerify)) {
@@ -2473,6 +2791,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DnListFileUrl", request.dnListFileUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.downloadProtocol)) {
+            query.put("DownloadProtocol", request.downloadProtocol);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.firmwareId)) {
             query.put("FirmwareId", request.firmwareId);
         }
@@ -2481,12 +2803,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GrayPercent", request.grayPercent);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupType)) {
+            query.put("GroupType", request.groupType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
             query.put("IotInstanceId", request.iotInstanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maximumPerMinute)) {
             query.put("MaximumPerMinute", request.maximumPerMinute);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.multiModuleMode)) {
+            query.put("MultiModuleMode", request.multiModuleMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.needConfirm)) {
@@ -2566,6 +2900,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateOTAVerifyJobResponse createOTAVerifyJobWithOptions(CreateOTAVerifyJobRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.downloadProtocol)) {
+            query.put("DownloadProtocol", request.downloadProtocol);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.firmwareId)) {
             query.put("FirmwareId", request.firmwareId);
         }
@@ -2584,6 +2922,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
             query.put("ProductKey", request.productKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.targetDeviceName)) {
@@ -2942,43 +3284,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createRuleActionWithOptions(request, runtime);
     }
 
-    public CreateRulengDistributeJobResponse createRulengDistributeJobWithOptions(CreateRulengDistributeJobRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
-            query.put("ProductKey", request.productKey);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceInstanceId)) {
-            query.put("SourceInstanceId", request.sourceInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.targetInstanceId)) {
-            query.put("TargetInstanceId", request.targetInstanceId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateRulengDistributeJob"),
-            new TeaPair("version", "2018-01-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRulengDistributeJobResponse());
-    }
-
-    public CreateRulengDistributeJobResponse createRulengDistributeJob(CreateRulengDistributeJobRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.createRulengDistributeJobWithOptions(request, runtime);
-    }
-
     public CreateSceneRuleResponse createSceneRuleWithOptions(CreateSceneRuleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3020,10 +3325,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createSceneRuleWithOptions(request, runtime);
     }
 
-    public CreateSpeechResponse createSpeechWithOptions(CreateSpeechRequest request, RuntimeOptions runtime) throws Exception {
+    public CreateSoundCodeResponse createSoundCodeWithOptions(CreateSoundCodeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
+            body.put("Duration", request.duration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.soundCodeContent)) {
+            body.put("SoundCodeContent", request.soundCodeContent);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.bizCode)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSoundCode"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSoundCodeResponse());
+    }
+
+    public CreateSoundCodeResponse createSoundCode(CreateSoundCodeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createSoundCodeWithOptions(request, runtime);
+    }
+
+    public CreateSpeechResponse createSpeechWithOptions(CreateSpeechRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateSpeechShrinkRequest request = new CreateSpeechShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.soundCodeConfig)) {
+            request.soundCodeConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.soundCodeConfig, "SoundCodeConfig", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioFormat)) {
+            body.put("AudioFormat", request.audioFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizCode)) {
+            body.put("BizCode", request.bizCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSoundCode)) {
+            body.put("EnableSoundCode", request.enableSoundCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectCode)) {
+            body.put("ProjectCode", request.projectCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.soundCodeConfigShrink)) {
+            body.put("SoundCodeConfig", request.soundCodeConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechRate)) {
+            body.put("SpeechRate", request.speechRate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechType)) {
+            body.put("SpeechType", request.speechType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.text)) {
+            body.put("Text", request.text);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.voice)) {
+            body.put("Voice", request.voice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.volume)) {
+            body.put("Volume", request.volume);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateSpeech"),
@@ -3046,8 +3439,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateStudioAppDomainOpenResponse createStudioAppDomainOpenWithOptions(CreateStudioAppDomainOpenRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.host)) {
+            body.put("Host", request.host);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            body.put("Protocol", request.protocol);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.appId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateStudioAppDomainOpen"),
@@ -3276,6 +3690,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createTopicRouteTableWithOptions(request, runtime);
     }
 
+    public DeleteClientIdsResponse deleteClientIdsWithOptions(DeleteClientIdsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotId)) {
+            query.put("IotId", request.iotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteClientIds"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteClientIdsResponse());
+    }
+
+    public DeleteClientIdsResponse deleteClientIds(DeleteClientIdsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteClientIdsWithOptions(request, runtime);
+    }
+
     public DeleteConsumerGroupResponse deleteConsumerGroupWithOptions(DeleteConsumerGroupRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3416,6 +3863,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteDeviceDistributeJobWithOptions(request, runtime);
     }
 
+    public DeleteDeviceDynamicGroupResponse deleteDeviceDynamicGroupWithOptions(DeleteDeviceDynamicGroupRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDeviceDynamicGroup"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDeviceDynamicGroupResponse());
+    }
+
+    public DeleteDeviceDynamicGroupResponse deleteDeviceDynamicGroup(DeleteDeviceDynamicGroupRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteDeviceDynamicGroupWithOptions(request, runtime);
+    }
+
     public DeleteDeviceFileResponse deleteDeviceFileWithOptions(DeleteDeviceFileRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3537,6 +4017,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDevicePropResponse deleteDeviceProp(DeleteDevicePropRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.deleteDevicePropWithOptions(request, runtime);
+    }
+
+    public DeleteDeviceSpeechResponse deleteDeviceSpeechWithOptions(DeleteDeviceSpeechRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceSpeechList)) {
+            body.put("DeviceSpeechList", request.deviceSpeechList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotId)) {
+            body.put("IotId", request.iotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDeviceSpeech"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDeviceSpeechResponse());
+    }
+
+    public DeleteDeviceSpeechResponse deleteDeviceSpeech(DeleteDeviceSpeechRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteDeviceSpeechWithOptions(request, runtime);
+    }
+
+    public DeleteDeviceTunnelResponse deleteDeviceTunnelWithOptions(DeleteDeviceTunnelRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tunnelId)) {
+            query.put("TunnelId", request.tunnelId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDeviceTunnel"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDeviceTunnelResponse());
+    }
+
+    public DeleteDeviceTunnelResponse deleteDeviceTunnel(DeleteDeviceTunnelRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteDeviceTunnelWithOptions(request, runtime);
     }
 
     public DeleteEdgeDriverResponse deleteEdgeDriverWithOptions(DeleteEdgeDriverRequest request, RuntimeOptions runtime) throws Exception {
@@ -3984,10 +4534,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteSceneRuleWithOptions(request, runtime);
     }
 
+    public DeleteSoundCodeResponse deleteSoundCodeWithOptions(DeleteSoundCodeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.soundCode)) {
+            body.put("SoundCode", request.soundCode);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSoundCode"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSoundCodeResponse());
+    }
+
+    public DeleteSoundCodeResponse deleteSoundCode(DeleteSoundCodeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteSoundCodeWithOptions(request, runtime);
+    }
+
     public DeleteSpeechResponse deleteSpeechWithOptions(DeleteSpeechRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechCodeList)) {
+            body.put("SpeechCodeList", request.speechCodeList);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.iotInstanceId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteSpeech"),
@@ -4010,8 +4602,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteStudioAppDomainOpenResponse deleteStudioAppDomainOpenWithOptions(DeleteStudioAppDomainOpenRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainId)) {
+            body.put("DomainId", request.domainId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.appId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteStudioAppDomainOpen"),
@@ -4560,8 +5169,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetDataAPIServiceDetailResponse getDataAPIServiceDetailWithOptions(GetDataAPIServiceDetailRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiSrn)) {
+            body.put("ApiSrn", request.apiSrn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.apiSrn)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetDataAPIServiceDetail"),
@@ -4952,39 +5570,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getLoraNodesTaskWithOptions(request, runtime);
     }
 
-    public GetNodesAddingTaskResponse getNodesAddingTaskWithOptions(GetNodesAddingTaskRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
-            query.put("IotInstanceId", request.iotInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
-            query.put("TaskId", request.taskId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetNodesAddingTask"),
-            new TeaPair("version", "2018-01-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNodesAddingTaskResponse());
-    }
-
-    public GetNodesAddingTaskResponse getNodesAddingTask(GetNodesAddingTaskRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getNodesAddingTaskWithOptions(request, runtime);
-    }
-
     public GetRuleResponse getRuleWithOptions(GetRuleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5084,6 +5669,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getSceneRuleWithOptions(request, runtime);
     }
 
+    public GetSoundCodeAudioResponse getSoundCodeAudioWithOptions(GetSoundCodeAudioRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.soundCodeList)) {
+            body.put("SoundCodeList", request.soundCodeList);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSoundCodeAudio"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSoundCodeAudioResponse());
+    }
+
+    public GetSoundCodeAudioResponse getSoundCodeAudio(GetSoundCodeAudioRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getSoundCodeAudioWithOptions(request, runtime);
+    }
+
+    public GetSpeechDeviceDetailResponse getSpeechDeviceDetailWithOptions(GetSpeechDeviceDetailRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotId)) {
+            body.put("IotId", request.iotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSpeechDeviceDetail"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSpeechDeviceDetailResponse());
+    }
+
+    public GetSpeechDeviceDetailResponse getSpeechDeviceDetail(GetSpeechDeviceDetailRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getSpeechDeviceDetailWithOptions(request, runtime);
+    }
+
     public GetSpeechVoiceResponse getSpeechVoiceWithOptions(RuntimeOptions runtime) throws Exception {
         OpenApiRequest req = new OpenApiRequest();
         Params params = Params.build(TeaConverter.buildMap(
@@ -5107,8 +5758,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetStudioAppTokenOpenResponse getStudioAppTokenOpenWithOptions(GetStudioAppTokenOpenRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.appId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetStudioAppTokenOpen"),
@@ -5342,6 +6006,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getThingTopoWithOptions(request, runtime);
     }
 
+    public GisQueryDeviceLocationResponse gisQueryDeviceLocationWithOptions(GisQueryDeviceLocationRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thingList)) {
+            query.put("ThingList", request.thingList);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GisQueryDeviceLocation"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GisQueryDeviceLocationResponse());
+    }
+
+    public GisQueryDeviceLocationResponse gisQueryDeviceLocation(GisQueryDeviceLocationRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.gisQueryDeviceLocationWithOptions(request, runtime);
+    }
+
+    public GisSearchDeviceTraceResponse gisSearchDeviceTraceWithOptions(GisSearchDeviceTraceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            query.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mapMatch)) {
+            query.put("MapMatch", request.mapMatch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            query.put("ProductKey", request.productKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GisSearchDeviceTrace"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GisSearchDeviceTraceResponse());
+    }
+
+    public GisSearchDeviceTraceResponse gisSearchDeviceTrace(GisSearchDeviceTraceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.gisSearchDeviceTraceWithOptions(request, runtime);
+    }
+
     public ImportThingModelTslResponse importThingModelTslWithOptions(ImportThingModelTslRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5397,8 +6143,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public InvokeDataAPIServiceResponse invokeDataAPIServiceWithOptions(InvokeDataAPIServiceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiSrn)) {
+            body.put("ApiSrn", request.apiSrn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.param)) {
+            body.put("Param", request.param);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toArray(request.apiSrn))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "InvokeDataAPIService"),
@@ -5577,6 +6336,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            query.put("ProductKey", request.productKey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
         }
@@ -5585,9 +6348,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TargetUid", request.targetUid);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            body.put("JobId", request.jobId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.jobId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListDeviceDistributeJob"),
@@ -6202,11 +6970,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listRuleActionsWithOptions(request, runtime);
     }
 
-    public ListTaskResponse listTaskWithOptions(ListTaskRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListTaskResponse listTaskWithOptions(ListTaskRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListTaskShrinkRequest request = new ListTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.device)) {
+            request.deviceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.device, "Device", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.device)) {
-            query.put("Device", request.device);
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceShrink)) {
+            query.put("Device", request.deviceShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
@@ -6249,63 +7023,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTaskResponse listTask(ListTaskRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listTaskWithOptions(request, runtime);
-    }
-
-    public ListTaskByPageResponse listTaskByPageWithOptions(ListTaskByPageRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.device)) {
-            query.put("Device", request.device);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
-            query.put("DeviceName", request.deviceName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
-            query.put("IotInstanceId", request.iotInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
-            query.put("JobId", request.jobId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.jobName)) {
-            query.put("JobName", request.jobName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
-            query.put("PageNo", request.pageNo);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
-            query.put("Status", request.status);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListTaskByPage"),
-            new TeaPair("version", "2018-01-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTaskByPageResponse());
-    }
-
-    public ListTaskByPageResponse listTaskByPage(ListTaskByPageRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.listTaskByPageWithOptions(request, runtime);
     }
 
     public ListThingModelVersionResponse listThingModelVersionWithOptions(ListThingModelVersionRequest request, RuntimeOptions runtime) throws Exception {
@@ -6446,8 +7163,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public PrintByTemplateResponse printByTemplateWithOptions(PrintByTemplateRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            body.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.historyPrintTopic)) {
+            body.put("HistoryPrintTopic", request.historyPrintTopic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotId)) {
+            body.put("IotId", request.iotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramsJsonString)) {
+            body.put("ParamsJsonString", request.paramsJsonString);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            body.put("ProductKey", request.productKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateBizCode)) {
+            body.put("TemplateBizCode", request.templateBizCode);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.deviceName)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PrintByTemplate"),
@@ -6568,8 +7314,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public PublishStudioAppResponse publishStudioAppWithOptions(PublishStudioAppRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.appId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PublishStudioApp"),
@@ -6642,9 +7405,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GroupId", request.groupId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            body.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotId)) {
+            body.put("IotId", request.iotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            body.put("ProductKey", request.productKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectCode)) {
+            body.put("ProjectCode", request.projectCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pushMode)) {
+            body.put("PushMode", request.pushMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechCodeList)) {
+            body.put("SpeechCodeList", request.speechCodeList);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.deviceName)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PushSpeech"),
@@ -6663,59 +7455,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PushSpeechResponse pushSpeech(PushSpeechRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.pushSpeechWithOptions(request, runtime);
-    }
-
-    public QueryAppDeviceListResponse queryAppDeviceListWithOptions(QueryAppDeviceListRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appKey)) {
-            query.put("AppKey", request.appKey);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.categoryKeyList)) {
-            query.put("CategoryKeyList", request.categoryKeyList);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
-            query.put("CurrentPage", request.currentPage);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
-            query.put("IotInstanceId", request.iotInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.productKeyList)) {
-            query.put("ProductKeyList", request.productKeyList);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tagList)) {
-            query.put("TagList", request.tagList);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "QueryAppDeviceList"),
-            new TeaPair("version", "2018-01-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryAppDeviceListResponse());
-    }
-
-    public QueryAppDeviceListResponse queryAppDeviceList(QueryAppDeviceListRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.queryAppDeviceListWithOptions(request, runtime);
     }
 
     public QueryBatchRegisterDeviceStatusResponse queryBatchRegisterDeviceStatusWithOptions(QueryBatchRegisterDeviceStatusRequest request, RuntimeOptions runtime) throws Exception {
@@ -6786,6 +7525,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryCertUrlByApplyIdResponse queryCertUrlByApplyId(QueryCertUrlByApplyIdRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryCertUrlByApplyIdWithOptions(request, runtime);
+    }
+
+    public QueryClientIdsResponse queryClientIdsWithOptions(QueryClientIdsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotId)) {
+            query.put("IotId", request.iotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryClientIds"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryClientIdsResponse());
+    }
+
+    public QueryClientIdsResponse queryClientIds(QueryClientIdsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryClientIdsWithOptions(request, runtime);
     }
 
     public QueryConsumerGroupByGroupIdResponse queryConsumerGroupByGroupIdWithOptions(QueryConsumerGroupByGroupIdRequest request, RuntimeOptions runtime) throws Exception {
@@ -7549,6 +8321,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GroupId", request.groupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.groupType)) {
+            query.put("GroupType", request.groupType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
             query.put("IotInstanceId", request.iotInstanceId);
         }
@@ -7584,6 +8360,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
             query.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupTypes)) {
+            query.put("GroupTypes", request.groupTypes);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
@@ -7625,6 +8405,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupType)) {
+            query.put("GroupType", request.groupType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
@@ -8252,6 +9036,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryDeviceServiceDataWithOptions(request, runtime);
     }
 
+    public QueryDeviceSpeechResponse queryDeviceSpeechWithOptions(QueryDeviceSpeechRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotId)) {
+            body.put("IotId", request.iotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageId)) {
+            body.put("PageId", request.pageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryDeviceSpeech"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceSpeechResponse());
+    }
+
+    public QueryDeviceSpeechResponse queryDeviceSpeech(QueryDeviceSpeechRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryDeviceSpeechWithOptions(request, runtime);
+    }
+
     public QueryDeviceStatisticsResponse queryDeviceStatisticsWithOptions(QueryDeviceStatisticsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8287,6 +9112,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryDeviceStatisticsResponse queryDeviceStatistics(QueryDeviceStatisticsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryDeviceStatisticsWithOptions(request, runtime);
+    }
+
+    public QueryDeviceTunnelResponse queryDeviceTunnelWithOptions(QueryDeviceTunnelRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tunnelId)) {
+            query.put("TunnelId", request.tunnelId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryDeviceTunnel"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceTunnelResponse());
+    }
+
+    public QueryDeviceTunnelResponse queryDeviceTunnel(QueryDeviceTunnelRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryDeviceTunnelWithOptions(request, runtime);
+    }
+
+    public QueryDynamicGroupDevicesResponse queryDynamicGroupDevicesWithOptions(QueryDynamicGroupDevicesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            query.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fuzzyName)) {
+            query.put("FuzzyName", request.fuzzyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            query.put("ProductKey", request.productKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryDynamicGroupDevices"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDynamicGroupDevicesResponse());
+    }
+
+    public QueryDynamicGroupDevicesResponse queryDynamicGroupDevices(QueryDynamicGroupDevicesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryDynamicGroupDevicesWithOptions(request, runtime);
     }
 
     public QueryEdgeDriverResponse queryEdgeDriverWithOptions(QueryEdgeDriverRequest request, RuntimeOptions runtime) throws Exception {
@@ -9225,10 +10144,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.querySolutionDeviceGroupPageWithOptions(request, runtime);
     }
 
+    public QuerySoundCodeListResponse querySoundCodeListWithOptions(QuerySoundCodeListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageId)) {
+            body.put("PageId", request.pageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QuerySoundCodeList"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySoundCodeListResponse());
+    }
+
+    public QuerySoundCodeListResponse querySoundCodeList(QuerySoundCodeListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.querySoundCodeListWithOptions(request, runtime);
+    }
+
     public QuerySpeechResponse querySpeechWithOptions(QuerySpeechRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechCode)) {
+            body.put("SpeechCode", request.speechCode);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.iotInstanceId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QuerySpeech"),
@@ -9249,10 +10214,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.querySpeechWithOptions(request, runtime);
     }
 
+    public QuerySpeechDeviceResponse querySpeechDeviceWithOptions(QuerySpeechDeviceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.availableSpace)) {
+            body.put("AvailableSpace", request.availableSpace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.availableSpaceScope)) {
+            body.put("AvailableSpaceScope", request.availableSpaceScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            body.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageId)) {
+            body.put("PageId", request.pageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectCode)) {
+            body.put("ProjectCode", request.projectCode);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QuerySpeechDevice"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySpeechDeviceResponse());
+    }
+
+    public QuerySpeechDeviceResponse querySpeechDevice(QuerySpeechDeviceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.querySpeechDeviceWithOptions(request, runtime);
+    }
+
     public QuerySpeechListResponse querySpeechListWithOptions(QuerySpeechListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioFormat)) {
+            body.put("AudioFormat", request.audioFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageId)) {
+            body.put("PageId", request.pageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectCode)) {
+            body.put("ProjectCode", request.projectCode);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.iotInstanceId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QuerySpeechList"),
@@ -9280,9 +10319,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("JobCode", request.jobCode);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageId)) {
+            body.put("PageId", request.pageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectCode)) {
+            body.put("ProjectCode", request.projectCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pushMode)) {
+            body.put("PushMode", request.pushMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusList)) {
+            body.put("StatusList", request.statusList);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.iotInstanceId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QuerySpeechPushJob"),
@@ -9305,8 +10369,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public QuerySpeechPushJobDeviceResponse querySpeechPushJobDeviceWithOptions(QuerySpeechPushJobDeviceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            body.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobCode)) {
+            body.put("JobCode", request.jobCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageId)) {
+            body.put("PageId", request.pageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.deviceName)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QuerySpeechPushJobDevice"),
@@ -9329,8 +10418,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public QuerySpeechPushJobSpeechResponse querySpeechPushJobSpeechWithOptions(QuerySpeechPushJobSpeechRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobCode)) {
+            body.put("JobCode", request.jobCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageId)) {
+            body.put("PageId", request.pageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.iotInstanceId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QuerySpeechPushJobSpeech"),
@@ -9353,8 +10459,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public QueryStudioAppDomainListOpenResponse queryStudioAppDomainListOpenWithOptions(QueryStudioAppDomainListOpenRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.appId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryStudioAppDomainListOpen"),
@@ -9377,8 +10496,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public QueryStudioAppListResponse queryStudioAppListWithOptions(QueryStudioAppListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fuzzyName)) {
+            body.put("FuzzyName", request.fuzzyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            body.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.types)) {
+            body.put("Types", request.types);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.fuzzyName)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryStudioAppList"),
@@ -9401,8 +10545,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public QueryStudioAppPageListOpenResponse queryStudioAppPageListOpenWithOptions(QueryStudioAppPageListOpenRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isRelease)) {
+            body.put("IsRelease", request.isRelease);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            body.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.appId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryStudioAppPageListOpen"),
@@ -9425,8 +10594,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public QueryStudioProjectListResponse queryStudioProjectListWithOptions(QueryStudioProjectListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            body.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.iotInstanceId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryStudioProjectList"),
@@ -9937,8 +11123,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public RefreshStudioAppTokenOpenResponse refreshStudioAppTokenOpenWithOptions(RefreshStudioAppTokenOpenRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.appId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RefreshStudioAppTokenOpen"),
@@ -10279,6 +11478,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.resetThingWithOptions(request, runtime);
     }
 
+    public ReupgradeOTATaskResponse reupgradeOTATaskWithOptions(ReupgradeOTATaskRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReupgradeOTATask"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReupgradeOTATaskResponse());
+    }
+
+    public ReupgradeOTATaskResponse reupgradeOTATask(ReupgradeOTATaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.reupgradeOTATaskWithOptions(request, runtime);
+    }
+
     public SaveDevicePropResponse saveDevicePropWithOptions(SaveDevicePropRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10378,6 +11614,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupType)) {
+            query.put("GroupType", request.groupType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
@@ -10576,8 +11816,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public SetStudioProjectCooperationResponse setStudioProjectCooperationWithOptions(SetStudioProjectCooperationRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.iotInstanceId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SetStudioProjectCooperation"),
@@ -10600,8 +11849,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public SetupStudioAppAuthModeOpenResponse setupStudioAppAuthModeOpenWithOptions(SetupStudioAppAuthModeOpenRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authMode)) {
+            body.put("AuthMode", request.authMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.appId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SetupStudioAppAuthModeOpen"),
@@ -10624,8 +11890,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public SpeechByCombinationResponse speechByCombinationWithOptions(SpeechByCombinationRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioFormat)) {
+            body.put("AudioFormat", request.audioFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.combinationList)) {
+            body.put("CombinationList", request.combinationList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            body.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotId)) {
+            body.put("IotId", request.iotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            body.put("ProductKey", request.productKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechId)) {
+            body.put("SpeechId", request.speechId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.combinationList)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SpeechByCombination"),
@@ -10644,6 +11939,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SpeechByCombinationResponse speechByCombination(SpeechByCombinationRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.speechByCombinationWithOptions(request, runtime);
+    }
+
+    public SpeechBySynthesisResponse speechBySynthesisWithOptions(SpeechBySynthesisRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioFormat)) {
+            body.put("AudioFormat", request.audioFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            body.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotId)) {
+            body.put("IotId", request.iotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            body.put("ProductKey", request.productKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechId)) {
+            body.put("SpeechId", request.speechId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechRate)) {
+            body.put("SpeechRate", request.speechRate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.text)) {
+            body.put("Text", request.text);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.voice)) {
+            body.put("Voice", request.voice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.volume)) {
+            body.put("Volume", request.volume);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SpeechBySynthesis"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SpeechBySynthesisResponse());
+    }
+
+    public SpeechBySynthesisResponse speechBySynthesis(SpeechBySynthesisRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.speechBySynthesisWithOptions(request, runtime);
     }
 
     public StartCpuResponse startCpuWithOptions(StartCpuRequest request, RuntimeOptions runtime) throws Exception {
@@ -10749,10 +12109,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.stopRuleWithOptions(request, runtime);
     }
 
+    public SubscribeTopicResponse subscribeTopicWithOptions(SubscribeTopicRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            query.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            query.put("ProductKey", request.productKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            query.put("Topic", request.topic);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubscribeTopic"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubscribeTopicResponse());
+    }
+
+    public SubscribeTopicResponse subscribeTopic(SubscribeTopicRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.subscribeTopicWithOptions(request, runtime);
+    }
+
     public SyncSpeechByCombinationResponse syncSpeechByCombinationWithOptions(SyncSpeechByCombinationRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioFormat)) {
+            body.put("AudioFormat", request.audioFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.combinationList)) {
+            body.put("CombinationList", request.combinationList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            body.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotId)) {
+            body.put("IotId", request.iotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            body.put("ProductKey", request.productKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechId)) {
+            body.put("SpeechId", request.speechId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.combinationList)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SyncSpeechByCombination"),
@@ -10773,10 +12203,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.syncSpeechByCombinationWithOptions(request, runtime);
     }
 
-    public TestSpeechResponse testSpeechWithOptions(TestSpeechRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public TestSpeechResponse testSpeechWithOptions(TestSpeechRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        TestSpeechShrinkRequest request = new TestSpeechShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.soundCodeConfig)) {
+            request.soundCodeConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.soundCodeConfig, "SoundCodeConfig", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioFormat)) {
+            body.put("AudioFormat", request.audioFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSoundCode)) {
+            body.put("EnableSoundCode", request.enableSoundCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectCode)) {
+            body.put("ProjectCode", request.projectCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.soundCodeConfigShrink)) {
+            body.put("SoundCodeConfig", request.soundCodeConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechRate)) {
+            body.put("SpeechRate", request.speechRate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechType)) {
+            body.put("SpeechType", request.speechType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.text)) {
+            body.put("Text", request.text);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.voice)) {
+            body.put("Voice", request.voice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.volume)) {
+            body.put("Volume", request.volume);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.iotInstanceId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "TestSpeech"),
@@ -10795,6 +12272,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TestSpeechResponse testSpeech(TestSpeechRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.testSpeechWithOptions(request, runtime);
+    }
+
+    public TransformClientIdResponse transformClientIdWithOptions(TransformClientIdRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            query.put("ClientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotId)) {
+            query.put("IotId", request.iotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TransformClientId"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TransformClientIdResponse());
+    }
+
+    public TransformClientIdResponse transformClientId(TransformClientIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.transformClientIdWithOptions(request, runtime);
     }
 
     public TriggerSceneRuleResponse triggerSceneRuleWithOptions(TriggerSceneRuleRequest request, RuntimeOptions runtime) throws Exception {
@@ -11024,6 +12538,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupType)) {
+            query.put("GroupType", request.groupType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
@@ -11325,8 +12843,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateEdgeInstanceMessageRoutingWithOptions(request, runtime);
     }
 
-    public UpdateJobResponse updateJobWithOptions(UpdateJobRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateJobResponse updateJobWithOptions(UpdateJobRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateJobShrinkRequest request = new UpdateJobShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rolloutConfig)) {
+            request.rolloutConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rolloutConfig, "RolloutConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.timeoutConfig)) {
+            request.timeoutConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.timeoutConfig, "TimeoutConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
@@ -11340,12 +12868,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("JobId", request.jobId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.rolloutConfig)) {
-            query.put("RolloutConfig", request.rolloutConfig);
+        if (!com.aliyun.teautil.Common.isUnset(request.rolloutConfigShrink)) {
+            query.put("RolloutConfig", request.rolloutConfigShrink);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.timeoutConfig)) {
-            query.put("TimeoutConfig", request.timeoutConfig);
+        if (!com.aliyun.teautil.Common.isUnset(request.timeoutConfigShrink)) {
+            query.put("TimeoutConfig", request.timeoutConfigShrink);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -11730,10 +13258,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateSceneRuleWithOptions(request, runtime);
     }
 
-    public UpdateSpeechResponse updateSpeechWithOptions(UpdateSpeechRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateSpeechResponse updateSpeechWithOptions(UpdateSpeechRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateSpeechShrinkRequest request = new UpdateSpeechShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.soundCodeConfig)) {
+            request.soundCodeConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.soundCodeConfig, "SoundCodeConfig", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSoundCode)) {
+            body.put("EnableSoundCode", request.enableSoundCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectCode)) {
+            body.put("ProjectCode", request.projectCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.soundCodeConfigShrink)) {
+            body.put("SoundCodeConfig", request.soundCodeConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechCode)) {
+            body.put("SpeechCode", request.speechCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechRate)) {
+            body.put("SpeechRate", request.speechRate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.voice)) {
+            body.put("Voice", request.voice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.volume)) {
+            body.put("Volume", request.volume);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", request.iotInstanceId)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateSpeech"),
@@ -11886,43 +13453,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateThingModelResponse updateThingModel(UpdateThingModelRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateThingModelWithOptions(request, runtime);
-    }
-
-    public UpdateThingModelValidationConfigResponse updateThingModelValidationConfigWithOptions(UpdateThingModelValidationConfigRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
-            query.put("IotInstanceId", request.iotInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
-            query.put("ProductKey", request.productKey);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.validateType)) {
-            query.put("ValidateType", request.validateType);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateThingModelValidationConfig"),
-            new TeaPair("version", "2018-01-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateThingModelValidationConfigResponse());
-    }
-
-    public UpdateThingModelValidationConfigResponse updateThingModelValidationConfig(UpdateThingModelValidationConfigRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.updateThingModelValidationConfigWithOptions(request, runtime);
     }
 
     public UpdateThingScriptResponse updateThingScriptWithOptions(UpdateThingScriptRequest request, RuntimeOptions runtime) throws Exception {

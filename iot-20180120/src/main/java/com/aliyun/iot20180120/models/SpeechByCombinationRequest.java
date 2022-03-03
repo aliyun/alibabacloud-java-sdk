@@ -4,6 +4,9 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class SpeechByCombinationRequest extends TeaModel {
+    @NameInMap("AudioFormat")
+    public String audioFormat;
+
     @NameInMap("CombinationList")
     public java.util.List<String> combinationList;
 
@@ -19,9 +22,20 @@ public class SpeechByCombinationRequest extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
+    @NameInMap("SpeechId")
+    public String speechId;
+
     public static SpeechByCombinationRequest build(java.util.Map<String, ?> map) throws Exception {
         SpeechByCombinationRequest self = new SpeechByCombinationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SpeechByCombinationRequest setAudioFormat(String audioFormat) {
+        this.audioFormat = audioFormat;
+        return this;
+    }
+    public String getAudioFormat() {
+        return this.audioFormat;
     }
 
     public SpeechByCombinationRequest setCombinationList(java.util.List<String> combinationList) {
@@ -62,6 +76,14 @@ public class SpeechByCombinationRequest extends TeaModel {
     }
     public String getProductKey() {
         return this.productKey;
+    }
+
+    public SpeechByCombinationRequest setSpeechId(String speechId) {
+        this.speechId = speechId;
+        return this;
+    }
+    public String getSpeechId() {
+        return this.speechId;
     }
 
 }

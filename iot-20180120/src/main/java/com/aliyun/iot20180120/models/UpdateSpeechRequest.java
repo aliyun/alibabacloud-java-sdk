@@ -4,11 +4,17 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateSpeechRequest extends TeaModel {
+    @NameInMap("EnableSoundCode")
+    public Boolean enableSoundCode;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProjectCode")
     public String projectCode;
+
+    @NameInMap("SoundCodeConfig")
+    public java.util.Map<String, ?> soundCodeConfig;
 
     @NameInMap("SpeechCode")
     public String speechCode;
@@ -27,6 +33,14 @@ public class UpdateSpeechRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateSpeechRequest setEnableSoundCode(Boolean enableSoundCode) {
+        this.enableSoundCode = enableSoundCode;
+        return this;
+    }
+    public Boolean getEnableSoundCode() {
+        return this.enableSoundCode;
+    }
+
     public UpdateSpeechRequest setIotInstanceId(String iotInstanceId) {
         this.iotInstanceId = iotInstanceId;
         return this;
@@ -41,6 +55,14 @@ public class UpdateSpeechRequest extends TeaModel {
     }
     public String getProjectCode() {
         return this.projectCode;
+    }
+
+    public UpdateSpeechRequest setSoundCodeConfig(java.util.Map<String, ?> soundCodeConfig) {
+        this.soundCodeConfig = soundCodeConfig;
+        return this;
+    }
+    public java.util.Map<String, ?> getSoundCodeConfig() {
+        return this.soundCodeConfig;
     }
 
     public UpdateSpeechRequest setSpeechCode(String speechCode) {

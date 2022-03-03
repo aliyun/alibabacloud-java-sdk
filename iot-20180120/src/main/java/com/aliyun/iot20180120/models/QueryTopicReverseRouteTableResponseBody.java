@@ -66,18 +66,18 @@ public class QueryTopicReverseRouteTableResponseBody extends TeaModel {
 
     public static class QueryTopicReverseRouteTableResponseBodySrcTopics extends TeaModel {
         @NameInMap("Topic")
-        public java.util.List<java.util.Map<String, String>> topic;
+        public java.util.List<java.util.Map<String, ?>> topic;
 
         public static QueryTopicReverseRouteTableResponseBodySrcTopics build(java.util.Map<String, ?> map) throws Exception {
             QueryTopicReverseRouteTableResponseBodySrcTopics self = new QueryTopicReverseRouteTableResponseBodySrcTopics();
             return TeaModel.build(map, self);
         }
 
-        public QueryTopicReverseRouteTableResponseBodySrcTopics setTopic(java.util.List<java.util.Map<String, String>> topic) {
+        public QueryTopicReverseRouteTableResponseBodySrcTopics setTopic(java.util.List<java.util.Map<String, ?>> topic) {
             this.topic = topic;
             return this;
         }
-        public java.util.List<java.util.Map<String, String>> getTopic() {
+        public java.util.List<java.util.Map<String, ?>> getTopic() {
             return this.topic;
         }
 

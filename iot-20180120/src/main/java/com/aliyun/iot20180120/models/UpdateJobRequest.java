@@ -14,10 +14,10 @@ public class UpdateJobRequest extends TeaModel {
     public String jobId;
 
     @NameInMap("RolloutConfig")
-    public String rolloutConfig;
+    public java.util.Map<String, ?> rolloutConfig;
 
     @NameInMap("TimeoutConfig")
-    public String timeoutConfig;
+    public java.util.Map<String, ?> timeoutConfig;
 
     public static UpdateJobRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateJobRequest self = new UpdateJobRequest();
@@ -48,19 +48,19 @@ public class UpdateJobRequest extends TeaModel {
         return this.jobId;
     }
 
-    public UpdateJobRequest setRolloutConfig(String rolloutConfig) {
+    public UpdateJobRequest setRolloutConfig(java.util.Map<String, ?> rolloutConfig) {
         this.rolloutConfig = rolloutConfig;
         return this;
     }
-    public String getRolloutConfig() {
+    public java.util.Map<String, ?> getRolloutConfig() {
         return this.rolloutConfig;
     }
 
-    public UpdateJobRequest setTimeoutConfig(String timeoutConfig) {
+    public UpdateJobRequest setTimeoutConfig(java.util.Map<String, ?> timeoutConfig) {
         this.timeoutConfig = timeoutConfig;
         return this;
     }
-    public String getTimeoutConfig() {
+    public java.util.Map<String, ?> getTimeoutConfig() {
         return this.timeoutConfig;
     }
 

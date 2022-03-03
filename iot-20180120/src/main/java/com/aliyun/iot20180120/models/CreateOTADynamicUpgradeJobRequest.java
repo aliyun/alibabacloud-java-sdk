@@ -4,17 +4,29 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateOTADynamicUpgradeJobRequest extends TeaModel {
+    @NameInMap("DownloadProtocol")
+    public String downloadProtocol;
+
     @NameInMap("DynamicMode")
     public Integer dynamicMode;
 
     @NameInMap("FirmwareId")
     public String firmwareId;
 
+    @NameInMap("GroupId")
+    public String groupId;
+
+    @NameInMap("GroupType")
+    public String groupType;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("MaximumPerMinute")
     public Integer maximumPerMinute;
+
+    @NameInMap("MultiModuleMode")
+    public Boolean multiModuleMode;
 
     @NameInMap("NeedConfirm")
     public Boolean needConfirm;
@@ -48,6 +60,14 @@ public class CreateOTADynamicUpgradeJobRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateOTADynamicUpgradeJobRequest setDownloadProtocol(String downloadProtocol) {
+        this.downloadProtocol = downloadProtocol;
+        return this;
+    }
+    public String getDownloadProtocol() {
+        return this.downloadProtocol;
+    }
+
     public CreateOTADynamicUpgradeJobRequest setDynamicMode(Integer dynamicMode) {
         this.dynamicMode = dynamicMode;
         return this;
@@ -64,6 +84,22 @@ public class CreateOTADynamicUpgradeJobRequest extends TeaModel {
         return this.firmwareId;
     }
 
+    public CreateOTADynamicUpgradeJobRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public CreateOTADynamicUpgradeJobRequest setGroupType(String groupType) {
+        this.groupType = groupType;
+        return this;
+    }
+    public String getGroupType() {
+        return this.groupType;
+    }
+
     public CreateOTADynamicUpgradeJobRequest setIotInstanceId(String iotInstanceId) {
         this.iotInstanceId = iotInstanceId;
         return this;
@@ -78,6 +114,14 @@ public class CreateOTADynamicUpgradeJobRequest extends TeaModel {
     }
     public Integer getMaximumPerMinute() {
         return this.maximumPerMinute;
+    }
+
+    public CreateOTADynamicUpgradeJobRequest setMultiModuleMode(Boolean multiModuleMode) {
+        this.multiModuleMode = multiModuleMode;
+        return this;
+    }
+    public Boolean getMultiModuleMode() {
+        return this.multiModuleMode;
     }
 
     public CreateOTADynamicUpgradeJobRequest setNeedConfirm(Boolean needConfirm) {
