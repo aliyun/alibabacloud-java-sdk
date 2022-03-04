@@ -4,6 +4,12 @@ package com.aliyun.virtual_human20210809.models;
 import com.aliyun.tea.*;
 
 public class StartRequest extends TeaModel {
+    @NameInMap("ExtendParams")
+    public java.util.Map<String, String> extendParams;
+
+    @NameInMap("PushStreamUrl")
+    public String pushStreamUrl;
+
     @NameInMap("RoomId")
     public String roomId;
 
@@ -13,18 +19,28 @@ public class StartRequest extends TeaModel {
     @NameInMap("VideoType")
     public String videoType;
 
-    @NameInMap("PushStreamUrl")
-    public String pushStreamUrl;
-
-    @NameInMap("ExtendParams")
-    public java.util.Map<String, String> extendParams;
-
     @NameInMap("VirtualHumanCode")
     public String virtualHumanCode;
 
     public static StartRequest build(java.util.Map<String, ?> map) throws Exception {
         StartRequest self = new StartRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartRequest setExtendParams(java.util.Map<String, String> extendParams) {
+        this.extendParams = extendParams;
+        return this;
+    }
+    public java.util.Map<String, String> getExtendParams() {
+        return this.extendParams;
+    }
+
+    public StartRequest setPushStreamUrl(String pushStreamUrl) {
+        this.pushStreamUrl = pushStreamUrl;
+        return this;
+    }
+    public String getPushStreamUrl() {
+        return this.pushStreamUrl;
     }
 
     public StartRequest setRoomId(String roomId) {
@@ -49,22 +65,6 @@ public class StartRequest extends TeaModel {
     }
     public String getVideoType() {
         return this.videoType;
-    }
-
-    public StartRequest setPushStreamUrl(String pushStreamUrl) {
-        this.pushStreamUrl = pushStreamUrl;
-        return this;
-    }
-    public String getPushStreamUrl() {
-        return this.pushStreamUrl;
-    }
-
-    public StartRequest setExtendParams(java.util.Map<String, String> extendParams) {
-        this.extendParams = extendParams;
-        return this;
-    }
-    public java.util.Map<String, String> getExtendParams() {
-        return this.extendParams;
     }
 
     public StartRequest setVirtualHumanCode(String virtualHumanCode) {
