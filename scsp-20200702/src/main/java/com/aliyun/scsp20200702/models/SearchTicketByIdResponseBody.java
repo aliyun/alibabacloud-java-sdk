@@ -211,6 +211,9 @@ public class SearchTicketByIdResponseBody extends TeaModel {
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
+        @NameInMap("ParentCaseId")
+        public Long parentCaseId;
+
         @NameInMap("Priority")
         public Integer priority;
 
@@ -341,6 +344,14 @@ public class SearchTicketByIdResponseBody extends TeaModel {
         }
         public Long getModifiedTime() {
             return this.modifiedTime;
+        }
+
+        public SearchTicketByIdResponseBodyData setParentCaseId(Long parentCaseId) {
+            this.parentCaseId = parentCaseId;
+            return this;
+        }
+        public Long getParentCaseId() {
+            return this.parentCaseId;
         }
 
         public SearchTicketByIdResponseBodyData setPriority(Integer priority) {

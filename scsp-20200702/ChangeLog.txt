@@ -1,3 +1,6 @@
+2022-03-04 Version: 1.9.18
+- SearchTicketById can return parentcaseid.
+
 2022-01-21 Version: 1.9.17
 - Publish agent monitor Servicer.
 
