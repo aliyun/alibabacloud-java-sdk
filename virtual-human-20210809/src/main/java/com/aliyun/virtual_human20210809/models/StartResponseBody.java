@@ -4,12 +4,11 @@ package com.aliyun.virtual_human20210809.models;
 import com.aliyun.tea.*;
 
 public class StartResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("Data")
+    public String data;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -17,20 +16,13 @@ public class StartResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("Data")
-    public String data;
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static StartResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartResponseBody self = new StartResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public StartResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public StartResponseBody setCode(String code) {
@@ -39,6 +31,14 @@ public class StartResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public StartResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public StartResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -57,12 +57,12 @@ public class StartResponseBody extends TeaModel {
         return this.message;
     }
 
-    public StartResponseBody setData(String data) {
-        this.data = data;
+    public StartResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

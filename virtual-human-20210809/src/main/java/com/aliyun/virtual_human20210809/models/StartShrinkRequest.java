@@ -4,6 +4,12 @@ package com.aliyun.virtual_human20210809.models;
 import com.aliyun.tea.*;
 
 public class StartShrinkRequest extends TeaModel {
+    @NameInMap("ExtendParams")
+    public String extendParamsShrink;
+
+    @NameInMap("PushStreamUrl")
+    public String pushStreamUrl;
+
     @NameInMap("RoomId")
     public String roomId;
 
@@ -13,18 +19,28 @@ public class StartShrinkRequest extends TeaModel {
     @NameInMap("VideoType")
     public String videoType;
 
-    @NameInMap("PushStreamUrl")
-    public String pushStreamUrl;
-
-    @NameInMap("ExtendParams")
-    public String extendParamsShrink;
-
     @NameInMap("VirtualHumanCode")
     public String virtualHumanCode;
 
     public static StartShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         StartShrinkRequest self = new StartShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartShrinkRequest setExtendParamsShrink(String extendParamsShrink) {
+        this.extendParamsShrink = extendParamsShrink;
+        return this;
+    }
+    public String getExtendParamsShrink() {
+        return this.extendParamsShrink;
+    }
+
+    public StartShrinkRequest setPushStreamUrl(String pushStreamUrl) {
+        this.pushStreamUrl = pushStreamUrl;
+        return this;
+    }
+    public String getPushStreamUrl() {
+        return this.pushStreamUrl;
     }
 
     public StartShrinkRequest setRoomId(String roomId) {
@@ -49,22 +65,6 @@ public class StartShrinkRequest extends TeaModel {
     }
     public String getVideoType() {
         return this.videoType;
-    }
-
-    public StartShrinkRequest setPushStreamUrl(String pushStreamUrl) {
-        this.pushStreamUrl = pushStreamUrl;
-        return this;
-    }
-    public String getPushStreamUrl() {
-        return this.pushStreamUrl;
-    }
-
-    public StartShrinkRequest setExtendParamsShrink(String extendParamsShrink) {
-        this.extendParamsShrink = extendParamsShrink;
-        return this;
-    }
-    public String getExtendParamsShrink() {
-        return this.extendParamsShrink;
     }
 
     public StartShrinkRequest setVirtualHumanCode(String virtualHumanCode) {

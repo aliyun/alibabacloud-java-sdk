@@ -4,12 +4,11 @@ package com.aliyun.virtual_human20210809.models;
 import com.aliyun.tea.*;
 
 public class TextToVideoResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("Data")
+    public String data;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -17,20 +16,13 @@ public class TextToVideoResponseBody extends TeaModel {
     @NameInMap("Message1")
     public String message1;
 
-    @NameInMap("Data")
-    public String data;
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static TextToVideoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TextToVideoResponseBody self = new TextToVideoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public TextToVideoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public TextToVideoResponseBody setCode(String code) {
@@ -39,6 +31,14 @@ public class TextToVideoResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public TextToVideoResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public TextToVideoResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -57,12 +57,12 @@ public class TextToVideoResponseBody extends TeaModel {
         return this.message1;
     }
 
-    public TextToVideoResponseBody setData(String data) {
-        this.data = data;
+    public TextToVideoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
