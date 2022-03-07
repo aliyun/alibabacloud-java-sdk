@@ -3,7 +3,7 @@ package com.aliyun.paiplugin20220112.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteScheduleResponseBody extends TeaModel {
+public class UpdateUploadUrlResponseBody extends TeaModel {
     // 返回数据。
     @NameInMap("Data")
     public String data;
@@ -20,12 +20,12 @@ public class DeleteScheduleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteScheduleResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteScheduleResponseBody self = new DeleteScheduleResponseBody();
+    public static UpdateUploadUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateUploadUrlResponseBody self = new UpdateUploadUrlResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteScheduleResponseBody setData(String data) {
+    public UpdateUploadUrlResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -33,7 +33,7 @@ public class DeleteScheduleResponseBody extends TeaModel {
         return this.data;
     }
 
-    public DeleteScheduleResponseBody setErrorCode(Integer errorCode) {
+    public UpdateUploadUrlResponseBody setErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -41,7 +41,7 @@ public class DeleteScheduleResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DeleteScheduleResponseBody setErrorMessage(String errorMessage) {
+    public UpdateUploadUrlResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -49,7 +49,7 @@ public class DeleteScheduleResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public DeleteScheduleResponseBody setRequestId(String requestId) {
+    public UpdateUploadUrlResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

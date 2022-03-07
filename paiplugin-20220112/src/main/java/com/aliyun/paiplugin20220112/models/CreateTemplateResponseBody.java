@@ -4,7 +4,7 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateResponseBody extends TeaModel {
-    // 返回数据
+    // 返回数据。
     @NameInMap("Data")
     public CreateTemplateResponseBodyData data;
 
@@ -70,7 +70,7 @@ public class CreateTemplateResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        // Id。
+        // 模板Id。
         @NameInMap("Id")
         public String id;
 
@@ -98,9 +98,9 @@ public class CreateTemplateResponseBody extends TeaModel {
         public String templateCode;
 
         // 模板类型。
-        // 0：验证码。
-        // 1：短信通知。
-        // 2：推广短信。
+        // - 0 : 验证码。
+        // - 1 : 短信通知。
+        // - 2 : 推广短信。
         @NameInMap("Type")
         public Integer type;
 

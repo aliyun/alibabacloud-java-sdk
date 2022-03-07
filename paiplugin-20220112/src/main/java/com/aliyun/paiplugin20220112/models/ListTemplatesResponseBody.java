@@ -4,7 +4,7 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesResponseBody extends TeaModel {
-    // 返回数据
+    // 返回数据。
     @NameInMap("Data")
     public ListTemplatesResponseBodyData data;
 
@@ -70,7 +70,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        // Id。
+        // 模板Id。
         @NameInMap("Id")
         public String id;
 
@@ -98,9 +98,9 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String templateCode;
 
         // 模板类型。
-        // 0：验证码。
-        // 1：短信通知。
-        // 2：推广短信。
+        // - 0 : 验证码。
+        // - 1 : 短信通知。
+        // - 2 : 推广短信。
         @NameInMap("Type")
         public Integer type;
 
@@ -212,11 +212,11 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 模板列表。
+        // 分页返回的模板列表。
         @NameInMap("Templates")
         public java.util.List<ListTemplatesResponseBodyDataTemplates> templates;
 
-        // 总模板数量。
+        // 全部模板注册记录数量。
         @NameInMap("TotalCount")
         public Integer totalCount;
 

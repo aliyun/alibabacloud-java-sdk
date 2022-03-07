@@ -4,7 +4,7 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class DeleteGroupResponseBody extends TeaModel {
-    // 返回数据
+    // 返回数据。
     @NameInMap("Data")
     public String data;
 

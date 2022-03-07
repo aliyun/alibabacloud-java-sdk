@@ -20,7 +20,7 @@ public class CreateGroupRequest extends TeaModel {
     @NameInMap("InferenceJobId")
     public String inferenceJobId;
 
-    // 人群名称
+    // 人群名称。
     @NameInMap("Name")
     public String name;
 
@@ -32,12 +32,12 @@ public class CreateGroupRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
-    // 人群来源
-    // - 0: Text，每行一个手机号
-    // - 1: 无header的csv文件，每行一个手机号
-    // - 2: 带header的csv文件，需指定手机号列名
-    // - 3: Odps，需指定手机号列名
-    // - 4: Algorithm，由算法预测生成
+    // 人群来源。
+    // - 0: Text，每行一个手机号。
+    // - 1: 文本文件，每行一个手机号。
+    // - 2: 带header的csv文件，需指定手机号列名。
+    // - 3: Odps，需指定手机号列名。
+    // - 4: Algorithm，由算法预测生成。
     @NameInMap("Source")
     public Integer source;
 

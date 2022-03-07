@@ -8,15 +8,15 @@ public class SendMessageRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
-    // 外部拓展字段。
+    // 外部拓展字段，示例：["1234567890"]。
     @NameInMap("OutIds")
     public java.util.List<String> outIds;
 
-    // 手机号，每个手机号对应一个模板变量、上行拓展码和外部拓展字段。
+    // 手机号，每个手机号对应一个模板变量、上行拓展码和外部拓展字段，示例：["1234567890"]。
     @NameInMap("PhoneNumbers")
     public java.util.List<String> phoneNumbers;
 
-    // 发送计划Id，用于关联发送计划。
+    // 触达计划Id，用于关联触达计划。
     @NameInMap("ScheduleId")
     public String scheduleId;
 
@@ -28,7 +28,7 @@ public class SendMessageRequest extends TeaModel {
     @NameInMap("SignatureId")
     public String signatureId;
 
-    // 短信上行拓展码。
+    // 短信上行拓展码，示例：["1234567890"]。
     @NameInMap("SmsUpExtendCodes")
     public java.util.List<String> smsUpExtendCodes;
 
@@ -40,7 +40,7 @@ public class SendMessageRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
-    // 短信模板变量对应的实际值，JSON格式。支持传入多个参数，示例：{"name":"张三","number":"15038****76"}。
+    // 短信模板变量对应的实际值，JSON格式。支持传入多个参数，示例：[{"name":"张三","number":"15038****76"}]。
     @NameInMap("TemplateParams")
     public java.util.List<String> templateParams;
 

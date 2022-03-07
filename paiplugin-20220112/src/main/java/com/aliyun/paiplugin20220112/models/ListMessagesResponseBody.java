@@ -4,7 +4,7 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListMessagesResponseBody extends TeaModel {
-    // 返回数据
+    // 返回数据。
     @NameInMap("Data")
     public ListMessagesResponseBodyData data;
 
@@ -62,7 +62,7 @@ public class ListMessagesResponseBody extends TeaModel {
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        // 关联人群Id。
+        // 关联人群Id，未关联则为空。
         @NameInMap("GroupId")
         public String groupId;
 
@@ -78,7 +78,7 @@ public class ListMessagesResponseBody extends TeaModel {
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
-        // 关联发送计划Id。
+        // 关联触达计划Id，未关联则为空。
         @NameInMap("ScheduleId")
         public String scheduleId;
 
@@ -100,6 +100,13 @@ public class ListMessagesResponseBody extends TeaModel {
         // 模板参数。
         @NameInMap("TemplateParams")
         public String templateParams;
+
+        // 模板类型。
+        // - 0 : 验证码。
+        // - 1 : 短信通知。
+        // - 2 : 推广短信。
+        @NameInMap("TemplateType")
+        public Integer templateType;
 
         public static ListMessagesResponseBodyDataMessages build(java.util.Map<String, ?> map) throws Exception {
             ListMessagesResponseBodyDataMessages self = new ListMessagesResponseBodyDataMessages();
@@ -184,6 +191,14 @@ public class ListMessagesResponseBody extends TeaModel {
         }
         public String getTemplateParams() {
             return this.templateParams;
+        }
+
+        public ListMessagesResponseBodyDataMessages setTemplateType(Integer templateType) {
+            this.templateType = templateType;
+            return this;
+        }
+        public Integer getTemplateType() {
+            return this.templateType;
         }
 
     }

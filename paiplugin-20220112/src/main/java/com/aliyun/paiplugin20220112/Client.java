@@ -33,9 +33,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 注册人群
-    
-     * @tags 人群
+     * 注册人群。
      */
     public CreateGroupResponse createGroup(CreateGroupRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -109,9 +107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 注册推理任务
-    
-     * @tags 推理任务
+     * 注册预测任务。
      */
     public CreateInferenceJobResponse createInferenceJob(CreateInferenceJobRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -161,9 +157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 注册触达计划
-    
-     * @tags 触达计划
+     * 注册触达计划。
      */
     public CreateScheduleResponse createSchedule(CreateScheduleRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -239,7 +233,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 注册签名。
     
-     * @tags 签名
      */
     public CreateSignatureResponse createSignature(CreateSignatureRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -277,9 +270,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 注册模板
+     * 注册模板。
     
-     * @tags 模板
      */
     public CreateTemplateResponse createTemplate(CreateTemplateRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -300,6 +292,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signature)) {
+            body.put("Signature", request.signature);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.signatureId)) {
@@ -329,9 +325,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 注册训练任务
+     * 注册训练任务。
     
-     * @tags 训练任务
      */
     public CreateTrainingJobResponse createTrainingJob(CreateTrainingJobRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -379,7 +374,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 删除人群
     
-     * @tags 人群
      */
     public DeleteGroupResponse deleteGroup(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -407,9 +401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 删除推理任务
-    
-     * @tags 推理任务
+     * 删除预测任务。
      */
     public DeleteInferenceJobResponse deleteInferenceJob(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -437,9 +429,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 删除触达计划
+     * 删除触达计划。
     
-     * @tags 触达计划
      */
     public DeleteScheduleResponse deleteSchedule(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -469,7 +460,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 删除签名。
     
-     * @tags 签名
      */
     public DeleteSignatureResponse deleteSignature(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -499,7 +489,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * 删除模板
     
-     * @tags 模板
      */
     public DeleteTemplateResponse deleteTemplate(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -527,9 +516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 删除训练任务
-    
-     * @tags 训练任务
+     * 删除训练任务。
      */
     public DeleteTrainingJobResponse deleteTrainingJob(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -557,8 +544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 获取算法详情
-     * @tags 算法
+     * 获取算法详情。
      */
     public GetAlgorithmResponse getAlgorithm(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -586,9 +572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 获取人群
-    默认返回所有人群信息
-     * @tags 人群
+     * 获取人群详情。
      */
     public GetGroupResponse getGroup(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -616,9 +600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 获取推理任务
-    默认返回所有推理任务信息
-     * @tags 推理任务
+     * 获取预测任务详情。
      */
     public GetInferenceJobResponse getInferenceJob(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -646,9 +628,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * 获取短信配置。
+     */
+    public GetMessageConfigResponse getMessageConfig() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMessageConfigWithOptions(headers, runtime);
+    }
+
+    public GetMessageConfigResponse getMessageConfigWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMessageConfig"),
+            new TeaPair("version", "2022-01-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/users/messageConfig"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMessageConfigResponse());
+    }
+
+    /**
      * 获取触达计划详情。
-    
-     * @tags 触达计划
      */
     public GetScheduleResponse getSchedule(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -676,8 +683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 获取签名详情
-     * @tags 签名
+     * 获取签名详情。
      */
     public GetSignatureResponse getSignature(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -705,10 +711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 获取模板
-    默认返回所有模板信息
-    ![模板列表](https://intranetproxy.alipay.com/skylark/lark/0/2021/png/302991/1615264998427-d2943cfb-106a-421d-b4a4-f06307b4d9be.png)
-     * @tags 模板
+     * 获取模板详情。
      */
     public GetTemplateResponse getTemplate(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -736,9 +739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 获取训练任务
-    默认返回所有训练任务信息
-     * @tags 训练任务
+     * 获取训练任务详情。
      */
     public GetTrainingJobResponse getTrainingJob(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -766,8 +767,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 获取算法列表
-     * @tags 算法
+     * 获取账号状态。
+     */
+    public GetUserResponse getUser() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getUserWithOptions(headers, runtime);
+    }
+
+    public GetUserResponse getUserWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUser"),
+            new TeaPair("version", "2022-01-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/users"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserResponse());
+    }
+
+    /**
+     * 获取算法列表。
      */
     public ListAlgorithmsResponse listAlgorithms(ListAlgorithmsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -813,8 +840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 获取人群列表
-     * @tags 人群
+     * 获取人群列表。
      */
     public ListGroupsResponse listGroups(ListGroupsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -868,8 +894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 获取推理任务列表
-     * @tags 推理任务
+     * 获取预测任务列表。
      */
     public ListInferenceJobsResponse listInferenceJobs(ListInferenceJobsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -919,8 +944,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 获取用户短信发送统计
-     * @tags 短信
+     * 获取短信发送统计列表。
+    获取短信发送统计数据，可按指定条件获取分类别详细数据，返回数据按日期顺序排列，发送统计为空的日期默认不返回。
+    发送数据在48小时内会随实际短信发送状态不断更新，最终数据以48小时后数据为准。
      */
     public ListMessageMetricsResponse listMessageMetrics(ListMessageMetricsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -971,6 +997,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TemplateId", request.templateId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
+            query.put("TemplateType", request.templateType);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -990,8 +1020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 查询短信发送详情
-     * @tags 短信
+     * 查询短信发送详情列表。
      */
     public ListMessagesResponse listMessages(ListMessagesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -1054,6 +1083,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TemplateId", request.templateId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
+            query.put("TemplateType", request.templateType);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -1074,7 +1107,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * 获取触达计划列表。
-     * @tags 触达计划
      */
     public ListSchedulesResponse listSchedules(ListSchedulesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -1120,8 +1152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 获取签名列表
-     * @tags 签名
+     * 获取签名列表。
      */
     public ListSignaturesResponse listSignatures(ListSignaturesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -1167,9 +1198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 获取模板列表
-    默认返回所有模板信息
-     * @tags 模板
+     * 获取模板列表。
      */
     public ListTemplatesResponse listTemplates(ListTemplatesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -1223,8 +1252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 获取训练任务列表
-     * @tags 训练任务
+     * 获取训练任务列表。
      */
     public ListTrainingJobsResponse listTrainingJobs(ListTrainingJobsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -1274,8 +1302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 发送短信
-     * @tags 短信
+     * 发送短信。
      */
     public SendMessageResponse sendMessage(SendMessageRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
@@ -1342,5 +1369,132 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new SendMessageResponse());
+    }
+
+    /**
+     * 短信回执。
+     */
+    public SmsReportResponse smsReport(SmsReportRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.smsReportWithOptions(request, headers, runtime);
+    }
+
+    public SmsReportResponse smsReportWithOptions(SmsReportRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.teautil.Common.toArray(request.body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SmsReport"),
+            new TeaPair("version", "2022-01-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/recall/report"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SmsReportResponse());
+    }
+
+    /**
+     * 短信上行。
+     */
+    public SmsUpResponse smsUp(SmsUpRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.smsUpWithOptions(request, headers, runtime);
+    }
+
+    public SmsUpResponse smsUpWithOptions(SmsUpRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.teautil.Common.toArray(request.body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SmsUp"),
+            new TeaPair("version", "2022-01-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/recall/up"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SmsUpResponse());
+    }
+
+    /**
+     * 更新回执Url。
+    
+     */
+    public UpdateReportUrlResponse updateReportUrl(UpdateReportUrlRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateReportUrlWithOptions(request, headers, runtime);
+    }
+
+    public UpdateReportUrlResponse updateReportUrlWithOptions(UpdateReportUrlRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            body.put("Url", request.url);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateReportUrl"),
+            new TeaPair("version", "2022-01-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/users/reportUrl"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateReportUrlResponse());
+    }
+
+    /**
+     * 更新上行Url。
+     */
+    public UpdateUploadUrlResponse updateUploadUrl(UpdateUploadUrlRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateUploadUrlWithOptions(request, headers, runtime);
+    }
+
+    public UpdateUploadUrlResponse updateUploadUrlWithOptions(UpdateUploadUrlRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            body.put("Url", request.url);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateUploadUrl"),
+            new TeaPair("version", "2022-01-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/users/uploadUrl"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateUploadUrlResponse());
     }
 }

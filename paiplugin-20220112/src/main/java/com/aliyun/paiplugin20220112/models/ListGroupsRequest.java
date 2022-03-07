@@ -4,7 +4,7 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsRequest extends TeaModel {
-    // 人群名称过滤，使用%name%模糊匹配
+    // 人群名称过滤。
     @NameInMap("Name")
     public String name;
 
@@ -16,15 +16,15 @@ public class ListGroupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 人群备注过滤，使用%name%模糊匹配
+    // 人群备注过滤。
     @NameInMap("Remark")
     public String remark;
 
-    // 来源过滤
+    // 来源过滤。
     @NameInMap("Source")
     public Integer source;
 
-    // 审核状态过滤
+    // 审核状态过滤。
     @NameInMap("Status")
     public Integer status;
 

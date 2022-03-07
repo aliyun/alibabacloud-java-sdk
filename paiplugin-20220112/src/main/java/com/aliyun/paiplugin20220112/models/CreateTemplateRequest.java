@@ -16,14 +16,18 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    // 签名Id。
+    // 签名名称，同时只能指定签名名称或签名Id其中之一。
+    @NameInMap("Signature")
+    public String signature;
+
+    // 签名Id，可通过ListSignatures获取审核状态为已通过的签名列表，获取签名Id。
     @NameInMap("SignatureId")
     public String signatureId;
 
     // 模板类型。
-    // 0：验证码。
-    // 1：短信通知。
-    // 2：推广短信。
+    // - 0 : 验证码。
+    // - 1 : 短信通知。
+    // - 2 : 推广短信。
     @NameInMap("Type")
     public Integer type;
 
@@ -54,6 +58,14 @@ public class CreateTemplateRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateTemplateRequest setSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    public String getSignature() {
+        return this.signature;
     }
 
     public CreateTemplateRequest setSignatureId(String signatureId) {
