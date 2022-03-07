@@ -4,6 +4,12 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
+    @NameInMap("AcceleratorType")
+    public String acceleratorType;
+
+    @NameInMap("Accessibility")
+    public String accessibility;
+
     // 实例名称
     @NameInMap("InstanceName")
     public String instanceName;
@@ -20,6 +26,9 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("PaymentType")
+    public String paymentType;
+
     // 排序字段
     @NameInMap("SortBy")
     public String sortBy;
@@ -35,6 +44,22 @@ public class ListInstancesRequest extends TeaModel {
     public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesRequest self = new ListInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstancesRequest setAcceleratorType(String acceleratorType) {
+        this.acceleratorType = acceleratorType;
+        return this;
+    }
+    public String getAcceleratorType() {
+        return this.acceleratorType;
+    }
+
+    public ListInstancesRequest setAccessibility(String accessibility) {
+        this.accessibility = accessibility;
+        return this;
+    }
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     public ListInstancesRequest setInstanceName(String instanceName) {
@@ -67,6 +92,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListInstancesRequest setPaymentType(String paymentType) {
+        this.paymentType = paymentType;
+        return this;
+    }
+    public String getPaymentType() {
+        return this.paymentType;
     }
 
     public ListInstancesRequest setSortBy(String sortBy) {
