@@ -1,3 +1,6 @@
+2022-03-07 Version: 2.3.5
+- Supported RemovePhoneNumbers.
+
 2022-03-03 Version: 2.3.4
 - Supported GetCallDetailRecord AgentEvents Duration.
 

@@ -4648,6 +4648,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemovePhoneNumbersResponse removePhoneNumbersWithOptions(RemovePhoneNumbersRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
