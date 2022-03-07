@@ -4,7 +4,7 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListSchedulesRequest extends TeaModel {
-    // 发送计划名称，用于名称过滤或搜索，使用%name%模糊匹配
+    // 触达计划名称过滤。
     @NameInMap("Name")
     public String name;
 
@@ -16,7 +16,7 @@ public class ListSchedulesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 发送状态过滤
+    // 发送状态过滤。
     @NameInMap("Status")
     public Integer status;
 

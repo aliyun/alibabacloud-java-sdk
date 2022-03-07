@@ -4,7 +4,7 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupResponseBody extends TeaModel {
-    // 返回数据
+    // 返回数据。
     @NameInMap("Data")
     public CreateGroupResponseBodyData data;
 
@@ -62,7 +62,7 @@ public class CreateGroupResponseBody extends TeaModel {
         @NameInMap("Algorithm")
         public String algorithm;
 
-        // 人群数量
+        // 人群数量。
         @NameInMap("Amount")
         public Integer amount;
 
@@ -70,7 +70,7 @@ public class CreateGroupResponseBody extends TeaModel {
         @NameInMap("Column")
         public String column;
 
-        // 创建时间 (UTC+8)
+        // 创建时间 (UTC+8)。
         @NameInMap("CreatedTime")
         public String createdTime;
 
@@ -78,7 +78,7 @@ public class CreateGroupResponseBody extends TeaModel {
         @NameInMap("Filter")
         public String filter;
 
-        // 人群Id
+        // 人群Id。
         @NameInMap("Id")
         public String id;
 
@@ -86,7 +86,7 @@ public class CreateGroupResponseBody extends TeaModel {
         @NameInMap("InferenceJobId")
         public String inferenceJobId;
 
-        // 人群名称
+        // 人群名称。
         @NameInMap("Name")
         public String name;
 
@@ -98,16 +98,19 @@ public class CreateGroupResponseBody extends TeaModel {
         @NameInMap("Remark")
         public String remark;
 
-        // 人群来源
-        // - 0: Text，每行一个手机号
-        // - 1: 无header的csv文件，每行一个手机号
-        // - 2: 带header的csv文件，需指定手机号列名
-        // - 3: Odps，需指定手机号列名
-        // - 4: Algorithm，由算法预测生成
+        // 人群来源。
+        // - 0: Text，每行一个手机号。
+        // - 1: 文本文件，每行一个手机号。
+        // - 2: 带header的csv文件，需指定手机号列名。
+        // - 3: Odps，需指定手机号列名。
+        // - 4: Algorithm，由算法预测生成。
         @NameInMap("Source")
         public Integer source;
 
-        // 人群状态
+        // 人群状态。
+        // - 0: 检查中。
+        // - 1: 已通过。
+        // - 2: 未通过。
         @NameInMap("Status")
         public Integer status;
 
@@ -119,7 +122,7 @@ public class CreateGroupResponseBody extends TeaModel {
         @NameInMap("Text")
         public String text;
 
-        // 更新时间 (UTC+8)
+        // 更新时间 (UTC+8)。
         @NameInMap("UpdatedTime")
         public String updatedTime;
 

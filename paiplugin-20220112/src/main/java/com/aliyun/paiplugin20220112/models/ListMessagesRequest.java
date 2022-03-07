@@ -8,11 +8,11 @@ public class ListMessagesRequest extends TeaModel {
     @NameInMap("Datetime")
     public String datetime;
 
-    // 关联人群Id。
+    // 关联人群Id过滤。
     @NameInMap("GroupId")
     public String groupId;
 
-    // 短信序列号。
+    // 短信Id过滤，短信Id为SendMessage成功返回的Id。
     @NameInMap("MessageId")
     public String messageId;
 
@@ -24,40 +24,47 @@ public class ListMessagesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 手机号码。
+    // 手机号码过滤。
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
-    // 请求序列号。
+    // 短信批处理Id过滤，短信批处理Id为SendMessage成功返回的RequestId。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 关联发送计划Id。
+    // 关联触达计划Id过滤。
     @NameInMap("ScheduleId")
     public String scheduleId;
 
-    // 签名名称。
+    // 签名名称过滤。
     @NameInMap("Signature")
     public String signature;
 
-    // 签名Id，同时只能指定签名名称或签名Id其中之一。
+    // 签名Id过滤，同时只能指定签名名称或签名Id其中之一。
     @NameInMap("SignatureId")
     public String signatureId;
 
-    // 短信发送状态。
+    // 短信发送状态过滤。
     // - 0 : 发送中。
     // - 1 : 发送成功。
     // - 2 : 发送失败。
     @NameInMap("Status")
     public Integer status;
 
-    // 模板号。
+    // 模板号过滤。
     @NameInMap("TemplateCode")
     public String templateCode;
 
-    // 模板Id，同时只能指定模板Code或模板Id其中之一。
+    // 模板Id过滤，同时只能指定模板Code或模板Id其中之一。
     @NameInMap("TemplateId")
     public String templateId;
+
+    // 模板类型过滤。
+    // - 0 : 验证码。
+    // - 1 : 短信通知。
+    // - 2 : 推广短信。
+    @NameInMap("TemplateType")
+    public Integer templateType;
 
     public static ListMessagesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMessagesRequest self = new ListMessagesRequest();
@@ -166,6 +173,14 @@ public class ListMessagesRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
+    }
+
+    public ListMessagesRequest setTemplateType(Integer templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public Integer getTemplateType() {
+        return this.templateType;
     }
 
 }

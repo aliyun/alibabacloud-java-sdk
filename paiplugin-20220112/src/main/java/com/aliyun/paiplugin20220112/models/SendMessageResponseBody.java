@@ -4,7 +4,7 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class SendMessageResponseBody extends TeaModel {
-    // 返回数据
+    // 返回数据。
     @NameInMap("Data")
     public SendMessageResponseBodyData data;
 
@@ -58,9 +58,11 @@ public class SendMessageResponseBody extends TeaModel {
     }
 
     public static class SendMessageResponseBodyDataMessages extends TeaModel {
+        // 短信Id，可使用ListMessages查询短信状态。
         @NameInMap("Id")
         public String id;
 
+        // 手机号码。
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
@@ -88,9 +90,11 @@ public class SendMessageResponseBody extends TeaModel {
     }
 
     public static class SendMessageResponseBodyData extends TeaModel {
+        // 短信结果列表，列表中手机号的顺序与输入请求手机号顺序一一对应。
         @NameInMap("Messages")
         public java.util.List<SendMessageResponseBodyDataMessages> messages;
 
+        // 短信批处理Id，可使用ListMessages查询短信状态。
         @NameInMap("RequestId")
         public String requestId;
 

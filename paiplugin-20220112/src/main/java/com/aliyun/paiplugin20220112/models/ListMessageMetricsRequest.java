@@ -20,7 +20,7 @@ public class ListMessageMetricsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 关联发送计划Id。
+    // 关联触达计划Id。
     @NameInMap("ScheduleId")
     public String scheduleId;
 
@@ -43,6 +43,13 @@ public class ListMessageMetricsRequest extends TeaModel {
     // 模板Id，同时只能指定模板Code或模板Id其中之一。
     @NameInMap("TemplateId")
     public String templateId;
+
+    // 模板类型。
+    // - 0 : 验证码。
+    // - 1 : 短信通知。
+    // - 2 : 推广短信。
+    @NameInMap("TemplateType")
+    public Integer templateType;
 
     public static ListMessageMetricsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMessageMetricsRequest self = new ListMessageMetricsRequest();
@@ -127,6 +134,14 @@ public class ListMessageMetricsRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
+    }
+
+    public ListMessageMetricsRequest setTemplateType(Integer templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public Integer getTemplateType() {
+        return this.templateType;
     }
 
 }
