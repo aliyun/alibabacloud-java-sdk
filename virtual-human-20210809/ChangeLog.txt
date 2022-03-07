@@ -1,3 +1,6 @@
+2022-03-07 Version: 1.0.5
+- Dingding meeting sdk.
+
 2022-03-04 Version: 1.0.4
 - Dingding meeting sdk.
 
