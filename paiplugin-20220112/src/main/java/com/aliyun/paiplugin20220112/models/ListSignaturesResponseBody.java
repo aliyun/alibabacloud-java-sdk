@@ -137,11 +137,11 @@ public class ListSignaturesResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 分页返回的签名列表。
+        // 签名列表。
         @NameInMap("Signatures")
         public java.util.List<ListSignaturesResponseBodyDataSignatures> signatures;
 
-        // 账号下全部签名注册记录数量。
+        // 签名数量。
         @NameInMap("TotalCount")
         public Integer totalCount;
 
