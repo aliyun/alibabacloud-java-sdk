@@ -4,65 +4,33 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListAlarmStatusResponseBody extends TeaModel {
-    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
-    @NameInMap("NextToken")
-    public String nextToken;
+    // 告警状态列表
+    @NameInMap("AlarmStatus")
+    public java.util.List<ListAlarmStatusResponseBodyAlarmStatus> alarmStatus;
 
     // MaxResults本次请求所返回的最大记录条数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 告警状态列表
-    @NameInMap("AlarmStatus")
-    public java.util.List<ListAlarmStatusResponseBodyAlarmStatus> alarmStatus;
+    // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     // 告警状态统计
     @NameInMap("Statistics")
     public java.util.List<ListAlarmStatusResponseBodyStatistics> statistics;
 
+    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListAlarmStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAlarmStatusResponseBody self = new ListAlarmStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAlarmStatusResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListAlarmStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListAlarmStatusResponseBody setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ListAlarmStatusResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
     }
 
     public ListAlarmStatusResponseBody setAlarmStatus(java.util.List<ListAlarmStatusResponseBodyAlarmStatus> alarmStatus) {
@@ -73,6 +41,30 @@ public class ListAlarmStatusResponseBody extends TeaModel {
         return this.alarmStatus;
     }
 
+    public ListAlarmStatusResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListAlarmStatusResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListAlarmStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListAlarmStatusResponseBody setStatistics(java.util.List<ListAlarmStatusResponseBodyStatistics> statistics) {
         this.statistics = statistics;
         return this;
@@ -81,76 +73,12 @@ public class ListAlarmStatusResponseBody extends TeaModel {
         return this.statistics;
     }
 
-    public static class ListAlarmStatusResponseBodyAlarmStatusResourceDevice extends TeaModel {
-        // 设备名
-        @NameInMap("HostName")
-        public String hostName;
-
-        public static ListAlarmStatusResponseBodyAlarmStatusResourceDevice build(java.util.Map<String, ?> map) throws Exception {
-            ListAlarmStatusResponseBodyAlarmStatusResourceDevice self = new ListAlarmStatusResponseBodyAlarmStatusResourceDevice();
-            return TeaModel.build(map, self);
-        }
-
-        public ListAlarmStatusResponseBodyAlarmStatusResourceDevice setHostName(String hostName) {
-            this.hostName = hostName;
-            return this;
-        }
-        public String getHostName() {
-            return this.hostName;
-        }
-
+    public ListAlarmStatusResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
     }
-
-    public static class ListAlarmStatusResponseBodyAlarmStatusMonitorItem extends TeaModel {
-        // 监控项名称
-        @NameInMap("MonitorItemName")
-        public String monitorItemName;
-
-        public static ListAlarmStatusResponseBodyAlarmStatusMonitorItem build(java.util.Map<String, ?> map) throws Exception {
-            ListAlarmStatusResponseBodyAlarmStatusMonitorItem self = new ListAlarmStatusResponseBodyAlarmStatusMonitorItem();
-            return TeaModel.build(map, self);
-        }
-
-        public ListAlarmStatusResponseBodyAlarmStatusMonitorItem setMonitorItemName(String monitorItemName) {
-            this.monitorItemName = monitorItemName;
-            return this;
-        }
-        public String getMonitorItemName() {
-            return this.monitorItemName;
-        }
-
-    }
-
-    public static class ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch extends TeaModel {
-        // 关闭原因
-        @NameInMap("Reason")
-        public String reason;
-
-        // 关闭到期时间
-        @NameInMap("ExpiryTime")
-        public String expiryTime;
-
-        public static ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch build(java.util.Map<String, ?> map) throws Exception {
-            ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch self = new ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch();
-            return TeaModel.build(map, self);
-        }
-
-        public ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch setReason(String reason) {
-            this.reason = reason;
-            return this;
-        }
-        public String getReason() {
-            return this.reason;
-        }
-
-        public ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch setExpiryTime(String expiryTime) {
-            this.expiryTime = expiryTime;
-            return this;
-        }
-        public String getExpiryTime() {
-            return this.expiryTime;
-        }
-
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListAlarmStatusResponseBodyAlarmStatusAggregateData extends TeaModel {
@@ -190,6 +118,9 @@ public class ListAlarmStatusResponseBody extends TeaModel {
         @NameInMap("DedicatedLineName")
         public String dedicatedLineName;
 
+        @NameInMap("PhysicalSpace")
+        public String physicalSpace;
+
         public static ListAlarmStatusResponseBodyAlarmStatusDedicatedLine build(java.util.Map<String, ?> map) throws Exception {
             ListAlarmStatusResponseBodyAlarmStatusDedicatedLine self = new ListAlarmStatusResponseBodyAlarmStatusDedicatedLine();
             return TeaModel.build(map, self);
@@ -201,6 +132,90 @@ public class ListAlarmStatusResponseBody extends TeaModel {
         }
         public String getDedicatedLineName() {
             return this.dedicatedLineName;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatusDedicatedLine setPhysicalSpace(String physicalSpace) {
+            this.physicalSpace = physicalSpace;
+            return this;
+        }
+        public String getPhysicalSpace() {
+            return this.physicalSpace;
+        }
+
+    }
+
+    public static class ListAlarmStatusResponseBodyAlarmStatusMonitorItem extends TeaModel {
+        // 采集类型
+        @NameInMap("CollectionType")
+        public String collectionType;
+
+        // 监控项描述
+        @NameInMap("MonitorItemDescription")
+        public String monitorItemDescription;
+
+        // 监控项名称
+        @NameInMap("MonitorItemName")
+        public String monitorItemName;
+
+        public static ListAlarmStatusResponseBodyAlarmStatusMonitorItem build(java.util.Map<String, ?> map) throws Exception {
+            ListAlarmStatusResponseBodyAlarmStatusMonitorItem self = new ListAlarmStatusResponseBodyAlarmStatusMonitorItem();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatusMonitorItem setCollectionType(String collectionType) {
+            this.collectionType = collectionType;
+            return this;
+        }
+        public String getCollectionType() {
+            return this.collectionType;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatusMonitorItem setMonitorItemDescription(String monitorItemDescription) {
+            this.monitorItemDescription = monitorItemDescription;
+            return this;
+        }
+        public String getMonitorItemDescription() {
+            return this.monitorItemDescription;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatusMonitorItem setMonitorItemName(String monitorItemName) {
+            this.monitorItemName = monitorItemName;
+            return this;
+        }
+        public String getMonitorItemName() {
+            return this.monitorItemName;
+        }
+
+    }
+
+    public static class ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch extends TeaModel {
+        // 关闭到期时间
+        @NameInMap("ExpiryTime")
+        public String expiryTime;
+
+        // 关闭原因
+        @NameInMap("Reason")
+        public String reason;
+
+        public static ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch build(java.util.Map<String, ?> map) throws Exception {
+            ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch self = new ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch setExpiryTime(String expiryTime) {
+            this.expiryTime = expiryTime;
+            return this;
+        }
+        public String getExpiryTime() {
+            return this.expiryTime;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
         }
 
     }
@@ -226,37 +241,29 @@ public class ListAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class ListAlarmStatusResponseBodyAlarmStatusResourceApp extends TeaModel {
-        // 监控域名
-        @NameInMap("Domain")
-        public String domain;
-
         // 应用ID
         @NameInMap("AppId")
         public String appId;
+
+        // 监控域名
+        @NameInMap("Domain")
+        public String domain;
 
         // 端口
         @NameInMap("Port")
         public String port;
 
-        // 资源类型
-        @NameInMap("Type")
-        public String type;
-
         // 所属探针
         @NameInMap("SecurityDomain")
         public String securityDomain;
 
+        // 资源类型
+        @NameInMap("Type")
+        public String type;
+
         public static ListAlarmStatusResponseBodyAlarmStatusResourceApp build(java.util.Map<String, ?> map) throws Exception {
             ListAlarmStatusResponseBodyAlarmStatusResourceApp self = new ListAlarmStatusResponseBodyAlarmStatusResourceApp();
             return TeaModel.build(map, self);
-        }
-
-        public ListAlarmStatusResponseBodyAlarmStatusResourceApp setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
         }
 
         public ListAlarmStatusResponseBodyAlarmStatusResourceApp setAppId(String appId) {
@@ -267,20 +274,20 @@ public class ListAlarmStatusResponseBody extends TeaModel {
             return this.appId;
         }
 
+        public ListAlarmStatusResponseBodyAlarmStatusResourceApp setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
+        }
+
         public ListAlarmStatusResponseBodyAlarmStatusResourceApp setPort(String port) {
             this.port = port;
             return this;
         }
         public String getPort() {
             return this.port;
-        }
-
-        public ListAlarmStatusResponseBodyAlarmStatusResourceApp setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public ListAlarmStatusResponseBodyAlarmStatusResourceApp setSecurityDomain(String securityDomain) {
@@ -291,24 +298,74 @@ public class ListAlarmStatusResponseBody extends TeaModel {
             return this.securityDomain;
         }
 
+        public ListAlarmStatusResponseBodyAlarmStatusResourceApp setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class ListAlarmStatusResponseBodyAlarmStatusResourceDevice extends TeaModel {
+        @NameInMap("DeviceForm")
+        public String deviceForm;
+
+        // 设备名
+        @NameInMap("HostName")
+        public String hostName;
+
+        @NameInMap("PhysicalSpace")
+        public String physicalSpace;
+
+        public static ListAlarmStatusResponseBodyAlarmStatusResourceDevice build(java.util.Map<String, ?> map) throws Exception {
+            ListAlarmStatusResponseBodyAlarmStatusResourceDevice self = new ListAlarmStatusResponseBodyAlarmStatusResourceDevice();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatusResourceDevice setDeviceForm(String deviceForm) {
+            this.deviceForm = deviceForm;
+            return this;
+        }
+        public String getDeviceForm() {
+            return this.deviceForm;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatusResourceDevice setHostName(String hostName) {
+            this.hostName = hostName;
+            return this;
+        }
+        public String getHostName() {
+            return this.hostName;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatusResourceDevice setPhysicalSpace(String physicalSpace) {
+            this.physicalSpace = physicalSpace;
+            return this;
+        }
+        public String getPhysicalSpace() {
+            return this.physicalSpace;
+        }
+
     }
 
     public static class ListAlarmStatusResponseBodyAlarmStatus extends TeaModel {
-        // 设备ID
-        @NameInMap("DeviceId")
-        public String deviceId;
+        // 异常数据项
+        @NameInMap("AbnormalDataItem")
+        public String abnormalDataItem;
 
-        // 监控项ID
-        @NameInMap("MonitorItemId")
-        public String monitorItemId;
+        // 采集探针IP
+        @NameInMap("AgentIp")
+        public String agentIp;
 
-        // 检测时间
-        @NameInMap("CollectionTime")
-        public String collectionTime;
+        // 聚合数据
+        @NameInMap("AggregateData")
+        public ListAlarmStatusResponseBodyAlarmStatusAggregateData aggregateData;
 
-        // 接收时间
-        @NameInMap("ReceiveTime")
-        public String receiveTime;
+        // 聚合数据ID
+        @NameInMap("AggregateDataId")
+        public String aggregateDataId;
 
         // 命中告警规则
         @NameInMap("AlarmRule")
@@ -318,109 +375,109 @@ public class ListAlarmStatusResponseBody extends TeaModel {
         @NameInMap("AlarmStatus")
         public String alarmStatus;
 
-        // 采集结果
-        @NameInMap("Result")
-        public String result;
+        // 应用ID
+        @NameInMap("AppId")
+        public String appId;
 
-        // 异常数据项
-        @NameInMap("AbnormalDataItem")
-        public String abnormalDataItem;
-
-        // 索引
-        @NameInMap("UniqueKey")
-        public String uniqueKey;
-
-        // 采集状态码
-        @NameInMap("ResponseCode")
-        public String responseCode;
-
-        // 设备
-        @NameInMap("ResourceDevice")
-        public ListAlarmStatusResponseBodyAlarmStatusResourceDevice resourceDevice;
-
-        // 监控项
-        @NameInMap("MonitorItem")
-        public ListAlarmStatusResponseBodyAlarmStatusMonitorItem monitorItem;
-
-        // 首次异常时间
-        @NameInMap("FirstAbnormalTime")
-        public String firstAbnormalTime;
-
-        // 告警开关配置
-        @NameInMap("NotificationSwitch")
-        public ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch notificationSwitch;
-
-        // 聚合数据ID
-        @NameInMap("AggregateDataId")
-        public String aggregateDataId;
-
-        // 聚合数据
-        @NameInMap("AggregateData")
-        public ListAlarmStatusResponseBodyAlarmStatusAggregateData aggregateData;
-
-        // 专线ID
-        @NameInMap("DedicatedLineId")
-        public String dedicatedLineId;
+        // 检测时间
+        @NameInMap("CollectionTime")
+        public String collectionTime;
 
         // 专线
         @NameInMap("DedicatedLine")
         public ListAlarmStatusResponseBodyAlarmStatusDedicatedLine dedicatedLine;
 
-        // 端口集ID
-        @NameInMap("PortCollectionId")
-        public String portCollectionId;
+        // 专线ID
+        @NameInMap("DedicatedLineId")
+        public String dedicatedLineId;
+
+        // 设备ID
+        @NameInMap("DeviceId")
+        public String deviceId;
+
+        // 首次异常时间
+        @NameInMap("FirstAbnormalTime")
+        public String firstAbnormalTime;
+
+        // 监控项
+        @NameInMap("MonitorItem")
+        public ListAlarmStatusResponseBodyAlarmStatusMonitorItem monitorItem;
+
+        // 监控项ID
+        @NameInMap("MonitorItemId")
+        public String monitorItemId;
+
+        // 告警开关配置
+        @NameInMap("NotificationSwitch")
+        public ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch notificationSwitch;
 
         // 端口集
         @NameInMap("PortCollection")
         public ListAlarmStatusResponseBodyAlarmStatusPortCollection portCollection;
 
-        // 采集探针IP
-        @NameInMap("AgentIp")
-        public String agentIp;
+        // 端口集ID
+        @NameInMap("PortCollectionId")
+        public String portCollectionId;
 
-        // 应用ID
-        @NameInMap("AppId")
-        public String appId;
+        // 接收时间
+        @NameInMap("ReceiveTime")
+        public String receiveTime;
 
         // 应用资源
         @NameInMap("ResourceApp")
         public ListAlarmStatusResponseBodyAlarmStatusResourceApp resourceApp;
+
+        // 设备
+        @NameInMap("ResourceDevice")
+        public ListAlarmStatusResponseBodyAlarmStatusResourceDevice resourceDevice;
+
+        // 采集状态码
+        @NameInMap("ResponseCode")
+        public String responseCode;
+
+        // 采集结果
+        @NameInMap("Result")
+        public String result;
+
+        // 索引
+        @NameInMap("UniqueKey")
+        public String uniqueKey;
 
         public static ListAlarmStatusResponseBodyAlarmStatus build(java.util.Map<String, ?> map) throws Exception {
             ListAlarmStatusResponseBodyAlarmStatus self = new ListAlarmStatusResponseBodyAlarmStatus();
             return TeaModel.build(map, self);
         }
 
-        public ListAlarmStatusResponseBodyAlarmStatus setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
+        public ListAlarmStatusResponseBodyAlarmStatus setAbnormalDataItem(String abnormalDataItem) {
+            this.abnormalDataItem = abnormalDataItem;
             return this;
         }
-        public String getDeviceId() {
-            return this.deviceId;
+        public String getAbnormalDataItem() {
+            return this.abnormalDataItem;
         }
 
-        public ListAlarmStatusResponseBodyAlarmStatus setMonitorItemId(String monitorItemId) {
-            this.monitorItemId = monitorItemId;
+        public ListAlarmStatusResponseBodyAlarmStatus setAgentIp(String agentIp) {
+            this.agentIp = agentIp;
             return this;
         }
-        public String getMonitorItemId() {
-            return this.monitorItemId;
+        public String getAgentIp() {
+            return this.agentIp;
         }
 
-        public ListAlarmStatusResponseBodyAlarmStatus setCollectionTime(String collectionTime) {
-            this.collectionTime = collectionTime;
+        public ListAlarmStatusResponseBodyAlarmStatus setAggregateData(ListAlarmStatusResponseBodyAlarmStatusAggregateData aggregateData) {
+            this.aggregateData = aggregateData;
             return this;
         }
-        public String getCollectionTime() {
-            return this.collectionTime;
+        public ListAlarmStatusResponseBodyAlarmStatusAggregateData getAggregateData() {
+            return this.aggregateData;
         }
 
-        public ListAlarmStatusResponseBodyAlarmStatus setReceiveTime(String receiveTime) {
-            this.receiveTime = receiveTime;
+        public ListAlarmStatusResponseBodyAlarmStatus setAggregateDataId(String aggregateDataId) {
+            this.aggregateDataId = aggregateDataId;
             return this;
         }
-        public String getReceiveTime() {
-            return this.receiveTime;
+        public String getAggregateDataId() {
+            return this.aggregateDataId;
         }
 
         public ListAlarmStatusResponseBodyAlarmStatus setAlarmRule(String alarmRule) {
@@ -439,92 +496,20 @@ public class ListAlarmStatusResponseBody extends TeaModel {
             return this.alarmStatus;
         }
 
-        public ListAlarmStatusResponseBodyAlarmStatus setResult(String result) {
-            this.result = result;
+        public ListAlarmStatusResponseBodyAlarmStatus setAppId(String appId) {
+            this.appId = appId;
             return this;
         }
-        public String getResult() {
-            return this.result;
+        public String getAppId() {
+            return this.appId;
         }
 
-        public ListAlarmStatusResponseBodyAlarmStatus setAbnormalDataItem(String abnormalDataItem) {
-            this.abnormalDataItem = abnormalDataItem;
+        public ListAlarmStatusResponseBodyAlarmStatus setCollectionTime(String collectionTime) {
+            this.collectionTime = collectionTime;
             return this;
         }
-        public String getAbnormalDataItem() {
-            return this.abnormalDataItem;
-        }
-
-        public ListAlarmStatusResponseBodyAlarmStatus setUniqueKey(String uniqueKey) {
-            this.uniqueKey = uniqueKey;
-            return this;
-        }
-        public String getUniqueKey() {
-            return this.uniqueKey;
-        }
-
-        public ListAlarmStatusResponseBodyAlarmStatus setResponseCode(String responseCode) {
-            this.responseCode = responseCode;
-            return this;
-        }
-        public String getResponseCode() {
-            return this.responseCode;
-        }
-
-        public ListAlarmStatusResponseBodyAlarmStatus setResourceDevice(ListAlarmStatusResponseBodyAlarmStatusResourceDevice resourceDevice) {
-            this.resourceDevice = resourceDevice;
-            return this;
-        }
-        public ListAlarmStatusResponseBodyAlarmStatusResourceDevice getResourceDevice() {
-            return this.resourceDevice;
-        }
-
-        public ListAlarmStatusResponseBodyAlarmStatus setMonitorItem(ListAlarmStatusResponseBodyAlarmStatusMonitorItem monitorItem) {
-            this.monitorItem = monitorItem;
-            return this;
-        }
-        public ListAlarmStatusResponseBodyAlarmStatusMonitorItem getMonitorItem() {
-            return this.monitorItem;
-        }
-
-        public ListAlarmStatusResponseBodyAlarmStatus setFirstAbnormalTime(String firstAbnormalTime) {
-            this.firstAbnormalTime = firstAbnormalTime;
-            return this;
-        }
-        public String getFirstAbnormalTime() {
-            return this.firstAbnormalTime;
-        }
-
-        public ListAlarmStatusResponseBodyAlarmStatus setNotificationSwitch(ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch notificationSwitch) {
-            this.notificationSwitch = notificationSwitch;
-            return this;
-        }
-        public ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch getNotificationSwitch() {
-            return this.notificationSwitch;
-        }
-
-        public ListAlarmStatusResponseBodyAlarmStatus setAggregateDataId(String aggregateDataId) {
-            this.aggregateDataId = aggregateDataId;
-            return this;
-        }
-        public String getAggregateDataId() {
-            return this.aggregateDataId;
-        }
-
-        public ListAlarmStatusResponseBodyAlarmStatus setAggregateData(ListAlarmStatusResponseBodyAlarmStatusAggregateData aggregateData) {
-            this.aggregateData = aggregateData;
-            return this;
-        }
-        public ListAlarmStatusResponseBodyAlarmStatusAggregateData getAggregateData() {
-            return this.aggregateData;
-        }
-
-        public ListAlarmStatusResponseBodyAlarmStatus setDedicatedLineId(String dedicatedLineId) {
-            this.dedicatedLineId = dedicatedLineId;
-            return this;
-        }
-        public String getDedicatedLineId() {
-            return this.dedicatedLineId;
+        public String getCollectionTime() {
+            return this.collectionTime;
         }
 
         public ListAlarmStatusResponseBodyAlarmStatus setDedicatedLine(ListAlarmStatusResponseBodyAlarmStatusDedicatedLine dedicatedLine) {
@@ -535,12 +520,52 @@ public class ListAlarmStatusResponseBody extends TeaModel {
             return this.dedicatedLine;
         }
 
-        public ListAlarmStatusResponseBodyAlarmStatus setPortCollectionId(String portCollectionId) {
-            this.portCollectionId = portCollectionId;
+        public ListAlarmStatusResponseBodyAlarmStatus setDedicatedLineId(String dedicatedLineId) {
+            this.dedicatedLineId = dedicatedLineId;
             return this;
         }
-        public String getPortCollectionId() {
-            return this.portCollectionId;
+        public String getDedicatedLineId() {
+            return this.dedicatedLineId;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatus setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatus setFirstAbnormalTime(String firstAbnormalTime) {
+            this.firstAbnormalTime = firstAbnormalTime;
+            return this;
+        }
+        public String getFirstAbnormalTime() {
+            return this.firstAbnormalTime;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatus setMonitorItem(ListAlarmStatusResponseBodyAlarmStatusMonitorItem monitorItem) {
+            this.monitorItem = monitorItem;
+            return this;
+        }
+        public ListAlarmStatusResponseBodyAlarmStatusMonitorItem getMonitorItem() {
+            return this.monitorItem;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatus setMonitorItemId(String monitorItemId) {
+            this.monitorItemId = monitorItemId;
+            return this;
+        }
+        public String getMonitorItemId() {
+            return this.monitorItemId;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatus setNotificationSwitch(ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch notificationSwitch) {
+            this.notificationSwitch = notificationSwitch;
+            return this;
+        }
+        public ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch getNotificationSwitch() {
+            return this.notificationSwitch;
         }
 
         public ListAlarmStatusResponseBodyAlarmStatus setPortCollection(ListAlarmStatusResponseBodyAlarmStatusPortCollection portCollection) {
@@ -551,20 +576,20 @@ public class ListAlarmStatusResponseBody extends TeaModel {
             return this.portCollection;
         }
 
-        public ListAlarmStatusResponseBodyAlarmStatus setAgentIp(String agentIp) {
-            this.agentIp = agentIp;
+        public ListAlarmStatusResponseBodyAlarmStatus setPortCollectionId(String portCollectionId) {
+            this.portCollectionId = portCollectionId;
             return this;
         }
-        public String getAgentIp() {
-            return this.agentIp;
+        public String getPortCollectionId() {
+            return this.portCollectionId;
         }
 
-        public ListAlarmStatusResponseBodyAlarmStatus setAppId(String appId) {
-            this.appId = appId;
+        public ListAlarmStatusResponseBodyAlarmStatus setReceiveTime(String receiveTime) {
+            this.receiveTime = receiveTime;
             return this;
         }
-        public String getAppId() {
-            return this.appId;
+        public String getReceiveTime() {
+            return this.receiveTime;
         }
 
         public ListAlarmStatusResponseBodyAlarmStatus setResourceApp(ListAlarmStatusResponseBodyAlarmStatusResourceApp resourceApp) {
@@ -573,6 +598,38 @@ public class ListAlarmStatusResponseBody extends TeaModel {
         }
         public ListAlarmStatusResponseBodyAlarmStatusResourceApp getResourceApp() {
             return this.resourceApp;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatus setResourceDevice(ListAlarmStatusResponseBodyAlarmStatusResourceDevice resourceDevice) {
+            this.resourceDevice = resourceDevice;
+            return this;
+        }
+        public ListAlarmStatusResponseBodyAlarmStatusResourceDevice getResourceDevice() {
+            return this.resourceDevice;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatus setResponseCode(String responseCode) {
+            this.responseCode = responseCode;
+            return this;
+        }
+        public String getResponseCode() {
+            return this.responseCode;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatus setResult(String result) {
+            this.result = result;
+            return this;
+        }
+        public String getResult() {
+            return this.result;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatus setUniqueKey(String uniqueKey) {
+            this.uniqueKey = uniqueKey;
+            return this;
+        }
+        public String getUniqueKey() {
+            return this.uniqueKey;
         }
 
     }

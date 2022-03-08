@@ -4,65 +4,41 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetAlarmStatusRequest extends TeaModel {
-    // 设备ID
-    @NameInMap("DeviceId")
-    public String deviceId;
-
-    // 监控项ID
-    @NameInMap("MonitorItemId")
-    public String monitorItemId;
-
-    // 数据类型
-    @NameInMap("Type")
-    public String type;
-
     // 聚合数据ID
     @NameInMap("AggregateDataId")
     public String aggregateDataId;
-
-    // 专线ID
-    @NameInMap("DedicatedLineId")
-    public String dedicatedLineId;
-
-    // 实例ID
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    // 端口集ID
-    @NameInMap("PortCollectionId")
-    public String portCollectionId;
 
     // 应用ID
     @NameInMap("AppId")
     public String appId;
 
+    // 专线ID
+    @NameInMap("DedicatedLineId")
+    public String dedicatedLineId;
+
+    // 设备ID
+    @NameInMap("DeviceId")
+    public String deviceId;
+
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    // 监控项ID
+    @NameInMap("MonitorItemId")
+    public String monitorItemId;
+
+    // 端口集ID
+    @NameInMap("PortCollectionId")
+    public String portCollectionId;
+
+    // 数据类型
+    @NameInMap("Type")
+    public String type;
+
     public static GetAlarmStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAlarmStatusRequest self = new GetAlarmStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetAlarmStatusRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-        return this;
-    }
-    public String getDeviceId() {
-        return this.deviceId;
-    }
-
-    public GetAlarmStatusRequest setMonitorItemId(String monitorItemId) {
-        this.monitorItemId = monitorItemId;
-        return this;
-    }
-    public String getMonitorItemId() {
-        return this.monitorItemId;
-    }
-
-    public GetAlarmStatusRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
     public GetAlarmStatusRequest setAggregateDataId(String aggregateDataId) {
@@ -73,12 +49,28 @@ public class GetAlarmStatusRequest extends TeaModel {
         return this.aggregateDataId;
     }
 
+    public GetAlarmStatusRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
     public GetAlarmStatusRequest setDedicatedLineId(String dedicatedLineId) {
         this.dedicatedLineId = dedicatedLineId;
         return this;
     }
     public String getDedicatedLineId() {
         return this.dedicatedLineId;
+    }
+
+    public GetAlarmStatusRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
     }
 
     public GetAlarmStatusRequest setInstanceId(String instanceId) {
@@ -89,6 +81,14 @@ public class GetAlarmStatusRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public GetAlarmStatusRequest setMonitorItemId(String monitorItemId) {
+        this.monitorItemId = monitorItemId;
+        return this;
+    }
+    public String getMonitorItemId() {
+        return this.monitorItemId;
+    }
+
     public GetAlarmStatusRequest setPortCollectionId(String portCollectionId) {
         this.portCollectionId = portCollectionId;
         return this;
@@ -97,12 +97,12 @@ public class GetAlarmStatusRequest extends TeaModel {
         return this.portCollectionId;
     }
 
-    public GetAlarmStatusRequest setAppId(String appId) {
-        this.appId = appId;
+    public GetAlarmStatusRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public String getAppId() {
-        return this.appId;
+    public String getType() {
+        return this.type;
     }
 
 }

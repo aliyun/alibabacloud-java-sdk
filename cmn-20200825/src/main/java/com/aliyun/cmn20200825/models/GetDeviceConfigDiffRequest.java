@@ -8,10 +8,6 @@ public class GetDeviceConfigDiffRequest extends TeaModel {
     @NameInMap("DeviceId")
     public String deviceId;
 
-    // 查询日期1，格式 yyyy-MM-dd
-    @NameInMap("StartDate")
-    public String startDate;
-
     // 查询日期2，格式 yyyy-MM-dd
     @NameInMap("EndDate")
     public String endDate;
@@ -19,6 +15,10 @@ public class GetDeviceConfigDiffRequest extends TeaModel {
     // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
+
+    // 查询日期1，格式 yyyy-MM-dd
+    @NameInMap("StartDate")
+    public String startDate;
 
     public static GetDeviceConfigDiffRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDeviceConfigDiffRequest self = new GetDeviceConfigDiffRequest();
@@ -31,14 +31,6 @@ public class GetDeviceConfigDiffRequest extends TeaModel {
     }
     public String getDeviceId() {
         return this.deviceId;
-    }
-
-    public GetDeviceConfigDiffRequest setStartDate(String startDate) {
-        this.startDate = startDate;
-        return this;
-    }
-    public String getStartDate() {
-        return this.startDate;
     }
 
     public GetDeviceConfigDiffRequest setEndDate(String endDate) {
@@ -55,6 +47,14 @@ public class GetDeviceConfigDiffRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetDeviceConfigDiffRequest setStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    public String getStartDate() {
+        return this.startDate;
     }
 
 }

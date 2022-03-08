@@ -4,24 +4,16 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceConfigDiffResponseBody extends TeaModel {
+    @NameInMap("DeviceConfigDiff")
+    public GetDeviceConfigDiffResponseBodyDeviceConfigDiff deviceConfigDiff;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DeviceConfigDiff")
-    public GetDeviceConfigDiffResponseBodyDeviceConfigDiff deviceConfigDiff;
-
     public static GetDeviceConfigDiffResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDeviceConfigDiffResponseBody self = new GetDeviceConfigDiffResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDeviceConfigDiffResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetDeviceConfigDiffResponseBody setDeviceConfigDiff(GetDeviceConfigDiffResponseBodyDeviceConfigDiff deviceConfigDiff) {
@@ -30,6 +22,14 @@ public class GetDeviceConfigDiffResponseBody extends TeaModel {
     }
     public GetDeviceConfigDiffResponseBodyDeviceConfigDiff getDeviceConfigDiff() {
         return this.deviceConfigDiff;
+    }
+
+    public GetDeviceConfigDiffResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GetDeviceConfigDiffResponseBodyDeviceConfigDiff extends TeaModel {

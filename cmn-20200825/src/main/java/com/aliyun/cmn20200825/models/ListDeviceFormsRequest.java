@@ -4,6 +4,10 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceFormsRequest extends TeaModel {
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     // 返回结果的最大个数。
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -12,13 +16,17 @@ public class ListDeviceFormsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 实例ID
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     public static ListDeviceFormsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDeviceFormsRequest self = new ListDeviceFormsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDeviceFormsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListDeviceFormsRequest setMaxResults(Integer maxResults) {
@@ -35,14 +43,6 @@ public class ListDeviceFormsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListDeviceFormsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
 }

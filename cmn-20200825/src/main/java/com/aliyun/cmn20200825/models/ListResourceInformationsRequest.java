@@ -4,6 +4,10 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListResourceInformationsRequest extends TeaModel {
+    // 架构id
+    @NameInMap("ArchitectureId")
+    public String architectureId;
+
     // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
@@ -16,13 +20,17 @@ public class ListResourceInformationsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 架构id
-    @NameInMap("ArchitectureId")
-    public String architectureId;
-
     public static ListResourceInformationsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourceInformationsRequest self = new ListResourceInformationsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListResourceInformationsRequest setArchitectureId(String architectureId) {
+        this.architectureId = architectureId;
+        return this;
+    }
+    public String getArchitectureId() {
+        return this.architectureId;
     }
 
     public ListResourceInformationsRequest setInstanceId(String instanceId) {
@@ -47,14 +55,6 @@ public class ListResourceInformationsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListResourceInformationsRequest setArchitectureId(String architectureId) {
-        this.architectureId = architectureId;
-        return this;
-    }
-    public String getArchitectureId() {
-        return this.architectureId;
     }
 
 }

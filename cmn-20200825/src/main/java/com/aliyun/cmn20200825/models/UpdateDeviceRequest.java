@@ -8,41 +8,29 @@ public class UpdateDeviceRequest extends TeaModel {
     @NameInMap("DeviceId")
     public String deviceId;
 
-    // 物理空间
-    @NameInMap("PhysicalSpaceId")
-    public String physicalSpaceId;
+    // enable密码
+    @NameInMap("EnablePassword")
+    public String enablePassword;
+
+    // 设备额外属性
+    @NameInMap("ExtAttributes")
+    public String extAttributes;
 
     // 主机名
     @NameInMap("HostName")
     public String hostName;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     // 设备IP
     @NameInMap("Ip")
     public String ip;
 
-    // 设备SN
-    @NameInMap("Sn")
-    public String sn;
-
-    // 设备MAC地址
-    @NameInMap("Mac")
-    public String mac;
-
-    // 设备厂商
-    @NameInMap("Vendor")
-    public String vendor;
-
-    // 设备型号
-    @NameInMap("Model")
-    public String model;
-
-    // 设备状态
-    @NameInMap("ServiceStatus")
-    public String serviceStatus;
-
-    // 设备安全域
-    @NameInMap("SecurityDomain")
-    public String securityDomain;
+    // 登录密码
+    @NameInMap("LoginPassword")
+    public String loginPassword;
 
     // 登录类型
     @NameInMap("LoginType")
@@ -52,25 +40,57 @@ public class UpdateDeviceRequest extends TeaModel {
     @NameInMap("LoginUsername")
     public String loginUsername;
 
-    // 登录密码
-    @NameInMap("LoginPassword")
-    public String loginPassword;
+    // 设备MAC地址
+    @NameInMap("Mac")
+    public String mac;
 
-    // enable密码
-    @NameInMap("EnablePassword")
-    public String enablePassword;
+    // 设备型号
+    @NameInMap("Model")
+    public String model;
+
+    // 物理空间
+    @NameInMap("PhysicalSpaceId")
+    public String physicalSpaceId;
+
+    // 设备安全域
+    @NameInMap("SecurityDomain")
+    public String securityDomain;
+
+    // 设备状态
+    @NameInMap("ServiceStatus")
+    public String serviceStatus;
+
+    // 设备SN
+    @NameInMap("Sn")
+    public String sn;
+
+    // SNMP 账号类型
+    @NameInMap("SnmpAccountType")
+    public String snmpAccountType;
 
     // SNMP 版本号
     @NameInMap("SnmpAccountVersion")
     public String snmpAccountVersion;
 
+    // SNMP Auth Passphrase
+    @NameInMap("SnmpAuthPassphrase")
+    public String snmpAuthPassphrase;
+
+    // Auth Protocol
+    @NameInMap("SnmpAuthProtocol")
+    public String snmpAuthProtocol;
+
     // SNMP Community
     @NameInMap("SnmpCommunity")
     public String snmpCommunity;
 
-    // SNMP 账号类型
-    @NameInMap("SnmpAccountType")
-    public String snmpAccountType;
+    // Privacy Passphrase
+    @NameInMap("SnmpPrivacyPassphrase")
+    public String snmpPrivacyPassphrase;
+
+    // Privacy Protocol
+    @NameInMap("SnmpPrivacyProtocol")
+    public String snmpPrivacyProtocol;
 
     // SNMP 安全级别
     @NameInMap("SnmpSecurityLevel")
@@ -80,29 +100,9 @@ public class UpdateDeviceRequest extends TeaModel {
     @NameInMap("SnmpUsername")
     public String snmpUsername;
 
-    // SNMP Auth PassPhrase
-    @NameInMap("SnmpAuthPassphrase")
-    public String snmpAuthPassphrase;
-
-    // Auth Protocol
-    @NameInMap("SnmpAuthProtocol")
-    public String snmpAuthProtocol;
-
-    // Privacy Passphase
-    @NameInMap("SnmpPrivacyPassphase")
-    public String snmpPrivacyPassphase;
-
-    // Privacy Protocol
-    @NameInMap("SnmpPrivacyProtocol")
-    public String snmpPrivacyProtocol;
-
-    // 设备额外属性
-    @NameInMap("ExtAttributes")
-    public String extAttributes;
-
-    // 实例ID
-    @NameInMap("InstanceId")
-    public String instanceId;
+    // 设备厂商
+    @NameInMap("Vendor")
+    public String vendor;
 
     public static UpdateDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDeviceRequest self = new UpdateDeviceRequest();
@@ -117,12 +117,20 @@ public class UpdateDeviceRequest extends TeaModel {
         return this.deviceId;
     }
 
-    public UpdateDeviceRequest setPhysicalSpaceId(String physicalSpaceId) {
-        this.physicalSpaceId = physicalSpaceId;
+    public UpdateDeviceRequest setEnablePassword(String enablePassword) {
+        this.enablePassword = enablePassword;
         return this;
     }
-    public String getPhysicalSpaceId() {
-        return this.physicalSpaceId;
+    public String getEnablePassword() {
+        return this.enablePassword;
+    }
+
+    public UpdateDeviceRequest setExtAttributes(String extAttributes) {
+        this.extAttributes = extAttributes;
+        return this;
+    }
+    public String getExtAttributes() {
+        return this.extAttributes;
     }
 
     public UpdateDeviceRequest setHostName(String hostName) {
@@ -133,6 +141,14 @@ public class UpdateDeviceRequest extends TeaModel {
         return this.hostName;
     }
 
+    public UpdateDeviceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public UpdateDeviceRequest setIp(String ip) {
         this.ip = ip;
         return this;
@@ -141,52 +157,12 @@ public class UpdateDeviceRequest extends TeaModel {
         return this.ip;
     }
 
-    public UpdateDeviceRequest setSn(String sn) {
-        this.sn = sn;
+    public UpdateDeviceRequest setLoginPassword(String loginPassword) {
+        this.loginPassword = loginPassword;
         return this;
     }
-    public String getSn() {
-        return this.sn;
-    }
-
-    public UpdateDeviceRequest setMac(String mac) {
-        this.mac = mac;
-        return this;
-    }
-    public String getMac() {
-        return this.mac;
-    }
-
-    public UpdateDeviceRequest setVendor(String vendor) {
-        this.vendor = vendor;
-        return this;
-    }
-    public String getVendor() {
-        return this.vendor;
-    }
-
-    public UpdateDeviceRequest setModel(String model) {
-        this.model = model;
-        return this;
-    }
-    public String getModel() {
-        return this.model;
-    }
-
-    public UpdateDeviceRequest setServiceStatus(String serviceStatus) {
-        this.serviceStatus = serviceStatus;
-        return this;
-    }
-    public String getServiceStatus() {
-        return this.serviceStatus;
-    }
-
-    public UpdateDeviceRequest setSecurityDomain(String securityDomain) {
-        this.securityDomain = securityDomain;
-        return this;
-    }
-    public String getSecurityDomain() {
-        return this.securityDomain;
+    public String getLoginPassword() {
+        return this.loginPassword;
     }
 
     public UpdateDeviceRequest setLoginType(String loginType) {
@@ -205,36 +181,52 @@ public class UpdateDeviceRequest extends TeaModel {
         return this.loginUsername;
     }
 
-    public UpdateDeviceRequest setLoginPassword(String loginPassword) {
-        this.loginPassword = loginPassword;
+    public UpdateDeviceRequest setMac(String mac) {
+        this.mac = mac;
         return this;
     }
-    public String getLoginPassword() {
-        return this.loginPassword;
+    public String getMac() {
+        return this.mac;
     }
 
-    public UpdateDeviceRequest setEnablePassword(String enablePassword) {
-        this.enablePassword = enablePassword;
+    public UpdateDeviceRequest setModel(String model) {
+        this.model = model;
         return this;
     }
-    public String getEnablePassword() {
-        return this.enablePassword;
+    public String getModel() {
+        return this.model;
     }
 
-    public UpdateDeviceRequest setSnmpAccountVersion(String snmpAccountVersion) {
-        this.snmpAccountVersion = snmpAccountVersion;
+    public UpdateDeviceRequest setPhysicalSpaceId(String physicalSpaceId) {
+        this.physicalSpaceId = physicalSpaceId;
         return this;
     }
-    public String getSnmpAccountVersion() {
-        return this.snmpAccountVersion;
+    public String getPhysicalSpaceId() {
+        return this.physicalSpaceId;
     }
 
-    public UpdateDeviceRequest setSnmpCommunity(String snmpCommunity) {
-        this.snmpCommunity = snmpCommunity;
+    public UpdateDeviceRequest setSecurityDomain(String securityDomain) {
+        this.securityDomain = securityDomain;
         return this;
     }
-    public String getSnmpCommunity() {
-        return this.snmpCommunity;
+    public String getSecurityDomain() {
+        return this.securityDomain;
+    }
+
+    public UpdateDeviceRequest setServiceStatus(String serviceStatus) {
+        this.serviceStatus = serviceStatus;
+        return this;
+    }
+    public String getServiceStatus() {
+        return this.serviceStatus;
+    }
+
+    public UpdateDeviceRequest setSn(String sn) {
+        this.sn = sn;
+        return this;
+    }
+    public String getSn() {
+        return this.sn;
     }
 
     public UpdateDeviceRequest setSnmpAccountType(String snmpAccountType) {
@@ -245,20 +237,12 @@ public class UpdateDeviceRequest extends TeaModel {
         return this.snmpAccountType;
     }
 
-    public UpdateDeviceRequest setSnmpSecurityLevel(String snmpSecurityLevel) {
-        this.snmpSecurityLevel = snmpSecurityLevel;
+    public UpdateDeviceRequest setSnmpAccountVersion(String snmpAccountVersion) {
+        this.snmpAccountVersion = snmpAccountVersion;
         return this;
     }
-    public String getSnmpSecurityLevel() {
-        return this.snmpSecurityLevel;
-    }
-
-    public UpdateDeviceRequest setSnmpUsername(String snmpUsername) {
-        this.snmpUsername = snmpUsername;
-        return this;
-    }
-    public String getSnmpUsername() {
-        return this.snmpUsername;
+    public String getSnmpAccountVersion() {
+        return this.snmpAccountVersion;
     }
 
     public UpdateDeviceRequest setSnmpAuthPassphrase(String snmpAuthPassphrase) {
@@ -277,12 +261,20 @@ public class UpdateDeviceRequest extends TeaModel {
         return this.snmpAuthProtocol;
     }
 
-    public UpdateDeviceRequest setSnmpPrivacyPassphase(String snmpPrivacyPassphase) {
-        this.snmpPrivacyPassphase = snmpPrivacyPassphase;
+    public UpdateDeviceRequest setSnmpCommunity(String snmpCommunity) {
+        this.snmpCommunity = snmpCommunity;
         return this;
     }
-    public String getSnmpPrivacyPassphase() {
-        return this.snmpPrivacyPassphase;
+    public String getSnmpCommunity() {
+        return this.snmpCommunity;
+    }
+
+    public UpdateDeviceRequest setSnmpPrivacyPassphrase(String snmpPrivacyPassphrase) {
+        this.snmpPrivacyPassphrase = snmpPrivacyPassphrase;
+        return this;
+    }
+    public String getSnmpPrivacyPassphrase() {
+        return this.snmpPrivacyPassphrase;
     }
 
     public UpdateDeviceRequest setSnmpPrivacyProtocol(String snmpPrivacyProtocol) {
@@ -293,20 +285,28 @@ public class UpdateDeviceRequest extends TeaModel {
         return this.snmpPrivacyProtocol;
     }
 
-    public UpdateDeviceRequest setExtAttributes(String extAttributes) {
-        this.extAttributes = extAttributes;
+    public UpdateDeviceRequest setSnmpSecurityLevel(String snmpSecurityLevel) {
+        this.snmpSecurityLevel = snmpSecurityLevel;
         return this;
     }
-    public String getExtAttributes() {
-        return this.extAttributes;
+    public String getSnmpSecurityLevel() {
+        return this.snmpSecurityLevel;
     }
 
-    public UpdateDeviceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public UpdateDeviceRequest setSnmpUsername(String snmpUsername) {
+        this.snmpUsername = snmpUsername;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getSnmpUsername() {
+        return this.snmpUsername;
+    }
+
+    public UpdateDeviceRequest setVendor(String vendor) {
+        this.vendor = vendor;
+        return this;
+    }
+    public String getVendor() {
+        return this.vendor;
     }
 
 }

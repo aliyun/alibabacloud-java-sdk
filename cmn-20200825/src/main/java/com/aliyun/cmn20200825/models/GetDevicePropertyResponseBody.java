@@ -4,25 +4,17 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetDevicePropertyResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 设备属性详情
     @NameInMap("DeviceProperty")
     public GetDevicePropertyResponseBodyDeviceProperty deviceProperty;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static GetDevicePropertyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDevicePropertyResponseBody self = new GetDevicePropertyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDevicePropertyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetDevicePropertyResponseBody setDeviceProperty(GetDevicePropertyResponseBodyDeviceProperty deviceProperty) {
@@ -33,10 +25,18 @@ public class GetDevicePropertyResponseBody extends TeaModel {
         return this.deviceProperty;
     }
 
+    public GetDevicePropertyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class GetDevicePropertyResponseBodyDeviceProperty extends TeaModel {
-        // 设备属性ID
-        @NameInMap("DevicePropertyId")
-        public String devicePropertyId;
+        // 是否内置属性
+        @NameInMap("BuiltIn")
+        public Boolean builtIn;
 
         // 设备形态ID
         @NameInMap("DeviceFormId")
@@ -46,37 +46,37 @@ public class GetDevicePropertyResponseBody extends TeaModel {
         @NameInMap("DeviceFormName")
         public String deviceFormName;
 
-        // 属性名称
-        @NameInMap("PropertyName")
-        public String propertyName;
-
-        // 属性主键
-        @NameInMap("PropertyKey")
-        public String propertyKey;
-
-        // 属性格式
-        @NameInMap("PropertyFormat")
-        public String propertyFormat;
+        // 设备属性ID
+        @NameInMap("DevicePropertyId")
+        public String devicePropertyId;
 
         // 属性内容
         @NameInMap("PropertyContent")
         public String propertyContent;
 
-        // 是否内置属性
-        @NameInMap("BuiltIn")
-        public Boolean builtIn;
+        // 属性格式
+        @NameInMap("PropertyFormat")
+        public String propertyFormat;
+
+        // 属性主键
+        @NameInMap("PropertyKey")
+        public String propertyKey;
+
+        // 属性名称
+        @NameInMap("PropertyName")
+        public String propertyName;
 
         public static GetDevicePropertyResponseBodyDeviceProperty build(java.util.Map<String, ?> map) throws Exception {
             GetDevicePropertyResponseBodyDeviceProperty self = new GetDevicePropertyResponseBodyDeviceProperty();
             return TeaModel.build(map, self);
         }
 
-        public GetDevicePropertyResponseBodyDeviceProperty setDevicePropertyId(String devicePropertyId) {
-            this.devicePropertyId = devicePropertyId;
+        public GetDevicePropertyResponseBodyDeviceProperty setBuiltIn(Boolean builtIn) {
+            this.builtIn = builtIn;
             return this;
         }
-        public String getDevicePropertyId() {
-            return this.devicePropertyId;
+        public Boolean getBuiltIn() {
+            return this.builtIn;
         }
 
         public GetDevicePropertyResponseBodyDeviceProperty setDeviceFormId(String deviceFormId) {
@@ -95,28 +95,12 @@ public class GetDevicePropertyResponseBody extends TeaModel {
             return this.deviceFormName;
         }
 
-        public GetDevicePropertyResponseBodyDeviceProperty setPropertyName(String propertyName) {
-            this.propertyName = propertyName;
+        public GetDevicePropertyResponseBodyDeviceProperty setDevicePropertyId(String devicePropertyId) {
+            this.devicePropertyId = devicePropertyId;
             return this;
         }
-        public String getPropertyName() {
-            return this.propertyName;
-        }
-
-        public GetDevicePropertyResponseBodyDeviceProperty setPropertyKey(String propertyKey) {
-            this.propertyKey = propertyKey;
-            return this;
-        }
-        public String getPropertyKey() {
-            return this.propertyKey;
-        }
-
-        public GetDevicePropertyResponseBodyDeviceProperty setPropertyFormat(String propertyFormat) {
-            this.propertyFormat = propertyFormat;
-            return this;
-        }
-        public String getPropertyFormat() {
-            return this.propertyFormat;
+        public String getDevicePropertyId() {
+            return this.devicePropertyId;
         }
 
         public GetDevicePropertyResponseBodyDeviceProperty setPropertyContent(String propertyContent) {
@@ -127,12 +111,28 @@ public class GetDevicePropertyResponseBody extends TeaModel {
             return this.propertyContent;
         }
 
-        public GetDevicePropertyResponseBodyDeviceProperty setBuiltIn(Boolean builtIn) {
-            this.builtIn = builtIn;
+        public GetDevicePropertyResponseBodyDeviceProperty setPropertyFormat(String propertyFormat) {
+            this.propertyFormat = propertyFormat;
             return this;
         }
-        public Boolean getBuiltIn() {
-            return this.builtIn;
+        public String getPropertyFormat() {
+            return this.propertyFormat;
+        }
+
+        public GetDevicePropertyResponseBodyDeviceProperty setPropertyKey(String propertyKey) {
+            this.propertyKey = propertyKey;
+            return this;
+        }
+        public String getPropertyKey() {
+            return this.propertyKey;
+        }
+
+        public GetDevicePropertyResponseBodyDeviceProperty setPropertyName(String propertyName) {
+            this.propertyName = propertyName;
+            return this;
+        }
+        public String getPropertyName() {
+            return this.propertyName;
         }
 
     }

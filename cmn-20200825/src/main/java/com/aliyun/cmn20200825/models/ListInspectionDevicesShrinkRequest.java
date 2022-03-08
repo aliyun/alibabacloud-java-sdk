@@ -8,6 +8,10 @@ public class ListInspectionDevicesShrinkRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 型号
+    @NameInMap("Model")
+    public String modelShrink;
+
     // 角色
     @NameInMap("Role")
     public String role;
@@ -15,10 +19,6 @@ public class ListInspectionDevicesShrinkRequest extends TeaModel {
     // 厂商
     @NameInMap("Vendor")
     public String vendor;
-
-    // 型号
-    @NameInMap("Model")
-    public String modelShrink;
 
     public static ListInspectionDevicesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInspectionDevicesShrinkRequest self = new ListInspectionDevicesShrinkRequest();
@@ -31,6 +31,14 @@ public class ListInspectionDevicesShrinkRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListInspectionDevicesShrinkRequest setModelShrink(String modelShrink) {
+        this.modelShrink = modelShrink;
+        return this;
+    }
+    public String getModelShrink() {
+        return this.modelShrink;
     }
 
     public ListInspectionDevicesShrinkRequest setRole(String role) {
@@ -47,14 +55,6 @@ public class ListInspectionDevicesShrinkRequest extends TeaModel {
     }
     public String getVendor() {
         return this.vendor;
-    }
-
-    public ListInspectionDevicesShrinkRequest setModelShrink(String modelShrink) {
-        this.modelShrink = modelShrink;
-        return this;
-    }
-    public String getModelShrink() {
-        return this.modelShrink;
     }
 
 }

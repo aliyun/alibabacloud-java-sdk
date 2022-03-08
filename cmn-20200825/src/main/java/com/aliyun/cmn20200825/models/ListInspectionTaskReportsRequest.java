@@ -8,13 +8,13 @@ public class ListInspectionTaskReportsRequest extends TeaModel {
     @NameInMap("InspectionItemId")
     public String inspectionItemId;
 
-    // 厂商
-    @NameInMap("Vendor")
-    public String vendor;
-
     // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
+
+    // 厂商
+    @NameInMap("Vendor")
+    public String vendor;
 
     public static ListInspectionTaskReportsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInspectionTaskReportsRequest self = new ListInspectionTaskReportsRequest();
@@ -29,20 +29,20 @@ public class ListInspectionTaskReportsRequest extends TeaModel {
         return this.inspectionItemId;
     }
 
-    public ListInspectionTaskReportsRequest setVendor(String vendor) {
-        this.vendor = vendor;
-        return this;
-    }
-    public String getVendor() {
-        return this.vendor;
-    }
-
     public ListInspectionTaskReportsRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListInspectionTaskReportsRequest setVendor(String vendor) {
+        this.vendor = vendor;
+        return this;
+    }
+    public String getVendor() {
+        return this.vendor;
     }
 
 }

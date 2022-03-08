@@ -4,25 +4,17 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class RetryTasksShrinkRequest extends TeaModel {
-    // 重执行任务的数组
-    @NameInMap("RetryTasks")
-    public String retryTasksShrink;
-
     // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 重执行任务的数组
+    @NameInMap("RetryTasks")
+    public String retryTasksShrink;
+
     public static RetryTasksShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RetryTasksShrinkRequest self = new RetryTasksShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RetryTasksShrinkRequest setRetryTasksShrink(String retryTasksShrink) {
-        this.retryTasksShrink = retryTasksShrink;
-        return this;
-    }
-    public String getRetryTasksShrink() {
-        return this.retryTasksShrink;
     }
 
     public RetryTasksShrinkRequest setInstanceId(String instanceId) {
@@ -31,6 +23,14 @@ public class RetryTasksShrinkRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public RetryTasksShrinkRequest setRetryTasksShrink(String retryTasksShrink) {
+        this.retryTasksShrink = retryTasksShrink;
+        return this;
+    }
+    public String getRetryTasksShrink() {
+        return this.retryTasksShrink;
     }
 
 }

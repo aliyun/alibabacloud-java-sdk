@@ -34,10 +34,6 @@ public class GetDeviceResponseBody extends TeaModel {
     }
 
     public static class GetDeviceResponseBodyDevice extends TeaModel {
-        // 设备ID
-        @NameInMap("DeviceId")
-        public String deviceId;
-
         // 设备形态ID
         @NameInMap("DeviceFormId")
         public String deviceFormId;
@@ -46,13 +42,17 @@ public class GetDeviceResponseBody extends TeaModel {
         @NameInMap("DeviceFormName")
         public String deviceFormName;
 
-        // 物理空间ID
-        @NameInMap("PhysicalSpaceId")
-        public String physicalSpaceId;
+        // 设备ID
+        @NameInMap("DeviceId")
+        public String deviceId;
 
-        // 物理空间名称
-        @NameInMap("PhysicalSpaceName")
-        public String physicalSpaceName;
+        // enable密码
+        @NameInMap("EnablePassword")
+        public String enablePassword;
+
+        // 设备额外属性
+        @NameInMap("ExtAttributes")
+        public String extAttributes;
 
         // 主机名
         @NameInMap("HostName")
@@ -62,29 +62,9 @@ public class GetDeviceResponseBody extends TeaModel {
         @NameInMap("Ip")
         public String ip;
 
-        // 设备SN
-        @NameInMap("Sn")
-        public String sn;
-
-        // 设备MAC地址
-        @NameInMap("Mac")
-        public String mac;
-
-        // 设备厂商
-        @NameInMap("Vendor")
-        public String vendor;
-
-        // 设备型号
-        @NameInMap("Model")
-        public String model;
-
-        // 设备安全域
-        @NameInMap("SecurityDomain")
-        public String securityDomain;
-
-        // 设备状态
-        @NameInMap("ServiceStatus")
-        public String serviceStatus;
+        // 登录密码
+        @NameInMap("LoginPassword")
+        public String loginPassword;
 
         // 登录类型
         @NameInMap("LoginType")
@@ -94,33 +74,41 @@ public class GetDeviceResponseBody extends TeaModel {
         @NameInMap("LoginUsername")
         public String loginUsername;
 
-        // 登录密码
-        @NameInMap("LoginPassword")
-        public String loginPassword;
+        // 设备MAC地址
+        @NameInMap("Mac")
+        public String mac;
 
-        // enable密码
-        @NameInMap("EnablePassword")
-        public String enablePassword;
+        // 设备型号
+        @NameInMap("Model")
+        public String model;
 
-        // SNMP版本号
-        @NameInMap("SnmpAccountVersion")
-        public String snmpAccountVersion;
+        // 物理空间ID
+        @NameInMap("PhysicalSpaceId")
+        public String physicalSpaceId;
 
-        // SNMP Community
-        @NameInMap("SnmpCommunity")
-        public String snmpCommunity;
+        // 物理空间名称
+        @NameInMap("PhysicalSpaceName")
+        public String physicalSpaceName;
+
+        // 设备安全域
+        @NameInMap("SecurityDomain")
+        public String securityDomain;
+
+        // 设备状态
+        @NameInMap("ServiceStatus")
+        public String serviceStatus;
+
+        // 设备SN
+        @NameInMap("Sn")
+        public String sn;
 
         // SNMP 账号类型
         @NameInMap("SnmpAccountType")
         public String snmpAccountType;
 
-        // SNMP 安全级别
-        @NameInMap("SnmpSecurityLevel")
-        public String snmpSecurityLevel;
-
-        // SNMP 用户名
-        @NameInMap("SnmpUsername")
-        public String snmpUsername;
+        // SNMP版本号
+        @NameInMap("SnmpAccountVersion")
+        public String snmpAccountVersion;
 
         // SNMP Auth PassPhrase
         @NameInMap("SnmpAuthPassphrase")
@@ -130,29 +118,33 @@ public class GetDeviceResponseBody extends TeaModel {
         @NameInMap("SnmpAuthProtocol")
         public String snmpAuthProtocol;
 
-        // SNMP Privacy Passphase
-        @NameInMap("SnmpPrivacyPassphase")
-        public String snmpPrivacyPassphase;
+        // SNMP Community
+        @NameInMap("SnmpCommunity")
+        public String snmpCommunity;
+
+        // SNMP Privacy Passphrase
+        @NameInMap("SnmpPrivacyPassphrase")
+        public String snmpPrivacyPassphrase;
 
         // SNMP Privacy Protocol
         @NameInMap("SnmpPrivacyProtocol")
         public String snmpPrivacyProtocol;
 
-        // 设备额外属性
-        @NameInMap("ExtAttributes")
-        public String extAttributes;
+        // SNMP 安全级别
+        @NameInMap("SnmpSecurityLevel")
+        public String snmpSecurityLevel;
+
+        // SNMP 用户名
+        @NameInMap("SnmpUsername")
+        public String snmpUsername;
+
+        // 设备厂商
+        @NameInMap("Vendor")
+        public String vendor;
 
         public static GetDeviceResponseBodyDevice build(java.util.Map<String, ?> map) throws Exception {
             GetDeviceResponseBodyDevice self = new GetDeviceResponseBodyDevice();
             return TeaModel.build(map, self);
-        }
-
-        public GetDeviceResponseBodyDevice setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
         }
 
         public GetDeviceResponseBodyDevice setDeviceFormId(String deviceFormId) {
@@ -171,20 +163,28 @@ public class GetDeviceResponseBody extends TeaModel {
             return this.deviceFormName;
         }
 
-        public GetDeviceResponseBodyDevice setPhysicalSpaceId(String physicalSpaceId) {
-            this.physicalSpaceId = physicalSpaceId;
+        public GetDeviceResponseBodyDevice setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
             return this;
         }
-        public String getPhysicalSpaceId() {
-            return this.physicalSpaceId;
+        public String getDeviceId() {
+            return this.deviceId;
         }
 
-        public GetDeviceResponseBodyDevice setPhysicalSpaceName(String physicalSpaceName) {
-            this.physicalSpaceName = physicalSpaceName;
+        public GetDeviceResponseBodyDevice setEnablePassword(String enablePassword) {
+            this.enablePassword = enablePassword;
             return this;
         }
-        public String getPhysicalSpaceName() {
-            return this.physicalSpaceName;
+        public String getEnablePassword() {
+            return this.enablePassword;
+        }
+
+        public GetDeviceResponseBodyDevice setExtAttributes(String extAttributes) {
+            this.extAttributes = extAttributes;
+            return this;
+        }
+        public String getExtAttributes() {
+            return this.extAttributes;
         }
 
         public GetDeviceResponseBodyDevice setHostName(String hostName) {
@@ -203,52 +203,12 @@ public class GetDeviceResponseBody extends TeaModel {
             return this.ip;
         }
 
-        public GetDeviceResponseBodyDevice setSn(String sn) {
-            this.sn = sn;
+        public GetDeviceResponseBodyDevice setLoginPassword(String loginPassword) {
+            this.loginPassword = loginPassword;
             return this;
         }
-        public String getSn() {
-            return this.sn;
-        }
-
-        public GetDeviceResponseBodyDevice setMac(String mac) {
-            this.mac = mac;
-            return this;
-        }
-        public String getMac() {
-            return this.mac;
-        }
-
-        public GetDeviceResponseBodyDevice setVendor(String vendor) {
-            this.vendor = vendor;
-            return this;
-        }
-        public String getVendor() {
-            return this.vendor;
-        }
-
-        public GetDeviceResponseBodyDevice setModel(String model) {
-            this.model = model;
-            return this;
-        }
-        public String getModel() {
-            return this.model;
-        }
-
-        public GetDeviceResponseBodyDevice setSecurityDomain(String securityDomain) {
-            this.securityDomain = securityDomain;
-            return this;
-        }
-        public String getSecurityDomain() {
-            return this.securityDomain;
-        }
-
-        public GetDeviceResponseBodyDevice setServiceStatus(String serviceStatus) {
-            this.serviceStatus = serviceStatus;
-            return this;
-        }
-        public String getServiceStatus() {
-            return this.serviceStatus;
+        public String getLoginPassword() {
+            return this.loginPassword;
         }
 
         public GetDeviceResponseBodyDevice setLoginType(String loginType) {
@@ -267,36 +227,60 @@ public class GetDeviceResponseBody extends TeaModel {
             return this.loginUsername;
         }
 
-        public GetDeviceResponseBodyDevice setLoginPassword(String loginPassword) {
-            this.loginPassword = loginPassword;
+        public GetDeviceResponseBodyDevice setMac(String mac) {
+            this.mac = mac;
             return this;
         }
-        public String getLoginPassword() {
-            return this.loginPassword;
+        public String getMac() {
+            return this.mac;
         }
 
-        public GetDeviceResponseBodyDevice setEnablePassword(String enablePassword) {
-            this.enablePassword = enablePassword;
+        public GetDeviceResponseBodyDevice setModel(String model) {
+            this.model = model;
             return this;
         }
-        public String getEnablePassword() {
-            return this.enablePassword;
+        public String getModel() {
+            return this.model;
         }
 
-        public GetDeviceResponseBodyDevice setSnmpAccountVersion(String snmpAccountVersion) {
-            this.snmpAccountVersion = snmpAccountVersion;
+        public GetDeviceResponseBodyDevice setPhysicalSpaceId(String physicalSpaceId) {
+            this.physicalSpaceId = physicalSpaceId;
             return this;
         }
-        public String getSnmpAccountVersion() {
-            return this.snmpAccountVersion;
+        public String getPhysicalSpaceId() {
+            return this.physicalSpaceId;
         }
 
-        public GetDeviceResponseBodyDevice setSnmpCommunity(String snmpCommunity) {
-            this.snmpCommunity = snmpCommunity;
+        public GetDeviceResponseBodyDevice setPhysicalSpaceName(String physicalSpaceName) {
+            this.physicalSpaceName = physicalSpaceName;
             return this;
         }
-        public String getSnmpCommunity() {
-            return this.snmpCommunity;
+        public String getPhysicalSpaceName() {
+            return this.physicalSpaceName;
+        }
+
+        public GetDeviceResponseBodyDevice setSecurityDomain(String securityDomain) {
+            this.securityDomain = securityDomain;
+            return this;
+        }
+        public String getSecurityDomain() {
+            return this.securityDomain;
+        }
+
+        public GetDeviceResponseBodyDevice setServiceStatus(String serviceStatus) {
+            this.serviceStatus = serviceStatus;
+            return this;
+        }
+        public String getServiceStatus() {
+            return this.serviceStatus;
+        }
+
+        public GetDeviceResponseBodyDevice setSn(String sn) {
+            this.sn = sn;
+            return this;
+        }
+        public String getSn() {
+            return this.sn;
         }
 
         public GetDeviceResponseBodyDevice setSnmpAccountType(String snmpAccountType) {
@@ -307,20 +291,12 @@ public class GetDeviceResponseBody extends TeaModel {
             return this.snmpAccountType;
         }
 
-        public GetDeviceResponseBodyDevice setSnmpSecurityLevel(String snmpSecurityLevel) {
-            this.snmpSecurityLevel = snmpSecurityLevel;
+        public GetDeviceResponseBodyDevice setSnmpAccountVersion(String snmpAccountVersion) {
+            this.snmpAccountVersion = snmpAccountVersion;
             return this;
         }
-        public String getSnmpSecurityLevel() {
-            return this.snmpSecurityLevel;
-        }
-
-        public GetDeviceResponseBodyDevice setSnmpUsername(String snmpUsername) {
-            this.snmpUsername = snmpUsername;
-            return this;
-        }
-        public String getSnmpUsername() {
-            return this.snmpUsername;
+        public String getSnmpAccountVersion() {
+            return this.snmpAccountVersion;
         }
 
         public GetDeviceResponseBodyDevice setSnmpAuthPassphrase(String snmpAuthPassphrase) {
@@ -339,12 +315,20 @@ public class GetDeviceResponseBody extends TeaModel {
             return this.snmpAuthProtocol;
         }
 
-        public GetDeviceResponseBodyDevice setSnmpPrivacyPassphase(String snmpPrivacyPassphase) {
-            this.snmpPrivacyPassphase = snmpPrivacyPassphase;
+        public GetDeviceResponseBodyDevice setSnmpCommunity(String snmpCommunity) {
+            this.snmpCommunity = snmpCommunity;
             return this;
         }
-        public String getSnmpPrivacyPassphase() {
-            return this.snmpPrivacyPassphase;
+        public String getSnmpCommunity() {
+            return this.snmpCommunity;
+        }
+
+        public GetDeviceResponseBodyDevice setSnmpPrivacyPassphrase(String snmpPrivacyPassphrase) {
+            this.snmpPrivacyPassphrase = snmpPrivacyPassphrase;
+            return this;
+        }
+        public String getSnmpPrivacyPassphrase() {
+            return this.snmpPrivacyPassphrase;
         }
 
         public GetDeviceResponseBodyDevice setSnmpPrivacyProtocol(String snmpPrivacyProtocol) {
@@ -355,12 +339,28 @@ public class GetDeviceResponseBody extends TeaModel {
             return this.snmpPrivacyProtocol;
         }
 
-        public GetDeviceResponseBodyDevice setExtAttributes(String extAttributes) {
-            this.extAttributes = extAttributes;
+        public GetDeviceResponseBodyDevice setSnmpSecurityLevel(String snmpSecurityLevel) {
+            this.snmpSecurityLevel = snmpSecurityLevel;
             return this;
         }
-        public String getExtAttributes() {
-            return this.extAttributes;
+        public String getSnmpSecurityLevel() {
+            return this.snmpSecurityLevel;
+        }
+
+        public GetDeviceResponseBodyDevice setSnmpUsername(String snmpUsername) {
+            this.snmpUsername = snmpUsername;
+            return this;
+        }
+        public String getSnmpUsername() {
+            return this.snmpUsername;
+        }
+
+        public GetDeviceResponseBodyDevice setVendor(String vendor) {
+            this.vendor = vendor;
+            return this;
+        }
+        public String getVendor() {
+            return this.vendor;
         }
 
     }

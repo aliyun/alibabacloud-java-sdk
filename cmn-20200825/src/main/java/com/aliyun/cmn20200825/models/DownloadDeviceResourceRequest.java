@@ -4,10 +4,6 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DownloadDeviceResourceRequest extends TeaModel {
-    // instanceId
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     // deviceResourceId
     @NameInMap("DeviceResourceId")
     public String deviceResourceId;
@@ -20,6 +16,10 @@ public class DownloadDeviceResourceRequest extends TeaModel {
     @NameInMap("DownloadType")
     public String downloadType;
 
+    // instanceId
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     // 建设项目id
     @NameInMap("SetupProjectId")
     public String setupProjectId;
@@ -27,14 +27,6 @@ public class DownloadDeviceResourceRequest extends TeaModel {
     public static DownloadDeviceResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         DownloadDeviceResourceRequest self = new DownloadDeviceResourceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DownloadDeviceResourceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public DownloadDeviceResourceRequest setDeviceResourceId(String deviceResourceId) {
@@ -59,6 +51,14 @@ public class DownloadDeviceResourceRequest extends TeaModel {
     }
     public String getDownloadType() {
         return this.downloadType;
+    }
+
+    public DownloadDeviceResourceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DownloadDeviceResourceRequest setSetupProjectId(String setupProjectId) {

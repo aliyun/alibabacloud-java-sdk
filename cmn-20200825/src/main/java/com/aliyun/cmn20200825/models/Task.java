@@ -130,9 +130,17 @@ public class Task extends TeaModel {
     }
 
     public static class InspectionTaskInspectionAlarmRules extends TeaModel {
+        // 告警实际值
+        @NameInMap("ActualValue")
+        public String actualValue;
+
         // 告警表达式
         @NameInMap("Expression")
         public String expression;
+
+        // 告警级别
+        @NameInMap("Level")
+        public String level;
 
         // 告警操作符
         @NameInMap("Operator")
@@ -142,17 +150,17 @@ public class Task extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        // 告警实际值
-        @NameInMap("ActualValue")
-        public String actualValue;
-
-        // 告警级别
-        @NameInMap("Level")
-        public String level;
-
         public static InspectionTaskInspectionAlarmRules build(java.util.Map<String, ?> map) throws Exception {
             InspectionTaskInspectionAlarmRules self = new InspectionTaskInspectionAlarmRules();
             return TeaModel.build(map, self);
+        }
+
+        public InspectionTaskInspectionAlarmRules setActualValue(String actualValue) {
+            this.actualValue = actualValue;
+            return this;
+        }
+        public String getActualValue() {
+            return this.actualValue;
         }
 
         public InspectionTaskInspectionAlarmRules setExpression(String expression) {
@@ -161,6 +169,14 @@ public class Task extends TeaModel {
         }
         public String getExpression() {
             return this.expression;
+        }
+
+        public InspectionTaskInspectionAlarmRules setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
         }
 
         public InspectionTaskInspectionAlarmRules setOperator(String operator) {
@@ -179,7 +195,35 @@ public class Task extends TeaModel {
             return this.value;
         }
 
-        public InspectionTaskInspectionAlarmRules setActualValue(String actualValue) {
+    }
+
+    public static class GetInspectionTaskResponseBodyInspectionTaskInspectionAlarmRules extends TeaModel {
+        // 告警实际值
+        @NameInMap("ActualValue")
+        public String actualValue;
+
+        // 告警符号
+        @NameInMap("Expression")
+        public String expression;
+
+        // 告警级别
+        @NameInMap("Level")
+        public String level;
+
+        // 告警操作符
+        @NameInMap("Operator")
+        public String operator;
+
+        // 告警值
+        @NameInMap("Value")
+        public String value;
+
+        public static GetInspectionTaskResponseBodyInspectionTaskInspectionAlarmRules build(java.util.Map<String, ?> map) throws Exception {
+            GetInspectionTaskResponseBodyInspectionTaskInspectionAlarmRules self = new GetInspectionTaskResponseBodyInspectionTaskInspectionAlarmRules();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInspectionTaskResponseBodyInspectionTaskInspectionAlarmRules setActualValue(String actualValue) {
             this.actualValue = actualValue;
             return this;
         }
@@ -187,7 +231,15 @@ public class Task extends TeaModel {
             return this.actualValue;
         }
 
-        public InspectionTaskInspectionAlarmRules setLevel(String level) {
+        public GetInspectionTaskResponseBodyInspectionTaskInspectionAlarmRules setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
+        public GetInspectionTaskResponseBodyInspectionTaskInspectionAlarmRules setLevel(String level) {
             this.level = level;
             return this;
         }
@@ -195,24 +247,40 @@ public class Task extends TeaModel {
             return this.level;
         }
 
+        public GetInspectionTaskResponseBodyInspectionTaskInspectionAlarmRules setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public GetInspectionTaskResponseBodyInspectionTaskInspectionAlarmRules setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic extends TeaModel {
+        // 高危数量
+        @NameInMap("CriticalNumber")
+        public Long criticalNumber;
+
         // 巡检项
         @NameInMap("InspectionItem")
         public String inspectionItem;
-
-        // 厂商
-        @NameInMap("Vendor")
-        public String vendor;
 
         // 型号
         @NameInMap("Model")
         public String model;
 
-        // 高危数量
-        @NameInMap("CriticalNumber")
-        public Long criticalNumber;
+        // 厂商
+        @NameInMap("Vendor")
+        public String vendor;
 
         // 中危数量
         @NameInMap("WarningNumber")
@@ -223,20 +291,20 @@ public class Task extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setCriticalNumber(Long criticalNumber) {
+            this.criticalNumber = criticalNumber;
+            return this;
+        }
+        public Long getCriticalNumber() {
+            return this.criticalNumber;
+        }
+
         public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setInspectionItem(String inspectionItem) {
             this.inspectionItem = inspectionItem;
             return this;
         }
         public String getInspectionItem() {
             return this.inspectionItem;
-        }
-
-        public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setVendor(String vendor) {
-            this.vendor = vendor;
-            return this;
-        }
-        public String getVendor() {
-            return this.vendor;
         }
 
         public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setModel(String model) {
@@ -247,12 +315,12 @@ public class Task extends TeaModel {
             return this.model;
         }
 
-        public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setCriticalNumber(Long criticalNumber) {
-            this.criticalNumber = criticalNumber;
+        public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setVendor(String vendor) {
+            this.vendor = vendor;
             return this;
         }
-        public Long getCriticalNumber() {
-            return this.criticalNumber;
+        public String getVendor() {
+            return this.vendor;
         }
 
         public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setWarningNumber(Long warningNumber) {

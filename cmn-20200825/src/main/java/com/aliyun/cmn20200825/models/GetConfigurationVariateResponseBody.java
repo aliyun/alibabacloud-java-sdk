@@ -4,25 +4,17 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetConfigurationVariateResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 资源对象
     @NameInMap("ConfigurationVariate")
     public GetConfigurationVariateResponseBodyConfigurationVariate configurationVariate;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static GetConfigurationVariateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetConfigurationVariateResponseBody self = new GetConfigurationVariateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetConfigurationVariateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetConfigurationVariateResponseBody setConfigurationVariate(GetConfigurationVariateResponseBodyConfigurationVariate configurationVariate) {
@@ -33,11 +25,15 @@ public class GetConfigurationVariateResponseBody extends TeaModel {
         return this.configurationVariate;
     }
 
-    public static class GetConfigurationVariateResponseBodyConfigurationVariate extends TeaModel {
-        // project
-        @NameInMap("VariateName")
-        public String variateName;
+    public GetConfigurationVariateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class GetConfigurationVariateResponseBodyConfigurationVariate extends TeaModel {
         // 变量描述
         @NameInMap("Comment")
         public String comment;
@@ -46,17 +42,13 @@ public class GetConfigurationVariateResponseBody extends TeaModel {
         @NameInMap("FormatFunction")
         public String formatFunction;
 
+        // project
+        @NameInMap("VariateName")
+        public String variateName;
+
         public static GetConfigurationVariateResponseBodyConfigurationVariate build(java.util.Map<String, ?> map) throws Exception {
             GetConfigurationVariateResponseBodyConfigurationVariate self = new GetConfigurationVariateResponseBodyConfigurationVariate();
             return TeaModel.build(map, self);
-        }
-
-        public GetConfigurationVariateResponseBodyConfigurationVariate setVariateName(String variateName) {
-            this.variateName = variateName;
-            return this;
-        }
-        public String getVariateName() {
-            return this.variateName;
         }
 
         public GetConfigurationVariateResponseBodyConfigurationVariate setComment(String comment) {
@@ -73,6 +65,14 @@ public class GetConfigurationVariateResponseBody extends TeaModel {
         }
         public String getFormatFunction() {
             return this.formatFunction;
+        }
+
+        public GetConfigurationVariateResponseBodyConfigurationVariate setVariateName(String variateName) {
+            this.variateName = variateName;
+            return this;
+        }
+        public String getVariateName() {
+            return this.variateName;
         }
 
     }

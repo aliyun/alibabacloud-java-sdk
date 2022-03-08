@@ -16,13 +16,13 @@ public class ListSetupProjectsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 集群名
-    @NameInMap("Status")
-    public String status;
-
     // 物理空间id
     @NameInMap("SpaceId")
     public String spaceId;
+
+    // 集群名
+    @NameInMap("Status")
+    public String status;
 
     public static ListSetupProjectsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSetupProjectsRequest self = new ListSetupProjectsRequest();
@@ -53,20 +53,20 @@ public class ListSetupProjectsRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListSetupProjectsRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
     public ListSetupProjectsRequest setSpaceId(String spaceId) {
         this.spaceId = spaceId;
         return this;
     }
     public String getSpaceId() {
         return this.spaceId;
+    }
+
+    public ListSetupProjectsRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

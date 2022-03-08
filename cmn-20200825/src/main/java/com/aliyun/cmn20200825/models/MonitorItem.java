@@ -16,10 +16,6 @@ public class MonitorItem extends TeaModel {
     @NameInMap("Config")
     public String config;
 
-    // 描述
-    @NameInMap("MonitorItemDescription")
-    public String monitorItemDescription;
-
     // 是否启用
     @NameInMap("Enable")
     public Integer enable;
@@ -36,6 +32,14 @@ public class MonitorItem extends TeaModel {
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    // 描述
+    @NameInMap("MonitorItemDescription")
+    public String monitorItemDescription;
+
+    // 监控项ID
+    @NameInMap("MonitorItemId")
+    public String monitorItemId;
+
     // 监控项名称
     @NameInMap("MonitorItemName")
     public String monitorItemName;
@@ -43,10 +47,6 @@ public class MonitorItem extends TeaModel {
     // 安全域
     @NameInMap("SecurityDomain")
     public String securityDomain;
-
-    // 监控项ID
-    @NameInMap("MonitorItemId")
-    public String monitorItemId;
 
     public static MonitorItem build(java.util.Map<String, ?> map) throws Exception {
         MonitorItem self = new MonitorItem();
@@ -75,14 +75,6 @@ public class MonitorItem extends TeaModel {
     }
     public String getConfig() {
         return this.config;
-    }
-
-    public MonitorItem setMonitorItemDescription(String monitorItemDescription) {
-        this.monitorItemDescription = monitorItemDescription;
-        return this;
-    }
-    public String getMonitorItemDescription() {
-        return this.monitorItemDescription;
     }
 
     public MonitorItem setEnable(Integer enable) {
@@ -117,6 +109,22 @@ public class MonitorItem extends TeaModel {
         return this.gmtModified;
     }
 
+    public MonitorItem setMonitorItemDescription(String monitorItemDescription) {
+        this.monitorItemDescription = monitorItemDescription;
+        return this;
+    }
+    public String getMonitorItemDescription() {
+        return this.monitorItemDescription;
+    }
+
+    public MonitorItem setMonitorItemId(String monitorItemId) {
+        this.monitorItemId = monitorItemId;
+        return this;
+    }
+    public String getMonitorItemId() {
+        return this.monitorItemId;
+    }
+
     public MonitorItem setMonitorItemName(String monitorItemName) {
         this.monitorItemName = monitorItemName;
         return this;
@@ -131,14 +139,6 @@ public class MonitorItem extends TeaModel {
     }
     public String getSecurityDomain() {
         return this.securityDomain;
-    }
-
-    public MonitorItem setMonitorItemId(String monitorItemId) {
-        this.monitorItemId = monitorItemId;
-        return this;
-    }
-    public String getMonitorItemId() {
-        return this.monitorItemId;
     }
 
 }

@@ -34,6 +34,9 @@ public class ListResourceTypesResponseBody extends TeaModel {
     }
 
     public static class ListResourceTypesResponseBodyResourceType extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
         // 资源类型
         @NameInMap("ResourceType")
         public String resourceType;
@@ -42,12 +45,17 @@ public class ListResourceTypesResponseBody extends TeaModel {
         @NameInMap("ResourceTypeName")
         public String resourceTypeName;
 
-        @NameInMap("Key")
-        public String key;
-
         public static ListResourceTypesResponseBodyResourceType build(java.util.Map<String, ?> map) throws Exception {
             ListResourceTypesResponseBodyResourceType self = new ListResourceTypesResponseBodyResourceType();
             return TeaModel.build(map, self);
+        }
+
+        public ListResourceTypesResponseBodyResourceType setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
         }
 
         public ListResourceTypesResponseBodyResourceType setResourceType(String resourceType) {
@@ -64,14 +72,6 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
         public String getResourceTypeName() {
             return this.resourceTypeName;
-        }
-
-        public ListResourceTypesResponseBodyResourceType setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
         }
 
     }

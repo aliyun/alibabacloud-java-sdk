@@ -8,17 +8,17 @@ public class UpdateSpaceModelShrinkRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 物理空间类型
-    @NameInMap("SpaceType")
-    public String spaceType;
+    // 层级
+    @NameInMap("Sort")
+    public String sortShrink;
 
     // 资源uuid
     @NameInMap("SpaceModelId")
     public String spaceModelId;
 
-    // 层级
-    @NameInMap("Sort")
-    public String sortShrink;
+    // 物理空间类型
+    @NameInMap("SpaceType")
+    public String spaceType;
 
     public static UpdateSpaceModelShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSpaceModelShrinkRequest self = new UpdateSpaceModelShrinkRequest();
@@ -33,12 +33,12 @@ public class UpdateSpaceModelShrinkRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public UpdateSpaceModelShrinkRequest setSpaceType(String spaceType) {
-        this.spaceType = spaceType;
+    public UpdateSpaceModelShrinkRequest setSortShrink(String sortShrink) {
+        this.sortShrink = sortShrink;
         return this;
     }
-    public String getSpaceType() {
-        return this.spaceType;
+    public String getSortShrink() {
+        return this.sortShrink;
     }
 
     public UpdateSpaceModelShrinkRequest setSpaceModelId(String spaceModelId) {
@@ -49,12 +49,12 @@ public class UpdateSpaceModelShrinkRequest extends TeaModel {
         return this.spaceModelId;
     }
 
-    public UpdateSpaceModelShrinkRequest setSortShrink(String sortShrink) {
-        this.sortShrink = sortShrink;
+    public UpdateSpaceModelShrinkRequest setSpaceType(String spaceType) {
+        this.spaceType = spaceType;
         return this;
     }
-    public String getSortShrink() {
-        return this.sortShrink;
+    public String getSpaceType() {
+        return this.spaceType;
     }
 
 }

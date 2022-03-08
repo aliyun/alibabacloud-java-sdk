@@ -4,14 +4,6 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateConfigurationVariateRequest extends TeaModel {
-    // instanceId
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    // 资源名称
-    @NameInMap("VariateName")
-    public String variateName;
-
     // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
@@ -24,25 +16,17 @@ public class CreateConfigurationVariateRequest extends TeaModel {
     @NameInMap("FormatFunction")
     public String formatFunction;
 
+    // instanceId
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    // 资源名称
+    @NameInMap("VariateName")
+    public String variateName;
+
     public static CreateConfigurationVariateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateConfigurationVariateRequest self = new CreateConfigurationVariateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateConfigurationVariateRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public CreateConfigurationVariateRequest setVariateName(String variateName) {
-        this.variateName = variateName;
-        return this;
-    }
-    public String getVariateName() {
-        return this.variateName;
     }
 
     public CreateConfigurationVariateRequest setClientToken(String clientToken) {
@@ -67,6 +51,22 @@ public class CreateConfigurationVariateRequest extends TeaModel {
     }
     public String getFormatFunction() {
         return this.formatFunction;
+    }
+
+    public CreateConfigurationVariateRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public CreateConfigurationVariateRequest setVariateName(String variateName) {
+        this.variateName = variateName;
+        return this;
+    }
+    public String getVariateName() {
+        return this.variateName;
     }
 
 }

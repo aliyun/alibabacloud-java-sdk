@@ -4,6 +4,10 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListPhysicalSpacesResponseBody extends TeaModel {
+    // 每页数量。
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
     // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public Integer nextToken;
@@ -20,13 +24,17 @@ public class ListPhysicalSpacesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    // 每页数量。
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
     public static ListPhysicalSpacesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPhysicalSpacesResponseBody self = new ListPhysicalSpacesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListPhysicalSpacesResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListPhysicalSpacesResponseBody setNextToken(Integer nextToken) {
@@ -61,15 +69,27 @@ public class ListPhysicalSpacesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListPhysicalSpacesResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
     public static class ListPhysicalSpacesResponseBodyPhysicalSpaces extends TeaModel {
+        // 具体地址
+        @NameInMap("Address")
+        public String address;
+
+        // 所属城市
+        @NameInMap("City")
+        public String city;
+
+        // 所属国家
+        @NameInMap("Country")
+        public String country;
+
+        // 实例
+        @NameInMap("Instance")
+        public String instance;
+
+        // 负责人
+        @NameInMap("Owner")
+        public String owner;
+
         // 物理空间ID
         @NameInMap("PhysicalSpaceId")
         public String physicalSpaceId;
@@ -78,21 +98,13 @@ public class ListPhysicalSpacesResponseBody extends TeaModel {
         @NameInMap("PhysicalSpaceName")
         public String physicalSpaceName;
 
-        // 所属国家
-        @NameInMap("Country")
-        public String country;
-
         // 所属省份
         @NameInMap("Province")
         public String province;
 
-        // 所属城市
-        @NameInMap("City")
-        public String city;
-
-        // 具体地址
-        @NameInMap("Address")
-        public String address;
+        // 备注
+        @NameInMap("Remark")
+        public String remark;
 
         // 缩写
         @NameInMap("SpaceAbbreviation")
@@ -102,17 +114,49 @@ public class ListPhysicalSpacesResponseBody extends TeaModel {
         @NameInMap("SpaceType")
         public String spaceType;
 
-        // 负责人
-        @NameInMap("Owner")
-        public String owner;
-
-        // 实例
-        @NameInMap("Instance")
-        public String instance;
-
         public static ListPhysicalSpacesResponseBodyPhysicalSpaces build(java.util.Map<String, ?> map) throws Exception {
             ListPhysicalSpacesResponseBodyPhysicalSpaces self = new ListPhysicalSpacesResponseBodyPhysicalSpaces();
             return TeaModel.build(map, self);
+        }
+
+        public ListPhysicalSpacesResponseBodyPhysicalSpaces setAddress(String address) {
+            this.address = address;
+            return this;
+        }
+        public String getAddress() {
+            return this.address;
+        }
+
+        public ListPhysicalSpacesResponseBodyPhysicalSpaces setCity(String city) {
+            this.city = city;
+            return this;
+        }
+        public String getCity() {
+            return this.city;
+        }
+
+        public ListPhysicalSpacesResponseBodyPhysicalSpaces setCountry(String country) {
+            this.country = country;
+            return this;
+        }
+        public String getCountry() {
+            return this.country;
+        }
+
+        public ListPhysicalSpacesResponseBodyPhysicalSpaces setInstance(String instance) {
+            this.instance = instance;
+            return this;
+        }
+        public String getInstance() {
+            return this.instance;
+        }
+
+        public ListPhysicalSpacesResponseBodyPhysicalSpaces setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
         }
 
         public ListPhysicalSpacesResponseBodyPhysicalSpaces setPhysicalSpaceId(String physicalSpaceId) {
@@ -131,14 +175,6 @@ public class ListPhysicalSpacesResponseBody extends TeaModel {
             return this.physicalSpaceName;
         }
 
-        public ListPhysicalSpacesResponseBodyPhysicalSpaces setCountry(String country) {
-            this.country = country;
-            return this;
-        }
-        public String getCountry() {
-            return this.country;
-        }
-
         public ListPhysicalSpacesResponseBodyPhysicalSpaces setProvince(String province) {
             this.province = province;
             return this;
@@ -147,20 +183,12 @@ public class ListPhysicalSpacesResponseBody extends TeaModel {
             return this.province;
         }
 
-        public ListPhysicalSpacesResponseBodyPhysicalSpaces setCity(String city) {
-            this.city = city;
+        public ListPhysicalSpacesResponseBodyPhysicalSpaces setRemark(String remark) {
+            this.remark = remark;
             return this;
         }
-        public String getCity() {
-            return this.city;
-        }
-
-        public ListPhysicalSpacesResponseBodyPhysicalSpaces setAddress(String address) {
-            this.address = address;
-            return this;
-        }
-        public String getAddress() {
-            return this.address;
+        public String getRemark() {
+            return this.remark;
         }
 
         public ListPhysicalSpacesResponseBodyPhysicalSpaces setSpaceAbbreviation(String spaceAbbreviation) {
@@ -177,22 +205,6 @@ public class ListPhysicalSpacesResponseBody extends TeaModel {
         }
         public String getSpaceType() {
             return this.spaceType;
-        }
-
-        public ListPhysicalSpacesResponseBodyPhysicalSpaces setOwner(String owner) {
-            this.owner = owner;
-            return this;
-        }
-        public String getOwner() {
-            return this.owner;
-        }
-
-        public ListPhysicalSpacesResponseBodyPhysicalSpaces setInstance(String instance) {
-            this.instance = instance;
-            return this;
-        }
-        public String getInstance() {
-            return this.instance;
         }
 
     }

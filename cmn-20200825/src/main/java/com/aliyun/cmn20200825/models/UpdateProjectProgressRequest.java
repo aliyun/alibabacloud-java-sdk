@@ -7,13 +7,13 @@ public class UpdateProjectProgressRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 资源id
-    @NameInMap("SetupProjectId")
-    public String setupProjectId;
-
     // 建设进展
     @NameInMap("Progress")
     public String progress;
+
+    // 资源id
+    @NameInMap("SetupProjectId")
+    public String setupProjectId;
 
     public static UpdateProjectProgressRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProjectProgressRequest self = new UpdateProjectProgressRequest();
@@ -28,20 +28,20 @@ public class UpdateProjectProgressRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public UpdateProjectProgressRequest setSetupProjectId(String setupProjectId) {
-        this.setupProjectId = setupProjectId;
-        return this;
-    }
-    public String getSetupProjectId() {
-        return this.setupProjectId;
-    }
-
     public UpdateProjectProgressRequest setProgress(String progress) {
         this.progress = progress;
         return this;
     }
     public String getProgress() {
         return this.progress;
+    }
+
+    public UpdateProjectProgressRequest setSetupProjectId(String setupProjectId) {
+        this.setupProjectId = setupProjectId;
+        return this;
+    }
+    public String getSetupProjectId() {
+        return this.setupProjectId;
     }
 
 }

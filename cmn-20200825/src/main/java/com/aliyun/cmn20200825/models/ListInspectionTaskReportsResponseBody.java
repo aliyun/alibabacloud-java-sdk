@@ -4,25 +4,17 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListInspectionTaskReportsResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 内容
     @NameInMap("InspectionTask")
     public java.util.List<ListInspectionTaskReportsResponseBodyInspectionTask> inspectionTask;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ListInspectionTaskReportsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInspectionTaskReportsResponseBody self = new ListInspectionTaskReportsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListInspectionTaskReportsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListInspectionTaskReportsResponseBody setInspectionTask(java.util.List<ListInspectionTaskReportsResponseBodyInspectionTask> inspectionTask) {
@@ -33,22 +25,30 @@ public class ListInspectionTaskReportsResponseBody extends TeaModel {
         return this.inspectionTask;
     }
 
+    public ListInspectionTaskReportsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic extends TeaModel {
+        // 高危数量
+        @NameInMap("CriticalNumber")
+        public Long criticalNumber;
+
         // 巡检项
         @NameInMap("InspectionItem")
         public String inspectionItem;
-
-        // 厂商
-        @NameInMap("Vendor")
-        public String vendor;
 
         // 型号
         @NameInMap("Model")
         public String model;
 
-        // 高危数量
-        @NameInMap("CriticalNumber")
-        public Long criticalNumber;
+        // 厂商
+        @NameInMap("Vendor")
+        public String vendor;
 
         // 中危数量
         @NameInMap("WarningNumber")
@@ -59,20 +59,20 @@ public class ListInspectionTaskReportsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setCriticalNumber(Long criticalNumber) {
+            this.criticalNumber = criticalNumber;
+            return this;
+        }
+        public Long getCriticalNumber() {
+            return this.criticalNumber;
+        }
+
         public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setInspectionItem(String inspectionItem) {
             this.inspectionItem = inspectionItem;
             return this;
         }
         public String getInspectionItem() {
             return this.inspectionItem;
-        }
-
-        public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setVendor(String vendor) {
-            this.vendor = vendor;
-            return this;
-        }
-        public String getVendor() {
-            return this.vendor;
         }
 
         public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setModel(String model) {
@@ -83,12 +83,12 @@ public class ListInspectionTaskReportsResponseBody extends TeaModel {
             return this.model;
         }
 
-        public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setCriticalNumber(Long criticalNumber) {
-            this.criticalNumber = criticalNumber;
+        public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setVendor(String vendor) {
+            this.vendor = vendor;
             return this;
         }
-        public Long getCriticalNumber() {
-            return this.criticalNumber;
+        public String getVendor() {
+            return this.vendor;
         }
 
         public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setWarningNumber(Long warningNumber) {
@@ -102,21 +102,48 @@ public class ListInspectionTaskReportsResponseBody extends TeaModel {
     }
 
     public static class ListInspectionTaskReportsResponseBodyInspectionTask extends TeaModel {
-        // 总设备数
-        @NameInMap("TotalDeviceNumber")
-        public Long totalDeviceNumber;
-
         // 实际设备数
         @NameInMap("ActualDeviceNumber")
         public Long actualDeviceNumber;
+
+        // 告警数量
+        @NameInMap("AlarmNumber")
+        public Long alarmNumber;
+
+        @NameInMap("AlarmStatistic")
+        public java.util.List<ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic> alarmStatistic;
+
+        // 高危数量
+        @NameInMap("CriticalNumber")
+        public Long criticalNumber;
+
+        // 高危占比
+        @NameInMap("CriticalRate")
+        public String criticalRate;
 
         // 设备占比
         @NameInMap("DeviceRate")
         public String deviceRate;
 
-        // 任务数
-        @NameInMap("TaskNumber")
-        public Long taskNumber;
+        // 失败详情
+        @NameInMap("FailureStatistic")
+        public String failureStatistic;
+
+        // 失败任务数
+        @NameInMap("FailureTaskNumber")
+        public Long failureTaskNumber;
+
+        // 失败占比
+        @NameInMap("FailureTaskRate")
+        public String failureTaskRate;
+
+        // 正常数量
+        @NameInMap("NormalNumber")
+        public Long normalNumber;
+
+        // 正常占比
+        @NameInMap("NormalRate")
+        public String normalRate;
 
         // 正在运行任务数
         @NameInMap("RunningTaskNumber")
@@ -134,29 +161,13 @@ public class ListInspectionTaskReportsResponseBody extends TeaModel {
         @NameInMap("SuccessTaskRate")
         public String successTaskRate;
 
-        // 失败任务数
-        @NameInMap("FailureTaskNumber")
-        public Long failureTaskNumber;
+        // 任务数
+        @NameInMap("TaskNumber")
+        public Long taskNumber;
 
-        // 失败占比
-        @NameInMap("FailureTaskRate")
-        public String failureTaskRate;
-
-        // 失败详情
-        @NameInMap("FailureStatistic")
-        public String failureStatistic;
-
-        // 告警数量
-        @NameInMap("AlarmNumber")
-        public Long alarmNumber;
-
-        // 高危数量
-        @NameInMap("CriticalNumber")
-        public Long criticalNumber;
-
-        // 高危占比
-        @NameInMap("CriticalRate")
-        public String criticalRate;
+        // 总设备数
+        @NameInMap("TotalDeviceNumber")
+        public Long totalDeviceNumber;
 
         // 中危数量
         @NameInMap("WarningNumber")
@@ -166,28 +177,9 @@ public class ListInspectionTaskReportsResponseBody extends TeaModel {
         @NameInMap("WarningRate")
         public String warningRate;
 
-        // 正常数量
-        @NameInMap("NormalNumber")
-        public Long normalNumber;
-
-        // 正常占比
-        @NameInMap("NormalRate")
-        public String normalRate;
-
-        @NameInMap("AlarmStatistic")
-        public java.util.List<ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic> alarmStatistic;
-
         public static ListInspectionTaskReportsResponseBodyInspectionTask build(java.util.Map<String, ?> map) throws Exception {
             ListInspectionTaskReportsResponseBodyInspectionTask self = new ListInspectionTaskReportsResponseBodyInspectionTask();
             return TeaModel.build(map, self);
-        }
-
-        public ListInspectionTaskReportsResponseBodyInspectionTask setTotalDeviceNumber(Long totalDeviceNumber) {
-            this.totalDeviceNumber = totalDeviceNumber;
-            return this;
-        }
-        public Long getTotalDeviceNumber() {
-            return this.totalDeviceNumber;
         }
 
         public ListInspectionTaskReportsResponseBodyInspectionTask setActualDeviceNumber(Long actualDeviceNumber) {
@@ -198,6 +190,38 @@ public class ListInspectionTaskReportsResponseBody extends TeaModel {
             return this.actualDeviceNumber;
         }
 
+        public ListInspectionTaskReportsResponseBodyInspectionTask setAlarmNumber(Long alarmNumber) {
+            this.alarmNumber = alarmNumber;
+            return this;
+        }
+        public Long getAlarmNumber() {
+            return this.alarmNumber;
+        }
+
+        public ListInspectionTaskReportsResponseBodyInspectionTask setAlarmStatistic(java.util.List<ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic> alarmStatistic) {
+            this.alarmStatistic = alarmStatistic;
+            return this;
+        }
+        public java.util.List<ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic> getAlarmStatistic() {
+            return this.alarmStatistic;
+        }
+
+        public ListInspectionTaskReportsResponseBodyInspectionTask setCriticalNumber(Long criticalNumber) {
+            this.criticalNumber = criticalNumber;
+            return this;
+        }
+        public Long getCriticalNumber() {
+            return this.criticalNumber;
+        }
+
+        public ListInspectionTaskReportsResponseBodyInspectionTask setCriticalRate(String criticalRate) {
+            this.criticalRate = criticalRate;
+            return this;
+        }
+        public String getCriticalRate() {
+            return this.criticalRate;
+        }
+
         public ListInspectionTaskReportsResponseBodyInspectionTask setDeviceRate(String deviceRate) {
             this.deviceRate = deviceRate;
             return this;
@@ -206,12 +230,44 @@ public class ListInspectionTaskReportsResponseBody extends TeaModel {
             return this.deviceRate;
         }
 
-        public ListInspectionTaskReportsResponseBodyInspectionTask setTaskNumber(Long taskNumber) {
-            this.taskNumber = taskNumber;
+        public ListInspectionTaskReportsResponseBodyInspectionTask setFailureStatistic(String failureStatistic) {
+            this.failureStatistic = failureStatistic;
             return this;
         }
-        public Long getTaskNumber() {
-            return this.taskNumber;
+        public String getFailureStatistic() {
+            return this.failureStatistic;
+        }
+
+        public ListInspectionTaskReportsResponseBodyInspectionTask setFailureTaskNumber(Long failureTaskNumber) {
+            this.failureTaskNumber = failureTaskNumber;
+            return this;
+        }
+        public Long getFailureTaskNumber() {
+            return this.failureTaskNumber;
+        }
+
+        public ListInspectionTaskReportsResponseBodyInspectionTask setFailureTaskRate(String failureTaskRate) {
+            this.failureTaskRate = failureTaskRate;
+            return this;
+        }
+        public String getFailureTaskRate() {
+            return this.failureTaskRate;
+        }
+
+        public ListInspectionTaskReportsResponseBodyInspectionTask setNormalNumber(Long normalNumber) {
+            this.normalNumber = normalNumber;
+            return this;
+        }
+        public Long getNormalNumber() {
+            return this.normalNumber;
+        }
+
+        public ListInspectionTaskReportsResponseBodyInspectionTask setNormalRate(String normalRate) {
+            this.normalRate = normalRate;
+            return this;
+        }
+        public String getNormalRate() {
+            return this.normalRate;
         }
 
         public ListInspectionTaskReportsResponseBodyInspectionTask setRunningTaskNumber(Long runningTaskNumber) {
@@ -246,52 +302,20 @@ public class ListInspectionTaskReportsResponseBody extends TeaModel {
             return this.successTaskRate;
         }
 
-        public ListInspectionTaskReportsResponseBodyInspectionTask setFailureTaskNumber(Long failureTaskNumber) {
-            this.failureTaskNumber = failureTaskNumber;
+        public ListInspectionTaskReportsResponseBodyInspectionTask setTaskNumber(Long taskNumber) {
+            this.taskNumber = taskNumber;
             return this;
         }
-        public Long getFailureTaskNumber() {
-            return this.failureTaskNumber;
+        public Long getTaskNumber() {
+            return this.taskNumber;
         }
 
-        public ListInspectionTaskReportsResponseBodyInspectionTask setFailureTaskRate(String failureTaskRate) {
-            this.failureTaskRate = failureTaskRate;
+        public ListInspectionTaskReportsResponseBodyInspectionTask setTotalDeviceNumber(Long totalDeviceNumber) {
+            this.totalDeviceNumber = totalDeviceNumber;
             return this;
         }
-        public String getFailureTaskRate() {
-            return this.failureTaskRate;
-        }
-
-        public ListInspectionTaskReportsResponseBodyInspectionTask setFailureStatistic(String failureStatistic) {
-            this.failureStatistic = failureStatistic;
-            return this;
-        }
-        public String getFailureStatistic() {
-            return this.failureStatistic;
-        }
-
-        public ListInspectionTaskReportsResponseBodyInspectionTask setAlarmNumber(Long alarmNumber) {
-            this.alarmNumber = alarmNumber;
-            return this;
-        }
-        public Long getAlarmNumber() {
-            return this.alarmNumber;
-        }
-
-        public ListInspectionTaskReportsResponseBodyInspectionTask setCriticalNumber(Long criticalNumber) {
-            this.criticalNumber = criticalNumber;
-            return this;
-        }
-        public Long getCriticalNumber() {
-            return this.criticalNumber;
-        }
-
-        public ListInspectionTaskReportsResponseBodyInspectionTask setCriticalRate(String criticalRate) {
-            this.criticalRate = criticalRate;
-            return this;
-        }
-        public String getCriticalRate() {
-            return this.criticalRate;
+        public Long getTotalDeviceNumber() {
+            return this.totalDeviceNumber;
         }
 
         public ListInspectionTaskReportsResponseBodyInspectionTask setWarningNumber(Long warningNumber) {
@@ -308,30 +332,6 @@ public class ListInspectionTaskReportsResponseBody extends TeaModel {
         }
         public String getWarningRate() {
             return this.warningRate;
-        }
-
-        public ListInspectionTaskReportsResponseBodyInspectionTask setNormalNumber(Long normalNumber) {
-            this.normalNumber = normalNumber;
-            return this;
-        }
-        public Long getNormalNumber() {
-            return this.normalNumber;
-        }
-
-        public ListInspectionTaskReportsResponseBodyInspectionTask setNormalRate(String normalRate) {
-            this.normalRate = normalRate;
-            return this;
-        }
-        public String getNormalRate() {
-            return this.normalRate;
-        }
-
-        public ListInspectionTaskReportsResponseBodyInspectionTask setAlarmStatistic(java.util.List<ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic> alarmStatistic) {
-            this.alarmStatistic = alarmStatistic;
-            return this;
-        }
-        public java.util.List<ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic> getAlarmStatistic() {
-            return this.alarmStatistic;
         }
 
     }

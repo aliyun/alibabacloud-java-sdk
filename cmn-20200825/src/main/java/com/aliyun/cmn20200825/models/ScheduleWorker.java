@@ -16,6 +16,10 @@ public class ScheduleWorker extends TeaModel {
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    // 联系方式
+    @NameInMap("WorkerContact")
+    public String workerContact;
+
     // 值班人员工号
     @NameInMap("WorkerId")
     public String workerId;
@@ -23,10 +27,6 @@ public class ScheduleWorker extends TeaModel {
     // 值班人员姓名
     @NameInMap("WorkerName")
     public String workerName;
-
-    // 联系方式
-    @NameInMap("WorkerContact")
-    public String workerContact;
 
     public static ScheduleWorker build(java.util.Map<String, ?> map) throws Exception {
         ScheduleWorker self = new ScheduleWorker();
@@ -57,6 +57,14 @@ public class ScheduleWorker extends TeaModel {
         return this.updateTime;
     }
 
+    public ScheduleWorker setWorkerContact(String workerContact) {
+        this.workerContact = workerContact;
+        return this;
+    }
+    public String getWorkerContact() {
+        return this.workerContact;
+    }
+
     public ScheduleWorker setWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
@@ -71,14 +79,6 @@ public class ScheduleWorker extends TeaModel {
     }
     public String getWorkerName() {
         return this.workerName;
-    }
-
-    public ScheduleWorker setWorkerContact(String workerContact) {
-        this.workerContact = workerContact;
-        return this;
-    }
-    public String getWorkerContact() {
-        return this.workerContact;
     }
 
 }

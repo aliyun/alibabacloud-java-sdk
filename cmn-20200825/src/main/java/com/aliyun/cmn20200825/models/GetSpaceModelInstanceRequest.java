@@ -8,6 +8,10 @@ public class GetSpaceModelInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 操作类型
+    @NameInMap("OperateType")
+    public String operateType;
+
     // 资源id
     @NameInMap("SpaceId")
     public String spaceId;
@@ -15,10 +19,6 @@ public class GetSpaceModelInstanceRequest extends TeaModel {
     // 物理空间类型
     @NameInMap("SpaceType")
     public String spaceType;
-
-    // 操作类型
-    @NameInMap("OperateType")
-    public String operateType;
 
     public static GetSpaceModelInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSpaceModelInstanceRequest self = new GetSpaceModelInstanceRequest();
@@ -31,6 +31,14 @@ public class GetSpaceModelInstanceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetSpaceModelInstanceRequest setOperateType(String operateType) {
+        this.operateType = operateType;
+        return this;
+    }
+    public String getOperateType() {
+        return this.operateType;
     }
 
     public GetSpaceModelInstanceRequest setSpaceId(String spaceId) {
@@ -47,14 +55,6 @@ public class GetSpaceModelInstanceRequest extends TeaModel {
     }
     public String getSpaceType() {
         return this.spaceType;
-    }
-
-    public GetSpaceModelInstanceRequest setOperateType(String operateType) {
-        this.operateType = operateType;
-        return this;
-    }
-    public String getOperateType() {
-        return this.operateType;
     }
 
 }

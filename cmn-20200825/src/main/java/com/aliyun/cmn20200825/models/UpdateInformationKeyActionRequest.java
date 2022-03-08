@@ -4,10 +4,6 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateInformationKeyActionRequest extends TeaModel {
-    // 资源id
-    @NameInMap("ResourceInformationId")
-    public String resourceInformationId;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -15,29 +11,25 @@ public class UpdateInformationKeyActionRequest extends TeaModel {
     @NameInMap("Key")
     public String key;
 
-    // 键值
-    @NameInMap("Value")
-    public String value;
-
     // 动作
     @NameInMap("KeyAction")
     public String keyAction;
+
+    // 资源id
+    @NameInMap("ResourceInformationId")
+    public String resourceInformationId;
 
     // 建设项目id
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 
+    // 键值
+    @NameInMap("Value")
+    public String value;
+
     public static UpdateInformationKeyActionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateInformationKeyActionRequest self = new UpdateInformationKeyActionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateInformationKeyActionRequest setResourceInformationId(String resourceInformationId) {
-        this.resourceInformationId = resourceInformationId;
-        return this;
-    }
-    public String getResourceInformationId() {
-        return this.resourceInformationId;
     }
 
     public UpdateInformationKeyActionRequest setInstanceId(String instanceId) {
@@ -56,14 +48,6 @@ public class UpdateInformationKeyActionRequest extends TeaModel {
         return this.key;
     }
 
-    public UpdateInformationKeyActionRequest setValue(String value) {
-        this.value = value;
-        return this;
-    }
-    public String getValue() {
-        return this.value;
-    }
-
     public UpdateInformationKeyActionRequest setKeyAction(String keyAction) {
         this.keyAction = keyAction;
         return this;
@@ -72,12 +56,28 @@ public class UpdateInformationKeyActionRequest extends TeaModel {
         return this.keyAction;
     }
 
+    public UpdateInformationKeyActionRequest setResourceInformationId(String resourceInformationId) {
+        this.resourceInformationId = resourceInformationId;
+        return this;
+    }
+    public String getResourceInformationId() {
+        return this.resourceInformationId;
+    }
+
     public UpdateInformationKeyActionRequest setSetupProjectId(String setupProjectId) {
         this.setupProjectId = setupProjectId;
         return this;
     }
     public String getSetupProjectId() {
         return this.setupProjectId;
+    }
+
+    public UpdateInformationKeyActionRequest setValue(String value) {
+        this.value = value;
+        return this;
+    }
+    public String getValue() {
+        return this.value;
     }
 
 }

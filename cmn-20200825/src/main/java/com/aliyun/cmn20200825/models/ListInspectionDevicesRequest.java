@@ -8,6 +8,10 @@ public class ListInspectionDevicesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 型号
+    @NameInMap("Model")
+    public java.util.List<String> model;
+
     // 角色
     @NameInMap("Role")
     public String role;
@@ -15,10 +19,6 @@ public class ListInspectionDevicesRequest extends TeaModel {
     // 厂商
     @NameInMap("Vendor")
     public String vendor;
-
-    // 型号
-    @NameInMap("Model")
-    public java.util.List<String> model;
 
     public static ListInspectionDevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInspectionDevicesRequest self = new ListInspectionDevicesRequest();
@@ -31,6 +31,14 @@ public class ListInspectionDevicesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListInspectionDevicesRequest setModel(java.util.List<String> model) {
+        this.model = model;
+        return this;
+    }
+    public java.util.List<String> getModel() {
+        return this.model;
     }
 
     public ListInspectionDevicesRequest setRole(String role) {
@@ -47,14 +55,6 @@ public class ListInspectionDevicesRequest extends TeaModel {
     }
     public String getVendor() {
         return this.vendor;
-    }
-
-    public ListInspectionDevicesRequest setModel(java.util.List<String> model) {
-        this.model = model;
-        return this;
-    }
-    public java.util.List<String> getModel() {
-        return this.model;
     }
 
 }

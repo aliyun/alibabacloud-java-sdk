@@ -4,17 +4,25 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateOsVersionRequest extends TeaModel {
-    // instanceId
-    @NameInMap("InstanceId")
-    public String instanceId;
+    // 幂等参数
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 厂商
-    @NameInMap("Vendor")
-    public String vendor;
+    // 文件名
+    @NameInMap("FileName")
+    public String fileName;
+
+    // 文件路径
+    @NameInMap("FilePath")
+    public String filePath;
+
+    // instanceId
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     // 型号
     @NameInMap("Model")
@@ -28,29 +36,21 @@ public class CreateOsVersionRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    // 文件名
-    @NameInMap("FileName")
-    public String fileName;
-
-    // 文件路径
-    @NameInMap("FilePath")
-    public String filePath;
-
-    // 幂等参数
-    @NameInMap("ClientToken")
-    public String clientToken;
+    // 厂商
+    @NameInMap("Vendor")
+    public String vendor;
 
     public static CreateOsVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOsVersionRequest self = new CreateOsVersionRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateOsVersionRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public CreateOsVersionRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateOsVersionRequest setCreateTime(String createTime) {
@@ -61,12 +61,28 @@ public class CreateOsVersionRequest extends TeaModel {
         return this.createTime;
     }
 
-    public CreateOsVersionRequest setVendor(String vendor) {
-        this.vendor = vendor;
+    public CreateOsVersionRequest setFileName(String fileName) {
+        this.fileName = fileName;
         return this;
     }
-    public String getVendor() {
-        return this.vendor;
+    public String getFileName() {
+        return this.fileName;
+    }
+
+    public CreateOsVersionRequest setFilePath(String filePath) {
+        this.filePath = filePath;
+        return this;
+    }
+    public String getFilePath() {
+        return this.filePath;
+    }
+
+    public CreateOsVersionRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public CreateOsVersionRequest setModel(String model) {
@@ -93,28 +109,12 @@ public class CreateOsVersionRequest extends TeaModel {
         return this.status;
     }
 
-    public CreateOsVersionRequest setFileName(String fileName) {
-        this.fileName = fileName;
+    public CreateOsVersionRequest setVendor(String vendor) {
+        this.vendor = vendor;
         return this;
     }
-    public String getFileName() {
-        return this.fileName;
-    }
-
-    public CreateOsVersionRequest setFilePath(String filePath) {
-        this.filePath = filePath;
-        return this;
-    }
-    public String getFilePath() {
-        return this.filePath;
-    }
-
-    public CreateOsVersionRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getVendor() {
+        return this.vendor;
     }
 
 }

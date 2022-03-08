@@ -4,25 +4,17 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListAlarmStatusHistoriesResponseBody extends TeaModel {
-    // request id
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 数据列表
     @NameInMap("AlarmStatusHistories")
     public java.util.List<ListAlarmStatusHistoriesResponseBodyAlarmStatusHistories> alarmStatusHistories;
 
+    // request id
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ListAlarmStatusHistoriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAlarmStatusHistoriesResponseBody self = new ListAlarmStatusHistoriesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAlarmStatusHistoriesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListAlarmStatusHistoriesResponseBody setAlarmStatusHistories(java.util.List<ListAlarmStatusHistoriesResponseBodyAlarmStatusHistories> alarmStatusHistories) {
@@ -31,6 +23,14 @@ public class ListAlarmStatusHistoriesResponseBody extends TeaModel {
     }
     public java.util.List<ListAlarmStatusHistoriesResponseBodyAlarmStatusHistories> getAlarmStatusHistories() {
         return this.alarmStatusHistories;
+    }
+
+    public ListAlarmStatusHistoriesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListAlarmStatusHistoriesResponseBodyAlarmStatusHistories extends TeaModel {

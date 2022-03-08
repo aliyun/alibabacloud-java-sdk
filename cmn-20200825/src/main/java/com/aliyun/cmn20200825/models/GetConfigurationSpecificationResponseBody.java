@@ -4,25 +4,17 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetConfigurationSpecificationResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 配置规范对象
     @NameInMap("ConfigurationSpecification")
     public GetConfigurationSpecificationResponseBodyConfigurationSpecification configurationSpecification;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static GetConfigurationSpecificationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetConfigurationSpecificationResponseBody self = new GetConfigurationSpecificationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetConfigurationSpecificationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetConfigurationSpecificationResponseBody setConfigurationSpecification(GetConfigurationSpecificationResponseBodyConfigurationSpecification configurationSpecification) {
@@ -33,82 +25,58 @@ public class GetConfigurationSpecificationResponseBody extends TeaModel {
         return this.configurationSpecification;
     }
 
+    public GetConfigurationSpecificationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class GetConfigurationSpecificationResponseBodyConfigurationSpecification extends TeaModel {
-        // 创建时间
-        @NameInMap("CreateTime")
-        public String createTime;
+        // 架构
+        @NameInMap("Architecture")
+        public String architecture;
 
         // 配置规范资源ID
         @NameInMap("ConfigurationSpecificationId")
         public String configurationSpecificationId;
 
-        // 更新时间
-        @NameInMap("UpdateTime")
-        public String updateTime;
-
-        // 配置规范名字
-        @NameInMap("SpecificationName")
-        public String specificationName;
-
-        // 架构
-        @NameInMap("Architecture")
-        public String architecture;
-
-        // 角色
-        @NameInMap("Role")
-        public String role;
+        // 创建时间
+        @NameInMap("CreateTime")
+        public String createTime;
 
         // 型号
         @NameInMap("Mode")
         public String mode;
 
-        // 厂商
-        @NameInMap("Vendor")
-        public String vendor;
+        // 相关变量
+        @NameInMap("RelatedVariate")
+        public java.util.List<String> relatedVariate;
+
+        // 角色
+        @NameInMap("Role")
+        public String role;
 
         // 规范内容
         @NameInMap("SpecificationContent")
         public String specificationContent;
 
-        // 相关变量
-        @NameInMap("RelatedVariate")
-        public java.util.List<String> relatedVariate;
+        // 配置规范名字
+        @NameInMap("SpecificationName")
+        public String specificationName;
+
+        // 更新时间
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
+        // 厂商
+        @NameInMap("Vendor")
+        public String vendor;
 
         public static GetConfigurationSpecificationResponseBodyConfigurationSpecification build(java.util.Map<String, ?> map) throws Exception {
             GetConfigurationSpecificationResponseBodyConfigurationSpecification self = new GetConfigurationSpecificationResponseBodyConfigurationSpecification();
             return TeaModel.build(map, self);
-        }
-
-        public GetConfigurationSpecificationResponseBodyConfigurationSpecification setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public GetConfigurationSpecificationResponseBodyConfigurationSpecification setConfigurationSpecificationId(String configurationSpecificationId) {
-            this.configurationSpecificationId = configurationSpecificationId;
-            return this;
-        }
-        public String getConfigurationSpecificationId() {
-            return this.configurationSpecificationId;
-        }
-
-        public GetConfigurationSpecificationResponseBodyConfigurationSpecification setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public GetConfigurationSpecificationResponseBodyConfigurationSpecification setSpecificationName(String specificationName) {
-            this.specificationName = specificationName;
-            return this;
-        }
-        public String getSpecificationName() {
-            return this.specificationName;
         }
 
         public GetConfigurationSpecificationResponseBodyConfigurationSpecification setArchitecture(String architecture) {
@@ -119,12 +87,20 @@ public class GetConfigurationSpecificationResponseBody extends TeaModel {
             return this.architecture;
         }
 
-        public GetConfigurationSpecificationResponseBodyConfigurationSpecification setRole(String role) {
-            this.role = role;
+        public GetConfigurationSpecificationResponseBodyConfigurationSpecification setConfigurationSpecificationId(String configurationSpecificationId) {
+            this.configurationSpecificationId = configurationSpecificationId;
             return this;
         }
-        public String getRole() {
-            return this.role;
+        public String getConfigurationSpecificationId() {
+            return this.configurationSpecificationId;
+        }
+
+        public GetConfigurationSpecificationResponseBodyConfigurationSpecification setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public GetConfigurationSpecificationResponseBodyConfigurationSpecification setMode(String mode) {
@@ -135,12 +111,20 @@ public class GetConfigurationSpecificationResponseBody extends TeaModel {
             return this.mode;
         }
 
-        public GetConfigurationSpecificationResponseBodyConfigurationSpecification setVendor(String vendor) {
-            this.vendor = vendor;
+        public GetConfigurationSpecificationResponseBodyConfigurationSpecification setRelatedVariate(java.util.List<String> relatedVariate) {
+            this.relatedVariate = relatedVariate;
             return this;
         }
-        public String getVendor() {
-            return this.vendor;
+        public java.util.List<String> getRelatedVariate() {
+            return this.relatedVariate;
+        }
+
+        public GetConfigurationSpecificationResponseBodyConfigurationSpecification setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
         }
 
         public GetConfigurationSpecificationResponseBodyConfigurationSpecification setSpecificationContent(String specificationContent) {
@@ -151,12 +135,28 @@ public class GetConfigurationSpecificationResponseBody extends TeaModel {
             return this.specificationContent;
         }
 
-        public GetConfigurationSpecificationResponseBodyConfigurationSpecification setRelatedVariate(java.util.List<String> relatedVariate) {
-            this.relatedVariate = relatedVariate;
+        public GetConfigurationSpecificationResponseBodyConfigurationSpecification setSpecificationName(String specificationName) {
+            this.specificationName = specificationName;
             return this;
         }
-        public java.util.List<String> getRelatedVariate() {
-            return this.relatedVariate;
+        public String getSpecificationName() {
+            return this.specificationName;
+        }
+
+        public GetConfigurationSpecificationResponseBodyConfigurationSpecification setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public GetConfigurationSpecificationResponseBodyConfigurationSpecification setVendor(String vendor) {
+            this.vendor = vendor;
+            return this;
+        }
+        public String getVendor() {
+            return this.vendor;
         }
 
     }

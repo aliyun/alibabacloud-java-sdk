@@ -12,6 +12,10 @@ public class AgentsTask extends TeaModel {
     @NameInMap("AgentType")
     public String agentType;
 
+    // 任务ID
+    @NameInMap("AgentsTaskId")
+    public String agentsTaskId;
+
     // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
@@ -27,10 +31,6 @@ public class AgentsTask extends TeaModel {
     // 任务状态
     @NameInMap("Status")
     public String status;
-
-    // 任务ID
-    @NameInMap("AgentsTaskId")
-    public String agentsTaskId;
 
     public static AgentsTask build(java.util.Map<String, ?> map) throws Exception {
         AgentsTask self = new AgentsTask();
@@ -51,6 +51,14 @@ public class AgentsTask extends TeaModel {
     }
     public String getAgentType() {
         return this.agentType;
+    }
+
+    public AgentsTask setAgentsTaskId(String agentsTaskId) {
+        this.agentsTaskId = agentsTaskId;
+        return this;
+    }
+    public String getAgentsTaskId() {
+        return this.agentsTaskId;
     }
 
     public AgentsTask setGmtCreate(String gmtCreate) {
@@ -83,14 +91,6 @@ public class AgentsTask extends TeaModel {
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public AgentsTask setAgentsTaskId(String agentsTaskId) {
-        this.agentsTaskId = agentsTaskId;
-        return this;
-    }
-    public String getAgentsTaskId() {
-        return this.agentsTaskId;
     }
 
 }

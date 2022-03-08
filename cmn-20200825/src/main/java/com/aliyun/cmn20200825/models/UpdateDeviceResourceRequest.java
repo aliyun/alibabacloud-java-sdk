@@ -4,9 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateDeviceResourceRequest extends TeaModel {
-    // instanceId
-    @NameInMap("InstanceId")
-    public String instanceId;
+    // 更新数据
+    @NameInMap("Data")
+    public String data;
 
     // 资源一级ID
     @NameInMap("DeviceResourceId")
@@ -16,6 +16,10 @@ public class UpdateDeviceResourceRequest extends TeaModel {
     @NameInMap("DeviceResourceIds")
     public java.util.List<String> deviceResourceIds;
 
+    // instanceId
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     // 建设项目id
     @NameInMap("SetupProjectId")
     public String setupProjectId;
@@ -24,21 +28,17 @@ public class UpdateDeviceResourceRequest extends TeaModel {
     @NameInMap("UpdateType")
     public String updateType;
 
-    // 更新数据
-    @NameInMap("Data")
-    public String data;
-
     public static UpdateDeviceResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDeviceResourceRequest self = new UpdateDeviceResourceRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDeviceResourceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public UpdateDeviceResourceRequest setData(String data) {
+        this.data = data;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getData() {
+        return this.data;
     }
 
     public UpdateDeviceResourceRequest setDeviceResourceId(String deviceResourceId) {
@@ -57,6 +57,14 @@ public class UpdateDeviceResourceRequest extends TeaModel {
         return this.deviceResourceIds;
     }
 
+    public UpdateDeviceResourceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public UpdateDeviceResourceRequest setSetupProjectId(String setupProjectId) {
         this.setupProjectId = setupProjectId;
         return this;
@@ -71,14 +79,6 @@ public class UpdateDeviceResourceRequest extends TeaModel {
     }
     public String getUpdateType() {
         return this.updateType;
-    }
-
-    public UpdateDeviceResourceRequest setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
     }
 
 }
