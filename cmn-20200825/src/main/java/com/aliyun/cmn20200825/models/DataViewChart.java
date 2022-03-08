@@ -4,6 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DataViewChart extends TeaModel {
+    // 图表类型
+    @NameInMap("ChartType")
+    public String chartType;
+
+    // 数据视图ID
+    @NameInMap("DataViewId")
+    public String dataViewId;
+
+    // 数据源类型
+    @NameInMap("DataViewSource")
+    public String dataViewSource;
+
     // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
@@ -12,18 +24,6 @@ public class DataViewChart extends TeaModel {
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    // 数据视图ID
-    @NameInMap("DataViewId")
-    public String dataViewId;
-
-    // 图表类型
-    @NameInMap("ChartType")
-    public String chartType;
-
-    // 数据源类型
-    @NameInMap("DataViewSource")
-    public String dataViewSource;
-
     // 布局配置
     @NameInMap("Grid")
     public String grid;
@@ -31,6 +31,30 @@ public class DataViewChart extends TeaModel {
     public static DataViewChart build(java.util.Map<String, ?> map) throws Exception {
         DataViewChart self = new DataViewChart();
         return TeaModel.build(map, self);
+    }
+
+    public DataViewChart setChartType(String chartType) {
+        this.chartType = chartType;
+        return this;
+    }
+    public String getChartType() {
+        return this.chartType;
+    }
+
+    public DataViewChart setDataViewId(String dataViewId) {
+        this.dataViewId = dataViewId;
+        return this;
+    }
+    public String getDataViewId() {
+        return this.dataViewId;
+    }
+
+    public DataViewChart setDataViewSource(String dataViewSource) {
+        this.dataViewSource = dataViewSource;
+        return this;
+    }
+    public String getDataViewSource() {
+        return this.dataViewSource;
     }
 
     public DataViewChart setGmtCreate(String gmtCreate) {
@@ -47,30 +71,6 @@ public class DataViewChart extends TeaModel {
     }
     public String getGmtModified() {
         return this.gmtModified;
-    }
-
-    public DataViewChart setDataViewId(String dataViewId) {
-        this.dataViewId = dataViewId;
-        return this;
-    }
-    public String getDataViewId() {
-        return this.dataViewId;
-    }
-
-    public DataViewChart setChartType(String chartType) {
-        this.chartType = chartType;
-        return this;
-    }
-    public String getChartType() {
-        return this.chartType;
-    }
-
-    public DataViewChart setDataViewSource(String dataViewSource) {
-        this.dataViewSource = dataViewSource;
-        return this;
-    }
-    public String getDataViewSource() {
-        return this.dataViewSource;
     }
 
     public DataViewChart setGrid(String grid) {

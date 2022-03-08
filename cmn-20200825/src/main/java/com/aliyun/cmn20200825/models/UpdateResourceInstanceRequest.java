@@ -7,6 +7,10 @@ public class UpdateResourceInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 数据
+    @NameInMap("ResourceInformation")
+    public java.util.List<UpdateResourceInstanceRequestResourceInformation> resourceInformation;
+
     // 资源id
     @NameInMap("ResourceInformationId")
     public String resourceInformationId;
@@ -14,10 +18,6 @@ public class UpdateResourceInstanceRequest extends TeaModel {
     // 建设项目资源uuid
     @NameInMap("SetupProjectId")
     public String setupProjectId;
-
-    // 数据
-    @NameInMap("ResourceInformation")
-    public java.util.List<UpdateResourceInstanceRequestResourceInformation> resourceInformation;
 
     public static UpdateResourceInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateResourceInstanceRequest self = new UpdateResourceInstanceRequest();
@@ -30,6 +30,14 @@ public class UpdateResourceInstanceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public UpdateResourceInstanceRequest setResourceInformation(java.util.List<UpdateResourceInstanceRequestResourceInformation> resourceInformation) {
+        this.resourceInformation = resourceInformation;
+        return this;
+    }
+    public java.util.List<UpdateResourceInstanceRequestResourceInformation> getResourceInformation() {
+        return this.resourceInformation;
     }
 
     public UpdateResourceInstanceRequest setResourceInformationId(String resourceInformationId) {
@@ -46,14 +54,6 @@ public class UpdateResourceInstanceRequest extends TeaModel {
     }
     public String getSetupProjectId() {
         return this.setupProjectId;
-    }
-
-    public UpdateResourceInstanceRequest setResourceInformation(java.util.List<UpdateResourceInstanceRequestResourceInformation> resourceInformation) {
-        this.resourceInformation = resourceInformation;
-        return this;
-    }
-    public java.util.List<UpdateResourceInstanceRequestResourceInformation> getResourceInformation() {
-        return this.resourceInformation;
     }
 
     public static class UpdateResourceInstanceRequestResourceInformation extends TeaModel {

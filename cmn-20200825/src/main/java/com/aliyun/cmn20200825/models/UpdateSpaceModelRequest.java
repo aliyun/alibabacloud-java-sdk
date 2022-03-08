@@ -8,17 +8,17 @@ public class UpdateSpaceModelRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 物理空间类型
-    @NameInMap("SpaceType")
-    public String spaceType;
+    // 层级
+    @NameInMap("Sort")
+    public java.util.List<UpdateSpaceModelRequestSort> sort;
 
     // 资源uuid
     @NameInMap("SpaceModelId")
     public String spaceModelId;
 
-    // 层级
-    @NameInMap("Sort")
-    public java.util.List<UpdateSpaceModelRequestSort> sort;
+    // 物理空间类型
+    @NameInMap("SpaceType")
+    public String spaceType;
 
     public static UpdateSpaceModelRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSpaceModelRequest self = new UpdateSpaceModelRequest();
@@ -33,12 +33,12 @@ public class UpdateSpaceModelRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public UpdateSpaceModelRequest setSpaceType(String spaceType) {
-        this.spaceType = spaceType;
+    public UpdateSpaceModelRequest setSort(java.util.List<UpdateSpaceModelRequestSort> sort) {
+        this.sort = sort;
         return this;
     }
-    public String getSpaceType() {
-        return this.spaceType;
+    public java.util.List<UpdateSpaceModelRequestSort> getSort() {
+        return this.sort;
     }
 
     public UpdateSpaceModelRequest setSpaceModelId(String spaceModelId) {
@@ -49,34 +49,26 @@ public class UpdateSpaceModelRequest extends TeaModel {
         return this.spaceModelId;
     }
 
-    public UpdateSpaceModelRequest setSort(java.util.List<UpdateSpaceModelRequestSort> sort) {
-        this.sort = sort;
+    public UpdateSpaceModelRequest setSpaceType(String spaceType) {
+        this.spaceType = spaceType;
         return this;
     }
-    public java.util.List<UpdateSpaceModelRequestSort> getSort() {
-        return this.sort;
+    public String getSpaceType() {
+        return this.spaceType;
     }
 
     public static class UpdateSpaceModelRequestSort extends TeaModel {
-        // 层级名称
-        @NameInMap("LevelName")
-        public String levelName;
-
         // 层级
         @NameInMap("Level")
         public Long level;
 
+        // 层级名称
+        @NameInMap("LevelName")
+        public String levelName;
+
         public static UpdateSpaceModelRequestSort build(java.util.Map<String, ?> map) throws Exception {
             UpdateSpaceModelRequestSort self = new UpdateSpaceModelRequestSort();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateSpaceModelRequestSort setLevelName(String levelName) {
-            this.levelName = levelName;
-            return this;
-        }
-        public String getLevelName() {
-            return this.levelName;
         }
 
         public UpdateSpaceModelRequestSort setLevel(Long level) {
@@ -85,6 +77,14 @@ public class UpdateSpaceModelRequest extends TeaModel {
         }
         public Long getLevel() {
             return this.level;
+        }
+
+        public UpdateSpaceModelRequestSort setLevelName(String levelName) {
+            this.levelName = levelName;
+            return this;
+        }
+        public String getLevelName() {
+            return this.levelName;
         }
 
     }

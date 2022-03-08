@@ -8,6 +8,10 @@ public class ListDevicePropertiesResponseBody extends TeaModel {
     @NameInMap("DeviceProperties")
     public java.util.List<ListDevicePropertiesResponseBodyDeviceProperties> deviceProperties;
 
+    // 每页数量。
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
     // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public Integer nextToken;
@@ -20,10 +24,6 @@ public class ListDevicePropertiesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    // 每页数量。
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
     public static ListDevicePropertiesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDevicePropertiesResponseBody self = new ListDevicePropertiesResponseBody();
         return TeaModel.build(map, self);
@@ -35,6 +35,14 @@ public class ListDevicePropertiesResponseBody extends TeaModel {
     }
     public java.util.List<ListDevicePropertiesResponseBodyDeviceProperties> getDeviceProperties() {
         return this.deviceProperties;
+    }
+
+    public ListDevicePropertiesResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListDevicePropertiesResponseBody setNextToken(Integer nextToken) {
@@ -61,18 +69,10 @@ public class ListDevicePropertiesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListDevicePropertiesResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
     public static class ListDevicePropertiesResponseBodyDeviceProperties extends TeaModel {
-        // 设备属性ID
-        @NameInMap("DevicePropertyId")
-        public String devicePropertyId;
+        // 是否内置属性
+        @NameInMap("BuiltIn")
+        public Boolean builtIn;
 
         // 设备形态ID
         @NameInMap("DeviceFormId")
@@ -82,37 +82,37 @@ public class ListDevicePropertiesResponseBody extends TeaModel {
         @NameInMap("DeviceFormName")
         public String deviceFormName;
 
-        // 属性名称
-        @NameInMap("PropertyName")
-        public String propertyName;
-
-        // 属性主键
-        @NameInMap("PropertyKey")
-        public String propertyKey;
-
-        // 属性格式
-        @NameInMap("PropertyFormat")
-        public String propertyFormat;
+        // 设备属性ID
+        @NameInMap("DevicePropertyId")
+        public String devicePropertyId;
 
         // 属性内容
         @NameInMap("PropertyContent")
         public String propertyContent;
 
-        // 是否内置属性
-        @NameInMap("BuiltIn")
-        public Boolean builtIn;
+        // 属性格式
+        @NameInMap("PropertyFormat")
+        public String propertyFormat;
+
+        // 属性主键
+        @NameInMap("PropertyKey")
+        public String propertyKey;
+
+        // 属性名称
+        @NameInMap("PropertyName")
+        public String propertyName;
 
         public static ListDevicePropertiesResponseBodyDeviceProperties build(java.util.Map<String, ?> map) throws Exception {
             ListDevicePropertiesResponseBodyDeviceProperties self = new ListDevicePropertiesResponseBodyDeviceProperties();
             return TeaModel.build(map, self);
         }
 
-        public ListDevicePropertiesResponseBodyDeviceProperties setDevicePropertyId(String devicePropertyId) {
-            this.devicePropertyId = devicePropertyId;
+        public ListDevicePropertiesResponseBodyDeviceProperties setBuiltIn(Boolean builtIn) {
+            this.builtIn = builtIn;
             return this;
         }
-        public String getDevicePropertyId() {
-            return this.devicePropertyId;
+        public Boolean getBuiltIn() {
+            return this.builtIn;
         }
 
         public ListDevicePropertiesResponseBodyDeviceProperties setDeviceFormId(String deviceFormId) {
@@ -131,28 +131,12 @@ public class ListDevicePropertiesResponseBody extends TeaModel {
             return this.deviceFormName;
         }
 
-        public ListDevicePropertiesResponseBodyDeviceProperties setPropertyName(String propertyName) {
-            this.propertyName = propertyName;
+        public ListDevicePropertiesResponseBodyDeviceProperties setDevicePropertyId(String devicePropertyId) {
+            this.devicePropertyId = devicePropertyId;
             return this;
         }
-        public String getPropertyName() {
-            return this.propertyName;
-        }
-
-        public ListDevicePropertiesResponseBodyDeviceProperties setPropertyKey(String propertyKey) {
-            this.propertyKey = propertyKey;
-            return this;
-        }
-        public String getPropertyKey() {
-            return this.propertyKey;
-        }
-
-        public ListDevicePropertiesResponseBodyDeviceProperties setPropertyFormat(String propertyFormat) {
-            this.propertyFormat = propertyFormat;
-            return this;
-        }
-        public String getPropertyFormat() {
-            return this.propertyFormat;
+        public String getDevicePropertyId() {
+            return this.devicePropertyId;
         }
 
         public ListDevicePropertiesResponseBodyDeviceProperties setPropertyContent(String propertyContent) {
@@ -163,12 +147,28 @@ public class ListDevicePropertiesResponseBody extends TeaModel {
             return this.propertyContent;
         }
 
-        public ListDevicePropertiesResponseBodyDeviceProperties setBuiltIn(Boolean builtIn) {
-            this.builtIn = builtIn;
+        public ListDevicePropertiesResponseBodyDeviceProperties setPropertyFormat(String propertyFormat) {
+            this.propertyFormat = propertyFormat;
             return this;
         }
-        public Boolean getBuiltIn() {
-            return this.builtIn;
+        public String getPropertyFormat() {
+            return this.propertyFormat;
+        }
+
+        public ListDevicePropertiesResponseBodyDeviceProperties setPropertyKey(String propertyKey) {
+            this.propertyKey = propertyKey;
+            return this;
+        }
+        public String getPropertyKey() {
+            return this.propertyKey;
+        }
+
+        public ListDevicePropertiesResponseBodyDeviceProperties setPropertyName(String propertyName) {
+            this.propertyName = propertyName;
+            return this;
+        }
+        public String getPropertyName() {
+            return this.propertyName;
         }
 
     }

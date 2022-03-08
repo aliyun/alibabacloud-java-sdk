@@ -33,86 +33,6 @@ public class GetPhysicalSpaceTopoResponseBody extends TeaModel {
         return this.topoData;
     }
 
-    public static class GetPhysicalSpaceTopoResponseBodyTopoDataLinks extends TeaModel {
-        // 源设备id
-        @NameInMap("SourceDeviceId")
-        public String sourceDeviceId;
-
-        // 源设备端口
-        @NameInMap("SourcePort")
-        public String sourcePort;
-
-        // 目标设备id
-        @NameInMap("TargetDeviceId")
-        public String targetDeviceId;
-
-        // 目标设备端口
-        @NameInMap("TargetPort")
-        public String targetPort;
-
-        // 源设备名
-        @NameInMap("SourceDeviceName")
-        public String sourceDeviceName;
-
-        // 目标设备名
-        @NameInMap("TargetDeviceName")
-        public String targetDeviceName;
-
-        public static GetPhysicalSpaceTopoResponseBodyTopoDataLinks build(java.util.Map<String, ?> map) throws Exception {
-            GetPhysicalSpaceTopoResponseBodyTopoDataLinks self = new GetPhysicalSpaceTopoResponseBodyTopoDataLinks();
-            return TeaModel.build(map, self);
-        }
-
-        public GetPhysicalSpaceTopoResponseBodyTopoDataLinks setSourceDeviceId(String sourceDeviceId) {
-            this.sourceDeviceId = sourceDeviceId;
-            return this;
-        }
-        public String getSourceDeviceId() {
-            return this.sourceDeviceId;
-        }
-
-        public GetPhysicalSpaceTopoResponseBodyTopoDataLinks setSourcePort(String sourcePort) {
-            this.sourcePort = sourcePort;
-            return this;
-        }
-        public String getSourcePort() {
-            return this.sourcePort;
-        }
-
-        public GetPhysicalSpaceTopoResponseBodyTopoDataLinks setTargetDeviceId(String targetDeviceId) {
-            this.targetDeviceId = targetDeviceId;
-            return this;
-        }
-        public String getTargetDeviceId() {
-            return this.targetDeviceId;
-        }
-
-        public GetPhysicalSpaceTopoResponseBodyTopoDataLinks setTargetPort(String targetPort) {
-            this.targetPort = targetPort;
-            return this;
-        }
-        public String getTargetPort() {
-            return this.targetPort;
-        }
-
-        public GetPhysicalSpaceTopoResponseBodyTopoDataLinks setSourceDeviceName(String sourceDeviceName) {
-            this.sourceDeviceName = sourceDeviceName;
-            return this;
-        }
-        public String getSourceDeviceName() {
-            return this.sourceDeviceName;
-        }
-
-        public GetPhysicalSpaceTopoResponseBodyTopoDataLinks setTargetDeviceName(String targetDeviceName) {
-            this.targetDeviceName = targetDeviceName;
-            return this;
-        }
-        public String getTargetDeviceName() {
-            return this.targetDeviceName;
-        }
-
-    }
-
     public static class GetPhysicalSpaceTopoResponseBodyTopoDataDevices extends TeaModel {
         // 设备id
         @NameInMap("DeviceId")
@@ -169,28 +89,108 @@ public class GetPhysicalSpaceTopoResponseBody extends TeaModel {
 
     }
 
+    public static class GetPhysicalSpaceTopoResponseBodyTopoDataLinks extends TeaModel {
+        // 源设备id
+        @NameInMap("SourceDeviceId")
+        public String sourceDeviceId;
+
+        // 源设备名
+        @NameInMap("SourceDeviceName")
+        public String sourceDeviceName;
+
+        // 源设备端口
+        @NameInMap("SourcePort")
+        public String sourcePort;
+
+        // 目标设备id
+        @NameInMap("TargetDeviceId")
+        public String targetDeviceId;
+
+        // 目标设备名
+        @NameInMap("TargetDeviceName")
+        public String targetDeviceName;
+
+        // 目标设备端口
+        @NameInMap("TargetPort")
+        public String targetPort;
+
+        public static GetPhysicalSpaceTopoResponseBodyTopoDataLinks build(java.util.Map<String, ?> map) throws Exception {
+            GetPhysicalSpaceTopoResponseBodyTopoDataLinks self = new GetPhysicalSpaceTopoResponseBodyTopoDataLinks();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPhysicalSpaceTopoResponseBodyTopoDataLinks setSourceDeviceId(String sourceDeviceId) {
+            this.sourceDeviceId = sourceDeviceId;
+            return this;
+        }
+        public String getSourceDeviceId() {
+            return this.sourceDeviceId;
+        }
+
+        public GetPhysicalSpaceTopoResponseBodyTopoDataLinks setSourceDeviceName(String sourceDeviceName) {
+            this.sourceDeviceName = sourceDeviceName;
+            return this;
+        }
+        public String getSourceDeviceName() {
+            return this.sourceDeviceName;
+        }
+
+        public GetPhysicalSpaceTopoResponseBodyTopoDataLinks setSourcePort(String sourcePort) {
+            this.sourcePort = sourcePort;
+            return this;
+        }
+        public String getSourcePort() {
+            return this.sourcePort;
+        }
+
+        public GetPhysicalSpaceTopoResponseBodyTopoDataLinks setTargetDeviceId(String targetDeviceId) {
+            this.targetDeviceId = targetDeviceId;
+            return this;
+        }
+        public String getTargetDeviceId() {
+            return this.targetDeviceId;
+        }
+
+        public GetPhysicalSpaceTopoResponseBodyTopoDataLinks setTargetDeviceName(String targetDeviceName) {
+            this.targetDeviceName = targetDeviceName;
+            return this;
+        }
+        public String getTargetDeviceName() {
+            return this.targetDeviceName;
+        }
+
+        public GetPhysicalSpaceTopoResponseBodyTopoDataLinks setTargetPort(String targetPort) {
+            this.targetPort = targetPort;
+            return this;
+        }
+        public String getTargetPort() {
+            return this.targetPort;
+        }
+
+    }
+
     public static class GetPhysicalSpaceTopoResponseBodyTopoData extends TeaModel {
-        // 更新时间
-        @NameInMap("UpdateTime")
-        public String updateTime;
+        @NameInMap("Devices")
+        public java.util.List<GetPhysicalSpaceTopoResponseBodyTopoDataDevices> devices;
 
         @NameInMap("Links")
         public java.util.List<GetPhysicalSpaceTopoResponseBodyTopoDataLinks> links;
 
-        @NameInMap("Devices")
-        public java.util.List<GetPhysicalSpaceTopoResponseBodyTopoDataDevices> devices;
+        // 更新时间
+        @NameInMap("UpdateTime")
+        public String updateTime;
 
         public static GetPhysicalSpaceTopoResponseBodyTopoData build(java.util.Map<String, ?> map) throws Exception {
             GetPhysicalSpaceTopoResponseBodyTopoData self = new GetPhysicalSpaceTopoResponseBodyTopoData();
             return TeaModel.build(map, self);
         }
 
-        public GetPhysicalSpaceTopoResponseBodyTopoData setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
+        public GetPhysicalSpaceTopoResponseBodyTopoData setDevices(java.util.List<GetPhysicalSpaceTopoResponseBodyTopoDataDevices> devices) {
+            this.devices = devices;
             return this;
         }
-        public String getUpdateTime() {
-            return this.updateTime;
+        public java.util.List<GetPhysicalSpaceTopoResponseBodyTopoDataDevices> getDevices() {
+            return this.devices;
         }
 
         public GetPhysicalSpaceTopoResponseBodyTopoData setLinks(java.util.List<GetPhysicalSpaceTopoResponseBodyTopoDataLinks> links) {
@@ -201,12 +201,12 @@ public class GetPhysicalSpaceTopoResponseBody extends TeaModel {
             return this.links;
         }
 
-        public GetPhysicalSpaceTopoResponseBodyTopoData setDevices(java.util.List<GetPhysicalSpaceTopoResponseBodyTopoDataDevices> devices) {
-            this.devices = devices;
+        public GetPhysicalSpaceTopoResponseBodyTopoData setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public java.util.List<GetPhysicalSpaceTopoResponseBodyTopoDataDevices> getDevices() {
-            return this.devices;
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }

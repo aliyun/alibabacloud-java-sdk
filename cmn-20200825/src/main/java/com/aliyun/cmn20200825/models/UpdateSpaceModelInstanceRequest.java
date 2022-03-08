@@ -4,25 +4,17 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateSpaceModelInstanceRequest extends TeaModel {
-    // 物理空间id
-    @NameInMap("SpaceId")
-    public String spaceId;
-
     // 物理空间实例
     @NameInMap("Instance")
     public String instance;
 
+    // 物理空间id
+    @NameInMap("SpaceId")
+    public String spaceId;
+
     public static UpdateSpaceModelInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSpaceModelInstanceRequest self = new UpdateSpaceModelInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateSpaceModelInstanceRequest setSpaceId(String spaceId) {
-        this.spaceId = spaceId;
-        return this;
-    }
-    public String getSpaceId() {
-        return this.spaceId;
     }
 
     public UpdateSpaceModelInstanceRequest setInstance(String instance) {
@@ -31,6 +23,14 @@ public class UpdateSpaceModelInstanceRequest extends TeaModel {
     }
     public String getInstance() {
         return this.instance;
+    }
+
+    public UpdateSpaceModelInstanceRequest setSpaceId(String spaceId) {
+        this.spaceId = spaceId;
+        return this;
+    }
+    public String getSpaceId() {
+        return this.spaceId;
     }
 
 }

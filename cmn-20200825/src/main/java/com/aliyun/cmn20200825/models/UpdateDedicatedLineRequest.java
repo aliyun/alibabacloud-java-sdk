@@ -4,29 +4,33 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateDedicatedLineRequest extends TeaModel {
-    // 实例 ID。
-    @NameInMap("DedicatedLineId")
-    public String dedicatedLineId;
-
-    // 运营商
-    @NameInMap("Isp")
-    public String isp;
-
     // 宽带（Mbps）
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
-    // 专线IP
-    @NameInMap("DedicatedLineIp")
-    public String dedicatedLineIp;
+    // 联系人
+    @NameInMap("Contact")
+    public String contact;
 
     // 专线网关
     @NameInMap("DedicatedLineGateway")
     public String dedicatedLineGateway;
 
+    // 实例 ID。
+    @NameInMap("DedicatedLineId")
+    public String dedicatedLineId;
+
+    // 专线IP
+    @NameInMap("DedicatedLineIp")
+    public String dedicatedLineIp;
+
     // 专线角色
     @NameInMap("DedicatedLineRole")
     public String dedicatedLineRole;
+
+    // 备注
+    @NameInMap("Description")
+    public String description;
 
     // 关联设备ID
     @NameInMap("DeviceId")
@@ -40,25 +44,17 @@ public class UpdateDedicatedLineRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 运营商
+    @NameInMap("Isp")
+    public String isp;
+
+    // 联系电话
+    @NameInMap("Phone")
+    public String phone;
+
     public static UpdateDedicatedLineRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDedicatedLineRequest self = new UpdateDedicatedLineRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateDedicatedLineRequest setDedicatedLineId(String dedicatedLineId) {
-        this.dedicatedLineId = dedicatedLineId;
-        return this;
-    }
-    public String getDedicatedLineId() {
-        return this.dedicatedLineId;
-    }
-
-    public UpdateDedicatedLineRequest setIsp(String isp) {
-        this.isp = isp;
-        return this;
-    }
-    public String getIsp() {
-        return this.isp;
     }
 
     public UpdateDedicatedLineRequest setBandwidth(Integer bandwidth) {
@@ -69,12 +65,12 @@ public class UpdateDedicatedLineRequest extends TeaModel {
         return this.bandwidth;
     }
 
-    public UpdateDedicatedLineRequest setDedicatedLineIp(String dedicatedLineIp) {
-        this.dedicatedLineIp = dedicatedLineIp;
+    public UpdateDedicatedLineRequest setContact(String contact) {
+        this.contact = contact;
         return this;
     }
-    public String getDedicatedLineIp() {
-        return this.dedicatedLineIp;
+    public String getContact() {
+        return this.contact;
     }
 
     public UpdateDedicatedLineRequest setDedicatedLineGateway(String dedicatedLineGateway) {
@@ -85,12 +81,36 @@ public class UpdateDedicatedLineRequest extends TeaModel {
         return this.dedicatedLineGateway;
     }
 
+    public UpdateDedicatedLineRequest setDedicatedLineId(String dedicatedLineId) {
+        this.dedicatedLineId = dedicatedLineId;
+        return this;
+    }
+    public String getDedicatedLineId() {
+        return this.dedicatedLineId;
+    }
+
+    public UpdateDedicatedLineRequest setDedicatedLineIp(String dedicatedLineIp) {
+        this.dedicatedLineIp = dedicatedLineIp;
+        return this;
+    }
+    public String getDedicatedLineIp() {
+        return this.dedicatedLineIp;
+    }
+
     public UpdateDedicatedLineRequest setDedicatedLineRole(String dedicatedLineRole) {
         this.dedicatedLineRole = dedicatedLineRole;
         return this;
     }
     public String getDedicatedLineRole() {
         return this.dedicatedLineRole;
+    }
+
+    public UpdateDedicatedLineRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public UpdateDedicatedLineRequest setDeviceId(String deviceId) {
@@ -115,6 +135,22 @@ public class UpdateDedicatedLineRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public UpdateDedicatedLineRequest setIsp(String isp) {
+        this.isp = isp;
+        return this;
+    }
+    public String getIsp() {
+        return this.isp;
+    }
+
+    public UpdateDedicatedLineRequest setPhone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+    public String getPhone() {
+        return this.phone;
     }
 
 }

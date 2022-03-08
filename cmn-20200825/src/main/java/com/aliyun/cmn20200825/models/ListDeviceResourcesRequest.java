@@ -4,9 +4,17 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceResourcesRequest extends TeaModel {
+    // 业务类型
+    @NameInMap("BusinessType")
+    public String businessType;
+
     // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
+
+    // List类型
+    @NameInMap("ListType")
+    public String listType;
 
     // 返回结果的最大个数。
     @NameInMap("MaxResults")
@@ -15,14 +23,6 @@ public class ListDeviceResourcesRequest extends TeaModel {
     // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public String nextToken;
-
-    // 业务类型
-    @NameInMap("BusinessType")
-    public String businessType;
-
-    // List类型
-    @NameInMap("ListType")
-    public String listType;
 
     // 建设项目id
     @NameInMap("SetupProjectId")
@@ -33,12 +33,28 @@ public class ListDeviceResourcesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListDeviceResourcesRequest setBusinessType(String businessType) {
+        this.businessType = businessType;
+        return this;
+    }
+    public String getBusinessType() {
+        return this.businessType;
+    }
+
     public ListDeviceResourcesRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListDeviceResourcesRequest setListType(String listType) {
+        this.listType = listType;
+        return this;
+    }
+    public String getListType() {
+        return this.listType;
     }
 
     public ListDeviceResourcesRequest setMaxResults(Integer maxResults) {
@@ -55,22 +71,6 @@ public class ListDeviceResourcesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListDeviceResourcesRequest setBusinessType(String businessType) {
-        this.businessType = businessType;
-        return this;
-    }
-    public String getBusinessType() {
-        return this.businessType;
-    }
-
-    public ListDeviceResourcesRequest setListType(String listType) {
-        this.listType = listType;
-        return this;
-    }
-    public String getListType() {
-        return this.listType;
     }
 
     public ListDeviceResourcesRequest setSetupProjectId(String setupProjectId) {

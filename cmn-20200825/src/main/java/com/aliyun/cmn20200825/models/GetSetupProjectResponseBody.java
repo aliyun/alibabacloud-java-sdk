@@ -34,33 +34,25 @@ public class GetSetupProjectResponseBody extends TeaModel {
     }
 
     public static class GetSetupProjectResponseBodySetupProjectPackages extends TeaModel {
-        // 角色
-        @NameInMap("Role")
-        public String role;
-
         // 设备号
         @NameInMap("DeviceNumber")
         public String deviceNumber;
-
-        // 厂商
-        @NameInMap("Vendor")
-        public String vendor;
 
         // 型号
         @NameInMap("Model")
         public String model;
 
+        // 角色
+        @NameInMap("Role")
+        public String role;
+
+        // 厂商
+        @NameInMap("Vendor")
+        public String vendor;
+
         public static GetSetupProjectResponseBodySetupProjectPackages build(java.util.Map<String, ?> map) throws Exception {
             GetSetupProjectResponseBodySetupProjectPackages self = new GetSetupProjectResponseBodySetupProjectPackages();
             return TeaModel.build(map, self);
-        }
-
-        public GetSetupProjectResponseBodySetupProjectPackages setRole(String role) {
-            this.role = role;
-            return this;
-        }
-        public String getRole() {
-            return this.role;
         }
 
         public GetSetupProjectResponseBodySetupProjectPackages setDeviceNumber(String deviceNumber) {
@@ -71,14 +63,6 @@ public class GetSetupProjectResponseBody extends TeaModel {
             return this.deviceNumber;
         }
 
-        public GetSetupProjectResponseBodySetupProjectPackages setVendor(String vendor) {
-            this.vendor = vendor;
-            return this;
-        }
-        public String getVendor() {
-            return this.vendor;
-        }
-
         public GetSetupProjectResponseBodySetupProjectPackages setModel(String model) {
             this.model = model;
             return this;
@@ -87,20 +71,48 @@ public class GetSetupProjectResponseBody extends TeaModel {
             return this.model;
         }
 
+        public GetSetupProjectResponseBodySetupProjectPackages setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+        public GetSetupProjectResponseBodySetupProjectPackages setVendor(String vendor) {
+            this.vendor = vendor;
+            return this;
+        }
+        public String getVendor() {
+            return this.vendor;
+        }
+
     }
 
     public static class GetSetupProjectResponseBodySetupProject extends TeaModel {
+        // 创建时间
+        @NameInMap("CreateTime")
+        public String createTime;
+
         // 预计交付时间
         @NameInMap("DeliveryTime")
         public String deliveryTime;
+
+        // 节点
+        @NameInMap("Nodes")
+        public String nodes;
 
         // 套餐
         @NameInMap("Packages")
         public java.util.List<GetSetupProjectResponseBodySetupProjectPackages> packages;
 
-        // 创建时间
-        @NameInMap("CreateTime")
-        public String createTime;
+        // 项目进展
+        @NameInMap("Progress")
+        public String progress;
+
+        // 资源一级ID
+        @NameInMap("SetupProjectId")
+        public String setupProjectId;
 
         // 物理空间uId
         @NameInMap("SpaceId")
@@ -114,21 +126,17 @@ public class GetSetupProjectResponseBody extends TeaModel {
         @NameInMap("SpaceType")
         public String spaceType;
 
-        // 资源一级ID
-        @NameInMap("SetupProjectId")
-        public String setupProjectId;
-
-        // 节点
-        @NameInMap("Nodes")
-        public String nodes;
-
-        // 项目进展
-        @NameInMap("Progress")
-        public String progress;
-
         public static GetSetupProjectResponseBodySetupProject build(java.util.Map<String, ?> map) throws Exception {
             GetSetupProjectResponseBodySetupProject self = new GetSetupProjectResponseBodySetupProject();
             return TeaModel.build(map, self);
+        }
+
+        public GetSetupProjectResponseBodySetupProject setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public GetSetupProjectResponseBodySetupProject setDeliveryTime(String deliveryTime) {
@@ -139,6 +147,14 @@ public class GetSetupProjectResponseBody extends TeaModel {
             return this.deliveryTime;
         }
 
+        public GetSetupProjectResponseBodySetupProject setNodes(String nodes) {
+            this.nodes = nodes;
+            return this;
+        }
+        public String getNodes() {
+            return this.nodes;
+        }
+
         public GetSetupProjectResponseBodySetupProject setPackages(java.util.List<GetSetupProjectResponseBodySetupProjectPackages> packages) {
             this.packages = packages;
             return this;
@@ -147,12 +163,20 @@ public class GetSetupProjectResponseBody extends TeaModel {
             return this.packages;
         }
 
-        public GetSetupProjectResponseBodySetupProject setCreateTime(String createTime) {
-            this.createTime = createTime;
+        public GetSetupProjectResponseBodySetupProject setProgress(String progress) {
+            this.progress = progress;
             return this;
         }
-        public String getCreateTime() {
-            return this.createTime;
+        public String getProgress() {
+            return this.progress;
+        }
+
+        public GetSetupProjectResponseBodySetupProject setSetupProjectId(String setupProjectId) {
+            this.setupProjectId = setupProjectId;
+            return this;
+        }
+        public String getSetupProjectId() {
+            return this.setupProjectId;
         }
 
         public GetSetupProjectResponseBodySetupProject setSpaceId(String spaceId) {
@@ -177,30 +201,6 @@ public class GetSetupProjectResponseBody extends TeaModel {
         }
         public String getSpaceType() {
             return this.spaceType;
-        }
-
-        public GetSetupProjectResponseBodySetupProject setSetupProjectId(String setupProjectId) {
-            this.setupProjectId = setupProjectId;
-            return this;
-        }
-        public String getSetupProjectId() {
-            return this.setupProjectId;
-        }
-
-        public GetSetupProjectResponseBodySetupProject setNodes(String nodes) {
-            this.nodes = nodes;
-            return this;
-        }
-        public String getNodes() {
-            return this.nodes;
-        }
-
-        public GetSetupProjectResponseBodySetupProject setProgress(String progress) {
-            this.progress = progress;
-            return this;
-        }
-        public String getProgress() {
-            return this.progress;
         }
 
     }

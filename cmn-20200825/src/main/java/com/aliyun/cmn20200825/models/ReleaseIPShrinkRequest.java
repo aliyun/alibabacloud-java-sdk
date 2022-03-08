@@ -4,6 +4,14 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ReleaseIPShrinkRequest extends TeaModel {
+    // deviceResourceId
+    @NameInMap("DeviceResourceId")
+    public String deviceResourceId;
+
+    // deviceResourceIdStr
+    @NameInMap("DeviceResourceIds")
+    public String deviceResourceIdsShrink;
+
     // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
@@ -16,17 +24,25 @@ public class ReleaseIPShrinkRequest extends TeaModel {
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 
-    // deviceResourceIdStr
-    @NameInMap("DeviceResourceIds")
-    public String deviceResourceIdsShrink;
-
-    // deviceResourceId
-    @NameInMap("DeviceResourceId")
-    public String deviceResourceId;
-
     public static ReleaseIPShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleaseIPShrinkRequest self = new ReleaseIPShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ReleaseIPShrinkRequest setDeviceResourceId(String deviceResourceId) {
+        this.deviceResourceId = deviceResourceId;
+        return this;
+    }
+    public String getDeviceResourceId() {
+        return this.deviceResourceId;
+    }
+
+    public ReleaseIPShrinkRequest setDeviceResourceIdsShrink(String deviceResourceIdsShrink) {
+        this.deviceResourceIdsShrink = deviceResourceIdsShrink;
+        return this;
+    }
+    public String getDeviceResourceIdsShrink() {
+        return this.deviceResourceIdsShrink;
     }
 
     public ReleaseIPShrinkRequest setInstanceId(String instanceId) {
@@ -51,22 +67,6 @@ public class ReleaseIPShrinkRequest extends TeaModel {
     }
     public String getSetupProjectId() {
         return this.setupProjectId;
-    }
-
-    public ReleaseIPShrinkRequest setDeviceResourceIdsShrink(String deviceResourceIdsShrink) {
-        this.deviceResourceIdsShrink = deviceResourceIdsShrink;
-        return this;
-    }
-    public String getDeviceResourceIdsShrink() {
-        return this.deviceResourceIdsShrink;
-    }
-
-    public ReleaseIPShrinkRequest setDeviceResourceId(String deviceResourceId) {
-        this.deviceResourceId = deviceResourceId;
-        return this;
-    }
-    public String getDeviceResourceId() {
-        return this.deviceResourceId;
     }
 
 }

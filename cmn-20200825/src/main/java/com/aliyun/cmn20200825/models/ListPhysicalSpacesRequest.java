@@ -4,6 +4,10 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListPhysicalSpacesRequest extends TeaModel {
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     // 返回结果的最大个数。
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -20,13 +24,17 @@ public class ListPhysicalSpacesRequest extends TeaModel {
     @NameInMap("PhysicalSpaceName")
     public String physicalSpaceName;
 
-    // 实例ID
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     public static ListPhysicalSpacesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPhysicalSpacesRequest self = new ListPhysicalSpacesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListPhysicalSpacesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListPhysicalSpacesRequest setMaxResults(Integer maxResults) {
@@ -59,14 +67,6 @@ public class ListPhysicalSpacesRequest extends TeaModel {
     }
     public String getPhysicalSpaceName() {
         return this.physicalSpaceName;
-    }
-
-    public ListPhysicalSpacesRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
 }

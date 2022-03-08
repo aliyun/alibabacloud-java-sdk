@@ -4,13 +4,21 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class AggregateData extends TeaModel {
-    // 创建时间
-    @NameInMap("GmtCreate")
-    public String gmtCreate;
+    // 描述
+    @NameInMap("AggregateDataDescription")
+    public String aggregateDataDescription;
 
-    // 修改时间
-    @NameInMap("GmtModified")
-    public String gmtModified;
+    // 聚合数据ID
+    @NameInMap("AggregateDataId")
+    public String aggregateDataId;
+
+    // 聚合数据名称
+    @NameInMap("AggregateDataName")
+    public String aggregateDataName;
+
+    // 聚合方式列表
+    @NameInMap("AggregateModeList")
+    public java.util.List<String> aggregateModeList;
 
     // 数据项
     @NameInMap("DataItem")
@@ -20,17 +28,13 @@ public class AggregateData extends TeaModel {
     @NameInMap("DeviceIdList")
     public java.util.List<String> deviceIdList;
 
-    // 聚合方式列表
-    @NameInMap("AggregateModeList")
-    public java.util.List<String> aggregateModeList;
+    // 创建时间
+    @NameInMap("GmtCreate")
+    public String gmtCreate;
 
-    // 聚合数据名称
-    @NameInMap("AggregateDataName")
-    public String aggregateDataName;
-
-    // 描述
-    @NameInMap("AggregateDataDescription")
-    public String aggregateDataDescription;
+    // 修改时间
+    @NameInMap("GmtModified")
+    public String gmtModified;
 
     // 是否聚合全部设备
     @NameInMap("IsAllDevice")
@@ -40,29 +44,41 @@ public class AggregateData extends TeaModel {
     @NameInMap("MonitorItemId")
     public String monitorItemId;
 
-    // 聚合数据ID
-    @NameInMap("AggregateDataId")
-    public String aggregateDataId;
-
     public static AggregateData build(java.util.Map<String, ?> map) throws Exception {
         AggregateData self = new AggregateData();
         return TeaModel.build(map, self);
     }
 
-    public AggregateData setGmtCreate(String gmtCreate) {
-        this.gmtCreate = gmtCreate;
+    public AggregateData setAggregateDataDescription(String aggregateDataDescription) {
+        this.aggregateDataDescription = aggregateDataDescription;
         return this;
     }
-    public String getGmtCreate() {
-        return this.gmtCreate;
+    public String getAggregateDataDescription() {
+        return this.aggregateDataDescription;
     }
 
-    public AggregateData setGmtModified(String gmtModified) {
-        this.gmtModified = gmtModified;
+    public AggregateData setAggregateDataId(String aggregateDataId) {
+        this.aggregateDataId = aggregateDataId;
         return this;
     }
-    public String getGmtModified() {
-        return this.gmtModified;
+    public String getAggregateDataId() {
+        return this.aggregateDataId;
+    }
+
+    public AggregateData setAggregateDataName(String aggregateDataName) {
+        this.aggregateDataName = aggregateDataName;
+        return this;
+    }
+    public String getAggregateDataName() {
+        return this.aggregateDataName;
+    }
+
+    public AggregateData setAggregateModeList(java.util.List<String> aggregateModeList) {
+        this.aggregateModeList = aggregateModeList;
+        return this;
+    }
+    public java.util.List<String> getAggregateModeList() {
+        return this.aggregateModeList;
     }
 
     public AggregateData setDataItem(String dataItem) {
@@ -81,28 +97,20 @@ public class AggregateData extends TeaModel {
         return this.deviceIdList;
     }
 
-    public AggregateData setAggregateModeList(java.util.List<String> aggregateModeList) {
-        this.aggregateModeList = aggregateModeList;
+    public AggregateData setGmtCreate(String gmtCreate) {
+        this.gmtCreate = gmtCreate;
         return this;
     }
-    public java.util.List<String> getAggregateModeList() {
-        return this.aggregateModeList;
+    public String getGmtCreate() {
+        return this.gmtCreate;
     }
 
-    public AggregateData setAggregateDataName(String aggregateDataName) {
-        this.aggregateDataName = aggregateDataName;
+    public AggregateData setGmtModified(String gmtModified) {
+        this.gmtModified = gmtModified;
         return this;
     }
-    public String getAggregateDataName() {
-        return this.aggregateDataName;
-    }
-
-    public AggregateData setAggregateDataDescription(String aggregateDataDescription) {
-        this.aggregateDataDescription = aggregateDataDescription;
-        return this;
-    }
-    public String getAggregateDataDescription() {
-        return this.aggregateDataDescription;
+    public String getGmtModified() {
+        return this.gmtModified;
     }
 
     public AggregateData setIsAllDevice(Integer isAllDevice) {
@@ -119,14 +127,6 @@ public class AggregateData extends TeaModel {
     }
     public String getMonitorItemId() {
         return this.monitorItemId;
-    }
-
-    public AggregateData setAggregateDataId(String aggregateDataId) {
-        this.aggregateDataId = aggregateDataId;
-        return this;
-    }
-    public String getAggregateDataId() {
-        return this.aggregateDataId;
     }
 
 }

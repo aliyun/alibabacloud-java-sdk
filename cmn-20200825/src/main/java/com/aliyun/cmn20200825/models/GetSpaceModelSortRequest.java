@@ -8,13 +8,13 @@ public class GetSpaceModelSortRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 物理空间类型
-    @NameInMap("SpaceType")
-    public String spaceType;
-
     // 操作类型
     @NameInMap("OperateType")
     public String operateType;
+
+    // 物理空间类型
+    @NameInMap("SpaceType")
+    public String spaceType;
 
     public static GetSpaceModelSortRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSpaceModelSortRequest self = new GetSpaceModelSortRequest();
@@ -29,20 +29,20 @@ public class GetSpaceModelSortRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public GetSpaceModelSortRequest setSpaceType(String spaceType) {
-        this.spaceType = spaceType;
-        return this;
-    }
-    public String getSpaceType() {
-        return this.spaceType;
-    }
-
     public GetSpaceModelSortRequest setOperateType(String operateType) {
         this.operateType = operateType;
         return this;
     }
     public String getOperateType() {
         return this.operateType;
+    }
+
+    public GetSpaceModelSortRequest setSpaceType(String spaceType) {
+        this.spaceType = spaceType;
+        return this;
+    }
+    public String getSpaceType() {
+        return this.spaceType;
     }
 
 }

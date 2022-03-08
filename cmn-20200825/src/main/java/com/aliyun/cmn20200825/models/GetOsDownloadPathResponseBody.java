@@ -4,25 +4,17 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetOsDownloadPathResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 系统版本
     @NameInMap("OsVersion")
     public GetOsDownloadPathResponseBodyOsVersion osVersion;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static GetOsDownloadPathResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetOsDownloadPathResponseBody self = new GetOsDownloadPathResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetOsDownloadPathResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetOsDownloadPathResponseBody setOsVersion(GetOsDownloadPathResponseBodyOsVersion osVersion) {
@@ -31,6 +23,14 @@ public class GetOsDownloadPathResponseBody extends TeaModel {
     }
     public GetOsDownloadPathResponseBodyOsVersion getOsVersion() {
         return this.osVersion;
+    }
+
+    public GetOsDownloadPathResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GetOsDownloadPathResponseBodyOsVersion extends TeaModel {

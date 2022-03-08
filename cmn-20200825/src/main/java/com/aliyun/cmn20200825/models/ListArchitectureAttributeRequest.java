@@ -4,12 +4,12 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListArchitectureAttributeRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     // 架构id
     @NameInMap("ArchitectureId")
     public String architectureId;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     // 角色
     @NameInMap("Role")
@@ -24,20 +24,20 @@ public class ListArchitectureAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListArchitectureAttributeRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public ListArchitectureAttributeRequest setArchitectureId(String architectureId) {
         this.architectureId = architectureId;
         return this;
     }
     public String getArchitectureId() {
         return this.architectureId;
+    }
+
+    public ListArchitectureAttributeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListArchitectureAttributeRequest setRole(String role) {

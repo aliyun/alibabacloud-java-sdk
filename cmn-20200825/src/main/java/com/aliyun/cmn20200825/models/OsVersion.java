@@ -4,25 +4,21 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class OsVersion extends TeaModel {
+    // 用户名
+    @NameInMap("AccessId")
+    public String accessId;
+
     // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 厂商
-    @NameInMap("Vendor")
-    public String vendor;
+    // 目录
+    @NameInMap("Directory")
+    public String directory;
 
-    // 型号
-    @NameInMap("Model")
-    public String model;
-
-    // 版本
-    @NameInMap("OsVersion")
-    public String osVersion;
-
-    // 状态
-    @NameInMap("Status")
-    public String status;
+    // 过期时间
+    @NameInMap("ExpireTime")
+    public String expireTime;
 
     // file
     @NameInMap("FileName")
@@ -32,13 +28,21 @@ public class OsVersion extends TeaModel {
     @NameInMap("FilePath")
     public String filePath;
 
+    // 主机
+    @NameInMap("Host")
+    public String host;
+
+    // 型号
+    @NameInMap("Model")
+    public String model;
+
+    // 版本
+    @NameInMap("OsVersion")
+    public String osVersion;
+
     // 资源id
     @NameInMap("OsVersionId")
     public String osVersionId;
-
-    // 用户名
-    @NameInMap("AccessId")
-    public String accessId;
 
     // 策略
     @NameInMap("Policy")
@@ -48,21 +52,25 @@ public class OsVersion extends TeaModel {
     @NameInMap("Signature")
     public String signature;
 
-    // 目录
-    @NameInMap("Directory")
-    public String directory;
+    // 状态
+    @NameInMap("Status")
+    public String status;
 
-    // 主机
-    @NameInMap("Host")
-    public String host;
-
-    // 过期时间
-    @NameInMap("ExpireTime")
-    public String expireTime;
+    // 厂商
+    @NameInMap("Vendor")
+    public String vendor;
 
     public static OsVersion build(java.util.Map<String, ?> map) throws Exception {
         OsVersion self = new OsVersion();
         return TeaModel.build(map, self);
+    }
+
+    public OsVersion setAccessId(String accessId) {
+        this.accessId = accessId;
+        return this;
+    }
+    public String getAccessId() {
+        return this.accessId;
     }
 
     public OsVersion setCreateTime(String createTime) {
@@ -73,36 +81,20 @@ public class OsVersion extends TeaModel {
         return this.createTime;
     }
 
-    public OsVersion setVendor(String vendor) {
-        this.vendor = vendor;
+    public OsVersion setDirectory(String directory) {
+        this.directory = directory;
         return this;
     }
-    public String getVendor() {
-        return this.vendor;
+    public String getDirectory() {
+        return this.directory;
     }
 
-    public OsVersion setModel(String model) {
-        this.model = model;
+    public OsVersion setExpireTime(String expireTime) {
+        this.expireTime = expireTime;
         return this;
     }
-    public String getModel() {
-        return this.model;
-    }
-
-    public OsVersion setOsVersion(String osVersion) {
-        this.osVersion = osVersion;
-        return this;
-    }
-    public String getOsVersion() {
-        return this.osVersion;
-    }
-
-    public OsVersion setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
+    public String getExpireTime() {
+        return this.expireTime;
     }
 
     public OsVersion setFileName(String fileName) {
@@ -121,20 +113,36 @@ public class OsVersion extends TeaModel {
         return this.filePath;
     }
 
+    public OsVersion setHost(String host) {
+        this.host = host;
+        return this;
+    }
+    public String getHost() {
+        return this.host;
+    }
+
+    public OsVersion setModel(String model) {
+        this.model = model;
+        return this;
+    }
+    public String getModel() {
+        return this.model;
+    }
+
+    public OsVersion setOsVersion(String osVersion) {
+        this.osVersion = osVersion;
+        return this;
+    }
+    public String getOsVersion() {
+        return this.osVersion;
+    }
+
     public OsVersion setOsVersionId(String osVersionId) {
         this.osVersionId = osVersionId;
         return this;
     }
     public String getOsVersionId() {
         return this.osVersionId;
-    }
-
-    public OsVersion setAccessId(String accessId) {
-        this.accessId = accessId;
-        return this;
-    }
-    public String getAccessId() {
-        return this.accessId;
     }
 
     public OsVersion setPolicy(String policy) {
@@ -153,28 +161,20 @@ public class OsVersion extends TeaModel {
         return this.signature;
     }
 
-    public OsVersion setDirectory(String directory) {
-        this.directory = directory;
+    public OsVersion setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getDirectory() {
-        return this.directory;
+    public String getStatus() {
+        return this.status;
     }
 
-    public OsVersion setHost(String host) {
-        this.host = host;
+    public OsVersion setVendor(String vendor) {
+        this.vendor = vendor;
         return this;
     }
-    public String getHost() {
-        return this.host;
-    }
-
-    public OsVersion setExpireTime(String expireTime) {
-        this.expireTime = expireTime;
-        return this;
-    }
-    public String getExpireTime() {
-        return this.expireTime;
+    public String getVendor() {
+        return this.vendor;
     }
 
 }

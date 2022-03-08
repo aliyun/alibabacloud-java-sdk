@@ -4,17 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListOsVersionsResponseBody extends TeaModel {
-    // 总记录数。
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     // 本次读取的最大数据量
     @NameInMap("MaxResults")
     public Long maxResults;
-
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
 
     // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
@@ -24,17 +16,17 @@ public class ListOsVersionsResponseBody extends TeaModel {
     @NameInMap("OsVersion")
     public java.util.List<ListOsVersionsResponseBodyOsVersion> osVersion;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 总记录数。
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListOsVersionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListOsVersionsResponseBody self = new ListOsVersionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListOsVersionsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListOsVersionsResponseBody setMaxResults(Long maxResults) {
@@ -43,14 +35,6 @@ public class ListOsVersionsResponseBody extends TeaModel {
     }
     public Long getMaxResults() {
         return this.maxResults;
-    }
-
-    public ListOsVersionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListOsVersionsResponseBody setNextToken(Integer nextToken) {
@@ -69,78 +53,62 @@ public class ListOsVersionsResponseBody extends TeaModel {
         return this.osVersion;
     }
 
+    public ListOsVersionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListOsVersionsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListOsVersionsResponseBodyOsVersion extends TeaModel {
-        // 系统版本
-        @NameInMap("OsVersion")
-        public String osVersion;
+        // 创建时间
+        @NameInMap("CreateTime")
+        public String createTime;
 
         // 文件名
         @NameInMap("FileName")
         public String fileName;
 
-        // 状态
-        @NameInMap("Status")
-        public String status;
-
         // 文件路径
         @NameInMap("FilePath")
         public String filePath;
-
-        // 创建时间
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        // 厂商
-        @NameInMap("Vendor")
-        public String vendor;
 
         // 型号
         @NameInMap("Model")
         public String model;
 
+        // 系统版本
+        @NameInMap("OsVersion")
+        public String osVersion;
+
         // 资源uuid
         @NameInMap("OsVersionId")
         public String osVersionId;
+
+        // 状态
+        @NameInMap("Status")
+        public String status;
 
         // 修改时间
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        // 厂商
+        @NameInMap("Vendor")
+        public String vendor;
+
         public static ListOsVersionsResponseBodyOsVersion build(java.util.Map<String, ?> map) throws Exception {
             ListOsVersionsResponseBodyOsVersion self = new ListOsVersionsResponseBodyOsVersion();
             return TeaModel.build(map, self);
-        }
-
-        public ListOsVersionsResponseBodyOsVersion setOsVersion(String osVersion) {
-            this.osVersion = osVersion;
-            return this;
-        }
-        public String getOsVersion() {
-            return this.osVersion;
-        }
-
-        public ListOsVersionsResponseBodyOsVersion setFileName(String fileName) {
-            this.fileName = fileName;
-            return this;
-        }
-        public String getFileName() {
-            return this.fileName;
-        }
-
-        public ListOsVersionsResponseBodyOsVersion setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListOsVersionsResponseBodyOsVersion setFilePath(String filePath) {
-            this.filePath = filePath;
-            return this;
-        }
-        public String getFilePath() {
-            return this.filePath;
         }
 
         public ListOsVersionsResponseBodyOsVersion setCreateTime(String createTime) {
@@ -151,12 +119,20 @@ public class ListOsVersionsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListOsVersionsResponseBodyOsVersion setVendor(String vendor) {
-            this.vendor = vendor;
+        public ListOsVersionsResponseBodyOsVersion setFileName(String fileName) {
+            this.fileName = fileName;
             return this;
         }
-        public String getVendor() {
-            return this.vendor;
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        public ListOsVersionsResponseBodyOsVersion setFilePath(String filePath) {
+            this.filePath = filePath;
+            return this;
+        }
+        public String getFilePath() {
+            return this.filePath;
         }
 
         public ListOsVersionsResponseBodyOsVersion setModel(String model) {
@@ -167,6 +143,14 @@ public class ListOsVersionsResponseBody extends TeaModel {
             return this.model;
         }
 
+        public ListOsVersionsResponseBodyOsVersion setOsVersion(String osVersion) {
+            this.osVersion = osVersion;
+            return this;
+        }
+        public String getOsVersion() {
+            return this.osVersion;
+        }
+
         public ListOsVersionsResponseBodyOsVersion setOsVersionId(String osVersionId) {
             this.osVersionId = osVersionId;
             return this;
@@ -175,12 +159,28 @@ public class ListOsVersionsResponseBody extends TeaModel {
             return this.osVersionId;
         }
 
+        public ListOsVersionsResponseBodyOsVersion setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
         public ListOsVersionsResponseBodyOsVersion setUpdateTime(String updateTime) {
             this.updateTime = updateTime;
             return this;
         }
         public String getUpdateTime() {
             return this.updateTime;
+        }
+
+        public ListOsVersionsResponseBodyOsVersion setVendor(String vendor) {
+            this.vendor = vendor;
+            return this;
+        }
+        public String getVendor() {
+            return this.vendor;
         }
 
     }

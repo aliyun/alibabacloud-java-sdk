@@ -4,25 +4,17 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListInspectionDevicesResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     // content
     @NameInMap("InspectionScripts")
     public java.util.List<ListInspectionDevicesResponseBodyInspectionScripts> inspectionScripts;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ListInspectionDevicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInspectionDevicesResponseBody self = new ListInspectionDevicesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListInspectionDevicesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListInspectionDevicesResponseBody setInspectionScripts(java.util.List<ListInspectionDevicesResponseBodyInspectionScripts> inspectionScripts) {
@@ -33,18 +25,22 @@ public class ListInspectionDevicesResponseBody extends TeaModel {
         return this.inspectionScripts;
     }
 
+    public ListInspectionDevicesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListInspectionDevicesResponseBodyInspectionScripts extends TeaModel {
-        // 角色
-        @NameInMap("Role")
-        public String role;
+        // 设备id
+        @NameInMap("DeviceId")
+        public String deviceId;
 
-        // 厂商
-        @NameInMap("Vendor")
-        public String vendor;
-
-        // 型号
-        @NameInMap("Model")
-        public String model;
+        // 设备状态
+        @NameInMap("DeviceState")
+        public String deviceState;
 
         // 主机名
         @NameInMap("HostName")
@@ -54,45 +50,41 @@ public class ListInspectionDevicesResponseBody extends TeaModel {
         @NameInMap("ManageIp")
         public String manageIp;
 
-        // 设备状态
-        @NameInMap("DeviceState")
-        public String deviceState;
+        // 型号
+        @NameInMap("Model")
+        public String model;
+
+        // 角色
+        @NameInMap("Role")
+        public String role;
 
         // 物理空间
         @NameInMap("Space")
         public String space;
 
-        // 设备id
-        @NameInMap("DeviceId")
-        public String deviceId;
+        // 厂商
+        @NameInMap("Vendor")
+        public String vendor;
 
         public static ListInspectionDevicesResponseBodyInspectionScripts build(java.util.Map<String, ?> map) throws Exception {
             ListInspectionDevicesResponseBodyInspectionScripts self = new ListInspectionDevicesResponseBodyInspectionScripts();
             return TeaModel.build(map, self);
         }
 
-        public ListInspectionDevicesResponseBodyInspectionScripts setRole(String role) {
-            this.role = role;
+        public ListInspectionDevicesResponseBodyInspectionScripts setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
             return this;
         }
-        public String getRole() {
-            return this.role;
+        public String getDeviceId() {
+            return this.deviceId;
         }
 
-        public ListInspectionDevicesResponseBodyInspectionScripts setVendor(String vendor) {
-            this.vendor = vendor;
+        public ListInspectionDevicesResponseBodyInspectionScripts setDeviceState(String deviceState) {
+            this.deviceState = deviceState;
             return this;
         }
-        public String getVendor() {
-            return this.vendor;
-        }
-
-        public ListInspectionDevicesResponseBodyInspectionScripts setModel(String model) {
-            this.model = model;
-            return this;
-        }
-        public String getModel() {
-            return this.model;
+        public String getDeviceState() {
+            return this.deviceState;
         }
 
         public ListInspectionDevicesResponseBodyInspectionScripts setHostName(String hostName) {
@@ -111,12 +103,20 @@ public class ListInspectionDevicesResponseBody extends TeaModel {
             return this.manageIp;
         }
 
-        public ListInspectionDevicesResponseBodyInspectionScripts setDeviceState(String deviceState) {
-            this.deviceState = deviceState;
+        public ListInspectionDevicesResponseBodyInspectionScripts setModel(String model) {
+            this.model = model;
             return this;
         }
-        public String getDeviceState() {
-            return this.deviceState;
+        public String getModel() {
+            return this.model;
+        }
+
+        public ListInspectionDevicesResponseBodyInspectionScripts setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
         }
 
         public ListInspectionDevicesResponseBodyInspectionScripts setSpace(String space) {
@@ -127,12 +127,12 @@ public class ListInspectionDevicesResponseBody extends TeaModel {
             return this.space;
         }
 
-        public ListInspectionDevicesResponseBodyInspectionScripts setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
+        public ListInspectionDevicesResponseBodyInspectionScripts setVendor(String vendor) {
+            this.vendor = vendor;
             return this;
         }
-        public String getDeviceId() {
-            return this.deviceId;
+        public String getVendor() {
+            return this.vendor;
         }
 
     }

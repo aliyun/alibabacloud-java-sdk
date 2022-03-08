@@ -4,65 +4,57 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class Module extends TeaModel {
-    // 资源一级ID
-    @NameInMap("ModuleId")
-    public String moduleId;
-
     // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
-
-    // 更新时间
-    @NameInMap("UpdateTime")
-    public String updateTime;
-
-    // 模块uuid
-    @NameInMap("Id")
-    public String id;
-
-    // 父模块uuid
-    @NameInMap("ParentModuleId")
-    public String parentModuleId;
-
-    // 模块名字
-    @NameInMap("Name")
-    public String name;
-
-    // 模块类型
-    @NameInMap("ModuleType")
-    public String moduleType;
-
-    // 最小建设模块数量
-    @NameInMap("MinCount")
-    public Long minCount;
-
-    // 最大建设模块数量
-    @NameInMap("MaxCount")
-    public Long maxCount;
-
-    // 堆叠
-    @NameInMap("Stack")
-    public Boolean stack;
 
     // 设备信息
     @NameInMap("Device")
     public ModuleDevice device;
 
+    // 模块uuid
+    @NameInMap("Id")
+    public String id;
+
+    // 最大建设模块数量
+    @NameInMap("MaxCount")
+    public Long maxCount;
+
+    // 最小建设模块数量
+    @NameInMap("MinCount")
+    public Long minCount;
+
     // 模块详情
     @NameInMap("ModuleDetails")
     public java.util.List<ModuleModuleDetails> moduleDetails;
 
+    // 资源一级ID
+    @NameInMap("ModuleId")
+    public String moduleId;
+
+    // 模块类型
+    @NameInMap("ModuleType")
+    public String moduleType;
+
+    // 模块名字
+    @NameInMap("Name")
+    public String name;
+
+    // 父模块uuid
+    @NameInMap("ParentModuleId")
+    public String parentModuleId;
+
+    // 堆叠
+    @NameInMap("Stack")
+    public Boolean stack;
+
+    // 更新时间
+    @NameInMap("UpdateTime")
+    public String updateTime;
+
     public static Module build(java.util.Map<String, ?> map) throws Exception {
         Module self = new Module();
         return TeaModel.build(map, self);
-    }
-
-    public Module setModuleId(String moduleId) {
-        this.moduleId = moduleId;
-        return this;
-    }
-    public String getModuleId() {
-        return this.moduleId;
     }
 
     public Module setCreateTime(String createTime) {
@@ -73,12 +65,12 @@ public class Module extends TeaModel {
         return this.createTime;
     }
 
-    public Module setUpdateTime(String updateTime) {
-        this.updateTime = updateTime;
+    public Module setDevice(ModuleDevice device) {
+        this.device = device;
         return this;
     }
-    public String getUpdateTime() {
-        return this.updateTime;
+    public ModuleDevice getDevice() {
+        return this.device;
     }
 
     public Module setId(String id) {
@@ -89,28 +81,12 @@ public class Module extends TeaModel {
         return this.id;
     }
 
-    public Module setParentModuleId(String parentModuleId) {
-        this.parentModuleId = parentModuleId;
+    public Module setMaxCount(Long maxCount) {
+        this.maxCount = maxCount;
         return this;
     }
-    public String getParentModuleId() {
-        return this.parentModuleId;
-    }
-
-    public Module setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public Module setModuleType(String moduleType) {
-        this.moduleType = moduleType;
-        return this;
-    }
-    public String getModuleType() {
-        return this.moduleType;
+    public Long getMaxCount() {
+        return this.maxCount;
     }
 
     public Module setMinCount(Long minCount) {
@@ -121,12 +97,44 @@ public class Module extends TeaModel {
         return this.minCount;
     }
 
-    public Module setMaxCount(Long maxCount) {
-        this.maxCount = maxCount;
+    public Module setModuleDetails(java.util.List<ModuleModuleDetails> moduleDetails) {
+        this.moduleDetails = moduleDetails;
         return this;
     }
-    public Long getMaxCount() {
-        return this.maxCount;
+    public java.util.List<ModuleModuleDetails> getModuleDetails() {
+        return this.moduleDetails;
+    }
+
+    public Module setModuleId(String moduleId) {
+        this.moduleId = moduleId;
+        return this;
+    }
+    public String getModuleId() {
+        return this.moduleId;
+    }
+
+    public Module setModuleType(String moduleType) {
+        this.moduleType = moduleType;
+        return this;
+    }
+    public String getModuleType() {
+        return this.moduleType;
+    }
+
+    public Module setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public Module setParentModuleId(String parentModuleId) {
+        this.parentModuleId = parentModuleId;
+        return this;
+    }
+    public String getParentModuleId() {
+        return this.parentModuleId;
     }
 
     public Module setStack(Boolean stack) {
@@ -137,42 +145,30 @@ public class Module extends TeaModel {
         return this.stack;
     }
 
-    public Module setDevice(ModuleDevice device) {
-        this.device = device;
+    public Module setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
         return this;
     }
-    public ModuleDevice getDevice() {
-        return this.device;
-    }
-
-    public Module setModuleDetails(java.util.List<ModuleModuleDetails> moduleDetails) {
-        this.moduleDetails = moduleDetails;
-        return this;
-    }
-    public java.util.List<ModuleModuleDetails> getModuleDetails() {
-        return this.moduleDetails;
+    public String getUpdateTime() {
+        return this.updateTime;
     }
 
     public static class ModuleDevice extends TeaModel {
+        // 区块内设备数量
+        @NameInMap("Count")
+        public Long count;
+
         // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 更新时间
-        @NameInMap("UpdateTime")
-        public String updateTime;
-
-        // 设备uuid
-        @NameInMap("Id")
-        public String id;
+        // 区块内设备数量
+        @NameInMap("DeviceCount")
+        public Long deviceCount;
 
         // 设备角色
         @NameInMap("DeviceRole")
         public String deviceRole;
-
-        // 区块内设备数量
-        @NameInMap("DeviceCount")
-        public Long deviceCount;
 
         // 设备x坐标
         @NameInMap("DeviceX")
@@ -182,13 +178,17 @@ public class Module extends TeaModel {
         @NameInMap("DeviceY")
         public String deviceY;
 
+        // 设备uuid
+        @NameInMap("Id")
+        public String id;
+
         // 设备角色
         @NameInMap("Role")
         public String role;
 
-        // 区块内设备数量
-        @NameInMap("Count")
-        public Long count;
+        // 更新时间
+        @NameInMap("UpdateTime")
+        public String updateTime;
 
         // 设备x坐标
         @NameInMap("X")
@@ -203,6 +203,14 @@ public class Module extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ModuleDevice setCount(Long count) {
+            this.count = count;
+            return this;
+        }
+        public Long getCount() {
+            return this.count;
+        }
+
         public ModuleDevice setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
@@ -211,20 +219,12 @@ public class Module extends TeaModel {
             return this.createTime;
         }
 
-        public ModuleDevice setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
+        public ModuleDevice setDeviceCount(Long deviceCount) {
+            this.deviceCount = deviceCount;
             return this;
         }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public ModuleDevice setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
+        public Long getDeviceCount() {
+            return this.deviceCount;
         }
 
         public ModuleDevice setDeviceRole(String deviceRole) {
@@ -233,14 +233,6 @@ public class Module extends TeaModel {
         }
         public String getDeviceRole() {
             return this.deviceRole;
-        }
-
-        public ModuleDevice setDeviceCount(Long deviceCount) {
-            this.deviceCount = deviceCount;
-            return this;
-        }
-        public Long getDeviceCount() {
-            return this.deviceCount;
         }
 
         public ModuleDevice setDeviceX(String deviceX) {
@@ -259,6 +251,14 @@ public class Module extends TeaModel {
             return this.deviceY;
         }
 
+        public ModuleDevice setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
         public ModuleDevice setRole(String role) {
             this.role = role;
             return this;
@@ -267,12 +267,12 @@ public class Module extends TeaModel {
             return this.role;
         }
 
-        public ModuleDevice setCount(Long count) {
-            this.count = count;
+        public ModuleDevice setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public Long getCount() {
-            return this.count;
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
         public ModuleDevice setX(String x) {
@@ -314,25 +314,17 @@ public class Module extends TeaModel {
     }
 
     public static class ModuleModuleDetails extends TeaModel {
-        // 模块序号
-        @NameInMap("OrderNumber")
-        public Long orderNumber;
-
         // 设备详情
         @NameInMap("DeviceDetails")
         public java.util.List<ModuleModuleDetailsDeviceDetails> deviceDetails;
 
+        // 模块序号
+        @NameInMap("OrderNumber")
+        public Long orderNumber;
+
         public static ModuleModuleDetails build(java.util.Map<String, ?> map) throws Exception {
             ModuleModuleDetails self = new ModuleModuleDetails();
             return TeaModel.build(map, self);
-        }
-
-        public ModuleModuleDetails setOrderNumber(Long orderNumber) {
-            this.orderNumber = orderNumber;
-            return this;
-        }
-        public Long getOrderNumber() {
-            return this.orderNumber;
         }
 
         public ModuleModuleDetails setDeviceDetails(java.util.List<ModuleModuleDetailsDeviceDetails> deviceDetails) {
@@ -341,6 +333,14 @@ public class Module extends TeaModel {
         }
         public java.util.List<ModuleModuleDetailsDeviceDetails> getDeviceDetails() {
             return this.deviceDetails;
+        }
+
+        public ModuleModuleDetails setOrderNumber(Long orderNumber) {
+            this.orderNumber = orderNumber;
+            return this;
+        }
+        public Long getOrderNumber() {
+            return this.orderNumber;
         }
 
     }

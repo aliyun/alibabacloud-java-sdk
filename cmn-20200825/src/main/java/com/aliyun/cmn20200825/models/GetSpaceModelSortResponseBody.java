@@ -34,25 +34,17 @@ public class GetSpaceModelSortResponseBody extends TeaModel {
     }
 
     public static class GetSpaceModelSortResponseBodySpaceModel extends TeaModel {
-        // 层级名称
-        @NameInMap("LevelName")
-        public String levelName;
-
         // 层级
         @NameInMap("Level")
         public Long level;
 
+        // 层级名称
+        @NameInMap("LevelName")
+        public String levelName;
+
         public static GetSpaceModelSortResponseBodySpaceModel build(java.util.Map<String, ?> map) throws Exception {
             GetSpaceModelSortResponseBodySpaceModel self = new GetSpaceModelSortResponseBodySpaceModel();
             return TeaModel.build(map, self);
-        }
-
-        public GetSpaceModelSortResponseBodySpaceModel setLevelName(String levelName) {
-            this.levelName = levelName;
-            return this;
-        }
-        public String getLevelName() {
-            return this.levelName;
         }
 
         public GetSpaceModelSortResponseBodySpaceModel setLevel(Long level) {
@@ -61,6 +53,14 @@ public class GetSpaceModelSortResponseBody extends TeaModel {
         }
         public Long getLevel() {
             return this.level;
+        }
+
+        public GetSpaceModelSortResponseBodySpaceModel setLevelName(String levelName) {
+            this.levelName = levelName;
+            return this;
+        }
+        public String getLevelName() {
+            return this.levelName;
         }
 
     }

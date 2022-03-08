@@ -4,33 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ApplyIPShrinkRequest extends TeaModel {
-    // instanceId
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    // ip地址类型
-    @NameInMap("IpType")
-    public String ipType;
-
-    // 建设项目id
-    @NameInMap("SetupProjectId")
-    public String setupProjectId;
-
     // 业务类型id
     @NameInMap("BusinessTypeId")
     public String businessTypeId;
-
-    // 设备uuid列表
-    @NameInMap("DeviceResourceIds")
-    public String deviceResourceIdsShrink;
-
-    // Loopback端口
-    @NameInMap("LoopbackPort")
-    public String loopbackPort;
-
-    // 位置空间
-    @NameInMap("NetLocation")
-    public String netLocation;
 
     // 业务参数
     @NameInMap("BusinessTypeParams")
@@ -40,9 +16,65 @@ public class ApplyIPShrinkRequest extends TeaModel {
     @NameInMap("DeviceResourceId")
     public String deviceResourceId;
 
+    // 设备uuid列表
+    @NameInMap("DeviceResourceIds")
+    public String deviceResourceIdsShrink;
+
+    // instanceId
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    // ip地址类型
+    @NameInMap("IpType")
+    public String ipType;
+
+    // Loopback端口
+    @NameInMap("LoopbackPort")
+    public String loopbackPort;
+
+    // 位置空间
+    @NameInMap("NetLocation")
+    public String netLocation;
+
+    // 建设项目id
+    @NameInMap("SetupProjectId")
+    public String setupProjectId;
+
     public static ApplyIPShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ApplyIPShrinkRequest self = new ApplyIPShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ApplyIPShrinkRequest setBusinessTypeId(String businessTypeId) {
+        this.businessTypeId = businessTypeId;
+        return this;
+    }
+    public String getBusinessTypeId() {
+        return this.businessTypeId;
+    }
+
+    public ApplyIPShrinkRequest setBusinessTypeParams(String businessTypeParams) {
+        this.businessTypeParams = businessTypeParams;
+        return this;
+    }
+    public String getBusinessTypeParams() {
+        return this.businessTypeParams;
+    }
+
+    public ApplyIPShrinkRequest setDeviceResourceId(String deviceResourceId) {
+        this.deviceResourceId = deviceResourceId;
+        return this;
+    }
+    public String getDeviceResourceId() {
+        return this.deviceResourceId;
+    }
+
+    public ApplyIPShrinkRequest setDeviceResourceIdsShrink(String deviceResourceIdsShrink) {
+        this.deviceResourceIdsShrink = deviceResourceIdsShrink;
+        return this;
+    }
+    public String getDeviceResourceIdsShrink() {
+        return this.deviceResourceIdsShrink;
     }
 
     public ApplyIPShrinkRequest setInstanceId(String instanceId) {
@@ -61,30 +93,6 @@ public class ApplyIPShrinkRequest extends TeaModel {
         return this.ipType;
     }
 
-    public ApplyIPShrinkRequest setSetupProjectId(String setupProjectId) {
-        this.setupProjectId = setupProjectId;
-        return this;
-    }
-    public String getSetupProjectId() {
-        return this.setupProjectId;
-    }
-
-    public ApplyIPShrinkRequest setBusinessTypeId(String businessTypeId) {
-        this.businessTypeId = businessTypeId;
-        return this;
-    }
-    public String getBusinessTypeId() {
-        return this.businessTypeId;
-    }
-
-    public ApplyIPShrinkRequest setDeviceResourceIdsShrink(String deviceResourceIdsShrink) {
-        this.deviceResourceIdsShrink = deviceResourceIdsShrink;
-        return this;
-    }
-    public String getDeviceResourceIdsShrink() {
-        return this.deviceResourceIdsShrink;
-    }
-
     public ApplyIPShrinkRequest setLoopbackPort(String loopbackPort) {
         this.loopbackPort = loopbackPort;
         return this;
@@ -101,20 +109,12 @@ public class ApplyIPShrinkRequest extends TeaModel {
         return this.netLocation;
     }
 
-    public ApplyIPShrinkRequest setBusinessTypeParams(String businessTypeParams) {
-        this.businessTypeParams = businessTypeParams;
+    public ApplyIPShrinkRequest setSetupProjectId(String setupProjectId) {
+        this.setupProjectId = setupProjectId;
         return this;
     }
-    public String getBusinessTypeParams() {
-        return this.businessTypeParams;
-    }
-
-    public ApplyIPShrinkRequest setDeviceResourceId(String deviceResourceId) {
-        this.deviceResourceId = deviceResourceId;
-        return this;
-    }
-    public String getDeviceResourceId() {
-        return this.deviceResourceId;
+    public String getSetupProjectId() {
+        return this.setupProjectId;
     }
 
 }

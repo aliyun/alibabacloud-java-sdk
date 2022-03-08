@@ -38,13 +38,17 @@ public class GetScheduleWorkerResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        // 资源一级ID
+        @NameInMap("ScheduleWorkerId")
+        public String scheduleWorkerId;
+
         // 更新时间
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        // 资源一级ID
-        @NameInMap("ScheduleWorkerId")
-        public String scheduleWorkerId;
+        // 联系方式
+        @NameInMap("WorkerContact")
+        public String workerContact;
 
         // 值班人员工号
         @NameInMap("WorkerId")
@@ -53,10 +57,6 @@ public class GetScheduleWorkerResponseBody extends TeaModel {
         // 值班人员姓名
         @NameInMap("WorkerName")
         public String workerName;
-
-        // 联系方式
-        @NameInMap("WorkerContact")
-        public String workerContact;
 
         public static GetScheduleWorkerResponseBodyScheduleWorker build(java.util.Map<String, ?> map) throws Exception {
             GetScheduleWorkerResponseBodyScheduleWorker self = new GetScheduleWorkerResponseBodyScheduleWorker();
@@ -71,6 +71,14 @@ public class GetScheduleWorkerResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public GetScheduleWorkerResponseBodyScheduleWorker setScheduleWorkerId(String scheduleWorkerId) {
+            this.scheduleWorkerId = scheduleWorkerId;
+            return this;
+        }
+        public String getScheduleWorkerId() {
+            return this.scheduleWorkerId;
+        }
+
         public GetScheduleWorkerResponseBodyScheduleWorker setUpdateTime(String updateTime) {
             this.updateTime = updateTime;
             return this;
@@ -79,12 +87,12 @@ public class GetScheduleWorkerResponseBody extends TeaModel {
             return this.updateTime;
         }
 
-        public GetScheduleWorkerResponseBodyScheduleWorker setScheduleWorkerId(String scheduleWorkerId) {
-            this.scheduleWorkerId = scheduleWorkerId;
+        public GetScheduleWorkerResponseBodyScheduleWorker setWorkerContact(String workerContact) {
+            this.workerContact = workerContact;
             return this;
         }
-        public String getScheduleWorkerId() {
-            return this.scheduleWorkerId;
+        public String getWorkerContact() {
+            return this.workerContact;
         }
 
         public GetScheduleWorkerResponseBodyScheduleWorker setWorkerId(String workerId) {
@@ -101,14 +109,6 @@ public class GetScheduleWorkerResponseBody extends TeaModel {
         }
         public String getWorkerName() {
             return this.workerName;
-        }
-
-        public GetScheduleWorkerResponseBodyScheduleWorker setWorkerContact(String workerContact) {
-            this.workerContact = workerContact;
-            return this;
-        }
-        public String getWorkerContact() {
-            return this.workerContact;
         }
 
     }

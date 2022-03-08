@@ -4,9 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateDeviceResourceShrinkRequest extends TeaModel {
-    // instanceId
-    @NameInMap("InstanceId")
-    public String instanceId;
+    // 更新数据
+    @NameInMap("Data")
+    public String data;
 
     // 资源一级ID
     @NameInMap("DeviceResourceId")
@@ -16,6 +16,10 @@ public class UpdateDeviceResourceShrinkRequest extends TeaModel {
     @NameInMap("DeviceResourceIds")
     public String deviceResourceIdsShrink;
 
+    // instanceId
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     // 建设项目id
     @NameInMap("SetupProjectId")
     public String setupProjectId;
@@ -24,21 +28,17 @@ public class UpdateDeviceResourceShrinkRequest extends TeaModel {
     @NameInMap("UpdateType")
     public String updateType;
 
-    // 更新数据
-    @NameInMap("Data")
-    public String data;
-
     public static UpdateDeviceResourceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDeviceResourceShrinkRequest self = new UpdateDeviceResourceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDeviceResourceShrinkRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public UpdateDeviceResourceShrinkRequest setData(String data) {
+        this.data = data;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getData() {
+        return this.data;
     }
 
     public UpdateDeviceResourceShrinkRequest setDeviceResourceId(String deviceResourceId) {
@@ -57,6 +57,14 @@ public class UpdateDeviceResourceShrinkRequest extends TeaModel {
         return this.deviceResourceIdsShrink;
     }
 
+    public UpdateDeviceResourceShrinkRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public UpdateDeviceResourceShrinkRequest setSetupProjectId(String setupProjectId) {
         this.setupProjectId = setupProjectId;
         return this;
@@ -71,14 +79,6 @@ public class UpdateDeviceResourceShrinkRequest extends TeaModel {
     }
     public String getUpdateType() {
         return this.updateType;
-    }
-
-    public UpdateDeviceResourceShrinkRequest setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
     }
 
 }

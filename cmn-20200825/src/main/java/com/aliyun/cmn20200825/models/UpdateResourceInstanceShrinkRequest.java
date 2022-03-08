@@ -7,6 +7,10 @@ public class UpdateResourceInstanceShrinkRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 数据
+    @NameInMap("ResourceInformation")
+    public String resourceInformationShrink;
+
     // 资源id
     @NameInMap("ResourceInformationId")
     public String resourceInformationId;
@@ -14,10 +18,6 @@ public class UpdateResourceInstanceShrinkRequest extends TeaModel {
     // 建设项目资源uuid
     @NameInMap("SetupProjectId")
     public String setupProjectId;
-
-    // 数据
-    @NameInMap("ResourceInformation")
-    public String resourceInformationShrink;
 
     public static UpdateResourceInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateResourceInstanceShrinkRequest self = new UpdateResourceInstanceShrinkRequest();
@@ -30,6 +30,14 @@ public class UpdateResourceInstanceShrinkRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public UpdateResourceInstanceShrinkRequest setResourceInformationShrink(String resourceInformationShrink) {
+        this.resourceInformationShrink = resourceInformationShrink;
+        return this;
+    }
+    public String getResourceInformationShrink() {
+        return this.resourceInformationShrink;
     }
 
     public UpdateResourceInstanceShrinkRequest setResourceInformationId(String resourceInformationId) {
@@ -46,14 +54,6 @@ public class UpdateResourceInstanceShrinkRequest extends TeaModel {
     }
     public String getSetupProjectId() {
         return this.setupProjectId;
-    }
-
-    public UpdateResourceInstanceShrinkRequest setResourceInformationShrink(String resourceInformationShrink) {
-        this.resourceInformationShrink = resourceInformationShrink;
-        return this;
-    }
-    public String getResourceInformationShrink() {
-        return this.resourceInformationShrink;
     }
 
 }

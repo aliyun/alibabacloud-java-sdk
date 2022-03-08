@@ -8,9 +8,25 @@ public class ScheduleDuty extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    // 结束时间
+    @NameInMap("EndDate")
+    public String endDate;
+
     // 资源一级ID
     @NameInMap("ScheduleDutyId")
     public String scheduleDutyId;
+
+    // scheduleTypeIds
+    @NameInMap("ScheduleTypeIds")
+    public java.util.List<String> scheduleTypeIds;
+
+    // 开始时间
+    @NameInMap("StartDate")
+    public String startDate;
+
+    // typeWorkerList
+    @NameInMap("TypeWorkerList")
+    public java.util.List<ScheduleDutyTypeWorkerList> typeWorkerList;
 
     // 更新时间
     @NameInMap("UpdateTime")
@@ -24,29 +40,13 @@ public class ScheduleDuty extends TeaModel {
     @NameInMap("WorkType")
     public String workType;
 
-    // 值班人员姓名
-    @NameInMap("WorkerName")
-    public String workerName;
-
     // 值班人员工号
     @NameInMap("WorkerId")
     public String workerId;
 
-    // 开始时间
-    @NameInMap("StartDate")
-    public String startDate;
-
-    // 结束时间
-    @NameInMap("EndDate")
-    public String endDate;
-
-    // scheduleTypeIds
-    @NameInMap("ScheduleTypeIds")
-    public java.util.List<String> scheduleTypeIds;
-
-    // typeWorkerList
-    @NameInMap("TypeWorkerList")
-    public java.util.List<ScheduleDutyTypeWorkerList> typeWorkerList;
+    // 值班人员姓名
+    @NameInMap("WorkerName")
+    public String workerName;
 
     public static ScheduleDuty build(java.util.Map<String, ?> map) throws Exception {
         ScheduleDuty self = new ScheduleDuty();
@@ -61,12 +61,44 @@ public class ScheduleDuty extends TeaModel {
         return this.createTime;
     }
 
+    public ScheduleDuty setEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    public String getEndDate() {
+        return this.endDate;
+    }
+
     public ScheduleDuty setScheduleDutyId(String scheduleDutyId) {
         this.scheduleDutyId = scheduleDutyId;
         return this;
     }
     public String getScheduleDutyId() {
         return this.scheduleDutyId;
+    }
+
+    public ScheduleDuty setScheduleTypeIds(java.util.List<String> scheduleTypeIds) {
+        this.scheduleTypeIds = scheduleTypeIds;
+        return this;
+    }
+    public java.util.List<String> getScheduleTypeIds() {
+        return this.scheduleTypeIds;
+    }
+
+    public ScheduleDuty setStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    public String getStartDate() {
+        return this.startDate;
+    }
+
+    public ScheduleDuty setTypeWorkerList(java.util.List<ScheduleDutyTypeWorkerList> typeWorkerList) {
+        this.typeWorkerList = typeWorkerList;
+        return this;
+    }
+    public java.util.List<ScheduleDutyTypeWorkerList> getTypeWorkerList() {
+        return this.typeWorkerList;
     }
 
     public ScheduleDuty setUpdateTime(String updateTime) {
@@ -93,14 +125,6 @@ public class ScheduleDuty extends TeaModel {
         return this.workType;
     }
 
-    public ScheduleDuty setWorkerName(String workerName) {
-        this.workerName = workerName;
-        return this;
-    }
-    public String getWorkerName() {
-        return this.workerName;
-    }
-
     public ScheduleDuty setWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
@@ -109,36 +133,12 @@ public class ScheduleDuty extends TeaModel {
         return this.workerId;
     }
 
-    public ScheduleDuty setStartDate(String startDate) {
-        this.startDate = startDate;
+    public ScheduleDuty setWorkerName(String workerName) {
+        this.workerName = workerName;
         return this;
     }
-    public String getStartDate() {
-        return this.startDate;
-    }
-
-    public ScheduleDuty setEndDate(String endDate) {
-        this.endDate = endDate;
-        return this;
-    }
-    public String getEndDate() {
-        return this.endDate;
-    }
-
-    public ScheduleDuty setScheduleTypeIds(java.util.List<String> scheduleTypeIds) {
-        this.scheduleTypeIds = scheduleTypeIds;
-        return this;
-    }
-    public java.util.List<String> getScheduleTypeIds() {
-        return this.scheduleTypeIds;
-    }
-
-    public ScheduleDuty setTypeWorkerList(java.util.List<ScheduleDutyTypeWorkerList> typeWorkerList) {
-        this.typeWorkerList = typeWorkerList;
-        return this;
-    }
-    public java.util.List<ScheduleDutyTypeWorkerList> getTypeWorkerList() {
-        return this.typeWorkerList;
+    public String getWorkerName() {
+        return this.workerName;
     }
 
     public static class ScheduleDutyTypeWorkerList extends TeaModel {

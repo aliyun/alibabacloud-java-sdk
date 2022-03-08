@@ -8,33 +8,21 @@ public class SubscriptionItem extends TeaModel {
     @NameInMap("AlarmStatus")
     public String alarmStatus;
 
-    // 通知方式
-    @NameInMap("NotificationMode")
-    public String notificationMode;
-
-    // 抑制策略
-    @NameInMap("SuppressionStrategy")
-    public String suppressionStrategy;
-
-    // 通知组ID
-    @NameInMap("NotificationGroupId")
-    public String notificationGroupId;
-
-    // 订阅类型
-    @NameInMap("SubscriptionType")
-    public String subscriptionType;
-
-    // 连续触发次数
-    @NameInMap("TriggerTimes")
-    public Integer triggerTimes;
+    // 发送通知的语言
+    @NameInMap("Language")
+    public String language;
 
     // 监控项ID
     @NameInMap("MonitorItemId")
     public String monitorItemId;
 
-    // 发送通知的语言
-    @NameInMap("Language")
-    public String language;
+    // 通知组ID
+    @NameInMap("NotificationGroupId")
+    public String notificationGroupId;
+
+    // 通知方式
+    @NameInMap("NotificationMode")
+    public String notificationMode;
 
     // 是否发送通知
     @NameInMap("RecoveryNotice")
@@ -43,6 +31,18 @@ public class SubscriptionItem extends TeaModel {
     // 订阅项ID
     @NameInMap("SubscriptionItemId")
     public String subscriptionItemId;
+
+    // 订阅类型
+    @NameInMap("SubscriptionType")
+    public String subscriptionType;
+
+    // 抑制策略
+    @NameInMap("SuppressionStrategy")
+    public String suppressionStrategy;
+
+    // 连续触发次数
+    @NameInMap("TriggerTimes")
+    public Integer triggerTimes;
 
     public static SubscriptionItem build(java.util.Map<String, ?> map) throws Exception {
         SubscriptionItem self = new SubscriptionItem();
@@ -57,44 +57,12 @@ public class SubscriptionItem extends TeaModel {
         return this.alarmStatus;
     }
 
-    public SubscriptionItem setNotificationMode(String notificationMode) {
-        this.notificationMode = notificationMode;
+    public SubscriptionItem setLanguage(String language) {
+        this.language = language;
         return this;
     }
-    public String getNotificationMode() {
-        return this.notificationMode;
-    }
-
-    public SubscriptionItem setSuppressionStrategy(String suppressionStrategy) {
-        this.suppressionStrategy = suppressionStrategy;
-        return this;
-    }
-    public String getSuppressionStrategy() {
-        return this.suppressionStrategy;
-    }
-
-    public SubscriptionItem setNotificationGroupId(String notificationGroupId) {
-        this.notificationGroupId = notificationGroupId;
-        return this;
-    }
-    public String getNotificationGroupId() {
-        return this.notificationGroupId;
-    }
-
-    public SubscriptionItem setSubscriptionType(String subscriptionType) {
-        this.subscriptionType = subscriptionType;
-        return this;
-    }
-    public String getSubscriptionType() {
-        return this.subscriptionType;
-    }
-
-    public SubscriptionItem setTriggerTimes(Integer triggerTimes) {
-        this.triggerTimes = triggerTimes;
-        return this;
-    }
-    public Integer getTriggerTimes() {
-        return this.triggerTimes;
+    public String getLanguage() {
+        return this.language;
     }
 
     public SubscriptionItem setMonitorItemId(String monitorItemId) {
@@ -105,12 +73,20 @@ public class SubscriptionItem extends TeaModel {
         return this.monitorItemId;
     }
 
-    public SubscriptionItem setLanguage(String language) {
-        this.language = language;
+    public SubscriptionItem setNotificationGroupId(String notificationGroupId) {
+        this.notificationGroupId = notificationGroupId;
         return this;
     }
-    public String getLanguage() {
-        return this.language;
+    public String getNotificationGroupId() {
+        return this.notificationGroupId;
+    }
+
+    public SubscriptionItem setNotificationMode(String notificationMode) {
+        this.notificationMode = notificationMode;
+        return this;
+    }
+    public String getNotificationMode() {
+        return this.notificationMode;
     }
 
     public SubscriptionItem setRecoveryNotice(Integer recoveryNotice) {
@@ -127,6 +103,30 @@ public class SubscriptionItem extends TeaModel {
     }
     public String getSubscriptionItemId() {
         return this.subscriptionItemId;
+    }
+
+    public SubscriptionItem setSubscriptionType(String subscriptionType) {
+        this.subscriptionType = subscriptionType;
+        return this;
+    }
+    public String getSubscriptionType() {
+        return this.subscriptionType;
+    }
+
+    public SubscriptionItem setSuppressionStrategy(String suppressionStrategy) {
+        this.suppressionStrategy = suppressionStrategy;
+        return this;
+    }
+    public String getSuppressionStrategy() {
+        return this.suppressionStrategy;
+    }
+
+    public SubscriptionItem setTriggerTimes(Integer triggerTimes) {
+        this.triggerTimes = triggerTimes;
+        return this;
+    }
+    public Integer getTriggerTimes() {
+        return this.triggerTimes;
     }
 
 }
