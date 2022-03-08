@@ -11,10 +11,6 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("CoreType")
     public String coreType;
 
-    // 资源对应的实例规格
-    @NameInMap("InstanceType")
-    public String instanceType;
-
     @NameInMap("Period")
     public Integer period;
 
@@ -23,6 +19,10 @@ public class DescribePriceRequest extends TeaModel {
 
     @NameInMap("PromotionId")
     public String promotionId;
+
+    // 资源对应的协议类型
+    @NameInMap("ProtocolType")
+    public String protocolType;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -51,14 +51,6 @@ public class DescribePriceRequest extends TeaModel {
         return this.coreType;
     }
 
-    public DescribePriceRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public String getInstanceType() {
-        return this.instanceType;
-    }
-
     public DescribePriceRequest setPeriod(Integer period) {
         this.period = period;
         return this;
@@ -81,6 +73,14 @@ public class DescribePriceRequest extends TeaModel {
     }
     public String getPromotionId() {
         return this.promotionId;
+    }
+
+    public DescribePriceRequest setProtocolType(String protocolType) {
+        this.protocolType = protocolType;
+        return this;
+    }
+    public String getProtocolType() {
+        return this.protocolType;
     }
 
     public DescribePriceRequest setRegionId(String regionId) {
