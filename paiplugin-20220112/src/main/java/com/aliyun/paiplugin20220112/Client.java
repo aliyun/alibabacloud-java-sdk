@@ -96,6 +96,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.signature)) {
+            body.put("Signature", request.signature);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.signatureId)) {
             body.put("SignatureId", request.signatureId);
         }
