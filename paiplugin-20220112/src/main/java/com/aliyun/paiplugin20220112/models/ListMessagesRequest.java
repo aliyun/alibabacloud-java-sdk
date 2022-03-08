@@ -8,6 +8,10 @@ public class ListMessagesRequest extends TeaModel {
     @NameInMap("Datetime")
     public String datetime;
 
+    // 短信错误码过滤。
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     // 关联人群Id过滤。
     @NameInMap("GroupId")
     public String groupId;
@@ -77,6 +81,14 @@ public class ListMessagesRequest extends TeaModel {
     }
     public String getDatetime() {
         return this.datetime;
+    }
+
+    public ListMessagesRequest setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListMessagesRequest setGroupId(String groupId) {

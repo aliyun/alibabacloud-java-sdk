@@ -58,7 +58,7 @@ public class SendMessageResponseBody extends TeaModel {
     }
 
     public static class SendMessageResponseBodyDataMessages extends TeaModel {
-        // 短信Id，可使用ListMessages查询短信状态。
+        // 短信Id。
         @NameInMap("Id")
         public String id;
 
@@ -90,11 +90,11 @@ public class SendMessageResponseBody extends TeaModel {
     }
 
     public static class SendMessageResponseBodyData extends TeaModel {
-        // 短信结果列表，列表中手机号的顺序与输入请求手机号顺序一一对应。
+        // 短信列表。
         @NameInMap("Messages")
         public java.util.List<SendMessageResponseBodyDataMessages> messages;
 
-        // 短信批处理Id，可使用ListMessages查询短信状态。
+        // 请求Id。
         @NameInMap("RequestId")
         public String requestId;
 

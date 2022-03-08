@@ -58,7 +58,7 @@ public class ListMessagesResponseBody extends TeaModel {
     }
 
     public static class ListMessagesResponseBodyDataMessages extends TeaModel {
-        // 错误码。
+        // 短信错误码。
         @NameInMap("ErrorCode")
         public String errorCode;
 

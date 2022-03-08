@@ -4,7 +4,7 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListSignaturesRequest extends TeaModel {
-    // 签名名称过滤。
+    // 签名名称。
     @NameInMap("Name")
     public String name;
 
@@ -16,10 +16,7 @@ public class ListSignaturesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 签名审核状态过滤。
-    // - 0：审核中。
-    // - 1：审核通过。
-    // - 2：审核不通过。
+    // 审核状态。
     @NameInMap("Status")
     public Integer status;
 
