@@ -69,6 +69,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createOrderWithOptions(request, runtime);
     }
 
+    public DescribeBillingsResponse describeBillingsWithOptions(DescribeBillingsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aliUid)) {
+            query.put("AliUid", request.aliUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeBillings"),
+            new TeaPair("version", "2021-12-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBillingsResponse());
+    }
+
+    public DescribeBillingsResponse describeBillings(DescribeBillingsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeBillingsWithOptions(request, runtime);
+    }
+
     public DescribePriceResponse describePriceWithOptions(DescribePriceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -78,10 +119,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.coreType)) {
             query.put("CoreType", request.coreType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
-            query.put("InstanceType", request.instanceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.period)) {
@@ -94,6 +131,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {
             query.put("PromotionId", request.promotionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocolType)) {
+            query.put("ProtocolType", request.protocolType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
