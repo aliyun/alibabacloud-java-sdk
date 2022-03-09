@@ -10,6 +10,9 @@ public class QueryGuideItemGroupRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("ItemState")
+    public String itemState;
+
     @NameInMap("PageNumber")
     public Long pageNumber;
 
@@ -35,6 +38,14 @@ public class QueryGuideItemGroupRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public QueryGuideItemGroupRequest setItemState(String itemState) {
+        this.itemState = itemState;
+        return this;
+    }
+    public String getItemState() {
+        return this.itemState;
     }
 
     public QueryGuideItemGroupRequest setPageNumber(Long pageNumber) {

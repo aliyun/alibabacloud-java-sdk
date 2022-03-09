@@ -134,6 +134,9 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
         @NameInMap("ExtJson")
         public String extJson;
 
+        @NameInMap("HasQuantity")
+        public Boolean hasQuantity;
+
         @NameInMap("ItemId")
         public Long itemId;
 
@@ -157,6 +160,9 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
 
         @NameInMap("ReservePrice")
         public Long reservePrice;
+
+        @NameInMap("SimpleQuantity")
+        public String simpleQuantity;
 
         @NameInMap("SkuId")
         public Long skuId;
@@ -197,6 +203,14 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
         }
         public String getExtJson() {
             return this.extJson;
+        }
+
+        public QueryItemDetailTeaResponseBodyItemSkusSku setHasQuantity(Boolean hasQuantity) {
+            this.hasQuantity = hasQuantity;
+            return this;
+        }
+        public Boolean getHasQuantity() {
+            return this.hasQuantity;
         }
 
         public QueryItemDetailTeaResponseBodyItemSkusSku setItemId(Long itemId) {
@@ -261,6 +275,14 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
         }
         public Long getReservePrice() {
             return this.reservePrice;
+        }
+
+        public QueryItemDetailTeaResponseBodyItemSkusSku setSimpleQuantity(String simpleQuantity) {
+            this.simpleQuantity = simpleQuantity;
+            return this;
+        }
+        public String getSimpleQuantity() {
+            return this.simpleQuantity;
         }
 
         public QueryItemDetailTeaResponseBodyItemSkusSku setSkuId(Long skuId) {
@@ -338,6 +360,9 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
         @NameInMap("ExtJson")
         public String extJson;
 
+        @NameInMap("HasQuantity")
+        public Boolean hasQuantity;
+
         @NameInMap("IforestProps")
         public QueryItemDetailTeaResponseBodyItemIforestProps iforestProps;
 
@@ -355,6 +380,9 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
 
         @NameInMap("ItemTitle")
         public String itemTitle;
+
+        @NameInMap("ItemTotalSimpleValue")
+        public String itemTotalSimpleValue;
 
         @NameInMap("LmItemCategory")
         public String lmItemCategory;
@@ -389,6 +417,9 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
         @NameInMap("SellerType")
         public Integer sellerType;
 
+        @NameInMap("SimpleQuantity")
+        public String simpleQuantity;
+
         @NameInMap("Skus")
         public QueryItemDetailTeaResponseBodyItemSkus skus;
 
@@ -397,6 +428,9 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
 
         @NameInMap("TotalSoldQuantity")
         public Integer totalSoldQuantity;
+
+        @NameInMap("TotalSoldSimpleQuantity")
+        public String totalSoldSimpleQuantity;
 
         @NameInMap("VideoPicUrl")
         public String videoPicUrl;
@@ -465,6 +499,14 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
             return this.extJson;
         }
 
+        public QueryItemDetailTeaResponseBodyItem setHasQuantity(Boolean hasQuantity) {
+            this.hasQuantity = hasQuantity;
+            return this;
+        }
+        public Boolean getHasQuantity() {
+            return this.hasQuantity;
+        }
+
         public QueryItemDetailTeaResponseBodyItem setIforestProps(QueryItemDetailTeaResponseBodyItemIforestProps iforestProps) {
             this.iforestProps = iforestProps;
             return this;
@@ -511,6 +553,14 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
         }
         public String getItemTitle() {
             return this.itemTitle;
+        }
+
+        public QueryItemDetailTeaResponseBodyItem setItemTotalSimpleValue(String itemTotalSimpleValue) {
+            this.itemTotalSimpleValue = itemTotalSimpleValue;
+            return this;
+        }
+        public String getItemTotalSimpleValue() {
+            return this.itemTotalSimpleValue;
         }
 
         public QueryItemDetailTeaResponseBodyItem setLmItemCategory(String lmItemCategory) {
@@ -601,6 +651,14 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
             return this.sellerType;
         }
 
+        public QueryItemDetailTeaResponseBodyItem setSimpleQuantity(String simpleQuantity) {
+            this.simpleQuantity = simpleQuantity;
+            return this;
+        }
+        public String getSimpleQuantity() {
+            return this.simpleQuantity;
+        }
+
         public QueryItemDetailTeaResponseBodyItem setSkus(QueryItemDetailTeaResponseBodyItemSkus skus) {
             this.skus = skus;
             return this;
@@ -623,6 +681,14 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
         }
         public Integer getTotalSoldQuantity() {
             return this.totalSoldQuantity;
+        }
+
+        public QueryItemDetailTeaResponseBodyItem setTotalSoldSimpleQuantity(String totalSoldSimpleQuantity) {
+            this.totalSoldSimpleQuantity = totalSoldSimpleQuantity;
+            return this;
+        }
+        public String getTotalSoldSimpleQuantity() {
+            return this.totalSoldSimpleQuantity;
         }
 
         public QueryItemDetailTeaResponseBodyItem setVideoPicUrl(String videoPicUrl) {
