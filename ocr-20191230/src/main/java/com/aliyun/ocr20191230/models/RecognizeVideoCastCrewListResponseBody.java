@@ -33,8 +33,8 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
     }
 
     public static class RecognizeVideoCastCrewListResponseBodyDataCastResults extends TeaModel {
-        @NameInMap("DetailInfoes")
-        public java.util.Map<String, String> detailInfoes;
+        @NameInMap("DetailInfo")
+        public java.util.Map<String, String> detailInfo;
 
         @NameInMap("EndTime")
         public Float endTime;
@@ -47,12 +47,12 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataCastResults setDetailInfoes(java.util.Map<String, String> detailInfoes) {
-            this.detailInfoes = detailInfoes;
+        public RecognizeVideoCastCrewListResponseBodyDataCastResults setDetailInfo(java.util.Map<String, String> detailInfo) {
+            this.detailInfo = detailInfo;
             return this;
         }
-        public java.util.Map<String, String> getDetailInfoes() {
-            return this.detailInfoes;
+        public java.util.Map<String, String> getDetailInfo() {
+            return this.detailInfo;
         }
 
         public RecognizeVideoCastCrewListResponseBodyDataCastResults setEndTime(Float endTime) {
@@ -73,19 +73,19 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
 
     }
 
-    public static class RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoesPosition extends TeaModel {
+    public static class RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoPosition extends TeaModel {
         @NameInMap("X")
         public Long x;
 
         @NameInMap("Y")
         public Long y;
 
-        public static RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoesPosition build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoesPosition self = new RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoesPosition();
+        public static RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoPosition build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoPosition self = new RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoPosition();
             return TeaModel.build(map, self);
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoesPosition setX(Long x) {
+        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoPosition setX(Long x) {
             this.x = x;
             return this;
         }
@@ -93,7 +93,7 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
             return this.x;
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoesPosition setY(Long y) {
+        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoPosition setY(Long y) {
             this.y = y;
             return this;
         }
@@ -103,7 +103,7 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
 
     }
 
-    public static class RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes extends TeaModel {
+    public static class RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo extends TeaModel {
         @NameInMap("Boxes")
         public java.util.List<Integer> boxes;
 
@@ -114,7 +114,7 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
         public Long frameIndex;
 
         @NameInMap("Position")
-        public java.util.List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoesPosition> position;
+        public java.util.List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoPosition> position;
 
         @NameInMap("Score")
         public Float score;
@@ -131,12 +131,12 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
         @NameInMap("TrackId")
         public Long trackId;
 
-        public static RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes self = new RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes();
+        public static RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo self = new RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo();
             return TeaModel.build(map, self);
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes setBoxes(java.util.List<Integer> boxes) {
+        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo setBoxes(java.util.List<Integer> boxes) {
             this.boxes = boxes;
             return this;
         }
@@ -144,7 +144,7 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
             return this.boxes;
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes setCharProbs(java.util.List<java.util.List<Float>> charProbs) {
+        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo setCharProbs(java.util.List<java.util.List<Float>> charProbs) {
             this.charProbs = charProbs;
             return this;
         }
@@ -152,7 +152,7 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
             return this.charProbs;
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes setFrameIndex(Long frameIndex) {
+        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo setFrameIndex(Long frameIndex) {
             this.frameIndex = frameIndex;
             return this;
         }
@@ -160,15 +160,15 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
             return this.frameIndex;
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes setPosition(java.util.List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoesPosition> position) {
+        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo setPosition(java.util.List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoPosition> position) {
             this.position = position;
             return this;
         }
-        public java.util.List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoesPosition> getPosition() {
+        public java.util.List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoPosition> getPosition() {
             return this.position;
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes setScore(Float score) {
+        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo setScore(Float score) {
             this.score = score;
             return this;
         }
@@ -176,7 +176,7 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
             return this.score;
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes setText(String text) {
+        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo setText(String text) {
             this.text = text;
             return this;
         }
@@ -184,7 +184,7 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
             return this.text;
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes setTextProb(Float textProb) {
+        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo setTextProb(Float textProb) {
             this.textProb = textProb;
             return this;
         }
@@ -192,7 +192,7 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
             return this.textProb;
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes setTimeStamp(Float timeStamp) {
+        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo setTimeStamp(Float timeStamp) {
             this.timeStamp = timeStamp;
             return this;
         }
@@ -200,7 +200,7 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
             return this.timeStamp;
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes setTrackId(Long trackId) {
+        public RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo setTrackId(Long trackId) {
             this.trackId = trackId;
             return this;
         }
@@ -211,8 +211,8 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
     }
 
     public static class RecognizeVideoCastCrewListResponseBodyDataOcrResults extends TeaModel {
-        @NameInMap("DetailInfoes")
-        public java.util.List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes> detailInfoes;
+        @NameInMap("DetailInfo")
+        public java.util.List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo> detailInfo;
 
         @NameInMap("EndTime")
         public Float endTime;
@@ -225,12 +225,12 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataOcrResults setDetailInfoes(java.util.List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes> detailInfoes) {
-            this.detailInfoes = detailInfoes;
+        public RecognizeVideoCastCrewListResponseBodyDataOcrResults setDetailInfo(java.util.List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo> detailInfo) {
+            this.detailInfo = detailInfo;
             return this;
         }
-        public java.util.List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes> getDetailInfoes() {
-            return this.detailInfoes;
+        public java.util.List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo> getDetailInfo() {
+            return this.detailInfo;
         }
 
         public RecognizeVideoCastCrewListResponseBodyDataOcrResults setEndTime(Float endTime) {
@@ -325,19 +325,19 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
 
     }
 
-    public static class RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoesPosition extends TeaModel {
+    public static class RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoPosition extends TeaModel {
         @NameInMap("X")
         public Long x;
 
         @NameInMap("Y")
         public Long y;
 
-        public static RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoesPosition build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoesPosition self = new RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoesPosition();
+        public static RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoPosition build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoPosition self = new RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoPosition();
             return TeaModel.build(map, self);
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoesPosition setX(Long x) {
+        public RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoPosition setX(Long x) {
             this.x = x;
             return this;
         }
@@ -345,7 +345,7 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
             return this.x;
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoesPosition setY(Long y) {
+        public RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoPosition setY(Long y) {
             this.y = y;
             return this;
         }
@@ -355,12 +355,12 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
 
     }
 
-    public static class RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoes extends TeaModel {
+    public static class RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfo extends TeaModel {
         @NameInMap("Boxes")
         public java.util.List<Long> boxes;
 
         @NameInMap("Position")
-        public java.util.List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoesPosition> position;
+        public java.util.List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoPosition> position;
 
         @NameInMap("Score")
         public Float score;
@@ -371,12 +371,12 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
         @NameInMap("TextType")
         public Long textType;
 
-        public static RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoes build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoes self = new RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoes();
+        public static RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfo build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfo self = new RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfo();
             return TeaModel.build(map, self);
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoes setBoxes(java.util.List<Long> boxes) {
+        public RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfo setBoxes(java.util.List<Long> boxes) {
             this.boxes = boxes;
             return this;
         }
@@ -384,15 +384,15 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
             return this.boxes;
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoes setPosition(java.util.List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoesPosition> position) {
+        public RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfo setPosition(java.util.List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoPosition> position) {
             this.position = position;
             return this;
         }
-        public java.util.List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoesPosition> getPosition() {
+        public java.util.List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoPosition> getPosition() {
             return this.position;
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoes setScore(Float score) {
+        public RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfo setScore(Float score) {
             this.score = score;
             return this;
         }
@@ -400,7 +400,7 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
             return this.score;
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoes setText(String text) {
+        public RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfo setText(String text) {
             this.text = text;
             return this;
         }
@@ -408,7 +408,7 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
             return this.text;
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoes setTextType(Long textType) {
+        public RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfo setTextType(Long textType) {
             this.textType = textType;
             return this;
         }
@@ -419,8 +419,8 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
     }
 
     public static class RecognizeVideoCastCrewListResponseBodyDataVideoOcrResults extends TeaModel {
-        @NameInMap("DetailInfoes")
-        public java.util.List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoes> detailInfoes;
+        @NameInMap("DetailInfo")
+        public java.util.List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfo> detailInfo;
 
         @NameInMap("EndTime")
         public Float endTime;
@@ -433,12 +433,12 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public RecognizeVideoCastCrewListResponseBodyDataVideoOcrResults setDetailInfoes(java.util.List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoes> detailInfoes) {
-            this.detailInfoes = detailInfoes;
+        public RecognizeVideoCastCrewListResponseBodyDataVideoOcrResults setDetailInfo(java.util.List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfo> detailInfo) {
+            this.detailInfo = detailInfo;
             return this;
         }
-        public java.util.List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoes> getDetailInfoes() {
-            return this.detailInfoes;
+        public java.util.List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfo> getDetailInfo() {
+            return this.detailInfo;
         }
 
         public RecognizeVideoCastCrewListResponseBodyDataVideoOcrResults setEndTime(Float endTime) {
