@@ -1,3 +1,6 @@
+2022-03-09 Version: 2.3.6
+- Supported CallsServiceLevel30.
+
 2022-03-07 Version: 2.3.5
 - Supported RemovePhoneNumbers.
 

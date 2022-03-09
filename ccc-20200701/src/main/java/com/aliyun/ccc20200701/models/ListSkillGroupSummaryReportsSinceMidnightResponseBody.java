@@ -103,6 +103,12 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         @NameInMap("CallsOffered")
         public Long callsOffered;
 
+        @NameInMap("CallsServiceLevel20")
+        public Long callsServiceLevel20;
+
+        @NameInMap("CallsServiceLevel30")
+        public Long callsServiceLevel30;
+
         @NameInMap("GiveUpByAgentOfQueueCount")
         public Long giveUpByAgentOfQueueCount;
 
@@ -226,6 +232,22 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         }
         public Long getCallsOffered() {
             return this.callsOffered;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsServiceLevel20(Long callsServiceLevel20) {
+            this.callsServiceLevel20 = callsServiceLevel20;
+            return this;
+        }
+        public Long getCallsServiceLevel20() {
+            return this.callsServiceLevel20;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsServiceLevel30(Long callsServiceLevel30) {
+            this.callsServiceLevel30 = callsServiceLevel30;
+            return this;
+        }
+        public Long getCallsServiceLevel30() {
+            return this.callsServiceLevel30;
         }
 
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setGiveUpByAgentOfQueueCount(Long giveUpByAgentOfQueueCount) {
