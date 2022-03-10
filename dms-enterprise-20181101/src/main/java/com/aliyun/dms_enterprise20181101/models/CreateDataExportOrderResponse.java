@@ -3,21 +3,21 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class GetSparkJobExecutorLogsResponse extends TeaModel {
+public class CreateDataExportOrderResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetSparkJobExecutorLogsResponseBody body;
+    public CreateDataExportOrderResponseBody body;
 
-    public static GetSparkJobExecutorLogsResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetSparkJobExecutorLogsResponse self = new GetSparkJobExecutorLogsResponse();
+    public static CreateDataExportOrderResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateDataExportOrderResponse self = new CreateDataExportOrderResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetSparkJobExecutorLogsResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateDataExportOrderResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class GetSparkJobExecutorLogsResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetSparkJobExecutorLogsResponse setBody(GetSparkJobExecutorLogsResponseBody body) {
+    public CreateDataExportOrderResponse setBody(CreateDataExportOrderResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetSparkJobExecutorLogsResponseBody getBody() {
+    public CreateDataExportOrderResponseBody getBody() {
         return this.body;
     }
 
