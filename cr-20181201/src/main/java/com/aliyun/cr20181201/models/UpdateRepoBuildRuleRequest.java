@@ -4,6 +4,9 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class UpdateRepoBuildRuleRequest extends TeaModel {
+    @NameInMap("BuildArgs")
+    public java.util.List<String> buildArgs;
+
     @NameInMap("BuildRuleId")
     public String buildRuleId;
 
@@ -34,6 +37,14 @@ public class UpdateRepoBuildRuleRequest extends TeaModel {
     public static UpdateRepoBuildRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRepoBuildRuleRequest self = new UpdateRepoBuildRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateRepoBuildRuleRequest setBuildArgs(java.util.List<String> buildArgs) {
+        this.buildArgs = buildArgs;
+        return this;
+    }
+    public java.util.List<String> getBuildArgs() {
+        return this.buildArgs;
     }
 
     public UpdateRepoBuildRuleRequest setBuildRuleId(String buildRuleId) {

@@ -19,6 +19,12 @@ public class ListNamespaceRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tag")
+    public java.util.List<ListNamespaceRequestTag> tag;
+
     public static ListNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNamespaceRequest self = new ListNamespaceRequest();
         return TeaModel.build(map, self);
@@ -62,6 +68,52 @@ public class ListNamespaceRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListNamespaceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public ListNamespaceRequest setTag(java.util.List<ListNamespaceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListNamespaceRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListNamespaceRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListNamespaceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListNamespaceRequestTag self = new ListNamespaceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListNamespaceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListNamespaceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

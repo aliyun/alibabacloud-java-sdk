@@ -105,6 +105,9 @@ public class ListChartNamespaceResponseBody extends TeaModel {
         @NameInMap("NamespaceStatus")
         public String namespaceStatus;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         public static ListChartNamespaceResponseBodyNamespaces build(java.util.Map<String, ?> map) throws Exception {
             ListChartNamespaceResponseBodyNamespaces self = new ListChartNamespaceResponseBodyNamespaces();
             return TeaModel.build(map, self);
@@ -156,6 +159,14 @@ public class ListChartNamespaceResponseBody extends TeaModel {
         }
         public String getNamespaceStatus() {
             return this.namespaceStatus;
+        }
+
+        public ListChartNamespaceResponseBodyNamespaces setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
     }

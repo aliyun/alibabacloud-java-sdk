@@ -219,6 +219,9 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         @NameInMap("CrossUser")
         public Boolean crossUser;
 
+        @NameInMap("CustomLink")
+        public Boolean customLink;
+
         @NameInMap("ImageFrom")
         public ListRepoSyncTaskResponseBodySyncTasksImageFrom imageFrom;
 
@@ -265,6 +268,14 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         }
         public Boolean getCrossUser() {
             return this.crossUser;
+        }
+
+        public ListRepoSyncTaskResponseBodySyncTasks setCustomLink(Boolean customLink) {
+            this.customLink = customLink;
+            return this;
+        }
+        public Boolean getCustomLink() {
+            return this.customLink;
         }
 
         public ListRepoSyncTaskResponseBodySyncTasks setImageFrom(ListRepoSyncTaskResponseBodySyncTasksImageFrom imageFrom) {

@@ -3,7 +3,7 @@ package com.aliyun.cr20181201.models;
 
 import com.aliyun.tea.*;
 
-public class ListRepositoryRequest extends TeaModel {
+public class ListChartRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -19,18 +19,12 @@ public class ListRepositoryRequest extends TeaModel {
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;
 
-    @NameInMap("RepoStatus")
-    public String repoStatus;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    public static ListRepositoryRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListRepositoryRequest self = new ListRepositoryRequest();
+    public static ListChartRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListChartRequest self = new ListChartRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListRepositoryRequest setInstanceId(String instanceId) {
+    public ListChartRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -38,7 +32,7 @@ public class ListRepositoryRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListRepositoryRequest setPageNo(Integer pageNo) {
+    public ListChartRequest setPageNo(Integer pageNo) {
         this.pageNo = pageNo;
         return this;
     }
@@ -46,7 +40,7 @@ public class ListRepositoryRequest extends TeaModel {
         return this.pageNo;
     }
 
-    public ListRepositoryRequest setPageSize(Integer pageSize) {
+    public ListChartRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -54,7 +48,7 @@ public class ListRepositoryRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListRepositoryRequest setRepoName(String repoName) {
+    public ListChartRequest setRepoName(String repoName) {
         this.repoName = repoName;
         return this;
     }
@@ -62,28 +56,12 @@ public class ListRepositoryRequest extends TeaModel {
         return this.repoName;
     }
 
-    public ListRepositoryRequest setRepoNamespaceName(String repoNamespaceName) {
+    public ListChartRequest setRepoNamespaceName(String repoNamespaceName) {
         this.repoNamespaceName = repoNamespaceName;
         return this;
     }
     public String getRepoNamespaceName() {
         return this.repoNamespaceName;
-    }
-
-    public ListRepositoryRequest setRepoStatus(String repoStatus) {
-        this.repoStatus = repoStatus;
-        return this;
-    }
-    public String getRepoStatus() {
-        return this.repoStatus;
-    }
-
-    public ListRepositoryRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
 }

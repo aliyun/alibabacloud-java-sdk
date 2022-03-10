@@ -86,6 +86,36 @@ public class ListNamespaceResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListNamespaceResponseBodyNamespacesTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListNamespaceResponseBodyNamespacesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListNamespaceResponseBodyNamespacesTags self = new ListNamespaceResponseBodyNamespacesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListNamespaceResponseBodyNamespacesTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListNamespaceResponseBodyNamespacesTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class ListNamespaceResponseBodyNamespaces extends TeaModel {
         @NameInMap("AutoCreateRepo")
         public Boolean autoCreateRepo;
@@ -104,6 +134,12 @@ public class ListNamespaceResponseBody extends TeaModel {
 
         @NameInMap("NamespaceStatus")
         public String namespaceStatus;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("Tags")
+        public java.util.List<ListNamespaceResponseBodyNamespacesTags> tags;
 
         public static ListNamespaceResponseBodyNamespaces build(java.util.Map<String, ?> map) throws Exception {
             ListNamespaceResponseBodyNamespaces self = new ListNamespaceResponseBodyNamespaces();
@@ -156,6 +192,22 @@ public class ListNamespaceResponseBody extends TeaModel {
         }
         public String getNamespaceStatus() {
             return this.namespaceStatus;
+        }
+
+        public ListNamespaceResponseBodyNamespaces setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public ListNamespaceResponseBodyNamespaces setTags(java.util.List<ListNamespaceResponseBodyNamespacesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListNamespaceResponseBodyNamespacesTags> getTags() {
+            return this.tags;
         }
 
     }

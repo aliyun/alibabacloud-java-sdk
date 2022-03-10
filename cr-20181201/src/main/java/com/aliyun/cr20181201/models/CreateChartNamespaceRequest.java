@@ -16,6 +16,9 @@ public class CreateChartNamespaceRequest extends TeaModel {
     @NameInMap("NamespaceName")
     public String namespaceName;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateChartNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateChartNamespaceRequest self = new CreateChartNamespaceRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class CreateChartNamespaceRequest extends TeaModel {
     }
     public String getNamespaceName() {
         return this.namespaceName;
+    }
+
+    public CreateChartNamespaceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }
