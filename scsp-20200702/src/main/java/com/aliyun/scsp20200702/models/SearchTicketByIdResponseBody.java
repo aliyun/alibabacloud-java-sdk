@@ -118,6 +118,9 @@ public class SearchTicketByIdResponseBody extends TeaModel {
         @NameInMap("Memo")
         public String memo;
 
+        @NameInMap("Operator")
+        public String operator;
+
         @NameInMap("OperatorName")
         public String operatorName;
 
@@ -156,6 +159,14 @@ public class SearchTicketByIdResponseBody extends TeaModel {
         }
         public String getMemo() {
             return this.memo;
+        }
+
+        public SearchTicketByIdResponseBodyDataActivityRecords setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
         }
 
         public SearchTicketByIdResponseBodyDataActivityRecords setOperatorName(String operatorName) {

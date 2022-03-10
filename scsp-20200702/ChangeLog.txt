@@ -1,3 +1,6 @@
+2022-03-10 Version: 1.9.19
+- SearchTicketById can return operator.
+
 2022-03-04 Version: 1.9.18
 - SearchTicketById can return parentcaseid.
 
