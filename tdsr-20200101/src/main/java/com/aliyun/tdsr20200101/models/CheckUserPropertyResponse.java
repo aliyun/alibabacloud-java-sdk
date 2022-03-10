@@ -3,21 +3,21 @@ package com.aliyun.tdsr20200101.models;
 
 import com.aliyun.tea.*;
 
-public class ListScenesResponse extends TeaModel {
+public class CheckUserPropertyResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListScenesResponseBody body;
+    public CheckUserPropertyResponseBody body;
 
-    public static ListScenesResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListScenesResponse self = new ListScenesResponse();
+    public static CheckUserPropertyResponse build(java.util.Map<String, ?> map) throws Exception {
+        CheckUserPropertyResponse self = new CheckUserPropertyResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListScenesResponse setHeaders(java.util.Map<String, String> headers) {
+    public CheckUserPropertyResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class ListScenesResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListScenesResponse setBody(ListScenesResponseBody body) {
+    public CheckUserPropertyResponse setBody(CheckUserPropertyResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListScenesResponseBody getBody() {
+    public CheckUserPropertyResponseBody getBody() {
         return this.body;
     }
 
