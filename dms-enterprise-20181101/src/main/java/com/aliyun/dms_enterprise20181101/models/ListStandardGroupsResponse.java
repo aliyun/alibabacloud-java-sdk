@@ -3,21 +3,21 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class KillSparkJobResponse extends TeaModel {
+public class ListStandardGroupsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public KillSparkJobResponseBody body;
+    public ListStandardGroupsResponseBody body;
 
-    public static KillSparkJobResponse build(java.util.Map<String, ?> map) throws Exception {
-        KillSparkJobResponse self = new KillSparkJobResponse();
+    public static ListStandardGroupsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListStandardGroupsResponse self = new ListStandardGroupsResponse();
         return TeaModel.build(map, self);
     }
 
-    public KillSparkJobResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListStandardGroupsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class KillSparkJobResponse extends TeaModel {
         return this.headers;
     }
 
-    public KillSparkJobResponse setBody(KillSparkJobResponseBody body) {
+    public ListStandardGroupsResponse setBody(ListStandardGroupsResponseBody body) {
         this.body = body;
         return this;
     }
-    public KillSparkJobResponseBody getBody() {
+    public ListStandardGroupsResponseBody getBody() {
         return this.body;
     }
 

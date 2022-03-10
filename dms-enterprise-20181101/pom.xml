@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dms_enterprise20181101</artifactId>
-  <version>1.28.0</version>
+  <version>1.29.0</version>
   <packaging>jar</packaging>
   <name>dms_enterprise20181101</name>
   <description>Alibaba Cloud dms-enterprise (20181101) SDK for Java
@@ -145,6 +145,10 @@
                 <relocation>
                   <pattern>com.sun</pattern>
                   <shadedPattern>com.aliyun.dms_enterprise20181101.external.com.sun</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache</pattern>
+                  <shadedPattern>com.aliyun.dms_enterprise20181101.external.org.apache</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>

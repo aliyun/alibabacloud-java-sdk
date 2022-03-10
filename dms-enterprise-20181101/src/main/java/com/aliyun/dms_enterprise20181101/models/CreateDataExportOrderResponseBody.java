@@ -3,10 +3,9 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class GetSparkJobDriverLogResponseBody extends TeaModel {
-    // driver log of the spark job
-    @NameInMap("DriverLog")
-    public String driverLog;
+public class CreateDataExportOrderResponseBody extends TeaModel {
+    @NameInMap("CreateOrderResult")
+    public java.util.List<Long> createOrderResult;
 
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -21,20 +20,20 @@ public class GetSparkJobDriverLogResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static GetSparkJobDriverLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetSparkJobDriverLogResponseBody self = new GetSparkJobDriverLogResponseBody();
+    public static CreateDataExportOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateDataExportOrderResponseBody self = new CreateDataExportOrderResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetSparkJobDriverLogResponseBody setDriverLog(String driverLog) {
-        this.driverLog = driverLog;
+    public CreateDataExportOrderResponseBody setCreateOrderResult(java.util.List<Long> createOrderResult) {
+        this.createOrderResult = createOrderResult;
         return this;
     }
-    public String getDriverLog() {
-        return this.driverLog;
+    public java.util.List<Long> getCreateOrderResult() {
+        return this.createOrderResult;
     }
 
-    public GetSparkJobDriverLogResponseBody setErrorCode(String errorCode) {
+    public CreateDataExportOrderResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -42,7 +41,7 @@ public class GetSparkJobDriverLogResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public GetSparkJobDriverLogResponseBody setErrorMessage(String errorMessage) {
+    public CreateDataExportOrderResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -50,7 +49,7 @@ public class GetSparkJobDriverLogResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public GetSparkJobDriverLogResponseBody setRequestId(String requestId) {
+    public CreateDataExportOrderResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -58,7 +57,7 @@ public class GetSparkJobDriverLogResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetSparkJobDriverLogResponseBody setSuccess(Boolean success) {
+    public CreateDataExportOrderResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

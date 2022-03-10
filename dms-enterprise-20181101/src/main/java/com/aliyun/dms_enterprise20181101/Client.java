@@ -314,6 +314,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDataCronClearOrderWithOptions(request, runtime);
     }
 
+    public CreateDataExportOrderResponse createDataExportOrderWithOptions(CreateDataExportOrderRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDataExportOrderShrinkRequest request = new CreateDataExportOrderShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.param))) {
+            request.paramShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.param), "Param", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.relatedUserList)) {
+            request.relatedUserListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.relatedUserList, "RelatedUserList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attachmentKey)) {
+            query.put("AttachmentKey", request.attachmentKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            query.put("Comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramShrink)) {
+            query.put("Param", request.paramShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relatedUserListShrink)) {
+            query.put("RelatedUserList", request.relatedUserListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDataExportOrder"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataExportOrderResponse());
+    }
+
+    public CreateDataExportOrderResponse createDataExportOrder(CreateDataExportOrderRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createDataExportOrderWithOptions(request, runtime);
+    }
+
     public CreateDataImportOrderResponse createDataImportOrderWithOptions(CreateDataImportOrderRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateDataImportOrderShrinkRequest request = new CreateDataImportOrderShrinkRequest();
@@ -2155,138 +2210,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getSQLReviewOptimizeDetailWithOptions(request, runtime);
     }
 
-    public GetSparkJobDetailResponse getSparkJobDetailWithOptions(GetSparkJobDetailRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
-            query.put("JobId", request.jobId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
-            query.put("Tid", request.tid);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetSparkJobDetail"),
-            new TeaPair("version", "2018-11-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSparkJobDetailResponse());
-    }
-
-    public GetSparkJobDetailResponse getSparkJobDetail(GetSparkJobDetailRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getSparkJobDetailWithOptions(request, runtime);
-    }
-
-    public GetSparkJobDriverLogResponse getSparkJobDriverLogWithOptions(GetSparkJobDriverLogRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
-            query.put("JobId", request.jobId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
-            query.put("Tid", request.tid);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetSparkJobDriverLog"),
-            new TeaPair("version", "2018-11-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSparkJobDriverLogResponse());
-    }
-
-    public GetSparkJobDriverLogResponse getSparkJobDriverLog(GetSparkJobDriverLogRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getSparkJobDriverLogWithOptions(request, runtime);
-    }
-
-    public GetSparkJobExecutorLogsResponse getSparkJobExecutorLogsWithOptions(GetSparkJobExecutorLogsRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
-            query.put("JobId", request.jobId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
-            query.put("Tid", request.tid);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetSparkJobExecutorLogs"),
-            new TeaPair("version", "2018-11-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSparkJobExecutorLogsResponse());
-    }
-
-    public GetSparkJobExecutorLogsResponse getSparkJobExecutorLogs(GetSparkJobExecutorLogsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getSparkJobExecutorLogsWithOptions(request, runtime);
-    }
-
-    public GetSparkJobLogResponse getSparkJobLogWithOptions(GetSparkJobLogRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
-            query.put("JobId", request.jobId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
-            query.put("Tid", request.tid);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetSparkJobLog"),
-            new TeaPair("version", "2018-11-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSparkJobLogResponse());
-    }
-
-    public GetSparkJobLogResponse getSparkJobLog(GetSparkJobLogRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getSparkJobLogWithOptions(request, runtime);
-    }
-
     public GetStructSyncExecSqlDetailResponse getStructSyncExecSqlDetailWithOptions(GetStructSyncExecSqlDetailRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2700,39 +2623,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InspectProxyAccessSecretResponse inspectProxyAccessSecret(InspectProxyAccessSecretRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.inspectProxyAccessSecretWithOptions(request, runtime);
-    }
-
-    public KillSparkJobResponse killSparkJobWithOptions(KillSparkJobRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
-            query.put("JobId", request.jobId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
-            query.put("Tid", request.tid);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "KillSparkJob"),
-            new TeaPair("version", "2018-11-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new KillSparkJobResponse());
-    }
-
-    public KillSparkJobResponse killSparkJob(KillSparkJobRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.killSparkJobWithOptions(request, runtime);
     }
 
     public ListColumnsResponse listColumnsWithOptions(ListColumnsRequest request, RuntimeOptions runtime) throws Exception {
@@ -3784,6 +3674,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listSensitiveColumnsDetailWithOptions(request, runtime);
     }
 
+    public ListStandardGroupsResponse listStandardGroupsWithOptions(ListStandardGroupsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListStandardGroups"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListStandardGroupsResponse());
+    }
+
+    public ListStandardGroupsResponse listStandardGroups(ListStandardGroupsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listStandardGroupsWithOptions(request, runtime);
+    }
+
     public ListTablesResponse listTablesWithOptions(ListTablesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4607,87 +4526,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitOrderApprovalResponse submitOrderApproval(SubmitOrderApprovalRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.submitOrderApprovalWithOptions(request, runtime);
-    }
-
-    public SubmitSparkJobResponse submitSparkJobWithOptions(SubmitSparkJobRequest tmpReq, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        SubmitSparkJobShrinkRequest request = new SubmitSparkJobShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.arguments)) {
-            request.argumentsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.arguments, "Arguments", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.configuration)) {
-            request.configurationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.configuration, "Configuration", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.files)) {
-            request.filesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.files, "Files", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.ossInfo))) {
-            request.ossInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.ossInfo), "OssInfo", "json");
-        }
-
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
-            query.put("Tid", request.tid);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appCode)) {
-            body.put("AppCode", request.appCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.argumentsShrink)) {
-            body.put("Arguments", request.argumentsShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.configurationShrink)) {
-            body.put("Configuration", request.configurationShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.filesShrink)) {
-            body.put("Files", request.filesShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mainClass)) {
-            body.put("MainClass", request.mainClass);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mainFile)) {
-            body.put("MainFile", request.mainFile);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
-            body.put("Name", request.name);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ossInfoShrink)) {
-            body.put("OssInfo", request.ossInfoShrink);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "SubmitSparkJob"),
-            new TeaPair("version", "2018-11-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitSparkJobResponse());
-    }
-
-    public SubmitSparkJobResponse submitSparkJob(SubmitSparkJobRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.submitSparkJobWithOptions(request, runtime);
     }
 
     public SubmitStructSyncOrderApprovalResponse submitStructSyncOrderApprovalWithOptions(SubmitStructSyncOrderApprovalRequest request, RuntimeOptions runtime) throws Exception {
