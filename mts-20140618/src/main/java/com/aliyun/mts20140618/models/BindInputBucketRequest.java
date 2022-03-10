@@ -7,11 +7,17 @@ public class BindInputBucketRequest extends TeaModel {
     @NameInMap("Bucket")
     public String bucket;
 
+    @NameInMap("DepositorCredentials")
+    public String depositorCredentials;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Referer")
+    public String referer;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -35,6 +41,14 @@ public class BindInputBucketRequest extends TeaModel {
         return this.bucket;
     }
 
+    public BindInputBucketRequest setDepositorCredentials(String depositorCredentials) {
+        this.depositorCredentials = depositorCredentials;
+        return this;
+    }
+    public String getDepositorCredentials() {
+        return this.depositorCredentials;
+    }
+
     public BindInputBucketRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -49,6 +63,14 @@ public class BindInputBucketRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public BindInputBucketRequest setReferer(String referer) {
+        this.referer = referer;
+        return this;
+    }
+    public String getReferer() {
+        return this.referer;
     }
 
     public BindInputBucketRequest setResourceOwnerAccount(String resourceOwnerAccount) {
