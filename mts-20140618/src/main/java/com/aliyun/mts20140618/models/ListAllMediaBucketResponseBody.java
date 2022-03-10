@@ -46,6 +46,9 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
         @NameInMap("Bucket")
         public String bucket;
 
+        @NameInMap("Referer")
+        public String referer;
+
         @NameInMap("Type")
         public String type;
 
@@ -60,6 +63,14 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
         }
         public String getBucket() {
             return this.bucket;
+        }
+
+        public ListAllMediaBucketResponseBodyMediaBucketListMediaBucket setReferer(String referer) {
+            this.referer = referer;
+            return this;
+        }
+        public String getReferer() {
+            return this.referer;
         }
 
         public ListAllMediaBucketResponseBodyMediaBucketListMediaBucket setType(String type) {

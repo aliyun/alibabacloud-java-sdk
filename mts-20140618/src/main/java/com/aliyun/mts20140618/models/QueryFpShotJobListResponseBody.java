@@ -7,14 +7,8 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     @NameInMap("FpShotJobList")
     public QueryFpShotJobListResponseBodyFpShotJobList fpShotJobList;
 
-    @NameInMap("NextPageToken")
-    public String nextPageToken;
-
     @NameInMap("NonExistIds")
     public QueryFpShotJobListResponseBodyNonExistIds nonExistIds;
-
-    @NameInMap("NonExistPrimaryKeys")
-    public QueryFpShotJobListResponseBodyNonExistPrimaryKeys nonExistPrimaryKeys;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -32,28 +26,12 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
         return this.fpShotJobList;
     }
 
-    public QueryFpShotJobListResponseBody setNextPageToken(String nextPageToken) {
-        this.nextPageToken = nextPageToken;
-        return this;
-    }
-    public String getNextPageToken() {
-        return this.nextPageToken;
-    }
-
     public QueryFpShotJobListResponseBody setNonExistIds(QueryFpShotJobListResponseBodyNonExistIds nonExistIds) {
         this.nonExistIds = nonExistIds;
         return this;
     }
     public QueryFpShotJobListResponseBodyNonExistIds getNonExistIds() {
         return this.nonExistIds;
-    }
-
-    public QueryFpShotJobListResponseBody setNonExistPrimaryKeys(QueryFpShotJobListResponseBodyNonExistPrimaryKeys nonExistPrimaryKeys) {
-        this.nonExistPrimaryKeys = nonExistPrimaryKeys;
-        return this;
-    }
-    public QueryFpShotJobListResponseBodyNonExistPrimaryKeys getNonExistPrimaryKeys() {
-        return this.nonExistPrimaryKeys;
     }
 
     public QueryFpShotJobListResponseBody setRequestId(String requestId) {
@@ -67,9 +45,6 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotConfig extends TeaModel {
         @NameInMap("FpDBId")
         public String fpDBId;
-
-        @NameInMap("Notary")
-        public String notary;
 
         @NameInMap("PrimaryKey")
         public String primaryKey;
@@ -88,14 +63,6 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
         }
         public String getFpDBId() {
             return this.fpDBId;
-        }
-
-        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotConfig setNotary(String notary) {
-            this.notary = notary;
-            return this;
-        }
-        public String getNotary() {
-            return this.notary;
         }
 
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotConfig setPrimaryKey(String primaryKey) {
@@ -756,12 +723,6 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
         @NameInMap("State")
         public String state;
 
-        @NameInMap("TransactionId")
-        public String transactionId;
-
-        @NameInMap("TxHash")
-        public String txHash;
-
         @NameInMap("UserData")
         public String userData;
 
@@ -866,22 +827,6 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             return this.state;
         }
 
-        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJob setTransactionId(String transactionId) {
-            this.transactionId = transactionId;
-            return this;
-        }
-        public String getTransactionId() {
-            return this.transactionId;
-        }
-
-        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJob setTxHash(String txHash) {
-            this.txHash = txHash;
-            return this;
-        }
-        public String getTxHash() {
-            return this.txHash;
-        }
-
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJob setUserData(String userData) {
             this.userData = userData;
             return this;
@@ -921,25 +866,6 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
         }
 
         public QueryFpShotJobListResponseBodyNonExistIds setString(java.util.List<String> string) {
-            this.string = string;
-            return this;
-        }
-        public java.util.List<String> getString() {
-            return this.string;
-        }
-
-    }
-
-    public static class QueryFpShotJobListResponseBodyNonExistPrimaryKeys extends TeaModel {
-        @NameInMap("String")
-        public java.util.List<String> string;
-
-        public static QueryFpShotJobListResponseBodyNonExistPrimaryKeys build(java.util.Map<String, ?> map) throws Exception {
-            QueryFpShotJobListResponseBodyNonExistPrimaryKeys self = new QueryFpShotJobListResponseBodyNonExistPrimaryKeys();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryFpShotJobListResponseBodyNonExistPrimaryKeys setString(java.util.List<String> string) {
             this.string = string;
             return this;
         }
