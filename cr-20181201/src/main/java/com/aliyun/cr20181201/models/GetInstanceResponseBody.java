@@ -31,6 +31,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static GetInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceResponseBody self = new GetInstanceResponseBody();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetInstanceResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

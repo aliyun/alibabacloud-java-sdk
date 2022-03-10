@@ -31,6 +31,9 @@ public class GetChartNamespaceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static GetChartNamespaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetChartNamespaceResponseBody self = new GetChartNamespaceResponseBody();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class GetChartNamespaceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetChartNamespaceResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

@@ -16,6 +16,9 @@ public class CreateNamespaceRequest extends TeaModel {
     @NameInMap("NamespaceName")
     public String namespaceName;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNamespaceRequest self = new CreateNamespaceRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class CreateNamespaceRequest extends TeaModel {
     }
     public String getNamespaceName() {
         return this.namespaceName;
+    }
+
+    public CreateNamespaceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }
