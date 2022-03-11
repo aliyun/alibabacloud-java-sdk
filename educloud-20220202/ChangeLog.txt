@@ -1,3 +1,6 @@
+2022-03-11 Version: 1.0.1
+- EduCloud API.
+
 2022-02-18 Version: 1.0.0-SNAPSHOT
 - EduCloud API.
 

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>educloud20220202</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>educloud20220202</name>
   <description>Alibaba Cloud EduCloud (20220202) SDK for Java
@@ -147,8 +147,8 @@
                   <shadedPattern>com.aliyun.educloud20220202.external.com.sun</shadedPattern>
                 </relocation>
                 <relocation>
-                  <pattern>commons-codec</pattern>
-                  <shadedPattern>com.aliyun.educloud20220202.external.commons.codec</shadedPattern>
+                  <pattern>org.apache</pattern>
+                  <shadedPattern>com.aliyun.educloud20220202.external.org.apache</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>
