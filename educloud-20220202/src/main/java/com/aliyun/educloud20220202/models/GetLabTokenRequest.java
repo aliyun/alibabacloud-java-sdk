@@ -4,9 +4,6 @@ package com.aliyun.educloud20220202.models;
 import com.aliyun.tea.*;
 
 public class GetLabTokenRequest extends TeaModel {
-    @NameInMap("AccountTagCode")
-    public String accountTagCode;
-
     @NameInMap("LabId")
     public String labId;
 
@@ -16,14 +13,6 @@ public class GetLabTokenRequest extends TeaModel {
     public static GetLabTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         GetLabTokenRequest self = new GetLabTokenRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetLabTokenRequest setAccountTagCode(String accountTagCode) {
-        this.accountTagCode = accountTagCode;
-        return this;
-    }
-    public String getAccountTagCode() {
-        return this.accountTagCode;
     }
 
     public GetLabTokenRequest setLabId(String labId) {
