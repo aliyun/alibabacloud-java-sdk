@@ -31,6 +31,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @NameInMap("DbObject")
     public String dbObject;
 
+    @NameInMap("DedicatedClusterId")
+    public String dedicatedClusterId;
+
     @NameInMap("Delay")
     public Long delay;
 
@@ -208,6 +211,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
     public String getDbObject() {
         return this.dbObject;
+    }
+
+    public DescribeDtsJobDetailResponseBody setDedicatedClusterId(String dedicatedClusterId) {
+        this.dedicatedClusterId = dedicatedClusterId;
+        return this;
+    }
+    public String getDedicatedClusterId() {
+        return this.dedicatedClusterId;
     }
 
     public DescribeDtsJobDetailResponseBody setDelay(Long delay) {

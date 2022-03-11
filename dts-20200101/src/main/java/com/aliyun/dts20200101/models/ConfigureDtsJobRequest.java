@@ -16,6 +16,9 @@ public class ConfigureDtsJobRequest extends TeaModel {
     @NameInMap("DbList")
     public String dbList;
 
+    @NameInMap("DedicatedClusterId")
+    public String dedicatedClusterId;
+
     @NameInMap("DelayNotice")
     public Boolean delayNotice;
 
@@ -159,6 +162,14 @@ public class ConfigureDtsJobRequest extends TeaModel {
     }
     public String getDbList() {
         return this.dbList;
+    }
+
+    public ConfigureDtsJobRequest setDedicatedClusterId(String dedicatedClusterId) {
+        this.dedicatedClusterId = dedicatedClusterId;
+        return this;
+    }
+    public String getDedicatedClusterId() {
+        return this.dedicatedClusterId;
     }
 
     public ConfigureDtsJobRequest setDelayNotice(Boolean delayNotice) {

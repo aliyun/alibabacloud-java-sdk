@@ -22,6 +22,9 @@ public class CreateDtsInstanceRequest extends TeaModel {
     @NameInMap("DestinationRegion")
     public String destinationRegion;
 
+    @NameInMap("Du")
+    public Integer du;
+
     @NameInMap("FeeType")
     public String feeType;
 
@@ -109,6 +112,14 @@ public class CreateDtsInstanceRequest extends TeaModel {
     }
     public String getDestinationRegion() {
         return this.destinationRegion;
+    }
+
+    public CreateDtsInstanceRequest setDu(Integer du) {
+        this.du = du;
+        return this;
+    }
+    public Integer getDu() {
+        return this.du;
     }
 
     public CreateDtsInstanceRequest setFeeType(String feeType) {
