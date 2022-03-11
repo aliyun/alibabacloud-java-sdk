@@ -1268,6 +1268,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("Checkpoint")
         public String checkpoint;
 
+        @NameInMap("CpuUsage")
+        public String cpuUsage;
+
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -1279,6 +1282,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         @NameInMap("DbObject")
         public String dbObject;
+
+        @NameInMap("DedicatedClusterId")
+        public String dedicatedClusterId;
 
         @NameInMap("Delay")
         public Long delay;
@@ -1301,11 +1307,17 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("DtsJobName")
         public String dtsJobName;
 
+        @NameInMap("DuUsage")
+        public Long duUsage;
+
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         @NameInMap("ExpireTime")
         public String expireTime;
+
+        @NameInMap("MemUsage")
+        public String memUsage;
 
         @NameInMap("MigrationMode")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode migrationMode;
@@ -1344,6 +1356,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.checkpoint;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setCpuUsage(String cpuUsage) {
+            this.cpuUsage = cpuUsage;
+            return this;
+        }
+        public String getCpuUsage() {
+            return this.cpuUsage;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
@@ -1374,6 +1394,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getDbObject() {
             return this.dbObject;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDedicatedClusterId(String dedicatedClusterId) {
+            this.dedicatedClusterId = dedicatedClusterId;
+            return this;
+        }
+        public String getDedicatedClusterId() {
+            return this.dedicatedClusterId;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDelay(Long delay) {
@@ -1432,6 +1460,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.dtsJobName;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDuUsage(Long duUsage) {
+            this.duUsage = duUsage;
+            return this;
+        }
+        public Long getDuUsage() {
+            return this.duUsage;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob setErrorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
@@ -1446,6 +1482,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setMemUsage(String memUsage) {
+            this.memUsage = memUsage;
+            return this;
+        }
+        public String getMemUsage() {
+            return this.memUsage;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob setMigrationMode(DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode migrationMode) {
@@ -1730,6 +1774,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("ConsumptionClient")
         public String consumptionClient;
 
+        @NameInMap("CpuUsage")
+        public String cpuUsage;
+
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -1744,6 +1791,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         @NameInMap("DbObject")
         public String dbObject;
+
+        @NameInMap("DedicatedClusterId")
+        public String dedicatedClusterId;
 
         @NameInMap("Delay")
         public Long delay;
@@ -1766,6 +1816,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("DtsJobName")
         public String dtsJobName;
 
+        @NameInMap("DuUsage")
+        public Long duUsage;
+
         @NameInMap("EndTimestamp")
         public String endTimestamp;
 
@@ -1778,6 +1831,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         // DTS任务类型
         @NameInMap("JobType")
         public String jobType;
+
+        @NameInMap("MemUsage")
+        public String memUsage;
 
         @NameInMap("MigrationMode")
         public DescribeDtsJobsResponseBodyDtsJobListMigrationMode migrationMode;
@@ -1860,6 +1916,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.consumptionClient;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobList setCpuUsage(String cpuUsage) {
+            this.cpuUsage = cpuUsage;
+            return this;
+        }
+        public String getCpuUsage() {
+            return this.cpuUsage;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobList setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
@@ -1898,6 +1962,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getDbObject() {
             return this.dbObject;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setDedicatedClusterId(String dedicatedClusterId) {
+            this.dedicatedClusterId = dedicatedClusterId;
+            return this;
+        }
+        public String getDedicatedClusterId() {
+            return this.dedicatedClusterId;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setDelay(Long delay) {
@@ -1956,6 +2028,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.dtsJobName;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobList setDuUsage(Long duUsage) {
+            this.duUsage = duUsage;
+            return this;
+        }
+        public Long getDuUsage() {
+            return this.duUsage;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobList setEndTimestamp(String endTimestamp) {
             this.endTimestamp = endTimestamp;
             return this;
@@ -1986,6 +2066,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getJobType() {
             return this.jobType;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setMemUsage(String memUsage) {
+            this.memUsage = memUsage;
+            return this;
+        }
+        public String getMemUsage() {
+            return this.memUsage;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setMigrationMode(DescribeDtsJobsResponseBodyDtsJobListMigrationMode migrationMode) {

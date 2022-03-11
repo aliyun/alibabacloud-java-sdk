@@ -10,6 +10,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     @NameInMap("DbList")
     public String dbList;
 
+    @NameInMap("DedicatedClusterId")
+    public String dedicatedClusterId;
+
     @NameInMap("DelayNotice")
     public Boolean delayNotice;
 
@@ -110,6 +113,14 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     }
     public String getDbList() {
         return this.dbList;
+    }
+
+    public ConfigureSubscriptionRequest setDedicatedClusterId(String dedicatedClusterId) {
+        this.dedicatedClusterId = dedicatedClusterId;
+        return this;
+    }
+    public String getDedicatedClusterId() {
+        return this.dedicatedClusterId;
     }
 
     public ConfigureSubscriptionRequest setDelayNotice(Boolean delayNotice) {

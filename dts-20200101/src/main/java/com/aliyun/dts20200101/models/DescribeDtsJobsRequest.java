@@ -4,6 +4,15 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDtsJobsRequest extends TeaModel {
+    @NameInMap("DedicatedClusterId")
+    public String dedicatedClusterId;
+
+    @NameInMap("DedicatedClusterNodeId")
+    public Long dedicatedClusterNodeId;
+
+    @NameInMap("DtsJobId")
+    public String dtsJobId;
+
     @NameInMap("GroupId")
     public String groupId;
 
@@ -15,6 +24,9 @@ public class DescribeDtsJobsRequest extends TeaModel {
 
     @NameInMap("OrderDirection")
     public String orderDirection;
+
+    @NameInMap("OwnerId")
+    public String ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -43,6 +55,30 @@ public class DescribeDtsJobsRequest extends TeaModel {
     public static DescribeDtsJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDtsJobsRequest self = new DescribeDtsJobsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDtsJobsRequest setDedicatedClusterId(String dedicatedClusterId) {
+        this.dedicatedClusterId = dedicatedClusterId;
+        return this;
+    }
+    public String getDedicatedClusterId() {
+        return this.dedicatedClusterId;
+    }
+
+    public DescribeDtsJobsRequest setDedicatedClusterNodeId(Long dedicatedClusterNodeId) {
+        this.dedicatedClusterNodeId = dedicatedClusterNodeId;
+        return this;
+    }
+    public Long getDedicatedClusterNodeId() {
+        return this.dedicatedClusterNodeId;
+    }
+
+    public DescribeDtsJobsRequest setDtsJobId(String dtsJobId) {
+        this.dtsJobId = dtsJobId;
+        return this;
+    }
+    public String getDtsJobId() {
+        return this.dtsJobId;
     }
 
     public DescribeDtsJobsRequest setGroupId(String groupId) {
@@ -75,6 +111,14 @@ public class DescribeDtsJobsRequest extends TeaModel {
     }
     public String getOrderDirection() {
         return this.orderDirection;
+    }
+
+    public DescribeDtsJobsRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeDtsJobsRequest setPageNumber(Integer pageNumber) {
