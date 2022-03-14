@@ -94,6 +94,36 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAlarmEventListResponseBodySuspEventsTacticItems extends TeaModel {
+        @NameInMap("TacticDisplayName")
+        public String tacticDisplayName;
+
+        @NameInMap("TacticId")
+        public String tacticId;
+
+        public static DescribeAlarmEventListResponseBodySuspEventsTacticItems build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAlarmEventListResponseBodySuspEventsTacticItems self = new DescribeAlarmEventListResponseBodySuspEventsTacticItems();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAlarmEventListResponseBodySuspEventsTacticItems setTacticDisplayName(String tacticDisplayName) {
+            this.tacticDisplayName = tacticDisplayName;
+            return this;
+        }
+        public String getTacticDisplayName() {
+            return this.tacticDisplayName;
+        }
+
+        public DescribeAlarmEventListResponseBodySuspEventsTacticItems setTacticId(String tacticId) {
+            this.tacticId = tacticId;
+            return this;
+        }
+        public String getTacticId() {
+            return this.tacticId;
+        }
+
+    }
+
     public static class DescribeAlarmEventListResponseBodySuspEvents extends TeaModel {
         @NameInMap("AlarmEventName")
         public String alarmEventName;
@@ -169,6 +199,10 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
 
         @NameInMap("SuspiciousEventCount")
         public Integer suspiciousEventCount;
+
+        // 攻击阶段展示名
+        @NameInMap("TacticItems")
+        public java.util.List<DescribeAlarmEventListResponseBodySuspEventsTacticItems> tacticItems;
 
         @NameInMap("Uuid")
         public String uuid;
@@ -376,6 +410,14 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
         }
         public Integer getSuspiciousEventCount() {
             return this.suspiciousEventCount;
+        }
+
+        public DescribeAlarmEventListResponseBodySuspEvents setTacticItems(java.util.List<DescribeAlarmEventListResponseBodySuspEventsTacticItems> tacticItems) {
+            this.tacticItems = tacticItems;
+            return this;
+        }
+        public java.util.List<DescribeAlarmEventListResponseBodySuspEventsTacticItems> getTacticItems() {
+            return this.tacticItems;
         }
 
         public DescribeAlarmEventListResponseBodySuspEvents setUuid(String uuid) {

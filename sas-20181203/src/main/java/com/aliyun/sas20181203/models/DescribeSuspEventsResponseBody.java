@@ -168,6 +168,36 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeSuspEventsResponseBodySuspEventsTacticItems extends TeaModel {
+        @NameInMap("TacticDisplayName")
+        public String tacticDisplayName;
+
+        @NameInMap("TacticId")
+        public String tacticId;
+
+        public static DescribeSuspEventsResponseBodySuspEventsTacticItems build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSuspEventsResponseBodySuspEventsTacticItems self = new DescribeSuspEventsResponseBodySuspEventsTacticItems();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSuspEventsResponseBodySuspEventsTacticItems setTacticDisplayName(String tacticDisplayName) {
+            this.tacticDisplayName = tacticDisplayName;
+            return this;
+        }
+        public String getTacticDisplayName() {
+            return this.tacticDisplayName;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEventsTacticItems setTacticId(String tacticId) {
+            this.tacticId = tacticId;
+            return this;
+        }
+        public String getTacticId() {
+            return this.tacticId;
+        }
+
+    }
+
     public static class DescribeSuspEventsResponseBodySuspEvents extends TeaModel {
         @NameInMap("Advanced")
         public Boolean advanced;
@@ -303,6 +333,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
 
         @NameInMap("Stages")
         public String stages;
+
+        // 攻击阶段展示名
+        @NameInMap("TacticItems")
+        public java.util.List<DescribeSuspEventsResponseBodySuspEventsTacticItems> tacticItems;
 
         @NameInMap("UniqueInfo")
         public String uniqueInfo;
@@ -673,6 +707,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
         public String getStages() {
             return this.stages;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setTacticItems(java.util.List<DescribeSuspEventsResponseBodySuspEventsTacticItems> tacticItems) {
+            this.tacticItems = tacticItems;
+            return this;
+        }
+        public java.util.List<DescribeSuspEventsResponseBodySuspEventsTacticItems> getTacticItems() {
+            return this.tacticItems;
         }
 
         public DescribeSuspEventsResponseBodySuspEvents setUniqueInfo(String uniqueInfo) {

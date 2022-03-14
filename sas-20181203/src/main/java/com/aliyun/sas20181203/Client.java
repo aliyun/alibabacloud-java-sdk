@@ -817,6 +817,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SourceIp", request.sourceIp);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tacticId)) {
+            query.put("TacticId", request.tacticId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -4718,8 +4722,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Uuids", request.uuids);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tacticId)) {
+            body.put("TacticId", request.tacticId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeSuspEvents"),
@@ -6234,6 +6244,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyOperateVulResponse modifyOperateVul(ModifyOperateVulRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.modifyOperateVulWithOptions(request, runtime);
+    }
+
+    public ModifyPropertyScheduleConfigResponse modifyPropertyScheduleConfigWithOptions(ModifyPropertyScheduleConfigRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleTime)) {
+            query.put("ScheduleTime", request.scheduleTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyPropertyScheduleConfig"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyPropertyScheduleConfigResponse());
+    }
+
+    public ModifyPropertyScheduleConfigResponse modifyPropertyScheduleConfig(ModifyPropertyScheduleConfigRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyPropertyScheduleConfigWithOptions(request, runtime);
     }
 
     public ModifyPushAllTaskResponse modifyPushAllTaskWithOptions(ModifyPushAllTaskRequest request, RuntimeOptions runtime) throws Exception {
