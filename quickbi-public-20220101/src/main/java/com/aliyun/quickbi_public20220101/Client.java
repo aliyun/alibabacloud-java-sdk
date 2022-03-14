@@ -14,7 +14,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(Config config) throws Exception {
         super(config);
-        this._endpointRule = "central";
+        this._endpointRule = "";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("quickbi-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -2181,6 +2181,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryWorkspaceUserListResponse queryWorkspaceUserList(QueryWorkspaceUserListRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryWorkspaceUserListWithOptions(request, runtime);
+    }
+
+    public ResultCallbackResponse resultCallbackWithOptions(ResultCallbackRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.handleReason)) {
+            query.put("HandleReason", request.handleReason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResultCallback"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResultCallbackResponse());
+    }
+
+    public ResultCallbackResponse resultCallback(ResultCallbackRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.resultCallbackWithOptions(request, runtime);
     }
 
     public SaveFavoritesResponse saveFavoritesWithOptions(SaveFavoritesRequest request, RuntimeOptions runtime) throws Exception {
