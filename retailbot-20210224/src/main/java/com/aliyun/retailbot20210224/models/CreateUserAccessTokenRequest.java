@@ -12,6 +12,10 @@ public class CreateUserAccessTokenRequest extends TeaModel {
     @NameInMap("ExpireTime")
     public Long expireTime;
 
+    // 额外信息，必须是JSON String格式
+    @NameInMap("ExtraInfo")
+    public String extraInfo;
+
     // 系统颁发的sourceId
     @NameInMap("SourceId")
     public Long sourceId;
@@ -43,6 +47,14 @@ public class CreateUserAccessTokenRequest extends TeaModel {
     }
     public Long getExpireTime() {
         return this.expireTime;
+    }
+
+    public CreateUserAccessTokenRequest setExtraInfo(String extraInfo) {
+        this.extraInfo = extraInfo;
+        return this;
+    }
+    public String getExtraInfo() {
+        return this.extraInfo;
     }
 
     public CreateUserAccessTokenRequest setSourceId(Long sourceId) {

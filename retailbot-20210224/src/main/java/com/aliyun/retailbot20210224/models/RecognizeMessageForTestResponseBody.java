@@ -490,6 +490,10 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
     }
 
     public static class RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans extends TeaModel {
+        // 槽位名称
+        @NameInMap("Alias")
+        public String alias;
+
         // 槽位结束下标
         @NameInMap("End")
         public Integer end;
@@ -521,6 +525,14 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
         public static RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans build(java.util.Map<String, ?> map) throws Exception {
             RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans self = new RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans();
             return TeaModel.build(map, self);
+        }
+
+        public RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans setAlias(String alias) {
+            this.alias = alias;
+            return this;
+        }
+        public String getAlias() {
+            return this.alias;
         }
 
         public RecognizeMessageForTestResponseBodyDataUnitSlotsUnitSpans setEnd(Integer end) {

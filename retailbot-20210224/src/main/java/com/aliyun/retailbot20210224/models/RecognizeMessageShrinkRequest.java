@@ -20,6 +20,10 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
     @NameInMap("ContentType")
     public String contentType;
 
+    // 上文期望的槽位
+    @NameInMap("ExpectedSlots")
+    public String expectedSlotsShrink;
+
     // query扩展信息, 通常在点击事件中使用
     @NameInMap("ExtraContent")
     public String extraContentShrink;
@@ -123,6 +127,14 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
     }
     public String getContentType() {
         return this.contentType;
+    }
+
+    public RecognizeMessageShrinkRequest setExpectedSlotsShrink(String expectedSlotsShrink) {
+        this.expectedSlotsShrink = expectedSlotsShrink;
+        return this;
+    }
+    public String getExpectedSlotsShrink() {
+        return this.expectedSlotsShrink;
     }
 
     public RecognizeMessageShrinkRequest setExtraContentShrink(String extraContentShrink) {
