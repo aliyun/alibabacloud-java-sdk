@@ -20,6 +20,10 @@ public class RecognizeMessageForTestRequest extends TeaModel {
     @NameInMap("ContentType")
     public String contentType;
 
+    // 上文期望的槽位
+    @NameInMap("ExpectedSlots")
+    public java.util.List<RecognizeMessageForTestRequestExpectedSlots> expectedSlots;
+
     // query扩展信息, 通常在点击事件中使用
     @NameInMap("ExtraContent")
     public java.util.Map<String, ?> extraContent;
@@ -119,6 +123,14 @@ public class RecognizeMessageForTestRequest extends TeaModel {
     }
     public String getContentType() {
         return this.contentType;
+    }
+
+    public RecognizeMessageForTestRequest setExpectedSlots(java.util.List<RecognizeMessageForTestRequestExpectedSlots> expectedSlots) {
+        this.expectedSlots = expectedSlots;
+        return this;
+    }
+    public java.util.List<RecognizeMessageForTestRequestExpectedSlots> getExpectedSlots() {
+        return this.expectedSlots;
     }
 
     public RecognizeMessageForTestRequest setExtraContent(java.util.Map<String, ?> extraContent) {
@@ -289,6 +301,26 @@ public class RecognizeMessageForTestRequest extends TeaModel {
         }
         public String getClientVersion() {
             return this.clientVersion;
+        }
+
+    }
+
+    public static class RecognizeMessageForTestRequestExpectedSlots extends TeaModel {
+        // 槽位key
+        @NameInMap("SlotKey")
+        public String slotKey;
+
+        public static RecognizeMessageForTestRequestExpectedSlots build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeMessageForTestRequestExpectedSlots self = new RecognizeMessageForTestRequestExpectedSlots();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizeMessageForTestRequestExpectedSlots setSlotKey(String slotKey) {
+            this.slotKey = slotKey;
+            return this;
+        }
+        public String getSlotKey() {
+            return this.slotKey;
         }
 
     }

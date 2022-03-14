@@ -1,3 +1,6 @@
+2022-03-14 Version: 2.4.2
+- Ner upgrade.
+
 2022-02-28 Version: 2.3.0
 - Supported multi channel.
 
