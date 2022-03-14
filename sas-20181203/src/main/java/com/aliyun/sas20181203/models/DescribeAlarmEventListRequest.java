@@ -40,6 +40,9 @@ public class DescribeAlarmEventListRequest extends TeaModel {
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    @NameInMap("TacticId")
+    public String tacticId;
+
     public static DescribeAlarmEventListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlarmEventListRequest self = new DescribeAlarmEventListRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class DescribeAlarmEventListRequest extends TeaModel {
     }
     public String getSourceIp() {
         return this.sourceIp;
+    }
+
+    public DescribeAlarmEventListRequest setTacticId(String tacticId) {
+        this.tacticId = tacticId;
+        return this;
+    }
+    public String getTacticId() {
+        return this.tacticId;
     }
 
 }

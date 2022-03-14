@@ -61,6 +61,9 @@ public class DescribeSuspEventsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("TacticId")
+    public String tacticId;
+
     @NameInMap("TargetType")
     public String targetType;
 
@@ -225,6 +228,14 @@ public class DescribeSuspEventsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeSuspEventsRequest setTacticId(String tacticId) {
+        this.tacticId = tacticId;
+        return this;
+    }
+    public String getTacticId() {
+        return this.tacticId;
     }
 
     public DescribeSuspEventsRequest setTargetType(String targetType) {
