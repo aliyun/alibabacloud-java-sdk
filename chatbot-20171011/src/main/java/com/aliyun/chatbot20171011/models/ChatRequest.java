@@ -16,9 +16,6 @@ public class ChatRequest extends TeaModel {
     @NameInMap("Perspective")
     public java.util.List<String> perspective;
 
-    @NameInMap("Recommend")
-    public Boolean recommend;
-
     @NameInMap("SenderId")
     public String senderId;
 
@@ -72,14 +69,6 @@ public class ChatRequest extends TeaModel {
     }
     public java.util.List<String> getPerspective() {
         return this.perspective;
-    }
-
-    public ChatRequest setRecommend(Boolean recommend) {
-        this.recommend = recommend;
-        return this;
-    }
-    public Boolean getRecommend() {
-        return this.recommend;
     }
 
     public ChatRequest setSenderId(String senderId) {

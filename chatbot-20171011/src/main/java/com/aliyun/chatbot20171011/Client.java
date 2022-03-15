@@ -213,10 +213,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Perspective", request.perspective);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.recommend)) {
-            query.put("Recommend", request.recommend);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.senderId)) {
             query.put("SenderId", request.senderId);
         }

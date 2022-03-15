@@ -216,20 +216,11 @@ public class ChatResponseBody extends TeaModel {
         @NameInMap("AnswerSource")
         public String answerSource;
 
-        @NameInMap("Category")
-        public String category;
-
-        @NameInMap("Content")
-        public String content;
-
         @NameInMap("KnowledgeId")
         public String knowledgeId;
 
         @NameInMap("Score")
         public Double score;
-
-        @NameInMap("Summary")
-        public String summary;
 
         @NameInMap("Title")
         public String title;
@@ -247,22 +238,6 @@ public class ChatResponseBody extends TeaModel {
             return this.answerSource;
         }
 
-        public ChatResponseBodyMessagesRecommends setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
-        }
-
-        public ChatResponseBodyMessagesRecommends setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
         public ChatResponseBodyMessagesRecommends setKnowledgeId(String knowledgeId) {
             this.knowledgeId = knowledgeId;
             return this;
@@ -277,14 +252,6 @@ public class ChatResponseBody extends TeaModel {
         }
         public Double getScore() {
             return this.score;
-        }
-
-        public ChatResponseBodyMessagesRecommends setSummary(String summary) {
-            this.summary = summary;
-            return this;
-        }
-        public String getSummary() {
-            return this.summary;
         }
 
         public ChatResponseBodyMessagesRecommends setTitle(String title) {
@@ -356,6 +323,9 @@ public class ChatResponseBody extends TeaModel {
         @NameInMap("ArticleTitle")
         public String articleTitle;
 
+        @NameInMap("Commands")
+        public java.util.Map<String, ?> commands;
+
         @NameInMap("Content")
         public String content;
 
@@ -414,6 +384,14 @@ public class ChatResponseBody extends TeaModel {
         }
         public String getArticleTitle() {
             return this.articleTitle;
+        }
+
+        public ChatResponseBodyMessagesText setCommands(java.util.Map<String, ?> commands) {
+            this.commands = commands;
+            return this;
+        }
+        public java.util.Map<String, ?> getCommands() {
+            return this.commands;
         }
 
         public ChatResponseBodyMessagesText setContent(String content) {
@@ -538,8 +516,16 @@ public class ChatResponseBody extends TeaModel {
         @NameInMap("Text")
         public ChatResponseBodyMessagesText text;
 
+        // 在线场景，反问标题
+        @NameInMap("Title")
+        public String title;
+
         @NameInMap("Type")
         public String type;
+
+        // 语音场景，澄清内容
+        @NameInMap("VoiceTitle")
+        public String voiceTitle;
 
         public static ChatResponseBodyMessages build(java.util.Map<String, ?> map) throws Exception {
             ChatResponseBodyMessages self = new ChatResponseBodyMessages();
@@ -586,12 +572,28 @@ public class ChatResponseBody extends TeaModel {
             return this.text;
         }
 
+        public ChatResponseBodyMessages setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
         public ChatResponseBodyMessages setType(String type) {
             this.type = type;
             return this;
         }
         public String getType() {
             return this.type;
+        }
+
+        public ChatResponseBodyMessages setVoiceTitle(String voiceTitle) {
+            this.voiceTitle = voiceTitle;
+            return this;
+        }
+        public String getVoiceTitle() {
+            return this.voiceTitle;
         }
 
     }
