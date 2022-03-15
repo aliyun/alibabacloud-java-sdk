@@ -2880,8 +2880,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("instance_name", request.instanceName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
-            body.put("namespace", request.namespace);
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaces)) {
+            body.put("namespaces", request.namespaces);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {

@@ -8,7 +8,7 @@ public class DeployPolicyInstanceRequest extends TeaModel {
     @NameInMap("action")
     public String action;
 
-    // 策略实例实施范围（限定命名空间）。默认 [] 代表集群所有命名空间。
+    // 限制策略实施的命名空间，为空时表示所有命名空间
     @NameInMap("namespaces")
     public java.util.List<String> namespaces;
 
