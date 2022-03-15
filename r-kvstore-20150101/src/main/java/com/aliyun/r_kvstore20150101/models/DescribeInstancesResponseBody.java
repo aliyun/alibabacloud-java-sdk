@@ -126,6 +126,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
+        @NameInMap("CloudType")
+        public String cloudType;
+
         @NameInMap("Config")
         public String config;
 
@@ -260,6 +263,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setCloudType(String cloudType) {
+            this.cloudType = cloudType;
+            return this;
+        }
+        public String getCloudType() {
+            return this.cloudType;
         }
 
         public DescribeInstancesResponseBodyInstancesKVStoreInstance setConfig(String config) {

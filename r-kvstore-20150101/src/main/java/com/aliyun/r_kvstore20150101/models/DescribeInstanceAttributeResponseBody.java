@@ -102,6 +102,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
+        @NameInMap("CloudType")
+        public String cloudType;
+
         @NameInMap("Config")
         public String config;
 
@@ -275,6 +278,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute setCloudType(String cloudType) {
+            this.cloudType = cloudType;
+            return this;
+        }
+        public String getCloudType() {
+            return this.cloudType;
         }
 
         public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute setConfig(String config) {

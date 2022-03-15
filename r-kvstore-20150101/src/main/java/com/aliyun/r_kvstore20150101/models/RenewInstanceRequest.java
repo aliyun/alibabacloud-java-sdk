@@ -13,6 +13,9 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("Capacity")
     public String capacity;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("CouponNo")
     public String couponNo;
 
@@ -70,6 +73,14 @@ public class RenewInstanceRequest extends TeaModel {
     }
     public String getCapacity() {
         return this.capacity;
+    }
+
+    public RenewInstanceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public RenewInstanceRequest setCouponNo(String couponNo) {
