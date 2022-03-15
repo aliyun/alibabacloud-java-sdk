@@ -314,6 +314,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("Jdk")
         public String jdk;
 
+        @NameInMap("KafkaConfigs")
+        public String kafkaConfigs;
+
         @NameInMap("Liveness")
         public String liveness;
 
@@ -575,6 +578,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getJdk() {
             return this.jdk;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setKafkaConfigs(String kafkaConfigs) {
+            this.kafkaConfigs = kafkaConfigs;
+            return this;
+        }
+        public String getKafkaConfigs() {
+            return this.kafkaConfigs;
         }
 
         public DescribeApplicationConfigResponseBodyData setLiveness(String liveness) {

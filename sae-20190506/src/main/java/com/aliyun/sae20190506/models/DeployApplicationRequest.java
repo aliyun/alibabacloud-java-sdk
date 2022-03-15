@@ -64,6 +64,15 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("Jdk")
     public String jdk;
 
+    @NameInMap("KafkaEndpoint")
+    public String kafkaEndpoint;
+
+    @NameInMap("KafkaInstanceId")
+    public String kafkaInstanceId;
+
+    @NameInMap("KafkaLogfileConfig")
+    public String kafkaLogfileConfig;
+
     @NameInMap("Liveness")
     public String liveness;
 
@@ -81,6 +90,9 @@ public class DeployApplicationRequest extends TeaModel {
 
     @NameInMap("NasId")
     public String nasId;
+
+    @NameInMap("OpenCollectToKafka")
+    public Boolean openCollectToKafka;
 
     // OSS使用的AKID
     @NameInMap("OssAkId")
@@ -296,6 +308,30 @@ public class DeployApplicationRequest extends TeaModel {
         return this.jdk;
     }
 
+    public DeployApplicationRequest setKafkaEndpoint(String kafkaEndpoint) {
+        this.kafkaEndpoint = kafkaEndpoint;
+        return this;
+    }
+    public String getKafkaEndpoint() {
+        return this.kafkaEndpoint;
+    }
+
+    public DeployApplicationRequest setKafkaInstanceId(String kafkaInstanceId) {
+        this.kafkaInstanceId = kafkaInstanceId;
+        return this;
+    }
+    public String getKafkaInstanceId() {
+        return this.kafkaInstanceId;
+    }
+
+    public DeployApplicationRequest setKafkaLogfileConfig(String kafkaLogfileConfig) {
+        this.kafkaLogfileConfig = kafkaLogfileConfig;
+        return this;
+    }
+    public String getKafkaLogfileConfig() {
+        return this.kafkaLogfileConfig;
+    }
+
     public DeployApplicationRequest setLiveness(String liveness) {
         this.liveness = liveness;
         return this;
@@ -342,6 +378,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getNasId() {
         return this.nasId;
+    }
+
+    public DeployApplicationRequest setOpenCollectToKafka(Boolean openCollectToKafka) {
+        this.openCollectToKafka = openCollectToKafka;
+        return this;
+    }
+    public Boolean getOpenCollectToKafka() {
+        return this.openCollectToKafka;
     }
 
     public DeployApplicationRequest setOssAkId(String ossAkId) {

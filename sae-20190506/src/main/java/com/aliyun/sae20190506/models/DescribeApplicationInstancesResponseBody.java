@@ -93,6 +93,9 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         @NameInMap("Eip")
         public String eip;
 
+        @NameInMap("FinishTimeStamp")
+        public Long finishTimeStamp;
+
         @NameInMap("GroupId")
         public String groupId;
 
@@ -139,6 +142,14 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
         public String getEip() {
             return this.eip;
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstances setFinishTimeStamp(Long finishTimeStamp) {
+            this.finishTimeStamp = finishTimeStamp;
+            return this;
+        }
+        public Long getFinishTimeStamp() {
+            return this.finishTimeStamp;
         }
 
         public DescribeApplicationInstancesResponseBodyDataInstances setGroupId(String groupId) {
