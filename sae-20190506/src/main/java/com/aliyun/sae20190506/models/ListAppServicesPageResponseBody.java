@@ -87,17 +87,11 @@ public class ListAppServicesPageResponseBody extends TeaModel {
     }
 
     public static class ListAppServicesPageResponseBodyDataResult extends TeaModel {
-        @NameInMap("ClusterName")
-        public String clusterName;
-
         @NameInMap("EdasAppId")
         public String edasAppId;
 
         @NameInMap("EdasAppName")
         public String edasAppName;
-
-        @NameInMap("GmtModifyTime")
-        public String gmtModifyTime;
 
         @NameInMap("Group")
         public String group;
@@ -116,14 +110,6 @@ public class ListAppServicesPageResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListAppServicesPageResponseBodyDataResult setClusterName(String clusterName) {
-            this.clusterName = clusterName;
-            return this;
-        }
-        public String getClusterName() {
-            return this.clusterName;
-        }
-
         public ListAppServicesPageResponseBodyDataResult setEdasAppId(String edasAppId) {
             this.edasAppId = edasAppId;
             return this;
@@ -138,14 +124,6 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         }
         public String getEdasAppName() {
             return this.edasAppName;
-        }
-
-        public ListAppServicesPageResponseBodyDataResult setGmtModifyTime(String gmtModifyTime) {
-            this.gmtModifyTime = gmtModifyTime;
-            return this;
-        }
-        public String getGmtModifyTime() {
-            return this.gmtModifyTime;
         }
 
         public ListAppServicesPageResponseBodyDataResult setGroup(String group) {

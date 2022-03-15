@@ -172,6 +172,9 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
     }
 
     public static class DescribeChangeOrderResponseBodyData extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
         @NameInMap("AppName")
         public String appName;
 
@@ -226,6 +229,14 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         public static DescribeChangeOrderResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeChangeOrderResponseBodyData self = new DescribeChangeOrderResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeChangeOrderResponseBodyData setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
         }
 
         public DescribeChangeOrderResponseBodyData setAppName(String appName) {

@@ -377,6 +377,9 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
     }
 
     public static class DescribeGreyTagRouteResponseBodyData extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
         @NameInMap("CreateTime")
         public Long createTime;
 
@@ -401,6 +404,14 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         public static DescribeGreyTagRouteResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeGreyTagRouteResponseBodyData self = new DescribeGreyTagRouteResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeGreyTagRouteResponseBodyData setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
         }
 
         public DescribeGreyTagRouteResponseBodyData setCreateTime(Long createTime) {
