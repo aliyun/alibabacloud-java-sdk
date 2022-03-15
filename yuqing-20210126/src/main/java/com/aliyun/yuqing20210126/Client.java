@@ -71,7 +71,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequestWithForm("AggregateSearchYuqing", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/aggSearch.json", "json", req, runtime), new AggregateSearchYuqingResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AggregateSearchYuqing"),
+            new TeaPair("version", "2021-01-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/aliyun/aggSearch.json"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AggregateSearchYuqingResponse());
     }
 
     public CreateProjectResponse createProject(CreateProjectRequest request) throws Exception {
@@ -109,7 +120,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequestWithForm("CreateProject", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/createProject.json", "json", req, runtime), new CreateProjectResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateProject"),
+            new TeaPair("version", "2021-01-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/aliyun/createProject.json"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProjectResponse());
     }
 
     public DeleteProjectResponse deleteProject(DeleteProjectRequest request) throws Exception {
@@ -147,7 +169,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequestWithForm("DeleteProject", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/deleteProject.json", "json", req, runtime), new DeleteProjectResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteProject"),
+            new TeaPair("version", "2021-01-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/aliyun/deleteProject.json"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProjectResponse());
     }
 
     public GetAnalysisComponentResultResponse getAnalysisComponentResult(GetAnalysisComponentResultRequest request) throws Exception {
@@ -175,7 +208,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetAnalysisComponentResult", "2021-01-26", "HTTPS", "GET", "AK", "/openapi/aliyun/getAnalysisComponentResult.json", "json", req, runtime), new GetAnalysisComponentResultResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAnalysisComponentResult"),
+            new TeaPair("version", "2021-01-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/aliyun/getAnalysisComponentResult.json"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAnalysisComponentResultResponse());
     }
 
     public GetMessageDetailResponse getMessageDetail(GetMessageDetailRequest request) throws Exception {
@@ -203,7 +247,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetMessageDetail", "2021-01-26", "HTTPS", "GET", "AK", "/openapi/aliyun/getMessageFromHbase.json", "json", req, runtime), new GetMessageDetailResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMessageDetail"),
+            new TeaPair("version", "2021-01-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/aliyun/getMessageFromHbase.json"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMessageDetailResponse());
     }
 
     public ListHotspotMessageResponse listHotspotMessage(ListHotspotMessageRequest request) throws Exception {
@@ -233,7 +288,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequestWithForm("ListHotspotMessage", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/searchHotspotDetail.json", "json", req, runtime), new ListHotspotMessageResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListHotspotMessage"),
+            new TeaPair("version", "2021-01-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/aliyun/searchHotspotDetail.json"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHotspotMessageResponse());
     }
 
     public ListYuqingMessagesResponse listYuqingMessages(ListYuqingMessagesRequest request) throws Exception {
@@ -263,7 +329,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequestWithForm("ListYuqingMessages", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/searchMessages.json", "json", req, runtime), new ListYuqingMessagesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListYuqingMessages"),
+            new TeaPair("version", "2021-01-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/aliyun/searchMessages.json"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListYuqingMessagesResponse());
     }
 
     public QueryAlarmDataListResponse queryAlarmDataList(QueryAlarmDataListRequest request) throws Exception {
@@ -295,7 +372,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("QueryAlarmDataList", "2021-01-26", "HTTPS", "GET", "AK", "/openapi/aliyun/queryAlarmDataList.json", "json", req, runtime), new QueryAlarmDataListResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryAlarmDataList"),
+            new TeaPair("version", "2021-01-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/aliyun/queryAlarmDataList.json"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryAlarmDataListResponse());
     }
 
     public QueryAnalysisComponentResponse queryAnalysisComponent(QueryAnalysisComponentRequest request) throws Exception {
@@ -329,7 +417,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequestWithForm("QueryAnalysisComponent", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/queryAnalysisComponent.json", "json", req, runtime), new QueryAnalysisComponentResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryAnalysisComponent"),
+            new TeaPair("version", "2021-01-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/aliyun/queryAnalysisComponent.json"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryAnalysisComponentResponse());
     }
 
     public QueryFilterListResponse queryFilterList(QueryFilterListRequest request) throws Exception {
@@ -365,7 +464,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("QueryFilterList", "2021-01-26", "HTTPS", "GET", "AK", "/openapi/aliyun/queryFilterList.json", "json", req, runtime), new QueryFilterListResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryFilterList"),
+            new TeaPair("version", "2021-01-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/aliyun/queryFilterList.json"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryFilterListResponse());
     }
 
     public QueryProjectListResponse queryProjectList(QueryProjectListRequest request) throws Exception {
@@ -405,7 +515,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("QueryProjectList", "2021-01-26", "HTTPS", "GET", "AK", "/openapi/aliyun/queryProjectList.json", "json", req, runtime), new QueryProjectListResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryProjectList"),
+            new TeaPair("version", "2021-01-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/aliyun/queryProjectList.json"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryProjectListResponse());
     }
 
     public QueryReportNotifiesResponse queryReportNotifies(QueryReportNotifiesRequest request) throws Exception {
@@ -457,7 +578,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("QueryReportNotifies", "2021-01-26", "HTTPS", "GET", "AK", "/openapi/aliyun/queryReportNotifies.json", "json", req, runtime), new QueryReportNotifiesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryReportNotifies"),
+            new TeaPair("version", "2021-01-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/aliyun/queryReportNotifies.json"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryReportNotifiesResponse());
     }
 
     public QueryTagNodesResponse queryTagNodes(QueryTagNodesRequest request) throws Exception {
@@ -481,7 +613,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("QueryTagNodes", "2021-01-26", "HTTPS", "GET", "AK", "/openapi/aliyun/queryTagNodes.json", "json", req, runtime), new QueryTagNodesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryTagNodes"),
+            new TeaPair("version", "2021-01-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/aliyun/queryTagNodes.json"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTagNodesResponse());
     }
 
     public UpdateProjectResponse updateProject(UpdateProjectRequest request) throws Exception {
@@ -527,7 +670,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequestWithForm("UpdateProject", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/updateProject.json", "json", req, runtime), new UpdateProjectResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateProject"),
+            new TeaPair("version", "2021-01-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/aliyun/updateProject.json"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProjectResponse());
     }
 
     public UpdatePropagationResponse updatePropagation(UpdatePropagationRequest request) throws Exception {
@@ -557,6 +711,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequestWithForm("UpdatePropagation", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/updatePropagation.json", "json", req, runtime), new UpdatePropagationResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePropagation"),
+            new TeaPair("version", "2021-01-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/aliyun/updatePropagation.json"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePropagationResponse());
     }
 }

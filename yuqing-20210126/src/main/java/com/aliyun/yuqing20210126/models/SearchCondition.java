@@ -288,6 +288,10 @@ public class SearchCondition extends TeaModel {
     @NameInMap("titleIncludingWordsIdx")
     public String titleIncludingWordsIdx;
 
+    // 检索的话题
+    @NameInMap("topicIdx")
+    public String topicIdx;
+
     // 指定索引模式,KEYWORD|CREATE_TIME
     @NameInMap("usedIndexModeSwitch")
     public String usedIndexModeSwitch;
@@ -863,6 +867,14 @@ public class SearchCondition extends TeaModel {
     }
     public String getTitleIncludingWordsIdx() {
         return this.titleIncludingWordsIdx;
+    }
+
+    public SearchCondition setTopicIdx(String topicIdx) {
+        this.topicIdx = topicIdx;
+        return this;
+    }
+    public String getTopicIdx() {
+        return this.topicIdx;
     }
 
     public SearchCondition setUsedIndexModeSwitch(String usedIndexModeSwitch) {
