@@ -43,6 +43,10 @@ public class ListIpBlocksRequest extends TeaModel {
     @NameInMap("SubNetBusiness")
     public String subNetBusiness;
 
+    // 是否获取顶层父类
+    @NameInMap("TopParent")
+    public Boolean topParent;
+
     // 是否树状展示地址段
     @NameInMap("TreeType")
     public Boolean treeType;
@@ -134,6 +138,14 @@ public class ListIpBlocksRequest extends TeaModel {
     }
     public String getSubNetBusiness() {
         return this.subNetBusiness;
+    }
+
+    public ListIpBlocksRequest setTopParent(Boolean topParent) {
+        this.topParent = topParent;
+        return this;
+    }
+    public Boolean getTopParent() {
+        return this.topParent;
     }
 
     public ListIpBlocksRequest setTreeType(Boolean treeType) {
