@@ -13,6 +13,12 @@ public class DescribeClusterMemberInfoRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -49,6 +55,22 @@ public class DescribeClusterMemberInfoRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeClusterMemberInfoRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeClusterMemberInfoRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeClusterMemberInfoRequest setResourceOwnerAccount(String resourceOwnerAccount) {

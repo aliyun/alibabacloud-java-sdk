@@ -3,9 +3,12 @@ package com.aliyun.r_kvstore20150101.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyActiveOperationTaskRequest extends TeaModel {
+public class ModifyActiveOperationTasksRequest extends TeaModel {
     @NameInMap("Ids")
     public String ids;
+
+    @NameInMap("ImmediateStart")
+    public Integer immediateStart;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -25,12 +28,12 @@ public class ModifyActiveOperationTaskRequest extends TeaModel {
     @NameInMap("SwitchTime")
     public String switchTime;
 
-    public static ModifyActiveOperationTaskRequest build(java.util.Map<String, ?> map) throws Exception {
-        ModifyActiveOperationTaskRequest self = new ModifyActiveOperationTaskRequest();
+    public static ModifyActiveOperationTasksRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyActiveOperationTasksRequest self = new ModifyActiveOperationTasksRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyActiveOperationTaskRequest setIds(String ids) {
+    public ModifyActiveOperationTasksRequest setIds(String ids) {
         this.ids = ids;
         return this;
     }
@@ -38,7 +41,15 @@ public class ModifyActiveOperationTaskRequest extends TeaModel {
         return this.ids;
     }
 
-    public ModifyActiveOperationTaskRequest setOwnerAccount(String ownerAccount) {
+    public ModifyActiveOperationTasksRequest setImmediateStart(Integer immediateStart) {
+        this.immediateStart = immediateStart;
+        return this;
+    }
+    public Integer getImmediateStart() {
+        return this.immediateStart;
+    }
+
+    public ModifyActiveOperationTasksRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -46,7 +57,7 @@ public class ModifyActiveOperationTaskRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public ModifyActiveOperationTaskRequest setOwnerId(Long ownerId) {
+    public ModifyActiveOperationTasksRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -54,7 +65,7 @@ public class ModifyActiveOperationTaskRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ModifyActiveOperationTaskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ModifyActiveOperationTasksRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -62,7 +73,7 @@ public class ModifyActiveOperationTaskRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public ModifyActiveOperationTaskRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ModifyActiveOperationTasksRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -70,7 +81,7 @@ public class ModifyActiveOperationTaskRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyActiveOperationTaskRequest setSecurityToken(String securityToken) {
+    public ModifyActiveOperationTasksRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }
@@ -78,7 +89,7 @@ public class ModifyActiveOperationTaskRequest extends TeaModel {
         return this.securityToken;
     }
 
-    public ModifyActiveOperationTaskRequest setSwitchTime(String switchTime) {
+    public ModifyActiveOperationTasksRequest setSwitchTime(String switchTime) {
         this.switchTime = switchTime;
         return this;
     }

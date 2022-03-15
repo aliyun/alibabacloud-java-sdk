@@ -25,6 +25,9 @@ public class DeleteShardingNodeRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("ShardCount")
+    public String shardCount;
+
     public static DeleteShardingNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteShardingNodeRequest self = new DeleteShardingNodeRequest();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class DeleteShardingNodeRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DeleteShardingNodeRequest setShardCount(String shardCount) {
+        this.shardCount = shardCount;
+        return this;
+    }
+    public String getShardCount() {
+        return this.shardCount;
     }
 
 }
