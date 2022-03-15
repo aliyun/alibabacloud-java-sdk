@@ -12,9 +12,9 @@ public class ModifyPolicyInstanceRequest extends TeaModel {
     @NameInMap("instance_name")
     public String instanceName;
 
-    // 策略实例实施范围
-    @NameInMap("namespace")
-    public String namespace;
+    // 限制策略实施的命名空间，为空时表示所有命名空间
+    @NameInMap("namespaces")
+    public java.util.List<String> namespaces;
 
     // 当前规则实例的配置参数
     @NameInMap("parameters")
@@ -41,12 +41,12 @@ public class ModifyPolicyInstanceRequest extends TeaModel {
         return this.instanceName;
     }
 
-    public ModifyPolicyInstanceRequest setNamespace(String namespace) {
-        this.namespace = namespace;
+    public ModifyPolicyInstanceRequest setNamespaces(java.util.List<String> namespaces) {
+        this.namespaces = namespaces;
         return this;
     }
-    public String getNamespace() {
-        return this.namespace;
+    public java.util.List<String> getNamespaces() {
+        return this.namespaces;
     }
 
     public ModifyPolicyInstanceRequest setParameters(java.util.Map<String, ?> parameters) {
