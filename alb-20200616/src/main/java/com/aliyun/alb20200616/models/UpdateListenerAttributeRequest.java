@@ -24,7 +24,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     @NameInMap("DefaultActions")
     public java.util.List<UpdateListenerAttributeRequestDefaultActions> defaultActions;
 
-    //  是否只预检此次请求
+    // 是否只预检此次请求
     @NameInMap("DryRun")
     public Boolean dryRun;
 

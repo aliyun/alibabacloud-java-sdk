@@ -20,7 +20,7 @@ public class ListAsynJobsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数	
+    // 总记录数
     @NameInMap("TotalCount")
     public Long totalCount;
 

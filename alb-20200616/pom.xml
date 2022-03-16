@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alb20200616</artifactId>
-  <version>1.0.8</version>
+  <version>1.0.9</version>
   <packaging>jar</packaging>
   <name>alb20200616</name>
   <description>Alibaba Cloud Alb (20200616) SDK for Java
@@ -145,6 +145,10 @@
                 <relocation>
                   <pattern>com.sun</pattern>
                   <shadedPattern>com.aliyun.alb20200616.external.com.sun</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache</pattern>
+                  <shadedPattern>com.aliyun.alb20200616.external.org.apache</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>
