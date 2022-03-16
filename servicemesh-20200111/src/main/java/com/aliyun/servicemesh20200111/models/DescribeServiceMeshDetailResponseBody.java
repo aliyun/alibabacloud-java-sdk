@@ -807,6 +807,25 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationRateLimit extends TeaModel {
+        @NameInMap("EnableGlobalRateLimit")
+        public Boolean enableGlobalRateLimit;
+
+        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationRateLimit build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationRateLimit self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationRateLimit();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationRateLimit setEnableGlobalRateLimit(Boolean enableGlobalRateLimit) {
+            this.enableGlobalRateLimit = enableGlobalRateLimit;
+            return this;
+        }
+        public Boolean getEnableGlobalRateLimit() {
+            return this.enableGlobalRateLimit;
+        }
+
+    }
+
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationSidecarProxyInitResourceLimit extends TeaModel {
         @NameInMap("ResourceCPULimit")
         public String resourceCPULimit;
@@ -883,6 +902,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         @NameInMap("MultiBuffer")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationMultiBuffer multiBuffer;
 
+        @NameInMap("RateLimit")
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationRateLimit rateLimit;
+
         @NameInMap("SidecarProxyInitResourceLimit")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationSidecarProxyInitResourceLimit sidecarProxyInitResourceLimit;
 
@@ -935,6 +957,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationMultiBuffer getMultiBuffer() {
             return this.multiBuffer;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration setRateLimit(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationRateLimit rateLimit) {
+            this.rateLimit = rateLimit;
+            return this;
+        }
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationRateLimit getRateLimit() {
+            return this.rateLimit;
         }
 
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration setSidecarProxyInitResourceLimit(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationSidecarProxyInitResourceLimit sidecarProxyInitResourceLimit) {
@@ -1980,6 +2010,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMesh extends TeaModel {
+        @NameInMap("ClusterSpec")
+        public String clusterSpec;
+
         @NameInMap("Clusters")
         public java.util.List<String> clusters;
 
@@ -1995,6 +2028,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public static DescribeServiceMeshDetailResponseBodyServiceMesh build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshDetailResponseBodyServiceMesh self = new DescribeServiceMeshDetailResponseBodyServiceMesh();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMesh setClusterSpec(String clusterSpec) {
+            this.clusterSpec = clusterSpec;
+            return this;
+        }
+        public String getClusterSpec() {
+            return this.clusterSpec;
         }
 
         public DescribeServiceMeshDetailResponseBodyServiceMesh setClusters(java.util.List<String> clusters) {
