@@ -7,8 +7,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
     @NameInMap("Instances")
     public DescribeInstancesResponseBodyInstances instances;
 
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -16,8 +16,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesResponseBody self = new DescribeInstancesResponseBody();
@@ -32,12 +32,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return this.instances;
     }
 
-    public DescribeInstancesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
+    public DescribeInstancesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Long getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeInstancesResponseBody setPageSize(Integer pageSize) {
@@ -56,12 +56,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeInstancesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeInstancesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceTagsTag extends TeaModel {
@@ -114,80 +114,71 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstance extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("ModuleId")
-        public Integer moduleId;
-
-        @NameInMap("VswitchId")
-        public String vswitchId;
+        @NameInMap("AutoRenewal")
+        public Boolean autoRenewal;
 
         @NameInMap("BackupStatus")
         public String backupStatus;
 
-        @NameInMap("PayType")
-        public String payType;
-
-        @NameInMap("CoreDiskType")
-        public String coreDiskType;
-
-        @NameInMap("Tags")
-        public DescribeInstancesResponseBodyInstancesInstanceTags tags;
-
-        @NameInMap("MasterNodeCount")
-        public Integer masterNodeCount;
-
-        @NameInMap("NetworkType")
-        public String networkType;
-
-        @NameInMap("CreatedTimeUTC")
-        public String createdTimeUTC;
-
-        @NameInMap("ParentId")
-        public String parentId;
-
-        @NameInMap("ExpireTimeUTC")
-        public String expireTimeUTC;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
-
-        @NameInMap("MasterInstanceType")
-        public String masterInstanceType;
-
-        @NameInMap("CoreInstanceType")
-        public String coreInstanceType;
-
-        @NameInMap("CreatedTime")
-        public String createdTime;
-
-        @NameInMap("CoreDiskSize")
-        public Integer coreDiskSize;
-
         @NameInMap("ClusterId")
         public String clusterId;
 
-        @NameInMap("ExpireTime")
-        public String expireTime;
+        @NameInMap("ClusterName")
+        public String clusterName;
 
-        @NameInMap("IsHa")
-        public Boolean isHa;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
+        @NameInMap("ClusterType")
+        public String clusterType;
 
         @NameInMap("ColdStorageStatus")
         public String coldStorageStatus;
 
+        @NameInMap("CoreDiskCount")
+        public String coreDiskCount;
+
+        @NameInMap("CoreDiskSize")
+        public Integer coreDiskSize;
+
+        @NameInMap("CoreDiskType")
+        public String coreDiskType;
+
+        @NameInMap("CoreInstanceType")
+        public String coreInstanceType;
+
+        @NameInMap("CoreNodeCount")
+        public Integer coreNodeCount;
+
+        @NameInMap("CreatedTime")
+        public String createdTime;
+
+        @NameInMap("CreatedTimeUTC")
+        public String createdTimeUTC;
+
+        @NameInMap("Duration")
+        public Integer duration;
+
+        @NameInMap("Engine")
+        public String engine;
+
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
+        @NameInMap("ExpireTimeUTC")
+        public String expireTimeUTC;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
         @NameInMap("IsDeletionProtection")
         public Boolean isDeletionProtection;
 
-        @NameInMap("RegionId")
-        public String regionId;
+        @NameInMap("IsHa")
+        public Boolean isHa;
+
+        @NameInMap("MajorVersion")
+        public String majorVersion;
 
         @NameInMap("MasterDiskSize")
         public Integer masterDiskSize;
@@ -195,74 +186,59 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("MasterDiskType")
         public String masterDiskType;
 
-        @NameInMap("AutoRenewal")
-        public Boolean autoRenewal;
+        @NameInMap("MasterInstanceType")
+        public String masterInstanceType;
 
-        @NameInMap("ClusterType")
-        public String clusterType;
+        @NameInMap("MasterNodeCount")
+        public Integer masterNodeCount;
 
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        @NameInMap("ClusterName")
-        public String clusterName;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        @NameInMap("Duration")
-        public Integer duration;
+        @NameInMap("ModuleId")
+        public Integer moduleId;
 
         @NameInMap("ModuleStackVersion")
         public String moduleStackVersion;
 
-        @NameInMap("Engine")
-        public String engine;
+        @NameInMap("NetworkType")
+        public String networkType;
 
-        @NameInMap("MajorVersion")
-        public String majorVersion;
+        @NameInMap("ParentId")
+        public String parentId;
 
-        @NameInMap("CoreDiskCount")
-        public String coreDiskCount;
+        @NameInMap("PayType")
+        public String payType;
 
-        @NameInMap("CoreNodeCount")
-        public Integer coreNodeCount;
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Tags")
+        public DescribeInstancesResponseBodyInstancesInstanceTags tags;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("VswitchId")
+        public String vswitchId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeInstancesResponseBodyInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesInstance self = new DescribeInstancesResponseBodyInstancesInstance();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesInstance setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public DescribeInstancesResponseBodyInstancesInstance setAutoRenewal(Boolean autoRenewal) {
+            this.autoRenewal = autoRenewal;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setModuleId(Integer moduleId) {
-            this.moduleId = moduleId;
-            return this;
-        }
-        public Integer getModuleId() {
-            return this.moduleId;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setVswitchId(String vswitchId) {
-            this.vswitchId = vswitchId;
-            return this;
-        }
-        public String getVswitchId() {
-            return this.vswitchId;
+        public Boolean getAutoRenewal() {
+            return this.autoRenewal;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setBackupStatus(String backupStatus) {
@@ -273,110 +249,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.backupStatus;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstance setPayType(String payType) {
-            this.payType = payType;
-            return this;
-        }
-        public String getPayType() {
-            return this.payType;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setCoreDiskType(String coreDiskType) {
-            this.coreDiskType = coreDiskType;
-            return this;
-        }
-        public String getCoreDiskType() {
-            return this.coreDiskType;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setTags(DescribeInstancesResponseBodyInstancesInstanceTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeInstancesResponseBodyInstancesInstanceTags getTags() {
-            return this.tags;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setMasterNodeCount(Integer masterNodeCount) {
-            this.masterNodeCount = masterNodeCount;
-            return this;
-        }
-        public Integer getMasterNodeCount() {
-            return this.masterNodeCount;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setNetworkType(String networkType) {
-            this.networkType = networkType;
-            return this;
-        }
-        public String getNetworkType() {
-            return this.networkType;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setCreatedTimeUTC(String createdTimeUTC) {
-            this.createdTimeUTC = createdTimeUTC;
-            return this;
-        }
-        public String getCreatedTimeUTC() {
-            return this.createdTimeUTC;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setParentId(String parentId) {
-            this.parentId = parentId;
-            return this;
-        }
-        public String getParentId() {
-            return this.parentId;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setExpireTimeUTC(String expireTimeUTC) {
-            this.expireTimeUTC = expireTimeUTC;
-            return this;
-        }
-        public String getExpireTimeUTC() {
-            return this.expireTimeUTC;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setMasterInstanceType(String masterInstanceType) {
-            this.masterInstanceType = masterInstanceType;
-            return this;
-        }
-        public String getMasterInstanceType() {
-            return this.masterInstanceType;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setCoreInstanceType(String coreInstanceType) {
-            this.coreInstanceType = coreInstanceType;
-            return this;
-        }
-        public String getCoreInstanceType() {
-            return this.coreInstanceType;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
-            return this;
-        }
-        public String getCreatedTime() {
-            return this.createdTime;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setCoreDiskSize(Integer coreDiskSize) {
-            this.coreDiskSize = coreDiskSize;
-            return this;
-        }
-        public Integer getCoreDiskSize() {
-            return this.coreDiskSize;
-        }
-
         public DescribeInstancesResponseBodyInstancesInstance setClusterId(String clusterId) {
             this.clusterId = clusterId;
             return this;
@@ -385,28 +257,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.clusterId;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstance setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
+        public DescribeInstancesResponseBodyInstancesInstance setClusterName(String clusterName) {
+            this.clusterName = clusterName;
             return this;
         }
-        public String getExpireTime() {
-            return this.expireTime;
+        public String getClusterName() {
+            return this.clusterName;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstance setIsHa(Boolean isHa) {
-            this.isHa = isHa;
+        public DescribeInstancesResponseBodyInstancesInstance setClusterType(String clusterType) {
+            this.clusterType = clusterType;
             return this;
         }
-        public Boolean getIsHa() {
-            return this.isHa;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
+        public String getClusterType() {
+            return this.clusterType;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setColdStorageStatus(String coldStorageStatus) {
@@ -417,6 +281,110 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.coldStorageStatus;
         }
 
+        public DescribeInstancesResponseBodyInstancesInstance setCoreDiskCount(String coreDiskCount) {
+            this.coreDiskCount = coreDiskCount;
+            return this;
+        }
+        public String getCoreDiskCount() {
+            return this.coreDiskCount;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setCoreDiskSize(Integer coreDiskSize) {
+            this.coreDiskSize = coreDiskSize;
+            return this;
+        }
+        public Integer getCoreDiskSize() {
+            return this.coreDiskSize;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setCoreDiskType(String coreDiskType) {
+            this.coreDiskType = coreDiskType;
+            return this;
+        }
+        public String getCoreDiskType() {
+            return this.coreDiskType;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setCoreInstanceType(String coreInstanceType) {
+            this.coreInstanceType = coreInstanceType;
+            return this;
+        }
+        public String getCoreInstanceType() {
+            return this.coreInstanceType;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setCoreNodeCount(Integer coreNodeCount) {
+            this.coreNodeCount = coreNodeCount;
+            return this;
+        }
+        public Integer getCoreNodeCount() {
+            return this.coreNodeCount;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
+            return this;
+        }
+        public String getCreatedTime() {
+            return this.createdTime;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setCreatedTimeUTC(String createdTimeUTC) {
+            this.createdTimeUTC = createdTimeUTC;
+            return this;
+        }
+        public String getCreatedTimeUTC() {
+            return this.createdTimeUTC;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setDuration(Integer duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Integer getDuration() {
+            return this.duration;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+        public String getEngine() {
+            return this.engine;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setExpireTimeUTC(String expireTimeUTC) {
+            this.expireTimeUTC = expireTimeUTC;
+            return this;
+        }
+        public String getExpireTimeUTC() {
+            return this.expireTimeUTC;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
         public DescribeInstancesResponseBodyInstancesInstance setIsDeletionProtection(Boolean isDeletionProtection) {
             this.isDeletionProtection = isDeletionProtection;
             return this;
@@ -425,12 +393,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.isDeletionProtection;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstance setRegionId(String regionId) {
-            this.regionId = regionId;
+        public DescribeInstancesResponseBodyInstancesInstance setIsHa(Boolean isHa) {
+            this.isHa = isHa;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
+        public Boolean getIsHa() {
+            return this.isHa;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setMajorVersion(String majorVersion) {
+            this.majorVersion = majorVersion;
+            return this;
+        }
+        public String getMajorVersion() {
+            return this.majorVersion;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setMasterDiskSize(Integer masterDiskSize) {
@@ -449,52 +425,28 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.masterDiskType;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstance setAutoRenewal(Boolean autoRenewal) {
-            this.autoRenewal = autoRenewal;
+        public DescribeInstancesResponseBodyInstancesInstance setMasterInstanceType(String masterInstanceType) {
+            this.masterInstanceType = masterInstanceType;
             return this;
         }
-        public Boolean getAutoRenewal() {
-            return this.autoRenewal;
+        public String getMasterInstanceType() {
+            return this.masterInstanceType;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstance setClusterType(String clusterType) {
-            this.clusterType = clusterType;
+        public DescribeInstancesResponseBodyInstancesInstance setMasterNodeCount(Integer masterNodeCount) {
+            this.masterNodeCount = masterNodeCount;
             return this;
         }
-        public String getClusterType() {
-            return this.clusterType;
+        public Integer getMasterNodeCount() {
+            return this.masterNodeCount;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstance setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
+        public DescribeInstancesResponseBodyInstancesInstance setModuleId(Integer moduleId) {
+            this.moduleId = moduleId;
             return this;
         }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setClusterName(String clusterName) {
-            this.clusterName = clusterName;
-            return this;
-        }
-        public String getClusterName() {
-            return this.clusterName;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstance setDuration(Integer duration) {
-            this.duration = duration;
-            return this;
-        }
-        public Integer getDuration() {
-            return this.duration;
+        public Integer getModuleId() {
+            return this.moduleId;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setModuleStackVersion(String moduleStackVersion) {
@@ -505,36 +457,84 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.moduleStackVersion;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstance setEngine(String engine) {
-            this.engine = engine;
+        public DescribeInstancesResponseBodyInstancesInstance setNetworkType(String networkType) {
+            this.networkType = networkType;
             return this;
         }
-        public String getEngine() {
-            return this.engine;
+        public String getNetworkType() {
+            return this.networkType;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstance setMajorVersion(String majorVersion) {
-            this.majorVersion = majorVersion;
+        public DescribeInstancesResponseBodyInstancesInstance setParentId(String parentId) {
+            this.parentId = parentId;
             return this;
         }
-        public String getMajorVersion() {
-            return this.majorVersion;
+        public String getParentId() {
+            return this.parentId;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstance setCoreDiskCount(String coreDiskCount) {
-            this.coreDiskCount = coreDiskCount;
+        public DescribeInstancesResponseBodyInstancesInstance setPayType(String payType) {
+            this.payType = payType;
             return this;
         }
-        public String getCoreDiskCount() {
-            return this.coreDiskCount;
+        public String getPayType() {
+            return this.payType;
         }
 
-        public DescribeInstancesResponseBodyInstancesInstance setCoreNodeCount(Integer coreNodeCount) {
-            this.coreNodeCount = coreNodeCount;
+        public DescribeInstancesResponseBodyInstancesInstance setRegionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
-        public Integer getCoreNodeCount() {
-            return this.coreNodeCount;
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setTags(DescribeInstancesResponseBodyInstancesInstanceTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstanceTags getTags() {
+            return this.tags;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

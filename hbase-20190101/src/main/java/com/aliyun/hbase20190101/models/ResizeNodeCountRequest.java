@@ -10,11 +10,11 @@ public class ResizeNodeCountRequest extends TeaModel {
     @NameInMap("NodeCount")
     public Integer nodeCount;
 
-    @NameInMap("ZoneId")
-    public String zoneId;
-
     @NameInMap("VSwitchId")
     public String vSwitchId;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static ResizeNodeCountRequest build(java.util.Map<String, ?> map) throws Exception {
         ResizeNodeCountRequest self = new ResizeNodeCountRequest();
@@ -37,20 +37,20 @@ public class ResizeNodeCountRequest extends TeaModel {
         return this.nodeCount;
     }
 
-    public ResizeNodeCountRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
     public ResizeNodeCountRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public ResizeNodeCountRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

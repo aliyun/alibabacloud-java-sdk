@@ -7,65 +7,65 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("HaTables")
-    public String haTables;
-
-    @NameInMap("HaActiveHdfsUri")
-    public String haActiveHdfsUri;
-
-    @NameInMap("HaActiveHbaseFsDir")
-    public String haActiveHbaseFsDir;
+    @NameInMap("HaActive")
+    public String haActive;
 
     @NameInMap("HaActiveClusterKey")
     public String haActiveClusterKey;
 
-    @NameInMap("HaActiveVersion")
-    public String haActiveVersion;
+    @NameInMap("HaActiveDBType")
+    public String haActiveDBType;
 
-    @NameInMap("HaActiveUser")
-    public String haActiveUser;
+    @NameInMap("HaActiveHbaseFsDir")
+    public String haActiveHbaseFsDir;
+
+    @NameInMap("HaActiveHdfsUri")
+    public String haActiveHdfsUri;
 
     @NameInMap("HaActivePassword")
     public String haActivePassword;
 
-    @NameInMap("HaStandbyHdfsUri")
-    public String haStandbyHdfsUri;
+    @NameInMap("HaActiveUser")
+    public String haActiveUser;
 
-    @NameInMap("HaStandbyHbaseFsDir")
-    public String haStandbyHbaseFsDir;
+    @NameInMap("HaActiveVersion")
+    public String haActiveVersion;
 
-    @NameInMap("HaStandbyClusterKey")
-    public String haStandbyClusterKey;
-
-    @NameInMap("HaStandbyVersion")
-    public String haStandbyVersion;
-
-    @NameInMap("HaStandbyUser")
-    public String haStandbyUser;
-
-    @NameInMap("HaStandbyPassword")
-    public String haStandbyPassword;
-
-    @NameInMap("HaActive")
-    public String haActive;
+    @NameInMap("HaMigrateType")
+    public String haMigrateType;
 
     @NameInMap("HaStandby")
     public String haStandby;
 
-    @NameInMap("HaActiveDBType")
-    public String haActiveDBType;
+    @NameInMap("HaStandbyClusterKey")
+    public String haStandbyClusterKey;
 
     @NameInMap("HaStandbyDBType")
     public String haStandbyDBType;
+
+    @NameInMap("HaStandbyHbaseFsDir")
+    public String haStandbyHbaseFsDir;
+
+    @NameInMap("HaStandbyHdfsUri")
+    public String haStandbyHdfsUri;
+
+    @NameInMap("HaStandbyPassword")
+    public String haStandbyPassword;
+
+    @NameInMap("HaStandbyUser")
+    public String haStandbyUser;
+
+    @NameInMap("HaStandbyVersion")
+    public String haStandbyVersion;
+
+    @NameInMap("HaTables")
+    public String haTables;
 
     @NameInMap("IsActiveStandard")
     public Boolean isActiveStandard;
 
     @NameInMap("IsStandbyStandard")
     public Boolean isStandbyStandard;
-
-    @NameInMap("HaMigrateType")
-    public String haMigrateType;
 
     public static RelateDbForHBaseHaRequest build(java.util.Map<String, ?> map) throws Exception {
         RelateDbForHBaseHaRequest self = new RelateDbForHBaseHaRequest();
@@ -80,28 +80,12 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public RelateDbForHBaseHaRequest setHaTables(String haTables) {
-        this.haTables = haTables;
+    public RelateDbForHBaseHaRequest setHaActive(String haActive) {
+        this.haActive = haActive;
         return this;
     }
-    public String getHaTables() {
-        return this.haTables;
-    }
-
-    public RelateDbForHBaseHaRequest setHaActiveHdfsUri(String haActiveHdfsUri) {
-        this.haActiveHdfsUri = haActiveHdfsUri;
-        return this;
-    }
-    public String getHaActiveHdfsUri() {
-        return this.haActiveHdfsUri;
-    }
-
-    public RelateDbForHBaseHaRequest setHaActiveHbaseFsDir(String haActiveHbaseFsDir) {
-        this.haActiveHbaseFsDir = haActiveHbaseFsDir;
-        return this;
-    }
-    public String getHaActiveHbaseFsDir() {
-        return this.haActiveHbaseFsDir;
+    public String getHaActive() {
+        return this.haActive;
     }
 
     public RelateDbForHBaseHaRequest setHaActiveClusterKey(String haActiveClusterKey) {
@@ -112,20 +96,28 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
         return this.haActiveClusterKey;
     }
 
-    public RelateDbForHBaseHaRequest setHaActiveVersion(String haActiveVersion) {
-        this.haActiveVersion = haActiveVersion;
+    public RelateDbForHBaseHaRequest setHaActiveDBType(String haActiveDBType) {
+        this.haActiveDBType = haActiveDBType;
         return this;
     }
-    public String getHaActiveVersion() {
-        return this.haActiveVersion;
+    public String getHaActiveDBType() {
+        return this.haActiveDBType;
     }
 
-    public RelateDbForHBaseHaRequest setHaActiveUser(String haActiveUser) {
-        this.haActiveUser = haActiveUser;
+    public RelateDbForHBaseHaRequest setHaActiveHbaseFsDir(String haActiveHbaseFsDir) {
+        this.haActiveHbaseFsDir = haActiveHbaseFsDir;
         return this;
     }
-    public String getHaActiveUser() {
-        return this.haActiveUser;
+    public String getHaActiveHbaseFsDir() {
+        return this.haActiveHbaseFsDir;
+    }
+
+    public RelateDbForHBaseHaRequest setHaActiveHdfsUri(String haActiveHdfsUri) {
+        this.haActiveHdfsUri = haActiveHdfsUri;
+        return this;
+    }
+    public String getHaActiveHdfsUri() {
+        return this.haActiveHdfsUri;
     }
 
     public RelateDbForHBaseHaRequest setHaActivePassword(String haActivePassword) {
@@ -136,60 +128,28 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
         return this.haActivePassword;
     }
 
-    public RelateDbForHBaseHaRequest setHaStandbyHdfsUri(String haStandbyHdfsUri) {
-        this.haStandbyHdfsUri = haStandbyHdfsUri;
+    public RelateDbForHBaseHaRequest setHaActiveUser(String haActiveUser) {
+        this.haActiveUser = haActiveUser;
         return this;
     }
-    public String getHaStandbyHdfsUri() {
-        return this.haStandbyHdfsUri;
+    public String getHaActiveUser() {
+        return this.haActiveUser;
     }
 
-    public RelateDbForHBaseHaRequest setHaStandbyHbaseFsDir(String haStandbyHbaseFsDir) {
-        this.haStandbyHbaseFsDir = haStandbyHbaseFsDir;
+    public RelateDbForHBaseHaRequest setHaActiveVersion(String haActiveVersion) {
+        this.haActiveVersion = haActiveVersion;
         return this;
     }
-    public String getHaStandbyHbaseFsDir() {
-        return this.haStandbyHbaseFsDir;
+    public String getHaActiveVersion() {
+        return this.haActiveVersion;
     }
 
-    public RelateDbForHBaseHaRequest setHaStandbyClusterKey(String haStandbyClusterKey) {
-        this.haStandbyClusterKey = haStandbyClusterKey;
+    public RelateDbForHBaseHaRequest setHaMigrateType(String haMigrateType) {
+        this.haMigrateType = haMigrateType;
         return this;
     }
-    public String getHaStandbyClusterKey() {
-        return this.haStandbyClusterKey;
-    }
-
-    public RelateDbForHBaseHaRequest setHaStandbyVersion(String haStandbyVersion) {
-        this.haStandbyVersion = haStandbyVersion;
-        return this;
-    }
-    public String getHaStandbyVersion() {
-        return this.haStandbyVersion;
-    }
-
-    public RelateDbForHBaseHaRequest setHaStandbyUser(String haStandbyUser) {
-        this.haStandbyUser = haStandbyUser;
-        return this;
-    }
-    public String getHaStandbyUser() {
-        return this.haStandbyUser;
-    }
-
-    public RelateDbForHBaseHaRequest setHaStandbyPassword(String haStandbyPassword) {
-        this.haStandbyPassword = haStandbyPassword;
-        return this;
-    }
-    public String getHaStandbyPassword() {
-        return this.haStandbyPassword;
-    }
-
-    public RelateDbForHBaseHaRequest setHaActive(String haActive) {
-        this.haActive = haActive;
-        return this;
-    }
-    public String getHaActive() {
-        return this.haActive;
+    public String getHaMigrateType() {
+        return this.haMigrateType;
     }
 
     public RelateDbForHBaseHaRequest setHaStandby(String haStandby) {
@@ -200,12 +160,12 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
         return this.haStandby;
     }
 
-    public RelateDbForHBaseHaRequest setHaActiveDBType(String haActiveDBType) {
-        this.haActiveDBType = haActiveDBType;
+    public RelateDbForHBaseHaRequest setHaStandbyClusterKey(String haStandbyClusterKey) {
+        this.haStandbyClusterKey = haStandbyClusterKey;
         return this;
     }
-    public String getHaActiveDBType() {
-        return this.haActiveDBType;
+    public String getHaStandbyClusterKey() {
+        return this.haStandbyClusterKey;
     }
 
     public RelateDbForHBaseHaRequest setHaStandbyDBType(String haStandbyDBType) {
@@ -214,6 +174,54 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     }
     public String getHaStandbyDBType() {
         return this.haStandbyDBType;
+    }
+
+    public RelateDbForHBaseHaRequest setHaStandbyHbaseFsDir(String haStandbyHbaseFsDir) {
+        this.haStandbyHbaseFsDir = haStandbyHbaseFsDir;
+        return this;
+    }
+    public String getHaStandbyHbaseFsDir() {
+        return this.haStandbyHbaseFsDir;
+    }
+
+    public RelateDbForHBaseHaRequest setHaStandbyHdfsUri(String haStandbyHdfsUri) {
+        this.haStandbyHdfsUri = haStandbyHdfsUri;
+        return this;
+    }
+    public String getHaStandbyHdfsUri() {
+        return this.haStandbyHdfsUri;
+    }
+
+    public RelateDbForHBaseHaRequest setHaStandbyPassword(String haStandbyPassword) {
+        this.haStandbyPassword = haStandbyPassword;
+        return this;
+    }
+    public String getHaStandbyPassword() {
+        return this.haStandbyPassword;
+    }
+
+    public RelateDbForHBaseHaRequest setHaStandbyUser(String haStandbyUser) {
+        this.haStandbyUser = haStandbyUser;
+        return this;
+    }
+    public String getHaStandbyUser() {
+        return this.haStandbyUser;
+    }
+
+    public RelateDbForHBaseHaRequest setHaStandbyVersion(String haStandbyVersion) {
+        this.haStandbyVersion = haStandbyVersion;
+        return this;
+    }
+    public String getHaStandbyVersion() {
+        return this.haStandbyVersion;
+    }
+
+    public RelateDbForHBaseHaRequest setHaTables(String haTables) {
+        this.haTables = haTables;
+        return this;
+    }
+    public String getHaTables() {
+        return this.haTables;
     }
 
     public RelateDbForHBaseHaRequest setIsActiveStandard(Boolean isActiveStandard) {
@@ -230,14 +238,6 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     }
     public Boolean getIsStandbyStandard() {
         return this.isStandbyStandard;
-    }
-
-    public RelateDbForHBaseHaRequest setHaMigrateType(String haMigrateType) {
-        this.haMigrateType = haMigrateType;
-        return this;
-    }
-    public String getHaMigrateType() {
-        return this.haMigrateType;
     }
 
 }

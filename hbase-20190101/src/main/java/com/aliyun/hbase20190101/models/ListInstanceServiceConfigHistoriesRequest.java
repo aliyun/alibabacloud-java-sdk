@@ -7,11 +7,11 @@ public class ListInstanceServiceConfigHistoriesRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static ListInstanceServiceConfigHistoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceServiceConfigHistoriesRequest self = new ListInstanceServiceConfigHistoriesRequest();
@@ -26,20 +26,20 @@ public class ListInstanceServiceConfigHistoriesRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public ListInstanceServiceConfigHistoriesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public ListInstanceServiceConfigHistoriesRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public ListInstanceServiceConfigHistoriesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

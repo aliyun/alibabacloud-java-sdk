@@ -4,23 +4,15 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMultiZoneAvailableResourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AvailableZones")
     public DescribeMultiZoneAvailableResourceResponseBodyAvailableZones availableZones;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeMultiZoneAvailableResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMultiZoneAvailableResourceResponseBody self = new DescribeMultiZoneAvailableResourceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeMultiZoneAvailableResourceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeMultiZoneAvailableResourceResponseBody setAvailableZones(DescribeMultiZoneAvailableResourceResponseBodyAvailableZones availableZones) {
@@ -31,342 +23,12 @@ public class DescribeMultiZoneAvailableResourceResponseBody extends TeaModel {
         return this.availableZones;
     }
 
-    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceInstanceTypeDetail extends TeaModel {
-        @NameInMap("Cpu")
-        public Integer cpu;
-
-        @NameInMap("Mem")
-        public Integer mem;
-
-        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceInstanceTypeDetail build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceInstanceTypeDetail self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceInstanceTypeDetail();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceInstanceTypeDetail setCpu(Integer cpu) {
-            this.cpu = cpu;
-            return this;
-        }
-        public Integer getCpu() {
-            return this.cpu;
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceInstanceTypeDetail setMem(Integer mem) {
-            this.mem = mem;
-            return this;
-        }
-        public Integer getMem() {
-            return this.mem;
-        }
-
+    public DescribeMultiZoneAvailableResourceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
     }
-
-    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceDBInstanceStorageRange extends TeaModel {
-        @NameInMap("MaxSize")
-        public Integer maxSize;
-
-        @NameInMap("StepSize")
-        public Integer stepSize;
-
-        @NameInMap("MinSize")
-        public Integer minSize;
-
-        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceDBInstanceStorageRange build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceDBInstanceStorageRange self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceDBInstanceStorageRange();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceDBInstanceStorageRange setMaxSize(Integer maxSize) {
-            this.maxSize = maxSize;
-            return this;
-        }
-        public Integer getMaxSize() {
-            return this.maxSize;
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceDBInstanceStorageRange setStepSize(Integer stepSize) {
-            this.stepSize = stepSize;
-            return this;
-        }
-        public Integer getStepSize() {
-            return this.stepSize;
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceDBInstanceStorageRange setMinSize(Integer minSize) {
-            this.minSize = minSize;
-            return this;
-        }
-        public Integer getMinSize() {
-            return this.minSize;
-        }
-
-    }
-
-    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResource extends TeaModel {
-        @NameInMap("InstanceTypeDetail")
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceInstanceTypeDetail instanceTypeDetail;
-
-        @NameInMap("DBInstanceStorageRange")
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceDBInstanceStorageRange DBInstanceStorageRange;
-
-        @NameInMap("MaxCoreCount")
-        public Integer maxCoreCount;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResource build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResource self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResource();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResource setInstanceTypeDetail(DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceInstanceTypeDetail instanceTypeDetail) {
-            this.instanceTypeDetail = instanceTypeDetail;
-            return this;
-        }
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceInstanceTypeDetail getInstanceTypeDetail() {
-            return this.instanceTypeDetail;
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResource setDBInstanceStorageRange(DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceDBInstanceStorageRange DBInstanceStorageRange) {
-            this.DBInstanceStorageRange = DBInstanceStorageRange;
-            return this;
-        }
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceDBInstanceStorageRange getDBInstanceStorageRange() {
-            return this.DBInstanceStorageRange;
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResource setMaxCoreCount(Integer maxCoreCount) {
-            this.maxCoreCount = maxCoreCount;
-            return this;
-        }
-        public Integer getMaxCoreCount() {
-            return this.maxCoreCount;
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResource setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-    }
-
-    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResources extends TeaModel {
-        @NameInMap("CoreResource")
-        public java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResource> coreResource;
-
-        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResources build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResources self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResources();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResources setCoreResource(java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResource> coreResource) {
-            this.coreResource = coreResource;
-            return this;
-        }
-        public java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResource> getCoreResource() {
-            return this.coreResource;
-        }
-
-    }
-
-    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageType extends TeaModel {
-        @NameInMap("CoreResources")
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResources coreResources;
-
-        @NameInMap("StorageType")
-        public String storageType;
-
-        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageType build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageType self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageType();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageType setCoreResources(DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResources coreResources) {
-            this.coreResources = coreResources;
-            return this;
-        }
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResources getCoreResources() {
-            return this.coreResources;
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageType setStorageType(String storageType) {
-            this.storageType = storageType;
-            return this;
-        }
-        public String getStorageType() {
-            return this.storageType;
-        }
-
-    }
-
-    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypes extends TeaModel {
-        @NameInMap("SupportedStorageType")
-        public java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageType> supportedStorageType;
-
-        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypes self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypes();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypes setSupportedStorageType(java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageType> supportedStorageType) {
-            this.supportedStorageType = supportedStorageType;
-            return this;
-        }
-        public java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageType> getSupportedStorageType() {
-            return this.supportedStorageType;
-        }
-
-    }
-
-    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories extends TeaModel {
-        @NameInMap("SupportedStorageTypes")
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypes supportedStorageTypes;
-
-        @NameInMap("Category")
-        public String category;
-
-        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories setSupportedStorageTypes(DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypes supportedStorageTypes) {
-            this.supportedStorageTypes = supportedStorageTypes;
-            return this;
-        }
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypes getSupportedStorageTypes() {
-            return this.supportedStorageTypes;
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
-        }
-
-    }
-
-    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories extends TeaModel {
-        @NameInMap("SupportedCategories")
-        public java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories> supportedCategories;
-
-        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories setSupportedCategories(java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories> supportedCategories) {
-            this.supportedCategories = supportedCategories;
-            return this;
-        }
-        public java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories> getSupportedCategories() {
-            return this.supportedCategories;
-        }
-
-    }
-
-    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion extends TeaModel {
-        @NameInMap("Version")
-        public String version;
-
-        @NameInMap("SupportedCategories")
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories supportedCategories;
-
-        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion setSupportedCategories(DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories supportedCategories) {
-            this.supportedCategories = supportedCategories;
-            return this;
-        }
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories getSupportedCategories() {
-            return this.supportedCategories;
-        }
-
-    }
-
-    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersions extends TeaModel {
-        @NameInMap("SupportedEngineVersion")
-        public java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion> supportedEngineVersion;
-
-        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersions self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersions();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersions setSupportedEngineVersion(java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion> supportedEngineVersion) {
-            this.supportedEngineVersion = supportedEngineVersion;
-            return this;
-        }
-        public java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion> getSupportedEngineVersion() {
-            return this.supportedEngineVersion;
-        }
-
-    }
-
-    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine extends TeaModel {
-        @NameInMap("SupportedEngineVersions")
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersions supportedEngineVersions;
-
-        @NameInMap("Engine")
-        public String engine;
-
-        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine setSupportedEngineVersions(DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersions supportedEngineVersions) {
-            this.supportedEngineVersions = supportedEngineVersions;
-            return this;
-        }
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersions getSupportedEngineVersions() {
-            return this.supportedEngineVersions;
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine setEngine(String engine) {
-            this.engine = engine;
-            return this;
-        }
-        public String getEngine() {
-            return this.engine;
-        }
-
-    }
-
-    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines extends TeaModel {
-        @NameInMap("SupportedEngine")
-        public java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine> supportedEngine;
-
-        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines setSupportedEngine(java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine> supportedEngine) {
-            this.supportedEngine = supportedEngine;
-            return this;
-        }
-        public java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine> getSupportedEngine() {
-            return this.supportedEngine;
-        }
-
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResourceInstanceTypeDetail extends TeaModel {
@@ -400,23 +62,15 @@ public class DescribeMultiZoneAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResource extends TeaModel {
-        @NameInMap("InstanceTypeDetail")
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResourceInstanceTypeDetail instanceTypeDetail;
-
         @NameInMap("InstanceType")
         public String instanceType;
+
+        @NameInMap("InstanceTypeDetail")
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResourceInstanceTypeDetail instanceTypeDetail;
 
         public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResource self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResource();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResource setInstanceTypeDetail(DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResourceInstanceTypeDetail instanceTypeDetail) {
-            this.instanceTypeDetail = instanceTypeDetail;
-            return this;
-        }
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResourceInstanceTypeDetail getInstanceTypeDetail() {
-            return this.instanceTypeDetail;
         }
 
         public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResource setInstanceType(String instanceType) {
@@ -425,6 +79,14 @@ public class DescribeMultiZoneAvailableResourceResponseBody extends TeaModel {
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResource setInstanceTypeDetail(DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResourceInstanceTypeDetail instanceTypeDetail) {
+            this.instanceTypeDetail = instanceTypeDetail;
+            return this;
+        }
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResourceInstanceTypeDetail getInstanceTypeDetail() {
+            return this.instanceTypeDetail;
         }
 
     }
@@ -448,38 +110,360 @@ public class DescribeMultiZoneAvailableResourceResponseBody extends TeaModel {
 
     }
 
+    public static class DBInstanceStorageRange extends TeaModel {
+        @NameInMap("MaxSize")
+        public Integer maxSize;
+
+        @NameInMap("MinSize")
+        public Integer minSize;
+
+        @NameInMap("StepSize")
+        public Integer stepSize;
+
+        public static DBInstanceStorageRange build(java.util.Map<String, ?> map) throws Exception {
+            DBInstanceStorageRange self = new DBInstanceStorageRange();
+            return TeaModel.build(map, self);
+        }
+
+        public DBInstanceStorageRange setMaxSize(Integer maxSize) {
+            this.maxSize = maxSize;
+            return this;
+        }
+        public Integer getMaxSize() {
+            return this.maxSize;
+        }
+
+        public DBInstanceStorageRange setMinSize(Integer minSize) {
+            this.minSize = minSize;
+            return this;
+        }
+        public Integer getMinSize() {
+            return this.minSize;
+        }
+
+        public DBInstanceStorageRange setStepSize(Integer stepSize) {
+            this.stepSize = stepSize;
+            return this;
+        }
+        public Integer getStepSize() {
+            return this.stepSize;
+        }
+
+    }
+
+    public static class InstanceTypeDetail extends TeaModel {
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        @NameInMap("Mem")
+        public Integer mem;
+
+        public static InstanceTypeDetail build(java.util.Map<String, ?> map) throws Exception {
+            InstanceTypeDetail self = new InstanceTypeDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public InstanceTypeDetail setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public InstanceTypeDetail setMem(Integer mem) {
+            this.mem = mem;
+            return this;
+        }
+        public Integer getMem() {
+            return this.mem;
+        }
+
+    }
+
+    public static class CoreResource extends TeaModel {
+        @NameInMap("DBInstanceStorageRange")
+        public DBInstanceStorageRange DBInstanceStorageRange;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("InstanceTypeDetail")
+        public InstanceTypeDetail instanceTypeDetail;
+
+        @NameInMap("MaxCoreCount")
+        public Integer maxCoreCount;
+
+        public static CoreResource build(java.util.Map<String, ?> map) throws Exception {
+            CoreResource self = new CoreResource();
+            return TeaModel.build(map, self);
+        }
+
+        public CoreResource setDBInstanceStorageRange(DBInstanceStorageRange DBInstanceStorageRange) {
+            this.DBInstanceStorageRange = DBInstanceStorageRange;
+            return this;
+        }
+        public DBInstanceStorageRange getDBInstanceStorageRange() {
+            return this.DBInstanceStorageRange;
+        }
+
+        public CoreResource setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public CoreResource setInstanceTypeDetail(InstanceTypeDetail instanceTypeDetail) {
+            this.instanceTypeDetail = instanceTypeDetail;
+            return this;
+        }
+        public InstanceTypeDetail getInstanceTypeDetail() {
+            return this.instanceTypeDetail;
+        }
+
+        public CoreResource setMaxCoreCount(Integer maxCoreCount) {
+            this.maxCoreCount = maxCoreCount;
+            return this;
+        }
+        public Integer getMaxCoreCount() {
+            return this.maxCoreCount;
+        }
+
+    }
+
+    public static class CoreResources extends TeaModel {
+        @NameInMap("CoreResource")
+        public java.util.List<CoreResource> coreResource;
+
+        public static CoreResources build(java.util.Map<String, ?> map) throws Exception {
+            CoreResources self = new CoreResources();
+            return TeaModel.build(map, self);
+        }
+
+        public CoreResources setCoreResource(java.util.List<CoreResource> coreResource) {
+            this.coreResource = coreResource;
+            return this;
+        }
+        public java.util.List<CoreResource> getCoreResource() {
+            return this.coreResource;
+        }
+
+    }
+
+    public static class SupportedStorageType extends TeaModel {
+        @NameInMap("CoreResources")
+        public CoreResources coreResources;
+
+        @NameInMap("StorageType")
+        public String storageType;
+
+        public static SupportedStorageType build(java.util.Map<String, ?> map) throws Exception {
+            SupportedStorageType self = new SupportedStorageType();
+            return TeaModel.build(map, self);
+        }
+
+        public SupportedStorageType setCoreResources(CoreResources coreResources) {
+            this.coreResources = coreResources;
+            return this;
+        }
+        public CoreResources getCoreResources() {
+            return this.coreResources;
+        }
+
+        public SupportedStorageType setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+    }
+
+    public static class SupportedStorageTypes extends TeaModel {
+        @NameInMap("SupportedStorageType")
+        public java.util.List<SupportedStorageType> supportedStorageType;
+
+        public static SupportedStorageTypes build(java.util.Map<String, ?> map) throws Exception {
+            SupportedStorageTypes self = new SupportedStorageTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public SupportedStorageTypes setSupportedStorageType(java.util.List<SupportedStorageType> supportedStorageType) {
+            this.supportedStorageType = supportedStorageType;
+            return this;
+        }
+        public java.util.List<SupportedStorageType> getSupportedStorageType() {
+            return this.supportedStorageType;
+        }
+
+    }
+
+    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("SupportedStorageTypes")
+        public SupportedStorageTypes supportedStorageTypes;
+
+        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories setSupportedStorageTypes(SupportedStorageTypes supportedStorageTypes) {
+            this.supportedStorageTypes = supportedStorageTypes;
+            return this;
+        }
+        public SupportedStorageTypes getSupportedStorageTypes() {
+            return this.supportedStorageTypes;
+        }
+
+    }
+
+    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories extends TeaModel {
+        @NameInMap("SupportedCategories")
+        public java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories> supportedCategories;
+
+        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories setSupportedCategories(java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories> supportedCategories) {
+            this.supportedCategories = supportedCategories;
+            return this;
+        }
+        public java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories> getSupportedCategories() {
+            return this.supportedCategories;
+        }
+
+    }
+
+    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion extends TeaModel {
+        @NameInMap("SupportedCategories")
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories supportedCategories;
+
+        @NameInMap("Version")
+        public String version;
+
+        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion setSupportedCategories(DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories supportedCategories) {
+            this.supportedCategories = supportedCategories;
+            return this;
+        }
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories getSupportedCategories() {
+            return this.supportedCategories;
+        }
+
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
+    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersions extends TeaModel {
+        @NameInMap("SupportedEngineVersion")
+        public java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion> supportedEngineVersion;
+
+        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersions self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersions setSupportedEngineVersion(java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion> supportedEngineVersion) {
+            this.supportedEngineVersion = supportedEngineVersion;
+            return this;
+        }
+        public java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersion> getSupportedEngineVersion() {
+            return this.supportedEngineVersion;
+        }
+
+    }
+
+    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine extends TeaModel {
+        @NameInMap("Engine")
+        public String engine;
+
+        @NameInMap("SupportedEngineVersions")
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersions supportedEngineVersions;
+
+        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine setEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+        public String getEngine() {
+            return this.engine;
+        }
+
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine setSupportedEngineVersions(DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersions supportedEngineVersions) {
+            this.supportedEngineVersions = supportedEngineVersions;
+            return this;
+        }
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersions getSupportedEngineVersions() {
+            return this.supportedEngineVersions;
+        }
+
+    }
+
+    public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines extends TeaModel {
+        @NameInMap("SupportedEngine")
+        public java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine> supportedEngine;
+
+        public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines setSupportedEngine(java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine> supportedEngine) {
+            this.supportedEngine = supportedEngine;
+            return this;
+        }
+        public java.util.List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine> getSupportedEngine() {
+            return this.supportedEngine;
+        }
+
+    }
+
     public static class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZone extends TeaModel {
-        @NameInMap("SupportedEngines")
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines supportedEngines;
-
-        @NameInMap("ZoneCombination")
-        public String zoneCombination;
-
         @NameInMap("MasterResources")
         public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResources masterResources;
 
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("SupportedEngines")
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines supportedEngines;
+
+        @NameInMap("ZoneCombination")
+        public String zoneCombination;
+
         public static DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZone self = new DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZone();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZone setSupportedEngines(DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines supportedEngines) {
-            this.supportedEngines = supportedEngines;
-            return this;
-        }
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines getSupportedEngines() {
-            return this.supportedEngines;
-        }
-
-        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZone setZoneCombination(String zoneCombination) {
-            this.zoneCombination = zoneCombination;
-            return this;
-        }
-        public String getZoneCombination() {
-            return this.zoneCombination;
         }
 
         public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZone setMasterResources(DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResources masterResources) {
@@ -496,6 +480,22 @@ public class DescribeMultiZoneAvailableResourceResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZone setSupportedEngines(DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines supportedEngines) {
+            this.supportedEngines = supportedEngines;
+            return this;
+        }
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines getSupportedEngines() {
+            return this.supportedEngines;
+        }
+
+        public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZone setZoneCombination(String zoneCombination) {
+            this.zoneCombination = zoneCombination;
+            return this;
+        }
+        public String getZoneCombination() {
+            return this.zoneCombination;
         }
 
     }

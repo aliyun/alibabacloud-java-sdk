@@ -7,9 +7,6 @@ public class CreateRestorePlanRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("TargetClusterId")
-    public String targetClusterId;
-
     @NameInMap("RestoreAllTable")
     public Boolean restoreAllTable;
 
@@ -22,6 +19,9 @@ public class CreateRestorePlanRequest extends TeaModel {
     @NameInMap("Tables")
     public String tables;
 
+    @NameInMap("TargetClusterId")
+    public String targetClusterId;
+
     public static CreateRestorePlanRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRestorePlanRequest self = new CreateRestorePlanRequest();
         return TeaModel.build(map, self);
@@ -33,14 +33,6 @@ public class CreateRestorePlanRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
-    }
-
-    public CreateRestorePlanRequest setTargetClusterId(String targetClusterId) {
-        this.targetClusterId = targetClusterId;
-        return this;
-    }
-    public String getTargetClusterId() {
-        return this.targetClusterId;
     }
 
     public CreateRestorePlanRequest setRestoreAllTable(Boolean restoreAllTable) {
@@ -73,6 +65,14 @@ public class CreateRestorePlanRequest extends TeaModel {
     }
     public String getTables() {
         return this.tables;
+    }
+
+    public CreateRestorePlanRequest setTargetClusterId(String targetClusterId) {
+        this.targetClusterId = targetClusterId;
+        return this;
+    }
+    public String getTargetClusterId() {
+        return this.targetClusterId;
     }
 
 }

@@ -4,34 +4,18 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupSummaryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Full")
+    public DescribeBackupSummaryResponseBodyFull full;
 
     @NameInMap("Incr")
     public DescribeBackupSummaryResponseBodyIncr incr;
 
-    @NameInMap("Full")
-    public DescribeBackupSummaryResponseBodyFull full;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeBackupSummaryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupSummaryResponseBody self = new DescribeBackupSummaryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBackupSummaryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeBackupSummaryResponseBody setIncr(DescribeBackupSummaryResponseBodyIncr incr) {
-        this.incr = incr;
-        return this;
-    }
-    public DescribeBackupSummaryResponseBodyIncr getIncr() {
-        return this.incr;
     }
 
     public DescribeBackupSummaryResponseBody setFull(DescribeBackupSummaryResponseBodyFull full) {
@@ -42,83 +26,28 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         return this.full;
     }
 
-    public static class DescribeBackupSummaryResponseBodyIncr extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+    public DescribeBackupSummaryResponseBody setIncr(DescribeBackupSummaryResponseBodyIncr incr) {
+        this.incr = incr;
+        return this;
+    }
+    public DescribeBackupSummaryResponseBodyIncr getIncr() {
+        return this.incr;
+    }
 
-        @NameInMap("Speed")
-        public String speed;
-
-        @NameInMap("Pos")
-        public String pos;
-
-        @NameInMap("QueueLogNum")
-        public String queueLogNum;
-
-        @NameInMap("BackupLogSize")
-        public String backupLogSize;
-
-        @NameInMap("RunningLogNum")
-        public String runningLogNum;
-
-        public static DescribeBackupSummaryResponseBodyIncr build(java.util.Map<String, ?> map) throws Exception {
-            DescribeBackupSummaryResponseBodyIncr self = new DescribeBackupSummaryResponseBodyIncr();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeBackupSummaryResponseBodyIncr setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeBackupSummaryResponseBodyIncr setSpeed(String speed) {
-            this.speed = speed;
-            return this;
-        }
-        public String getSpeed() {
-            return this.speed;
-        }
-
-        public DescribeBackupSummaryResponseBodyIncr setPos(String pos) {
-            this.pos = pos;
-            return this;
-        }
-        public String getPos() {
-            return this.pos;
-        }
-
-        public DescribeBackupSummaryResponseBodyIncr setQueueLogNum(String queueLogNum) {
-            this.queueLogNum = queueLogNum;
-            return this;
-        }
-        public String getQueueLogNum() {
-            return this.queueLogNum;
-        }
-
-        public DescribeBackupSummaryResponseBodyIncr setBackupLogSize(String backupLogSize) {
-            this.backupLogSize = backupLogSize;
-            return this;
-        }
-        public String getBackupLogSize() {
-            return this.backupLogSize;
-        }
-
-        public DescribeBackupSummaryResponseBodyIncr setRunningLogNum(String runningLogNum) {
-            this.runningLogNum = runningLogNum;
-            return this;
-        }
-        public String getRunningLogNum() {
-            return this.runningLogNum;
-        }
-
+    public DescribeBackupSummaryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeBackupSummaryResponseBodyFullRecordsRecord extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("DataSize")
+        public String dataSize;
 
         @NameInMap("FinishTime")
         public String finishTime;
@@ -126,29 +55,34 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         @NameInMap("Process")
         public String process;
 
-        @NameInMap("DataSize")
-        public String dataSize;
+        @NameInMap("RecordId")
+        public String recordId;
 
         @NameInMap("Speed")
         public String speed;
 
-        @NameInMap("RecordId")
-        public String recordId;
-
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeBackupSummaryResponseBodyFullRecordsRecord build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupSummaryResponseBodyFullRecordsRecord self = new DescribeBackupSummaryResponseBodyFullRecordsRecord();
             return TeaModel.build(map, self);
         }
 
-        public DescribeBackupSummaryResponseBodyFullRecordsRecord setStatus(String status) {
-            this.status = status;
+        public DescribeBackupSummaryResponseBodyFullRecordsRecord setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeBackupSummaryResponseBodyFullRecordsRecord setDataSize(String dataSize) {
+            this.dataSize = dataSize;
+            return this;
+        }
+        public String getDataSize() {
+            return this.dataSize;
         }
 
         public DescribeBackupSummaryResponseBodyFullRecordsRecord setFinishTime(String finishTime) {
@@ -167,12 +101,12 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             return this.process;
         }
 
-        public DescribeBackupSummaryResponseBodyFullRecordsRecord setDataSize(String dataSize) {
-            this.dataSize = dataSize;
+        public DescribeBackupSummaryResponseBodyFullRecordsRecord setRecordId(String recordId) {
+            this.recordId = recordId;
             return this;
         }
-        public String getDataSize() {
-            return this.dataSize;
+        public String getRecordId() {
+            return this.recordId;
         }
 
         public DescribeBackupSummaryResponseBodyFullRecordsRecord setSpeed(String speed) {
@@ -183,20 +117,12 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             return this.speed;
         }
 
-        public DescribeBackupSummaryResponseBodyFullRecordsRecord setRecordId(String recordId) {
-            this.recordId = recordId;
+        public DescribeBackupSummaryResponseBodyFullRecordsRecord setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getRecordId() {
-            return this.recordId;
-        }
-
-        public DescribeBackupSummaryResponseBodyFullRecordsRecord setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
+        public String getStatus() {
+            return this.status;
         }
 
     }
@@ -221,20 +147,20 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupSummaryResponseBodyFull extends TeaModel {
+        @NameInMap("HasMore")
+        public String hasMore;
+
         @NameInMap("NextFullBackupDate")
         public String nextFullBackupDate;
 
-        @NameInMap("Records")
-        public DescribeBackupSummaryResponseBodyFullRecords records;
-
-        @NameInMap("HasMore")
-        public String hasMore;
+        @NameInMap("PageNumber")
+        public Integer pageNumber;
 
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        @NameInMap("PageNumber")
-        public Integer pageNumber;
+        @NameInMap("Records")
+        public DescribeBackupSummaryResponseBodyFullRecords records;
 
         @NameInMap("Total")
         public Integer total;
@@ -242,22 +168,6 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         public static DescribeBackupSummaryResponseBodyFull build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupSummaryResponseBodyFull self = new DescribeBackupSummaryResponseBodyFull();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBackupSummaryResponseBodyFull setNextFullBackupDate(String nextFullBackupDate) {
-            this.nextFullBackupDate = nextFullBackupDate;
-            return this;
-        }
-        public String getNextFullBackupDate() {
-            return this.nextFullBackupDate;
-        }
-
-        public DescribeBackupSummaryResponseBodyFull setRecords(DescribeBackupSummaryResponseBodyFullRecords records) {
-            this.records = records;
-            return this;
-        }
-        public DescribeBackupSummaryResponseBodyFullRecords getRecords() {
-            return this.records;
         }
 
         public DescribeBackupSummaryResponseBodyFull setHasMore(String hasMore) {
@@ -268,12 +178,12 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             return this.hasMore;
         }
 
-        public DescribeBackupSummaryResponseBodyFull setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public DescribeBackupSummaryResponseBodyFull setNextFullBackupDate(String nextFullBackupDate) {
+            this.nextFullBackupDate = nextFullBackupDate;
             return this;
         }
-        public Integer getPageSize() {
-            return this.pageSize;
+        public String getNextFullBackupDate() {
+            return this.nextFullBackupDate;
         }
 
         public DescribeBackupSummaryResponseBodyFull setPageNumber(Integer pageNumber) {
@@ -284,12 +194,102 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             return this.pageNumber;
         }
 
+        public DescribeBackupSummaryResponseBodyFull setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public DescribeBackupSummaryResponseBodyFull setRecords(DescribeBackupSummaryResponseBodyFullRecords records) {
+            this.records = records;
+            return this;
+        }
+        public DescribeBackupSummaryResponseBodyFullRecords getRecords() {
+            return this.records;
+        }
+
         public DescribeBackupSummaryResponseBodyFull setTotal(Integer total) {
             this.total = total;
             return this;
         }
         public Integer getTotal() {
             return this.total;
+        }
+
+    }
+
+    public static class DescribeBackupSummaryResponseBodyIncr extends TeaModel {
+        @NameInMap("BackupLogSize")
+        public String backupLogSize;
+
+        @NameInMap("Pos")
+        public String pos;
+
+        @NameInMap("QueueLogNum")
+        public String queueLogNum;
+
+        @NameInMap("RunningLogNum")
+        public String runningLogNum;
+
+        @NameInMap("Speed")
+        public String speed;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeBackupSummaryResponseBodyIncr build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackupSummaryResponseBodyIncr self = new DescribeBackupSummaryResponseBodyIncr();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackupSummaryResponseBodyIncr setBackupLogSize(String backupLogSize) {
+            this.backupLogSize = backupLogSize;
+            return this;
+        }
+        public String getBackupLogSize() {
+            return this.backupLogSize;
+        }
+
+        public DescribeBackupSummaryResponseBodyIncr setPos(String pos) {
+            this.pos = pos;
+            return this;
+        }
+        public String getPos() {
+            return this.pos;
+        }
+
+        public DescribeBackupSummaryResponseBodyIncr setQueueLogNum(String queueLogNum) {
+            this.queueLogNum = queueLogNum;
+            return this;
+        }
+        public String getQueueLogNum() {
+            return this.queueLogNum;
+        }
+
+        public DescribeBackupSummaryResponseBodyIncr setRunningLogNum(String runningLogNum) {
+            this.runningLogNum = runningLogNum;
+            return this;
+        }
+        public String getRunningLogNum() {
+            return this.runningLogNum;
+        }
+
+        public DescribeBackupSummaryResponseBodyIncr setSpeed(String speed) {
+            this.speed = speed;
+            return this;
+        }
+        public String getSpeed() {
+            return this.speed;
+        }
+
+        public DescribeBackupSummaryResponseBodyIncr setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

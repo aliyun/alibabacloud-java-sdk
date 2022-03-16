@@ -7,11 +7,11 @@ public class ModifyIpWhitelistRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("IpList")
-    public String ipList;
-
     @NameInMap("GroupName")
     public String groupName;
+
+    @NameInMap("IpList")
+    public String ipList;
 
     @NameInMap("IpVersion")
     public String ipVersion;
@@ -29,20 +29,20 @@ public class ModifyIpWhitelistRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public ModifyIpWhitelistRequest setIpList(String ipList) {
-        this.ipList = ipList;
-        return this;
-    }
-    public String getIpList() {
-        return this.ipList;
-    }
-
     public ModifyIpWhitelistRequest setGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     public String getGroupName() {
         return this.groupName;
+    }
+
+    public ModifyIpWhitelistRequest setIpList(String ipList) {
+        this.ipList = ipList;
+        return this;
+    }
+    public String getIpList() {
+        return this.ipList;
     }
 
     public ModifyIpWhitelistRequest setIpVersion(String ipVersion) {

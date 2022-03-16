@@ -7,11 +7,11 @@ public class ModifyInstanceMaintainTimeRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("MaintainStartTime")
-    public String maintainStartTime;
-
     @NameInMap("MaintainEndTime")
     public String maintainEndTime;
+
+    @NameInMap("MaintainStartTime")
+    public String maintainStartTime;
 
     public static ModifyInstanceMaintainTimeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceMaintainTimeRequest self = new ModifyInstanceMaintainTimeRequest();
@@ -26,20 +26,20 @@ public class ModifyInstanceMaintainTimeRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public ModifyInstanceMaintainTimeRequest setMaintainStartTime(String maintainStartTime) {
-        this.maintainStartTime = maintainStartTime;
-        return this;
-    }
-    public String getMaintainStartTime() {
-        return this.maintainStartTime;
-    }
-
     public ModifyInstanceMaintainTimeRequest setMaintainEndTime(String maintainEndTime) {
         this.maintainEndTime = maintainEndTime;
         return this;
     }
     public String getMaintainEndTime() {
         return this.maintainEndTime;
+    }
+
+    public ModifyInstanceMaintainTimeRequest setMaintainStartTime(String maintainStartTime) {
+        this.maintainStartTime = maintainStartTime;
+        return this;
+    }
+    public String getMaintainStartTime() {
+        return this.maintainStartTime;
     }
 
 }

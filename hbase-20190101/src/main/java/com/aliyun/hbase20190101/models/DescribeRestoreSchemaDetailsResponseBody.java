@@ -4,23 +4,15 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
-    @NameInMap("RestoreSchema")
-    public DescribeRestoreSchemaDetailsResponseBodyRestoreSchema restoreSchema;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("RestoreSchema")
+    public DescribeRestoreSchemaDetailsResponseBodyRestoreSchema restoreSchema;
 
     public static DescribeRestoreSchemaDetailsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRestoreSchemaDetailsResponseBody self = new DescribeRestoreSchemaDetailsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRestoreSchemaDetailsResponseBody setRestoreSchema(DescribeRestoreSchemaDetailsResponseBodyRestoreSchema restoreSchema) {
-        this.restoreSchema = restoreSchema;
-        return this;
-    }
-    public DescribeRestoreSchemaDetailsResponseBodyRestoreSchema getRestoreSchema() {
-        return this.restoreSchema;
     }
 
     public DescribeRestoreSchemaDetailsResponseBody setRequestId(String requestId) {
@@ -31,18 +23,26 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeRestoreSchemaDetailsResponseBody setRestoreSchema(DescribeRestoreSchemaDetailsResponseBodyRestoreSchema restoreSchema) {
+        this.restoreSchema = restoreSchema;
+        return this;
+    }
+    public DescribeRestoreSchemaDetailsResponseBodyRestoreSchema getRestoreSchema() {
+        return this.restoreSchema;
+    }
+
     public static class DescribeRestoreSchemaDetailsResponseBodyRestoreSchemaRestoreSchemaDetailsRestoreSchemaDetail extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
+
+        @NameInMap("Message")
+        public String message;
 
         @NameInMap("StartTime")
         public String startTime;
 
         @NameInMap("State")
         public String state;
-
-        @NameInMap("Message")
-        public String message;
 
         @NameInMap("Table")
         public String table;
@@ -60,6 +60,14 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
             return this.endTime;
         }
 
+        public DescribeRestoreSchemaDetailsResponseBodyRestoreSchemaRestoreSchemaDetailsRestoreSchemaDetail setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
         public DescribeRestoreSchemaDetailsResponseBodyRestoreSchemaRestoreSchemaDetailsRestoreSchemaDetail setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
@@ -74,14 +82,6 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public DescribeRestoreSchemaDetailsResponseBodyRestoreSchemaRestoreSchemaDetailsRestoreSchemaDetail setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
         }
 
         public DescribeRestoreSchemaDetailsResponseBodyRestoreSchemaRestoreSchemaDetailsRestoreSchemaDetail setTable(String table) {
@@ -114,20 +114,20 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreSchemaDetailsResponseBodyRestoreSchema extends TeaModel {
-        @NameInMap("Succeed")
-        public Integer succeed;
-
-        @NameInMap("RestoreSchemaDetails")
-        public DescribeRestoreSchemaDetailsResponseBodyRestoreSchemaRestoreSchemaDetails restoreSchemaDetails;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
+        @NameInMap("Fail")
+        public Integer fail;
 
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        @NameInMap("Fail")
-        public Integer fail;
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("RestoreSchemaDetails")
+        public DescribeRestoreSchemaDetailsResponseBodyRestoreSchemaRestoreSchemaDetails restoreSchemaDetails;
+
+        @NameInMap("Succeed")
+        public Integer succeed;
 
         @NameInMap("Total")
         public Long total;
@@ -137,28 +137,12 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeRestoreSchemaDetailsResponseBodyRestoreSchema setSucceed(Integer succeed) {
-            this.succeed = succeed;
+        public DescribeRestoreSchemaDetailsResponseBodyRestoreSchema setFail(Integer fail) {
+            this.fail = fail;
             return this;
         }
-        public Integer getSucceed() {
-            return this.succeed;
-        }
-
-        public DescribeRestoreSchemaDetailsResponseBodyRestoreSchema setRestoreSchemaDetails(DescribeRestoreSchemaDetailsResponseBodyRestoreSchemaRestoreSchemaDetails restoreSchemaDetails) {
-            this.restoreSchemaDetails = restoreSchemaDetails;
-            return this;
-        }
-        public DescribeRestoreSchemaDetailsResponseBodyRestoreSchemaRestoreSchemaDetails getRestoreSchemaDetails() {
-            return this.restoreSchemaDetails;
-        }
-
-        public DescribeRestoreSchemaDetailsResponseBodyRestoreSchema setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
+        public Integer getFail() {
+            return this.fail;
         }
 
         public DescribeRestoreSchemaDetailsResponseBodyRestoreSchema setPageNumber(Integer pageNumber) {
@@ -169,12 +153,28 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
             return this.pageNumber;
         }
 
-        public DescribeRestoreSchemaDetailsResponseBodyRestoreSchema setFail(Integer fail) {
-            this.fail = fail;
+        public DescribeRestoreSchemaDetailsResponseBodyRestoreSchema setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
-        public Integer getFail() {
-            return this.fail;
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public DescribeRestoreSchemaDetailsResponseBodyRestoreSchema setRestoreSchemaDetails(DescribeRestoreSchemaDetailsResponseBodyRestoreSchemaRestoreSchemaDetails restoreSchemaDetails) {
+            this.restoreSchemaDetails = restoreSchemaDetails;
+            return this;
+        }
+        public DescribeRestoreSchemaDetailsResponseBodyRestoreSchemaRestoreSchemaDetails getRestoreSchemaDetails() {
+            return this.restoreSchemaDetails;
+        }
+
+        public DescribeRestoreSchemaDetailsResponseBodyRestoreSchema setSucceed(Integer succeed) {
+            this.succeed = succeed;
+            return this;
+        }
+        public Integer getSucceed() {
+            return this.succeed;
         }
 
         public DescribeRestoreSchemaDetailsResponseBodyRestoreSchema setTotal(Long total) {

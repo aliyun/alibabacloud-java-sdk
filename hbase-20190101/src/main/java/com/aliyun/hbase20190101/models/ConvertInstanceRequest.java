@@ -7,11 +7,14 @@ public class ConvertInstanceRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("PricingCycle")
-    public String pricingCycle;
-
     @NameInMap("Duration")
     public Integer duration;
+
+    @NameInMap("PayType")
+    public String payType;
+
+    @NameInMap("PricingCycle")
+    public String pricingCycle;
 
     public static ConvertInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ConvertInstanceRequest self = new ConvertInstanceRequest();
@@ -26,20 +29,28 @@ public class ConvertInstanceRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public ConvertInstanceRequest setPricingCycle(String pricingCycle) {
-        this.pricingCycle = pricingCycle;
-        return this;
-    }
-    public String getPricingCycle() {
-        return this.pricingCycle;
-    }
-
     public ConvertInstanceRequest setDuration(Integer duration) {
         this.duration = duration;
         return this;
     }
     public Integer getDuration() {
         return this.duration;
+    }
+
+    public ConvertInstanceRequest setPayType(String payType) {
+        this.payType = payType;
+        return this;
+    }
+    public String getPayType() {
+        return this.payType;
+    }
+
+    public ConvertInstanceRequest setPricingCycle(String pricingCycle) {
+        this.pricingCycle = pricingCycle;
+        return this;
+    }
+    public String getPricingCycle() {
+        return this.pricingCycle;
     }
 
 }

@@ -35,23 +35,23 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
-        @NameInMap("StartTime")
-        public String startTime;
-
         @NameInMap("Process")
         public String process;
+
+        @NameInMap("RestoreDelay")
+        public String restoreDelay;
 
         @NameInMap("RestoreStartTs")
         public String restoreStartTs;
 
-        @NameInMap("State")
-        public String state;
-
         @NameInMap("RestoredTs")
         public String restoredTs;
 
-        @NameInMap("RestoreDelay")
-        public String restoreDelay;
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("State")
+        public String state;
 
         public static DescribeRestoreIncrDetailResponseBodyRestoreIncrDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeRestoreIncrDetailResponseBodyRestoreIncrDetail self = new DescribeRestoreIncrDetailResponseBodyRestoreIncrDetail();
@@ -66,20 +66,20 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public DescribeRestoreIncrDetailResponseBodyRestoreIncrDetail setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
         public DescribeRestoreIncrDetailResponseBodyRestoreIncrDetail setProcess(String process) {
             this.process = process;
             return this;
         }
         public String getProcess() {
             return this.process;
+        }
+
+        public DescribeRestoreIncrDetailResponseBodyRestoreIncrDetail setRestoreDelay(String restoreDelay) {
+            this.restoreDelay = restoreDelay;
+            return this;
+        }
+        public String getRestoreDelay() {
+            return this.restoreDelay;
         }
 
         public DescribeRestoreIncrDetailResponseBodyRestoreIncrDetail setRestoreStartTs(String restoreStartTs) {
@@ -90,14 +90,6 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
             return this.restoreStartTs;
         }
 
-        public DescribeRestoreIncrDetailResponseBodyRestoreIncrDetail setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
         public DescribeRestoreIncrDetailResponseBodyRestoreIncrDetail setRestoredTs(String restoredTs) {
             this.restoredTs = restoredTs;
             return this;
@@ -106,12 +98,20 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
             return this.restoredTs;
         }
 
-        public DescribeRestoreIncrDetailResponseBodyRestoreIncrDetail setRestoreDelay(String restoreDelay) {
-            this.restoreDelay = restoreDelay;
+        public DescribeRestoreIncrDetailResponseBodyRestoreIncrDetail setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public String getRestoreDelay() {
-            return this.restoreDelay;
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeRestoreIncrDetailResponseBodyRestoreIncrDetail setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
     }

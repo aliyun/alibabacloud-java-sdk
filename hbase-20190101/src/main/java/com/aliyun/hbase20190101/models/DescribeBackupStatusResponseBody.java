@@ -4,8 +4,8 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("BackupStatus")
+    public String backupStatus;
 
     @NameInMap("BdsClusterId")
     public String bdsClusterId;
@@ -13,20 +13,20 @@ public class DescribeBackupStatusResponseBody extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("BackupStatus")
-    public String backupStatus;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeBackupStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupStatusResponseBody self = new DescribeBackupStatusResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeBackupStatusResponseBody setBackupStatus(String backupStatus) {
+        this.backupStatus = backupStatus;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getBackupStatus() {
+        return this.backupStatus;
     }
 
     public DescribeBackupStatusResponseBody setBdsClusterId(String bdsClusterId) {
@@ -45,12 +45,12 @@ public class DescribeBackupStatusResponseBody extends TeaModel {
         return this.clusterId;
     }
 
-    public DescribeBackupStatusResponseBody setBackupStatus(String backupStatus) {
-        this.backupStatus = backupStatus;
+    public DescribeBackupStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getBackupStatus() {
-        return this.backupStatus;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

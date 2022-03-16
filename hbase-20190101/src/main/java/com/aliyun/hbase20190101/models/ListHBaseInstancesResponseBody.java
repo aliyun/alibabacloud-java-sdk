@@ -32,26 +32,26 @@ public class ListHBaseInstancesResponseBody extends TeaModel {
     }
 
     public static class ListHBaseInstancesResponseBodyInstancesInstance extends TeaModel {
-        @NameInMap("IsDefault")
-        public Boolean isDefault;
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         @NameInMap("InstanceName")
         public String instanceName;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
+        @NameInMap("IsDefault")
+        public Boolean isDefault;
 
         public static ListHBaseInstancesResponseBodyInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
             ListHBaseInstancesResponseBodyInstancesInstance self = new ListHBaseInstancesResponseBodyInstancesInstance();
             return TeaModel.build(map, self);
         }
 
-        public ListHBaseInstancesResponseBodyInstancesInstance setIsDefault(Boolean isDefault) {
-            this.isDefault = isDefault;
+        public ListHBaseInstancesResponseBodyInstancesInstance setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public Boolean getIsDefault() {
-            return this.isDefault;
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public ListHBaseInstancesResponseBodyInstancesInstance setInstanceName(String instanceName) {
@@ -62,12 +62,12 @@ public class ListHBaseInstancesResponseBody extends TeaModel {
             return this.instanceName;
         }
 
-        public ListHBaseInstancesResponseBodyInstancesInstance setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public ListHBaseInstancesResponseBodyInstancesInstance setIsDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
+        public Boolean getIsDefault() {
+            return this.isDefault;
         }
 
     }

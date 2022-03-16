@@ -4,18 +4,26 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class AddUserHdfsInfoRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("ExtInfo")
     public String extInfo;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static AddUserHdfsInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         AddUserHdfsInfoRequest self = new AddUserHdfsInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddUserHdfsInfoRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public AddUserHdfsInfoRequest setClusterId(String clusterId) {
@@ -32,14 +40,6 @@ public class AddUserHdfsInfoRequest extends TeaModel {
     }
     public String getExtInfo() {
         return this.extInfo;
-    }
-
-    public AddUserHdfsInfoRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

@@ -21,14 +21,8 @@ public class XpackRelateDBResponseBody extends TeaModel {
     }
 
     public static class QueryXpackRelateDBResponseBodyClusterListCluster extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("DBVersion")
-        public String DBVersion;
-
-        @NameInMap("IsRelated")
-        public Boolean isRelated;
+        @NameInMap("ClusterId")
+        public String clusterId;
 
         @NameInMap("ClusterName")
         public String clusterName;
@@ -36,39 +30,29 @@ public class XpackRelateDBResponseBody extends TeaModel {
         @NameInMap("DBType")
         public String DBType;
 
+        @NameInMap("DBVersion")
+        public String DBVersion;
+
+        @NameInMap("IsRelated")
+        public Boolean isRelated;
+
         @NameInMap("LockMode")
         public String lockMode;
 
-        @NameInMap("ClusterId")
-        public String clusterId;
+        @NameInMap("Status")
+        public String status;
 
         public static QueryXpackRelateDBResponseBodyClusterListCluster build(java.util.Map<String, ?> map) throws Exception {
             QueryXpackRelateDBResponseBodyClusterListCluster self = new QueryXpackRelateDBResponseBodyClusterListCluster();
             return TeaModel.build(map, self);
         }
 
-        public QueryXpackRelateDBResponseBodyClusterListCluster setStatus(String status) {
-            this.status = status;
+        public QueryXpackRelateDBResponseBodyClusterListCluster setClusterId(String clusterId) {
+            this.clusterId = clusterId;
             return this;
         }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public QueryXpackRelateDBResponseBodyClusterListCluster setDBVersion(String DBVersion) {
-            this.DBVersion = DBVersion;
-            return this;
-        }
-        public String getDBVersion() {
-            return this.DBVersion;
-        }
-
-        public QueryXpackRelateDBResponseBodyClusterListCluster setIsRelated(Boolean isRelated) {
-            this.isRelated = isRelated;
-            return this;
-        }
-        public Boolean getIsRelated() {
-            return this.isRelated;
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         public QueryXpackRelateDBResponseBodyClusterListCluster setClusterName(String clusterName) {
@@ -87,6 +71,22 @@ public class XpackRelateDBResponseBody extends TeaModel {
             return this.DBType;
         }
 
+        public QueryXpackRelateDBResponseBodyClusterListCluster setDBVersion(String DBVersion) {
+            this.DBVersion = DBVersion;
+            return this;
+        }
+        public String getDBVersion() {
+            return this.DBVersion;
+        }
+
+        public QueryXpackRelateDBResponseBodyClusterListCluster setIsRelated(Boolean isRelated) {
+            this.isRelated = isRelated;
+            return this;
+        }
+        public Boolean getIsRelated() {
+            return this.isRelated;
+        }
+
         public QueryXpackRelateDBResponseBodyClusterListCluster setLockMode(String lockMode) {
             this.lockMode = lockMode;
             return this;
@@ -95,12 +95,12 @@ public class XpackRelateDBResponseBody extends TeaModel {
             return this.lockMode;
         }
 
-        public QueryXpackRelateDBResponseBodyClusterListCluster setClusterId(String clusterId) {
-            this.clusterId = clusterId;
+        public QueryXpackRelateDBResponseBodyClusterListCluster setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getClusterId() {
-            return this.clusterId;
+        public String getStatus() {
+            return this.status;
         }
 
     }

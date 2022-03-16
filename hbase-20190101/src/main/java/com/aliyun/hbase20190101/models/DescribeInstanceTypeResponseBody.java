@@ -4,23 +4,15 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTypeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceTypeSpecList")
     public DescribeInstanceTypeResponseBodyInstanceTypeSpecList instanceTypeSpecList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeInstanceTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceTypeResponseBody self = new DescribeInstanceTypeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceTypeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeInstanceTypeResponseBody setInstanceTypeSpecList(DescribeInstanceTypeResponseBodyInstanceTypeSpecList instanceTypeSpecList) {
@@ -31,15 +23,23 @@ public class DescribeInstanceTypeResponseBody extends TeaModel {
         return this.instanceTypeSpecList;
     }
 
+    public DescribeInstanceTypeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeInstanceTypeResponseBodyInstanceTypeSpecListInstanceTypeSpec extends TeaModel {
         @NameInMap("CpuSize")
         public Long cpuSize;
 
-        @NameInMap("MemSize")
-        public Long memSize;
-
         @NameInMap("InstanceType")
         public String instanceType;
+
+        @NameInMap("MemSize")
+        public Long memSize;
 
         public static DescribeInstanceTypeResponseBodyInstanceTypeSpecListInstanceTypeSpec build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceTypeResponseBodyInstanceTypeSpecListInstanceTypeSpec self = new DescribeInstanceTypeResponseBodyInstanceTypeSpecListInstanceTypeSpec();
@@ -54,20 +54,20 @@ public class DescribeInstanceTypeResponseBody extends TeaModel {
             return this.cpuSize;
         }
 
-        public DescribeInstanceTypeResponseBodyInstanceTypeSpecListInstanceTypeSpec setMemSize(Long memSize) {
-            this.memSize = memSize;
-            return this;
-        }
-        public Long getMemSize() {
-            return this.memSize;
-        }
-
         public DescribeInstanceTypeResponseBodyInstanceTypeSpecListInstanceTypeSpec setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public DescribeInstanceTypeResponseBodyInstanceTypeSpecListInstanceTypeSpec setMemSize(Long memSize) {
+            this.memSize = memSize;
+            return this;
+        }
+        public Long getMemSize() {
+            return this.memSize;
         }
 
     }

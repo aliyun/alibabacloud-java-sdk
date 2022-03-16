@@ -4,6 +4,9 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateGlobalResourceRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -13,12 +16,17 @@ public class CreateGlobalResourceRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static CreateGlobalResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGlobalResourceRequest self = new CreateGlobalResourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateGlobalResourceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateGlobalResourceRequest setClusterId(String clusterId) {
@@ -43,14 +51,6 @@ public class CreateGlobalResourceRequest extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
-    }
-
-    public CreateGlobalResourceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

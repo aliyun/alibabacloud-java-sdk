@@ -32,23 +32,15 @@ public class ListTagsResponseBody extends TeaModel {
     }
 
     public static class ListTagsResponseBodyTagsTag extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static ListTagsResponseBodyTagsTag build(java.util.Map<String, ?> map) throws Exception {
             ListTagsResponseBodyTagsTag self = new ListTagsResponseBodyTagsTag();
             return TeaModel.build(map, self);
-        }
-
-        public ListTagsResponseBodyTagsTag setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public ListTagsResponseBodyTagsTag setTagKey(String tagKey) {
@@ -57,6 +49,14 @@ public class ListTagsResponseBody extends TeaModel {
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public ListTagsResponseBodyTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

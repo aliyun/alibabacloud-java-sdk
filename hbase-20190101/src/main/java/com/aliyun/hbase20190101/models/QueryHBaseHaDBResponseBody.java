@@ -4,11 +4,11 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class QueryHBaseHaDBResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("ClusterList")
     public QueryHBaseHaDBResponseBodyClusterList clusterList;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -16,20 +16,12 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static QueryHBaseHaDBResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryHBaseHaDBResponseBody self = new QueryHBaseHaDBResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryHBaseHaDBResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public QueryHBaseHaDBResponseBody setClusterList(QueryHBaseHaDBResponseBodyClusterList clusterList) {
@@ -38,6 +30,14 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
     }
     public QueryHBaseHaDBResponseBodyClusterList getClusterList() {
         return this.clusterList;
+    }
+
+    public QueryHBaseHaDBResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public QueryHBaseHaDBResponseBody setPageSize(Integer pageSize) {
@@ -56,20 +56,20 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryHBaseHaDBResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public QueryHBaseHaDBResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class QueryHBaseHaDBResponseBodyClusterListClusterHaSlbConnListHaSlbConn extends TeaModel {
-        @NameInMap("SlbConnAddr")
-        public String slbConnAddr;
-
         @NameInMap("HbaseType")
         public String hbaseType;
+
+        @NameInMap("SlbConnAddr")
+        public String slbConnAddr;
 
         @NameInMap("SlbType")
         public String slbType;
@@ -79,20 +79,20 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryHBaseHaDBResponseBodyClusterListClusterHaSlbConnListHaSlbConn setSlbConnAddr(String slbConnAddr) {
-            this.slbConnAddr = slbConnAddr;
-            return this;
-        }
-        public String getSlbConnAddr() {
-            return this.slbConnAddr;
-        }
-
         public QueryHBaseHaDBResponseBodyClusterListClusterHaSlbConnListHaSlbConn setHbaseType(String hbaseType) {
             this.hbaseType = hbaseType;
             return this;
         }
         public String getHbaseType() {
             return this.hbaseType;
+        }
+
+        public QueryHBaseHaDBResponseBodyClusterListClusterHaSlbConnListHaSlbConn setSlbConnAddr(String slbConnAddr) {
+            this.slbConnAddr = slbConnAddr;
+            return this;
+        }
+        public String getSlbConnAddr() {
+            return this.slbConnAddr;
         }
 
         public QueryHBaseHaDBResponseBodyClusterListClusterHaSlbConnListHaSlbConn setSlbType(String slbType) {
@@ -125,17 +125,17 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
     }
 
     public static class QueryHBaseHaDBResponseBodyClusterListCluster extends TeaModel {
-        @NameInMap("HaName")
-        public String haName;
+        @NameInMap("ActiveName")
+        public String activeName;
 
         @NameInMap("BdsName")
         public String bdsName;
 
+        @NameInMap("HaName")
+        public String haName;
+
         @NameInMap("HaSlbConnList")
         public QueryHBaseHaDBResponseBodyClusterListClusterHaSlbConnList haSlbConnList;
-
-        @NameInMap("ActiveName")
-        public String activeName;
 
         @NameInMap("StandbyName")
         public String standbyName;
@@ -145,12 +145,12 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryHBaseHaDBResponseBodyClusterListCluster setHaName(String haName) {
-            this.haName = haName;
+        public QueryHBaseHaDBResponseBodyClusterListCluster setActiveName(String activeName) {
+            this.activeName = activeName;
             return this;
         }
-        public String getHaName() {
-            return this.haName;
+        public String getActiveName() {
+            return this.activeName;
         }
 
         public QueryHBaseHaDBResponseBodyClusterListCluster setBdsName(String bdsName) {
@@ -161,20 +161,20 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
             return this.bdsName;
         }
 
+        public QueryHBaseHaDBResponseBodyClusterListCluster setHaName(String haName) {
+            this.haName = haName;
+            return this;
+        }
+        public String getHaName() {
+            return this.haName;
+        }
+
         public QueryHBaseHaDBResponseBodyClusterListCluster setHaSlbConnList(QueryHBaseHaDBResponseBodyClusterListClusterHaSlbConnList haSlbConnList) {
             this.haSlbConnList = haSlbConnList;
             return this;
         }
         public QueryHBaseHaDBResponseBodyClusterListClusterHaSlbConnList getHaSlbConnList() {
             return this.haSlbConnList;
-        }
-
-        public QueryHBaseHaDBResponseBodyClusterListCluster setActiveName(String activeName) {
-            this.activeName = activeName;
-            return this;
-        }
-        public String getActiveName() {
-            return this.activeName;
         }
 
         public QueryHBaseHaDBResponseBodyClusterListCluster setStandbyName(String standbyName) {

@@ -7,14 +7,14 @@ public class DescribeRestoreFullDetailsRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("RestoreRecordId")
-    public String restoreRecordId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("RestoreRecordId")
+    public String restoreRecordId;
 
     public static DescribeRestoreFullDetailsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRestoreFullDetailsRequest self = new DescribeRestoreFullDetailsRequest();
@@ -27,14 +27,6 @@ public class DescribeRestoreFullDetailsRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
-    }
-
-    public DescribeRestoreFullDetailsRequest setRestoreRecordId(String restoreRecordId) {
-        this.restoreRecordId = restoreRecordId;
-        return this;
-    }
-    public String getRestoreRecordId() {
-        return this.restoreRecordId;
     }
 
     public DescribeRestoreFullDetailsRequest setPageNumber(Integer pageNumber) {
@@ -51,6 +43,14 @@ public class DescribeRestoreFullDetailsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeRestoreFullDetailsRequest setRestoreRecordId(String restoreRecordId) {
+        this.restoreRecordId = restoreRecordId;
+        return this;
+    }
+    public String getRestoreRecordId() {
+        return this.restoreRecordId;
     }
 
 }

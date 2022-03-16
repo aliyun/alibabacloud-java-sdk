@@ -4,8 +4,11 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceServiceConfigurationsResponseBody extends TeaModel {
-    @NameInMap("TotalRecordCount")
-    public Long totalRecordCount;
+    @NameInMap("ConfigureList")
+    public ListInstanceServiceConfigurationsResponseBodyConfigureList configureList;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
@@ -13,23 +16,28 @@ public class ListInstanceServiceConfigurationsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("ConfigureList")
-    public ListInstanceServiceConfigurationsResponseBodyConfigureList configureList;
+    @NameInMap("TotalRecordCount")
+    public Long totalRecordCount;
 
     public static ListInstanceServiceConfigurationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceServiceConfigurationsResponseBody self = new ListInstanceServiceConfigurationsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListInstanceServiceConfigurationsResponseBody setTotalRecordCount(Long totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
+    public ListInstanceServiceConfigurationsResponseBody setConfigureList(ListInstanceServiceConfigurationsResponseBodyConfigureList configureList) {
+        this.configureList = configureList;
         return this;
     }
-    public Long getTotalRecordCount() {
-        return this.totalRecordCount;
+    public ListInstanceServiceConfigurationsResponseBodyConfigureList getConfigureList() {
+        return this.configureList;
+    }
+
+    public ListInstanceServiceConfigurationsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListInstanceServiceConfigurationsResponseBody setPageRecordCount(Integer pageRecordCount) {
@@ -48,71 +56,39 @@ public class ListInstanceServiceConfigurationsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListInstanceServiceConfigurationsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListInstanceServiceConfigurationsResponseBody setTotalRecordCount(Long totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListInstanceServiceConfigurationsResponseBody setConfigureList(ListInstanceServiceConfigurationsResponseBodyConfigureList configureList) {
-        this.configureList = configureList;
-        return this;
-    }
-    public ListInstanceServiceConfigurationsResponseBodyConfigureList getConfigureList() {
-        return this.configureList;
+    public Long getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public static class ListInstanceServiceConfigurationsResponseBodyConfigureListConfig extends TeaModel {
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("RunningValue")
-        public String runningValue;
+        @NameInMap("ConfigureName")
+        public String configureName;
 
         @NameInMap("ConfigureUnit")
         public String configureUnit;
 
-        @NameInMap("ConfigureName")
-        public String configureName;
-
-        @NameInMap("ValueRange")
-        public String valueRange;
-
         @NameInMap("DefaultValue")
         public String defaultValue;
+
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("NeedRestart")
         public String needRestart;
 
+        @NameInMap("RunningValue")
+        public String runningValue;
+
+        @NameInMap("ValueRange")
+        public String valueRange;
+
         public static ListInstanceServiceConfigurationsResponseBodyConfigureListConfig build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceServiceConfigurationsResponseBodyConfigureListConfig self = new ListInstanceServiceConfigurationsResponseBodyConfigureListConfig();
             return TeaModel.build(map, self);
-        }
-
-        public ListInstanceServiceConfigurationsResponseBodyConfigureListConfig setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListInstanceServiceConfigurationsResponseBodyConfigureListConfig setRunningValue(String runningValue) {
-            this.runningValue = runningValue;
-            return this;
-        }
-        public String getRunningValue() {
-            return this.runningValue;
-        }
-
-        public ListInstanceServiceConfigurationsResponseBodyConfigureListConfig setConfigureUnit(String configureUnit) {
-            this.configureUnit = configureUnit;
-            return this;
-        }
-        public String getConfigureUnit() {
-            return this.configureUnit;
         }
 
         public ListInstanceServiceConfigurationsResponseBodyConfigureListConfig setConfigureName(String configureName) {
@@ -123,12 +99,12 @@ public class ListInstanceServiceConfigurationsResponseBody extends TeaModel {
             return this.configureName;
         }
 
-        public ListInstanceServiceConfigurationsResponseBodyConfigureListConfig setValueRange(String valueRange) {
-            this.valueRange = valueRange;
+        public ListInstanceServiceConfigurationsResponseBodyConfigureListConfig setConfigureUnit(String configureUnit) {
+            this.configureUnit = configureUnit;
             return this;
         }
-        public String getValueRange() {
-            return this.valueRange;
+        public String getConfigureUnit() {
+            return this.configureUnit;
         }
 
         public ListInstanceServiceConfigurationsResponseBodyConfigureListConfig setDefaultValue(String defaultValue) {
@@ -139,12 +115,36 @@ public class ListInstanceServiceConfigurationsResponseBody extends TeaModel {
             return this.defaultValue;
         }
 
+        public ListInstanceServiceConfigurationsResponseBodyConfigureListConfig setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public ListInstanceServiceConfigurationsResponseBodyConfigureListConfig setNeedRestart(String needRestart) {
             this.needRestart = needRestart;
             return this;
         }
         public String getNeedRestart() {
             return this.needRestart;
+        }
+
+        public ListInstanceServiceConfigurationsResponseBodyConfigureListConfig setRunningValue(String runningValue) {
+            this.runningValue = runningValue;
+            return this;
+        }
+        public String getRunningValue() {
+            return this.runningValue;
+        }
+
+        public ListInstanceServiceConfigurationsResponseBodyConfigureListConfig setValueRange(String valueRange) {
+            this.valueRange = valueRange;
+            return this;
+        }
+        public String getValueRange() {
+            return this.valueRange;
         }
 
     }

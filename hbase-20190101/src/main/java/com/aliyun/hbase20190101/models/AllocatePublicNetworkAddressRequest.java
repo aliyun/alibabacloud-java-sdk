@@ -4,23 +4,15 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class AllocatePublicNetworkAddressRequest extends TeaModel {
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("ClusterId")
+    public String clusterId;
 
     public static AllocatePublicNetworkAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocatePublicNetworkAddressRequest self = new AllocatePublicNetworkAddressRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AllocatePublicNetworkAddressRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     public AllocatePublicNetworkAddressRequest setClientToken(String clientToken) {
@@ -29,6 +21,14 @@ public class AllocatePublicNetworkAddressRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public AllocatePublicNetworkAddressRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
 }

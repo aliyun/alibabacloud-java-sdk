@@ -4,11 +4,11 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupTablesRequest extends TeaModel {
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     @NameInMap("BackupRecordId")
     public String backupRecordId;
+
+    @NameInMap("ClusterId")
+    public String clusterId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -21,20 +21,20 @@ public class DescribeBackupTablesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupTablesRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
-    }
-
     public DescribeBackupTablesRequest setBackupRecordId(String backupRecordId) {
         this.backupRecordId = backupRecordId;
         return this;
     }
     public String getBackupRecordId() {
         return this.backupRecordId;
+    }
+
+    public DescribeBackupTablesRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public DescribeBackupTablesRequest setPageNumber(Integer pageNumber) {

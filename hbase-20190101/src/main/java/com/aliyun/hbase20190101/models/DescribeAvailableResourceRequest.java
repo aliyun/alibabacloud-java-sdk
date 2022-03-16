@@ -7,6 +7,18 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    @NameInMap("CoreInstanceType")
+    public String coreInstanceType;
+
+    @NameInMap("DiskType")
+    public String diskType;
+
+    @NameInMap("Engine")
+    public String engine;
+
+    @NameInMap("EngineVersion")
+    public String engineVersion;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -24,6 +36,38 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public DescribeAvailableResourceRequest setCoreInstanceType(String coreInstanceType) {
+        this.coreInstanceType = coreInstanceType;
+        return this;
+    }
+    public String getCoreInstanceType() {
+        return this.coreInstanceType;
+    }
+
+    public DescribeAvailableResourceRequest setDiskType(String diskType) {
+        this.diskType = diskType;
+        return this;
+    }
+    public String getDiskType() {
+        return this.diskType;
+    }
+
+    public DescribeAvailableResourceRequest setEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String getEngine() {
+        return this.engine;
+    }
+
+    public DescribeAvailableResourceRequest setEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    public String getEngineVersion() {
+        return this.engineVersion;
     }
 
     public DescribeAvailableResourceRequest setRegionId(String regionId) {

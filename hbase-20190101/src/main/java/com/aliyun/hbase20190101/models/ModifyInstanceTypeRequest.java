@@ -7,11 +7,11 @@ public class ModifyInstanceTypeRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("MasterInstanceType")
-    public String masterInstanceType;
-
     @NameInMap("CoreInstanceType")
     public String coreInstanceType;
+
+    @NameInMap("MasterInstanceType")
+    public String masterInstanceType;
 
     public static ModifyInstanceTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceTypeRequest self = new ModifyInstanceTypeRequest();
@@ -26,20 +26,20 @@ public class ModifyInstanceTypeRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public ModifyInstanceTypeRequest setMasterInstanceType(String masterInstanceType) {
-        this.masterInstanceType = masterInstanceType;
-        return this;
-    }
-    public String getMasterInstanceType() {
-        return this.masterInstanceType;
-    }
-
     public ModifyInstanceTypeRequest setCoreInstanceType(String coreInstanceType) {
         this.coreInstanceType = coreInstanceType;
         return this;
     }
     public String getCoreInstanceType() {
         return this.coreInstanceType;
+    }
+
+    public ModifyInstanceTypeRequest setMasterInstanceType(String masterInstanceType) {
+        this.masterInstanceType = masterInstanceType;
+        return this;
+    }
+    public String getMasterInstanceType() {
+        return this.masterInstanceType;
     }
 
 }

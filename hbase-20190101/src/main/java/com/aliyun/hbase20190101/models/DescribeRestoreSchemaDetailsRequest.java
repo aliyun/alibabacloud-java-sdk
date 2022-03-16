@@ -7,14 +7,14 @@ public class DescribeRestoreSchemaDetailsRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("RestoreRecordId")
-    public String restoreRecordId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("RestoreRecordId")
+    public String restoreRecordId;
 
     public static DescribeRestoreSchemaDetailsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRestoreSchemaDetailsRequest self = new DescribeRestoreSchemaDetailsRequest();
@@ -27,14 +27,6 @@ public class DescribeRestoreSchemaDetailsRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
-    }
-
-    public DescribeRestoreSchemaDetailsRequest setRestoreRecordId(String restoreRecordId) {
-        this.restoreRecordId = restoreRecordId;
-        return this;
-    }
-    public String getRestoreRecordId() {
-        return this.restoreRecordId;
     }
 
     public DescribeRestoreSchemaDetailsRequest setPageNumber(Integer pageNumber) {
@@ -51,6 +43,14 @@ public class DescribeRestoreSchemaDetailsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeRestoreSchemaDetailsRequest setRestoreRecordId(String restoreRecordId) {
+        this.restoreRecordId = restoreRecordId;
+        return this;
+    }
+    public String getRestoreRecordId() {
+        return this.restoreRecordId;
     }
 
 }

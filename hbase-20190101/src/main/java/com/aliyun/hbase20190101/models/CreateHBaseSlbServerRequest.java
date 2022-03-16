@@ -4,18 +4,26 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateHBaseSlbServerRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("SlbServer")
     public String slbServer;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static CreateHBaseSlbServerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateHBaseSlbServerRequest self = new CreateHBaseSlbServerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateHBaseSlbServerRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateHBaseSlbServerRequest setClusterId(String clusterId) {
@@ -32,14 +40,6 @@ public class CreateHBaseSlbServerRequest extends TeaModel {
     }
     public String getSlbServer() {
         return this.slbServer;
-    }
-
-    public CreateHBaseSlbServerRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }
