@@ -7,6 +7,9 @@ public class CreateHbaseHaSlbRequest extends TeaModel {
     @NameInMap("BdsId")
     public String bdsId;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("HaId")
     public String haId;
 
@@ -15,9 +18,6 @@ public class CreateHbaseHaSlbRequest extends TeaModel {
 
     @NameInMap("HbaseType")
     public String hbaseType;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
 
     public static CreateHbaseHaSlbRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateHbaseHaSlbRequest self = new CreateHbaseHaSlbRequest();
@@ -30,6 +30,14 @@ public class CreateHbaseHaSlbRequest extends TeaModel {
     }
     public String getBdsId() {
         return this.bdsId;
+    }
+
+    public CreateHbaseHaSlbRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateHbaseHaSlbRequest setHaId(String haId) {
@@ -54,14 +62,6 @@ public class CreateHbaseHaSlbRequest extends TeaModel {
     }
     public String getHbaseType() {
         return this.hbaseType;
-    }
-
-    public CreateHbaseHaSlbRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

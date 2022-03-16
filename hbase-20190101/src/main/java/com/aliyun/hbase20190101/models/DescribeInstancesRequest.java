@@ -4,8 +4,14 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClusterId")
+    public String clusterId;
+
+    @NameInMap("ClusterName")
+    public String clusterName;
+
+    @NameInMap("DbType")
+    public String dbType;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,11 +19,8 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("DbType")
-    public String dbType;
-
-    @NameInMap("ClusterName")
-    public String clusterName;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -30,12 +33,28 @@ public class DescribeInstancesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstancesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeInstancesRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    public DescribeInstancesRequest setClusterName(String clusterName) {
+        this.clusterName = clusterName;
+        return this;
+    }
+    public String getClusterName() {
+        return this.clusterName;
+    }
+
+    public DescribeInstancesRequest setDbType(String dbType) {
+        this.dbType = dbType;
+        return this;
+    }
+    public String getDbType() {
+        return this.dbType;
     }
 
     public DescribeInstancesRequest setPageNumber(Integer pageNumber) {
@@ -54,20 +73,12 @@ public class DescribeInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeInstancesRequest setDbType(String dbType) {
-        this.dbType = dbType;
+    public DescribeInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getDbType() {
-        return this.dbType;
-    }
-
-    public DescribeInstancesRequest setClusterName(String clusterName) {
-        this.clusterName = clusterName;
-        return this;
-    }
-    public String getClusterName() {
-        return this.clusterName;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeInstancesRequest setResourceGroupId(String resourceGroupId) {

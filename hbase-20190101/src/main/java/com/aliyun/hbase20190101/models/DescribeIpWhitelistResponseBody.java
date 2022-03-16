@@ -4,23 +4,15 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpWhitelistResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Groups")
     public DescribeIpWhitelistResponseBodyGroups groups;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeIpWhitelistResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeIpWhitelistResponseBody self = new DescribeIpWhitelistResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeIpWhitelistResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeIpWhitelistResponseBody setGroups(DescribeIpWhitelistResponseBodyGroups groups) {
@@ -29,6 +21,14 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
     }
     public DescribeIpWhitelistResponseBodyGroups getGroups() {
         return this.groups;
+    }
+
+    public DescribeIpWhitelistResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeIpWhitelistResponseBodyGroupsGroupIpList extends TeaModel {
@@ -51,26 +51,18 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
     }
 
     public static class DescribeIpWhitelistResponseBodyGroupsGroup extends TeaModel {
-        @NameInMap("IpVersion")
-        public Integer ipVersion;
-
         @NameInMap("GroupName")
         public String groupName;
 
         @NameInMap("IpList")
         public DescribeIpWhitelistResponseBodyGroupsGroupIpList ipList;
 
+        @NameInMap("IpVersion")
+        public Integer ipVersion;
+
         public static DescribeIpWhitelistResponseBodyGroupsGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeIpWhitelistResponseBodyGroupsGroup self = new DescribeIpWhitelistResponseBodyGroupsGroup();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeIpWhitelistResponseBodyGroupsGroup setIpVersion(Integer ipVersion) {
-            this.ipVersion = ipVersion;
-            return this;
-        }
-        public Integer getIpVersion() {
-            return this.ipVersion;
         }
 
         public DescribeIpWhitelistResponseBodyGroupsGroup setGroupName(String groupName) {
@@ -87,6 +79,14 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
         }
         public DescribeIpWhitelistResponseBodyGroupsGroupIpList getIpList() {
             return this.ipList;
+        }
+
+        public DescribeIpWhitelistResponseBodyGroupsGroup setIpVersion(Integer ipVersion) {
+            this.ipVersion = ipVersion;
+            return this;
+        }
+        public Integer getIpVersion() {
+            return this.ipVersion;
         }
 
     }

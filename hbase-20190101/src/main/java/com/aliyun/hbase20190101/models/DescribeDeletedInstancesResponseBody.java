@@ -7,8 +7,8 @@ public class DescribeDeletedInstancesResponseBody extends TeaModel {
     @NameInMap("Instances")
     public DescribeDeletedInstancesResponseBodyInstances instances;
 
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -16,8 +16,8 @@ public class DescribeDeletedInstancesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeDeletedInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeletedInstancesResponseBody self = new DescribeDeletedInstancesResponseBody();
@@ -32,12 +32,12 @@ public class DescribeDeletedInstancesResponseBody extends TeaModel {
         return this.instances;
     }
 
-    public DescribeDeletedInstancesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
+    public DescribeDeletedInstancesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Long getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDeletedInstancesResponseBody setPageSize(Integer pageSize) {
@@ -56,86 +56,54 @@ public class DescribeDeletedInstancesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDeletedInstancesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDeletedInstancesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeDeletedInstancesResponseBodyInstancesInstance extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("ParentId")
-        public String parentId;
-
         @NameInMap("ClusterType")
         public String clusterType;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
-
-        @NameInMap("DeleteTime")
-        public String deleteTime;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        @NameInMap("ModuleStackVersion")
-        public String moduleStackVersion;
-
-        @NameInMap("Engine")
-        public String engine;
-
-        @NameInMap("MajorVersion")
-        public String majorVersion;
 
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        @NameInMap("DeleteTime")
+        public String deleteTime;
+
+        @NameInMap("Engine")
+        public String engine;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("MajorVersion")
+        public String majorVersion;
+
+        @NameInMap("ModuleStackVersion")
+        public String moduleStackVersion;
+
+        @NameInMap("ParentId")
+        public String parentId;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static DescribeDeletedInstancesResponseBodyInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDeletedInstancesResponseBodyInstancesInstance self = new DescribeDeletedInstancesResponseBodyInstancesInstance();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDeletedInstancesResponseBodyInstancesInstance setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeDeletedInstancesResponseBodyInstancesInstance setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeDeletedInstancesResponseBodyInstancesInstance setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeDeletedInstancesResponseBodyInstancesInstance setParentId(String parentId) {
-            this.parentId = parentId;
-            return this;
-        }
-        public String getParentId() {
-            return this.parentId;
         }
 
         public DescribeDeletedInstancesResponseBodyInstancesInstance setClusterType(String clusterType) {
@@ -146,12 +114,12 @@ public class DescribeDeletedInstancesResponseBody extends TeaModel {
             return this.clusterType;
         }
 
-        public DescribeDeletedInstancesResponseBodyInstancesInstance setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
+        public DescribeDeletedInstancesResponseBodyInstancesInstance setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
             return this;
         }
-        public String getInstanceName() {
-            return this.instanceName;
+        public String getCreatedTime() {
+            return this.createdTime;
         }
 
         public DescribeDeletedInstancesResponseBodyInstancesInstance setDeleteTime(String deleteTime) {
@@ -162,28 +130,28 @@ public class DescribeDeletedInstancesResponseBody extends TeaModel {
             return this.deleteTime;
         }
 
-        public DescribeDeletedInstancesResponseBodyInstancesInstance setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public DescribeDeletedInstancesResponseBodyInstancesInstance setModuleStackVersion(String moduleStackVersion) {
-            this.moduleStackVersion = moduleStackVersion;
-            return this;
-        }
-        public String getModuleStackVersion() {
-            return this.moduleStackVersion;
-        }
-
         public DescribeDeletedInstancesResponseBodyInstancesInstance setEngine(String engine) {
             this.engine = engine;
             return this;
         }
         public String getEngine() {
             return this.engine;
+        }
+
+        public DescribeDeletedInstancesResponseBodyInstancesInstance setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeDeletedInstancesResponseBodyInstancesInstance setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
         public DescribeDeletedInstancesResponseBodyInstancesInstance setMajorVersion(String majorVersion) {
@@ -194,12 +162,44 @@ public class DescribeDeletedInstancesResponseBody extends TeaModel {
             return this.majorVersion;
         }
 
-        public DescribeDeletedInstancesResponseBodyInstancesInstance setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
+        public DescribeDeletedInstancesResponseBodyInstancesInstance setModuleStackVersion(String moduleStackVersion) {
+            this.moduleStackVersion = moduleStackVersion;
             return this;
         }
-        public String getCreatedTime() {
-            return this.createdTime;
+        public String getModuleStackVersion() {
+            return this.moduleStackVersion;
+        }
+
+        public DescribeDeletedInstancesResponseBodyInstancesInstance setParentId(String parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public String getParentId() {
+            return this.parentId;
+        }
+
+        public DescribeDeletedInstancesResponseBodyInstancesInstance setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeDeletedInstancesResponseBodyInstancesInstance setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeDeletedInstancesResponseBodyInstancesInstance setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

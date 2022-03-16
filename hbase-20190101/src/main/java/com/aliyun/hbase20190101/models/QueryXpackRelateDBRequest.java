@@ -7,11 +7,11 @@ public class QueryXpackRelateDBRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("RelateDbType")
-    public String relateDbType;
-
     @NameInMap("HasSingleNode")
     public Boolean hasSingleNode;
+
+    @NameInMap("RelateDbType")
+    public String relateDbType;
 
     public static QueryXpackRelateDBRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryXpackRelateDBRequest self = new QueryXpackRelateDBRequest();
@@ -26,20 +26,20 @@ public class QueryXpackRelateDBRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public QueryXpackRelateDBRequest setRelateDbType(String relateDbType) {
-        this.relateDbType = relateDbType;
-        return this;
-    }
-    public String getRelateDbType() {
-        return this.relateDbType;
-    }
-
     public QueryXpackRelateDBRequest setHasSingleNode(Boolean hasSingleNode) {
         this.hasSingleNode = hasSingleNode;
         return this;
     }
     public Boolean getHasSingleNode() {
         return this.hasSingleNode;
+    }
+
+    public QueryXpackRelateDBRequest setRelateDbType(String relateDbType) {
+        this.relateDbType = relateDbType;
+        return this;
+    }
+    public String getRelateDbType() {
+        return this.relateDbType;
     }
 
 }

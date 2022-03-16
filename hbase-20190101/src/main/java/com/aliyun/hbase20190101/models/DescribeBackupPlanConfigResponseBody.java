@@ -4,32 +4,24 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPlanConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("FullBackupCycle")
     public Integer fullBackupCycle;
-
-    @NameInMap("NextFullBackupDate")
-    public String nextFullBackupDate;
-
-    @NameInMap("Tables")
-    public DescribeBackupPlanConfigResponseBodyTables tables;
 
     @NameInMap("MinHFileBackupCount")
     public Integer minHFileBackupCount;
 
+    @NameInMap("NextFullBackupDate")
+    public String nextFullBackupDate;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Tables")
+    public DescribeBackupPlanConfigResponseBodyTables tables;
+
     public static DescribeBackupPlanConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupPlanConfigResponseBody self = new DescribeBackupPlanConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBackupPlanConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeBackupPlanConfigResponseBody setFullBackupCycle(Integer fullBackupCycle) {
@@ -40,6 +32,14 @@ public class DescribeBackupPlanConfigResponseBody extends TeaModel {
         return this.fullBackupCycle;
     }
 
+    public DescribeBackupPlanConfigResponseBody setMinHFileBackupCount(Integer minHFileBackupCount) {
+        this.minHFileBackupCount = minHFileBackupCount;
+        return this;
+    }
+    public Integer getMinHFileBackupCount() {
+        return this.minHFileBackupCount;
+    }
+
     public DescribeBackupPlanConfigResponseBody setNextFullBackupDate(String nextFullBackupDate) {
         this.nextFullBackupDate = nextFullBackupDate;
         return this;
@@ -48,20 +48,20 @@ public class DescribeBackupPlanConfigResponseBody extends TeaModel {
         return this.nextFullBackupDate;
     }
 
+    public DescribeBackupPlanConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeBackupPlanConfigResponseBody setTables(DescribeBackupPlanConfigResponseBodyTables tables) {
         this.tables = tables;
         return this;
     }
     public DescribeBackupPlanConfigResponseBodyTables getTables() {
         return this.tables;
-    }
-
-    public DescribeBackupPlanConfigResponseBody setMinHFileBackupCount(Integer minHFileBackupCount) {
-        this.minHFileBackupCount = minHFileBackupCount;
-        return this;
-    }
-    public Integer getMinHFileBackupCount() {
-        return this.minHFileBackupCount;
     }
 
     public static class DescribeBackupPlanConfigResponseBodyTables extends TeaModel {

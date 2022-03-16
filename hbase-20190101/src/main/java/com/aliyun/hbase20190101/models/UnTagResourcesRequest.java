@@ -4,11 +4,11 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class UnTagResourcesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("All")
     public Boolean all;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -21,20 +21,20 @@ public class UnTagResourcesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UnTagResourcesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public UnTagResourcesRequest setAll(Boolean all) {
         this.all = all;
         return this;
     }
     public Boolean getAll() {
         return this.all;
+    }
+
+    public UnTagResourcesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UnTagResourcesRequest setResourceId(java.util.List<String> resourceId) {

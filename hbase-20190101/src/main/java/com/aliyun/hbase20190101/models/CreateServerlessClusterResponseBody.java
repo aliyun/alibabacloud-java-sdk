@@ -4,9 +4,6 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateServerlessClusterResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -16,17 +13,12 @@ public class CreateServerlessClusterResponseBody extends TeaModel {
     @NameInMap("PassWord")
     public String passWord;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static CreateServerlessClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateServerlessClusterResponseBody self = new CreateServerlessClusterResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateServerlessClusterResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateServerlessClusterResponseBody setClusterId(String clusterId) {
@@ -51,6 +43,14 @@ public class CreateServerlessClusterResponseBody extends TeaModel {
     }
     public String getPassWord() {
         return this.passWord;
+    }
+
+    public CreateServerlessClusterResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -7,9 +7,6 @@ public class ModifyBackupPlanConfigRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("Tables")
-    public String tables;
-
     @NameInMap("FullBackupCycle")
     public String fullBackupCycle;
 
@@ -18,6 +15,9 @@ public class ModifyBackupPlanConfigRequest extends TeaModel {
 
     @NameInMap("NextFullBackupDate")
     public String nextFullBackupDate;
+
+    @NameInMap("Tables")
+    public String tables;
 
     public static ModifyBackupPlanConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBackupPlanConfigRequest self = new ModifyBackupPlanConfigRequest();
@@ -30,14 +30,6 @@ public class ModifyBackupPlanConfigRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
-    }
-
-    public ModifyBackupPlanConfigRequest setTables(String tables) {
-        this.tables = tables;
-        return this;
-    }
-    public String getTables() {
-        return this.tables;
     }
 
     public ModifyBackupPlanConfigRequest setFullBackupCycle(String fullBackupCycle) {
@@ -62,6 +54,14 @@ public class ModifyBackupPlanConfigRequest extends TeaModel {
     }
     public String getNextFullBackupDate() {
         return this.nextFullBackupDate;
+    }
+
+    public ModifyBackupPlanConfigRequest setTables(String tables) {
+        this.tables = tables;
+        return this;
+    }
+    public String getTables() {
+        return this.tables;
     }
 
 }

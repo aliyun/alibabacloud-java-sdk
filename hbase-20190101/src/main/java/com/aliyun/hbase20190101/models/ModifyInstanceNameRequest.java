@@ -7,17 +7,17 @@ public class ModifyInstanceNameRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
-
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("ClusterName")
     public String clusterName;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static ModifyInstanceNameRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceNameRequest self = new ModifyInstanceNameRequest();
@@ -30,22 +30,6 @@ public class ModifyInstanceNameRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    public ModifyInstanceNameRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyInstanceNameRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
     }
 
     public ModifyInstanceNameRequest setClusterId(String clusterId) {
@@ -62,6 +46,22 @@ public class ModifyInstanceNameRequest extends TeaModel {
     }
     public String getClusterName() {
         return this.clusterName;
+    }
+
+    public ModifyInstanceNameRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyInstanceNameRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

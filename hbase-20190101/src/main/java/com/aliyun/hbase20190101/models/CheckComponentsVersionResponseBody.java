@@ -32,23 +32,15 @@ public class CheckComponentsVersionResponseBody extends TeaModel {
     }
 
     public static class CheckComponentsVersionResponseBodyComponentsComponent extends TeaModel {
-        @NameInMap("IsLatestVersion")
-        public String isLatestVersion;
-
         @NameInMap("Component")
         public String component;
+
+        @NameInMap("IsLatestVersion")
+        public String isLatestVersion;
 
         public static CheckComponentsVersionResponseBodyComponentsComponent build(java.util.Map<String, ?> map) throws Exception {
             CheckComponentsVersionResponseBodyComponentsComponent self = new CheckComponentsVersionResponseBodyComponentsComponent();
             return TeaModel.build(map, self);
-        }
-
-        public CheckComponentsVersionResponseBodyComponentsComponent setIsLatestVersion(String isLatestVersion) {
-            this.isLatestVersion = isLatestVersion;
-            return this;
-        }
-        public String getIsLatestVersion() {
-            return this.isLatestVersion;
         }
 
         public CheckComponentsVersionResponseBodyComponentsComponent setComponent(String component) {
@@ -57,6 +49,14 @@ public class CheckComponentsVersionResponseBody extends TeaModel {
         }
         public String getComponent() {
             return this.component;
+        }
+
+        public CheckComponentsVersionResponseBodyComponentsComponent setIsLatestVersion(String isLatestVersion) {
+            this.isLatestVersion = isLatestVersion;
+            return this;
+        }
+        public String getIsLatestVersion() {
+            return this.isLatestVersion;
         }
 
     }

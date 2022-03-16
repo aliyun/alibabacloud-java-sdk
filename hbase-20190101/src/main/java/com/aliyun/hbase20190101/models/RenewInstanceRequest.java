@@ -7,11 +7,11 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("PricingCycle")
-    public String pricingCycle;
-
     @NameInMap("Duration")
     public Integer duration;
+
+    @NameInMap("PricingCycle")
+    public String pricingCycle;
 
     public static RenewInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewInstanceRequest self = new RenewInstanceRequest();
@@ -26,20 +26,20 @@ public class RenewInstanceRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public RenewInstanceRequest setPricingCycle(String pricingCycle) {
-        this.pricingCycle = pricingCycle;
-        return this;
-    }
-    public String getPricingCycle() {
-        return this.pricingCycle;
-    }
-
     public RenewInstanceRequest setDuration(Integer duration) {
         this.duration = duration;
         return this;
     }
     public Integer getDuration() {
         return this.duration;
+    }
+
+    public RenewInstanceRequest setPricingCycle(String pricingCycle) {
+        this.pricingCycle = pricingCycle;
+        return this;
+    }
+    public String getPricingCycle() {
+        return this.pricingCycle;
     }
 
 }

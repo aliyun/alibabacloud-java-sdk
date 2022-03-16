@@ -4,26 +4,35 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class EnableHBaseueModuleRequest extends TeaModel {
-    @NameInMap("ModuleClusterName")
-    public String moduleClusterName;
+    @NameInMap("AutoRenewPeriod")
+    public Integer autoRenewPeriod;
 
-    @NameInMap("VpcId")
-    public String vpcId;
+    @NameInMap("BdsId")
+    public String bdsId;
 
-    @NameInMap("VswitchId")
-    public String vswitchId;
-
-    @NameInMap("MasterInstanceType")
-    public String masterInstanceType;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("CoreInstanceType")
     public String coreInstanceType;
 
+    @NameInMap("DiskSize")
+    public Integer diskSize;
+
     @NameInMap("DiskType")
     public String diskType;
 
-    @NameInMap("DiskSize")
-    public Integer diskSize;
+    @NameInMap("HbaseueClusterId")
+    public String hbaseueClusterId;
+
+    @NameInMap("MasterInstanceType")
+    public String masterInstanceType;
+
+    @NameInMap("ModuleClusterName")
+    public String moduleClusterName;
+
+    @NameInMap("ModuleTypeName")
+    public String moduleTypeName;
 
     @NameInMap("NodeCount")
     public Integer nodeCount;
@@ -31,29 +40,20 @@ public class EnableHBaseueModuleRequest extends TeaModel {
     @NameInMap("PayType")
     public String payType;
 
-    @NameInMap("PeriodUnit")
-    public String periodUnit;
-
     @NameInMap("Period")
     public Integer period;
 
-    @NameInMap("AutoRenewPeriod")
-    public Integer autoRenewPeriod;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("HbaseueClusterId")
-    public String hbaseueClusterId;
-
-    @NameInMap("BdsId")
-    public String bdsId;
-
-    @NameInMap("ModuleTypeName")
-    public String moduleTypeName;
+    @NameInMap("PeriodUnit")
+    public String periodUnit;
 
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("VpcId")
+    public String vpcId;
+
+    @NameInMap("VswitchId")
+    public String vswitchId;
 
     @NameInMap("ZoneId")
     public String zoneId;
@@ -63,36 +63,28 @@ public class EnableHBaseueModuleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public EnableHBaseueModuleRequest setModuleClusterName(String moduleClusterName) {
-        this.moduleClusterName = moduleClusterName;
+    public EnableHBaseueModuleRequest setAutoRenewPeriod(Integer autoRenewPeriod) {
+        this.autoRenewPeriod = autoRenewPeriod;
         return this;
     }
-    public String getModuleClusterName() {
-        return this.moduleClusterName;
+    public Integer getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
     }
 
-    public EnableHBaseueModuleRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
+    public EnableHBaseueModuleRequest setBdsId(String bdsId) {
+        this.bdsId = bdsId;
         return this;
     }
-    public String getVpcId() {
-        return this.vpcId;
+    public String getBdsId() {
+        return this.bdsId;
     }
 
-    public EnableHBaseueModuleRequest setVswitchId(String vswitchId) {
-        this.vswitchId = vswitchId;
+    public EnableHBaseueModuleRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getVswitchId() {
-        return this.vswitchId;
-    }
-
-    public EnableHBaseueModuleRequest setMasterInstanceType(String masterInstanceType) {
-        this.masterInstanceType = masterInstanceType;
-        return this;
-    }
-    public String getMasterInstanceType() {
-        return this.masterInstanceType;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public EnableHBaseueModuleRequest setCoreInstanceType(String coreInstanceType) {
@@ -103,6 +95,14 @@ public class EnableHBaseueModuleRequest extends TeaModel {
         return this.coreInstanceType;
     }
 
+    public EnableHBaseueModuleRequest setDiskSize(Integer diskSize) {
+        this.diskSize = diskSize;
+        return this;
+    }
+    public Integer getDiskSize() {
+        return this.diskSize;
+    }
+
     public EnableHBaseueModuleRequest setDiskType(String diskType) {
         this.diskType = diskType;
         return this;
@@ -111,12 +111,36 @@ public class EnableHBaseueModuleRequest extends TeaModel {
         return this.diskType;
     }
 
-    public EnableHBaseueModuleRequest setDiskSize(Integer diskSize) {
-        this.diskSize = diskSize;
+    public EnableHBaseueModuleRequest setHbaseueClusterId(String hbaseueClusterId) {
+        this.hbaseueClusterId = hbaseueClusterId;
         return this;
     }
-    public Integer getDiskSize() {
-        return this.diskSize;
+    public String getHbaseueClusterId() {
+        return this.hbaseueClusterId;
+    }
+
+    public EnableHBaseueModuleRequest setMasterInstanceType(String masterInstanceType) {
+        this.masterInstanceType = masterInstanceType;
+        return this;
+    }
+    public String getMasterInstanceType() {
+        return this.masterInstanceType;
+    }
+
+    public EnableHBaseueModuleRequest setModuleClusterName(String moduleClusterName) {
+        this.moduleClusterName = moduleClusterName;
+        return this;
+    }
+    public String getModuleClusterName() {
+        return this.moduleClusterName;
+    }
+
+    public EnableHBaseueModuleRequest setModuleTypeName(String moduleTypeName) {
+        this.moduleTypeName = moduleTypeName;
+        return this;
+    }
+    public String getModuleTypeName() {
+        return this.moduleTypeName;
     }
 
     public EnableHBaseueModuleRequest setNodeCount(Integer nodeCount) {
@@ -135,14 +159,6 @@ public class EnableHBaseueModuleRequest extends TeaModel {
         return this.payType;
     }
 
-    public EnableHBaseueModuleRequest setPeriodUnit(String periodUnit) {
-        this.periodUnit = periodUnit;
-        return this;
-    }
-    public String getPeriodUnit() {
-        return this.periodUnit;
-    }
-
     public EnableHBaseueModuleRequest setPeriod(Integer period) {
         this.period = period;
         return this;
@@ -151,44 +167,12 @@ public class EnableHBaseueModuleRequest extends TeaModel {
         return this.period;
     }
 
-    public EnableHBaseueModuleRequest setAutoRenewPeriod(Integer autoRenewPeriod) {
-        this.autoRenewPeriod = autoRenewPeriod;
+    public EnableHBaseueModuleRequest setPeriodUnit(String periodUnit) {
+        this.periodUnit = periodUnit;
         return this;
     }
-    public Integer getAutoRenewPeriod() {
-        return this.autoRenewPeriod;
-    }
-
-    public EnableHBaseueModuleRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public EnableHBaseueModuleRequest setHbaseueClusterId(String hbaseueClusterId) {
-        this.hbaseueClusterId = hbaseueClusterId;
-        return this;
-    }
-    public String getHbaseueClusterId() {
-        return this.hbaseueClusterId;
-    }
-
-    public EnableHBaseueModuleRequest setBdsId(String bdsId) {
-        this.bdsId = bdsId;
-        return this;
-    }
-    public String getBdsId() {
-        return this.bdsId;
-    }
-
-    public EnableHBaseueModuleRequest setModuleTypeName(String moduleTypeName) {
-        this.moduleTypeName = moduleTypeName;
-        return this;
-    }
-    public String getModuleTypeName() {
-        return this.moduleTypeName;
+    public String getPeriodUnit() {
+        return this.periodUnit;
     }
 
     public EnableHBaseueModuleRequest setRegionId(String regionId) {
@@ -197,6 +181,22 @@ public class EnableHBaseueModuleRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public EnableHBaseueModuleRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public EnableHBaseueModuleRequest setVswitchId(String vswitchId) {
+        this.vswitchId = vswitchId;
+        return this;
+    }
+    public String getVswitchId() {
+        return this.vswitchId;
     }
 
     public EnableHBaseueModuleRequest setZoneId(String zoneId) {

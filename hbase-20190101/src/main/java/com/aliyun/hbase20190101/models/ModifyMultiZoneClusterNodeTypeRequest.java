@@ -7,14 +7,14 @@ public class ModifyMultiZoneClusterNodeTypeRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("MasterInstanceType")
-    public String masterInstanceType;
-
     @NameInMap("CoreInstanceType")
     public String coreInstanceType;
 
     @NameInMap("LogInstanceType")
     public String logInstanceType;
+
+    @NameInMap("MasterInstanceType")
+    public String masterInstanceType;
 
     public static ModifyMultiZoneClusterNodeTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyMultiZoneClusterNodeTypeRequest self = new ModifyMultiZoneClusterNodeTypeRequest();
@@ -27,14 +27,6 @@ public class ModifyMultiZoneClusterNodeTypeRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
-    }
-
-    public ModifyMultiZoneClusterNodeTypeRequest setMasterInstanceType(String masterInstanceType) {
-        this.masterInstanceType = masterInstanceType;
-        return this;
-    }
-    public String getMasterInstanceType() {
-        return this.masterInstanceType;
     }
 
     public ModifyMultiZoneClusterNodeTypeRequest setCoreInstanceType(String coreInstanceType) {
@@ -51,6 +43,14 @@ public class ModifyMultiZoneClusterNodeTypeRequest extends TeaModel {
     }
     public String getLogInstanceType() {
         return this.logInstanceType;
+    }
+
+    public ModifyMultiZoneClusterNodeTypeRequest setMasterInstanceType(String masterInstanceType) {
+        this.masterInstanceType = masterInstanceType;
+        return this;
+    }
+    public String getMasterInstanceType() {
+        return this.masterInstanceType;
     }
 
 }

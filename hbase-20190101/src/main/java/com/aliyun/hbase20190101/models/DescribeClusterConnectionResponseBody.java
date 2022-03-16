@@ -4,14 +4,26 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterConnectionResponseBody extends TeaModel {
+    @NameInMap("DbType")
+    public String dbType;
+
     @NameInMap("IsMultimod")
     public String isMultimod;
 
-    @NameInMap("VpcId")
-    public String vpcId;
+    @NameInMap("NetType")
+    public String netType;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("ServiceConnAddrs")
+    public DescribeClusterConnectionResponseBodyServiceConnAddrs serviceConnAddrs;
+
+    @NameInMap("SlbConnAddrs")
+    public DescribeClusterConnectionResponseBodySlbConnAddrs slbConnAddrs;
+
+    @NameInMap("ThriftConn")
+    public DescribeClusterConnectionResponseBodyThriftConn thriftConn;
 
     @NameInMap("UiProxyConnAddrInfo")
     public DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo uiProxyConnAddrInfo;
@@ -19,27 +31,23 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    @NameInMap("ServiceConnAddrs")
-    public DescribeClusterConnectionResponseBodyServiceConnAddrs serviceConnAddrs;
-
-    @NameInMap("NetType")
-    public String netType;
-
-    @NameInMap("DbType")
-    public String dbType;
-
-    @NameInMap("ThriftConn")
-    public DescribeClusterConnectionResponseBodyThriftConn thriftConn;
+    @NameInMap("VpcId")
+    public String vpcId;
 
     @NameInMap("ZkConnAddrs")
     public DescribeClusterConnectionResponseBodyZkConnAddrs zkConnAddrs;
 
-    @NameInMap("SlbConnAddrs")
-    public DescribeClusterConnectionResponseBodySlbConnAddrs slbConnAddrs;
-
     public static DescribeClusterConnectionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterConnectionResponseBody self = new DescribeClusterConnectionResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeClusterConnectionResponseBody setDbType(String dbType) {
+        this.dbType = dbType;
+        return this;
+    }
+    public String getDbType() {
+        return this.dbType;
     }
 
     public DescribeClusterConnectionResponseBody setIsMultimod(String isMultimod) {
@@ -50,12 +58,12 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         return this.isMultimod;
     }
 
-    public DescribeClusterConnectionResponseBody setVpcId(String vpcId) {
-        this.vpcId = vpcId;
+    public DescribeClusterConnectionResponseBody setNetType(String netType) {
+        this.netType = netType;
         return this;
     }
-    public String getVpcId() {
-        return this.vpcId;
+    public String getNetType() {
+        return this.netType;
     }
 
     public DescribeClusterConnectionResponseBody setRequestId(String requestId) {
@@ -64,6 +72,30 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeClusterConnectionResponseBody setServiceConnAddrs(DescribeClusterConnectionResponseBodyServiceConnAddrs serviceConnAddrs) {
+        this.serviceConnAddrs = serviceConnAddrs;
+        return this;
+    }
+    public DescribeClusterConnectionResponseBodyServiceConnAddrs getServiceConnAddrs() {
+        return this.serviceConnAddrs;
+    }
+
+    public DescribeClusterConnectionResponseBody setSlbConnAddrs(DescribeClusterConnectionResponseBodySlbConnAddrs slbConnAddrs) {
+        this.slbConnAddrs = slbConnAddrs;
+        return this;
+    }
+    public DescribeClusterConnectionResponseBodySlbConnAddrs getSlbConnAddrs() {
+        return this.slbConnAddrs;
+    }
+
+    public DescribeClusterConnectionResponseBody setThriftConn(DescribeClusterConnectionResponseBodyThriftConn thriftConn) {
+        this.thriftConn = thriftConn;
+        return this;
+    }
+    public DescribeClusterConnectionResponseBodyThriftConn getThriftConn() {
+        return this.thriftConn;
     }
 
     public DescribeClusterConnectionResponseBody setUiProxyConnAddrInfo(DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo uiProxyConnAddrInfo) {
@@ -82,36 +114,12 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         return this.vSwitchId;
     }
 
-    public DescribeClusterConnectionResponseBody setServiceConnAddrs(DescribeClusterConnectionResponseBodyServiceConnAddrs serviceConnAddrs) {
-        this.serviceConnAddrs = serviceConnAddrs;
+    public DescribeClusterConnectionResponseBody setVpcId(String vpcId) {
+        this.vpcId = vpcId;
         return this;
     }
-    public DescribeClusterConnectionResponseBodyServiceConnAddrs getServiceConnAddrs() {
-        return this.serviceConnAddrs;
-    }
-
-    public DescribeClusterConnectionResponseBody setNetType(String netType) {
-        this.netType = netType;
-        return this;
-    }
-    public String getNetType() {
-        return this.netType;
-    }
-
-    public DescribeClusterConnectionResponseBody setDbType(String dbType) {
-        this.dbType = dbType;
-        return this;
-    }
-    public String getDbType() {
-        return this.dbType;
-    }
-
-    public DescribeClusterConnectionResponseBody setThriftConn(DescribeClusterConnectionResponseBodyThriftConn thriftConn) {
-        this.thriftConn = thriftConn;
-        return this;
-    }
-    public DescribeClusterConnectionResponseBodyThriftConn getThriftConn() {
-        return this.thriftConn;
+    public String getVpcId() {
+        return this.vpcId;
     }
 
     public DescribeClusterConnectionResponseBody setZkConnAddrs(DescribeClusterConnectionResponseBodyZkConnAddrs zkConnAddrs) {
@@ -122,68 +130,27 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         return this.zkConnAddrs;
     }
 
-    public DescribeClusterConnectionResponseBody setSlbConnAddrs(DescribeClusterConnectionResponseBodySlbConnAddrs slbConnAddrs) {
-        this.slbConnAddrs = slbConnAddrs;
-        return this;
-    }
-    public DescribeClusterConnectionResponseBodySlbConnAddrs getSlbConnAddrs() {
-        return this.slbConnAddrs;
-    }
+    public static class DescribeClusterConnectionResponseBodyServiceConnAddrsServiceConnAddrConnAddrInfo extends TeaModel {
+        @NameInMap("ConnAddr")
+        public String connAddr;
 
-    public static class DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo extends TeaModel {
         @NameInMap("ConnAddrPort")
         public String connAddrPort;
 
         @NameInMap("NetType")
         public String netType;
 
-        @NameInMap("ConnAddr")
-        public String connAddr;
-
-        public static DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo build(java.util.Map<String, ?> map) throws Exception {
-            DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo self = new DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo();
+        public static DescribeClusterConnectionResponseBodyServiceConnAddrsServiceConnAddrConnAddrInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterConnectionResponseBodyServiceConnAddrsServiceConnAddrConnAddrInfo self = new DescribeClusterConnectionResponseBodyServiceConnAddrsServiceConnAddrConnAddrInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo setConnAddrPort(String connAddrPort) {
-            this.connAddrPort = connAddrPort;
-            return this;
-        }
-        public String getConnAddrPort() {
-            return this.connAddrPort;
-        }
-
-        public DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo setNetType(String netType) {
-            this.netType = netType;
-            return this;
-        }
-        public String getNetType() {
-            return this.netType;
-        }
-
-        public DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo setConnAddr(String connAddr) {
+        public DescribeClusterConnectionResponseBodyServiceConnAddrsServiceConnAddrConnAddrInfo setConnAddr(String connAddr) {
             this.connAddr = connAddr;
             return this;
         }
         public String getConnAddr() {
             return this.connAddr;
-        }
-
-    }
-
-    public static class DescribeClusterConnectionResponseBodyServiceConnAddrsServiceConnAddrConnAddrInfo extends TeaModel {
-        @NameInMap("ConnAddrPort")
-        public String connAddrPort;
-
-        @NameInMap("NetType")
-        public String netType;
-
-        @NameInMap("ConnAddr")
-        public String connAddr;
-
-        public static DescribeClusterConnectionResponseBodyServiceConnAddrsServiceConnAddrConnAddrInfo build(java.util.Map<String, ?> map) throws Exception {
-            DescribeClusterConnectionResponseBodyServiceConnAddrsServiceConnAddrConnAddrInfo self = new DescribeClusterConnectionResponseBodyServiceConnAddrsServiceConnAddrConnAddrInfo();
-            return TeaModel.build(map, self);
         }
 
         public DescribeClusterConnectionResponseBodyServiceConnAddrsServiceConnAddrConnAddrInfo setConnAddrPort(String connAddrPort) {
@@ -200,14 +167,6 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         }
         public String getNetType() {
             return this.netType;
-        }
-
-        public DescribeClusterConnectionResponseBodyServiceConnAddrsServiceConnAddrConnAddrInfo setConnAddr(String connAddr) {
-            this.connAddr = connAddr;
-            return this;
-        }
-        public String getConnAddr() {
-            return this.connAddr;
         }
 
     }
@@ -261,120 +220,27 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeClusterConnectionResponseBodyThriftConn extends TeaModel {
-        @NameInMap("ConnAddrPort")
-        public String connAddrPort;
-
-        @NameInMap("NetType")
-        public String netType;
-
-        @NameInMap("ConnAddr")
-        public String connAddr;
-
-        public static DescribeClusterConnectionResponseBodyThriftConn build(java.util.Map<String, ?> map) throws Exception {
-            DescribeClusterConnectionResponseBodyThriftConn self = new DescribeClusterConnectionResponseBodyThriftConn();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeClusterConnectionResponseBodyThriftConn setConnAddrPort(String connAddrPort) {
-            this.connAddrPort = connAddrPort;
-            return this;
-        }
-        public String getConnAddrPort() {
-            return this.connAddrPort;
-        }
-
-        public DescribeClusterConnectionResponseBodyThriftConn setNetType(String netType) {
-            this.netType = netType;
-            return this;
-        }
-        public String getNetType() {
-            return this.netType;
-        }
-
-        public DescribeClusterConnectionResponseBodyThriftConn setConnAddr(String connAddr) {
-            this.connAddr = connAddr;
-            return this;
-        }
-        public String getConnAddr() {
-            return this.connAddr;
-        }
-
-    }
-
-    public static class DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr extends TeaModel {
-        @NameInMap("ConnAddrPort")
-        public String connAddrPort;
-
-        @NameInMap("NetType")
-        public String netType;
-
-        @NameInMap("ConnAddr")
-        public String connAddr;
-
-        public static DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr build(java.util.Map<String, ?> map) throws Exception {
-            DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr self = new DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr setConnAddrPort(String connAddrPort) {
-            this.connAddrPort = connAddrPort;
-            return this;
-        }
-        public String getConnAddrPort() {
-            return this.connAddrPort;
-        }
-
-        public DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr setNetType(String netType) {
-            this.netType = netType;
-            return this;
-        }
-        public String getNetType() {
-            return this.netType;
-        }
-
-        public DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr setConnAddr(String connAddr) {
-            this.connAddr = connAddr;
-            return this;
-        }
-        public String getConnAddr() {
-            return this.connAddr;
-        }
-
-    }
-
-    public static class DescribeClusterConnectionResponseBodyZkConnAddrs extends TeaModel {
-        @NameInMap("ZkConnAddr")
-        public java.util.List<DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr> zkConnAddr;
-
-        public static DescribeClusterConnectionResponseBodyZkConnAddrs build(java.util.Map<String, ?> map) throws Exception {
-            DescribeClusterConnectionResponseBodyZkConnAddrs self = new DescribeClusterConnectionResponseBodyZkConnAddrs();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeClusterConnectionResponseBodyZkConnAddrs setZkConnAddr(java.util.List<DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr> zkConnAddr) {
-            this.zkConnAddr = zkConnAddr;
-            return this;
-        }
-        public java.util.List<DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr> getZkConnAddr() {
-            return this.zkConnAddr;
-        }
-
-    }
-
     public static class DescribeClusterConnectionResponseBodySlbConnAddrsSlbConnAddrConnAddrInfo extends TeaModel {
+        @NameInMap("ConnAddr")
+        public String connAddr;
+
         @NameInMap("ConnAddrPort")
         public String connAddrPort;
 
         @NameInMap("NetType")
         public String netType;
-
-        @NameInMap("ConnAddr")
-        public String connAddr;
 
         public static DescribeClusterConnectionResponseBodySlbConnAddrsSlbConnAddrConnAddrInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterConnectionResponseBodySlbConnAddrsSlbConnAddrConnAddrInfo self = new DescribeClusterConnectionResponseBodySlbConnAddrsSlbConnAddrConnAddrInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterConnectionResponseBodySlbConnAddrsSlbConnAddrConnAddrInfo setConnAddr(String connAddr) {
+            this.connAddr = connAddr;
+            return this;
+        }
+        public String getConnAddr() {
+            return this.connAddr;
         }
 
         public DescribeClusterConnectionResponseBodySlbConnAddrsSlbConnAddrConnAddrInfo setConnAddrPort(String connAddrPort) {
@@ -391,14 +257,6 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         }
         public String getNetType() {
             return this.netType;
-        }
-
-        public DescribeClusterConnectionResponseBodySlbConnAddrsSlbConnAddrConnAddrInfo setConnAddr(String connAddr) {
-            this.connAddr = connAddr;
-            return this;
-        }
-        public String getConnAddr() {
-            return this.connAddr;
         }
 
     }
@@ -448,6 +306,148 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         }
         public java.util.List<DescribeClusterConnectionResponseBodySlbConnAddrsSlbConnAddr> getSlbConnAddr() {
             return this.slbConnAddr;
+        }
+
+    }
+
+    public static class DescribeClusterConnectionResponseBodyThriftConn extends TeaModel {
+        @NameInMap("ConnAddr")
+        public String connAddr;
+
+        @NameInMap("ConnAddrPort")
+        public String connAddrPort;
+
+        @NameInMap("NetType")
+        public String netType;
+
+        public static DescribeClusterConnectionResponseBodyThriftConn build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterConnectionResponseBodyThriftConn self = new DescribeClusterConnectionResponseBodyThriftConn();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterConnectionResponseBodyThriftConn setConnAddr(String connAddr) {
+            this.connAddr = connAddr;
+            return this;
+        }
+        public String getConnAddr() {
+            return this.connAddr;
+        }
+
+        public DescribeClusterConnectionResponseBodyThriftConn setConnAddrPort(String connAddrPort) {
+            this.connAddrPort = connAddrPort;
+            return this;
+        }
+        public String getConnAddrPort() {
+            return this.connAddrPort;
+        }
+
+        public DescribeClusterConnectionResponseBodyThriftConn setNetType(String netType) {
+            this.netType = netType;
+            return this;
+        }
+        public String getNetType() {
+            return this.netType;
+        }
+
+    }
+
+    public static class DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo extends TeaModel {
+        @NameInMap("ConnAddr")
+        public String connAddr;
+
+        @NameInMap("ConnAddrPort")
+        public String connAddrPort;
+
+        @NameInMap("NetType")
+        public String netType;
+
+        public static DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo self = new DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo setConnAddr(String connAddr) {
+            this.connAddr = connAddr;
+            return this;
+        }
+        public String getConnAddr() {
+            return this.connAddr;
+        }
+
+        public DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo setConnAddrPort(String connAddrPort) {
+            this.connAddrPort = connAddrPort;
+            return this;
+        }
+        public String getConnAddrPort() {
+            return this.connAddrPort;
+        }
+
+        public DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo setNetType(String netType) {
+            this.netType = netType;
+            return this;
+        }
+        public String getNetType() {
+            return this.netType;
+        }
+
+    }
+
+    public static class DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr extends TeaModel {
+        @NameInMap("ConnAddr")
+        public String connAddr;
+
+        @NameInMap("ConnAddrPort")
+        public String connAddrPort;
+
+        @NameInMap("NetType")
+        public String netType;
+
+        public static DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr self = new DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr setConnAddr(String connAddr) {
+            this.connAddr = connAddr;
+            return this;
+        }
+        public String getConnAddr() {
+            return this.connAddr;
+        }
+
+        public DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr setConnAddrPort(String connAddrPort) {
+            this.connAddrPort = connAddrPort;
+            return this;
+        }
+        public String getConnAddrPort() {
+            return this.connAddrPort;
+        }
+
+        public DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr setNetType(String netType) {
+            this.netType = netType;
+            return this;
+        }
+        public String getNetType() {
+            return this.netType;
+        }
+
+    }
+
+    public static class DescribeClusterConnectionResponseBodyZkConnAddrs extends TeaModel {
+        @NameInMap("ZkConnAddr")
+        public java.util.List<DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr> zkConnAddr;
+
+        public static DescribeClusterConnectionResponseBodyZkConnAddrs build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterConnectionResponseBodyZkConnAddrs self = new DescribeClusterConnectionResponseBodyZkConnAddrs();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterConnectionResponseBodyZkConnAddrs setZkConnAddr(java.util.List<DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr> zkConnAddr) {
+            this.zkConnAddr = zkConnAddr;
+            return this;
+        }
+        public java.util.List<DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr> getZkConnAddr() {
+            return this.zkConnAddr;
         }
 
     }

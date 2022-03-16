@@ -7,9 +7,6 @@ public class ModifyInstanceServiceConfigRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("Restart")
-    public Boolean restart;
-
     @NameInMap("ConfigureName")
     public String configureName;
 
@@ -18,6 +15,9 @@ public class ModifyInstanceServiceConfigRequest extends TeaModel {
 
     @NameInMap("Parameters")
     public String parameters;
+
+    @NameInMap("Restart")
+    public Boolean restart;
 
     public static ModifyInstanceServiceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceServiceConfigRequest self = new ModifyInstanceServiceConfigRequest();
@@ -30,14 +30,6 @@ public class ModifyInstanceServiceConfigRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
-    }
-
-    public ModifyInstanceServiceConfigRequest setRestart(Boolean restart) {
-        this.restart = restart;
-        return this;
-    }
-    public Boolean getRestart() {
-        return this.restart;
     }
 
     public ModifyInstanceServiceConfigRequest setConfigureName(String configureName) {
@@ -62,6 +54,14 @@ public class ModifyInstanceServiceConfigRequest extends TeaModel {
     }
     public String getParameters() {
         return this.parameters;
+    }
+
+    public ModifyInstanceServiceConfigRequest setRestart(Boolean restart) {
+        this.restart = restart;
+        return this;
+    }
+    public Boolean getRestart() {
+        return this.restart;
     }
 
 }

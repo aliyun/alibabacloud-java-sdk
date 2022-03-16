@@ -7,8 +7,8 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("PreferredBackupTime")
-    public String preferredBackupTime;
+    @NameInMap("PreferredBackupEndTimeUTC")
+    public String preferredBackupEndTimeUTC;
 
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
@@ -16,8 +16,8 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("PreferredBackupStartTimeUTC")
     public String preferredBackupStartTimeUTC;
 
-    @NameInMap("PreferredBackupEndTimeUTC")
-    public String preferredBackupEndTimeUTC;
+    @NameInMap("PreferredBackupTime")
+    public String preferredBackupTime;
 
     public static ModifyBackupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBackupPolicyRequest self = new ModifyBackupPolicyRequest();
@@ -32,12 +32,12 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public ModifyBackupPolicyRequest setPreferredBackupTime(String preferredBackupTime) {
-        this.preferredBackupTime = preferredBackupTime;
+    public ModifyBackupPolicyRequest setPreferredBackupEndTimeUTC(String preferredBackupEndTimeUTC) {
+        this.preferredBackupEndTimeUTC = preferredBackupEndTimeUTC;
         return this;
     }
-    public String getPreferredBackupTime() {
-        return this.preferredBackupTime;
+    public String getPreferredBackupEndTimeUTC() {
+        return this.preferredBackupEndTimeUTC;
     }
 
     public ModifyBackupPolicyRequest setPreferredBackupPeriod(String preferredBackupPeriod) {
@@ -56,12 +56,12 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.preferredBackupStartTimeUTC;
     }
 
-    public ModifyBackupPolicyRequest setPreferredBackupEndTimeUTC(String preferredBackupEndTimeUTC) {
-        this.preferredBackupEndTimeUTC = preferredBackupEndTimeUTC;
+    public ModifyBackupPolicyRequest setPreferredBackupTime(String preferredBackupTime) {
+        this.preferredBackupTime = preferredBackupTime;
         return this;
     }
-    public String getPreferredBackupEndTimeUTC() {
-        return this.preferredBackupEndTimeUTC;
+    public String getPreferredBackupTime() {
+        return this.preferredBackupTime;
     }
 
 }

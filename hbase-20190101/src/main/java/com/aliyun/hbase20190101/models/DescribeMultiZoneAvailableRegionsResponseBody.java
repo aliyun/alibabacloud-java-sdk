@@ -4,23 +4,15 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Regions")
     public DescribeMultiZoneAvailableRegionsResponseBodyRegions regions;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeMultiZoneAvailableRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMultiZoneAvailableRegionsResponseBody self = new DescribeMultiZoneAvailableRegionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeMultiZoneAvailableRegionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeMultiZoneAvailableRegionsResponseBody setRegions(DescribeMultiZoneAvailableRegionsResponseBodyRegions regions) {
@@ -29,6 +21,14 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
     }
     public DescribeMultiZoneAvailableRegionsResponseBodyRegions getRegions() {
         return this.regions;
+    }
+
+    public DescribeMultiZoneAvailableRegionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombinesAvailableCombineZones extends TeaModel {
@@ -51,23 +51,15 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombinesAvailableCombine extends TeaModel {
-        @NameInMap("Zones")
-        public DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombinesAvailableCombineZones zones;
-
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Zones")
+        public DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombinesAvailableCombineZones zones;
 
         public static DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombinesAvailableCombine build(java.util.Map<String, ?> map) throws Exception {
             DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombinesAvailableCombine self = new DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombinesAvailableCombine();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombinesAvailableCombine setZones(DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombinesAvailableCombineZones zones) {
-            this.zones = zones;
-            return this;
-        }
-        public DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombinesAvailableCombineZones getZones() {
-            return this.zones;
         }
 
         public DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombinesAvailableCombine setId(String id) {
@@ -76,6 +68,14 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombinesAvailableCombine setZones(DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombinesAvailableCombineZones zones) {
+            this.zones = zones;
+            return this;
+        }
+        public DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombinesAvailableCombineZones getZones() {
+            return this.zones;
         }
 
     }
@@ -100,14 +100,14 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegion extends TeaModel {
+        @NameInMap("AvailableCombines")
+        public DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombines availableCombines;
+
         @NameInMap("LocalName")
         public String localName;
 
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
-
-        @NameInMap("AvailableCombines")
-        public DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombines availableCombines;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -115,6 +115,14 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
         public static DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegion build(java.util.Map<String, ?> map) throws Exception {
             DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegion self = new DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegion();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegion setAvailableCombines(DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombines availableCombines) {
+            this.availableCombines = availableCombines;
+            return this;
+        }
+        public DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombines getAvailableCombines() {
+            return this.availableCombines;
         }
 
         public DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegion setLocalName(String localName) {
@@ -131,14 +139,6 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
         }
         public String getRegionEndpoint() {
             return this.regionEndpoint;
-        }
-
-        public DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegion setAvailableCombines(DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombines availableCombines) {
-            this.availableCombines = availableCombines;
-            return this;
-        }
-        public DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombines getAvailableCombines() {
-            return this.availableCombines;
         }
 
         public DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegion setRegionId(String regionId) {

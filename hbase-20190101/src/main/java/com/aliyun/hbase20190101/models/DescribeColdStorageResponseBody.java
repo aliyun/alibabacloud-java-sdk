@@ -4,51 +4,33 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeColdStorageResponseBody extends TeaModel {
-    @NameInMap("ColdStorageUsePercent")
-    public String coldStorageUsePercent;
+    @NameInMap("ClusterId")
+    public String clusterId;
 
     @NameInMap("ColdStorageSize")
     public String coldStorageSize;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ColdStorageType")
+    public String coldStorageType;
 
-    @NameInMap("ClusterId")
-    public String clusterId;
+    @NameInMap("ColdStorageUseAmount")
+    public String coldStorageUseAmount;
 
-    @NameInMap("PayType")
-    public String payType;
+    @NameInMap("ColdStorageUsePercent")
+    public String coldStorageUsePercent;
 
     @NameInMap("OpenStatus")
     public String openStatus;
 
+    @NameInMap("PayType")
+    public String payType;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeColdStorageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeColdStorageResponseBody self = new DescribeColdStorageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeColdStorageResponseBody setColdStorageUsePercent(String coldStorageUsePercent) {
-        this.coldStorageUsePercent = coldStorageUsePercent;
-        return this;
-    }
-    public String getColdStorageUsePercent() {
-        return this.coldStorageUsePercent;
-    }
-
-    public DescribeColdStorageResponseBody setColdStorageSize(String coldStorageSize) {
-        this.coldStorageSize = coldStorageSize;
-        return this;
-    }
-    public String getColdStorageSize() {
-        return this.coldStorageSize;
-    }
-
-    public DescribeColdStorageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeColdStorageResponseBody setClusterId(String clusterId) {
@@ -59,12 +41,36 @@ public class DescribeColdStorageResponseBody extends TeaModel {
         return this.clusterId;
     }
 
-    public DescribeColdStorageResponseBody setPayType(String payType) {
-        this.payType = payType;
+    public DescribeColdStorageResponseBody setColdStorageSize(String coldStorageSize) {
+        this.coldStorageSize = coldStorageSize;
         return this;
     }
-    public String getPayType() {
-        return this.payType;
+    public String getColdStorageSize() {
+        return this.coldStorageSize;
+    }
+
+    public DescribeColdStorageResponseBody setColdStorageType(String coldStorageType) {
+        this.coldStorageType = coldStorageType;
+        return this;
+    }
+    public String getColdStorageType() {
+        return this.coldStorageType;
+    }
+
+    public DescribeColdStorageResponseBody setColdStorageUseAmount(String coldStorageUseAmount) {
+        this.coldStorageUseAmount = coldStorageUseAmount;
+        return this;
+    }
+    public String getColdStorageUseAmount() {
+        return this.coldStorageUseAmount;
+    }
+
+    public DescribeColdStorageResponseBody setColdStorageUsePercent(String coldStorageUsePercent) {
+        this.coldStorageUsePercent = coldStorageUsePercent;
+        return this;
+    }
+    public String getColdStorageUsePercent() {
+        return this.coldStorageUsePercent;
     }
 
     public DescribeColdStorageResponseBody setOpenStatus(String openStatus) {
@@ -73,6 +79,22 @@ public class DescribeColdStorageResponseBody extends TeaModel {
     }
     public String getOpenStatus() {
         return this.openStatus;
+    }
+
+    public DescribeColdStorageResponseBody setPayType(String payType) {
+        this.payType = payType;
+        return this;
+    }
+    public String getPayType() {
+        return this.payType;
+    }
+
+    public DescribeColdStorageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

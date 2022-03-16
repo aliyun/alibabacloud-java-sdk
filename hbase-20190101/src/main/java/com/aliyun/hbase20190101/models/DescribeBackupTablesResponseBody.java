@@ -4,43 +4,27 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupTablesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("BackupRecords")
     public DescribeBackupTablesResponseBodyBackupRecords backupRecords;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("Total")
-    public Long total;
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Tables")
     public DescribeBackupTablesResponseBodyTables tables;
 
+    @NameInMap("Total")
+    public Long total;
+
     public static DescribeBackupTablesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupTablesResponseBody self = new DescribeBackupTablesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBackupTablesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeBackupTablesResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public DescribeBackupTablesResponseBody setBackupRecords(DescribeBackupTablesResponseBodyBackupRecords backupRecords) {
@@ -59,12 +43,20 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeBackupTablesResponseBody setTotal(Long total) {
-        this.total = total;
+    public DescribeBackupTablesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public Long getTotal() {
-        return this.total;
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeBackupTablesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeBackupTablesResponseBody setTables(DescribeBackupTablesResponseBodyTables tables) {
@@ -75,27 +67,35 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
         return this.tables;
     }
 
+    public DescribeBackupTablesResponseBody setTotal(Long total) {
+        this.total = total;
+        return this;
+    }
+    public Long getTotal() {
+        return this.total;
+    }
+
     public static class DescribeBackupTablesResponseBodyBackupRecordsBackupRecord extends TeaModel {
+        @NameInMap("DataSize")
+        public String dataSize;
+
         @NameInMap("EndTime")
         public String endTime;
 
-        @NameInMap("StartTime")
-        public String startTime;
+        @NameInMap("Message")
+        public String message;
 
         @NameInMap("Process")
         public String process;
 
-        @NameInMap("DataSize")
-        public String dataSize;
-
         @NameInMap("Speed")
         public String speed;
 
+        @NameInMap("StartTime")
+        public String startTime;
+
         @NameInMap("State")
         public String state;
-
-        @NameInMap("Message")
-        public String message;
 
         @NameInMap("Table")
         public String table;
@@ -103,30 +103,6 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
         public static DescribeBackupTablesResponseBodyBackupRecordsBackupRecord build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupTablesResponseBodyBackupRecordsBackupRecord self = new DescribeBackupTablesResponseBodyBackupRecordsBackupRecord();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBackupTablesResponseBodyBackupRecordsBackupRecord setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public DescribeBackupTablesResponseBodyBackupRecordsBackupRecord setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public DescribeBackupTablesResponseBodyBackupRecordsBackupRecord setProcess(String process) {
-            this.process = process;
-            return this;
-        }
-        public String getProcess() {
-            return this.process;
         }
 
         public DescribeBackupTablesResponseBodyBackupRecordsBackupRecord setDataSize(String dataSize) {
@@ -137,20 +113,12 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
             return this.dataSize;
         }
 
-        public DescribeBackupTablesResponseBodyBackupRecordsBackupRecord setSpeed(String speed) {
-            this.speed = speed;
+        public DescribeBackupTablesResponseBodyBackupRecordsBackupRecord setEndTime(String endTime) {
+            this.endTime = endTime;
             return this;
         }
-        public String getSpeed() {
-            return this.speed;
-        }
-
-        public DescribeBackupTablesResponseBodyBackupRecordsBackupRecord setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public DescribeBackupTablesResponseBodyBackupRecordsBackupRecord setMessage(String message) {
@@ -159,6 +127,38 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
         }
         public String getMessage() {
             return this.message;
+        }
+
+        public DescribeBackupTablesResponseBodyBackupRecordsBackupRecord setProcess(String process) {
+            this.process = process;
+            return this;
+        }
+        public String getProcess() {
+            return this.process;
+        }
+
+        public DescribeBackupTablesResponseBodyBackupRecordsBackupRecord setSpeed(String speed) {
+            this.speed = speed;
+            return this;
+        }
+        public String getSpeed() {
+            return this.speed;
+        }
+
+        public DescribeBackupTablesResponseBodyBackupRecordsBackupRecord setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeBackupTablesResponseBodyBackupRecordsBackupRecord setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
         public DescribeBackupTablesResponseBodyBackupRecordsBackupRecord setTable(String table) {

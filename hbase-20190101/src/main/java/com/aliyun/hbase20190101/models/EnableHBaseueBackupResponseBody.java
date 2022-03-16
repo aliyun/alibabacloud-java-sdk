@@ -4,26 +4,18 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class EnableHBaseueBackupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("OrderId")
     public String orderId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static EnableHBaseueBackupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EnableHBaseueBackupResponseBody self = new EnableHBaseueBackupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public EnableHBaseueBackupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public EnableHBaseueBackupResponseBody setClusterId(String clusterId) {
@@ -40,6 +32,14 @@ public class EnableHBaseueBackupResponseBody extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public EnableHBaseueBackupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
