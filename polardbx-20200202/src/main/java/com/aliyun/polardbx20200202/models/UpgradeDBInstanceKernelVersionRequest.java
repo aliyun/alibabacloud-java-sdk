@@ -10,6 +10,10 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    // 切换模式： 0:立刻执行，1：运维时间执行
+    @NameInMap("SwitchMode")
+    public String switchMode;
+
     public static UpgradeDBInstanceKernelVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBInstanceKernelVersionRequest self = new UpgradeDBInstanceKernelVersionRequest();
         return TeaModel.build(map, self);
@@ -29,6 +33,14 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public UpgradeDBInstanceKernelVersionRequest setSwitchMode(String switchMode) {
+        this.switchMode = switchMode;
+        return this;
+    }
+    public String getSwitchMode() {
+        return this.switchMode;
     }
 
 }
