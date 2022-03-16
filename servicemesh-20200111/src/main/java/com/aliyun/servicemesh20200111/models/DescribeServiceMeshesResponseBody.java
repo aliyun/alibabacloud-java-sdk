@@ -522,6 +522,9 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshesResponseBodyServiceMeshes extends TeaModel {
+        @NameInMap("ClusterSpec")
+        public String clusterSpec;
+
         @NameInMap("Clusters")
         public java.util.List<String> clusters;
 
@@ -537,6 +540,14 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         public static DescribeServiceMeshesResponseBodyServiceMeshes build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshesResponseBodyServiceMeshes self = new DescribeServiceMeshesResponseBodyServiceMeshes();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshes setClusterSpec(String clusterSpec) {
+            this.clusterSpec = clusterSpec;
+            return this;
+        }
+        public String getClusterSpec() {
+            return this.clusterSpec;
         }
 
         public DescribeServiceMeshesResponseBodyServiceMeshes setClusters(java.util.List<String> clusters) {

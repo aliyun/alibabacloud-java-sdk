@@ -34,6 +34,9 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("CRAggregationEnabled")
     public Boolean CRAggregationEnabled;
 
+    @NameInMap("ClusterSpec")
+    public String clusterSpec;
+
     @NameInMap("CniEnabled")
     public Boolean cniEnabled;
 
@@ -87,6 +90,9 @@ public class UpdateMeshFeatureRequest extends TeaModel {
 
     @NameInMap("GatewayAPIEnabled")
     public Boolean gatewayAPIEnabled;
+
+    @NameInMap("GlobalRateLimitEnabled")
+    public Boolean globalRateLimitEnabled;
 
     @NameInMap("Http10Enabled")
     public Boolean http10Enabled;
@@ -296,6 +302,14 @@ public class UpdateMeshFeatureRequest extends TeaModel {
         return this.CRAggregationEnabled;
     }
 
+    public UpdateMeshFeatureRequest setClusterSpec(String clusterSpec) {
+        this.clusterSpec = clusterSpec;
+        return this;
+    }
+    public String getClusterSpec() {
+        return this.clusterSpec;
+    }
+
     public UpdateMeshFeatureRequest setCniEnabled(Boolean cniEnabled) {
         this.cniEnabled = cniEnabled;
         return this;
@@ -438,6 +452,14 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public Boolean getGatewayAPIEnabled() {
         return this.gatewayAPIEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setGlobalRateLimitEnabled(Boolean globalRateLimitEnabled) {
+        this.globalRateLimitEnabled = globalRateLimitEnabled;
+        return this;
+    }
+    public Boolean getGlobalRateLimitEnabled() {
+        return this.globalRateLimitEnabled;
     }
 
     public UpdateMeshFeatureRequest setHttp10Enabled(Boolean http10Enabled) {

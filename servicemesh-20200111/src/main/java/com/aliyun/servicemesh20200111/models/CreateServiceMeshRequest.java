@@ -25,14 +25,29 @@ public class CreateServiceMeshRequest extends TeaModel {
     @NameInMap("AccessLogServicePort")
     public Integer accessLogServicePort;
 
+    @NameInMap("ApiServerLoadBalancerSpec")
+    public String apiServerLoadBalancerSpec;
+
     @NameInMap("ApiServerPublicEip")
     public Boolean apiServerPublicEip;
 
     @NameInMap("AuditProject")
     public String auditProject;
 
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
+    @NameInMap("AutoRenewPeriod")
+    public Integer autoRenewPeriod;
+
     @NameInMap("CRAggregationEnabled")
     public Boolean CRAggregationEnabled;
+
+    @NameInMap("ChargeType")
+    public String chargeType;
+
+    @NameInMap("ClusterSpec")
+    public String clusterSpec;
 
     @NameInMap("ConfigSourceEnabled")
     public Boolean configSourceEnabled;
@@ -85,6 +100,9 @@ public class CreateServiceMeshRequest extends TeaModel {
     @NameInMap("GatewayAPIEnabled")
     public Boolean gatewayAPIEnabled;
 
+    @NameInMap("GlobalRateLimitEnabled")
+    public Boolean globalRateLimitEnabled;
+
     @NameInMap("IncludeIPRanges")
     public String includeIPRanges;
 
@@ -102,6 +120,12 @@ public class CreateServiceMeshRequest extends TeaModel {
 
     @NameInMap("MSEEnabled")
     public Boolean MSEEnabled;
+
+    @NameInMap("MultiBufferEnabled")
+    public Boolean multiBufferEnabled;
+
+    @NameInMap("MultiBufferPollDelay")
+    public String multiBufferPollDelay;
 
     @NameInMap("MysqlFilterEnabled")
     public Boolean mysqlFilterEnabled;
@@ -129,6 +153,12 @@ public class CreateServiceMeshRequest extends TeaModel {
 
     @NameInMap("OpenAgentPolicy")
     public Boolean openAgentPolicy;
+
+    @NameInMap("Period")
+    public Integer period;
+
+    @NameInMap("PilotLoadBalancerSpec")
+    public String pilotLoadBalancerSpec;
 
     @NameInMap("PrometheusUrl")
     public String prometheusUrl;
@@ -233,6 +263,14 @@ public class CreateServiceMeshRequest extends TeaModel {
         return this.accessLogServicePort;
     }
 
+    public CreateServiceMeshRequest setApiServerLoadBalancerSpec(String apiServerLoadBalancerSpec) {
+        this.apiServerLoadBalancerSpec = apiServerLoadBalancerSpec;
+        return this;
+    }
+    public String getApiServerLoadBalancerSpec() {
+        return this.apiServerLoadBalancerSpec;
+    }
+
     public CreateServiceMeshRequest setApiServerPublicEip(Boolean apiServerPublicEip) {
         this.apiServerPublicEip = apiServerPublicEip;
         return this;
@@ -249,12 +287,44 @@ public class CreateServiceMeshRequest extends TeaModel {
         return this.auditProject;
     }
 
+    public CreateServiceMeshRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    public CreateServiceMeshRequest setAutoRenewPeriod(Integer autoRenewPeriod) {
+        this.autoRenewPeriod = autoRenewPeriod;
+        return this;
+    }
+    public Integer getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
+    }
+
     public CreateServiceMeshRequest setCRAggregationEnabled(Boolean CRAggregationEnabled) {
         this.CRAggregationEnabled = CRAggregationEnabled;
         return this;
     }
     public Boolean getCRAggregationEnabled() {
         return this.CRAggregationEnabled;
+    }
+
+    public CreateServiceMeshRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
+    }
+
+    public CreateServiceMeshRequest setClusterSpec(String clusterSpec) {
+        this.clusterSpec = clusterSpec;
+        return this;
+    }
+    public String getClusterSpec() {
+        return this.clusterSpec;
     }
 
     public CreateServiceMeshRequest setConfigSourceEnabled(Boolean configSourceEnabled) {
@@ -393,6 +463,14 @@ public class CreateServiceMeshRequest extends TeaModel {
         return this.gatewayAPIEnabled;
     }
 
+    public CreateServiceMeshRequest setGlobalRateLimitEnabled(Boolean globalRateLimitEnabled) {
+        this.globalRateLimitEnabled = globalRateLimitEnabled;
+        return this;
+    }
+    public Boolean getGlobalRateLimitEnabled() {
+        return this.globalRateLimitEnabled;
+    }
+
     public CreateServiceMeshRequest setIncludeIPRanges(String includeIPRanges) {
         this.includeIPRanges = includeIPRanges;
         return this;
@@ -439,6 +517,22 @@ public class CreateServiceMeshRequest extends TeaModel {
     }
     public Boolean getMSEEnabled() {
         return this.MSEEnabled;
+    }
+
+    public CreateServiceMeshRequest setMultiBufferEnabled(Boolean multiBufferEnabled) {
+        this.multiBufferEnabled = multiBufferEnabled;
+        return this;
+    }
+    public Boolean getMultiBufferEnabled() {
+        return this.multiBufferEnabled;
+    }
+
+    public CreateServiceMeshRequest setMultiBufferPollDelay(String multiBufferPollDelay) {
+        this.multiBufferPollDelay = multiBufferPollDelay;
+        return this;
+    }
+    public String getMultiBufferPollDelay() {
+        return this.multiBufferPollDelay;
     }
 
     public CreateServiceMeshRequest setMysqlFilterEnabled(Boolean mysqlFilterEnabled) {
@@ -511,6 +605,22 @@ public class CreateServiceMeshRequest extends TeaModel {
     }
     public Boolean getOpenAgentPolicy() {
         return this.openAgentPolicy;
+    }
+
+    public CreateServiceMeshRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public CreateServiceMeshRequest setPilotLoadBalancerSpec(String pilotLoadBalancerSpec) {
+        this.pilotLoadBalancerSpec = pilotLoadBalancerSpec;
+        return this;
+    }
+    public String getPilotLoadBalancerSpec() {
+        return this.pilotLoadBalancerSpec;
     }
 
     public CreateServiceMeshRequest setPrometheusUrl(String prometheusUrl) {
