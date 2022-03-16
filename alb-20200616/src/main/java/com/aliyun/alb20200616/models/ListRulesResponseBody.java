@@ -321,6 +321,95 @@ public class ListRulesResponseBody extends TeaModel {
 
     }
 
+    public static class ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig extends TeaModel {
+        @NameInMap("QPS")
+        public Integer QPS;
+
+        public static ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig self = new ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig setQPS(Integer QPS) {
+            this.QPS = QPS;
+            return this;
+        }
+        public Integer getQPS() {
+            return this.QPS;
+        }
+
+    }
+
+    public static class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples extends TeaModel {
+        @NameInMap("ServerGroupId")
+        public String serverGroupId;
+
+        public static ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples build(java.util.Map<String, ?> map) throws Exception {
+            ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples self = new ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples setServerGroupId(String serverGroupId) {
+            this.serverGroupId = serverGroupId;
+            return this;
+        }
+        public String getServerGroupId() {
+            return this.serverGroupId;
+        }
+
+    }
+
+    public static class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig extends TeaModel {
+        @NameInMap("ServerGroupTuples")
+        public java.util.List<ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> serverGroupTuples;
+
+        public static ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig self = new ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig setServerGroupTuples(java.util.List<ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> serverGroupTuples) {
+            this.serverGroupTuples = serverGroupTuples;
+            return this;
+        }
+        public java.util.List<ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> getServerGroupTuples() {
+            return this.serverGroupTuples;
+        }
+
+    }
+
+    public static class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig extends TeaModel {
+        // TargetType为服务器组时必选，目标服务器组
+        @NameInMap("MirrorGroupConfig")
+        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig mirrorGroupConfig;
+
+        // 流量镜像的目的，可以是服务器组
+        @NameInMap("TargetType")
+        public String targetType;
+
+        public static ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig self = new ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig setMirrorGroupConfig(ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig mirrorGroupConfig) {
+            this.mirrorGroupConfig = mirrorGroupConfig;
+            return this;
+        }
+        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig getMirrorGroupConfig() {
+            return this.mirrorGroupConfig;
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig setTargetType(String targetType) {
+            this.targetType = targetType;
+            return this;
+        }
+        public String getTargetType() {
+            return this.targetType;
+        }
+
+    }
+
     public static class ListRulesResponseBodyRulesRuleActions extends TeaModel {
         // 返回固定内容动作配置
         @NameInMap("FixedResponseConfig")
@@ -345,6 +434,13 @@ public class ListRulesResponseBody extends TeaModel {
         // 内部重定向动作配置
         @NameInMap("RewriteConfig")
         public ListRulesResponseBodyRulesRuleActionsRewriteConfig rewriteConfig;
+
+        @NameInMap("TrafficLimitConfig")
+        public ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig trafficLimitConfig;
+
+        // 流量镜像Action对应的配置，type为TrafficMirror时必填且有效
+        @NameInMap("TrafficMirrorConfig")
+        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig trafficMirrorConfig;
 
         // 转发规则动作类型
         @NameInMap("Type")
@@ -401,6 +497,22 @@ public class ListRulesResponseBody extends TeaModel {
         }
         public ListRulesResponseBodyRulesRuleActionsRewriteConfig getRewriteConfig() {
             return this.rewriteConfig;
+        }
+
+        public ListRulesResponseBodyRulesRuleActions setTrafficLimitConfig(ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig trafficLimitConfig) {
+            this.trafficLimitConfig = trafficLimitConfig;
+            return this;
+        }
+        public ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig getTrafficLimitConfig() {
+            return this.trafficLimitConfig;
+        }
+
+        public ListRulesResponseBodyRulesRuleActions setTrafficMirrorConfig(ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig trafficMirrorConfig) {
+            this.trafficMirrorConfig = trafficMirrorConfig;
+            return this;
+        }
+        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig getTrafficMirrorConfig() {
+            return this.trafficMirrorConfig;
         }
 
         public ListRulesResponseBodyRulesRuleActions setType(String type) {

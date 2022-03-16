@@ -8,7 +8,7 @@ public class EnableDeletionProtectionRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    //  是否只预检此次请求
+    // 是否只预检此次请求
     @NameInMap("DryRun")
     public Boolean dryRun;
 

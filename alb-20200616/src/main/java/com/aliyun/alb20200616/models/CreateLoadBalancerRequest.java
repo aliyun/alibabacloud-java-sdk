@@ -20,7 +20,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("DeletionProtectionEnabled")
     public Boolean deletionProtectionEnabled;
 
-    //  是否只预检此次请求
+    // 是否只预检此次请求
     @NameInMap("DryRun")
     public Boolean dryRun;
 
