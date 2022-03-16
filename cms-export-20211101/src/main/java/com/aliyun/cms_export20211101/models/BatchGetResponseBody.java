@@ -199,6 +199,9 @@ public class BatchGetResponseBody extends TeaModel {
         @NameInMap("Records")
         public java.util.List<BatchGetResponseBodyDataRecords> records;
 
+        @NameInMap("__anchorTs__")
+        public Long anchorTs;
+
         public static BatchGetResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             BatchGetResponseBodyData self = new BatchGetResponseBodyData();
             return TeaModel.build(map, self);
@@ -242,6 +245,14 @@ public class BatchGetResponseBody extends TeaModel {
         }
         public java.util.List<BatchGetResponseBodyDataRecords> getRecords() {
             return this.records;
+        }
+
+        public BatchGetResponseBodyData setAnchorTs(Long anchorTs) {
+            this.anchorTs = anchorTs;
+            return this;
+        }
+        public Long getAnchorTs() {
+            return this.anchorTs;
         }
 
     }
