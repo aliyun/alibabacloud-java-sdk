@@ -8,6 +8,9 @@ public class RecognizeVehicleLicenseRequest extends TeaModel {
     @NameInMap("Url")
     public String url;
 
+    @NameInMap("WorkflowOp")
+    public String workflowOp;
+
     // 图片二进制字节流，最大10MB
     @NameInMap("body")
     public java.io.InputStream body;
@@ -23,6 +26,14 @@ public class RecognizeVehicleLicenseRequest extends TeaModel {
     }
     public String getUrl() {
         return this.url;
+    }
+
+    public RecognizeVehicleLicenseRequest setWorkflowOp(String workflowOp) {
+        this.workflowOp = workflowOp;
+        return this;
+    }
+    public String getWorkflowOp() {
+        return this.workflowOp;
     }
 
     public RecognizeVehicleLicenseRequest setBody(java.io.InputStream body) {

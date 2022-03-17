@@ -16,7 +16,7 @@ public class RecognizeExcelExportRequest extends TeaModel {
     @NameInMap("OcrImageCount")
     public Long ocrImageCount;
 
-    // 图片识别结果集
+    // 存储图片识别结果集的oss地址
     @NameInMap("OcrResult")
     public String ocrResult;
 
