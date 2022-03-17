@@ -3,21 +3,21 @@ package com.aliyun.mpaas20201028.models;
 
 import com.aliyun.tea.*;
 
-public class QueryMpsSchedulerListResponse extends TeaModel {
+public class OpenApiDecodeResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public QueryMpsSchedulerListResponseBody body;
+    public OpenApiDecodeResponseBody body;
 
-    public static QueryMpsSchedulerListResponse build(java.util.Map<String, ?> map) throws Exception {
-        QueryMpsSchedulerListResponse self = new QueryMpsSchedulerListResponse();
+    public static OpenApiDecodeResponse build(java.util.Map<String, ?> map) throws Exception {
+        OpenApiDecodeResponse self = new OpenApiDecodeResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryMpsSchedulerListResponse setHeaders(java.util.Map<String, String> headers) {
+    public OpenApiDecodeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class QueryMpsSchedulerListResponse extends TeaModel {
         return this.headers;
     }
 
-    public QueryMpsSchedulerListResponse setBody(QueryMpsSchedulerListResponseBody body) {
+    public OpenApiDecodeResponse setBody(OpenApiDecodeResponseBody body) {
         this.body = body;
         return this;
     }
-    public QueryMpsSchedulerListResponseBody getBody() {
+    public OpenApiDecodeResponseBody getBody() {
         return this.body;
     }
 

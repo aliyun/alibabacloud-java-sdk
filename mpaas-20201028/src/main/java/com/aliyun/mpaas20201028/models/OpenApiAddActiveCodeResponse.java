@@ -3,21 +3,21 @@ package com.aliyun.mpaas20201028.models;
 
 import com.aliyun.tea.*;
 
-public class RevokeMpsMessageResponse extends TeaModel {
+public class OpenApiAddActiveCodeResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public RevokeMpsMessageResponseBody body;
+    public OpenApiAddActiveCodeResponseBody body;
 
-    public static RevokeMpsMessageResponse build(java.util.Map<String, ?> map) throws Exception {
-        RevokeMpsMessageResponse self = new RevokeMpsMessageResponse();
+    public static OpenApiAddActiveCodeResponse build(java.util.Map<String, ?> map) throws Exception {
+        OpenApiAddActiveCodeResponse self = new OpenApiAddActiveCodeResponse();
         return TeaModel.build(map, self);
     }
 
-    public RevokeMpsMessageResponse setHeaders(java.util.Map<String, String> headers) {
+    public OpenApiAddActiveCodeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class RevokeMpsMessageResponse extends TeaModel {
         return this.headers;
     }
 
-    public RevokeMpsMessageResponse setBody(RevokeMpsMessageResponseBody body) {
+    public OpenApiAddActiveCodeResponse setBody(OpenApiAddActiveCodeResponseBody body) {
         this.body = body;
         return this;
     }
-    public RevokeMpsMessageResponseBody getBody() {
+    public OpenApiAddActiveCodeResponseBody getBody() {
         return this.body;
     }
 

@@ -3,7 +3,7 @@ package com.aliyun.mpaas20201028.models;
 
 import com.aliyun.tea.*;
 
-public class CancelMpsSchedulerResponseBody extends TeaModel {
+public class OpenApiQueryActiveCodeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
@@ -16,12 +16,12 @@ public class CancelMpsSchedulerResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    public static CancelMpsSchedulerResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CancelMpsSchedulerResponseBody self = new CancelMpsSchedulerResponseBody();
+    public static OpenApiQueryActiveCodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        OpenApiQueryActiveCodeResponseBody self = new OpenApiQueryActiveCodeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CancelMpsSchedulerResponseBody setRequestId(String requestId) {
+    public OpenApiQueryActiveCodeResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -29,7 +29,7 @@ public class CancelMpsSchedulerResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CancelMpsSchedulerResponseBody setResultCode(String resultCode) {
+    public OpenApiQueryActiveCodeResponseBody setResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
@@ -37,7 +37,7 @@ public class CancelMpsSchedulerResponseBody extends TeaModel {
         return this.resultCode;
     }
 
-    public CancelMpsSchedulerResponseBody setResultContent(String resultContent) {
+    public OpenApiQueryActiveCodeResponseBody setResultContent(String resultContent) {
         this.resultContent = resultContent;
         return this;
     }
@@ -45,7 +45,7 @@ public class CancelMpsSchedulerResponseBody extends TeaModel {
         return this.resultContent;
     }
 
-    public CancelMpsSchedulerResponseBody setResultMessage(String resultMessage) {
+    public OpenApiQueryActiveCodeResponseBody setResultMessage(String resultMessage) {
         this.resultMessage = resultMessage;
         return this;
     }
