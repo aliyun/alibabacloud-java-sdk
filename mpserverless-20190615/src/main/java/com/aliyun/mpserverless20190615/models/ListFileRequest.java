@@ -4,6 +4,9 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class ListFileRequest extends TeaModel {
+    @NameInMap("FileId")
+    public String fileId;
+
     @NameInMap("Keyword")
     public String keyword;
 
@@ -19,6 +22,14 @@ public class ListFileRequest extends TeaModel {
     public static ListFileRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFileRequest self = new ListFileRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListFileRequest setFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    public String getFileId() {
+        return this.fileId;
     }
 
     public ListFileRequest setKeyword(String keyword) {
