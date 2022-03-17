@@ -345,6 +345,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Url", request.url);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.workflowOp)) {
+            query.put("WorkflowOp", request.workflowOp);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", request.body),
@@ -405,6 +409,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.url)) {
             query.put("Url", request.url);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workflowOp)) {
+            query.put("WorkflowOp", request.workflowOp);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -526,6 +534,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RecognizeCommonPrintedInvoiceResponse recognizeCommonPrintedInvoice(RecognizeCommonPrintedInvoiceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.recognizeCommonPrintedInvoiceWithOptions(request, runtime);
+    }
+
+    public RecognizeCosmeticProduceLicenseResponse recognizeCosmeticProduceLicenseWithOptions(RecognizeCosmeticProduceLicenseRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", request.body),
+            new TeaPair("stream", request.body)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecognizeCosmeticProduceLicense"),
+            new TeaPair("version", "2021-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecognizeCosmeticProduceLicenseResponse());
+    }
+
+    public RecognizeCosmeticProduceLicenseResponse recognizeCosmeticProduceLicense(RecognizeCosmeticProduceLicenseRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.recognizeCosmeticProduceLicenseWithOptions(request, runtime);
     }
 
     public RecognizeCtwoMedicalDeviceManageLicenseResponse recognizeCtwoMedicalDeviceManageLicenseWithOptions(RecognizeCtwoMedicalDeviceManageLicenseRequest request, RuntimeOptions runtime) throws Exception {
@@ -1199,6 +1238,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.recognizeHandwritingWithOptions(request, runtime);
     }
 
+    public RecognizeHotelConsumeResponse recognizeHotelConsumeWithOptions(RecognizeHotelConsumeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", request.body),
+            new TeaPair("stream", request.body)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecognizeHotelConsume"),
+            new TeaPair("version", "2021-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecognizeHotelConsumeResponse());
+    }
+
+    public RecognizeHotelConsumeResponse recognizeHotelConsume(RecognizeHotelConsumeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.recognizeHotelConsumeWithOptions(request, runtime);
+    }
+
     public RecognizeHouseholdResponse recognizeHouseholdWithOptions(RecognizeHouseholdRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1239,6 +1309,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.url)) {
             query.put("Url", request.url);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workflowOp)) {
+            query.put("WorkflowOp", request.workflowOp);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1575,6 +1649,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.recognizeMultiLanguageWithOptions(request, runtime);
     }
 
+    public RecognizeNonTaxInvoiceResponse recognizeNonTaxInvoiceWithOptions(RecognizeNonTaxInvoiceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", request.body),
+            new TeaPair("stream", request.body)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecognizeNonTaxInvoice"),
+            new TeaPair("version", "2021-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecognizeNonTaxInvoiceResponse());
+    }
+
+    public RecognizeNonTaxInvoiceResponse recognizeNonTaxInvoice(RecognizeNonTaxInvoiceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.recognizeNonTaxInvoiceWithOptions(request, runtime);
+    }
+
     public RecognizePassportResponse recognizePassportWithOptions(RecognizePassportRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1604,6 +1709,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RecognizePassportResponse recognizePassport(RecognizePassportRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.recognizePassportWithOptions(request, runtime);
+    }
+
+    public RecognizePaymentRecordResponse recognizePaymentRecordWithOptions(RecognizePaymentRecordRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", request.body),
+            new TeaPair("stream", request.body)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecognizePaymentRecord"),
+            new TeaPair("version", "2021-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecognizePaymentRecordResponse());
+    }
+
+    public RecognizePaymentRecordResponse recognizePaymentRecord(RecognizePaymentRecordRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.recognizePaymentRecordWithOptions(request, runtime);
+    }
+
+    public RecognizePurchaseRecordResponse recognizePurchaseRecordWithOptions(RecognizePurchaseRecordRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", request.body),
+            new TeaPair("stream", request.body)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecognizePurchaseRecord"),
+            new TeaPair("version", "2021-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecognizePurchaseRecordResponse());
+    }
+
+    public RecognizePurchaseRecordResponse recognizePurchaseRecord(RecognizePurchaseRecordRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.recognizePurchaseRecordWithOptions(request, runtime);
     }
 
     public RecognizeQuotaInvoiceResponse recognizeQuotaInvoiceWithOptions(RecognizeQuotaInvoiceRequest request, RuntimeOptions runtime) throws Exception {
@@ -2081,6 +2248,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.url)) {
             query.put("Url", request.url);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workflowOp)) {
+            query.put("WorkflowOp", request.workflowOp);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
