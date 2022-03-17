@@ -1,3 +1,6 @@
+2022-03-17 Version: 2.4.4
+- Apaas Interface publish.
+
 2022-03-15 Version: 2.4.3
 - Add ExtraInfo in CreateUserAccessToken.
 
