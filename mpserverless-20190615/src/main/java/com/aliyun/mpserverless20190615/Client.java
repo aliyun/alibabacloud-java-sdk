@@ -220,7 +220,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CheckMpServerlessRoleExistsResponse checkMpServerlessRoleExistsWithOptions(CheckMpServerlessRoleExistsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("RoleName", request.roleName);
+        if (!com.aliyun.teautil.Common.isUnset(request.roleName)) {
+            query.put("RoleName", request.roleName);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1458,6 +1461,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListFileResponse listFileWithOptions(ListFileRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
+            body.put("FileId", request.fileId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
             body.put("Keyword", request.keyword);
         }
