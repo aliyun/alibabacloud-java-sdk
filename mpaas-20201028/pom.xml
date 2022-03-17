@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>mpaas20201028</artifactId>
-  <version>2.1.7</version>
+  <version>2.1.8</version>
   <packaging>jar</packaging>
   <name>mpaas20201028</name>
   <description>Alibaba Cloud Mobile PaaS (20201028) SDK for Java
@@ -145,6 +145,10 @@
                 <relocation>
                   <pattern>com.sun</pattern>
                   <shadedPattern>com.aliyun.mpaas20201028.external.com.sun</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache</pattern>
+                  <shadedPattern>com.aliyun.mpaas20201028.external.org.apache</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>
