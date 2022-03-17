@@ -360,6 +360,9 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
         @NameInMap("ExtJson")
         public String extJson;
 
+        @NameInMap("FirstPicUrl")
+        public String firstPicUrl;
+
         @NameInMap("HasQuantity")
         public Boolean hasQuantity;
 
@@ -497,6 +500,14 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
         }
         public String getExtJson() {
             return this.extJson;
+        }
+
+        public QueryItemDetailTeaResponseBodyItem setFirstPicUrl(String firstPicUrl) {
+            this.firstPicUrl = firstPicUrl;
+            return this;
+        }
+        public String getFirstPicUrl() {
+            return this.firstPicUrl;
         }
 
         public QueryItemDetailTeaResponseBodyItem setHasQuantity(Boolean hasQuantity) {
