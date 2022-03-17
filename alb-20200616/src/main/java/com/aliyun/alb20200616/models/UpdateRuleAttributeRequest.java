@@ -174,6 +174,10 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
+        // 权重
+        @NameInMap("Weight")
+        public Integer weight;
+
         public static UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupTuples build(java.util.Map<String, ?> map) throws Exception {
             UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupTuples self = new UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupTuples();
             return TeaModel.build(map, self);
@@ -185,6 +189,14 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         }
         public String getServerGroupId() {
             return this.serverGroupId;
+        }
+
+        public UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupTuples setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }

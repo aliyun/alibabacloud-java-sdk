@@ -118,6 +118,10 @@ public class ListRulesResponseBody extends TeaModel {
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
+        // 当ServerGroupTuple.N数量大于1时，可配置每个服务器组的权重
+        @NameInMap("Weight")
+        public Integer weight;
+
         public static ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupTuples build(java.util.Map<String, ?> map) throws Exception {
             ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupTuples self = new ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupTuples();
             return TeaModel.build(map, self);
@@ -129,6 +133,14 @@ public class ListRulesResponseBody extends TeaModel {
         }
         public String getServerGroupId() {
             return this.serverGroupId;
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupTuples setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }
@@ -322,90 +334,17 @@ public class ListRulesResponseBody extends TeaModel {
     }
 
     public static class ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig extends TeaModel {
-        @NameInMap("QPS")
-        public Integer QPS;
-
         public static ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig build(java.util.Map<String, ?> map) throws Exception {
             ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig self = new ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig();
             return TeaModel.build(map, self);
         }
 
-        public ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig setQPS(Integer QPS) {
-            this.QPS = QPS;
-            return this;
-        }
-        public Integer getQPS() {
-            return this.QPS;
-        }
-
-    }
-
-    public static class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples extends TeaModel {
-        @NameInMap("ServerGroupId")
-        public String serverGroupId;
-
-        public static ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples build(java.util.Map<String, ?> map) throws Exception {
-            ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples self = new ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples();
-            return TeaModel.build(map, self);
-        }
-
-        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples setServerGroupId(String serverGroupId) {
-            this.serverGroupId = serverGroupId;
-            return this;
-        }
-        public String getServerGroupId() {
-            return this.serverGroupId;
-        }
-
-    }
-
-    public static class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig extends TeaModel {
-        @NameInMap("ServerGroupTuples")
-        public java.util.List<ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> serverGroupTuples;
-
-        public static ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig build(java.util.Map<String, ?> map) throws Exception {
-            ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig self = new ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig setServerGroupTuples(java.util.List<ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> serverGroupTuples) {
-            this.serverGroupTuples = serverGroupTuples;
-            return this;
-        }
-        public java.util.List<ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> getServerGroupTuples() {
-            return this.serverGroupTuples;
-        }
-
     }
 
     public static class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig extends TeaModel {
-        // TargetType为服务器组时必选，目标服务器组
-        @NameInMap("MirrorGroupConfig")
-        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig mirrorGroupConfig;
-
-        // 流量镜像的目的，可以是服务器组
-        @NameInMap("TargetType")
-        public String targetType;
-
         public static ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig build(java.util.Map<String, ?> map) throws Exception {
             ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig self = new ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig();
             return TeaModel.build(map, self);
-        }
-
-        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig setMirrorGroupConfig(ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig mirrorGroupConfig) {
-            this.mirrorGroupConfig = mirrorGroupConfig;
-            return this;
-        }
-        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig getMirrorGroupConfig() {
-            return this.mirrorGroupConfig;
-        }
-
-        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig setTargetType(String targetType) {
-            this.targetType = targetType;
-            return this;
-        }
-        public String getTargetType() {
-            return this.targetType;
         }
 
     }

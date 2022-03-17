@@ -414,10 +414,6 @@ public class ListListenersResponseBody extends TeaModel {
     }
 
     public static class ListListenersResponseBodyListeners extends TeaModel {
-        // 是否开启双向认证
-        @NameInMap("CaEnabled")
-        public String caEnabled;
-
         // 默认动作
         @NameInMap("DefaultActions")
         public java.util.List<ListListenersResponseBodyListenersDefaultActions> defaultActions;
@@ -481,14 +477,6 @@ public class ListListenersResponseBody extends TeaModel {
         public static ListListenersResponseBodyListeners build(java.util.Map<String, ?> map) throws Exception {
             ListListenersResponseBodyListeners self = new ListListenersResponseBodyListeners();
             return TeaModel.build(map, self);
-        }
-
-        public ListListenersResponseBodyListeners setCaEnabled(String caEnabled) {
-            this.caEnabled = caEnabled;
-            return this;
-        }
-        public String getCaEnabled() {
-            return this.caEnabled;
         }
 
         public ListListenersResponseBodyListeners setDefaultActions(java.util.List<ListListenersResponseBodyListenersDefaultActions> defaultActions) {

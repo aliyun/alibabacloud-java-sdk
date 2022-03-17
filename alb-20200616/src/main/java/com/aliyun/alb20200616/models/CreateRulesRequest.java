@@ -138,6 +138,10 @@ public class CreateRulesRequest extends TeaModel {
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
+        // 权重
+        @NameInMap("Weight")
+        public Integer weight;
+
         public static CreateRulesRequestRulesRuleActionsForwardGroupConfigServerGroupTuples build(java.util.Map<String, ?> map) throws Exception {
             CreateRulesRequestRulesRuleActionsForwardGroupConfigServerGroupTuples self = new CreateRulesRequestRulesRuleActionsForwardGroupConfigServerGroupTuples();
             return TeaModel.build(map, self);
@@ -149,6 +153,14 @@ public class CreateRulesRequest extends TeaModel {
         }
         public String getServerGroupId() {
             return this.serverGroupId;
+        }
+
+        public CreateRulesRequestRulesRuleActionsForwardGroupConfigServerGroupTuples setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }
