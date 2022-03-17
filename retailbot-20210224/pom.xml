@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>retailbot20210224</artifactId>
-  <version>2.4.3</version>
+  <version>2.4.4</version>
   <packaging>jar</packaging>
   <name>retailbot20210224</name>
   <description>Alibaba Cloud RetailBot (20210224) SDK for Java
