@@ -28,6 +28,10 @@ public class DescribeClustersV1Request extends TeaModel {
     @NameInMap("profile")
     public String profile;
 
+    // 地域。
+    @NameInMap("region_id")
+    public String regionId;
+
     public static DescribeClustersV1Request build(java.util.Map<String, ?> map) throws Exception {
         DescribeClustersV1Request self = new DescribeClustersV1Request();
         return TeaModel.build(map, self);
@@ -79,6 +83,14 @@ public class DescribeClustersV1Request extends TeaModel {
     }
     public String getProfile() {
         return this.profile;
+    }
+
+    public DescribeClustersV1Request setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }
