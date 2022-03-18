@@ -74,8 +74,8 @@ public class QuerySqlAnalysisDataResponseBody extends TeaModel {
         @NameInMap("Cnt")
         public Long cnt;
 
-        @NameInMap("CurrentEndTime")
-        public Long currentEndTime;
+        @NameInMap("CntRate")
+        public Double cntRate;
 
         @NameInMap("DbName")
         public String dbName;
@@ -89,8 +89,8 @@ public class QuerySqlAnalysisDataResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("MaxRowsExamined")
-        public Long maxRowsExamined;
+        @NameInMap("RtRate")
+        public Double rtRate;
 
         @NameInMap("Sql")
         public String sql;
@@ -148,12 +148,12 @@ public class QuerySqlAnalysisDataResponseBody extends TeaModel {
             return this.cnt;
         }
 
-        public QuerySqlAnalysisDataResponseBodyDataList setCurrentEndTime(Long currentEndTime) {
-            this.currentEndTime = currentEndTime;
+        public QuerySqlAnalysisDataResponseBodyDataList setCntRate(Double cntRate) {
+            this.cntRate = cntRate;
             return this;
         }
-        public Long getCurrentEndTime() {
-            return this.currentEndTime;
+        public Double getCntRate() {
+            return this.cntRate;
         }
 
         public QuerySqlAnalysisDataResponseBodyDataList setDbName(String dbName) {
@@ -188,12 +188,12 @@ public class QuerySqlAnalysisDataResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public QuerySqlAnalysisDataResponseBodyDataList setMaxRowsExamined(Long maxRowsExamined) {
-            this.maxRowsExamined = maxRowsExamined;
+        public QuerySqlAnalysisDataResponseBodyDataList setRtRate(Double rtRate) {
+            this.rtRate = rtRate;
             return this;
         }
-        public Long getMaxRowsExamined() {
-            return this.maxRowsExamined;
+        public Double getRtRate() {
+            return this.rtRate;
         }
 
         public QuerySqlAnalysisDataResponseBodyDataList setSql(String sql) {

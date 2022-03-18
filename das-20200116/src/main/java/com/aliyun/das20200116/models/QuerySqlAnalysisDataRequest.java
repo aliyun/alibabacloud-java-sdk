@@ -4,9 +4,6 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class QuerySqlAnalysisDataRequest extends TeaModel {
-    @NameInMap("ConsoleContext")
-    public String consoleContext;
-
     @NameInMap("PageNo")
     public Integer pageNo;
 
@@ -31,14 +28,6 @@ public class QuerySqlAnalysisDataRequest extends TeaModel {
     public static QuerySqlAnalysisDataRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySqlAnalysisDataRequest self = new QuerySqlAnalysisDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QuerySqlAnalysisDataRequest setConsoleContext(String consoleContext) {
-        this.consoleContext = consoleContext;
-        return this;
-    }
-    public String getConsoleContext() {
-        return this.consoleContext;
     }
 
     public QuerySqlAnalysisDataRequest setPageNo(Integer pageNo) {

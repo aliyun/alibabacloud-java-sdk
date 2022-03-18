@@ -1118,10 +1118,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAsyncErrorRequestStatByCodeResponse getAsyncErrorRequestStatByCodeWithOptions(GetAsyncErrorRequestStatByCodeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.consoleContext)) {
-            query.put("ConsoleContext", request.consoleContext);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -1136,10 +1132,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
             query.put("NodeId", request.nodeId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.role)) {
-            query.put("Role", request.role);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.start)) {
@@ -2194,10 +2186,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSqlAnalysisReportResponse getSqlAnalysisReportWithOptions(GetSqlAnalysisReportRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.consoleContext)) {
-            query.put("ConsoleContext", request.consoleContext);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.moduleNameList)) {
             query.put("ModuleNameList", request.moduleNameList);
         }
@@ -2355,11 +2343,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public QuerySqlAnalysisDataResponse querySqlAnalysisDataWithOptions(QuerySqlAnalysisDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.consoleContext)) {
-            query.put("ConsoleContext", request.consoleContext);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
             body.put("PageNo", request.pageNo);
@@ -2390,7 +2373,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(

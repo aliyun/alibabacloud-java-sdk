@@ -4,14 +4,11 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetAsyncErrorRequestStatByCodeRequest extends TeaModel {
-    @NameInMap("ConsoleContext")
-    public String consoleContext;
-
     @NameInMap("DbName")
     public String dbName;
 
     @NameInMap("End")
-    public String end;
+    public Long end;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -19,23 +16,12 @@ public class GetAsyncErrorRequestStatByCodeRequest extends TeaModel {
     @NameInMap("NodeId")
     public String nodeId;
 
-    @NameInMap("Role")
-    public String role;
-
     @NameInMap("Start")
-    public String start;
+    public Long start;
 
     public static GetAsyncErrorRequestStatByCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAsyncErrorRequestStatByCodeRequest self = new GetAsyncErrorRequestStatByCodeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetAsyncErrorRequestStatByCodeRequest setConsoleContext(String consoleContext) {
-        this.consoleContext = consoleContext;
-        return this;
-    }
-    public String getConsoleContext() {
-        return this.consoleContext;
     }
 
     public GetAsyncErrorRequestStatByCodeRequest setDbName(String dbName) {
@@ -46,11 +32,11 @@ public class GetAsyncErrorRequestStatByCodeRequest extends TeaModel {
         return this.dbName;
     }
 
-    public GetAsyncErrorRequestStatByCodeRequest setEnd(String end) {
+    public GetAsyncErrorRequestStatByCodeRequest setEnd(Long end) {
         this.end = end;
         return this;
     }
-    public String getEnd() {
+    public Long getEnd() {
         return this.end;
     }
 
@@ -70,19 +56,11 @@ public class GetAsyncErrorRequestStatByCodeRequest extends TeaModel {
         return this.nodeId;
     }
 
-    public GetAsyncErrorRequestStatByCodeRequest setRole(String role) {
-        this.role = role;
-        return this;
-    }
-    public String getRole() {
-        return this.role;
-    }
-
-    public GetAsyncErrorRequestStatByCodeRequest setStart(String start) {
+    public GetAsyncErrorRequestStatByCodeRequest setStart(Long start) {
         this.start = start;
         return this;
     }
-    public String getStart() {
+    public Long getStart() {
         return this.start;
     }
 
