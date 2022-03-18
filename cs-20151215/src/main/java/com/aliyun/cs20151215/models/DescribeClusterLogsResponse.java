@@ -46,10 +46,6 @@ public class DescribeClusterLogsResponse extends TeaModel {
         @NameInMap("cluster_log")
         public String clusterLog;
 
-        // 日志等级。
-        @NameInMap("log_level")
-        public String logLevel;
-
         // 日志创建时间。
         @NameInMap("created")
         public String created;
@@ -85,14 +81,6 @@ public class DescribeClusterLogsResponse extends TeaModel {
         }
         public String getClusterLog() {
             return this.clusterLog;
-        }
-
-        public DescribeClusterLogsResponseBody setLogLevel(String logLevel) {
-            this.logLevel = logLevel;
-            return this;
-        }
-        public String getLogLevel() {
-            return this.logLevel;
         }
 
         public DescribeClusterLogsResponseBody setCreated(String created) {
