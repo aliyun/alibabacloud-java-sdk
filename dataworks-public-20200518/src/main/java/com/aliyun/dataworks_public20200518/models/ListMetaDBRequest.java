@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListMetaDBRequest extends TeaModel {
+    @NameInMap("ClusterId")
+    public String clusterId;
+
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
@@ -19,6 +22,14 @@ public class ListMetaDBRequest extends TeaModel {
     public static ListMetaDBRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMetaDBRequest self = new ListMetaDBRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListMetaDBRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public ListMetaDBRequest setDataSourceType(String dataSourceType) {
