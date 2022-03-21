@@ -38,6 +38,7 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
         @NameInMap("AvgExecutionMS")
         public Float avgExecutionMS;
 
+        // 平均执行时间
         @NameInMap("AvgExecutionTimeMS")
         public Long avgExecutionTimeMS;
 
@@ -48,9 +49,6 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
         // 首次加载时间(零时区)
         @NameInMap("FirstLoadTimeUTCString")
         public String firstLoadTimeUTCString;
-
-        @NameInMap("ForcedOutlineId")
-        public Long forcedOutlineId;
 
         // 命中次数
         @NameInMap("HitCount")
@@ -135,14 +133,6 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
         }
         public String getFirstLoadTimeUTCString() {
             return this.firstLoadTimeUTCString;
-        }
-
-        public DescribeSQLPlansResponseBodySQLPlans setForcedOutlineId(Long forcedOutlineId) {
-            this.forcedOutlineId = forcedOutlineId;
-            return this;
-        }
-        public Long getForcedOutlineId() {
-            return this.forcedOutlineId;
         }
 
         public DescribeSQLPlansResponseBodySQLPlans setHitCount(Integer hitCount) {

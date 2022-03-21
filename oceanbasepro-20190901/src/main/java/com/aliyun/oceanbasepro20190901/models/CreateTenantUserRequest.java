@@ -4,9 +4,6 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateTenantUserRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     // 数据库描述信息。
     @NameInMap("Description")
     public String description;
@@ -38,14 +35,6 @@ public class CreateTenantUserRequest extends TeaModel {
     public static CreateTenantUserRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTenantUserRequest self = new CreateTenantUserRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateTenantUserRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public CreateTenantUserRequest setDescription(String description) {

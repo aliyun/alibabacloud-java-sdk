@@ -8,9 +8,11 @@ public class DescribeSQLHistoryListRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    // 页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // 每页数量
     @NameInMap("PageSize")
     public Integer pageSize;
 

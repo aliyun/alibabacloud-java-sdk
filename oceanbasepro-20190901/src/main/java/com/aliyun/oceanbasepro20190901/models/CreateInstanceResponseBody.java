@@ -4,6 +4,7 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
+    // 返回数据
     @NameInMap("Data")
     public java.util.List<CreateInstanceResponseBodyData> data;
 
@@ -45,10 +46,6 @@ public class CreateInstanceResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // 订单成交价
-        @NameInMap("TradePrice")
-        public Float tradePrice;
-
         public static CreateInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateInstanceResponseBodyData self = new CreateInstanceResponseBodyData();
             return TeaModel.build(map, self);
@@ -76,14 +73,6 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
-        }
-
-        public CreateInstanceResponseBodyData setTradePrice(Float tradePrice) {
-            this.tradePrice = tradePrice;
-            return this;
-        }
-        public Float getTradePrice() {
-            return this.tradePrice;
         }
 
     }

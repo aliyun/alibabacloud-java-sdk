@@ -12,6 +12,7 @@ public class DescribeTenantMetricsResponseBody extends TeaModel {
     @NameInMap("TenantMetrics")
     public String tenantMetrics;
 
+    // 总数量
     @NameInMap("TotalCount")
     public Integer totalCount;
 

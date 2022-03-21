@@ -8,14 +8,11 @@ public class CreateTenantRequest extends TeaModel {
     @NameInMap("Charset")
     public String charset;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     // 租户的CPU大小，单位：核数（Cores）
     @NameInMap("Cpu")
     public Integer cpu;
 
-    // 数据库描述信息。
+    // 租户描述信息。
     @NameInMap("Description")
     public String description;
 
@@ -66,14 +63,6 @@ public class CreateTenantRequest extends TeaModel {
     }
     public String getCharset() {
         return this.charset;
-    }
-
-    public CreateTenantRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public CreateTenantRequest setCpu(Integer cpu) {

@@ -274,6 +274,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("IsLatestObVersion")
         public Boolean isLatestObVersion;
 
+        // 是否使用可信ecs
+        @NameInMap("IsTrustEcs")
+        public Boolean isTrustEcs;
+
         // 集群的每天例行维护时间，UTC时间。
         @NameInMap("MaintainTime")
         public String maintainTime;
@@ -409,6 +413,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public Boolean getIsLatestObVersion() {
             return this.isLatestObVersion;
+        }
+
+        public DescribeInstanceResponseBodyInstance setIsTrustEcs(Boolean isTrustEcs) {
+            this.isTrustEcs = isTrustEcs;
+            return this;
+        }
+        public Boolean getIsTrustEcs() {
+            return this.isTrustEcs;
         }
 
         public DescribeInstanceResponseBodyInstance setMaintainTime(String maintainTime) {
