@@ -28,6 +28,9 @@ public class UpdateQualityRuleRequest extends TeaModel {
     @NameInMap("MethodName")
     public String methodName;
 
+    @NameInMap("OpenSwitch")
+    public Boolean openSwitch;
+
     @NameInMap("Operator")
     public String operator;
 
@@ -128,6 +131,14 @@ public class UpdateQualityRuleRequest extends TeaModel {
     }
     public String getMethodName() {
         return this.methodName;
+    }
+
+    public UpdateQualityRuleRequest setOpenSwitch(Boolean openSwitch) {
+        this.openSwitch = openSwitch;
+        return this;
+    }
+    public Boolean getOpenSwitch() {
+        return this.openSwitch;
     }
 
     public UpdateQualityRuleRequest setOperator(String operator) {

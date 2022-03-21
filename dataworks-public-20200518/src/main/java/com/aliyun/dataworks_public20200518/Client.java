@@ -9108,6 +9108,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("MethodName", request.methodName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.openSwitch)) {
+            body.put("OpenSwitch", request.openSwitch);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.operator)) {
             body.put("Operator", request.operator);
         }
