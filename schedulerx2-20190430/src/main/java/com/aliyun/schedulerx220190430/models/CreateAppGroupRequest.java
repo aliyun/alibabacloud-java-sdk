@@ -7,6 +7,9 @@ public class CreateAppGroupRequest extends TeaModel {
     @NameInMap("AlarmJson")
     public String alarmJson;
 
+    @NameInMap("AppKey")
+    public String appKey;
+
     @NameInMap("AppName")
     public String appName;
 
@@ -18,6 +21,12 @@ public class CreateAppGroupRequest extends TeaModel {
 
     @NameInMap("MaxJobs")
     public Integer maxJobs;
+
+    @NameInMap("MonitorConfigJson")
+    public String monitorConfigJson;
+
+    @NameInMap("MonitorContactsJson")
+    public String monitorContactsJson;
 
     @NameInMap("Namespace")
     public String namespace;
@@ -42,6 +51,14 @@ public class CreateAppGroupRequest extends TeaModel {
     }
     public String getAlarmJson() {
         return this.alarmJson;
+    }
+
+    public CreateAppGroupRequest setAppKey(String appKey) {
+        this.appKey = appKey;
+        return this;
+    }
+    public String getAppKey() {
+        return this.appKey;
     }
 
     public CreateAppGroupRequest setAppName(String appName) {
@@ -74,6 +91,22 @@ public class CreateAppGroupRequest extends TeaModel {
     }
     public Integer getMaxJobs() {
         return this.maxJobs;
+    }
+
+    public CreateAppGroupRequest setMonitorConfigJson(String monitorConfigJson) {
+        this.monitorConfigJson = monitorConfigJson;
+        return this;
+    }
+    public String getMonitorConfigJson() {
+        return this.monitorConfigJson;
+    }
+
+    public CreateAppGroupRequest setMonitorContactsJson(String monitorContactsJson) {
+        this.monitorContactsJson = monitorContactsJson;
+        return this;
+    }
+    public String getMonitorContactsJson() {
+        return this.monitorContactsJson;
     }
 
     public CreateAppGroupRequest setNamespace(String namespace) {
