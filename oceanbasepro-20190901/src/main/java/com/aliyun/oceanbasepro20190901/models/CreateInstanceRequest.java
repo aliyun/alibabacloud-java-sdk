@@ -16,13 +16,17 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
-    // 存储空间大小，单位GB。  存储空间的限制根据集群规格不同而不同，具体如下：  - 8C32GB：100GB~10000GB  - 14C70GB：200GB~1000GB  - 30C180GB：400GB~10000GB  - 62C400G：800GB-10000GB。  各套餐的存储空间默认值为其最小值。
+    // 存储空间大小，单位GB。  存储空间的限制根据集群规格不同而不同，具体如下：  - 8C32GB：100GB~10000GB  - 14C70GB：200GB~10000GB  - 30C180GB：400GB~10000GB  - 62C400G：800GB-10000GB。  各套餐的存储空间默认值为其最小值。
     @NameInMap("DiskSize")
     public Long diskSize;
 
     // 集群规格信息。  当前支持四种套餐：  - 8C32GB：8核 32GB  - 14C70GB（默认）：14核 70GB  - 30C180GB：30核 180GB  - 62C400GB：62核 400GB
     @NameInMap("InstanceClass")
     public String instanceClass;
+
+    // 集群名称。
+    @NameInMap("InstanceName")
+    public String instanceName;
 
     // 购买资源的时长，单位由PeriodUnit指定。当参数InstanceChargeType取值为PrePaid时才生效且为必选值。一旦指定了DedicatedHostId，则取值范围不能超过专有宿主机的订阅时长。取值范围：  PeriodUnit=Week时，Period取值：{“1”, “2”, “3”, “4”}。 PeriodUnit=Month时，Period取值：{“1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”, ”48”, ”60”}。
     @NameInMap("Period")
@@ -36,7 +40,7 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // Oceanbase集群的系列  - normal（默认）：高可用版本  - basic：基础版本
+    // Oceanbase集群的系列  - normal（默认）：高可用版本  - basic：基础版本（API暂不支持，请页面购买）
     @NameInMap("Series")
     public String series;
 
@@ -87,6 +91,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getInstanceClass() {
         return this.instanceClass;
+    }
+
+    public CreateInstanceRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     public CreateInstanceRequest setPeriod(Long period) {

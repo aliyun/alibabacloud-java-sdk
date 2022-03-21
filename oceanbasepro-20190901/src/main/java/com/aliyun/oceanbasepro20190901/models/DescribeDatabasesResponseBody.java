@@ -46,6 +46,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     }
 
     public static class DescribeDatabasesResponseBodyDatabasesTables extends TeaModel {
+        // 数据库表名
         @NameInMap("TableName")
         public String tableName;
 
@@ -109,6 +110,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     }
 
     public static class DescribeDatabasesResponseBodyDatabases extends TeaModel {
+        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -120,6 +122,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        // 数据库类型
         @NameInMap("DbType")
         public String dbType;
 
@@ -139,6 +142,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        // 数据库表信息
         @NameInMap("Tables")
         public java.util.List<DescribeDatabasesResponseBodyDatabasesTables> tables;
 

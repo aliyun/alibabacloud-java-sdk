@@ -8,9 +8,6 @@ public class DescribeNodeMetricsRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("FuzzyName")
-    public Boolean fuzzyName;
-
     // Oceanbase集群ID。
     @NameInMap("InstanceId")
     public String instanceId;
@@ -54,14 +51,6 @@ public class DescribeNodeMetricsRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeNodeMetricsRequest setFuzzyName(Boolean fuzzyName) {
-        this.fuzzyName = fuzzyName;
-        return this;
-    }
-    public Boolean getFuzzyName() {
-        return this.fuzzyName;
     }
 
     public DescribeNodeMetricsRequest setInstanceId(String instanceId) {

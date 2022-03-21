@@ -86,6 +86,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public Long endTime;
 
+        // 结束时间（零时区）
         @NameInMap("EndTimeUTCString")
         public String endTimeUTCString;
 
@@ -501,6 +502,7 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
         @NameInMap("Count")
         public Long count;
 
+        // 列表
         @NameInMap("List")
         public java.util.List<DescribeSQLHistoryListResponseBodySQLHistoryListList> list;
 

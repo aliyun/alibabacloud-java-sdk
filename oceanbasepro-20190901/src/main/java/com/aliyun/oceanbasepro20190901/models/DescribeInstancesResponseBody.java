@@ -330,6 +330,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Version")
         public String version;
 
+        // vpcId
         @NameInMap("VpcId")
         public String vpcId;
 
