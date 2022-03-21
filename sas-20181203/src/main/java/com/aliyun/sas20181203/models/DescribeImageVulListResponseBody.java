@@ -75,7 +75,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         public String matchDetail;
 
         @NameInMap("MatchList")
-        public String matchList;
+        public java.util.List<String> matchList;
 
         @NameInMap("Name")
         public String name;
@@ -118,11 +118,11 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             return this.matchDetail;
         }
 
-        public DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setMatchList(String matchList) {
+        public DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setMatchList(java.util.List<String> matchList) {
             this.matchList = matchList;
             return this;
         }
-        public String getMatchList() {
+        public java.util.List<String> getMatchList() {
             return this.matchList;
         }
 

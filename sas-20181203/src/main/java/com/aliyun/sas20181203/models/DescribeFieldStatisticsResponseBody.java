@@ -35,6 +35,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("AliYunInstanceCount")
         public Integer aliYunInstanceCount;
 
+        @NameInMap("AwsInstanceCount")
+        public Integer awsInstanceCount;
+
         @NameInMap("ExposedInstanceCount")
         public Integer exposedInstanceCount;
 
@@ -100,6 +103,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
         public Integer getAliYunInstanceCount() {
             return this.aliYunInstanceCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setAwsInstanceCount(Integer awsInstanceCount) {
+            this.awsInstanceCount = awsInstanceCount;
+            return this;
+        }
+        public Integer getAwsInstanceCount() {
+            return this.awsInstanceCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setExposedInstanceCount(Integer exposedInstanceCount) {
