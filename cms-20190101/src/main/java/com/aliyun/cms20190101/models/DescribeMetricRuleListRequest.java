@@ -13,9 +13,6 @@ public class DescribeMetricRuleListRequest extends TeaModel {
     @NameInMap("EnableState")
     public Boolean enableState;
 
-    @NameInMap("GroupBy")
-    public String groupBy;
-
     @NameInMap("GroupId")
     public String groupId;
 
@@ -67,14 +64,6 @@ public class DescribeMetricRuleListRequest extends TeaModel {
     }
     public Boolean getEnableState() {
         return this.enableState;
-    }
-
-    public DescribeMetricRuleListRequest setGroupBy(String groupBy) {
-        this.groupBy = groupBy;
-        return this;
-    }
-    public String getGroupBy() {
-        return this.groupBy;
     }
 
     public DescribeMetricRuleListRequest setGroupId(String groupId) {

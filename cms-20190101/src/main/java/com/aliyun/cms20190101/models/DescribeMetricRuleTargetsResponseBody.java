@@ -71,6 +71,9 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("JsonParams")
+        public String jsonParams;
+
         @NameInMap("Level")
         public String level;
 
@@ -93,6 +96,14 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public DescribeMetricRuleTargetsResponseBodyTargetsTarget setJsonParams(String jsonParams) {
+            this.jsonParams = jsonParams;
+            return this;
+        }
+        public String getJsonParams() {
+            return this.jsonParams;
         }
 
         public DescribeMetricRuleTargetsResponseBodyTargetsTarget setLevel(String level) {

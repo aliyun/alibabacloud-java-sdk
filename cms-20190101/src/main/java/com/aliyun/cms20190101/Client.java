@@ -2903,10 +2903,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableState", request.enableState);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.groupBy)) {
-            query.put("GroupBy", request.groupBy);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             query.put("GroupId", request.groupId);
         }

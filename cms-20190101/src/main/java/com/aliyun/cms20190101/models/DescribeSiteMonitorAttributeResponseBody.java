@@ -380,6 +380,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("http_method")
         public String httpMethod;
 
+        @NameInMap("isBase64Encode")
+        public String isBase64Encode;
+
         @NameInMap("match_rule")
         public Integer matchRule;
 
@@ -496,6 +499,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
         public String getHttpMethod() {
             return this.httpMethod;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setIsBase64Encode(String isBase64Encode) {
+            this.isBase64Encode = isBase64Encode;
+            return this;
+        }
+        public String getIsBase64Encode() {
+            return this.isBase64Encode;
         }
 
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setMatchRule(Integer matchRule) {

@@ -241,6 +241,9 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("JsonParams")
+        public String jsonParams;
+
         @NameInMap("Product")
         public String product;
 
@@ -280,6 +283,14 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public PutEventRuleTargetsRequestOpenApiParameters setJsonParams(String jsonParams) {
+            this.jsonParams = jsonParams;
+            return this;
+        }
+        public String getJsonParams() {
+            return this.jsonParams;
         }
 
         public PutEventRuleTargetsRequestOpenApiParameters setProduct(String product) {
