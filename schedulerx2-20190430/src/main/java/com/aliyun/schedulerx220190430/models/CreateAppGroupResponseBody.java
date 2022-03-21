@@ -68,6 +68,9 @@ public class CreateAppGroupResponseBody extends TeaModel {
         @NameInMap("AppGroupId")
         public Long appGroupId;
 
+        @NameInMap("AppKey")
+        public String appKey;
+
         public static CreateAppGroupResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateAppGroupResponseBodyData self = new CreateAppGroupResponseBodyData();
             return TeaModel.build(map, self);
@@ -79,6 +82,14 @@ public class CreateAppGroupResponseBody extends TeaModel {
         }
         public Long getAppGroupId() {
             return this.appGroupId;
+        }
+
+        public CreateAppGroupResponseBodyData setAppKey(String appKey) {
+            this.appKey = appKey;
+            return this;
+        }
+        public String getAppKey() {
+            return this.appKey;
         }
 
     }

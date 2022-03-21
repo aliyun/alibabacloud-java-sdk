@@ -10,6 +10,9 @@ public class GetJobInfoRequest extends TeaModel {
     @NameInMap("JobId")
     public Long jobId;
 
+    @NameInMap("JobName")
+    public String jobName;
+
     @NameInMap("Namespace")
     public String namespace;
 
@@ -38,6 +41,14 @@ public class GetJobInfoRequest extends TeaModel {
     }
     public Long getJobId() {
         return this.jobId;
+    }
+
+    public GetJobInfoRequest setJobName(String jobName) {
+        this.jobName = jobName;
+        return this;
+    }
+    public String getJobName() {
+        return this.jobName;
     }
 
     public GetJobInfoRequest setNamespace(String namespace) {

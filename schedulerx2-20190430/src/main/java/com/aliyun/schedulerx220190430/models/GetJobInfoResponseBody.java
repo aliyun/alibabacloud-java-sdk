@@ -365,6 +365,9 @@ public class GetJobInfoResponseBody extends TeaModel {
         @NameInMap("JarUrl")
         public String jarUrl;
 
+        @NameInMap("JobId")
+        public Long jobId;
+
         @NameInMap("JobMonitorInfo")
         public GetJobInfoResponseBodyDataJobConfigInfoJobMonitorInfo jobMonitorInfo;
 
@@ -440,6 +443,14 @@ public class GetJobInfoResponseBody extends TeaModel {
         }
         public String getJarUrl() {
             return this.jarUrl;
+        }
+
+        public GetJobInfoResponseBodyDataJobConfigInfo setJobId(Long jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public Long getJobId() {
+            return this.jobId;
         }
 
         public GetJobInfoResponseBodyDataJobConfigInfo setJobMonitorInfo(GetJobInfoResponseBodyDataJobConfigInfoJobMonitorInfo jobMonitorInfo) {
