@@ -49,6 +49,9 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("JsonParams")
+        public String jsonParams;
+
         @NameInMap("Level")
         public String level;
 
@@ -71,6 +74,14 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public PutMetricRuleTargetsRequestTargets setJsonParams(String jsonParams) {
+            this.jsonParams = jsonParams;
+            return this;
+        }
+        public String getJsonParams() {
+            return this.jsonParams;
         }
 
         public PutMetricRuleTargetsRequestTargets setLevel(String level) {
