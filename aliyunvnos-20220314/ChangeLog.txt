@@ -1,0 +1,3 @@
+2022-03-21 Version: 1.0.0
+- SetUserSsoSettings.
+
