@@ -5622,6 +5622,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Area", request.area);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.l2Preload)) {
+            query.put("L2Preload", request.l2Preload);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.objectPath)) {
             query.put("ObjectPath", request.objectPath);
         }
