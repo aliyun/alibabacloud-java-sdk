@@ -4,23 +4,15 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DescribeScdnDomainRealTimeReqHitRateDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DescribeScdnDomainRealTimeReqHitRateDataResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeScdnDomainRealTimeReqHitRateDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScdnDomainRealTimeReqHitRateDataResponseBody self = new DescribeScdnDomainRealTimeReqHitRateDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScdnDomainRealTimeReqHitRateDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeScdnDomainRealTimeReqHitRateDataResponseBody setData(DescribeScdnDomainRealTimeReqHitRateDataResponseBodyData data) {
@@ -29,6 +21,14 @@ public class DescribeScdnDomainRealTimeReqHitRateDataResponseBody extends TeaMod
     }
     public DescribeScdnDomainRealTimeReqHitRateDataResponseBodyData getData() {
         return this.data;
+    }
+
+    public DescribeScdnDomainRealTimeReqHitRateDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeScdnDomainRealTimeReqHitRateDataResponseBodyDataReqHitRateDataModel extends TeaModel {

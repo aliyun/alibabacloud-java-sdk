@@ -4,20 +4,26 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class SetScdnDomainCertificateRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("DomainName")
-    public String domainName;
+    @NameInMap("CertName")
+    public String certName;
 
     @NameInMap("CertType")
     public String certType;
 
-    @NameInMap("CertName")
-    public String certName;
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("ForceSet")
+    public String forceSet;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("Region")
+    public String region;
+
+    @NameInMap("SSLPri")
+    public String SSLPri;
 
     @NameInMap("SSLProtocol")
     public String SSLProtocol;
@@ -25,42 +31,20 @@ public class SetScdnDomainCertificateRequest extends TeaModel {
     @NameInMap("SSLPub")
     public String SSLPub;
 
-    @NameInMap("SSLPri")
-    public String SSLPri;
-
-    @NameInMap("Region")
-    public String region;
-
-    @NameInMap("ForceSet")
-    public String forceSet;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static SetScdnDomainCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         SetScdnDomainCertificateRequest self = new SetScdnDomainCertificateRequest();
         return TeaModel.build(map, self);
     }
 
-    public SetScdnDomainCertificateRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public SetScdnDomainCertificateRequest setCertName(String certName) {
+        this.certName = certName;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public SetScdnDomainCertificateRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public SetScdnDomainCertificateRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
+    public String getCertName() {
+        return this.certName;
     }
 
     public SetScdnDomainCertificateRequest setCertType(String certType) {
@@ -71,12 +55,44 @@ public class SetScdnDomainCertificateRequest extends TeaModel {
         return this.certType;
     }
 
-    public SetScdnDomainCertificateRequest setCertName(String certName) {
-        this.certName = certName;
+    public SetScdnDomainCertificateRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getCertName() {
-        return this.certName;
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public SetScdnDomainCertificateRequest setForceSet(String forceSet) {
+        this.forceSet = forceSet;
+        return this;
+    }
+    public String getForceSet() {
+        return this.forceSet;
+    }
+
+    public SetScdnDomainCertificateRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public SetScdnDomainCertificateRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
+    }
+
+    public SetScdnDomainCertificateRequest setSSLPri(String SSLPri) {
+        this.SSLPri = SSLPri;
+        return this;
+    }
+    public String getSSLPri() {
+        return this.SSLPri;
     }
 
     public SetScdnDomainCertificateRequest setSSLProtocol(String SSLProtocol) {
@@ -95,28 +111,12 @@ public class SetScdnDomainCertificateRequest extends TeaModel {
         return this.SSLPub;
     }
 
-    public SetScdnDomainCertificateRequest setSSLPri(String SSLPri) {
-        this.SSLPri = SSLPri;
+    public SetScdnDomainCertificateRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getSSLPri() {
-        return this.SSLPri;
-    }
-
-    public SetScdnDomainCertificateRequest setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
-    }
-
-    public SetScdnDomainCertificateRequest setForceSet(String forceSet) {
-        this.forceSet = forceSet;
-        return this;
-    }
-    public String getForceSet() {
-        return this.forceSet;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

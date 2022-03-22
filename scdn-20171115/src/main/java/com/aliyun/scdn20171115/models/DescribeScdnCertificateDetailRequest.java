@@ -4,18 +4,26 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DescribeScdnCertificateDetailRequest extends TeaModel {
+    @NameInMap("CertName")
+    public String certName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("CertName")
-    public String certName;
-
     public static DescribeScdnCertificateDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeScdnCertificateDetailRequest self = new DescribeScdnCertificateDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeScdnCertificateDetailRequest setCertName(String certName) {
+        this.certName = certName;
+        return this;
+    }
+    public String getCertName() {
+        return this.certName;
     }
 
     public DescribeScdnCertificateDetailRequest setOwnerId(Long ownerId) {
@@ -32,14 +40,6 @@ public class DescribeScdnCertificateDetailRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public DescribeScdnCertificateDetailRequest setCertName(String certName) {
-        this.certName = certName;
-        return this;
-    }
-    public String getCertName() {
-        return this.certName;
     }
 
 }

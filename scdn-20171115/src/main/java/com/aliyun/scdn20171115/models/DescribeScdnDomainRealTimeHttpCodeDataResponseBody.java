@@ -4,59 +4,27 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DescribeScdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("DataInterval")
-    public String dataInterval;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("RealTimeHttpCodeData")
     public DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeData realTimeHttpCodeData;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeScdnDomainRealTimeHttpCodeDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScdnDomainRealTimeHttpCodeDataResponseBody self = new DescribeScdnDomainRealTimeHttpCodeDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScdnDomainRealTimeHttpCodeDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeScdnDomainRealTimeHttpCodeDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeScdnDomainRealTimeHttpCodeDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
-    public DescribeScdnDomainRealTimeHttpCodeDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeScdnDomainRealTimeHttpCodeDataResponseBody setDataInterval(String dataInterval) {
@@ -67,6 +35,22 @@ public class DescribeScdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
         return this.dataInterval;
     }
 
+    public DescribeScdnDomainRealTimeHttpCodeDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeScdnDomainRealTimeHttpCodeDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public DescribeScdnDomainRealTimeHttpCodeDataResponseBody setRealTimeHttpCodeData(DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeData realTimeHttpCodeData) {
         this.realTimeHttpCodeData = realTimeHttpCodeData;
         return this;
@@ -75,15 +59,31 @@ public class DescribeScdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
         return this.realTimeHttpCodeData;
     }
 
+    public DescribeScdnDomainRealTimeHttpCodeDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeScdnDomainRealTimeHttpCodeDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static class DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData extends TeaModel {
         @NameInMap("Code")
         public String code;
 
-        @NameInMap("Proportion")
-        public String proportion;
-
         @NameInMap("Count")
         public String count;
+
+        @NameInMap("Proportion")
+        public String proportion;
 
         public static DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData build(java.util.Map<String, ?> map) throws Exception {
             DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData self = new DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData();
@@ -98,20 +98,20 @@ public class DescribeScdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
             return this.code;
         }
 
-        public DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData setProportion(String proportion) {
-            this.proportion = proportion;
-            return this;
-        }
-        public String getProportion() {
-            return this.proportion;
-        }
-
         public DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData setCount(String count) {
             this.count = count;
             return this;
         }
         public String getCount() {
             return this.count;
+        }
+
+        public DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData setProportion(String proportion) {
+            this.proportion = proportion;
+            return this;
+        }
+        public String getProportion() {
+            return this.proportion;
         }
 
     }
@@ -136,23 +136,15 @@ public class DescribeScdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
     }
 
     public static class DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData extends TeaModel {
-        @NameInMap("Value")
-        public DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValue value;
-
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("Value")
+        public DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValue value;
 
         public static DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData build(java.util.Map<String, ?> map) throws Exception {
             DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData self = new DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData setValue(DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValue value) {
-            this.value = value;
-            return this;
-        }
-        public DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValue getValue() {
-            return this.value;
         }
 
         public DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData setTimeStamp(String timeStamp) {
@@ -161,6 +153,14 @@ public class DescribeScdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData setValue(DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValue value) {
+            this.value = value;
+            return this;
+        }
+        public DescribeScdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValue getValue() {
+            return this.value;
         }
 
     }

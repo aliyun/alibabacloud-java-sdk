@@ -4,21 +4,37 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DeleteScdnSpecificConfigRequest extends TeaModel {
+    @NameInMap("ConfigId")
+    public String configId;
+
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
-    @NameInMap("ConfigId")
-    public String configId;
-
     public static DeleteScdnSpecificConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteScdnSpecificConfigRequest self = new DeleteScdnSpecificConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteScdnSpecificConfigRequest setConfigId(String configId) {
+        this.configId = configId;
+        return this;
+    }
+    public String getConfigId() {
+        return this.configId;
+    }
+
+    public DeleteScdnSpecificConfigRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DeleteScdnSpecificConfigRequest setOwnerId(Long ownerId) {
@@ -35,22 +51,6 @@ public class DeleteScdnSpecificConfigRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public DeleteScdnSpecificConfigRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
-    public DeleteScdnSpecificConfigRequest setConfigId(String configId) {
-        this.configId = configId;
-        return this;
-    }
-    public String getConfigId() {
-        return this.configId;
     }
 
 }

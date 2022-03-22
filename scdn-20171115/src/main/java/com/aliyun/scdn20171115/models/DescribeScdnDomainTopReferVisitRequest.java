@@ -4,29 +4,21 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DescribeScdnDomainTopReferVisitRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("SortBy")
     public String sortBy;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeScdnDomainTopReferVisitRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeScdnDomainTopReferVisitRequest self = new DescribeScdnDomainTopReferVisitRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScdnDomainTopReferVisitRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeScdnDomainTopReferVisitRequest setDomainName(String domainName) {
@@ -37,12 +29,12 @@ public class DescribeScdnDomainTopReferVisitRequest extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeScdnDomainTopReferVisitRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeScdnDomainTopReferVisitRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeScdnDomainTopReferVisitRequest setSortBy(String sortBy) {
@@ -51,6 +43,14 @@ public class DescribeScdnDomainTopReferVisitRequest extends TeaModel {
     }
     public String getSortBy() {
         return this.sortBy;
+    }
+
+    public DescribeScdnDomainTopReferVisitRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

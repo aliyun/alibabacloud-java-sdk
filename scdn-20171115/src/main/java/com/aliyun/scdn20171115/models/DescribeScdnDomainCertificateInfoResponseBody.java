@@ -32,26 +32,14 @@ public class DescribeScdnDomainCertificateInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("CertLife")
-        public String certLife;
+        @NameInMap("CertDomainName")
+        public String certDomainName;
 
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
-        @NameInMap("SSLPub")
-        public String SSLPub;
-
-        @NameInMap("SSLProtocol")
-        public String SSLProtocol;
-
-        @NameInMap("CertType")
-        public String certType;
-
-        @NameInMap("CertDomainName")
-        public String certDomainName;
+        @NameInMap("CertLife")
+        public String certLife;
 
         @NameInMap("CertName")
         public String certName;
@@ -59,28 +47,32 @@ public class DescribeScdnDomainCertificateInfoResponseBody extends TeaModel {
         @NameInMap("CertOrg")
         public String certOrg;
 
+        @NameInMap("CertType")
+        public String certType;
+
         @NameInMap("DomainName")
         public String domainName;
+
+        @NameInMap("SSLProtocol")
+        public String SSLProtocol;
+
+        @NameInMap("SSLPub")
+        public String SSLPub;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo self = new DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo setStatus(String status) {
-            this.status = status;
+        public DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo setCertDomainName(String certDomainName) {
+            this.certDomainName = certDomainName;
             return this;
         }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo setCertLife(String certLife) {
-            this.certLife = certLife;
-            return this;
-        }
-        public String getCertLife() {
-            return this.certLife;
+        public String getCertDomainName() {
+            return this.certDomainName;
         }
 
         public DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo setCertExpireTime(String certExpireTime) {
@@ -91,36 +83,12 @@ public class DescribeScdnDomainCertificateInfoResponseBody extends TeaModel {
             return this.certExpireTime;
         }
 
-        public DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo setSSLPub(String SSLPub) {
-            this.SSLPub = SSLPub;
+        public DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo setCertLife(String certLife) {
+            this.certLife = certLife;
             return this;
         }
-        public String getSSLPub() {
-            return this.SSLPub;
-        }
-
-        public DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo setSSLProtocol(String SSLProtocol) {
-            this.SSLProtocol = SSLProtocol;
-            return this;
-        }
-        public String getSSLProtocol() {
-            return this.SSLProtocol;
-        }
-
-        public DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo setCertType(String certType) {
-            this.certType = certType;
-            return this;
-        }
-        public String getCertType() {
-            return this.certType;
-        }
-
-        public DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo setCertDomainName(String certDomainName) {
-            this.certDomainName = certDomainName;
-            return this;
-        }
-        public String getCertDomainName() {
-            return this.certDomainName;
+        public String getCertLife() {
+            return this.certLife;
         }
 
         public DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo setCertName(String certName) {
@@ -139,12 +107,44 @@ public class DescribeScdnDomainCertificateInfoResponseBody extends TeaModel {
             return this.certOrg;
         }
 
+        public DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo setCertType(String certType) {
+            this.certType = certType;
+            return this;
+        }
+        public String getCertType() {
+            return this.certType;
+        }
+
         public DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo setDomainName(String domainName) {
             this.domainName = domainName;
             return this;
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo setSSLProtocol(String SSLProtocol) {
+            this.SSLProtocol = SSLProtocol;
+            return this;
+        }
+        public String getSSLProtocol() {
+            return this.SSLProtocol;
+        }
+
+        public DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo setSSLPub(String SSLPub) {
+            this.SSLPub = SSLPub;
+            return this;
+        }
+        public String getSSLPub() {
+            return this.SSLPub;
+        }
+
+        public DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

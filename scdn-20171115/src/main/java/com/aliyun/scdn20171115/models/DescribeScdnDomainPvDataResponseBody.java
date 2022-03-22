@@ -4,59 +4,27 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DescribeScdnDomainPvDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("DataInterval")
-    public String dataInterval;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("PvDataInterval")
     public DescribeScdnDomainPvDataResponseBodyPvDataInterval pvDataInterval;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeScdnDomainPvDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScdnDomainPvDataResponseBody self = new DescribeScdnDomainPvDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScdnDomainPvDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeScdnDomainPvDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeScdnDomainPvDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
-    public DescribeScdnDomainPvDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeScdnDomainPvDataResponseBody setDataInterval(String dataInterval) {
@@ -67,6 +35,22 @@ public class DescribeScdnDomainPvDataResponseBody extends TeaModel {
         return this.dataInterval;
     }
 
+    public DescribeScdnDomainPvDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeScdnDomainPvDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public DescribeScdnDomainPvDataResponseBody setPvDataInterval(DescribeScdnDomainPvDataResponseBodyPvDataInterval pvDataInterval) {
         this.pvDataInterval = pvDataInterval;
         return this;
@@ -75,24 +59,32 @@ public class DescribeScdnDomainPvDataResponseBody extends TeaModel {
         return this.pvDataInterval;
     }
 
-    public static class DescribeScdnDomainPvDataResponseBodyPvDataIntervalUsageData extends TeaModel {
-        @NameInMap("Value")
-        public String value;
+    public DescribeScdnDomainPvDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public DescribeScdnDomainPvDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public static class DescribeScdnDomainPvDataResponseBodyPvDataIntervalUsageData extends TeaModel {
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeScdnDomainPvDataResponseBodyPvDataIntervalUsageData build(java.util.Map<String, ?> map) throws Exception {
             DescribeScdnDomainPvDataResponseBodyPvDataIntervalUsageData self = new DescribeScdnDomainPvDataResponseBodyPvDataIntervalUsageData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeScdnDomainPvDataResponseBodyPvDataIntervalUsageData setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DescribeScdnDomainPvDataResponseBodyPvDataIntervalUsageData setTimeStamp(String timeStamp) {
@@ -101,6 +93,14 @@ public class DescribeScdnDomainPvDataResponseBody extends TeaModel {
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeScdnDomainPvDataResponseBodyPvDataIntervalUsageData setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
