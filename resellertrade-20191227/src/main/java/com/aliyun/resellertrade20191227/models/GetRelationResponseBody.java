@@ -180,6 +180,12 @@ public class GetRelationResponseBody extends TeaModel {
     }
 
     public static class GetRelationResponseBodyData extends TeaModel {
+        // 是否可登陆官网
+        // true：可登录
+        // false：不可登陆
+        @NameInMap("CanLoginOfficial")
+        public Boolean canLoginOfficial;
+
         @NameInMap("Class")
         public String _class;
 
@@ -213,6 +219,14 @@ public class GetRelationResponseBody extends TeaModel {
         public static GetRelationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetRelationResponseBodyData self = new GetRelationResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetRelationResponseBodyData setCanLoginOfficial(Boolean canLoginOfficial) {
+            this.canLoginOfficial = canLoginOfficial;
+            return this;
+        }
+        public Boolean getCanLoginOfficial() {
+            return this.canLoginOfficial;
         }
 
         public GetRelationResponseBodyData set_class(String _class) {
