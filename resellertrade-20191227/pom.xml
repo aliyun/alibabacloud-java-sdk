@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>resellertrade20191227</artifactId>
-  <version>1.1.3</version>
+  <version>1.1.4</version>
   <packaging>jar</packaging>
   <name>resellertrade20191227</name>
   <description>Alibaba Cloud ResellerTrade (20191227) SDK for Java
@@ -145,6 +145,10 @@
                 <relocation>
                   <pattern>com.sun</pattern>
                   <shadedPattern>com.aliyun.resellertrade20191227.external.com.sun</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache</pattern>
+                  <shadedPattern>com.aliyun.resellertrade20191227.external.org.apache</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>
