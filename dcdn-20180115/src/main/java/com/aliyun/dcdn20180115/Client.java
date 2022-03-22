@@ -1761,6 +1761,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDcdnDomainBpsDataWithOptions(request, runtime);
     }
 
+    public DescribeDcdnDomainBpsDataByLayerResponse describeDcdnDomainBpsDataByLayerWithOptions(DescribeDcdnDomainBpsDataByLayerRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ispNameEn)) {
+            query.put("IspNameEn", request.ispNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.layer)) {
+            query.put("Layer", request.layer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationNameEn)) {
+            query.put("LocationNameEn", request.locationNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDcdnDomainBpsDataByLayer"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainBpsDataByLayerResponse());
+    }
+
+    public DescribeDcdnDomainBpsDataByLayerResponse describeDcdnDomainBpsDataByLayer(DescribeDcdnDomainBpsDataByLayerRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeDcdnDomainBpsDataByLayerWithOptions(request, runtime);
+    }
+
     public DescribeDcdnDomainByCertificateResponse describeDcdnDomainByCertificateWithOptions(DescribeDcdnDomainByCertificateRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2091,6 +2148,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDcdnDomainHttpCodeDataResponse describeDcdnDomainHttpCodeData(DescribeDcdnDomainHttpCodeDataRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeDcdnDomainHttpCodeDataWithOptions(request, runtime);
+    }
+
+    public DescribeDcdnDomainHttpCodeDataByLayerResponse describeDcdnDomainHttpCodeDataByLayerWithOptions(DescribeDcdnDomainHttpCodeDataByLayerRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ispNameEn)) {
+            query.put("IspNameEn", request.ispNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.layer)) {
+            query.put("Layer", request.layer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationNameEn)) {
+            query.put("LocationNameEn", request.locationNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDcdnDomainHttpCodeDataByLayer"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainHttpCodeDataByLayerResponse());
+    }
+
+    public DescribeDcdnDomainHttpCodeDataByLayerResponse describeDcdnDomainHttpCodeDataByLayer(DescribeDcdnDomainHttpCodeDataByLayerRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeDcdnDomainHttpCodeDataByLayerWithOptions(request, runtime);
     }
 
     public DescribeDcdnDomainIpaBpsDataResponse describeDcdnDomainIpaBpsDataWithOptions(DescribeDcdnDomainIpaBpsDataRequest request, RuntimeOptions runtime) throws Exception {
@@ -2561,6 +2675,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDcdnDomainQpsDataResponse describeDcdnDomainQpsData(DescribeDcdnDomainQpsDataRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeDcdnDomainQpsDataWithOptions(request, runtime);
+    }
+
+    public DescribeDcdnDomainQpsDataByLayerResponse describeDcdnDomainQpsDataByLayerWithOptions(DescribeDcdnDomainQpsDataByLayerRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ispNameEn)) {
+            query.put("IspNameEn", request.ispNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.layer)) {
+            query.put("Layer", request.layer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationNameEn)) {
+            query.put("LocationNameEn", request.locationNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDcdnDomainQpsDataByLayer"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainQpsDataByLayerResponse());
+    }
+
+    public DescribeDcdnDomainQpsDataByLayerResponse describeDcdnDomainQpsDataByLayer(DescribeDcdnDomainQpsDataByLayerRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeDcdnDomainQpsDataByLayerWithOptions(request, runtime);
     }
 
     public DescribeDcdnDomainRealTimeBpsDataResponse describeDcdnDomainRealTimeBpsDataWithOptions(DescribeDcdnDomainRealTimeBpsDataRequest request, RuntimeOptions runtime) throws Exception {
@@ -5375,6 +5546,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.area)) {
             query.put("Area", request.area);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.l2Preload)) {
+            query.put("L2Preload", request.l2Preload);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.objectPath)) {

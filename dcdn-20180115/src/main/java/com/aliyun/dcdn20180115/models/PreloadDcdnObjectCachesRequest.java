@@ -7,6 +7,9 @@ public class PreloadDcdnObjectCachesRequest extends TeaModel {
     @NameInMap("Area")
     public String area;
 
+    @NameInMap("L2Preload")
+    public Boolean l2Preload;
+
     @NameInMap("ObjectPath")
     public String objectPath;
 
@@ -27,6 +30,14 @@ public class PreloadDcdnObjectCachesRequest extends TeaModel {
     }
     public String getArea() {
         return this.area;
+    }
+
+    public PreloadDcdnObjectCachesRequest setL2Preload(Boolean l2Preload) {
+        this.l2Preload = l2Preload;
+        return this;
+    }
+    public Boolean getL2Preload() {
+        return this.l2Preload;
     }
 
     public PreloadDcdnObjectCachesRequest setObjectPath(String objectPath) {
