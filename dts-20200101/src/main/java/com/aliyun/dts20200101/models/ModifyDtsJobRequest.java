@@ -16,6 +16,10 @@ public class ModifyDtsJobRequest extends TeaModel {
     @NameInMap("EtlOperatorColumnReference")
     public String etlOperatorColumnReference;
 
+    // 文件上传后的url
+    @NameInMap("FileOssUrl")
+    public String fileOssUrl;
+
     // 修改任务的方式，当为UPDATE_RESERVED时为修改reserve字段，不传默认修改dbList
     @NameInMap("ModifyTypeEnum")
     public String modifyTypeEnum;
@@ -65,6 +69,14 @@ public class ModifyDtsJobRequest extends TeaModel {
     }
     public String getEtlOperatorColumnReference() {
         return this.etlOperatorColumnReference;
+    }
+
+    public ModifyDtsJobRequest setFileOssUrl(String fileOssUrl) {
+        this.fileOssUrl = fileOssUrl;
+        return this;
+    }
+    public String getFileOssUrl() {
+        return this.fileOssUrl;
     }
 
     public ModifyDtsJobRequest setModifyTypeEnum(String modifyTypeEnum) {
