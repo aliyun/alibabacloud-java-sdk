@@ -8,6 +8,10 @@ public class SubmitTraceAbRequest extends TeaModel {
     @NameInMap("CallBack")
     public String callBack;
 
+    // 密钥base64串
+    @NameInMap("CipherBase64ed")
+    public String cipherBase64ed;
+
     // 溯源水印ab流处理视频输入
     @NameInMap("Input")
     public String input;
@@ -47,6 +51,14 @@ public class SubmitTraceAbRequest extends TeaModel {
     }
     public String getCallBack() {
         return this.callBack;
+    }
+
+    public SubmitTraceAbRequest setCipherBase64ed(String cipherBase64ed) {
+        this.cipherBase64ed = cipherBase64ed;
+        return this;
+    }
+    public String getCipherBase64ed() {
+        return this.cipherBase64ed;
     }
 
     public SubmitTraceAbRequest setInput(String input) {

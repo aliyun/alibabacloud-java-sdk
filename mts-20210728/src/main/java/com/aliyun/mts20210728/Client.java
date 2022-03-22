@@ -158,53 +158,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCopyrightExtractResponse());
     }
 
-    public QueryImageCopyrightResponse queryImageCopyright(QueryImageCopyrightRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.queryImageCopyrightWithOptions(request, headers, runtime);
-    }
-
-    public QueryImageCopyrightResponse queryImageCopyrightWithOptions(QueryImageCopyrightRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.createTimeEnd)) {
-            body.put("CreateTimeEnd", request.createTimeEnd);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.createTimeStart)) {
-            body.put("CreateTimeStart", request.createTimeStart);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
-            body.put("JobId", request.jobId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "QueryImageCopyright"),
-            new TeaPair("version", "2021-07-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/queryImageCopyright"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryImageCopyrightResponse());
-    }
-
     public QueryTraceAbResponse queryTraceAb(QueryTraceAbRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -494,6 +447,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callBack)) {
             body.put("CallBack", request.callBack);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cipherBase64ed)) {
+            body.put("CipherBase64ed", request.cipherBase64ed);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.input)) {
