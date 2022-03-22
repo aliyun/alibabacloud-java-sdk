@@ -4,55 +4,39 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class OpenScdnServiceRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("Bandwidth")
     public Integer bandwidth;
-
-    @NameInMap("ProtectType")
-    public String protectType;
-
-    @NameInMap("DDoSBasic")
-    public Integer DDoSBasic;
-
-    @NameInMap("ElasticProtection")
-    public Integer elasticProtection;
 
     @NameInMap("CcProtection")
     public Integer ccProtection;
 
+    @NameInMap("DDoSBasic")
+    public Integer DDoSBasic;
+
     @NameInMap("DomainCount")
     public Integer domainCount;
 
-    @NameInMap("StartDate")
-    public String startDate;
+    @NameInMap("ElasticProtection")
+    public Integer elasticProtection;
 
     @NameInMap("EndDate")
     public String endDate;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ProtectType")
+    public String protectType;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    @NameInMap("StartDate")
+    public String startDate;
+
     public static OpenScdnServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         OpenScdnServiceRequest self = new OpenScdnServiceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public OpenScdnServiceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public OpenScdnServiceRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public OpenScdnServiceRequest setBandwidth(Integer bandwidth) {
@@ -63,12 +47,12 @@ public class OpenScdnServiceRequest extends TeaModel {
         return this.bandwidth;
     }
 
-    public OpenScdnServiceRequest setProtectType(String protectType) {
-        this.protectType = protectType;
+    public OpenScdnServiceRequest setCcProtection(Integer ccProtection) {
+        this.ccProtection = ccProtection;
         return this;
     }
-    public String getProtectType() {
-        return this.protectType;
+    public Integer getCcProtection() {
+        return this.ccProtection;
     }
 
     public OpenScdnServiceRequest setDDoSBasic(Integer DDoSBasic) {
@@ -79,22 +63,6 @@ public class OpenScdnServiceRequest extends TeaModel {
         return this.DDoSBasic;
     }
 
-    public OpenScdnServiceRequest setElasticProtection(Integer elasticProtection) {
-        this.elasticProtection = elasticProtection;
-        return this;
-    }
-    public Integer getElasticProtection() {
-        return this.elasticProtection;
-    }
-
-    public OpenScdnServiceRequest setCcProtection(Integer ccProtection) {
-        this.ccProtection = ccProtection;
-        return this;
-    }
-    public Integer getCcProtection() {
-        return this.ccProtection;
-    }
-
     public OpenScdnServiceRequest setDomainCount(Integer domainCount) {
         this.domainCount = domainCount;
         return this;
@@ -103,12 +71,12 @@ public class OpenScdnServiceRequest extends TeaModel {
         return this.domainCount;
     }
 
-    public OpenScdnServiceRequest setStartDate(String startDate) {
-        this.startDate = startDate;
+    public OpenScdnServiceRequest setElasticProtection(Integer elasticProtection) {
+        this.elasticProtection = elasticProtection;
         return this;
     }
-    public String getStartDate() {
-        return this.startDate;
+    public Integer getElasticProtection() {
+        return this.elasticProtection;
     }
 
     public OpenScdnServiceRequest setEndDate(String endDate) {
@@ -117,6 +85,38 @@ public class OpenScdnServiceRequest extends TeaModel {
     }
     public String getEndDate() {
         return this.endDate;
+    }
+
+    public OpenScdnServiceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public OpenScdnServiceRequest setProtectType(String protectType) {
+        this.protectType = protectType;
+        return this;
+    }
+    public String getProtectType() {
+        return this.protectType;
+    }
+
+    public OpenScdnServiceRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public OpenScdnServiceRequest setStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    public String getStartDate() {
+        return this.startDate;
     }
 
 }

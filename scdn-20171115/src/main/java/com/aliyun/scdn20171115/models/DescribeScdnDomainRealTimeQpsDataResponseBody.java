@@ -4,23 +4,15 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DescribeScdnDomainRealTimeQpsDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DescribeScdnDomainRealTimeQpsDataResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeScdnDomainRealTimeQpsDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScdnDomainRealTimeQpsDataResponseBody self = new DescribeScdnDomainRealTimeQpsDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScdnDomainRealTimeQpsDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeScdnDomainRealTimeQpsDataResponseBody setData(DescribeScdnDomainRealTimeQpsDataResponseBodyData data) {
@@ -29,6 +21,14 @@ public class DescribeScdnDomainRealTimeQpsDataResponseBody extends TeaModel {
     }
     public DescribeScdnDomainRealTimeQpsDataResponseBodyData getData() {
         return this.data;
+    }
+
+    public DescribeScdnDomainRealTimeQpsDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeScdnDomainRealTimeQpsDataResponseBodyDataQpsModel extends TeaModel {

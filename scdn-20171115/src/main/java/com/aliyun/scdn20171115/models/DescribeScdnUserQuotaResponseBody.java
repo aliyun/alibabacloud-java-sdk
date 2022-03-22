@@ -4,79 +4,39 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DescribeScdnUserQuotaResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("RefreshUrlQuota")
-    public Integer refreshUrlQuota;
+    @NameInMap("BlockQuota")
+    public Integer blockQuota;
 
     @NameInMap("BlockRemain")
     public Integer blockRemain;
 
-    @NameInMap("PreloadRemain")
-    public Integer preloadRemain;
-
-    @NameInMap("RefreshDirRemain")
-    public Integer refreshDirRemain;
-
-    @NameInMap("BlockQuota")
-    public Integer blockQuota;
-
-    @NameInMap("RefreshDirQuota")
-    public Integer refreshDirQuota;
-
     @NameInMap("DomainQuota")
     public Integer domainQuota;
-
-    @NameInMap("RefreshUrlRemain")
-    public Integer refreshUrlRemain;
 
     @NameInMap("PreloadQuota")
     public Integer preloadQuota;
 
+    @NameInMap("PreloadRemain")
+    public Integer preloadRemain;
+
+    @NameInMap("RefreshDirQuota")
+    public Integer refreshDirQuota;
+
+    @NameInMap("RefreshDirRemain")
+    public Integer refreshDirRemain;
+
+    @NameInMap("RefreshUrlQuota")
+    public Integer refreshUrlQuota;
+
+    @NameInMap("RefreshUrlRemain")
+    public Integer refreshUrlRemain;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeScdnUserQuotaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScdnUserQuotaResponseBody self = new DescribeScdnUserQuotaResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScdnUserQuotaResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeScdnUserQuotaResponseBody setRefreshUrlQuota(Integer refreshUrlQuota) {
-        this.refreshUrlQuota = refreshUrlQuota;
-        return this;
-    }
-    public Integer getRefreshUrlQuota() {
-        return this.refreshUrlQuota;
-    }
-
-    public DescribeScdnUserQuotaResponseBody setBlockRemain(Integer blockRemain) {
-        this.blockRemain = blockRemain;
-        return this;
-    }
-    public Integer getBlockRemain() {
-        return this.blockRemain;
-    }
-
-    public DescribeScdnUserQuotaResponseBody setPreloadRemain(Integer preloadRemain) {
-        this.preloadRemain = preloadRemain;
-        return this;
-    }
-    public Integer getPreloadRemain() {
-        return this.preloadRemain;
-    }
-
-    public DescribeScdnUserQuotaResponseBody setRefreshDirRemain(Integer refreshDirRemain) {
-        this.refreshDirRemain = refreshDirRemain;
-        return this;
-    }
-    public Integer getRefreshDirRemain() {
-        return this.refreshDirRemain;
     }
 
     public DescribeScdnUserQuotaResponseBody setBlockQuota(Integer blockQuota) {
@@ -87,12 +47,12 @@ public class DescribeScdnUserQuotaResponseBody extends TeaModel {
         return this.blockQuota;
     }
 
-    public DescribeScdnUserQuotaResponseBody setRefreshDirQuota(Integer refreshDirQuota) {
-        this.refreshDirQuota = refreshDirQuota;
+    public DescribeScdnUserQuotaResponseBody setBlockRemain(Integer blockRemain) {
+        this.blockRemain = blockRemain;
         return this;
     }
-    public Integer getRefreshDirQuota() {
-        return this.refreshDirQuota;
+    public Integer getBlockRemain() {
+        return this.blockRemain;
     }
 
     public DescribeScdnUserQuotaResponseBody setDomainQuota(Integer domainQuota) {
@@ -103,6 +63,46 @@ public class DescribeScdnUserQuotaResponseBody extends TeaModel {
         return this.domainQuota;
     }
 
+    public DescribeScdnUserQuotaResponseBody setPreloadQuota(Integer preloadQuota) {
+        this.preloadQuota = preloadQuota;
+        return this;
+    }
+    public Integer getPreloadQuota() {
+        return this.preloadQuota;
+    }
+
+    public DescribeScdnUserQuotaResponseBody setPreloadRemain(Integer preloadRemain) {
+        this.preloadRemain = preloadRemain;
+        return this;
+    }
+    public Integer getPreloadRemain() {
+        return this.preloadRemain;
+    }
+
+    public DescribeScdnUserQuotaResponseBody setRefreshDirQuota(Integer refreshDirQuota) {
+        this.refreshDirQuota = refreshDirQuota;
+        return this;
+    }
+    public Integer getRefreshDirQuota() {
+        return this.refreshDirQuota;
+    }
+
+    public DescribeScdnUserQuotaResponseBody setRefreshDirRemain(Integer refreshDirRemain) {
+        this.refreshDirRemain = refreshDirRemain;
+        return this;
+    }
+    public Integer getRefreshDirRemain() {
+        return this.refreshDirRemain;
+    }
+
+    public DescribeScdnUserQuotaResponseBody setRefreshUrlQuota(Integer refreshUrlQuota) {
+        this.refreshUrlQuota = refreshUrlQuota;
+        return this;
+    }
+    public Integer getRefreshUrlQuota() {
+        return this.refreshUrlQuota;
+    }
+
     public DescribeScdnUserQuotaResponseBody setRefreshUrlRemain(Integer refreshUrlRemain) {
         this.refreshUrlRemain = refreshUrlRemain;
         return this;
@@ -111,12 +111,12 @@ public class DescribeScdnUserQuotaResponseBody extends TeaModel {
         return this.refreshUrlRemain;
     }
 
-    public DescribeScdnUserQuotaResponseBody setPreloadQuota(Integer preloadQuota) {
-        this.preloadQuota = preloadQuota;
+    public DescribeScdnUserQuotaResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getPreloadQuota() {
-        return this.preloadQuota;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

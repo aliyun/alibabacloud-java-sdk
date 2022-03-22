@@ -4,56 +4,24 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DescribeScdnRefreshTasksResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
-    @NameInMap("Tasks")
-    public DescribeScdnRefreshTasksResponseBodyTasks tasks;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Tasks")
+    public DescribeScdnRefreshTasksResponseBodyTasks tasks;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeScdnRefreshTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScdnRefreshTasksResponseBody self = new DescribeScdnRefreshTasksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScdnRefreshTasksResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeScdnRefreshTasksResponseBody setTasks(DescribeScdnRefreshTasksResponseBodyTasks tasks) {
-        this.tasks = tasks;
-        return this;
-    }
-    public DescribeScdnRefreshTasksResponseBodyTasks getTasks() {
-        return this.tasks;
-    }
-
-    public DescribeScdnRefreshTasksResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeScdnRefreshTasksResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
     }
 
     public DescribeScdnRefreshTasksResponseBody setPageNumber(Long pageNumber) {
@@ -64,12 +32,47 @@ public class DescribeScdnRefreshTasksResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeScdnRefreshTasksResponseBodyTasksTask extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+    public DescribeScdnRefreshTasksResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
 
+    public DescribeScdnRefreshTasksResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeScdnRefreshTasksResponseBody setTasks(DescribeScdnRefreshTasksResponseBodyTasks tasks) {
+        this.tasks = tasks;
+        return this;
+    }
+    public DescribeScdnRefreshTasksResponseBodyTasks getTasks() {
+        return this.tasks;
+    }
+
+    public DescribeScdnRefreshTasksResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class DescribeScdnRefreshTasksResponseBodyTasksTask extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("ObjectPath")
+        public String objectPath;
 
         @NameInMap("ObjectType")
         public String objectType;
@@ -77,11 +80,8 @@ public class DescribeScdnRefreshTasksResponseBody extends TeaModel {
         @NameInMap("Process")
         public String process;
 
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("ObjectPath")
-        public String objectPath;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("TaskId")
         public String taskId;
@@ -91,20 +91,28 @@ public class DescribeScdnRefreshTasksResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeScdnRefreshTasksResponseBodyTasksTask setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
         public DescribeScdnRefreshTasksResponseBodyTasksTask setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeScdnRefreshTasksResponseBodyTasksTask setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeScdnRefreshTasksResponseBodyTasksTask setObjectPath(String objectPath) {
+            this.objectPath = objectPath;
+            return this;
+        }
+        public String getObjectPath() {
+            return this.objectPath;
         }
 
         public DescribeScdnRefreshTasksResponseBodyTasksTask setObjectType(String objectType) {
@@ -123,20 +131,12 @@ public class DescribeScdnRefreshTasksResponseBody extends TeaModel {
             return this.process;
         }
 
-        public DescribeScdnRefreshTasksResponseBodyTasksTask setDescription(String description) {
-            this.description = description;
+        public DescribeScdnRefreshTasksResponseBodyTasksTask setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeScdnRefreshTasksResponseBodyTasksTask setObjectPath(String objectPath) {
-            this.objectPath = objectPath;
-            return this;
-        }
-        public String getObjectPath() {
-            return this.objectPath;
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeScdnRefreshTasksResponseBodyTasksTask setTaskId(String taskId) {

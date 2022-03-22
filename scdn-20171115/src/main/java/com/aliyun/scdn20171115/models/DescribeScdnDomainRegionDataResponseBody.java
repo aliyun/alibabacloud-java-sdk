@@ -4,20 +4,20 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DescribeScdnDomainRegionDataResponseBody extends TeaModel {
+    @NameInMap("DataInterval")
+    public String dataInterval;
+
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("DataInterval")
-    public String dataInterval;
 
     @NameInMap("Value")
     public DescribeScdnDomainRegionDataResponseBodyValue value;
@@ -25,6 +25,22 @@ public class DescribeScdnDomainRegionDataResponseBody extends TeaModel {
     public static DescribeScdnDomainRegionDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScdnDomainRegionDataResponseBody self = new DescribeScdnDomainRegionDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeScdnDomainRegionDataResponseBody setDataInterval(String dataInterval) {
+        this.dataInterval = dataInterval;
+        return this;
+    }
+    public String getDataInterval() {
+        return this.dataInterval;
+    }
+
+    public DescribeScdnDomainRegionDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DescribeScdnDomainRegionDataResponseBody setEndTime(String endTime) {
@@ -43,28 +59,12 @@ public class DescribeScdnDomainRegionDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeScdnDomainRegionDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
     public DescribeScdnDomainRegionDataResponseBody setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeScdnDomainRegionDataResponseBody setDataInterval(String dataInterval) {
-        this.dataInterval = dataInterval;
-        return this;
-    }
-    public String getDataInterval() {
-        return this.dataInterval;
     }
 
     public DescribeScdnDomainRegionDataResponseBody setValue(DescribeScdnDomainRegionDataResponseBodyValue value) {
@@ -76,11 +76,8 @@ public class DescribeScdnDomainRegionDataResponseBody extends TeaModel {
     }
 
     public static class DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData extends TeaModel {
-        @NameInMap("TotalQuery")
-        public String totalQuery;
-
-        @NameInMap("TotalBytes")
-        public String totalBytes;
+        @NameInMap("AvgObjectSize")
+        public String avgObjectSize;
 
         @NameInMap("AvgResponseRate")
         public String avgResponseRate;
@@ -88,49 +85,44 @@ public class DescribeScdnDomainRegionDataResponseBody extends TeaModel {
         @NameInMap("AvgResponseTime")
         public String avgResponseTime;
 
-        @NameInMap("ReqErrRate")
-        public String reqErrRate;
-
-        @NameInMap("AvgObjectSize")
-        public String avgObjectSize;
-
         @NameInMap("Bps")
         public String bps;
 
-        @NameInMap("Qps")
-        public String qps;
-
-        @NameInMap("RegionEname")
-        public String regionEname;
-
-        @NameInMap("Region")
-        public String region;
+        @NameInMap("BytesProportion")
+        public String bytesProportion;
 
         @NameInMap("Proportion")
         public String proportion;
 
-        @NameInMap("BytesProportion")
-        public String bytesProportion;
+        @NameInMap("Qps")
+        public String qps;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("RegionEname")
+        public String regionEname;
+
+        @NameInMap("ReqErrRate")
+        public String reqErrRate;
+
+        @NameInMap("TotalBytes")
+        public String totalBytes;
+
+        @NameInMap("TotalQuery")
+        public String totalQuery;
 
         public static DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData build(java.util.Map<String, ?> map) throws Exception {
             DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData self = new DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setTotalQuery(String totalQuery) {
-            this.totalQuery = totalQuery;
+        public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setAvgObjectSize(String avgObjectSize) {
+            this.avgObjectSize = avgObjectSize;
             return this;
         }
-        public String getTotalQuery() {
-            return this.totalQuery;
-        }
-
-        public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setTotalBytes(String totalBytes) {
-            this.totalBytes = totalBytes;
-            return this;
-        }
-        public String getTotalBytes() {
-            return this.totalBytes;
+        public String getAvgObjectSize() {
+            return this.avgObjectSize;
         }
 
         public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setAvgResponseRate(String avgResponseRate) {
@@ -149,22 +141,6 @@ public class DescribeScdnDomainRegionDataResponseBody extends TeaModel {
             return this.avgResponseTime;
         }
 
-        public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setReqErrRate(String reqErrRate) {
-            this.reqErrRate = reqErrRate;
-            return this;
-        }
-        public String getReqErrRate() {
-            return this.reqErrRate;
-        }
-
-        public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setAvgObjectSize(String avgObjectSize) {
-            this.avgObjectSize = avgObjectSize;
-            return this;
-        }
-        public String getAvgObjectSize() {
-            return this.avgObjectSize;
-        }
-
         public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setBps(String bps) {
             this.bps = bps;
             return this;
@@ -173,28 +149,12 @@ public class DescribeScdnDomainRegionDataResponseBody extends TeaModel {
             return this.bps;
         }
 
-        public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setQps(String qps) {
-            this.qps = qps;
+        public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setBytesProportion(String bytesProportion) {
+            this.bytesProportion = bytesProportion;
             return this;
         }
-        public String getQps() {
-            return this.qps;
-        }
-
-        public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setRegionEname(String regionEname) {
-            this.regionEname = regionEname;
-            return this;
-        }
-        public String getRegionEname() {
-            return this.regionEname;
-        }
-
-        public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
+        public String getBytesProportion() {
+            return this.bytesProportion;
         }
 
         public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setProportion(String proportion) {
@@ -205,12 +165,52 @@ public class DescribeScdnDomainRegionDataResponseBody extends TeaModel {
             return this.proportion;
         }
 
-        public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setBytesProportion(String bytesProportion) {
-            this.bytesProportion = bytesProportion;
+        public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setQps(String qps) {
+            this.qps = qps;
             return this;
         }
-        public String getBytesProportion() {
-            return this.bytesProportion;
+        public String getQps() {
+            return this.qps;
+        }
+
+        public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setRegionEname(String regionEname) {
+            this.regionEname = regionEname;
+            return this;
+        }
+        public String getRegionEname() {
+            return this.regionEname;
+        }
+
+        public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setReqErrRate(String reqErrRate) {
+            this.reqErrRate = reqErrRate;
+            return this;
+        }
+        public String getReqErrRate() {
+            return this.reqErrRate;
+        }
+
+        public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setTotalBytes(String totalBytes) {
+            this.totalBytes = totalBytes;
+            return this;
+        }
+        public String getTotalBytes() {
+            return this.totalBytes;
+        }
+
+        public DescribeScdnDomainRegionDataResponseBodyValueRegionProportionData setTotalQuery(String totalQuery) {
+            this.totalQuery = totalQuery;
+            return this;
+        }
+        public String getTotalQuery() {
+            return this.totalQuery;
         }
 
     }

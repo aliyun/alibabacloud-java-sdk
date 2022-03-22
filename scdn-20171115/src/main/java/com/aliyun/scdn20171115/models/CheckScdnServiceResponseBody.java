@@ -4,14 +4,11 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class CheckScdnServiceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Enabled")
+    public Boolean enabled;
 
     @NameInMap("InDebt")
     public Boolean inDebt;
-
-    @NameInMap("Enabled")
-    public Boolean enabled;
 
     @NameInMap("InDebtOverdue")
     public Boolean inDebtOverdue;
@@ -19,25 +16,12 @@ public class CheckScdnServiceResponseBody extends TeaModel {
     @NameInMap("OnService")
     public Boolean onService;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static CheckScdnServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CheckScdnServiceResponseBody self = new CheckScdnServiceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CheckScdnServiceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CheckScdnServiceResponseBody setInDebt(Boolean inDebt) {
-        this.inDebt = inDebt;
-        return this;
-    }
-    public Boolean getInDebt() {
-        return this.inDebt;
     }
 
     public CheckScdnServiceResponseBody setEnabled(Boolean enabled) {
@@ -46,6 +30,14 @@ public class CheckScdnServiceResponseBody extends TeaModel {
     }
     public Boolean getEnabled() {
         return this.enabled;
+    }
+
+    public CheckScdnServiceResponseBody setInDebt(Boolean inDebt) {
+        this.inDebt = inDebt;
+        return this;
+    }
+    public Boolean getInDebt() {
+        return this.inDebt;
     }
 
     public CheckScdnServiceResponseBody setInDebtOverdue(Boolean inDebtOverdue) {
@@ -62,6 +54,14 @@ public class CheckScdnServiceResponseBody extends TeaModel {
     }
     public Boolean getOnService() {
         return this.onService;
+    }
+
+    public CheckScdnServiceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

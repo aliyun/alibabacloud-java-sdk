@@ -4,23 +4,15 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DescribeScdnDomainRealTimeBpsDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DescribeScdnDomainRealTimeBpsDataResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeScdnDomainRealTimeBpsDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScdnDomainRealTimeBpsDataResponseBody self = new DescribeScdnDomainRealTimeBpsDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScdnDomainRealTimeBpsDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeScdnDomainRealTimeBpsDataResponseBody setData(DescribeScdnDomainRealTimeBpsDataResponseBodyData data) {
@@ -31,24 +23,24 @@ public class DescribeScdnDomainRealTimeBpsDataResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class DescribeScdnDomainRealTimeBpsDataResponseBodyDataBpsModel extends TeaModel {
-        @NameInMap("TimeStamp")
-        public String timeStamp;
+    public DescribeScdnDomainRealTimeBpsDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeScdnDomainRealTimeBpsDataResponseBodyDataBpsModel extends TeaModel {
         @NameInMap("Bps")
         public Float bps;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
 
         public static DescribeScdnDomainRealTimeBpsDataResponseBodyDataBpsModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeScdnDomainRealTimeBpsDataResponseBodyDataBpsModel self = new DescribeScdnDomainRealTimeBpsDataResponseBodyDataBpsModel();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeScdnDomainRealTimeBpsDataResponseBodyDataBpsModel setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
         }
 
         public DescribeScdnDomainRealTimeBpsDataResponseBodyDataBpsModel setBps(Float bps) {
@@ -57,6 +49,14 @@ public class DescribeScdnDomainRealTimeBpsDataResponseBody extends TeaModel {
         }
         public Float getBps() {
             return this.bps;
+        }
+
+        public DescribeScdnDomainRealTimeBpsDataResponseBodyDataBpsModel setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

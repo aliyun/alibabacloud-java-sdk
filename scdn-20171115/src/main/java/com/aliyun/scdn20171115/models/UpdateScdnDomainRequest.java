@@ -4,40 +4,24 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class UpdateScdnDomainRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("Sources")
-    public String sources;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    @NameInMap("Sources")
+    public String sources;
+
     public static UpdateScdnDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateScdnDomainRequest self = new UpdateScdnDomainRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateScdnDomainRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public UpdateScdnDomainRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public UpdateScdnDomainRequest setDomainName(String domainName) {
@@ -48,12 +32,12 @@ public class UpdateScdnDomainRequest extends TeaModel {
         return this.domainName;
     }
 
-    public UpdateScdnDomainRequest setSources(String sources) {
-        this.sources = sources;
+    public UpdateScdnDomainRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getSources() {
-        return this.sources;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public UpdateScdnDomainRequest setResourceGroupId(String resourceGroupId) {
@@ -62,6 +46,22 @@ public class UpdateScdnDomainRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public UpdateScdnDomainRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public UpdateScdnDomainRequest setSources(String sources) {
+        this.sources = sources;
+        return this;
+    }
+    public String getSources() {
+        return this.sources;
     }
 
 }

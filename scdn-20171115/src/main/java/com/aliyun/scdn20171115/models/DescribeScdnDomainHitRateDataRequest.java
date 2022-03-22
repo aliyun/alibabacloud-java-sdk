@@ -4,14 +4,8 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DescribeScdnDomainHitRateDataRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -19,17 +13,15 @@ public class DescribeScdnDomainHitRateDataRequest extends TeaModel {
     @NameInMap("Interval")
     public String interval;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeScdnDomainHitRateDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeScdnDomainHitRateDataRequest self = new DescribeScdnDomainHitRateDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScdnDomainHitRateDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeScdnDomainHitRateDataRequest setDomainName(String domainName) {
@@ -38,14 +30,6 @@ public class DescribeScdnDomainHitRateDataRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeScdnDomainHitRateDataRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeScdnDomainHitRateDataRequest setEndTime(String endTime) {
@@ -62,6 +46,22 @@ public class DescribeScdnDomainHitRateDataRequest extends TeaModel {
     }
     public String getInterval() {
         return this.interval;
+    }
+
+    public DescribeScdnDomainHitRateDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeScdnDomainHitRateDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

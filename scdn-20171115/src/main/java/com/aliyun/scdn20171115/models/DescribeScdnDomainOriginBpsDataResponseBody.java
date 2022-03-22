@@ -4,59 +4,27 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DescribeScdnDomainOriginBpsDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("DataInterval")
-    public String dataInterval;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("OriginBpsDataPerInterval")
     public DescribeScdnDomainOriginBpsDataResponseBodyOriginBpsDataPerInterval originBpsDataPerInterval;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeScdnDomainOriginBpsDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScdnDomainOriginBpsDataResponseBody self = new DescribeScdnDomainOriginBpsDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScdnDomainOriginBpsDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeScdnDomainOriginBpsDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeScdnDomainOriginBpsDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
-    public DescribeScdnDomainOriginBpsDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeScdnDomainOriginBpsDataResponseBody setDataInterval(String dataInterval) {
@@ -67,6 +35,22 @@ public class DescribeScdnDomainOriginBpsDataResponseBody extends TeaModel {
         return this.dataInterval;
     }
 
+    public DescribeScdnDomainOriginBpsDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeScdnDomainOriginBpsDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public DescribeScdnDomainOriginBpsDataResponseBody setOriginBpsDataPerInterval(DescribeScdnDomainOriginBpsDataResponseBodyOriginBpsDataPerInterval originBpsDataPerInterval) {
         this.originBpsDataPerInterval = originBpsDataPerInterval;
         return this;
@@ -75,18 +59,34 @@ public class DescribeScdnDomainOriginBpsDataResponseBody extends TeaModel {
         return this.originBpsDataPerInterval;
     }
 
+    public DescribeScdnDomainOriginBpsDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeScdnDomainOriginBpsDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static class DescribeScdnDomainOriginBpsDataResponseBodyOriginBpsDataPerIntervalDataModule extends TeaModel {
         @NameInMap("HttpOriginBpsValue")
         public String httpOriginBpsValue;
-
-        @NameInMap("TimeStamp")
-        public String timeStamp;
 
         @NameInMap("HttpsOriginBpsValue")
         public String httpsOriginBpsValue;
 
         @NameInMap("OriginBpsValue")
         public String originBpsValue;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
 
         public static DescribeScdnDomainOriginBpsDataResponseBodyOriginBpsDataPerIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeScdnDomainOriginBpsDataResponseBodyOriginBpsDataPerIntervalDataModule self = new DescribeScdnDomainOriginBpsDataResponseBodyOriginBpsDataPerIntervalDataModule();
@@ -99,14 +99,6 @@ public class DescribeScdnDomainOriginBpsDataResponseBody extends TeaModel {
         }
         public String getHttpOriginBpsValue() {
             return this.httpOriginBpsValue;
-        }
-
-        public DescribeScdnDomainOriginBpsDataResponseBodyOriginBpsDataPerIntervalDataModule setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
         }
 
         public DescribeScdnDomainOriginBpsDataResponseBodyOriginBpsDataPerIntervalDataModule setHttpsOriginBpsValue(String httpsOriginBpsValue) {
@@ -123,6 +115,14 @@ public class DescribeScdnDomainOriginBpsDataResponseBody extends TeaModel {
         }
         public String getOriginBpsValue() {
             return this.originBpsValue;
+        }
+
+        public DescribeScdnDomainOriginBpsDataResponseBodyOriginBpsDataPerIntervalDataModule setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

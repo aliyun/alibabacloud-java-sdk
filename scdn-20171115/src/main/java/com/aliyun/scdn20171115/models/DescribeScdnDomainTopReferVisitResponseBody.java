@@ -4,11 +4,11 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DescribeScdnDomainTopReferVisitResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DomainName")
     public String domainName;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("StartTime")
     public String startTime;
@@ -21,20 +21,20 @@ public class DescribeScdnDomainTopReferVisitResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeScdnDomainTopReferVisitResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeScdnDomainTopReferVisitResponseBody setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public DescribeScdnDomainTopReferVisitResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeScdnDomainTopReferVisitResponseBody setStartTime(String startTime) {
@@ -54,48 +54,24 @@ public class DescribeScdnDomainTopReferVisitResponseBody extends TeaModel {
     }
 
     public static class DescribeScdnDomainTopReferVisitResponseBodyTopReferListReferList extends TeaModel {
-        @NameInMap("VisitData")
-        public String visitData;
-
-        @NameInMap("ReferDetail")
-        public String referDetail;
-
-        @NameInMap("VisitProportion")
-        public Float visitProportion;
-
         @NameInMap("Flow")
         public String flow;
 
         @NameInMap("FlowProportion")
         public Float flowProportion;
 
+        @NameInMap("ReferDetail")
+        public String referDetail;
+
+        @NameInMap("VisitData")
+        public String visitData;
+
+        @NameInMap("VisitProportion")
+        public Float visitProportion;
+
         public static DescribeScdnDomainTopReferVisitResponseBodyTopReferListReferList build(java.util.Map<String, ?> map) throws Exception {
             DescribeScdnDomainTopReferVisitResponseBodyTopReferListReferList self = new DescribeScdnDomainTopReferVisitResponseBodyTopReferListReferList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeScdnDomainTopReferVisitResponseBodyTopReferListReferList setVisitData(String visitData) {
-            this.visitData = visitData;
-            return this;
-        }
-        public String getVisitData() {
-            return this.visitData;
-        }
-
-        public DescribeScdnDomainTopReferVisitResponseBodyTopReferListReferList setReferDetail(String referDetail) {
-            this.referDetail = referDetail;
-            return this;
-        }
-        public String getReferDetail() {
-            return this.referDetail;
-        }
-
-        public DescribeScdnDomainTopReferVisitResponseBodyTopReferListReferList setVisitProportion(Float visitProportion) {
-            this.visitProportion = visitProportion;
-            return this;
-        }
-        public Float getVisitProportion() {
-            return this.visitProportion;
         }
 
         public DescribeScdnDomainTopReferVisitResponseBodyTopReferListReferList setFlow(String flow) {
@@ -112,6 +88,30 @@ public class DescribeScdnDomainTopReferVisitResponseBody extends TeaModel {
         }
         public Float getFlowProportion() {
             return this.flowProportion;
+        }
+
+        public DescribeScdnDomainTopReferVisitResponseBodyTopReferListReferList setReferDetail(String referDetail) {
+            this.referDetail = referDetail;
+            return this;
+        }
+        public String getReferDetail() {
+            return this.referDetail;
+        }
+
+        public DescribeScdnDomainTopReferVisitResponseBodyTopReferListReferList setVisitData(String visitData) {
+            this.visitData = visitData;
+            return this;
+        }
+        public String getVisitData() {
+            return this.visitData;
+        }
+
+        public DescribeScdnDomainTopReferVisitResponseBodyTopReferListReferList setVisitProportion(Float visitProportion) {
+            this.visitProportion = visitProportion;
+            return this;
+        }
+        public Float getVisitProportion() {
+            return this.visitProportion;
         }
 
     }

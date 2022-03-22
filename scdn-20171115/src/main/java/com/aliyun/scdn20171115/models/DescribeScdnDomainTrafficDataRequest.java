@@ -4,14 +4,8 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DescribeScdnDomainTrafficDataRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -25,17 +19,15 @@ public class DescribeScdnDomainTrafficDataRequest extends TeaModel {
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeScdnDomainTrafficDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeScdnDomainTrafficDataRequest self = new DescribeScdnDomainTrafficDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScdnDomainTrafficDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeScdnDomainTrafficDataRequest setDomainName(String domainName) {
@@ -44,14 +36,6 @@ public class DescribeScdnDomainTrafficDataRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeScdnDomainTrafficDataRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeScdnDomainTrafficDataRequest setEndTime(String endTime) {
@@ -84,6 +68,22 @@ public class DescribeScdnDomainTrafficDataRequest extends TeaModel {
     }
     public String getLocationNameEn() {
         return this.locationNameEn;
+    }
+
+    public DescribeScdnDomainTrafficDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeScdnDomainTrafficDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

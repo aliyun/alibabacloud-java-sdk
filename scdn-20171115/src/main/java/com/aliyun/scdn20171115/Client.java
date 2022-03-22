@@ -90,10 +90,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public AddScdnDomainResponse addScdnDomainWithOptions(AddScdnDomainRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.checkUrl)) {
+            query.put("CheckUrl", request.checkUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("Scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sources)) {
+            query.put("Sources", request.sources);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("AddScdnDomain", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new AddScdnDomainResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddScdnDomain"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddScdnDomainResponse());
     }
 
     public AddScdnDomainResponse addScdnDomain(AddScdnDomainRequest request) throws Exception {
@@ -103,10 +147,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public BatchDeleteScdnDomainConfigsResponse batchDeleteScdnDomainConfigsWithOptions(BatchDeleteScdnDomainConfigsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainNames)) {
+            query.put("DomainNames", request.domainNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.functionNames)) {
+            query.put("FunctionNames", request.functionNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("BatchDeleteScdnDomainConfigs", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new BatchDeleteScdnDomainConfigsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchDeleteScdnDomainConfigs"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchDeleteScdnDomainConfigsResponse());
     }
 
     public BatchDeleteScdnDomainConfigsResponse batchDeleteScdnDomainConfigs(BatchDeleteScdnDomainConfigsRequest request) throws Exception {
@@ -116,10 +192,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public BatchSetScdnDomainConfigsResponse batchSetScdnDomainConfigsWithOptions(BatchSetScdnDomainConfigsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainNames)) {
+            query.put("DomainNames", request.domainNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.functions)) {
+            query.put("Functions", request.functions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("BatchSetScdnDomainConfigs", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new BatchSetScdnDomainConfigsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchSetScdnDomainConfigs"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchSetScdnDomainConfigsResponse());
     }
 
     public BatchSetScdnDomainConfigsResponse batchSetScdnDomainConfigs(BatchSetScdnDomainConfigsRequest request) throws Exception {
@@ -127,12 +235,122 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchSetScdnDomainConfigsWithOptions(request, runtime);
     }
 
+    public BatchStartScdnDomainResponse batchStartScdnDomainWithOptions(BatchStartScdnDomainRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainNames)) {
+            query.put("DomainNames", request.domainNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchStartScdnDomain"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchStartScdnDomainResponse());
+    }
+
+    public BatchStartScdnDomainResponse batchStartScdnDomain(BatchStartScdnDomainRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.batchStartScdnDomainWithOptions(request, runtime);
+    }
+
+    public BatchStopScdnDomainResponse batchStopScdnDomainWithOptions(BatchStopScdnDomainRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainNames)) {
+            query.put("DomainNames", request.domainNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchStopScdnDomain"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchStopScdnDomainResponse());
+    }
+
+    public BatchStopScdnDomainResponse batchStopScdnDomain(BatchStopScdnDomainRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.batchStopScdnDomainWithOptions(request, runtime);
+    }
+
     public BatchUpdateScdnDomainResponse batchUpdateScdnDomainWithOptions(BatchUpdateScdnDomainRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sources)) {
+            query.put("Sources", request.sources);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topLevelDomain)) {
+            query.put("TopLevelDomain", request.topLevelDomain);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("BatchUpdateScdnDomain", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new BatchUpdateScdnDomainResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchUpdateScdnDomain"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchUpdateScdnDomainResponse());
     }
 
     public BatchUpdateScdnDomainResponse batchUpdateScdnDomain(BatchUpdateScdnDomainRequest request) throws Exception {
@@ -142,10 +360,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CheckScdnServiceResponse checkScdnServiceWithOptions(CheckScdnServiceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("CheckScdnService", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new CheckScdnServiceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckScdnService"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckScdnServiceResponse());
     }
 
     public CheckScdnServiceResponse checkScdnService(CheckScdnServiceRequest request) throws Exception {
@@ -155,10 +393,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteScdnDomainResponse deleteScdnDomainWithOptions(DeleteScdnDomainRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteScdnDomain", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteScdnDomainResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteScdnDomain"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteScdnDomainResponse());
     }
 
     public DeleteScdnDomainResponse deleteScdnDomain(DeleteScdnDomainRequest request) throws Exception {
@@ -168,10 +434,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteScdnSpecificConfigResponse deleteScdnSpecificConfigWithOptions(DeleteScdnSpecificConfigRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteScdnSpecificConfig", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteScdnSpecificConfigResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteScdnSpecificConfig"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteScdnSpecificConfigResponse());
     }
 
     public DeleteScdnSpecificConfigResponse deleteScdnSpecificConfig(DeleteScdnSpecificConfigRequest request) throws Exception {
@@ -179,13 +473,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteScdnSpecificConfigWithOptions(request, runtime);
     }
 
+    public DescribeScdnCcInfoResponse describeScdnCcInfoWithOptions(DescribeScdnCcInfoRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnCcInfo"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnCcInfoResponse());
+    }
+
+    public DescribeScdnCcInfoResponse describeScdnCcInfo(DescribeScdnCcInfoRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeScdnCcInfoWithOptions(request, runtime);
+    }
+
     public DescribeScdnCcQpsInfoResponse describeScdnCcQpsInfoWithOptions(DescribeScdnCcQpsInfoRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnCcQpsInfo", "2017-11-15", "HTTPS", "GET", "AK", "json", req, runtime), new DescribeScdnCcQpsInfoResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnCcQpsInfo"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnCcQpsInfoResponse());
     }
 
     public DescribeScdnCcQpsInfoResponse describeScdnCcQpsInfo(DescribeScdnCcQpsInfoRequest request) throws Exception {
@@ -197,9 +527,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnCcTopIp", "2017-11-15", "HTTPS", "GET", "AK", "json", req, runtime), new DescribeScdnCcTopIpResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnCcTopIp"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnCcTopIpResponse());
     }
 
     public DescribeScdnCcTopIpResponse describeScdnCcTopIp(DescribeScdnCcTopIpRequest request) throws Exception {
@@ -211,9 +552,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnCcTopUrl", "2017-11-15", "HTTPS", "GET", "AK", "json", req, runtime), new DescribeScdnCcTopUrlResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnCcTopUrl"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnCcTopUrlResponse());
     }
 
     public DescribeScdnCcTopUrlResponse describeScdnCcTopUrl(DescribeScdnCcTopUrlRequest request) throws Exception {
@@ -223,10 +575,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnCertificateDetailResponse describeScdnCertificateDetailWithOptions(DescribeScdnCertificateDetailRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certName)) {
+            query.put("CertName", request.certName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnCertificateDetail", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnCertificateDetailResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnCertificateDetail"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnCertificateDetailResponse());
     }
 
     public DescribeScdnCertificateDetailResponse describeScdnCertificateDetail(DescribeScdnCertificateDetailRequest request) throws Exception {
@@ -236,10 +612,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnCertificateListResponse describeScdnCertificateListWithOptions(DescribeScdnCertificateListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnCertificateList", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnCertificateListResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnCertificateList"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnCertificateListResponse());
     }
 
     public DescribeScdnCertificateListResponse describeScdnCertificateList(DescribeScdnCertificateListRequest request) throws Exception {
@@ -251,9 +651,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDDoSInfo", "2017-11-15", "HTTPS", "GET", "AK", "json", req, runtime), new DescribeScdnDDoSInfoResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDDoSInfo"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDDoSInfoResponse());
     }
 
     public DescribeScdnDDoSInfoResponse describeScdnDDoSInfo(DescribeScdnDDoSInfoRequest request) throws Exception {
@@ -265,9 +676,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDDoSTrafficInfo", "2017-11-15", "HTTPS", "GET", "AK", "json", req, runtime), new DescribeScdnDDoSTrafficInfoResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDDoSTrafficInfo"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDDoSTrafficInfoResponse());
     }
 
     public DescribeScdnDDoSTrafficInfoResponse describeScdnDDoSTrafficInfo(DescribeScdnDDoSTrafficInfoRequest request) throws Exception {
@@ -277,10 +699,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainBpsDataResponse describeScdnDomainBpsDataWithOptions(DescribeScdnDomainBpsDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ispNameEn)) {
+            query.put("IspNameEn", request.ispNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationNameEn)) {
+            query.put("LocationNameEn", request.locationNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainBpsData", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainBpsDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainBpsData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainBpsDataResponse());
     }
 
     public DescribeScdnDomainBpsDataResponse describeScdnDomainBpsData(DescribeScdnDomainBpsDataRequest request) throws Exception {
@@ -290,10 +752,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainCertificateInfoResponse describeScdnDomainCertificateInfoWithOptions(DescribeScdnDomainCertificateInfoRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainCertificateInfo", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainCertificateInfoResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainCertificateInfo"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainCertificateInfoResponse());
     }
 
     public DescribeScdnDomainCertificateInfoResponse describeScdnDomainCertificateInfo(DescribeScdnDomainCertificateInfoRequest request) throws Exception {
@@ -305,9 +787,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainCname", "2017-11-15", "HTTPS", "GET", "AK", "json", req, runtime), new DescribeScdnDomainCnameResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainCname"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainCnameResponse());
     }
 
     public DescribeScdnDomainCnameResponse describeScdnDomainCname(DescribeScdnDomainCnameRequest request) throws Exception {
@@ -317,10 +810,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainConfigsResponse describeScdnDomainConfigsWithOptions(DescribeScdnDomainConfigsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.functionNames)) {
+            query.put("FunctionNames", request.functionNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainConfigs", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainConfigsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainConfigs"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainConfigsResponse());
     }
 
     public DescribeScdnDomainConfigsResponse describeScdnDomainConfigs(DescribeScdnDomainConfigsRequest request) throws Exception {
@@ -330,10 +855,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainDetailResponse describeScdnDomainDetailWithOptions(DescribeScdnDomainDetailRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainDetail", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainDetailResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainDetail"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainDetailResponse());
     }
 
     public DescribeScdnDomainDetailResponse describeScdnDomainDetail(DescribeScdnDomainDetailRequest request) throws Exception {
@@ -343,10 +892,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainHitRateDataResponse describeScdnDomainHitRateDataWithOptions(DescribeScdnDomainHitRateDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainHitRateData", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainHitRateDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainHitRateData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainHitRateDataResponse());
     }
 
     public DescribeScdnDomainHitRateDataResponse describeScdnDomainHitRateData(DescribeScdnDomainHitRateDataRequest request) throws Exception {
@@ -356,10 +937,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainHttpCodeDataResponse describeScdnDomainHttpCodeDataWithOptions(DescribeScdnDomainHttpCodeDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ispNameEn)) {
+            query.put("IspNameEn", request.ispNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationNameEn)) {
+            query.put("LocationNameEn", request.locationNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainHttpCodeData", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainHttpCodeDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainHttpCodeData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainHttpCodeDataResponse());
     }
 
     public DescribeScdnDomainHttpCodeDataResponse describeScdnDomainHttpCodeData(DescribeScdnDomainHttpCodeDataRequest request) throws Exception {
@@ -369,10 +990,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainIspDataResponse describeScdnDomainIspDataWithOptions(DescribeScdnDomainIspDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainIspData", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainIspDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainIspData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainIspDataResponse());
     }
 
     public DescribeScdnDomainIspDataResponse describeScdnDomainIspData(DescribeScdnDomainIspDataRequest request) throws Exception {
@@ -382,10 +1031,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainLogResponse describeScdnDomainLogWithOptions(DescribeScdnDomainLogRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainLog", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainLogResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainLog"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainLogResponse());
     }
 
     public DescribeScdnDomainLogResponse describeScdnDomainLog(DescribeScdnDomainLogRequest request) throws Exception {
@@ -395,10 +1080,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainOriginBpsDataResponse describeScdnDomainOriginBpsDataWithOptions(DescribeScdnDomainOriginBpsDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainOriginBpsData", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainOriginBpsDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainOriginBpsData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainOriginBpsDataResponse());
     }
 
     public DescribeScdnDomainOriginBpsDataResponse describeScdnDomainOriginBpsData(DescribeScdnDomainOriginBpsDataRequest request) throws Exception {
@@ -408,10 +1125,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainOriginTrafficDataResponse describeScdnDomainOriginTrafficDataWithOptions(DescribeScdnDomainOriginTrafficDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainOriginTrafficData", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainOriginTrafficDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainOriginTrafficData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainOriginTrafficDataResponse());
     }
 
     public DescribeScdnDomainOriginTrafficDataResponse describeScdnDomainOriginTrafficData(DescribeScdnDomainOriginTrafficDataRequest request) throws Exception {
@@ -421,10 +1170,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainPvDataResponse describeScdnDomainPvDataWithOptions(DescribeScdnDomainPvDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainPvData", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainPvDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainPvData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainPvDataResponse());
     }
 
     public DescribeScdnDomainPvDataResponse describeScdnDomainPvData(DescribeScdnDomainPvDataRequest request) throws Exception {
@@ -434,10 +1211,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainQpsDataResponse describeScdnDomainQpsDataWithOptions(DescribeScdnDomainQpsDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ispNameEn)) {
+            query.put("IspNameEn", request.ispNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationNameEn)) {
+            query.put("LocationNameEn", request.locationNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainQpsData", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainQpsDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainQpsData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainQpsDataResponse());
     }
 
     public DescribeScdnDomainQpsDataResponse describeScdnDomainQpsData(DescribeScdnDomainQpsDataRequest request) throws Exception {
@@ -449,9 +1266,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainRealTimeBpsData", "2017-11-15", "HTTPS", "GET", "AK", "json", req, runtime), new DescribeScdnDomainRealTimeBpsDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainRealTimeBpsData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainRealTimeBpsDataResponse());
     }
 
     public DescribeScdnDomainRealTimeBpsDataResponse describeScdnDomainRealTimeBpsData(DescribeScdnDomainRealTimeBpsDataRequest request) throws Exception {
@@ -463,9 +1291,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainRealTimeByteHitRateData", "2017-11-15", "HTTPS", "GET", "AK", "json", req, runtime), new DescribeScdnDomainRealTimeByteHitRateDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainRealTimeByteHitRateData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainRealTimeByteHitRateDataResponse());
     }
 
     public DescribeScdnDomainRealTimeByteHitRateDataResponse describeScdnDomainRealTimeByteHitRateData(DescribeScdnDomainRealTimeByteHitRateDataRequest request) throws Exception {
@@ -475,10 +1314,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainRealTimeHttpCodeDataResponse describeScdnDomainRealTimeHttpCodeDataWithOptions(DescribeScdnDomainRealTimeHttpCodeDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ispNameEn)) {
+            query.put("IspNameEn", request.ispNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationNameEn)) {
+            query.put("LocationNameEn", request.locationNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainRealTimeHttpCodeData", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainRealTimeHttpCodeDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainRealTimeHttpCodeData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainRealTimeHttpCodeDataResponse());
     }
 
     public DescribeScdnDomainRealTimeHttpCodeDataResponse describeScdnDomainRealTimeHttpCodeData(DescribeScdnDomainRealTimeHttpCodeDataRequest request) throws Exception {
@@ -490,9 +1365,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainRealTimeQpsData", "2017-11-15", "HTTPS", "GET", "AK", "json", req, runtime), new DescribeScdnDomainRealTimeQpsDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainRealTimeQpsData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainRealTimeQpsDataResponse());
     }
 
     public DescribeScdnDomainRealTimeQpsDataResponse describeScdnDomainRealTimeQpsData(DescribeScdnDomainRealTimeQpsDataRequest request) throws Exception {
@@ -504,9 +1390,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainRealTimeReqHitRateData", "2017-11-15", "HTTPS", "GET", "AK", "json", req, runtime), new DescribeScdnDomainRealTimeReqHitRateDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainRealTimeReqHitRateData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainRealTimeReqHitRateDataResponse());
     }
 
     public DescribeScdnDomainRealTimeReqHitRateDataResponse describeScdnDomainRealTimeReqHitRateData(DescribeScdnDomainRealTimeReqHitRateDataRequest request) throws Exception {
@@ -516,10 +1413,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainRealTimeSrcBpsDataResponse describeScdnDomainRealTimeSrcBpsDataWithOptions(DescribeScdnDomainRealTimeSrcBpsDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainRealTimeSrcBpsData", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainRealTimeSrcBpsDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainRealTimeSrcBpsData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainRealTimeSrcBpsDataResponse());
     }
 
     public DescribeScdnDomainRealTimeSrcBpsDataResponse describeScdnDomainRealTimeSrcBpsData(DescribeScdnDomainRealTimeSrcBpsDataRequest request) throws Exception {
@@ -529,10 +1454,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainRealTimeSrcTrafficDataResponse describeScdnDomainRealTimeSrcTrafficDataWithOptions(DescribeScdnDomainRealTimeSrcTrafficDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainRealTimeSrcTrafficData", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainRealTimeSrcTrafficDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainRealTimeSrcTrafficData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainRealTimeSrcTrafficDataResponse());
     }
 
     public DescribeScdnDomainRealTimeSrcTrafficDataResponse describeScdnDomainRealTimeSrcTrafficData(DescribeScdnDomainRealTimeSrcTrafficDataRequest request) throws Exception {
@@ -542,10 +1495,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainRealTimeTrafficDataResponse describeScdnDomainRealTimeTrafficDataWithOptions(DescribeScdnDomainRealTimeTrafficDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainRealTimeTrafficData", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainRealTimeTrafficDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainRealTimeTrafficData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainRealTimeTrafficDataResponse());
     }
 
     public DescribeScdnDomainRealTimeTrafficDataResponse describeScdnDomainRealTimeTrafficData(DescribeScdnDomainRealTimeTrafficDataRequest request) throws Exception {
@@ -555,10 +1536,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainRegionDataResponse describeScdnDomainRegionDataWithOptions(DescribeScdnDomainRegionDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainRegionData", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainRegionDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainRegionData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainRegionDataResponse());
     }
 
     public DescribeScdnDomainRegionDataResponse describeScdnDomainRegionData(DescribeScdnDomainRegionDataRequest request) throws Exception {
@@ -568,10 +1577,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainTopReferVisitResponse describeScdnDomainTopReferVisitWithOptions(DescribeScdnDomainTopReferVisitRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainTopReferVisit", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainTopReferVisitResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainTopReferVisit"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainTopReferVisitResponse());
     }
 
     public DescribeScdnDomainTopReferVisitResponse describeScdnDomainTopReferVisit(DescribeScdnDomainTopReferVisitRequest request) throws Exception {
@@ -581,10 +1618,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainTopUrlVisitResponse describeScdnDomainTopUrlVisitWithOptions(DescribeScdnDomainTopUrlVisitRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainTopUrlVisit", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainTopUrlVisitResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainTopUrlVisit"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainTopUrlVisitResponse());
     }
 
     public DescribeScdnDomainTopUrlVisitResponse describeScdnDomainTopUrlVisit(DescribeScdnDomainTopUrlVisitRequest request) throws Exception {
@@ -594,10 +1659,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainTrafficDataResponse describeScdnDomainTrafficDataWithOptions(DescribeScdnDomainTrafficDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ispNameEn)) {
+            query.put("IspNameEn", request.ispNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationNameEn)) {
+            query.put("LocationNameEn", request.locationNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainTrafficData", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainTrafficDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainTrafficData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainTrafficDataResponse());
     }
 
     public DescribeScdnDomainTrafficDataResponse describeScdnDomainTrafficData(DescribeScdnDomainTrafficDataRequest request) throws Exception {
@@ -607,10 +1712,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnDomainUvDataResponse describeScdnDomainUvDataWithOptions(DescribeScdnDomainUvDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnDomainUvData", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnDomainUvDataResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnDomainUvData"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnDomainUvDataResponse());
     }
 
     public DescribeScdnDomainUvDataResponse describeScdnDomainUvData(DescribeScdnDomainUvDataRequest request) throws Exception {
@@ -620,10 +1753,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnRefreshQuotaResponse describeScdnRefreshQuotaWithOptions(DescribeScdnRefreshQuotaRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnRefreshQuota", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnRefreshQuotaResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnRefreshQuota"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnRefreshQuotaResponse());
     }
 
     public DescribeScdnRefreshQuotaResponse describeScdnRefreshQuota(DescribeScdnRefreshQuotaRequest request) throws Exception {
@@ -633,10 +1786,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnRefreshTasksResponse describeScdnRefreshTasksWithOptions(DescribeScdnRefreshTasksRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectPath)) {
+            query.put("ObjectPath", request.objectPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectType)) {
+            query.put("ObjectType", request.objectType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnRefreshTasks", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnRefreshTasksResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnRefreshTasks"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnRefreshTasksResponse());
     }
 
     public DescribeScdnRefreshTasksResponse describeScdnRefreshTasks(DescribeScdnRefreshTasksRequest request) throws Exception {
@@ -646,10 +1859,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnServiceResponse describeScdnServiceWithOptions(DescribeScdnServiceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnService", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnServiceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnService"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnServiceResponse());
     }
 
     public DescribeScdnServiceResponse describeScdnService(DescribeScdnServiceRequest request) throws Exception {
@@ -659,10 +1892,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnTopDomainsByFlowResponse describeScdnTopDomainsByFlowWithOptions(DescribeScdnTopDomainsByFlowRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.product)) {
+            query.put("Product", request.product);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnTopDomainsByFlow", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnTopDomainsByFlowResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnTopDomainsByFlow"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnTopDomainsByFlowResponse());
     }
 
     public DescribeScdnTopDomainsByFlowResponse describeScdnTopDomainsByFlow(DescribeScdnTopDomainsByFlowRequest request) throws Exception {
@@ -672,10 +1937,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnUserDomainsResponse describeScdnUserDomainsWithOptions(DescribeScdnUserDomainsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.changeEndTime)) {
+            query.put("ChangeEndTime", request.changeEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.changeStartTime)) {
+            query.put("ChangeStartTime", request.changeStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.checkDomainShow)) {
+            query.put("CheckDomainShow", request.checkDomainShow);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainSearchType)) {
+            query.put("DomainSearchType", request.domainSearchType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainStatus)) {
+            query.put("DomainStatus", request.domainStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnUserDomains", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnUserDomainsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnUserDomains"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnUserDomainsResponse());
     }
 
     public DescribeScdnUserDomainsResponse describeScdnUserDomains(DescribeScdnUserDomainsRequest request) throws Exception {
@@ -687,9 +2008,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnUserProtectInfo", "2017-11-15", "HTTPS", "GET", "AK", "json", req, runtime), new DescribeScdnUserProtectInfoResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnUserProtectInfo"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnUserProtectInfoResponse());
     }
 
     public DescribeScdnUserProtectInfoResponse describeScdnUserProtectInfo(DescribeScdnUserProtectInfoRequest request) throws Exception {
@@ -699,10 +2031,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeScdnUserQuotaResponse describeScdnUserQuotaWithOptions(DescribeScdnUserQuotaRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeScdnUserQuota", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeScdnUserQuotaResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnUserQuota"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnUserQuotaResponse());
     }
 
     public DescribeScdnUserQuotaResponse describeScdnUserQuota(DescribeScdnUserQuotaRequest request) throws Exception {
@@ -712,10 +2064,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public OpenScdnServiceResponse openScdnServiceWithOptions(OpenScdnServiceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidth)) {
+            query.put("Bandwidth", request.bandwidth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ccProtection)) {
+            query.put("CcProtection", request.ccProtection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DDoSBasic)) {
+            query.put("DDoSBasic", request.DDoSBasic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainCount)) {
+            query.put("DomainCount", request.domainCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.elasticProtection)) {
+            query.put("ElasticProtection", request.elasticProtection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protectType)) {
+            query.put("ProtectType", request.protectType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("OpenScdnService", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new OpenScdnServiceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OpenScdnService"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenScdnServiceResponse());
     }
 
     public OpenScdnServiceResponse openScdnService(OpenScdnServiceRequest request) throws Exception {
@@ -725,10 +2129,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public PreloadScdnObjectCachesResponse preloadScdnObjectCachesWithOptions(PreloadScdnObjectCachesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.area)) {
+            query.put("Area", request.area);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.l2Preload)) {
+            query.put("L2Preload", request.l2Preload);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectPath)) {
+            query.put("ObjectPath", request.objectPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("PreloadScdnObjectCaches", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new PreloadScdnObjectCachesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PreloadScdnObjectCaches"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PreloadScdnObjectCachesResponse());
     }
 
     public PreloadScdnObjectCachesResponse preloadScdnObjectCaches(PreloadScdnObjectCachesRequest request) throws Exception {
@@ -738,10 +2174,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public RefreshScdnObjectCachesResponse refreshScdnObjectCachesWithOptions(RefreshScdnObjectCachesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.objectPath)) {
+            query.put("ObjectPath", request.objectPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectType)) {
+            query.put("ObjectType", request.objectType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("RefreshScdnObjectCaches", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new RefreshScdnObjectCachesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RefreshScdnObjectCaches"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RefreshScdnObjectCachesResponse());
     }
 
     public RefreshScdnObjectCachesResponse refreshScdnObjectCaches(RefreshScdnObjectCachesRequest request) throws Exception {
@@ -753,9 +2217,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("SetScdnBotInfo", "2017-11-15", "HTTPS", "GET", "AK", "json", req, runtime), new SetScdnBotInfoResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetScdnBotInfo"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetScdnBotInfoResponse());
     }
 
     public SetScdnBotInfoResponse setScdnBotInfo(SetScdnBotInfoRequest request) throws Exception {
@@ -767,9 +2242,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("SetScdnCcInfo", "2017-11-15", "HTTPS", "GET", "AK", "json", req, runtime), new SetScdnCcInfoResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetScdnCcInfo"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetScdnCcInfoResponse());
     }
 
     public SetScdnCcInfoResponse setScdnCcInfo(SetScdnCcInfoRequest request) throws Exception {
@@ -781,9 +2267,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("SetScdnDDoSInfo", "2017-11-15", "HTTPS", "GET", "AK", "json", req, runtime), new SetScdnDDoSInfoResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetScdnDDoSInfo"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetScdnDDoSInfoResponse());
     }
 
     public SetScdnDDoSInfoResponse setScdnDDoSInfo(SetScdnDDoSInfoRequest request) throws Exception {
@@ -795,9 +2292,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("SetScdnDomainBizInfo", "2017-11-15", "HTTPS", "GET", "AK", "json", req, runtime), new SetScdnDomainBizInfoResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetScdnDomainBizInfo"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetScdnDomainBizInfoResponse());
     }
 
     public SetScdnDomainBizInfoResponse setScdnDomainBizInfo(SetScdnDomainBizInfoRequest request) throws Exception {
@@ -807,10 +2315,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public SetScdnDomainCertificateResponse setScdnDomainCertificateWithOptions(SetScdnDomainCertificateRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certName)) {
+            query.put("CertName", request.certName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certType)) {
+            query.put("CertType", request.certType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forceSet)) {
+            query.put("ForceSet", request.forceSet);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.SSLPri)) {
+            query.put("SSLPri", request.SSLPri);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.SSLProtocol)) {
+            query.put("SSLProtocol", request.SSLProtocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.SSLPub)) {
+            query.put("SSLPub", request.SSLPub);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("SetScdnDomainCertificate", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new SetScdnDomainCertificateResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetScdnDomainCertificate"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetScdnDomainCertificateResponse());
     }
 
     public SetScdnDomainCertificateResponse setScdnDomainCertificate(SetScdnDomainCertificateRequest request) throws Exception {
@@ -820,10 +2380,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public StartScdnDomainResponse startScdnDomainWithOptions(StartScdnDomainRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("StartScdnDomain", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new StartScdnDomainResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartScdnDomain"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartScdnDomainResponse());
     }
 
     public StartScdnDomainResponse startScdnDomain(StartScdnDomainRequest request) throws Exception {
@@ -833,10 +2417,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public StopScdnDomainResponse stopScdnDomainWithOptions(StopScdnDomainRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("StopScdnDomain", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new StopScdnDomainResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopScdnDomain"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopScdnDomainResponse());
     }
 
     public StopScdnDomainResponse stopScdnDomain(StopScdnDomainRequest request) throws Exception {
@@ -846,10 +2454,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateScdnDomainResponse updateScdnDomainWithOptions(UpdateScdnDomainRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sources)) {
+            query.put("Sources", request.sources);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("UpdateScdnDomain", "2017-11-15", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateScdnDomainResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateScdnDomain"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateScdnDomainResponse());
     }
 
     public UpdateScdnDomainResponse updateScdnDomain(UpdateScdnDomainRequest request) throws Exception {

@@ -4,43 +4,35 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DescribeScdnDomainHitRateDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
+    @NameInMap("EndTime")
+    public String endTime;
+
     @NameInMap("HitRatePerInterval")
     public DescribeScdnDomainHitRateDataResponseBodyHitRatePerInterval hitRatePerInterval;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("DataInterval")
-    public String dataInterval;
 
     public static DescribeScdnDomainHitRateDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScdnDomainHitRateDataResponseBody self = new DescribeScdnDomainHitRateDataResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeScdnDomainHitRateDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeScdnDomainHitRateDataResponseBody setDataInterval(String dataInterval) {
+        this.dataInterval = dataInterval;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeScdnDomainHitRateDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getDataInterval() {
+        return this.dataInterval;
     }
 
     public DescribeScdnDomainHitRateDataResponseBody setDomainName(String domainName) {
@@ -51,6 +43,14 @@ public class DescribeScdnDomainHitRateDataResponseBody extends TeaModel {
         return this.domainName;
     }
 
+    public DescribeScdnDomainHitRateDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public DescribeScdnDomainHitRateDataResponseBody setHitRatePerInterval(DescribeScdnDomainHitRateDataResponseBodyHitRatePerInterval hitRatePerInterval) {
         this.hitRatePerInterval = hitRatePerInterval;
         return this;
@@ -59,20 +59,20 @@ public class DescribeScdnDomainHitRateDataResponseBody extends TeaModel {
         return this.hitRatePerInterval;
     }
 
+    public DescribeScdnDomainHitRateDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeScdnDomainHitRateDataResponseBody setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeScdnDomainHitRateDataResponseBody setDataInterval(String dataInterval) {
-        this.dataInterval = dataInterval;
-        return this;
-    }
-    public String getDataInterval() {
-        return this.dataInterval;
     }
 
     public static class DescribeScdnDomainHitRateDataResponseBodyHitRatePerIntervalDataModule extends TeaModel {

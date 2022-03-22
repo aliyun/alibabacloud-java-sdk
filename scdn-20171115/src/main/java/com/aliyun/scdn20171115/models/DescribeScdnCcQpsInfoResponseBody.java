@@ -4,6 +4,9 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DescribeScdnCcQpsInfoResponseBody extends TeaModel {
+    @NameInMap("Attacks")
+    public DescribeScdnCcQpsInfoResponseBodyAttacks attacks;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class DescribeScdnCcQpsInfoResponseBody extends TeaModel {
     @NameInMap("Totals")
     public DescribeScdnCcQpsInfoResponseBodyTotals totals;
 
-    @NameInMap("Attacks")
-    public DescribeScdnCcQpsInfoResponseBodyAttacks attacks;
-
     public static DescribeScdnCcQpsInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScdnCcQpsInfoResponseBody self = new DescribeScdnCcQpsInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeScdnCcQpsInfoResponseBody setAttacks(DescribeScdnCcQpsInfoResponseBodyAttacks attacks) {
+        this.attacks = attacks;
+        return this;
+    }
+    public DescribeScdnCcQpsInfoResponseBodyAttacks getAttacks() {
+        return this.attacks;
     }
 
     public DescribeScdnCcQpsInfoResponseBody setRequestId(String requestId) {
@@ -45,32 +53,35 @@ public class DescribeScdnCcQpsInfoResponseBody extends TeaModel {
         return this.totals;
     }
 
-    public DescribeScdnCcQpsInfoResponseBody setAttacks(DescribeScdnCcQpsInfoResponseBodyAttacks attacks) {
-        this.attacks = attacks;
-        return this;
-    }
-    public DescribeScdnCcQpsInfoResponseBodyAttacks getAttacks() {
-        return this.attacks;
+    public static class DescribeScdnCcQpsInfoResponseBodyAttacks extends TeaModel {
+        @NameInMap("Attack")
+        public java.util.List<String> attack;
+
+        public static DescribeScdnCcQpsInfoResponseBodyAttacks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScdnCcQpsInfoResponseBodyAttacks self = new DescribeScdnCcQpsInfoResponseBodyAttacks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScdnCcQpsInfoResponseBodyAttacks setAttack(java.util.List<String> attack) {
+            this.attack = attack;
+            return this;
+        }
+        public java.util.List<String> getAttack() {
+            return this.attack;
+        }
+
     }
 
     public static class DescribeScdnCcQpsInfoResponseBodyTimeScopesTimeScope extends TeaModel {
-        @NameInMap("Start")
-        public String start;
-
         @NameInMap("Interval")
         public String interval;
+
+        @NameInMap("Start")
+        public String start;
 
         public static DescribeScdnCcQpsInfoResponseBodyTimeScopesTimeScope build(java.util.Map<String, ?> map) throws Exception {
             DescribeScdnCcQpsInfoResponseBodyTimeScopesTimeScope self = new DescribeScdnCcQpsInfoResponseBodyTimeScopesTimeScope();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeScdnCcQpsInfoResponseBodyTimeScopesTimeScope setStart(String start) {
-            this.start = start;
-            return this;
-        }
-        public String getStart() {
-            return this.start;
         }
 
         public DescribeScdnCcQpsInfoResponseBodyTimeScopesTimeScope setInterval(String interval) {
@@ -79,6 +90,14 @@ public class DescribeScdnCcQpsInfoResponseBody extends TeaModel {
         }
         public String getInterval() {
             return this.interval;
+        }
+
+        public DescribeScdnCcQpsInfoResponseBodyTimeScopesTimeScope setStart(String start) {
+            this.start = start;
+            return this;
+        }
+        public String getStart() {
+            return this.start;
         }
 
     }
@@ -117,25 +136,6 @@ public class DescribeScdnCcQpsInfoResponseBody extends TeaModel {
         }
         public java.util.List<String> getTotal() {
             return this.total;
-        }
-
-    }
-
-    public static class DescribeScdnCcQpsInfoResponseBodyAttacks extends TeaModel {
-        @NameInMap("Attack")
-        public java.util.List<String> attack;
-
-        public static DescribeScdnCcQpsInfoResponseBodyAttacks build(java.util.Map<String, ?> map) throws Exception {
-            DescribeScdnCcQpsInfoResponseBodyAttacks self = new DescribeScdnCcQpsInfoResponseBodyAttacks();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeScdnCcQpsInfoResponseBodyAttacks setAttack(java.util.List<String> attack) {
-            this.attack = attack;
-            return this;
-        }
-        public java.util.List<String> getAttack() {
-            return this.attack;
         }
 
     }

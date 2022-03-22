@@ -4,23 +4,15 @@ package com.aliyun.scdn20171115.models;
 import com.aliyun.tea.*;
 
 public class DescribeScdnDomainCnameResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CnameDatas")
     public DescribeScdnDomainCnameResponseBodyCnameDatas cnameDatas;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeScdnDomainCnameResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScdnDomainCnameResponseBody self = new DescribeScdnDomainCnameResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScdnDomainCnameResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeScdnDomainCnameResponseBody setCnameDatas(DescribeScdnDomainCnameResponseBodyCnameDatas cnameDatas) {
@@ -31,27 +23,35 @@ public class DescribeScdnDomainCnameResponseBody extends TeaModel {
         return this.cnameDatas;
     }
 
+    public DescribeScdnDomainCnameResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeScdnDomainCnameResponseBodyCnameDatasData extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("Cname")
+        public String cname;
 
         @NameInMap("Domain")
         public String domain;
 
-        @NameInMap("Cname")
-        public String cname;
+        @NameInMap("Status")
+        public Integer status;
 
         public static DescribeScdnDomainCnameResponseBodyCnameDatasData build(java.util.Map<String, ?> map) throws Exception {
             DescribeScdnDomainCnameResponseBodyCnameDatasData self = new DescribeScdnDomainCnameResponseBodyCnameDatasData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeScdnDomainCnameResponseBodyCnameDatasData setStatus(Integer status) {
-            this.status = status;
+        public DescribeScdnDomainCnameResponseBodyCnameDatasData setCname(String cname) {
+            this.cname = cname;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
+        public String getCname() {
+            return this.cname;
         }
 
         public DescribeScdnDomainCnameResponseBodyCnameDatasData setDomain(String domain) {
@@ -62,12 +62,12 @@ public class DescribeScdnDomainCnameResponseBody extends TeaModel {
             return this.domain;
         }
 
-        public DescribeScdnDomainCnameResponseBodyCnameDatasData setCname(String cname) {
-            this.cname = cname;
+        public DescribeScdnDomainCnameResponseBodyCnameDatasData setStatus(Integer status) {
+            this.status = status;
             return this;
         }
-        public String getCname() {
-            return this.cname;
+        public Integer getStatus() {
+            return this.status;
         }
 
     }
