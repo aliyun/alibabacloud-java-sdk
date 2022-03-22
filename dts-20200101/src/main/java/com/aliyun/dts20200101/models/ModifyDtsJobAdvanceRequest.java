@@ -3,22 +3,22 @@ package com.aliyun.dts20200101.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyDtsJobShrinkRequest extends TeaModel {
+public class ModifyDtsJobAdvanceRequest extends TeaModel {
+    @NameInMap("FileOssUrlObject")
+    @Validation(required = true)
+    public java.io.InputStream fileOssUrlObject;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("DbList")
-    public String dbListShrink;
+    public java.util.Map<String, ?> dbList;
 
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
     @NameInMap("EtlOperatorColumnReference")
     public String etlOperatorColumnReference;
-
-    // 文件上传后的url
-    @NameInMap("FileOssUrl")
-    public String fileOssUrl;
 
     // 修改任务的方式，当为UPDATE_RESERVED时为修改reserve字段，不传默认修改dbList
     @NameInMap("ModifyTypeEnum")
@@ -34,12 +34,20 @@ public class ModifyDtsJobShrinkRequest extends TeaModel {
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 
-    public static ModifyDtsJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        ModifyDtsJobShrinkRequest self = new ModifyDtsJobShrinkRequest();
+    public static ModifyDtsJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyDtsJobAdvanceRequest self = new ModifyDtsJobAdvanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDtsJobShrinkRequest setClientToken(String clientToken) {
+    public ModifyDtsJobAdvanceRequest setFileOssUrlObject(java.io.InputStream fileOssUrlObject) {
+        this.fileOssUrlObject = fileOssUrlObject;
+        return this;
+    }
+    public java.io.InputStream getFileOssUrlObject() {
+        return this.fileOssUrlObject;
+    }
+
+    public ModifyDtsJobAdvanceRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -47,15 +55,15 @@ public class ModifyDtsJobShrinkRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public ModifyDtsJobShrinkRequest setDbListShrink(String dbListShrink) {
-        this.dbListShrink = dbListShrink;
+    public ModifyDtsJobAdvanceRequest setDbList(java.util.Map<String, ?> dbList) {
+        this.dbList = dbList;
         return this;
     }
-    public String getDbListShrink() {
-        return this.dbListShrink;
+    public java.util.Map<String, ?> getDbList() {
+        return this.dbList;
     }
 
-    public ModifyDtsJobShrinkRequest setDtsInstanceId(String dtsInstanceId) {
+    public ModifyDtsJobAdvanceRequest setDtsInstanceId(String dtsInstanceId) {
         this.dtsInstanceId = dtsInstanceId;
         return this;
     }
@@ -63,7 +71,7 @@ public class ModifyDtsJobShrinkRequest extends TeaModel {
         return this.dtsInstanceId;
     }
 
-    public ModifyDtsJobShrinkRequest setEtlOperatorColumnReference(String etlOperatorColumnReference) {
+    public ModifyDtsJobAdvanceRequest setEtlOperatorColumnReference(String etlOperatorColumnReference) {
         this.etlOperatorColumnReference = etlOperatorColumnReference;
         return this;
     }
@@ -71,15 +79,7 @@ public class ModifyDtsJobShrinkRequest extends TeaModel {
         return this.etlOperatorColumnReference;
     }
 
-    public ModifyDtsJobShrinkRequest setFileOssUrl(String fileOssUrl) {
-        this.fileOssUrl = fileOssUrl;
-        return this;
-    }
-    public String getFileOssUrl() {
-        return this.fileOssUrl;
-    }
-
-    public ModifyDtsJobShrinkRequest setModifyTypeEnum(String modifyTypeEnum) {
+    public ModifyDtsJobAdvanceRequest setModifyTypeEnum(String modifyTypeEnum) {
         this.modifyTypeEnum = modifyTypeEnum;
         return this;
     }
@@ -87,7 +87,7 @@ public class ModifyDtsJobShrinkRequest extends TeaModel {
         return this.modifyTypeEnum;
     }
 
-    public ModifyDtsJobShrinkRequest setRegionId(String regionId) {
+    public ModifyDtsJobAdvanceRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -95,7 +95,7 @@ public class ModifyDtsJobShrinkRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ModifyDtsJobShrinkRequest setReserved(String reserved) {
+    public ModifyDtsJobAdvanceRequest setReserved(String reserved) {
         this.reserved = reserved;
         return this;
     }
@@ -103,7 +103,7 @@ public class ModifyDtsJobShrinkRequest extends TeaModel {
         return this.reserved;
     }
 
-    public ModifyDtsJobShrinkRequest setSynchronizationDirection(String synchronizationDirection) {
+    public ModifyDtsJobAdvanceRequest setSynchronizationDirection(String synchronizationDirection) {
         this.synchronizationDirection = synchronizationDirection;
         return this;
     }
