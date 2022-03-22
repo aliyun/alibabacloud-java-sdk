@@ -1196,6 +1196,58 @@ public class DescribeApiResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeApiResponseBodyServiceConfigEventBridgeConfig extends TeaModel {
+        @NameInMap("EventBridgeRegionId")
+        public String eventBridgeRegionId;
+
+        @NameInMap("EventBus")
+        public String eventBus;
+
+        @NameInMap("EventSource")
+        public String eventSource;
+
+        @NameInMap("RoleArn")
+        public String roleArn;
+
+        public static DescribeApiResponseBodyServiceConfigEventBridgeConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApiResponseBodyServiceConfigEventBridgeConfig self = new DescribeApiResponseBodyServiceConfigEventBridgeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApiResponseBodyServiceConfigEventBridgeConfig setEventBridgeRegionId(String eventBridgeRegionId) {
+            this.eventBridgeRegionId = eventBridgeRegionId;
+            return this;
+        }
+        public String getEventBridgeRegionId() {
+            return this.eventBridgeRegionId;
+        }
+
+        public DescribeApiResponseBodyServiceConfigEventBridgeConfig setEventBus(String eventBus) {
+            this.eventBus = eventBus;
+            return this;
+        }
+        public String getEventBus() {
+            return this.eventBus;
+        }
+
+        public DescribeApiResponseBodyServiceConfigEventBridgeConfig setEventSource(String eventSource) {
+            this.eventSource = eventSource;
+            return this;
+        }
+        public String getEventSource() {
+            return this.eventSource;
+        }
+
+        public DescribeApiResponseBodyServiceConfigEventBridgeConfig setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
+            return this;
+        }
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+    }
+
     public static class DescribeApiResponseBodyServiceConfigFunctionComputeConfig extends TeaModel {
         @NameInMap("ContentTypeCatagory")
         public String contentTypeCatagory;
@@ -1510,6 +1562,9 @@ public class DescribeApiResponseBody extends TeaModel {
         @NameInMap("ContentTypeValue")
         public String contentTypeValue;
 
+        @NameInMap("EventBridgeConfig")
+        public DescribeApiResponseBodyServiceConfigEventBridgeConfig eventBridgeConfig;
+
         @NameInMap("FunctionComputeConfig")
         public DescribeApiResponseBodyServiceConfigFunctionComputeConfig functionComputeConfig;
 
@@ -1576,6 +1631,14 @@ public class DescribeApiResponseBody extends TeaModel {
         }
         public String getContentTypeValue() {
             return this.contentTypeValue;
+        }
+
+        public DescribeApiResponseBodyServiceConfig setEventBridgeConfig(DescribeApiResponseBodyServiceConfigEventBridgeConfig eventBridgeConfig) {
+            this.eventBridgeConfig = eventBridgeConfig;
+            return this;
+        }
+        public DescribeApiResponseBodyServiceConfigEventBridgeConfig getEventBridgeConfig() {
+            return this.eventBridgeConfig;
         }
 
         public DescribeApiResponseBodyServiceConfig setFunctionComputeConfig(DescribeApiResponseBodyServiceConfigFunctionComputeConfig functionComputeConfig) {

@@ -10,6 +10,9 @@ public class CreateBackendRequest extends TeaModel {
     @NameInMap("BackendType")
     public String backendType;
 
+    @NameInMap("CreateEventBridgeServiceLinkedRole")
+    public Boolean createEventBridgeServiceLinkedRole;
+
     @NameInMap("Description")
     public String description;
 
@@ -35,6 +38,14 @@ public class CreateBackendRequest extends TeaModel {
     }
     public String getBackendType() {
         return this.backendType;
+    }
+
+    public CreateBackendRequest setCreateEventBridgeServiceLinkedRole(Boolean createEventBridgeServiceLinkedRole) {
+        this.createEventBridgeServiceLinkedRole = createEventBridgeServiceLinkedRole;
+        return this;
+    }
+    public Boolean getCreateEventBridgeServiceLinkedRole() {
+        return this.createEventBridgeServiceLinkedRole;
     }
 
     public CreateBackendRequest setDescription(String description) {
