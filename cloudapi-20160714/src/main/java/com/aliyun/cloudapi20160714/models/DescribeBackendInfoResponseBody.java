@@ -31,6 +31,58 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig extends TeaModel {
+        @NameInMap("EventBridgeRegionId")
+        public String eventBridgeRegionId;
+
+        @NameInMap("EventBus")
+        public String eventBus;
+
+        @NameInMap("EventSource")
+        public String eventSource;
+
+        @NameInMap("RoleArn")
+        public String roleArn;
+
+        public static DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig self = new DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig setEventBridgeRegionId(String eventBridgeRegionId) {
+            this.eventBridgeRegionId = eventBridgeRegionId;
+            return this;
+        }
+        public String getEventBridgeRegionId() {
+            return this.eventBridgeRegionId;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig setEventBus(String eventBus) {
+            this.eventBus = eventBus;
+            return this;
+        }
+        public String getEventBus() {
+            return this.eventBus;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig setEventSource(String eventSource) {
+            this.eventSource = eventSource;
+            return this;
+        }
+        public String getEventSource() {
+            return this.eventSource;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
+            return this;
+        }
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+    }
+
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigFunctionComputeConfig extends TeaModel {
         @NameInMap("FcBaseUrl")
         public String fcBaseUrl;
@@ -232,6 +284,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig extends TeaModel {
+        @NameInMap("EventBridgeConfig")
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig eventBridgeConfig;
+
         @NameInMap("FunctionComputeConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigFunctionComputeConfig functionComputeConfig;
 
@@ -250,6 +305,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public static DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig self = new DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig setEventBridgeConfig(DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig eventBridgeConfig) {
+            this.eventBridgeConfig = eventBridgeConfig;
+            return this;
+        }
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig getEventBridgeConfig() {
+            return this.eventBridgeConfig;
         }
 
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig setFunctionComputeConfig(DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigFunctionComputeConfig functionComputeConfig) {

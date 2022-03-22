@@ -599,6 +599,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BackendType", request.backendType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.createEventBridgeServiceLinkedRole)) {
+            query.put("CreateEventBridgeServiceLinkedRole", request.createEventBridgeServiceLinkedRole);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
         }
