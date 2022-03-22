@@ -101,6 +101,9 @@ public class ListSnapshotResponseBody extends TeaModel {
         @NameInMap("SourceFsSize")
         public Integer sourceFsSize;
 
+        @NameInMap("SourceFsStripeWidth")
+        public Integer sourceFsStripeWidth;
+
         @NameInMap("Status")
         public String status;
 
@@ -203,6 +206,14 @@ public class ListSnapshotResponseBody extends TeaModel {
         }
         public Integer getSourceFsSize() {
             return this.sourceFsSize;
+        }
+
+        public ListSnapshotResponseBodySnapshots setSourceFsStripeWidth(Integer sourceFsStripeWidth) {
+            this.sourceFsStripeWidth = sourceFsStripeWidth;
+            return this;
+        }
+        public Integer getSourceFsStripeWidth() {
+            return this.sourceFsStripeWidth;
         }
 
         public ListSnapshotResponseBodySnapshots setStatus(String status) {
