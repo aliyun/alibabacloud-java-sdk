@@ -13,6 +13,9 @@ public class AddServiceSourceRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("IngressOptionsRequest")
+    public AddServiceSourceRequestIngressOptionsRequest ingressOptionsRequest;
+
     @NameInMap("Name")
     public String name;
 
@@ -51,6 +54,14 @@ public class AddServiceSourceRequest extends TeaModel {
         return this.gatewayUniqueId;
     }
 
+    public AddServiceSourceRequest setIngressOptionsRequest(AddServiceSourceRequestIngressOptionsRequest ingressOptionsRequest) {
+        this.ingressOptionsRequest = ingressOptionsRequest;
+        return this;
+    }
+    public AddServiceSourceRequestIngressOptionsRequest getIngressOptionsRequest() {
+        return this.ingressOptionsRequest;
+    }
+
     public AddServiceSourceRequest setName(String name) {
         this.name = name;
         return this;
@@ -73,6 +84,47 @@ public class AddServiceSourceRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class AddServiceSourceRequestIngressOptionsRequest extends TeaModel {
+        @NameInMap("EnableIngress")
+        public Boolean enableIngress;
+
+        @NameInMap("IngressClass")
+        public String ingressClass;
+
+        @NameInMap("WatchNamespace")
+        public String watchNamespace;
+
+        public static AddServiceSourceRequestIngressOptionsRequest build(java.util.Map<String, ?> map) throws Exception {
+            AddServiceSourceRequestIngressOptionsRequest self = new AddServiceSourceRequestIngressOptionsRequest();
+            return TeaModel.build(map, self);
+        }
+
+        public AddServiceSourceRequestIngressOptionsRequest setEnableIngress(Boolean enableIngress) {
+            this.enableIngress = enableIngress;
+            return this;
+        }
+        public Boolean getEnableIngress() {
+            return this.enableIngress;
+        }
+
+        public AddServiceSourceRequestIngressOptionsRequest setIngressClass(String ingressClass) {
+            this.ingressClass = ingressClass;
+            return this;
+        }
+        public String getIngressClass() {
+            return this.ingressClass;
+        }
+
+        public AddServiceSourceRequestIngressOptionsRequest setWatchNamespace(String watchNamespace) {
+            this.watchNamespace = watchNamespace;
+            return this;
+        }
+        public String getWatchNamespace() {
+            return this.watchNamespace;
+        }
+
     }
 
 }

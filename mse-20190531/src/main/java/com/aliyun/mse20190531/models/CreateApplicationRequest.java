@@ -19,8 +19,14 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    @NameInMap("SentinelEnable")
+    public String sentinelEnable;
+
     @NameInMap("Source")
     public String source;
+
+    @NameInMap("SwitchEnable")
+    public String switchEnable;
 
     public static CreateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationRequest self = new CreateApplicationRequest();
@@ -67,12 +73,28 @@ public class CreateApplicationRequest extends TeaModel {
         return this.region;
     }
 
+    public CreateApplicationRequest setSentinelEnable(String sentinelEnable) {
+        this.sentinelEnable = sentinelEnable;
+        return this;
+    }
+    public String getSentinelEnable() {
+        return this.sentinelEnable;
+    }
+
     public CreateApplicationRequest setSource(String source) {
         this.source = source;
         return this;
     }
     public String getSource() {
         return this.source;
+    }
+
+    public CreateApplicationRequest setSwitchEnable(String switchEnable) {
+        this.switchEnable = switchEnable;
+        return this;
+    }
+    public String getSwitchEnable() {
+        return this.switchEnable;
     }
 
 }

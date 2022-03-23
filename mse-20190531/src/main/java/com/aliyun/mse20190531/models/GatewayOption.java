@@ -12,6 +12,10 @@ public class GatewayOption extends TeaModel {
     @NameInMap("EnableHardwareAcceleration")
     public Boolean enableHardwareAcceleration;
 
+    // 是否开启waf
+    @NameInMap("EnableWaf")
+    public Boolean enableWaf;
+
     // 日志配置详情
     @NameInMap("LogConfigDetails")
     public GatewayOptionLogConfigDetails logConfigDetails;
@@ -39,6 +43,14 @@ public class GatewayOption extends TeaModel {
     }
     public Boolean getEnableHardwareAcceleration() {
         return this.enableHardwareAcceleration;
+    }
+
+    public GatewayOption setEnableWaf(Boolean enableWaf) {
+        this.enableWaf = enableWaf;
+        return this;
+    }
+    public Boolean getEnableWaf() {
+        return this.enableWaf;
     }
 
     public GatewayOption setLogConfigDetails(GatewayOptionLogConfigDetails logConfigDetails) {

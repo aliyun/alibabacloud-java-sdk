@@ -76,6 +76,25 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListGatewayRouteResponseBodyDataResultComment extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        public static ListGatewayRouteResponseBodyDataResultComment build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayRouteResponseBodyDataResultComment self = new ListGatewayRouteResponseBodyDataResultComment();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayRouteResponseBodyDataResultComment setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class ListGatewayRouteResponseBodyDataResultDirectResponse extends TeaModel {
         @NameInMap("Body")
         public String body;
@@ -419,6 +438,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
     }
 
     public static class ListGatewayRouteResponseBodyDataResult extends TeaModel {
+        @NameInMap("Comment")
+        public ListGatewayRouteResponseBodyDataResultComment comment;
+
         @NameInMap("DefaultServiceId")
         public Long defaultServiceId;
 
@@ -482,9 +504,20 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        @NameInMap("Type")
+        public String type;
+
         public static ListGatewayRouteResponseBodyDataResult build(java.util.Map<String, ?> map) throws Exception {
             ListGatewayRouteResponseBodyDataResult self = new ListGatewayRouteResponseBodyDataResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListGatewayRouteResponseBodyDataResult setComment(ListGatewayRouteResponseBodyDataResultComment comment) {
+            this.comment = comment;
+            return this;
+        }
+        public ListGatewayRouteResponseBodyDataResultComment getComment() {
+            return this.comment;
         }
 
         public ListGatewayRouteResponseBodyDataResult setDefaultServiceId(Long defaultServiceId) {
@@ -653,6 +686,14 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public ListGatewayRouteResponseBodyDataResult setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

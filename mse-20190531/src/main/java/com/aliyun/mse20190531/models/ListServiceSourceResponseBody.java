@@ -76,6 +76,47 @@ public class ListServiceSourceResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListServiceSourceResponseBodyDataIngressOptions extends TeaModel {
+        @NameInMap("EnableIngress")
+        public Boolean enableIngress;
+
+        @NameInMap("IngressClass")
+        public String ingressClass;
+
+        @NameInMap("WatchNamespace")
+        public String watchNamespace;
+
+        public static ListServiceSourceResponseBodyDataIngressOptions build(java.util.Map<String, ?> map) throws Exception {
+            ListServiceSourceResponseBodyDataIngressOptions self = new ListServiceSourceResponseBodyDataIngressOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServiceSourceResponseBodyDataIngressOptions setEnableIngress(Boolean enableIngress) {
+            this.enableIngress = enableIngress;
+            return this;
+        }
+        public Boolean getEnableIngress() {
+            return this.enableIngress;
+        }
+
+        public ListServiceSourceResponseBodyDataIngressOptions setIngressClass(String ingressClass) {
+            this.ingressClass = ingressClass;
+            return this;
+        }
+        public String getIngressClass() {
+            return this.ingressClass;
+        }
+
+        public ListServiceSourceResponseBodyDataIngressOptions setWatchNamespace(String watchNamespace) {
+            this.watchNamespace = watchNamespace;
+            return this;
+        }
+        public String getWatchNamespace() {
+            return this.watchNamespace;
+        }
+
+    }
+
     public static class ListServiceSourceResponseBodyData extends TeaModel {
         @NameInMap("Address")
         public String address;
@@ -94,6 +135,9 @@ public class ListServiceSourceResponseBody extends TeaModel {
 
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("IngressOptions")
+        public ListServiceSourceResponseBodyDataIngressOptions ingressOptions;
 
         @NameInMap("Name")
         public String name;
@@ -158,6 +202,14 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListServiceSourceResponseBodyData setIngressOptions(ListServiceSourceResponseBodyDataIngressOptions ingressOptions) {
+            this.ingressOptions = ingressOptions;
+            return this;
+        }
+        public ListServiceSourceResponseBodyDataIngressOptions getIngressOptions() {
+            return this.ingressOptions;
         }
 
         public ListServiceSourceResponseBodyData setName(String name) {

@@ -78,7 +78,7 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
 
     public static class DeleteGatewayDomainResponseBodyData extends TeaModel {
         @NameInMap("CertIdentifier")
-        public Integer certIdentifier;
+        public String certIdentifier;
 
         @NameInMap("GatewayId")
         public Long gatewayId;
@@ -109,11 +109,11 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DeleteGatewayDomainResponseBodyData setCertIdentifier(Integer certIdentifier) {
+        public DeleteGatewayDomainResponseBodyData setCertIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
             return this;
         }
-        public Integer getCertIdentifier() {
+        public String getCertIdentifier() {
             return this.certIdentifier;
         }
 

@@ -82,6 +82,9 @@ public class ListGatewayRouteRequest extends TeaModel {
         @NameInMap("DomainId")
         public Long domainId;
 
+        @NameInMap("DomainName")
+        public String domainName;
+
         @NameInMap("GatewayId")
         public Long gatewayId;
 
@@ -116,6 +119,14 @@ public class ListGatewayRouteRequest extends TeaModel {
         }
         public Long getDomainId() {
             return this.domainId;
+        }
+
+        public ListGatewayRouteRequestFilterParams setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
         }
 
         public ListGatewayRouteRequestFilterParams setGatewayId(Long gatewayId) {

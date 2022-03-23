@@ -10,6 +10,9 @@ public class ListGatewayDomainRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("Type")
+    public String type;
+
     public static ListGatewayDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGatewayDomainRequest self = new ListGatewayDomainRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ListGatewayDomainRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
+    }
+
+    public ListGatewayDomainRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }
