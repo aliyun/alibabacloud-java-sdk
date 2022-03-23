@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceRequest extends TeaModel {
+    @NameInMap("BackupSetID")
+    public String backupSetID;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -36,9 +39,6 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     @NameInMap("EncryptionType")
     public String encryptionType;
-
-    @NameInMap("OpenMonitor")
-    public Boolean openMonitor;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -76,6 +76,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     public static CreateDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBInstanceRequest self = new CreateDBInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDBInstanceRequest setBackupSetID(String backupSetID) {
+        this.backupSetID = backupSetID;
+        return this;
+    }
+    public String getBackupSetID() {
+        return this.backupSetID;
     }
 
     public CreateDBInstanceRequest setClientToken(String clientToken) {
@@ -164,14 +172,6 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getEncryptionType() {
         return this.encryptionType;
-    }
-
-    public CreateDBInstanceRequest setOpenMonitor(Boolean openMonitor) {
-        this.openMonitor = openMonitor;
-        return this;
-    }
-    public Boolean getOpenMonitor() {
-        return this.openMonitor;
     }
 
     public CreateDBInstanceRequest setOwnerAccount(String ownerAccount) {
