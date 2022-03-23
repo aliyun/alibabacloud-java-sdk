@@ -33,6 +33,62 @@ public class GetAppTemplateResponseBody extends TeaModel {
         return this.result;
     }
 
+    public static class GetAppTemplateResponseBodyResultApps extends TeaModel {
+        // 应用id
+        @NameInMap("AppId")
+        public String appId;
+
+        // 应用的Key
+        @NameInMap("AppKey")
+        public String appKey;
+
+        // 应用名称
+        @NameInMap("AppName")
+        public String appName;
+
+        // 应用状态
+        @NameInMap("AppStatus")
+        public String appStatus;
+
+        public static GetAppTemplateResponseBodyResultApps build(java.util.Map<String, ?> map) throws Exception {
+            GetAppTemplateResponseBodyResultApps self = new GetAppTemplateResponseBodyResultApps();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAppTemplateResponseBodyResultApps setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public GetAppTemplateResponseBodyResultApps setAppKey(String appKey) {
+            this.appKey = appKey;
+            return this;
+        }
+        public String getAppKey() {
+            return this.appKey;
+        }
+
+        public GetAppTemplateResponseBodyResultApps setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
+        }
+
+        public GetAppTemplateResponseBodyResultApps setAppStatus(String appStatus) {
+            this.appStatus = appStatus;
+            return this;
+        }
+        public String getAppStatus() {
+            return this.appStatus;
+        }
+
+    }
+
     public static class GetAppTemplateResponseBodyResultConfigList extends TeaModel {
         // 配置项
         @NameInMap("Key")
@@ -73,6 +129,10 @@ public class GetAppTemplateResponseBody extends TeaModel {
         // 应用模板名称
         @NameInMap("AppTemplateName")
         public String appTemplateName;
+
+        // 应用列表信息
+        @NameInMap("Apps")
+        public java.util.List<GetAppTemplateResponseBodyResultApps> apps;
 
         // 组件列表
         @NameInMap("ComponentList")
@@ -124,6 +184,14 @@ public class GetAppTemplateResponseBody extends TeaModel {
         }
         public String getAppTemplateName() {
             return this.appTemplateName;
+        }
+
+        public GetAppTemplateResponseBodyResult setApps(java.util.List<GetAppTemplateResponseBodyResultApps> apps) {
+            this.apps = apps;
+            return this;
+        }
+        public java.util.List<GetAppTemplateResponseBodyResultApps> getApps() {
+            return this.apps;
         }
 
         public GetAppTemplateResponseBodyResult setComponentList(java.util.List<String> componentList) {
