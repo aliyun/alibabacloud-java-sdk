@@ -3,21 +3,21 @@ package com.aliyun.alikafka20190916.models;
 
 import com.aliyun.tea.*;
 
-public class GetMetaProductListResponse extends TeaModel {
+public class GetAllInstanceIdListResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetMetaProductListResponseBody body;
+    public GetAllInstanceIdListResponseBody body;
 
-    public static GetMetaProductListResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetMetaProductListResponse self = new GetMetaProductListResponse();
+    public static GetAllInstanceIdListResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetAllInstanceIdListResponse self = new GetAllInstanceIdListResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetMetaProductListResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetAllInstanceIdListResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class GetMetaProductListResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetMetaProductListResponse setBody(GetMetaProductListResponseBody body) {
+    public GetAllInstanceIdListResponse setBody(GetAllInstanceIdListResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetMetaProductListResponseBody getBody() {
+    public GetAllInstanceIdListResponseBody getBody() {
         return this.body;
     }
 
