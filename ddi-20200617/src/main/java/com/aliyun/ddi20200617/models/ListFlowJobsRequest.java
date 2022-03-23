@@ -8,6 +8,9 @@ public class ListFlowJobsRequest extends TeaModel {
     @NameInMap("Adhoc")
     public Boolean adhoc;
 
+    @NameInMap("ExactName")
+    public String exactName;
+
     // 作业ID。您可以调用ListFlowJob查看作业ID。
     @NameInMap("Id")
     public String id;
@@ -47,6 +50,14 @@ public class ListFlowJobsRequest extends TeaModel {
     }
     public Boolean getAdhoc() {
         return this.adhoc;
+    }
+
+    public ListFlowJobsRequest setExactName(String exactName) {
+        this.exactName = exactName;
+        return this;
+    }
+    public String getExactName() {
+        return this.exactName;
     }
 
     public ListFlowJobsRequest setId(String id) {

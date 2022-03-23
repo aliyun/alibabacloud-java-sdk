@@ -1125,6 +1125,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Adhoc", request.adhoc);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.exactName)) {
+            query.put("ExactName", request.exactName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             query.put("Id", request.id);
         }
