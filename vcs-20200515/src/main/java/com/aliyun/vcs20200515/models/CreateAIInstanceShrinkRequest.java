@@ -4,7 +4,7 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateAIInstanceShrinkRequest extends TeaModel {
-    // 算子id
+    // 算子Id
     @NameInMap("AlgorithmId")
     public String algorithmId;
 
@@ -28,7 +28,7 @@ public class CreateAIInstanceShrinkRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
-    // 所属项目id
+    // 所属项目Id
     @NameInMap("ProjectId")
     public String projectId;
 

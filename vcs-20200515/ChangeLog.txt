@@ -1,3 +1,6 @@
+2022-03-23 Version: 3.1.3
+- The data service provides table-item interface.
+
 2021-11-25 Version: 3.1.2
 - The data service provides task-policy interface.
 

@@ -4,11 +4,11 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class AddCameraForInstanceRequest extends TeaModel {
-    // 设备id
+    // 设备Id
     @NameInMap("CameraIds")
     public java.util.List<String> cameraIds;
 
-    // 实例id
+    // 实例Id
     @NameInMap("InstanceId")
     public String instanceId;
 

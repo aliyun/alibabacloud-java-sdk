@@ -3,21 +3,21 @@ package com.aliyun.vcs20200515.models;
 
 import com.aliyun.tea.*;
 
-public class PushBillsResponse extends TeaModel {
+public class CreateSubscribeResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public PushBillsResponseBody body;
+    public CreateSubscribeResponseBody body;
 
-    public static PushBillsResponse build(java.util.Map<String, ?> map) throws Exception {
-        PushBillsResponse self = new PushBillsResponse();
+    public static CreateSubscribeResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateSubscribeResponse self = new CreateSubscribeResponse();
         return TeaModel.build(map, self);
     }
 
-    public PushBillsResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateSubscribeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class PushBillsResponse extends TeaModel {
         return this.headers;
     }
 
-    public PushBillsResponse setBody(PushBillsResponseBody body) {
+    public CreateSubscribeResponse setBody(CreateSubscribeResponseBody body) {
         this.body = body;
         return this;
     }
-    public PushBillsResponseBody getBody() {
+    public CreateSubscribeResponseBody getBody() {
         return this.body;
     }
 

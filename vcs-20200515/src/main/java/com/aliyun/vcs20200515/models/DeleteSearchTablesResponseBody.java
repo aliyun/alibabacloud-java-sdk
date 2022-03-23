@@ -3,25 +3,26 @@ package com.aliyun.vcs20200515.models;
 
 import com.aliyun.tea.*;
 
-public class ReportDeviceCapacityResponseBody extends TeaModel {
+public class DeleteSearchTablesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
+    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("RetryInterval")
-    public String retryInterval;
+    @NameInMap("Success")
+    public String success;
 
-    public static ReportDeviceCapacityResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ReportDeviceCapacityResponseBody self = new ReportDeviceCapacityResponseBody();
+    public static DeleteSearchTablesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteSearchTablesResponseBody self = new DeleteSearchTablesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ReportDeviceCapacityResponseBody setCode(String code) {
+    public DeleteSearchTablesResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -29,7 +30,7 @@ public class ReportDeviceCapacityResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ReportDeviceCapacityResponseBody setMessage(String message) {
+    public DeleteSearchTablesResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -37,7 +38,7 @@ public class ReportDeviceCapacityResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ReportDeviceCapacityResponseBody setRequestId(String requestId) {
+    public DeleteSearchTablesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -45,12 +46,12 @@ public class ReportDeviceCapacityResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ReportDeviceCapacityResponseBody setRetryInterval(String retryInterval) {
-        this.retryInterval = retryInterval;
+    public DeleteSearchTablesResponseBody setSuccess(String success) {
+        this.success = success;
         return this;
     }
-    public String getRetryInterval() {
-        return this.retryInterval;
+    public String getSuccess() {
+        return this.success;
     }
 
 }

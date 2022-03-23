@@ -3,28 +3,26 @@ package com.aliyun.vcs20200515.models;
 
 import com.aliyun.tea.*;
 
-public class PushBillsResponseBody extends TeaModel {
+public class UpdateSearchTableResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Data")
-    public String data;
 
     @NameInMap("Message")
     public String message;
 
+    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    public static PushBillsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        PushBillsResponseBody self = new PushBillsResponseBody();
+    public static UpdateSearchTableResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateSearchTableResponseBody self = new UpdateSearchTableResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public PushBillsResponseBody setCode(String code) {
+    public UpdateSearchTableResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -32,15 +30,7 @@ public class PushBillsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public PushBillsResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public PushBillsResponseBody setMessage(String message) {
+    public UpdateSearchTableResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -48,7 +38,7 @@ public class PushBillsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public PushBillsResponseBody setRequestId(String requestId) {
+    public UpdateSearchTableResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +46,7 @@ public class PushBillsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public PushBillsResponseBody setSuccess(Boolean success) {
+    public UpdateSearchTableResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

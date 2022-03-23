@@ -3,21 +3,21 @@ package com.aliyun.vcs20200515.models;
 
 import com.aliyun.tea.*;
 
-public class ReportDeviceCapacityResponse extends TeaModel {
+public class GetOdpsResultResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public ReportDeviceCapacityResponseBody body;
+    public GetOdpsResultResponseBody body;
 
-    public static ReportDeviceCapacityResponse build(java.util.Map<String, ?> map) throws Exception {
-        ReportDeviceCapacityResponse self = new ReportDeviceCapacityResponse();
+    public static GetOdpsResultResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetOdpsResultResponse self = new GetOdpsResultResponse();
         return TeaModel.build(map, self);
     }
 
-    public ReportDeviceCapacityResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetOdpsResultResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class ReportDeviceCapacityResponse extends TeaModel {
         return this.headers;
     }
 
-    public ReportDeviceCapacityResponse setBody(ReportDeviceCapacityResponseBody body) {
+    public GetOdpsResultResponse setBody(GetOdpsResultResponseBody body) {
         this.body = body;
         return this;
     }
-    public ReportDeviceCapacityResponseBody getBody() {
+    public GetOdpsResultResponseBody getBody() {
         return this.body;
     }
 
