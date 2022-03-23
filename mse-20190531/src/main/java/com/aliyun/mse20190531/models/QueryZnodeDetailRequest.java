@@ -10,6 +10,9 @@ public class QueryZnodeDetailRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("Path")
     public String path;
 
@@ -35,6 +38,14 @@ public class QueryZnodeDetailRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public QueryZnodeDetailRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public QueryZnodeDetailRequest setPath(String path) {

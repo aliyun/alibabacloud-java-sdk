@@ -10,9 +10,6 @@ public class PullServicesRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    @NameInMap("SourceId")
-    public String sourceId;
-
     @NameInMap("SourceType")
     public String sourceType;
 
@@ -35,14 +32,6 @@ public class PullServicesRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
-    }
-
-    public PullServicesRequest setSourceId(String sourceId) {
-        this.sourceId = sourceId;
-        return this;
-    }
-    public String getSourceId() {
-        return this.sourceId;
     }
 
     public PullServicesRequest setSourceType(String sourceType) {

@@ -87,7 +87,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         public Long beforeDate;
 
         @NameInMap("CertIdentifier")
-        public Integer certIdentifier;
+        public String certIdentifier;
 
         @NameInMap("CertName")
         public String certName;
@@ -160,11 +160,11 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             return this.beforeDate;
         }
 
-        public GetGatewayDomainDetailResponseBodyData setCertIdentifier(Integer certIdentifier) {
+        public GetGatewayDomainDetailResponseBodyData setCertIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
             return this;
         }
-        public Integer getCertIdentifier() {
+        public String getCertIdentifier() {
             return this.certIdentifier;
         }
 

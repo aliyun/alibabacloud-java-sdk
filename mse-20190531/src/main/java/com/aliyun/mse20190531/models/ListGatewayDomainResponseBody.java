@@ -76,12 +76,34 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListGatewayDomainResponseBodyDataComment extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        public static ListGatewayDomainResponseBodyDataComment build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayDomainResponseBodyDataComment self = new ListGatewayDomainResponseBodyDataComment();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayDomainResponseBodyDataComment setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class ListGatewayDomainResponseBodyData extends TeaModel {
         @NameInMap("CertBeforeDate")
         public String certBeforeDate;
 
         @NameInMap("CertIdentifier")
         public String certIdentifier;
+
+        @NameInMap("Comment")
+        public ListGatewayDomainResponseBodyDataComment comment;
 
         @NameInMap("GatewayId")
         public Long gatewayId;
@@ -104,6 +126,12 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("Type")
+        public String type;
+
         public static ListGatewayDomainResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListGatewayDomainResponseBodyData self = new ListGatewayDomainResponseBodyData();
             return TeaModel.build(map, self);
@@ -123,6 +151,14 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
         public String getCertIdentifier() {
             return this.certIdentifier;
+        }
+
+        public ListGatewayDomainResponseBodyData setComment(ListGatewayDomainResponseBodyDataComment comment) {
+            this.comment = comment;
+            return this;
+        }
+        public ListGatewayDomainResponseBodyDataComment getComment() {
+            return this.comment;
         }
 
         public ListGatewayDomainResponseBodyData setGatewayId(Long gatewayId) {
@@ -179,6 +215,22 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
         public String getProtocol() {
             return this.protocol;
+        }
+
+        public ListGatewayDomainResponseBodyData setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public ListGatewayDomainResponseBodyData setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
