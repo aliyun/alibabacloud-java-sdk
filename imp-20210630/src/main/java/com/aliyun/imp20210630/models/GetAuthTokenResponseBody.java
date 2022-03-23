@@ -33,7 +33,7 @@ public class GetAuthTokenResponseBody extends TeaModel {
     }
 
     public static class GetAuthTokenResponseBodyResult extends TeaModel {
-        // 用于长链接建连的token
+        // 用于长连接建连的token
         @NameInMap("AccessToken")
         public String accessToken;
 
