@@ -62,7 +62,7 @@ public class CreateAIInstanceResponseBody extends TeaModel {
         @NameInMap("AcuUsed")
         public Long acuUsed;
 
-        // 实例id
+        // 实例Id
         @NameInMap("InstanceId")
         public String instanceId;
 
