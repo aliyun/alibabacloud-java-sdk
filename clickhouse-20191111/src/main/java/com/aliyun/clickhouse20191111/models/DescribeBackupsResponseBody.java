@@ -78,7 +78,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupSetInfo;
 
         @NameInMap("BackupSize")
-        public Integer backupSize;
+        public Long backupSize;
 
         @NameInMap("BackupStartTime")
         public String backupStartTime;
@@ -129,11 +129,11 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.backupSetInfo;
         }
 
-        public DescribeBackupsResponseBodyItems setBackupSize(Integer backupSize) {
+        public DescribeBackupsResponseBodyItems setBackupSize(Long backupSize) {
             this.backupSize = backupSize;
             return this;
         }
-        public Integer getBackupSize() {
+        public Long getBackupSize() {
             return this.backupSize;
         }
 
