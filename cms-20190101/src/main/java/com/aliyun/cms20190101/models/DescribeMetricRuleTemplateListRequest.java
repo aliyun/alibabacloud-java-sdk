@@ -13,6 +13,12 @@ public class DescribeMetricRuleTemplateListRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("Order")
+    public Boolean order;
+
+    @NameInMap("OrderBy")
+    public String orderBy;
+
     @NameInMap("PageNumber")
     public Long pageNumber;
 
@@ -52,6 +58,22 @@ public class DescribeMetricRuleTemplateListRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public DescribeMetricRuleTemplateListRequest setOrder(Boolean order) {
+        this.order = order;
+        return this;
+    }
+    public Boolean getOrder() {
+        return this.order;
+    }
+
+    public DescribeMetricRuleTemplateListRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
     }
 
     public DescribeMetricRuleTemplateListRequest setPageNumber(Long pageNumber) {

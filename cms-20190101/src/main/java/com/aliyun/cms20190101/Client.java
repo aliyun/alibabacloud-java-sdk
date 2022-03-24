@@ -2325,6 +2325,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RuleName", request.ruleName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.silenceTime)) {
+            query.put("SilenceTime", request.silenceTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3028,6 +3032,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -5772,9 +5784,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.putMonitoringConfigWithOptions(request, runtime);
     }
 
-    public PutResourceMetricRuleResponse putResourceMetricRuleWithOptions(PutResourceMetricRuleRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public PutResourceMetricRuleResponse putResourceMetricRuleWithOptions(PutResourceMetricRuleRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        PutResourceMetricRuleShrinkRequest request = new PutResourceMetricRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.compositeExpression))) {
+            request.compositeExpressionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.compositeExpression), "CompositeExpression", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.compositeExpressionShrink)) {
+            query.put("CompositeExpression", request.compositeExpressionShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.contactGroups)) {
             query.put("ContactGroups", request.contactGroups);
         }

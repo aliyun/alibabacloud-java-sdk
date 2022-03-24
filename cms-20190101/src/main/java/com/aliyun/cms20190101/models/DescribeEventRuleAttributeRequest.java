@@ -10,6 +10,9 @@ public class DescribeEventRuleAttributeRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
+    @NameInMap("SilenceTime")
+    public String silenceTime;
+
     public static DescribeEventRuleAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEventRuleAttributeRequest self = new DescribeEventRuleAttributeRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DescribeEventRuleAttributeRequest extends TeaModel {
     }
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    public DescribeEventRuleAttributeRequest setSilenceTime(String silenceTime) {
+        this.silenceTime = silenceTime;
+        return this;
+    }
+    public String getSilenceTime() {
+        return this.silenceTime;
     }
 
 }
