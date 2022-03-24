@@ -238,7 +238,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
     }
 
     public static class ListLhTaskFlowAndScenarioResponseBodyRawDAGList extends TeaModel {
-        @NameInMap("dag")
+        @NameInMap("Dag")
         public java.util.List<ListLhTaskFlowAndScenarioResponseBodyRawDAGListDag> dag;
 
         public static ListLhTaskFlowAndScenarioResponseBodyRawDAGList build(java.util.Map<String, ?> map) throws Exception {
@@ -256,7 +256,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
 
     }
 
-    public static class ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag extends TeaModel {
+    public static class ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag extends TeaModel {
         @NameInMap("CanEdit")
         public Boolean canEdit;
 
@@ -299,12 +299,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
-        public static ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag build(java.util.Map<String, ?> map) throws Exception {
-            ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag self = new ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag();
+        public static ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag build(java.util.Map<String, ?> map) throws Exception {
+            ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag self = new ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag();
             return TeaModel.build(map, self);
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag setCanEdit(Boolean canEdit) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag setCanEdit(Boolean canEdit) {
             this.canEdit = canEdit;
             return this;
         }
@@ -312,7 +312,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             return this.canEdit;
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag setCreatorId(String creatorId) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag setCreatorId(String creatorId) {
             this.creatorId = creatorId;
             return this;
         }
@@ -320,7 +320,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             return this.creatorId;
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag setCreatorNickName(String creatorNickName) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag setCreatorNickName(String creatorNickName) {
             this.creatorNickName = creatorNickName;
             return this;
         }
@@ -328,7 +328,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             return this.creatorNickName;
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag setDagOwnerNickName(String dagOwnerNickName) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag setDagOwnerNickName(String dagOwnerNickName) {
             this.dagOwnerNickName = dagOwnerNickName;
             return this;
         }
@@ -336,7 +336,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             return this.dagOwnerNickName;
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag setDataFlowId(Long dataFlowId) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag setDataFlowId(Long dataFlowId) {
             this.dataFlowId = dataFlowId;
             return this;
         }
@@ -344,7 +344,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             return this.dataFlowId;
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag setDemoId(String demoId) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag setDemoId(String demoId) {
             this.demoId = demoId;
             return this;
         }
@@ -352,7 +352,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             return this.demoId;
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag setDeployId(Long deployId) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag setDeployId(Long deployId) {
             this.deployId = deployId;
             return this;
         }
@@ -360,7 +360,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             return this.deployId;
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag setId(Long id) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag setId(Long id) {
             this.id = id;
             return this;
         }
@@ -368,7 +368,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             return this.id;
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag setIsDeleted(Boolean isDeleted) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag setIsDeleted(Boolean isDeleted) {
             this.isDeleted = isDeleted;
             return this;
         }
@@ -376,7 +376,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             return this.isDeleted;
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag setLatestInstanceStatus(Integer latestInstanceStatus) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag setLatestInstanceStatus(Integer latestInstanceStatus) {
             this.latestInstanceStatus = latestInstanceStatus;
             return this;
         }
@@ -384,7 +384,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             return this.latestInstanceStatus;
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag setLatestInstanceTime(Integer latestInstanceTime) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag setLatestInstanceTime(Integer latestInstanceTime) {
             this.latestInstanceTime = latestInstanceTime;
             return this;
         }
@@ -392,7 +392,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             return this.latestInstanceTime;
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag setScenarioId(Long scenarioId) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag setScenarioId(Long scenarioId) {
             this.scenarioId = scenarioId;
             return this;
         }
@@ -400,7 +400,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             return this.scenarioId;
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag setSpaceId(Long spaceId) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag setSpaceId(Long spaceId) {
             this.spaceId = spaceId;
             return this;
         }
@@ -408,7 +408,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             return this.spaceId;
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag setStatus(Integer status) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag setStatus(Integer status) {
             this.status = status;
             return this;
         }
@@ -418,26 +418,26 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
 
     }
 
-    public static class ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagList extends TeaModel {
-        @NameInMap("dag")
-        public java.util.List<ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag> dag;
+    public static class ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagList extends TeaModel {
+        @NameInMap("Dag")
+        public java.util.List<ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag> dag;
 
-        public static ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagList build(java.util.Map<String, ?> map) throws Exception {
-            ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagList self = new ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagList();
+        public static ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagList build(java.util.Map<String, ?> map) throws Exception {
+            ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagList self = new ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagList();
             return TeaModel.build(map, self);
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagList setDag(java.util.List<ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag> dag) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagList setDag(java.util.List<ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag> dag) {
             this.dag = dag;
             return this;
         }
-        public java.util.List<ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagListDag> getDag() {
+        public java.util.List<ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag> getDag() {
             return this.dag;
         }
 
     }
 
-    public static class ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenario extends TeaModel {
+    public static class ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGScenario extends TeaModel {
         @NameInMap("CreatorId")
         public String creatorId;
 
@@ -447,12 +447,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         @NameInMap("ScenarioName")
         public String scenarioName;
 
-        public static ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenario build(java.util.Map<String, ?> map) throws Exception {
-            ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenario self = new ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenario();
+        public static ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGScenario build(java.util.Map<String, ?> map) throws Exception {
+            ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGScenario self = new ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGScenario();
             return TeaModel.build(map, self);
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenario setCreatorId(String creatorId) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGScenario setCreatorId(String creatorId) {
             this.creatorId = creatorId;
             return this;
         }
@@ -460,7 +460,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             return this.creatorId;
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenario setDescription(String description) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGScenario setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -468,7 +468,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenario setScenarioName(String scenarioName) {
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGScenario setScenarioName(String scenarioName) {
             this.scenarioName = scenarioName;
             return this;
         }
@@ -478,32 +478,51 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
 
     }
 
-    public static class ListLhTaskFlowAndScenarioResponseBodyScenarioDAGList extends TeaModel {
+    public static class ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAG extends TeaModel {
         @NameInMap("DagList")
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagList dagList;
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagList dagList;
 
         @NameInMap("Scenario")
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenario scenario;
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGScenario scenario;
+
+        public static ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAG build(java.util.Map<String, ?> map) throws Exception {
+            ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAG self = new ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAG();
+            return TeaModel.build(map, self);
+        }
+
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAG setDagList(ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagList dagList) {
+            this.dagList = dagList;
+            return this;
+        }
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagList getDagList() {
+            return this.dagList;
+        }
+
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAG setScenario(ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGScenario scenario) {
+            this.scenario = scenario;
+            return this;
+        }
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGScenario getScenario() {
+            return this.scenario;
+        }
+
+    }
+
+    public static class ListLhTaskFlowAndScenarioResponseBodyScenarioDAGList extends TeaModel {
+        @NameInMap("ScenarioDAG")
+        public java.util.List<ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAG> scenarioDAG;
 
         public static ListLhTaskFlowAndScenarioResponseBodyScenarioDAGList build(java.util.Map<String, ?> map) throws Exception {
             ListLhTaskFlowAndScenarioResponseBodyScenarioDAGList self = new ListLhTaskFlowAndScenarioResponseBodyScenarioDAGList();
             return TeaModel.build(map, self);
         }
 
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGList setDagList(ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagList dagList) {
-            this.dagList = dagList;
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGList setScenarioDAG(java.util.List<ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAG> scenarioDAG) {
+            this.scenarioDAG = scenarioDAG;
             return this;
         }
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListDagList getDagList() {
-            return this.dagList;
-        }
-
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGList setScenario(ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenario scenario) {
-            this.scenario = scenario;
-            return this;
-        }
-        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenario getScenario() {
-            return this.scenario;
+        public java.util.List<ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAG> getScenarioDAG() {
+            return this.scenarioDAG;
         }
 
     }

@@ -3,21 +3,21 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDataExportOrderResponse extends TeaModel {
+public class ChangeLhDagOwnerResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreateDataExportOrderResponseBody body;
+    public ChangeLhDagOwnerResponseBody body;
 
-    public static CreateDataExportOrderResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateDataExportOrderResponse self = new CreateDataExportOrderResponse();
+    public static ChangeLhDagOwnerResponse build(java.util.Map<String, ?> map) throws Exception {
+        ChangeLhDagOwnerResponse self = new ChangeLhDagOwnerResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateDataExportOrderResponse setHeaders(java.util.Map<String, String> headers) {
+    public ChangeLhDagOwnerResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class CreateDataExportOrderResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateDataExportOrderResponse setBody(CreateDataExportOrderResponseBody body) {
+    public ChangeLhDagOwnerResponse setBody(ChangeLhDagOwnerResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateDataExportOrderResponseBody getBody() {
+    public ChangeLhDagOwnerResponseBody getBody() {
         return this.body;
     }
 

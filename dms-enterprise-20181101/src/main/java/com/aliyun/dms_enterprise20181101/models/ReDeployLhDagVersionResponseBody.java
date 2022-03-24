@@ -3,9 +3,9 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDataExportOrderResponseBody extends TeaModel {
-    @NameInMap("CreateOrderResult")
-    public java.util.List<Long> createOrderResult;
+public class ReDeployLhDagVersionResponseBody extends TeaModel {
+    @NameInMap("DeployId")
+    public Long deployId;
 
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -13,27 +13,26 @@ public class CreateDataExportOrderResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    public static CreateDataExportOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateDataExportOrderResponseBody self = new CreateDataExportOrderResponseBody();
+    public static ReDeployLhDagVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ReDeployLhDagVersionResponseBody self = new ReDeployLhDagVersionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateDataExportOrderResponseBody setCreateOrderResult(java.util.List<Long> createOrderResult) {
-        this.createOrderResult = createOrderResult;
+    public ReDeployLhDagVersionResponseBody setDeployId(Long deployId) {
+        this.deployId = deployId;
         return this;
     }
-    public java.util.List<Long> getCreateOrderResult() {
-        return this.createOrderResult;
+    public Long getDeployId() {
+        return this.deployId;
     }
 
-    public CreateDataExportOrderResponseBody setErrorCode(String errorCode) {
+    public ReDeployLhDagVersionResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -41,7 +40,7 @@ public class CreateDataExportOrderResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public CreateDataExportOrderResponseBody setErrorMessage(String errorMessage) {
+    public ReDeployLhDagVersionResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -49,7 +48,7 @@ public class CreateDataExportOrderResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public CreateDataExportOrderResponseBody setRequestId(String requestId) {
+    public ReDeployLhDagVersionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -57,7 +56,7 @@ public class CreateDataExportOrderResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateDataExportOrderResponseBody setSuccess(Boolean success) {
+    public ReDeployLhDagVersionResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
