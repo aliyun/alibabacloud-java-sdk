@@ -1,3 +1,6 @@
+2022-03-24 Version: 1.0.4
+- Modify SayHello.
+
 2022-03-24 Version: 1.0.3
 - Modify param type.
 
