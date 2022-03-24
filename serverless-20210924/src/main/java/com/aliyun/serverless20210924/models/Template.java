@@ -3,7 +3,7 @@ package com.aliyun.serverless20210924.models;
 
 import com.aliyun.tea.*;
 
-public class Service extends TeaModel {
+public class Template extends TeaModel {
     // A time representing the server time when this object was created. Clients may not set this value. Populated by the system. Read-only.
     @NameInMap("createdTime")
     public String createdTime;
@@ -24,24 +24,28 @@ public class Service extends TeaModel {
     @NameInMap("name")
     public String name;
 
-    // Specification of the desired behavior of the Service.
+    // Specification of the desired behavior of the Template.
     @NameInMap("spec")
-    public ServiceSpec spec;
+    public TemplateSpec spec;
 
-    // Most recently observed status of the Service. This data may not be up-to-date. Populated by the system. Read-only.
+    // Most recently observed status of the Template. This data may not be up-to-date. Populated by the system. Read-only.
     @NameInMap("status")
-    public ServiceStatus status;
+    public TemplateStatus status;
 
     // Main user ID of an Aliyun account
     @NameInMap("uid")
     public String uid;
 
-    public static Service build(java.util.Map<String, ?> map) throws Exception {
-        Service self = new Service();
+    // The major version of the template. "1" by default. You should ONLY increment the major version when the template are not backwards compatible with the previous major version.
+    @NameInMap("version")
+    public Integer version;
+
+    public static Template build(java.util.Map<String, ?> map) throws Exception {
+        Template self = new Template();
         return TeaModel.build(map, self);
     }
 
-    public Service setCreatedTime(String createdTime) {
+    public Template setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
         return this;
     }
@@ -49,7 +53,7 @@ public class Service extends TeaModel {
         return this.createdTime;
     }
 
-    public Service setDescription(String description) {
+    public Template setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -57,7 +61,7 @@ public class Service extends TeaModel {
         return this.description;
     }
 
-    public Service setGeneration(Integer generation) {
+    public Template setGeneration(Integer generation) {
         this.generation = generation;
         return this;
     }
@@ -65,7 +69,7 @@ public class Service extends TeaModel {
         return this.generation;
     }
 
-    public Service setKind(String kind) {
+    public Template setKind(String kind) {
         this.kind = kind;
         return this;
     }
@@ -73,7 +77,7 @@ public class Service extends TeaModel {
         return this.kind;
     }
 
-    public Service setName(String name) {
+    public Template setName(String name) {
         this.name = name;
         return this;
     }
@@ -81,28 +85,36 @@ public class Service extends TeaModel {
         return this.name;
     }
 
-    public Service setSpec(ServiceSpec spec) {
+    public Template setSpec(TemplateSpec spec) {
         this.spec = spec;
         return this;
     }
-    public ServiceSpec getSpec() {
+    public TemplateSpec getSpec() {
         return this.spec;
     }
 
-    public Service setStatus(ServiceStatus status) {
+    public Template setStatus(TemplateStatus status) {
         this.status = status;
         return this;
     }
-    public ServiceStatus getStatus() {
+    public TemplateStatus getStatus() {
         return this.status;
     }
 
-    public Service setUid(String uid) {
+    public Template setUid(String uid) {
         this.uid = uid;
         return this;
     }
     public String getUid() {
         return this.uid;
+    }
+
+    public Template setVersion(Integer version) {
+        this.version = version;
+        return this;
+    }
+    public Integer getVersion() {
+        return this.version;
     }
 
 }
