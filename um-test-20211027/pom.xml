@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>um_test20211027</artifactId>
-  <version>1.0.6</version>
+  <version>1.0.7</version>
   <packaging>jar</packaging>
   <name>um_test20211027</name>
   <description>Alibaba Cloud um-test (20211027) SDK for Java
