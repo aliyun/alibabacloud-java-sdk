@@ -7,6 +7,9 @@ public class PutResourceMetricRuleRequest extends TeaModel {
     @NameInMap("Escalations")
     public PutResourceMetricRuleRequestEscalations escalations;
 
+    @NameInMap("CompositeExpression")
+    public PutResourceMetricRuleRequestCompositeExpression compositeExpression;
+
     @NameInMap("ContactGroups")
     public String contactGroups;
 
@@ -63,6 +66,14 @@ public class PutResourceMetricRuleRequest extends TeaModel {
     }
     public PutResourceMetricRuleRequestEscalations getEscalations() {
         return this.escalations;
+    }
+
+    public PutResourceMetricRuleRequest setCompositeExpression(PutResourceMetricRuleRequestCompositeExpression compositeExpression) {
+        this.compositeExpression = compositeExpression;
+        return this;
+    }
+    public PutResourceMetricRuleRequestCompositeExpression getCompositeExpression() {
+        return this.compositeExpression;
     }
 
     public PutResourceMetricRuleRequest setContactGroups(String contactGroups) {
@@ -381,6 +392,132 @@ public class PutResourceMetricRuleRequest extends TeaModel {
         }
         public PutResourceMetricRuleRequestEscalationsWarn getWarn() {
             return this.warn;
+        }
+
+    }
+
+    public static class PutResourceMetricRuleRequestCompositeExpressionExpressionList extends TeaModel {
+        @NameInMap("ComparisonOperator")
+        public String comparisonOperator;
+
+        @NameInMap("MetricName")
+        public String metricName;
+
+        @NameInMap("Period")
+        public Long period;
+
+        @NameInMap("Statistics")
+        public String statistics;
+
+        @NameInMap("Threshold")
+        public String threshold;
+
+        public static PutResourceMetricRuleRequestCompositeExpressionExpressionList build(java.util.Map<String, ?> map) throws Exception {
+            PutResourceMetricRuleRequestCompositeExpressionExpressionList self = new PutResourceMetricRuleRequestCompositeExpressionExpressionList();
+            return TeaModel.build(map, self);
+        }
+
+        public PutResourceMetricRuleRequestCompositeExpressionExpressionList setComparisonOperator(String comparisonOperator) {
+            this.comparisonOperator = comparisonOperator;
+            return this;
+        }
+        public String getComparisonOperator() {
+            return this.comparisonOperator;
+        }
+
+        public PutResourceMetricRuleRequestCompositeExpressionExpressionList setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        public PutResourceMetricRuleRequestCompositeExpressionExpressionList setPeriod(Long period) {
+            this.period = period;
+            return this;
+        }
+        public Long getPeriod() {
+            return this.period;
+        }
+
+        public PutResourceMetricRuleRequestCompositeExpressionExpressionList setStatistics(String statistics) {
+            this.statistics = statistics;
+            return this;
+        }
+        public String getStatistics() {
+            return this.statistics;
+        }
+
+        public PutResourceMetricRuleRequestCompositeExpressionExpressionList setThreshold(String threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+    }
+
+    public static class PutResourceMetricRuleRequestCompositeExpression extends TeaModel {
+        @NameInMap("ExpressionList")
+        public java.util.List<PutResourceMetricRuleRequestCompositeExpressionExpressionList> expressionList;
+
+        @NameInMap("ExpressionListJoin")
+        public String expressionListJoin;
+
+        @NameInMap("ExpressionRaw")
+        public String expressionRaw;
+
+        @NameInMap("Level")
+        public String level;
+
+        @NameInMap("Times")
+        public Integer times;
+
+        public static PutResourceMetricRuleRequestCompositeExpression build(java.util.Map<String, ?> map) throws Exception {
+            PutResourceMetricRuleRequestCompositeExpression self = new PutResourceMetricRuleRequestCompositeExpression();
+            return TeaModel.build(map, self);
+        }
+
+        public PutResourceMetricRuleRequestCompositeExpression setExpressionList(java.util.List<PutResourceMetricRuleRequestCompositeExpressionExpressionList> expressionList) {
+            this.expressionList = expressionList;
+            return this;
+        }
+        public java.util.List<PutResourceMetricRuleRequestCompositeExpressionExpressionList> getExpressionList() {
+            return this.expressionList;
+        }
+
+        public PutResourceMetricRuleRequestCompositeExpression setExpressionListJoin(String expressionListJoin) {
+            this.expressionListJoin = expressionListJoin;
+            return this;
+        }
+        public String getExpressionListJoin() {
+            return this.expressionListJoin;
+        }
+
+        public PutResourceMetricRuleRequestCompositeExpression setExpressionRaw(String expressionRaw) {
+            this.expressionRaw = expressionRaw;
+            return this;
+        }
+        public String getExpressionRaw() {
+            return this.expressionRaw;
+        }
+
+        public PutResourceMetricRuleRequestCompositeExpression setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public PutResourceMetricRuleRequestCompositeExpression setTimes(Integer times) {
+            this.times = times;
+            return this;
+        }
+        public Integer getTimes() {
+            return this.times;
         }
 
     }

@@ -75,6 +75,151 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         return this.total;
     }
 
+    public static class DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionListExpressionList extends TeaModel {
+        @NameInMap("ComparisonOperator")
+        public String comparisonOperator;
+
+        @NameInMap("MetricName")
+        public String metricName;
+
+        @NameInMap("Period")
+        public Integer period;
+
+        @NameInMap("Statistics")
+        public String statistics;
+
+        @NameInMap("Threshold")
+        public String threshold;
+
+        public static DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionListExpressionList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionListExpressionList self = new DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionListExpressionList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionListExpressionList setComparisonOperator(String comparisonOperator) {
+            this.comparisonOperator = comparisonOperator;
+            return this;
+        }
+        public String getComparisonOperator() {
+            return this.comparisonOperator;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionListExpressionList setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionListExpressionList setPeriod(Integer period) {
+            this.period = period;
+            return this;
+        }
+        public Integer getPeriod() {
+            return this.period;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionListExpressionList setStatistics(String statistics) {
+            this.statistics = statistics;
+            return this;
+        }
+        public String getStatistics() {
+            return this.statistics;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionListExpressionList setThreshold(String threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+    }
+
+    public static class DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionList extends TeaModel {
+        @NameInMap("ExpressionList")
+        public java.util.List<DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionListExpressionList> expressionList;
+
+        public static DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionList self = new DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionList setExpressionList(java.util.List<DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionListExpressionList> expressionList) {
+            this.expressionList = expressionList;
+            return this;
+        }
+        public java.util.List<DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionListExpressionList> getExpressionList() {
+            return this.expressionList;
+        }
+
+    }
+
+    public static class DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpression extends TeaModel {
+        @NameInMap("ExpressionList")
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionList expressionList;
+
+        @NameInMap("ExpressionListJoin")
+        public String expressionListJoin;
+
+        @NameInMap("ExpressionRaw")
+        public String expressionRaw;
+
+        @NameInMap("Level")
+        public String level;
+
+        @NameInMap("Times")
+        public Integer times;
+
+        public static DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpression build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpression self = new DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpression();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpression setExpressionList(DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionList expressionList) {
+            this.expressionList = expressionList;
+            return this;
+        }
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionList getExpressionList() {
+            return this.expressionList;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpression setExpressionListJoin(String expressionListJoin) {
+            this.expressionListJoin = expressionListJoin;
+            return this;
+        }
+        public String getExpressionListJoin() {
+            return this.expressionListJoin;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpression setExpressionRaw(String expressionRaw) {
+            this.expressionRaw = expressionRaw;
+            return this;
+        }
+        public String getExpressionRaw() {
+            return this.expressionRaw;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpression setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpression setTimes(Integer times) {
+            this.times = times;
+            return this;
+        }
+        public Integer getTimes() {
+            return this.times;
+        }
+
+    }
+
     public static class DescribeMetricRuleListResponseBodyAlarmsAlarmEscalationsCritical extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
@@ -358,6 +503,9 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         @NameInMap("AlertState")
         public String alertState;
 
+        @NameInMap("CompositeExpression")
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpression compositeExpression;
+
         @NameInMap("ContactGroups")
         public String contactGroups;
 
@@ -429,6 +577,14 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         }
         public String getAlertState() {
             return this.alertState;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setCompositeExpression(DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpression compositeExpression) {
+            this.compositeExpression = compositeExpression;
+            return this;
+        }
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpression getCompositeExpression() {
+            return this.compositeExpression;
         }
 
         public DescribeMetricRuleListResponseBodyAlarmsAlarm setContactGroups(String contactGroups) {
