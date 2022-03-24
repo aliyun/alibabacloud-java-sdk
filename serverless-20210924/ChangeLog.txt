@@ -1,3 +1,6 @@
+2022-03-24 Version: 1.0.0
+- Add template API.
+
 2022-01-13 Version: 0.0.1
 - Test.
 

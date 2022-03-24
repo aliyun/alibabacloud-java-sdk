@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>serverless20210924</artifactId>
-  <version>0.0.1</version>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
   <name>serverless20210924</name>
   <description>Alibaba Cloud serverless (20210924) SDK for Java
@@ -145,6 +145,10 @@
                 <relocation>
                   <pattern>com.sun</pattern>
                   <shadedPattern>com.aliyun.serverless20210924.external.com.sun</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache</pattern>
+                  <shadedPattern>com.aliyun.serverless20210924.external.org.apache</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>
