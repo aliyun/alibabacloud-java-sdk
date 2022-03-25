@@ -95,6 +95,10 @@ public class ModifyWhiteIpsRequest extends TeaModel {
         @NameInMap("ips")
         public java.util.List<String> ips;
 
+        // ip白名单的类型
+        @NameInMap("whiteIpType")
+        public String whiteIpType;
+
         public static ModifyWhiteIpsRequestWhiteIpGroup build(java.util.Map<String, ?> map) throws Exception {
             ModifyWhiteIpsRequestWhiteIpGroup self = new ModifyWhiteIpsRequestWhiteIpGroup();
             return TeaModel.build(map, self);
@@ -114,6 +118,14 @@ public class ModifyWhiteIpsRequest extends TeaModel {
         }
         public java.util.List<String> getIps() {
             return this.ips;
+        }
+
+        public ModifyWhiteIpsRequestWhiteIpGroup setWhiteIpType(String whiteIpType) {
+            this.whiteIpType = whiteIpType;
+            return this;
+        }
+        public String getWhiteIpType() {
+            return this.whiteIpType;
         }
 
     }

@@ -256,7 +256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/openapi/assist/actions/capacity-plan"),
             new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
+            new TeaPair("authType", "Anonymous"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
@@ -3223,6 +3223,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceResponse());
+    }
+
+    public ListInstanceHistoryEventsResponse listInstanceHistoryEvents(ListInstanceHistoryEventsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listInstanceHistoryEventsWithOptions(request, headers, runtime);
+    }
+
+    public ListInstanceHistoryEventsResponse listInstanceHistoryEventsWithOptions(ListInstanceHistoryEventsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventCreateEndTime)) {
+            query.put("eventCreateEndTime", request.eventCreateEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventCreateStartTime)) {
+            query.put("eventCreateStartTime", request.eventCreateStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventExecuteEndTime)) {
+            query.put("eventExecuteEndTime", request.eventExecuteEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventExecuteStartTime)) {
+            query.put("eventExecuteStartTime", request.eventExecuteStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventFinashEndTime)) {
+            query.put("eventFinashEndTime", request.eventFinashEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventFinashStartTime)) {
+            query.put("eventFinashStartTime", request.eventFinashStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventLevel)) {
+            query.put("eventLevel", request.eventLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventType)) {
+            query.put("eventType", request.eventType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("instanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeIP)) {
+            query.put("nodeIP", request.nodeIP);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.teautil.Common.toArray(request.body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstanceHistoryEvents"),
+            new TeaPair("version", "2017-06-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/events"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceHistoryEventsResponse());
     }
 
     public ListInstanceIndicesResponse listInstanceIndices(String InstanceId, ListInstanceIndicesRequest request) throws Exception {
