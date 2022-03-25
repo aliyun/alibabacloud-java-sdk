@@ -4,17 +4,17 @@ package com.aliyun.holowatcher20200730.models;
 import com.aliyun.tea.*;
 
 public class ProduceNoticeRequest extends TeaModel {
-    @NameInMap("BizType")
-    public String bizType;
-
     @NameInMap("BizId")
     public String bizId;
 
-    @NameInMap("OperationType")
-    public String operationType;
+    @NameInMap("BizType")
+    public String bizType;
 
     @NameInMap("ExtInfo")
     public String extInfo;
+
+    @NameInMap("OperationType")
+    public String operationType;
 
     @NameInMap("UserId")
     public Long userId;
@@ -22,14 +22,6 @@ public class ProduceNoticeRequest extends TeaModel {
     public static ProduceNoticeRequest build(java.util.Map<String, ?> map) throws Exception {
         ProduceNoticeRequest self = new ProduceNoticeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ProduceNoticeRequest setBizType(String bizType) {
-        this.bizType = bizType;
-        return this;
-    }
-    public String getBizType() {
-        return this.bizType;
     }
 
     public ProduceNoticeRequest setBizId(String bizId) {
@@ -40,12 +32,12 @@ public class ProduceNoticeRequest extends TeaModel {
         return this.bizId;
     }
 
-    public ProduceNoticeRequest setOperationType(String operationType) {
-        this.operationType = operationType;
+    public ProduceNoticeRequest setBizType(String bizType) {
+        this.bizType = bizType;
         return this;
     }
-    public String getOperationType() {
-        return this.operationType;
+    public String getBizType() {
+        return this.bizType;
     }
 
     public ProduceNoticeRequest setExtInfo(String extInfo) {
@@ -54,6 +46,14 @@ public class ProduceNoticeRequest extends TeaModel {
     }
     public String getExtInfo() {
         return this.extInfo;
+    }
+
+    public ProduceNoticeRequest setOperationType(String operationType) {
+        this.operationType = operationType;
+        return this;
+    }
+    public String getOperationType() {
+        return this.operationType;
     }
 
     public ProduceNoticeRequest setUserId(Long userId) {

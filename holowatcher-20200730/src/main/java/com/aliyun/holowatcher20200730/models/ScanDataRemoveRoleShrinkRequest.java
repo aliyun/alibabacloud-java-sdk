@@ -4,6 +4,14 @@ package com.aliyun.holowatcher20200730.models;
 import com.aliyun.tea.*;
 
 public class ScanDataRemoveRoleShrinkRequest extends TeaModel {
+    // 业务幂等编号，用于幂等处理
+    @NameInMap("BizOrderNo")
+    public String bizOrderNo;
+
+    // 移除角色的项目ID，必须是开放平台图对应source创建的项目
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     // removeUserDataRequest
     @NameInMap("RemoveUserDataRequest")
     public String removeUserDataRequestShrink;
@@ -16,17 +24,25 @@ public class ScanDataRemoveRoleShrinkRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
-    // 移除角色的项目ID，必须是开放平台图对应source创建的项目
-    @NameInMap("ProjectId")
-    public Long projectId;
-
-    // 业务幂等编号，用于幂等处理
-    @NameInMap("BizOrderNo")
-    public String bizOrderNo;
-
     public static ScanDataRemoveRoleShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ScanDataRemoveRoleShrinkRequest self = new ScanDataRemoveRoleShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ScanDataRemoveRoleShrinkRequest setBizOrderNo(String bizOrderNo) {
+        this.bizOrderNo = bizOrderNo;
+        return this;
+    }
+    public String getBizOrderNo() {
+        return this.bizOrderNo;
+    }
+
+    public ScanDataRemoveRoleShrinkRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ScanDataRemoveRoleShrinkRequest setRemoveUserDataRequestShrink(String removeUserDataRequestShrink) {
@@ -51,22 +67,6 @@ public class ScanDataRemoveRoleShrinkRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
-    }
-
-    public ScanDataRemoveRoleShrinkRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
-    }
-
-    public ScanDataRemoveRoleShrinkRequest setBizOrderNo(String bizOrderNo) {
-        this.bizOrderNo = bizOrderNo;
-        return this;
-    }
-    public String getBizOrderNo() {
-        return this.bizOrderNo;
     }
 
 }

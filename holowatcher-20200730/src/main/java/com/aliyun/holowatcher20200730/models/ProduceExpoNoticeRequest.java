@@ -8,11 +8,11 @@ public class ProduceExpoNoticeRequest extends TeaModel {
     @NameInMap("BizType")
     public String bizType;
 
-    @NameInMap("OperationType")
-    public String operationType;
-
     @NameInMap("ExtInfo")
     public String extInfo;
+
+    @NameInMap("OperationType")
+    public String operationType;
 
     @NameInMap("UserId")
     public Long userId;
@@ -30,20 +30,20 @@ public class ProduceExpoNoticeRequest extends TeaModel {
         return this.bizType;
     }
 
-    public ProduceExpoNoticeRequest setOperationType(String operationType) {
-        this.operationType = operationType;
-        return this;
-    }
-    public String getOperationType() {
-        return this.operationType;
-    }
-
     public ProduceExpoNoticeRequest setExtInfo(String extInfo) {
         this.extInfo = extInfo;
         return this;
     }
     public String getExtInfo() {
         return this.extInfo;
+    }
+
+    public ProduceExpoNoticeRequest setOperationType(String operationType) {
+        this.operationType = operationType;
+        return this;
+    }
+    public String getOperationType() {
+        return this.operationType;
     }
 
     public ProduceExpoNoticeRequest setUserId(Long userId) {

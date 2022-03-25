@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.holowatcher20200730.models;
+
+import com.aliyun.tea.*;
+
+public class GetStatusAndOssResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public GetStatusAndOssResponseBody body;
+
+    public static GetStatusAndOssResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetStatusAndOssResponse self = new GetStatusAndOssResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public GetStatusAndOssResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetStatusAndOssResponse setBody(GetStatusAndOssResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetStatusAndOssResponseBody getBody() {
+        return this.body;
+    }
+
+}

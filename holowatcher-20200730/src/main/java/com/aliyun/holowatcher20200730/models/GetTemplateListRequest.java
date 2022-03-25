@@ -7,23 +7,23 @@ public class GetTemplateListRequest extends TeaModel {
     @NameInMap("Current")
     public Integer current;
 
-    @NameInMap("Size")
-    public Integer size;
-
-    @NameInMap("Style")
-    public String style;
-
     @NameInMap("Id")
     public Long id;
 
-    @NameInMap("Type")
-    public String type;
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("Size")
+    public Integer size;
 
     @NameInMap("Spec")
     public String spec;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("Style")
+    public String style;
+
+    @NameInMap("Type")
+    public String type;
 
     public static GetTemplateListRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTemplateListRequest self = new GetTemplateListRequest();
@@ -38,22 +38,6 @@ public class GetTemplateListRequest extends TeaModel {
         return this.current;
     }
 
-    public GetTemplateListRequest setSize(Integer size) {
-        this.size = size;
-        return this;
-    }
-    public Integer getSize() {
-        return this.size;
-    }
-
-    public GetTemplateListRequest setStyle(String style) {
-        this.style = style;
-        return this;
-    }
-    public String getStyle() {
-        return this.style;
-    }
-
     public GetTemplateListRequest setId(Long id) {
         this.id = id;
         return this;
@@ -62,12 +46,20 @@ public class GetTemplateListRequest extends TeaModel {
         return this.id;
     }
 
-    public GetTemplateListRequest setType(String type) {
-        this.type = type;
+    public GetTemplateListRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public String getName() {
+        return this.name;
+    }
+
+    public GetTemplateListRequest setSize(Integer size) {
+        this.size = size;
+        return this;
+    }
+    public Integer getSize() {
+        return this.size;
     }
 
     public GetTemplateListRequest setSpec(String spec) {
@@ -78,12 +70,20 @@ public class GetTemplateListRequest extends TeaModel {
         return this.spec;
     }
 
-    public GetTemplateListRequest setName(String name) {
-        this.name = name;
+    public GetTemplateListRequest setStyle(String style) {
+        this.style = style;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getStyle() {
+        return this.style;
+    }
+
+    public GetTemplateListRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

@@ -8,8 +8,8 @@ public class CommonRequestRequest extends TeaModel {
     @NameInMap("Api")
     public String api;
 
-    @NameInMap("UserType")
-    public String userType;
+    @NameInMap("BizOrderNo")
+    public String bizOrderNo;
 
     @NameInMap("Params")
     public String params;
@@ -17,8 +17,8 @@ public class CommonRequestRequest extends TeaModel {
     @NameInMap("UserId")
     public String userId;
 
-    @NameInMap("BizOrderNo")
-    public String bizOrderNo;
+    @NameInMap("UserType")
+    public String userType;
 
     public static CommonRequestRequest build(java.util.Map<String, ?> map) throws Exception {
         CommonRequestRequest self = new CommonRequestRequest();
@@ -33,12 +33,12 @@ public class CommonRequestRequest extends TeaModel {
         return this.api;
     }
 
-    public CommonRequestRequest setUserType(String userType) {
-        this.userType = userType;
+    public CommonRequestRequest setBizOrderNo(String bizOrderNo) {
+        this.bizOrderNo = bizOrderNo;
         return this;
     }
-    public String getUserType() {
-        return this.userType;
+    public String getBizOrderNo() {
+        return this.bizOrderNo;
     }
 
     public CommonRequestRequest setParams(String params) {
@@ -57,12 +57,12 @@ public class CommonRequestRequest extends TeaModel {
         return this.userId;
     }
 
-    public CommonRequestRequest setBizOrderNo(String bizOrderNo) {
-        this.bizOrderNo = bizOrderNo;
+    public CommonRequestRequest setUserType(String userType) {
+        this.userType = userType;
         return this;
     }
-    public String getBizOrderNo() {
-        return this.bizOrderNo;
+    public String getUserType() {
+        return this.userType;
     }
 
 }

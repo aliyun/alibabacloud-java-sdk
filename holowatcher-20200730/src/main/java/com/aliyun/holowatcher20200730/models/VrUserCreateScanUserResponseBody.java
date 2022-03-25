@@ -8,9 +8,13 @@ public class VrUserCreateScanUserResponseBody extends TeaModel {
     @NameInMap("Async")
     public Boolean async;
 
-    // resultObj
-    @NameInMap("ResultObj")
-    public java.util.Map<String, ?> resultObj;
+    // asyncToken
+    @NameInMap("AsyncToken")
+    public String asyncToken;
+
+    // errorCode
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     // errorMsg
     @NameInMap("ErrorMsg")
@@ -20,21 +24,17 @@ public class VrUserCreateScanUserResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    // resultObj
+    @NameInMap("ResultObj")
+    public java.util.Map<String, ?> resultObj;
+
     // retry
     @NameInMap("Retry")
     public Boolean retry;
 
-    // errorCode
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     // success
     @NameInMap("Success")
     public Boolean success;
-
-    // asyncToken
-    @NameInMap("AsyncToken")
-    public String asyncToken;
 
     public static VrUserCreateScanUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         VrUserCreateScanUserResponseBody self = new VrUserCreateScanUserResponseBody();
@@ -49,12 +49,20 @@ public class VrUserCreateScanUserResponseBody extends TeaModel {
         return this.async;
     }
 
-    public VrUserCreateScanUserResponseBody setResultObj(java.util.Map<String, ?> resultObj) {
-        this.resultObj = resultObj;
+    public VrUserCreateScanUserResponseBody setAsyncToken(String asyncToken) {
+        this.asyncToken = asyncToken;
         return this;
     }
-    public java.util.Map<String, ?> getResultObj() {
-        return this.resultObj;
+    public String getAsyncToken() {
+        return this.asyncToken;
+    }
+
+    public VrUserCreateScanUserResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public VrUserCreateScanUserResponseBody setErrorMsg(String errorMsg) {
@@ -73,6 +81,14 @@ public class VrUserCreateScanUserResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public VrUserCreateScanUserResponseBody setResultObj(java.util.Map<String, ?> resultObj) {
+        this.resultObj = resultObj;
+        return this;
+    }
+    public java.util.Map<String, ?> getResultObj() {
+        return this.resultObj;
+    }
+
     public VrUserCreateScanUserResponseBody setRetry(Boolean retry) {
         this.retry = retry;
         return this;
@@ -81,28 +97,12 @@ public class VrUserCreateScanUserResponseBody extends TeaModel {
         return this.retry;
     }
 
-    public VrUserCreateScanUserResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public VrUserCreateScanUserResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public VrUserCreateScanUserResponseBody setAsyncToken(String asyncToken) {
-        this.asyncToken = asyncToken;
-        return this;
-    }
-    public String getAsyncToken() {
-        return this.asyncToken;
     }
 
 }

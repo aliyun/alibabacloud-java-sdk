@@ -8,9 +8,13 @@ public class ScanDataQueryProjectResponseBody extends TeaModel {
     @NameInMap("Async")
     public Boolean async;
 
-    // resultObj
-    @NameInMap("ResultObj")
-    public java.util.Map<String, ?> resultObj;
+    // asyncToken
+    @NameInMap("AsyncToken")
+    public String asyncToken;
+
+    // errorCode
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     // errorMsg
     @NameInMap("ErrorMsg")
@@ -20,21 +24,17 @@ public class ScanDataQueryProjectResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    // resultObj
+    @NameInMap("ResultObj")
+    public java.util.Map<String, ?> resultObj;
+
     // retry
     @NameInMap("Retry")
     public Boolean retry;
 
-    // errorCode
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     // success
     @NameInMap("Success")
     public Boolean success;
-
-    // asyncToken
-    @NameInMap("AsyncToken")
-    public String asyncToken;
 
     public static ScanDataQueryProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ScanDataQueryProjectResponseBody self = new ScanDataQueryProjectResponseBody();
@@ -49,12 +49,20 @@ public class ScanDataQueryProjectResponseBody extends TeaModel {
         return this.async;
     }
 
-    public ScanDataQueryProjectResponseBody setResultObj(java.util.Map<String, ?> resultObj) {
-        this.resultObj = resultObj;
+    public ScanDataQueryProjectResponseBody setAsyncToken(String asyncToken) {
+        this.asyncToken = asyncToken;
         return this;
     }
-    public java.util.Map<String, ?> getResultObj() {
-        return this.resultObj;
+    public String getAsyncToken() {
+        return this.asyncToken;
+    }
+
+    public ScanDataQueryProjectResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ScanDataQueryProjectResponseBody setErrorMsg(String errorMsg) {
@@ -73,6 +81,14 @@ public class ScanDataQueryProjectResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ScanDataQueryProjectResponseBody setResultObj(java.util.Map<String, ?> resultObj) {
+        this.resultObj = resultObj;
+        return this;
+    }
+    public java.util.Map<String, ?> getResultObj() {
+        return this.resultObj;
+    }
+
     public ScanDataQueryProjectResponseBody setRetry(Boolean retry) {
         this.retry = retry;
         return this;
@@ -81,28 +97,12 @@ public class ScanDataQueryProjectResponseBody extends TeaModel {
         return this.retry;
     }
 
-    public ScanDataQueryProjectResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public ScanDataQueryProjectResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public ScanDataQueryProjectResponseBody setAsyncToken(String asyncToken) {
-        this.asyncToken = asyncToken;
-        return this;
-    }
-    public String getAsyncToken() {
-        return this.asyncToken;
     }
 
 }

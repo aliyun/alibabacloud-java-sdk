@@ -4,36 +4,28 @@ package com.aliyun.holowatcher20200730.models;
 import com.aliyun.tea.*;
 
 public class QueryAccountLabelResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     @NameInMap("Count")
     public Integer count;
 
+    @NameInMap("Data")
+    public java.util.List<QueryAccountLabelResponseBodyData> data;
+
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("Data")
-    public java.util.List<QueryAccountLabelResponseBodyData> data;
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static QueryAccountLabelResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryAccountLabelResponseBody self = new QueryAccountLabelResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryAccountLabelResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryAccountLabelResponseBody setCode(String code) {
@@ -44,20 +36,20 @@ public class QueryAccountLabelResponseBody extends TeaModel {
         return this.code;
     }
 
-    public QueryAccountLabelResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public QueryAccountLabelResponseBody setCount(Integer count) {
         this.count = count;
         return this;
     }
     public Integer getCount() {
         return this.count;
+    }
+
+    public QueryAccountLabelResponseBody setData(java.util.List<QueryAccountLabelResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<QueryAccountLabelResponseBodyData> getData() {
+        return this.data;
     }
 
     public QueryAccountLabelResponseBody setMessage(String message) {
@@ -68,12 +60,20 @@ public class QueryAccountLabelResponseBody extends TeaModel {
         return this.message;
     }
 
-    public QueryAccountLabelResponseBody setData(java.util.List<QueryAccountLabelResponseBodyData> data) {
-        this.data = data;
+    public QueryAccountLabelResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<QueryAccountLabelResponseBodyData> getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryAccountLabelResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class QueryAccountLabelResponseBodyData extends TeaModel {
