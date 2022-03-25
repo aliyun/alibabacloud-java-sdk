@@ -943,6 +943,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.saveOpenJMeterSceneWithOptions(request, runtime);
     }
 
+    public SavePtsSceneResponse savePtsSceneWithOptions(SavePtsSceneRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SavePtsSceneShrinkRequest request = new SavePtsSceneShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.scene))) {
+            request.sceneShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.scene), "Scene", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneShrink)) {
+            query.put("Scene", request.sceneShrink);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SavePtsScene"),
+            new TeaPair("version", "2020-10-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SavePtsSceneResponse());
+    }
+
+    public SavePtsSceneResponse savePtsScene(SavePtsSceneRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.savePtsSceneWithOptions(request, runtime);
+    }
+
     public StartDebugPtsSceneResponse startDebugPtsSceneWithOptions(StartDebugPtsSceneRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
