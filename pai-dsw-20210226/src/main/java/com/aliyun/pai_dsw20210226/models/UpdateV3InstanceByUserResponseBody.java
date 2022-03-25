@@ -27,6 +27,9 @@ public class UpdateV3InstanceByUserResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("UserSet")
+    public java.util.List<String> userSet;
+
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -81,6 +84,14 @@ public class UpdateV3InstanceByUserResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public UpdateV3InstanceByUserResponseBody setUserSet(java.util.List<String> userSet) {
+        this.userSet = userSet;
+        return this;
+    }
+    public java.util.List<String> getUserSet() {
+        return this.userSet;
     }
 
     public UpdateV3InstanceByUserResponseBody setWorkspaceId(String workspaceId) {
