@@ -22,6 +22,10 @@ public class CreateDBRequest extends TeaModel {
     @NameInMap("DbName")
     public String dbName;
 
+    // drds/auto 用来区分所建库为自动拆分模式，还是手动拆分模式
+    @NameInMap("Mode")
+    public String mode;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -82,6 +86,14 @@ public class CreateDBRequest extends TeaModel {
     }
     public String getDbName() {
         return this.dbName;
+    }
+
+    public CreateDBRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
     }
 
     public CreateDBRequest setRegionId(String regionId) {
