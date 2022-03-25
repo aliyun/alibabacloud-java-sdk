@@ -64,8 +64,29 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         @NameInMap("CusterState")
         public String custerState;
 
+        @NameInMap("HcCount")
+        public Integer hcCount;
+
         @NameInMap("HostIp")
         public String hostIp;
+
+        @NameInMap("Image")
+        public String image;
+
+        @NameInMap("ImageDigest")
+        public String imageDigest;
+
+        @NameInMap("ImageRepoName")
+        public String imageRepoName;
+
+        @NameInMap("ImageRepoNamespace")
+        public String imageRepoNamespace;
+
+        @NameInMap("ImageRepoTag")
+        public String imageRepoTag;
+
+        @NameInMap("ImageUuid")
+        public String imageUuid;
 
         @NameInMap("InstanceCount")
         public Integer instanceCount;
@@ -158,12 +179,68 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             return this.custerState;
         }
 
+        public DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList setHcCount(Integer hcCount) {
+            this.hcCount = hcCount;
+            return this;
+        }
+        public Integer getHcCount() {
+            return this.hcCount;
+        }
+
         public DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList setHostIp(String hostIp) {
             this.hostIp = hostIp;
             return this;
         }
         public String getHostIp() {
             return this.hostIp;
+        }
+
+        public DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList setImage(String image) {
+            this.image = image;
+            return this;
+        }
+        public String getImage() {
+            return this.image;
+        }
+
+        public DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList setImageDigest(String imageDigest) {
+            this.imageDigest = imageDigest;
+            return this;
+        }
+        public String getImageDigest() {
+            return this.imageDigest;
+        }
+
+        public DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList setImageRepoName(String imageRepoName) {
+            this.imageRepoName = imageRepoName;
+            return this;
+        }
+        public String getImageRepoName() {
+            return this.imageRepoName;
+        }
+
+        public DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList setImageRepoNamespace(String imageRepoNamespace) {
+            this.imageRepoNamespace = imageRepoNamespace;
+            return this;
+        }
+        public String getImageRepoNamespace() {
+            return this.imageRepoNamespace;
+        }
+
+        public DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList setImageRepoTag(String imageRepoTag) {
+            this.imageRepoTag = imageRepoTag;
+            return this;
+        }
+        public String getImageRepoTag() {
+            return this.imageRepoTag;
+        }
+
+        public DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList setImageUuid(String imageUuid) {
+            this.imageUuid = imageUuid;
+            return this;
+        }
+        public String getImageUuid() {
+            return this.imageUuid;
         }
 
         public DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList setInstanceCount(Integer instanceCount) {
