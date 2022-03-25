@@ -4,6 +4,14 @@ package com.aliyun.holowatcher20200730.models;
 import com.aliyun.tea.*;
 
 public class ScanDataRemoveRoleRequest extends TeaModel {
+    // 业务幂等编号，用于幂等处理
+    @NameInMap("BizOrderNo")
+    public String bizOrderNo;
+
+    // 移除角色的项目ID，必须是开放平台图对应source创建的项目
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     // removeUserDataRequest
     @NameInMap("RemoveUserDataRequest")
     public ScanDataRemoveRoleRequestRemoveUserDataRequest removeUserDataRequest;
@@ -16,17 +24,25 @@ public class ScanDataRemoveRoleRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
-    // 移除角色的项目ID，必须是开放平台图对应source创建的项目
-    @NameInMap("ProjectId")
-    public Long projectId;
-
-    // 业务幂等编号，用于幂等处理
-    @NameInMap("BizOrderNo")
-    public String bizOrderNo;
-
     public static ScanDataRemoveRoleRequest build(java.util.Map<String, ?> map) throws Exception {
         ScanDataRemoveRoleRequest self = new ScanDataRemoveRoleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ScanDataRemoveRoleRequest setBizOrderNo(String bizOrderNo) {
+        this.bizOrderNo = bizOrderNo;
+        return this;
+    }
+    public String getBizOrderNo() {
+        return this.bizOrderNo;
+    }
+
+    public ScanDataRemoveRoleRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ScanDataRemoveRoleRequest setRemoveUserDataRequest(ScanDataRemoveRoleRequestRemoveUserDataRequest removeUserDataRequest) {
@@ -53,23 +69,11 @@ public class ScanDataRemoveRoleRequest extends TeaModel {
         return this.source;
     }
 
-    public ScanDataRemoveRoleRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
-    }
-
-    public ScanDataRemoveRoleRequest setBizOrderNo(String bizOrderNo) {
-        this.bizOrderNo = bizOrderNo;
-        return this;
-    }
-    public String getBizOrderNo() {
-        return this.bizOrderNo;
-    }
-
     public static class ScanDataRemoveRoleRequestRemoveUserDataRequest extends TeaModel {
+        // 会员手机号码
+        @NameInMap("UserMobNum")
+        public String userMobNum;
+
         // 会员昵称
         @NameInMap("UserNick")
         public String userNick;
@@ -78,13 +82,17 @@ public class ScanDataRemoveRoleRequest extends TeaModel {
         @NameInMap("UserType")
         public String userType;
 
-        // 会员手机号码
-        @NameInMap("UserMobNum")
-        public String userMobNum;
-
         public static ScanDataRemoveRoleRequestRemoveUserDataRequest build(java.util.Map<String, ?> map) throws Exception {
             ScanDataRemoveRoleRequestRemoveUserDataRequest self = new ScanDataRemoveRoleRequestRemoveUserDataRequest();
             return TeaModel.build(map, self);
+        }
+
+        public ScanDataRemoveRoleRequestRemoveUserDataRequest setUserMobNum(String userMobNum) {
+            this.userMobNum = userMobNum;
+            return this;
+        }
+        public String getUserMobNum() {
+            return this.userMobNum;
         }
 
         public ScanDataRemoveRoleRequestRemoveUserDataRequest setUserNick(String userNick) {
@@ -101,14 +109,6 @@ public class ScanDataRemoveRoleRequest extends TeaModel {
         }
         public String getUserType() {
             return this.userType;
-        }
-
-        public ScanDataRemoveRoleRequestRemoveUserDataRequest setUserMobNum(String userMobNum) {
-            this.userMobNum = userMobNum;
-            return this;
-        }
-        public String getUserMobNum() {
-            return this.userMobNum;
         }
 
     }

@@ -7,11 +7,11 @@ public class GetMaterialListRequest extends TeaModel {
     @NameInMap("Current")
     public Integer current;
 
-    @NameInMap("Size")
-    public Integer size;
-
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("Size")
+    public Integer size;
 
     @NameInMap("Type")
     public String type;
@@ -29,20 +29,20 @@ public class GetMaterialListRequest extends TeaModel {
         return this.current;
     }
 
-    public GetMaterialListRequest setSize(Integer size) {
-        this.size = size;
-        return this;
-    }
-    public Integer getSize() {
-        return this.size;
-    }
-
     public GetMaterialListRequest setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public GetMaterialListRequest setSize(Integer size) {
+        this.size = size;
+        return this;
+    }
+    public Integer getSize() {
+        return this.size;
     }
 
     public GetMaterialListRequest setType(String type) {

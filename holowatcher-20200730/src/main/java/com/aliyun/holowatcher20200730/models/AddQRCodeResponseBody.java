@@ -4,25 +4,25 @@ package com.aliyun.holowatcher20200730.models;
 import com.aliyun.tea.*;
 
 public class AddQRCodeResponseBody extends TeaModel {
-    // msgInfo
-    @NameInMap("MsgInfo")
-    public String msgInfo;
-
-    // msgCode
-    @NameInMap("MsgCode")
-    public String msgCode;
+    // data
+    @NameInMap("Data")
+    public String data;
 
     // error
     @NameInMap("Error")
     public String error;
 
+    // msgCode
+    @NameInMap("MsgCode")
+    public String msgCode;
+
+    // msgInfo
+    @NameInMap("MsgInfo")
+    public String msgInfo;
+
     // traceId
     @NameInMap("RequestId")
     public String requestId;
-
-    // data
-    @NameInMap("Data")
-    public String data;
 
     // success
     @NameInMap("Success")
@@ -33,20 +33,12 @@ public class AddQRCodeResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AddQRCodeResponseBody setMsgInfo(String msgInfo) {
-        this.msgInfo = msgInfo;
+    public AddQRCodeResponseBody setData(String data) {
+        this.data = data;
         return this;
     }
-    public String getMsgInfo() {
-        return this.msgInfo;
-    }
-
-    public AddQRCodeResponseBody setMsgCode(String msgCode) {
-        this.msgCode = msgCode;
-        return this;
-    }
-    public String getMsgCode() {
-        return this.msgCode;
+    public String getData() {
+        return this.data;
     }
 
     public AddQRCodeResponseBody setError(String error) {
@@ -57,20 +49,28 @@ public class AddQRCodeResponseBody extends TeaModel {
         return this.error;
     }
 
+    public AddQRCodeResponseBody setMsgCode(String msgCode) {
+        this.msgCode = msgCode;
+        return this;
+    }
+    public String getMsgCode() {
+        return this.msgCode;
+    }
+
+    public AddQRCodeResponseBody setMsgInfo(String msgInfo) {
+        this.msgInfo = msgInfo;
+        return this;
+    }
+    public String getMsgInfo() {
+        return this.msgInfo;
+    }
+
     public AddQRCodeResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public AddQRCodeResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
     }
 
     public AddQRCodeResponseBody setSuccess(Boolean success) {

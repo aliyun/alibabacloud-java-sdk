@@ -4,20 +4,20 @@ package com.aliyun.holowatcher20200730.models;
 import com.aliyun.tea.*;
 
 public class CreateMaterialResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("MsgInfo")
-    public String msgInfo;
-
-    @NameInMap("MsgCode")
-    public String msgCode;
+    @NameInMap("Data")
+    public java.util.Map<String, ?> data;
 
     @NameInMap("Error")
     public String error;
 
-    @NameInMap("Data")
-    public java.util.Map<String, ?> data;
+    @NameInMap("MsgCode")
+    public String msgCode;
+
+    @NameInMap("MsgInfo")
+    public String msgInfo;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,28 +27,12 @@ public class CreateMaterialResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateMaterialResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateMaterialResponseBody setData(java.util.Map<String, ?> data) {
+        this.data = data;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateMaterialResponseBody setMsgInfo(String msgInfo) {
-        this.msgInfo = msgInfo;
-        return this;
-    }
-    public String getMsgInfo() {
-        return this.msgInfo;
-    }
-
-    public CreateMaterialResponseBody setMsgCode(String msgCode) {
-        this.msgCode = msgCode;
-        return this;
-    }
-    public String getMsgCode() {
-        return this.msgCode;
+    public java.util.Map<String, ?> getData() {
+        return this.data;
     }
 
     public CreateMaterialResponseBody setError(String error) {
@@ -59,12 +43,28 @@ public class CreateMaterialResponseBody extends TeaModel {
         return this.error;
     }
 
-    public CreateMaterialResponseBody setData(java.util.Map<String, ?> data) {
-        this.data = data;
+    public CreateMaterialResponseBody setMsgCode(String msgCode) {
+        this.msgCode = msgCode;
         return this;
     }
-    public java.util.Map<String, ?> getData() {
-        return this.data;
+    public String getMsgCode() {
+        return this.msgCode;
+    }
+
+    public CreateMaterialResponseBody setMsgInfo(String msgInfo) {
+        this.msgInfo = msgInfo;
+        return this;
+    }
+    public String getMsgInfo() {
+        return this.msgInfo;
+    }
+
+    public CreateMaterialResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateMaterialResponseBody setSuccess(Boolean success) {

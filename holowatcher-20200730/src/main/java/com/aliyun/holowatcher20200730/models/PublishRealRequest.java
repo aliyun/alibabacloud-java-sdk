@@ -8,13 +8,13 @@ public class PublishRealRequest extends TeaModel {
     @NameInMap("DatasetId")
     public Long datasetId;
 
-    // tag
-    @NameInMap("Tag")
-    public String tag;
-
     // projectId
     @NameInMap("ProjectId")
     public Long projectId;
+
+    // tag
+    @NameInMap("Tag")
+    public String tag;
 
     public static PublishRealRequest build(java.util.Map<String, ?> map) throws Exception {
         PublishRealRequest self = new PublishRealRequest();
@@ -29,20 +29,20 @@ public class PublishRealRequest extends TeaModel {
         return this.datasetId;
     }
 
-    public PublishRealRequest setTag(String tag) {
-        this.tag = tag;
-        return this;
-    }
-    public String getTag() {
-        return this.tag;
-    }
-
     public PublishRealRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     public Long getProjectId() {
         return this.projectId;
+    }
+
+    public PublishRealRequest setTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    public String getTag() {
+        return this.tag;
     }
 
 }

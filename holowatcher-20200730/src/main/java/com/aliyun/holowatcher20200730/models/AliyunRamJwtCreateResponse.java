@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.holowatcher20200730.models;
+
+import com.aliyun.tea.*;
+
+public class AliyunRamJwtCreateResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public AliyunRamJwtCreateResponseBody body;
+
+    public static AliyunRamJwtCreateResponse build(java.util.Map<String, ?> map) throws Exception {
+        AliyunRamJwtCreateResponse self = new AliyunRamJwtCreateResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public AliyunRamJwtCreateResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public AliyunRamJwtCreateResponse setBody(AliyunRamJwtCreateResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AliyunRamJwtCreateResponseBody getBody() {
+        return this.body;
+    }
+
+}

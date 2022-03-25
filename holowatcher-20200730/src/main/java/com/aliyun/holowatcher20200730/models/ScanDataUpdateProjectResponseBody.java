@@ -8,13 +8,21 @@ public class ScanDataUpdateProjectResponseBody extends TeaModel {
     @NameInMap("Async")
     public Boolean async;
 
-    // resultObj
-    @NameInMap("ProjectId")
-    public Long projectId;
+    // asyncToken
+    @NameInMap("AsyncToken")
+    public String asyncToken;
+
+    // errorCode
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     // errorMsg
     @NameInMap("ErrorMsg")
     public String errorMsg;
+
+    // resultObj
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     // traceId
     @NameInMap("RequestId")
@@ -24,17 +32,9 @@ public class ScanDataUpdateProjectResponseBody extends TeaModel {
     @NameInMap("Retry")
     public Boolean retry;
 
-    // errorCode
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     // success
     @NameInMap("Success")
     public Boolean success;
-
-    // asyncToken
-    @NameInMap("AsyncToken")
-    public String asyncToken;
 
     public static ScanDataUpdateProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ScanDataUpdateProjectResponseBody self = new ScanDataUpdateProjectResponseBody();
@@ -49,12 +49,20 @@ public class ScanDataUpdateProjectResponseBody extends TeaModel {
         return this.async;
     }
 
-    public ScanDataUpdateProjectResponseBody setProjectId(Long projectId) {
-        this.projectId = projectId;
+    public ScanDataUpdateProjectResponseBody setAsyncToken(String asyncToken) {
+        this.asyncToken = asyncToken;
         return this;
     }
-    public Long getProjectId() {
-        return this.projectId;
+    public String getAsyncToken() {
+        return this.asyncToken;
+    }
+
+    public ScanDataUpdateProjectResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ScanDataUpdateProjectResponseBody setErrorMsg(String errorMsg) {
@@ -63,6 +71,14 @@ public class ScanDataUpdateProjectResponseBody extends TeaModel {
     }
     public String getErrorMsg() {
         return this.errorMsg;
+    }
+
+    public ScanDataUpdateProjectResponseBody setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ScanDataUpdateProjectResponseBody setRequestId(String requestId) {
@@ -81,28 +97,12 @@ public class ScanDataUpdateProjectResponseBody extends TeaModel {
         return this.retry;
     }
 
-    public ScanDataUpdateProjectResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public ScanDataUpdateProjectResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public ScanDataUpdateProjectResponseBody setAsyncToken(String asyncToken) {
-        this.asyncToken = asyncToken;
-        return this;
-    }
-    public String getAsyncToken() {
-        return this.asyncToken;
     }
 
 }
