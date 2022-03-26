@@ -4,8 +4,11 @@ package com.aliyun.sts20150401.models;
 import com.aliyun.tea.*;
 
 public class AssumeRoleWithSAMLRequest extends TeaModel {
-    @NameInMap("SAMLProviderArn")
-    public String SAMLProviderArn;
+    @NameInMap("DurationSeconds")
+    public Long durationSeconds;
+
+    @NameInMap("Policy")
+    public String policy;
 
     @NameInMap("RoleArn")
     public String roleArn;
@@ -13,23 +16,28 @@ public class AssumeRoleWithSAMLRequest extends TeaModel {
     @NameInMap("SAMLAssertion")
     public String SAMLAssertion;
 
-    @NameInMap("Policy")
-    public String policy;
-
-    @NameInMap("DurationSeconds")
-    public Long durationSeconds;
+    @NameInMap("SAMLProviderArn")
+    public String SAMLProviderArn;
 
     public static AssumeRoleWithSAMLRequest build(java.util.Map<String, ?> map) throws Exception {
         AssumeRoleWithSAMLRequest self = new AssumeRoleWithSAMLRequest();
         return TeaModel.build(map, self);
     }
 
-    public AssumeRoleWithSAMLRequest setSAMLProviderArn(String SAMLProviderArn) {
-        this.SAMLProviderArn = SAMLProviderArn;
+    public AssumeRoleWithSAMLRequest setDurationSeconds(Long durationSeconds) {
+        this.durationSeconds = durationSeconds;
         return this;
     }
-    public String getSAMLProviderArn() {
-        return this.SAMLProviderArn;
+    public Long getDurationSeconds() {
+        return this.durationSeconds;
+    }
+
+    public AssumeRoleWithSAMLRequest setPolicy(String policy) {
+        this.policy = policy;
+        return this;
+    }
+    public String getPolicy() {
+        return this.policy;
     }
 
     public AssumeRoleWithSAMLRequest setRoleArn(String roleArn) {
@@ -48,20 +56,12 @@ public class AssumeRoleWithSAMLRequest extends TeaModel {
         return this.SAMLAssertion;
     }
 
-    public AssumeRoleWithSAMLRequest setPolicy(String policy) {
-        this.policy = policy;
+    public AssumeRoleWithSAMLRequest setSAMLProviderArn(String SAMLProviderArn) {
+        this.SAMLProviderArn = SAMLProviderArn;
         return this;
     }
-    public String getPolicy() {
-        return this.policy;
-    }
-
-    public AssumeRoleWithSAMLRequest setDurationSeconds(Long durationSeconds) {
-        this.durationSeconds = durationSeconds;
-        return this;
-    }
-    public Long getDurationSeconds() {
-        return this.durationSeconds;
+    public String getSAMLProviderArn() {
+        return this.SAMLProviderArn;
     }
 
 }
