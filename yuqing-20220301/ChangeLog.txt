@@ -1,3 +1,6 @@
+2022-03-28 Version: 1.0.6
+- Modify SearchCondition.
+
 2022-03-25 Version: 1.0.5
 - Add QueryYuqingMessage API.
 

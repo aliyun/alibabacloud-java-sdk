@@ -174,19 +174,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public SayHelloResponse sayHello(SayHelloRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        SayHelloHeaders headers = new SayHelloHeaders();
         return this.sayHelloWithOptions(request, headers, runtime);
     }
 
-    public SayHelloResponse sayHelloWithOptions(SayHelloRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public SayHelloResponse sayHelloWithOptions(SayHelloRequest request, SayHelloHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.word)) {
             query.put("word", request.word);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.contentType)) {
+            realHeaders.put("Content-Type", com.aliyun.teautil.Common.toJSONString(headers.contentType));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
