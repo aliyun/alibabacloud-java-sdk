@@ -425,6 +425,24 @@ public class StartMPUTaskRequest extends TeaModel {
     }
 
     public static class StartMPUTaskRequestClockWidgets extends TeaModel {
+        @NameInMap("Alpha")
+        public Float alpha;
+
+        @NameInMap("BorderColor")
+        public Long borderColor;
+
+        @NameInMap("BorderWidth")
+        public Integer borderWidth;
+
+        @NameInMap("Box")
+        public Boolean box;
+
+        @NameInMap("BoxBorderWidth")
+        public Integer boxBorderWidth;
+
+        @NameInMap("BoxColor")
+        public Long boxColor;
+
         @NameInMap("FontColor")
         public Integer fontColor;
 
@@ -446,6 +464,54 @@ public class StartMPUTaskRequest extends TeaModel {
         public static StartMPUTaskRequestClockWidgets build(java.util.Map<String, ?> map) throws Exception {
             StartMPUTaskRequestClockWidgets self = new StartMPUTaskRequestClockWidgets();
             return TeaModel.build(map, self);
+        }
+
+        public StartMPUTaskRequestClockWidgets setAlpha(Float alpha) {
+            this.alpha = alpha;
+            return this;
+        }
+        public Float getAlpha() {
+            return this.alpha;
+        }
+
+        public StartMPUTaskRequestClockWidgets setBorderColor(Long borderColor) {
+            this.borderColor = borderColor;
+            return this;
+        }
+        public Long getBorderColor() {
+            return this.borderColor;
+        }
+
+        public StartMPUTaskRequestClockWidgets setBorderWidth(Integer borderWidth) {
+            this.borderWidth = borderWidth;
+            return this;
+        }
+        public Integer getBorderWidth() {
+            return this.borderWidth;
+        }
+
+        public StartMPUTaskRequestClockWidgets setBox(Boolean box) {
+            this.box = box;
+            return this;
+        }
+        public Boolean getBox() {
+            return this.box;
+        }
+
+        public StartMPUTaskRequestClockWidgets setBoxBorderWidth(Integer boxBorderWidth) {
+            this.boxBorderWidth = boxBorderWidth;
+            return this;
+        }
+        public Integer getBoxBorderWidth() {
+            return this.boxBorderWidth;
+        }
+
+        public StartMPUTaskRequestClockWidgets setBoxColor(Long boxColor) {
+            this.boxColor = boxColor;
+            return this;
+        }
+        public Long getBoxColor() {
+            return this.boxColor;
         }
 
         public StartMPUTaskRequestClockWidgets setFontColor(Integer fontColor) {
@@ -603,6 +669,24 @@ public class StartMPUTaskRequest extends TeaModel {
     }
 
     public static class StartMPUTaskRequestUserPanesTexts extends TeaModel {
+        @NameInMap("Alpha")
+        public Float alpha;
+
+        @NameInMap("BorderColor")
+        public Long borderColor;
+
+        @NameInMap("BorderWidth")
+        public Integer borderWidth;
+
+        @NameInMap("Box")
+        public Boolean box;
+
+        @NameInMap("BoxBorderWidth")
+        public Integer boxBorderWidth;
+
+        @NameInMap("BoxColor")
+        public Long boxColor;
+
         @NameInMap("FontColor")
         public Integer fontColor;
 
@@ -627,6 +711,54 @@ public class StartMPUTaskRequest extends TeaModel {
         public static StartMPUTaskRequestUserPanesTexts build(java.util.Map<String, ?> map) throws Exception {
             StartMPUTaskRequestUserPanesTexts self = new StartMPUTaskRequestUserPanesTexts();
             return TeaModel.build(map, self);
+        }
+
+        public StartMPUTaskRequestUserPanesTexts setAlpha(Float alpha) {
+            this.alpha = alpha;
+            return this;
+        }
+        public Float getAlpha() {
+            return this.alpha;
+        }
+
+        public StartMPUTaskRequestUserPanesTexts setBorderColor(Long borderColor) {
+            this.borderColor = borderColor;
+            return this;
+        }
+        public Long getBorderColor() {
+            return this.borderColor;
+        }
+
+        public StartMPUTaskRequestUserPanesTexts setBorderWidth(Integer borderWidth) {
+            this.borderWidth = borderWidth;
+            return this;
+        }
+        public Integer getBorderWidth() {
+            return this.borderWidth;
+        }
+
+        public StartMPUTaskRequestUserPanesTexts setBox(Boolean box) {
+            this.box = box;
+            return this;
+        }
+        public Boolean getBox() {
+            return this.box;
+        }
+
+        public StartMPUTaskRequestUserPanesTexts setBoxBorderWidth(Integer boxBorderWidth) {
+            this.boxBorderWidth = boxBorderWidth;
+            return this;
+        }
+        public Integer getBoxBorderWidth() {
+            return this.boxBorderWidth;
+        }
+
+        public StartMPUTaskRequestUserPanesTexts setBoxColor(Long boxColor) {
+            this.boxColor = boxColor;
+            return this;
+        }
+        public Long getBoxColor() {
+            return this.boxColor;
         }
 
         public StartMPUTaskRequestUserPanesTexts setFontColor(Integer fontColor) {
