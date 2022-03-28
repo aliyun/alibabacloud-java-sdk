@@ -455,6 +455,9 @@ public class LaunchSurveyResponseBody extends TeaModel {
         @NameInMap("CallContext")
         public LaunchSurveyResponseBodyDataCallContext callContext;
 
+        @NameInMap("ContextId")
+        public Long contextId;
+
         @NameInMap("UserContext")
         public LaunchSurveyResponseBodyDataUserContext userContext;
 
@@ -469,6 +472,14 @@ public class LaunchSurveyResponseBody extends TeaModel {
         }
         public LaunchSurveyResponseBodyDataCallContext getCallContext() {
             return this.callContext;
+        }
+
+        public LaunchSurveyResponseBodyData setContextId(Long contextId) {
+            this.contextId = contextId;
+            return this;
+        }
+        public Long getContextId() {
+            return this.contextId;
         }
 
         public LaunchSurveyResponseBodyData setUserContext(LaunchSurveyResponseBodyDataUserContext userContext) {
