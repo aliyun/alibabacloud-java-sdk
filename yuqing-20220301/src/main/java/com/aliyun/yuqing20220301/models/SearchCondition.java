@@ -18,15 +18,35 @@ public class SearchCondition extends TeaModel {
 
     // 抓取截止时间
     @NameInMap("createTimeEnd")
-    public String createTimeEnd;
+    public Long createTimeEnd;
 
     // 抓取起始时间
     @NameInMap("createTimeStart")
-    public String createTimeStart;
+    public Long createTimeStart;
+
+    // 文章签名
+    @NameInMap("docContentSign")
+    public String docContentSign;
 
     // 舆情文章唯一docId
     @NameInMap("docId")
     public String docId;
+
+    // 是否去重
+    @NameInMap("duplicateRemoval")
+    public Boolean duplicateRemoval;
+
+    // 情感分上限
+    @NameInMap("emotionScoreMax")
+    public Double emotionScoreMax;
+
+    // 情感分下限
+    @NameInMap("emotionScoreMin")
+    public Double emotionScoreMin;
+
+    // 是否高亮关键词
+    @NameInMap("enableKeywordHighlight")
+    public Boolean enableKeywordHighlight;
 
     // 排除作者名称
     @NameInMap("excludeAuthorName")
@@ -90,11 +110,11 @@ public class SearchCondition extends TeaModel {
 
     // 截止发布时间
     @NameInMap("publishTimeEnd")
-    public String publishTimeEnd;
+    public Long publishTimeEnd;
 
     // 起始发布时间
     @NameInMap("publishTimeStart")
-    public String publishTimeStart;
+    public Long publishTimeStart;
 
     // 排序字段
     @NameInMap("sortBy")
@@ -108,13 +128,17 @@ public class SearchCondition extends TeaModel {
     @NameInMap("subCondition")
     public SearchCondition subCondition;
 
+    // #话题
+    @NameInMap("topics")
+    public String topics;
+
     // 舆情文章截止更新时间
     @NameInMap("updateTimeEnd")
-    public String updateTimeEnd;
+    public Long updateTimeEnd;
 
     // 舆情文章起始更新时间
     @NameInMap("updateTimeStart")
-    public String updateTimeStart;
+    public Long updateTimeStart;
 
     public static SearchCondition build(java.util.Map<String, ?> map) throws Exception {
         SearchCondition self = new SearchCondition();
@@ -145,20 +169,28 @@ public class SearchCondition extends TeaModel {
         return this.authorName;
     }
 
-    public SearchCondition setCreateTimeEnd(String createTimeEnd) {
+    public SearchCondition setCreateTimeEnd(Long createTimeEnd) {
         this.createTimeEnd = createTimeEnd;
         return this;
     }
-    public String getCreateTimeEnd() {
+    public Long getCreateTimeEnd() {
         return this.createTimeEnd;
     }
 
-    public SearchCondition setCreateTimeStart(String createTimeStart) {
+    public SearchCondition setCreateTimeStart(Long createTimeStart) {
         this.createTimeStart = createTimeStart;
         return this;
     }
-    public String getCreateTimeStart() {
+    public Long getCreateTimeStart() {
         return this.createTimeStart;
+    }
+
+    public SearchCondition setDocContentSign(String docContentSign) {
+        this.docContentSign = docContentSign;
+        return this;
+    }
+    public String getDocContentSign() {
+        return this.docContentSign;
     }
 
     public SearchCondition setDocId(String docId) {
@@ -167,6 +199,38 @@ public class SearchCondition extends TeaModel {
     }
     public String getDocId() {
         return this.docId;
+    }
+
+    public SearchCondition setDuplicateRemoval(Boolean duplicateRemoval) {
+        this.duplicateRemoval = duplicateRemoval;
+        return this;
+    }
+    public Boolean getDuplicateRemoval() {
+        return this.duplicateRemoval;
+    }
+
+    public SearchCondition setEmotionScoreMax(Double emotionScoreMax) {
+        this.emotionScoreMax = emotionScoreMax;
+        return this;
+    }
+    public Double getEmotionScoreMax() {
+        return this.emotionScoreMax;
+    }
+
+    public SearchCondition setEmotionScoreMin(Double emotionScoreMin) {
+        this.emotionScoreMin = emotionScoreMin;
+        return this;
+    }
+    public Double getEmotionScoreMin() {
+        return this.emotionScoreMin;
+    }
+
+    public SearchCondition setEnableKeywordHighlight(Boolean enableKeywordHighlight) {
+        this.enableKeywordHighlight = enableKeywordHighlight;
+        return this;
+    }
+    public Boolean getEnableKeywordHighlight() {
+        return this.enableKeywordHighlight;
     }
 
     public SearchCondition setExcludeAuthorName(String excludeAuthorName) {
@@ -289,19 +353,19 @@ public class SearchCondition extends TeaModel {
         return this.posKeywordsInTitle;
     }
 
-    public SearchCondition setPublishTimeEnd(String publishTimeEnd) {
+    public SearchCondition setPublishTimeEnd(Long publishTimeEnd) {
         this.publishTimeEnd = publishTimeEnd;
         return this;
     }
-    public String getPublishTimeEnd() {
+    public Long getPublishTimeEnd() {
         return this.publishTimeEnd;
     }
 
-    public SearchCondition setPublishTimeStart(String publishTimeStart) {
+    public SearchCondition setPublishTimeStart(Long publishTimeStart) {
         this.publishTimeStart = publishTimeStart;
         return this;
     }
-    public String getPublishTimeStart() {
+    public Long getPublishTimeStart() {
         return this.publishTimeStart;
     }
 
@@ -329,19 +393,27 @@ public class SearchCondition extends TeaModel {
         return this.subCondition;
     }
 
-    public SearchCondition setUpdateTimeEnd(String updateTimeEnd) {
+    public SearchCondition setTopics(String topics) {
+        this.topics = topics;
+        return this;
+    }
+    public String getTopics() {
+        return this.topics;
+    }
+
+    public SearchCondition setUpdateTimeEnd(Long updateTimeEnd) {
         this.updateTimeEnd = updateTimeEnd;
         return this;
     }
-    public String getUpdateTimeEnd() {
+    public Long getUpdateTimeEnd() {
         return this.updateTimeEnd;
     }
 
-    public SearchCondition setUpdateTimeStart(String updateTimeStart) {
+    public SearchCondition setUpdateTimeStart(Long updateTimeStart) {
         this.updateTimeStart = updateTimeStart;
         return this;
     }
-    public String getUpdateTimeStart() {
+    public Long getUpdateTimeStart() {
         return this.updateTimeStart;
     }
 
