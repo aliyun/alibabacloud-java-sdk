@@ -4,13 +4,29 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
+    // 状态码
+    @NameInMap("Code")
+    public String code;
+
+    // http状态码
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     // 本分页中请求的实例列表
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
+    // 说明
+    @NameInMap("Message")
+    public String message;
+
     // 请求Id
     @NameInMap("RequestId")
     public String requestId;
+
+    // 成功标志
+    @NameInMap("Success")
+    public Boolean success;
 
     // 实例总数
     @NameInMap("TotalCount")
@@ -21,6 +37,22 @@ public class ListInstancesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListInstancesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListInstancesResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
     public ListInstancesResponseBody setInstances(java.util.List<ListInstancesResponseBodyInstances> instances) {
         this.instances = instances;
         return this;
@@ -29,12 +61,28 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.instances;
     }
 
+    public ListInstancesResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public ListInstancesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListInstancesResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public ListInstancesResponseBody setTotalCount(Long totalCount) {
@@ -362,6 +410,10 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("UserId")
         public String userId;
 
+        // 用户名称
+        @NameInMap("UserName")
+        public String userName;
+
         // user vpc配置
         @NameInMap("UserVpc")
         public ListInstancesResponseBodyInstancesUserVpc userVpc;
@@ -565,6 +617,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getUserId() {
             return this.userId;
+        }
+
+        public ListInstancesResponseBodyInstances setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
         public ListInstancesResponseBodyInstances setUserVpc(ListInstancesResponseBodyInstancesUserVpc userVpc) {

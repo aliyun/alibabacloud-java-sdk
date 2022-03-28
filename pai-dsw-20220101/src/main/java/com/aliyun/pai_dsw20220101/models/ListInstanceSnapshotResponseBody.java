@@ -4,6 +4,18 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceSnapshotResponseBody extends TeaModel {
+    // 状态码
+    @NameInMap("Code")
+    public String code;
+
+    // http状态码
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    // 说明
+    @NameInMap("Message")
+    public String message;
+
     // 请求Id
     @NameInMap("RequestId")
     public String requestId;
@@ -12,6 +24,10 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
     @NameInMap("Snapshots")
     public java.util.List<ListInstanceSnapshotResponseBodySnapshots> snapshots;
 
+    // 成功标志
+    @NameInMap("Success")
+    public Boolean success;
+
     // 实例总数
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -19,6 +35,30 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
     public static ListInstanceSnapshotResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceSnapshotResponseBody self = new ListInstanceSnapshotResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstanceSnapshotResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListInstanceSnapshotResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public ListInstanceSnapshotResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ListInstanceSnapshotResponseBody setRequestId(String requestId) {
@@ -35,6 +75,14 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
     }
     public java.util.List<ListInstanceSnapshotResponseBodySnapshots> getSnapshots() {
         return this.snapshots;
+    }
+
+    public ListInstanceSnapshotResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public ListInstanceSnapshotResponseBody setTotalCount(Long totalCount) {

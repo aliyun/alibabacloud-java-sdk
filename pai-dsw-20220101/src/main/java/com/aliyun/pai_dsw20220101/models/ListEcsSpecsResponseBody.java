@@ -4,13 +4,29 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ListEcsSpecsResponseBody extends TeaModel {
+    // 状态码
+    @NameInMap("Code")
+    public String code;
+
     // 本分页中请求的实例列表
     @NameInMap("EcsSpecs")
     public java.util.List<ListEcsSpecsResponseBodyEcsSpecs> ecsSpecs;
 
+    // http状态码
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    // 说明
+    @NameInMap("Message")
+    public String message;
+
     // 请求Id
     @NameInMap("RequestId")
     public String requestId;
+
+    // 成功标志
+    @NameInMap("Success")
+    public Boolean success;
 
     // 实例总数
     @NameInMap("TotalCount")
@@ -21,6 +37,14 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListEcsSpecsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
     public ListEcsSpecsResponseBody setEcsSpecs(java.util.List<ListEcsSpecsResponseBodyEcsSpecs> ecsSpecs) {
         this.ecsSpecs = ecsSpecs;
         return this;
@@ -29,12 +53,36 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         return this.ecsSpecs;
     }
 
+    public ListEcsSpecsResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public ListEcsSpecsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public ListEcsSpecsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListEcsSpecsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public ListEcsSpecsResponseBody setTotalCount(Long totalCount) {

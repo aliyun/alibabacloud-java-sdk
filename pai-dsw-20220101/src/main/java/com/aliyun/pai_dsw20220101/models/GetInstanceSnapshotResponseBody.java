@@ -4,6 +4,10 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceSnapshotResponseBody extends TeaModel {
+    // 状态码
+    @NameInMap("Code")
+    public String code;
+
     // 实例快照创建时间
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
@@ -11,6 +15,10 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
     // 实例快照修改时间
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
+
+    // http状态码
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     // 实例快照的镜像Id
     @NameInMap("ImageId")
@@ -23,6 +31,10 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
     // 实例Id
     @NameInMap("InstanceId")
     public String instanceId;
+
+    // 说明
+    @NameInMap("Message")
+    public String message;
 
     // 实例快照错误代码
     @NameInMap("ReasonCode")
@@ -48,9 +60,21 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    // 成功标志
+    @NameInMap("Success")
+    public Boolean success;
+
     public static GetInstanceSnapshotResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceSnapshotResponseBody self = new GetInstanceSnapshotResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetInstanceSnapshotResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetInstanceSnapshotResponseBody setGmtCreateTime(String gmtCreateTime) {
@@ -67,6 +91,14 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
     }
     public String getGmtModifiedTime() {
         return this.gmtModifiedTime;
+    }
+
+    public GetInstanceSnapshotResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public GetInstanceSnapshotResponseBody setImageId(String imageId) {
@@ -91,6 +123,14 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetInstanceSnapshotResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GetInstanceSnapshotResponseBody setReasonCode(String reasonCode) {
@@ -139,6 +179,14 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public GetInstanceSnapshotResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }
