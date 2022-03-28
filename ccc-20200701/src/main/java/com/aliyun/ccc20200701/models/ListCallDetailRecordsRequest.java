@@ -16,11 +16,17 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     @NameInMap("ContactDisposition")
     public String contactDisposition;
 
+    @NameInMap("ContactDispositionList")
+    public String contactDispositionList;
+
     @NameInMap("ContactId")
     public String contactId;
 
     @NameInMap("ContactType")
     public String contactType;
+
+    @NameInMap("ContactTypeList")
+    public String contactTypeList;
 
     @NameInMap("Criteria")
     public String criteria;
@@ -98,6 +104,14 @@ public class ListCallDetailRecordsRequest extends TeaModel {
         return this.contactDisposition;
     }
 
+    public ListCallDetailRecordsRequest setContactDispositionList(String contactDispositionList) {
+        this.contactDispositionList = contactDispositionList;
+        return this;
+    }
+    public String getContactDispositionList() {
+        return this.contactDispositionList;
+    }
+
     public ListCallDetailRecordsRequest setContactId(String contactId) {
         this.contactId = contactId;
         return this;
@@ -112,6 +126,14 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     }
     public String getContactType() {
         return this.contactType;
+    }
+
+    public ListCallDetailRecordsRequest setContactTypeList(String contactTypeList) {
+        this.contactTypeList = contactTypeList;
+        return this;
+    }
+    public String getContactTypeList() {
+        return this.contactTypeList;
     }
 
     public ListCallDetailRecordsRequest setCriteria(String criteria) {

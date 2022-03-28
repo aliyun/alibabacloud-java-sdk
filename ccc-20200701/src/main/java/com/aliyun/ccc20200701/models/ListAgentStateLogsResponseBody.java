@@ -68,6 +68,9 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         @NameInMap("Duration")
         public Long duration;
 
+        @NameInMap("OutboundScenario")
+        public Boolean outboundScenario;
+
         @NameInMap("StartTime")
         public Long startTime;
 
@@ -88,6 +91,14 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         }
         public Long getDuration() {
             return this.duration;
+        }
+
+        public ListAgentStateLogsResponseBodyData setOutboundScenario(Boolean outboundScenario) {
+            this.outboundScenario = outboundScenario;
+            return this;
+        }
+        public Boolean getOutboundScenario() {
+            return this.outboundScenario;
         }
 
         public ListAgentStateLogsResponseBodyData setStartTime(Long startTime) {

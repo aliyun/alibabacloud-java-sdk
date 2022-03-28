@@ -227,6 +227,9 @@ public class AnswerCallResponseBody extends TeaModel {
     }
 
     public static class AnswerCallResponseBodyDataCallContext extends TeaModel {
+        @NameInMap("CallType")
+        public String callType;
+
         @NameInMap("ChannelContexts")
         public java.util.List<AnswerCallResponseBodyDataCallContextChannelContexts> channelContexts;
 
@@ -239,6 +242,14 @@ public class AnswerCallResponseBody extends TeaModel {
         public static AnswerCallResponseBodyDataCallContext build(java.util.Map<String, ?> map) throws Exception {
             AnswerCallResponseBodyDataCallContext self = new AnswerCallResponseBodyDataCallContext();
             return TeaModel.build(map, self);
+        }
+
+        public AnswerCallResponseBodyDataCallContext setCallType(String callType) {
+            this.callType = callType;
+            return this;
+        }
+        public String getCallType() {
+            return this.callType;
         }
 
         public AnswerCallResponseBodyDataCallContext setChannelContexts(java.util.List<AnswerCallResponseBodyDataCallContextChannelContexts> channelContexts) {

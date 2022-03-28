@@ -433,6 +433,9 @@ public class BlindTransferResponseBody extends TeaModel {
         @NameInMap("CallContext")
         public BlindTransferResponseBodyDataCallContext callContext;
 
+        @NameInMap("ContextId")
+        public Long contextId;
+
         @NameInMap("UserContext")
         public BlindTransferResponseBodyDataUserContext userContext;
 
@@ -447,6 +450,14 @@ public class BlindTransferResponseBody extends TeaModel {
         }
         public BlindTransferResponseBodyDataCallContext getCallContext() {
             return this.callContext;
+        }
+
+        public BlindTransferResponseBodyData setContextId(Long contextId) {
+            this.contextId = contextId;
+            return this;
+        }
+        public Long getContextId() {
+            return this.contextId;
         }
 
         public BlindTransferResponseBodyData setUserContext(BlindTransferResponseBodyDataUserContext userContext) {
