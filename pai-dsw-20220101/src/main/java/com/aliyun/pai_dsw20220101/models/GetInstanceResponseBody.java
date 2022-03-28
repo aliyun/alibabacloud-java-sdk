@@ -16,6 +16,10 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("AccumulatedRunningTimeInMs")
     public Long accumulatedRunningTimeInMs;
 
+    // 状态码
+    @NameInMap("Code")
+    public String code;
+
     // 数据集集合
     @NameInMap("Datasets")
     public java.util.List<GetInstanceResponseBodyDatasets> datasets;
@@ -35,6 +39,10 @@ public class GetInstanceResponseBody extends TeaModel {
     // 实例修改时间
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
+
+    // http状态码
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     // 镜像Id
     @NameInMap("ImageId")
@@ -72,6 +80,10 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("LatestSnapshot")
     public GetInstanceResponseBodyLatestSnapshot latestSnapshot;
 
+    // 说明
+    @NameInMap("Message")
+    public String message;
+
     // 支付类型
     @NameInMap("PaymentType")
     public String paymentType;
@@ -92,6 +104,10 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    // 成功标志
+    @NameInMap("Success")
+    public Boolean success;
+
     // 终端url
     @NameInMap("TerminalUrl")
     public String terminalUrl;
@@ -99,6 +115,10 @@ public class GetInstanceResponseBody extends TeaModel {
     // 用户Id
     @NameInMap("UserId")
     public String userId;
+
+    // 用户名称
+    @NameInMap("UserName")
+    public String userName;
 
     // user vpc配置
     @NameInMap("UserVpc")
@@ -145,6 +165,14 @@ public class GetInstanceResponseBody extends TeaModel {
         return this.accumulatedRunningTimeInMs;
     }
 
+    public GetInstanceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
     public GetInstanceResponseBody setDatasets(java.util.List<GetInstanceResponseBodyDatasets> datasets) {
         this.datasets = datasets;
         return this;
@@ -183,6 +211,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getGmtModifiedTime() {
         return this.gmtModifiedTime;
+    }
+
+    public GetInstanceResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public GetInstanceResponseBody setImageId(String imageId) {
@@ -257,6 +293,14 @@ public class GetInstanceResponseBody extends TeaModel {
         return this.latestSnapshot;
     }
 
+    public GetInstanceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public GetInstanceResponseBody setPaymentType(String paymentType) {
         this.paymentType = paymentType;
         return this;
@@ -297,6 +341,14 @@ public class GetInstanceResponseBody extends TeaModel {
         return this.status;
     }
 
+    public GetInstanceResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public GetInstanceResponseBody setTerminalUrl(String terminalUrl) {
         this.terminalUrl = terminalUrl;
         return this;
@@ -311,6 +363,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public GetInstanceResponseBody setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
     }
 
     public GetInstanceResponseBody setUserVpc(GetInstanceResponseBodyUserVpc userVpc) {
