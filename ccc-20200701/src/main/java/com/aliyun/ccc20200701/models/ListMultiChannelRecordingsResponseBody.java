@@ -83,6 +83,9 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        @NameInMap("SkillGroupId")
+        public String skillGroupId;
+
         @NameInMap("StartTime")
         public Long startTime;
 
@@ -137,6 +140,14 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         }
         public String getFileUrl() {
             return this.fileUrl;
+        }
+
+        public ListMultiChannelRecordingsResponseBodyData setSkillGroupId(String skillGroupId) {
+            this.skillGroupId = skillGroupId;
+            return this;
+        }
+        public String getSkillGroupId() {
+            return this.skillGroupId;
         }
 
         public ListMultiChannelRecordingsResponseBodyData setStartTime(Long startTime) {
