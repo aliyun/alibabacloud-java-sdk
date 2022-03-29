@@ -13,6 +13,9 @@ public class CreateNamespaceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Source")
+    public String source;
+
     @NameInMap("Uid")
     public String uid;
 
@@ -43,6 +46,14 @@ public class CreateNamespaceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateNamespaceRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public CreateNamespaceRequest setUid(String uid) {
