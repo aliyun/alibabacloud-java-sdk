@@ -807,6 +807,25 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationOPAScopeInjection extends TeaModel {
+        @NameInMap("OPAScopeInjected")
+        public Boolean OPAScopeInjected;
+
+        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationOPAScopeInjection build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationOPAScopeInjection self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationOPAScopeInjection();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationOPAScopeInjection setOPAScopeInjected(Boolean OPAScopeInjected) {
+            this.OPAScopeInjected = OPAScopeInjected;
+            return this;
+        }
+        public Boolean getOPAScopeInjected() {
+            return this.OPAScopeInjected;
+        }
+
+    }
+
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationRateLimit extends TeaModel {
         @NameInMap("EnableGlobalRateLimit")
         public Boolean enableGlobalRateLimit;
@@ -902,6 +921,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         @NameInMap("MultiBuffer")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationMultiBuffer multiBuffer;
 
+        @NameInMap("OPAScopeInjection")
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationOPAScopeInjection OPAScopeInjection;
+
         @NameInMap("RateLimit")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationRateLimit rateLimit;
 
@@ -957,6 +979,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationMultiBuffer getMultiBuffer() {
             return this.multiBuffer;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration setOPAScopeInjection(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationOPAScopeInjection OPAScopeInjection) {
+            this.OPAScopeInjection = OPAScopeInjection;
+            return this;
+        }
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationOPAScopeInjection getOPAScopeInjection() {
+            return this.OPAScopeInjection;
         }
 
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration setRateLimit(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationRateLimit rateLimit) {
