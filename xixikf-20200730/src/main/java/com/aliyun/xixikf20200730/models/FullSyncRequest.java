@@ -86,7 +86,7 @@ public class FullSyncRequest extends TeaModel {
         public String deptName;
 
         @NameInMap("DeptOrder")
-        public String deptOrder;
+        public Long deptOrder;
 
         @NameInMap("DeptType")
         public String deptType;
@@ -126,11 +126,11 @@ public class FullSyncRequest extends TeaModel {
             return this.deptName;
         }
 
-        public FullSyncRequestDepartmentInfos setDeptOrder(String deptOrder) {
+        public FullSyncRequestDepartmentInfos setDeptOrder(Long deptOrder) {
             this.deptOrder = deptOrder;
             return this;
         }
-        public String getDeptOrder() {
+        public Long getDeptOrder() {
             return this.deptOrder;
         }
 

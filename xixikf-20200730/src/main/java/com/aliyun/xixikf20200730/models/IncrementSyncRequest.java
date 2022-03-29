@@ -91,25 +91,25 @@ public class IncrementSyncRequest extends TeaModel {
         public String deptCode;
 
         @NameInMap("DeptHiding")
-        public String deptHiding;
+        public Long deptHiding;
 
         @NameInMap("DeptName")
         public String deptName;
 
         @NameInMap("DeptOrder")
-        public String deptOrder;
+        public Long deptOrder;
 
         @NameInMap("DeptType")
         public String deptType;
 
+        @NameInMap("Ext")
+        public String ext;
+
         @NameInMap("IsDelete")
-        public String isDelete;
+        public Long isDelete;
 
         @NameInMap("ParentCode")
         public String parentCode;
-
-        @NameInMap("ext")
-        public String ext;
 
         public static IncrementSyncRequestDepartmentInfos build(java.util.Map<String, ?> map) throws Exception {
             IncrementSyncRequestDepartmentInfos self = new IncrementSyncRequestDepartmentInfos();
@@ -124,11 +124,11 @@ public class IncrementSyncRequest extends TeaModel {
             return this.deptCode;
         }
 
-        public IncrementSyncRequestDepartmentInfos setDeptHiding(String deptHiding) {
+        public IncrementSyncRequestDepartmentInfos setDeptHiding(Long deptHiding) {
             this.deptHiding = deptHiding;
             return this;
         }
-        public String getDeptHiding() {
+        public Long getDeptHiding() {
             return this.deptHiding;
         }
 
@@ -140,11 +140,11 @@ public class IncrementSyncRequest extends TeaModel {
             return this.deptName;
         }
 
-        public IncrementSyncRequestDepartmentInfos setDeptOrder(String deptOrder) {
+        public IncrementSyncRequestDepartmentInfos setDeptOrder(Long deptOrder) {
             this.deptOrder = deptOrder;
             return this;
         }
-        public String getDeptOrder() {
+        public Long getDeptOrder() {
             return this.deptOrder;
         }
 
@@ -156,11 +156,19 @@ public class IncrementSyncRequest extends TeaModel {
             return this.deptType;
         }
 
-        public IncrementSyncRequestDepartmentInfos setIsDelete(String isDelete) {
+        public IncrementSyncRequestDepartmentInfos setExt(String ext) {
+            this.ext = ext;
+            return this;
+        }
+        public String getExt() {
+            return this.ext;
+        }
+
+        public IncrementSyncRequestDepartmentInfos setIsDelete(Long isDelete) {
             this.isDelete = isDelete;
             return this;
         }
-        public String getIsDelete() {
+        public Long getIsDelete() {
             return this.isDelete;
         }
 
@@ -172,14 +180,6 @@ public class IncrementSyncRequest extends TeaModel {
             return this.parentCode;
         }
 
-        public IncrementSyncRequestDepartmentInfos setExt(String ext) {
-            this.ext = ext;
-            return this;
-        }
-        public String getExt() {
-            return this.ext;
-        }
-
     }
 
     public static class IncrementSyncRequestRoleInfos extends TeaModel {
@@ -187,7 +187,7 @@ public class IncrementSyncRequest extends TeaModel {
         public String groupId;
 
         @NameInMap("IsDelete")
-        public String isDelete;
+        public Long isDelete;
 
         @NameInMap("RoleDesc")
         public String roleDesc;
@@ -211,11 +211,11 @@ public class IncrementSyncRequest extends TeaModel {
             return this.groupId;
         }
 
-        public IncrementSyncRequestRoleInfos setIsDelete(String isDelete) {
+        public IncrementSyncRequestRoleInfos setIsDelete(Long isDelete) {
             this.isDelete = isDelete;
             return this;
         }
-        public String getIsDelete() {
+        public Long getIsDelete() {
             return this.isDelete;
         }
 
