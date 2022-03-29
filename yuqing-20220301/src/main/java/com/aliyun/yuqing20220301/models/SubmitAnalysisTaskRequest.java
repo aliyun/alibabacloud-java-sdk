@@ -11,6 +11,9 @@ public class SubmitAnalysisTaskRequest extends TeaModel {
     @NameInMap("searchCondition")
     public SearchCondition searchCondition;
 
+    @NameInMap("teamHashId")
+    public String teamHashId;
+
     public static SubmitAnalysisTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitAnalysisTaskRequest self = new SubmitAnalysisTaskRequest();
         return TeaModel.build(map, self);
@@ -30,6 +33,14 @@ public class SubmitAnalysisTaskRequest extends TeaModel {
     }
     public SearchCondition getSearchCondition() {
         return this.searchCondition;
+    }
+
+    public SubmitAnalysisTaskRequest setTeamHashId(String teamHashId) {
+        this.teamHashId = teamHashId;
+        return this;
+    }
+    public String getTeamHashId() {
+        return this.teamHashId;
     }
 
 }

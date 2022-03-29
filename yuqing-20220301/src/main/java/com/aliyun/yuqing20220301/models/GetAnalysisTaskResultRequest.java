@@ -5,22 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetAnalysisTaskResultRequest extends TeaModel {
     @NameInMap("analysisId")
-    public String analysisId;
+    public Long analysisId;
 
     // A short description of struct
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("teamHashId")
+    public String teamHashId;
 
     public static GetAnalysisTaskResultRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAnalysisTaskResultRequest self = new GetAnalysisTaskResultRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetAnalysisTaskResultRequest setAnalysisId(String analysisId) {
+    public GetAnalysisTaskResultRequest setAnalysisId(Long analysisId) {
         this.analysisId = analysisId;
         return this;
     }
-    public String getAnalysisId() {
+    public Long getAnalysisId() {
         return this.analysisId;
     }
 
@@ -30,6 +33,14 @@ public class GetAnalysisTaskResultRequest extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetAnalysisTaskResultRequest setTeamHashId(String teamHashId) {
+        this.teamHashId = teamHashId;
+        return this;
+    }
+    public String getTeamHashId() {
+        return this.teamHashId;
     }
 
 }

@@ -136,6 +136,10 @@ public class SearchCondition extends TeaModel {
     @NameInMap("readsLevel")
     public Integer readsLevel;
 
+    // 相关性等级，1：低，2：中，3：高，4：低级别以上
+    @NameInMap("relevanceLevel")
+    public Integer relevanceLevel;
+
     // 转发级别，1：100转发以内，2：1k以内，3：1w以内，4：10w以内，5，10w+
     @NameInMap("repostLevel")
     public Integer repostLevel;
@@ -427,6 +431,14 @@ public class SearchCondition extends TeaModel {
     }
     public Integer getReadsLevel() {
         return this.readsLevel;
+    }
+
+    public SearchCondition setRelevanceLevel(Integer relevanceLevel) {
+        this.relevanceLevel = relevanceLevel;
+        return this;
+    }
+    public Integer getRelevanceLevel() {
+        return this.relevanceLevel;
     }
 
     public SearchCondition setRepostLevel(Integer repostLevel) {

@@ -1,3 +1,6 @@
+2022-03-29 Version: 1.0.8
+- Update Analysis API.
+
 2022-03-29 Version: 1.0.7
 - Add Analysis API.
 
