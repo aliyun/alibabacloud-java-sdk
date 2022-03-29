@@ -168,6 +168,36 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class ListFunctionInstancesResponseBodyResultUsageParameters extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListFunctionInstancesResponseBodyResultUsageParameters build(java.util.Map<String, ?> map) throws Exception {
+            ListFunctionInstancesResponseBodyResultUsageParameters self = new ListFunctionInstancesResponseBodyResultUsageParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public ListFunctionInstancesResponseBodyResultUsageParameters setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListFunctionInstancesResponseBodyResultUsageParameters setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListFunctionInstancesResponseBodyResult extends TeaModel {
         @NameInMap("Belongs")
         public ListFunctionInstancesResponseBodyResultBelongs belongs;
@@ -204,6 +234,9 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("UsageParameters")
+        public java.util.List<ListFunctionInstancesResponseBodyResultUsageParameters> usageParameters;
 
         @NameInMap("VersionId")
         public Long versionId;
@@ -307,6 +340,14 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListFunctionInstancesResponseBodyResult setUsageParameters(java.util.List<ListFunctionInstancesResponseBodyResultUsageParameters> usageParameters) {
+            this.usageParameters = usageParameters;
+            return this;
+        }
+        public java.util.List<ListFunctionInstancesResponseBodyResultUsageParameters> getUsageParameters() {
+            return this.usageParameters;
         }
 
         public ListFunctionInstancesResponseBodyResult setVersionId(Long versionId) {

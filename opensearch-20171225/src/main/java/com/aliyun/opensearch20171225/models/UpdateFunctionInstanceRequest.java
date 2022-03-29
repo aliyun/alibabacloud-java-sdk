@@ -16,6 +16,10 @@ public class UpdateFunctionInstanceRequest extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    // 使用参数
+    @NameInMap("usageParameters")
+    public java.util.List<UpdateFunctionInstanceRequestUsageParameters> usageParameters;
+
     public static UpdateFunctionInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFunctionInstanceRequest self = new UpdateFunctionInstanceRequest();
         return TeaModel.build(map, self);
@@ -45,6 +49,14 @@ public class UpdateFunctionInstanceRequest extends TeaModel {
         return this.description;
     }
 
+    public UpdateFunctionInstanceRequest setUsageParameters(java.util.List<UpdateFunctionInstanceRequestUsageParameters> usageParameters) {
+        this.usageParameters = usageParameters;
+        return this;
+    }
+    public java.util.List<UpdateFunctionInstanceRequestUsageParameters> getUsageParameters() {
+        return this.usageParameters;
+    }
+
     public static class UpdateFunctionInstanceRequestCreateParameters extends TeaModel {
         // 参数名称
         @NameInMap("name")
@@ -68,6 +80,36 @@ public class UpdateFunctionInstanceRequest extends TeaModel {
         }
 
         public UpdateFunctionInstanceRequestCreateParameters setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class UpdateFunctionInstanceRequestUsageParameters extends TeaModel {
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("value")
+        public String value;
+
+        public static UpdateFunctionInstanceRequestUsageParameters build(java.util.Map<String, ?> map) throws Exception {
+            UpdateFunctionInstanceRequestUsageParameters self = new UpdateFunctionInstanceRequestUsageParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateFunctionInstanceRequestUsageParameters setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public UpdateFunctionInstanceRequestUsageParameters setValue(String value) {
             this.value = value;
             return this;
         }

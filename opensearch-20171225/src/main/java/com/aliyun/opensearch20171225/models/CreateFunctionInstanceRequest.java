@@ -28,6 +28,10 @@ public class CreateFunctionInstanceRequest extends TeaModel {
     @NameInMap("modelType")
     public String modelType;
 
+    // 使用参数
+    @NameInMap("usageParameters")
+    public java.util.List<CreateFunctionInstanceRequestUsageParameters> usageParameters;
+
     public static CreateFunctionInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFunctionInstanceRequest self = new CreateFunctionInstanceRequest();
         return TeaModel.build(map, self);
@@ -81,6 +85,14 @@ public class CreateFunctionInstanceRequest extends TeaModel {
         return this.modelType;
     }
 
+    public CreateFunctionInstanceRequest setUsageParameters(java.util.List<CreateFunctionInstanceRequestUsageParameters> usageParameters) {
+        this.usageParameters = usageParameters;
+        return this;
+    }
+    public java.util.List<CreateFunctionInstanceRequestUsageParameters> getUsageParameters() {
+        return this.usageParameters;
+    }
+
     public static class CreateFunctionInstanceRequestCreateParameters extends TeaModel {
         // 参数名称
         @NameInMap("name")
@@ -104,6 +116,38 @@ public class CreateFunctionInstanceRequest extends TeaModel {
         }
 
         public CreateFunctionInstanceRequestCreateParameters setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateFunctionInstanceRequestUsageParameters extends TeaModel {
+        // 参数名称
+        @NameInMap("name")
+        public String name;
+
+        // 参数值
+        @NameInMap("value")
+        public String value;
+
+        public static CreateFunctionInstanceRequestUsageParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateFunctionInstanceRequestUsageParameters self = new CreateFunctionInstanceRequestUsageParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateFunctionInstanceRequestUsageParameters setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateFunctionInstanceRequestUsageParameters setValue(String value) {
             this.value = value;
             return this;
         }

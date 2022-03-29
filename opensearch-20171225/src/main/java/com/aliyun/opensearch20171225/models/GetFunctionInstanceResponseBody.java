@@ -187,6 +187,36 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class GetFunctionInstanceResponseBodyResultUsageParameters extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetFunctionInstanceResponseBodyResultUsageParameters build(java.util.Map<String, ?> map) throws Exception {
+            GetFunctionInstanceResponseBodyResultUsageParameters self = new GetFunctionInstanceResponseBodyResultUsageParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFunctionInstanceResponseBodyResultUsageParameters setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetFunctionInstanceResponseBodyResultUsageParameters setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetFunctionInstanceResponseBodyResult extends TeaModel {
         @NameInMap("Belongs")
         public GetFunctionInstanceResponseBodyResultBelongs belongs;
@@ -226,6 +256,9 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
 
         @NameInMap("Task")
         public GetFunctionInstanceResponseBodyResultTask task;
+
+        @NameInMap("UsageParameters")
+        public java.util.List<GetFunctionInstanceResponseBodyResultUsageParameters> usageParameters;
 
         @NameInMap("VersionId")
         public Long versionId;
@@ -337,6 +370,14 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
         }
         public GetFunctionInstanceResponseBodyResultTask getTask() {
             return this.task;
+        }
+
+        public GetFunctionInstanceResponseBodyResult setUsageParameters(java.util.List<GetFunctionInstanceResponseBodyResultUsageParameters> usageParameters) {
+            this.usageParameters = usageParameters;
+            return this;
+        }
+        public java.util.List<GetFunctionInstanceResponseBodyResultUsageParameters> getUsageParameters() {
+            return this.usageParameters;
         }
 
         public GetFunctionInstanceResponseBodyResult setVersionId(Long versionId) {
