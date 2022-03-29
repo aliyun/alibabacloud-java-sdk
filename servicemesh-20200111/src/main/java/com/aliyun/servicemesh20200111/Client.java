@@ -135,6 +135,163 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createASMGatewayWithOptions(request, runtime);
     }
 
+    public CreateGatewaySecretResponse createGatewaySecretWithOptions(CreateGatewaySecretRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cert)) {
+            body.put("Cert", request.cert);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.istioGatewayName)) {
+            body.put("IstioGatewayName", request.istioGatewayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.key)) {
+            body.put("Key", request.key);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secretName)) {
+            body.put("SecretName", request.secretName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateGatewaySecret"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGatewaySecretResponse());
+    }
+
+    public CreateGatewaySecretResponse createGatewaySecret(CreateGatewaySecretRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createGatewaySecretWithOptions(request, runtime);
+    }
+
+    public CreateIstioGatewayDomainsResponse createIstioGatewayDomainsWithOptions(CreateIstioGatewayDomainsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credential)) {
+            body.put("Credential", request.credential);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forceHttps)) {
+            body.put("ForceHttps", request.forceHttps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hosts)) {
+            body.put("Hosts", request.hosts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.istioGatewayName)) {
+            body.put("IstioGatewayName", request.istioGatewayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.number)) {
+            body.put("Number", request.number);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.portName)) {
+            body.put("PortName", request.portName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            body.put("Protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateIstioGatewayDomains"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIstioGatewayDomainsResponse());
+    }
+
+    public CreateIstioGatewayDomainsResponse createIstioGatewayDomains(CreateIstioGatewayDomainsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createIstioGatewayDomainsWithOptions(request, runtime);
+    }
+
+    public CreateIstioGatewayRoutesResponse createIstioGatewayRoutesWithOptions(CreateIstioGatewayRoutesRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateIstioGatewayRoutesShrinkRequest request = new CreateIstioGatewayRoutesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.gatewayRoute))) {
+            request.gatewayRouteShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.gatewayRoute), "GatewayRoute", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayRouteShrink)) {
+            body.put("GatewayRoute", request.gatewayRouteShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.istioGatewayName)) {
+            body.put("IstioGatewayName", request.istioGatewayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateIstioGatewayRoutes"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIstioGatewayRoutesResponse());
+    }
+
+    public CreateIstioGatewayRoutesResponse createIstioGatewayRoutes(CreateIstioGatewayRoutesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createIstioGatewayRoutesWithOptions(request, runtime);
+    }
+
     public CreateServiceMeshResponse createServiceMeshWithOptions(CreateServiceMeshRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -422,6 +579,121 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateServiceMeshResponse createServiceMesh(CreateServiceMeshRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createServiceMeshWithOptions(request, runtime);
+    }
+
+    public DeleteGatewayRouteResponse deleteGatewayRouteWithOptions(DeleteGatewayRouteRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.istioGatewayName)) {
+            body.put("IstioGatewayName", request.istioGatewayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeName)) {
+            body.put("RouteName", request.routeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteGatewayRoute"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteGatewayRouteResponse());
+    }
+
+    public DeleteGatewayRouteResponse deleteGatewayRoute(DeleteGatewayRouteRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteGatewayRouteWithOptions(request, runtime);
+    }
+
+    public DeleteGatewaySecretResponse deleteGatewaySecretWithOptions(DeleteGatewaySecretRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.istioGatewayName)) {
+            body.put("IstioGatewayName", request.istioGatewayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secretName)) {
+            body.put("SecretName", request.secretName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteGatewaySecret"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteGatewaySecretResponse());
+    }
+
+    public DeleteGatewaySecretResponse deleteGatewaySecret(DeleteGatewaySecretRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteGatewaySecretWithOptions(request, runtime);
+    }
+
+    public DeleteIstioGatewayDomainsResponse deleteIstioGatewayDomainsWithOptions(DeleteIstioGatewayDomainsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hosts)) {
+            body.put("Hosts", request.hosts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.istioGatewayName)) {
+            body.put("IstioGatewayName", request.istioGatewayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.portName)) {
+            body.put("PortName", request.portName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteIstioGatewayDomains"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIstioGatewayDomainsResponse());
+    }
+
+    public DeleteIstioGatewayDomainsResponse deleteIstioGatewayDomains(DeleteIstioGatewayDomainsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteIstioGatewayDomainsWithOptions(request, runtime);
     }
 
     public DeleteServiceMeshResponse deleteServiceMeshWithOptions(DeleteServiceMeshRequest request, RuntimeOptions runtime) throws Exception {
@@ -717,6 +989,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeCrTemplatesWithOptions(request, runtime);
     }
 
+    public DescribeGatewaySecretDetailsResponse describeGatewaySecretDetailsWithOptions(DescribeGatewaySecretDetailsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.istioGatewayName)) {
+            body.put("IstioGatewayName", request.istioGatewayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeGatewaySecretDetails"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeGatewaySecretDetailsResponse());
+    }
+
+    public DescribeGatewaySecretDetailsResponse describeGatewaySecretDetails(DescribeGatewaySecretDetailsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeGatewaySecretDetailsWithOptions(request, runtime);
+    }
+
     public DescribeGuestClusterAccessLogDashboardsResponse describeGuestClusterAccessLogDashboardsWithOptions(DescribeGuestClusterAccessLogDashboardsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -878,6 +1183,154 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeIngressGatewaysWithOptions(request, runtime);
     }
 
+    public DescribeIstioGatewayDomainsResponse describeIstioGatewayDomainsWithOptions(DescribeIstioGatewayDomainsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.istioGatewayName)) {
+            body.put("IstioGatewayName", request.istioGatewayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeIstioGatewayDomains"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeIstioGatewayDomainsResponse());
+    }
+
+    public DescribeIstioGatewayDomainsResponse describeIstioGatewayDomains(DescribeIstioGatewayDomainsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeIstioGatewayDomainsWithOptions(request, runtime);
+    }
+
+    public DescribeIstioGatewayRouteDetailResponse describeIstioGatewayRouteDetailWithOptions(DescribeIstioGatewayRouteDetailRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.istioGatewayName)) {
+            body.put("IstioGatewayName", request.istioGatewayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeName)) {
+            body.put("RouteName", request.routeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeIstioGatewayRouteDetail"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeIstioGatewayRouteDetailResponse());
+    }
+
+    public DescribeIstioGatewayRouteDetailResponse describeIstioGatewayRouteDetail(DescribeIstioGatewayRouteDetailRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeIstioGatewayRouteDetailWithOptions(request, runtime);
+    }
+
+    public DescribeIstioGatewayRoutesResponse describeIstioGatewayRoutesWithOptions(DescribeIstioGatewayRoutesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.istioGatewayName)) {
+            body.put("IstioGatewayName", request.istioGatewayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeIstioGatewayRoutes"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeIstioGatewayRoutesResponse());
+    }
+
+    public DescribeIstioGatewayRoutesResponse describeIstioGatewayRoutes(DescribeIstioGatewayRoutesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeIstioGatewayRoutesWithOptions(request, runtime);
+    }
+
+    public DescribeManagedServicesResponse describeManagedServicesWithOptions(DescribeManagedServicesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.guestCluster)) {
+            body.put("GuestCluster", request.guestCluster);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.marker)) {
+            body.put("Marker", request.marker);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeManagedServices"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeManagedServicesResponse());
+    }
+
+    public DescribeManagedServicesResponse describeManagedServices(DescribeManagedServicesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeManagedServicesWithOptions(request, runtime);
+    }
+
     public DescribeNamespaceScopeSidecarConfigResponse describeNamespaceScopeSidecarConfigWithOptions(DescribeNamespaceScopeSidecarConfigRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -971,6 +1424,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeReusableSlbResponse describeReusableSlb(DescribeReusableSlbRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeReusableSlbWithOptions(request, runtime);
+    }
+
+    public DescribeServiceAccessDetailResponse describeServiceAccessDetailWithOptions(DescribeServiceAccessDetailRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.guestCluster)) {
+            body.put("GuestCluster", request.guestCluster);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
+            body.put("ServiceName", request.serviceName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeServiceAccessDetail"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeServiceAccessDetailResponse());
+    }
+
+    public DescribeServiceAccessDetailResponse describeServiceAccessDetail(DescribeServiceAccessDetailRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeServiceAccessDetailWithOptions(request, runtime);
+    }
+
+    public DescribeServiceManagedResourceResponse describeServiceManagedResourceWithOptions(DescribeServiceManagedResourceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.guestCluster)) {
+            body.put("GuestCluster", request.guestCluster);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
+            body.put("ServiceName", request.serviceName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeServiceManagedResource"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeServiceManagedResourceResponse());
+    }
+
+    public DescribeServiceManagedResourceResponse describeServiceManagedResource(DescribeServiceManagedResourceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeServiceManagedResourceWithOptions(request, runtime);
     }
 
     public DescribeServiceMeshAdditionalStatusResponse describeServiceMeshAdditionalStatusWithOptions(DescribeServiceMeshAdditionalStatusRequest request, RuntimeOptions runtime) throws Exception {
@@ -1153,6 +1688,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeServiceMeshProxyStatusResponse describeServiceMeshProxyStatus(DescribeServiceMeshProxyStatusRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeServiceMeshProxyStatusWithOptions(request, runtime);
+    }
+
+    public DescribeServiceMeshServiceLabelResponse describeServiceMeshServiceLabelWithOptions(DescribeServiceMeshServiceLabelRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceNames)) {
+            body.put("ServiceNames", request.serviceNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceNamespaces)) {
+            body.put("ServiceNamespaces", request.serviceNamespaces);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeServiceMeshServiceLabel"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeServiceMeshServiceLabelResponse());
+    }
+
+    public DescribeServiceMeshServiceLabelResponse describeServiceMeshServiceLabel(DescribeServiceMeshServiceLabelRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeServiceMeshServiceLabelWithOptions(request, runtime);
     }
 
     public DescribeServiceMeshUpgradeStatusResponse describeServiceMeshUpgradeStatusWithOptions(DescribeServiceMeshUpgradeStatusRequest request, RuntimeOptions runtime) throws Exception {
@@ -1364,6 +1936,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeVSwitchesWithOptions(request, runtime);
     }
 
+    public DescribeVersionManagementResponse describeVersionManagementWithOptions(DescribeVersionManagementRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.guestCluster)) {
+            body.put("GuestCluster", request.guestCluster);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
+            body.put("ServiceName", request.serviceName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVersionManagement"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVersionManagementResponse());
+    }
+
+    public DescribeVersionManagementResponse describeVersionManagement(DescribeVersionManagementRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeVersionManagementWithOptions(request, runtime);
+    }
+
     public DescribeVersionsResponse describeVersionsWithOptions(RuntimeOptions runtime) throws Exception {
         OpenApiRequest req = new OpenApiRequest();
         Params params = Params.build(TeaConverter.buildMap(
@@ -1565,6 +2178,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetVmMetaResponse getVmMeta(GetVmMetaRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getVmMetaWithOptions(request, runtime);
+    }
+
+    public ListDashboardResponse listDashboardWithOptions(ListDashboardRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.k8sClusterId)) {
+            query.put("K8sClusterId", request.k8sClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            query.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDashboard"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDashboardResponse());
+    }
+
+    public ListDashboardResponse listDashboard(ListDashboardRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listDashboardWithOptions(request, runtime);
     }
 
     public ModifyServiceMeshNameResponse modifyServiceMeshNameWithOptions(ModifyServiceMeshNameRequest request, RuntimeOptions runtime) throws Exception {
@@ -1810,6 +2456,169 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateASMGatewayImportedServicesWithOptions(request, runtime);
     }
 
+    public UpdateInjectedProxyConfigResponse updateInjectedProxyConfigWithOptions(UpdateInjectedProxyConfigRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deploymentNames)) {
+            body.put("DeploymentNames", request.deploymentNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.guestCluster)) {
+            body.put("GuestCluster", request.guestCluster);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limitCPUs)) {
+            body.put("LimitCPUs", request.limitCPUs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limitMemories)) {
+            body.put("LimitMemories", request.limitMemories);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestCPUs)) {
+            body.put("RequestCPUs", request.requestCPUs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestMemories)) {
+            body.put("RequestMemories", request.requestMemories);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateInjectedProxyConfig"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInjectedProxyConfigResponse());
+    }
+
+    public UpdateInjectedProxyConfigResponse updateInjectedProxyConfig(UpdateInjectedProxyConfigRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateInjectedProxyConfigWithOptions(request, runtime);
+    }
+
+    public UpdateIstioGatewayRoutesResponse updateIstioGatewayRoutesWithOptions(UpdateIstioGatewayRoutesRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateIstioGatewayRoutesShrinkRequest request = new UpdateIstioGatewayRoutesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.gatewayRoute))) {
+            request.gatewayRouteShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.gatewayRoute), "GatewayRoute", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayRouteShrink)) {
+            body.put("GatewayRoute", request.gatewayRouteShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.istioGatewayName)) {
+            body.put("IstioGatewayName", request.istioGatewayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateIstioGatewayRoutes"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIstioGatewayRoutesResponse());
+    }
+
+    public UpdateIstioGatewayRoutesResponse updateIstioGatewayRoutes(UpdateIstioGatewayRoutesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateIstioGatewayRoutesWithOptions(request, runtime);
+    }
+
+    public UpdateIstioRouteAdditionalStatusResponse updateIstioRouteAdditionalStatusWithOptions(UpdateIstioRouteAdditionalStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            query.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeName)) {
+            query.put("RouteName", request.routeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.istioGatewayName)) {
+            body.put("IstioGatewayName", request.istioGatewayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateIstioRouteAdditionalStatus"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIstioRouteAdditionalStatusResponse());
+    }
+
+    public UpdateIstioRouteAdditionalStatusResponse updateIstioRouteAdditionalStatus(UpdateIstioRouteAdditionalStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateIstioRouteAdditionalStatusWithOptions(request, runtime);
+    }
+
     public UpdateMeshFeatureResponse updateMeshFeatureWithOptions(UpdateMeshFeatureRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1977,6 +2786,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("MysqlFilterEnabled", request.mysqlFilterEnabled);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.OPAInjectorCPULimit)) {
+            body.put("OPAInjectorCPULimit", request.OPAInjectorCPULimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.OPAInjectorCPURequirement)) {
+            body.put("OPAInjectorCPURequirement", request.OPAInjectorCPURequirement);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.OPAInjectorMemoryLimit)) {
+            body.put("OPAInjectorMemoryLimit", request.OPAInjectorMemoryLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.OPAInjectorMemoryRequirement)) {
+            body.put("OPAInjectorMemoryRequirement", request.OPAInjectorMemoryRequirement);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.OPALimitCPU)) {
             body.put("OPALimitCPU", request.OPALimitCPU);
         }
@@ -1995,6 +2820,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.OPARequestMemory)) {
             body.put("OPARequestMemory", request.OPARequestMemory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.OPAScopeInjected)) {
+            body.put("OPAScopeInjected", request.OPAScopeInjected);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.opaEnabled)) {
@@ -2218,6 +3047,108 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateNamespaceScopeSidecarConfigResponse updateNamespaceScopeSidecarConfig(UpdateNamespaceScopeSidecarConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateNamespaceScopeSidecarConfigWithOptions(request, runtime);
+    }
+
+    public UpdateServiceSidecarInjectResponse updateServiceSidecarInjectWithOptions(UpdateServiceSidecarInjectRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.guestCluster)) {
+            body.put("GuestCluster", request.guestCluster);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inject)) {
+            body.put("Inject", request.inject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limitCPU)) {
+            body.put("LimitCPU", request.limitCPU);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limitMemory)) {
+            body.put("LimitMemory", request.limitMemory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestCPU)) {
+            body.put("RequestCPU", request.requestCPU);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestMemory)) {
+            body.put("RequestMemory", request.requestMemory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
+            body.put("ServiceName", request.serviceName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateServiceSidecarInject"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceSidecarInjectResponse());
+    }
+
+    public UpdateServiceSidecarInjectResponse updateServiceSidecarInject(UpdateServiceSidecarInjectRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateServiceSidecarInjectWithOptions(request, runtime);
+    }
+
+    public UpdateUnlabeledServiceManagedResourceResponse updateUnlabeledServiceManagedResourceWithOptions(UpdateUnlabeledServiceManagedResourceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.guestCluster)) {
+            body.put("GuestCluster", request.guestCluster);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
+            body.put("ServiceName", request.serviceName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateUnlabeledServiceManagedResource"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateUnlabeledServiceManagedResourceResponse());
+    }
+
+    public UpdateUnlabeledServiceManagedResourceResponse updateUnlabeledServiceManagedResource(UpdateUnlabeledServiceManagedResourceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateUnlabeledServiceManagedResourceWithOptions(request, runtime);
     }
 
     public UpgradeMeshEditionPartiallyResponse upgradeMeshEditionPartiallyWithOptions(UpgradeMeshEditionPartiallyRequest request, RuntimeOptions runtime) throws Exception {

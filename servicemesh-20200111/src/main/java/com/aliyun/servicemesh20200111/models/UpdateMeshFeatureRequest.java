@@ -127,6 +127,18 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("MysqlFilterEnabled")
     public Boolean mysqlFilterEnabled;
 
+    @NameInMap("OPAInjectorCPULimit")
+    public String OPAInjectorCPULimit;
+
+    @NameInMap("OPAInjectorCPURequirement")
+    public String OPAInjectorCPURequirement;
+
+    @NameInMap("OPAInjectorMemoryLimit")
+    public String OPAInjectorMemoryLimit;
+
+    @NameInMap("OPAInjectorMemoryRequirement")
+    public String OPAInjectorMemoryRequirement;
+
     @NameInMap("OPALimitCPU")
     public String OPALimitCPU;
 
@@ -141,6 +153,9 @@ public class UpdateMeshFeatureRequest extends TeaModel {
 
     @NameInMap("OPARequestMemory")
     public String OPARequestMemory;
+
+    @NameInMap("OPAScopeInjected")
+    public Boolean OPAScopeInjected;
 
     @NameInMap("OpaEnabled")
     public Boolean opaEnabled;
@@ -550,6 +565,38 @@ public class UpdateMeshFeatureRequest extends TeaModel {
         return this.mysqlFilterEnabled;
     }
 
+    public UpdateMeshFeatureRequest setOPAInjectorCPULimit(String OPAInjectorCPULimit) {
+        this.OPAInjectorCPULimit = OPAInjectorCPULimit;
+        return this;
+    }
+    public String getOPAInjectorCPULimit() {
+        return this.OPAInjectorCPULimit;
+    }
+
+    public UpdateMeshFeatureRequest setOPAInjectorCPURequirement(String OPAInjectorCPURequirement) {
+        this.OPAInjectorCPURequirement = OPAInjectorCPURequirement;
+        return this;
+    }
+    public String getOPAInjectorCPURequirement() {
+        return this.OPAInjectorCPURequirement;
+    }
+
+    public UpdateMeshFeatureRequest setOPAInjectorMemoryLimit(String OPAInjectorMemoryLimit) {
+        this.OPAInjectorMemoryLimit = OPAInjectorMemoryLimit;
+        return this;
+    }
+    public String getOPAInjectorMemoryLimit() {
+        return this.OPAInjectorMemoryLimit;
+    }
+
+    public UpdateMeshFeatureRequest setOPAInjectorMemoryRequirement(String OPAInjectorMemoryRequirement) {
+        this.OPAInjectorMemoryRequirement = OPAInjectorMemoryRequirement;
+        return this;
+    }
+    public String getOPAInjectorMemoryRequirement() {
+        return this.OPAInjectorMemoryRequirement;
+    }
+
     public UpdateMeshFeatureRequest setOPALimitCPU(String OPALimitCPU) {
         this.OPALimitCPU = OPALimitCPU;
         return this;
@@ -588,6 +635,14 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public String getOPARequestMemory() {
         return this.OPARequestMemory;
+    }
+
+    public UpdateMeshFeatureRequest setOPAScopeInjected(Boolean OPAScopeInjected) {
+        this.OPAScopeInjected = OPAScopeInjected;
+        return this;
+    }
+    public Boolean getOPAScopeInjected() {
+        return this.OPAScopeInjected;
     }
 
     public UpdateMeshFeatureRequest setOpaEnabled(Boolean opaEnabled) {
