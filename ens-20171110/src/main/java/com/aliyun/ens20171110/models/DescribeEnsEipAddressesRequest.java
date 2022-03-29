@@ -18,6 +18,10 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     @NameInMap("EipAddress")
     public String eipAddress;
 
+    // ENS节点ID
+    @NameInMap("EnsRegionId")
+    public String ensRegionId;
+
     // 列表的页码，默认值为1。
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -61,6 +65,14 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     }
     public String getEipAddress() {
         return this.eipAddress;
+    }
+
+    public DescribeEnsEipAddressesRequest setEnsRegionId(String ensRegionId) {
+        this.ensRegionId = ensRegionId;
+        return this;
+    }
+    public String getEnsRegionId() {
+        return this.ensRegionId;
     }
 
     public DescribeEnsEipAddressesRequest setPageNumber(Integer pageNumber) {

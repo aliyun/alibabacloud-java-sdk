@@ -4,14 +4,13 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ExportBillDetailDataRequest extends TeaModel {
+    // 结束时间UTC格式
     @NameInMap("EndDate")
     public String endDate;
 
+    // 开始时间，UTC格式
     @NameInMap("StartDate")
     public String startDate;
-
-    @NameInMap("Version")
-    public String version;
 
     public static ExportBillDetailDataRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportBillDetailDataRequest self = new ExportBillDetailDataRequest();
@@ -32,14 +31,6 @@ public class ExportBillDetailDataRequest extends TeaModel {
     }
     public String getStartDate() {
         return this.startDate;
-    }
-
-    public ExportBillDetailDataRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

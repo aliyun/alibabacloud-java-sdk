@@ -72,6 +72,12 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("Period")
     public Long period;
 
+    // 查询云服务器ENS不同计费周期的价格。取值范围：
+    // Month（默认）：按月计费的价格单位。
+    // Day：按天计费的价格单位。
+    @NameInMap("PeriodUnit")
+    public String periodUnit;
+
     // 私网ip
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -247,6 +253,14 @@ public class RunInstancesRequest extends TeaModel {
     }
     public Long getPeriod() {
         return this.period;
+    }
+
+    public RunInstancesRequest setPeriodUnit(String periodUnit) {
+        this.periodUnit = periodUnit;
+        return this;
+    }
+    public String getPeriodUnit() {
+        return this.periodUnit;
     }
 
     public RunInstancesRequest setPrivateIpAddress(String privateIpAddress) {

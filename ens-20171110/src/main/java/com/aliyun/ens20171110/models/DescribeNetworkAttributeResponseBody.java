@@ -29,6 +29,9 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("RouterTableId")
+    public String routerTableId;
+
     @NameInMap("Status")
     public String status;
 
@@ -102,6 +105,14 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeNetworkAttributeResponseBody setRouterTableId(String routerTableId) {
+        this.routerTableId = routerTableId;
+        return this;
+    }
+    public String getRouterTableId() {
+        return this.routerTableId;
     }
 
     public DescribeNetworkAttributeResponseBody setStatus(String status) {
