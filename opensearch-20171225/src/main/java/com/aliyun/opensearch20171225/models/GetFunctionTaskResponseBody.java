@@ -3,7 +3,7 @@ package com.aliyun.opensearch20171225.models;
 
 import com.aliyun.tea.*;
 
-public class ListFunctionTasksResponseBody extends TeaModel {
+public class GetFunctionTaskResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
@@ -20,20 +20,17 @@ public class ListFunctionTasksResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Result")
-    public java.util.List<ListFunctionTasksResponseBodyResult> result;
+    public GetFunctionTaskResponseBodyResult result;
 
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
-    public static ListFunctionTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListFunctionTasksResponseBody self = new ListFunctionTasksResponseBody();
+    public static GetFunctionTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetFunctionTaskResponseBody self = new GetFunctionTaskResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListFunctionTasksResponseBody setCode(String code) {
+    public GetFunctionTaskResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -41,7 +38,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListFunctionTasksResponseBody setHttpCode(Long httpCode) {
+    public GetFunctionTaskResponseBody setHttpCode(Long httpCode) {
         this.httpCode = httpCode;
         return this;
     }
@@ -49,7 +46,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         return this.httpCode;
     }
 
-    public ListFunctionTasksResponseBody setLatency(Long latency) {
+    public GetFunctionTaskResponseBody setLatency(Long latency) {
         this.latency = latency;
         return this;
     }
@@ -57,7 +54,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         return this.latency;
     }
 
-    public ListFunctionTasksResponseBody setMessage(String message) {
+    public GetFunctionTaskResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -65,7 +62,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ListFunctionTasksResponseBody setRequestId(String requestId) {
+    public GetFunctionTaskResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -73,15 +70,15 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListFunctionTasksResponseBody setResult(java.util.List<ListFunctionTasksResponseBodyResult> result) {
+    public GetFunctionTaskResponseBody setResult(GetFunctionTaskResponseBodyResult result) {
         this.result = result;
         return this;
     }
-    public java.util.List<ListFunctionTasksResponseBodyResult> getResult() {
+    public GetFunctionTaskResponseBodyResult getResult() {
         return this.result;
     }
 
-    public ListFunctionTasksResponseBody setStatus(String status) {
+    public GetFunctionTaskResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
@@ -89,15 +86,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         return this.status;
     }
 
-    public ListFunctionTasksResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public static class ListFunctionTasksResponseBodyResult extends TeaModel {
+    public static class GetFunctionTaskResponseBodyResult extends TeaModel {
         @NameInMap("EndTime")
         public Long endTime;
 
@@ -122,12 +111,12 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        public static ListFunctionTasksResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
-            ListFunctionTasksResponseBodyResult self = new ListFunctionTasksResponseBodyResult();
+        public static GetFunctionTaskResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
+            GetFunctionTaskResponseBodyResult self = new GetFunctionTaskResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public ListFunctionTasksResponseBodyResult setEndTime(Long endTime) {
+        public GetFunctionTaskResponseBodyResult setEndTime(Long endTime) {
             this.endTime = endTime;
             return this;
         }
@@ -135,7 +124,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public ListFunctionTasksResponseBodyResult setExtendInfo(String extendInfo) {
+        public GetFunctionTaskResponseBodyResult setExtendInfo(String extendInfo) {
             this.extendInfo = extendInfo;
             return this;
         }
@@ -143,7 +132,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             return this.extendInfo;
         }
 
-        public ListFunctionTasksResponseBodyResult setFunctionName(String functionName) {
+        public GetFunctionTaskResponseBodyResult setFunctionName(String functionName) {
             this.functionName = functionName;
             return this;
         }
@@ -151,7 +140,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             return this.functionName;
         }
 
-        public ListFunctionTasksResponseBodyResult setGeneration(String generation) {
+        public GetFunctionTaskResponseBodyResult setGeneration(String generation) {
             this.generation = generation;
             return this;
         }
@@ -159,7 +148,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             return this.generation;
         }
 
-        public ListFunctionTasksResponseBodyResult setProgress(Long progress) {
+        public GetFunctionTaskResponseBodyResult setProgress(Long progress) {
             this.progress = progress;
             return this;
         }
@@ -167,7 +156,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             return this.progress;
         }
 
-        public ListFunctionTasksResponseBodyResult setRunId(String runId) {
+        public GetFunctionTaskResponseBodyResult setRunId(String runId) {
             this.runId = runId;
             return this;
         }
@@ -175,7 +164,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             return this.runId;
         }
 
-        public ListFunctionTasksResponseBodyResult setStartTime(Long startTime) {
+        public GetFunctionTaskResponseBodyResult setStartTime(Long startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -183,7 +172,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public ListFunctionTasksResponseBodyResult setStatus(String status) {
+        public GetFunctionTaskResponseBodyResult setStatus(String status) {
             this.status = status;
             return this;
         }

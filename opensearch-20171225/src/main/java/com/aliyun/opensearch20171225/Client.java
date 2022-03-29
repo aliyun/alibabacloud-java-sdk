@@ -337,6 +337,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("modelType", request.modelType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.usageParameters)) {
+            body.put("usageParameters", request.usageParameters);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -704,6 +708,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFunctionInstanceResponse());
+    }
+
+    public DeleteFunctionTaskResponse deleteFunctionTask(String appGroupIdentity, String functionName, String instanceName, String generation) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteFunctionTaskWithOptions(appGroupIdentity, functionName, instanceName, generation, headers, runtime);
+    }
+
+    public DeleteFunctionTaskResponse deleteFunctionTaskWithOptions(String appGroupIdentity, String functionName, String instanceName, String generation, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        appGroupIdentity = com.aliyun.openapiutil.Client.getEncodeParam(appGroupIdentity);
+        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
+        instanceName = com.aliyun.openapiutil.Client.getEncodeParam(instanceName);
+        generation = com.aliyun.openapiutil.Client.getEncodeParam(generation);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFunctionTask"),
+            new TeaPair("version", "2017-12-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v4/openapi/app-groups/" + appGroupIdentity + "/functions/" + functionName + "/instances/" + instanceName + "/tasks/" + generation + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFunctionTaskResponse());
     }
 
     public DeleteModelResponse deleteModel(String appGroupIdentity, String modelName) throws Exception {
@@ -1535,6 +1567,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionInstanceResponse());
+    }
+
+    public GetFunctionTaskResponse getFunctionTask(String appGroupIdentity, String functionName, String instanceName, String generation) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getFunctionTaskWithOptions(appGroupIdentity, functionName, instanceName, generation, headers, runtime);
+    }
+
+    public GetFunctionTaskResponse getFunctionTaskWithOptions(String appGroupIdentity, String functionName, String instanceName, String generation, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        appGroupIdentity = com.aliyun.openapiutil.Client.getEncodeParam(appGroupIdentity);
+        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
+        instanceName = com.aliyun.openapiutil.Client.getEncodeParam(instanceName);
+        generation = com.aliyun.openapiutil.Client.getEncodeParam(generation);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFunctionTask"),
+            new TeaPair("version", "2017-12-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v4/openapi/app-groups/" + appGroupIdentity + "/functions/" + functionName + "/instances/" + instanceName + "/tasks/" + generation + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionTaskResponse());
     }
 
     public GetFunctionVersionResponse getFunctionVersion(String functionName, String versionId) throws Exception {
@@ -2548,16 +2608,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListModelsResponse());
     }
 
-    public ListProceedingsResponse listProceedings(String appGroupIdentity) throws Exception {
+    public ListProceedingsResponse listProceedings(String appGroupIdentity, ListProceedingsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listProceedingsWithOptions(appGroupIdentity, headers, runtime);
+        return this.listProceedingsWithOptions(appGroupIdentity, request, headers, runtime);
     }
 
-    public ListProceedingsResponse listProceedingsWithOptions(String appGroupIdentity, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListProceedingsResponse listProceedingsWithOptions(String appGroupIdentity, ListProceedingsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         appGroupIdentity = com.aliyun.openapiutil.Client.getEncodeParam(appGroupIdentity);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterFinished)) {
+            query.put("filterFinished", request.filterFinished);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListProceedings"),
@@ -4093,6 +4160,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usageParameters)) {
+            body.put("usageParameters", request.usageParameters);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
