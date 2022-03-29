@@ -293,6 +293,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.analyseType)) {
+            body.put("analyseType", request.analyseType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.searchCondition))) {
             body.put("searchCondition", request.searchCondition);
         }
