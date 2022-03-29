@@ -11,6 +11,10 @@ public class QueryIntentsRequest extends TeaModel {
     @NameInMap("DialogId")
     public Long dialogId;
 
+    // 机器人实例 ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("IntentName")
     public String intentName;
 
@@ -39,6 +43,14 @@ public class QueryIntentsRequest extends TeaModel {
     }
     public Long getDialogId() {
         return this.dialogId;
+    }
+
+    public QueryIntentsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public QueryIntentsRequest setIntentName(String intentName) {
