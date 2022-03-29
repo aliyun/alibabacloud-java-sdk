@@ -7,17 +7,17 @@ public class QueryDeviceStatRequest extends TeaModel {
     @NameInMap("AppKey")
     public Long appKey;
 
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("DeviceType")
+    public String deviceType;
 
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("DeviceType")
-    public String deviceType;
-
     @NameInMap("QueryType")
     public String queryType;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static QueryDeviceStatRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceStatRequest self = new QueryDeviceStatRequest();
@@ -32,12 +32,12 @@ public class QueryDeviceStatRequest extends TeaModel {
         return this.appKey;
     }
 
-    public QueryDeviceStatRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public QueryDeviceStatRequest setDeviceType(String deviceType) {
+        this.deviceType = deviceType;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public String getDeviceType() {
+        return this.deviceType;
     }
 
     public QueryDeviceStatRequest setEndTime(String endTime) {
@@ -48,20 +48,20 @@ public class QueryDeviceStatRequest extends TeaModel {
         return this.endTime;
     }
 
-    public QueryDeviceStatRequest setDeviceType(String deviceType) {
-        this.deviceType = deviceType;
-        return this;
-    }
-    public String getDeviceType() {
-        return this.deviceType;
-    }
-
     public QueryDeviceStatRequest setQueryType(String queryType) {
         this.queryType = queryType;
         return this;
     }
     public String getQueryType() {
         return this.queryType;
+    }
+
+    public QueryDeviceStatRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

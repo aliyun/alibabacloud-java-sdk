@@ -7,20 +7,8 @@ public class QueryPushRecordsRequest extends TeaModel {
     @NameInMap("AppKey")
     public Long appKey;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
-
-    @NameInMap("PushType")
-    public String pushType;
-
-    @NameInMap("Target")
-    public String target;
-
-    @NameInMap("Source")
-    public String source;
 
     @NameInMap("Keyword")
     public String keyword;
@@ -28,11 +16,23 @@ public class QueryPushRecordsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("Page")
+    public Integer page;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Page")
-    public Integer page;
+    @NameInMap("PushType")
+    public String pushType;
+
+    @NameInMap("Source")
+    public String source;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("Target")
+    public String target;
 
     public static QueryPushRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryPushRecordsRequest self = new QueryPushRecordsRequest();
@@ -47,44 +47,12 @@ public class QueryPushRecordsRequest extends TeaModel {
         return this.appKey;
     }
 
-    public QueryPushRecordsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public QueryPushRecordsRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public QueryPushRecordsRequest setPushType(String pushType) {
-        this.pushType = pushType;
-        return this;
-    }
-    public String getPushType() {
-        return this.pushType;
-    }
-
-    public QueryPushRecordsRequest setTarget(String target) {
-        this.target = target;
-        return this;
-    }
-    public String getTarget() {
-        return this.target;
-    }
-
-    public QueryPushRecordsRequest setSource(String source) {
-        this.source = source;
-        return this;
-    }
-    public String getSource() {
-        return this.source;
     }
 
     public QueryPushRecordsRequest setKeyword(String keyword) {
@@ -103,6 +71,14 @@ public class QueryPushRecordsRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public QueryPushRecordsRequest setPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    public Integer getPage() {
+        return this.page;
+    }
+
     public QueryPushRecordsRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -111,12 +87,36 @@ public class QueryPushRecordsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryPushRecordsRequest setPage(Integer page) {
-        this.page = page;
+    public QueryPushRecordsRequest setPushType(String pushType) {
+        this.pushType = pushType;
         return this;
     }
-    public Integer getPage() {
-        return this.page;
+    public String getPushType() {
+        return this.pushType;
+    }
+
+    public QueryPushRecordsRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
+    }
+
+    public QueryPushRecordsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public QueryPushRecordsRequest setTarget(String target) {
+        this.target = target;
+        return this;
+    }
+    public String getTarget() {
+        return this.target;
     }
 
 }

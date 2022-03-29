@@ -7,6 +7,12 @@ public class PushMessageToiOSRequest extends TeaModel {
     @NameInMap("AppKey")
     public Long appKey;
 
+    @NameInMap("Body")
+    public String body;
+
+    @NameInMap("JobKey")
+    public String jobKey;
+
     @NameInMap("Target")
     public String target;
 
@@ -15,12 +21,6 @@ public class PushMessageToiOSRequest extends TeaModel {
 
     @NameInMap("Title")
     public String title;
-
-    @NameInMap("Body")
-    public String body;
-
-    @NameInMap("JobKey")
-    public String jobKey;
 
     public static PushMessageToiOSRequest build(java.util.Map<String, ?> map) throws Exception {
         PushMessageToiOSRequest self = new PushMessageToiOSRequest();
@@ -33,6 +33,22 @@ public class PushMessageToiOSRequest extends TeaModel {
     }
     public Long getAppKey() {
         return this.appKey;
+    }
+
+    public PushMessageToiOSRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
+    }
+
+    public PushMessageToiOSRequest setJobKey(String jobKey) {
+        this.jobKey = jobKey;
+        return this;
+    }
+    public String getJobKey() {
+        return this.jobKey;
     }
 
     public PushMessageToiOSRequest setTarget(String target) {
@@ -57,22 +73,6 @@ public class PushMessageToiOSRequest extends TeaModel {
     }
     public String getTitle() {
         return this.title;
-    }
-
-    public PushMessageToiOSRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
-    }
-
-    public PushMessageToiOSRequest setJobKey(String jobKey) {
-        this.jobKey = jobKey;
-        return this;
-    }
-    public String getJobKey() {
-        return this.jobKey;
     }
 
 }

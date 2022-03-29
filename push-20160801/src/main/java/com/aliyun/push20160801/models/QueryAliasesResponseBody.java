@@ -4,23 +4,15 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class QueryAliasesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AliasInfos")
     public QueryAliasesResponseBodyAliasInfos aliasInfos;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryAliasesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryAliasesResponseBody self = new QueryAliasesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryAliasesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryAliasesResponseBody setAliasInfos(QueryAliasesResponseBodyAliasInfos aliasInfos) {
@@ -29,6 +21,14 @@ public class QueryAliasesResponseBody extends TeaModel {
     }
     public QueryAliasesResponseBodyAliasInfos getAliasInfos() {
         return this.aliasInfos;
+    }
+
+    public QueryAliasesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class QueryAliasesResponseBodyAliasInfosAliasInfo extends TeaModel {

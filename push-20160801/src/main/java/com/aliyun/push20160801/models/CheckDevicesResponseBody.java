@@ -4,23 +4,15 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class CheckDevicesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DeviceCheckInfos")
     public CheckDevicesResponseBodyDeviceCheckInfos deviceCheckInfos;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CheckDevicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CheckDevicesResponseBody self = new CheckDevicesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CheckDevicesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CheckDevicesResponseBody setDeviceCheckInfos(CheckDevicesResponseBodyDeviceCheckInfos deviceCheckInfos) {
@@ -31,24 +23,24 @@ public class CheckDevicesResponseBody extends TeaModel {
         return this.deviceCheckInfos;
     }
 
-    public static class CheckDevicesResponseBodyDeviceCheckInfosDeviceCheckInfo extends TeaModel {
-        @NameInMap("DeviceId")
-        public String deviceId;
+    public CheckDevicesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class CheckDevicesResponseBodyDeviceCheckInfosDeviceCheckInfo extends TeaModel {
         @NameInMap("Available")
         public Boolean available;
+
+        @NameInMap("DeviceId")
+        public String deviceId;
 
         public static CheckDevicesResponseBodyDeviceCheckInfosDeviceCheckInfo build(java.util.Map<String, ?> map) throws Exception {
             CheckDevicesResponseBodyDeviceCheckInfosDeviceCheckInfo self = new CheckDevicesResponseBodyDeviceCheckInfosDeviceCheckInfo();
             return TeaModel.build(map, self);
-        }
-
-        public CheckDevicesResponseBodyDeviceCheckInfosDeviceCheckInfo setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
         }
 
         public CheckDevicesResponseBodyDeviceCheckInfosDeviceCheckInfo setAvailable(Boolean available) {
@@ -57,6 +49,14 @@ public class CheckDevicesResponseBody extends TeaModel {
         }
         public Boolean getAvailable() {
             return this.available;
+        }
+
+        public CheckDevicesResponseBodyDeviceCheckInfosDeviceCheckInfo setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
         }
 
     }

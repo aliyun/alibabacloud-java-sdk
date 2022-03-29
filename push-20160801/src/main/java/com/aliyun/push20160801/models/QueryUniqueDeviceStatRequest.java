@@ -7,14 +7,14 @@ public class QueryUniqueDeviceStatRequest extends TeaModel {
     @NameInMap("AppKey")
     public Long appKey;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("Granularity")
     public String granularity;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static QueryUniqueDeviceStatRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryUniqueDeviceStatRequest self = new QueryUniqueDeviceStatRequest();
@@ -27,14 +27,6 @@ public class QueryUniqueDeviceStatRequest extends TeaModel {
     }
     public Long getAppKey() {
         return this.appKey;
-    }
-
-    public QueryUniqueDeviceStatRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public QueryUniqueDeviceStatRequest setEndTime(String endTime) {
@@ -51,6 +43,14 @@ public class QueryUniqueDeviceStatRequest extends TeaModel {
     }
     public String getGranularity() {
         return this.granularity;
+    }
+
+    public QueryUniqueDeviceStatRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

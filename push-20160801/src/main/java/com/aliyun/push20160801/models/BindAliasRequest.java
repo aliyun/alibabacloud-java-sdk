@@ -4,18 +4,26 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class BindAliasRequest extends TeaModel {
+    @NameInMap("AliasName")
+    public String aliasName;
+
     @NameInMap("AppKey")
     public Long appKey;
 
     @NameInMap("DeviceId")
     public String deviceId;
 
-    @NameInMap("AliasName")
-    public String aliasName;
-
     public static BindAliasRequest build(java.util.Map<String, ?> map) throws Exception {
         BindAliasRequest self = new BindAliasRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BindAliasRequest setAliasName(String aliasName) {
+        this.aliasName = aliasName;
+        return this;
+    }
+    public String getAliasName() {
+        return this.aliasName;
     }
 
     public BindAliasRequest setAppKey(Long appKey) {
@@ -32,14 +40,6 @@ public class BindAliasRequest extends TeaModel {
     }
     public String getDeviceId() {
         return this.deviceId;
-    }
-
-    public BindAliasRequest setAliasName(String aliasName) {
-        this.aliasName = aliasName;
-        return this;
-    }
-    public String getAliasName() {
-        return this.aliasName;
     }
 
 }

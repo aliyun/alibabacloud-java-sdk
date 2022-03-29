@@ -4,23 +4,15 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceStatResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AppDeviceStats")
     public QueryDeviceStatResponseBodyAppDeviceStats appDeviceStats;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryDeviceStatResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceStatResponseBody self = new QueryDeviceStatResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDeviceStatResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryDeviceStatResponseBody setAppDeviceStats(QueryDeviceStatResponseBodyAppDeviceStats appDeviceStats) {
@@ -31,27 +23,35 @@ public class QueryDeviceStatResponseBody extends TeaModel {
         return this.appDeviceStats;
     }
 
+    public QueryDeviceStatResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class QueryDeviceStatResponseBodyAppDeviceStatsAppDeviceStat extends TeaModel {
-        @NameInMap("Time")
-        public String time;
+        @NameInMap("Count")
+        public Long count;
 
         @NameInMap("DeviceType")
         public String deviceType;
 
-        @NameInMap("Count")
-        public Long count;
+        @NameInMap("Time")
+        public String time;
 
         public static QueryDeviceStatResponseBodyAppDeviceStatsAppDeviceStat build(java.util.Map<String, ?> map) throws Exception {
             QueryDeviceStatResponseBodyAppDeviceStatsAppDeviceStat self = new QueryDeviceStatResponseBodyAppDeviceStatsAppDeviceStat();
             return TeaModel.build(map, self);
         }
 
-        public QueryDeviceStatResponseBodyAppDeviceStatsAppDeviceStat setTime(String time) {
-            this.time = time;
+        public QueryDeviceStatResponseBodyAppDeviceStatsAppDeviceStat setCount(Long count) {
+            this.count = count;
             return this;
         }
-        public String getTime() {
-            return this.time;
+        public Long getCount() {
+            return this.count;
         }
 
         public QueryDeviceStatResponseBodyAppDeviceStatsAppDeviceStat setDeviceType(String deviceType) {
@@ -62,12 +62,12 @@ public class QueryDeviceStatResponseBody extends TeaModel {
             return this.deviceType;
         }
 
-        public QueryDeviceStatResponseBodyAppDeviceStatsAppDeviceStat setCount(Long count) {
-            this.count = count;
+        public QueryDeviceStatResponseBodyAppDeviceStatsAppDeviceStat setTime(String time) {
+            this.time = time;
             return this;
         }
-        public Long getCount() {
-            return this.count;
+        public String getTime() {
+            return this.time;
         }
 
     }

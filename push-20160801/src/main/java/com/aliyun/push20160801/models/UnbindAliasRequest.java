@@ -4,14 +4,14 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class UnbindAliasRequest extends TeaModel {
+    @NameInMap("AliasName")
+    public String aliasName;
+
     @NameInMap("AppKey")
     public Long appKey;
 
     @NameInMap("DeviceId")
     public String deviceId;
-
-    @NameInMap("AliasName")
-    public String aliasName;
 
     @NameInMap("UnbindAll")
     public Boolean unbindAll;
@@ -19,6 +19,14 @@ public class UnbindAliasRequest extends TeaModel {
     public static UnbindAliasRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindAliasRequest self = new UnbindAliasRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UnbindAliasRequest setAliasName(String aliasName) {
+        this.aliasName = aliasName;
+        return this;
+    }
+    public String getAliasName() {
+        return this.aliasName;
     }
 
     public UnbindAliasRequest setAppKey(Long appKey) {
@@ -35,14 +43,6 @@ public class UnbindAliasRequest extends TeaModel {
     }
     public String getDeviceId() {
         return this.deviceId;
-    }
-
-    public UnbindAliasRequest setAliasName(String aliasName) {
-        this.aliasName = aliasName;
-        return this;
-    }
-    public String getAliasName() {
-        return this.aliasName;
     }
 
     public UnbindAliasRequest setUnbindAll(Boolean unbindAll) {

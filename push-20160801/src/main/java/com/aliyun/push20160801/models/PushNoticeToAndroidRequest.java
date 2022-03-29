@@ -7,6 +7,15 @@ public class PushNoticeToAndroidRequest extends TeaModel {
     @NameInMap("AppKey")
     public Long appKey;
 
+    @NameInMap("Body")
+    public String body;
+
+    @NameInMap("ExtParameters")
+    public String extParameters;
+
+    @NameInMap("JobKey")
+    public String jobKey;
+
     @NameInMap("Target")
     public String target;
 
@@ -15,15 +24,6 @@ public class PushNoticeToAndroidRequest extends TeaModel {
 
     @NameInMap("Title")
     public String title;
-
-    @NameInMap("Body")
-    public String body;
-
-    @NameInMap("JobKey")
-    public String jobKey;
-
-    @NameInMap("ExtParameters")
-    public String extParameters;
 
     public static PushNoticeToAndroidRequest build(java.util.Map<String, ?> map) throws Exception {
         PushNoticeToAndroidRequest self = new PushNoticeToAndroidRequest();
@@ -36,6 +36,30 @@ public class PushNoticeToAndroidRequest extends TeaModel {
     }
     public Long getAppKey() {
         return this.appKey;
+    }
+
+    public PushNoticeToAndroidRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
+    }
+
+    public PushNoticeToAndroidRequest setExtParameters(String extParameters) {
+        this.extParameters = extParameters;
+        return this;
+    }
+    public String getExtParameters() {
+        return this.extParameters;
+    }
+
+    public PushNoticeToAndroidRequest setJobKey(String jobKey) {
+        this.jobKey = jobKey;
+        return this;
+    }
+    public String getJobKey() {
+        return this.jobKey;
     }
 
     public PushNoticeToAndroidRequest setTarget(String target) {
@@ -60,30 +84,6 @@ public class PushNoticeToAndroidRequest extends TeaModel {
     }
     public String getTitle() {
         return this.title;
-    }
-
-    public PushNoticeToAndroidRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
-    }
-
-    public PushNoticeToAndroidRequest setJobKey(String jobKey) {
-        this.jobKey = jobKey;
-        return this;
-    }
-    public String getJobKey() {
-        return this.jobKey;
-    }
-
-    public PushNoticeToAndroidRequest setExtParameters(String extParameters) {
-        this.extParameters = extParameters;
-        return this;
-    }
-    public String getExtParameters() {
-        return this.extParameters;
     }
 
 }

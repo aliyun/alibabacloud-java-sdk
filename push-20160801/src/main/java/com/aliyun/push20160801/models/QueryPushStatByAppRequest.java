@@ -7,14 +7,14 @@ public class QueryPushStatByAppRequest extends TeaModel {
     @NameInMap("AppKey")
     public Long appKey;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("Granularity")
     public String granularity;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static QueryPushStatByAppRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryPushStatByAppRequest self = new QueryPushStatByAppRequest();
@@ -27,14 +27,6 @@ public class QueryPushStatByAppRequest extends TeaModel {
     }
     public Long getAppKey() {
         return this.appKey;
-    }
-
-    public QueryPushStatByAppRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public QueryPushStatByAppRequest setEndTime(String endTime) {
@@ -51,6 +43,14 @@ public class QueryPushStatByAppRequest extends TeaModel {
     }
     public String getGranularity() {
         return this.granularity;
+    }
+
+    public QueryPushStatByAppRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }
