@@ -1628,7 +1628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", request.body),
-            new TeaPair("stream", request.body)
+            new TeaPair("stream", tmpReq.body)
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RecognizeMultiLanguage"),
