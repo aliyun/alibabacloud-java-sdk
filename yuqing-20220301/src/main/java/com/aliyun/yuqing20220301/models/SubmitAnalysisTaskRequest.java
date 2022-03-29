@@ -4,6 +4,9 @@ package com.aliyun.yuqing20220301.models;
 import com.aliyun.tea.*;
 
 public class SubmitAnalysisTaskRequest extends TeaModel {
+    @NameInMap("analyseType")
+    public String analyseType;
+
     // A short description of struct
     @NameInMap("requestId")
     public String requestId;
@@ -17,6 +20,14 @@ public class SubmitAnalysisTaskRequest extends TeaModel {
     public static SubmitAnalysisTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitAnalysisTaskRequest self = new SubmitAnalysisTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitAnalysisTaskRequest setAnalyseType(String analyseType) {
+        this.analyseType = analyseType;
+        return this;
+    }
+    public String getAnalyseType() {
+        return this.analyseType;
     }
 
     public SubmitAnalysisTaskRequest setRequestId(String requestId) {
