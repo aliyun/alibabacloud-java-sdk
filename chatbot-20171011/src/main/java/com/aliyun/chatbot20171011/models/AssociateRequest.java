@@ -4,6 +4,9 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class AssociateRequest extends TeaModel {
+    @NameInMap("AgentKey")
+    public String agentKey;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -22,6 +25,14 @@ public class AssociateRequest extends TeaModel {
     public static AssociateRequest build(java.util.Map<String, ?> map) throws Exception {
         AssociateRequest self = new AssociateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AssociateRequest setAgentKey(String agentKey) {
+        this.agentKey = agentKey;
+        return this;
+    }
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     public AssociateRequest setInstanceId(String instanceId) {
