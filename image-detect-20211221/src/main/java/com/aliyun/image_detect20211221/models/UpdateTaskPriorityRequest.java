@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskPriorityRequest extends TeaModel {
     @NameInMap("Priority")
-    public String priority;
+    public Integer priority;
 
     @NameInMap("TaskUid")
     public String taskUid;
@@ -15,11 +15,11 @@ public class UpdateTaskPriorityRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateTaskPriorityRequest setPriority(String priority) {
+    public UpdateTaskPriorityRequest setPriority(Integer priority) {
         this.priority = priority;
         return this;
     }
-    public String getPriority() {
+    public Integer getPriority() {
         return this.priority;
     }
 
