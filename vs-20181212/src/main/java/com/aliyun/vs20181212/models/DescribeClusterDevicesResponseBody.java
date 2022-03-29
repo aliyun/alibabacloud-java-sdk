@@ -134,8 +134,17 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
         @NameInMap("ExternalIp")
         public String externalIp;
 
+        @NameInMap("ExternalIsp")
+        public String externalIsp;
+
         @NameInMap("ExternalPorts")
         public String externalPorts;
+
+        @NameInMap("OutgoingIp")
+        public String outgoingIp;
+
+        @NameInMap("OutgoingIsp")
+        public String outgoingIsp;
 
         public static DescribeClusterDevicesResponseBodyDevicesPodInfosNetwork build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterDevicesResponseBodyDevicesPodInfosNetwork self = new DescribeClusterDevicesResponseBodyDevicesPodInfosNetwork();
@@ -158,12 +167,36 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
             return this.externalIp;
         }
 
+        public DescribeClusterDevicesResponseBodyDevicesPodInfosNetwork setExternalIsp(String externalIsp) {
+            this.externalIsp = externalIsp;
+            return this;
+        }
+        public String getExternalIsp() {
+            return this.externalIsp;
+        }
+
         public DescribeClusterDevicesResponseBodyDevicesPodInfosNetwork setExternalPorts(String externalPorts) {
             this.externalPorts = externalPorts;
             return this;
         }
         public String getExternalPorts() {
             return this.externalPorts;
+        }
+
+        public DescribeClusterDevicesResponseBodyDevicesPodInfosNetwork setOutgoingIp(String outgoingIp) {
+            this.outgoingIp = outgoingIp;
+            return this;
+        }
+        public String getOutgoingIp() {
+            return this.outgoingIp;
+        }
+
+        public DescribeClusterDevicesResponseBodyDevicesPodInfosNetwork setOutgoingIsp(String outgoingIsp) {
+            this.outgoingIsp = outgoingIsp;
+            return this;
+        }
+        public String getOutgoingIsp() {
+            return this.outgoingIsp;
         }
 
     }

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>vs20181212</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <packaging>jar</packaging>
   <name>vs20181212</name>
   <description>Alibaba Cloud video surveillance system (20181212) SDK for Java
@@ -147,8 +147,8 @@
                   <shadedPattern>com.aliyun.vs20181212.external.com.sun</shadedPattern>
                 </relocation>
                 <relocation>
-                  <pattern>commons-codec</pattern>
-                  <shadedPattern>com.aliyun.vs20181212.external.commons.codec</shadedPattern>
+                  <pattern>org.apache</pattern>
+                  <shadedPattern>com.aliyun.vs20181212.external.org.apache</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>
