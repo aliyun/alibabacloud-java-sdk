@@ -8,7 +8,7 @@ public class FieldCondition extends TeaModel {
     @NameInMap("fieldName")
     public String fieldName;
 
-    // 操作符
+    // 操作符，枚举值
     @NameInMap("operateType")
     public String operateType;
 

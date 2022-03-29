@@ -4,6 +4,10 @@ package com.aliyun.yuqing20220301.models;
 import com.aliyun.tea.*;
 
 public class QueryYuqingMessageRequest extends TeaModel {
+    // A short description of struct
+    @NameInMap("requestId")
+    public String requestId;
+
     @NameInMap("searchCondition")
     public SearchCondition searchCondition;
 
@@ -13,6 +17,14 @@ public class QueryYuqingMessageRequest extends TeaModel {
     public static QueryYuqingMessageRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryYuqingMessageRequest self = new QueryYuqingMessageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryYuqingMessageRequest setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public QueryYuqingMessageRequest setSearchCondition(SearchCondition searchCondition) {
