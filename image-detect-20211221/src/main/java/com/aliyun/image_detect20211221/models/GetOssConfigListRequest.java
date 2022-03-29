@@ -8,10 +8,10 @@ public class GetOssConfigListRequest extends TeaModel {
     public String configName;
 
     @NameInMap("PageIndex")
-    public String pageIndex;
+    public Long pageIndex;
 
     @NameInMap("PageSize")
-    public String pageSize;
+    public Long pageSize;
 
     public static GetOssConfigListRequest build(java.util.Map<String, ?> map) throws Exception {
         GetOssConfigListRequest self = new GetOssConfigListRequest();
@@ -26,19 +26,19 @@ public class GetOssConfigListRequest extends TeaModel {
         return this.configName;
     }
 
-    public GetOssConfigListRequest setPageIndex(String pageIndex) {
+    public GetOssConfigListRequest setPageIndex(Long pageIndex) {
         this.pageIndex = pageIndex;
         return this;
     }
-    public String getPageIndex() {
+    public Long getPageIndex() {
         return this.pageIndex;
     }
 
-    public GetOssConfigListRequest setPageSize(String pageSize) {
+    public GetOssConfigListRequest setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Long getPageSize() {
         return this.pageSize;
     }
 
