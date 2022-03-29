@@ -4,23 +4,15 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class QueryUniqueDeviceStatResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AppDeviceStats")
     public QueryUniqueDeviceStatResponseBodyAppDeviceStats appDeviceStats;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryUniqueDeviceStatResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryUniqueDeviceStatResponseBody self = new QueryUniqueDeviceStatResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryUniqueDeviceStatResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryUniqueDeviceStatResponseBody setAppDeviceStats(QueryUniqueDeviceStatResponseBodyAppDeviceStats appDeviceStats) {
@@ -31,24 +23,24 @@ public class QueryUniqueDeviceStatResponseBody extends TeaModel {
         return this.appDeviceStats;
     }
 
-    public static class QueryUniqueDeviceStatResponseBodyAppDeviceStatsAppDeviceStat extends TeaModel {
-        @NameInMap("Time")
-        public String time;
+    public QueryUniqueDeviceStatResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class QueryUniqueDeviceStatResponseBodyAppDeviceStatsAppDeviceStat extends TeaModel {
         @NameInMap("Count")
         public Long count;
+
+        @NameInMap("Time")
+        public String time;
 
         public static QueryUniqueDeviceStatResponseBodyAppDeviceStatsAppDeviceStat build(java.util.Map<String, ?> map) throws Exception {
             QueryUniqueDeviceStatResponseBodyAppDeviceStatsAppDeviceStat self = new QueryUniqueDeviceStatResponseBodyAppDeviceStatsAppDeviceStat();
             return TeaModel.build(map, self);
-        }
-
-        public QueryUniqueDeviceStatResponseBodyAppDeviceStatsAppDeviceStat setTime(String time) {
-            this.time = time;
-            return this;
-        }
-        public String getTime() {
-            return this.time;
         }
 
         public QueryUniqueDeviceStatResponseBodyAppDeviceStatsAppDeviceStat setCount(Long count) {
@@ -57,6 +49,14 @@ public class QueryUniqueDeviceStatResponseBody extends TeaModel {
         }
         public Long getCount() {
             return this.count;
+        }
+
+        public QueryUniqueDeviceStatResponseBodyAppDeviceStatsAppDeviceStat setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
         }
 
     }

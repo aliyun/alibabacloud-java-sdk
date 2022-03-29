@@ -7,6 +7,12 @@ public class PushMessageToAndroidRequest extends TeaModel {
     @NameInMap("AppKey")
     public Long appKey;
 
+    @NameInMap("Body")
+    public String body;
+
+    @NameInMap("JobKey")
+    public String jobKey;
+
     @NameInMap("Target")
     public String target;
 
@@ -15,12 +21,6 @@ public class PushMessageToAndroidRequest extends TeaModel {
 
     @NameInMap("Title")
     public String title;
-
-    @NameInMap("Body")
-    public String body;
-
-    @NameInMap("JobKey")
-    public String jobKey;
 
     public static PushMessageToAndroidRequest build(java.util.Map<String, ?> map) throws Exception {
         PushMessageToAndroidRequest self = new PushMessageToAndroidRequest();
@@ -33,6 +33,22 @@ public class PushMessageToAndroidRequest extends TeaModel {
     }
     public Long getAppKey() {
         return this.appKey;
+    }
+
+    public PushMessageToAndroidRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
+    }
+
+    public PushMessageToAndroidRequest setJobKey(String jobKey) {
+        this.jobKey = jobKey;
+        return this;
+    }
+    public String getJobKey() {
+        return this.jobKey;
     }
 
     public PushMessageToAndroidRequest setTarget(String target) {
@@ -57,22 +73,6 @@ public class PushMessageToAndroidRequest extends TeaModel {
     }
     public String getTitle() {
         return this.title;
-    }
-
-    public PushMessageToAndroidRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
-    }
-
-    public PushMessageToAndroidRequest setJobKey(String jobKey) {
-        this.jobKey = jobKey;
-        return this;
-    }
-    public String getJobKey() {
-        return this.jobKey;
     }
 
 }

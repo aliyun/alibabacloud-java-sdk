@@ -4,23 +4,15 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class QueryDevicesByAliasResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DeviceIds")
     public QueryDevicesByAliasResponseBodyDeviceIds deviceIds;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryDevicesByAliasResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDevicesByAliasResponseBody self = new QueryDevicesByAliasResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDevicesByAliasResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryDevicesByAliasResponseBody setDeviceIds(QueryDevicesByAliasResponseBodyDeviceIds deviceIds) {
@@ -29,6 +21,14 @@ public class QueryDevicesByAliasResponseBody extends TeaModel {
     }
     public QueryDevicesByAliasResponseBodyDeviceIds getDeviceIds() {
         return this.deviceIds;
+    }
+
+    public QueryDevicesByAliasResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class QueryDevicesByAliasResponseBodyDeviceIds extends TeaModel {

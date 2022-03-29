@@ -7,20 +7,20 @@ public class QueryPushRecordsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("Page")
+    public Integer page;
+
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("PushInfos")
+    public QueryPushRecordsResponseBodyPushInfos pushInfos;
 
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Total")
     public Integer total;
-
-    @NameInMap("Page")
-    public Integer page;
-
-    @NameInMap("PushInfos")
-    public QueryPushRecordsResponseBodyPushInfos pushInfos;
 
     public static QueryPushRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryPushRecordsResponseBody self = new QueryPushRecordsResponseBody();
@@ -35,12 +35,28 @@ public class QueryPushRecordsResponseBody extends TeaModel {
         return this.nextToken;
     }
 
+    public QueryPushRecordsResponseBody setPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    public Integer getPage() {
+        return this.page;
+    }
+
     public QueryPushRecordsResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public QueryPushRecordsResponseBody setPushInfos(QueryPushRecordsResponseBodyPushInfos pushInfos) {
+        this.pushInfos = pushInfos;
+        return this;
+    }
+    public QueryPushRecordsResponseBodyPushInfos getPushInfos() {
+        return this.pushInfos;
     }
 
     public QueryPushRecordsResponseBody setRequestId(String requestId) {
@@ -59,72 +75,40 @@ public class QueryPushRecordsResponseBody extends TeaModel {
         return this.total;
     }
 
-    public QueryPushRecordsResponseBody setPage(Integer page) {
-        this.page = page;
-        return this;
-    }
-    public Integer getPage() {
-        return this.page;
-    }
-
-    public QueryPushRecordsResponseBody setPushInfos(QueryPushRecordsResponseBodyPushInfos pushInfos) {
-        this.pushInfos = pushInfos;
-        return this;
-    }
-    public QueryPushRecordsResponseBodyPushInfos getPushInfos() {
-        return this.pushInfos;
-    }
-
     public static class QueryPushRecordsResponseBodyPushInfosPushInfo extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("MessageId")
-        public String messageId;
-
         @NameInMap("AppKey")
         public Long appKey;
-
-        @NameInMap("DeviceType")
-        public String deviceType;
-
-        @NameInMap("PushType")
-        public String pushType;
 
         @NameInMap("Body")
         public String body;
 
-        @NameInMap("Title")
-        public String title;
+        @NameInMap("DeviceType")
+        public String deviceType;
 
-        @NameInMap("Source")
-        public String source;
+        @NameInMap("MessageId")
+        public String messageId;
 
         @NameInMap("PushTime")
         public String pushTime;
 
+        @NameInMap("PushType")
+        public String pushType;
+
+        @NameInMap("Source")
+        public String source;
+
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("Target")
         public String target;
+
+        @NameInMap("Title")
+        public String title;
 
         public static QueryPushRecordsResponseBodyPushInfosPushInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryPushRecordsResponseBodyPushInfosPushInfo self = new QueryPushRecordsResponseBodyPushInfosPushInfo();
             return TeaModel.build(map, self);
-        }
-
-        public QueryPushRecordsResponseBodyPushInfosPushInfo setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public QueryPushRecordsResponseBodyPushInfosPushInfo setMessageId(String messageId) {
-            this.messageId = messageId;
-            return this;
-        }
-        public String getMessageId() {
-            return this.messageId;
         }
 
         public QueryPushRecordsResponseBodyPushInfosPushInfo setAppKey(Long appKey) {
@@ -135,22 +119,6 @@ public class QueryPushRecordsResponseBody extends TeaModel {
             return this.appKey;
         }
 
-        public QueryPushRecordsResponseBodyPushInfosPushInfo setDeviceType(String deviceType) {
-            this.deviceType = deviceType;
-            return this;
-        }
-        public String getDeviceType() {
-            return this.deviceType;
-        }
-
-        public QueryPushRecordsResponseBodyPushInfosPushInfo setPushType(String pushType) {
-            this.pushType = pushType;
-            return this;
-        }
-        public String getPushType() {
-            return this.pushType;
-        }
-
         public QueryPushRecordsResponseBodyPushInfosPushInfo setBody(String body) {
             this.body = body;
             return this;
@@ -159,20 +127,20 @@ public class QueryPushRecordsResponseBody extends TeaModel {
             return this.body;
         }
 
-        public QueryPushRecordsResponseBodyPushInfosPushInfo setTitle(String title) {
-            this.title = title;
+        public QueryPushRecordsResponseBodyPushInfosPushInfo setDeviceType(String deviceType) {
+            this.deviceType = deviceType;
             return this;
         }
-        public String getTitle() {
-            return this.title;
+        public String getDeviceType() {
+            return this.deviceType;
         }
 
-        public QueryPushRecordsResponseBodyPushInfosPushInfo setSource(String source) {
-            this.source = source;
+        public QueryPushRecordsResponseBodyPushInfosPushInfo setMessageId(String messageId) {
+            this.messageId = messageId;
             return this;
         }
-        public String getSource() {
-            return this.source;
+        public String getMessageId() {
+            return this.messageId;
         }
 
         public QueryPushRecordsResponseBodyPushInfosPushInfo setPushTime(String pushTime) {
@@ -183,12 +151,44 @@ public class QueryPushRecordsResponseBody extends TeaModel {
             return this.pushTime;
         }
 
+        public QueryPushRecordsResponseBodyPushInfosPushInfo setPushType(String pushType) {
+            this.pushType = pushType;
+            return this;
+        }
+        public String getPushType() {
+            return this.pushType;
+        }
+
+        public QueryPushRecordsResponseBodyPushInfosPushInfo setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public QueryPushRecordsResponseBodyPushInfosPushInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
         public QueryPushRecordsResponseBodyPushInfosPushInfo setTarget(String target) {
             this.target = target;
             return this;
         }
         public String getTarget() {
             return this.target;
+        }
+
+        public QueryPushRecordsResponseBodyPushInfosPushInfo setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
         }
 
     }

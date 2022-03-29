@@ -4,23 +4,15 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class QueryPushStatByMsgResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PushStats")
     public QueryPushStatByMsgResponseBodyPushStats pushStats;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryPushStatByMsgResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryPushStatByMsgResponseBody self = new QueryPushStatByMsgResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryPushStatByMsgResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryPushStatByMsgResponseBody setPushStats(QueryPushStatByMsgResponseBodyPushStats pushStats) {
@@ -31,27 +23,26 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
         return this.pushStats;
     }
 
+    public QueryPushStatByMsgResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class QueryPushStatByMsgResponseBodyPushStatsPushStat extends TeaModel {
-        @NameInMap("MessageId")
-        public String messageId;
+        @NameInMap("AcceptCount")
+        public Long acceptCount;
 
         @NameInMap("DeletedCount")
         public Long deletedCount;
 
+        @NameInMap("MessageId")
+        public String messageId;
+
         @NameInMap("OpenedCount")
         public Long openedCount;
-
-        @NameInMap("SmsReceiveSuccessCount")
-        public Long smsReceiveSuccessCount;
-
-        @NameInMap("SmsSkipCount")
-        public Long smsSkipCount;
-
-        @NameInMap("SmsReceiveFailedCount")
-        public Long smsReceiveFailedCount;
-
-        @NameInMap("SmsFailedCount")
-        public Long smsFailedCount;
 
         @NameInMap("ReceivedCount")
         public Long receivedCount;
@@ -59,23 +50,32 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
         @NameInMap("SentCount")
         public Long sentCount;
 
+        @NameInMap("SmsFailedCount")
+        public Long smsFailedCount;
+
+        @NameInMap("SmsReceiveFailedCount")
+        public Long smsReceiveFailedCount;
+
+        @NameInMap("SmsReceiveSuccessCount")
+        public Long smsReceiveSuccessCount;
+
         @NameInMap("SmsSentCount")
         public Long smsSentCount;
 
-        @NameInMap("AcceptCount")
-        public Long acceptCount;
+        @NameInMap("SmsSkipCount")
+        public Long smsSkipCount;
 
         public static QueryPushStatByMsgResponseBodyPushStatsPushStat build(java.util.Map<String, ?> map) throws Exception {
             QueryPushStatByMsgResponseBodyPushStatsPushStat self = new QueryPushStatByMsgResponseBodyPushStatsPushStat();
             return TeaModel.build(map, self);
         }
 
-        public QueryPushStatByMsgResponseBodyPushStatsPushStat setMessageId(String messageId) {
-            this.messageId = messageId;
+        public QueryPushStatByMsgResponseBodyPushStatsPushStat setAcceptCount(Long acceptCount) {
+            this.acceptCount = acceptCount;
             return this;
         }
-        public String getMessageId() {
-            return this.messageId;
+        public Long getAcceptCount() {
+            return this.acceptCount;
         }
 
         public QueryPushStatByMsgResponseBodyPushStatsPushStat setDeletedCount(Long deletedCount) {
@@ -86,44 +86,20 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
             return this.deletedCount;
         }
 
+        public QueryPushStatByMsgResponseBodyPushStatsPushStat setMessageId(String messageId) {
+            this.messageId = messageId;
+            return this;
+        }
+        public String getMessageId() {
+            return this.messageId;
+        }
+
         public QueryPushStatByMsgResponseBodyPushStatsPushStat setOpenedCount(Long openedCount) {
             this.openedCount = openedCount;
             return this;
         }
         public Long getOpenedCount() {
             return this.openedCount;
-        }
-
-        public QueryPushStatByMsgResponseBodyPushStatsPushStat setSmsReceiveSuccessCount(Long smsReceiveSuccessCount) {
-            this.smsReceiveSuccessCount = smsReceiveSuccessCount;
-            return this;
-        }
-        public Long getSmsReceiveSuccessCount() {
-            return this.smsReceiveSuccessCount;
-        }
-
-        public QueryPushStatByMsgResponseBodyPushStatsPushStat setSmsSkipCount(Long smsSkipCount) {
-            this.smsSkipCount = smsSkipCount;
-            return this;
-        }
-        public Long getSmsSkipCount() {
-            return this.smsSkipCount;
-        }
-
-        public QueryPushStatByMsgResponseBodyPushStatsPushStat setSmsReceiveFailedCount(Long smsReceiveFailedCount) {
-            this.smsReceiveFailedCount = smsReceiveFailedCount;
-            return this;
-        }
-        public Long getSmsReceiveFailedCount() {
-            return this.smsReceiveFailedCount;
-        }
-
-        public QueryPushStatByMsgResponseBodyPushStatsPushStat setSmsFailedCount(Long smsFailedCount) {
-            this.smsFailedCount = smsFailedCount;
-            return this;
-        }
-        public Long getSmsFailedCount() {
-            return this.smsFailedCount;
         }
 
         public QueryPushStatByMsgResponseBodyPushStatsPushStat setReceivedCount(Long receivedCount) {
@@ -142,6 +118,30 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
             return this.sentCount;
         }
 
+        public QueryPushStatByMsgResponseBodyPushStatsPushStat setSmsFailedCount(Long smsFailedCount) {
+            this.smsFailedCount = smsFailedCount;
+            return this;
+        }
+        public Long getSmsFailedCount() {
+            return this.smsFailedCount;
+        }
+
+        public QueryPushStatByMsgResponseBodyPushStatsPushStat setSmsReceiveFailedCount(Long smsReceiveFailedCount) {
+            this.smsReceiveFailedCount = smsReceiveFailedCount;
+            return this;
+        }
+        public Long getSmsReceiveFailedCount() {
+            return this.smsReceiveFailedCount;
+        }
+
+        public QueryPushStatByMsgResponseBodyPushStatsPushStat setSmsReceiveSuccessCount(Long smsReceiveSuccessCount) {
+            this.smsReceiveSuccessCount = smsReceiveSuccessCount;
+            return this;
+        }
+        public Long getSmsReceiveSuccessCount() {
+            return this.smsReceiveSuccessCount;
+        }
+
         public QueryPushStatByMsgResponseBodyPushStatsPushStat setSmsSentCount(Long smsSentCount) {
             this.smsSentCount = smsSentCount;
             return this;
@@ -150,12 +150,12 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
             return this.smsSentCount;
         }
 
-        public QueryPushStatByMsgResponseBodyPushStatsPushStat setAcceptCount(Long acceptCount) {
-            this.acceptCount = acceptCount;
+        public QueryPushStatByMsgResponseBodyPushStatsPushStat setSmsSkipCount(Long smsSkipCount) {
+            this.smsSkipCount = smsSkipCount;
             return this;
         }
-        public Long getAcceptCount() {
-            return this.acceptCount;
+        public Long getSmsSkipCount() {
+            return this.smsSkipCount;
         }
 
     }

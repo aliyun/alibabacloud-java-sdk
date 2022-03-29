@@ -32,23 +32,15 @@ public class ListSummaryAppsResponseBody extends TeaModel {
     }
 
     public static class ListSummaryAppsResponseBodySummaryAppInfosSummaryAppInfo extends TeaModel {
-        @NameInMap("AppName")
-        public String appName;
-
         @NameInMap("AppKey")
         public Long appKey;
+
+        @NameInMap("AppName")
+        public String appName;
 
         public static ListSummaryAppsResponseBodySummaryAppInfosSummaryAppInfo build(java.util.Map<String, ?> map) throws Exception {
             ListSummaryAppsResponseBodySummaryAppInfosSummaryAppInfo self = new ListSummaryAppsResponseBodySummaryAppInfosSummaryAppInfo();
             return TeaModel.build(map, self);
-        }
-
-        public ListSummaryAppsResponseBodySummaryAppInfosSummaryAppInfo setAppName(String appName) {
-            this.appName = appName;
-            return this;
-        }
-        public String getAppName() {
-            return this.appName;
         }
 
         public ListSummaryAppsResponseBodySummaryAppInfosSummaryAppInfo setAppKey(Long appKey) {
@@ -57,6 +49,14 @@ public class ListSummaryAppsResponseBody extends TeaModel {
         }
         public Long getAppKey() {
             return this.appKey;
+        }
+
+        public ListSummaryAppsResponseBodySummaryAppInfosSummaryAppInfo setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
         }
 
     }
