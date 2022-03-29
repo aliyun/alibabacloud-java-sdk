@@ -16,6 +16,10 @@ public class SearchCondition extends TeaModel {
     @NameInMap("authorName")
     public String authorName;
 
+    // 评论级别，1：100转发以内，2：1k以内，3：1w以内，4：10w以内，5，10w+
+    @NameInMap("commentsLevel")
+    public Integer commentsLevel;
+
     // 抓取截止时间
     @NameInMap("createTimeEnd")
     public Long createTimeEnd;
@@ -36,13 +40,9 @@ public class SearchCondition extends TeaModel {
     @NameInMap("duplicateRemoval")
     public Boolean duplicateRemoval;
 
-    // 情感分上限
-    @NameInMap("emotionScoreMax")
-    public Double emotionScoreMax;
-
-    // 情感分下限
-    @NameInMap("emotionScoreMin")
-    public Double emotionScoreMin;
+    // 情感类型，1非负，-1负面
+    @NameInMap("emotionType")
+    public Integer emotionType;
 
     // 是否高亮关键词
     @NameInMap("enableKeywordHighlight")
@@ -64,6 +64,18 @@ public class SearchCondition extends TeaModel {
     @NameInMap("excludeKeywordsInTitle")
     public String excludeKeywordsInTitle;
 
+    // 其他过滤条件
+    @NameInMap("fieldConditions")
+    public java.util.List<FieldCondition> fieldConditions;
+
+    // 文章是否含有图片
+    @NameInMap("hasImage")
+    public Boolean hasImage;
+
+    // 是否含有视频
+    @NameInMap("hasVideo")
+    public Boolean hasVideo;
+
     // 网站域名
     @NameInMap("hostName")
     public String hostName;
@@ -71,6 +83,10 @@ public class SearchCondition extends TeaModel {
     // 关键词标签Id列表
     @NameInMap("keywordTagIds")
     public String keywordTagIds;
+
+    // 点赞级别，1：100转发以内，2：1k以内，3：1w以内，4：10w以内，5，10w+
+    @NameInMap("likesLevel")
+    public Integer likesLevel;
 
     // 媒体库id列表
     @NameInMap("mediaLibraryIds")
@@ -116,6 +132,14 @@ public class SearchCondition extends TeaModel {
     @NameInMap("publishTimeStart")
     public Long publishTimeStart;
 
+    // 阅读数级别，1：100转发以内，2：1k以内，3：1w以内，4：10w以内，5，10w+
+    @NameInMap("readsLevel")
+    public Integer readsLevel;
+
+    // 转发级别，1：100转发以内，2：1k以内，3：1w以内，4：10w以内，5，10w+
+    @NameInMap("repostLevel")
+    public Integer repostLevel;
+
     // 排序字段
     @NameInMap("sortBy")
     public String sortBy;
@@ -123,10 +147,6 @@ public class SearchCondition extends TeaModel {
     // 指定正反向排序
     @NameInMap("sortByDirection")
     public String sortByDirection;
-
-    // 嵌套查询AND条件
-    @NameInMap("subCondition")
-    public SearchCondition subCondition;
 
     // #话题
     @NameInMap("topics")
@@ -169,6 +189,14 @@ public class SearchCondition extends TeaModel {
         return this.authorName;
     }
 
+    public SearchCondition setCommentsLevel(Integer commentsLevel) {
+        this.commentsLevel = commentsLevel;
+        return this;
+    }
+    public Integer getCommentsLevel() {
+        return this.commentsLevel;
+    }
+
     public SearchCondition setCreateTimeEnd(Long createTimeEnd) {
         this.createTimeEnd = createTimeEnd;
         return this;
@@ -209,20 +237,12 @@ public class SearchCondition extends TeaModel {
         return this.duplicateRemoval;
     }
 
-    public SearchCondition setEmotionScoreMax(Double emotionScoreMax) {
-        this.emotionScoreMax = emotionScoreMax;
+    public SearchCondition setEmotionType(Integer emotionType) {
+        this.emotionType = emotionType;
         return this;
     }
-    public Double getEmotionScoreMax() {
-        return this.emotionScoreMax;
-    }
-
-    public SearchCondition setEmotionScoreMin(Double emotionScoreMin) {
-        this.emotionScoreMin = emotionScoreMin;
-        return this;
-    }
-    public Double getEmotionScoreMin() {
-        return this.emotionScoreMin;
+    public Integer getEmotionType() {
+        return this.emotionType;
     }
 
     public SearchCondition setEnableKeywordHighlight(Boolean enableKeywordHighlight) {
@@ -265,6 +285,30 @@ public class SearchCondition extends TeaModel {
         return this.excludeKeywordsInTitle;
     }
 
+    public SearchCondition setFieldConditions(java.util.List<FieldCondition> fieldConditions) {
+        this.fieldConditions = fieldConditions;
+        return this;
+    }
+    public java.util.List<FieldCondition> getFieldConditions() {
+        return this.fieldConditions;
+    }
+
+    public SearchCondition setHasImage(Boolean hasImage) {
+        this.hasImage = hasImage;
+        return this;
+    }
+    public Boolean getHasImage() {
+        return this.hasImage;
+    }
+
+    public SearchCondition setHasVideo(Boolean hasVideo) {
+        this.hasVideo = hasVideo;
+        return this;
+    }
+    public Boolean getHasVideo() {
+        return this.hasVideo;
+    }
+
     public SearchCondition setHostName(String hostName) {
         this.hostName = hostName;
         return this;
@@ -279,6 +323,14 @@ public class SearchCondition extends TeaModel {
     }
     public String getKeywordTagIds() {
         return this.keywordTagIds;
+    }
+
+    public SearchCondition setLikesLevel(Integer likesLevel) {
+        this.likesLevel = likesLevel;
+        return this;
+    }
+    public Integer getLikesLevel() {
+        return this.likesLevel;
     }
 
     public SearchCondition setMediaLibraryIds(String mediaLibraryIds) {
@@ -369,6 +421,22 @@ public class SearchCondition extends TeaModel {
         return this.publishTimeStart;
     }
 
+    public SearchCondition setReadsLevel(Integer readsLevel) {
+        this.readsLevel = readsLevel;
+        return this;
+    }
+    public Integer getReadsLevel() {
+        return this.readsLevel;
+    }
+
+    public SearchCondition setRepostLevel(Integer repostLevel) {
+        this.repostLevel = repostLevel;
+        return this;
+    }
+    public Integer getRepostLevel() {
+        return this.repostLevel;
+    }
+
     public SearchCondition setSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -383,14 +451,6 @@ public class SearchCondition extends TeaModel {
     }
     public String getSortByDirection() {
         return this.sortByDirection;
-    }
-
-    public SearchCondition setSubCondition(SearchCondition subCondition) {
-        this.subCondition = subCondition;
-        return this;
-    }
-    public SearchCondition getSubCondition() {
-        return this.subCondition;
     }
 
     public SearchCondition setTopics(String topics) {

@@ -13,6 +13,13 @@ public class ConsoleProxyRequest extends TeaModel {
     @NameInMap("paramJson")
     public String paramJson;
 
+    // A short description of struct
+    @NameInMap("requestId")
+    public String requestId;
+
+    @NameInMap("teamHashId")
+    public String teamHashId;
+
     public static ConsoleProxyRequest build(java.util.Map<String, ?> map) throws Exception {
         ConsoleProxyRequest self = new ConsoleProxyRequest();
         return TeaModel.build(map, self);
@@ -40,6 +47,22 @@ public class ConsoleProxyRequest extends TeaModel {
     }
     public String getParamJson() {
         return this.paramJson;
+    }
+
+    public ConsoleProxyRequest setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ConsoleProxyRequest setTeamHashId(String teamHashId) {
+        this.teamHashId = teamHashId;
+        return this;
+    }
+    public String getTeamHashId() {
+        return this.teamHashId;
     }
 
 }

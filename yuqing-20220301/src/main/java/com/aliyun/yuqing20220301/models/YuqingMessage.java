@@ -32,10 +32,6 @@ public class YuqingMessage extends TeaModel {
     @NameInMap("authorVerifyType")
     public String authorVerifyType;
 
-    // 情感的正负面，-1代表负面，1代表非负面
-    @NameInMap("contentEmotionType")
-    public Integer contentEmotionType;
-
     // 舆情文章被抓取的时间戳
     @NameInMap("createTime")
     public Long createTime;
@@ -68,6 +64,14 @@ public class YuqingMessage extends TeaModel {
     @NameInMap("docUrl")
     public String docUrl;
 
+    // 情感的正负面，-1代表负面，1代表非负面
+    @NameInMap("emotionType")
+    public Integer emotionType;
+
+    // 命中的搜索词列表
+    @NameInMap("highlightKeywords")
+    public java.util.List<String> highlightKeywords;
+
     // 媒体类型，枚举值
     @NameInMap("mediaType")
     public String mediaType;
@@ -90,11 +94,15 @@ public class YuqingMessage extends TeaModel {
 
     // 相似文章数
     @NameInMap("similarNumber")
-    public Long similarNumber;
+    public Integer similarNumber;
 
-    // 文章更新时间
-    @NameInMap("updateTime")
-    public Long updateTime;
+    // 微博评论id
+    @NameInMap("weiboCommentId")
+    public String weiboCommentId;
+
+    // 微博消息id
+    @NameInMap("weiboMid")
+    public String weiboMid;
 
     public static YuqingMessage build(java.util.Map<String, ?> map) throws Exception {
         YuqingMessage self = new YuqingMessage();
@@ -155,14 +163,6 @@ public class YuqingMessage extends TeaModel {
     }
     public String getAuthorVerifyType() {
         return this.authorVerifyType;
-    }
-
-    public YuqingMessage setContentEmotionType(Integer contentEmotionType) {
-        this.contentEmotionType = contentEmotionType;
-        return this;
-    }
-    public Integer getContentEmotionType() {
-        return this.contentEmotionType;
     }
 
     public YuqingMessage setCreateTime(Long createTime) {
@@ -229,6 +229,22 @@ public class YuqingMessage extends TeaModel {
         return this.docUrl;
     }
 
+    public YuqingMessage setEmotionType(Integer emotionType) {
+        this.emotionType = emotionType;
+        return this;
+    }
+    public Integer getEmotionType() {
+        return this.emotionType;
+    }
+
+    public YuqingMessage setHighlightKeywords(java.util.List<String> highlightKeywords) {
+        this.highlightKeywords = highlightKeywords;
+        return this;
+    }
+    public java.util.List<String> getHighlightKeywords() {
+        return this.highlightKeywords;
+    }
+
     public YuqingMessage setMediaType(String mediaType) {
         this.mediaType = mediaType;
         return this;
@@ -269,20 +285,28 @@ public class YuqingMessage extends TeaModel {
         return this.relevanceScore;
     }
 
-    public YuqingMessage setSimilarNumber(Long similarNumber) {
+    public YuqingMessage setSimilarNumber(Integer similarNumber) {
         this.similarNumber = similarNumber;
         return this;
     }
-    public Long getSimilarNumber() {
+    public Integer getSimilarNumber() {
         return this.similarNumber;
     }
 
-    public YuqingMessage setUpdateTime(Long updateTime) {
-        this.updateTime = updateTime;
+    public YuqingMessage setWeiboCommentId(String weiboCommentId) {
+        this.weiboCommentId = weiboCommentId;
         return this;
     }
-    public Long getUpdateTime() {
-        return this.updateTime;
+    public String getWeiboCommentId() {
+        return this.weiboCommentId;
+    }
+
+    public YuqingMessage setWeiboMid(String weiboMid) {
+        this.weiboMid = weiboMid;
+        return this;
+    }
+    public String getWeiboMid() {
+        return this.weiboMid;
     }
 
 }

@@ -11,6 +11,10 @@ public class OpenProductRequest extends TeaModel {
     @NameInMap("productInstance")
     public ProductInstance productInstance;
 
+    // A short description of struct
+    @NameInMap("requestId")
+    public String requestId;
+
     public static OpenProductRequest build(java.util.Map<String, ?> map) throws Exception {
         OpenProductRequest self = new OpenProductRequest();
         return TeaModel.build(map, self);
@@ -30,6 +34,14 @@ public class OpenProductRequest extends TeaModel {
     }
     public ProductInstance getProductInstance() {
         return this.productInstance;
+    }
+
+    public OpenProductRequest setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
