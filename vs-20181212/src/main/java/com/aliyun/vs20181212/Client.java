@@ -32,47 +32,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public AddDeviceResponse addDeviceWithOptions(AddDeviceRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
-            query.put("Config", request.config);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
-            query.put("GroupId", request.groupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
-            query.put("Protocol", request.protocol);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "AddDevice"),
-            new TeaPair("version", "2018-12-12"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AddDeviceResponse());
-    }
-
-    public AddDeviceResponse addDevice(AddDeviceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.addDeviceWithOptions(request, runtime);
-    }
-
     public AddRegisteredDeviceResponse addRegisteredDeviceWithOptions(AddRegisteredDeviceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1601,51 +1560,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDeviceAlarmResponse createDeviceAlarm(CreateDeviceAlarmRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createDeviceAlarmWithOptions(request, runtime);
-    }
-
-    public CreateDeviceSnapshotResponse createDeviceSnapshotWithOptions(CreateDeviceSnapshotRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
-            query.put("DeviceId", request.deviceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
-            query.put("Mode", request.mode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.snapshotConfig)) {
-            query.put("SnapshotConfig", request.snapshotConfig);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.streamId)) {
-            query.put("StreamId", request.streamId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateDeviceSnapshot"),
-            new TeaPair("version", "2018-12-12"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDeviceSnapshotResponse());
-    }
-
-    public CreateDeviceSnapshotResponse createDeviceSnapshot(CreateDeviceSnapshotRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.createDeviceSnapshotWithOptions(request, runtime);
     }
 
     public CreateDirectoryResponse createDirectoryWithOptions(CreateDirectoryRequest request, RuntimeOptions runtime) throws Exception {
@@ -4061,6 +3975,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeTemplatesWithOptions(request, runtime);
     }
 
+    public DescribeUserDevicesResponse describeUserDevicesWithOptions(DescribeUserDevicesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ensInstanceIds)) {
+            query.put("EnsInstanceIds", request.ensInstanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverName)) {
+            query.put("ServerName", request.serverName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeUserDevices"),
+            new TeaPair("version", "2018-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserDevicesResponse());
+    }
+
+    public DescribeUserDevicesResponse describeUserDevices(DescribeUserDevicesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeUserDevicesWithOptions(request, runtime);
+    }
+
     public DescribeVodStreamURLResponse describeVodStreamURLWithOptions(DescribeVodStreamURLRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5468,96 +5419,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListBucketsResponse listBuckets(ListBucketsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listBucketsWithOptions(request, runtime);
-    }
-
-    public ListDeviceChannelsResponse listDeviceChannelsWithOptions(ListDeviceChannelsRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
-            query.put("DeviceId", request.deviceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
-            query.put("PageNum", request.pageNum);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListDeviceChannels"),
-            new TeaPair("version", "2018-12-12"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDeviceChannelsResponse());
-    }
-
-    public ListDeviceChannelsResponse listDeviceChannels(ListDeviceChannelsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.listDeviceChannelsWithOptions(request, runtime);
-    }
-
-    public ListDeviceRecordsResponse listDeviceRecordsWithOptions(ListDeviceRecordsRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
-            query.put("DeviceId", request.deviceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
-            query.put("PageNum", request.pageNum);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.searchCriteria)) {
-            query.put("SearchCriteria", request.searchCriteria);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.streamId)) {
-            query.put("StreamId", request.streamId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListDeviceRecords"),
-            new TeaPair("version", "2018-12-12"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDeviceRecordsResponse());
-    }
-
-    public ListDeviceRecordsResponse listDeviceRecords(ListDeviceRecordsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.listDeviceRecordsWithOptions(request, runtime);
     }
 
     public ListObjectsResponse listObjectsWithOptions(ListObjectsRequest request, RuntimeOptions runtime) throws Exception {
@@ -7112,39 +6973,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.syncCatalogsWithOptions(request, runtime);
     }
 
-    public SyncDeviceChannelsResponse syncDeviceChannelsWithOptions(SyncDeviceChannelsRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
-            query.put("DeviceId", request.deviceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "SyncDeviceChannels"),
-            new TeaPair("version", "2018-12-12"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SyncDeviceChannelsResponse());
-    }
-
-    public SyncDeviceChannelsResponse syncDeviceChannels(SyncDeviceChannelsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.syncDeviceChannelsWithOptions(request, runtime);
-    }
-
     public UnbindDirectoryResponse unbindDirectoryWithOptions(UnbindDirectoryRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7683,62 +7511,5 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpgradeRenderingDevicesImageResponse upgradeRenderingDevicesImage(UpgradeRenderingDevicesImageRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.upgradeRenderingDevicesImageWithOptions(request, runtime);
-    }
-
-    public UploadDeviceRecordResponse uploadDeviceRecordWithOptions(UploadDeviceRecordRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
-            query.put("DeviceId", request.deviceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.searchCriteria)) {
-            query.put("SearchCriteria", request.searchCriteria);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.streamId)) {
-            query.put("StreamId", request.streamId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.uploadId)) {
-            query.put("UploadId", request.uploadId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.uploadMode)) {
-            query.put("UploadMode", request.uploadMode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.uploadParams)) {
-            query.put("UploadParams", request.uploadParams);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.uploadType)) {
-            query.put("UploadType", request.uploadType);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UploadDeviceRecord"),
-            new TeaPair("version", "2018-12-12"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UploadDeviceRecordResponse());
-    }
-
-    public UploadDeviceRecordResponse uploadDeviceRecord(UploadDeviceRecordRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.uploadDeviceRecordWithOptions(request, runtime);
     }
 }

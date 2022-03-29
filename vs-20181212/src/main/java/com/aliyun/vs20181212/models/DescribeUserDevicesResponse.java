@@ -3,21 +3,21 @@ package com.aliyun.vs20181212.models;
 
 import com.aliyun.tea.*;
 
-public class AddDeviceResponse extends TeaModel {
+public class DescribeUserDevicesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public AddDeviceResponseBody body;
+    public DescribeUserDevicesResponseBody body;
 
-    public static AddDeviceResponse build(java.util.Map<String, ?> map) throws Exception {
-        AddDeviceResponse self = new AddDeviceResponse();
+    public static DescribeUserDevicesResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeUserDevicesResponse self = new DescribeUserDevicesResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddDeviceResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeUserDevicesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class AddDeviceResponse extends TeaModel {
         return this.headers;
     }
 
-    public AddDeviceResponse setBody(AddDeviceResponseBody body) {
+    public DescribeUserDevicesResponse setBody(DescribeUserDevicesResponseBody body) {
         this.body = body;
         return this;
     }
-    public AddDeviceResponseBody getBody() {
+    public DescribeUserDevicesResponseBody getBody() {
         return this.body;
     }
 
