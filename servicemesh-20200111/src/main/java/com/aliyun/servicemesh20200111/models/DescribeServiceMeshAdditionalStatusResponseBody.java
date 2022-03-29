@@ -32,6 +32,12 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus extends TeaModel {
+        @NameInMap("PayType")
+        public String payType;
+
+        @NameInMap("Reused")
+        public Boolean reused;
+
         @NameInMap("SLBBackEndServerNumStatus")
         public String SLBBackEndServerNumStatus;
 
@@ -41,6 +47,22 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
         public static DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus self = new DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus setReused(Boolean reused) {
+            this.reused = reused;
+            return this;
+        }
+        public Boolean getReused() {
+            return this.reused;
         }
 
         public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus setSLBBackEndServerNumStatus(String SLBBackEndServerNumStatus) {
@@ -62,6 +84,12 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus extends TeaModel {
+        @NameInMap("PayType")
+        public String payType;
+
+        @NameInMap("Reused")
+        public Boolean reused;
+
         @NameInMap("SLBBackEndServerNumStatus")
         public String SLBBackEndServerNumStatus;
 
@@ -71,6 +99,22 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
         public static DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus self = new DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus setReused(Boolean reused) {
+            this.reused = reused;
+            return this;
+        }
+        public Boolean getReused() {
+            return this.reused;
         }
 
         public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus setSLBBackEndServerNumStatus(String SLBBackEndServerNumStatus) {
