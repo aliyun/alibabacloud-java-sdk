@@ -3,21 +3,21 @@ package com.aliyun.ens20171110.models;
 
 import com.aliyun.tea.*;
 
-public class CreateElbBuyOrderResponse extends TeaModel {
+public class ModifyPrepayInstanceSpecResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreateElbBuyOrderResponseBody body;
+    public ModifyPrepayInstanceSpecResponseBody body;
 
-    public static CreateElbBuyOrderResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateElbBuyOrderResponse self = new CreateElbBuyOrderResponse();
+    public static ModifyPrepayInstanceSpecResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyPrepayInstanceSpecResponse self = new ModifyPrepayInstanceSpecResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateElbBuyOrderResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyPrepayInstanceSpecResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class CreateElbBuyOrderResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateElbBuyOrderResponse setBody(CreateElbBuyOrderResponseBody body) {
+    public ModifyPrepayInstanceSpecResponse setBody(ModifyPrepayInstanceSpecResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateElbBuyOrderResponseBody getBody() {
+    public ModifyPrepayInstanceSpecResponseBody getBody() {
         return this.body;
     }
 

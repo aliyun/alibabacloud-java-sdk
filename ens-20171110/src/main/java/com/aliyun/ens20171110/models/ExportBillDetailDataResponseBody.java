@@ -4,9 +4,11 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ExportBillDetailDataResponseBody extends TeaModel {
+    // 文件下载地址
     @NameInMap("FilePath")
     public String filePath;
 
+    // 请求ID，公共字段
     @NameInMap("RequestId")
     public String requestId;
 

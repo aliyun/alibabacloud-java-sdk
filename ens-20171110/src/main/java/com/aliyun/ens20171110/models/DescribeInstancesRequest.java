@@ -52,9 +52,6 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    @NameInMap("Version")
-    public String version;
-
     public static DescribeInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesRequest self = new DescribeInstancesRequest();
         return TeaModel.build(map, self);
@@ -186,14 +183,6 @@ public class DescribeInstancesRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
-    }
-
-    public DescribeInstancesRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

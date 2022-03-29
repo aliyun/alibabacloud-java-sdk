@@ -103,6 +103,9 @@ public class DescribeNetworksResponseBody extends TeaModel {
         @NameInMap("NetworkName")
         public String networkName;
 
+        @NameInMap("RouterTableId")
+        public String routerTableId;
+
         @NameInMap("Status")
         public String status;
 
@@ -160,6 +163,14 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
         public String getNetworkName() {
             return this.networkName;
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetwork setRouterTableId(String routerTableId) {
+            this.routerTableId = routerTableId;
+            return this;
+        }
+        public String getRouterTableId() {
+            return this.routerTableId;
         }
 
         public DescribeNetworksResponseBodyNetworksNetwork setStatus(String status) {
