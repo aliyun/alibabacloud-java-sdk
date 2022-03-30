@@ -131,23 +131,15 @@ public class UpdateEslDeviceLightResponseBody extends TeaModel {
     }
 
     public static class UpdateEslDeviceLightResponseBodyLightFailEslInfos extends TeaModel {
-        @NameInMap("EslBarCode")
-        public String eslBarCode;
-
         @NameInMap("ErrorMessage")
         public String errorMessage;
+
+        @NameInMap("EslBarCode")
+        public String eslBarCode;
 
         public static UpdateEslDeviceLightResponseBodyLightFailEslInfos build(java.util.Map<String, ?> map) throws Exception {
             UpdateEslDeviceLightResponseBodyLightFailEslInfos self = new UpdateEslDeviceLightResponseBodyLightFailEslInfos();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateEslDeviceLightResponseBodyLightFailEslInfos setEslBarCode(String eslBarCode) {
-            this.eslBarCode = eslBarCode;
-            return this;
-        }
-        public String getEslBarCode() {
-            return this.eslBarCode;
         }
 
         public UpdateEslDeviceLightResponseBodyLightFailEslInfos setErrorMessage(String errorMessage) {
@@ -156,6 +148,14 @@ public class UpdateEslDeviceLightResponseBody extends TeaModel {
         }
         public String getErrorMessage() {
             return this.errorMessage;
+        }
+
+        public UpdateEslDeviceLightResponseBodyLightFailEslInfos setEslBarCode(String eslBarCode) {
+            this.eslBarCode = eslBarCode;
+            return this;
+        }
+        public String getEslBarCode() {
+            return this.eslBarCode;
         }
 
     }

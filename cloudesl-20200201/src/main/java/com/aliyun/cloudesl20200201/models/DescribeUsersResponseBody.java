@@ -172,62 +172,30 @@ public class DescribeUsersResponseBody extends TeaModel {
     }
 
     public static class DescribeUsersResponseBodyUsers extends TeaModel {
-        @NameInMap("UserType")
-        public String userType;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("Stores")
-        public String stores;
-
-        @NameInMap("UserName")
-        public String userName;
-
         @NameInMap("Bid")
         public String bid;
-
-        @NameInMap("OwnerId")
-        public String ownerId;
 
         @NameInMap("DingTalkInfos")
         public java.util.List<DescribeUsersResponseBodyUsersDingTalkInfos> dingTalkInfos;
 
+        @NameInMap("OwnerId")
+        public String ownerId;
+
+        @NameInMap("Stores")
+        public String stores;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserName")
+        public String userName;
+
+        @NameInMap("UserType")
+        public String userType;
+
         public static DescribeUsersResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
             DescribeUsersResponseBodyUsers self = new DescribeUsersResponseBodyUsers();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeUsersResponseBodyUsers setUserType(String userType) {
-            this.userType = userType;
-            return this;
-        }
-        public String getUserType() {
-            return this.userType;
-        }
-
-        public DescribeUsersResponseBodyUsers setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public DescribeUsersResponseBodyUsers setStores(String stores) {
-            this.stores = stores;
-            return this;
-        }
-        public String getStores() {
-            return this.stores;
-        }
-
-        public DescribeUsersResponseBodyUsers setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
         }
 
         public DescribeUsersResponseBodyUsers setBid(String bid) {
@@ -238,6 +206,14 @@ public class DescribeUsersResponseBody extends TeaModel {
             return this.bid;
         }
 
+        public DescribeUsersResponseBodyUsers setDingTalkInfos(java.util.List<DescribeUsersResponseBodyUsersDingTalkInfos> dingTalkInfos) {
+            this.dingTalkInfos = dingTalkInfos;
+            return this;
+        }
+        public java.util.List<DescribeUsersResponseBodyUsersDingTalkInfos> getDingTalkInfos() {
+            return this.dingTalkInfos;
+        }
+
         public DescribeUsersResponseBodyUsers setOwnerId(String ownerId) {
             this.ownerId = ownerId;
             return this;
@@ -246,12 +222,36 @@ public class DescribeUsersResponseBody extends TeaModel {
             return this.ownerId;
         }
 
-        public DescribeUsersResponseBodyUsers setDingTalkInfos(java.util.List<DescribeUsersResponseBodyUsersDingTalkInfos> dingTalkInfos) {
-            this.dingTalkInfos = dingTalkInfos;
+        public DescribeUsersResponseBodyUsers setStores(String stores) {
+            this.stores = stores;
             return this;
         }
-        public java.util.List<DescribeUsersResponseBodyUsersDingTalkInfos> getDingTalkInfos() {
-            return this.dingTalkInfos;
+        public String getStores() {
+            return this.stores;
+        }
+
+        public DescribeUsersResponseBodyUsers setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public DescribeUsersResponseBodyUsers setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public DescribeUsersResponseBodyUsers setUserType(String userType) {
+            this.userType = userType;
+            return this;
+        }
+        public String getUserType() {
+            return this.userType;
         }
 
     }

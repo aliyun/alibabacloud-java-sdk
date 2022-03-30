@@ -142,41 +142,29 @@ public class DescribeUserLogResponseBody extends TeaModel {
     }
 
     public static class DescribeUserLogResponseBodyUserLogs extends TeaModel {
-        @NameInMap("EslBarCode")
-        public String eslBarCode;
-
-        @NameInMap("OperationSendTime")
-        public String operationSendTime;
-
         @NameInMap("ActionPrice")
         public String actionPrice;
 
-        @NameInMap("UserId")
-        public String userId;
+        @NameInMap("BePromotion")
+        public Boolean bePromotion;
 
-        @NameInMap("PriceUnit")
-        public String priceUnit;
+        @NameInMap("EslBarCode")
+        public String eslBarCode;
 
-        @NameInMap("ResultCode")
-        public String resultCode;
+        @NameInMap("EslSignal")
+        public Integer eslSignal;
 
-        @NameInMap("ItemId")
-        public String itemId;
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
 
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        @NameInMap("OperationType")
-        public String operationType;
+        @NameInMap("ItemBarCode")
+        public String itemBarCode;
 
-        @NameInMap("OperationResponseTime")
-        public String operationResponseTime;
-
-        @NameInMap("OperationStatus")
-        public String operationStatus;
-
-        @NameInMap("StoreId")
-        public String storeId;
+        @NameInMap("ItemId")
+        public String itemId;
 
         @NameInMap("ItemShortTitle")
         public String itemShortTitle;
@@ -184,40 +172,36 @@ public class DescribeUserLogResponseBody extends TeaModel {
         @NameInMap("LogId")
         public String logId;
 
-        @NameInMap("BePromotion")
-        public Boolean bePromotion;
+        @NameInMap("OperationResponseTime")
+        public String operationResponseTime;
 
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
+        @NameInMap("OperationSendTime")
+        public String operationSendTime;
 
-        @NameInMap("EslSignal")
-        public Integer eslSignal;
+        @NameInMap("OperationStatus")
+        public String operationStatus;
+
+        @NameInMap("OperationType")
+        public String operationType;
+
+        @NameInMap("PriceUnit")
+        public String priceUnit;
+
+        @NameInMap("ResultCode")
+        public String resultCode;
 
         @NameInMap("SpendTime")
         public String spendTime;
 
-        @NameInMap("ItemBarCode")
-        public String itemBarCode;
+        @NameInMap("StoreId")
+        public String storeId;
+
+        @NameInMap("UserId")
+        public String userId;
 
         public static DescribeUserLogResponseBodyUserLogs build(java.util.Map<String, ?> map) throws Exception {
             DescribeUserLogResponseBodyUserLogs self = new DescribeUserLogResponseBodyUserLogs();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeUserLogResponseBodyUserLogs setEslBarCode(String eslBarCode) {
-            this.eslBarCode = eslBarCode;
-            return this;
-        }
-        public String getEslBarCode() {
-            return this.eslBarCode;
-        }
-
-        public DescribeUserLogResponseBodyUserLogs setOperationSendTime(String operationSendTime) {
-            this.operationSendTime = operationSendTime;
-            return this;
-        }
-        public String getOperationSendTime() {
-            return this.operationSendTime;
         }
 
         public DescribeUserLogResponseBodyUserLogs setActionPrice(String actionPrice) {
@@ -228,36 +212,36 @@ public class DescribeUserLogResponseBody extends TeaModel {
             return this.actionPrice;
         }
 
-        public DescribeUserLogResponseBodyUserLogs setUserId(String userId) {
-            this.userId = userId;
+        public DescribeUserLogResponseBodyUserLogs setBePromotion(Boolean bePromotion) {
+            this.bePromotion = bePromotion;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public Boolean getBePromotion() {
+            return this.bePromotion;
         }
 
-        public DescribeUserLogResponseBodyUserLogs setPriceUnit(String priceUnit) {
-            this.priceUnit = priceUnit;
+        public DescribeUserLogResponseBodyUserLogs setEslBarCode(String eslBarCode) {
+            this.eslBarCode = eslBarCode;
             return this;
         }
-        public String getPriceUnit() {
-            return this.priceUnit;
+        public String getEslBarCode() {
+            return this.eslBarCode;
         }
 
-        public DescribeUserLogResponseBodyUserLogs setResultCode(String resultCode) {
-            this.resultCode = resultCode;
+        public DescribeUserLogResponseBodyUserLogs setEslSignal(Integer eslSignal) {
+            this.eslSignal = eslSignal;
             return this;
         }
-        public String getResultCode() {
-            return this.resultCode;
+        public Integer getEslSignal() {
+            return this.eslSignal;
         }
 
-        public DescribeUserLogResponseBodyUserLogs setItemId(String itemId) {
-            this.itemId = itemId;
+        public DescribeUserLogResponseBodyUserLogs setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
             return this;
         }
-        public String getItemId() {
-            return this.itemId;
+        public String getGmtCreate() {
+            return this.gmtCreate;
         }
 
         public DescribeUserLogResponseBodyUserLogs setGmtModified(String gmtModified) {
@@ -268,36 +252,20 @@ public class DescribeUserLogResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public DescribeUserLogResponseBodyUserLogs setOperationType(String operationType) {
-            this.operationType = operationType;
+        public DescribeUserLogResponseBodyUserLogs setItemBarCode(String itemBarCode) {
+            this.itemBarCode = itemBarCode;
             return this;
         }
-        public String getOperationType() {
-            return this.operationType;
+        public String getItemBarCode() {
+            return this.itemBarCode;
         }
 
-        public DescribeUserLogResponseBodyUserLogs setOperationResponseTime(String operationResponseTime) {
-            this.operationResponseTime = operationResponseTime;
+        public DescribeUserLogResponseBodyUserLogs setItemId(String itemId) {
+            this.itemId = itemId;
             return this;
         }
-        public String getOperationResponseTime() {
-            return this.operationResponseTime;
-        }
-
-        public DescribeUserLogResponseBodyUserLogs setOperationStatus(String operationStatus) {
-            this.operationStatus = operationStatus;
-            return this;
-        }
-        public String getOperationStatus() {
-            return this.operationStatus;
-        }
-
-        public DescribeUserLogResponseBodyUserLogs setStoreId(String storeId) {
-            this.storeId = storeId;
-            return this;
-        }
-        public String getStoreId() {
-            return this.storeId;
+        public String getItemId() {
+            return this.itemId;
         }
 
         public DescribeUserLogResponseBodyUserLogs setItemShortTitle(String itemShortTitle) {
@@ -316,28 +284,52 @@ public class DescribeUserLogResponseBody extends TeaModel {
             return this.logId;
         }
 
-        public DescribeUserLogResponseBodyUserLogs setBePromotion(Boolean bePromotion) {
-            this.bePromotion = bePromotion;
+        public DescribeUserLogResponseBodyUserLogs setOperationResponseTime(String operationResponseTime) {
+            this.operationResponseTime = operationResponseTime;
             return this;
         }
-        public Boolean getBePromotion() {
-            return this.bePromotion;
+        public String getOperationResponseTime() {
+            return this.operationResponseTime;
         }
 
-        public DescribeUserLogResponseBodyUserLogs setGmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
+        public DescribeUserLogResponseBodyUserLogs setOperationSendTime(String operationSendTime) {
+            this.operationSendTime = operationSendTime;
             return this;
         }
-        public String getGmtCreate() {
-            return this.gmtCreate;
+        public String getOperationSendTime() {
+            return this.operationSendTime;
         }
 
-        public DescribeUserLogResponseBodyUserLogs setEslSignal(Integer eslSignal) {
-            this.eslSignal = eslSignal;
+        public DescribeUserLogResponseBodyUserLogs setOperationStatus(String operationStatus) {
+            this.operationStatus = operationStatus;
             return this;
         }
-        public Integer getEslSignal() {
-            return this.eslSignal;
+        public String getOperationStatus() {
+            return this.operationStatus;
+        }
+
+        public DescribeUserLogResponseBodyUserLogs setOperationType(String operationType) {
+            this.operationType = operationType;
+            return this;
+        }
+        public String getOperationType() {
+            return this.operationType;
+        }
+
+        public DescribeUserLogResponseBodyUserLogs setPriceUnit(String priceUnit) {
+            this.priceUnit = priceUnit;
+            return this;
+        }
+        public String getPriceUnit() {
+            return this.priceUnit;
+        }
+
+        public DescribeUserLogResponseBodyUserLogs setResultCode(String resultCode) {
+            this.resultCode = resultCode;
+            return this;
+        }
+        public String getResultCode() {
+            return this.resultCode;
         }
 
         public DescribeUserLogResponseBodyUserLogs setSpendTime(String spendTime) {
@@ -348,12 +340,20 @@ public class DescribeUserLogResponseBody extends TeaModel {
             return this.spendTime;
         }
 
-        public DescribeUserLogResponseBodyUserLogs setItemBarCode(String itemBarCode) {
-            this.itemBarCode = itemBarCode;
+        public DescribeUserLogResponseBodyUserLogs setStoreId(String storeId) {
+            this.storeId = storeId;
             return this;
         }
-        public String getItemBarCode() {
-            return this.itemBarCode;
+        public String getStoreId() {
+            return this.storeId;
+        }
+
+        public DescribeUserLogResponseBodyUserLogs setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

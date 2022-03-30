@@ -109,6 +109,9 @@ public class BatchInsertItemsResponseBody extends TeaModel {
     }
 
     public static class BatchInsertItemsResponseBodyBatchResults extends TeaModel {
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
         @NameInMap("Index")
         public Integer index;
 
@@ -118,12 +121,17 @@ public class BatchInsertItemsResponseBody extends TeaModel {
         @NameInMap("Success")
         public Boolean success;
 
-        @NameInMap("ErrorCode")
-        public String errorCode;
-
         public static BatchInsertItemsResponseBodyBatchResults build(java.util.Map<String, ?> map) throws Exception {
             BatchInsertItemsResponseBodyBatchResults self = new BatchInsertItemsResponseBodyBatchResults();
             return TeaModel.build(map, self);
+        }
+
+        public BatchInsertItemsResponseBodyBatchResults setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         public BatchInsertItemsResponseBodyBatchResults setIndex(Integer index) {
@@ -148,14 +156,6 @@ public class BatchInsertItemsResponseBody extends TeaModel {
         }
         public Boolean getSuccess() {
             return this.success;
-        }
-
-        public BatchInsertItemsResponseBodyBatchResults setErrorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-        public String getErrorCode() {
-            return this.errorCode;
         }
 
     }

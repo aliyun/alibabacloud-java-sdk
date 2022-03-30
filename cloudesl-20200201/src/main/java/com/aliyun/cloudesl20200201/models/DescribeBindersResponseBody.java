@@ -142,91 +142,75 @@ public class DescribeBindersResponseBody extends TeaModel {
     }
 
     public static class DescribeBindersResponseBodyEslItemBindInfos extends TeaModel {
-        @NameInMap("EslBarCode")
-        public String eslBarCode;
-
-        @NameInMap("TemplateSceneId")
-        public String templateSceneId;
-
         @NameInMap("ActionPrice")
         public String actionPrice;
-
-        @NameInMap("ItemTitle")
-        public String itemTitle;
-
-        @NameInMap("PromotionStart")
-        public String promotionStart;
-
-        @NameInMap("PriceUnit")
-        public String priceUnit;
-
-        @NameInMap("OriginalPrice")
-        public String originalPrice;
-
-        @NameInMap("ItemId")
-        public String itemId;
-
-        @NameInMap("GmtModified")
-        public String gmtModified;
-
-        @NameInMap("EslPic")
-        public String eslPic;
-
-        @NameInMap("StoreId")
-        public String storeId;
-
-        @NameInMap("ItemShortTitle")
-        public String itemShortTitle;
-
-        @NameInMap("BindId")
-        public String bindId;
-
-        @NameInMap("PromotionText")
-        public String promotionText;
-
-        @NameInMap("EslModel")
-        public String eslModel;
 
         @NameInMap("BePromotion")
         public Boolean bePromotion;
 
-        @NameInMap("SkuId")
-        public String skuId;
+        @NameInMap("BindId")
+        public String bindId;
+
+        @NameInMap("EslBarCode")
+        public String eslBarCode;
 
         @NameInMap("EslConnectAp")
         public String eslConnectAp;
 
+        @NameInMap("EslModel")
+        public String eslModel;
+
+        @NameInMap("EslPic")
+        public String eslPic;
+
         @NameInMap("EslStatus")
         public String eslStatus;
 
-        @NameInMap("TemplateId")
-        public String templateId;
-
-        @NameInMap("PromotionEnd")
-        public String promotionEnd;
+        @NameInMap("GmtModified")
+        public String gmtModified;
 
         @NameInMap("ItemBarCode")
         public String itemBarCode;
 
+        @NameInMap("ItemId")
+        public String itemId;
+
+        @NameInMap("ItemShortTitle")
+        public String itemShortTitle;
+
+        @NameInMap("ItemTitle")
+        public String itemTitle;
+
+        @NameInMap("OriginalPrice")
+        public String originalPrice;
+
+        @NameInMap("PriceUnit")
+        public String priceUnit;
+
+        @NameInMap("PromotionEnd")
+        public String promotionEnd;
+
+        @NameInMap("PromotionStart")
+        public String promotionStart;
+
+        @NameInMap("PromotionText")
+        public String promotionText;
+
+        @NameInMap("SkuId")
+        public String skuId;
+
+        @NameInMap("StoreId")
+        public String storeId;
+
+        @NameInMap("TemplateId")
+        public String templateId;
+
+        @NameInMap("TemplateSceneId")
+        public String templateSceneId;
+
         public static DescribeBindersResponseBodyEslItemBindInfos build(java.util.Map<String, ?> map) throws Exception {
             DescribeBindersResponseBodyEslItemBindInfos self = new DescribeBindersResponseBodyEslItemBindInfos();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBindersResponseBodyEslItemBindInfos setEslBarCode(String eslBarCode) {
-            this.eslBarCode = eslBarCode;
-            return this;
-        }
-        public String getEslBarCode() {
-            return this.eslBarCode;
-        }
-
-        public DescribeBindersResponseBodyEslItemBindInfos setTemplateSceneId(String templateSceneId) {
-            this.templateSceneId = templateSceneId;
-            return this;
-        }
-        public String getTemplateSceneId() {
-            return this.templateSceneId;
         }
 
         public DescribeBindersResponseBodyEslItemBindInfos setActionPrice(String actionPrice) {
@@ -237,76 +221,12 @@ public class DescribeBindersResponseBody extends TeaModel {
             return this.actionPrice;
         }
 
-        public DescribeBindersResponseBodyEslItemBindInfos setItemTitle(String itemTitle) {
-            this.itemTitle = itemTitle;
+        public DescribeBindersResponseBodyEslItemBindInfos setBePromotion(Boolean bePromotion) {
+            this.bePromotion = bePromotion;
             return this;
         }
-        public String getItemTitle() {
-            return this.itemTitle;
-        }
-
-        public DescribeBindersResponseBodyEslItemBindInfos setPromotionStart(String promotionStart) {
-            this.promotionStart = promotionStart;
-            return this;
-        }
-        public String getPromotionStart() {
-            return this.promotionStart;
-        }
-
-        public DescribeBindersResponseBodyEslItemBindInfos setPriceUnit(String priceUnit) {
-            this.priceUnit = priceUnit;
-            return this;
-        }
-        public String getPriceUnit() {
-            return this.priceUnit;
-        }
-
-        public DescribeBindersResponseBodyEslItemBindInfos setOriginalPrice(String originalPrice) {
-            this.originalPrice = originalPrice;
-            return this;
-        }
-        public String getOriginalPrice() {
-            return this.originalPrice;
-        }
-
-        public DescribeBindersResponseBodyEslItemBindInfos setItemId(String itemId) {
-            this.itemId = itemId;
-            return this;
-        }
-        public String getItemId() {
-            return this.itemId;
-        }
-
-        public DescribeBindersResponseBodyEslItemBindInfos setGmtModified(String gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public String getGmtModified() {
-            return this.gmtModified;
-        }
-
-        public DescribeBindersResponseBodyEslItemBindInfos setEslPic(String eslPic) {
-            this.eslPic = eslPic;
-            return this;
-        }
-        public String getEslPic() {
-            return this.eslPic;
-        }
-
-        public DescribeBindersResponseBodyEslItemBindInfos setStoreId(String storeId) {
-            this.storeId = storeId;
-            return this;
-        }
-        public String getStoreId() {
-            return this.storeId;
-        }
-
-        public DescribeBindersResponseBodyEslItemBindInfos setItemShortTitle(String itemShortTitle) {
-            this.itemShortTitle = itemShortTitle;
-            return this;
-        }
-        public String getItemShortTitle() {
-            return this.itemShortTitle;
+        public Boolean getBePromotion() {
+            return this.bePromotion;
         }
 
         public DescribeBindersResponseBodyEslItemBindInfos setBindId(String bindId) {
@@ -317,36 +237,12 @@ public class DescribeBindersResponseBody extends TeaModel {
             return this.bindId;
         }
 
-        public DescribeBindersResponseBodyEslItemBindInfos setPromotionText(String promotionText) {
-            this.promotionText = promotionText;
+        public DescribeBindersResponseBodyEslItemBindInfos setEslBarCode(String eslBarCode) {
+            this.eslBarCode = eslBarCode;
             return this;
         }
-        public String getPromotionText() {
-            return this.promotionText;
-        }
-
-        public DescribeBindersResponseBodyEslItemBindInfos setEslModel(String eslModel) {
-            this.eslModel = eslModel;
-            return this;
-        }
-        public String getEslModel() {
-            return this.eslModel;
-        }
-
-        public DescribeBindersResponseBodyEslItemBindInfos setBePromotion(Boolean bePromotion) {
-            this.bePromotion = bePromotion;
-            return this;
-        }
-        public Boolean getBePromotion() {
-            return this.bePromotion;
-        }
-
-        public DescribeBindersResponseBodyEslItemBindInfos setSkuId(String skuId) {
-            this.skuId = skuId;
-            return this;
-        }
-        public String getSkuId() {
-            return this.skuId;
+        public String getEslBarCode() {
+            return this.eslBarCode;
         }
 
         public DescribeBindersResponseBodyEslItemBindInfos setEslConnectAp(String eslConnectAp) {
@@ -357,6 +253,22 @@ public class DescribeBindersResponseBody extends TeaModel {
             return this.eslConnectAp;
         }
 
+        public DescribeBindersResponseBodyEslItemBindInfos setEslModel(String eslModel) {
+            this.eslModel = eslModel;
+            return this;
+        }
+        public String getEslModel() {
+            return this.eslModel;
+        }
+
+        public DescribeBindersResponseBodyEslItemBindInfos setEslPic(String eslPic) {
+            this.eslPic = eslPic;
+            return this;
+        }
+        public String getEslPic() {
+            return this.eslPic;
+        }
+
         public DescribeBindersResponseBodyEslItemBindInfos setEslStatus(String eslStatus) {
             this.eslStatus = eslStatus;
             return this;
@@ -365,12 +277,60 @@ public class DescribeBindersResponseBody extends TeaModel {
             return this.eslStatus;
         }
 
-        public DescribeBindersResponseBodyEslItemBindInfos setTemplateId(String templateId) {
-            this.templateId = templateId;
+        public DescribeBindersResponseBodyEslItemBindInfos setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
             return this;
         }
-        public String getTemplateId() {
-            return this.templateId;
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
+        public DescribeBindersResponseBodyEslItemBindInfos setItemBarCode(String itemBarCode) {
+            this.itemBarCode = itemBarCode;
+            return this;
+        }
+        public String getItemBarCode() {
+            return this.itemBarCode;
+        }
+
+        public DescribeBindersResponseBodyEslItemBindInfos setItemId(String itemId) {
+            this.itemId = itemId;
+            return this;
+        }
+        public String getItemId() {
+            return this.itemId;
+        }
+
+        public DescribeBindersResponseBodyEslItemBindInfos setItemShortTitle(String itemShortTitle) {
+            this.itemShortTitle = itemShortTitle;
+            return this;
+        }
+        public String getItemShortTitle() {
+            return this.itemShortTitle;
+        }
+
+        public DescribeBindersResponseBodyEslItemBindInfos setItemTitle(String itemTitle) {
+            this.itemTitle = itemTitle;
+            return this;
+        }
+        public String getItemTitle() {
+            return this.itemTitle;
+        }
+
+        public DescribeBindersResponseBodyEslItemBindInfos setOriginalPrice(String originalPrice) {
+            this.originalPrice = originalPrice;
+            return this;
+        }
+        public String getOriginalPrice() {
+            return this.originalPrice;
+        }
+
+        public DescribeBindersResponseBodyEslItemBindInfos setPriceUnit(String priceUnit) {
+            this.priceUnit = priceUnit;
+            return this;
+        }
+        public String getPriceUnit() {
+            return this.priceUnit;
         }
 
         public DescribeBindersResponseBodyEslItemBindInfos setPromotionEnd(String promotionEnd) {
@@ -381,12 +341,52 @@ public class DescribeBindersResponseBody extends TeaModel {
             return this.promotionEnd;
         }
 
-        public DescribeBindersResponseBodyEslItemBindInfos setItemBarCode(String itemBarCode) {
-            this.itemBarCode = itemBarCode;
+        public DescribeBindersResponseBodyEslItemBindInfos setPromotionStart(String promotionStart) {
+            this.promotionStart = promotionStart;
             return this;
         }
-        public String getItemBarCode() {
-            return this.itemBarCode;
+        public String getPromotionStart() {
+            return this.promotionStart;
+        }
+
+        public DescribeBindersResponseBodyEslItemBindInfos setPromotionText(String promotionText) {
+            this.promotionText = promotionText;
+            return this;
+        }
+        public String getPromotionText() {
+            return this.promotionText;
+        }
+
+        public DescribeBindersResponseBodyEslItemBindInfos setSkuId(String skuId) {
+            this.skuId = skuId;
+            return this;
+        }
+        public String getSkuId() {
+            return this.skuId;
+        }
+
+        public DescribeBindersResponseBodyEslItemBindInfos setStoreId(String storeId) {
+            this.storeId = storeId;
+            return this;
+        }
+        public String getStoreId() {
+            return this.storeId;
+        }
+
+        public DescribeBindersResponseBodyEslItemBindInfos setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        public DescribeBindersResponseBodyEslItemBindInfos setTemplateSceneId(String templateSceneId) {
+            this.templateSceneId = templateSceneId;
+            return this;
+        }
+        public String getTemplateSceneId() {
+            return this.templateSceneId;
         }
 
     }

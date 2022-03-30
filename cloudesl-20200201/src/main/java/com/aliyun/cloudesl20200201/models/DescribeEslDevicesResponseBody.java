@@ -142,20 +142,26 @@ public class DescribeEslDevicesResponseBody extends TeaModel {
     }
 
     public static class DescribeEslDevicesResponseBodyEslDevices extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("StoreId")
-        public String storeId;
+        @NameInMap("BatteryLevel")
+        public Integer batteryLevel;
 
         @NameInMap("EslBarCode")
         public String eslBarCode;
 
-        @NameInMap("Model")
-        public String model;
+        @NameInMap("EslSignal")
+        public Integer eslSignal;
+
+        @NameInMap("EslStatus")
+        public String eslStatus;
 
         @NameInMap("LastCommunicateTime")
         public String lastCommunicateTime;
+
+        @NameInMap("Mac")
+        public String mac;
+
+        @NameInMap("Model")
+        public String model;
 
         @NameInMap("ScreenHeight")
         public Integer screenHeight;
@@ -163,37 +169,34 @@ public class DescribeEslDevicesResponseBody extends TeaModel {
         @NameInMap("ScreenWidth")
         public Integer screenWidth;
 
-        @NameInMap("EslSignal")
-        public Integer eslSignal;
+        @NameInMap("StoreId")
+        public String storeId;
 
-        @NameInMap("BatteryLevel")
-        public Integer batteryLevel;
+        @NameInMap("Type")
+        public String type;
 
-        @NameInMap("EslStatus")
-        public String eslStatus;
-
-        @NameInMap("Mac")
-        public String mac;
+        // 类型编码
+        // 取值范围如下：
+        // NORMAL 常规
+        // LOW_TEMPLATE 低温价签
+        // THREE_COLOR 三色价签
+        // ESL_TYPE_DM_LCD  段码屏幕
+        // ESL_TYPE_FULL_COLOR 彩色屏幕
+        // ESL_TYPE_MUTIMEDIA 多媒体
+        @NameInMap("TypeEncode")
+        public String typeEncode;
 
         public static DescribeEslDevicesResponseBodyEslDevices build(java.util.Map<String, ?> map) throws Exception {
             DescribeEslDevicesResponseBodyEslDevices self = new DescribeEslDevicesResponseBodyEslDevices();
             return TeaModel.build(map, self);
         }
 
-        public DescribeEslDevicesResponseBodyEslDevices setType(String type) {
-            this.type = type;
+        public DescribeEslDevicesResponseBodyEslDevices setBatteryLevel(Integer batteryLevel) {
+            this.batteryLevel = batteryLevel;
             return this;
         }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeEslDevicesResponseBodyEslDevices setStoreId(String storeId) {
-            this.storeId = storeId;
-            return this;
-        }
-        public String getStoreId() {
-            return this.storeId;
+        public Integer getBatteryLevel() {
+            return this.batteryLevel;
         }
 
         public DescribeEslDevicesResponseBodyEslDevices setEslBarCode(String eslBarCode) {
@@ -204,12 +207,20 @@ public class DescribeEslDevicesResponseBody extends TeaModel {
             return this.eslBarCode;
         }
 
-        public DescribeEslDevicesResponseBodyEslDevices setModel(String model) {
-            this.model = model;
+        public DescribeEslDevicesResponseBodyEslDevices setEslSignal(Integer eslSignal) {
+            this.eslSignal = eslSignal;
             return this;
         }
-        public String getModel() {
-            return this.model;
+        public Integer getEslSignal() {
+            return this.eslSignal;
+        }
+
+        public DescribeEslDevicesResponseBodyEslDevices setEslStatus(String eslStatus) {
+            this.eslStatus = eslStatus;
+            return this;
+        }
+        public String getEslStatus() {
+            return this.eslStatus;
         }
 
         public DescribeEslDevicesResponseBodyEslDevices setLastCommunicateTime(String lastCommunicateTime) {
@@ -218,6 +229,22 @@ public class DescribeEslDevicesResponseBody extends TeaModel {
         }
         public String getLastCommunicateTime() {
             return this.lastCommunicateTime;
+        }
+
+        public DescribeEslDevicesResponseBodyEslDevices setMac(String mac) {
+            this.mac = mac;
+            return this;
+        }
+        public String getMac() {
+            return this.mac;
+        }
+
+        public DescribeEslDevicesResponseBodyEslDevices setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
         }
 
         public DescribeEslDevicesResponseBodyEslDevices setScreenHeight(Integer screenHeight) {
@@ -236,36 +263,28 @@ public class DescribeEslDevicesResponseBody extends TeaModel {
             return this.screenWidth;
         }
 
-        public DescribeEslDevicesResponseBodyEslDevices setEslSignal(Integer eslSignal) {
-            this.eslSignal = eslSignal;
+        public DescribeEslDevicesResponseBodyEslDevices setStoreId(String storeId) {
+            this.storeId = storeId;
             return this;
         }
-        public Integer getEslSignal() {
-            return this.eslSignal;
+        public String getStoreId() {
+            return this.storeId;
         }
 
-        public DescribeEslDevicesResponseBodyEslDevices setBatteryLevel(Integer batteryLevel) {
-            this.batteryLevel = batteryLevel;
+        public DescribeEslDevicesResponseBodyEslDevices setType(String type) {
+            this.type = type;
             return this;
         }
-        public Integer getBatteryLevel() {
-            return this.batteryLevel;
+        public String getType() {
+            return this.type;
         }
 
-        public DescribeEslDevicesResponseBodyEslDevices setEslStatus(String eslStatus) {
-            this.eslStatus = eslStatus;
+        public DescribeEslDevicesResponseBodyEslDevices setTypeEncode(String typeEncode) {
+            this.typeEncode = typeEncode;
             return this;
         }
-        public String getEslStatus() {
-            return this.eslStatus;
-        }
-
-        public DescribeEslDevicesResponseBodyEslDevices setMac(String mac) {
-            this.mac = mac;
-            return this;
-        }
-        public String getMac() {
-            return this.mac;
+        public String getTypeEncode() {
+            return this.typeEncode;
         }
 
     }

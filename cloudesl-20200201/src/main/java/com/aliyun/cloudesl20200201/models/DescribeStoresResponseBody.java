@@ -142,32 +142,32 @@ public class DescribeStoresResponseBody extends TeaModel {
     }
 
     public static class DescribeStoresResponseBodyStores extends TeaModel {
-        @NameInMap("StoreId")
-        public String storeId;
-
-        @NameInMap("ParentId")
-        public String parentId;
-
-        @NameInMap("TimeZone")
-        public String timeZone;
-
         @NameInMap("GmtCreate")
         public String gmtCreate;
-
-        @NameInMap("StoreName")
-        public String storeName;
 
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        @NameInMap("TemplateVersion")
-        public String templateVersion;
-
         @NameInMap("Level")
         public String level;
 
+        @NameInMap("ParentId")
+        public String parentId;
+
         @NameInMap("Phone")
         public String phone;
+
+        @NameInMap("StoreId")
+        public String storeId;
+
+        @NameInMap("StoreName")
+        public String storeName;
+
+        @NameInMap("TemplateVersion")
+        public String templateVersion;
+
+        @NameInMap("TimeZone")
+        public String timeZone;
 
         @NameInMap("UserStoreCode")
         public String userStoreCode;
@@ -175,30 +175,6 @@ public class DescribeStoresResponseBody extends TeaModel {
         public static DescribeStoresResponseBodyStores build(java.util.Map<String, ?> map) throws Exception {
             DescribeStoresResponseBodyStores self = new DescribeStoresResponseBodyStores();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeStoresResponseBodyStores setStoreId(String storeId) {
-            this.storeId = storeId;
-            return this;
-        }
-        public String getStoreId() {
-            return this.storeId;
-        }
-
-        public DescribeStoresResponseBodyStores setParentId(String parentId) {
-            this.parentId = parentId;
-            return this;
-        }
-        public String getParentId() {
-            return this.parentId;
-        }
-
-        public DescribeStoresResponseBodyStores setTimeZone(String timeZone) {
-            this.timeZone = timeZone;
-            return this;
-        }
-        public String getTimeZone() {
-            return this.timeZone;
         }
 
         public DescribeStoresResponseBodyStores setGmtCreate(String gmtCreate) {
@@ -209,28 +185,12 @@ public class DescribeStoresResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public DescribeStoresResponseBodyStores setStoreName(String storeName) {
-            this.storeName = storeName;
-            return this;
-        }
-        public String getStoreName() {
-            return this.storeName;
-        }
-
         public DescribeStoresResponseBodyStores setGmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
             return this;
         }
         public String getGmtModified() {
             return this.gmtModified;
-        }
-
-        public DescribeStoresResponseBodyStores setTemplateVersion(String templateVersion) {
-            this.templateVersion = templateVersion;
-            return this;
-        }
-        public String getTemplateVersion() {
-            return this.templateVersion;
         }
 
         public DescribeStoresResponseBodyStores setLevel(String level) {
@@ -241,12 +201,52 @@ public class DescribeStoresResponseBody extends TeaModel {
             return this.level;
         }
 
+        public DescribeStoresResponseBodyStores setParentId(String parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public String getParentId() {
+            return this.parentId;
+        }
+
         public DescribeStoresResponseBodyStores setPhone(String phone) {
             this.phone = phone;
             return this;
         }
         public String getPhone() {
             return this.phone;
+        }
+
+        public DescribeStoresResponseBodyStores setStoreId(String storeId) {
+            this.storeId = storeId;
+            return this;
+        }
+        public String getStoreId() {
+            return this.storeId;
+        }
+
+        public DescribeStoresResponseBodyStores setStoreName(String storeName) {
+            this.storeName = storeName;
+            return this;
+        }
+        public String getStoreName() {
+            return this.storeName;
+        }
+
+        public DescribeStoresResponseBodyStores setTemplateVersion(String templateVersion) {
+            this.templateVersion = templateVersion;
+            return this;
+        }
+        public String getTemplateVersion() {
+            return this.templateVersion;
+        }
+
+        public DescribeStoresResponseBodyStores setTimeZone(String timeZone) {
+            this.timeZone = timeZone;
+            return this;
+        }
+        public String getTimeZone() {
+            return this.timeZone;
         }
 
         public DescribeStoresResponseBodyStores setUserStoreCode(String userStoreCode) {
