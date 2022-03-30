@@ -593,6 +593,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AndroidRenderStyle", request.androidRenderStyle);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.androidVivoPushMode)) {
+            query.put("AndroidVivoPushMode", request.androidVivoPushMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.androidXiaoMiActivity)) {
             query.put("AndroidXiaoMiActivity", request.androidXiaoMiActivity);
         }
@@ -685,6 +689,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Title", request.title);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.trim)) {
+            query.put("Trim", request.trim);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.iOSApnsEnv)) {
             query.put("iOSApnsEnv", request.iOSApnsEnv);
         }
@@ -699,6 +707,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.iOSExtParameters)) {
             query.put("iOSExtParameters", request.iOSExtParameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iOSInterruptionLevel)) {
+            query.put("iOSInterruptionLevel", request.iOSInterruptionLevel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.iOSMusic)) {
@@ -719,6 +731,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.iOSNotificationThreadId)) {
             query.put("iOSNotificationThreadId", request.iOSNotificationThreadId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iOSRelevanceScore)) {
+            query.put("iOSRelevanceScore", request.iOSRelevanceScore);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.iOSRemind)) {
