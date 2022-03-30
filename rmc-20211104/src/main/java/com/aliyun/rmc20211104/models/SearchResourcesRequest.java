@@ -16,6 +16,9 @@ public class SearchResourcesRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("SortCriterion")
+    public SearchResourcesRequestSortCriterion sortCriterion;
+
     public static SearchResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchResourcesRequest self = new SearchResourcesRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class SearchResourcesRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public SearchResourcesRequest setSortCriterion(SearchResourcesRequestSortCriterion sortCriterion) {
+        this.sortCriterion = sortCriterion;
+        return this;
+    }
+    public SearchResourcesRequestSortCriterion getSortCriterion() {
+        return this.sortCriterion;
     }
 
     public static class SearchResourcesRequestFilter extends TeaModel {
@@ -90,6 +101,36 @@ public class SearchResourcesRequest extends TeaModel {
         }
         public java.util.List<String> getValue() {
             return this.value;
+        }
+
+    }
+
+    public static class SearchResourcesRequestSortCriterion extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Order")
+        public String order;
+
+        public static SearchResourcesRequestSortCriterion build(java.util.Map<String, ?> map) throws Exception {
+            SearchResourcesRequestSortCriterion self = new SearchResourcesRequestSortCriterion();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchResourcesRequestSortCriterion setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public SearchResourcesRequestSortCriterion setOrder(String order) {
+            this.order = order;
+            return this;
+        }
+        public String getOrder() {
+            return this.order;
         }
 
     }
