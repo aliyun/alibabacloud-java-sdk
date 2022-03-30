@@ -142,11 +142,11 @@ public class DescribeApDevicesResponseBody extends TeaModel {
     }
 
     public static class DescribeApDevicesResponseBodyApDevices extends TeaModel {
-        @NameInMap("Status")
-        public Boolean status;
+        @NameInMap("BeActivate")
+        public Boolean beActivate;
 
-        @NameInMap("StoreId")
-        public String storeId;
+        @NameInMap("Mac")
+        public String mac;
 
         @NameInMap("Model")
         public String model;
@@ -154,31 +154,31 @@ public class DescribeApDevicesResponseBody extends TeaModel {
         @NameInMap("Remark")
         public String remark;
 
-        @NameInMap("BeActivate")
-        public Boolean beActivate;
+        @NameInMap("Status")
+        public Boolean status;
 
-        @NameInMap("Mac")
-        public String mac;
+        @NameInMap("StoreId")
+        public String storeId;
 
         public static DescribeApDevicesResponseBodyApDevices build(java.util.Map<String, ?> map) throws Exception {
             DescribeApDevicesResponseBodyApDevices self = new DescribeApDevicesResponseBodyApDevices();
             return TeaModel.build(map, self);
         }
 
-        public DescribeApDevicesResponseBodyApDevices setStatus(Boolean status) {
-            this.status = status;
+        public DescribeApDevicesResponseBodyApDevices setBeActivate(Boolean beActivate) {
+            this.beActivate = beActivate;
             return this;
         }
-        public Boolean getStatus() {
-            return this.status;
+        public Boolean getBeActivate() {
+            return this.beActivate;
         }
 
-        public DescribeApDevicesResponseBodyApDevices setStoreId(String storeId) {
-            this.storeId = storeId;
+        public DescribeApDevicesResponseBodyApDevices setMac(String mac) {
+            this.mac = mac;
             return this;
         }
-        public String getStoreId() {
-            return this.storeId;
+        public String getMac() {
+            return this.mac;
         }
 
         public DescribeApDevicesResponseBodyApDevices setModel(String model) {
@@ -197,20 +197,20 @@ public class DescribeApDevicesResponseBody extends TeaModel {
             return this.remark;
         }
 
-        public DescribeApDevicesResponseBodyApDevices setBeActivate(Boolean beActivate) {
-            this.beActivate = beActivate;
+        public DescribeApDevicesResponseBodyApDevices setStatus(Boolean status) {
+            this.status = status;
             return this;
         }
-        public Boolean getBeActivate() {
-            return this.beActivate;
+        public Boolean getStatus() {
+            return this.status;
         }
 
-        public DescribeApDevicesResponseBodyApDevices setMac(String mac) {
-            this.mac = mac;
+        public DescribeApDevicesResponseBodyApDevices setStoreId(String storeId) {
+            this.storeId = storeId;
             return this;
         }
-        public String getMac() {
-            return this.mac;
+        public String getStoreId() {
+            return this.storeId;
         }
 
     }
