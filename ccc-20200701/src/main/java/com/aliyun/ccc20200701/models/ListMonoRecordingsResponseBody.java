@@ -83,6 +83,9 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        @NameInMap("RamId")
+        public String ramId;
+
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
@@ -140,6 +143,14 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
         }
         public String getFileUrl() {
             return this.fileUrl;
+        }
+
+        public ListMonoRecordingsResponseBodyData setRamId(String ramId) {
+            this.ramId = ramId;
+            return this;
+        }
+        public String getRamId() {
+            return this.ramId;
         }
 
         public ListMonoRecordingsResponseBodyData setSkillGroupId(String skillGroupId) {
