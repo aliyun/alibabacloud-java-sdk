@@ -20,6 +20,10 @@ public class SearchCondition extends TeaModel {
     @NameInMap("commentsLevel")
     public Integer commentsLevel;
 
+    // 内容长度级别，1：100以内，2：1k以内，3：1w以内，4：10w以内，5，10w+
+    @NameInMap("contentLenLevel")
+    public Integer contentLenLevel;
+
     // 抓取截止时间
     @NameInMap("createTimeEnd")
     public Long createTimeEnd;
@@ -48,6 +52,10 @@ public class SearchCondition extends TeaModel {
     @NameInMap("enableKeywordHighlight")
     public Boolean enableKeywordHighlight;
 
+    // 排除被@的用户名称
+    @NameInMap("excludeAtAuthorName")
+    public String excludeAtAuthorName;
+
     // 排除作者名称
     @NameInMap("excludeAuthorName")
     public String excludeAuthorName;
@@ -56,6 +64,10 @@ public class SearchCondition extends TeaModel {
     @NameInMap("excludeHostName")
     public String excludeHostName;
 
+    // 排除关键词标签Id列表
+    @NameInMap("excludeKeywordTagIds")
+    public String excludeKeywordTagIds;
+
     // 排除词
     @NameInMap("excludeKeywords")
     public String excludeKeywords;
@@ -63,6 +75,22 @@ public class SearchCondition extends TeaModel {
     // 标题排除词
     @NameInMap("excludeKeywordsInTitle")
     public String excludeKeywordsInTitle;
+
+    // 排除媒体库id列表
+    @NameInMap("excludeMediaLibraryIds")
+    public String excludeMediaLibraryIds;
+
+    // 排除媒体名称
+    @NameInMap("excludeMediaName")
+    public String excludeMediaName;
+
+    // 排除媒体类型，枚举值
+    @NameInMap("excludeMediaType")
+    public String excludeMediaType;
+
+    // 排除消息类型，枚举值
+    @NameInMap("excludeMessageType")
+    public String excludeMessageType;
 
     // 其他过滤条件
     @NameInMap("fieldConditions")
@@ -201,6 +229,14 @@ public class SearchCondition extends TeaModel {
         return this.commentsLevel;
     }
 
+    public SearchCondition setContentLenLevel(Integer contentLenLevel) {
+        this.contentLenLevel = contentLenLevel;
+        return this;
+    }
+    public Integer getContentLenLevel() {
+        return this.contentLenLevel;
+    }
+
     public SearchCondition setCreateTimeEnd(Long createTimeEnd) {
         this.createTimeEnd = createTimeEnd;
         return this;
@@ -257,6 +293,14 @@ public class SearchCondition extends TeaModel {
         return this.enableKeywordHighlight;
     }
 
+    public SearchCondition setExcludeAtAuthorName(String excludeAtAuthorName) {
+        this.excludeAtAuthorName = excludeAtAuthorName;
+        return this;
+    }
+    public String getExcludeAtAuthorName() {
+        return this.excludeAtAuthorName;
+    }
+
     public SearchCondition setExcludeAuthorName(String excludeAuthorName) {
         this.excludeAuthorName = excludeAuthorName;
         return this;
@@ -273,6 +317,14 @@ public class SearchCondition extends TeaModel {
         return this.excludeHostName;
     }
 
+    public SearchCondition setExcludeKeywordTagIds(String excludeKeywordTagIds) {
+        this.excludeKeywordTagIds = excludeKeywordTagIds;
+        return this;
+    }
+    public String getExcludeKeywordTagIds() {
+        return this.excludeKeywordTagIds;
+    }
+
     public SearchCondition setExcludeKeywords(String excludeKeywords) {
         this.excludeKeywords = excludeKeywords;
         return this;
@@ -287,6 +339,38 @@ public class SearchCondition extends TeaModel {
     }
     public String getExcludeKeywordsInTitle() {
         return this.excludeKeywordsInTitle;
+    }
+
+    public SearchCondition setExcludeMediaLibraryIds(String excludeMediaLibraryIds) {
+        this.excludeMediaLibraryIds = excludeMediaLibraryIds;
+        return this;
+    }
+    public String getExcludeMediaLibraryIds() {
+        return this.excludeMediaLibraryIds;
+    }
+
+    public SearchCondition setExcludeMediaName(String excludeMediaName) {
+        this.excludeMediaName = excludeMediaName;
+        return this;
+    }
+    public String getExcludeMediaName() {
+        return this.excludeMediaName;
+    }
+
+    public SearchCondition setExcludeMediaType(String excludeMediaType) {
+        this.excludeMediaType = excludeMediaType;
+        return this;
+    }
+    public String getExcludeMediaType() {
+        return this.excludeMediaType;
+    }
+
+    public SearchCondition setExcludeMessageType(String excludeMessageType) {
+        this.excludeMessageType = excludeMessageType;
+        return this;
+    }
+    public String getExcludeMessageType() {
+        return this.excludeMessageType;
     }
 
     public SearchCondition setFieldConditions(java.util.List<FieldCondition> fieldConditions) {
