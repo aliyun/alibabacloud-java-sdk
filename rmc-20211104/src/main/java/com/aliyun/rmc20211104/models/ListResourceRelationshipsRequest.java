@@ -10,9 +10,6 @@ public class ListResourceRelationshipsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("Scene")
-    public String scene;
-
     @NameInMap("SourceRegionId")
     public String sourceRegionId;
 
@@ -44,14 +41,6 @@ public class ListResourceRelationshipsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListResourceRelationshipsRequest setScene(String scene) {
-        this.scene = scene;
-        return this;
-    }
-    public String getScene() {
-        return this.scene;
     }
 
     public ListResourceRelationshipsRequest setSourceRegionId(String sourceRegionId) {

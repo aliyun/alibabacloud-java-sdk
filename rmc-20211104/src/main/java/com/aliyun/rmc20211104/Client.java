@@ -43,10 +43,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextToken", request.nextToken);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
-            query.put("Scene", request.scene);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.sourceRegionId)) {
             query.put("SourceRegionId", request.sourceRegionId);
         }
