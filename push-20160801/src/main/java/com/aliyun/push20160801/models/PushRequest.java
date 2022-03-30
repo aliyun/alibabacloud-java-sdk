@@ -79,6 +79,9 @@ public class PushRequest extends TeaModel {
     @NameInMap("AndroidRenderStyle")
     public Integer androidRenderStyle;
 
+    @NameInMap("AndroidVivoPushMode")
+    public Integer androidVivoPushMode;
+
     @NameInMap("AndroidXiaoMiActivity")
     public String androidXiaoMiActivity;
 
@@ -148,6 +151,9 @@ public class PushRequest extends TeaModel {
     @NameInMap("Title")
     public String title;
 
+    @NameInMap("Trim")
+    public Boolean trim;
+
     @NameInMap("iOSApnsEnv")
     public String iOSApnsEnv;
 
@@ -159,6 +165,9 @@ public class PushRequest extends TeaModel {
 
     @NameInMap("iOSExtParameters")
     public String iOSExtParameters;
+
+    @NameInMap("iOSInterruptionLevel")
+    public String iOSInterruptionLevel;
 
     @NameInMap("iOSMusic")
     public String iOSMusic;
@@ -174,6 +183,9 @@ public class PushRequest extends TeaModel {
 
     @NameInMap("iOSNotificationThreadId")
     public String iOSNotificationThreadId;
+
+    @NameInMap("iOSRelevanceScore")
+    public Double iOSRelevanceScore;
 
     @NameInMap("iOSRemind")
     public Boolean iOSRemind;
@@ -392,6 +404,14 @@ public class PushRequest extends TeaModel {
         return this.androidRenderStyle;
     }
 
+    public PushRequest setAndroidVivoPushMode(Integer androidVivoPushMode) {
+        this.androidVivoPushMode = androidVivoPushMode;
+        return this;
+    }
+    public Integer getAndroidVivoPushMode() {
+        return this.androidVivoPushMode;
+    }
+
     public PushRequest setAndroidXiaoMiActivity(String androidXiaoMiActivity) {
         this.androidXiaoMiActivity = androidXiaoMiActivity;
         return this;
@@ -576,6 +596,14 @@ public class PushRequest extends TeaModel {
         return this.title;
     }
 
+    public PushRequest setTrim(Boolean trim) {
+        this.trim = trim;
+        return this;
+    }
+    public Boolean getTrim() {
+        return this.trim;
+    }
+
     public PushRequest setIOSApnsEnv(String iOSApnsEnv) {
         this.iOSApnsEnv = iOSApnsEnv;
         return this;
@@ -606,6 +634,14 @@ public class PushRequest extends TeaModel {
     }
     public String getIOSExtParameters() {
         return this.iOSExtParameters;
+    }
+
+    public PushRequest setIOSInterruptionLevel(String iOSInterruptionLevel) {
+        this.iOSInterruptionLevel = iOSInterruptionLevel;
+        return this;
+    }
+    public String getIOSInterruptionLevel() {
+        return this.iOSInterruptionLevel;
     }
 
     public PushRequest setIOSMusic(String iOSMusic) {
@@ -646,6 +682,14 @@ public class PushRequest extends TeaModel {
     }
     public String getIOSNotificationThreadId() {
         return this.iOSNotificationThreadId;
+    }
+
+    public PushRequest setIOSRelevanceScore(Double iOSRelevanceScore) {
+        this.iOSRelevanceScore = iOSRelevanceScore;
+        return this;
+    }
+    public Double getIOSRelevanceScore() {
+        return this.iOSRelevanceScore;
     }
 
     public PushRequest setIOSRemind(Boolean iOSRemind) {
@@ -756,6 +800,9 @@ public class PushRequest extends TeaModel {
         @NameInMap("AndroidRenderStyle")
         public String androidRenderStyle;
 
+        @NameInMap("AndroidVivoPushMode")
+        public Integer androidVivoPushMode;
+
         @NameInMap("AndroidXiaoMiActivity")
         public String androidXiaoMiActivity;
 
@@ -807,6 +854,9 @@ public class PushRequest extends TeaModel {
         @NameInMap("Title")
         public String title;
 
+        @NameInMap("Trim")
+        public Boolean trim;
+
         @NameInMap("iOSApnsEnv")
         public String iOSApnsEnv;
 
@@ -818,6 +868,9 @@ public class PushRequest extends TeaModel {
 
         @NameInMap("iOSExtParameters")
         public String iOSExtParameters;
+
+        @NameInMap("iOSInterruptionLevel")
+        public String iOSInterruptionLevel;
 
         @NameInMap("iOSMusic")
         public String iOSMusic;
@@ -833,6 +886,9 @@ public class PushRequest extends TeaModel {
 
         @NameInMap("iOSNotificationThreadId")
         public String iOSNotificationThreadId;
+
+        @NameInMap("iOSRelevanceScore")
+        public Double iOSRelevanceScore;
 
         @NameInMap("iOSRemind")
         public Boolean iOSRemind;
@@ -1051,6 +1107,14 @@ public class PushRequest extends TeaModel {
             return this.androidRenderStyle;
         }
 
+        public MassPushRequestPushTask setAndroidVivoPushMode(Integer androidVivoPushMode) {
+            this.androidVivoPushMode = androidVivoPushMode;
+            return this;
+        }
+        public Integer getAndroidVivoPushMode() {
+            return this.androidVivoPushMode;
+        }
+
         public MassPushRequestPushTask setAndroidXiaoMiActivity(String androidXiaoMiActivity) {
             this.androidXiaoMiActivity = androidXiaoMiActivity;
             return this;
@@ -1187,6 +1251,14 @@ public class PushRequest extends TeaModel {
             return this.title;
         }
 
+        public MassPushRequestPushTask setTrim(Boolean trim) {
+            this.trim = trim;
+            return this;
+        }
+        public Boolean getTrim() {
+            return this.trim;
+        }
+
         public MassPushRequestPushTask setIOSApnsEnv(String iOSApnsEnv) {
             this.iOSApnsEnv = iOSApnsEnv;
             return this;
@@ -1217,6 +1289,14 @@ public class PushRequest extends TeaModel {
         }
         public String getIOSExtParameters() {
             return this.iOSExtParameters;
+        }
+
+        public MassPushRequestPushTask setIOSInterruptionLevel(String iOSInterruptionLevel) {
+            this.iOSInterruptionLevel = iOSInterruptionLevel;
+            return this;
+        }
+        public String getIOSInterruptionLevel() {
+            return this.iOSInterruptionLevel;
         }
 
         public MassPushRequestPushTask setIOSMusic(String iOSMusic) {
@@ -1257,6 +1337,14 @@ public class PushRequest extends TeaModel {
         }
         public String getIOSNotificationThreadId() {
             return this.iOSNotificationThreadId;
+        }
+
+        public MassPushRequestPushTask setIOSRelevanceScore(Double iOSRelevanceScore) {
+            this.iOSRelevanceScore = iOSRelevanceScore;
+            return this;
+        }
+        public Double getIOSRelevanceScore() {
+            return this.iOSRelevanceScore;
         }
 
         public MassPushRequestPushTask setIOSRemind(Boolean iOSRemind) {

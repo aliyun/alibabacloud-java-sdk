@@ -107,6 +107,9 @@ public class MassPushRequest extends TeaModel {
         @NameInMap("AndroidRenderStyle")
         public String androidRenderStyle;
 
+        @NameInMap("AndroidVivoPushMode")
+        public Integer androidVivoPushMode;
+
         @NameInMap("AndroidXiaoMiActivity")
         public String androidXiaoMiActivity;
 
@@ -158,6 +161,9 @@ public class MassPushRequest extends TeaModel {
         @NameInMap("Title")
         public String title;
 
+        @NameInMap("Trim")
+        public Boolean trim;
+
         @NameInMap("iOSApnsEnv")
         public String iOSApnsEnv;
 
@@ -169,6 +175,9 @@ public class MassPushRequest extends TeaModel {
 
         @NameInMap("iOSExtParameters")
         public String iOSExtParameters;
+
+        @NameInMap("iOSInterruptionLevel")
+        public String iOSInterruptionLevel;
 
         @NameInMap("iOSMusic")
         public String iOSMusic;
@@ -184,6 +193,9 @@ public class MassPushRequest extends TeaModel {
 
         @NameInMap("iOSNotificationThreadId")
         public String iOSNotificationThreadId;
+
+        @NameInMap("iOSRelevanceScore")
+        public Double iOSRelevanceScore;
 
         @NameInMap("iOSRemind")
         public Boolean iOSRemind;
@@ -402,6 +414,14 @@ public class MassPushRequest extends TeaModel {
             return this.androidRenderStyle;
         }
 
+        public MassPushRequestPushTask setAndroidVivoPushMode(Integer androidVivoPushMode) {
+            this.androidVivoPushMode = androidVivoPushMode;
+            return this;
+        }
+        public Integer getAndroidVivoPushMode() {
+            return this.androidVivoPushMode;
+        }
+
         public MassPushRequestPushTask setAndroidXiaoMiActivity(String androidXiaoMiActivity) {
             this.androidXiaoMiActivity = androidXiaoMiActivity;
             return this;
@@ -538,6 +558,14 @@ public class MassPushRequest extends TeaModel {
             return this.title;
         }
 
+        public MassPushRequestPushTask setTrim(Boolean trim) {
+            this.trim = trim;
+            return this;
+        }
+        public Boolean getTrim() {
+            return this.trim;
+        }
+
         public MassPushRequestPushTask setIOSApnsEnv(String iOSApnsEnv) {
             this.iOSApnsEnv = iOSApnsEnv;
             return this;
@@ -568,6 +596,14 @@ public class MassPushRequest extends TeaModel {
         }
         public String getIOSExtParameters() {
             return this.iOSExtParameters;
+        }
+
+        public MassPushRequestPushTask setIOSInterruptionLevel(String iOSInterruptionLevel) {
+            this.iOSInterruptionLevel = iOSInterruptionLevel;
+            return this;
+        }
+        public String getIOSInterruptionLevel() {
+            return this.iOSInterruptionLevel;
         }
 
         public MassPushRequestPushTask setIOSMusic(String iOSMusic) {
@@ -608,6 +644,14 @@ public class MassPushRequest extends TeaModel {
         }
         public String getIOSNotificationThreadId() {
             return this.iOSNotificationThreadId;
+        }
+
+        public MassPushRequestPushTask setIOSRelevanceScore(Double iOSRelevanceScore) {
+            this.iOSRelevanceScore = iOSRelevanceScore;
+            return this;
+        }
+        public Double getIOSRelevanceScore() {
+            return this.iOSRelevanceScore;
         }
 
         public MassPushRequestPushTask setIOSRemind(Boolean iOSRemind) {
