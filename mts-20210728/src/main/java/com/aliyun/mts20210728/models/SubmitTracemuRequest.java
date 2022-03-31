@@ -4,6 +4,10 @@ package com.aliyun.mts20210728.models;
 import com.aliyun.tea.*;
 
 public class SubmitTracemuRequest extends TeaModel {
+    // 密钥服务器uri
+    @NameInMap("KeyUri")
+    public String keyUri;
+
     // ab流处理后的媒体id
     @NameInMap("MediaId")
     public String mediaId;
@@ -19,6 +23,14 @@ public class SubmitTracemuRequest extends TeaModel {
     public static SubmitTracemuRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitTracemuRequest self = new SubmitTracemuRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitTracemuRequest setKeyUri(String keyUri) {
+        this.keyUri = keyUri;
+        return this;
+    }
+    public String getKeyUri() {
+        return this.keyUri;
     }
 
     public SubmitTracemuRequest setMediaId(String mediaId) {

@@ -551,6 +551,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitTracemuResponse submitTracemuWithOptions(SubmitTracemuRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyUri)) {
+            body.put("KeyUri", request.keyUri);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
             body.put("MediaId", request.mediaId);
         }
