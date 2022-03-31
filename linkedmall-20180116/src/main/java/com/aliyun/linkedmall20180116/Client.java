@@ -3083,6 +3083,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryBizItemListWithOptions(request, runtime);
     }
 
+    public QueryBizItemListV2Response queryBizItemListV2WithOptions(QueryBizItemListV2Request tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryBizItemListV2ShrinkRequest request = new QueryBizItemListV2ShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.itemIds)) {
+            request.itemIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.itemIds, "ItemIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.lmItemIds)) {
+            request.lmItemIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.lmItemIds, "LmItemIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
+            query.put("CategoryId", request.categoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.itemIdsShrink)) {
+            query.put("ItemIds", request.itemIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lmItemIdsShrink)) {
+            query.put("LmItemIds", request.lmItemIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subBizId)) {
+            query.put("SubBizId", request.subBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryBizItemListV2"),
+            new TeaPair("version", "2018-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryBizItemListV2Response());
+    }
+
+    public QueryBizItemListV2Response queryBizItemListV2(QueryBizItemListV2Request request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryBizItemListV2WithOptions(request, runtime);
+    }
+
     public QueryBizItemListWithCacheResponse queryBizItemListWithCacheWithOptions(QueryBizItemListWithCacheRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         QueryBizItemListWithCacheShrinkRequest request = new QueryBizItemListWithCacheShrinkRequest();
