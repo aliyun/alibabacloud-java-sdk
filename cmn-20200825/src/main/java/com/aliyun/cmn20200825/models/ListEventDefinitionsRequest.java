@@ -12,6 +12,10 @@ public class ListEventDefinitionsRequest extends TeaModel {
     @NameInMap("EventName")
     public String eventName;
 
+    // 事件类型
+    @NameInMap("EventType")
+    public String eventType;
+
     // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
@@ -43,6 +47,14 @@ public class ListEventDefinitionsRequest extends TeaModel {
     }
     public String getEventName() {
         return this.eventName;
+    }
+
+    public ListEventDefinitionsRequest setEventType(String eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    public String getEventType() {
+        return this.eventType;
     }
 
     public ListEventDefinitionsRequest setInstanceId(String instanceId) {

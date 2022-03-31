@@ -4,6 +4,10 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListDevicesResponseBody extends TeaModel {
+    // 每页数量。
+    @NameInMap("AmountUsed")
+    public Integer amountUsed;
+
     // 数组，返回示例目录。
     @NameInMap("Devices")
     public java.util.List<ListDevicesResponseBodyDevices> devices;
@@ -27,6 +31,14 @@ public class ListDevicesResponseBody extends TeaModel {
     public static ListDevicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDevicesResponseBody self = new ListDevicesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListDevicesResponseBody setAmountUsed(Integer amountUsed) {
+        this.amountUsed = amountUsed;
+        return this;
+    }
+    public Integer getAmountUsed() {
+        return this.amountUsed;
     }
 
     public ListDevicesResponseBody setDevices(java.util.List<ListDevicesResponseBodyDevices> devices) {
