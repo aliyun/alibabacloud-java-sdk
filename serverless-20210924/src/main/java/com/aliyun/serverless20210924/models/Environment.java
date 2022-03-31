@@ -8,6 +8,10 @@ public class Environment extends TeaModel {
     @NameInMap("createdTime")
     public String createdTime;
 
+    // Date and time at which a deletion is requested by the user. Null when the resource has not been requested for deletion. This field is set by the server, not directly settable by a client. Populated by the system. Read-only.
+    @NameInMap("deletionTime")
+    public String deletionTime;
+
     // Human-readable description of the resource
     @NameInMap("description")
     public String description;
@@ -47,6 +51,14 @@ public class Environment extends TeaModel {
     }
     public String getCreatedTime() {
         return this.createdTime;
+    }
+
+    public Environment setDeletionTime(String deletionTime) {
+        this.deletionTime = deletionTime;
+        return this;
+    }
+    public String getDeletionTime() {
+        return this.deletionTime;
     }
 
     public Environment setDescription(String description) {
