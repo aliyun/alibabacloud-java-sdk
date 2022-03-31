@@ -3,12 +3,12 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class GetGatewayRouteDetailResponseBody extends TeaModel {
+public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
-    public GetGatewayRouteDetailResponseBodyData data;
+    public UpdateGatewayRouteWafStatusResponseBodyData data;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -23,12 +23,12 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static GetGatewayRouteDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetGatewayRouteDetailResponseBody self = new GetGatewayRouteDetailResponseBody();
+    public static UpdateGatewayRouteWafStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateGatewayRouteWafStatusResponseBody self = new UpdateGatewayRouteWafStatusResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetGatewayRouteDetailResponseBody setCode(Integer code) {
+    public UpdateGatewayRouteWafStatusResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -36,15 +36,15 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetGatewayRouteDetailResponseBody setData(GetGatewayRouteDetailResponseBodyData data) {
+    public UpdateGatewayRouteWafStatusResponseBody setData(UpdateGatewayRouteWafStatusResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public GetGatewayRouteDetailResponseBodyData getData() {
+    public UpdateGatewayRouteWafStatusResponseBodyData getData() {
         return this.data;
     }
 
-    public GetGatewayRouteDetailResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public UpdateGatewayRouteWafStatusResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -52,7 +52,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public GetGatewayRouteDetailResponseBody setMessage(String message) {
+    public UpdateGatewayRouteWafStatusResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -60,7 +60,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetGatewayRouteDetailResponseBody setRequestId(String requestId) {
+    public UpdateGatewayRouteWafStatusResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -68,7 +68,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetGatewayRouteDetailResponseBody setSuccess(Boolean success) {
+    public UpdateGatewayRouteWafStatusResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -76,7 +76,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetGatewayRouteDetailResponseBodyDataCors extends TeaModel {
+    public static class UpdateGatewayRouteWafStatusResponseBodyDataCors extends TeaModel {
         @NameInMap("AllowCredentials")
         public Boolean allowCredentials;
 
@@ -101,12 +101,12 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("UnitNum")
         public Long unitNum;
 
-        public static GetGatewayRouteDetailResponseBodyDataCors build(java.util.Map<String, ?> map) throws Exception {
-            GetGatewayRouteDetailResponseBodyDataCors self = new GetGatewayRouteDetailResponseBodyDataCors();
+        public static UpdateGatewayRouteWafStatusResponseBodyDataCors build(java.util.Map<String, ?> map) throws Exception {
+            UpdateGatewayRouteWafStatusResponseBodyDataCors self = new UpdateGatewayRouteWafStatusResponseBodyDataCors();
             return TeaModel.build(map, self);
         }
 
-        public GetGatewayRouteDetailResponseBodyDataCors setAllowCredentials(Boolean allowCredentials) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataCors setAllowCredentials(Boolean allowCredentials) {
             this.allowCredentials = allowCredentials;
             return this;
         }
@@ -114,7 +114,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.allowCredentials;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataCors setAllowHeaders(String allowHeaders) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataCors setAllowHeaders(String allowHeaders) {
             this.allowHeaders = allowHeaders;
             return this;
         }
@@ -122,7 +122,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.allowHeaders;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataCors setAllowMethods(String allowMethods) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataCors setAllowMethods(String allowMethods) {
             this.allowMethods = allowMethods;
             return this;
         }
@@ -130,7 +130,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.allowMethods;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataCors setAllowOrigins(String allowOrigins) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataCors setAllowOrigins(String allowOrigins) {
             this.allowOrigins = allowOrigins;
             return this;
         }
@@ -138,7 +138,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.allowOrigins;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataCors setExposeHeaders(String exposeHeaders) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataCors setExposeHeaders(String exposeHeaders) {
             this.exposeHeaders = exposeHeaders;
             return this;
         }
@@ -146,7 +146,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.exposeHeaders;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataCors setStatus(String status) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataCors setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -154,7 +154,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataCors setTimeUnit(String timeUnit) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataCors setTimeUnit(String timeUnit) {
             this.timeUnit = timeUnit;
             return this;
         }
@@ -162,7 +162,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.timeUnit;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataCors setUnitNum(Long unitNum) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataCors setUnitNum(Long unitNum) {
             this.unitNum = unitNum;
             return this;
         }
@@ -172,19 +172,19 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetGatewayRouteDetailResponseBodyDataDirectResponse extends TeaModel {
+    public static class UpdateGatewayRouteWafStatusResponseBodyDataDirectResponse extends TeaModel {
         @NameInMap("Body")
         public String body;
 
         @NameInMap("Code")
         public Integer code;
 
-        public static GetGatewayRouteDetailResponseBodyDataDirectResponse build(java.util.Map<String, ?> map) throws Exception {
-            GetGatewayRouteDetailResponseBodyDataDirectResponse self = new GetGatewayRouteDetailResponseBodyDataDirectResponse();
+        public static UpdateGatewayRouteWafStatusResponseBodyDataDirectResponse build(java.util.Map<String, ?> map) throws Exception {
+            UpdateGatewayRouteWafStatusResponseBodyDataDirectResponse self = new UpdateGatewayRouteWafStatusResponseBodyDataDirectResponse();
             return TeaModel.build(map, self);
         }
 
-        public GetGatewayRouteDetailResponseBodyDataDirectResponse setBody(String body) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataDirectResponse setBody(String body) {
             this.body = body;
             return this;
         }
@@ -192,7 +192,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.body;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataDirectResponse setCode(Integer code) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataDirectResponse setCode(Integer code) {
             this.code = code;
             return this;
         }
@@ -202,7 +202,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetGatewayRouteDetailResponseBodyDataHTTPRewrite extends TeaModel {
+    public static class UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite extends TeaModel {
         @NameInMap("Host")
         public String host;
 
@@ -221,12 +221,12 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("Substitution")
         public String substitution;
 
-        public static GetGatewayRouteDetailResponseBodyDataHTTPRewrite build(java.util.Map<String, ?> map) throws Exception {
-            GetGatewayRouteDetailResponseBodyDataHTTPRewrite self = new GetGatewayRouteDetailResponseBodyDataHTTPRewrite();
+        public static UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite build(java.util.Map<String, ?> map) throws Exception {
+            UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite self = new UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite();
             return TeaModel.build(map, self);
         }
 
-        public GetGatewayRouteDetailResponseBodyDataHTTPRewrite setHost(String host) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite setHost(String host) {
             this.host = host;
             return this;
         }
@@ -234,7 +234,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.host;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataHTTPRewrite setPath(String path) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite setPath(String path) {
             this.path = path;
             return this;
         }
@@ -242,7 +242,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.path;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataHTTPRewrite setPathType(String pathType) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite setPathType(String pathType) {
             this.pathType = pathType;
             return this;
         }
@@ -250,7 +250,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.pathType;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataHTTPRewrite setPattern(String pattern) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite setPattern(String pattern) {
             this.pattern = pattern;
             return this;
         }
@@ -258,7 +258,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.pattern;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataHTTPRewrite setStatus(String status) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -266,7 +266,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataHTTPRewrite setSubstitution(String substitution) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite setSubstitution(String substitution) {
             this.substitution = substitution;
             return this;
         }
@@ -276,7 +276,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetGatewayRouteDetailResponseBodyDataHeaderOpHeaderOpItems extends TeaModel {
+    public static class UpdateGatewayRouteWafStatusResponseBodyDataHeaderOpHeaderOpItems extends TeaModel {
         @NameInMap("DirectionType")
         public String directionType;
 
@@ -289,12 +289,12 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static GetGatewayRouteDetailResponseBodyDataHeaderOpHeaderOpItems build(java.util.Map<String, ?> map) throws Exception {
-            GetGatewayRouteDetailResponseBodyDataHeaderOpHeaderOpItems self = new GetGatewayRouteDetailResponseBodyDataHeaderOpHeaderOpItems();
+        public static UpdateGatewayRouteWafStatusResponseBodyDataHeaderOpHeaderOpItems build(java.util.Map<String, ?> map) throws Exception {
+            UpdateGatewayRouteWafStatusResponseBodyDataHeaderOpHeaderOpItems self = new UpdateGatewayRouteWafStatusResponseBodyDataHeaderOpHeaderOpItems();
             return TeaModel.build(map, self);
         }
 
-        public GetGatewayRouteDetailResponseBodyDataHeaderOpHeaderOpItems setDirectionType(String directionType) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataHeaderOpHeaderOpItems setDirectionType(String directionType) {
             this.directionType = directionType;
             return this;
         }
@@ -302,7 +302,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.directionType;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataHeaderOpHeaderOpItems setKey(String key) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataHeaderOpHeaderOpItems setKey(String key) {
             this.key = key;
             return this;
         }
@@ -310,7 +310,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.key;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataHeaderOpHeaderOpItems setOpType(String opType) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataHeaderOpHeaderOpItems setOpType(String opType) {
             this.opType = opType;
             return this;
         }
@@ -318,7 +318,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.opType;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataHeaderOpHeaderOpItems setValue(String value) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataHeaderOpHeaderOpItems setValue(String value) {
             this.value = value;
             return this;
         }
@@ -328,27 +328,27 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetGatewayRouteDetailResponseBodyDataHeaderOp extends TeaModel {
+    public static class UpdateGatewayRouteWafStatusResponseBodyDataHeaderOp extends TeaModel {
         @NameInMap("HeaderOpItems")
-        public java.util.List<GetGatewayRouteDetailResponseBodyDataHeaderOpHeaderOpItems> headerOpItems;
+        public java.util.List<UpdateGatewayRouteWafStatusResponseBodyDataHeaderOpHeaderOpItems> headerOpItems;
 
         @NameInMap("Status")
         public String status;
 
-        public static GetGatewayRouteDetailResponseBodyDataHeaderOp build(java.util.Map<String, ?> map) throws Exception {
-            GetGatewayRouteDetailResponseBodyDataHeaderOp self = new GetGatewayRouteDetailResponseBodyDataHeaderOp();
+        public static UpdateGatewayRouteWafStatusResponseBodyDataHeaderOp build(java.util.Map<String, ?> map) throws Exception {
+            UpdateGatewayRouteWafStatusResponseBodyDataHeaderOp self = new UpdateGatewayRouteWafStatusResponseBodyDataHeaderOp();
             return TeaModel.build(map, self);
         }
 
-        public GetGatewayRouteDetailResponseBodyDataHeaderOp setHeaderOpItems(java.util.List<GetGatewayRouteDetailResponseBodyDataHeaderOpHeaderOpItems> headerOpItems) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataHeaderOp setHeaderOpItems(java.util.List<UpdateGatewayRouteWafStatusResponseBodyDataHeaderOpHeaderOpItems> headerOpItems) {
             this.headerOpItems = headerOpItems;
             return this;
         }
-        public java.util.List<GetGatewayRouteDetailResponseBodyDataHeaderOpHeaderOpItems> getHeaderOpItems() {
+        public java.util.List<UpdateGatewayRouteWafStatusResponseBodyDataHeaderOpHeaderOpItems> getHeaderOpItems() {
             return this.headerOpItems;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataHeaderOp setStatus(String status) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataHeaderOp setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -358,7 +358,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetGatewayRouteDetailResponseBodyDataRedirect extends TeaModel {
+    public static class UpdateGatewayRouteWafStatusResponseBodyDataRedirect extends TeaModel {
         @NameInMap("Code")
         public Integer code;
 
@@ -368,12 +368,12 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("Path")
         public String path;
 
-        public static GetGatewayRouteDetailResponseBodyDataRedirect build(java.util.Map<String, ?> map) throws Exception {
-            GetGatewayRouteDetailResponseBodyDataRedirect self = new GetGatewayRouteDetailResponseBodyDataRedirect();
+        public static UpdateGatewayRouteWafStatusResponseBodyDataRedirect build(java.util.Map<String, ?> map) throws Exception {
+            UpdateGatewayRouteWafStatusResponseBodyDataRedirect self = new UpdateGatewayRouteWafStatusResponseBodyDataRedirect();
             return TeaModel.build(map, self);
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRedirect setCode(Integer code) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRedirect setCode(Integer code) {
             this.code = code;
             return this;
         }
@@ -381,7 +381,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.code;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRedirect setHost(String host) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRedirect setHost(String host) {
             this.host = host;
             return this;
         }
@@ -389,7 +389,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.host;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRedirect setPath(String path) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRedirect setPath(String path) {
             this.path = path;
             return this;
         }
@@ -399,7 +399,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetGatewayRouteDetailResponseBodyDataRetry extends TeaModel {
+    public static class UpdateGatewayRouteWafStatusResponseBodyDataRetry extends TeaModel {
         @NameInMap("Attempts")
         public Integer attempts;
 
@@ -412,12 +412,12 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        public static GetGatewayRouteDetailResponseBodyDataRetry build(java.util.Map<String, ?> map) throws Exception {
-            GetGatewayRouteDetailResponseBodyDataRetry self = new GetGatewayRouteDetailResponseBodyDataRetry();
+        public static UpdateGatewayRouteWafStatusResponseBodyDataRetry build(java.util.Map<String, ?> map) throws Exception {
+            UpdateGatewayRouteWafStatusResponseBodyDataRetry self = new UpdateGatewayRouteWafStatusResponseBodyDataRetry();
             return TeaModel.build(map, self);
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRetry setAttempts(Integer attempts) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRetry setAttempts(Integer attempts) {
             this.attempts = attempts;
             return this;
         }
@@ -425,7 +425,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.attempts;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRetry setHttpCodes(java.util.List<String> httpCodes) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRetry setHttpCodes(java.util.List<String> httpCodes) {
             this.httpCodes = httpCodes;
             return this;
         }
@@ -433,7 +433,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.httpCodes;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRetry setRetryOn(java.util.List<String> retryOn) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRetry setRetryOn(java.util.List<String> retryOn) {
             this.retryOn = retryOn;
             return this;
         }
@@ -441,7 +441,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.retryOn;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRetry setStatus(String status) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRetry setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -451,7 +451,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetGatewayRouteDetailResponseBodyDataRoutePredicatesHeaderPredicates extends TeaModel {
+    public static class UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesHeaderPredicates extends TeaModel {
         @NameInMap("Key")
         public String key;
 
@@ -461,12 +461,12 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static GetGatewayRouteDetailResponseBodyDataRoutePredicatesHeaderPredicates build(java.util.Map<String, ?> map) throws Exception {
-            GetGatewayRouteDetailResponseBodyDataRoutePredicatesHeaderPredicates self = new GetGatewayRouteDetailResponseBodyDataRoutePredicatesHeaderPredicates();
+        public static UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesHeaderPredicates build(java.util.Map<String, ?> map) throws Exception {
+            UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesHeaderPredicates self = new UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesHeaderPredicates();
             return TeaModel.build(map, self);
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRoutePredicatesHeaderPredicates setKey(String key) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesHeaderPredicates setKey(String key) {
             this.key = key;
             return this;
         }
@@ -474,7 +474,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.key;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRoutePredicatesHeaderPredicates setType(String type) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesHeaderPredicates setType(String type) {
             this.type = type;
             return this;
         }
@@ -482,7 +482,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.type;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRoutePredicatesHeaderPredicates setValue(String value) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesHeaderPredicates setValue(String value) {
             this.value = value;
             return this;
         }
@@ -492,7 +492,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetGatewayRouteDetailResponseBodyDataRoutePredicatesPathPredicates extends TeaModel {
+    public static class UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesPathPredicates extends TeaModel {
         @NameInMap("IgnoreCase")
         public Boolean ignoreCase;
 
@@ -502,12 +502,12 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        public static GetGatewayRouteDetailResponseBodyDataRoutePredicatesPathPredicates build(java.util.Map<String, ?> map) throws Exception {
-            GetGatewayRouteDetailResponseBodyDataRoutePredicatesPathPredicates self = new GetGatewayRouteDetailResponseBodyDataRoutePredicatesPathPredicates();
+        public static UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesPathPredicates build(java.util.Map<String, ?> map) throws Exception {
+            UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesPathPredicates self = new UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesPathPredicates();
             return TeaModel.build(map, self);
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRoutePredicatesPathPredicates setIgnoreCase(Boolean ignoreCase) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesPathPredicates setIgnoreCase(Boolean ignoreCase) {
             this.ignoreCase = ignoreCase;
             return this;
         }
@@ -515,7 +515,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.ignoreCase;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRoutePredicatesPathPredicates setPath(String path) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesPathPredicates setPath(String path) {
             this.path = path;
             return this;
         }
@@ -523,7 +523,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.path;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRoutePredicatesPathPredicates setType(String type) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesPathPredicates setType(String type) {
             this.type = type;
             return this;
         }
@@ -533,7 +533,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetGatewayRouteDetailResponseBodyDataRoutePredicatesQueryPredicates extends TeaModel {
+    public static class UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesQueryPredicates extends TeaModel {
         @NameInMap("Key")
         public String key;
 
@@ -543,12 +543,12 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static GetGatewayRouteDetailResponseBodyDataRoutePredicatesQueryPredicates build(java.util.Map<String, ?> map) throws Exception {
-            GetGatewayRouteDetailResponseBodyDataRoutePredicatesQueryPredicates self = new GetGatewayRouteDetailResponseBodyDataRoutePredicatesQueryPredicates();
+        public static UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesQueryPredicates build(java.util.Map<String, ?> map) throws Exception {
+            UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesQueryPredicates self = new UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesQueryPredicates();
             return TeaModel.build(map, self);
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRoutePredicatesQueryPredicates setKey(String key) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesQueryPredicates setKey(String key) {
             this.key = key;
             return this;
         }
@@ -556,7 +556,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.key;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRoutePredicatesQueryPredicates setType(String type) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesQueryPredicates setType(String type) {
             this.type = type;
             return this;
         }
@@ -564,7 +564,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.type;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRoutePredicatesQueryPredicates setValue(String value) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesQueryPredicates setValue(String value) {
             this.value = value;
             return this;
         }
@@ -574,33 +574,33 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetGatewayRouteDetailResponseBodyDataRoutePredicates extends TeaModel {
+    public static class UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates extends TeaModel {
         @NameInMap("HeaderPredicates")
-        public java.util.List<GetGatewayRouteDetailResponseBodyDataRoutePredicatesHeaderPredicates> headerPredicates;
+        public java.util.List<UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesHeaderPredicates> headerPredicates;
 
         @NameInMap("MethodPredicates")
         public java.util.List<String> methodPredicates;
 
         @NameInMap("PathPredicates")
-        public GetGatewayRouteDetailResponseBodyDataRoutePredicatesPathPredicates pathPredicates;
+        public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesPathPredicates pathPredicates;
 
         @NameInMap("QueryPredicates")
-        public java.util.List<GetGatewayRouteDetailResponseBodyDataRoutePredicatesQueryPredicates> queryPredicates;
+        public java.util.List<UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesQueryPredicates> queryPredicates;
 
-        public static GetGatewayRouteDetailResponseBodyDataRoutePredicates build(java.util.Map<String, ?> map) throws Exception {
-            GetGatewayRouteDetailResponseBodyDataRoutePredicates self = new GetGatewayRouteDetailResponseBodyDataRoutePredicates();
+        public static UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates build(java.util.Map<String, ?> map) throws Exception {
+            UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates self = new UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates();
             return TeaModel.build(map, self);
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRoutePredicates setHeaderPredicates(java.util.List<GetGatewayRouteDetailResponseBodyDataRoutePredicatesHeaderPredicates> headerPredicates) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates setHeaderPredicates(java.util.List<UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesHeaderPredicates> headerPredicates) {
             this.headerPredicates = headerPredicates;
             return this;
         }
-        public java.util.List<GetGatewayRouteDetailResponseBodyDataRoutePredicatesHeaderPredicates> getHeaderPredicates() {
+        public java.util.List<UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesHeaderPredicates> getHeaderPredicates() {
             return this.headerPredicates;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRoutePredicates setMethodPredicates(java.util.List<String> methodPredicates) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates setMethodPredicates(java.util.List<String> methodPredicates) {
             this.methodPredicates = methodPredicates;
             return this;
         }
@@ -608,25 +608,25 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.methodPredicates;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRoutePredicates setPathPredicates(GetGatewayRouteDetailResponseBodyDataRoutePredicatesPathPredicates pathPredicates) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates setPathPredicates(UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesPathPredicates pathPredicates) {
             this.pathPredicates = pathPredicates;
             return this;
         }
-        public GetGatewayRouteDetailResponseBodyDataRoutePredicatesPathPredicates getPathPredicates() {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesPathPredicates getPathPredicates() {
             return this.pathPredicates;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRoutePredicates setQueryPredicates(java.util.List<GetGatewayRouteDetailResponseBodyDataRoutePredicatesQueryPredicates> queryPredicates) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates setQueryPredicates(java.util.List<UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesQueryPredicates> queryPredicates) {
             this.queryPredicates = queryPredicates;
             return this;
         }
-        public java.util.List<GetGatewayRouteDetailResponseBodyDataRoutePredicatesQueryPredicates> getQueryPredicates() {
+        public java.util.List<UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesQueryPredicates> getQueryPredicates() {
             return this.queryPredicates;
         }
 
     }
 
-    public static class GetGatewayRouteDetailResponseBodyDataRouteServices extends TeaModel {
+    public static class UpdateGatewayRouteWafStatusResponseBodyDataRouteServices extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
@@ -651,12 +651,12 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("Version")
         public String version;
 
-        public static GetGatewayRouteDetailResponseBodyDataRouteServices build(java.util.Map<String, ?> map) throws Exception {
-            GetGatewayRouteDetailResponseBodyDataRouteServices self = new GetGatewayRouteDetailResponseBodyDataRouteServices();
+        public static UpdateGatewayRouteWafStatusResponseBodyDataRouteServices build(java.util.Map<String, ?> map) throws Exception {
+            UpdateGatewayRouteWafStatusResponseBodyDataRouteServices self = new UpdateGatewayRouteWafStatusResponseBodyDataRouteServices();
             return TeaModel.build(map, self);
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRouteServices setGroupName(String groupName) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRouteServices setGroupName(String groupName) {
             this.groupName = groupName;
             return this;
         }
@@ -664,7 +664,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.groupName;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRouteServices setName(String name) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRouteServices setName(String name) {
             this.name = name;
             return this;
         }
@@ -672,7 +672,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRouteServices setNamespace(String namespace) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRouteServices setNamespace(String namespace) {
             this.namespace = namespace;
             return this;
         }
@@ -680,7 +680,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.namespace;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRouteServices setPercent(Integer percent) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRouteServices setPercent(Integer percent) {
             this.percent = percent;
             return this;
         }
@@ -688,7 +688,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.percent;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRouteServices setServiceId(Long serviceId) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRouteServices setServiceId(Long serviceId) {
             this.serviceId = serviceId;
             return this;
         }
@@ -696,7 +696,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.serviceId;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRouteServices setServiceName(String serviceName) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRouteServices setServiceName(String serviceName) {
             this.serviceName = serviceName;
             return this;
         }
@@ -704,7 +704,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.serviceName;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRouteServices setSourceType(String sourceType) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRouteServices setSourceType(String sourceType) {
             this.sourceType = sourceType;
             return this;
         }
@@ -712,7 +712,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.sourceType;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataRouteServices setVersion(String version) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRouteServices setVersion(String version) {
             this.version = version;
             return this;
         }
@@ -722,7 +722,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetGatewayRouteDetailResponseBodyDataTimeout extends TeaModel {
+    public static class UpdateGatewayRouteWafStatusResponseBodyDataTimeout extends TeaModel {
         @NameInMap("Status")
         public String status;
 
@@ -732,12 +732,12 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("UnitNum")
         public Integer unitNum;
 
-        public static GetGatewayRouteDetailResponseBodyDataTimeout build(java.util.Map<String, ?> map) throws Exception {
-            GetGatewayRouteDetailResponseBodyDataTimeout self = new GetGatewayRouteDetailResponseBodyDataTimeout();
+        public static UpdateGatewayRouteWafStatusResponseBodyDataTimeout build(java.util.Map<String, ?> map) throws Exception {
+            UpdateGatewayRouteWafStatusResponseBodyDataTimeout self = new UpdateGatewayRouteWafStatusResponseBodyDataTimeout();
             return TeaModel.build(map, self);
         }
 
-        public GetGatewayRouteDetailResponseBodyDataTimeout setStatus(String status) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataTimeout setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -745,7 +745,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataTimeout setTimeUnit(String timeUnit) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataTimeout setTimeUnit(String timeUnit) {
             this.timeUnit = timeUnit;
             return this;
         }
@@ -753,7 +753,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.timeUnit;
         }
 
-        public GetGatewayRouteDetailResponseBodyDataTimeout setUnitNum(Integer unitNum) {
+        public UpdateGatewayRouteWafStatusResponseBodyDataTimeout setUnitNum(Integer unitNum) {
             this.unitNum = unitNum;
             return this;
         }
@@ -763,9 +763,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetGatewayRouteDetailResponseBodyData extends TeaModel {
+    public static class UpdateGatewayRouteWafStatusResponseBodyData extends TeaModel {
         @NameInMap("Cors")
-        public GetGatewayRouteDetailResponseBodyDataCors cors;
+        public UpdateGatewayRouteWafStatusResponseBodyDataCors cors;
 
         @NameInMap("DefaultServiceId")
         public Long defaultServiceId;
@@ -777,7 +777,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public String destinationType;
 
         @NameInMap("DirectResponse")
-        public GetGatewayRouteDetailResponseBodyDataDirectResponse directResponse;
+        public UpdateGatewayRouteWafStatusResponseBodyDataDirectResponse directResponse;
 
         @NameInMap("DomainId")
         public Long domainId;
@@ -807,10 +807,10 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public String gmtModified;
 
         @NameInMap("HTTPRewrite")
-        public GetGatewayRouteDetailResponseBodyDataHTTPRewrite HTTPRewrite;
+        public UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite HTTPRewrite;
 
         @NameInMap("HeaderOp")
-        public GetGatewayRouteDetailResponseBodyDataHeaderOp headerOp;
+        public UpdateGatewayRouteWafStatusResponseBodyDataHeaderOp headerOp;
 
         @NameInMap("Id")
         public Long id;
@@ -822,19 +822,19 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public String predicates;
 
         @NameInMap("Redirect")
-        public GetGatewayRouteDetailResponseBodyDataRedirect redirect;
+        public UpdateGatewayRouteWafStatusResponseBodyDataRedirect redirect;
 
         @NameInMap("Retry")
-        public GetGatewayRouteDetailResponseBodyDataRetry retry;
+        public UpdateGatewayRouteWafStatusResponseBodyDataRetry retry;
 
         @NameInMap("RouteOrder")
         public Integer routeOrder;
 
         @NameInMap("RoutePredicates")
-        public GetGatewayRouteDetailResponseBodyDataRoutePredicates routePredicates;
+        public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates routePredicates;
 
         @NameInMap("RouteServices")
-        public java.util.List<GetGatewayRouteDetailResponseBodyDataRouteServices> routeServices;
+        public java.util.List<UpdateGatewayRouteWafStatusResponseBodyDataRouteServices> routeServices;
 
         @NameInMap("Services")
         public String services;
@@ -843,22 +843,22 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public Integer status;
 
         @NameInMap("Timeout")
-        public GetGatewayRouteDetailResponseBodyDataTimeout timeout;
+        public UpdateGatewayRouteWafStatusResponseBodyDataTimeout timeout;
 
-        public static GetGatewayRouteDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            GetGatewayRouteDetailResponseBodyData self = new GetGatewayRouteDetailResponseBodyData();
+        public static UpdateGatewayRouteWafStatusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            UpdateGatewayRouteWafStatusResponseBodyData self = new UpdateGatewayRouteWafStatusResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetGatewayRouteDetailResponseBodyData setCors(GetGatewayRouteDetailResponseBodyDataCors cors) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setCors(UpdateGatewayRouteWafStatusResponseBodyDataCors cors) {
             this.cors = cors;
             return this;
         }
-        public GetGatewayRouteDetailResponseBodyDataCors getCors() {
+        public UpdateGatewayRouteWafStatusResponseBodyDataCors getCors() {
             return this.cors;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setDefaultServiceId(Long defaultServiceId) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setDefaultServiceId(Long defaultServiceId) {
             this.defaultServiceId = defaultServiceId;
             return this;
         }
@@ -866,7 +866,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.defaultServiceId;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setDefaultServiceName(String defaultServiceName) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setDefaultServiceName(String defaultServiceName) {
             this.defaultServiceName = defaultServiceName;
             return this;
         }
@@ -874,7 +874,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.defaultServiceName;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setDestinationType(String destinationType) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setDestinationType(String destinationType) {
             this.destinationType = destinationType;
             return this;
         }
@@ -882,15 +882,15 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.destinationType;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setDirectResponse(GetGatewayRouteDetailResponseBodyDataDirectResponse directResponse) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setDirectResponse(UpdateGatewayRouteWafStatusResponseBodyDataDirectResponse directResponse) {
             this.directResponse = directResponse;
             return this;
         }
-        public GetGatewayRouteDetailResponseBodyDataDirectResponse getDirectResponse() {
+        public UpdateGatewayRouteWafStatusResponseBodyDataDirectResponse getDirectResponse() {
             return this.directResponse;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setDomainId(Long domainId) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setDomainId(Long domainId) {
             this.domainId = domainId;
             return this;
         }
@@ -898,7 +898,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.domainId;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setDomainIdList(java.util.List<Long> domainIdList) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setDomainIdList(java.util.List<Long> domainIdList) {
             this.domainIdList = domainIdList;
             return this;
         }
@@ -906,7 +906,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.domainIdList;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setDomainName(String domainName) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setDomainName(String domainName) {
             this.domainName = domainName;
             return this;
         }
@@ -914,7 +914,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.domainName;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setDomainNameList(java.util.List<String> domainNameList) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setDomainNameList(java.util.List<String> domainNameList) {
             this.domainNameList = domainNameList;
             return this;
         }
@@ -922,7 +922,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.domainNameList;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setEnableWaf(Boolean enableWaf) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setEnableWaf(Boolean enableWaf) {
             this.enableWaf = enableWaf;
             return this;
         }
@@ -930,7 +930,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.enableWaf;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setGatewayId(Long gatewayId) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setGatewayId(Long gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
@@ -938,7 +938,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.gatewayId;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setGatewayUniqueId(String gatewayUniqueId) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setGatewayUniqueId(String gatewayUniqueId) {
             this.gatewayUniqueId = gatewayUniqueId;
             return this;
         }
@@ -946,7 +946,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.gatewayUniqueId;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setGmtCreate(String gmtCreate) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
@@ -954,7 +954,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setGmtModified(String gmtModified) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setGmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
             return this;
         }
@@ -962,23 +962,23 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setHTTPRewrite(GetGatewayRouteDetailResponseBodyDataHTTPRewrite HTTPRewrite) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setHTTPRewrite(UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite HTTPRewrite) {
             this.HTTPRewrite = HTTPRewrite;
             return this;
         }
-        public GetGatewayRouteDetailResponseBodyDataHTTPRewrite getHTTPRewrite() {
+        public UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite getHTTPRewrite() {
             return this.HTTPRewrite;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setHeaderOp(GetGatewayRouteDetailResponseBodyDataHeaderOp headerOp) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setHeaderOp(UpdateGatewayRouteWafStatusResponseBodyDataHeaderOp headerOp) {
             this.headerOp = headerOp;
             return this;
         }
-        public GetGatewayRouteDetailResponseBodyDataHeaderOp getHeaderOp() {
+        public UpdateGatewayRouteWafStatusResponseBodyDataHeaderOp getHeaderOp() {
             return this.headerOp;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setId(Long id) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setId(Long id) {
             this.id = id;
             return this;
         }
@@ -986,7 +986,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.id;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setName(String name) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setName(String name) {
             this.name = name;
             return this;
         }
@@ -994,7 +994,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setPredicates(String predicates) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setPredicates(String predicates) {
             this.predicates = predicates;
             return this;
         }
@@ -1002,23 +1002,23 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.predicates;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setRedirect(GetGatewayRouteDetailResponseBodyDataRedirect redirect) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setRedirect(UpdateGatewayRouteWafStatusResponseBodyDataRedirect redirect) {
             this.redirect = redirect;
             return this;
         }
-        public GetGatewayRouteDetailResponseBodyDataRedirect getRedirect() {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRedirect getRedirect() {
             return this.redirect;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setRetry(GetGatewayRouteDetailResponseBodyDataRetry retry) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setRetry(UpdateGatewayRouteWafStatusResponseBodyDataRetry retry) {
             this.retry = retry;
             return this;
         }
-        public GetGatewayRouteDetailResponseBodyDataRetry getRetry() {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRetry getRetry() {
             return this.retry;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setRouteOrder(Integer routeOrder) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setRouteOrder(Integer routeOrder) {
             this.routeOrder = routeOrder;
             return this;
         }
@@ -1026,23 +1026,23 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.routeOrder;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setRoutePredicates(GetGatewayRouteDetailResponseBodyDataRoutePredicates routePredicates) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setRoutePredicates(UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates routePredicates) {
             this.routePredicates = routePredicates;
             return this;
         }
-        public GetGatewayRouteDetailResponseBodyDataRoutePredicates getRoutePredicates() {
+        public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates getRoutePredicates() {
             return this.routePredicates;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setRouteServices(java.util.List<GetGatewayRouteDetailResponseBodyDataRouteServices> routeServices) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setRouteServices(java.util.List<UpdateGatewayRouteWafStatusResponseBodyDataRouteServices> routeServices) {
             this.routeServices = routeServices;
             return this;
         }
-        public java.util.List<GetGatewayRouteDetailResponseBodyDataRouteServices> getRouteServices() {
+        public java.util.List<UpdateGatewayRouteWafStatusResponseBodyDataRouteServices> getRouteServices() {
             return this.routeServices;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setServices(String services) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setServices(String services) {
             this.services = services;
             return this;
         }
@@ -1050,7 +1050,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.services;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setStatus(Integer status) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setStatus(Integer status) {
             this.status = status;
             return this;
         }
@@ -1058,11 +1058,11 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetGatewayRouteDetailResponseBodyData setTimeout(GetGatewayRouteDetailResponseBodyDataTimeout timeout) {
+        public UpdateGatewayRouteWafStatusResponseBodyData setTimeout(UpdateGatewayRouteWafStatusResponseBodyDataTimeout timeout) {
             this.timeout = timeout;
             return this;
         }
-        public GetGatewayRouteDetailResponseBodyDataTimeout getTimeout() {
+        public UpdateGatewayRouteWafStatusResponseBodyDataTimeout getTimeout() {
             return this.timeout;
         }
 

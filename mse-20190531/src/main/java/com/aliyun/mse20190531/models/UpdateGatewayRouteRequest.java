@@ -16,6 +16,9 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     @NameInMap("DomainIdListJSON")
     public String domainIdListJSON;
 
+    @NameInMap("EnableWaf")
+    public Boolean enableWaf;
+
     @NameInMap("GatewayId")
     public Long gatewayId;
 
@@ -75,6 +78,14 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
     public String getDomainIdListJSON() {
         return this.domainIdListJSON;
+    }
+
+    public UpdateGatewayRouteRequest setEnableWaf(Boolean enableWaf) {
+        this.enableWaf = enableWaf;
+        return this;
+    }
+    public Boolean getEnableWaf() {
+        return this.enableWaf;
     }
 
     public UpdateGatewayRouteRequest setGatewayId(Long gatewayId) {
