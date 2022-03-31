@@ -28,9 +28,6 @@ public class CreateLakeHouseSpaceRequest extends TeaModel {
     @NameInMap("Tid")
     public Long tid;
 
-    @NameInMap("UserId")
-    public Long userId;
-
     public static CreateLakeHouseSpaceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLakeHouseSpaceRequest self = new CreateLakeHouseSpaceRequest();
         return TeaModel.build(map, self);
@@ -98,14 +95,6 @@ public class CreateLakeHouseSpaceRequest extends TeaModel {
     }
     public Long getTid() {
         return this.tid;
-    }
-
-    public CreateLakeHouseSpaceRequest setUserId(Long userId) {
-        this.userId = userId;
-        return this;
-    }
-    public Long getUserId() {
-        return this.userId;
     }
 
 }
