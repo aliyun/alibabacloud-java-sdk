@@ -7,6 +7,9 @@ public class PreviewMCTableRequest extends TeaModel {
     @NameInMap("Endpoint")
     public String endpoint;
 
+    @NameInMap("Partition")
+    public String partition;
+
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -21,6 +24,14 @@ public class PreviewMCTableRequest extends TeaModel {
     }
     public String getEndpoint() {
         return this.endpoint;
+    }
+
+    public PreviewMCTableRequest setPartition(String partition) {
+        this.partition = partition;
+        return this;
+    }
+    public String getPartition() {
+        return this.partition;
     }
 
     public PreviewMCTableRequest setWorkspaceId(String workspaceId) {

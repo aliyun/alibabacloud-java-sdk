@@ -1634,6 +1634,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Endpoint", request.endpoint);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.partition)) {
+            query.put("Partition", request.partition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             query.put("WorkspaceId", request.workspaceId);
         }
