@@ -465,6 +465,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("DomainNameList")
         public java.util.List<String> domainNameList;
 
+        @NameInMap("EnableWaf")
+        public String enableWaf;
+
         @NameInMap("GatewayId")
         public Long gatewayId;
 
@@ -582,6 +585,14 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
         public java.util.List<String> getDomainNameList() {
             return this.domainNameList;
+        }
+
+        public ListGatewayRouteResponseBodyDataResult setEnableWaf(String enableWaf) {
+            this.enableWaf = enableWaf;
+            return this;
+        }
+        public String getEnableWaf() {
+            return this.enableWaf;
         }
 
         public ListGatewayRouteResponseBodyDataResult setGatewayId(Long gatewayId) {

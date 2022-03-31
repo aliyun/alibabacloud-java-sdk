@@ -76,6 +76,36 @@ public class ListGatewayResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListGatewayResponseBodyDataResultInitConfig extends TeaModel {
+        @NameInMap("EnableWaf")
+        public Boolean enableWaf;
+
+        @NameInMap("SupportWaf")
+        public Boolean supportWaf;
+
+        public static ListGatewayResponseBodyDataResultInitConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayResponseBodyDataResultInitConfig self = new ListGatewayResponseBodyDataResultInitConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayResponseBodyDataResultInitConfig setEnableWaf(Boolean enableWaf) {
+            this.enableWaf = enableWaf;
+            return this;
+        }
+        public Boolean getEnableWaf() {
+            return this.enableWaf;
+        }
+
+        public ListGatewayResponseBodyDataResultInitConfig setSupportWaf(Boolean supportWaf) {
+            this.supportWaf = supportWaf;
+            return this;
+        }
+        public Boolean getSupportWaf() {
+            return this.supportWaf;
+        }
+
+    }
+
     public static class ListGatewayResponseBodyDataResultInternetSlb extends TeaModel {
         @NameInMap("GatewaySlbMode")
         public String gatewaySlbMode;
@@ -310,6 +340,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("InitConfig")
+        public ListGatewayResponseBodyDataResultInitConfig initConfig;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -438,6 +471,14 @@ public class ListGatewayResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListGatewayResponseBodyDataResult setInitConfig(ListGatewayResponseBodyDataResultInitConfig initConfig) {
+            this.initConfig = initConfig;
+            return this;
+        }
+        public ListGatewayResponseBodyDataResultInitConfig getInitConfig() {
+            return this.initConfig;
         }
 
         public ListGatewayResponseBodyDataResult setInstanceId(String instanceId) {
