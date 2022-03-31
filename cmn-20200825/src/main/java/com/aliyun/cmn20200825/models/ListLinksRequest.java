@@ -24,6 +24,9 @@ public class ListLinksRequest extends TeaModel {
     @NameInMap("LinkName")
     public String linkName;
 
+    @NameInMap("LinkNo")
+    public String linkNo;
+
     // 链路状态
     @NameInMap("LinkStatus")
     public String linkStatus;
@@ -91,6 +94,14 @@ public class ListLinksRequest extends TeaModel {
     }
     public String getLinkName() {
         return this.linkName;
+    }
+
+    public ListLinksRequest setLinkNo(String linkNo) {
+        this.linkNo = linkNo;
+        return this;
+    }
+    public String getLinkNo() {
+        return this.linkNo;
     }
 
     public ListLinksRequest setLinkStatus(String linkStatus) {
