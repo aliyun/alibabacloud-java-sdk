@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class NASConfig extends TeaModel {
     // groupID
     @NameInMap("groupId")
-    public String groupId;
+    public Integer groupId;
 
     // 挂载点
     @NameInMap("mountPoints")
@@ -14,18 +14,18 @@ public class NASConfig extends TeaModel {
 
     // userID
     @NameInMap("userId")
-    public String userId;
+    public Integer userId;
 
     public static NASConfig build(java.util.Map<String, ?> map) throws Exception {
         NASConfig self = new NASConfig();
         return TeaModel.build(map, self);
     }
 
-    public NASConfig setGroupId(String groupId) {
+    public NASConfig setGroupId(Integer groupId) {
         this.groupId = groupId;
         return this;
     }
-    public String getGroupId() {
+    public Integer getGroupId() {
         return this.groupId;
     }
 
@@ -37,11 +37,11 @@ public class NASConfig extends TeaModel {
         return this.mountPoints;
     }
 
-    public NASConfig setUserId(String userId) {
+    public NASConfig setUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
-    public String getUserId() {
+    public Integer getUserId() {
         return this.userId;
     }
 

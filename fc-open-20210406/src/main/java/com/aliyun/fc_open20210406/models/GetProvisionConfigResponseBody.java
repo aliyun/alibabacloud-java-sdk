@@ -4,6 +4,10 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetProvisionConfigResponseBody extends TeaModel {
+    // 是否始终分配CPU给函数实例。
+    @NameInMap("alwaysAllocateCPU")
+    public Boolean alwaysAllocateCPU;
+
     // 实际资源个数
     @NameInMap("current")
     public Long current;
@@ -31,6 +35,14 @@ public class GetProvisionConfigResponseBody extends TeaModel {
     public static GetProvisionConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetProvisionConfigResponseBody self = new GetProvisionConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetProvisionConfigResponseBody setAlwaysAllocateCPU(Boolean alwaysAllocateCPU) {
+        this.alwaysAllocateCPU = alwaysAllocateCPU;
+        return this;
+    }
+    public Boolean getAlwaysAllocateCPU() {
+        return this.alwaysAllocateCPU;
     }
 
     public GetProvisionConfigResponseBody setCurrent(Long current) {
