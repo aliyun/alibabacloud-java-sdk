@@ -10,9 +10,6 @@ public class InvokeFunctionHeaders extends TeaModel {
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
-    @NameInMap("X-Fc-Code-Checksum")
-    public String xFcCodeChecksum;
-
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
@@ -49,14 +46,6 @@ public class InvokeFunctionHeaders extends TeaModel {
     }
     public String getXFcAccountId() {
         return this.xFcAccountId;
-    }
-
-    public InvokeFunctionHeaders setXFcCodeChecksum(String xFcCodeChecksum) {
-        this.xFcCodeChecksum = xFcCodeChecksum;
-        return this;
-    }
-    public String getXFcCodeChecksum() {
-        return this.xFcCodeChecksum;
     }
 
     public InvokeFunctionHeaders setXFcDate(String xFcDate) {

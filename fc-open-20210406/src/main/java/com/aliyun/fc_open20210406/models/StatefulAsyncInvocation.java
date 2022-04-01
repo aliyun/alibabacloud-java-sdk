@@ -4,51 +4,59 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class StatefulAsyncInvocation extends TeaModel {
-    // alreadyRetriedTimes
+    // 异步任务调用失败后的已重试次数。
     @NameInMap("alreadyRetriedTimes")
     public Long alreadyRetriedTimes;
 
-    // destinationStatus
+    // 异步任务的目的状态。
     @NameInMap("destinationStatus")
     public String destinationStatus;
 
-    // endTime
+    // 异步任务的结束时间。
     @NameInMap("endTime")
     public Long endTime;
 
-    // functionName
+    // 异步任务事件列表。
+    @NameInMap("events")
+    public java.util.List<StatefulAsyncInvocationEvent> events;
+
+    // 异步任务所属的函数的名称。
     @NameInMap("functionName")
     public String functionName;
 
-    // invocationErrorMessage
+    // 异步任务的执行实例ID。
+    @NameInMap("instanceId")
+    public String instanceId;
+
+    // 异步任务的错误消息。
     @NameInMap("invocationErrorMessage")
     public String invocationErrorMessage;
 
-    // invocationId
+    // 异步任务ID。
     @NameInMap("invocationId")
     public String invocationId;
 
-    // invocationPayload
+    // 异步任务的任务触发事件。
     @NameInMap("invocationPayload")
     public String invocationPayload;
 
-    // qualifier
+    // 异步任务所属的服务的别名或版本。
     @NameInMap("qualifier")
     public String qualifier;
 
-    // requestId
+    // 异步任务的请求ID。
     @NameInMap("requestId")
     public String requestId;
 
-    // serviceName
+    // 异步任务所属的服务的名称。
     @NameInMap("serviceName")
     public String serviceName;
 
-    // startedTime
+    // 异步任务的开始时间。
     @NameInMap("startedTime")
     public Long startedTime;
 
-    // status
+    // 异步任务的执行状态。      Enqueued：异步消息已入队，等待处理。      Succeeded：调用执行成功。      Failed：调用执行失败。      Running：调用执行中。      Stopped：调用执行终止。      Stopping：执行停止中。      Invalid：您的执行因函数被删除等原因处于无效状态（任务未被执行）。      Expired：您为任务配置了最长排队等待的期限。该任务因为超期被丢弃（任务未被执行）。      Retrying：异步调用因执行错误重试中。
     @NameInMap("status")
     public String status;
 
@@ -81,12 +89,28 @@ public class StatefulAsyncInvocation extends TeaModel {
         return this.endTime;
     }
 
+    public StatefulAsyncInvocation setEvents(java.util.List<StatefulAsyncInvocationEvent> events) {
+        this.events = events;
+        return this;
+    }
+    public java.util.List<StatefulAsyncInvocationEvent> getEvents() {
+        return this.events;
+    }
+
     public StatefulAsyncInvocation setFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
     }
     public String getFunctionName() {
         return this.functionName;
+    }
+
+    public StatefulAsyncInvocation setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public StatefulAsyncInvocation setInvocationErrorMessage(String invocationErrorMessage) {

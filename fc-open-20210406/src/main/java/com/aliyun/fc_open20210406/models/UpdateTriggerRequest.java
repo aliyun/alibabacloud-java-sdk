@@ -15,7 +15,7 @@ public class UpdateTriggerRequest extends TeaModel {
     @NameInMap("qualifier")
     public String qualifier;
 
-    // trigger配置，针对不同的trigger类型，trigger配置会有所不同	
+    // trigger配置，针对不同的trigger类型，trigger配置会有所不同
     @NameInMap("triggerConfig")
     public String triggerConfig;
 

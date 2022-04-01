@@ -4,14 +4,6 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class Code extends TeaModel {
-    // codeCheckSum
-    @NameInMap("codeCheckSum")
-    public String codeCheckSum;
-
-    // error
-    @NameInMap("err")
-    public String err;
-
     // 函数代码包的OSS bucket name
     @NameInMap("ossBucketName")
     public String ossBucketName;
@@ -27,22 +19,6 @@ public class Code extends TeaModel {
     public static Code build(java.util.Map<String, ?> map) throws Exception {
         Code self = new Code();
         return TeaModel.build(map, self);
-    }
-
-    public Code setCodeCheckSum(String codeCheckSum) {
-        this.codeCheckSum = codeCheckSum;
-        return this;
-    }
-    public String getCodeCheckSum() {
-        return this.codeCheckSum;
-    }
-
-    public Code setErr(String err) {
-        this.err = err;
-        return this;
-    }
-    public String getErr() {
-        return this.err;
     }
 
     public Code setOssBucketName(String ossBucketName) {
