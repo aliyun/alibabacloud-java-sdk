@@ -2960,6 +2960,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alwaysAllocateCPU)) {
+            body.put("alwaysAllocateCPU", request.alwaysAllocateCPU);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.scheduledActions)) {
             body.put("scheduledActions", request.scheduledActions);
         }

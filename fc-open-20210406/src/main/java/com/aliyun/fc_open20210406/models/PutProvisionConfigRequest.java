@@ -4,6 +4,10 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class PutProvisionConfigRequest extends TeaModel {
+    // 当实例进入空闲状态时，是否继续分配CPU。
+    @NameInMap("alwaysAllocateCPU")
+    public Boolean alwaysAllocateCPU;
+
     // 定时策略配置
     @NameInMap("scheduledActions")
     public java.util.List<ScheduledActions> scheduledActions;
@@ -23,6 +27,14 @@ public class PutProvisionConfigRequest extends TeaModel {
     public static PutProvisionConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         PutProvisionConfigRequest self = new PutProvisionConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PutProvisionConfigRequest setAlwaysAllocateCPU(Boolean alwaysAllocateCPU) {
+        this.alwaysAllocateCPU = alwaysAllocateCPU;
+        return this;
+    }
+    public Boolean getAlwaysAllocateCPU() {
+        return this.alwaysAllocateCPU;
     }
 
     public PutProvisionConfigRequest setScheduledActions(java.util.List<ScheduledActions> scheduledActions) {

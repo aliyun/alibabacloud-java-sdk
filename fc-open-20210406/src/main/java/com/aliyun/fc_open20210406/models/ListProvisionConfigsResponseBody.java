@@ -34,6 +34,10 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
     }
 
     public static class ListProvisionConfigsResponseBodyProvisionConfigs extends TeaModel {
+        // 是否始终分配CPU给函数实例。
+        @NameInMap("alwaysAllocateCPU")
+        public Boolean alwaysAllocateCPU;
+
         // 实际资源个数
         @NameInMap("current")
         public Long current;
@@ -61,6 +65,14 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
         public static ListProvisionConfigsResponseBodyProvisionConfigs build(java.util.Map<String, ?> map) throws Exception {
             ListProvisionConfigsResponseBodyProvisionConfigs self = new ListProvisionConfigsResponseBodyProvisionConfigs();
             return TeaModel.build(map, self);
+        }
+
+        public ListProvisionConfigsResponseBodyProvisionConfigs setAlwaysAllocateCPU(Boolean alwaysAllocateCPU) {
+            this.alwaysAllocateCPU = alwaysAllocateCPU;
+            return this;
+        }
+        public Boolean getAlwaysAllocateCPU() {
+            return this.alwaysAllocateCPU;
         }
 
         public ListProvisionConfigsResponseBodyProvisionConfigs setCurrent(Long current) {
