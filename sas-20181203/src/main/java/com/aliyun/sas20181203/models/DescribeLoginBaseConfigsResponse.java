@@ -3,21 +3,21 @@ package com.aliyun.sas20181203.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDialogMessagesResponse extends TeaModel {
+public class DescribeLoginBaseConfigsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeDialogMessagesResponseBody body;
+    public DescribeLoginBaseConfigsResponseBody body;
 
-    public static DescribeDialogMessagesResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDialogMessagesResponse self = new DescribeDialogMessagesResponse();
+    public static DescribeLoginBaseConfigsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeLoginBaseConfigsResponse self = new DescribeLoginBaseConfigsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDialogMessagesResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeLoginBaseConfigsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DescribeDialogMessagesResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeDialogMessagesResponse setBody(DescribeDialogMessagesResponseBody body) {
+    public DescribeLoginBaseConfigsResponse setBody(DescribeLoginBaseConfigsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeDialogMessagesResponseBody getBody() {
+    public DescribeLoginBaseConfigsResponseBody getBody() {
         return this.body;
     }
 
