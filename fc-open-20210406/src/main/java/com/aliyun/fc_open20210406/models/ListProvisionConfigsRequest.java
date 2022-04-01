@@ -4,7 +4,7 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListProvisionConfigsRequest extends TeaModel {
-    // 限定此次返回资源的数量。如果不设定，默认返回20，最大不能超过100。返回结果可能小于指定的数量，但不会多于指定的数量	
+    // 限定此次返回资源的数量。如果不设定，默认返回20，最大不能超过100。返回结果可能小于指定的数量，但不会多于指定的数量
     @NameInMap("limit")
     public Long limit;
 

@@ -90,20 +90,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -162,20 +150,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -299,14 +275,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
             realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
         }
@@ -360,20 +328,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -448,20 +404,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -534,20 +478,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -595,20 +527,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -655,20 +575,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -709,20 +617,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -768,20 +664,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -829,20 +713,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -895,20 +767,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -951,20 +811,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -1009,20 +857,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -1064,20 +900,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -1124,20 +948,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -1179,20 +991,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -1241,20 +1041,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -1295,20 +1083,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -1350,20 +1126,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -1404,20 +1168,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -1465,20 +1217,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -1527,20 +1267,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -1589,20 +1317,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -1651,20 +1367,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -1707,20 +1411,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -1742,60 +1434,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetLayerVersionResponse());
-    }
-
-    public GetLayerVersionByArnResponse getLayerVersionByArn(String arn) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        GetLayerVersionByArnHeaders headers = new GetLayerVersionByArnHeaders();
-        return this.getLayerVersionByArnWithOptions(arn, headers, runtime);
-    }
-
-    public GetLayerVersionByArnResponse getLayerVersionByArnWithOptions(String arn, GetLayerVersionByArnHeaders headers, RuntimeOptions runtime) throws Exception {
-        arn = com.aliyun.openapiutil.Client.getEncodeParam(arn);
-        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
-            realHeaders = headers.commonHeaders;
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
-            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
-            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
-            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", realHeaders)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetLayerVersionByArn"),
-            new TeaPair("version", "2021-04-06"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/layerarn/" + arn + ""),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLayerVersionByArnResponse());
     }
 
     public GetProvisionConfigResponse getProvisionConfig(String serviceName, String functionName, GetProvisionConfigRequest request) throws Exception {
@@ -1822,20 +1460,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -1882,20 +1508,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -1943,20 +1557,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -2063,20 +1665,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -2122,10 +1712,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
@@ -2202,20 +1788,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -2274,20 +1848,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -2336,20 +1898,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -2479,20 +2029,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -2515,56 +2053,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListFunctionsResponse());
-    }
-
-    public ListInstancesResponse listInstances(String serviceName, String functionName, ListInstancesRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        ListInstancesHeaders headers = new ListInstancesHeaders();
-        return this.listInstancesWithOptions(serviceName, functionName, request, headers, runtime);
-    }
-
-    public ListInstancesResponse listInstancesWithOptions(String serviceName, String functionName, ListInstancesRequest request, ListInstancesHeaders headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
-            query.put("limit", request.limit);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
-            query.put("nextToken", request.nextToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
-            query.put("qualifier", request.qualifier);
-        }
-
-        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
-            realHeaders = headers.commonHeaders;
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
-            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", realHeaders),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListInstances"),
-            new TeaPair("version", "2021-04-06"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/instances"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstancesResponse());
     }
 
     public ListLayerVersionsResponse listLayerVersions(String layerName, ListLayerVersionsRequest request) throws Exception {
@@ -2594,20 +2082,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -2666,20 +2142,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -2738,20 +2202,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -2810,20 +2262,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -2874,20 +2314,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -2947,20 +2375,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -3019,20 +2435,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -3055,6 +2459,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListServicesResponse());
+    }
+
+    public ListStatefulAsyncInvocationFunctionsResponse listStatefulAsyncInvocationFunctions(ListStatefulAsyncInvocationFunctionsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        ListStatefulAsyncInvocationFunctionsHeaders headers = new ListStatefulAsyncInvocationFunctionsHeaders();
+        return this.listStatefulAsyncInvocationFunctionsWithOptions(request, headers, runtime);
+    }
+
+    public ListStatefulAsyncInvocationFunctionsResponse listStatefulAsyncInvocationFunctionsWithOptions(ListStatefulAsyncInvocationFunctionsRequest request, ListStatefulAsyncInvocationFunctionsHeaders headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListStatefulAsyncInvocationFunctions"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/stateful-async-invocation-functions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListStatefulAsyncInvocationFunctionsResponse());
     }
 
     public ListStatefulAsyncInvocationsResponse listStatefulAsyncInvocations(String serviceName, String functionName, ListStatefulAsyncInvocationsRequest request) throws Exception {
@@ -3177,20 +2633,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -3251,20 +2695,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -3306,20 +2738,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -3341,117 +2761,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListVpcBindingsResponse());
-    }
-
-    public PermanentDeleteLayerVersionResponse permanentDeleteLayerVersion(String userID, String layerName, String version) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        PermanentDeleteLayerVersionHeaders headers = new PermanentDeleteLayerVersionHeaders();
-        return this.permanentDeleteLayerVersionWithOptions(userID, layerName, version, headers, runtime);
-    }
-
-    public PermanentDeleteLayerVersionResponse permanentDeleteLayerVersionWithOptions(String userID, String layerName, String version, PermanentDeleteLayerVersionHeaders headers, RuntimeOptions runtime) throws Exception {
-        userID = com.aliyun.openapiutil.Client.getEncodeParam(userID);
-        layerName = com.aliyun.openapiutil.Client.getEncodeParam(layerName);
-        version = com.aliyun.openapiutil.Client.getEncodeParam(version);
-        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
-            realHeaders = headers.commonHeaders;
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
-            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
-            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
-            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", realHeaders)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "PermanentDeleteLayerVersion"),
-            new TeaPair("version", "2021-04-06"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/adminlayers/" + userID + "/" + layerName + "/versions/" + version + ""),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new PermanentDeleteLayerVersionResponse());
-    }
-
-    public PublishLayerAsPublicResponse publishLayerAsPublic(String layerName, String version) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        PublishLayerAsPublicHeaders headers = new PublishLayerAsPublicHeaders();
-        return this.publishLayerAsPublicWithOptions(layerName, version, headers, runtime);
-    }
-
-    public PublishLayerAsPublicResponse publishLayerAsPublicWithOptions(String layerName, String version, PublishLayerAsPublicHeaders headers, RuntimeOptions runtime) throws Exception {
-        layerName = com.aliyun.openapiutil.Client.getEncodeParam(layerName);
-        version = com.aliyun.openapiutil.Client.getEncodeParam(version);
-        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
-            realHeaders = headers.commonHeaders;
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
-            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
-            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
-            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", realHeaders)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "PublishLayerAsPublic"),
-            new TeaPair("version", "2021-04-06"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/layers/" + layerName + "/versions/" + version + ""),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishLayerAsPublicResponse());
     }
 
     public PublishServiceVersionResponse publishServiceVersion(String serviceName, PublishServiceVersionRequest request) throws Exception {
@@ -3481,20 +2790,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -3560,20 +2857,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -3632,20 +2917,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -3708,20 +2981,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -3776,20 +3037,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -3840,20 +3089,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -3904,20 +3141,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -3972,20 +3197,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -4046,20 +3259,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -4115,20 +3316,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -4253,14 +3442,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
             realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
         }
@@ -4334,20 +3515,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
@@ -4413,20 +3582,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
             realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {

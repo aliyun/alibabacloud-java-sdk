@@ -10,17 +10,8 @@ public class CreateCustomDomainHeaders extends TeaModel {
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
-    @NameInMap("X-Fc-Code-Checksum")
-    public String xFcCodeChecksum;
-
     @NameInMap("X-Fc-Date")
     public String xFcDate;
-
-    @NameInMap("X-Fc-Invocation-Type")
-    public String xFcInvocationType;
-
-    @NameInMap("X-Fc-Log-Type")
-    public String xFcLogType;
 
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
@@ -46,36 +37,12 @@ public class CreateCustomDomainHeaders extends TeaModel {
         return this.xFcAccountId;
     }
 
-    public CreateCustomDomainHeaders setXFcCodeChecksum(String xFcCodeChecksum) {
-        this.xFcCodeChecksum = xFcCodeChecksum;
-        return this;
-    }
-    public String getXFcCodeChecksum() {
-        return this.xFcCodeChecksum;
-    }
-
     public CreateCustomDomainHeaders setXFcDate(String xFcDate) {
         this.xFcDate = xFcDate;
         return this;
     }
     public String getXFcDate() {
         return this.xFcDate;
-    }
-
-    public CreateCustomDomainHeaders setXFcInvocationType(String xFcInvocationType) {
-        this.xFcInvocationType = xFcInvocationType;
-        return this;
-    }
-    public String getXFcInvocationType() {
-        return this.xFcInvocationType;
-    }
-
-    public CreateCustomDomainHeaders setXFcLogType(String xFcLogType) {
-        this.xFcLogType = xFcLogType;
-        return this;
-    }
-    public String getXFcLogType() {
-        return this.xFcLogType;
     }
 
     public CreateCustomDomainHeaders setXFcTraceId(String xFcTraceId) {

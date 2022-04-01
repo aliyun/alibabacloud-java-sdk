@@ -13,7 +13,7 @@ public class UntagResourceRequest extends TeaModel {
     public String resourceArn;
 
     // tag key 值列表， 最大为 20，当 all=false， length 至少为 1. 当 length 大于 1 时， 可以忽略 all 值
-    @NameInMap("tagKeys	")
+    @NameInMap("tagKeys")
     public java.util.List<String> tagKeys;
 
     public static UntagResourceRequest build(java.util.Map<String, ?> map) throws Exception {

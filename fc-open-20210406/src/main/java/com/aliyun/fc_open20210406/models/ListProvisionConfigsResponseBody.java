@@ -4,7 +4,7 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListProvisionConfigsResponseBody extends TeaModel {
-    // 下次查询的起始token	
+    // 下次查询的起始token
     @NameInMap("nextToken")
     public String nextToken;
 
