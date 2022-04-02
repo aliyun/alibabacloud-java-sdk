@@ -3,25 +3,25 @@ package com.aliyun.cams20200606.models;
 
 import com.aliyun.tea.*;
 
-public class CheckChatappContactsRequest extends TeaModel {
+public class CheckChatappContactsShrinkRequest extends TeaModel {
     // 通道类型
     @NameInMap("ChannelType")
     public String channelType;
 
     // 需要查询的用户列表,单次调用最多查询10个。注意：用户号码必须加国家码
     @NameInMap("Contacts")
-    public java.util.List<String> contacts;
+    public String contactsShrink;
 
     // 发送号码,所选择ChannelType下的Business账号，即在控制台上审核通过的Number
     @NameInMap("From")
     public String from;
 
-    public static CheckChatappContactsRequest build(java.util.Map<String, ?> map) throws Exception {
-        CheckChatappContactsRequest self = new CheckChatappContactsRequest();
+    public static CheckChatappContactsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CheckChatappContactsShrinkRequest self = new CheckChatappContactsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CheckChatappContactsRequest setChannelType(String channelType) {
+    public CheckChatappContactsShrinkRequest setChannelType(String channelType) {
         this.channelType = channelType;
         return this;
     }
@@ -29,15 +29,15 @@ public class CheckChatappContactsRequest extends TeaModel {
         return this.channelType;
     }
 
-    public CheckChatappContactsRequest setContacts(java.util.List<String> contacts) {
-        this.contacts = contacts;
+    public CheckChatappContactsShrinkRequest setContactsShrink(String contactsShrink) {
+        this.contactsShrink = contactsShrink;
         return this;
     }
-    public java.util.List<String> getContacts() {
-        return this.contacts;
+    public String getContactsShrink() {
+        return this.contactsShrink;
     }
 
-    public CheckChatappContactsRequest setFrom(String from) {
+    public CheckChatappContactsShrinkRequest setFrom(String from) {
         this.from = from;
         return this;
     }

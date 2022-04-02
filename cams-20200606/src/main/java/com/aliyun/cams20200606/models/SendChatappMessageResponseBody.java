@@ -7,11 +7,12 @@ public class SendChatappMessageResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public String data;
-
     @NameInMap("Message")
     public String message;
+
+    // 消息ID
+    @NameInMap("MessageId")
+    public String messageId;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -29,20 +30,20 @@ public class SendChatappMessageResponseBody extends TeaModel {
         return this.code;
     }
 
-    public SendChatappMessageResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
     public SendChatappMessageResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public SendChatappMessageResponseBody setMessageId(String messageId) {
+        this.messageId = messageId;
+        return this;
+    }
+    public String getMessageId() {
+        return this.messageId;
     }
 
     public SendChatappMessageResponseBody setRequestId(String requestId) {
