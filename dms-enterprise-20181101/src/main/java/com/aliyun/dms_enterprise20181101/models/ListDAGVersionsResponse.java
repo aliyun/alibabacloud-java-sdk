@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dms_enterprise20181101.models;
+
+import com.aliyun.tea.*;
+
+public class ListDAGVersionsResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ListDAGVersionsResponseBody body;
+
+    public static ListDAGVersionsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListDAGVersionsResponse self = new ListDAGVersionsResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public ListDAGVersionsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ListDAGVersionsResponse setBody(ListDAGVersionsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListDAGVersionsResponseBody getBody() {
+        return this.body;
+    }
+
+}

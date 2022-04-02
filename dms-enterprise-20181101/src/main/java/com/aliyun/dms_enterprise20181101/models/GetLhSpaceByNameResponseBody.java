@@ -68,14 +68,14 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
         @NameInMap("CreatorId")
         public String creatorId;
 
-        @NameInMap("DbType")
-        public String dbType;
-
         @NameInMap("Description")
         public String description;
 
         @NameInMap("DevDbId")
         public Integer devDbId;
+
+        @NameInMap("DwDbType")
+        public String dwDbType;
 
         @NameInMap("Id")
         public Long id;
@@ -111,14 +111,6 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             return this.creatorId;
         }
 
-        public GetLhSpaceByNameResponseBodyLakehouseSpace setDbType(String dbType) {
-            this.dbType = dbType;
-            return this;
-        }
-        public String getDbType() {
-            return this.dbType;
-        }
-
         public GetLhSpaceByNameResponseBodyLakehouseSpace setDescription(String description) {
             this.description = description;
             return this;
@@ -133,6 +125,14 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
         }
         public Integer getDevDbId() {
             return this.devDbId;
+        }
+
+        public GetLhSpaceByNameResponseBodyLakehouseSpace setDwDbType(String dwDbType) {
+            this.dwDbType = dwDbType;
+            return this;
+        }
+        public String getDwDbType() {
+            return this.dwDbType;
         }
 
         public GetLhSpaceByNameResponseBodyLakehouseSpace setId(Long id) {
