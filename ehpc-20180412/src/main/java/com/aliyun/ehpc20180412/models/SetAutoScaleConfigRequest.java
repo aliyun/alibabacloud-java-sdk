@@ -336,8 +336,14 @@ public class SetAutoScaleConfigRequest extends TeaModel {
         @NameInMap("MaxNodesInQueue")
         public Integer maxNodesInQueue;
 
+        @NameInMap("MaxNodesPerCycle")
+        public Long maxNodesPerCycle;
+
         @NameInMap("MinNodesInQueue")
         public Integer minNodesInQueue;
+
+        @NameInMap("MinNodesPerCycle")
+        public Long minNodesPerCycle;
 
         @NameInMap("QueueImageId")
         public String queueImageId;
@@ -429,12 +435,28 @@ public class SetAutoScaleConfigRequest extends TeaModel {
             return this.maxNodesInQueue;
         }
 
+        public SetAutoScaleConfigRequestQueues setMaxNodesPerCycle(Long maxNodesPerCycle) {
+            this.maxNodesPerCycle = maxNodesPerCycle;
+            return this;
+        }
+        public Long getMaxNodesPerCycle() {
+            return this.maxNodesPerCycle;
+        }
+
         public SetAutoScaleConfigRequestQueues setMinNodesInQueue(Integer minNodesInQueue) {
             this.minNodesInQueue = minNodesInQueue;
             return this;
         }
         public Integer getMinNodesInQueue() {
             return this.minNodesInQueue;
+        }
+
+        public SetAutoScaleConfigRequestQueues setMinNodesPerCycle(Long minNodesPerCycle) {
+            this.minNodesPerCycle = minNodesPerCycle;
+            return this;
+        }
+        public Long getMinNodesPerCycle() {
+            return this.minNodesPerCycle;
         }
 
         public SetAutoScaleConfigRequestQueues setQueueImageId(String queueImageId) {

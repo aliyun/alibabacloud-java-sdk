@@ -46,6 +46,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Domain")
+    public String domain;
+
     @NameInMap("EcsChargeType")
     public String ecsChargeType;
 
@@ -135,6 +138,9 @@ public class CreateClusterRequest extends TeaModel {
 
     @NameInMap("VolumeId")
     public String volumeId;
+
+    @NameInMap("VolumeMountOption")
+    public String volumeMountOption;
 
     @NameInMap("VolumeMountpoint")
     public String volumeMountpoint;
@@ -272,6 +278,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateClusterRequest setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
     }
 
     public CreateClusterRequest setEcsChargeType(String ecsChargeType) {
@@ -514,6 +528,14 @@ public class CreateClusterRequest extends TeaModel {
         return this.volumeId;
     }
 
+    public CreateClusterRequest setVolumeMountOption(String volumeMountOption) {
+        this.volumeMountOption = volumeMountOption;
+        return this;
+    }
+    public String getVolumeMountOption() {
+        return this.volumeMountOption;
+    }
+
     public CreateClusterRequest setVolumeMountpoint(String volumeMountpoint) {
         this.volumeMountpoint = volumeMountpoint;
         return this;
@@ -742,6 +764,9 @@ public class CreateClusterRequest extends TeaModel {
         @NameInMap("VolumeId")
         public String volumeId;
 
+        @NameInMap("VolumeMountOption")
+        public String volumeMountOption;
+
         @NameInMap("VolumeMountpoint")
         public String volumeMountpoint;
 
@@ -802,6 +827,14 @@ public class CreateClusterRequest extends TeaModel {
         }
         public String getVolumeId() {
             return this.volumeId;
+        }
+
+        public CreateClusterRequestAdditionalVolumes setVolumeMountOption(String volumeMountOption) {
+            this.volumeMountOption = volumeMountOption;
+            return this;
+        }
+        public String getVolumeMountOption() {
+            return this.volumeMountOption;
         }
 
         public CreateClusterRequestAdditionalVolumes setVolumeMountpoint(String volumeMountpoint) {

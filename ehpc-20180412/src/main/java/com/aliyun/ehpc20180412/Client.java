@@ -757,6 +757,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeContainerAppWithOptions(request, runtime);
     }
 
+    public DescribeDeployProcessResponse describeDeployProcessWithOptions(DescribeDeployProcessRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDeployProcess"),
+            new TeaPair("version", "2018-04-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDeployProcessResponse());
+    }
+
+    public DescribeDeployProcessResponse describeDeployProcess(DescribeDeployProcessRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeDeployProcessWithOptions(request, runtime);
+    }
+
     public DescribeGWSClusterPolicyResponse describeGWSClusterPolicyWithOptions(DescribeGWSClusterPolicyRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1242,6 +1267,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetIfEcsTypeSupportHtConfigResponse getIfEcsTypeSupportHtConfig(GetIfEcsTypeSupportHtConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getIfEcsTypeSupportHtConfigWithOptions(request, runtime);
+    }
+
+    public GetPostScriptsResponse getPostScriptsWithOptions(GetPostScriptsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPostScripts"),
+            new TeaPair("version", "2018-04-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPostScriptsResponse());
+    }
+
+    public GetPostScriptsResponse getPostScripts(GetPostScriptsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getPostScriptsWithOptions(request, runtime);
+    }
+
+    public GetQueueConfResponse getQueueConfWithOptions(GetQueueConfRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetQueueConf"),
+            new TeaPair("version", "2018-04-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetQueueConfResponse());
+    }
+
+    public GetQueueConfResponse getQueueConf(GetQueueConfRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getQueueConfWithOptions(request, runtime);
     }
 
     public GetSchedulerInfoResponse getSchedulerInfoWithOptions(GetSchedulerInfoRequest request, RuntimeOptions runtime) throws Exception {
@@ -1813,6 +1888,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListJobsResponse listJobs(ListJobsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listJobsWithOptions(request, runtime);
+    }
+
+    public ListJobsWithFiltersResponse listJobsWithFiltersWithOptions(ListJobsWithFiltersRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListJobsWithFilters"),
+            new TeaPair("version", "2018-04-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListJobsWithFiltersResponse());
+    }
+
+    public ListJobsWithFiltersResponse listJobsWithFilters(ListJobsWithFiltersRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listJobsWithFiltersWithOptions(request, runtime);
     }
 
     public ListNodesResponse listNodesWithOptions(ListNodesRequest request, RuntimeOptions runtime) throws Exception {
@@ -2533,6 +2633,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetGWSInstanceUserResponse setGWSInstanceUser(SetGWSInstanceUserRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.setGWSInstanceUserWithOptions(request, runtime);
+    }
+
+    public SetPostScriptsResponse setPostScriptsWithOptions(SetPostScriptsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetPostScripts"),
+            new TeaPair("version", "2018-04-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetPostScriptsResponse());
+    }
+
+    public SetPostScriptsResponse setPostScripts(SetPostScriptsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.setPostScriptsWithOptions(request, runtime);
     }
 
     public SetQueueResponse setQueueWithOptions(SetQueueRequest request, RuntimeOptions runtime) throws Exception {

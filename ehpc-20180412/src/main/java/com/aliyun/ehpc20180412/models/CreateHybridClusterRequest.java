@@ -467,6 +467,9 @@ public class CreateHybridClusterRequest extends TeaModel {
         @NameInMap("AccountType")
         public String accountType;
 
+        @NameInMap("Dir")
+        public String dir;
+
         @NameInMap("HostName")
         public String hostName;
 
@@ -490,6 +493,14 @@ public class CreateHybridClusterRequest extends TeaModel {
         }
         public String getAccountType() {
             return this.accountType;
+        }
+
+        public CreateHybridClusterRequestNodes setDir(String dir) {
+            this.dir = dir;
+            return this;
+        }
+        public String getDir() {
+            return this.dir;
         }
 
         public CreateHybridClusterRequestNodes setHostName(String hostName) {
