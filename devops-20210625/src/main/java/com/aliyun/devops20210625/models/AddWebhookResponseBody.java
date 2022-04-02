@@ -65,23 +65,17 @@ public class AddWebhookResponseBody extends TeaModel {
     }
 
     public static class AddWebhookResponseBodyResult extends TeaModel {
-        @NameInMap("EnableSslVerification")
-        public Boolean enableSslVerification;
-
-        @NameInMap("buildEvents")
-        public Boolean buildEvents;
-
         @NameInMap("createdAt")
         public String createdAt;
 
         @NameInMap("description")
         public String description;
 
+        @NameInMap("enableSslVerification")
+        public Boolean enableSslVerification;
+
         @NameInMap("id")
         public Long id;
-
-        @NameInMap("issuesEvents")
-        public Boolean issuesEvents;
 
         @NameInMap("lastTestResult")
         public String lastTestResult;
@@ -112,22 +106,6 @@ public class AddWebhookResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public AddWebhookResponseBodyResult setEnableSslVerification(Boolean enableSslVerification) {
-            this.enableSslVerification = enableSslVerification;
-            return this;
-        }
-        public Boolean getEnableSslVerification() {
-            return this.enableSslVerification;
-        }
-
-        public AddWebhookResponseBodyResult setBuildEvents(Boolean buildEvents) {
-            this.buildEvents = buildEvents;
-            return this;
-        }
-        public Boolean getBuildEvents() {
-            return this.buildEvents;
-        }
-
         public AddWebhookResponseBodyResult setCreatedAt(String createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -144,20 +122,20 @@ public class AddWebhookResponseBody extends TeaModel {
             return this.description;
         }
 
+        public AddWebhookResponseBodyResult setEnableSslVerification(Boolean enableSslVerification) {
+            this.enableSslVerification = enableSslVerification;
+            return this;
+        }
+        public Boolean getEnableSslVerification() {
+            return this.enableSslVerification;
+        }
+
         public AddWebhookResponseBodyResult setId(Long id) {
             this.id = id;
             return this;
         }
         public Long getId() {
             return this.id;
-        }
-
-        public AddWebhookResponseBodyResult setIssuesEvents(Boolean issuesEvents) {
-            this.issuesEvents = issuesEvents;
-            return this;
-        }
-        public Boolean getIssuesEvents() {
-            return this.issuesEvents;
         }
 
         public AddWebhookResponseBodyResult setLastTestResult(String lastTestResult) {

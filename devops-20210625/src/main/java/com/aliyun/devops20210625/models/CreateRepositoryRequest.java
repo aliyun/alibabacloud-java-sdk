@@ -31,10 +31,6 @@ public class CreateRepositoryRequest extends TeaModel {
     @NameInMap("importRepoType")
     public String importRepoType;
 
-    // 导入SVN库的设置
-    @NameInMap("importSvnRepoConfig")
-    public CreateRepositoryRequestImportSvnRepoConfig importSvnRepoConfig;
-
     // 导入时账号的token
     @NameInMap("importToken")
     public String importToken;
@@ -148,14 +144,6 @@ public class CreateRepositoryRequest extends TeaModel {
         return this.importRepoType;
     }
 
-    public CreateRepositoryRequest setImportSvnRepoConfig(CreateRepositoryRequestImportSvnRepoConfig importSvnRepoConfig) {
-        this.importSvnRepoConfig = importSvnRepoConfig;
-        return this;
-    }
-    public CreateRepositoryRequestImportSvnRepoConfig getImportSvnRepoConfig() {
-        return this.importSvnRepoConfig;
-    }
-
     public CreateRepositoryRequest setImportToken(String importToken) {
         this.importToken = importToken;
         return this;
@@ -266,158 +254,6 @@ public class CreateRepositoryRequest extends TeaModel {
     }
     public Boolean getSync() {
         return this.sync;
-    }
-
-    public static class CreateRepositoryRequestImportSvnRepoConfig extends TeaModel {
-        // author 映射
-        @NameInMap("authorMapping")
-        public String authorMapping;
-
-        // 分支映射
-        @NameInMap("branchMapping")
-        public String branchMapping;
-
-        // 不导入branch
-        @NameInMap("noBranches")
-        public Boolean noBranches;
-
-        // 不导入tag
-        @NameInMap("noTags")
-        public Boolean noTags;
-
-        // svn密码
-        @NameInMap("password")
-        public String password;
-
-        // 导入代码库目标path
-        @NameInMap("path")
-        public String path;
-
-        // 根目录映射trunk
-        @NameInMap("rootIsTrunk")
-        public Boolean rootIsTrunk;
-
-        // 标准布局
-        @NameInMap("standardLayout")
-        public Boolean standardLayout;
-
-        // svn仓库地址
-        @NameInMap("svnImportUrl")
-        public String svnImportUrl;
-
-        // 标签映射
-        @NameInMap("tagMapping")
-        public String tagMapping;
-
-        // trunk映射
-        @NameInMap("trunkMapping")
-        public String trunkMapping;
-
-        // svn用户名
-        @NameInMap("username")
-        public String username;
-
-        public static CreateRepositoryRequestImportSvnRepoConfig build(java.util.Map<String, ?> map) throws Exception {
-            CreateRepositoryRequestImportSvnRepoConfig self = new CreateRepositoryRequestImportSvnRepoConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateRepositoryRequestImportSvnRepoConfig setAuthorMapping(String authorMapping) {
-            this.authorMapping = authorMapping;
-            return this;
-        }
-        public String getAuthorMapping() {
-            return this.authorMapping;
-        }
-
-        public CreateRepositoryRequestImportSvnRepoConfig setBranchMapping(String branchMapping) {
-            this.branchMapping = branchMapping;
-            return this;
-        }
-        public String getBranchMapping() {
-            return this.branchMapping;
-        }
-
-        public CreateRepositoryRequestImportSvnRepoConfig setNoBranches(Boolean noBranches) {
-            this.noBranches = noBranches;
-            return this;
-        }
-        public Boolean getNoBranches() {
-            return this.noBranches;
-        }
-
-        public CreateRepositoryRequestImportSvnRepoConfig setNoTags(Boolean noTags) {
-            this.noTags = noTags;
-            return this;
-        }
-        public Boolean getNoTags() {
-            return this.noTags;
-        }
-
-        public CreateRepositoryRequestImportSvnRepoConfig setPassword(String password) {
-            this.password = password;
-            return this;
-        }
-        public String getPassword() {
-            return this.password;
-        }
-
-        public CreateRepositoryRequestImportSvnRepoConfig setPath(String path) {
-            this.path = path;
-            return this;
-        }
-        public String getPath() {
-            return this.path;
-        }
-
-        public CreateRepositoryRequestImportSvnRepoConfig setRootIsTrunk(Boolean rootIsTrunk) {
-            this.rootIsTrunk = rootIsTrunk;
-            return this;
-        }
-        public Boolean getRootIsTrunk() {
-            return this.rootIsTrunk;
-        }
-
-        public CreateRepositoryRequestImportSvnRepoConfig setStandardLayout(Boolean standardLayout) {
-            this.standardLayout = standardLayout;
-            return this;
-        }
-        public Boolean getStandardLayout() {
-            return this.standardLayout;
-        }
-
-        public CreateRepositoryRequestImportSvnRepoConfig setSvnImportUrl(String svnImportUrl) {
-            this.svnImportUrl = svnImportUrl;
-            return this;
-        }
-        public String getSvnImportUrl() {
-            return this.svnImportUrl;
-        }
-
-        public CreateRepositoryRequestImportSvnRepoConfig setTagMapping(String tagMapping) {
-            this.tagMapping = tagMapping;
-            return this;
-        }
-        public String getTagMapping() {
-            return this.tagMapping;
-        }
-
-        public CreateRepositoryRequestImportSvnRepoConfig setTrunkMapping(String trunkMapping) {
-            this.trunkMapping = trunkMapping;
-            return this;
-        }
-        public String getTrunkMapping() {
-            return this.trunkMapping;
-        }
-
-        public CreateRepositoryRequestImportSvnRepoConfig setUsername(String username) {
-            this.username = username;
-            return this;
-        }
-        public String getUsername() {
-            return this.username;
-        }
-
     }
 
 }
