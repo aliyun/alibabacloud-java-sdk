@@ -3,7 +3,7 @@ package com.aliyun.cams20200606.models;
 
 import com.aliyun.tea.*;
 
-public class SendChatappMessageRequest extends TeaModel {
+public class SendChatappMessageShrinkRequest extends TeaModel {
     // 通道类型 whatsapp/viber/line
     @NameInMap("ChannelType")
     public String channelType;
@@ -25,14 +25,14 @@ public class SendChatappMessageRequest extends TeaModel {
     public String messageType;
 
     @NameInMap("Payload")
-    public java.util.List<String> payload;
+    public String payloadShrink;
 
     // 模板编码
     @NameInMap("TemplateCode")
     public String templateCode;
 
     @NameInMap("TemplateParams")
-    public java.util.Map<String, String> templateParams;
+    public String templateParamsShrink;
 
     // 接收号码
     @NameInMap("To")
@@ -44,12 +44,12 @@ public class SendChatappMessageRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
-    public static SendChatappMessageRequest build(java.util.Map<String, ?> map) throws Exception {
-        SendChatappMessageRequest self = new SendChatappMessageRequest();
+    public static SendChatappMessageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        SendChatappMessageShrinkRequest self = new SendChatappMessageShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public SendChatappMessageRequest setChannelType(String channelType) {
+    public SendChatappMessageShrinkRequest setChannelType(String channelType) {
         this.channelType = channelType;
         return this;
     }
@@ -57,7 +57,7 @@ public class SendChatappMessageRequest extends TeaModel {
         return this.channelType;
     }
 
-    public SendChatappMessageRequest setContent(String content) {
+    public SendChatappMessageShrinkRequest setContent(String content) {
         this.content = content;
         return this;
     }
@@ -65,7 +65,7 @@ public class SendChatappMessageRequest extends TeaModel {
         return this.content;
     }
 
-    public SendChatappMessageRequest setFrom(String from) {
+    public SendChatappMessageShrinkRequest setFrom(String from) {
         this.from = from;
         return this;
     }
@@ -73,7 +73,7 @@ public class SendChatappMessageRequest extends TeaModel {
         return this.from;
     }
 
-    public SendChatappMessageRequest setLanguage(String language) {
+    public SendChatappMessageShrinkRequest setLanguage(String language) {
         this.language = language;
         return this;
     }
@@ -81,7 +81,7 @@ public class SendChatappMessageRequest extends TeaModel {
         return this.language;
     }
 
-    public SendChatappMessageRequest setMessageType(String messageType) {
+    public SendChatappMessageShrinkRequest setMessageType(String messageType) {
         this.messageType = messageType;
         return this;
     }
@@ -89,15 +89,15 @@ public class SendChatappMessageRequest extends TeaModel {
         return this.messageType;
     }
 
-    public SendChatappMessageRequest setPayload(java.util.List<String> payload) {
-        this.payload = payload;
+    public SendChatappMessageShrinkRequest setPayloadShrink(String payloadShrink) {
+        this.payloadShrink = payloadShrink;
         return this;
     }
-    public java.util.List<String> getPayload() {
-        return this.payload;
+    public String getPayloadShrink() {
+        return this.payloadShrink;
     }
 
-    public SendChatappMessageRequest setTemplateCode(String templateCode) {
+    public SendChatappMessageShrinkRequest setTemplateCode(String templateCode) {
         this.templateCode = templateCode;
         return this;
     }
@@ -105,15 +105,15 @@ public class SendChatappMessageRequest extends TeaModel {
         return this.templateCode;
     }
 
-    public SendChatappMessageRequest setTemplateParams(java.util.Map<String, String> templateParams) {
-        this.templateParams = templateParams;
+    public SendChatappMessageShrinkRequest setTemplateParamsShrink(String templateParamsShrink) {
+        this.templateParamsShrink = templateParamsShrink;
         return this;
     }
-    public java.util.Map<String, String> getTemplateParams() {
-        return this.templateParams;
+    public String getTemplateParamsShrink() {
+        return this.templateParamsShrink;
     }
 
-    public SendChatappMessageRequest setTo(String to) {
+    public SendChatappMessageShrinkRequest setTo(String to) {
         this.to = to;
         return this;
     }
@@ -121,7 +121,7 @@ public class SendChatappMessageRequest extends TeaModel {
         return this.to;
     }
 
-    public SendChatappMessageRequest setType(String type) {
+    public SendChatappMessageShrinkRequest setType(String type) {
         this.type = type;
         return this;
     }

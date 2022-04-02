@@ -8,10 +8,8 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 返回数据结点
-    // {"templateCode": "744c4b5c79c9432497a075bdfca36bf5"，"templateName": "hello_whatsapp"}
     @NameInMap("Data")
-    public String data;
+    public CreateChatappTemplateResponseBodyData data;
 
     // 提示信息，当返回异常时有值
     @NameInMap("Message")
@@ -34,11 +32,11 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateChatappTemplateResponseBody setData(String data) {
+    public CreateChatappTemplateResponseBody setData(CreateChatappTemplateResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public CreateChatappTemplateResponseBodyData getData() {
         return this.data;
     }
 
@@ -56,6 +54,38 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class CreateChatappTemplateResponseBodyData extends TeaModel {
+        // 模板Code
+        @NameInMap("TemplateCode")
+        public String templateCode;
+
+        // 模板名称
+        @NameInMap("TemplateName")
+        public String templateName;
+
+        public static CreateChatappTemplateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            CreateChatappTemplateResponseBodyData self = new CreateChatappTemplateResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateChatappTemplateResponseBodyData setTemplateCode(String templateCode) {
+            this.templateCode = templateCode;
+            return this;
+        }
+        public String getTemplateCode() {
+            return this.templateCode;
+        }
+
+        public CreateChatappTemplateResponseBodyData setTemplateName(String templateName) {
+            this.templateName = templateName;
+            return this;
+        }
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
     }
 
 }

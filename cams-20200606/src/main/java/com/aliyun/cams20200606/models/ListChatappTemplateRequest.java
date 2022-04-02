@@ -16,18 +16,8 @@ public class ListChatappTemplateRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // 分页字段
     @NameInMap("Page")
-    public String page;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    public ListChatappTemplateRequestPage page;
 
     public static ListChatappTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         ListChatappTemplateRequest self = new ListChatappTemplateRequest();
@@ -58,36 +48,44 @@ public class ListChatappTemplateRequest extends TeaModel {
         return this.name;
     }
 
-    public ListChatappTemplateRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ListChatappTemplateRequest setPage(String page) {
+    public ListChatappTemplateRequest setPage(ListChatappTemplateRequestPage page) {
         this.page = page;
         return this;
     }
-    public String getPage() {
+    public ListChatappTemplateRequestPage getPage() {
         return this.page;
     }
 
-    public ListChatappTemplateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
+    public static class ListChatappTemplateRequestPage extends TeaModel {
+        // 查询开始数
+        @NameInMap("Index")
+        public Integer index;
 
-    public ListChatappTemplateRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+        // 每次查询返回的条数
+        @NameInMap("Size")
+        public Integer size;
+
+        public static ListChatappTemplateRequestPage build(java.util.Map<String, ?> map) throws Exception {
+            ListChatappTemplateRequestPage self = new ListChatappTemplateRequestPage();
+            return TeaModel.build(map, self);
+        }
+
+        public ListChatappTemplateRequestPage setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        public ListChatappTemplateRequestPage setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
     }
 
 }
