@@ -85,6 +85,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         @NameInMap("CreatorNickName")
         public String creatorNickName;
 
+        @NameInMap("DagName")
+        public String dagName;
+
+        @NameInMap("DagOwnerId")
+        public String dagOwnerId;
+
         @NameInMap("DagOwnerNickName")
         public String dagOwnerNickName;
 
@@ -145,6 +151,22 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         }
         public String getCreatorNickName() {
             return this.creatorNickName;
+        }
+
+        public ListLhTaskFlowAndScenarioResponseBodyRawDAGListDag setDagName(String dagName) {
+            this.dagName = dagName;
+            return this;
+        }
+        public String getDagName() {
+            return this.dagName;
+        }
+
+        public ListLhTaskFlowAndScenarioResponseBodyRawDAGListDag setDagOwnerId(String dagOwnerId) {
+            this.dagOwnerId = dagOwnerId;
+            return this;
+        }
+        public String getDagOwnerId() {
+            return this.dagOwnerId;
         }
 
         public ListLhTaskFlowAndScenarioResponseBodyRawDAGListDag setDagOwnerNickName(String dagOwnerNickName) {
@@ -266,6 +288,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         @NameInMap("CreatorNickName")
         public String creatorNickName;
 
+        @NameInMap("DagName")
+        public String dagName;
+
+        @NameInMap("DagOwnerId")
+        public String dagOwnerId;
+
         @NameInMap("DagOwnerNickName")
         public String dagOwnerNickName;
 
@@ -326,6 +354,22 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         }
         public String getCreatorNickName() {
             return this.creatorNickName;
+        }
+
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag setDagName(String dagName) {
+            this.dagName = dagName;
+            return this;
+        }
+        public String getDagName() {
+            return this.dagName;
+        }
+
+        public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag setDagOwnerId(String dagOwnerId) {
+            this.dagOwnerId = dagOwnerId;
+            return this;
+        }
+        public String getDagOwnerId() {
+            return this.dagOwnerId;
         }
 
         public ListLhTaskFlowAndScenarioResponseBodyScenarioDAGListScenarioDAGDagListDag setDagOwnerNickName(String dagOwnerNickName) {
