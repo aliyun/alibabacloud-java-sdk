@@ -7,11 +7,11 @@ public class DetectSpineMRIRequest extends TeaModel {
     @NameInMap("DataFormat")
     public String dataFormat;
 
-    @NameInMap("OrgName")
-    public String orgName;
-
     @NameInMap("OrgId")
     public String orgId;
+
+    @NameInMap("OrgName")
+    public String orgName;
 
     @NameInMap("URLList")
     public java.util.List<DetectSpineMRIRequestURLList> URLList;
@@ -29,20 +29,20 @@ public class DetectSpineMRIRequest extends TeaModel {
         return this.dataFormat;
     }
 
-    public DetectSpineMRIRequest setOrgName(String orgName) {
-        this.orgName = orgName;
-        return this;
-    }
-    public String getOrgName() {
-        return this.orgName;
-    }
-
     public DetectSpineMRIRequest setOrgId(String orgId) {
         this.orgId = orgId;
         return this;
     }
     public String getOrgId() {
         return this.orgId;
+    }
+
+    public DetectSpineMRIRequest setOrgName(String orgName) {
+        this.orgName = orgName;
+        return this;
+    }
+    public String getOrgName() {
+        return this.orgName;
     }
 
     public DetectSpineMRIRequest setURLList(java.util.List<DetectSpineMRIRequestURLList> URLList) {

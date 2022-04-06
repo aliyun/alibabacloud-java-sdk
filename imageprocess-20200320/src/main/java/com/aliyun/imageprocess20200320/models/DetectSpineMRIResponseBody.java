@@ -4,23 +4,15 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectSpineMRIResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DetectSpineMRIResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetectSpineMRIResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectSpineMRIResponseBody self = new DetectSpineMRIResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectSpineMRIResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectSpineMRIResponseBody setData(DetectSpineMRIResponseBodyData data) {
@@ -31,12 +23,20 @@ public class DetectSpineMRIResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class DetectSpineMRIResponseBodyDataDiscs extends TeaModel {
-        @NameInMap("Identification")
-        public String identification;
+    public DetectSpineMRIResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DetectSpineMRIResponseBodyDataDiscs extends TeaModel {
         @NameInMap("Disease")
         public String disease;
+
+        @NameInMap("Identification")
+        public String identification;
 
         @NameInMap("Location")
         public java.util.List<Float> location;
@@ -46,20 +46,20 @@ public class DetectSpineMRIResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DetectSpineMRIResponseBodyDataDiscs setIdentification(String identification) {
-            this.identification = identification;
-            return this;
-        }
-        public String getIdentification() {
-            return this.identification;
-        }
-
         public DetectSpineMRIResponseBodyDataDiscs setDisease(String disease) {
             this.disease = disease;
             return this;
         }
         public String getDisease() {
             return this.disease;
+        }
+
+        public DetectSpineMRIResponseBodyDataDiscs setIdentification(String identification) {
+            this.identification = identification;
+            return this;
+        }
+        public String getIdentification() {
+            return this.identification;
         }
 
         public DetectSpineMRIResponseBodyDataDiscs setLocation(java.util.List<Float> location) {
@@ -73,11 +73,11 @@ public class DetectSpineMRIResponseBody extends TeaModel {
     }
 
     public static class DetectSpineMRIResponseBodyDataVertebras extends TeaModel {
-        @NameInMap("Identification")
-        public String identification;
-
         @NameInMap("Disease")
         public String disease;
+
+        @NameInMap("Identification")
+        public String identification;
 
         @NameInMap("Location")
         public java.util.List<Float> location;
@@ -87,20 +87,20 @@ public class DetectSpineMRIResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DetectSpineMRIResponseBodyDataVertebras setIdentification(String identification) {
-            this.identification = identification;
-            return this;
-        }
-        public String getIdentification() {
-            return this.identification;
-        }
-
         public DetectSpineMRIResponseBodyDataVertebras setDisease(String disease) {
             this.disease = disease;
             return this;
         }
         public String getDisease() {
             return this.disease;
+        }
+
+        public DetectSpineMRIResponseBodyDataVertebras setIdentification(String identification) {
+            this.identification = identification;
+            return this;
+        }
+        public String getIdentification() {
+            return this.identification;
         }
 
         public DetectSpineMRIResponseBodyDataVertebras setLocation(java.util.List<Float> location) {

@@ -7,11 +7,11 @@ public class DetectRibFractureRequest extends TeaModel {
     @NameInMap("DataFormat")
     public String dataFormat;
 
-    @NameInMap("OrgName")
-    public String orgName;
-
     @NameInMap("OrgId")
     public String orgId;
+
+    @NameInMap("OrgName")
+    public String orgName;
 
     @NameInMap("SourceType")
     public String sourceType;
@@ -32,20 +32,20 @@ public class DetectRibFractureRequest extends TeaModel {
         return this.dataFormat;
     }
 
-    public DetectRibFractureRequest setOrgName(String orgName) {
-        this.orgName = orgName;
-        return this;
-    }
-    public String getOrgName() {
-        return this.orgName;
-    }
-
     public DetectRibFractureRequest setOrgId(String orgId) {
         this.orgId = orgId;
         return this;
     }
     public String getOrgId() {
         return this.orgId;
+    }
+
+    public DetectRibFractureRequest setOrgName(String orgName) {
+        this.orgName = orgName;
+        return this;
+    }
+    public String getOrgName() {
+        return this.orgName;
     }
 
     public DetectRibFractureRequest setSourceType(String sourceType) {

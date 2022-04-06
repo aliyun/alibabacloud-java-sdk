@@ -4,23 +4,15 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class ClassifyFNFResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ClassifyFNFResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ClassifyFNFResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ClassifyFNFResponseBody self = new ClassifyFNFResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ClassifyFNFResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ClassifyFNFResponseBody setData(ClassifyFNFResponseBodyData data) {
@@ -29,6 +21,14 @@ public class ClassifyFNFResponseBody extends TeaModel {
     }
     public ClassifyFNFResponseBodyData getData() {
         return this.data;
+    }
+
+    public ClassifyFNFResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ClassifyFNFResponseBodyDataFracturesTag extends TeaModel {
@@ -51,26 +51,18 @@ public class ClassifyFNFResponseBody extends TeaModel {
     }
 
     public static class ClassifyFNFResponseBodyDataFractures extends TeaModel {
-        @NameInMap("Value")
-        public Float value;
-
         @NameInMap("Boxes")
         public java.util.List<Integer> boxes;
 
         @NameInMap("Tag")
         public ClassifyFNFResponseBodyDataFracturesTag tag;
 
+        @NameInMap("Value")
+        public Float value;
+
         public static ClassifyFNFResponseBodyDataFractures build(java.util.Map<String, ?> map) throws Exception {
             ClassifyFNFResponseBodyDataFractures self = new ClassifyFNFResponseBodyDataFractures();
             return TeaModel.build(map, self);
-        }
-
-        public ClassifyFNFResponseBodyDataFractures setValue(Float value) {
-            this.value = value;
-            return this;
-        }
-        public Float getValue() {
-            return this.value;
         }
 
         public ClassifyFNFResponseBodyDataFractures setBoxes(java.util.List<Integer> boxes) {
@@ -87,6 +79,14 @@ public class ClassifyFNFResponseBody extends TeaModel {
         }
         public ClassifyFNFResponseBodyDataFracturesTag getTag() {
             return this.tag;
+        }
+
+        public ClassifyFNFResponseBodyDataFractures setValue(Float value) {
+            this.value = value;
+            return this;
+        }
+        public Float getValue() {
+            return this.value;
         }
 
     }

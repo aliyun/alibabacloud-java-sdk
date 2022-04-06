@@ -7,20 +7,20 @@ public class RunCTRegistrationRequest extends TeaModel {
     @NameInMap("DataFormat")
     public String dataFormat;
 
-    @NameInMap("OrgName")
-    public String orgName;
+    @NameInMap("DataSourceType")
+    public String dataSourceType;
+
+    @NameInMap("FloatingList")
+    public java.util.List<RunCTRegistrationRequestFloatingList> floatingList;
 
     @NameInMap("OrgId")
     public String orgId;
 
-    @NameInMap("DataSourceType")
-    public String dataSourceType;
+    @NameInMap("OrgName")
+    public String orgName;
 
     @NameInMap("ReferenceList")
     public java.util.List<RunCTRegistrationRequestReferenceList> referenceList;
-
-    @NameInMap("FloatingList")
-    public java.util.List<RunCTRegistrationRequestFloatingList> floatingList;
 
     public static RunCTRegistrationRequest build(java.util.Map<String, ?> map) throws Exception {
         RunCTRegistrationRequest self = new RunCTRegistrationRequest();
@@ -35,36 +35,12 @@ public class RunCTRegistrationRequest extends TeaModel {
         return this.dataFormat;
     }
 
-    public RunCTRegistrationRequest setOrgName(String orgName) {
-        this.orgName = orgName;
-        return this;
-    }
-    public String getOrgName() {
-        return this.orgName;
-    }
-
-    public RunCTRegistrationRequest setOrgId(String orgId) {
-        this.orgId = orgId;
-        return this;
-    }
-    public String getOrgId() {
-        return this.orgId;
-    }
-
     public RunCTRegistrationRequest setDataSourceType(String dataSourceType) {
         this.dataSourceType = dataSourceType;
         return this;
     }
     public String getDataSourceType() {
         return this.dataSourceType;
-    }
-
-    public RunCTRegistrationRequest setReferenceList(java.util.List<RunCTRegistrationRequestReferenceList> referenceList) {
-        this.referenceList = referenceList;
-        return this;
-    }
-    public java.util.List<RunCTRegistrationRequestReferenceList> getReferenceList() {
-        return this.referenceList;
     }
 
     public RunCTRegistrationRequest setFloatingList(java.util.List<RunCTRegistrationRequestFloatingList> floatingList) {
@@ -75,23 +51,28 @@ public class RunCTRegistrationRequest extends TeaModel {
         return this.floatingList;
     }
 
-    public static class RunCTRegistrationRequestReferenceList extends TeaModel {
-        @NameInMap("ReferenceURL")
-        public String referenceURL;
+    public RunCTRegistrationRequest setOrgId(String orgId) {
+        this.orgId = orgId;
+        return this;
+    }
+    public String getOrgId() {
+        return this.orgId;
+    }
 
-        public static RunCTRegistrationRequestReferenceList build(java.util.Map<String, ?> map) throws Exception {
-            RunCTRegistrationRequestReferenceList self = new RunCTRegistrationRequestReferenceList();
-            return TeaModel.build(map, self);
-        }
+    public RunCTRegistrationRequest setOrgName(String orgName) {
+        this.orgName = orgName;
+        return this;
+    }
+    public String getOrgName() {
+        return this.orgName;
+    }
 
-        public RunCTRegistrationRequestReferenceList setReferenceURL(String referenceURL) {
-            this.referenceURL = referenceURL;
-            return this;
-        }
-        public String getReferenceURL() {
-            return this.referenceURL;
-        }
-
+    public RunCTRegistrationRequest setReferenceList(java.util.List<RunCTRegistrationRequestReferenceList> referenceList) {
+        this.referenceList = referenceList;
+        return this;
+    }
+    public java.util.List<RunCTRegistrationRequestReferenceList> getReferenceList() {
+        return this.referenceList;
     }
 
     public static class RunCTRegistrationRequestFloatingList extends TeaModel {
@@ -109,6 +90,25 @@ public class RunCTRegistrationRequest extends TeaModel {
         }
         public String getFloatingURL() {
             return this.floatingURL;
+        }
+
+    }
+
+    public static class RunCTRegistrationRequestReferenceList extends TeaModel {
+        @NameInMap("ReferenceURL")
+        public String referenceURL;
+
+        public static RunCTRegistrationRequestReferenceList build(java.util.Map<String, ?> map) throws Exception {
+            RunCTRegistrationRequestReferenceList self = new RunCTRegistrationRequestReferenceList();
+            return TeaModel.build(map, self);
+        }
+
+        public RunCTRegistrationRequestReferenceList setReferenceURL(String referenceURL) {
+            this.referenceURL = referenceURL;
+            return this;
+        }
+        public String getReferenceURL() {
+            return this.referenceURL;
         }
 
     }

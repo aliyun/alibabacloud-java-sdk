@@ -4,23 +4,15 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectKneeXRayResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DetectKneeXRayResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetectKneeXRayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectKneeXRayResponseBody self = new DetectKneeXRayResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectKneeXRayResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectKneeXRayResponseBody setData(DetectKneeXRayResponseBodyData data) {
@@ -29,6 +21,14 @@ public class DetectKneeXRayResponseBody extends TeaModel {
     }
     public DetectKneeXRayResponseBodyData getData() {
         return this.data;
+    }
+
+    public DetectKneeXRayResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DetectKneeXRayResponseBodyDataKLDetections extends TeaModel {

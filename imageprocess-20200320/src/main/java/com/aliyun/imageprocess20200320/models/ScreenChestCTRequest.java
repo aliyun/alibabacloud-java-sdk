@@ -7,17 +7,17 @@ public class ScreenChestCTRequest extends TeaModel {
     @NameInMap("DataFormat")
     public String dataFormat;
 
-    @NameInMap("OrgName")
-    public String orgName;
+    @NameInMap("Mask")
+    public Long mask;
 
     @NameInMap("OrgId")
     public String orgId;
 
+    @NameInMap("OrgName")
+    public String orgName;
+
     @NameInMap("URLList")
     public java.util.List<ScreenChestCTRequestURLList> URLList;
-
-    @NameInMap("Mask")
-    public Long mask;
 
     public static ScreenChestCTRequest build(java.util.Map<String, ?> map) throws Exception {
         ScreenChestCTRequest self = new ScreenChestCTRequest();
@@ -32,12 +32,12 @@ public class ScreenChestCTRequest extends TeaModel {
         return this.dataFormat;
     }
 
-    public ScreenChestCTRequest setOrgName(String orgName) {
-        this.orgName = orgName;
+    public ScreenChestCTRequest setMask(Long mask) {
+        this.mask = mask;
         return this;
     }
-    public String getOrgName() {
-        return this.orgName;
+    public Long getMask() {
+        return this.mask;
     }
 
     public ScreenChestCTRequest setOrgId(String orgId) {
@@ -48,20 +48,20 @@ public class ScreenChestCTRequest extends TeaModel {
         return this.orgId;
     }
 
+    public ScreenChestCTRequest setOrgName(String orgName) {
+        this.orgName = orgName;
+        return this;
+    }
+    public String getOrgName() {
+        return this.orgName;
+    }
+
     public ScreenChestCTRequest setURLList(java.util.List<ScreenChestCTRequestURLList> URLList) {
         this.URLList = URLList;
         return this;
     }
     public java.util.List<ScreenChestCTRequestURLList> getURLList() {
         return this.URLList;
-    }
-
-    public ScreenChestCTRequest setMask(Long mask) {
-        this.mask = mask;
-        return this;
-    }
-    public Long getMask() {
-        return this.mask;
     }
 
     public static class ScreenChestCTRequestURLList extends TeaModel {

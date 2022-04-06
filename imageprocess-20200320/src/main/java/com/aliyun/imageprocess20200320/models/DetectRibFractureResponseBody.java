@@ -4,23 +4,15 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectRibFractureResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DetectRibFractureResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetectRibFractureResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectRibFractureResponseBody self = new DetectRibFractureResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectRibFractureResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectRibFractureResponseBody setData(DetectRibFractureResponseBodyData data) {
@@ -31,21 +23,29 @@ public class DetectRibFractureResponseBody extends TeaModel {
         return this.data;
     }
 
+    public DetectRibFractureResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DetectRibFractureResponseBodyDataDetections extends TeaModel {
+        @NameInMap("CoordinateImage")
+        public java.util.List<Integer> coordinateImage;
+
         @NameInMap("Coordinates")
         public java.util.List<Integer> coordinates;
 
-        @NameInMap("FractureId")
-        public Integer fractureId;
-
-        @NameInMap("CoordinateImage")
-        public java.util.List<Integer> coordinateImage;
+        @NameInMap("FractureCategory")
+        public String fractureCategory;
 
         @NameInMap("FractureConfidence")
         public Float fractureConfidence;
 
-        @NameInMap("FractureCategory")
-        public String fractureCategory;
+        @NameInMap("FractureId")
+        public Integer fractureId;
 
         @NameInMap("FractureLocation")
         public String fractureLocation;
@@ -58,6 +58,14 @@ public class DetectRibFractureResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DetectRibFractureResponseBodyDataDetections setCoordinateImage(java.util.List<Integer> coordinateImage) {
+            this.coordinateImage = coordinateImage;
+            return this;
+        }
+        public java.util.List<Integer> getCoordinateImage() {
+            return this.coordinateImage;
+        }
+
         public DetectRibFractureResponseBodyDataDetections setCoordinates(java.util.List<Integer> coordinates) {
             this.coordinates = coordinates;
             return this;
@@ -66,20 +74,12 @@ public class DetectRibFractureResponseBody extends TeaModel {
             return this.coordinates;
         }
 
-        public DetectRibFractureResponseBodyDataDetections setFractureId(Integer fractureId) {
-            this.fractureId = fractureId;
+        public DetectRibFractureResponseBodyDataDetections setFractureCategory(String fractureCategory) {
+            this.fractureCategory = fractureCategory;
             return this;
         }
-        public Integer getFractureId() {
-            return this.fractureId;
-        }
-
-        public DetectRibFractureResponseBodyDataDetections setCoordinateImage(java.util.List<Integer> coordinateImage) {
-            this.coordinateImage = coordinateImage;
-            return this;
-        }
-        public java.util.List<Integer> getCoordinateImage() {
-            return this.coordinateImage;
+        public String getFractureCategory() {
+            return this.fractureCategory;
         }
 
         public DetectRibFractureResponseBodyDataDetections setFractureConfidence(Float fractureConfidence) {
@@ -90,12 +90,12 @@ public class DetectRibFractureResponseBody extends TeaModel {
             return this.fractureConfidence;
         }
 
-        public DetectRibFractureResponseBodyDataDetections setFractureCategory(String fractureCategory) {
-            this.fractureCategory = fractureCategory;
+        public DetectRibFractureResponseBodyDataDetections setFractureId(Integer fractureId) {
+            this.fractureId = fractureId;
             return this;
         }
-        public String getFractureCategory() {
-            return this.fractureCategory;
+        public Integer getFractureId() {
+            return this.fractureId;
         }
 
         public DetectRibFractureResponseBodyDataDetections setFractureLocation(String fractureLocation) {

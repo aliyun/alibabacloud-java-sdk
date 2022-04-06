@@ -4,23 +4,15 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectHipKeypointXRayResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DetectHipKeypointXRayResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetectHipKeypointXRayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectHipKeypointXRayResponseBody self = new DetectHipKeypointXRayResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectHipKeypointXRayResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectHipKeypointXRayResponseBody setData(DetectHipKeypointXRayResponseBodyData data) {
@@ -29,6 +21,14 @@ public class DetectHipKeypointXRayResponseBody extends TeaModel {
     }
     public DetectHipKeypointXRayResponseBodyData getData() {
         return this.data;
+    }
+
+    public DetectHipKeypointXRayResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DetectHipKeypointXRayResponseBodyDataKeyPointsTag extends TeaModel {
@@ -62,26 +62,18 @@ public class DetectHipKeypointXRayResponseBody extends TeaModel {
     }
 
     public static class DetectHipKeypointXRayResponseBodyDataKeyPoints extends TeaModel {
-        @NameInMap("Value")
-        public Float value;
-
         @NameInMap("Coordinates")
         public java.util.List<Integer> coordinates;
 
         @NameInMap("Tag")
         public DetectHipKeypointXRayResponseBodyDataKeyPointsTag tag;
 
+        @NameInMap("Value")
+        public Float value;
+
         public static DetectHipKeypointXRayResponseBodyDataKeyPoints build(java.util.Map<String, ?> map) throws Exception {
             DetectHipKeypointXRayResponseBodyDataKeyPoints self = new DetectHipKeypointXRayResponseBodyDataKeyPoints();
             return TeaModel.build(map, self);
-        }
-
-        public DetectHipKeypointXRayResponseBodyDataKeyPoints setValue(Float value) {
-            this.value = value;
-            return this;
-        }
-        public Float getValue() {
-            return this.value;
         }
 
         public DetectHipKeypointXRayResponseBodyDataKeyPoints setCoordinates(java.util.List<Integer> coordinates) {
@@ -100,14 +92,22 @@ public class DetectHipKeypointXRayResponseBody extends TeaModel {
             return this.tag;
         }
 
+        public DetectHipKeypointXRayResponseBodyDataKeyPoints setValue(Float value) {
+            this.value = value;
+            return this;
+        }
+        public Float getValue() {
+            return this.value;
+        }
+
     }
 
     public static class DetectHipKeypointXRayResponseBodyData extends TeaModel {
-        @NameInMap("KeyPoints")
-        public java.util.List<DetectHipKeypointXRayResponseBodyDataKeyPoints> keyPoints;
-
         @NameInMap("ImageUrl")
         public String imageUrl;
+
+        @NameInMap("KeyPoints")
+        public java.util.List<DetectHipKeypointXRayResponseBodyDataKeyPoints> keyPoints;
 
         @NameInMap("OrgId")
         public String orgId;
@@ -120,20 +120,20 @@ public class DetectHipKeypointXRayResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DetectHipKeypointXRayResponseBodyData setKeyPoints(java.util.List<DetectHipKeypointXRayResponseBodyDataKeyPoints> keyPoints) {
-            this.keyPoints = keyPoints;
-            return this;
-        }
-        public java.util.List<DetectHipKeypointXRayResponseBodyDataKeyPoints> getKeyPoints() {
-            return this.keyPoints;
-        }
-
         public DetectHipKeypointXRayResponseBodyData setImageUrl(String imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
         public String getImageUrl() {
             return this.imageUrl;
+        }
+
+        public DetectHipKeypointXRayResponseBodyData setKeyPoints(java.util.List<DetectHipKeypointXRayResponseBodyDataKeyPoints> keyPoints) {
+            this.keyPoints = keyPoints;
+            return this;
+        }
+        public java.util.List<DetectHipKeypointXRayResponseBodyDataKeyPoints> getKeyPoints() {
+            return this.keyPoints;
         }
 
         public DetectHipKeypointXRayResponseBodyData setOrgId(String orgId) {

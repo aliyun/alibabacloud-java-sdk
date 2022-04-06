@@ -7,11 +7,11 @@ public class TranslateMedRequest extends TeaModel {
     @NameInMap("FromLanguage")
     public String fromLanguage;
 
-    @NameInMap("ToLanguage")
-    public String toLanguage;
-
     @NameInMap("Text")
     public String text;
+
+    @NameInMap("ToLanguage")
+    public String toLanguage;
 
     public static TranslateMedRequest build(java.util.Map<String, ?> map) throws Exception {
         TranslateMedRequest self = new TranslateMedRequest();
@@ -26,20 +26,20 @@ public class TranslateMedRequest extends TeaModel {
         return this.fromLanguage;
     }
 
-    public TranslateMedRequest setToLanguage(String toLanguage) {
-        this.toLanguage = toLanguage;
-        return this;
-    }
-    public String getToLanguage() {
-        return this.toLanguage;
-    }
-
     public TranslateMedRequest setText(String text) {
         this.text = text;
         return this;
     }
     public String getText() {
         return this.text;
+    }
+
+    public TranslateMedRequest setToLanguage(String toLanguage) {
+        this.toLanguage = toLanguage;
+        return this;
+    }
+    public String getToLanguage() {
+        return this.toLanguage;
     }
 
 }

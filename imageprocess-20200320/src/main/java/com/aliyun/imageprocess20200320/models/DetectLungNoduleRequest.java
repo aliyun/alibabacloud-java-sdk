@@ -7,17 +7,17 @@ public class DetectLungNoduleRequest extends TeaModel {
     @NameInMap("DataFormat")
     public String dataFormat;
 
-    @NameInMap("OrgName")
-    public String orgName;
-
     @NameInMap("OrgId")
     public String orgId;
 
-    @NameInMap("URLList")
-    public java.util.List<DetectLungNoduleRequestURLList> URLList;
+    @NameInMap("OrgName")
+    public String orgName;
 
     @NameInMap("Threshold")
     public Float threshold;
+
+    @NameInMap("URLList")
+    public java.util.List<DetectLungNoduleRequestURLList> URLList;
 
     public static DetectLungNoduleRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectLungNoduleRequest self = new DetectLungNoduleRequest();
@@ -32,14 +32,6 @@ public class DetectLungNoduleRequest extends TeaModel {
         return this.dataFormat;
     }
 
-    public DetectLungNoduleRequest setOrgName(String orgName) {
-        this.orgName = orgName;
-        return this;
-    }
-    public String getOrgName() {
-        return this.orgName;
-    }
-
     public DetectLungNoduleRequest setOrgId(String orgId) {
         this.orgId = orgId;
         return this;
@@ -48,12 +40,12 @@ public class DetectLungNoduleRequest extends TeaModel {
         return this.orgId;
     }
 
-    public DetectLungNoduleRequest setURLList(java.util.List<DetectLungNoduleRequestURLList> URLList) {
-        this.URLList = URLList;
+    public DetectLungNoduleRequest setOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
-    public java.util.List<DetectLungNoduleRequestURLList> getURLList() {
-        return this.URLList;
+    public String getOrgName() {
+        return this.orgName;
     }
 
     public DetectLungNoduleRequest setThreshold(Float threshold) {
@@ -62,6 +54,14 @@ public class DetectLungNoduleRequest extends TeaModel {
     }
     public Float getThreshold() {
         return this.threshold;
+    }
+
+    public DetectLungNoduleRequest setURLList(java.util.List<DetectLungNoduleRequestURLList> URLList) {
+        this.URLList = URLList;
+        return this;
+    }
+    public java.util.List<DetectLungNoduleRequestURLList> getURLList() {
+        return this.URLList;
     }
 
     public static class DetectLungNoduleRequestURLList extends TeaModel {

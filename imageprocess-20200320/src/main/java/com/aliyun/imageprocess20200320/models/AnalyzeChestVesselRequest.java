@@ -4,11 +4,11 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class AnalyzeChestVesselRequest extends TeaModel {
-    @NameInMap("URLList")
-    public java.util.List<AnalyzeChestVesselRequestURLList> URLList;
-
     @NameInMap("DataFormat")
     public String dataFormat;
+
+    @NameInMap("DataSourceType")
+    public String dataSourceType;
 
     @NameInMap("OrgId")
     public String orgId;
@@ -16,20 +16,12 @@ public class AnalyzeChestVesselRequest extends TeaModel {
     @NameInMap("OrgName")
     public String orgName;
 
-    @NameInMap("DataSourceType")
-    public String dataSourceType;
+    @NameInMap("URLList")
+    public java.util.List<AnalyzeChestVesselRequestURLList> URLList;
 
     public static AnalyzeChestVesselRequest build(java.util.Map<String, ?> map) throws Exception {
         AnalyzeChestVesselRequest self = new AnalyzeChestVesselRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AnalyzeChestVesselRequest setURLList(java.util.List<AnalyzeChestVesselRequestURLList> URLList) {
-        this.URLList = URLList;
-        return this;
-    }
-    public java.util.List<AnalyzeChestVesselRequestURLList> getURLList() {
-        return this.URLList;
     }
 
     public AnalyzeChestVesselRequest setDataFormat(String dataFormat) {
@@ -38,6 +30,14 @@ public class AnalyzeChestVesselRequest extends TeaModel {
     }
     public String getDataFormat() {
         return this.dataFormat;
+    }
+
+    public AnalyzeChestVesselRequest setDataSourceType(String dataSourceType) {
+        this.dataSourceType = dataSourceType;
+        return this;
+    }
+    public String getDataSourceType() {
+        return this.dataSourceType;
     }
 
     public AnalyzeChestVesselRequest setOrgId(String orgId) {
@@ -56,12 +56,12 @@ public class AnalyzeChestVesselRequest extends TeaModel {
         return this.orgName;
     }
 
-    public AnalyzeChestVesselRequest setDataSourceType(String dataSourceType) {
-        this.dataSourceType = dataSourceType;
+    public AnalyzeChestVesselRequest setURLList(java.util.List<AnalyzeChestVesselRequestURLList> URLList) {
+        this.URLList = URLList;
         return this;
     }
-    public String getDataSourceType() {
-        return this.dataSourceType;
+    public java.util.List<AnalyzeChestVesselRequestURLList> getURLList() {
+        return this.URLList;
     }
 
     public static class AnalyzeChestVesselRequestURLList extends TeaModel {
