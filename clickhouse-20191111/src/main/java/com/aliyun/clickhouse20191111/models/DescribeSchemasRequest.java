@@ -19,12 +19,6 @@ public class DescribeSchemasRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SchemaName")
-    public String schemaName;
-
-    @NameInMap("TableName")
-    public String tableName;
-
     public static DescribeSchemasRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSchemasRequest self = new DescribeSchemasRequest();
         return TeaModel.build(map, self);
@@ -68,22 +62,6 @@ public class DescribeSchemasRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeSchemasRequest setSchemaName(String schemaName) {
-        this.schemaName = schemaName;
-        return this;
-    }
-    public String getSchemaName() {
-        return this.schemaName;
-    }
-
-    public DescribeSchemasRequest setTableName(String tableName) {
-        this.tableName = tableName;
-        return this;
-    }
-    public String getTableName() {
-        return this.tableName;
     }
 
 }

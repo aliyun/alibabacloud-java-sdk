@@ -22,6 +22,9 @@ public class CreateBackupPolicyRequest extends TeaModel {
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -79,6 +82,14 @@ public class CreateBackupPolicyRequest extends TeaModel {
     }
     public String getPreferredBackupTime() {
         return this.preferredBackupTime;
+    }
+
+    public CreateBackupPolicyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateBackupPolicyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
