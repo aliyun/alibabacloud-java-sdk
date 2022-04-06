@@ -7,14 +7,14 @@ public class CalcCACSRequest extends TeaModel {
     @NameInMap("DataFormat")
     public String dataFormat;
 
-    @NameInMap("OrgName")
-    public String orgName;
+    @NameInMap("DataSourceType")
+    public String dataSourceType;
 
     @NameInMap("OrgId")
     public String orgId;
 
-    @NameInMap("DataSourceType")
-    public String dataSourceType;
+    @NameInMap("OrgName")
+    public String orgName;
 
     @NameInMap("URLList")
     public java.util.List<CalcCACSRequestURLList> URLList;
@@ -32,12 +32,12 @@ public class CalcCACSRequest extends TeaModel {
         return this.dataFormat;
     }
 
-    public CalcCACSRequest setOrgName(String orgName) {
-        this.orgName = orgName;
+    public CalcCACSRequest setDataSourceType(String dataSourceType) {
+        this.dataSourceType = dataSourceType;
         return this;
     }
-    public String getOrgName() {
-        return this.orgName;
+    public String getDataSourceType() {
+        return this.dataSourceType;
     }
 
     public CalcCACSRequest setOrgId(String orgId) {
@@ -48,12 +48,12 @@ public class CalcCACSRequest extends TeaModel {
         return this.orgId;
     }
 
-    public CalcCACSRequest setDataSourceType(String dataSourceType) {
-        this.dataSourceType = dataSourceType;
+    public CalcCACSRequest setOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
-    public String getDataSourceType() {
-        return this.dataSourceType;
+    public String getOrgName() {
+        return this.orgName;
     }
 
     public CalcCACSRequest setURLList(java.util.List<CalcCACSRequestURLList> URLList) {

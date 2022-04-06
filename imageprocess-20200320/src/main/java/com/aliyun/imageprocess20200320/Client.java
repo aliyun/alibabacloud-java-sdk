@@ -42,12 +42,134 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public AnalyzeChestVesselResponse analyzeChestVesselWithOptions(AnalyzeChestVesselRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
+            body.put("DataFormat", request.dataFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceType)) {
+            body.put("DataSourceType", request.dataSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("OrgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
+            body.put("OrgName", request.orgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.URLList)) {
+            body.put("URLList", request.URLList);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AnalyzeChestVessel"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AnalyzeChestVesselResponse());
+    }
+
+    public AnalyzeChestVesselResponse analyzeChestVessel(AnalyzeChestVesselRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.analyzeChestVesselWithOptions(request, runtime);
+    }
+
+    public CalcCACSResponse calcCACSWithOptions(CalcCACSRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
+            body.put("DataFormat", request.dataFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceType)) {
+            body.put("DataSourceType", request.dataSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("OrgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
+            body.put("OrgName", request.orgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.URLList)) {
+            body.put("URLList", request.URLList);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CalcCACS"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CalcCACSResponse());
+    }
+
+    public CalcCACSResponse calcCACS(CalcCACSRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.calcCACSWithOptions(request, runtime);
+    }
+
     public ClassifyFNFResponse classifyFNFWithOptions(ClassifyFNFRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
+            body.put("DataFormat", request.dataFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
+            body.put("ImageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("OrgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
+            body.put("OrgName", request.orgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tracerId)) {
+            body.put("TracerId", request.tracerId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ClassifyFNF", "2020-03-20", "HTTPS", "POST", "AK", "json", req, runtime), new ClassifyFNFResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClassifyFNF"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClassifyFNFResponse());
     }
 
     public ClassifyFNFResponse classifyFNF(ClassifyFNFRequest request) throws Exception {
@@ -129,90 +251,85 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return classifyFNFResp;
     }
 
-    public DetectLungNoduleResponse detectLungNoduleWithOptions(DetectLungNoduleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DetectCovid19CadResponse detectCovid19CadWithOptions(DetectCovid19CadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
+            body.put("DataFormat", request.dataFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("OrgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
+            body.put("OrgName", request.orgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.URLList)) {
+            body.put("URLList", request.URLList);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DetectLungNodule", "2020-03-20", "HTTPS", "POST", "AK", "json", req, runtime), new DetectLungNoduleResponse());
-    }
-
-    public DetectLungNoduleResponse detectLungNodule(DetectLungNoduleRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.detectLungNoduleWithOptions(request, runtime);
-    }
-
-    public RunCTRegistrationResponse runCTRegistrationWithOptions(RunCTRegistrationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetectCovid19Cad"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.doRPCRequest("RunCTRegistration", "2020-03-20", "HTTPS", "POST", "AK", "json", req, runtime), new RunCTRegistrationResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetectCovid19CadResponse());
     }
 
-    public RunCTRegistrationResponse runCTRegistration(RunCTRegistrationRequest request) throws Exception {
+    public DetectCovid19CadResponse detectCovid19Cad(DetectCovid19CadRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.runCTRegistrationWithOptions(request, runtime);
-    }
-
-    public AnalyzeChestVesselResponse analyzeChestVesselWithOptions(AnalyzeChestVesselRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("AnalyzeChestVessel", "2020-03-20", "HTTPS", "POST", "AK", "json", req, runtime), new AnalyzeChestVesselResponse());
-    }
-
-    public AnalyzeChestVesselResponse analyzeChestVessel(AnalyzeChestVesselRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.analyzeChestVesselWithOptions(request, runtime);
-    }
-
-    public TranslateMedResponse translateMedWithOptions(TranslateMedRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("TranslateMed", "2020-03-20", "HTTPS", "POST", "AK", "json", req, runtime), new TranslateMedResponse());
-    }
-
-    public TranslateMedResponse translateMed(TranslateMedRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.translateMedWithOptions(request, runtime);
-    }
-
-    public DetectSpineMRIResponse detectSpineMRIWithOptions(DetectSpineMRIRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DetectSpineMRI", "2020-03-20", "HTTPS", "POST", "AK", "json", req, runtime), new DetectSpineMRIResponse());
-    }
-
-    public DetectSpineMRIResponse detectSpineMRI(DetectSpineMRIRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.detectSpineMRIWithOptions(request, runtime);
-    }
-
-    public CalcCACSResponse calcCACSWithOptions(CalcCACSRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CalcCACS", "2020-03-20", "HTTPS", "POST", "AK", "json", req, runtime), new CalcCACSResponse());
-    }
-
-    public CalcCACSResponse calcCACS(CalcCACSRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.calcCACSWithOptions(request, runtime);
+        return this.detectCovid19CadWithOptions(request, runtime);
     }
 
     public DetectHipKeypointXRayResponse detectHipKeypointXRayWithOptions(DetectHipKeypointXRayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
+            body.put("DataFormat", request.dataFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
+            body.put("ImageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("OrgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
+            body.put("OrgName", request.orgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tracerId)) {
+            body.put("TracerId", request.tracerId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DetectHipKeypointXRay", "2020-03-20", "HTTPS", "POST", "AK", "json", req, runtime), new DetectHipKeypointXRayResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetectHipKeypointXRay"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetectHipKeypointXRayResponse());
     }
 
     public DetectHipKeypointXRayResponse detectHipKeypointXRay(DetectHipKeypointXRayRequest request) throws Exception {
@@ -296,10 +413,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DetectKneeKeypointXRayResponse detectKneeKeypointXRayWithOptions(DetectKneeKeypointXRayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
+            body.put("DataFormat", request.dataFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
+            body.put("ImageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("OrgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
+            body.put("OrgName", request.orgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tracerId)) {
+            body.put("TracerId", request.tracerId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DetectKneeKeypointXRay", "2020-03-20", "HTTPS", "POST", "AK", "json", req, runtime), new DetectKneeKeypointXRayResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetectKneeKeypointXRay"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetectKneeKeypointXRayResponse());
     }
 
     public DetectKneeKeypointXRayResponse detectKneeKeypointXRay(DetectKneeKeypointXRayRequest request) throws Exception {
@@ -381,25 +530,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return detectKneeKeypointXRayResp;
     }
 
-    public RunMedQAResponse runMedQAWithOptions(RunMedQARequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("RunMedQA", "2020-03-20", "HTTPS", "POST", "AK", "json", req, runtime), new RunMedQAResponse());
-    }
-
-    public RunMedQAResponse runMedQA(RunMedQARequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.runMedQAWithOptions(request, runtime);
-    }
-
     public DetectKneeXRayResponse detectKneeXRayWithOptions(DetectKneeXRayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
+            body.put("DataFormat", request.dataFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("OrgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
+            body.put("OrgName", request.orgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            body.put("Url", request.url);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DetectKneeXRay", "2020-03-20", "HTTPS", "POST", "AK", "json", req, runtime), new DetectKneeXRayResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetectKneeXRay"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetectKneeXRayResponse());
     }
 
     public DetectKneeXRayResponse detectKneeXRay(DetectKneeXRayRequest request) throws Exception {
@@ -481,25 +645,89 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return detectKneeXRayResp;
     }
 
-    public GetAsyncJobResultResponse getAsyncJobResultWithOptions(GetAsyncJobResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DetectLungNoduleResponse detectLungNoduleWithOptions(DetectLungNoduleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
+            body.put("DataFormat", request.dataFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("OrgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
+            body.put("OrgName", request.orgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.threshold)) {
+            body.put("Threshold", request.threshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.URLList)) {
+            body.put("URLList", request.URLList);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doRPCRequest("GetAsyncJobResult", "2020-03-20", "HTTPS", "POST", "AK", "json", req, runtime), new GetAsyncJobResultResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetectLungNodule"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetectLungNoduleResponse());
     }
 
-    public GetAsyncJobResultResponse getAsyncJobResult(GetAsyncJobResultRequest request) throws Exception {
+    public DetectLungNoduleResponse detectLungNodule(DetectLungNoduleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getAsyncJobResultWithOptions(request, runtime);
+        return this.detectLungNoduleWithOptions(request, runtime);
     }
 
     public DetectRibFractureResponse detectRibFractureWithOptions(DetectRibFractureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
+            body.put("DataFormat", request.dataFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("OrgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
+            body.put("OrgName", request.orgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            body.put("SourceType", request.sourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.URLList)) {
+            body.put("URLList", request.URLList);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DetectRibFracture", "2020-03-20", "HTTPS", "POST", "AK", "json", req, runtime), new DetectRibFractureResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetectRibFracture"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetectRibFractureResponse());
     }
 
     public DetectRibFractureResponse detectRibFracture(DetectRibFractureRequest request) throws Exception {
@@ -507,38 +735,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detectRibFractureWithOptions(request, runtime);
     }
 
-    public DetectCovid19CadResponse detectCovid19CadWithOptions(DetectCovid19CadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DetectCovid19Cad", "2020-03-20", "HTTPS", "POST", "AK", "json", req, runtime), new DetectCovid19CadResponse());
-    }
-
-    public DetectCovid19CadResponse detectCovid19Cad(DetectCovid19CadRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.detectCovid19CadWithOptions(request, runtime);
-    }
-
-    public ScreenChestCTResponse screenChestCTWithOptions(ScreenChestCTRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ScreenChestCT", "2020-03-20", "HTTPS", "POST", "AK", "json", req, runtime), new ScreenChestCTResponse());
-    }
-
-    public ScreenChestCTResponse screenChestCT(ScreenChestCTRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.screenChestCTWithOptions(request, runtime);
-    }
-
     public DetectSkinDiseaseResponse detectSkinDiseaseWithOptions(DetectSkinDiseaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("OrgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
+            body.put("OrgName", request.orgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            body.put("Url", request.url);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DetectSkinDisease", "2020-03-20", "HTTPS", "POST", "AK", "json", req, runtime), new DetectSkinDiseaseResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetectSkinDisease"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetectSkinDiseaseResponse());
     }
 
     public DetectSkinDiseaseResponse detectSkinDisease(DetectSkinDiseaseRequest request) throws Exception {
@@ -618,5 +844,263 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         DetectSkinDiseaseResponse detectSkinDiseaseResp = this.detectSkinDiseaseWithOptions(detectSkinDiseaseReq, runtime);
         return detectSkinDiseaseResp;
+    }
+
+    public DetectSpineMRIResponse detectSpineMRIWithOptions(DetectSpineMRIRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
+            body.put("DataFormat", request.dataFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("OrgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
+            body.put("OrgName", request.orgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.URLList)) {
+            body.put("URLList", request.URLList);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetectSpineMRI"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetectSpineMRIResponse());
+    }
+
+    public DetectSpineMRIResponse detectSpineMRI(DetectSpineMRIRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detectSpineMRIWithOptions(request, runtime);
+    }
+
+    public GetAsyncJobResultResponse getAsyncJobResultWithOptions(GetAsyncJobResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            body.put("JobId", request.jobId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAsyncJobResult"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAsyncJobResultResponse());
+    }
+
+    public GetAsyncJobResultResponse getAsyncJobResult(GetAsyncJobResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAsyncJobResultWithOptions(request, runtime);
+    }
+
+    public RunCTRegistrationResponse runCTRegistrationWithOptions(RunCTRegistrationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
+            body.put("DataFormat", request.dataFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceType)) {
+            body.put("DataSourceType", request.dataSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.floatingList)) {
+            body.put("FloatingList", request.floatingList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("OrgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
+            body.put("OrgName", request.orgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.referenceList)) {
+            body.put("ReferenceList", request.referenceList);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunCTRegistration"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunCTRegistrationResponse());
+    }
+
+    public RunCTRegistrationResponse runCTRegistration(RunCTRegistrationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.runCTRegistrationWithOptions(request, runtime);
+    }
+
+    public RunMedQAResponse runMedQAWithOptions(RunMedQARequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.answerImageDataList)) {
+            body.put("AnswerImageDataList", request.answerImageDataList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.answerImageURLList)) {
+            body.put("AnswerImageURLList", request.answerImageURLList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.answerTextList)) {
+            body.put("AnswerTextList", request.answerTextList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.department)) {
+            body.put("Department", request.department);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("OrgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
+            body.put("OrgName", request.orgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.questionType)) {
+            body.put("QuestionType", request.questionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("SessionId", request.sessionId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunMedQA"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunMedQAResponse());
+    }
+
+    public RunMedQAResponse runMedQA(RunMedQARequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.runMedQAWithOptions(request, runtime);
+    }
+
+    public ScreenChestCTResponse screenChestCTWithOptions(ScreenChestCTRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
+            body.put("DataFormat", request.dataFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mask)) {
+            body.put("Mask", request.mask);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("OrgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
+            body.put("OrgName", request.orgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.URLList)) {
+            body.put("URLList", request.URLList);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ScreenChestCT"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ScreenChestCTResponse());
+    }
+
+    public ScreenChestCTResponse screenChestCT(ScreenChestCTRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.screenChestCTWithOptions(request, runtime);
+    }
+
+    public TranslateMedResponse translateMedWithOptions(TranslateMedRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fromLanguage)) {
+            body.put("FromLanguage", request.fromLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.text)) {
+            body.put("Text", request.text);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toLanguage)) {
+            body.put("ToLanguage", request.toLanguage);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TranslateMed"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TranslateMedResponse());
+    }
+
+    public TranslateMedResponse translateMed(TranslateMedRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.translateMedWithOptions(request, runtime);
     }
 }

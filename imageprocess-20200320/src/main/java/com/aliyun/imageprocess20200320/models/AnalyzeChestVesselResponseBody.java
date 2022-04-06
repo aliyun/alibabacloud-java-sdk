@@ -4,24 +4,16 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class AnalyzeChestVesselResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public AnalyzeChestVesselResponseBodyData data;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public AnalyzeChestVesselResponseBodyData data;
-
     public static AnalyzeChestVesselResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AnalyzeChestVesselResponseBody self = new AnalyzeChestVesselResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AnalyzeChestVesselResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AnalyzeChestVesselResponseBody setData(AnalyzeChestVesselResponseBodyData data) {
@@ -32,68 +24,36 @@ public class AnalyzeChestVesselResponseBody extends TeaModel {
         return this.data;
     }
 
+    public AnalyzeChestVesselResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class AnalyzeChestVesselResponseBodyDataAortaInfo extends TeaModel {
-        @NameInMap("MaxAreaIndex")
-        public Long maxAreaIndex;
-
-        @NameInMap("MaxArea")
-        public Float maxArea;
-
-        @NameInMap("MaxDiameter")
-        public Float maxDiameter;
-
-        @NameInMap("LabelValue")
-        public Long labelValue;
+        @NameInMap("Area")
+        public java.util.List<Float> area;
 
         @NameInMap("Coordinates")
         public java.util.List<java.util.List<Float>> coordinates;
 
-        @NameInMap("Area")
-        public java.util.List<Float> area;
+        @NameInMap("LabelValue")
+        public Long labelValue;
+
+        @NameInMap("MaxArea")
+        public Float maxArea;
+
+        @NameInMap("MaxAreaIndex")
+        public Long maxAreaIndex;
+
+        @NameInMap("MaxDiameter")
+        public Float maxDiameter;
 
         public static AnalyzeChestVesselResponseBodyDataAortaInfo build(java.util.Map<String, ?> map) throws Exception {
             AnalyzeChestVesselResponseBodyDataAortaInfo self = new AnalyzeChestVesselResponseBodyDataAortaInfo();
             return TeaModel.build(map, self);
-        }
-
-        public AnalyzeChestVesselResponseBodyDataAortaInfo setMaxAreaIndex(Long maxAreaIndex) {
-            this.maxAreaIndex = maxAreaIndex;
-            return this;
-        }
-        public Long getMaxAreaIndex() {
-            return this.maxAreaIndex;
-        }
-
-        public AnalyzeChestVesselResponseBodyDataAortaInfo setMaxArea(Float maxArea) {
-            this.maxArea = maxArea;
-            return this;
-        }
-        public Float getMaxArea() {
-            return this.maxArea;
-        }
-
-        public AnalyzeChestVesselResponseBodyDataAortaInfo setMaxDiameter(Float maxDiameter) {
-            this.maxDiameter = maxDiameter;
-            return this;
-        }
-        public Float getMaxDiameter() {
-            return this.maxDiameter;
-        }
-
-        public AnalyzeChestVesselResponseBodyDataAortaInfo setLabelValue(Long labelValue) {
-            this.labelValue = labelValue;
-            return this;
-        }
-        public Long getLabelValue() {
-            return this.labelValue;
-        }
-
-        public AnalyzeChestVesselResponseBodyDataAortaInfo setCoordinates(java.util.List<java.util.List<Float>> coordinates) {
-            this.coordinates = coordinates;
-            return this;
-        }
-        public java.util.List<java.util.List<Float>> getCoordinates() {
-            return this.coordinates;
         }
 
         public AnalyzeChestVesselResponseBodyDataAortaInfo setArea(java.util.List<Float> area) {
@@ -104,26 +64,66 @@ public class AnalyzeChestVesselResponseBody extends TeaModel {
             return this.area;
         }
 
+        public AnalyzeChestVesselResponseBodyDataAortaInfo setCoordinates(java.util.List<java.util.List<Float>> coordinates) {
+            this.coordinates = coordinates;
+            return this;
+        }
+        public java.util.List<java.util.List<Float>> getCoordinates() {
+            return this.coordinates;
+        }
+
+        public AnalyzeChestVesselResponseBodyDataAortaInfo setLabelValue(Long labelValue) {
+            this.labelValue = labelValue;
+            return this;
+        }
+        public Long getLabelValue() {
+            return this.labelValue;
+        }
+
+        public AnalyzeChestVesselResponseBodyDataAortaInfo setMaxArea(Float maxArea) {
+            this.maxArea = maxArea;
+            return this;
+        }
+        public Float getMaxArea() {
+            return this.maxArea;
+        }
+
+        public AnalyzeChestVesselResponseBodyDataAortaInfo setMaxAreaIndex(Long maxAreaIndex) {
+            this.maxAreaIndex = maxAreaIndex;
+            return this;
+        }
+        public Long getMaxAreaIndex() {
+            return this.maxAreaIndex;
+        }
+
+        public AnalyzeChestVesselResponseBodyDataAortaInfo setMaxDiameter(Float maxDiameter) {
+            this.maxDiameter = maxDiameter;
+            return this;
+        }
+        public Float getMaxDiameter() {
+            return this.maxDiameter;
+        }
+
     }
 
     public static class AnalyzeChestVesselResponseBodyDataPulmonaryInfo extends TeaModel {
-        @NameInMap("MaxAreaIndex")
-        public Long maxAreaIndex;
-
-        @NameInMap("MaxArea")
-        public Float maxArea;
-
-        @NameInMap("MaxDiameter")
-        public Float maxDiameter;
-
-        @NameInMap("LabelValue")
-        public Long labelValue;
+        @NameInMap("Area")
+        public java.util.List<Float> area;
 
         @NameInMap("Coordinates")
         public java.util.List<java.util.List<Float>> coordinates;
 
-        @NameInMap("Area")
-        public java.util.List<Float> area;
+        @NameInMap("LabelValue")
+        public Long labelValue;
+
+        @NameInMap("MaxArea")
+        public Float maxArea;
+
+        @NameInMap("MaxAreaIndex")
+        public Long maxAreaIndex;
+
+        @NameInMap("MaxDiameter")
+        public Float maxDiameter;
 
         @NameInMap("NearestAortaArea")
         public Float nearestAortaArea;
@@ -133,36 +133,12 @@ public class AnalyzeChestVesselResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public AnalyzeChestVesselResponseBodyDataPulmonaryInfo setMaxAreaIndex(Long maxAreaIndex) {
-            this.maxAreaIndex = maxAreaIndex;
+        public AnalyzeChestVesselResponseBodyDataPulmonaryInfo setArea(java.util.List<Float> area) {
+            this.area = area;
             return this;
         }
-        public Long getMaxAreaIndex() {
-            return this.maxAreaIndex;
-        }
-
-        public AnalyzeChestVesselResponseBodyDataPulmonaryInfo setMaxArea(Float maxArea) {
-            this.maxArea = maxArea;
-            return this;
-        }
-        public Float getMaxArea() {
-            return this.maxArea;
-        }
-
-        public AnalyzeChestVesselResponseBodyDataPulmonaryInfo setMaxDiameter(Float maxDiameter) {
-            this.maxDiameter = maxDiameter;
-            return this;
-        }
-        public Float getMaxDiameter() {
-            return this.maxDiameter;
-        }
-
-        public AnalyzeChestVesselResponseBodyDataPulmonaryInfo setLabelValue(Long labelValue) {
-            this.labelValue = labelValue;
-            return this;
-        }
-        public Long getLabelValue() {
-            return this.labelValue;
+        public java.util.List<Float> getArea() {
+            return this.area;
         }
 
         public AnalyzeChestVesselResponseBodyDataPulmonaryInfo setCoordinates(java.util.List<java.util.List<Float>> coordinates) {
@@ -173,12 +149,36 @@ public class AnalyzeChestVesselResponseBody extends TeaModel {
             return this.coordinates;
         }
 
-        public AnalyzeChestVesselResponseBodyDataPulmonaryInfo setArea(java.util.List<Float> area) {
-            this.area = area;
+        public AnalyzeChestVesselResponseBodyDataPulmonaryInfo setLabelValue(Long labelValue) {
+            this.labelValue = labelValue;
             return this;
         }
-        public java.util.List<Float> getArea() {
-            return this.area;
+        public Long getLabelValue() {
+            return this.labelValue;
+        }
+
+        public AnalyzeChestVesselResponseBodyDataPulmonaryInfo setMaxArea(Float maxArea) {
+            this.maxArea = maxArea;
+            return this;
+        }
+        public Float getMaxArea() {
+            return this.maxArea;
+        }
+
+        public AnalyzeChestVesselResponseBodyDataPulmonaryInfo setMaxAreaIndex(Long maxAreaIndex) {
+            this.maxAreaIndex = maxAreaIndex;
+            return this;
+        }
+        public Long getMaxAreaIndex() {
+            return this.maxAreaIndex;
+        }
+
+        public AnalyzeChestVesselResponseBodyDataPulmonaryInfo setMaxDiameter(Float maxDiameter) {
+            this.maxDiameter = maxDiameter;
+            return this;
+        }
+        public Float getMaxDiameter() {
+            return this.maxDiameter;
         }
 
         public AnalyzeChestVesselResponseBodyDataPulmonaryInfo setNearestAortaArea(Float nearestAortaArea) {

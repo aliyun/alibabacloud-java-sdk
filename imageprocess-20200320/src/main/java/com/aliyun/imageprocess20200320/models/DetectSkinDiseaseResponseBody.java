@@ -4,23 +4,15 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectSkinDiseaseResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DetectSkinDiseaseResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetectSkinDiseaseResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectSkinDiseaseResponseBody self = new DetectSkinDiseaseResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectSkinDiseaseResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectSkinDiseaseResponseBody setData(DetectSkinDiseaseResponseBodyData data) {
@@ -29,6 +21,14 @@ public class DetectSkinDiseaseResponseBody extends TeaModel {
     }
     public DetectSkinDiseaseResponseBodyData getData() {
         return this.data;
+    }
+
+    public DetectSkinDiseaseResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DetectSkinDiseaseResponseBodyData extends TeaModel {

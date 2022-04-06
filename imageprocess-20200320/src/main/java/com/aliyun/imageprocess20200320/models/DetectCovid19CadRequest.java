@@ -7,11 +7,11 @@ public class DetectCovid19CadRequest extends TeaModel {
     @NameInMap("DataFormat")
     public String dataFormat;
 
-    @NameInMap("OrgName")
-    public String orgName;
-
     @NameInMap("OrgId")
     public String orgId;
+
+    @NameInMap("OrgName")
+    public String orgName;
 
     @NameInMap("URLList")
     public java.util.List<DetectCovid19CadRequestURLList> URLList;
@@ -29,20 +29,20 @@ public class DetectCovid19CadRequest extends TeaModel {
         return this.dataFormat;
     }
 
-    public DetectCovid19CadRequest setOrgName(String orgName) {
-        this.orgName = orgName;
-        return this;
-    }
-    public String getOrgName() {
-        return this.orgName;
-    }
-
     public DetectCovid19CadRequest setOrgId(String orgId) {
         this.orgId = orgId;
         return this;
     }
     public String getOrgId() {
         return this.orgId;
+    }
+
+    public DetectCovid19CadRequest setOrgName(String orgName) {
+        this.orgName = orgName;
+        return this;
+    }
+    public String getOrgName() {
+        return this.orgName;
     }
 
     public DetectCovid19CadRequest setURLList(java.util.List<DetectCovid19CadRequestURLList> URLList) {

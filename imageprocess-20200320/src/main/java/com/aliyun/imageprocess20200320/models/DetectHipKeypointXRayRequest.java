@@ -4,11 +4,11 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectHipKeypointXRayRequest extends TeaModel {
-    @NameInMap("ImageUrl")
-    public String imageUrl;
-
     @NameInMap("DataFormat")
     public String dataFormat;
+
+    @NameInMap("ImageUrl")
+    public String imageUrl;
 
     @NameInMap("OrgId")
     public String orgId;
@@ -24,20 +24,20 @@ public class DetectHipKeypointXRayRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DetectHipKeypointXRayRequest setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-        return this;
-    }
-    public String getImageUrl() {
-        return this.imageUrl;
-    }
-
     public DetectHipKeypointXRayRequest setDataFormat(String dataFormat) {
         this.dataFormat = dataFormat;
         return this;
     }
     public String getDataFormat() {
         return this.dataFormat;
+    }
+
+    public DetectHipKeypointXRayRequest setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    public String getImageUrl() {
+        return this.imageUrl;
     }
 
     public DetectHipKeypointXRayRequest setOrgId(String orgId) {

@@ -4,29 +4,21 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectKneeXRayRequest extends TeaModel {
-    @NameInMap("Url")
-    public String url;
-
     @NameInMap("DataFormat")
     public String dataFormat;
-
-    @NameInMap("OrgName")
-    public String orgName;
 
     @NameInMap("OrgId")
     public String orgId;
 
+    @NameInMap("OrgName")
+    public String orgName;
+
+    @NameInMap("Url")
+    public String url;
+
     public static DetectKneeXRayRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectKneeXRayRequest self = new DetectKneeXRayRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DetectKneeXRayRequest setUrl(String url) {
-        this.url = url;
-        return this;
-    }
-    public String getUrl() {
-        return this.url;
     }
 
     public DetectKneeXRayRequest setDataFormat(String dataFormat) {
@@ -37,6 +29,14 @@ public class DetectKneeXRayRequest extends TeaModel {
         return this.dataFormat;
     }
 
+    public DetectKneeXRayRequest setOrgId(String orgId) {
+        this.orgId = orgId;
+        return this;
+    }
+    public String getOrgId() {
+        return this.orgId;
+    }
+
     public DetectKneeXRayRequest setOrgName(String orgName) {
         this.orgName = orgName;
         return this;
@@ -45,12 +45,12 @@ public class DetectKneeXRayRequest extends TeaModel {
         return this.orgName;
     }
 
-    public DetectKneeXRayRequest setOrgId(String orgId) {
-        this.orgId = orgId;
+    public DetectKneeXRayRequest setUrl(String url) {
+        this.url = url;
         return this;
     }
-    public String getOrgId() {
-        return this.orgId;
+    public String getUrl() {
+        return this.url;
     }
 
 }

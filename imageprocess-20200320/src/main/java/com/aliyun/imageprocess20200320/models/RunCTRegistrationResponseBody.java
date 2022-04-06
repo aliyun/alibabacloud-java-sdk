@@ -4,23 +4,15 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class RunCTRegistrationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RunCTRegistrationResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RunCTRegistrationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RunCTRegistrationResponseBody self = new RunCTRegistrationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RunCTRegistrationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RunCTRegistrationResponseBody setData(RunCTRegistrationResponseBodyData data) {
@@ -29,6 +21,14 @@ public class RunCTRegistrationResponseBody extends TeaModel {
     }
     public RunCTRegistrationResponseBodyData getData() {
         return this.data;
+    }
+
+    public RunCTRegistrationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class RunCTRegistrationResponseBodyData extends TeaModel {
