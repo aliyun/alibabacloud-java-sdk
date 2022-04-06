@@ -4,9 +4,6 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class CreateAppGroupRequest extends TeaModel {
-    @NameInMap("AlarmJson")
-    public String alarmJson;
-
     @NameInMap("AppKey")
     public String appKey;
 
@@ -40,17 +37,12 @@ public class CreateAppGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ScheduleBusyWorkers")
+    public Boolean scheduleBusyWorkers;
+
     public static CreateAppGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppGroupRequest self = new CreateAppGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateAppGroupRequest setAlarmJson(String alarmJson) {
-        this.alarmJson = alarmJson;
-        return this;
-    }
-    public String getAlarmJson() {
-        return this.alarmJson;
     }
 
     public CreateAppGroupRequest setAppKey(String appKey) {
@@ -139,6 +131,14 @@ public class CreateAppGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateAppGroupRequest setScheduleBusyWorkers(Boolean scheduleBusyWorkers) {
+        this.scheduleBusyWorkers = scheduleBusyWorkers;
+        return this;
+    }
+    public Boolean getScheduleBusyWorkers() {
+        return this.scheduleBusyWorkers;
     }
 
 }
