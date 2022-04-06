@@ -38,9 +38,6 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         @NameInMap("RdsId")
         public String rdsId;
 
-        @NameInMap("RdsPassword")
-        public String rdsPassword;
-
         @NameInMap("RdsUserName")
         public String rdsUserName;
 
@@ -72,14 +69,6 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         }
         public String getRdsId() {
             return this.rdsId;
-        }
-
-        public DescribeSynDbsResponseBodySynDbs setRdsPassword(String rdsPassword) {
-            this.rdsPassword = rdsPassword;
-            return this;
-        }
-        public String getRdsPassword() {
-            return this.rdsPassword;
         }
 
         public DescribeSynDbsResponseBodySynDbs setRdsUserName(String rdsUserName) {

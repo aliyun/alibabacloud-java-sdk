@@ -605,6 +605,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PreferredBackupTime", request.preferredBackupTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -712,6 +716,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceDBClusterId)) {
+            query.put("SourceDBClusterId", request.sourceDBClusterId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
@@ -2836,14 +2844,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.schemaName)) {
-            query.put("SchemaName", request.schemaName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
-            query.put("TableName", request.tableName);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3115,10 +3115,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.schemaName)) {
             query.put("SchemaName", request.schemaName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
-            query.put("TableName", request.tableName);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

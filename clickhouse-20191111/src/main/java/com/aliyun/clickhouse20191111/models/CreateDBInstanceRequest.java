@@ -61,6 +61,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SourceDBClusterId")
+    public String sourceDBClusterId;
+
     @NameInMap("UsedTime")
     public String usedTime;
 
@@ -228,6 +231,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateDBInstanceRequest setSourceDBClusterId(String sourceDBClusterId) {
+        this.sourceDBClusterId = sourceDBClusterId;
+        return this;
+    }
+    public String getSourceDBClusterId() {
+        return this.sourceDBClusterId;
     }
 
     public CreateDBInstanceRequest setUsedTime(String usedTime) {

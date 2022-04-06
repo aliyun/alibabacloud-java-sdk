@@ -22,9 +22,6 @@ public class DescribeTablesRequest extends TeaModel {
     @NameInMap("SchemaName")
     public String schemaName;
 
-    @NameInMap("TableName")
-    public String tableName;
-
     public static DescribeTablesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTablesRequest self = new DescribeTablesRequest();
         return TeaModel.build(map, self);
@@ -76,14 +73,6 @@ public class DescribeTablesRequest extends TeaModel {
     }
     public String getSchemaName() {
         return this.schemaName;
-    }
-
-    public DescribeTablesRequest setTableName(String tableName) {
-        this.tableName = tableName;
-        return this;
-    }
-    public String getTableName() {
-        return this.tableName;
     }
 
 }

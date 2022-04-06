@@ -216,6 +216,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("SupportMysqlPort")
         public Boolean supportMysqlPort;
 
+        @NameInMap("SupportOss")
+        public Integer supportOss;
+
         @NameInMap("Tags")
         public DescribeDBClusterAttributeResponseBodyDBClusterTags tags;
 
@@ -517,6 +520,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public Boolean getSupportMysqlPort() {
             return this.supportMysqlPort;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setSupportOss(Integer supportOss) {
+            this.supportOss = supportOss;
+            return this;
+        }
+        public Integer getSupportOss() {
+            return this.supportOss;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBCluster setTags(DescribeDBClusterAttributeResponseBodyDBClusterTags tags) {
