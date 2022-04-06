@@ -8,6 +8,9 @@ public class AssociateRoomRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("ClientBaseParam")
+    public String clientBaseParam;
+
     @NameInMap("ClientVersion")
     public String clientVersion;
 
@@ -30,6 +33,14 @@ public class AssociateRoomRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public AssociateRoomRequest setClientBaseParam(String clientBaseParam) {
+        this.clientBaseParam = clientBaseParam;
+        return this;
+    }
+    public String getClientBaseParam() {
+        return this.clientBaseParam;
     }
 
     public AssociateRoomRequest setClientVersion(String clientVersion) {

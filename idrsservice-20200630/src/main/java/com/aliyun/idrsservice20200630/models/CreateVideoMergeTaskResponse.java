@@ -3,21 +3,21 @@ package com.aliyun.idrsservice20200630.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateServiceConfigurationResponse extends TeaModel {
+public class CreateVideoMergeTaskResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpdateServiceConfigurationResponseBody body;
+    public CreateVideoMergeTaskResponseBody body;
 
-    public static UpdateServiceConfigurationResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateServiceConfigurationResponse self = new UpdateServiceConfigurationResponse();
+    public static CreateVideoMergeTaskResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateVideoMergeTaskResponse self = new CreateVideoMergeTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateServiceConfigurationResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateVideoMergeTaskResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class UpdateServiceConfigurationResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateServiceConfigurationResponse setBody(UpdateServiceConfigurationResponseBody body) {
+    public CreateVideoMergeTaskResponse setBody(CreateVideoMergeTaskResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateServiceConfigurationResponseBody getBody() {
+    public CreateVideoMergeTaskResponseBody getBody() {
         return this.body;
     }
 

@@ -7,6 +7,9 @@ public class UploadReportRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("ClientBaseParam")
+    public String clientBaseParam;
+
     @NameInMap("ClientVersion")
     public String clientVersion;
 
@@ -55,6 +58,14 @@ public class UploadReportRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public UploadReportRequest setClientBaseParam(String clientBaseParam) {
+        this.clientBaseParam = clientBaseParam;
+        return this;
+    }
+    public String getClientBaseParam() {
+        return this.clientBaseParam;
     }
 
     public UploadReportRequest setClientVersion(String clientVersion) {

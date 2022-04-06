@@ -58,7 +58,7 @@ public class GetAppResponseBody extends TeaModel {
         public String config;
 
         @NameInMap("CreatedAt")
-        public Integer createdAt;
+        public String createdAt;
 
         @NameInMap("Disabled")
         public String disabled;
@@ -82,11 +82,11 @@ public class GetAppResponseBody extends TeaModel {
             return this.config;
         }
 
-        public GetAppResponseBodyData setCreatedAt(Integer createdAt) {
+        public GetAppResponseBodyData setCreatedAt(String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-        public Integer getCreatedAt() {
+        public String getCreatedAt() {
             return this.createdAt;
         }
 

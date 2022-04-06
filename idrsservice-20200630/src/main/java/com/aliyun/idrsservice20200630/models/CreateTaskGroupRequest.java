@@ -31,11 +31,11 @@ public class CreateTaskGroupRequest extends TeaModel {
     @NameInMap("TriggerPeriod")
     public String triggerPeriod;
 
+    @NameInMap("VideoInfo")
+    public java.util.List<CreateTaskGroupRequestVideoInfo> videoInfo;
+
     @NameInMap("VideoMetaUrl")
     public java.util.List<String> videoMetaUrl;
-
-    @NameInMap("VideoUrl")
-    public java.util.List<String> videoUrl;
 
     public static CreateTaskGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTaskGroupRequest self = new CreateTaskGroupRequest();
@@ -114,6 +114,14 @@ public class CreateTaskGroupRequest extends TeaModel {
         return this.triggerPeriod;
     }
 
+    public CreateTaskGroupRequest setVideoInfo(java.util.List<CreateTaskGroupRequestVideoInfo> videoInfo) {
+        this.videoInfo = videoInfo;
+        return this;
+    }
+    public java.util.List<CreateTaskGroupRequestVideoInfo> getVideoInfo() {
+        return this.videoInfo;
+    }
+
     public CreateTaskGroupRequest setVideoMetaUrl(java.util.List<String> videoMetaUrl) {
         this.videoMetaUrl = videoMetaUrl;
         return this;
@@ -122,12 +130,45 @@ public class CreateTaskGroupRequest extends TeaModel {
         return this.videoMetaUrl;
     }
 
-    public CreateTaskGroupRequest setVideoUrl(java.util.List<String> videoUrl) {
-        this.videoUrl = videoUrl;
-        return this;
-    }
-    public java.util.List<String> getVideoUrl() {
-        return this.videoUrl;
+    public static class CreateTaskGroupRequestVideoInfo extends TeaModel {
+        @NameInMap("RuleId")
+        public String ruleId;
+
+        @NameInMap("VideoMetaUrl")
+        public String videoMetaUrl;
+
+        @NameInMap("VideoUrl")
+        public String videoUrl;
+
+        public static CreateTaskGroupRequestVideoInfo build(java.util.Map<String, ?> map) throws Exception {
+            CreateTaskGroupRequestVideoInfo self = new CreateTaskGroupRequestVideoInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTaskGroupRequestVideoInfo setRuleId(String ruleId) {
+            this.ruleId = ruleId;
+            return this;
+        }
+        public String getRuleId() {
+            return this.ruleId;
+        }
+
+        public CreateTaskGroupRequestVideoInfo setVideoMetaUrl(String videoMetaUrl) {
+            this.videoMetaUrl = videoMetaUrl;
+            return this;
+        }
+        public String getVideoMetaUrl() {
+            return this.videoMetaUrl;
+        }
+
+        public CreateTaskGroupRequestVideoInfo setVideoUrl(String videoUrl) {
+            this.videoUrl = videoUrl;
+            return this;
+        }
+        public String getVideoUrl() {
+            return this.videoUrl;
+        }
+
     }
 
 }

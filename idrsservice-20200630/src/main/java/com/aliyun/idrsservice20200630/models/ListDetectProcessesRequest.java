@@ -16,6 +16,9 @@ public class ListDetectProcessesRequest extends TeaModel {
     @NameInMap("PublishStatus")
     public Boolean publishStatus;
 
+    @NameInMap("Type")
+    public String type;
+
     public static ListDetectProcessesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDetectProcessesRequest self = new ListDetectProcessesRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ListDetectProcessesRequest extends TeaModel {
     }
     public Boolean getPublishStatus() {
         return this.publishStatus;
+    }
+
+    public ListDetectProcessesRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }
