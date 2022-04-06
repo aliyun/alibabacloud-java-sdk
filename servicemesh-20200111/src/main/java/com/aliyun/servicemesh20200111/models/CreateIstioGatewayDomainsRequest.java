@@ -16,6 +16,12 @@ public class CreateIstioGatewayDomainsRequest extends TeaModel {
     @NameInMap("IstioGatewayName")
     public String istioGatewayName;
 
+    @NameInMap("Limit")
+    public String limit;
+
+    @NameInMap("Namespace")
+    public String namespace;
+
     @NameInMap("Number")
     public Integer number;
 
@@ -63,6 +69,22 @@ public class CreateIstioGatewayDomainsRequest extends TeaModel {
     }
     public String getIstioGatewayName() {
         return this.istioGatewayName;
+    }
+
+    public CreateIstioGatewayDomainsRequest setLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    public String getLimit() {
+        return this.limit;
+    }
+
+    public CreateIstioGatewayDomainsRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public CreateIstioGatewayDomainsRequest setNumber(Integer number) {

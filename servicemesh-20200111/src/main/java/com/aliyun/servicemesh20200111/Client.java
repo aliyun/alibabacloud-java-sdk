@@ -199,6 +199,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("IstioGatewayName", request.istioGatewayName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.number)) {
             body.put("Number", request.number);
         }
@@ -664,6 +672,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.istioGatewayName)) {
             body.put("IstioGatewayName", request.istioGatewayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.portName)) {
@@ -1190,6 +1206,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("IstioGatewayName", request.istioGatewayName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
             body.put("ServiceMeshId", request.serviceMeshId);
         }
@@ -1548,8 +1572,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ServiceMeshId", request.serviceMeshId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            body.put("Offset", request.offset);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeServiceMeshClusters"),
@@ -2660,6 +2694,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.CRAggregationEnabled)) {
             body.put("CRAggregationEnabled", request.CRAggregationEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.canaryUpgradeEnabled)) {
+            body.put("CanaryUpgradeEnabled", request.canaryUpgradeEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clusterSpec)) {

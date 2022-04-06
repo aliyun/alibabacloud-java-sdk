@@ -34,6 +34,9 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("CRAggregationEnabled")
     public Boolean CRAggregationEnabled;
 
+    @NameInMap("CanaryUpgradeEnabled")
+    public Boolean canaryUpgradeEnabled;
+
     @NameInMap("ClusterSpec")
     public String clusterSpec;
 
@@ -315,6 +318,14 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public Boolean getCRAggregationEnabled() {
         return this.CRAggregationEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setCanaryUpgradeEnabled(Boolean canaryUpgradeEnabled) {
+        this.canaryUpgradeEnabled = canaryUpgradeEnabled;
+        return this;
+    }
+    public Boolean getCanaryUpgradeEnabled() {
+        return this.canaryUpgradeEnabled;
     }
 
     public UpdateMeshFeatureRequest setClusterSpec(String clusterSpec) {
