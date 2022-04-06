@@ -41,6 +41,9 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
         @NameInMap("Domains")
         public java.util.List<String> domains;
 
+        @NameInMap("Namespace")
+        public String namespace;
+
         @NameInMap("PortName")
         public String portName;
 
@@ -74,6 +77,14 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
         }
         public java.util.List<String> getDomains() {
             return this.domains;
+        }
+
+        public DescribeIstioGatewayDomainsResponseBodyGatewaySecretDetails setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public DescribeIstioGatewayDomainsResponseBodyGatewaySecretDetails setPortName(String portName) {

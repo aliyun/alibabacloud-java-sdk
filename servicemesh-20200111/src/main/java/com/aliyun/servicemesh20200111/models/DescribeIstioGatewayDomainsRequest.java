@@ -7,6 +7,12 @@ public class DescribeIstioGatewayDomainsRequest extends TeaModel {
     @NameInMap("IstioGatewayName")
     public String istioGatewayName;
 
+    @NameInMap("Limit")
+    public String limit;
+
+    @NameInMap("Namespace")
+    public String namespace;
+
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
@@ -21,6 +27,22 @@ public class DescribeIstioGatewayDomainsRequest extends TeaModel {
     }
     public String getIstioGatewayName() {
         return this.istioGatewayName;
+    }
+
+    public DescribeIstioGatewayDomainsRequest setLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    public String getLimit() {
+        return this.limit;
+    }
+
+    public DescribeIstioGatewayDomainsRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public DescribeIstioGatewayDomainsRequest setServiceMeshId(String serviceMeshId) {

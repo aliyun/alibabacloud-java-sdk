@@ -740,6 +740,9 @@ public class CreateIstioGatewayRoutesRequest extends TeaModel {
         @NameInMap("MatchRequest")
         public CreateIstioGatewayRoutesRequestGatewayRouteMatchRequest matchRequest;
 
+        @NameInMap("Namespace")
+        public String namespace;
+
         @NameInMap("RouteDestinations")
         public java.util.List<CreateIstioGatewayRoutesRequestGatewayRouteRouteDestinations> routeDestinations;
 
@@ -768,6 +771,14 @@ public class CreateIstioGatewayRoutesRequest extends TeaModel {
         }
         public CreateIstioGatewayRoutesRequestGatewayRouteMatchRequest getMatchRequest() {
             return this.matchRequest;
+        }
+
+        public CreateIstioGatewayRoutesRequestGatewayRoute setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public CreateIstioGatewayRoutesRequestGatewayRoute setRouteDestinations(java.util.List<CreateIstioGatewayRoutesRequestGatewayRouteRouteDestinations> routeDestinations) {

@@ -7,6 +7,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     @NameInMap("Priority")
     public Integer priority;
 
@@ -30,6 +33,14 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public DescribeIstioGatewayRouteDetailResponseBody setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public DescribeIstioGatewayRouteDetailResponseBody setPriority(Integer priority) {

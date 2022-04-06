@@ -10,6 +10,12 @@ public class DeleteIstioGatewayDomainsRequest extends TeaModel {
     @NameInMap("IstioGatewayName")
     public String istioGatewayName;
 
+    @NameInMap("Limit")
+    public String limit;
+
+    @NameInMap("Namespace")
+    public String namespace;
+
     @NameInMap("PortName")
     public String portName;
 
@@ -35,6 +41,22 @@ public class DeleteIstioGatewayDomainsRequest extends TeaModel {
     }
     public String getIstioGatewayName() {
         return this.istioGatewayName;
+    }
+
+    public DeleteIstioGatewayDomainsRequest setLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    public String getLimit() {
+        return this.limit;
+    }
+
+    public DeleteIstioGatewayDomainsRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public DeleteIstioGatewayDomainsRequest setPortName(String portName) {
