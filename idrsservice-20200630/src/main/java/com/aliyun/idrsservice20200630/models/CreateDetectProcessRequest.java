@@ -13,6 +13,9 @@ public class CreateDetectProcessRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("Type")
+    public String type;
+
     public static CreateDetectProcessRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDetectProcessRequest self = new CreateDetectProcessRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class CreateDetectProcessRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateDetectProcessRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

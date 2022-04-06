@@ -8,6 +8,9 @@ public class CreateSignatureRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("ClientBaseParam")
+    public String clientBaseParam;
+
     @NameInMap("ClientVersion")
     public String clientVersion;
 
@@ -30,6 +33,14 @@ public class CreateSignatureRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public CreateSignatureRequest setClientBaseParam(String clientBaseParam) {
+        this.clientBaseParam = clientBaseParam;
+        return this;
+    }
+    public String getClientBaseParam() {
+        return this.clientBaseParam;
     }
 
     public CreateSignatureRequest setClientVersion(String clientVersion) {

@@ -4,6 +4,9 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class GetWatermarkRequest extends TeaModel {
+    @NameInMap("ClientBaseParam")
+    public String clientBaseParam;
+
     @NameInMap("ClientVersion")
     public String clientVersion;
 
@@ -13,6 +16,14 @@ public class GetWatermarkRequest extends TeaModel {
     public static GetWatermarkRequest build(java.util.Map<String, ?> map) throws Exception {
         GetWatermarkRequest self = new GetWatermarkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetWatermarkRequest setClientBaseParam(String clientBaseParam) {
+        this.clientBaseParam = clientBaseParam;
+        return this;
+    }
+    public String getClientBaseParam() {
+        return this.clientBaseParam;
     }
 
     public GetWatermarkRequest setClientVersion(String clientVersion) {

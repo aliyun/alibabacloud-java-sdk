@@ -4,6 +4,9 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class GetAppRequest extends TeaModel {
+    @NameInMap("ClientBaseParam")
+    public String clientBaseParam;
+
     @NameInMap("ClientVersion")
     public String clientVersion;
 
@@ -19,6 +22,14 @@ public class GetAppRequest extends TeaModel {
     public static GetAppRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAppRequest self = new GetAppRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetAppRequest setClientBaseParam(String clientBaseParam) {
+        this.clientBaseParam = clientBaseParam;
+        return this;
+    }
+    public String getClientBaseParam() {
+        return this.clientBaseParam;
     }
 
     public GetAppRequest setClientVersion(String clientVersion) {
