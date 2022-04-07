@@ -34,6 +34,9 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
+    @NameInMap("IpSetConfig")
+    public DescribeAcceleratorResponseBodyIpSetConfig ipSetConfig;
+
     @NameInMap("Name")
     public String name;
 
@@ -135,6 +138,14 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     }
     public String getInstanceChargeType() {
         return this.instanceChargeType;
+    }
+
+    public DescribeAcceleratorResponseBody setIpSetConfig(DescribeAcceleratorResponseBodyIpSetConfig ipSetConfig) {
+        this.ipSetConfig = ipSetConfig;
+        return this;
+    }
+    public DescribeAcceleratorResponseBodyIpSetConfig getIpSetConfig() {
+        return this.ipSetConfig;
     }
 
     public DescribeAcceleratorResponseBody setName(String name) {
@@ -252,6 +263,25 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+    }
+
+    public static class DescribeAcceleratorResponseBodyIpSetConfig extends TeaModel {
+        @NameInMap("AccessMode")
+        public String accessMode;
+
+        public static DescribeAcceleratorResponseBodyIpSetConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAcceleratorResponseBodyIpSetConfig self = new DescribeAcceleratorResponseBodyIpSetConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAcceleratorResponseBodyIpSetConfig setAccessMode(String accessMode) {
+            this.accessMode = accessMode;
+            return this;
+        }
+        public String getAccessMode() {
+            return this.accessMode;
         }
 
     }

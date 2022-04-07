@@ -427,6 +427,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Duration", request.duration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.ipSetConfig))) {
+            query.put("IpSetConfig", request.ipSetConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
         }

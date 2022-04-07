@@ -135,6 +135,26 @@ public class ListAcceleratorsResponseBody extends TeaModel {
 
     }
 
+    public static class ListAcceleratorsResponseBodyAcceleratorsIpSetConfig extends TeaModel {
+        // 加速区接入方式
+        @NameInMap("AccessMode")
+        public String accessMode;
+
+        public static ListAcceleratorsResponseBodyAcceleratorsIpSetConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListAcceleratorsResponseBodyAcceleratorsIpSetConfig self = new ListAcceleratorsResponseBodyAcceleratorsIpSetConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAcceleratorsResponseBodyAcceleratorsIpSetConfig setAccessMode(String accessMode) {
+            this.accessMode = accessMode;
+            return this;
+        }
+        public String getAccessMode() {
+            return this.accessMode;
+        }
+
+    }
+
     public static class ListAcceleratorsResponseBodyAccelerators extends TeaModel {
         @NameInMap("AcceleratorId")
         public String acceleratorId;
@@ -168,6 +188,10 @@ public class ListAcceleratorsResponseBody extends TeaModel {
 
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
+
+        // 加速区配置
+        @NameInMap("IpSetConfig")
+        public ListAcceleratorsResponseBodyAcceleratorsIpSetConfig ipSetConfig;
 
         @NameInMap("Name")
         public String name;
@@ -278,6 +302,14 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         }
         public String getInstanceChargeType() {
             return this.instanceChargeType;
+        }
+
+        public ListAcceleratorsResponseBodyAccelerators setIpSetConfig(ListAcceleratorsResponseBodyAcceleratorsIpSetConfig ipSetConfig) {
+            this.ipSetConfig = ipSetConfig;
+            return this;
+        }
+        public ListAcceleratorsResponseBodyAcceleratorsIpSetConfig getIpSetConfig() {
+            return this.ipSetConfig;
         }
 
         public ListAcceleratorsResponseBodyAccelerators setName(String name) {
