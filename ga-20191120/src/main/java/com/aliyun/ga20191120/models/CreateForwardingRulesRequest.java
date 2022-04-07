@@ -112,6 +112,9 @@ public class CreateForwardingRulesRequest extends TeaModel {
         @NameInMap("RuleActionType")
         public String ruleActionType;
 
+        @NameInMap("RuleActionValue")
+        public String ruleActionValue;
+
         public static CreateForwardingRulesRequestForwardingRulesRuleActions build(java.util.Map<String, ?> map) throws Exception {
             CreateForwardingRulesRequestForwardingRulesRuleActions self = new CreateForwardingRulesRequestForwardingRulesRuleActions();
             return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class CreateForwardingRulesRequest extends TeaModel {
         }
         public String getRuleActionType() {
             return this.ruleActionType;
+        }
+
+        public CreateForwardingRulesRequestForwardingRulesRuleActions setRuleActionValue(String ruleActionValue) {
+            this.ruleActionValue = ruleActionValue;
+            return this;
+        }
+        public String getRuleActionValue() {
+            return this.ruleActionValue;
         }
 
     }
@@ -191,6 +202,9 @@ public class CreateForwardingRulesRequest extends TeaModel {
         @NameInMap("RuleConditionType")
         public String ruleConditionType;
 
+        @NameInMap("RuleConditionValue")
+        public String ruleConditionValue;
+
         public static CreateForwardingRulesRequestForwardingRulesRuleConditions build(java.util.Map<String, ?> map) throws Exception {
             CreateForwardingRulesRequestForwardingRulesRuleConditions self = new CreateForwardingRulesRequestForwardingRulesRuleConditions();
             return TeaModel.build(map, self);
@@ -220,6 +234,14 @@ public class CreateForwardingRulesRequest extends TeaModel {
             return this.ruleConditionType;
         }
 
+        public CreateForwardingRulesRequestForwardingRulesRuleConditions setRuleConditionValue(String ruleConditionValue) {
+            this.ruleConditionValue = ruleConditionValue;
+            return this;
+        }
+        public String getRuleConditionValue() {
+            return this.ruleConditionValue;
+        }
+
     }
 
     public static class CreateForwardingRulesRequestForwardingRules extends TeaModel {
@@ -234,6 +256,9 @@ public class CreateForwardingRulesRequest extends TeaModel {
 
         @NameInMap("RuleConditions")
         public java.util.List<CreateForwardingRulesRequestForwardingRulesRuleConditions> ruleConditions;
+
+        @NameInMap("RuleDirection")
+        public String ruleDirection;
 
         public static CreateForwardingRulesRequestForwardingRules build(java.util.Map<String, ?> map) throws Exception {
             CreateForwardingRulesRequestForwardingRules self = new CreateForwardingRulesRequestForwardingRules();
@@ -270,6 +295,14 @@ public class CreateForwardingRulesRequest extends TeaModel {
         }
         public java.util.List<CreateForwardingRulesRequestForwardingRulesRuleConditions> getRuleConditions() {
             return this.ruleConditions;
+        }
+
+        public CreateForwardingRulesRequestForwardingRules setRuleDirection(String ruleDirection) {
+            this.ruleDirection = ruleDirection;
+            return this;
+        }
+        public String getRuleDirection() {
+            return this.ruleDirection;
         }
 
     }

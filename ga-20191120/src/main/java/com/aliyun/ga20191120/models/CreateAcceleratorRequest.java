@@ -22,6 +22,9 @@ public class CreateAcceleratorRequest extends TeaModel {
     @NameInMap("Duration")
     public Integer duration;
 
+    @NameInMap("IpSetConfig")
+    public CreateAcceleratorRequestIpSetConfig ipSetConfig;
+
     @NameInMap("Name")
     public String name;
 
@@ -87,6 +90,14 @@ public class CreateAcceleratorRequest extends TeaModel {
         return this.duration;
     }
 
+    public CreateAcceleratorRequest setIpSetConfig(CreateAcceleratorRequestIpSetConfig ipSetConfig) {
+        this.ipSetConfig = ipSetConfig;
+        return this;
+    }
+    public CreateAcceleratorRequestIpSetConfig getIpSetConfig() {
+        return this.ipSetConfig;
+    }
+
     public CreateAcceleratorRequest setName(String name) {
         this.name = name;
         return this;
@@ -117,6 +128,25 @@ public class CreateAcceleratorRequest extends TeaModel {
     }
     public String getSpec() {
         return this.spec;
+    }
+
+    public static class CreateAcceleratorRequestIpSetConfig extends TeaModel {
+        @NameInMap("AccessMode")
+        public String accessMode;
+
+        public static CreateAcceleratorRequestIpSetConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateAcceleratorRequestIpSetConfig self = new CreateAcceleratorRequestIpSetConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAcceleratorRequestIpSetConfig setAccessMode(String accessMode) {
+            this.accessMode = accessMode;
+            return this;
+        }
+        public String getAccessMode() {
+            return this.accessMode;
+        }
+
     }
 
 }
