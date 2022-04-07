@@ -14,7 +14,7 @@ public class ListMultipartUploadsRequest extends TeaModel {
     public String keyMarker;
 
     @NameInMap("max-uploads")
-    public String maxUploads;
+    public Long maxUploads;
 
     @NameInMap("prefix")
     public String prefix;
@@ -51,11 +51,11 @@ public class ListMultipartUploadsRequest extends TeaModel {
         return this.keyMarker;
     }
 
-    public ListMultipartUploadsRequest setMaxUploads(String maxUploads) {
+    public ListMultipartUploadsRequest setMaxUploads(Long maxUploads) {
         this.maxUploads = maxUploads;
         return this;
     }
-    public String getMaxUploads() {
+    public Long getMaxUploads() {
         return this.maxUploads;
     }
 

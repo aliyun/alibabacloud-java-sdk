@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class GetBucketInfoResponseBody extends TeaModel {
     @NameInMap("Bucket")
-    public GetBucketInfoResponseBodyBucketInfo bucketInfo;
+    public BucketInfo bucketInfo;
 
     public static GetBucketInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetBucketInfoResponseBody self = new GetBucketInfoResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetBucketInfoResponseBody setBucketInfo(GetBucketInfoResponseBodyBucketInfo bucketInfo) {
+    public GetBucketInfoResponseBody setBucketInfo(BucketInfo bucketInfo) {
         this.bucketInfo = bucketInfo;
         return this;
     }
-    public GetBucketInfoResponseBodyBucketInfo getBucketInfo() {
+    public BucketInfo getBucketInfo() {
         return this.bucketInfo;
     }
 
-    public static class GetBucketInfoResponseBodyBucketInfoAccessControlList extends TeaModel {
+    public static class AccessControlList extends TeaModel {
         @NameInMap("Grant")
         public String grant;
 
-        public static GetBucketInfoResponseBodyBucketInfoAccessControlList build(java.util.Map<String, ?> map) throws Exception {
-            GetBucketInfoResponseBodyBucketInfoAccessControlList self = new GetBucketInfoResponseBodyBucketInfoAccessControlList();
+        public static AccessControlList build(java.util.Map<String, ?> map) throws Exception {
+            AccessControlList self = new AccessControlList();
             return TeaModel.build(map, self);
         }
 
-        public GetBucketInfoResponseBodyBucketInfoAccessControlList setGrant(String grant) {
+        public AccessControlList setGrant(String grant) {
             this.grant = grant;
             return this;
         }
@@ -39,9 +39,9 @@ public class GetBucketInfoResponseBody extends TeaModel {
 
     }
 
-    public static class GetBucketInfoResponseBodyBucketInfo extends TeaModel {
+    public static class BucketInfo extends TeaModel {
         @NameInMap("AccessControlList")
-        public GetBucketInfoResponseBodyBucketInfoAccessControlList accessControlList;
+        public AccessControlList accessControlList;
 
         @NameInMap("Comment")
         public String comment;
@@ -73,20 +73,20 @@ public class GetBucketInfoResponseBody extends TeaModel {
         @NameInMap("TransferAcceleration")
         public String transferAcceleration;
 
-        public static GetBucketInfoResponseBodyBucketInfo build(java.util.Map<String, ?> map) throws Exception {
-            GetBucketInfoResponseBodyBucketInfo self = new GetBucketInfoResponseBodyBucketInfo();
+        public static BucketInfo build(java.util.Map<String, ?> map) throws Exception {
+            BucketInfo self = new BucketInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetBucketInfoResponseBodyBucketInfo setAccessControlList(GetBucketInfoResponseBodyBucketInfoAccessControlList accessControlList) {
+        public BucketInfo setAccessControlList(AccessControlList accessControlList) {
             this.accessControlList = accessControlList;
             return this;
         }
-        public GetBucketInfoResponseBodyBucketInfoAccessControlList getAccessControlList() {
+        public AccessControlList getAccessControlList() {
             return this.accessControlList;
         }
 
-        public GetBucketInfoResponseBodyBucketInfo setComment(String comment) {
+        public BucketInfo setComment(String comment) {
             this.comment = comment;
             return this;
         }
@@ -94,7 +94,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
             return this.comment;
         }
 
-        public GetBucketInfoResponseBodyBucketInfo setCreationDate(String creationDate) {
+        public BucketInfo setCreationDate(String creationDate) {
             this.creationDate = creationDate;
             return this;
         }
@@ -102,7 +102,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
             return this.creationDate;
         }
 
-        public GetBucketInfoResponseBodyBucketInfo setCrossRegionReplication(String crossRegionReplication) {
+        public BucketInfo setCrossRegionReplication(String crossRegionReplication) {
             this.crossRegionReplication = crossRegionReplication;
             return this;
         }
@@ -110,7 +110,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
             return this.crossRegionReplication;
         }
 
-        public GetBucketInfoResponseBodyBucketInfo setExtranetEndpoint(String extranetEndpoint) {
+        public BucketInfo setExtranetEndpoint(String extranetEndpoint) {
             this.extranetEndpoint = extranetEndpoint;
             return this;
         }
@@ -118,7 +118,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
             return this.extranetEndpoint;
         }
 
-        public GetBucketInfoResponseBodyBucketInfo setIntranetEndpoint(String intranetEndpoint) {
+        public BucketInfo setIntranetEndpoint(String intranetEndpoint) {
             this.intranetEndpoint = intranetEndpoint;
             return this;
         }
@@ -126,7 +126,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
             return this.intranetEndpoint;
         }
 
-        public GetBucketInfoResponseBodyBucketInfo setLocation(String location) {
+        public BucketInfo setLocation(String location) {
             this.location = location;
             return this;
         }
@@ -134,7 +134,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
             return this.location;
         }
 
-        public GetBucketInfoResponseBodyBucketInfo setName(String name) {
+        public BucketInfo setName(String name) {
             this.name = name;
             return this;
         }
@@ -142,7 +142,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetBucketInfoResponseBodyBucketInfo setOwner(Owner owner) {
+        public BucketInfo setOwner(Owner owner) {
             this.owner = owner;
             return this;
         }
@@ -150,7 +150,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
             return this.owner;
         }
 
-        public GetBucketInfoResponseBodyBucketInfo setStorageClass(String storageClass) {
+        public BucketInfo setStorageClass(String storageClass) {
             this.storageClass = storageClass;
             return this;
         }
@@ -158,7 +158,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
             return this.storageClass;
         }
 
-        public GetBucketInfoResponseBodyBucketInfo setTransferAcceleration(String transferAcceleration) {
+        public BucketInfo setTransferAcceleration(String transferAcceleration) {
             this.transferAcceleration = transferAcceleration;
             return this;
         }

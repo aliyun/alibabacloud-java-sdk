@@ -3,21 +3,21 @@ package com.aliyun.oss20190517.models;
 
 import com.aliyun.tea.*;
 
-public class GetBucketResponse extends TeaModel {
+public class CreateSelectObjectMetaResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetBucketResponseBody body;
+    public SelectMetaStatus body;
 
-    public static GetBucketResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetBucketResponse self = new GetBucketResponse();
+    public static CreateSelectObjectMetaResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateSelectObjectMetaResponse self = new CreateSelectObjectMetaResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetBucketResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateSelectObjectMetaResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class GetBucketResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetBucketResponse setBody(GetBucketResponseBody body) {
+    public CreateSelectObjectMetaResponse setBody(SelectMetaStatus body) {
         this.body = body;
         return this;
     }
-    public GetBucketResponseBody getBody() {
+    public SelectMetaStatus getBody() {
         return this.body;
     }
 

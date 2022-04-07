@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetObjectAclResponseBody extends TeaModel {
     @NameInMap("AccessControlList")
-    public GetObjectAclResponseBodyAccessControlList accessControlList;
+    public AccessControlList accessControlList;
 
     @NameInMap("Owner")
     public Owner owner;
@@ -15,11 +15,11 @@ public class GetObjectAclResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetObjectAclResponseBody setAccessControlList(GetObjectAclResponseBodyAccessControlList accessControlList) {
+    public GetObjectAclResponseBody setAccessControlList(AccessControlList accessControlList) {
         this.accessControlList = accessControlList;
         return this;
     }
-    public GetObjectAclResponseBodyAccessControlList getAccessControlList() {
+    public AccessControlList getAccessControlList() {
         return this.accessControlList;
     }
 
@@ -31,16 +31,16 @@ public class GetObjectAclResponseBody extends TeaModel {
         return this.owner;
     }
 
-    public static class GetObjectAclResponseBodyAccessControlList extends TeaModel {
+    public static class AccessControlList extends TeaModel {
         @NameInMap("Grant")
         public String ACL;
 
-        public static GetObjectAclResponseBodyAccessControlList build(java.util.Map<String, ?> map) throws Exception {
-            GetObjectAclResponseBodyAccessControlList self = new GetObjectAclResponseBodyAccessControlList();
+        public static AccessControlList build(java.util.Map<String, ?> map) throws Exception {
+            AccessControlList self = new AccessControlList();
             return TeaModel.build(map, self);
         }
 
-        public GetObjectAclResponseBodyAccessControlList setACL(String ACL) {
+        public AccessControlList setACL(String ACL) {
             this.ACL = ACL;
             return this;
         }

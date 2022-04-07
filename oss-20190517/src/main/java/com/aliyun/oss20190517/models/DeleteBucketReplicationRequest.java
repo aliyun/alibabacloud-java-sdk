@@ -4,7 +4,7 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class DeleteBucketReplicationRequest extends TeaModel {
-    @NameInMap("body")
+    @NameInMap("ReplicationRules")
     public ReplicationRules body;
 
     public static DeleteBucketReplicationRequest build(java.util.Map<String, ?> map) throws Exception {

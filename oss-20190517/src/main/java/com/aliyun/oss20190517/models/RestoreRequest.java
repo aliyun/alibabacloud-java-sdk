@@ -10,7 +10,7 @@ public class RestoreRequest extends TeaModel {
 
     // description
     @NameInMap("JobParameters")
-    public RestoreRequestJobParameters jobParameters;
+    public JobParameters jobParameters;
 
     public static RestoreRequest build(java.util.Map<String, ?> map) throws Exception {
         RestoreRequest self = new RestoreRequest();
@@ -25,25 +25,25 @@ public class RestoreRequest extends TeaModel {
         return this.days;
     }
 
-    public RestoreRequest setJobParameters(RestoreRequestJobParameters jobParameters) {
+    public RestoreRequest setJobParameters(JobParameters jobParameters) {
         this.jobParameters = jobParameters;
         return this;
     }
-    public RestoreRequestJobParameters getJobParameters() {
+    public JobParameters getJobParameters() {
         return this.jobParameters;
     }
 
-    public static class RestoreRequestJobParameters extends TeaModel {
+    public static class JobParameters extends TeaModel {
         // description
         @NameInMap("Tier")
         public String tier;
 
-        public static RestoreRequestJobParameters build(java.util.Map<String, ?> map) throws Exception {
-            RestoreRequestJobParameters self = new RestoreRequestJobParameters();
+        public static JobParameters build(java.util.Map<String, ?> map) throws Exception {
+            JobParameters self = new JobParameters();
             return TeaModel.build(map, self);
         }
 
-        public RestoreRequestJobParameters setTier(String tier) {
+        public JobParameters setTier(String tier) {
             this.tier = tier;
             return this;
         }

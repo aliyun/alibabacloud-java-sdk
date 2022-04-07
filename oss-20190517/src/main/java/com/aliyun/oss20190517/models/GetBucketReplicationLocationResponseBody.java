@@ -8,7 +8,7 @@ public class GetBucketReplicationLocationResponseBody extends TeaModel {
     public java.util.List<String> locations;
 
     @NameInMap("LocationTransferTypeConstraint")
-    public GetBucketReplicationLocationResponseBodyLocationTransferTypeConstraint locationTransferTypeConstraint;
+    public LocationTransferTypeConstraint locationTransferTypeConstraint;
 
     public static GetBucketReplicationLocationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetBucketReplicationLocationResponseBody self = new GetBucketReplicationLocationResponseBody();
@@ -23,24 +23,24 @@ public class GetBucketReplicationLocationResponseBody extends TeaModel {
         return this.locations;
     }
 
-    public GetBucketReplicationLocationResponseBody setLocationTransferTypeConstraint(GetBucketReplicationLocationResponseBodyLocationTransferTypeConstraint locationTransferTypeConstraint) {
+    public GetBucketReplicationLocationResponseBody setLocationTransferTypeConstraint(LocationTransferTypeConstraint locationTransferTypeConstraint) {
         this.locationTransferTypeConstraint = locationTransferTypeConstraint;
         return this;
     }
-    public GetBucketReplicationLocationResponseBodyLocationTransferTypeConstraint getLocationTransferTypeConstraint() {
+    public LocationTransferTypeConstraint getLocationTransferTypeConstraint() {
         return this.locationTransferTypeConstraint;
     }
 
-    public static class GetBucketReplicationLocationResponseBodyLocationTransferTypeConstraint extends TeaModel {
+    public static class LocationTransferTypeConstraint extends TeaModel {
         @NameInMap("LocationTransferType")
         public java.util.List<LocationTransferType> locationTransferTypes;
 
-        public static GetBucketReplicationLocationResponseBodyLocationTransferTypeConstraint build(java.util.Map<String, ?> map) throws Exception {
-            GetBucketReplicationLocationResponseBodyLocationTransferTypeConstraint self = new GetBucketReplicationLocationResponseBodyLocationTransferTypeConstraint();
+        public static LocationTransferTypeConstraint build(java.util.Map<String, ?> map) throws Exception {
+            LocationTransferTypeConstraint self = new LocationTransferTypeConstraint();
             return TeaModel.build(map, self);
         }
 
-        public GetBucketReplicationLocationResponseBodyLocationTransferTypeConstraint setLocationTransferTypes(java.util.List<LocationTransferType> locationTransferTypes) {
+        public LocationTransferTypeConstraint setLocationTransferTypes(java.util.List<LocationTransferType> locationTransferTypes) {
             this.locationTransferTypes = locationTransferTypes;
             return this;
         }

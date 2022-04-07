@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetBucketLifecycleResponseBody extends TeaModel {
     @NameInMap("Rule")
-    public LifecycleRule rule;
+    public java.util.List<LifecycleRule> rules;
 
     public static GetBucketLifecycleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetBucketLifecycleResponseBody self = new GetBucketLifecycleResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetBucketLifecycleResponseBody setRule(LifecycleRule rule) {
-        this.rule = rule;
+    public GetBucketLifecycleResponseBody setRules(java.util.List<LifecycleRule> rules) {
+        this.rules = rules;
         return this;
     }
-    public LifecycleRule getRule() {
-        return this.rule;
+    public java.util.List<LifecycleRule> getRules() {
+        return this.rules;
     }
 
 }

@@ -22,7 +22,7 @@ public class GetBucketInventoryResponseBody extends TeaModel {
     public Boolean isEnabled;
 
     @NameInMap("OptionalFields")
-    public GetBucketInventoryResponseBodyOptionalFields optionalFields;
+    public OptionalFields optionalFields;
 
     @NameInMap("Schedule")
     public InventorySchedule schedule;
@@ -72,11 +72,11 @@ public class GetBucketInventoryResponseBody extends TeaModel {
         return this.isEnabled;
     }
 
-    public GetBucketInventoryResponseBody setOptionalFields(GetBucketInventoryResponseBodyOptionalFields optionalFields) {
+    public GetBucketInventoryResponseBody setOptionalFields(OptionalFields optionalFields) {
         this.optionalFields = optionalFields;
         return this;
     }
-    public GetBucketInventoryResponseBodyOptionalFields getOptionalFields() {
+    public OptionalFields getOptionalFields() {
         return this.optionalFields;
     }
 
@@ -88,16 +88,16 @@ public class GetBucketInventoryResponseBody extends TeaModel {
         return this.schedule;
     }
 
-    public static class GetBucketInventoryResponseBodyOptionalFields extends TeaModel {
+    public static class OptionalFields extends TeaModel {
         @NameInMap("Field")
         public java.util.List<String> field;
 
-        public static GetBucketInventoryResponseBodyOptionalFields build(java.util.Map<String, ?> map) throws Exception {
-            GetBucketInventoryResponseBodyOptionalFields self = new GetBucketInventoryResponseBodyOptionalFields();
+        public static OptionalFields build(java.util.Map<String, ?> map) throws Exception {
+            OptionalFields self = new OptionalFields();
             return TeaModel.build(map, self);
         }
 
-        public GetBucketInventoryResponseBodyOptionalFields setField(java.util.List<String> field) {
+        public OptionalFields setField(java.util.List<String> field) {
             this.field = field;
             return this;
         }

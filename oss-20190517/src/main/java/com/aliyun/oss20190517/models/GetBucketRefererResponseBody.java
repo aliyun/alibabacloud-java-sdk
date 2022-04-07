@@ -8,7 +8,7 @@ public class GetBucketRefererResponseBody extends TeaModel {
     public Boolean allowEmptyReferer;
 
     @NameInMap("RefererList")
-    public GetBucketRefererResponseBodyRefererList refererList;
+    public RefererList refererList;
 
     public static GetBucketRefererResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetBucketRefererResponseBody self = new GetBucketRefererResponseBody();
@@ -23,24 +23,24 @@ public class GetBucketRefererResponseBody extends TeaModel {
         return this.allowEmptyReferer;
     }
 
-    public GetBucketRefererResponseBody setRefererList(GetBucketRefererResponseBodyRefererList refererList) {
+    public GetBucketRefererResponseBody setRefererList(RefererList refererList) {
         this.refererList = refererList;
         return this;
     }
-    public GetBucketRefererResponseBodyRefererList getRefererList() {
+    public RefererList getRefererList() {
         return this.refererList;
     }
 
-    public static class GetBucketRefererResponseBodyRefererList extends TeaModel {
+    public static class RefererList extends TeaModel {
         @NameInMap("Referer")
         public java.util.List<String> referer;
 
-        public static GetBucketRefererResponseBodyRefererList build(java.util.Map<String, ?> map) throws Exception {
-            GetBucketRefererResponseBodyRefererList self = new GetBucketRefererResponseBodyRefererList();
+        public static RefererList build(java.util.Map<String, ?> map) throws Exception {
+            RefererList self = new RefererList();
             return TeaModel.build(map, self);
         }
 
-        public GetBucketRefererResponseBodyRefererList setReferer(java.util.List<String> referer) {
+        public RefererList setReferer(java.util.List<String> referer) {
             this.referer = referer;
             return this;
         }

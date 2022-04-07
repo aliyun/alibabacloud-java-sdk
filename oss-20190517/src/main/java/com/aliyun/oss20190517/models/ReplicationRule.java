@@ -13,7 +13,7 @@ public class ReplicationRule extends TeaModel {
 
     // A short description of EncryptionConfiguration
     @NameInMap("EncryptionConfiguration")
-    public ReplicationRuleEncryptionConfiguration encryptionConfiguration;
+    public EncryptionConfiguration encryptionConfiguration;
 
     // A short description of HistoricalObjectReplication
     @NameInMap("HistoricalObjectReplication")
@@ -58,11 +58,11 @@ public class ReplicationRule extends TeaModel {
         return this.destination;
     }
 
-    public ReplicationRule setEncryptionConfiguration(ReplicationRuleEncryptionConfiguration encryptionConfiguration) {
+    public ReplicationRule setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
     }
-    public ReplicationRuleEncryptionConfiguration getEncryptionConfiguration() {
+    public EncryptionConfiguration getEncryptionConfiguration() {
         return this.encryptionConfiguration;
     }
 
@@ -114,17 +114,17 @@ public class ReplicationRule extends TeaModel {
         return this.syncRole;
     }
 
-    public static class ReplicationRuleEncryptionConfiguration extends TeaModel {
+    public static class EncryptionConfiguration extends TeaModel {
         // kms id
         @NameInMap("ReplicaKmsKeyID")
         public String replicaKmsKeyID;
 
-        public static ReplicationRuleEncryptionConfiguration build(java.util.Map<String, ?> map) throws Exception {
-            ReplicationRuleEncryptionConfiguration self = new ReplicationRuleEncryptionConfiguration();
+        public static EncryptionConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            EncryptionConfiguration self = new EncryptionConfiguration();
             return TeaModel.build(map, self);
         }
 
-        public ReplicationRuleEncryptionConfiguration setReplicaKmsKeyID(String replicaKmsKeyID) {
+        public EncryptionConfiguration setReplicaKmsKeyID(String replicaKmsKeyID) {
             this.replicaKmsKeyID = replicaKmsKeyID;
             return this;
         }

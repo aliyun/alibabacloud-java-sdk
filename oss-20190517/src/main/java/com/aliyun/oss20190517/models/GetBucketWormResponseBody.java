@@ -8,7 +8,7 @@ public class GetBucketWormResponseBody extends TeaModel {
     public String creationDate;
 
     @NameInMap("RetentionPeriodInDays")
-    public Long retentionPeriodInDays;
+    public Integer retentionPeriodInDays;
 
     @NameInMap("State")
     public String state;
@@ -29,11 +29,11 @@ public class GetBucketWormResponseBody extends TeaModel {
         return this.creationDate;
     }
 
-    public GetBucketWormResponseBody setRetentionPeriodInDays(Long retentionPeriodInDays) {
+    public GetBucketWormResponseBody setRetentionPeriodInDays(Integer retentionPeriodInDays) {
         this.retentionPeriodInDays = retentionPeriodInDays;
         return this;
     }
-    public Long getRetentionPeriodInDays() {
+    public Integer getRetentionPeriodInDays() {
         return this.retentionPeriodInDays;
     }
 
