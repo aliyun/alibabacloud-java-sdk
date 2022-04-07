@@ -16,11 +16,11 @@ public class SearchCondition extends TeaModel {
     @NameInMap("authorName")
     public String authorName;
 
-    // 评论级别，1：100转发以内，2：1k以内，3：1w以内，4：10w以内，5，10w+
+    // 评论级别，1：100以内，2：100-1k，3：1k-1w以内，4：1w-10w，5，10w+
     @NameInMap("commentsLevel")
     public Integer commentsLevel;
 
-    // 内容长度级别，1：100以内，2：1k以内，3：1w以内，4：10w以内，5，10w+
+    // 内容长度级别，1：100以内，2：100-1k，3：1k-1w以内，4：1w-10w，5，10w+
     @NameInMap("contentLenLevel")
     public Integer contentLenLevel;
 
@@ -112,7 +112,7 @@ public class SearchCondition extends TeaModel {
     @NameInMap("keywordTagIds")
     public String keywordTagIds;
 
-    // 点赞级别，1：100转发以内，2：1k以内，3：1w以内，4：10w以内，5，10w+
+    // 点赞级别，1：100以内，2：100-1k，3：1k-1w以内，4：1w-10w，5，10w+
     @NameInMap("likesLevel")
     public Integer likesLevel;
 
@@ -160,7 +160,7 @@ public class SearchCondition extends TeaModel {
     @NameInMap("publishTimeStart")
     public Long publishTimeStart;
 
-    // 阅读数级别，1：100转发以内，2：1k以内，3：1w以内，4：10w以内，5，10w+
+    // 阅读级别，1：100以内，2：100-1k，3：1k-1w以内，4：1w-10w，5，10w+
     @NameInMap("readsLevel")
     public Integer readsLevel;
 
@@ -168,7 +168,7 @@ public class SearchCondition extends TeaModel {
     @NameInMap("relevanceLevel")
     public Integer relevanceLevel;
 
-    // 转发级别，1：100转发以内，2：1k以内，3：1w以内，4：10w以内，5，10w+
+    // 转发级别，1：100以内，2：100-1k，3：1k-1w以内，4：1w-10w，5，10w+
     @NameInMap("repostLevel")
     public Integer repostLevel;
 
