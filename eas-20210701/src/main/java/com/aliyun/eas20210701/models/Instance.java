@@ -28,6 +28,10 @@ public class Instance extends TeaModel {
     @NameInMap("LastState")
     public java.util.List<java.util.Map<String, ?>> lastState;
 
+    // 实例的命名空间
+    @NameInMap("Namespace")
+    public String namespace;
+
     // 实例已经启动完成的进程数
     @NameInMap("ReadyProcesses")
     public Integer readyProcesses;
@@ -103,6 +107,14 @@ public class Instance extends TeaModel {
     }
     public java.util.List<java.util.Map<String, ?>> getLastState() {
         return this.lastState;
+    }
+
+    public Instance setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public Instance setReadyProcesses(Integer readyProcesses) {

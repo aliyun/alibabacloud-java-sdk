@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceAutoScalerResponseBody extends TeaModel {
+    @NameInMap("CurrentValues")
+    public java.util.Map<String, ?> currentValues;
+
     // 服务最大实例数
     @NameInMap("MaxReplica")
     public Integer maxReplica;
@@ -27,6 +30,14 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
     public static DescribeServiceAutoScalerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeServiceAutoScalerResponseBody self = new DescribeServiceAutoScalerResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeServiceAutoScalerResponseBody setCurrentValues(java.util.Map<String, ?> currentValues) {
+        this.currentValues = currentValues;
+        return this;
+    }
+    public java.util.Map<String, ?> getCurrentValues() {
+        return this.currentValues;
     }
 
     public DescribeServiceAutoScalerResponseBody setMaxReplica(Integer maxReplica) {

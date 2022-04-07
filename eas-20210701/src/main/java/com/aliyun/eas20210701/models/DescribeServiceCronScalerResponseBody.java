@@ -54,6 +54,9 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceCronScalerResponseBodyScaleJobs extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("LastProbeTime")
         public String lastProbeTime;
 
@@ -75,6 +78,14 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
         public static DescribeServiceCronScalerResponseBodyScaleJobs build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceCronScalerResponseBodyScaleJobs self = new DescribeServiceCronScalerResponseBodyScaleJobs();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceCronScalerResponseBodyScaleJobs setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeServiceCronScalerResponseBodyScaleJobs setLastProbeTime(String lastProbeTime) {
