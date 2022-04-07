@@ -4,8 +4,8 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class RestoreObjectRequest extends TeaModel {
-    @NameInMap("body")
-    public RestoreRequest body;
+    @NameInMap("RestoreRequest")
+    public RestoreRequest restoreRequest;
 
     @NameInMap("versionId")
     public String versionId;
@@ -15,12 +15,12 @@ public class RestoreObjectRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RestoreObjectRequest setBody(RestoreRequest body) {
-        this.body = body;
+    public RestoreObjectRequest setRestoreRequest(RestoreRequest restoreRequest) {
+        this.restoreRequest = restoreRequest;
         return this;
     }
-    public RestoreRequest getBody() {
-        return this.body;
+    public RestoreRequest getRestoreRequest() {
+        return this.restoreRequest;
     }
 
     public RestoreObjectRequest setVersionId(String versionId) {

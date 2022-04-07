@@ -26,7 +26,7 @@ public class RoutingRuleRedirect extends TeaModel {
 
     // description
     @NameInMap("MirrorHeaders")
-    public RoutingRuleRedirectMirrorHeaders mirrorHeaders;
+    public MirrorHeaders mirrorHeaders;
 
     // description
     @NameInMap("MirrorPassQueryString")
@@ -38,7 +38,7 @@ public class RoutingRuleRedirect extends TeaModel {
 
     // description
     @NameInMap("PassQueryString")
-    public String passQueryString;
+    public Boolean passQueryString;
 
     // description
     @NameInMap("Protocol")
@@ -105,11 +105,11 @@ public class RoutingRuleRedirect extends TeaModel {
         return this.mirrorFollowRedirect;
     }
 
-    public RoutingRuleRedirect setMirrorHeaders(RoutingRuleRedirectMirrorHeaders mirrorHeaders) {
+    public RoutingRuleRedirect setMirrorHeaders(MirrorHeaders mirrorHeaders) {
         this.mirrorHeaders = mirrorHeaders;
         return this;
     }
-    public RoutingRuleRedirectMirrorHeaders getMirrorHeaders() {
+    public MirrorHeaders getMirrorHeaders() {
         return this.mirrorHeaders;
     }
 
@@ -129,11 +129,11 @@ public class RoutingRuleRedirect extends TeaModel {
         return this.mirrorURL;
     }
 
-    public RoutingRuleRedirect setPassQueryString(String passQueryString) {
+    public RoutingRuleRedirect setPassQueryString(Boolean passQueryString) {
         this.passQueryString = passQueryString;
         return this;
     }
-    public String getPassQueryString() {
+    public Boolean getPassQueryString() {
         return this.passQueryString;
     }
 
@@ -177,7 +177,7 @@ public class RoutingRuleRedirect extends TeaModel {
         return this.transparentMirrorResponseCodes;
     }
 
-    public static class RoutingRuleRedirectMirrorHeadersSet extends TeaModel {
+    public static class Set extends TeaModel {
         // description
         @NameInMap("Key")
         public String key;
@@ -186,12 +186,12 @@ public class RoutingRuleRedirect extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static RoutingRuleRedirectMirrorHeadersSet build(java.util.Map<String, ?> map) throws Exception {
-            RoutingRuleRedirectMirrorHeadersSet self = new RoutingRuleRedirectMirrorHeadersSet();
+        public static Set build(java.util.Map<String, ?> map) throws Exception {
+            Set self = new Set();
             return TeaModel.build(map, self);
         }
 
-        public RoutingRuleRedirectMirrorHeadersSet setKey(String key) {
+        public Set setKey(String key) {
             this.key = key;
             return this;
         }
@@ -199,7 +199,7 @@ public class RoutingRuleRedirect extends TeaModel {
             return this.key;
         }
 
-        public RoutingRuleRedirectMirrorHeadersSet setValue(String value) {
+        public Set setValue(String value) {
             this.value = value;
             return this;
         }
@@ -209,7 +209,7 @@ public class RoutingRuleRedirect extends TeaModel {
 
     }
 
-    public static class RoutingRuleRedirectMirrorHeaders extends TeaModel {
+    public static class MirrorHeaders extends TeaModel {
         // description
         @NameInMap("Pass")
         public java.util.List<String> pass;
@@ -224,14 +224,14 @@ public class RoutingRuleRedirect extends TeaModel {
 
         // description
         @NameInMap("Set")
-        public java.util.List<RoutingRuleRedirectMirrorHeadersSet> set;
+        public java.util.List<Set> set;
 
-        public static RoutingRuleRedirectMirrorHeaders build(java.util.Map<String, ?> map) throws Exception {
-            RoutingRuleRedirectMirrorHeaders self = new RoutingRuleRedirectMirrorHeaders();
+        public static MirrorHeaders build(java.util.Map<String, ?> map) throws Exception {
+            MirrorHeaders self = new MirrorHeaders();
             return TeaModel.build(map, self);
         }
 
-        public RoutingRuleRedirectMirrorHeaders setPass(java.util.List<String> pass) {
+        public MirrorHeaders setPass(java.util.List<String> pass) {
             this.pass = pass;
             return this;
         }
@@ -239,7 +239,7 @@ public class RoutingRuleRedirect extends TeaModel {
             return this.pass;
         }
 
-        public RoutingRuleRedirectMirrorHeaders setPassAll(Boolean passAll) {
+        public MirrorHeaders setPassAll(Boolean passAll) {
             this.passAll = passAll;
             return this;
         }
@@ -247,7 +247,7 @@ public class RoutingRuleRedirect extends TeaModel {
             return this.passAll;
         }
 
-        public RoutingRuleRedirectMirrorHeaders setRemove(java.util.List<String> remove) {
+        public MirrorHeaders setRemove(java.util.List<String> remove) {
             this.remove = remove;
             return this;
         }
@@ -255,11 +255,11 @@ public class RoutingRuleRedirect extends TeaModel {
             return this.remove;
         }
 
-        public RoutingRuleRedirectMirrorHeaders setSet(java.util.List<RoutingRuleRedirectMirrorHeadersSet> set) {
+        public MirrorHeaders setSet(java.util.List<Set> set) {
             this.set = set;
             return this;
         }
-        public java.util.List<RoutingRuleRedirectMirrorHeadersSet> getSet() {
+        public java.util.List<Set> getSet() {
             return this.set;
         }
 

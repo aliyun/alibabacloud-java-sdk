@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadPartCopyRequest extends TeaModel {
     @NameInMap("partNumber")
-    public String partNumber;
+    public Long partNumber;
 
     @NameInMap("uploadId")
     public String uploadId;
@@ -15,11 +15,11 @@ public class UploadPartCopyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UploadPartCopyRequest setPartNumber(String partNumber) {
+    public UploadPartCopyRequest setPartNumber(Long partNumber) {
         this.partNumber = partNumber;
         return this;
     }
-    public String getPartNumber() {
+    public Long getPartNumber() {
         return this.partNumber;
     }
 

@@ -7,6 +7,12 @@ public class ListMultipartUploadsResponseBody extends TeaModel {
     @NameInMap("Bucket")
     public String bucket;
 
+    @NameInMap("CommonPrefixes")
+    public java.util.List<CommonPrefix> commonPrefixes;
+
+    @NameInMap("Delimiter")
+    public String delimiter;
+
     @NameInMap("EncodingType")
     public String encodingType;
 
@@ -22,8 +28,11 @@ public class ListMultipartUploadsResponseBody extends TeaModel {
     @NameInMap("NextKeyMarker")
     public String nextKeyMarker;
 
-    @NameInMap("NextUploadMarker")
-    public String nextUploadMarker;
+    @NameInMap("NextUploadIdMarker")
+    public String nextUploadIdMarker;
+
+    @NameInMap("Prefix")
+    public String prefix;
 
     @NameInMap("Upload")
     public java.util.List<Upload> uploads;
@@ -42,6 +51,22 @@ public class ListMultipartUploadsResponseBody extends TeaModel {
     }
     public String getBucket() {
         return this.bucket;
+    }
+
+    public ListMultipartUploadsResponseBody setCommonPrefixes(java.util.List<CommonPrefix> commonPrefixes) {
+        this.commonPrefixes = commonPrefixes;
+        return this;
+    }
+    public java.util.List<CommonPrefix> getCommonPrefixes() {
+        return this.commonPrefixes;
+    }
+
+    public ListMultipartUploadsResponseBody setDelimiter(String delimiter) {
+        this.delimiter = delimiter;
+        return this;
+    }
+    public String getDelimiter() {
+        return this.delimiter;
     }
 
     public ListMultipartUploadsResponseBody setEncodingType(String encodingType) {
@@ -84,12 +109,20 @@ public class ListMultipartUploadsResponseBody extends TeaModel {
         return this.nextKeyMarker;
     }
 
-    public ListMultipartUploadsResponseBody setNextUploadMarker(String nextUploadMarker) {
-        this.nextUploadMarker = nextUploadMarker;
+    public ListMultipartUploadsResponseBody setNextUploadIdMarker(String nextUploadIdMarker) {
+        this.nextUploadIdMarker = nextUploadIdMarker;
         return this;
     }
-    public String getNextUploadMarker() {
-        return this.nextUploadMarker;
+    public String getNextUploadIdMarker() {
+        return this.nextUploadIdMarker;
+    }
+
+    public ListMultipartUploadsResponseBody setPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    public String getPrefix() {
+        return this.prefix;
     }
 
     public ListMultipartUploadsResponseBody setUploads(java.util.List<Upload> uploads) {

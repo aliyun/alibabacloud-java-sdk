@@ -4,7 +4,7 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class LifecycleConfiguration extends TeaModel {
-    // 生命周期规则
+    // description
     @NameInMap("Rule")
     public java.util.List<LifecycleRule> rule;
 

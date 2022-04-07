@@ -10,7 +10,7 @@ public class LocationTransferType extends TeaModel {
 
     // The container that stores the transmission type
     @NameInMap("TransferTypes")
-    public LocationTransferTypeTransferTypes transferTypes;
+    public TransferTypes transferTypes;
 
     public static LocationTransferType build(java.util.Map<String, ?> map) throws Exception {
         LocationTransferType self = new LocationTransferType();
@@ -25,25 +25,25 @@ public class LocationTransferType extends TeaModel {
         return this.location;
     }
 
-    public LocationTransferType setTransferTypes(LocationTransferTypeTransferTypes transferTypes) {
+    public LocationTransferType setTransferTypes(TransferTypes transferTypes) {
         this.transferTypes = transferTypes;
         return this;
     }
-    public LocationTransferTypeTransferTypes getTransferTypes() {
+    public TransferTypes getTransferTypes() {
         return this.transferTypes;
     }
 
-    public static class LocationTransferTypeTransferTypes extends TeaModel {
+    public static class TransferTypes extends TeaModel {
         // The link used to transfer data in Cross-region replication
         @NameInMap("Type")
         public String type;
 
-        public static LocationTransferTypeTransferTypes build(java.util.Map<String, ?> map) throws Exception {
-            LocationTransferTypeTransferTypes self = new LocationTransferTypeTransferTypes();
+        public static TransferTypes build(java.util.Map<String, ?> map) throws Exception {
+            TransferTypes self = new TransferTypes();
             return TeaModel.build(map, self);
         }
 
-        public LocationTransferTypeTransferTypes setType(String type) {
+        public TransferTypes setType(String type) {
             this.type = type;
             return this;
         }

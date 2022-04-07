@@ -23,7 +23,7 @@ public class InventoryConfiguration extends TeaModel {
 
     // The container that stores the configuration fields included in the inventory list
     @NameInMap("OptionalFields")
-    public InventoryConfigurationOptionalFields optionalFields;
+    public OptionalFields optionalFields;
 
     @NameInMap("Schedule")
     public InventorySchedule schedule;
@@ -73,11 +73,11 @@ public class InventoryConfiguration extends TeaModel {
         return this.isEnabled;
     }
 
-    public InventoryConfiguration setOptionalFields(InventoryConfigurationOptionalFields optionalFields) {
+    public InventoryConfiguration setOptionalFields(OptionalFields optionalFields) {
         this.optionalFields = optionalFields;
         return this;
     }
-    public InventoryConfigurationOptionalFields getOptionalFields() {
+    public OptionalFields getOptionalFields() {
         return this.optionalFields;
     }
 
@@ -89,17 +89,17 @@ public class InventoryConfiguration extends TeaModel {
         return this.schedule;
     }
 
-    public static class InventoryConfigurationOptionalFields extends TeaModel {
+    public static class OptionalFields extends TeaModel {
         // field list
         @NameInMap("Field")
         public java.util.List<String> fields;
 
-        public static InventoryConfigurationOptionalFields build(java.util.Map<String, ?> map) throws Exception {
-            InventoryConfigurationOptionalFields self = new InventoryConfigurationOptionalFields();
+        public static OptionalFields build(java.util.Map<String, ?> map) throws Exception {
+            OptionalFields self = new OptionalFields();
             return TeaModel.build(map, self);
         }
 
-        public InventoryConfigurationOptionalFields setFields(java.util.List<String> fields) {
+        public OptionalFields setFields(java.util.List<String> fields) {
             this.fields = fields;
             return this;
         }

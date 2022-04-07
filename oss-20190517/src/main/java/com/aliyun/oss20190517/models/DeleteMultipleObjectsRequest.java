@@ -4,10 +4,7 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class DeleteMultipleObjectsRequest extends TeaModel {
-    @NameInMap("body")
-    public Delete body;
-
-    @NameInMap("delete")
+    @NameInMap("Delete")
     public Delete delete;
 
     @NameInMap("encoding-type")
@@ -16,14 +13,6 @@ public class DeleteMultipleObjectsRequest extends TeaModel {
     public static DeleteMultipleObjectsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMultipleObjectsRequest self = new DeleteMultipleObjectsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteMultipleObjectsRequest setBody(Delete body) {
-        this.body = body;
-        return this;
-    }
-    public Delete getBody() {
-        return this.body;
     }
 
     public DeleteMultipleObjectsRequest setDelete(Delete delete) {

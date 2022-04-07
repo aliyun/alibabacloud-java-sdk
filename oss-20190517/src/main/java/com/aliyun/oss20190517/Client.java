@@ -44,7 +44,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new AbortBucketWormResponse());
     }
@@ -79,7 +79,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new AbortMultipartUploadResponse());
     }
@@ -157,7 +157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "binary"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new AppendObjectResponse());
     }
@@ -191,7 +191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new CompleteBucketWormResponse());
     }
@@ -305,8 +305,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("x-oss-object-acl", com.aliyun.teautil.Common.toJSONString(headers.acl));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.sse)) {
-            realHeaders.put("x-oss-server-side-encryption", com.aliyun.teautil.Common.toJSONString(headers.sse));
+        if (!com.aliyun.teautil.Common.isUnset(headers.serverSideEncryption)) {
+            realHeaders.put("x-oss-server-side-encryption", com.aliyun.teautil.Common.toJSONString(headers.serverSideEncryption));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.sseKeyId)) {
@@ -321,8 +321,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("x-oss-tagging", com.aliyun.teautil.Common.toJSONString(headers.tagging));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xOssTaggingDirective)) {
-            realHeaders.put("x-oss-tagging-directive", com.aliyun.teautil.Common.toJSONString(headers.xOssTaggingDirective));
+        if (!com.aliyun.teautil.Common.isUnset(headers.taggingDirective)) {
+            realHeaders.put("x-oss-tagging-directive", com.aliyun.teautil.Common.toJSONString(headers.taggingDirective));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -337,10 +337,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "binary"),
+            new TeaPair("reqBodyType", "xml"),
             new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new CopyObjectResponse());
+    }
+
+    public CreateSelectObjectMetaResponse createSelectObjectMeta(String bucket, String key, CreateSelectObjectMetaRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createSelectObjectMetaWithOptions(bucket, key, request, headers, runtime);
+    }
+
+    public CreateSelectObjectMetaResponse createSelectObjectMetaWithOptions(String bucket, String key, CreateSelectObjectMetaRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("bucket", bucket);
+        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.selectMetaRequest)))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSelectObjectMeta"),
+            new TeaPair("version", "2019-05-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + key + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "xml"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateSelectObjectMetaResponse());
     }
 
     public DeleteBucketResponse deleteBucket(String bucket) throws Exception {
@@ -365,7 +395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketResponse());
     }
@@ -392,7 +422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketCorsResponse());
     }
@@ -419,7 +449,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketEncryptionResponse());
     }
@@ -453,7 +483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketInventoryResponse());
     }
@@ -480,7 +510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketLifecycleResponse());
     }
@@ -507,7 +537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketLoggingResponse());
     }
@@ -534,7 +564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketPolicyResponse());
     }
@@ -549,15 +579,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.body))) {
-            body.put("body", request.body);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.body)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteBucketReplication"),
@@ -568,7 +593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketReplicationResponse());
     }
@@ -595,7 +620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketTagsResponse());
     }
@@ -622,7 +647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketWebsiteResponse());
     }
@@ -650,33 +675,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteLiveChannelResponse());
     }
 
-    public DeleteMultipleObjectsResponse deleteMultipleObjects(DeleteMultipleObjectsRequest request) throws Exception {
+    public DeleteMultipleObjectsResponse deleteMultipleObjects(String bucket, DeleteMultipleObjectsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteMultipleObjectsWithOptions(request, headers, runtime);
+        return this.deleteMultipleObjectsWithOptions(bucket, request, headers, runtime);
     }
 
-    public DeleteMultipleObjectsResponse deleteMultipleObjectsWithOptions(DeleteMultipleObjectsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteMultipleObjectsResponse deleteMultipleObjectsWithOptions(String bucket, DeleteMultipleObjectsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("bucket", bucket);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.encodingType)) {
             query.put("encoding-type", request.encodingType);
         }
 
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.delete))) {
-            body.put("delete", request.delete);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.delete)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteMultipleObjects"),
@@ -721,7 +744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "binary"),
+            new TeaPair("reqBodyType", "xml"),
             new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteObjectResponse());
@@ -757,7 +780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteObjectTaggingResponse());
     }
@@ -828,59 +851,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new ExtendBucketWormResponse());
-    }
-
-    public GetBucketResponse getBucket(String bucket, GetBucketRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketWithOptions(bucket, request, headers, runtime);
-    }
-
-    public GetBucketResponse getBucketWithOptions(String bucket, GetBucketRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("bucket", bucket);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.delimiter)) {
-            query.put("delimiter", request.delimiter);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.encodingType)) {
-            query.put("encoding-type", request.encodingType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.marker)) {
-            query.put("marker", request.marker);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.maxKeys)) {
-            query.put("max-keys", request.maxKeys);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.prefix)) {
-            query.put("prefix", request.prefix);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetBucket"),
-            new TeaPair("version", "2019-05-17"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "xml"),
             new TeaPair("bodyType", "xml")
         ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ExtendBucketWormResponse());
     }
 
     public GetBucketAclResponse getBucketAcl(String bucket) throws Exception {
@@ -1642,7 +1615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "HEAD"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "binary"),
+            new TeaPair("reqBodyType", "xml"),
             new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new GetObjectMetaResponse());
@@ -1683,45 +1656,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetObjectTaggingResponse());
     }
 
-    public GetServiceResponse getService(GetServiceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getServiceWithOptions(request, headers, runtime);
-    }
-
-    public GetServiceResponse getServiceWithOptions(GetServiceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.marker)) {
-            query.put("marker", request.marker);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.maxKeys)) {
-            query.put("max-keys", request.maxKeys);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.prefix)) {
-            query.put("prefix", request.prefix);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetService"),
-            new TeaPair("version", "2019-05-17"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "xml")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new GetServiceResponse());
-    }
-
     public GetSymlinkResponse getSymlink(String bucket, String key, GetSymlinkRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1752,7 +1686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new GetSymlinkResponse());
     }
@@ -1862,15 +1796,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.initiateWormConfiguration))) {
-            body.put("InitiateWormConfiguration", request.initiateWormConfiguration);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.initiateWormConfiguration)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "InitiateBucketWorm"),
@@ -1881,7 +1810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new InitiateBucketWormResponse());
     }
@@ -2390,7 +2319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new OptionObjectResponse());
     }
@@ -2417,7 +2346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "none"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PostObjectResponse());
     }
@@ -2457,7 +2386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PostVodPlaylistResponse());
     }
@@ -2472,11 +2401,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.createBucketConfiguration))) {
-            body.put("CreateBucketConfiguration", request.createBucketConfiguration);
-        }
-
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -2489,7 +2413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", realHeaders),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.createBucketConfiguration)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucket"),
@@ -2500,7 +2424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketResponse());
     }
@@ -2536,7 +2460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketAclResponse());
     }
@@ -2551,15 +2475,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.cORSConfiguration))) {
-            body.put("CORSConfiguration", request.cORSConfiguration);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.cORSConfiguration)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketCors"),
@@ -2570,7 +2489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketCorsResponse());
     }
@@ -2585,15 +2504,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.serverSideEncryptionRule))) {
-            body.put("ServerSideEncryptionRule", request.serverSideEncryptionRule);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.serverSideEncryptionRule)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketEncryption"),
@@ -2604,7 +2518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketEncryptionResponse());
     }
@@ -2624,16 +2538,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("inventoryId", request.inventoryId);
         }
 
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.inventoryConfiguration))) {
-            body.put("InventoryConfiguration", request.inventoryConfiguration);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.inventoryConfiguration)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketInventory"),
@@ -2644,7 +2553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketInventoryResponse());
     }
@@ -2659,15 +2568,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.lifecycleConfiguration))) {
-            body.put("LifecycleConfiguration", request.lifecycleConfiguration);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.lifecycleConfiguration)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketLifecycle"),
@@ -2678,7 +2582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketLifecycleResponse());
     }
@@ -2693,15 +2597,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.bucketLoggingStatus))) {
-            body.put("BucketLoggingStatus", request.bucketLoggingStatus);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.bucketLoggingStatus)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketLogging"),
@@ -2712,7 +2611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketLoggingResponse());
     }
@@ -2741,7 +2640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketPolicyResponse());
     }
@@ -2756,15 +2655,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.refererConfiguration))) {
-            body.put("RefererConfiguration", request.refererConfiguration);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.refererConfiguration)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketReferer"),
@@ -2775,7 +2669,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketRefererResponse());
     }
@@ -2790,15 +2684,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.replicationConfiguration))) {
-            body.put("ReplicationConfiguration", request.replicationConfiguration);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.replicationConfiguration)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketReplication"),
@@ -2809,7 +2698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketReplicationResponse());
     }
@@ -2824,15 +2713,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.requestPaymentConfiguration))) {
-            body.put("RequestPaymentConfiguration", request.requestPaymentConfiguration);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.requestPaymentConfiguration)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketRequestPayment"),
@@ -2843,7 +2727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketRequestPaymentResponse());
     }
@@ -2858,15 +2742,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.tagging))) {
-            body.put("Tagging", request.tagging);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.tagging)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketTags"),
@@ -2877,7 +2756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketTagsResponse());
     }
@@ -2892,15 +2771,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.transferAccelerationConfiguration))) {
-            body.put("TransferAccelerationConfiguration", request.transferAccelerationConfiguration);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.transferAccelerationConfiguration)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketTransferAcceleration"),
@@ -2911,7 +2785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketTransferAccelerationResponse());
     }
@@ -2926,15 +2800,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.versioningConfiguration))) {
-            body.put("VersioningConfiguration", request.versioningConfiguration);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.versioningConfiguration)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketVersioning"),
@@ -2945,7 +2814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketVersioningResponse());
     }
@@ -2960,15 +2829,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.websiteConfiguration))) {
-            body.put("WebsiteConfiguration", request.websiteConfiguration);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.websiteConfiguration)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketWebsite"),
@@ -2979,7 +2843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketWebsiteResponse());
     }
@@ -2995,15 +2859,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
         channel = com.aliyun.openapiutil.Client.getEncodeParam(channel);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.liveChannelConfiguration))) {
-            body.put("LiveChannelConfiguration", request.liveChannelConfiguration);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.liveChannelConfiguration)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutLiveChannel"),
@@ -3049,7 +2908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutLiveChannelStatusResponse());
     }
@@ -3161,7 +3020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutObjectAclResponse());
     }
@@ -3182,16 +3041,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("versionId", request.versionId);
         }
 
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.tagging))) {
-            body.put("Tagging", request.tagging);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.tagging)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutObjectTagging"),
@@ -3202,7 +3056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutObjectTaggingResponse());
     }
@@ -3251,7 +3105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PutSymlinkResponse());
     }
@@ -3272,16 +3126,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("versionId", request.versionId);
         }
 
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.body))) {
-            body.put("body", request.body);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.restoreRequest)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RestoreObject"),
@@ -3292,7 +3141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new RestoreObjectResponse());
     }
@@ -3308,15 +3157,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
         key = com.aliyun.openapiutil.Client.getEncodeParam(key);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.selectRequest))) {
-            body.put("SelectRequest", request.selectRequest);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.selectRequest)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SelectObject"),
@@ -3368,7 +3212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "binary"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new UploadPartResponse());
     }

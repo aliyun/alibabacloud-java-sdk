@@ -35,7 +35,7 @@ public class CopyObjectHeaders extends TeaModel {
     public String acl;
 
     @NameInMap("x-oss-server-side-encryption")
-    public String sse;
+    public String serverSideEncryption;
 
     @NameInMap("x-oss-server-side-encryption-key-id")
     public String sseKeyId;
@@ -47,7 +47,7 @@ public class CopyObjectHeaders extends TeaModel {
     public String tagging;
 
     @NameInMap("x-oss-tagging-directive")
-    public String xOssTaggingDirective;
+    public String taggingDirective;
 
     public static CopyObjectHeaders build(java.util.Map<String, ?> map) throws Exception {
         CopyObjectHeaders self = new CopyObjectHeaders();
@@ -134,12 +134,12 @@ public class CopyObjectHeaders extends TeaModel {
         return this.acl;
     }
 
-    public CopyObjectHeaders setSse(String sse) {
-        this.sse = sse;
+    public CopyObjectHeaders setServerSideEncryption(String serverSideEncryption) {
+        this.serverSideEncryption = serverSideEncryption;
         return this;
     }
-    public String getSse() {
-        return this.sse;
+    public String getServerSideEncryption() {
+        return this.serverSideEncryption;
     }
 
     public CopyObjectHeaders setSseKeyId(String sseKeyId) {
@@ -166,12 +166,12 @@ public class CopyObjectHeaders extends TeaModel {
         return this.tagging;
     }
 
-    public CopyObjectHeaders setXOssTaggingDirective(String xOssTaggingDirective) {
-        this.xOssTaggingDirective = xOssTaggingDirective;
+    public CopyObjectHeaders setTaggingDirective(String taggingDirective) {
+        this.taggingDirective = taggingDirective;
         return this;
     }
-    public String getXOssTaggingDirective() {
-        return this.xOssTaggingDirective;
+    public String getTaggingDirective() {
+        return this.taggingDirective;
     }
 
 }

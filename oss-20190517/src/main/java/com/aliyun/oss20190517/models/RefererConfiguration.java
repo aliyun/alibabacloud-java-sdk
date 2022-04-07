@@ -8,9 +8,13 @@ public class RefererConfiguration extends TeaModel {
     @NameInMap("AllowEmptyReferer")
     public Boolean allowEmptyReferer;
 
+    // description
+    @NameInMap("AllowTruncateQueryString")
+    public Boolean allowTruncateQueryString;
+
     // 保存Referer访问白名单
     @NameInMap("RefererList")
-    public RefererConfigurationRefererList refererList;
+    public RefererList refererList;
 
     public static RefererConfiguration build(java.util.Map<String, ?> map) throws Exception {
         RefererConfiguration self = new RefererConfiguration();
@@ -25,25 +29,33 @@ public class RefererConfiguration extends TeaModel {
         return this.allowEmptyReferer;
     }
 
-    public RefererConfiguration setRefererList(RefererConfigurationRefererList refererList) {
+    public RefererConfiguration setAllowTruncateQueryString(Boolean allowTruncateQueryString) {
+        this.allowTruncateQueryString = allowTruncateQueryString;
+        return this;
+    }
+    public Boolean getAllowTruncateQueryString() {
+        return this.allowTruncateQueryString;
+    }
+
+    public RefererConfiguration setRefererList(RefererList refererList) {
         this.refererList = refererList;
         return this;
     }
-    public RefererConfigurationRefererList getRefererList() {
+    public RefererList getRefererList() {
         return this.refererList;
     }
 
-    public static class RefererConfigurationRefererList extends TeaModel {
+    public static class RefererList extends TeaModel {
         // 指定一条Referer访问白名单
         @NameInMap("Referer")
         public java.util.List<String> referer;
 
-        public static RefererConfigurationRefererList build(java.util.Map<String, ?> map) throws Exception {
-            RefererConfigurationRefererList self = new RefererConfigurationRefererList();
+        public static RefererList build(java.util.Map<String, ?> map) throws Exception {
+            RefererList self = new RefererList();
             return TeaModel.build(map, self);
         }
 
-        public RefererConfigurationRefererList setReferer(java.util.List<String> referer) {
+        public RefererList setReferer(java.util.List<String> referer) {
             this.referer = referer;
             return this;
         }

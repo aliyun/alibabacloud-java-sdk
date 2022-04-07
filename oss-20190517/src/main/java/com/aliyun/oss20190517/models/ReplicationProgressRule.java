@@ -24,7 +24,7 @@ public class ReplicationProgressRule extends TeaModel {
 
     // A short description of Progress
     @NameInMap("Progress")
-    public ReplicationProgressRuleProgress progress;
+    public Progress progress;
 
     // A short description of action
     @NameInMap("Status")
@@ -75,11 +75,11 @@ public class ReplicationProgressRule extends TeaModel {
         return this.prefixSet;
     }
 
-    public ReplicationProgressRule setProgress(ReplicationProgressRuleProgress progress) {
+    public ReplicationProgressRule setProgress(Progress progress) {
         this.progress = progress;
         return this;
     }
-    public ReplicationProgressRuleProgress getProgress() {
+    public Progress getProgress() {
         return this.progress;
     }
 
@@ -91,7 +91,7 @@ public class ReplicationProgressRule extends TeaModel {
         return this.status;
     }
 
-    public static class ReplicationProgressRuleProgress extends TeaModel {
+    public static class Progress extends TeaModel {
         // A short description of HistoricalObject
         @NameInMap("HistoricalObject")
         public String historicalObject;
@@ -100,12 +100,12 @@ public class ReplicationProgressRule extends TeaModel {
         @NameInMap("NewObject")
         public String newObject;
 
-        public static ReplicationProgressRuleProgress build(java.util.Map<String, ?> map) throws Exception {
-            ReplicationProgressRuleProgress self = new ReplicationProgressRuleProgress();
+        public static Progress build(java.util.Map<String, ?> map) throws Exception {
+            Progress self = new Progress();
             return TeaModel.build(map, self);
         }
 
-        public ReplicationProgressRuleProgress setHistoricalObject(String historicalObject) {
+        public Progress setHistoricalObject(String historicalObject) {
             this.historicalObject = historicalObject;
             return this;
         }
@@ -113,7 +113,7 @@ public class ReplicationProgressRule extends TeaModel {
             return this.historicalObject;
         }
 
-        public ReplicationProgressRuleProgress setNewObject(String newObject) {
+        public Progress setNewObject(String newObject) {
             this.newObject = newObject;
             return this;
         }

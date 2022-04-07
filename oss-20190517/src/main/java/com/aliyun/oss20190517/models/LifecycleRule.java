@@ -6,11 +6,11 @@ import com.aliyun.tea.*;
 public class LifecycleRule extends TeaModel {
     // 未完成分片上传的过期属性
     @NameInMap("AbortMultipartUpload")
-    public LifecycleRuleLifecycleAbortMultipartUpload lifecycleAbortMultipartUpload;
+    public LifecycleAbortMultipartUpload lifecycleAbortMultipartUpload;
 
     // 过期属性
     @NameInMap("Expiration")
-    public LifecycleRuleLifecycleExpiration lifecycleExpiration;
+    public LifecycleExpiration lifecycleExpiration;
 
     // 规则标识
     @NameInMap("ID")
@@ -18,11 +18,11 @@ public class LifecycleRule extends TeaModel {
 
     // 非当前版本生命周期规则的过期属性
     @NameInMap("NoncurrentVersionExpiration")
-    public LifecycleRuleNoncurrentVersionExpiration noncurrentVersionExpiration;
+    public NoncurrentVersionExpiration noncurrentVersionExpiration;
 
     // 非当前版本生命周期规则的转储属性
     @NameInMap("NoncurrentVersionTransition")
-    public java.util.List<LifecycleRuleNoncurrentVersionTransition> noncurrentVersionTransition;
+    public java.util.List<NoncurrentVersionTransition> noncurrentVersionTransition;
 
     // 指定规则所适用的前缀
     @NameInMap("Prefix")
@@ -34,30 +34,30 @@ public class LifecycleRule extends TeaModel {
 
     // 标签列表
     @NameInMap("Tag")
-    public java.util.List<LifecycleRuleTag> tag;
+    public java.util.List<Tag> tag;
 
     // 存储类型转换
     @NameInMap("Transition")
-    public java.util.List<LifecycleRuleLifecycleTransition> lifecycleTransition;
+    public java.util.List<LifecycleTransition> lifecycleTransition;
 
     public static LifecycleRule build(java.util.Map<String, ?> map) throws Exception {
         LifecycleRule self = new LifecycleRule();
         return TeaModel.build(map, self);
     }
 
-    public LifecycleRule setLifecycleAbortMultipartUpload(LifecycleRuleLifecycleAbortMultipartUpload lifecycleAbortMultipartUpload) {
+    public LifecycleRule setLifecycleAbortMultipartUpload(LifecycleAbortMultipartUpload lifecycleAbortMultipartUpload) {
         this.lifecycleAbortMultipartUpload = lifecycleAbortMultipartUpload;
         return this;
     }
-    public LifecycleRuleLifecycleAbortMultipartUpload getLifecycleAbortMultipartUpload() {
+    public LifecycleAbortMultipartUpload getLifecycleAbortMultipartUpload() {
         return this.lifecycleAbortMultipartUpload;
     }
 
-    public LifecycleRule setLifecycleExpiration(LifecycleRuleLifecycleExpiration lifecycleExpiration) {
+    public LifecycleRule setLifecycleExpiration(LifecycleExpiration lifecycleExpiration) {
         this.lifecycleExpiration = lifecycleExpiration;
         return this;
     }
-    public LifecycleRuleLifecycleExpiration getLifecycleExpiration() {
+    public LifecycleExpiration getLifecycleExpiration() {
         return this.lifecycleExpiration;
     }
 
@@ -69,19 +69,19 @@ public class LifecycleRule extends TeaModel {
         return this.ID;
     }
 
-    public LifecycleRule setNoncurrentVersionExpiration(LifecycleRuleNoncurrentVersionExpiration noncurrentVersionExpiration) {
+    public LifecycleRule setNoncurrentVersionExpiration(NoncurrentVersionExpiration noncurrentVersionExpiration) {
         this.noncurrentVersionExpiration = noncurrentVersionExpiration;
         return this;
     }
-    public LifecycleRuleNoncurrentVersionExpiration getNoncurrentVersionExpiration() {
+    public NoncurrentVersionExpiration getNoncurrentVersionExpiration() {
         return this.noncurrentVersionExpiration;
     }
 
-    public LifecycleRule setNoncurrentVersionTransition(java.util.List<LifecycleRuleNoncurrentVersionTransition> noncurrentVersionTransition) {
+    public LifecycleRule setNoncurrentVersionTransition(java.util.List<NoncurrentVersionTransition> noncurrentVersionTransition) {
         this.noncurrentVersionTransition = noncurrentVersionTransition;
         return this;
     }
-    public java.util.List<LifecycleRuleNoncurrentVersionTransition> getNoncurrentVersionTransition() {
+    public java.util.List<NoncurrentVersionTransition> getNoncurrentVersionTransition() {
         return this.noncurrentVersionTransition;
     }
 
@@ -101,23 +101,23 @@ public class LifecycleRule extends TeaModel {
         return this.status;
     }
 
-    public LifecycleRule setTag(java.util.List<LifecycleRuleTag> tag) {
+    public LifecycleRule setTag(java.util.List<Tag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<LifecycleRuleTag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
-    public LifecycleRule setLifecycleTransition(java.util.List<LifecycleRuleLifecycleTransition> lifecycleTransition) {
+    public LifecycleRule setLifecycleTransition(java.util.List<LifecycleTransition> lifecycleTransition) {
         this.lifecycleTransition = lifecycleTransition;
         return this;
     }
-    public java.util.List<LifecycleRuleLifecycleTransition> getLifecycleTransition() {
+    public java.util.List<LifecycleTransition> getLifecycleTransition() {
         return this.lifecycleTransition;
     }
 
-    public static class LifecycleRuleLifecycleAbortMultipartUpload extends TeaModel {
+    public static class LifecycleAbortMultipartUpload extends TeaModel {
         // 日期
         @NameInMap("CreatedBeforeDate")
         public String createdBeforeDate;
@@ -126,12 +126,12 @@ public class LifecycleRule extends TeaModel {
         @NameInMap("Days")
         public Integer days;
 
-        public static LifecycleRuleLifecycleAbortMultipartUpload build(java.util.Map<String, ?> map) throws Exception {
-            LifecycleRuleLifecycleAbortMultipartUpload self = new LifecycleRuleLifecycleAbortMultipartUpload();
+        public static LifecycleAbortMultipartUpload build(java.util.Map<String, ?> map) throws Exception {
+            LifecycleAbortMultipartUpload self = new LifecycleAbortMultipartUpload();
             return TeaModel.build(map, self);
         }
 
-        public LifecycleRuleLifecycleAbortMultipartUpload setCreatedBeforeDate(String createdBeforeDate) {
+        public LifecycleAbortMultipartUpload setCreatedBeforeDate(String createdBeforeDate) {
             this.createdBeforeDate = createdBeforeDate;
             return this;
         }
@@ -139,7 +139,7 @@ public class LifecycleRule extends TeaModel {
             return this.createdBeforeDate;
         }
 
-        public LifecycleRuleLifecycleAbortMultipartUpload setDays(Integer days) {
+        public LifecycleAbortMultipartUpload setDays(Integer days) {
             this.days = days;
             return this;
         }
@@ -149,7 +149,7 @@ public class LifecycleRule extends TeaModel {
 
     }
 
-    public static class LifecycleRuleLifecycleExpiration extends TeaModel {
+    public static class LifecycleExpiration extends TeaModel {
         // 日期
         @NameInMap("CreatedBeforeDate")
         public String createdBeforeDate;
@@ -162,12 +162,12 @@ public class LifecycleRule extends TeaModel {
         @NameInMap("ExpiredObjectDeleteMarker")
         public Boolean expiredObjectDeleteMarker;
 
-        public static LifecycleRuleLifecycleExpiration build(java.util.Map<String, ?> map) throws Exception {
-            LifecycleRuleLifecycleExpiration self = new LifecycleRuleLifecycleExpiration();
+        public static LifecycleExpiration build(java.util.Map<String, ?> map) throws Exception {
+            LifecycleExpiration self = new LifecycleExpiration();
             return TeaModel.build(map, self);
         }
 
-        public LifecycleRuleLifecycleExpiration setCreatedBeforeDate(String createdBeforeDate) {
+        public LifecycleExpiration setCreatedBeforeDate(String createdBeforeDate) {
             this.createdBeforeDate = createdBeforeDate;
             return this;
         }
@@ -175,7 +175,7 @@ public class LifecycleRule extends TeaModel {
             return this.createdBeforeDate;
         }
 
-        public LifecycleRuleLifecycleExpiration setDays(Integer days) {
+        public LifecycleExpiration setDays(Integer days) {
             this.days = days;
             return this;
         }
@@ -183,7 +183,7 @@ public class LifecycleRule extends TeaModel {
             return this.days;
         }
 
-        public LifecycleRuleLifecycleExpiration setExpiredObjectDeleteMarker(Boolean expiredObjectDeleteMarker) {
+        public LifecycleExpiration setExpiredObjectDeleteMarker(Boolean expiredObjectDeleteMarker) {
             this.expiredObjectDeleteMarker = expiredObjectDeleteMarker;
             return this;
         }
@@ -193,17 +193,17 @@ public class LifecycleRule extends TeaModel {
 
     }
 
-    public static class LifecycleRuleNoncurrentVersionExpiration extends TeaModel {
+    public static class NoncurrentVersionExpiration extends TeaModel {
         // 天数
         @NameInMap("NoncurrentDays")
         public Integer noncurrentDays;
 
-        public static LifecycleRuleNoncurrentVersionExpiration build(java.util.Map<String, ?> map) throws Exception {
-            LifecycleRuleNoncurrentVersionExpiration self = new LifecycleRuleNoncurrentVersionExpiration();
+        public static NoncurrentVersionExpiration build(java.util.Map<String, ?> map) throws Exception {
+            NoncurrentVersionExpiration self = new NoncurrentVersionExpiration();
             return TeaModel.build(map, self);
         }
 
-        public LifecycleRuleNoncurrentVersionExpiration setNoncurrentDays(Integer noncurrentDays) {
+        public NoncurrentVersionExpiration setNoncurrentDays(Integer noncurrentDays) {
             this.noncurrentDays = noncurrentDays;
             return this;
         }
@@ -213,7 +213,7 @@ public class LifecycleRule extends TeaModel {
 
     }
 
-    public static class LifecycleRuleNoncurrentVersionTransition extends TeaModel {
+    public static class NoncurrentVersionTransition extends TeaModel {
         // 天数
         @NameInMap("NoncurrentDays")
         public Integer noncurrentDays;
@@ -222,12 +222,12 @@ public class LifecycleRule extends TeaModel {
         @NameInMap("StorageClass")
         public String storageClass;
 
-        public static LifecycleRuleNoncurrentVersionTransition build(java.util.Map<String, ?> map) throws Exception {
-            LifecycleRuleNoncurrentVersionTransition self = new LifecycleRuleNoncurrentVersionTransition();
+        public static NoncurrentVersionTransition build(java.util.Map<String, ?> map) throws Exception {
+            NoncurrentVersionTransition self = new NoncurrentVersionTransition();
             return TeaModel.build(map, self);
         }
 
-        public LifecycleRuleNoncurrentVersionTransition setNoncurrentDays(Integer noncurrentDays) {
+        public NoncurrentVersionTransition setNoncurrentDays(Integer noncurrentDays) {
             this.noncurrentDays = noncurrentDays;
             return this;
         }
@@ -235,7 +235,7 @@ public class LifecycleRule extends TeaModel {
             return this.noncurrentDays;
         }
 
-        public LifecycleRuleNoncurrentVersionTransition setStorageClass(String storageClass) {
+        public NoncurrentVersionTransition setStorageClass(String storageClass) {
             this.storageClass = storageClass;
             return this;
         }
@@ -245,7 +245,7 @@ public class LifecycleRule extends TeaModel {
 
     }
 
-    public static class LifecycleRuleTag extends TeaModel {
+    public static class Tag extends TeaModel {
         // 标签 key
         @NameInMap("Key")
         public String key;
@@ -254,12 +254,12 @@ public class LifecycleRule extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static LifecycleRuleTag build(java.util.Map<String, ?> map) throws Exception {
-            LifecycleRuleTag self = new LifecycleRuleTag();
+        public static Tag build(java.util.Map<String, ?> map) throws Exception {
+            Tag self = new Tag();
             return TeaModel.build(map, self);
         }
 
-        public LifecycleRuleTag setKey(String key) {
+        public Tag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -267,7 +267,7 @@ public class LifecycleRule extends TeaModel {
             return this.key;
         }
 
-        public LifecycleRuleTag setValue(String value) {
+        public Tag setValue(String value) {
             this.value = value;
             return this;
         }
@@ -277,7 +277,7 @@ public class LifecycleRule extends TeaModel {
 
     }
 
-    public static class LifecycleRuleLifecycleTransition extends TeaModel {
+    public static class LifecycleTransition extends TeaModel {
         // 日期
         @NameInMap("CreatedBeforeDate")
         public String createdBeforeDate;
@@ -289,12 +289,12 @@ public class LifecycleRule extends TeaModel {
         @NameInMap("StorageClass")
         public String storageClass;
 
-        public static LifecycleRuleLifecycleTransition build(java.util.Map<String, ?> map) throws Exception {
-            LifecycleRuleLifecycleTransition self = new LifecycleRuleLifecycleTransition();
+        public static LifecycleTransition build(java.util.Map<String, ?> map) throws Exception {
+            LifecycleTransition self = new LifecycleTransition();
             return TeaModel.build(map, self);
         }
 
-        public LifecycleRuleLifecycleTransition setCreatedBeforeDate(String createdBeforeDate) {
+        public LifecycleTransition setCreatedBeforeDate(String createdBeforeDate) {
             this.createdBeforeDate = createdBeforeDate;
             return this;
         }
@@ -302,7 +302,7 @@ public class LifecycleRule extends TeaModel {
             return this.createdBeforeDate;
         }
 
-        public LifecycleRuleLifecycleTransition setDays(Integer days) {
+        public LifecycleTransition setDays(Integer days) {
             this.days = days;
             return this;
         }
@@ -310,7 +310,7 @@ public class LifecycleRule extends TeaModel {
             return this.days;
         }
 
-        public LifecycleRuleLifecycleTransition setStorageClass(String storageClass) {
+        public LifecycleTransition setStorageClass(String storageClass) {
             this.storageClass = storageClass;
             return this;
         }
