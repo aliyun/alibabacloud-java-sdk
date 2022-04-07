@@ -17,8 +17,8 @@ public class CreateResourceResponseBody extends TeaModel {
     public String requestId;
 
     // 资源组ID
-    @NameInMap("ResourceID")
-    public String resourceID;
+    @NameInMap("ResourceId")
+    public String resourceId;
 
     // 资源组名称
     @NameInMap("ResourceName")
@@ -53,12 +53,12 @@ public class CreateResourceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateResourceResponseBody setResourceID(String resourceID) {
-        this.resourceID = resourceID;
+    public CreateResourceResponseBody setResourceId(String resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
-    public String getResourceID() {
-        return this.resourceID;
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     public CreateResourceResponseBody setResourceName(String resourceName) {
