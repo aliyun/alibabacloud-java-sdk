@@ -5718,6 +5718,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.installBackupClientWithOptions(request, runtime);
     }
 
+    public InstallCloudMonitorResponse installCloudMonitorWithOptions(InstallCloudMonitorRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentAccessKey)) {
+            query.put("AgentAccessKey", request.agentAccessKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentSecretKey)) {
+            query.put("AgentSecretKey", request.agentSecretKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.argusVersion)) {
+            query.put("ArgusVersion", request.argusVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdList)) {
+            query.put("InstanceIdList", request.instanceIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuidList)) {
+            query.put("UuidList", request.uuidList);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InstallCloudMonitor"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InstallCloudMonitorResponse());
+    }
+
+    public InstallCloudMonitorResponse installCloudMonitor(InstallCloudMonitorRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.installCloudMonitorWithOptions(request, runtime);
+    }
+
     public ModifyAntiBruteForceRuleResponse modifyAntiBruteForceRuleWithOptions(ModifyAntiBruteForceRuleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
