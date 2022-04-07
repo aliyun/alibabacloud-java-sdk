@@ -111,6 +111,9 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
+        @NameInMap("HealehStatus")
+        public String healehStatus;
+
         @NameInMap("Id")
         public Long id;
 
@@ -187,6 +190,14 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         }
         public String getGroupName() {
             return this.groupName;
+        }
+
+        public ListGatewayServiceResponseBodyDataResult setHealehStatus(String healehStatus) {
+            this.healehStatus = healehStatus;
+            return this;
+        }
+        public String getHealehStatus() {
+            return this.healehStatus;
         }
 
         public ListGatewayServiceResponseBodyDataResult setId(Long id) {
