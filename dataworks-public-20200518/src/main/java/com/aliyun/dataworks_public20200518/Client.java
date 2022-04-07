@@ -9608,4 +9608,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateUdfFileWithOptions(request, runtime);
     }
+
+    public UpdateWorkbenchEventResultResponse updateWorkbenchEventResultWithOptions(UpdateWorkbenchEventResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.checkResult)) {
+            query.put("CheckResult", request.checkResult);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.checkResultTip)) {
+            query.put("CheckResultTip", request.checkResultTip);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extensionCode)) {
+            query.put("ExtensionCode", request.extensionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messageId)) {
+            query.put("MessageId", request.messageId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateWorkbenchEventResult"),
+            new TeaPair("version", "2020-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWorkbenchEventResultResponse());
+    }
+
+    public UpdateWorkbenchEventResultResponse updateWorkbenchEventResult(UpdateWorkbenchEventResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateWorkbenchEventResultWithOptions(request, runtime);
+    }
 }
