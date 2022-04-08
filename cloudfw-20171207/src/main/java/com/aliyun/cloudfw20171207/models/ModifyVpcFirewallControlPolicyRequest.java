@@ -37,6 +37,9 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("Proto")
     public String proto;
 
+    @NameInMap("Release")
+    public String release;
+
     @NameInMap("Source")
     public String source;
 
@@ -137,6 +140,14 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
     }
     public String getProto() {
         return this.proto;
+    }
+
+    public ModifyVpcFirewallControlPolicyRequest setRelease(String release) {
+        this.release = release;
+        return this;
+    }
+    public String getRelease() {
+        return this.release;
     }
 
     public ModifyVpcFirewallControlPolicyRequest setSource(String source) {
