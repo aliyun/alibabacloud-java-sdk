@@ -4,33 +4,33 @@ package com.aliyun.address_purification20191118.models;
 import com.aliyun.tea.*;
 
 public class GetAddressSimilarityResponse extends TeaModel {
-    @NameInMap("Data")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String data;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
+    public GetAddressSimilarityResponseBody body;
 
     public static GetAddressSimilarityResponse build(java.util.Map<String, ?> map) throws Exception {
         GetAddressSimilarityResponse self = new GetAddressSimilarityResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetAddressSimilarityResponse setData(String data) {
-        this.data = data;
+    public GetAddressSimilarityResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetAddressSimilarityResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetAddressSimilarityResponse setBody(GetAddressSimilarityResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public GetAddressSimilarityResponseBody getBody() {
+        return this.body;
     }
 
 }

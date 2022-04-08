@@ -4,16 +4,8 @@ package com.aliyun.address_purification20191118.models;
 import com.aliyun.tea.*;
 
 public class GetZipcodeRequest extends TeaModel {
-    @NameInMap("ServiceCode")
-    @Validation(required = true)
-    public String serviceCode;
-
-    @NameInMap("Text")
-    @Validation(required = true)
-    public String text;
-
-    @NameInMap("DefaultProvince")
-    public String defaultProvince;
+    @NameInMap("AppKey")
+    public String appKey;
 
     @NameInMap("DefaultCity")
     public String defaultCity;
@@ -21,37 +13,26 @@ public class GetZipcodeRequest extends TeaModel {
     @NameInMap("DefaultDistrict")
     public String defaultDistrict;
 
-    @NameInMap("AppKey")
-    @Validation(required = true)
-    public String appKey;
+    @NameInMap("DefaultProvince")
+    public String defaultProvince;
+
+    @NameInMap("ServiceCode")
+    public String serviceCode;
+
+    @NameInMap("Text")
+    public String text;
 
     public static GetZipcodeRequest build(java.util.Map<String, ?> map) throws Exception {
         GetZipcodeRequest self = new GetZipcodeRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetZipcodeRequest setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
+    public GetZipcodeRequest setAppKey(String appKey) {
+        this.appKey = appKey;
         return this;
     }
-    public String getServiceCode() {
-        return this.serviceCode;
-    }
-
-    public GetZipcodeRequest setText(String text) {
-        this.text = text;
-        return this;
-    }
-    public String getText() {
-        return this.text;
-    }
-
-    public GetZipcodeRequest setDefaultProvince(String defaultProvince) {
-        this.defaultProvince = defaultProvince;
-        return this;
-    }
-    public String getDefaultProvince() {
-        return this.defaultProvince;
+    public String getAppKey() {
+        return this.appKey;
     }
 
     public GetZipcodeRequest setDefaultCity(String defaultCity) {
@@ -70,12 +51,28 @@ public class GetZipcodeRequest extends TeaModel {
         return this.defaultDistrict;
     }
 
-    public GetZipcodeRequest setAppKey(String appKey) {
-        this.appKey = appKey;
+    public GetZipcodeRequest setDefaultProvince(String defaultProvince) {
+        this.defaultProvince = defaultProvince;
         return this;
     }
-    public String getAppKey() {
-        return this.appKey;
+    public String getDefaultProvince() {
+        return this.defaultProvince;
+    }
+
+    public GetZipcodeRequest setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+    public String getServiceCode() {
+        return this.serviceCode;
+    }
+
+    public GetZipcodeRequest setText(String text) {
+        this.text = text;
+        return this;
+    }
+    public String getText() {
+        return this.text;
     }
 
 }

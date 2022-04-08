@@ -4,33 +4,33 @@ package com.aliyun.address_purification20191118.models;
 import com.aliyun.tea.*;
 
 public class CorrectAddressResponse extends TeaModel {
-    @NameInMap("Data")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String data;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
+    public CorrectAddressResponseBody body;
 
     public static CorrectAddressResponse build(java.util.Map<String, ?> map) throws Exception {
         CorrectAddressResponse self = new CorrectAddressResponse();
         return TeaModel.build(map, self);
     }
 
-    public CorrectAddressResponse setData(String data) {
-        this.data = data;
+    public CorrectAddressResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CorrectAddressResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CorrectAddressResponse setBody(CorrectAddressResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public CorrectAddressResponseBody getBody() {
+        return this.body;
     }
 
 }
