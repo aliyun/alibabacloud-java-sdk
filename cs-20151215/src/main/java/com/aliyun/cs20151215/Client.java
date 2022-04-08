@@ -988,14 +988,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         NodepoolId = com.aliyun.openapiutil.Client.getEncodeParam(NodepoolId);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.force)) {
-            body.put("force", request.force);
+            query.put("force", request.force);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteClusterNodepool"),
