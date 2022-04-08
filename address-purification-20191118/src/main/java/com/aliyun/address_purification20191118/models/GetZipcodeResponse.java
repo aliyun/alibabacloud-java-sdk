@@ -4,33 +4,33 @@ package com.aliyun.address_purification20191118.models;
 import com.aliyun.tea.*;
 
 public class GetZipcodeResponse extends TeaModel {
-    @NameInMap("Data")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String data;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
+    public GetZipcodeResponseBody body;
 
     public static GetZipcodeResponse build(java.util.Map<String, ?> map) throws Exception {
         GetZipcodeResponse self = new GetZipcodeResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetZipcodeResponse setData(String data) {
-        this.data = data;
+    public GetZipcodeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetZipcodeResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetZipcodeResponse setBody(GetZipcodeResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public GetZipcodeResponseBody getBody() {
+        return this.body;
     }
 
 }

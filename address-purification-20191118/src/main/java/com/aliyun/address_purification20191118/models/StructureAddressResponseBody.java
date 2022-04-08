@@ -3,21 +3,19 @@ package com.aliyun.address_purification20191118.models;
 
 import com.aliyun.tea.*;
 
-public class ClassifyPOIResponse extends TeaModel {
+public class StructureAddressResponseBody extends TeaModel {
     @NameInMap("Data")
-    @Validation(required = true)
     public String data;
 
     @NameInMap("RequestId")
-    @Validation(required = true)
     public String requestId;
 
-    public static ClassifyPOIResponse build(java.util.Map<String, ?> map) throws Exception {
-        ClassifyPOIResponse self = new ClassifyPOIResponse();
+    public static StructureAddressResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        StructureAddressResponseBody self = new StructureAddressResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ClassifyPOIResponse setData(String data) {
+    public StructureAddressResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -25,7 +23,7 @@ public class ClassifyPOIResponse extends TeaModel {
         return this.data;
     }
 
-    public ClassifyPOIResponse setRequestId(String requestId) {
+    public StructureAddressResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -3,21 +3,19 @@ package com.aliyun.address_purification20191118.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateProjectResponse extends TeaModel {
+public class GetZipcodeResponseBody extends TeaModel {
     @NameInMap("Data")
-    @Validation(required = true)
     public String data;
 
     @NameInMap("RequestId")
-    @Validation(required = true)
     public String requestId;
 
-    public static UpdateProjectResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateProjectResponse self = new UpdateProjectResponse();
+    public static GetZipcodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetZipcodeResponseBody self = new GetZipcodeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateProjectResponse setData(String data) {
+    public GetZipcodeResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -25,7 +23,7 @@ public class UpdateProjectResponse extends TeaModel {
         return this.data;
     }
 
-    public UpdateProjectResponse setRequestId(String requestId) {
+    public GetZipcodeResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

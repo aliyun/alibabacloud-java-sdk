@@ -3,21 +3,19 @@ package com.aliyun.address_purification20191118.models;
 
 import com.aliyun.tea.*;
 
-public class GetAddressGeocodeResponse extends TeaModel {
+public class GetAddressDivisionCodeResponseBody extends TeaModel {
     @NameInMap("Data")
-    @Validation(required = true)
     public String data;
 
     @NameInMap("RequestId")
-    @Validation(required = true)
     public String requestId;
 
-    public static GetAddressGeocodeResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetAddressGeocodeResponse self = new GetAddressGeocodeResponse();
+    public static GetAddressDivisionCodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetAddressDivisionCodeResponseBody self = new GetAddressDivisionCodeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetAddressGeocodeResponse setData(String data) {
+    public GetAddressDivisionCodeResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -25,7 +23,7 @@ public class GetAddressGeocodeResponse extends TeaModel {
         return this.data;
     }
 
-    public GetAddressGeocodeResponse setRequestId(String requestId) {
+    public GetAddressDivisionCodeResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

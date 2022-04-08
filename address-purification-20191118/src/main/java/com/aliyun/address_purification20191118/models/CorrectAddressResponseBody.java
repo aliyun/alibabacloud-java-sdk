@@ -3,21 +3,19 @@ package com.aliyun.address_purification20191118.models;
 
 import com.aliyun.tea.*;
 
-public class CompleteAddressResponse extends TeaModel {
+public class CorrectAddressResponseBody extends TeaModel {
     @NameInMap("Data")
-    @Validation(required = true)
     public String data;
 
     @NameInMap("RequestId")
-    @Validation(required = true)
     public String requestId;
 
-    public static CompleteAddressResponse build(java.util.Map<String, ?> map) throws Exception {
-        CompleteAddressResponse self = new CompleteAddressResponse();
+    public static CorrectAddressResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CorrectAddressResponseBody self = new CorrectAddressResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CompleteAddressResponse setData(String data) {
+    public CorrectAddressResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -25,7 +23,7 @@ public class CompleteAddressResponse extends TeaModel {
         return this.data;
     }
 
-    public CompleteAddressResponse setRequestId(String requestId) {
+    public CorrectAddressResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
