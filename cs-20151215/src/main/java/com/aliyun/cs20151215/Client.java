@@ -978,17 +978,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteClusterResponse());
     }
 
-    public DeleteClusterNodepoolResponse deleteClusterNodepool(String ClusterId, String NodepoolId) throws Exception {
+    public DeleteClusterNodepoolResponse deleteClusterNodepool(String ClusterId, String NodepoolId, DeleteClusterNodepoolRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteClusterNodepoolWithOptions(ClusterId, NodepoolId, headers, runtime);
+        return this.deleteClusterNodepoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
     }
 
-    public DeleteClusterNodepoolResponse deleteClusterNodepoolWithOptions(String ClusterId, String NodepoolId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteClusterNodepoolResponse deleteClusterNodepoolWithOptions(String ClusterId, String NodepoolId, DeleteClusterNodepoolRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         NodepoolId = com.aliyun.openapiutil.Client.getEncodeParam(NodepoolId);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            body.put("force", request.force);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteClusterNodepool"),

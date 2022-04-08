@@ -26,6 +26,10 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         @NameInMap("component_name")
         public String componentName;
 
+        // 组件自定义参数
+        @NameInMap("config")
+        public String config;
+
         // 可升级版本
         @NameInMap("next_version")
         public String nextVersion;
@@ -45,6 +49,14 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         }
         public String getComponentName() {
             return this.componentName;
+        }
+
+        public UpgradeClusterAddonsRequestBody setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
         }
 
         public UpgradeClusterAddonsRequestBody setNextVersion(String nextVersion) {
