@@ -433,6 +433,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Proto", request.proto);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.release)) {
+            query.put("Release", request.release);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
         }
@@ -1375,6 +1379,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Proto", request.proto);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.release)) {
+            query.put("Release", request.release);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
         }
@@ -2026,6 +2034,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.proto)) {
             query.put("Proto", request.proto);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.release)) {
+            query.put("Release", request.release);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
