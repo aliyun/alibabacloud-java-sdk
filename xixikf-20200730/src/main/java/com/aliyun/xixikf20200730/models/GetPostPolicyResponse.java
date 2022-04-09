@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.xixikf20200730.models;
+
+import com.aliyun.tea.*;
+
+public class GetPostPolicyResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public GetPostPolicyResponseBody body;
+
+    public static GetPostPolicyResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetPostPolicyResponse self = new GetPostPolicyResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public GetPostPolicyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetPostPolicyResponse setBody(GetPostPolicyResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetPostPolicyResponseBody getBody() {
+        return this.body;
+    }
+
+}
