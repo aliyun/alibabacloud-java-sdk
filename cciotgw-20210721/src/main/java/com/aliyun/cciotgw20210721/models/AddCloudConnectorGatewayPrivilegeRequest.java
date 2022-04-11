@@ -10,9 +10,6 @@ public class AddCloudConnectorGatewayPrivilegeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("Type")
-    public String type;
-
     @NameInMap("UserAliUid")
     public String userAliUid;
 
@@ -35,14 +32,6 @@ public class AddCloudConnectorGatewayPrivilegeRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public AddCloudConnectorGatewayPrivilegeRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
     public AddCloudConnectorGatewayPrivilegeRequest setUserAliUid(String userAliUid) {

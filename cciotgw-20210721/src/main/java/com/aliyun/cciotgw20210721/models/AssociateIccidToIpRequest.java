@@ -76,6 +76,9 @@ public class AssociateIccidToIpRequest extends TeaModel {
     }
 
     public static class AssociateIccidToIpRequestIccidIpList extends TeaModel {
+        @NameInMap("CardType")
+        public String cardType;
+
         @NameInMap("Iccid")
         public String iccid;
 
@@ -85,6 +88,14 @@ public class AssociateIccidToIpRequest extends TeaModel {
         public static AssociateIccidToIpRequestIccidIpList build(java.util.Map<String, ?> map) throws Exception {
             AssociateIccidToIpRequestIccidIpList self = new AssociateIccidToIpRequestIccidIpList();
             return TeaModel.build(map, self);
+        }
+
+        public AssociateIccidToIpRequestIccidIpList setCardType(String cardType) {
+            this.cardType = cardType;
+            return this;
+        }
+        public String getCardType() {
+            return this.cardType;
         }
 
         public AssociateIccidToIpRequestIccidIpList setIccid(String iccid) {
