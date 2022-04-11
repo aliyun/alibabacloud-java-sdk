@@ -13,6 +13,9 @@ public class CreateEngineNamespaceRequest extends TeaModel {
     @NameInMap("Desc")
     public String desc;
 
+    @NameInMap("Id")
+    public String id;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -49,6 +52,14 @@ public class CreateEngineNamespaceRequest extends TeaModel {
     }
     public String getDesc() {
         return this.desc;
+    }
+
+    public CreateEngineNamespaceRequest setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
     public CreateEngineNamespaceRequest setInstanceId(String instanceId) {

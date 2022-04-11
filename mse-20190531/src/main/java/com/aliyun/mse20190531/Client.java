@@ -943,6 +943,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Desc", request.desc);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -4565,55 +4569,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RetryClusterResponse retryCluster(RetryClusterRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.retryClusterWithOptions(request, runtime);
-    }
-
-    public ScalingClusterResponse scalingClusterWithOptions(ScalingClusterRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
-            query.put("AcceptLanguage", request.acceptLanguage);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.clusterSpecification)) {
-            query.put("ClusterSpecification", request.clusterSpecification);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.cpu)) {
-            query.put("Cpu", request.cpu);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceCount)) {
-            query.put("InstanceCount", request.instanceCount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.memoryCapacity)) {
-            query.put("MemoryCapacity", request.memoryCapacity);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ScalingCluster"),
-            new TeaPair("version", "2019-05-31"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ScalingClusterResponse());
-    }
-
-    public ScalingClusterResponse scalingCluster(ScalingClusterRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.scalingClusterWithOptions(request, runtime);
     }
 
     public SelectGatewaySlbResponse selectGatewaySlbWithOptions(SelectGatewaySlbRequest request, RuntimeOptions runtime) throws Exception {
