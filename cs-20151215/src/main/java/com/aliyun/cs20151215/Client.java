@@ -246,8 +246,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("cool_down_duration", request.coolDownDuration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.expander)) {
+            body.put("expander", request.expander);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gpuUtilizationThreshold)) {
             body.put("gpu_utilization_threshold", request.gpuUtilizationThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scaleDownEnabled)) {
+            body.put("scale_down_enabled", request.scaleDownEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scanInterval)) {
@@ -1509,31 +1517,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "array")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterLogsResponse());
-    }
-
-    public DescribeClusterNamespacesResponse describeClusterNamespaces(String ClusterId) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClusterNamespacesWithOptions(ClusterId, headers, runtime);
-    }
-
-    public DescribeClusterNamespacesResponse describeClusterNamespacesWithOptions(String ClusterId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeClusterNamespaces"),
-            new TeaPair("version", "2015-12-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/k8s/" + ClusterId + "/namespaces"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "array")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterNamespacesResponse());
     }
 
     public DescribeClusterNodePoolDetailResponse describeClusterNodePoolDetail(String ClusterId, String NodepoolId) throws Exception {

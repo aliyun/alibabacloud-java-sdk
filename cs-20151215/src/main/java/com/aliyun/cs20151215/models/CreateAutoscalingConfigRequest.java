@@ -8,9 +8,17 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     @NameInMap("cool_down_duration")
     public String coolDownDuration;
 
+    // 节点池扩容顺序策略
+    @NameInMap("expander")
+    public String expander;
+
     // GPU缩容阈值，节点上 Request 的资源与总资源量的比值
     @NameInMap("gpu_utilization_threshold")
     public String gpuUtilizationThreshold;
+
+    // 是否允许缩容
+    @NameInMap("scale_down_enabled")
+    public Boolean scaleDownEnabled;
 
     // 弹性灵敏度，判断伸缩的间隔时间
     @NameInMap("scan_interval")
@@ -37,12 +45,28 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
         return this.coolDownDuration;
     }
 
+    public CreateAutoscalingConfigRequest setExpander(String expander) {
+        this.expander = expander;
+        return this;
+    }
+    public String getExpander() {
+        return this.expander;
+    }
+
     public CreateAutoscalingConfigRequest setGpuUtilizationThreshold(String gpuUtilizationThreshold) {
         this.gpuUtilizationThreshold = gpuUtilizationThreshold;
         return this;
     }
     public String getGpuUtilizationThreshold() {
         return this.gpuUtilizationThreshold;
+    }
+
+    public CreateAutoscalingConfigRequest setScaleDownEnabled(Boolean scaleDownEnabled) {
+        this.scaleDownEnabled = scaleDownEnabled;
+        return this;
+    }
+    public Boolean getScaleDownEnabled() {
+        return this.scaleDownEnabled;
     }
 
     public CreateAutoscalingConfigRequest setScanInterval(String scanInterval) {
