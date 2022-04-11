@@ -19,6 +19,9 @@ public class GetIoTCloudConnectorGatewayResponseBody extends TeaModel {
     @NameInMap("ForwardingUnitIds")
     public java.util.List<String> forwardingUnitIds;
 
+    @NameInMap("HaMode")
+    public String haMode;
+
     @NameInMap("IoTCloudConnectorGatewayId")
     public String ioTCloudConnectorGatewayId;
 
@@ -89,6 +92,14 @@ public class GetIoTCloudConnectorGatewayResponseBody extends TeaModel {
     }
     public java.util.List<String> getForwardingUnitIds() {
         return this.forwardingUnitIds;
+    }
+
+    public GetIoTCloudConnectorGatewayResponseBody setHaMode(String haMode) {
+        this.haMode = haMode;
+        return this;
+    }
+    public String getHaMode() {
+        return this.haMode;
     }
 
     public GetIoTCloudConnectorGatewayResponseBody setIoTCloudConnectorGatewayId(String ioTCloudConnectorGatewayId) {
