@@ -10,9 +10,6 @@ public class ListCloudConnectorGatewayPrivilegeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("Type")
-    public String type;
-
     public static ListCloudConnectorGatewayPrivilegeRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCloudConnectorGatewayPrivilegeRequest self = new ListCloudConnectorGatewayPrivilegeRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class ListCloudConnectorGatewayPrivilegeRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public ListCloudConnectorGatewayPrivilegeRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
 }
