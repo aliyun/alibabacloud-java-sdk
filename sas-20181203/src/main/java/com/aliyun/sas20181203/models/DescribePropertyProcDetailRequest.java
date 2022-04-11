@@ -10,6 +10,9 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("Extend")
+    public String extend;
+
     @NameInMap("Name")
     public String name;
 
@@ -50,6 +53,14 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribePropertyProcDetailRequest setExtend(String extend) {
+        this.extend = extend;
+        return this;
+    }
+    public String getExtend() {
+        return this.extend;
     }
 
     public DescribePropertyProcDetailRequest setName(String name) {

@@ -7,6 +7,9 @@ public class DescribePropertyCronDetailRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("Extend")
+    public String extend;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -33,6 +36,14 @@ public class DescribePropertyCronDetailRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribePropertyCronDetailRequest setExtend(String extend) {
+        this.extend = extend;
+        return this;
+    }
+    public String getExtend() {
+        return this.extend;
     }
 
     public DescribePropertyCronDetailRequest setPageSize(Integer pageSize) {
