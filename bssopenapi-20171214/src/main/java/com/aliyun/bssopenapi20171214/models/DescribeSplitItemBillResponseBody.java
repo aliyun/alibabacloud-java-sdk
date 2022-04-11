@@ -80,6 +80,9 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         @NameInMap("BillingItem")
         public String billingItem;
 
+        @NameInMap("BillingItemCode")
+        public String billingItemCode;
+
         @NameInMap("BillingType")
         public String billingType;
 
@@ -130,6 +133,9 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
 
         @NameInMap("Item")
         public String item;
+
+        @NameInMap("ItemName")
+        public String itemName;
 
         @NameInMap("ListPrice")
         public String listPrice;
@@ -266,6 +272,14 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.billingItem;
         }
 
+        public DescribeSplitItemBillResponseBodyDataItems setBillingItemCode(String billingItemCode) {
+            this.billingItemCode = billingItemCode;
+            return this;
+        }
+        public String getBillingItemCode() {
+            return this.billingItemCode;
+        }
+
         public DescribeSplitItemBillResponseBodyDataItems setBillingType(String billingType) {
             this.billingType = billingType;
             return this;
@@ -400,6 +414,14 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         }
         public String getItem() {
             return this.item;
+        }
+
+        public DescribeSplitItemBillResponseBodyDataItems setItemName(String itemName) {
+            this.itemName = itemName;
+            return this;
+        }
+        public String getItemName() {
+            return this.itemName;
         }
 
         public DescribeSplitItemBillResponseBodyDataItems setListPrice(String listPrice) {
