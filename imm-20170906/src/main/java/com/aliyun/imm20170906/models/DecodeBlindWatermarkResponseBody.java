@@ -4,9 +4,6 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class DecodeBlindWatermarkResponseBody extends TeaModel {
-    @NameInMap("Content")
-    public String content;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -16,14 +13,6 @@ public class DecodeBlindWatermarkResponseBody extends TeaModel {
     public static DecodeBlindWatermarkResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DecodeBlindWatermarkResponseBody self = new DecodeBlindWatermarkResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DecodeBlindWatermarkResponseBody setContent(String content) {
-        this.content = content;
-        return this;
-    }
-    public String getContent() {
-        return this.content;
     }
 
     public DecodeBlindWatermarkResponseBody setRequestId(String requestId) {
