@@ -3,21 +3,21 @@ package com.aliyun.vod20170321.models;
 
 import com.aliyun.tea.*;
 
-public class UnTagVodResourcesResponse extends TeaModel {
+public class GetMediaRefreshJobsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public UnTagVodResourcesResponseBody body;
+    public GetMediaRefreshJobsResponseBody body;
 
-    public static UnTagVodResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
-        UnTagVodResourcesResponse self = new UnTagVodResourcesResponse();
+    public static GetMediaRefreshJobsResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetMediaRefreshJobsResponse self = new GetMediaRefreshJobsResponse();
         return TeaModel.build(map, self);
     }
 
-    public UnTagVodResourcesResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetMediaRefreshJobsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class UnTagVodResourcesResponse extends TeaModel {
         return this.headers;
     }
 
-    public UnTagVodResourcesResponse setBody(UnTagVodResourcesResponseBody body) {
+    public GetMediaRefreshJobsResponse setBody(GetMediaRefreshJobsResponseBody body) {
         this.body = body;
         return this;
     }
-    public UnTagVodResourcesResponseBody getBody() {
+    public GetMediaRefreshJobsResponseBody getBody() {
         return this.body;
     }
 
