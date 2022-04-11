@@ -82,7 +82,7 @@ public class ResultValue extends TeaModel {
     }
 
     public static class ResultValueDeviceUnionIds extends TeaModel {
-        // 组织id，
+        // 组织id
         @NameInMap("OrganizationId")
         public String organizationId;
 

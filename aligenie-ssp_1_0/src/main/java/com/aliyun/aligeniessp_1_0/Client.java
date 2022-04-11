@@ -142,6 +142,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeviceIdByIdentityResponse());
     }
 
+    public GetDeviceIdentityResponse getDeviceIdentity(GetDeviceIdentityRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        GetDeviceIdentityHeaders headers = new GetDeviceIdentityHeaders();
+        return this.getDeviceIdentityWithOptions(request, headers, runtime);
+    }
+
+    public GetDeviceIdentityResponse getDeviceIdentityWithOptions(GetDeviceIdentityRequest tmpReq, GetDeviceIdentityHeaders headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetDeviceIdentityShrinkRequest request = new GetDeviceIdentityShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deviceInfo))) {
+            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deviceInfo), "DeviceInfo", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceInfoShrink)) {
+            query.put("DeviceInfo", request.deviceInfoShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDeviceIdentity"),
+            new TeaPair("version", "ssp_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/ssp/getDeviceIdentity"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeviceIdentityResponse());
+    }
+
     public GetDeviceStatusInfoResponse getDeviceStatusInfo(GetDeviceStatusInfoRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         GetDeviceStatusInfoHeaders headers = new GetDeviceStatusInfoHeaders();
