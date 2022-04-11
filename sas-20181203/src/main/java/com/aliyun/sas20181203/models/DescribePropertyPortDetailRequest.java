@@ -10,6 +10,9 @@ public class DescribePropertyPortDetailRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("Extend")
+    public String extend;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -44,6 +47,14 @@ public class DescribePropertyPortDetailRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribePropertyPortDetailRequest setExtend(String extend) {
+        this.extend = extend;
+        return this;
+    }
+    public String getExtend() {
+        return this.extend;
     }
 
     public DescribePropertyPortDetailRequest setPageSize(Integer pageSize) {

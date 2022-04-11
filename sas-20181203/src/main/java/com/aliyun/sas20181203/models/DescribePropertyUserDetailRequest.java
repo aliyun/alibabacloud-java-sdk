@@ -7,6 +7,9 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("Extend")
+    public String extend;
+
     @NameInMap("IsRoot")
     public String isRoot;
 
@@ -39,6 +42,14 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribePropertyUserDetailRequest setExtend(String extend) {
+        this.extend = extend;
+        return this;
+    }
+    public String getExtend() {
+        return this.extend;
     }
 
     public DescribePropertyUserDetailRequest setIsRoot(String isRoot) {
