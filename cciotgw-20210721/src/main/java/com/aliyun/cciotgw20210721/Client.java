@@ -558,6 +558,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryAsynTokenResultWithOptions(request, runtime);
     }
 
+    public SwitchVpcRouteToBackUpZoneResponse switchVpcRouteToBackUpZoneWithOptions(SwitchVpcRouteToBackUpZoneRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cciotGwId)) {
+            query.put("CciotGwId", request.cciotGwId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zone)) {
+            query.put("Zone", request.zone);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SwitchVpcRouteToBackUpZone"),
+            new TeaPair("version", "2021-07-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SwitchVpcRouteToBackUpZoneResponse());
+    }
+
+    public SwitchVpcRouteToBackUpZoneResponse switchVpcRouteToBackUpZone(SwitchVpcRouteToBackUpZoneRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.switchVpcRouteToBackUpZoneWithOptions(request, runtime);
+    }
+
     public UnAssociateIccidToIpResponse unAssociateIccidToIpWithOptions(UnAssociateIccidToIpRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
