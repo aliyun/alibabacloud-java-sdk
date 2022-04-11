@@ -3,21 +3,21 @@ package com.aliyun.vod20170321.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateStreamInfoResponse extends TeaModel {
+public class RefreshMediaPlayUrlsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpdateStreamInfoResponseBody body;
+    public RefreshMediaPlayUrlsResponseBody body;
 
-    public static UpdateStreamInfoResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateStreamInfoResponse self = new UpdateStreamInfoResponse();
+    public static RefreshMediaPlayUrlsResponse build(java.util.Map<String, ?> map) throws Exception {
+        RefreshMediaPlayUrlsResponse self = new RefreshMediaPlayUrlsResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateStreamInfoResponse setHeaders(java.util.Map<String, String> headers) {
+    public RefreshMediaPlayUrlsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class UpdateStreamInfoResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateStreamInfoResponse setBody(UpdateStreamInfoResponseBody body) {
+    public RefreshMediaPlayUrlsResponse setBody(RefreshMediaPlayUrlsResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateStreamInfoResponseBody getBody() {
+    public RefreshMediaPlayUrlsResponseBody getBody() {
         return this.body;
     }
 

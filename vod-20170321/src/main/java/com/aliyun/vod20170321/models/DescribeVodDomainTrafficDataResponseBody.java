@@ -19,6 +19,9 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    @NameInMap("TotalTraffic")
+    public String totalTraffic;
+
     @NameInMap("TrafficDataPerInterval")
     public DescribeVodDomainTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
 
@@ -65,6 +68,14 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeVodDomainTrafficDataResponseBody setTotalTraffic(String totalTraffic) {
+        this.totalTraffic = totalTraffic;
+        return this;
+    }
+    public String getTotalTraffic() {
+        return this.totalTraffic;
     }
 
     public DescribeVodDomainTrafficDataResponseBody setTrafficDataPerInterval(DescribeVodDomainTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval) {
