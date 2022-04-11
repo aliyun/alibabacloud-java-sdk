@@ -19,11 +19,20 @@ public class QueryAccountTransactionsRequest extends TeaModel {
     @NameInMap("RecordID")
     public String recordID;
 
+    @NameInMap("TransactionChannel")
+    public String transactionChannel;
+
     @NameInMap("TransactionChannelSN")
     public String transactionChannelSN;
 
+    @NameInMap("TransactionFlow")
+    public String transactionFlow;
+
     @NameInMap("TransactionNumber")
     public String transactionNumber;
+
+    @NameInMap("TransactionType")
+    public String transactionType;
 
     public static QueryAccountTransactionsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAccountTransactionsRequest self = new QueryAccountTransactionsRequest();
@@ -70,6 +79,14 @@ public class QueryAccountTransactionsRequest extends TeaModel {
         return this.recordID;
     }
 
+    public QueryAccountTransactionsRequest setTransactionChannel(String transactionChannel) {
+        this.transactionChannel = transactionChannel;
+        return this;
+    }
+    public String getTransactionChannel() {
+        return this.transactionChannel;
+    }
+
     public QueryAccountTransactionsRequest setTransactionChannelSN(String transactionChannelSN) {
         this.transactionChannelSN = transactionChannelSN;
         return this;
@@ -78,12 +95,28 @@ public class QueryAccountTransactionsRequest extends TeaModel {
         return this.transactionChannelSN;
     }
 
+    public QueryAccountTransactionsRequest setTransactionFlow(String transactionFlow) {
+        this.transactionFlow = transactionFlow;
+        return this;
+    }
+    public String getTransactionFlow() {
+        return this.transactionFlow;
+    }
+
     public QueryAccountTransactionsRequest setTransactionNumber(String transactionNumber) {
         this.transactionNumber = transactionNumber;
         return this;
     }
     public String getTransactionNumber() {
         return this.transactionNumber;
+    }
+
+    public QueryAccountTransactionsRequest setTransactionType(String transactionType) {
+        this.transactionType = transactionType;
+        return this;
+    }
+    public String getTransactionType() {
+        return this.transactionType;
     }
 
 }
