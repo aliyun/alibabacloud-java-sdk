@@ -1,3 +1,6 @@
+2022-04-12 Version: 2.0.2
+- First version.
+
 2022-04-12 Version: 2.1.0
 - Add CreateAppSessionBatch api.
 
