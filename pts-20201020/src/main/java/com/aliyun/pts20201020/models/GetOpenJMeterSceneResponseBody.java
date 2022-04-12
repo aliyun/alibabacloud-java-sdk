@@ -301,7 +301,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         @NameInMap("BaseInfo")
         public GetOpenJMeterSceneResponseBodySceneBaseInfo baseInfo;
 
-        // 最大并发
+        // 最大并发，并发模式下生效
         @NameInMap("Concurrency")
         public Integer concurrency;
 
@@ -329,6 +329,17 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         @NameInMap("IsVpcTest")
         public Boolean isVpcTest;
 
+        @NameInMap("MaxRps")
+        public Integer maxRps;
+
+        // 施压模式，concurrency_mode表示并发压测,tps_mode表示RPS压测
+        @NameInMap("Mode")
+        public String mode;
+
+        // 压力来源。“”表示公网，intranet-vpc表示VPC
+        @NameInMap("Pool")
+        public String pool;
+
         // 递增时间，单位s
         @NameInMap("RampUp")
         public Integer rampUp;
@@ -348,6 +359,12 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         // 安全组id，VPC压测时配置
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
+
+        @NameInMap("StartConcurrency")
+        public Integer startConcurrency;
+
+        @NameInMap("StartRps")
+        public Integer startRps;
 
         // 递增阶梯数。预热时间和预热阶段数都不配置时 使用固定压力值 只配置预热时间，不配置阶段数时 使用均匀递增 预热时间和阶段数都配置时，并且steps<rampUp 使用阶梯递增 不能只配置steps，不配置rampUp 如果这样配置，默认使用固定压力值
         @NameInMap("Steps")
@@ -446,6 +463,30 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             return this.isVpcTest;
         }
 
+        public GetOpenJMeterSceneResponseBodyScene setMaxRps(Integer maxRps) {
+            this.maxRps = maxRps;
+            return this;
+        }
+        public Integer getMaxRps() {
+            return this.maxRps;
+        }
+
+        public GetOpenJMeterSceneResponseBodyScene setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+        public GetOpenJMeterSceneResponseBodyScene setPool(String pool) {
+            this.pool = pool;
+            return this;
+        }
+        public String getPool() {
+            return this.pool;
+        }
+
         public GetOpenJMeterSceneResponseBodyScene setRampUp(Integer rampUp) {
             this.rampUp = rampUp;
             return this;
@@ -484,6 +525,22 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         }
         public String getSecurityGroupId() {
             return this.securityGroupId;
+        }
+
+        public GetOpenJMeterSceneResponseBodyScene setStartConcurrency(Integer startConcurrency) {
+            this.startConcurrency = startConcurrency;
+            return this;
+        }
+        public Integer getStartConcurrency() {
+            return this.startConcurrency;
+        }
+
+        public GetOpenJMeterSceneResponseBodyScene setStartRps(Integer startRps) {
+            this.startRps = startRps;
+            return this;
+        }
+        public Integer getStartRps() {
+            return this.startRps;
         }
 
         public GetOpenJMeterSceneResponseBodyScene setSteps(Integer steps) {

@@ -32,6 +32,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public AdjustJMeterSceneSpeedResponse adjustJMeterSceneSpeedWithOptions(AdjustJMeterSceneSpeedRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.reportId)) {
+            query.put("ReportId", request.reportId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speed)) {
+            query.put("Speed", request.speed);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AdjustJMeterSceneSpeed"),
+            new TeaPair("version", "2020-10-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AdjustJMeterSceneSpeedResponse());
+    }
+
+    public AdjustJMeterSceneSpeedResponse adjustJMeterSceneSpeed(AdjustJMeterSceneSpeedRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.adjustJMeterSceneSpeedWithOptions(request, runtime);
+    }
+
     public CreatePtsSceneResponse createPtsSceneWithOptions(CreatePtsSceneRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -185,6 +218,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeletePtsScenesResponse deletePtsScenes(DeletePtsScenesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.deletePtsScenesWithOptions(request, runtime);
+    }
+
+    public GetAllRegionsResponse getAllRegionsWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAllRegions"),
+            new TeaPair("version", "2020-10-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAllRegionsResponse());
+    }
+
+    public GetAllRegionsResponse getAllRegions() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getAllRegionsWithOptions(runtime);
     }
 
     public GetJMeterLogsResponse getJMeterLogsWithOptions(GetJMeterLogsRequest request, RuntimeOptions runtime) throws Exception {
@@ -612,6 +666,129 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetPtsSceneRunningStatusResponse getPtsSceneRunningStatus(GetPtsSceneRunningStatusRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getPtsSceneRunningStatusWithOptions(request, runtime);
+    }
+
+    public GetUserVpcSecurityGroupResponse getUserVpcSecurityGroupWithOptions(GetUserVpcSecurityGroupRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserVpcSecurityGroup"),
+            new TeaPair("version", "2020-10-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserVpcSecurityGroupResponse());
+    }
+
+    public GetUserVpcSecurityGroupResponse getUserVpcSecurityGroup(GetUserVpcSecurityGroupRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getUserVpcSecurityGroupWithOptions(request, runtime);
+    }
+
+    public GetUserVpcVSwitchResponse getUserVpcVSwitchWithOptions(GetUserVpcVSwitchRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserVpcVSwitch"),
+            new TeaPair("version", "2020-10-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserVpcVSwitchResponse());
+    }
+
+    public GetUserVpcVSwitchResponse getUserVpcVSwitch(GetUserVpcVSwitchRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getUserVpcVSwitchWithOptions(request, runtime);
+    }
+
+    public GetUserVpcsResponse getUserVpcsWithOptions(GetUserVpcsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserVpcs"),
+            new TeaPair("version", "2020-10-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserVpcsResponse());
+    }
+
+    public GetUserVpcsResponse getUserVpcs(GetUserVpcsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getUserVpcsWithOptions(request, runtime);
     }
 
     public ListEnvsResponse listEnvsWithOptions(ListEnvsRequest request, RuntimeOptions runtime) throws Exception {
