@@ -398,61 +398,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDataCronClearOrderWithOptions(request, runtime);
     }
 
-    public CreateDataExportOrderResponse createDataExportOrderWithOptions(CreateDataExportOrderRequest tmpReq, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        CreateDataExportOrderShrinkRequest request = new CreateDataExportOrderShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.param))) {
-            request.paramShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.param), "Param", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.relatedUserList)) {
-            request.relatedUserListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.relatedUserList, "RelatedUserList", "json");
-        }
-
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.attachmentKey)) {
-            query.put("AttachmentKey", request.attachmentKey);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
-            query.put("Comment", request.comment);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.paramShrink)) {
-            query.put("Param", request.paramShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.relatedUserListShrink)) {
-            query.put("RelatedUserList", request.relatedUserListShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
-            query.put("Tid", request.tid);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateDataExportOrder"),
-            new TeaPair("version", "2018-11-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataExportOrderResponse());
-    }
-
-    public CreateDataExportOrderResponse createDataExportOrder(CreateDataExportOrderRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.createDataExportOrderWithOptions(request, runtime);
-    }
-
     public CreateDataImportOrderResponse createDataImportOrderWithOptions(CreateDataImportOrderRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateDataImportOrderShrinkRequest request = new CreateDataImportOrderShrinkRequest();
@@ -4198,14 +4143,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTaskFlowResponse listTaskFlowWithOptions(ListTaskFlowRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.dagId)) {
-            query.put("DagId", request.dagId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.dagInstanceId)) {
-            query.put("DagInstanceId", request.dagInstanceId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
             query.put("Tid", request.tid);
         }
