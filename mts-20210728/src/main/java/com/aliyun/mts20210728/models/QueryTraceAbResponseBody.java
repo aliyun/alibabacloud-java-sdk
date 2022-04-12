@@ -90,6 +90,10 @@ public class QueryTraceAbResponseBody extends TeaModel {
         @NameInMap("Output")
         public String output;
 
+        // 任务结果
+        @NameInMap("Result")
+        public String result;
+
         // 任务状态
         @NameInMap("Status")
         public String status;
@@ -169,6 +173,14 @@ public class QueryTraceAbResponseBody extends TeaModel {
         }
         public String getOutput() {
             return this.output;
+        }
+
+        public QueryTraceAbResponseBodyData setResult(String result) {
+            this.result = result;
+            return this;
+        }
+        public String getResult() {
+            return this.result;
         }
 
         public QueryTraceAbResponseBodyData setStatus(String status) {
