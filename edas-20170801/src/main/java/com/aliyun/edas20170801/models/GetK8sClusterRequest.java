@@ -4,8 +4,8 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetK8sClusterRequest extends TeaModel {
-    @NameInMap("RegionTag")
-    public String regionTag;
+    @NameInMap("ClusterType")
+    public Integer clusterType;
 
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -13,20 +13,20 @@ public class GetK8sClusterRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("ClusterType")
-    public Integer clusterType;
+    @NameInMap("RegionTag")
+    public String regionTag;
 
     public static GetK8sClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         GetK8sClusterRequest self = new GetK8sClusterRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetK8sClusterRequest setRegionTag(String regionTag) {
-        this.regionTag = regionTag;
+    public GetK8sClusterRequest setClusterType(Integer clusterType) {
+        this.clusterType = clusterType;
         return this;
     }
-    public String getRegionTag() {
-        return this.regionTag;
+    public Integer getClusterType() {
+        return this.clusterType;
     }
 
     public GetK8sClusterRequest setCurrentPage(Integer currentPage) {
@@ -45,12 +45,12 @@ public class GetK8sClusterRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public GetK8sClusterRequest setClusterType(Integer clusterType) {
-        this.clusterType = clusterType;
+    public GetK8sClusterRequest setRegionTag(String regionTag) {
+        this.regionTag = regionTag;
         return this;
     }
-    public Integer getClusterType() {
-        return this.clusterType;
+    public String getRegionTag() {
+        return this.regionTag;
     }
 
 }

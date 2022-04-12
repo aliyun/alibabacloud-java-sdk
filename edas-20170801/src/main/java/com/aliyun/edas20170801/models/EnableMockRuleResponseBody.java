@@ -4,17 +4,17 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class EnableMockRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public EnableMockRuleResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public EnableMockRuleResponseBodyData data;
-
-    @NameInMap("Code")
-    public Integer code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class EnableMockRuleResponseBody extends TeaModel {
     public static EnableMockRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EnableMockRuleResponseBody self = new EnableMockRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public EnableMockRuleResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public EnableMockRuleResponseBody setData(EnableMockRuleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public EnableMockRuleResponseBodyData getData() {
+        return this.data;
     }
 
     public EnableMockRuleResponseBody setMessage(String message) {
@@ -40,22 +56,6 @@ public class EnableMockRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public EnableMockRuleResponseBody setData(EnableMockRuleResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public EnableMockRuleResponseBodyData getData() {
-        return this.data;
-    }
-
-    public EnableMockRuleResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public EnableMockRuleResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,29 +65,29 @@ public class EnableMockRuleResponseBody extends TeaModel {
     }
 
     public static class EnableMockRuleResponseBodyData extends TeaModel {
-        @NameInMap("NamespaceId")
-        public String namespaceId;
-
-        @NameInMap("ScMockItemJson")
-        public String scMockItemJson;
-
-        @NameInMap("ConsumerAppName")
-        public String consumerAppName;
+        @NameInMap("AccountId")
+        public String accountId;
 
         @NameInMap("ConsumerAppId")
         public String consumerAppId;
 
-        @NameInMap("AccountId")
-        public String accountId;
+        @NameInMap("ConsumerAppName")
+        public String consumerAppName;
+
+        @NameInMap("Enable")
+        public Boolean enable;
 
         @NameInMap("ExtraJson")
         public String extraJson;
 
-        @NameInMap("Source")
-        public String source;
+        @NameInMap("Id")
+        public Long id;
 
-        @NameInMap("Region")
-        public String region;
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("NamespaceId")
+        public String namespaceId;
 
         @NameInMap("ProviderAppId")
         public String providerAppId;
@@ -95,50 +95,18 @@ public class EnableMockRuleResponseBody extends TeaModel {
         @NameInMap("ProviderAppName")
         public String providerAppName;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Region")
+        public String region;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("ScMockItemJson")
+        public String scMockItemJson;
 
-        @NameInMap("Enable")
-        public Boolean enable;
+        @NameInMap("Source")
+        public String source;
 
         public static EnableMockRuleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             EnableMockRuleResponseBodyData self = new EnableMockRuleResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public EnableMockRuleResponseBodyData setNamespaceId(String namespaceId) {
-            this.namespaceId = namespaceId;
-            return this;
-        }
-        public String getNamespaceId() {
-            return this.namespaceId;
-        }
-
-        public EnableMockRuleResponseBodyData setScMockItemJson(String scMockItemJson) {
-            this.scMockItemJson = scMockItemJson;
-            return this;
-        }
-        public String getScMockItemJson() {
-            return this.scMockItemJson;
-        }
-
-        public EnableMockRuleResponseBodyData setConsumerAppName(String consumerAppName) {
-            this.consumerAppName = consumerAppName;
-            return this;
-        }
-        public String getConsumerAppName() {
-            return this.consumerAppName;
-        }
-
-        public EnableMockRuleResponseBodyData setConsumerAppId(String consumerAppId) {
-            this.consumerAppId = consumerAppId;
-            return this;
-        }
-        public String getConsumerAppId() {
-            return this.consumerAppId;
         }
 
         public EnableMockRuleResponseBodyData setAccountId(String accountId) {
@@ -149,6 +117,30 @@ public class EnableMockRuleResponseBody extends TeaModel {
             return this.accountId;
         }
 
+        public EnableMockRuleResponseBodyData setConsumerAppId(String consumerAppId) {
+            this.consumerAppId = consumerAppId;
+            return this;
+        }
+        public String getConsumerAppId() {
+            return this.consumerAppId;
+        }
+
+        public EnableMockRuleResponseBodyData setConsumerAppName(String consumerAppName) {
+            this.consumerAppName = consumerAppName;
+            return this;
+        }
+        public String getConsumerAppName() {
+            return this.consumerAppName;
+        }
+
+        public EnableMockRuleResponseBodyData setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
         public EnableMockRuleResponseBodyData setExtraJson(String extraJson) {
             this.extraJson = extraJson;
             return this;
@@ -157,20 +149,28 @@ public class EnableMockRuleResponseBody extends TeaModel {
             return this.extraJson;
         }
 
-        public EnableMockRuleResponseBodyData setSource(String source) {
-            this.source = source;
+        public EnableMockRuleResponseBodyData setId(Long id) {
+            this.id = id;
             return this;
         }
-        public String getSource() {
-            return this.source;
+        public Long getId() {
+            return this.id;
         }
 
-        public EnableMockRuleResponseBodyData setRegion(String region) {
-            this.region = region;
+        public EnableMockRuleResponseBodyData setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getRegion() {
-            return this.region;
+        public String getName() {
+            return this.name;
+        }
+
+        public EnableMockRuleResponseBodyData setNamespaceId(String namespaceId) {
+            this.namespaceId = namespaceId;
+            return this;
+        }
+        public String getNamespaceId() {
+            return this.namespaceId;
         }
 
         public EnableMockRuleResponseBodyData setProviderAppId(String providerAppId) {
@@ -189,28 +189,28 @@ public class EnableMockRuleResponseBody extends TeaModel {
             return this.providerAppName;
         }
 
-        public EnableMockRuleResponseBodyData setName(String name) {
-            this.name = name;
+        public EnableMockRuleResponseBodyData setRegion(String region) {
+            this.region = region;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getRegion() {
+            return this.region;
         }
 
-        public EnableMockRuleResponseBodyData setId(Long id) {
-            this.id = id;
+        public EnableMockRuleResponseBodyData setScMockItemJson(String scMockItemJson) {
+            this.scMockItemJson = scMockItemJson;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public String getScMockItemJson() {
+            return this.scMockItemJson;
         }
 
-        public EnableMockRuleResponseBodyData setEnable(Boolean enable) {
-            this.enable = enable;
+        public EnableMockRuleResponseBodyData setSource(String source) {
+            this.source = source;
             return this;
         }
-        public Boolean getEnable() {
-            return this.enable;
+        public String getSource() {
+            return this.source;
         }
 
     }

@@ -10,8 +10,14 @@ public class BindK8sSlbRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("Type")
-    public String type;
+    @NameInMap("Port")
+    public String port;
+
+    @NameInMap("Scheduler")
+    public String scheduler;
+
+    @NameInMap("ServicePortInfos")
+    public String servicePortInfos;
 
     @NameInMap("SlbId")
     public String slbId;
@@ -19,20 +25,14 @@ public class BindK8sSlbRequest extends TeaModel {
     @NameInMap("SlbProtocol")
     public String slbProtocol;
 
-    @NameInMap("TargetPort")
-    public String targetPort;
-
-    @NameInMap("Port")
-    public String port;
-
-    @NameInMap("ServicePortInfos")
-    public String servicePortInfos;
-
     @NameInMap("Specification")
     public String specification;
 
-    @NameInMap("Scheduler")
-    public String scheduler;
+    @NameInMap("TargetPort")
+    public String targetPort;
+
+    @NameInMap("Type")
+    public String type;
 
     public static BindK8sSlbRequest build(java.util.Map<String, ?> map) throws Exception {
         BindK8sSlbRequest self = new BindK8sSlbRequest();
@@ -55,12 +55,28 @@ public class BindK8sSlbRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public BindK8sSlbRequest setType(String type) {
-        this.type = type;
+    public BindK8sSlbRequest setPort(String port) {
+        this.port = port;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public String getPort() {
+        return this.port;
+    }
+
+    public BindK8sSlbRequest setScheduler(String scheduler) {
+        this.scheduler = scheduler;
+        return this;
+    }
+    public String getScheduler() {
+        return this.scheduler;
+    }
+
+    public BindK8sSlbRequest setServicePortInfos(String servicePortInfos) {
+        this.servicePortInfos = servicePortInfos;
+        return this;
+    }
+    public String getServicePortInfos() {
+        return this.servicePortInfos;
     }
 
     public BindK8sSlbRequest setSlbId(String slbId) {
@@ -79,30 +95,6 @@ public class BindK8sSlbRequest extends TeaModel {
         return this.slbProtocol;
     }
 
-    public BindK8sSlbRequest setTargetPort(String targetPort) {
-        this.targetPort = targetPort;
-        return this;
-    }
-    public String getTargetPort() {
-        return this.targetPort;
-    }
-
-    public BindK8sSlbRequest setPort(String port) {
-        this.port = port;
-        return this;
-    }
-    public String getPort() {
-        return this.port;
-    }
-
-    public BindK8sSlbRequest setServicePortInfos(String servicePortInfos) {
-        this.servicePortInfos = servicePortInfos;
-        return this;
-    }
-    public String getServicePortInfos() {
-        return this.servicePortInfos;
-    }
-
     public BindK8sSlbRequest setSpecification(String specification) {
         this.specification = specification;
         return this;
@@ -111,12 +103,20 @@ public class BindK8sSlbRequest extends TeaModel {
         return this.specification;
     }
 
-    public BindK8sSlbRequest setScheduler(String scheduler) {
-        this.scheduler = scheduler;
+    public BindK8sSlbRequest setTargetPort(String targetPort) {
+        this.targetPort = targetPort;
         return this;
     }
-    public String getScheduler() {
-        return this.scheduler;
+    public String getTargetPort() {
+        return this.targetPort;
+    }
+
+    public BindK8sSlbRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

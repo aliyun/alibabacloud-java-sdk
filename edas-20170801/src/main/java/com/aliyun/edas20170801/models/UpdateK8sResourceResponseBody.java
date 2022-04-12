@@ -4,18 +4,26 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateK8sResourceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static UpdateK8sResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateK8sResourceResponseBody self = new UpdateK8sResourceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateK8sResourceResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public UpdateK8sResourceResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class UpdateK8sResourceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UpdateK8sResourceResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
 }

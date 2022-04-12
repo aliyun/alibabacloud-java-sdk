@@ -4,21 +4,37 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationResponseBody extends TeaModel {
+    @NameInMap("Application")
+    public GetApplicationResponseBodyApplication application;
+
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public Integer code;
-
-    @NameInMap("Application")
-    public GetApplicationResponseBodyApplication application;
-
     public static GetApplicationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetApplicationResponseBody self = new GetApplicationResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetApplicationResponseBody setApplication(GetApplicationResponseBodyApplication application) {
+        this.application = application;
+        return this;
+    }
+    public GetApplicationResponseBodyApplication getApplication() {
+        return this.application;
+    }
+
+    public GetApplicationResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public GetApplicationResponseBody setMessage(String message) {
@@ -37,67 +53,51 @@ public class GetApplicationResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetApplicationResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public GetApplicationResponseBody setApplication(GetApplicationResponseBodyApplication application) {
-        this.application = application;
-        return this;
-    }
-    public GetApplicationResponseBodyApplication getApplication() {
-        return this.application;
-    }
-
     public static class GetApplicationResponseBodyApplication extends TeaModel {
-        @NameInMap("ExtSlbIp")
-        public String extSlbIp;
+        @NameInMap("AppId")
+        public String appId;
 
-        @NameInMap("Owner")
-        public String owner;
+        @NameInMap("ApplicationType")
+        public String applicationType;
 
-        @NameInMap("SlbPort")
-        public Integer slbPort;
+        @NameInMap("BuildPackageId")
+        public Long buildPackageId;
 
-        @NameInMap("NameSpace")
-        public String nameSpace;
+        @NameInMap("ClusterId")
+        public String clusterId;
 
-        @NameInMap("ExtSlbName")
-        public String extSlbName;
+        @NameInMap("ClusterType")
+        public String clusterType;
+
+        @NameInMap("Cpu")
+        public Integer cpu;
 
         @NameInMap("CreateTime")
         public Long createTime;
 
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("Port")
-        public Integer port;
-
-        @NameInMap("RunningInstanceCount")
-        public Integer runningInstanceCount;
-
-        @NameInMap("SlbIp")
-        public String slbIp;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("Dockerize")
         public Boolean dockerize;
 
+        @NameInMap("Email")
+        public String email;
+
+        @NameInMap("ExtSlbId")
+        public String extSlbId;
+
+        @NameInMap("ExtSlbIp")
+        public String extSlbIp;
+
+        @NameInMap("ExtSlbName")
+        public String extSlbName;
+
+        @NameInMap("HealthCheckUrl")
+        public String healthCheckUrl;
+
         @NameInMap("InstanceCount")
         public Integer instanceCount;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("AppId")
-        public String appId;
-
-        @NameInMap("SlbInfo")
-        public String slbInfo;
 
         @NameInMap("Memory")
         public Integer memory;
@@ -105,146 +105,42 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("ClusterId")
-        public String clusterId;
+        @NameInMap("NameSpace")
+        public String nameSpace;
 
-        @NameInMap("HealthCheckUrl")
-        public String healthCheckUrl;
+        @NameInMap("Owner")
+        public String owner;
 
-        @NameInMap("SlbId")
-        public String slbId;
-
-        @NameInMap("ApplicationType")
-        public String applicationType;
-
-        @NameInMap("ExtSlbId")
-        public String extSlbId;
-
-        @NameInMap("BuildPackageId")
-        public Long buildPackageId;
+        @NameInMap("Port")
+        public Integer port;
 
         @NameInMap("RegionId")
         public String regionId;
 
-        @NameInMap("Email")
-        public String email;
+        @NameInMap("RunningInstanceCount")
+        public Integer runningInstanceCount;
 
-        @NameInMap("Cpu")
-        public Integer cpu;
+        @NameInMap("SlbId")
+        public String slbId;
 
-        @NameInMap("ClusterType")
-        public String clusterType;
+        @NameInMap("SlbInfo")
+        public String slbInfo;
+
+        @NameInMap("SlbIp")
+        public String slbIp;
 
         @NameInMap("SlbName")
         public String slbName;
 
+        @NameInMap("SlbPort")
+        public Integer slbPort;
+
+        @NameInMap("UserId")
+        public String userId;
+
         public static GetApplicationResponseBodyApplication build(java.util.Map<String, ?> map) throws Exception {
             GetApplicationResponseBodyApplication self = new GetApplicationResponseBodyApplication();
             return TeaModel.build(map, self);
-        }
-
-        public GetApplicationResponseBodyApplication setExtSlbIp(String extSlbIp) {
-            this.extSlbIp = extSlbIp;
-            return this;
-        }
-        public String getExtSlbIp() {
-            return this.extSlbIp;
-        }
-
-        public GetApplicationResponseBodyApplication setOwner(String owner) {
-            this.owner = owner;
-            return this;
-        }
-        public String getOwner() {
-            return this.owner;
-        }
-
-        public GetApplicationResponseBodyApplication setSlbPort(Integer slbPort) {
-            this.slbPort = slbPort;
-            return this;
-        }
-        public Integer getSlbPort() {
-            return this.slbPort;
-        }
-
-        public GetApplicationResponseBodyApplication setNameSpace(String nameSpace) {
-            this.nameSpace = nameSpace;
-            return this;
-        }
-        public String getNameSpace() {
-            return this.nameSpace;
-        }
-
-        public GetApplicationResponseBodyApplication setExtSlbName(String extSlbName) {
-            this.extSlbName = extSlbName;
-            return this;
-        }
-        public String getExtSlbName() {
-            return this.extSlbName;
-        }
-
-        public GetApplicationResponseBodyApplication setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
-        }
-
-        public GetApplicationResponseBodyApplication setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public GetApplicationResponseBodyApplication setPort(Integer port) {
-            this.port = port;
-            return this;
-        }
-        public Integer getPort() {
-            return this.port;
-        }
-
-        public GetApplicationResponseBodyApplication setRunningInstanceCount(Integer runningInstanceCount) {
-            this.runningInstanceCount = runningInstanceCount;
-            return this;
-        }
-        public Integer getRunningInstanceCount() {
-            return this.runningInstanceCount;
-        }
-
-        public GetApplicationResponseBodyApplication setSlbIp(String slbIp) {
-            this.slbIp = slbIp;
-            return this;
-        }
-        public String getSlbIp() {
-            return this.slbIp;
-        }
-
-        public GetApplicationResponseBodyApplication setDockerize(Boolean dockerize) {
-            this.dockerize = dockerize;
-            return this;
-        }
-        public Boolean getDockerize() {
-            return this.dockerize;
-        }
-
-        public GetApplicationResponseBodyApplication setInstanceCount(Integer instanceCount) {
-            this.instanceCount = instanceCount;
-            return this;
-        }
-        public Integer getInstanceCount() {
-            return this.instanceCount;
-        }
-
-        public GetApplicationResponseBodyApplication setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public GetApplicationResponseBodyApplication setAppId(String appId) {
@@ -255,12 +151,116 @@ public class GetApplicationResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public GetApplicationResponseBodyApplication setSlbInfo(String slbInfo) {
-            this.slbInfo = slbInfo;
+        public GetApplicationResponseBodyApplication setApplicationType(String applicationType) {
+            this.applicationType = applicationType;
             return this;
         }
-        public String getSlbInfo() {
-            return this.slbInfo;
+        public String getApplicationType() {
+            return this.applicationType;
+        }
+
+        public GetApplicationResponseBodyApplication setBuildPackageId(Long buildPackageId) {
+            this.buildPackageId = buildPackageId;
+            return this;
+        }
+        public Long getBuildPackageId() {
+            return this.buildPackageId;
+        }
+
+        public GetApplicationResponseBodyApplication setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public GetApplicationResponseBodyApplication setClusterType(String clusterType) {
+            this.clusterType = clusterType;
+            return this;
+        }
+        public String getClusterType() {
+            return this.clusterType;
+        }
+
+        public GetApplicationResponseBodyApplication setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public GetApplicationResponseBodyApplication setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetApplicationResponseBodyApplication setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetApplicationResponseBodyApplication setDockerize(Boolean dockerize) {
+            this.dockerize = dockerize;
+            return this;
+        }
+        public Boolean getDockerize() {
+            return this.dockerize;
+        }
+
+        public GetApplicationResponseBodyApplication setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
+        }
+
+        public GetApplicationResponseBodyApplication setExtSlbId(String extSlbId) {
+            this.extSlbId = extSlbId;
+            return this;
+        }
+        public String getExtSlbId() {
+            return this.extSlbId;
+        }
+
+        public GetApplicationResponseBodyApplication setExtSlbIp(String extSlbIp) {
+            this.extSlbIp = extSlbIp;
+            return this;
+        }
+        public String getExtSlbIp() {
+            return this.extSlbIp;
+        }
+
+        public GetApplicationResponseBodyApplication setExtSlbName(String extSlbName) {
+            this.extSlbName = extSlbName;
+            return this;
+        }
+        public String getExtSlbName() {
+            return this.extSlbName;
+        }
+
+        public GetApplicationResponseBodyApplication setHealthCheckUrl(String healthCheckUrl) {
+            this.healthCheckUrl = healthCheckUrl;
+            return this;
+        }
+        public String getHealthCheckUrl() {
+            return this.healthCheckUrl;
+        }
+
+        public GetApplicationResponseBodyApplication setInstanceCount(Integer instanceCount) {
+            this.instanceCount = instanceCount;
+            return this;
+        }
+        public Integer getInstanceCount() {
+            return this.instanceCount;
         }
 
         public GetApplicationResponseBodyApplication setMemory(Integer memory) {
@@ -279,52 +279,28 @@ public class GetApplicationResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetApplicationResponseBodyApplication setClusterId(String clusterId) {
-            this.clusterId = clusterId;
+        public GetApplicationResponseBodyApplication setNameSpace(String nameSpace) {
+            this.nameSpace = nameSpace;
             return this;
         }
-        public String getClusterId() {
-            return this.clusterId;
+        public String getNameSpace() {
+            return this.nameSpace;
         }
 
-        public GetApplicationResponseBodyApplication setHealthCheckUrl(String healthCheckUrl) {
-            this.healthCheckUrl = healthCheckUrl;
+        public GetApplicationResponseBodyApplication setOwner(String owner) {
+            this.owner = owner;
             return this;
         }
-        public String getHealthCheckUrl() {
-            return this.healthCheckUrl;
+        public String getOwner() {
+            return this.owner;
         }
 
-        public GetApplicationResponseBodyApplication setSlbId(String slbId) {
-            this.slbId = slbId;
+        public GetApplicationResponseBodyApplication setPort(Integer port) {
+            this.port = port;
             return this;
         }
-        public String getSlbId() {
-            return this.slbId;
-        }
-
-        public GetApplicationResponseBodyApplication setApplicationType(String applicationType) {
-            this.applicationType = applicationType;
-            return this;
-        }
-        public String getApplicationType() {
-            return this.applicationType;
-        }
-
-        public GetApplicationResponseBodyApplication setExtSlbId(String extSlbId) {
-            this.extSlbId = extSlbId;
-            return this;
-        }
-        public String getExtSlbId() {
-            return this.extSlbId;
-        }
-
-        public GetApplicationResponseBodyApplication setBuildPackageId(Long buildPackageId) {
-            this.buildPackageId = buildPackageId;
-            return this;
-        }
-        public Long getBuildPackageId() {
-            return this.buildPackageId;
+        public Integer getPort() {
+            return this.port;
         }
 
         public GetApplicationResponseBodyApplication setRegionId(String regionId) {
@@ -335,28 +311,36 @@ public class GetApplicationResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public GetApplicationResponseBodyApplication setEmail(String email) {
-            this.email = email;
+        public GetApplicationResponseBodyApplication setRunningInstanceCount(Integer runningInstanceCount) {
+            this.runningInstanceCount = runningInstanceCount;
             return this;
         }
-        public String getEmail() {
-            return this.email;
+        public Integer getRunningInstanceCount() {
+            return this.runningInstanceCount;
         }
 
-        public GetApplicationResponseBodyApplication setCpu(Integer cpu) {
-            this.cpu = cpu;
+        public GetApplicationResponseBodyApplication setSlbId(String slbId) {
+            this.slbId = slbId;
             return this;
         }
-        public Integer getCpu() {
-            return this.cpu;
+        public String getSlbId() {
+            return this.slbId;
         }
 
-        public GetApplicationResponseBodyApplication setClusterType(String clusterType) {
-            this.clusterType = clusterType;
+        public GetApplicationResponseBodyApplication setSlbInfo(String slbInfo) {
+            this.slbInfo = slbInfo;
             return this;
         }
-        public String getClusterType() {
-            return this.clusterType;
+        public String getSlbInfo() {
+            return this.slbInfo;
+        }
+
+        public GetApplicationResponseBodyApplication setSlbIp(String slbIp) {
+            this.slbIp = slbIp;
+            return this;
+        }
+        public String getSlbIp() {
+            return this.slbIp;
         }
 
         public GetApplicationResponseBodyApplication setSlbName(String slbName) {
@@ -365,6 +349,22 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public String getSlbName() {
             return this.slbName;
+        }
+
+        public GetApplicationResponseBodyApplication setSlbPort(Integer slbPort) {
+            this.slbPort = slbPort;
+            return this;
+        }
+        public Integer getSlbPort() {
+            return this.slbPort;
+        }
+
+        public GetApplicationResponseBodyApplication setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

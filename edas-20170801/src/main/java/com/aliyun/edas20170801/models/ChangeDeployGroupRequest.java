@@ -10,11 +10,11 @@ public class ChangeDeployGroupRequest extends TeaModel {
     @NameInMap("EccInfo")
     public String eccInfo;
 
-    @NameInMap("GroupName")
-    public String groupName;
-
     @NameInMap("ForceStatus")
     public Boolean forceStatus;
+
+    @NameInMap("GroupName")
+    public String groupName;
 
     public static ChangeDeployGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeDeployGroupRequest self = new ChangeDeployGroupRequest();
@@ -37,20 +37,20 @@ public class ChangeDeployGroupRequest extends TeaModel {
         return this.eccInfo;
     }
 
-    public ChangeDeployGroupRequest setGroupName(String groupName) {
-        this.groupName = groupName;
-        return this;
-    }
-    public String getGroupName() {
-        return this.groupName;
-    }
-
     public ChangeDeployGroupRequest setForceStatus(Boolean forceStatus) {
         this.forceStatus = forceStatus;
         return this;
     }
     public Boolean getForceStatus() {
         return this.forceStatus;
+    }
+
+    public ChangeDeployGroupRequest setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
     }
 
 }

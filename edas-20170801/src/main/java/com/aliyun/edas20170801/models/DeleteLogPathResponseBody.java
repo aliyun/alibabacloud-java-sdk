@@ -4,18 +4,26 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteLogPathResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     public static DeleteLogPathResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteLogPathResponseBody self = new DeleteLogPathResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteLogPathResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DeleteLogPathResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class DeleteLogPathResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteLogPathResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

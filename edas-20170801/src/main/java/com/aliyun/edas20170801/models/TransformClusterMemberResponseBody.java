@@ -4,21 +4,37 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class TransformClusterMemberResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public String data;
-
-    @NameInMap("Code")
-    public Integer code;
-
     public static TransformClusterMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TransformClusterMemberResponseBody self = new TransformClusterMemberResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public TransformClusterMemberResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public TransformClusterMemberResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public TransformClusterMemberResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class TransformClusterMemberResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public TransformClusterMemberResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public TransformClusterMemberResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
 }

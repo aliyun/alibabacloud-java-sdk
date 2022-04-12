@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListSubAccountResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class ListSubAccountResponseBody extends TeaModel {
     @NameInMap("SubAccountList")
     public ListSubAccountResponseBodySubAccountList subAccountList;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static ListSubAccountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSubAccountResponseBody self = new ListSubAccountResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListSubAccountResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public ListSubAccountResponseBody setMessage(String message) {
@@ -45,23 +53,9 @@ public class ListSubAccountResponseBody extends TeaModel {
         return this.subAccountList;
     }
 
-    public ListSubAccountResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public static class ListSubAccountResponseBodySubAccountListSubAccount extends TeaModel {
-        @NameInMap("SubEdasId")
-        public String subEdasId;
-
-        @NameInMap("SubUserId")
-        public String subUserId;
-
-        @NameInMap("Email")
-        public String email;
+        @NameInMap("AdminEdasId")
+        public String adminEdasId;
 
         @NameInMap("AdminUserId")
         public String adminUserId;
@@ -69,42 +63,32 @@ public class ListSubAccountResponseBody extends TeaModel {
         @NameInMap("AdminUserKp")
         public String adminUserKp;
 
-        @NameInMap("AdminEdasId")
-        public String adminEdasId;
-
-        @NameInMap("SubUserKp")
-        public String subUserKp;
+        @NameInMap("Email")
+        public String email;
 
         @NameInMap("Phone")
         public String phone;
+
+        @NameInMap("SubEdasId")
+        public String subEdasId;
+
+        @NameInMap("SubUserId")
+        public String subUserId;
+
+        @NameInMap("SubUserKp")
+        public String subUserKp;
 
         public static ListSubAccountResponseBodySubAccountListSubAccount build(java.util.Map<String, ?> map) throws Exception {
             ListSubAccountResponseBodySubAccountListSubAccount self = new ListSubAccountResponseBodySubAccountListSubAccount();
             return TeaModel.build(map, self);
         }
 
-        public ListSubAccountResponseBodySubAccountListSubAccount setSubEdasId(String subEdasId) {
-            this.subEdasId = subEdasId;
+        public ListSubAccountResponseBodySubAccountListSubAccount setAdminEdasId(String adminEdasId) {
+            this.adminEdasId = adminEdasId;
             return this;
         }
-        public String getSubEdasId() {
-            return this.subEdasId;
-        }
-
-        public ListSubAccountResponseBodySubAccountListSubAccount setSubUserId(String subUserId) {
-            this.subUserId = subUserId;
-            return this;
-        }
-        public String getSubUserId() {
-            return this.subUserId;
-        }
-
-        public ListSubAccountResponseBodySubAccountListSubAccount setEmail(String email) {
-            this.email = email;
-            return this;
-        }
-        public String getEmail() {
-            return this.email;
+        public String getAdminEdasId() {
+            return this.adminEdasId;
         }
 
         public ListSubAccountResponseBodySubAccountListSubAccount setAdminUserId(String adminUserId) {
@@ -123,20 +107,12 @@ public class ListSubAccountResponseBody extends TeaModel {
             return this.adminUserKp;
         }
 
-        public ListSubAccountResponseBodySubAccountListSubAccount setAdminEdasId(String adminEdasId) {
-            this.adminEdasId = adminEdasId;
+        public ListSubAccountResponseBodySubAccountListSubAccount setEmail(String email) {
+            this.email = email;
             return this;
         }
-        public String getAdminEdasId() {
-            return this.adminEdasId;
-        }
-
-        public ListSubAccountResponseBodySubAccountListSubAccount setSubUserKp(String subUserKp) {
-            this.subUserKp = subUserKp;
-            return this;
-        }
-        public String getSubUserKp() {
-            return this.subUserKp;
+        public String getEmail() {
+            return this.email;
         }
 
         public ListSubAccountResponseBodySubAccountListSubAccount setPhone(String phone) {
@@ -145,6 +121,30 @@ public class ListSubAccountResponseBody extends TeaModel {
         }
         public String getPhone() {
             return this.phone;
+        }
+
+        public ListSubAccountResponseBodySubAccountListSubAccount setSubEdasId(String subEdasId) {
+            this.subEdasId = subEdasId;
+            return this;
+        }
+        public String getSubEdasId() {
+            return this.subEdasId;
+        }
+
+        public ListSubAccountResponseBodySubAccountListSubAccount setSubUserId(String subUserId) {
+            this.subUserId = subUserId;
+            return this;
+        }
+        public String getSubUserId() {
+            return this.subUserId;
+        }
+
+        public ListSubAccountResponseBodySubAccountListSubAccount setSubUserKp(String subUserKp) {
+            this.subUserKp = subUserKp;
+            return this;
+        }
+        public String getSubUserKp() {
+            return this.subUserKp;
         }
 
     }

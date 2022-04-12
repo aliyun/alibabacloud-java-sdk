@@ -4,6 +4,15 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class RollbackChangeOrderResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public RollbackChangeOrderResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,18 +22,33 @@ public class RollbackChangeOrderResponseBody extends TeaModel {
     @NameInMap("TraceId")
     public String traceId;
 
-    @NameInMap("Data")
-    public RollbackChangeOrderResponseBodyData data;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Code")
-    public Integer code;
-
     public static RollbackChangeOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RollbackChangeOrderResponseBody self = new RollbackChangeOrderResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RollbackChangeOrderResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public RollbackChangeOrderResponseBody setData(RollbackChangeOrderResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public RollbackChangeOrderResponseBodyData getData() {
+        return this.data;
+    }
+
+    public RollbackChangeOrderResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public RollbackChangeOrderResponseBody setMessage(String message) {
@@ -49,30 +73,6 @@ public class RollbackChangeOrderResponseBody extends TeaModel {
     }
     public String getTraceId() {
         return this.traceId;
-    }
-
-    public RollbackChangeOrderResponseBody setData(RollbackChangeOrderResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public RollbackChangeOrderResponseBodyData getData() {
-        return this.data;
-    }
-
-    public RollbackChangeOrderResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public RollbackChangeOrderResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public static class AbortAndRollbackChangeOrderResponseBodyData extends TeaModel {

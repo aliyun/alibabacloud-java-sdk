@@ -7,14 +7,14 @@ public class ListClusterResponseBody extends TeaModel {
     @NameInMap("ClusterList")
     public ListClusterResponseBodyClusterList clusterList;
 
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public Integer code;
 
     public static ListClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListClusterResponseBody self = new ListClusterResponseBody();
@@ -27,6 +27,14 @@ public class ListClusterResponseBody extends TeaModel {
     }
     public ListClusterResponseBodyClusterList getClusterList() {
         return this.clusterList;
+    }
+
+    public ListClusterResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public ListClusterResponseBody setMessage(String message) {
@@ -45,44 +53,24 @@ public class ListClusterResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListClusterResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public static class ListClusterResponseBodyClusterListCluster extends TeaModel {
-        @NameInMap("OversoldFactor")
-        public Integer oversoldFactor;
+        @NameInMap("ClusterId")
+        public String clusterId;
 
-        @NameInMap("VpcId")
-        public String vpcId;
+        @NameInMap("ClusterName")
+        public String clusterName;
 
-        @NameInMap("UpdateTime")
-        public Long updateTime;
+        @NameInMap("ClusterType")
+        public Integer clusterType;
 
-        @NameInMap("MemUsed")
-        public Integer memUsed;
-
-        @NameInMap("IaasProvider")
-        public String iaasProvider;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
+        @NameInMap("Cpu")
+        public Integer cpu;
 
         @NameInMap("CpuUsed")
         public Integer cpuUsed;
 
-        @NameInMap("Mem")
-        public Integer mem;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("Cpu")
-        public Integer cpu;
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("CsClusterId")
         public String csClusterId;
@@ -90,75 +78,71 @@ public class ListClusterResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("IaasProvider")
+        public String iaasProvider;
+
+        @NameInMap("Mem")
+        public Integer mem;
+
+        @NameInMap("MemUsed")
+        public Integer memUsed;
+
         @NameInMap("NetworkMode")
         public Integer networkMode;
-
-        @NameInMap("ClusterType")
-        public Integer clusterType;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        @NameInMap("ClusterName")
-        public String clusterName;
 
         @NameInMap("NodeNum")
         public Integer nodeNum;
 
-        @NameInMap("ClusterId")
-        public String clusterId;
+        @NameInMap("OversoldFactor")
+        public Integer oversoldFactor;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
+        @NameInMap("VpcId")
+        public String vpcId;
 
         public static ListClusterResponseBodyClusterListCluster build(java.util.Map<String, ?> map) throws Exception {
             ListClusterResponseBodyClusterListCluster self = new ListClusterResponseBodyClusterListCluster();
             return TeaModel.build(map, self);
         }
 
-        public ListClusterResponseBodyClusterListCluster setOversoldFactor(Integer oversoldFactor) {
-            this.oversoldFactor = oversoldFactor;
+        public ListClusterResponseBodyClusterListCluster setClusterId(String clusterId) {
+            this.clusterId = clusterId;
             return this;
         }
-        public Integer getOversoldFactor() {
-            return this.oversoldFactor;
+        public String getClusterId() {
+            return this.clusterId;
         }
 
-        public ListClusterResponseBodyClusterListCluster setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public ListClusterResponseBodyClusterListCluster setClusterName(String clusterName) {
+            this.clusterName = clusterName;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
+        public String getClusterName() {
+            return this.clusterName;
         }
 
-        public ListClusterResponseBodyClusterListCluster setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
+        public ListClusterResponseBodyClusterListCluster setClusterType(Integer clusterType) {
+            this.clusterType = clusterType;
             return this;
         }
-        public Long getUpdateTime() {
-            return this.updateTime;
+        public Integer getClusterType() {
+            return this.clusterType;
         }
 
-        public ListClusterResponseBodyClusterListCluster setMemUsed(Integer memUsed) {
-            this.memUsed = memUsed;
+        public ListClusterResponseBodyClusterListCluster setCpu(Integer cpu) {
+            this.cpu = cpu;
             return this;
         }
-        public Integer getMemUsed() {
-            return this.memUsed;
-        }
-
-        public ListClusterResponseBodyClusterListCluster setIaasProvider(String iaasProvider) {
-            this.iaasProvider = iaasProvider;
-            return this;
-        }
-        public String getIaasProvider() {
-            return this.iaasProvider;
-        }
-
-        public ListClusterResponseBodyClusterListCluster setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
+        public Integer getCpu() {
+            return this.cpu;
         }
 
         public ListClusterResponseBodyClusterListCluster setCpuUsed(Integer cpuUsed) {
@@ -169,28 +153,12 @@ public class ListClusterResponseBody extends TeaModel {
             return this.cpuUsed;
         }
 
-        public ListClusterResponseBodyClusterListCluster setMem(Integer mem) {
-            this.mem = mem;
+        public ListClusterResponseBodyClusterListCluster setCreateTime(Long createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public Integer getMem() {
-            return this.mem;
-        }
-
-        public ListClusterResponseBodyClusterListCluster setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public ListClusterResponseBodyClusterListCluster setCpu(Integer cpu) {
-            this.cpu = cpu;
-            return this;
-        }
-        public Integer getCpu() {
-            return this.cpu;
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public ListClusterResponseBodyClusterListCluster setCsClusterId(String csClusterId) {
@@ -209,36 +177,36 @@ public class ListClusterResponseBody extends TeaModel {
             return this.description;
         }
 
+        public ListClusterResponseBodyClusterListCluster setIaasProvider(String iaasProvider) {
+            this.iaasProvider = iaasProvider;
+            return this;
+        }
+        public String getIaasProvider() {
+            return this.iaasProvider;
+        }
+
+        public ListClusterResponseBodyClusterListCluster setMem(Integer mem) {
+            this.mem = mem;
+            return this;
+        }
+        public Integer getMem() {
+            return this.mem;
+        }
+
+        public ListClusterResponseBodyClusterListCluster setMemUsed(Integer memUsed) {
+            this.memUsed = memUsed;
+            return this;
+        }
+        public Integer getMemUsed() {
+            return this.memUsed;
+        }
+
         public ListClusterResponseBodyClusterListCluster setNetworkMode(Integer networkMode) {
             this.networkMode = networkMode;
             return this;
         }
         public Integer getNetworkMode() {
             return this.networkMode;
-        }
-
-        public ListClusterResponseBodyClusterListCluster setClusterType(Integer clusterType) {
-            this.clusterType = clusterType;
-            return this;
-        }
-        public Integer getClusterType() {
-            return this.clusterType;
-        }
-
-        public ListClusterResponseBodyClusterListCluster setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        public ListClusterResponseBodyClusterListCluster setClusterName(String clusterName) {
-            this.clusterName = clusterName;
-            return this;
-        }
-        public String getClusterName() {
-            return this.clusterName;
         }
 
         public ListClusterResponseBodyClusterListCluster setNodeNum(Integer nodeNum) {
@@ -249,12 +217,44 @@ public class ListClusterResponseBody extends TeaModel {
             return this.nodeNum;
         }
 
-        public ListClusterResponseBodyClusterListCluster setClusterId(String clusterId) {
-            this.clusterId = clusterId;
+        public ListClusterResponseBodyClusterListCluster setOversoldFactor(Integer oversoldFactor) {
+            this.oversoldFactor = oversoldFactor;
             return this;
         }
-        public String getClusterId() {
-            return this.clusterId;
+        public Integer getOversoldFactor() {
+            return this.oversoldFactor;
+        }
+
+        public ListClusterResponseBodyClusterListCluster setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public ListClusterResponseBodyClusterListCluster setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public ListClusterResponseBodyClusterListCluster setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public ListClusterResponseBodyClusterListCluster setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

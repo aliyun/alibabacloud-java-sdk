@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class QueryEccInfoResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("EccInfo")
     public QueryEccInfoResponseBodyEccInfo eccInfo;
 
@@ -13,12 +16,17 @@ public class QueryEccInfoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static QueryEccInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryEccInfoResponseBody self = new QueryEccInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryEccInfoResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public QueryEccInfoResponseBody setEccInfo(QueryEccInfoResponseBodyEccInfo eccInfo) {
@@ -45,17 +53,9 @@ public class QueryEccInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryEccInfoResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public static class QueryEccInfoResponseBodyEccInfo extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
+        @NameInMap("AppId")
+        public String appId;
 
         @NameInMap("EccId")
         public String eccId;
@@ -72,23 +72,23 @@ public class QueryEccInfoResponseBody extends TeaModel {
         @NameInMap("PackageMd5")
         public String packageMd5;
 
-        @NameInMap("AppId")
-        public String appId;
-
         @NameInMap("PackageVersion")
         public String packageVersion;
+
+        @NameInMap("VpcId")
+        public String vpcId;
 
         public static QueryEccInfoResponseBodyEccInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryEccInfoResponseBodyEccInfo self = new QueryEccInfoResponseBodyEccInfo();
             return TeaModel.build(map, self);
         }
 
-        public QueryEccInfoResponseBodyEccInfo setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public QueryEccInfoResponseBodyEccInfo setAppId(String appId) {
+            this.appId = appId;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
+        public String getAppId() {
+            return this.appId;
         }
 
         public QueryEccInfoResponseBodyEccInfo setEccId(String eccId) {
@@ -131,20 +131,20 @@ public class QueryEccInfoResponseBody extends TeaModel {
             return this.packageMd5;
         }
 
-        public QueryEccInfoResponseBodyEccInfo setAppId(String appId) {
-            this.appId = appId;
-            return this;
-        }
-        public String getAppId() {
-            return this.appId;
-        }
-
         public QueryEccInfoResponseBodyEccInfo setPackageVersion(String packageVersion) {
             this.packageVersion = packageVersion;
             return this;
         }
         public String getPackageVersion() {
             return this.packageVersion;
+        }
+
+        public QueryEccInfoResponseBodyEccInfo setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

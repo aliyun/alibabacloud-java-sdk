@@ -4,21 +4,37 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateIDCImportCommandResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public String data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static CreateIDCImportCommandResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateIDCImportCommandResponseBody self = new CreateIDCImportCommandResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateIDCImportCommandResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateIDCImportCommandResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public CreateIDCImportCommandResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class CreateIDCImportCommandResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateIDCImportCommandResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public CreateIDCImportCommandResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

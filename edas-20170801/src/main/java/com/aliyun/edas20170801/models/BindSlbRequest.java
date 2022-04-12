@@ -7,6 +7,9 @@ public class BindSlbRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("ListenerPort")
+    public Integer listenerPort;
+
     @NameInMap("SlbId")
     public String slbId;
 
@@ -15,9 +18,6 @@ public class BindSlbRequest extends TeaModel {
 
     @NameInMap("Type")
     public String type;
-
-    @NameInMap("ListenerPort")
-    public Integer listenerPort;
 
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
@@ -33,6 +33,14 @@ public class BindSlbRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public BindSlbRequest setListenerPort(Integer listenerPort) {
+        this.listenerPort = listenerPort;
+        return this;
+    }
+    public Integer getListenerPort() {
+        return this.listenerPort;
     }
 
     public BindSlbRequest setSlbId(String slbId) {
@@ -57,14 +65,6 @@ public class BindSlbRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public BindSlbRequest setListenerPort(Integer listenerPort) {
-        this.listenerPort = listenerPort;
-        return this;
-    }
-    public Integer getListenerPort() {
-        return this.listenerPort;
     }
 
     public BindSlbRequest setVServerGroupId(String VServerGroupId) {

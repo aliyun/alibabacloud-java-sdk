@@ -4,21 +4,37 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class BindSlbResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public BindSlbResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public BindSlbResponseBodyData data;
-
-    @NameInMap("Code")
-    public Integer code;
-
     public static BindSlbResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BindSlbResponseBody self = new BindSlbResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public BindSlbResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public BindSlbResponseBody setData(BindSlbResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public BindSlbResponseBodyData getData() {
+        return this.data;
     }
 
     public BindSlbResponseBody setMessage(String message) {
@@ -37,93 +53,37 @@ public class BindSlbResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public BindSlbResponseBody setData(BindSlbResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public BindSlbResponseBodyData getData() {
-        return this.data;
-    }
-
-    public BindSlbResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public static class BindSlbResponseBodyData extends TeaModel {
-        @NameInMap("VServerGroupId")
-        public String VServerGroupId;
-
-        @NameInMap("SlbId")
-        public String slbId;
+        @NameInMap("ExtSlbId")
+        public String extSlbId;
 
         @NameInMap("ExtSlbIp")
         public String extSlbIp;
 
-        @NameInMap("SlbPort")
-        public Integer slbPort;
-
         @NameInMap("ExtSlbName")
         public String extSlbName;
-
-        @NameInMap("ExtSlbId")
-        public String extSlbId;
 
         @NameInMap("ExtVServerGroupId")
         public String extVServerGroupId;
 
-        @NameInMap("SlbName")
-        public String slbName;
+        @NameInMap("SlbId")
+        public String slbId;
 
         @NameInMap("SlbIp")
         public String slbIp;
 
+        @NameInMap("SlbName")
+        public String slbName;
+
+        @NameInMap("SlbPort")
+        public Integer slbPort;
+
+        @NameInMap("VServerGroupId")
+        public String VServerGroupId;
+
         public static BindSlbResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             BindSlbResponseBodyData self = new BindSlbResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public BindSlbResponseBodyData setVServerGroupId(String VServerGroupId) {
-            this.VServerGroupId = VServerGroupId;
-            return this;
-        }
-        public String getVServerGroupId() {
-            return this.VServerGroupId;
-        }
-
-        public BindSlbResponseBodyData setSlbId(String slbId) {
-            this.slbId = slbId;
-            return this;
-        }
-        public String getSlbId() {
-            return this.slbId;
-        }
-
-        public BindSlbResponseBodyData setExtSlbIp(String extSlbIp) {
-            this.extSlbIp = extSlbIp;
-            return this;
-        }
-        public String getExtSlbIp() {
-            return this.extSlbIp;
-        }
-
-        public BindSlbResponseBodyData setSlbPort(Integer slbPort) {
-            this.slbPort = slbPort;
-            return this;
-        }
-        public Integer getSlbPort() {
-            return this.slbPort;
-        }
-
-        public BindSlbResponseBodyData setExtSlbName(String extSlbName) {
-            this.extSlbName = extSlbName;
-            return this;
-        }
-        public String getExtSlbName() {
-            return this.extSlbName;
         }
 
         public BindSlbResponseBodyData setExtSlbId(String extSlbId) {
@@ -134,12 +94,44 @@ public class BindSlbResponseBody extends TeaModel {
             return this.extSlbId;
         }
 
+        public BindSlbResponseBodyData setExtSlbIp(String extSlbIp) {
+            this.extSlbIp = extSlbIp;
+            return this;
+        }
+        public String getExtSlbIp() {
+            return this.extSlbIp;
+        }
+
+        public BindSlbResponseBodyData setExtSlbName(String extSlbName) {
+            this.extSlbName = extSlbName;
+            return this;
+        }
+        public String getExtSlbName() {
+            return this.extSlbName;
+        }
+
         public BindSlbResponseBodyData setExtVServerGroupId(String extVServerGroupId) {
             this.extVServerGroupId = extVServerGroupId;
             return this;
         }
         public String getExtVServerGroupId() {
             return this.extVServerGroupId;
+        }
+
+        public BindSlbResponseBodyData setSlbId(String slbId) {
+            this.slbId = slbId;
+            return this;
+        }
+        public String getSlbId() {
+            return this.slbId;
+        }
+
+        public BindSlbResponseBodyData setSlbIp(String slbIp) {
+            this.slbIp = slbIp;
+            return this;
+        }
+        public String getSlbIp() {
+            return this.slbIp;
         }
 
         public BindSlbResponseBodyData setSlbName(String slbName) {
@@ -150,12 +142,20 @@ public class BindSlbResponseBody extends TeaModel {
             return this.slbName;
         }
 
-        public BindSlbResponseBodyData setSlbIp(String slbIp) {
-            this.slbIp = slbIp;
+        public BindSlbResponseBodyData setSlbPort(Integer slbPort) {
+            this.slbPort = slbPort;
             return this;
         }
-        public String getSlbIp() {
-            return this.slbIp;
+        public Integer getSlbPort() {
+            return this.slbPort;
+        }
+
+        public BindSlbResponseBodyData setVServerGroupId(String VServerGroupId) {
+            this.VServerGroupId = VServerGroupId;
+            return this;
+        }
+        public String getVServerGroupId() {
+            return this.VServerGroupId;
         }
 
     }

@@ -7,11 +7,11 @@ public class TransformClusterMemberRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public String instanceIds;
 
-    @NameInMap("TargetClusterId")
-    public String targetClusterId;
-
     @NameInMap("Password")
     public String password;
+
+    @NameInMap("TargetClusterId")
+    public String targetClusterId;
 
     public static TransformClusterMemberRequest build(java.util.Map<String, ?> map) throws Exception {
         TransformClusterMemberRequest self = new TransformClusterMemberRequest();
@@ -26,20 +26,20 @@ public class TransformClusterMemberRequest extends TeaModel {
         return this.instanceIds;
     }
 
-    public TransformClusterMemberRequest setTargetClusterId(String targetClusterId) {
-        this.targetClusterId = targetClusterId;
-        return this;
-    }
-    public String getTargetClusterId() {
-        return this.targetClusterId;
-    }
-
     public TransformClusterMemberRequest setPassword(String password) {
         this.password = password;
         return this;
     }
     public String getPassword() {
         return this.password;
+    }
+
+    public TransformClusterMemberRequest setTargetClusterId(String targetClusterId) {
+        this.targetClusterId = targetClusterId;
+        return this;
+    }
+    public String getTargetClusterId() {
+        return this.targetClusterId;
     }
 
 }

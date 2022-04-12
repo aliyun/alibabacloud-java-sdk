@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetPackageStorageCredentialResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Credential")
     public GetPackageStorageCredentialResponseBodyCredential credential;
 
@@ -13,12 +16,17 @@ public class GetPackageStorageCredentialResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static GetPackageStorageCredentialResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPackageStorageCredentialResponseBody self = new GetPackageStorageCredentialResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetPackageStorageCredentialResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public GetPackageStorageCredentialResponseBody setCredential(GetPackageStorageCredentialResponseBodyCredential credential) {
@@ -45,71 +53,31 @@ public class GetPackageStorageCredentialResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetPackageStorageCredentialResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public static class GetPackageStorageCredentialResponseBodyCredential extends TeaModel {
-        @NameInMap("KeyPrefix")
-        public String keyPrefix;
-
-        @NameInMap("SecurityToken")
-        public String securityToken;
+        @NameInMap("AccessKeyId")
+        public String accessKeyId;
 
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
+        @NameInMap("Bucket")
+        public String bucket;
+
         @NameInMap("Expiration")
         public String expiration;
 
-        @NameInMap("AccessKeyId")
-        public String accessKeyId;
-
-        @NameInMap("Bucket")
-        public String bucket;
+        @NameInMap("KeyPrefix")
+        public String keyPrefix;
 
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("SecurityToken")
+        public String securityToken;
+
         public static GetPackageStorageCredentialResponseBodyCredential build(java.util.Map<String, ?> map) throws Exception {
             GetPackageStorageCredentialResponseBodyCredential self = new GetPackageStorageCredentialResponseBodyCredential();
             return TeaModel.build(map, self);
-        }
-
-        public GetPackageStorageCredentialResponseBodyCredential setKeyPrefix(String keyPrefix) {
-            this.keyPrefix = keyPrefix;
-            return this;
-        }
-        public String getKeyPrefix() {
-            return this.keyPrefix;
-        }
-
-        public GetPackageStorageCredentialResponseBodyCredential setSecurityToken(String securityToken) {
-            this.securityToken = securityToken;
-            return this;
-        }
-        public String getSecurityToken() {
-            return this.securityToken;
-        }
-
-        public GetPackageStorageCredentialResponseBodyCredential setAccessKeySecret(String accessKeySecret) {
-            this.accessKeySecret = accessKeySecret;
-            return this;
-        }
-        public String getAccessKeySecret() {
-            return this.accessKeySecret;
-        }
-
-        public GetPackageStorageCredentialResponseBodyCredential setExpiration(String expiration) {
-            this.expiration = expiration;
-            return this;
-        }
-        public String getExpiration() {
-            return this.expiration;
         }
 
         public GetPackageStorageCredentialResponseBodyCredential setAccessKeyId(String accessKeyId) {
@@ -120,6 +88,14 @@ public class GetPackageStorageCredentialResponseBody extends TeaModel {
             return this.accessKeyId;
         }
 
+        public GetPackageStorageCredentialResponseBodyCredential setAccessKeySecret(String accessKeySecret) {
+            this.accessKeySecret = accessKeySecret;
+            return this;
+        }
+        public String getAccessKeySecret() {
+            return this.accessKeySecret;
+        }
+
         public GetPackageStorageCredentialResponseBodyCredential setBucket(String bucket) {
             this.bucket = bucket;
             return this;
@@ -128,12 +104,36 @@ public class GetPackageStorageCredentialResponseBody extends TeaModel {
             return this.bucket;
         }
 
+        public GetPackageStorageCredentialResponseBodyCredential setExpiration(String expiration) {
+            this.expiration = expiration;
+            return this;
+        }
+        public String getExpiration() {
+            return this.expiration;
+        }
+
+        public GetPackageStorageCredentialResponseBodyCredential setKeyPrefix(String keyPrefix) {
+            this.keyPrefix = keyPrefix;
+            return this;
+        }
+        public String getKeyPrefix() {
+            return this.keyPrefix;
+        }
+
         public GetPackageStorageCredentialResponseBodyCredential setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetPackageStorageCredentialResponseBodyCredential setSecurityToken(String securityToken) {
+            this.securityToken = securityToken;
+            return this;
+        }
+        public String getSecurityToken() {
+            return this.securityToken;
         }
 
     }

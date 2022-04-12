@@ -4,21 +4,37 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListAuthorityResponseBody extends TeaModel {
+    @NameInMap("AuthorityList")
+    public ListAuthorityResponseBodyAuthorityList authorityList;
+
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public Integer code;
-
-    @NameInMap("AuthorityList")
-    public ListAuthorityResponseBodyAuthorityList authorityList;
-
     public static ListAuthorityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAuthorityResponseBody self = new ListAuthorityResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListAuthorityResponseBody setAuthorityList(ListAuthorityResponseBodyAuthorityList authorityList) {
+        this.authorityList = authorityList;
+        return this;
+    }
+    public ListAuthorityResponseBodyAuthorityList getAuthorityList() {
+        return this.authorityList;
+    }
+
+    public ListAuthorityResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public ListAuthorityResponseBody setMessage(String message) {
@@ -37,31 +53,15 @@ public class ListAuthorityResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListAuthorityResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public ListAuthorityResponseBody setAuthorityList(ListAuthorityResponseBodyAuthorityList authorityList) {
-        this.authorityList = authorityList;
-        return this;
-    }
-    public ListAuthorityResponseBodyAuthorityList getAuthorityList() {
-        return this.authorityList;
-    }
-
     public static class ListAuthorityResponseBodyAuthorityListAuthorityActionListAction extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
         @NameInMap("Description")
         public String description;
 
         @NameInMap("GroupId")
         public String groupId;
-
-        @NameInMap("Code")
-        public String code;
 
         @NameInMap("Name")
         public String name;
@@ -69,6 +69,14 @@ public class ListAuthorityResponseBody extends TeaModel {
         public static ListAuthorityResponseBodyAuthorityListAuthorityActionListAction build(java.util.Map<String, ?> map) throws Exception {
             ListAuthorityResponseBodyAuthorityListAuthorityActionListAction self = new ListAuthorityResponseBodyAuthorityListAuthorityActionListAction();
             return TeaModel.build(map, self);
+        }
+
+        public ListAuthorityResponseBodyAuthorityListAuthorityActionListAction setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public ListAuthorityResponseBodyAuthorityListAuthorityActionListAction setDescription(String description) {
@@ -85,14 +93,6 @@ public class ListAuthorityResponseBody extends TeaModel {
         }
         public String getGroupId() {
             return this.groupId;
-        }
-
-        public ListAuthorityResponseBodyAuthorityListAuthorityActionListAction setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
         }
 
         public ListAuthorityResponseBodyAuthorityListAuthorityActionListAction setName(String name) {
@@ -125,14 +125,14 @@ public class ListAuthorityResponseBody extends TeaModel {
     }
 
     public static class ListAuthorityResponseBodyAuthorityListAuthority extends TeaModel {
-        @NameInMap("GroupId")
-        public String groupId;
+        @NameInMap("ActionList")
+        public ListAuthorityResponseBodyAuthorityListAuthorityActionList actionList;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("ActionList")
-        public ListAuthorityResponseBodyAuthorityListAuthorityActionList actionList;
+        @NameInMap("GroupId")
+        public String groupId;
 
         @NameInMap("Name")
         public String name;
@@ -142,12 +142,12 @@ public class ListAuthorityResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListAuthorityResponseBodyAuthorityListAuthority setGroupId(String groupId) {
-            this.groupId = groupId;
+        public ListAuthorityResponseBodyAuthorityListAuthority setActionList(ListAuthorityResponseBodyAuthorityListAuthorityActionList actionList) {
+            this.actionList = actionList;
             return this;
         }
-        public String getGroupId() {
-            return this.groupId;
+        public ListAuthorityResponseBodyAuthorityListAuthorityActionList getActionList() {
+            return this.actionList;
         }
 
         public ListAuthorityResponseBodyAuthorityListAuthority setDescription(String description) {
@@ -158,12 +158,12 @@ public class ListAuthorityResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListAuthorityResponseBodyAuthorityListAuthority setActionList(ListAuthorityResponseBodyAuthorityListAuthorityActionList actionList) {
-            this.actionList = actionList;
+        public ListAuthorityResponseBodyAuthorityListAuthority setGroupId(String groupId) {
+            this.groupId = groupId;
             return this;
         }
-        public ListAuthorityResponseBodyAuthorityListAuthorityActionList getActionList() {
-            return this.actionList;
+        public String getGroupId() {
+            return this.groupId;
         }
 
         public ListAuthorityResponseBodyAuthorityListAuthority setName(String name) {

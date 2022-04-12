@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListUserDefineRegionResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
     @NameInMap("UserDefineRegionList")
     public ListUserDefineRegionResponseBodyUserDefineRegionList userDefineRegionList;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static ListUserDefineRegionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListUserDefineRegionResponseBody self = new ListUserDefineRegionResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListUserDefineRegionResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public ListUserDefineRegionResponseBody setMessage(String message) {
@@ -45,35 +53,27 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
         return this.userDefineRegionList;
     }
 
-    public ListUserDefineRegionResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public static class ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity extends TeaModel {
         @NameInMap("BelongRegion")
         public String belongRegion;
 
-        @NameInMap("RegionName")
-        public String regionName;
-
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("DebugEnable")
         public Boolean debugEnable;
 
-        @NameInMap("UserId")
-        public String userId;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("RegionName")
+        public String regionName;
+
+        @NameInMap("UserId")
+        public String userId;
 
         public static ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity build(java.util.Map<String, ?> map) throws Exception {
             ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity self = new ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity();
@@ -88,22 +88,6 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             return this.belongRegion;
         }
 
-        public ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity setRegionName(String regionName) {
-            this.regionName = regionName;
-            return this;
-        }
-        public String getRegionName() {
-            return this.regionName;
-        }
-
-        public ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
         public ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity setDebugEnable(Boolean debugEnable) {
             this.debugEnable = debugEnable;
             return this;
@@ -112,12 +96,12 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             return this.debugEnable;
         }
 
-        public ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity setUserId(String userId) {
-            this.userId = userId;
+        public ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public String getDescription() {
+            return this.description;
         }
 
         public ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity setId(Long id) {
@@ -134,6 +118,22 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity setRegionName(String regionName) {
+            this.regionName = regionName;
+            return this;
+        }
+        public String getRegionName() {
+            return this.regionName;
+        }
+
+        public ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

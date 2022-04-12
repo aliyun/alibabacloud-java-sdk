@@ -4,24 +4,32 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationRequest extends TeaModel {
+    @NameInMap("AppName")
+    public String appName;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("LogicalRegionId")
     public String logicalRegionId;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("LogicalRegionIdFilter")
+    public String logicalRegionIdFilter;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("LogicalRegionIdFilter")
-    public String logicalRegionIdFilter;
-
     public static ListApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         ListApplicationRequest self = new ListApplicationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListApplicationRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
     }
 
     public ListApplicationRequest setClusterId(String clusterId) {
@@ -40,12 +48,12 @@ public class ListApplicationRequest extends TeaModel {
         return this.logicalRegionId;
     }
 
-    public ListApplicationRequest setAppName(String appName) {
-        this.appName = appName;
+    public ListApplicationRequest setLogicalRegionIdFilter(String logicalRegionIdFilter) {
+        this.logicalRegionIdFilter = logicalRegionIdFilter;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public String getLogicalRegionIdFilter() {
+        return this.logicalRegionIdFilter;
     }
 
     public ListApplicationRequest setResourceGroupId(String resourceGroupId) {
@@ -54,14 +62,6 @@ public class ListApplicationRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public ListApplicationRequest setLogicalRegionIdFilter(String logicalRegionIdFilter) {
-        this.logicalRegionIdFilter = logicalRegionIdFilter;
-        return this;
-    }
-    public String getLogicalRegionIdFilter() {
-        return this.logicalRegionIdFilter;
     }
 
 }

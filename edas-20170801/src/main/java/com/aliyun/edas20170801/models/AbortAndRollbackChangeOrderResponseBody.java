@@ -4,6 +4,15 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public AbortAndRollbackChangeOrderResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,18 +22,33 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
     @NameInMap("TraceId")
     public String traceId;
 
-    @NameInMap("Data")
-    public AbortAndRollbackChangeOrderResponseBodyData data;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Code")
-    public Integer code;
-
     public static AbortAndRollbackChangeOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AbortAndRollbackChangeOrderResponseBody self = new AbortAndRollbackChangeOrderResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AbortAndRollbackChangeOrderResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public AbortAndRollbackChangeOrderResponseBody setData(AbortAndRollbackChangeOrderResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public AbortAndRollbackChangeOrderResponseBodyData getData() {
+        return this.data;
+    }
+
+    public AbortAndRollbackChangeOrderResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public AbortAndRollbackChangeOrderResponseBody setMessage(String message) {
@@ -49,30 +73,6 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
     }
     public String getTraceId() {
         return this.traceId;
-    }
-
-    public AbortAndRollbackChangeOrderResponseBody setData(AbortAndRollbackChangeOrderResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public AbortAndRollbackChangeOrderResponseBodyData getData() {
-        return this.data;
-    }
-
-    public AbortAndRollbackChangeOrderResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public AbortAndRollbackChangeOrderResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public static class AbortAndRollbackChangeOrderResponseBodyData extends TeaModel {

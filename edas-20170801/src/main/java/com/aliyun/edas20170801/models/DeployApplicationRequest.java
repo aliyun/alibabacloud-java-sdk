@@ -4,26 +4,11 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class DeployApplicationRequest extends TeaModel {
+    @NameInMap("AppEnv")
+    public String appEnv;
+
     @NameInMap("AppId")
     public String appId;
-
-    @NameInMap("PackageVersion")
-    public String packageVersion;
-
-    @NameInMap("Desc")
-    public String desc;
-
-    @NameInMap("DeployType")
-    public String deployType;
-
-    @NameInMap("WarUrl")
-    public String warUrl;
-
-    @NameInMap("ImageUrl")
-    public String imageUrl;
-
-    @NameInMap("GroupId")
-    public String groupId;
 
     @NameInMap("Batch")
     public Integer batch;
@@ -31,27 +16,50 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("BatchWaitTime")
     public Integer batchWaitTime;
 
-    @NameInMap("AppEnv")
-    public String appEnv;
-
     @NameInMap("BuildPackId")
     public Long buildPackId;
 
     @NameInMap("ComponentIds")
     public String componentIds;
 
-    @NameInMap("ReleaseType")
-    public Long releaseType;
+    @NameInMap("DeployType")
+    public String deployType;
+
+    @NameInMap("Desc")
+    public String desc;
 
     @NameInMap("Gray")
     public Boolean gray;
 
+    @NameInMap("GroupId")
+    public String groupId;
+
+    @NameInMap("ImageUrl")
+    public String imageUrl;
+
+    @NameInMap("PackageVersion")
+    public String packageVersion;
+
+    @NameInMap("ReleaseType")
+    public Long releaseType;
+
     @NameInMap("TrafficControlStrategy")
     public String trafficControlStrategy;
+
+    @NameInMap("WarUrl")
+    public String warUrl;
 
     public static DeployApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         DeployApplicationRequest self = new DeployApplicationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeployApplicationRequest setAppEnv(String appEnv) {
+        this.appEnv = appEnv;
+        return this;
+    }
+    public String getAppEnv() {
+        return this.appEnv;
     }
 
     public DeployApplicationRequest setAppId(String appId) {
@@ -60,54 +68,6 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
-    }
-
-    public DeployApplicationRequest setPackageVersion(String packageVersion) {
-        this.packageVersion = packageVersion;
-        return this;
-    }
-    public String getPackageVersion() {
-        return this.packageVersion;
-    }
-
-    public DeployApplicationRequest setDesc(String desc) {
-        this.desc = desc;
-        return this;
-    }
-    public String getDesc() {
-        return this.desc;
-    }
-
-    public DeployApplicationRequest setDeployType(String deployType) {
-        this.deployType = deployType;
-        return this;
-    }
-    public String getDeployType() {
-        return this.deployType;
-    }
-
-    public DeployApplicationRequest setWarUrl(String warUrl) {
-        this.warUrl = warUrl;
-        return this;
-    }
-    public String getWarUrl() {
-        return this.warUrl;
-    }
-
-    public DeployApplicationRequest setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-        return this;
-    }
-    public String getImageUrl() {
-        return this.imageUrl;
-    }
-
-    public DeployApplicationRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
     }
 
     public DeployApplicationRequest setBatch(Integer batch) {
@@ -126,14 +86,6 @@ public class DeployApplicationRequest extends TeaModel {
         return this.batchWaitTime;
     }
 
-    public DeployApplicationRequest setAppEnv(String appEnv) {
-        this.appEnv = appEnv;
-        return this;
-    }
-    public String getAppEnv() {
-        return this.appEnv;
-    }
-
     public DeployApplicationRequest setBuildPackId(Long buildPackId) {
         this.buildPackId = buildPackId;
         return this;
@@ -150,12 +102,20 @@ public class DeployApplicationRequest extends TeaModel {
         return this.componentIds;
     }
 
-    public DeployApplicationRequest setReleaseType(Long releaseType) {
-        this.releaseType = releaseType;
+    public DeployApplicationRequest setDeployType(String deployType) {
+        this.deployType = deployType;
         return this;
     }
-    public Long getReleaseType() {
-        return this.releaseType;
+    public String getDeployType() {
+        return this.deployType;
+    }
+
+    public DeployApplicationRequest setDesc(String desc) {
+        this.desc = desc;
+        return this;
+    }
+    public String getDesc() {
+        return this.desc;
     }
 
     public DeployApplicationRequest setGray(Boolean gray) {
@@ -166,12 +126,52 @@ public class DeployApplicationRequest extends TeaModel {
         return this.gray;
     }
 
+    public DeployApplicationRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public DeployApplicationRequest setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    public String getImageUrl() {
+        return this.imageUrl;
+    }
+
+    public DeployApplicationRequest setPackageVersion(String packageVersion) {
+        this.packageVersion = packageVersion;
+        return this;
+    }
+    public String getPackageVersion() {
+        return this.packageVersion;
+    }
+
+    public DeployApplicationRequest setReleaseType(Long releaseType) {
+        this.releaseType = releaseType;
+        return this;
+    }
+    public Long getReleaseType() {
+        return this.releaseType;
+    }
+
     public DeployApplicationRequest setTrafficControlStrategy(String trafficControlStrategy) {
         this.trafficControlStrategy = trafficControlStrategy;
         return this;
     }
     public String getTrafficControlStrategy() {
         return this.trafficControlStrategy;
+    }
+
+    public DeployApplicationRequest setWarUrl(String warUrl) {
+        this.warUrl = warUrl;
+        return this;
+    }
+    public String getWarUrl() {
+        return this.warUrl;
     }
 
 }

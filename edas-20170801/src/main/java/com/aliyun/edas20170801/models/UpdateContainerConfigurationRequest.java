@@ -7,11 +7,11 @@ public class UpdateContainerConfigurationRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    @NameInMap("GroupId")
-    public String groupId;
-
     @NameInMap("ContextPath")
     public String contextPath;
+
+    @NameInMap("GroupId")
+    public String groupId;
 
     @NameInMap("HttpPort")
     public Integer httpPort;
@@ -38,20 +38,20 @@ public class UpdateContainerConfigurationRequest extends TeaModel {
         return this.appId;
     }
 
-    public UpdateContainerConfigurationRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
-    }
-
     public UpdateContainerConfigurationRequest setContextPath(String contextPath) {
         this.contextPath = contextPath;
         return this;
     }
     public String getContextPath() {
         return this.contextPath;
+    }
+
+    public UpdateContainerConfigurationRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public UpdateContainerConfigurationRequest setHttpPort(Integer httpPort) {

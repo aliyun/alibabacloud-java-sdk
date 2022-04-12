@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyScalingRuleRequest extends TeaModel {
+    @NameInMap("AcceptEULA")
+    public Boolean acceptEULA;
+
     @NameInMap("AppId")
     public String appId;
 
@@ -13,14 +16,14 @@ public class ModifyScalingRuleRequest extends TeaModel {
     @NameInMap("InCondition")
     public String inCondition;
 
-    @NameInMap("InEnable")
-    public Boolean inEnable;
-
     @NameInMap("InCpu")
     public Integer inCpu;
 
     @NameInMap("InDuration")
     public Integer inDuration;
+
+    @NameInMap("InEnable")
+    public Boolean inEnable;
 
     @NameInMap("InInstanceNum")
     public Integer inInstanceNum;
@@ -34,11 +37,17 @@ public class ModifyScalingRuleRequest extends TeaModel {
     @NameInMap("InStep")
     public Integer inStep;
 
-    @NameInMap("OutCondition")
-    public String outCondition;
+    @NameInMap("KeyPairName")
+    public String keyPairName;
+
+    @NameInMap("MultiAzPolicy")
+    public String multiAzPolicy;
 
     @NameInMap("OutCPU")
     public Integer outCPU;
+
+    @NameInMap("OutCondition")
+    public String outCondition;
 
     @NameInMap("OutDuration")
     public Integer outDuration;
@@ -58,20 +67,17 @@ public class ModifyScalingRuleRequest extends TeaModel {
     @NameInMap("OutStep")
     public Integer outStep;
 
+    @NameInMap("Password")
+    public String password;
+
     @NameInMap("ResourceFrom")
     public String resourceFrom;
 
-    @NameInMap("MultiAzPolicy")
-    public String multiAzPolicy;
-
-    @NameInMap("VpcId")
-    public String vpcId;
-
-    @NameInMap("VSwitchIds")
-    public String vSwitchIds;
-
     @NameInMap("ScalingPolicy")
     public String scalingPolicy;
+
+    @NameInMap("TemplateId")
+    public String templateId;
 
     @NameInMap("TemplateInstanceId")
     public String templateInstanceId;
@@ -79,24 +85,26 @@ public class ModifyScalingRuleRequest extends TeaModel {
     @NameInMap("TemplateInstanceName")
     public String templateInstanceName;
 
-    @NameInMap("Password")
-    public String password;
-
-    @NameInMap("KeyPairName")
-    public String keyPairName;
-
-    @NameInMap("AcceptEULA")
-    public Boolean acceptEULA;
-
-    @NameInMap("TemplateId")
-    public String templateId;
-
     @NameInMap("TemplateVersion")
     public Integer templateVersion;
+
+    @NameInMap("VSwitchIds")
+    public String vSwitchIds;
+
+    @NameInMap("VpcId")
+    public String vpcId;
 
     public static ModifyScalingRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyScalingRuleRequest self = new ModifyScalingRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyScalingRuleRequest setAcceptEULA(Boolean acceptEULA) {
+        this.acceptEULA = acceptEULA;
+        return this;
+    }
+    public Boolean getAcceptEULA() {
+        return this.acceptEULA;
     }
 
     public ModifyScalingRuleRequest setAppId(String appId) {
@@ -123,14 +131,6 @@ public class ModifyScalingRuleRequest extends TeaModel {
         return this.inCondition;
     }
 
-    public ModifyScalingRuleRequest setInEnable(Boolean inEnable) {
-        this.inEnable = inEnable;
-        return this;
-    }
-    public Boolean getInEnable() {
-        return this.inEnable;
-    }
-
     public ModifyScalingRuleRequest setInCpu(Integer inCpu) {
         this.inCpu = inCpu;
         return this;
@@ -145,6 +145,14 @@ public class ModifyScalingRuleRequest extends TeaModel {
     }
     public Integer getInDuration() {
         return this.inDuration;
+    }
+
+    public ModifyScalingRuleRequest setInEnable(Boolean inEnable) {
+        this.inEnable = inEnable;
+        return this;
+    }
+    public Boolean getInEnable() {
+        return this.inEnable;
     }
 
     public ModifyScalingRuleRequest setInInstanceNum(Integer inInstanceNum) {
@@ -179,12 +187,20 @@ public class ModifyScalingRuleRequest extends TeaModel {
         return this.inStep;
     }
 
-    public ModifyScalingRuleRequest setOutCondition(String outCondition) {
-        this.outCondition = outCondition;
+    public ModifyScalingRuleRequest setKeyPairName(String keyPairName) {
+        this.keyPairName = keyPairName;
         return this;
     }
-    public String getOutCondition() {
-        return this.outCondition;
+    public String getKeyPairName() {
+        return this.keyPairName;
+    }
+
+    public ModifyScalingRuleRequest setMultiAzPolicy(String multiAzPolicy) {
+        this.multiAzPolicy = multiAzPolicy;
+        return this;
+    }
+    public String getMultiAzPolicy() {
+        return this.multiAzPolicy;
     }
 
     public ModifyScalingRuleRequest setOutCPU(Integer outCPU) {
@@ -193,6 +209,14 @@ public class ModifyScalingRuleRequest extends TeaModel {
     }
     public Integer getOutCPU() {
         return this.outCPU;
+    }
+
+    public ModifyScalingRuleRequest setOutCondition(String outCondition) {
+        this.outCondition = outCondition;
+        return this;
+    }
+    public String getOutCondition() {
+        return this.outCondition;
     }
 
     public ModifyScalingRuleRequest setOutDuration(Integer outDuration) {
@@ -243,6 +267,14 @@ public class ModifyScalingRuleRequest extends TeaModel {
         return this.outStep;
     }
 
+    public ModifyScalingRuleRequest setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    public String getPassword() {
+        return this.password;
+    }
+
     public ModifyScalingRuleRequest setResourceFrom(String resourceFrom) {
         this.resourceFrom = resourceFrom;
         return this;
@@ -251,36 +283,20 @@ public class ModifyScalingRuleRequest extends TeaModel {
         return this.resourceFrom;
     }
 
-    public ModifyScalingRuleRequest setMultiAzPolicy(String multiAzPolicy) {
-        this.multiAzPolicy = multiAzPolicy;
-        return this;
-    }
-    public String getMultiAzPolicy() {
-        return this.multiAzPolicy;
-    }
-
-    public ModifyScalingRuleRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public ModifyScalingRuleRequest setVSwitchIds(String vSwitchIds) {
-        this.vSwitchIds = vSwitchIds;
-        return this;
-    }
-    public String getVSwitchIds() {
-        return this.vSwitchIds;
-    }
-
     public ModifyScalingRuleRequest setScalingPolicy(String scalingPolicy) {
         this.scalingPolicy = scalingPolicy;
         return this;
     }
     public String getScalingPolicy() {
         return this.scalingPolicy;
+    }
+
+    public ModifyScalingRuleRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
     }
 
     public ModifyScalingRuleRequest setTemplateInstanceId(String templateInstanceId) {
@@ -299,44 +315,28 @@ public class ModifyScalingRuleRequest extends TeaModel {
         return this.templateInstanceName;
     }
 
-    public ModifyScalingRuleRequest setPassword(String password) {
-        this.password = password;
-        return this;
-    }
-    public String getPassword() {
-        return this.password;
-    }
-
-    public ModifyScalingRuleRequest setKeyPairName(String keyPairName) {
-        this.keyPairName = keyPairName;
-        return this;
-    }
-    public String getKeyPairName() {
-        return this.keyPairName;
-    }
-
-    public ModifyScalingRuleRequest setAcceptEULA(Boolean acceptEULA) {
-        this.acceptEULA = acceptEULA;
-        return this;
-    }
-    public Boolean getAcceptEULA() {
-        return this.acceptEULA;
-    }
-
-    public ModifyScalingRuleRequest setTemplateId(String templateId) {
-        this.templateId = templateId;
-        return this;
-    }
-    public String getTemplateId() {
-        return this.templateId;
-    }
-
     public ModifyScalingRuleRequest setTemplateVersion(Integer templateVersion) {
         this.templateVersion = templateVersion;
         return this;
     }
     public Integer getTemplateVersion() {
         return this.templateVersion;
+    }
+
+    public ModifyScalingRuleRequest setVSwitchIds(String vSwitchIds) {
+        this.vSwitchIds = vSwitchIds;
+        return this;
+    }
+    public String getVSwitchIds() {
+        return this.vSwitchIds;
+    }
+
+    public ModifyScalingRuleRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

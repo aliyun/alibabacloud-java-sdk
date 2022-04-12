@@ -4,37 +4,21 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListRecentChangeOrderResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ChangeOrderList")
     public ListRecentChangeOrderResponseBodyChangeOrderList changeOrderList;
 
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ListRecentChangeOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRecentChangeOrderResponseBody self = new ListRecentChangeOrderResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListRecentChangeOrderResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListRecentChangeOrderResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListRecentChangeOrderResponseBody setChangeOrderList(ListRecentChangeOrderResponseBodyChangeOrderList changeOrderList) {
@@ -53,108 +37,76 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
         return this.code;
     }
 
+    public ListRecentChangeOrderResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListRecentChangeOrderResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("FinishTime")
-        public String finishTime;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("ChangeOrderDescription")
-        public String changeOrderDescription;
-
-        @NameInMap("Source")
-        public String source;
-
-        @NameInMap("CreateUserId")
-        public String createUserId;
+        @NameInMap("AppId")
+        public String appId;
 
         @NameInMap("BatchCount")
         public Integer batchCount;
 
-        @NameInMap("CoTypeCode")
-        public String coTypeCode;
+        @NameInMap("BatchType")
+        public String batchType;
+
+        @NameInMap("ChangeOrderDescription")
+        public String changeOrderDescription;
 
         @NameInMap("ChangeOrderId")
         public String changeOrderId;
 
-        @NameInMap("BatchType")
-        public String batchType;
+        @NameInMap("CoType")
+        public String coType;
+
+        @NameInMap("CoTypeCode")
+        public String coTypeCode;
+
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("CreateUserId")
+        public String createUserId;
+
+        @NameInMap("FinishTime")
+        public String finishTime;
 
         @NameInMap("GroupId")
         public String groupId;
 
-        @NameInMap("CoType")
-        public String coType;
+        @NameInMap("Source")
+        public String source;
 
-        @NameInMap("AppId")
-        public String appId;
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("UserId")
+        public String userId;
 
         public static ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder build(java.util.Map<String, ?> map) throws Exception {
             ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder self = new ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder();
             return TeaModel.build(map, self);
         }
 
-        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setStatus(Integer status) {
-            this.status = status;
+        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setAppId(String appId) {
+            this.appId = appId;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setFinishTime(String finishTime) {
-            this.finishTime = finishTime;
-            return this;
-        }
-        public String getFinishTime() {
-            return this.finishTime;
-        }
-
-        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setChangeOrderDescription(String changeOrderDescription) {
-            this.changeOrderDescription = changeOrderDescription;
-            return this;
-        }
-        public String getChangeOrderDescription() {
-            return this.changeOrderDescription;
-        }
-
-        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setSource(String source) {
-            this.source = source;
-            return this;
-        }
-        public String getSource() {
-            return this.source;
-        }
-
-        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setCreateUserId(String createUserId) {
-            this.createUserId = createUserId;
-            return this;
-        }
-        public String getCreateUserId() {
-            return this.createUserId;
+        public String getAppId() {
+            return this.appId;
         }
 
         public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setBatchCount(Integer batchCount) {
@@ -165,12 +117,20 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
             return this.batchCount;
         }
 
-        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setCoTypeCode(String coTypeCode) {
-            this.coTypeCode = coTypeCode;
+        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setBatchType(String batchType) {
+            this.batchType = batchType;
             return this;
         }
-        public String getCoTypeCode() {
-            return this.coTypeCode;
+        public String getBatchType() {
+            return this.batchType;
+        }
+
+        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setChangeOrderDescription(String changeOrderDescription) {
+            this.changeOrderDescription = changeOrderDescription;
+            return this;
+        }
+        public String getChangeOrderDescription() {
+            return this.changeOrderDescription;
         }
 
         public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setChangeOrderId(String changeOrderId) {
@@ -181,12 +141,44 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
             return this.changeOrderId;
         }
 
-        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setBatchType(String batchType) {
-            this.batchType = batchType;
+        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setCoType(String coType) {
+            this.coType = coType;
             return this;
         }
-        public String getBatchType() {
-            return this.batchType;
+        public String getCoType() {
+            return this.coType;
+        }
+
+        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setCoTypeCode(String coTypeCode) {
+            this.coTypeCode = coTypeCode;
+            return this;
+        }
+        public String getCoTypeCode() {
+            return this.coTypeCode;
+        }
+
+        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setCreateUserId(String createUserId) {
+            this.createUserId = createUserId;
+            return this;
+        }
+        public String getCreateUserId() {
+            return this.createUserId;
+        }
+
+        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setFinishTime(String finishTime) {
+            this.finishTime = finishTime;
+            return this;
+        }
+        public String getFinishTime() {
+            return this.finishTime;
         }
 
         public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setGroupId(String groupId) {
@@ -197,20 +189,28 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
             return this.groupId;
         }
 
-        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setCoType(String coType) {
-            this.coType = coType;
+        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setSource(String source) {
+            this.source = source;
             return this;
         }
-        public String getCoType() {
-            return this.coType;
+        public String getSource() {
+            return this.source;
         }
 
-        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setAppId(String appId) {
-            this.appId = appId;
+        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setStatus(Integer status) {
+            this.status = status;
             return this;
         }
-        public String getAppId() {
-            return this.appId;
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

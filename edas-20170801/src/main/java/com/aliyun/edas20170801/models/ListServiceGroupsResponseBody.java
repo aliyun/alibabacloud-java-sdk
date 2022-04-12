@@ -4,8 +4,8 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListServiceGroupsResponseBody extends TeaModel {
-    @NameInMap("ServiceGroupsList")
-    public ListServiceGroupsResponseBodyServiceGroupsList serviceGroupsList;
+    @NameInMap("Code")
+    public Integer code;
 
     @NameInMap("Message")
     public String message;
@@ -13,20 +13,20 @@ public class ListServiceGroupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public Integer code;
+    @NameInMap("ServiceGroupsList")
+    public ListServiceGroupsResponseBodyServiceGroupsList serviceGroupsList;
 
     public static ListServiceGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListServiceGroupsResponseBody self = new ListServiceGroupsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListServiceGroupsResponseBody setServiceGroupsList(ListServiceGroupsResponseBodyServiceGroupsList serviceGroupsList) {
-        this.serviceGroupsList = serviceGroupsList;
+    public ListServiceGroupsResponseBody setCode(Integer code) {
+        this.code = code;
         return this;
     }
-    public ListServiceGroupsResponseBodyServiceGroupsList getServiceGroupsList() {
-        return this.serviceGroupsList;
+    public Integer getCode() {
+        return this.code;
     }
 
     public ListServiceGroupsResponseBody setMessage(String message) {
@@ -45,27 +45,35 @@ public class ListServiceGroupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListServiceGroupsResponseBody setCode(Integer code) {
-        this.code = code;
+    public ListServiceGroupsResponseBody setServiceGroupsList(ListServiceGroupsResponseBodyServiceGroupsList serviceGroupsList) {
+        this.serviceGroupsList = serviceGroupsList;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public ListServiceGroupsResponseBodyServiceGroupsList getServiceGroupsList() {
+        return this.serviceGroupsList;
     }
 
     public static class ListServiceGroupsResponseBodyServiceGroupsListListServiceGroups extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("GroupId")
         public String groupId;
 
         @NameInMap("GroupName")
         public String groupName;
 
-        @NameInMap("CreateTime")
-        public String createTime;
-
         public static ListServiceGroupsResponseBodyServiceGroupsListListServiceGroups build(java.util.Map<String, ?> map) throws Exception {
             ListServiceGroupsResponseBodyServiceGroupsListListServiceGroups self = new ListServiceGroupsResponseBodyServiceGroupsListListServiceGroups();
             return TeaModel.build(map, self);
+        }
+
+        public ListServiceGroupsResponseBodyServiceGroupsListListServiceGroups setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListServiceGroupsResponseBodyServiceGroupsListListServiceGroups setGroupId(String groupId) {
@@ -82,14 +90,6 @@ public class ListServiceGroupsResponseBody extends TeaModel {
         }
         public String getGroupName() {
             return this.groupName;
-        }
-
-        public ListServiceGroupsResponseBodyServiceGroupsListListServiceGroups setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
     }

@@ -4,11 +4,8 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class InsertOrUpdateRegionRequest extends TeaModel {
-    @NameInMap("RegionTag")
-    public String regionTag;
-
-    @NameInMap("RegionName")
-    public String regionName;
+    @NameInMap("DebugEnable")
+    public Boolean debugEnable;
 
     @NameInMap("Description")
     public String description;
@@ -16,28 +13,23 @@ public class InsertOrUpdateRegionRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
-    @NameInMap("DebugEnable")
-    public Boolean debugEnable;
+    @NameInMap("RegionName")
+    public String regionName;
+
+    @NameInMap("RegionTag")
+    public String regionTag;
 
     public static InsertOrUpdateRegionRequest build(java.util.Map<String, ?> map) throws Exception {
         InsertOrUpdateRegionRequest self = new InsertOrUpdateRegionRequest();
         return TeaModel.build(map, self);
     }
 
-    public InsertOrUpdateRegionRequest setRegionTag(String regionTag) {
-        this.regionTag = regionTag;
+    public InsertOrUpdateRegionRequest setDebugEnable(Boolean debugEnable) {
+        this.debugEnable = debugEnable;
         return this;
     }
-    public String getRegionTag() {
-        return this.regionTag;
-    }
-
-    public InsertOrUpdateRegionRequest setRegionName(String regionName) {
-        this.regionName = regionName;
-        return this;
-    }
-    public String getRegionName() {
-        return this.regionName;
+    public Boolean getDebugEnable() {
+        return this.debugEnable;
     }
 
     public InsertOrUpdateRegionRequest setDescription(String description) {
@@ -56,12 +48,20 @@ public class InsertOrUpdateRegionRequest extends TeaModel {
         return this.id;
     }
 
-    public InsertOrUpdateRegionRequest setDebugEnable(Boolean debugEnable) {
-        this.debugEnable = debugEnable;
+    public InsertOrUpdateRegionRequest setRegionName(String regionName) {
+        this.regionName = regionName;
         return this;
     }
-    public Boolean getDebugEnable() {
-        return this.debugEnable;
+    public String getRegionName() {
+        return this.regionName;
+    }
+
+    public InsertOrUpdateRegionRequest setRegionTag(String regionTag) {
+        this.regionTag = regionTag;
+        return this;
+    }
+    public String getRegionTag() {
+        return this.regionTag;
     }
 
 }

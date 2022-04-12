@@ -10,29 +10,32 @@ public class UpdateK8sSlbRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("Type")
-    public String type;
-
-    @NameInMap("SlbProtocol")
-    public String slbProtocol;
-
-    @NameInMap("TargetPort")
-    public String targetPort;
+    @NameInMap("DisableForceOverride")
+    public Boolean disableForceOverride;
 
     @NameInMap("Port")
     public String port;
 
+    @NameInMap("Scheduler")
+    public String scheduler;
+
     @NameInMap("ServicePortInfos")
     public String servicePortInfos;
+
+    @NameInMap("SlbName")
+    public String slbName;
+
+    @NameInMap("SlbProtocol")
+    public String slbProtocol;
 
     @NameInMap("Specification")
     public String specification;
 
-    @NameInMap("Scheduler")
-    public String scheduler;
+    @NameInMap("TargetPort")
+    public String targetPort;
 
-    @NameInMap("SlbName")
-    public String slbName;
+    @NameInMap("Type")
+    public String type;
 
     public static UpdateK8sSlbRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateK8sSlbRequest self = new UpdateK8sSlbRequest();
@@ -55,28 +58,12 @@ public class UpdateK8sSlbRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public UpdateK8sSlbRequest setType(String type) {
-        this.type = type;
+    public UpdateK8sSlbRequest setDisableForceOverride(Boolean disableForceOverride) {
+        this.disableForceOverride = disableForceOverride;
         return this;
     }
-    public String getType() {
-        return this.type;
-    }
-
-    public UpdateK8sSlbRequest setSlbProtocol(String slbProtocol) {
-        this.slbProtocol = slbProtocol;
-        return this;
-    }
-    public String getSlbProtocol() {
-        return this.slbProtocol;
-    }
-
-    public UpdateK8sSlbRequest setTargetPort(String targetPort) {
-        this.targetPort = targetPort;
-        return this;
-    }
-    public String getTargetPort() {
-        return this.targetPort;
+    public Boolean getDisableForceOverride() {
+        return this.disableForceOverride;
     }
 
     public UpdateK8sSlbRequest setPort(String port) {
@@ -87,12 +74,36 @@ public class UpdateK8sSlbRequest extends TeaModel {
         return this.port;
     }
 
+    public UpdateK8sSlbRequest setScheduler(String scheduler) {
+        this.scheduler = scheduler;
+        return this;
+    }
+    public String getScheduler() {
+        return this.scheduler;
+    }
+
     public UpdateK8sSlbRequest setServicePortInfos(String servicePortInfos) {
         this.servicePortInfos = servicePortInfos;
         return this;
     }
     public String getServicePortInfos() {
         return this.servicePortInfos;
+    }
+
+    public UpdateK8sSlbRequest setSlbName(String slbName) {
+        this.slbName = slbName;
+        return this;
+    }
+    public String getSlbName() {
+        return this.slbName;
+    }
+
+    public UpdateK8sSlbRequest setSlbProtocol(String slbProtocol) {
+        this.slbProtocol = slbProtocol;
+        return this;
+    }
+    public String getSlbProtocol() {
+        return this.slbProtocol;
     }
 
     public UpdateK8sSlbRequest setSpecification(String specification) {
@@ -103,20 +114,20 @@ public class UpdateK8sSlbRequest extends TeaModel {
         return this.specification;
     }
 
-    public UpdateK8sSlbRequest setScheduler(String scheduler) {
-        this.scheduler = scheduler;
+    public UpdateK8sSlbRequest setTargetPort(String targetPort) {
+        this.targetPort = targetPort;
         return this;
     }
-    public String getScheduler() {
-        return this.scheduler;
+    public String getTargetPort() {
+        return this.targetPort;
     }
 
-    public UpdateK8sSlbRequest setSlbName(String slbName) {
-        this.slbName = slbName;
+    public UpdateK8sSlbRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public String getSlbName() {
-        return this.slbName;
+    public String getType() {
+        return this.type;
     }
 
 }

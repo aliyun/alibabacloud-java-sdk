@@ -4,6 +4,12 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetScalingRulesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public GetScalingRulesResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,15 +19,25 @@ public class GetScalingRulesResponseBody extends TeaModel {
     @NameInMap("UpdateTime")
     public Long updateTime;
 
-    @NameInMap("Data")
-    public GetScalingRulesResponseBodyData data;
-
-    @NameInMap("Code")
-    public Integer code;
-
     public static GetScalingRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetScalingRulesResponseBody self = new GetScalingRulesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetScalingRulesResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public GetScalingRulesResponseBody setData(GetScalingRulesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetScalingRulesResponseBodyData getData() {
+        return this.data;
     }
 
     public GetScalingRulesResponseBody setMessage(String message) {
@@ -48,61 +64,24 @@ public class GetScalingRulesResponseBody extends TeaModel {
         return this.updateTime;
     }
 
-    public GetScalingRulesResponseBody setData(GetScalingRulesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetScalingRulesResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetScalingRulesResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public static class GetScalingRulesResponseBodyDataRuleListRule extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
-        @NameInMap("Rt")
-        public Integer rt;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
-
-        @NameInMap("ResourceFrom")
-        public String resourceFrom;
-
-        @NameInMap("MultiAzPolicy")
-        public String multiAzPolicy;
-
-        @NameInMap("SpecId")
-        public String specId;
-
-        @NameInMap("Mode")
-        public String mode;
-
-        @NameInMap("LoadNum")
-        public Integer loadNum;
-
-        @NameInMap("TemplateVersion")
-        public Integer templateVersion;
+        @NameInMap("AppId")
+        public String appId;
 
         @NameInMap("Cond")
         public String cond;
 
-        @NameInMap("Step")
-        public Integer step;
-
         @NameInMap("Cpu")
         public Integer cpu;
+
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        @NameInMap("Duration")
+        public Integer duration;
+
+        @NameInMap("Enable")
+        public Boolean enable;
 
         @NameInMap("GroupId")
         public String groupId;
@@ -110,107 +89,56 @@ public class GetScalingRulesResponseBody extends TeaModel {
         @NameInMap("InstNum")
         public Integer instNum;
 
-        @NameInMap("AppId")
-        public String appId;
-
-        @NameInMap("Duration")
-        public Integer duration;
-
-        @NameInMap("VSwitchIds")
-        public String vSwitchIds;
+        @NameInMap("LoadNum")
+        public Integer loadNum;
 
         @NameInMap("MetricType")
         public String metricType;
 
+        @NameInMap("Mode")
+        public String mode;
+
+        @NameInMap("MultiAzPolicy")
+        public String multiAzPolicy;
+
+        @NameInMap("ResourceFrom")
+        public String resourceFrom;
+
+        @NameInMap("Rt")
+        public Integer rt;
+
+        @NameInMap("SpecId")
+        public String specId;
+
+        @NameInMap("Step")
+        public Integer step;
+
         @NameInMap("TemplateId")
         public String templateId;
 
-        @NameInMap("Enable")
-        public Boolean enable;
+        @NameInMap("TemplateVersion")
+        public Integer templateVersion;
+
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
+        @NameInMap("VSwitchIds")
+        public String vSwitchIds;
+
+        @NameInMap("VpcId")
+        public String vpcId;
 
         public static GetScalingRulesResponseBodyDataRuleListRule build(java.util.Map<String, ?> map) throws Exception {
             GetScalingRulesResponseBodyDataRuleListRule self = new GetScalingRulesResponseBodyDataRuleListRule();
             return TeaModel.build(map, self);
         }
 
-        public GetScalingRulesResponseBodyDataRuleListRule setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public GetScalingRulesResponseBodyDataRuleListRule setAppId(String appId) {
+            this.appId = appId;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public GetScalingRulesResponseBodyDataRuleListRule setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public GetScalingRulesResponseBodyDataRuleListRule setRt(Integer rt) {
-            this.rt = rt;
-            return this;
-        }
-        public Integer getRt() {
-            return this.rt;
-        }
-
-        public GetScalingRulesResponseBodyDataRuleListRule setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
-        }
-
-        public GetScalingRulesResponseBodyDataRuleListRule setResourceFrom(String resourceFrom) {
-            this.resourceFrom = resourceFrom;
-            return this;
-        }
-        public String getResourceFrom() {
-            return this.resourceFrom;
-        }
-
-        public GetScalingRulesResponseBodyDataRuleListRule setMultiAzPolicy(String multiAzPolicy) {
-            this.multiAzPolicy = multiAzPolicy;
-            return this;
-        }
-        public String getMultiAzPolicy() {
-            return this.multiAzPolicy;
-        }
-
-        public GetScalingRulesResponseBodyDataRuleListRule setSpecId(String specId) {
-            this.specId = specId;
-            return this;
-        }
-        public String getSpecId() {
-            return this.specId;
-        }
-
-        public GetScalingRulesResponseBodyDataRuleListRule setMode(String mode) {
-            this.mode = mode;
-            return this;
-        }
-        public String getMode() {
-            return this.mode;
-        }
-
-        public GetScalingRulesResponseBodyDataRuleListRule setLoadNum(Integer loadNum) {
-            this.loadNum = loadNum;
-            return this;
-        }
-        public Integer getLoadNum() {
-            return this.loadNum;
-        }
-
-        public GetScalingRulesResponseBodyDataRuleListRule setTemplateVersion(Integer templateVersion) {
-            this.templateVersion = templateVersion;
-            return this;
-        }
-        public Integer getTemplateVersion() {
-            return this.templateVersion;
+        public String getAppId() {
+            return this.appId;
         }
 
         public GetScalingRulesResponseBodyDataRuleListRule setCond(String cond) {
@@ -221,20 +149,36 @@ public class GetScalingRulesResponseBody extends TeaModel {
             return this.cond;
         }
 
-        public GetScalingRulesResponseBodyDataRuleListRule setStep(Integer step) {
-            this.step = step;
-            return this;
-        }
-        public Integer getStep() {
-            return this.step;
-        }
-
         public GetScalingRulesResponseBodyDataRuleListRule setCpu(Integer cpu) {
             this.cpu = cpu;
             return this;
         }
         public Integer getCpu() {
             return this.cpu;
+        }
+
+        public GetScalingRulesResponseBodyDataRuleListRule setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetScalingRulesResponseBodyDataRuleListRule setDuration(Integer duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Integer getDuration() {
+            return this.duration;
+        }
+
+        public GetScalingRulesResponseBodyDataRuleListRule setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
         }
 
         public GetScalingRulesResponseBodyDataRuleListRule setGroupId(String groupId) {
@@ -253,28 +197,12 @@ public class GetScalingRulesResponseBody extends TeaModel {
             return this.instNum;
         }
 
-        public GetScalingRulesResponseBodyDataRuleListRule setAppId(String appId) {
-            this.appId = appId;
+        public GetScalingRulesResponseBodyDataRuleListRule setLoadNum(Integer loadNum) {
+            this.loadNum = loadNum;
             return this;
         }
-        public String getAppId() {
-            return this.appId;
-        }
-
-        public GetScalingRulesResponseBodyDataRuleListRule setDuration(Integer duration) {
-            this.duration = duration;
-            return this;
-        }
-        public Integer getDuration() {
-            return this.duration;
-        }
-
-        public GetScalingRulesResponseBodyDataRuleListRule setVSwitchIds(String vSwitchIds) {
-            this.vSwitchIds = vSwitchIds;
-            return this;
-        }
-        public String getVSwitchIds() {
-            return this.vSwitchIds;
+        public Integer getLoadNum() {
+            return this.loadNum;
         }
 
         public GetScalingRulesResponseBodyDataRuleListRule setMetricType(String metricType) {
@@ -285,6 +213,54 @@ public class GetScalingRulesResponseBody extends TeaModel {
             return this.metricType;
         }
 
+        public GetScalingRulesResponseBodyDataRuleListRule setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+        public GetScalingRulesResponseBodyDataRuleListRule setMultiAzPolicy(String multiAzPolicy) {
+            this.multiAzPolicy = multiAzPolicy;
+            return this;
+        }
+        public String getMultiAzPolicy() {
+            return this.multiAzPolicy;
+        }
+
+        public GetScalingRulesResponseBodyDataRuleListRule setResourceFrom(String resourceFrom) {
+            this.resourceFrom = resourceFrom;
+            return this;
+        }
+        public String getResourceFrom() {
+            return this.resourceFrom;
+        }
+
+        public GetScalingRulesResponseBodyDataRuleListRule setRt(Integer rt) {
+            this.rt = rt;
+            return this;
+        }
+        public Integer getRt() {
+            return this.rt;
+        }
+
+        public GetScalingRulesResponseBodyDataRuleListRule setSpecId(String specId) {
+            this.specId = specId;
+            return this;
+        }
+        public String getSpecId() {
+            return this.specId;
+        }
+
+        public GetScalingRulesResponseBodyDataRuleListRule setStep(Integer step) {
+            this.step = step;
+            return this;
+        }
+        public Integer getStep() {
+            return this.step;
+        }
+
         public GetScalingRulesResponseBodyDataRuleListRule setTemplateId(String templateId) {
             this.templateId = templateId;
             return this;
@@ -293,12 +269,36 @@ public class GetScalingRulesResponseBody extends TeaModel {
             return this.templateId;
         }
 
-        public GetScalingRulesResponseBodyDataRuleListRule setEnable(Boolean enable) {
-            this.enable = enable;
+        public GetScalingRulesResponseBodyDataRuleListRule setTemplateVersion(Integer templateVersion) {
+            this.templateVersion = templateVersion;
             return this;
         }
-        public Boolean getEnable() {
-            return this.enable;
+        public Integer getTemplateVersion() {
+            return this.templateVersion;
+        }
+
+        public GetScalingRulesResponseBodyDataRuleListRule setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public GetScalingRulesResponseBodyDataRuleListRule setVSwitchIds(String vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public GetScalingRulesResponseBodyDataRuleListRule setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }
@@ -323,48 +323,24 @@ public class GetScalingRulesResponseBody extends TeaModel {
     }
 
     public static class GetScalingRulesResponseBodyData extends TeaModel {
-        @NameInMap("OversoldFactor")
-        public Integer oversoldFactor;
-
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
         @NameInMap("ClusterType")
         public Integer clusterType;
+
+        @NameInMap("OversoldFactor")
+        public Integer oversoldFactor;
 
         @NameInMap("RuleList")
         public GetScalingRulesResponseBodyDataRuleList ruleList;
 
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
         public static GetScalingRulesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetScalingRulesResponseBodyData self = new GetScalingRulesResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetScalingRulesResponseBodyData setOversoldFactor(Integer oversoldFactor) {
-            this.oversoldFactor = oversoldFactor;
-            return this;
-        }
-        public Integer getOversoldFactor() {
-            return this.oversoldFactor;
-        }
-
-        public GetScalingRulesResponseBodyData setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public GetScalingRulesResponseBodyData setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
         }
 
         public GetScalingRulesResponseBodyData setClusterType(Integer clusterType) {
@@ -375,12 +351,36 @@ public class GetScalingRulesResponseBody extends TeaModel {
             return this.clusterType;
         }
 
+        public GetScalingRulesResponseBodyData setOversoldFactor(Integer oversoldFactor) {
+            this.oversoldFactor = oversoldFactor;
+            return this;
+        }
+        public Integer getOversoldFactor() {
+            return this.oversoldFactor;
+        }
+
         public GetScalingRulesResponseBodyData setRuleList(GetScalingRulesResponseBodyDataRuleList ruleList) {
             this.ruleList = ruleList;
             return this;
         }
         public GetScalingRulesResponseBodyDataRuleList getRuleList() {
             return this.ruleList;
+        }
+
+        public GetScalingRulesResponseBodyData setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public GetScalingRulesResponseBodyData setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

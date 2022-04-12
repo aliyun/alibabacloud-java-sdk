@@ -4,37 +4,21 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class InsertDeployGroupResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("DeployGroupEntity")
     public InsertDeployGroupResponseBodyDeployGroupEntity deployGroupEntity;
 
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static InsertDeployGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InsertDeployGroupResponseBody self = new InsertDeployGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public InsertDeployGroupResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public InsertDeployGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public InsertDeployGroupResponseBody setCode(Integer code) {
@@ -53,24 +37,37 @@ public class InsertDeployGroupResponseBody extends TeaModel {
         return this.deployGroupEntity;
     }
 
+    public InsertDeployGroupResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public InsertDeployGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class InsertDeployGroupResponseBodyDeployGroupEntity extends TeaModel {
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
-        @NameInMap("GroupName")
-        public String groupName;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
+        @NameInMap("AppId")
+        public String appId;
 
         @NameInMap("AppVersionId")
         public String appVersionId;
 
-        @NameInMap("AppId")
-        public String appId;
+        @NameInMap("ClusterId")
+        public String clusterId;
 
-        @NameInMap("PackageVersionId")
-        public String packageVersionId;
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        @NameInMap("GroupName")
+        public String groupName;
 
         @NameInMap("GroupType")
         public Integer groupType;
@@ -78,44 +75,15 @@ public class InsertDeployGroupResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
-        @NameInMap("ClusterId")
-        public String clusterId;
+        @NameInMap("PackageVersionId")
+        public String packageVersionId;
+
+        @NameInMap("UpdateTime")
+        public Long updateTime;
 
         public static InsertDeployGroupResponseBodyDeployGroupEntity build(java.util.Map<String, ?> map) throws Exception {
             InsertDeployGroupResponseBodyDeployGroupEntity self = new InsertDeployGroupResponseBodyDeployGroupEntity();
             return TeaModel.build(map, self);
-        }
-
-        public InsertDeployGroupResponseBodyDeployGroupEntity setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public InsertDeployGroupResponseBodyDeployGroupEntity setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
-        }
-
-        public InsertDeployGroupResponseBodyDeployGroupEntity setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
-        }
-
-        public InsertDeployGroupResponseBodyDeployGroupEntity setAppVersionId(String appVersionId) {
-            this.appVersionId = appVersionId;
-            return this;
-        }
-        public String getAppVersionId() {
-            return this.appVersionId;
         }
 
         public InsertDeployGroupResponseBodyDeployGroupEntity setAppId(String appId) {
@@ -126,12 +94,36 @@ public class InsertDeployGroupResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public InsertDeployGroupResponseBodyDeployGroupEntity setPackageVersionId(String packageVersionId) {
-            this.packageVersionId = packageVersionId;
+        public InsertDeployGroupResponseBodyDeployGroupEntity setAppVersionId(String appVersionId) {
+            this.appVersionId = appVersionId;
             return this;
         }
-        public String getPackageVersionId() {
-            return this.packageVersionId;
+        public String getAppVersionId() {
+            return this.appVersionId;
+        }
+
+        public InsertDeployGroupResponseBodyDeployGroupEntity setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public InsertDeployGroupResponseBodyDeployGroupEntity setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public InsertDeployGroupResponseBodyDeployGroupEntity setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
         }
 
         public InsertDeployGroupResponseBodyDeployGroupEntity setGroupType(Integer groupType) {
@@ -150,12 +142,20 @@ public class InsertDeployGroupResponseBody extends TeaModel {
             return this.id;
         }
 
-        public InsertDeployGroupResponseBodyDeployGroupEntity setClusterId(String clusterId) {
-            this.clusterId = clusterId;
+        public InsertDeployGroupResponseBodyDeployGroupEntity setPackageVersionId(String packageVersionId) {
+            this.packageVersionId = packageVersionId;
             return this;
         }
-        public String getClusterId() {
-            return this.clusterId;
+        public String getPackageVersionId() {
+            return this.packageVersionId;
+        }
+
+        public InsertDeployGroupResponseBodyDeployGroupEntity setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
     }

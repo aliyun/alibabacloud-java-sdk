@@ -7,11 +7,11 @@ public class InstallAgentRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("InstanceIds")
-    public String instanceIds;
-
     @NameInMap("DoAsync")
     public Boolean doAsync;
+
+    @NameInMap("InstanceIds")
+    public String instanceIds;
 
     public static InstallAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         InstallAgentRequest self = new InstallAgentRequest();
@@ -26,20 +26,20 @@ public class InstallAgentRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public InstallAgentRequest setInstanceIds(String instanceIds) {
-        this.instanceIds = instanceIds;
-        return this;
-    }
-    public String getInstanceIds() {
-        return this.instanceIds;
-    }
-
     public InstallAgentRequest setDoAsync(Boolean doAsync) {
         this.doAsync = doAsync;
         return this;
     }
     public Boolean getDoAsync() {
         return this.doAsync;
+    }
+
+    public InstallAgentRequest setInstanceIds(String instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public String getInstanceIds() {
+        return this.instanceIds;
     }
 
 }

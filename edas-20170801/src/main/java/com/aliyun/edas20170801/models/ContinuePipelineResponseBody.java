@@ -4,18 +4,26 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ContinuePipelineResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static ContinuePipelineResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ContinuePipelineResponseBody self = new ContinuePipelineResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ContinuePipelineResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public ContinuePipelineResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class ContinuePipelineResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ContinuePipelineResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
 }

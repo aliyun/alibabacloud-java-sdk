@@ -7,14 +7,14 @@ public class QuerySlsLogStoreListRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    @NameInMap("Type")
-    public String type;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("Type")
+    public String type;
 
     public static QuerySlsLogStoreListRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySlsLogStoreListRequest self = new QuerySlsLogStoreListRequest();
@@ -29,12 +29,12 @@ public class QuerySlsLogStoreListRequest extends TeaModel {
         return this.appId;
     }
 
-    public QuerySlsLogStoreListRequest setType(String type) {
-        this.type = type;
+    public QuerySlsLogStoreListRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public QuerySlsLogStoreListRequest setPageSize(Integer pageSize) {
@@ -45,12 +45,12 @@ public class QuerySlsLogStoreListRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QuerySlsLogStoreListRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public QuerySlsLogStoreListRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getType() {
+        return this.type;
     }
 
 }

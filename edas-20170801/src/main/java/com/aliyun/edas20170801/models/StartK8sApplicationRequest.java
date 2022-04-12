@@ -4,18 +4,26 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class StartK8sApplicationRequest extends TeaModel {
+    @NameInMap("AppId")
+    public String appId;
+
     @NameInMap("Replicas")
     public Integer replicas;
 
     @NameInMap("Timeout")
     public Integer timeout;
 
-    @NameInMap("AppId")
-    public String appId;
-
     public static StartK8sApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         StartK8sApplicationRequest self = new StartK8sApplicationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartK8sApplicationRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
     }
 
     public StartK8sApplicationRequest setReplicas(Integer replicas) {
@@ -32,14 +40,6 @@ public class StartK8sApplicationRequest extends TeaModel {
     }
     public Integer getTimeout() {
         return this.timeout;
-    }
-
-    public StartK8sApplicationRequest setAppId(String appId) {
-        this.appId = appId;
-        return this;
-    }
-    public String getAppId() {
-        return this.appId;
     }
 
 }

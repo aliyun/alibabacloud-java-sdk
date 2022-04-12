@@ -4,6 +4,12 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetMockRuleByProviderAppIdResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public java.util.List<GetMockRuleByProviderAppIdResponseBodyData> data;
+
     @NameInMap("HttpCode")
     public String httpCode;
 
@@ -13,18 +19,28 @@ public class GetMockRuleByProviderAppIdResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public java.util.List<GetMockRuleByProviderAppIdResponseBodyData> data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
 
     public static GetMockRuleByProviderAppIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMockRuleByProviderAppIdResponseBody self = new GetMockRuleByProviderAppIdResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMockRuleByProviderAppIdResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetMockRuleByProviderAppIdResponseBody setData(java.util.List<GetMockRuleByProviderAppIdResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetMockRuleByProviderAppIdResponseBodyData> getData() {
+        return this.data;
     }
 
     public GetMockRuleByProviderAppIdResponseBody setHttpCode(String httpCode) {
@@ -51,22 +67,6 @@ public class GetMockRuleByProviderAppIdResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetMockRuleByProviderAppIdResponseBody setData(java.util.List<GetMockRuleByProviderAppIdResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<GetMockRuleByProviderAppIdResponseBodyData> getData() {
-        return this.data;
-    }
-
-    public GetMockRuleByProviderAppIdResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetMockRuleByProviderAppIdResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -76,29 +76,29 @@ public class GetMockRuleByProviderAppIdResponseBody extends TeaModel {
     }
 
     public static class GetMockRuleByProviderAppIdResponseBodyData extends TeaModel {
-        @NameInMap("NamespaceId")
-        public String namespaceId;
-
-        @NameInMap("ScMockItemJson")
-        public String scMockItemJson;
-
-        @NameInMap("ConsumerAppName")
-        public String consumerAppName;
+        @NameInMap("AccountId")
+        public String accountId;
 
         @NameInMap("ConsumerAppId")
         public String consumerAppId;
 
-        @NameInMap("AccountId")
-        public String accountId;
+        @NameInMap("ConsumerAppName")
+        public String consumerAppName;
+
+        @NameInMap("Enable")
+        public Boolean enable;
 
         @NameInMap("ExtraJson")
         public String extraJson;
 
-        @NameInMap("Source")
-        public String source;
+        @NameInMap("Id")
+        public Long id;
 
-        @NameInMap("Region")
-        public String region;
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("NamespaceId")
+        public String namespaceId;
 
         @NameInMap("ProviderAppId")
         public String providerAppId;
@@ -106,50 +106,18 @@ public class GetMockRuleByProviderAppIdResponseBody extends TeaModel {
         @NameInMap("ProviderAppName")
         public String providerAppName;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Region")
+        public String region;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("ScMockItemJson")
+        public String scMockItemJson;
 
-        @NameInMap("Enable")
-        public Boolean enable;
+        @NameInMap("Source")
+        public String source;
 
         public static GetMockRuleByProviderAppIdResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMockRuleByProviderAppIdResponseBodyData self = new GetMockRuleByProviderAppIdResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetMockRuleByProviderAppIdResponseBodyData setNamespaceId(String namespaceId) {
-            this.namespaceId = namespaceId;
-            return this;
-        }
-        public String getNamespaceId() {
-            return this.namespaceId;
-        }
-
-        public GetMockRuleByProviderAppIdResponseBodyData setScMockItemJson(String scMockItemJson) {
-            this.scMockItemJson = scMockItemJson;
-            return this;
-        }
-        public String getScMockItemJson() {
-            return this.scMockItemJson;
-        }
-
-        public GetMockRuleByProviderAppIdResponseBodyData setConsumerAppName(String consumerAppName) {
-            this.consumerAppName = consumerAppName;
-            return this;
-        }
-        public String getConsumerAppName() {
-            return this.consumerAppName;
-        }
-
-        public GetMockRuleByProviderAppIdResponseBodyData setConsumerAppId(String consumerAppId) {
-            this.consumerAppId = consumerAppId;
-            return this;
-        }
-        public String getConsumerAppId() {
-            return this.consumerAppId;
         }
 
         public GetMockRuleByProviderAppIdResponseBodyData setAccountId(String accountId) {
@@ -160,6 +128,30 @@ public class GetMockRuleByProviderAppIdResponseBody extends TeaModel {
             return this.accountId;
         }
 
+        public GetMockRuleByProviderAppIdResponseBodyData setConsumerAppId(String consumerAppId) {
+            this.consumerAppId = consumerAppId;
+            return this;
+        }
+        public String getConsumerAppId() {
+            return this.consumerAppId;
+        }
+
+        public GetMockRuleByProviderAppIdResponseBodyData setConsumerAppName(String consumerAppName) {
+            this.consumerAppName = consumerAppName;
+            return this;
+        }
+        public String getConsumerAppName() {
+            return this.consumerAppName;
+        }
+
+        public GetMockRuleByProviderAppIdResponseBodyData setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
         public GetMockRuleByProviderAppIdResponseBodyData setExtraJson(String extraJson) {
             this.extraJson = extraJson;
             return this;
@@ -168,20 +160,28 @@ public class GetMockRuleByProviderAppIdResponseBody extends TeaModel {
             return this.extraJson;
         }
 
-        public GetMockRuleByProviderAppIdResponseBodyData setSource(String source) {
-            this.source = source;
+        public GetMockRuleByProviderAppIdResponseBodyData setId(Long id) {
+            this.id = id;
             return this;
         }
-        public String getSource() {
-            return this.source;
+        public Long getId() {
+            return this.id;
         }
 
-        public GetMockRuleByProviderAppIdResponseBodyData setRegion(String region) {
-            this.region = region;
+        public GetMockRuleByProviderAppIdResponseBodyData setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getRegion() {
-            return this.region;
+        public String getName() {
+            return this.name;
+        }
+
+        public GetMockRuleByProviderAppIdResponseBodyData setNamespaceId(String namespaceId) {
+            this.namespaceId = namespaceId;
+            return this;
+        }
+        public String getNamespaceId() {
+            return this.namespaceId;
         }
 
         public GetMockRuleByProviderAppIdResponseBodyData setProviderAppId(String providerAppId) {
@@ -200,28 +200,28 @@ public class GetMockRuleByProviderAppIdResponseBody extends TeaModel {
             return this.providerAppName;
         }
 
-        public GetMockRuleByProviderAppIdResponseBodyData setName(String name) {
-            this.name = name;
+        public GetMockRuleByProviderAppIdResponseBodyData setRegion(String region) {
+            this.region = region;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getRegion() {
+            return this.region;
         }
 
-        public GetMockRuleByProviderAppIdResponseBodyData setId(Long id) {
-            this.id = id;
+        public GetMockRuleByProviderAppIdResponseBodyData setScMockItemJson(String scMockItemJson) {
+            this.scMockItemJson = scMockItemJson;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public String getScMockItemJson() {
+            return this.scMockItemJson;
         }
 
-        public GetMockRuleByProviderAppIdResponseBodyData setEnable(Boolean enable) {
-            this.enable = enable;
+        public GetMockRuleByProviderAppIdResponseBodyData setSource(String source) {
+            this.source = source;
             return this;
         }
-        public Boolean getEnable() {
-            return this.enable;
+        public String getSource() {
+            return this.source;
         }
 
     }

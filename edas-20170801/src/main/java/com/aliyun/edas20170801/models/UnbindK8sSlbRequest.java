@@ -10,11 +10,11 @@ public class UnbindK8sSlbRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("Type")
-    public String type;
-
     @NameInMap("SlbName")
     public String slbName;
+
+    @NameInMap("Type")
+    public String type;
 
     public static UnbindK8sSlbRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindK8sSlbRequest self = new UnbindK8sSlbRequest();
@@ -37,20 +37,20 @@ public class UnbindK8sSlbRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public UnbindK8sSlbRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
     public UnbindK8sSlbRequest setSlbName(String slbName) {
         this.slbName = slbName;
         return this;
     }
     public String getSlbName() {
         return this.slbName;
+    }
+
+    public UnbindK8sSlbRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

@@ -4,14 +4,14 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetChangeOrderInfoResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public Integer code;
 
     @NameInMap("changeOrderInfo")
     public GetChangeOrderInfoResponseBodyChangeOrderInfo changeOrderInfo;
@@ -19,6 +19,14 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
     public static GetChangeOrderInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetChangeOrderInfoResponseBody self = new GetChangeOrderInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetChangeOrderInfoResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public GetChangeOrderInfoResponseBody setMessage(String message) {
@@ -37,14 +45,6 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetChangeOrderInfoResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public GetChangeOrderInfoResponseBody setChangeOrderInfo(GetChangeOrderInfoResponseBodyChangeOrderInfo changeOrderInfo) {
         this.changeOrderInfo = changeOrderInfo;
         return this;
@@ -53,83 +53,45 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         return this.changeOrderInfo;
     }
 
-    public static class GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl extends TeaModel {
-        @NameInMap("Tips")
-        public String tips;
-
-        @NameInMap("Routes")
-        public String routes;
-
-        @NameInMap("Rules")
-        public String rules;
-
-        public static GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl build(java.util.Map<String, ?> map) throws Exception {
-            GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl self = new GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl();
-            return TeaModel.build(map, self);
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl setTips(String tips) {
-            this.tips = tips;
-            return this;
-        }
-        public String getTips() {
-            return this.tips;
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl setRoutes(String routes) {
-            this.routes = routes;
-            return this;
-        }
-        public String getRoutes() {
-            return this.routes;
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl setRules(String rules) {
-            this.rules = rules;
-            return this;
-        }
-        public String getRules() {
-            return this.rules;
-        }
-
-    }
-
     public static class GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO extends TeaModel {
-        @NameInMap("TaskErrorIgnorance")
-        public Integer taskErrorIgnorance;
+        @NameInMap("RetryType")
+        public Integer retryType;
 
         @NameInMap("ShowManualIgnorance")
         public Boolean showManualIgnorance;
 
-        @NameInMap("TaskStatus")
-        public String taskStatus;
-
-        @NameInMap("TaskName")
-        public String taskName;
-
-        @NameInMap("TaskMessage")
-        public String taskMessage;
-
         @NameInMap("TaskErrorCode")
         public String taskErrorCode;
+
+        @NameInMap("TaskErrorIgnorance")
+        public Integer taskErrorIgnorance;
+
+        @NameInMap("TaskErrorMessage")
+        public String taskErrorMessage;
 
         @NameInMap("TaskId")
         public String taskId;
 
-        @NameInMap("TaskErrorMessage")
-        public String taskErrorMessage;
+        @NameInMap("TaskMessage")
+        public String taskMessage;
+
+        @NameInMap("TaskName")
+        public String taskName;
+
+        @NameInMap("TaskStatus")
+        public String taskStatus;
 
         public static GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO build(java.util.Map<String, ?> map) throws Exception {
             GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO self = new GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO();
             return TeaModel.build(map, self);
         }
 
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO setTaskErrorIgnorance(Integer taskErrorIgnorance) {
-            this.taskErrorIgnorance = taskErrorIgnorance;
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO setRetryType(Integer retryType) {
+            this.retryType = retryType;
             return this;
         }
-        public Integer getTaskErrorIgnorance() {
-            return this.taskErrorIgnorance;
+        public Integer getRetryType() {
+            return this.retryType;
         }
 
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO setShowManualIgnorance(Boolean showManualIgnorance) {
@@ -140,36 +102,28 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             return this.showManualIgnorance;
         }
 
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO setTaskStatus(String taskStatus) {
-            this.taskStatus = taskStatus;
-            return this;
-        }
-        public String getTaskStatus() {
-            return this.taskStatus;
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO setTaskName(String taskName) {
-            this.taskName = taskName;
-            return this;
-        }
-        public String getTaskName() {
-            return this.taskName;
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO setTaskMessage(String taskMessage) {
-            this.taskMessage = taskMessage;
-            return this;
-        }
-        public String getTaskMessage() {
-            return this.taskMessage;
-        }
-
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO setTaskErrorCode(String taskErrorCode) {
             this.taskErrorCode = taskErrorCode;
             return this;
         }
         public String getTaskErrorCode() {
             return this.taskErrorCode;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO setTaskErrorIgnorance(Integer taskErrorIgnorance) {
+            this.taskErrorIgnorance = taskErrorIgnorance;
+            return this;
+        }
+        public Integer getTaskErrorIgnorance() {
+            return this.taskErrorIgnorance;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO setTaskErrorMessage(String taskErrorMessage) {
+            this.taskErrorMessage = taskErrorMessage;
+            return this;
+        }
+        public String getTaskErrorMessage() {
+            return this.taskErrorMessage;
         }
 
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO setTaskId(String taskId) {
@@ -180,12 +134,28 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             return this.taskId;
         }
 
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO setTaskErrorMessage(String taskErrorMessage) {
-            this.taskErrorMessage = taskErrorMessage;
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO setTaskMessage(String taskMessage) {
+            this.taskMessage = taskMessage;
             return this;
         }
-        public String getTaskErrorMessage() {
-            return this.taskErrorMessage;
+        public String getTaskMessage() {
+            return this.taskMessage;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO setTaskName(String taskName) {
+            this.taskName = taskName;
+            return this;
+        }
+        public String getTaskName() {
+            return this.taskName;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO setTaskStatus(String taskStatus) {
+            this.taskStatus = taskStatus;
+            return this;
+        }
+        public String getTaskStatus() {
+            return this.taskStatus;
         }
 
     }
@@ -213,14 +183,14 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         @NameInMap("StageId")
         public String stageId;
 
+        @NameInMap("StageName")
+        public String stageName;
+
         @NameInMap("StageStatus")
         public Integer stageStatus;
 
         @NameInMap("TaskList")
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskList taskList;
-
-        @NameInMap("StageName")
-        public String stageName;
 
         public static GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTO build(java.util.Map<String, ?> map) throws Exception {
             GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTO self = new GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTO();
@@ -233,6 +203,14 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         }
         public String getStageId() {
             return this.stageId;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTO setStageName(String stageName) {
+            this.stageName = stageName;
+            return this;
+        }
+        public String getStageName() {
+            return this.stageName;
         }
 
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTO setStageStatus(Integer stageStatus) {
@@ -249,14 +227,6 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         }
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskList getTaskList() {
             return this.taskList;
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTO setStageName(String stageName) {
-            this.stageName = stageName;
-            return this;
-        }
-        public String getStageName() {
-            return this.stageName;
         }
 
     }
@@ -280,112 +250,28 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
 
     }
 
-    public static class GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage extends TeaModel {
-        @NameInMap("StageId")
-        public String stageId;
-
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("Message")
-        public String message;
-
-        @NameInMap("StageName")
-        public String stageName;
-
-        public static GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage build(java.util.Map<String, ?> map) throws Exception {
-            GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage self = new GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage();
-            return TeaModel.build(map, self);
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage setStageId(String stageId) {
-            this.stageId = stageId;
-            return this;
-        }
-        public String getStageId() {
-            return this.stageId;
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage setStageName(String stageName) {
-            this.stageName = stageName;
-            return this;
-        }
-        public String getStageName() {
-            return this.stageName;
-        }
-
-    }
-
     public static class GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOListInstanceStageDTO extends TeaModel {
+        @NameInMap("FinishTime")
+        public String finishTime;
+
         @NameInMap("StageId")
         public String stageId;
-
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("StartTime")
-        public String startTime;
 
         @NameInMap("StageMessage")
         public String stageMessage;
 
-        @NameInMap("FinishTime")
-        public String finishTime;
-
         @NameInMap("StageName")
         public String stageName;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Status")
+        public Integer status;
 
         public static GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOListInstanceStageDTO build(java.util.Map<String, ?> map) throws Exception {
             GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOListInstanceStageDTO self = new GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOListInstanceStageDTO();
             return TeaModel.build(map, self);
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOListInstanceStageDTO setStageId(String stageId) {
-            this.stageId = stageId;
-            return this;
-        }
-        public String getStageId() {
-            return this.stageId;
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOListInstanceStageDTO setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOListInstanceStageDTO setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOListInstanceStageDTO setStageMessage(String stageMessage) {
-            this.stageMessage = stageMessage;
-            return this;
-        }
-        public String getStageMessage() {
-            return this.stageMessage;
         }
 
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOListInstanceStageDTO setFinishTime(String finishTime) {
@@ -396,12 +282,44 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             return this.finishTime;
         }
 
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOListInstanceStageDTO setStageId(String stageId) {
+            this.stageId = stageId;
+            return this;
+        }
+        public String getStageId() {
+            return this.stageId;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOListInstanceStageDTO setStageMessage(String stageMessage) {
+            this.stageMessage = stageMessage;
+            return this;
+        }
+        public String getStageMessage() {
+            return this.stageMessage;
+        }
+
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOListInstanceStageDTO setStageName(String stageName) {
             this.stageName = stageName;
             return this;
         }
         public String getStageName() {
             return this.stageName;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOListInstanceStageDTO setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOListInstanceStageDTO setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
     }
@@ -426,35 +344,27 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
     }
 
     public static class GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTO extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
         @NameInMap("InstanceIp")
         public String instanceIp;
-
-        @NameInMap("PodName")
-        public String podName;
-
-        @NameInMap("InstanceStageDTOList")
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOList instanceStageDTOList;
 
         @NameInMap("InstanceName")
         public String instanceName;
 
+        @NameInMap("InstanceStageDTOList")
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOList instanceStageDTOList;
+
+        @NameInMap("PodName")
+        public String podName;
+
         @NameInMap("PodStatus")
         public String podStatus;
+
+        @NameInMap("Status")
+        public Integer status;
 
         public static GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTO build(java.util.Map<String, ?> map) throws Exception {
             GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTO self = new GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTO();
             return TeaModel.build(map, self);
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTO setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
         }
 
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTO setInstanceIp(String instanceIp) {
@@ -465,12 +375,12 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             return this.instanceIp;
         }
 
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTO setPodName(String podName) {
-            this.podName = podName;
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTO setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
             return this;
         }
-        public String getPodName() {
-            return this.podName;
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTO setInstanceStageDTOList(GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOList instanceStageDTOList) {
@@ -481,12 +391,12 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             return this.instanceStageDTOList;
         }
 
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTO setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTO setPodName(String podName) {
+            this.podName = podName;
             return this;
         }
-        public String getInstanceName() {
-            return this.instanceName;
+        public String getPodName() {
+            return this.podName;
         }
 
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTO setPodStatus(String podStatus) {
@@ -495,6 +405,14 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         }
         public String getPodStatus() {
             return this.podStatus;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTO setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
     }
@@ -518,24 +436,68 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
 
     }
 
-    public static class GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTO extends TeaModel {
-        @NameInMap("ServiceStage")
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage serviceStage;
+    public static class GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage extends TeaModel {
+        @NameInMap("Message")
+        public String message;
 
+        @NameInMap("StageId")
+        public String stageId;
+
+        @NameInMap("StageName")
+        public String stageName;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        public static GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage build(java.util.Map<String, ?> map) throws Exception {
+            GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage self = new GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage();
+            return TeaModel.build(map, self);
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage setStageId(String stageId) {
+            this.stageId = stageId;
+            return this;
+        }
+        public String getStageId() {
+            return this.stageId;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage setStageName(String stageName) {
+            this.stageName = stageName;
+            return this;
+        }
+        public String getStageName() {
+            return this.stageName;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTO extends TeaModel {
         @NameInMap("InstanceDTOList")
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOList instanceDTOList;
+
+        @NameInMap("ServiceStage")
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage serviceStage;
 
         public static GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTO build(java.util.Map<String, ?> map) throws Exception {
             GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTO self = new GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTO();
             return TeaModel.build(map, self);
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTO setServiceStage(GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage serviceStage) {
-            this.serviceStage = serviceStage;
-            return this;
-        }
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage getServiceStage() {
-            return this.serviceStage;
         }
 
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTO setInstanceDTOList(GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOList instanceDTOList) {
@@ -546,20 +508,28 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             return this.instanceDTOList;
         }
 
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTO setServiceStage(GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage serviceStage) {
+            this.serviceStage = serviceStage;
+            return this;
+        }
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage getServiceStage() {
+            return this.serviceStage;
+        }
+
     }
 
     public static class GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTO extends TeaModel {
         @NameInMap("StageId")
         public String stageId;
 
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("StageName")
+        public String stageName;
 
         @NameInMap("StageResultDTO")
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTO stageResultDTO;
 
-        @NameInMap("StageName")
-        public String stageName;
+        @NameInMap("Status")
+        public Integer status;
 
         public static GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTO build(java.util.Map<String, ?> map) throws Exception {
             GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTO self = new GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTO();
@@ -574,12 +544,12 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             return this.stageId;
         }
 
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTO setStatus(Integer status) {
-            this.status = status;
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTO setStageName(String stageName) {
+            this.stageName = stageName;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
+        public String getStageName() {
+            return this.stageName;
         }
 
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTO setStageResultDTO(GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTO stageResultDTO) {
@@ -590,12 +560,12 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             return this.stageResultDTO;
         }
 
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTO setStageName(String stageName) {
-            this.stageName = stageName;
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTO setStatus(Integer status) {
+            this.status = status;
             return this;
         }
-        public String getStageName() {
-            return this.stageName;
+        public Integer getStatus() {
+            return this.status;
         }
 
     }
@@ -620,11 +590,11 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
     }
 
     public static class GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfo extends TeaModel {
-        @NameInMap("StartTime")
-        public String startTime;
+        @NameInMap("PipelineId")
+        public String pipelineId;
 
-        @NameInMap("UpdateTime")
-        public String updateTime;
+        @NameInMap("PipelineName")
+        public String pipelineName;
 
         @NameInMap("PipelineStatus")
         public Integer pipelineStatus;
@@ -632,34 +602,34 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         @NameInMap("StageDetailList")
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailList stageDetailList;
 
-        @NameInMap("PipelineName")
-        public String pipelineName;
-
         @NameInMap("StageList")
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageList stageList;
 
-        @NameInMap("PipelineId")
-        public String pipelineId;
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
 
         public static GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfo build(java.util.Map<String, ?> map) throws Exception {
             GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfo self = new GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfo setStartTime(String startTime) {
-            this.startTime = startTime;
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfo setPipelineId(String pipelineId) {
+            this.pipelineId = pipelineId;
             return this;
         }
-        public String getStartTime() {
-            return this.startTime;
+        public String getPipelineId() {
+            return this.pipelineId;
         }
 
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfo setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfo setPipelineName(String pipelineName) {
+            this.pipelineName = pipelineName;
             return this;
         }
-        public String getUpdateTime() {
-            return this.updateTime;
+        public String getPipelineName() {
+            return this.pipelineName;
         }
 
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfo setPipelineStatus(Integer pipelineStatus) {
@@ -678,14 +648,6 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             return this.stageDetailList;
         }
 
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfo setPipelineName(String pipelineName) {
-            this.pipelineName = pipelineName;
-            return this;
-        }
-        public String getPipelineName() {
-            return this.pipelineName;
-        }
-
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfo setStageList(GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageList stageList) {
             this.stageList = stageList;
             return this;
@@ -694,12 +656,20 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             return this.stageList;
         }
 
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfo setPipelineId(String pipelineId) {
-            this.pipelineId = pipelineId;
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfo setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public String getPipelineId() {
-            return this.pipelineId;
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfo setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }
@@ -723,70 +693,109 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
 
     }
 
+    public static class GetChangeOrderInfoResponseBodyChangeOrderInfoTargets extends TeaModel {
+        @NameInMap("Items")
+        public java.util.List<String> items;
+
+        public static GetChangeOrderInfoResponseBodyChangeOrderInfoTargets build(java.util.Map<String, ?> map) throws Exception {
+            GetChangeOrderInfoResponseBodyChangeOrderInfoTargets self = new GetChangeOrderInfoResponseBodyChangeOrderInfoTargets();
+            return TeaModel.build(map, self);
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoTargets setItems(java.util.List<String> items) {
+            this.items = items;
+            return this;
+        }
+        public java.util.List<String> getItems() {
+            return this.items;
+        }
+
+    }
+
+    public static class GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl extends TeaModel {
+        @NameInMap("Routes")
+        public String routes;
+
+        @NameInMap("Rules")
+        public String rules;
+
+        @NameInMap("Tips")
+        public String tips;
+
+        public static GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl build(java.util.Map<String, ?> map) throws Exception {
+            GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl self = new GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl();
+            return TeaModel.build(map, self);
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl setRoutes(String routes) {
+            this.routes = routes;
+            return this;
+        }
+        public String getRoutes() {
+            return this.routes;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl setRules(String rules) {
+            this.rules = rules;
+            return this;
+        }
+        public String getRules() {
+            return this.rules;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl setTips(String tips) {
+            this.tips = tips;
+            return this;
+        }
+        public String getTips() {
+            return this.tips;
+        }
+
+    }
+
     public static class GetChangeOrderInfoResponseBodyChangeOrderInfo extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("ChangeOrderDescription")
-        public String changeOrderDescription;
-
         @NameInMap("BatchCount")
         public Integer batchCount;
-
-        @NameInMap("CreateUserId")
-        public String createUserId;
-
-        @NameInMap("SupportRollback")
-        public Boolean supportRollback;
-
-        @NameInMap("Desc")
-        public String desc;
-
-        @NameInMap("ChangeOrderId")
-        public String changeOrderId;
 
         @NameInMap("BatchType")
         public String batchType;
 
+        @NameInMap("ChangeOrderDescription")
+        public String changeOrderDescription;
+
+        @NameInMap("ChangeOrderId")
+        public String changeOrderId;
+
         @NameInMap("CoType")
         public String coType;
 
-        @NameInMap("TrafficControl")
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl trafficControl;
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("CreateUserId")
+        public String createUserId;
+
+        @NameInMap("Desc")
+        public String desc;
 
         @NameInMap("PipelineInfoList")
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoList pipelineInfoList;
 
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("SupportRollback")
+        public Boolean supportRollback;
+
+        @NameInMap("Targets")
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoTargets targets;
+
+        @NameInMap("TrafficControl")
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl trafficControl;
+
         public static GetChangeOrderInfoResponseBodyChangeOrderInfo build(java.util.Map<String, ?> map) throws Exception {
             GetChangeOrderInfoResponseBodyChangeOrderInfo self = new GetChangeOrderInfoResponseBodyChangeOrderInfo();
             return TeaModel.build(map, self);
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfo setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfo setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfo setChangeOrderDescription(String changeOrderDescription) {
-            this.changeOrderDescription = changeOrderDescription;
-            return this;
-        }
-        public String getChangeOrderDescription() {
-            return this.changeOrderDescription;
         }
 
         public GetChangeOrderInfoResponseBodyChangeOrderInfo setBatchCount(Integer batchCount) {
@@ -797,28 +806,20 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             return this.batchCount;
         }
 
-        public GetChangeOrderInfoResponseBodyChangeOrderInfo setCreateUserId(String createUserId) {
-            this.createUserId = createUserId;
+        public GetChangeOrderInfoResponseBodyChangeOrderInfo setBatchType(String batchType) {
+            this.batchType = batchType;
             return this;
         }
-        public String getCreateUserId() {
-            return this.createUserId;
+        public String getBatchType() {
+            return this.batchType;
         }
 
-        public GetChangeOrderInfoResponseBodyChangeOrderInfo setSupportRollback(Boolean supportRollback) {
-            this.supportRollback = supportRollback;
+        public GetChangeOrderInfoResponseBodyChangeOrderInfo setChangeOrderDescription(String changeOrderDescription) {
+            this.changeOrderDescription = changeOrderDescription;
             return this;
         }
-        public Boolean getSupportRollback() {
-            return this.supportRollback;
-        }
-
-        public GetChangeOrderInfoResponseBodyChangeOrderInfo setDesc(String desc) {
-            this.desc = desc;
-            return this;
-        }
-        public String getDesc() {
-            return this.desc;
+        public String getChangeOrderDescription() {
+            return this.changeOrderDescription;
         }
 
         public GetChangeOrderInfoResponseBodyChangeOrderInfo setChangeOrderId(String changeOrderId) {
@@ -829,14 +830,6 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             return this.changeOrderId;
         }
 
-        public GetChangeOrderInfoResponseBodyChangeOrderInfo setBatchType(String batchType) {
-            this.batchType = batchType;
-            return this;
-        }
-        public String getBatchType() {
-            return this.batchType;
-        }
-
         public GetChangeOrderInfoResponseBodyChangeOrderInfo setCoType(String coType) {
             this.coType = coType;
             return this;
@@ -845,12 +838,28 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             return this.coType;
         }
 
-        public GetChangeOrderInfoResponseBodyChangeOrderInfo setTrafficControl(GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl trafficControl) {
-            this.trafficControl = trafficControl;
+        public GetChangeOrderInfoResponseBodyChangeOrderInfo setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl getTrafficControl() {
-            return this.trafficControl;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfo setCreateUserId(String createUserId) {
+            this.createUserId = createUserId;
+            return this;
+        }
+        public String getCreateUserId() {
+            return this.createUserId;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfo setDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+        public String getDesc() {
+            return this.desc;
         }
 
         public GetChangeOrderInfoResponseBodyChangeOrderInfo setPipelineInfoList(GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoList pipelineInfoList) {
@@ -859,6 +868,38 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         }
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoList getPipelineInfoList() {
             return this.pipelineInfoList;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfo setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfo setSupportRollback(Boolean supportRollback) {
+            this.supportRollback = supportRollback;
+            return this;
+        }
+        public Boolean getSupportRollback() {
+            return this.supportRollback;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfo setTargets(GetChangeOrderInfoResponseBodyChangeOrderInfoTargets targets) {
+            this.targets = targets;
+            return this;
+        }
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoTargets getTargets() {
+            return this.targets;
+        }
+
+        public GetChangeOrderInfoResponseBodyChangeOrderInfo setTrafficControl(GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl trafficControl) {
+            this.trafficControl = trafficControl;
+            return this;
+        }
+        public GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl getTrafficControl() {
+            return this.trafficControl;
         }
 
     }

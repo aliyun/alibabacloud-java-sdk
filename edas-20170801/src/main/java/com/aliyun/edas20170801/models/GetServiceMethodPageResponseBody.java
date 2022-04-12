@@ -4,6 +4,12 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetServiceMethodPageResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetServiceMethodPageResponseBodyData data;
+
     @NameInMap("HttpCode")
     public String httpCode;
 
@@ -13,18 +19,28 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetServiceMethodPageResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
 
     public static GetServiceMethodPageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetServiceMethodPageResponseBody self = new GetServiceMethodPageResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetServiceMethodPageResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetServiceMethodPageResponseBody setData(GetServiceMethodPageResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetServiceMethodPageResponseBodyData getData() {
+        return this.data;
     }
 
     public GetServiceMethodPageResponseBody setHttpCode(String httpCode) {
@@ -51,22 +67,6 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetServiceMethodPageResponseBody setData(GetServiceMethodPageResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetServiceMethodPageResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetServiceMethodPageResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetServiceMethodPageResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -76,23 +76,15 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
     }
 
     public static class GetServiceMethodPageResponseBodyDataResultReturnDefinition extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Type")
+        public String type;
 
         public static GetServiceMethodPageResponseBodyDataResultReturnDefinition build(java.util.Map<String, ?> map) throws Exception {
             GetServiceMethodPageResponseBodyDataResultReturnDefinition self = new GetServiceMethodPageResponseBodyDataResultReturnDefinition();
             return TeaModel.build(map, self);
-        }
-
-        public GetServiceMethodPageResponseBodyDataResultReturnDefinition setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public GetServiceMethodPageResponseBodyDataResultReturnDefinition setId(String id) {
@@ -103,23 +95,22 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             return this.id;
         }
 
+        public GetServiceMethodPageResponseBodyDataResultReturnDefinition setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
     public static class GetServiceMethodPageResponseBodyDataResult extends TeaModel {
-        @NameInMap("ParameterDetails")
-        public String parameterDetails;
+        @NameInMap("MethodController")
+        public String methodController;
 
-        @NameInMap("ParameterNames")
-        public String parameterNames;
-
-        @NameInMap("Paths")
-        public String paths;
-
-        @NameInMap("ParameterTypes")
-        public String parameterTypes;
-
-        @NameInMap("ReturnType")
-        public String returnType;
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("NameDetail")
         public String nameDetail;
@@ -127,64 +118,49 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         @NameInMap("ParameterDefinitions")
         public String parameterDefinitions;
 
-        @NameInMap("ReturnDefinition")
-        public GetServiceMethodPageResponseBodyDataResultReturnDefinition returnDefinition;
+        @NameInMap("ParameterDetails")
+        public String parameterDetails;
+
+        @NameInMap("ParameterNames")
+        public String parameterNames;
+
+        @NameInMap("ParameterTypes")
+        public String parameterTypes;
+
+        @NameInMap("Paths")
+        public String paths;
 
         @NameInMap("RequestMethods")
         public String requestMethods;
 
+        @NameInMap("ReturnDefinition")
+        public GetServiceMethodPageResponseBodyDataResultReturnDefinition returnDefinition;
+
         @NameInMap("ReturnDetails")
         public String returnDetails;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("MethodController")
-        public String methodController;
+        @NameInMap("ReturnType")
+        public String returnType;
 
         public static GetServiceMethodPageResponseBodyDataResult build(java.util.Map<String, ?> map) throws Exception {
             GetServiceMethodPageResponseBodyDataResult self = new GetServiceMethodPageResponseBodyDataResult();
             return TeaModel.build(map, self);
         }
 
-        public GetServiceMethodPageResponseBodyDataResult setParameterDetails(String parameterDetails) {
-            this.parameterDetails = parameterDetails;
+        public GetServiceMethodPageResponseBodyDataResult setMethodController(String methodController) {
+            this.methodController = methodController;
             return this;
         }
-        public String getParameterDetails() {
-            return this.parameterDetails;
+        public String getMethodController() {
+            return this.methodController;
         }
 
-        public GetServiceMethodPageResponseBodyDataResult setParameterNames(String parameterNames) {
-            this.parameterNames = parameterNames;
+        public GetServiceMethodPageResponseBodyDataResult setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getParameterNames() {
-            return this.parameterNames;
-        }
-
-        public GetServiceMethodPageResponseBodyDataResult setPaths(String paths) {
-            this.paths = paths;
-            return this;
-        }
-        public String getPaths() {
-            return this.paths;
-        }
-
-        public GetServiceMethodPageResponseBodyDataResult setParameterTypes(String parameterTypes) {
-            this.parameterTypes = parameterTypes;
-            return this;
-        }
-        public String getParameterTypes() {
-            return this.parameterTypes;
-        }
-
-        public GetServiceMethodPageResponseBodyDataResult setReturnType(String returnType) {
-            this.returnType = returnType;
-            return this;
-        }
-        public String getReturnType() {
-            return this.returnType;
+        public String getName() {
+            return this.name;
         }
 
         public GetServiceMethodPageResponseBodyDataResult setNameDetail(String nameDetail) {
@@ -203,12 +179,36 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             return this.parameterDefinitions;
         }
 
-        public GetServiceMethodPageResponseBodyDataResult setReturnDefinition(GetServiceMethodPageResponseBodyDataResultReturnDefinition returnDefinition) {
-            this.returnDefinition = returnDefinition;
+        public GetServiceMethodPageResponseBodyDataResult setParameterDetails(String parameterDetails) {
+            this.parameterDetails = parameterDetails;
             return this;
         }
-        public GetServiceMethodPageResponseBodyDataResultReturnDefinition getReturnDefinition() {
-            return this.returnDefinition;
+        public String getParameterDetails() {
+            return this.parameterDetails;
+        }
+
+        public GetServiceMethodPageResponseBodyDataResult setParameterNames(String parameterNames) {
+            this.parameterNames = parameterNames;
+            return this;
+        }
+        public String getParameterNames() {
+            return this.parameterNames;
+        }
+
+        public GetServiceMethodPageResponseBodyDataResult setParameterTypes(String parameterTypes) {
+            this.parameterTypes = parameterTypes;
+            return this;
+        }
+        public String getParameterTypes() {
+            return this.parameterTypes;
+        }
+
+        public GetServiceMethodPageResponseBodyDataResult setPaths(String paths) {
+            this.paths = paths;
+            return this;
+        }
+        public String getPaths() {
+            return this.paths;
         }
 
         public GetServiceMethodPageResponseBodyDataResult setRequestMethods(String requestMethods) {
@@ -219,6 +219,14 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             return this.requestMethods;
         }
 
+        public GetServiceMethodPageResponseBodyDataResult setReturnDefinition(GetServiceMethodPageResponseBodyDataResultReturnDefinition returnDefinition) {
+            this.returnDefinition = returnDefinition;
+            return this;
+        }
+        public GetServiceMethodPageResponseBodyDataResultReturnDefinition getReturnDefinition() {
+            return this.returnDefinition;
+        }
+
         public GetServiceMethodPageResponseBodyDataResult setReturnDetails(String returnDetails) {
             this.returnDetails = returnDetails;
             return this;
@@ -227,56 +235,32 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             return this.returnDetails;
         }
 
-        public GetServiceMethodPageResponseBodyDataResult setName(String name) {
-            this.name = name;
+        public GetServiceMethodPageResponseBodyDataResult setReturnType(String returnType) {
+            this.returnType = returnType;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public GetServiceMethodPageResponseBodyDataResult setMethodController(String methodController) {
-            this.methodController = methodController;
-            return this;
-        }
-        public String getMethodController() {
-            return this.methodController;
+        public String getReturnType() {
+            return this.returnType;
         }
 
     }
 
     public static class GetServiceMethodPageResponseBodyData extends TeaModel {
-        @NameInMap("Result")
-        public java.util.List<GetServiceMethodPageResponseBodyDataResult> result;
-
-        @NameInMap("TotalSize")
-        public Integer totalSize;
-
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        @NameInMap("Result")
+        public java.util.List<GetServiceMethodPageResponseBodyDataResult> result;
+
+        @NameInMap("TotalSize")
+        public Integer totalSize;
+
         public static GetServiceMethodPageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetServiceMethodPageResponseBodyData self = new GetServiceMethodPageResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetServiceMethodPageResponseBodyData setResult(java.util.List<GetServiceMethodPageResponseBodyDataResult> result) {
-            this.result = result;
-            return this;
-        }
-        public java.util.List<GetServiceMethodPageResponseBodyDataResult> getResult() {
-            return this.result;
-        }
-
-        public GetServiceMethodPageResponseBodyData setTotalSize(Integer totalSize) {
-            this.totalSize = totalSize;
-            return this;
-        }
-        public Integer getTotalSize() {
-            return this.totalSize;
         }
 
         public GetServiceMethodPageResponseBodyData setPageNumber(Integer pageNumber) {
@@ -293,6 +277,22 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         }
         public Integer getPageSize() {
             return this.pageSize;
+        }
+
+        public GetServiceMethodPageResponseBodyData setResult(java.util.List<GetServiceMethodPageResponseBodyDataResult> result) {
+            this.result = result;
+            return this;
+        }
+        public java.util.List<GetServiceMethodPageResponseBodyDataResult> getResult() {
+            return this.result;
+        }
+
+        public GetServiceMethodPageResponseBodyData setTotalSize(Integer totalSize) {
+            this.totalSize = totalSize;
+            return this;
+        }
+        public Integer getTotalSize() {
+            return this.totalSize;
         }
 
     }
