@@ -37,8 +37,11 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
-    @NameInMap("SourceRegionId")
-    public String sourceRegionId;
+    @NameInMap("RPO")
+    public Long RPO;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("SourceZoneId")
     public String sourceZoneId;
@@ -136,12 +139,20 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
         return this.periodUnit;
     }
 
-    public CreateDiskReplicaPairRequest setSourceRegionId(String sourceRegionId) {
-        this.sourceRegionId = sourceRegionId;
+    public CreateDiskReplicaPairRequest setRPO(Long RPO) {
+        this.RPO = RPO;
         return this;
     }
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public Long getRPO() {
+        return this.RPO;
+    }
+
+    public CreateDiskReplicaPairRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateDiskReplicaPairRequest setSourceZoneId(String sourceZoneId) {

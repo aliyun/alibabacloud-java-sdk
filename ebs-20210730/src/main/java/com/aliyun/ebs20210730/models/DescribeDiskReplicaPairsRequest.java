@@ -16,6 +16,13 @@ public class DescribeDiskReplicaPairsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ReplicaGroupId")
+    public String replicaGroupId;
+
+    // production或backup，表示数据从主或备站点获取，默认为production。
+    @NameInMap("Site")
+    public String site;
+
     public static DescribeDiskReplicaPairsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDiskReplicaPairsRequest self = new DescribeDiskReplicaPairsRequest();
         return TeaModel.build(map, self);
@@ -51,6 +58,22 @@ public class DescribeDiskReplicaPairsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDiskReplicaPairsRequest setReplicaGroupId(String replicaGroupId) {
+        this.replicaGroupId = replicaGroupId;
+        return this;
+    }
+    public String getReplicaGroupId() {
+        return this.replicaGroupId;
+    }
+
+    public DescribeDiskReplicaPairsRequest setSite(String site) {
+        this.site = site;
+        return this;
+    }
+    public String getSite() {
+        return this.site;
     }
 
 }
