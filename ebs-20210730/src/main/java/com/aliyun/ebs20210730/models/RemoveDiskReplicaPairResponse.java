@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ebs20210730.models;
+
+import com.aliyun.tea.*;
+
+public class RemoveDiskReplicaPairResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public RemoveDiskReplicaPairResponseBody body;
+
+    public static RemoveDiskReplicaPairResponse build(java.util.Map<String, ?> map) throws Exception {
+        RemoveDiskReplicaPairResponse self = new RemoveDiskReplicaPairResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public RemoveDiskReplicaPairResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public RemoveDiskReplicaPairResponse setBody(RemoveDiskReplicaPairResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public RemoveDiskReplicaPairResponseBody getBody() {
+        return this.body;
+    }
+
+}

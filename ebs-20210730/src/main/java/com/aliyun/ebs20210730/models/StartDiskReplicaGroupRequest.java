@@ -3,7 +3,7 @@ package com.aliyun.ebs20210730.models;
 
 import com.aliyun.tea.*;
 
-public class StartDiskReplicaPairRequest extends TeaModel {
+public class StartDiskReplicaGroupRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -13,15 +13,15 @@ public class StartDiskReplicaPairRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ReplicaPairId")
-    public String replicaPairId;
+    @NameInMap("ReplicaGroupId")
+    public String replicaGroupId;
 
-    public static StartDiskReplicaPairRequest build(java.util.Map<String, ?> map) throws Exception {
-        StartDiskReplicaPairRequest self = new StartDiskReplicaPairRequest();
+    public static StartDiskReplicaGroupRequest build(java.util.Map<String, ?> map) throws Exception {
+        StartDiskReplicaGroupRequest self = new StartDiskReplicaGroupRequest();
         return TeaModel.build(map, self);
     }
 
-    public StartDiskReplicaPairRequest setClientToken(String clientToken) {
+    public StartDiskReplicaGroupRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -29,7 +29,7 @@ public class StartDiskReplicaPairRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public StartDiskReplicaPairRequest setOneShot(Boolean oneShot) {
+    public StartDiskReplicaGroupRequest setOneShot(Boolean oneShot) {
         this.oneShot = oneShot;
         return this;
     }
@@ -37,7 +37,7 @@ public class StartDiskReplicaPairRequest extends TeaModel {
         return this.oneShot;
     }
 
-    public StartDiskReplicaPairRequest setRegionId(String regionId) {
+    public StartDiskReplicaGroupRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -45,12 +45,12 @@ public class StartDiskReplicaPairRequest extends TeaModel {
         return this.regionId;
     }
 
-    public StartDiskReplicaPairRequest setReplicaPairId(String replicaPairId) {
-        this.replicaPairId = replicaPairId;
+    public StartDiskReplicaGroupRequest setReplicaGroupId(String replicaGroupId) {
+        this.replicaGroupId = replicaGroupId;
         return this;
     }
-    public String getReplicaPairId() {
-        return this.replicaPairId;
+    public String getReplicaGroupId() {
+        return this.replicaGroupId;
     }
 
 }

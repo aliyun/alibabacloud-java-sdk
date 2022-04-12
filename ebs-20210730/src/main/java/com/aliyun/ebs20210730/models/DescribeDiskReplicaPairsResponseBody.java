@@ -44,11 +44,15 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiskReplicaPairsResponseBodyReplicaPairs extends TeaModel {
-        @NameInMap("AsyncCycle")
-        public Long asyncCycle;
-
         @NameInMap("Bandwidth")
         public Long bandwidth;
+
+        @NameInMap("ChargeType")
+        public String chargeType;
+
+        // 创建时间。1970年1月1日0点0分以来的毫秒数
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("Description")
         public String description;
@@ -59,20 +63,55 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         @NameInMap("DestinationRegion")
         public String destinationRegion;
 
-        @NameInMap("LastRPO")
-        public Long lastRPO;
+        @NameInMap("DestinationZoneId")
+        public String destinationZoneId;
+
+        @NameInMap("LastRecoverPoint")
+        public Long lastRecoverPoint;
 
         @NameInMap("PairName")
         public String pairName;
 
+        // pair的初始源地域
+        @NameInMap("PrimaryRegion")
+        public String primaryRegion;
+
+        // pair的初始源可用区
+        @NameInMap("PrimaryZone")
+        public String primaryZone;
+
+        @NameInMap("RPO")
+        public Long RPO;
+
+        @NameInMap("ReplicaGroupId")
+        public String replicaGroupId;
+
+        @NameInMap("ReplicaGroupName")
+        public String replicaGroupName;
+
         @NameInMap("ReplicaPairId")
         public String replicaPairId;
+
+        // pair信息的后端站点来源，production或backup
+        @NameInMap("Site")
+        public String site;
 
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
 
         @NameInMap("SourceRegion")
         public String sourceRegion;
+
+        @NameInMap("SourceZoneId")
+        public String sourceZoneId;
+
+        // pair的初始目的地域
+        @NameInMap("StandbyRegion")
+        public String standbyRegion;
+
+        // pair的初始目的可用区
+        @NameInMap("StandbyZone")
+        public String standbyZone;
 
         @NameInMap("Status")
         public String status;
@@ -85,20 +124,28 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setAsyncCycle(Long asyncCycle) {
-            this.asyncCycle = asyncCycle;
-            return this;
-        }
-        public Long getAsyncCycle() {
-            return this.asyncCycle;
-        }
-
         public DescribeDiskReplicaPairsResponseBodyReplicaPairs setBandwidth(Long bandwidth) {
             this.bandwidth = bandwidth;
             return this;
         }
         public Long getBandwidth() {
             return this.bandwidth;
+        }
+
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeDiskReplicaPairsResponseBodyReplicaPairs setDescription(String description) {
@@ -125,12 +172,20 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             return this.destinationRegion;
         }
 
-        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setLastRPO(Long lastRPO) {
-            this.lastRPO = lastRPO;
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setDestinationZoneId(String destinationZoneId) {
+            this.destinationZoneId = destinationZoneId;
             return this;
         }
-        public Long getLastRPO() {
-            return this.lastRPO;
+        public String getDestinationZoneId() {
+            return this.destinationZoneId;
+        }
+
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setLastRecoverPoint(Long lastRecoverPoint) {
+            this.lastRecoverPoint = lastRecoverPoint;
+            return this;
+        }
+        public Long getLastRecoverPoint() {
+            return this.lastRecoverPoint;
         }
 
         public DescribeDiskReplicaPairsResponseBodyReplicaPairs setPairName(String pairName) {
@@ -141,12 +196,60 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             return this.pairName;
         }
 
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setPrimaryRegion(String primaryRegion) {
+            this.primaryRegion = primaryRegion;
+            return this;
+        }
+        public String getPrimaryRegion() {
+            return this.primaryRegion;
+        }
+
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setPrimaryZone(String primaryZone) {
+            this.primaryZone = primaryZone;
+            return this;
+        }
+        public String getPrimaryZone() {
+            return this.primaryZone;
+        }
+
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setRPO(Long RPO) {
+            this.RPO = RPO;
+            return this;
+        }
+        public Long getRPO() {
+            return this.RPO;
+        }
+
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setReplicaGroupId(String replicaGroupId) {
+            this.replicaGroupId = replicaGroupId;
+            return this;
+        }
+        public String getReplicaGroupId() {
+            return this.replicaGroupId;
+        }
+
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setReplicaGroupName(String replicaGroupName) {
+            this.replicaGroupName = replicaGroupName;
+            return this;
+        }
+        public String getReplicaGroupName() {
+            return this.replicaGroupName;
+        }
+
         public DescribeDiskReplicaPairsResponseBodyReplicaPairs setReplicaPairId(String replicaPairId) {
             this.replicaPairId = replicaPairId;
             return this;
         }
         public String getReplicaPairId() {
             return this.replicaPairId;
+        }
+
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setSite(String site) {
+            this.site = site;
+            return this;
+        }
+        public String getSite() {
+            return this.site;
         }
 
         public DescribeDiskReplicaPairsResponseBodyReplicaPairs setSourceDiskId(String sourceDiskId) {
@@ -163,6 +266,30 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         }
         public String getSourceRegion() {
             return this.sourceRegion;
+        }
+
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setSourceZoneId(String sourceZoneId) {
+            this.sourceZoneId = sourceZoneId;
+            return this;
+        }
+        public String getSourceZoneId() {
+            return this.sourceZoneId;
+        }
+
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setStandbyRegion(String standbyRegion) {
+            this.standbyRegion = standbyRegion;
+            return this;
+        }
+        public String getStandbyRegion() {
+            return this.standbyRegion;
+        }
+
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setStandbyZone(String standbyZone) {
+            this.standbyZone = standbyZone;
+            return this;
+        }
+        public String getStandbyZone() {
+            return this.standbyZone;
         }
 
         public DescribeDiskReplicaPairsResponseBodyReplicaPairs setStatus(String status) {

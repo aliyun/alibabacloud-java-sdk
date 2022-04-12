@@ -4,6 +4,9 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class ModifyDiskReplicaPairRequest extends TeaModel {
+    @NameInMap("Bandwidth")
+    public Long bandwidth;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -12,6 +15,9 @@ public class ModifyDiskReplicaPairRequest extends TeaModel {
 
     @NameInMap("PairName")
     public String pairName;
+
+    @NameInMap("RPO")
+    public Long RPO;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -22,6 +28,14 @@ public class ModifyDiskReplicaPairRequest extends TeaModel {
     public static ModifyDiskReplicaPairRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDiskReplicaPairRequest self = new ModifyDiskReplicaPairRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDiskReplicaPairRequest setBandwidth(Long bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Long getBandwidth() {
+        return this.bandwidth;
     }
 
     public ModifyDiskReplicaPairRequest setClientToken(String clientToken) {
@@ -46,6 +60,14 @@ public class ModifyDiskReplicaPairRequest extends TeaModel {
     }
     public String getPairName() {
         return this.pairName;
+    }
+
+    public ModifyDiskReplicaPairRequest setRPO(Long RPO) {
+        this.RPO = RPO;
+        return this;
+    }
+    public Long getRPO() {
+        return this.RPO;
     }
 
     public ModifyDiskReplicaPairRequest setRegionId(String regionId) {

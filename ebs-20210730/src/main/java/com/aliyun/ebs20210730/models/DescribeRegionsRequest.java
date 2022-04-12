@@ -7,6 +7,9 @@ public class DescribeRegionsRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -21,6 +24,14 @@ public class DescribeRegionsRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public DescribeRegionsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeRegionsRequest setResourceType(String resourceType) {
