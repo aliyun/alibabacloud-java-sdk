@@ -7,8 +7,8 @@ public class ListAppSessionsResponseBody extends TeaModel {
     @NameInMap("AppSessions")
     public java.util.List<ListAppSessionsResponseBodyAppSessions> appSessions;
 
-    @NameInMap("PageNum")
-    public Integer pageNum;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -30,12 +30,12 @@ public class ListAppSessionsResponseBody extends TeaModel {
         return this.appSessions;
     }
 
-    public ListAppSessionsResponseBody setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
+    public ListAppSessionsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getPageNum() {
-        return this.pageNum;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListAppSessionsResponseBody setPageSize(Integer pageSize) {

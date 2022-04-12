@@ -735,6 +735,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createAppSessionWithOptions(request, runtime);
     }
 
+    public CreateAppSessionBatchResponse createAppSessionBatchWithOptions(CreateAppSessionBatchRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateAppSessionBatchShrinkRequest request = new CreateAppSessionBatchShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.appInfos)) {
+            request.appInfosShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.appInfos, "AppInfos", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInfosShrink)) {
+            query.put("AppInfos", request.appInfosShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customTaskId)) {
+            query.put("CustomTaskId", request.customTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            query.put("Timeout", request.timeout);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAppSessionBatch"),
+            new TeaPair("version", "2021-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAppSessionBatchResponse());
+    }
+
+    public CreateAppSessionBatchResponse createAppSessionBatch(CreateAppSessionBatchRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createAppSessionBatchWithOptions(request, runtime);
+    }
+
     public CreateUploadTaskResponse createUploadTaskWithOptions(CreateUploadTaskRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -928,6 +971,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getOssInfoWithOptions(runtime);
     }
 
+    public GetTenantIdResponse getTenantIdWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTenantId"),
+            new TeaPair("version", "2021-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTenantIdResponse());
+    }
+
+    public GetTenantIdResponse getTenantId() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getTenantIdWithOptions(runtime);
+    }
+
     public GetTokenResponse getTokenWithOptions(GetTokenRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -971,6 +1035,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetTokenResponse getToken(GetTokenRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getTokenWithOptions(request, runtime);
+    }
+
+    public GetUploadToolUrlResponse getUploadToolUrlWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUploadToolUrl"),
+            new TeaPair("version", "2021-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUploadToolUrlResponse());
+    }
+
+    public GetUploadToolUrlResponse getUploadToolUrl() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getUploadToolUrlWithOptions(runtime);
     }
 
     public HasActivateResponse hasActivateWithOptions(RuntimeOptions runtime) throws Exception {
@@ -1148,6 +1233,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryUploadProgressResponse queryUploadProgress(QueryUploadProgressRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryUploadProgressWithOptions(request, runtime);
+    }
+
+    public RecordFinishedFileResponse recordFinishedFileWithOptions(RecordFinishedFileRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bucketName)) {
+            body.put("BucketName", request.bucketName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.env)) {
+            body.put("Env", request.env);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileFingerprintDTOList)) {
+            body.put("FileFingerprintDTOList", request.fileFingerprintDTOList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSize)) {
+            body.put("FileSize", request.fileSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileType)) {
+            body.put("FileType", request.fileType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            body.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toolVersion)) {
+            body.put("ToolVersion", request.toolVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            body.put("VersionId", request.versionId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecordFinishedFile"),
+            new TeaPair("version", "2021-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecordFinishedFileResponse());
+    }
+
+    public RecordFinishedFileResponse recordFinishedFile(RecordFinishedFileRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.recordFinishedFileWithOptions(request, runtime);
     }
 
     public ReplicateVersionResponse replicateVersionWithOptions(ReplicateVersionRequest request, RuntimeOptions runtime) throws Exception {
