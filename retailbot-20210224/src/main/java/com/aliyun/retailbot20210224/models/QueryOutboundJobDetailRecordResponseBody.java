@@ -145,6 +145,10 @@ public class QueryOutboundJobDetailRecordResponseBody extends TeaModel {
         @NameInMap("SubBizOrder")
         public Long subBizOrder;
 
+        // tenant Id
+        @NameInMap("TenantId")
+        public Long tenantId;
+
         @NameInMap("YunTaskId")
         public String yunTaskId;
 
@@ -335,6 +339,14 @@ public class QueryOutboundJobDetailRecordResponseBody extends TeaModel {
         }
         public Long getSubBizOrder() {
             return this.subBizOrder;
+        }
+
+        public QueryOutboundJobDetailRecordResponseBodyData setTenantId(Long tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public Long getTenantId() {
+            return this.tenantId;
         }
 
         public QueryOutboundJobDetailRecordResponseBodyData setYunTaskId(String yunTaskId) {

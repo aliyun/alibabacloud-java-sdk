@@ -43,6 +43,10 @@ public class QueryOutboundJobResponseBody extends TeaModel {
     }
 
     public static class QueryOutboundJobResponseBodyData extends TeaModel {
+        // appCode
+        @NameInMap("AppCode")
+        public String appCode;
+
         // 应用ID
         @NameInMap("AppId")
         public String appId;
@@ -87,11 +91,19 @@ public class QueryOutboundJobResponseBody extends TeaModel {
         @NameInMap("SaasId")
         public String saasId;
 
+        // shop Id
+        @NameInMap("ShopId")
+        public Long shopId;
+
         @NameInMap("StartTime")
         public String startTime;
 
         @NameInMap("Status")
         public Integer status;
+
+        // tenant Id
+        @NameInMap("TenantId")
+        public Long tenantId;
 
         // 版本
         @NameInMap("Version")
@@ -100,6 +112,14 @@ public class QueryOutboundJobResponseBody extends TeaModel {
         public static QueryOutboundJobResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryOutboundJobResponseBodyData self = new QueryOutboundJobResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryOutboundJobResponseBodyData setAppCode(String appCode) {
+            this.appCode = appCode;
+            return this;
+        }
+        public String getAppCode() {
+            return this.appCode;
         }
 
         public QueryOutboundJobResponseBodyData setAppId(String appId) {
@@ -198,6 +218,14 @@ public class QueryOutboundJobResponseBody extends TeaModel {
             return this.saasId;
         }
 
+        public QueryOutboundJobResponseBodyData setShopId(Long shopId) {
+            this.shopId = shopId;
+            return this;
+        }
+        public Long getShopId() {
+            return this.shopId;
+        }
+
         public QueryOutboundJobResponseBodyData setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
@@ -212,6 +240,14 @@ public class QueryOutboundJobResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public QueryOutboundJobResponseBodyData setTenantId(Long tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public Long getTenantId() {
+            return this.tenantId;
         }
 
         public QueryOutboundJobResponseBodyData setVersion(String version) {

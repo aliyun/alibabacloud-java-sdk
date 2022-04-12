@@ -13,9 +13,8 @@ public class CreateOutboundJobResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static CreateOutboundJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateOutboundJobResponseBody self = new CreateOutboundJobResponseBody();
@@ -46,12 +45,12 @@ public class CreateOutboundJobResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateOutboundJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateOutboundJobResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

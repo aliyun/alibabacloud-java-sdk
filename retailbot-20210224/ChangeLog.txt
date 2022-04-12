@@ -1,3 +1,6 @@
+2022-04-12 Version: 2.6.0
+- Apaas Interface publish.
+
 2022-03-17 Version: 2.5.0
 - Apaas Interface publish.
 

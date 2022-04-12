@@ -13,6 +13,9 @@ public class QueryOutboundJobDataResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static QueryOutboundJobDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryOutboundJobDataResponseBody self = new QueryOutboundJobDataResponseBody();
         return TeaModel.build(map, self);
@@ -42,7 +45,19 @@ public class QueryOutboundJobDataResponseBody extends TeaModel {
         return this.message;
     }
 
+    public QueryOutboundJobDataResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class QueryOutboundJobDataResponseBodyData extends TeaModel {
+        // appCode
+        @NameInMap("AppCode")
+        public String appCode;
+
         @NameInMap("BatchNo")
         public String batchNo;
 
@@ -76,6 +91,10 @@ public class QueryOutboundJobDataResponseBody extends TeaModel {
         @NameInMap("JobId")
         public Long jobId;
 
+        // saas Id
+        @NameInMap("SaasId")
+        public String saasId;
+
         @NameInMap("StartTime")
         public String startTime;
 
@@ -85,9 +104,21 @@ public class QueryOutboundJobDataResponseBody extends TeaModel {
         @NameInMap("SuccessCount")
         public Integer successCount;
 
+        // tenant Id
+        @NameInMap("TenantId")
+        public Long tenantId;
+
         public static QueryOutboundJobDataResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryOutboundJobDataResponseBodyData self = new QueryOutboundJobDataResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryOutboundJobDataResponseBodyData setAppCode(String appCode) {
+            this.appCode = appCode;
+            return this;
+        }
+        public String getAppCode() {
+            return this.appCode;
         }
 
         public QueryOutboundJobDataResponseBodyData setBatchNo(String batchNo) {
@@ -178,6 +209,14 @@ public class QueryOutboundJobDataResponseBody extends TeaModel {
             return this.jobId;
         }
 
+        public QueryOutboundJobDataResponseBodyData setSaasId(String saasId) {
+            this.saasId = saasId;
+            return this;
+        }
+        public String getSaasId() {
+            return this.saasId;
+        }
+
         public QueryOutboundJobDataResponseBodyData setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
@@ -200,6 +239,14 @@ public class QueryOutboundJobDataResponseBody extends TeaModel {
         }
         public Integer getSuccessCount() {
             return this.successCount;
+        }
+
+        public QueryOutboundJobDataResponseBodyData setTenantId(Long tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public Long getTenantId() {
+            return this.tenantId;
         }
 
     }
