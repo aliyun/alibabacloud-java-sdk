@@ -225,6 +225,13 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
         @NameInMap("JmeterPluginLabel")
         public String jmeterPluginLabel;
 
+        @NameInMap("MaxRps")
+        public Integer maxRps;
+
+        // 压力模式
+        @NameInMap("Mode")
+        public String mode;
+
         // 预热时间
         @NameInMap("RampUp")
         public Integer rampUp;
@@ -244,6 +251,12 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
         // 安全组id，VPC压测时配置
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
+
+        @NameInMap("StartConcurrency")
+        public Integer startConcurrency;
+
+        @NameInMap("StartRps")
+        public Integer startRps;
 
         // 预热阶段
         @NameInMap("Steps")
@@ -350,6 +363,22 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
             return this.jmeterPluginLabel;
         }
 
+        public SaveOpenJMeterSceneRequestOpenJMeterScene setMaxRps(Integer maxRps) {
+            this.maxRps = maxRps;
+            return this;
+        }
+        public Integer getMaxRps() {
+            return this.maxRps;
+        }
+
+        public SaveOpenJMeterSceneRequestOpenJMeterScene setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
         public SaveOpenJMeterSceneRequestOpenJMeterScene setRampUp(Integer rampUp) {
             this.rampUp = rampUp;
             return this;
@@ -388,6 +417,22 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
         }
         public String getSecurityGroupId() {
             return this.securityGroupId;
+        }
+
+        public SaveOpenJMeterSceneRequestOpenJMeterScene setStartConcurrency(Integer startConcurrency) {
+            this.startConcurrency = startConcurrency;
+            return this;
+        }
+        public Integer getStartConcurrency() {
+            return this.startConcurrency;
+        }
+
+        public SaveOpenJMeterSceneRequestOpenJMeterScene setStartRps(Integer startRps) {
+            this.startRps = startRps;
+            return this;
+        }
+        public Integer getStartRps() {
+            return this.startRps;
         }
 
         public SaveOpenJMeterSceneRequestOpenJMeterScene setSteps(Integer steps) {

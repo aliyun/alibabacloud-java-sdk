@@ -394,6 +394,10 @@ public class SavePtsSceneRequest extends TeaModel {
         @NameInMap("Increment")
         public Integer increment;
 
+        // 是否为VPC测试。默认为false，表示公网测试。当此值为true时，VPC相关配置才会生效。
+        @NameInMap("IsVpcTest")
+        public String isVpcTest;
+
         // 单量级持续时长，单位分钟，一定是小于施压时长 maxRunningTime
         @NameInMap("KeepTime")
         public Integer keepTime;
@@ -457,6 +461,14 @@ public class SavePtsSceneRequest extends TeaModel {
         }
         public Integer getIncrement() {
             return this.increment;
+        }
+
+        public SavePtsSceneRequestSceneLoadConfig setIsVpcTest(String isVpcTest) {
+            this.isVpcTest = isVpcTest;
+            return this;
+        }
+        public String getIsVpcTest() {
+            return this.isVpcTest;
         }
 
         public SavePtsSceneRequestSceneLoadConfig setKeepTime(Integer keepTime) {
