@@ -8,7 +8,7 @@ public class GetAppSessionRequest extends TeaModel {
     @NameInMap("CustomSessionId")
     public String customSessionId;
 
-    // 自定义用户id
+    // 平台会话id
     @NameInMap("PlatformSessionId")
     public String platformSessionId;
 
