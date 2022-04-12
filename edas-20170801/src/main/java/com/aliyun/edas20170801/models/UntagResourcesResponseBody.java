@@ -4,18 +4,26 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static UntagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UntagResourcesResponseBody self = new UntagResourcesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UntagResourcesResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public UntagResourcesResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class UntagResourcesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UntagResourcesResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
 }

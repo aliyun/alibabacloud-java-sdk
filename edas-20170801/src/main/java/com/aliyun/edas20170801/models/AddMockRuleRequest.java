@@ -4,14 +4,26 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class AddMockRuleRequest extends TeaModel {
+    @NameInMap("ConsumerAppsJson")
+    public String consumerAppsJson;
+
+    @NameInMap("DubboMockItemJson")
+    public String dubboMockItemJson;
+
+    @NameInMap("Enable")
+    public Boolean enable;
+
+    @NameInMap("ExtraJson")
+    public String extraJson;
+
+    @NameInMap("MockType")
+    public Long mockType;
+
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Region")
-    public String region;
-
-    @NameInMap("Source")
-    public String source;
+    @NameInMap("Namespace")
+    public String namespace;
 
     @NameInMap("ProviderAppId")
     public String providerAppId;
@@ -19,27 +31,58 @@ public class AddMockRuleRequest extends TeaModel {
     @NameInMap("ProviderAppName")
     public String providerAppName;
 
-    @NameInMap("ExtraJson")
-    public String extraJson;
+    @NameInMap("Region")
+    public String region;
 
     @NameInMap("ScMockItemJson")
     public String scMockItemJson;
 
-    @NameInMap("DubboMockItemJson")
-    public String dubboMockItemJson;
-
-    @NameInMap("ConsumerAppsJson")
-    public String consumerAppsJson;
-
-    @NameInMap("Enable")
-    public Boolean enable;
-
-    @NameInMap("Namespace")
-    public String namespace;
+    @NameInMap("Source")
+    public String source;
 
     public static AddMockRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         AddMockRuleRequest self = new AddMockRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddMockRuleRequest setConsumerAppsJson(String consumerAppsJson) {
+        this.consumerAppsJson = consumerAppsJson;
+        return this;
+    }
+    public String getConsumerAppsJson() {
+        return this.consumerAppsJson;
+    }
+
+    public AddMockRuleRequest setDubboMockItemJson(String dubboMockItemJson) {
+        this.dubboMockItemJson = dubboMockItemJson;
+        return this;
+    }
+    public String getDubboMockItemJson() {
+        return this.dubboMockItemJson;
+    }
+
+    public AddMockRuleRequest setEnable(Boolean enable) {
+        this.enable = enable;
+        return this;
+    }
+    public Boolean getEnable() {
+        return this.enable;
+    }
+
+    public AddMockRuleRequest setExtraJson(String extraJson) {
+        this.extraJson = extraJson;
+        return this;
+    }
+    public String getExtraJson() {
+        return this.extraJson;
+    }
+
+    public AddMockRuleRequest setMockType(Long mockType) {
+        this.mockType = mockType;
+        return this;
+    }
+    public Long getMockType() {
+        return this.mockType;
     }
 
     public AddMockRuleRequest setName(String name) {
@@ -50,20 +93,12 @@ public class AddMockRuleRequest extends TeaModel {
         return this.name;
     }
 
-    public AddMockRuleRequest setRegion(String region) {
-        this.region = region;
+    public AddMockRuleRequest setNamespace(String namespace) {
+        this.namespace = namespace;
         return this;
     }
-    public String getRegion() {
-        return this.region;
-    }
-
-    public AddMockRuleRequest setSource(String source) {
-        this.source = source;
-        return this;
-    }
-    public String getSource() {
-        return this.source;
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public AddMockRuleRequest setProviderAppId(String providerAppId) {
@@ -82,12 +117,12 @@ public class AddMockRuleRequest extends TeaModel {
         return this.providerAppName;
     }
 
-    public AddMockRuleRequest setExtraJson(String extraJson) {
-        this.extraJson = extraJson;
+    public AddMockRuleRequest setRegion(String region) {
+        this.region = region;
         return this;
     }
-    public String getExtraJson() {
-        return this.extraJson;
+    public String getRegion() {
+        return this.region;
     }
 
     public AddMockRuleRequest setScMockItemJson(String scMockItemJson) {
@@ -98,36 +133,12 @@ public class AddMockRuleRequest extends TeaModel {
         return this.scMockItemJson;
     }
 
-    public AddMockRuleRequest setDubboMockItemJson(String dubboMockItemJson) {
-        this.dubboMockItemJson = dubboMockItemJson;
+    public AddMockRuleRequest setSource(String source) {
+        this.source = source;
         return this;
     }
-    public String getDubboMockItemJson() {
-        return this.dubboMockItemJson;
-    }
-
-    public AddMockRuleRequest setConsumerAppsJson(String consumerAppsJson) {
-        this.consumerAppsJson = consumerAppsJson;
-        return this;
-    }
-    public String getConsumerAppsJson() {
-        return this.consumerAppsJson;
-    }
-
-    public AddMockRuleRequest setEnable(Boolean enable) {
-        this.enable = enable;
-        return this;
-    }
-    public Boolean getEnable() {
-        return this.enable;
-    }
-
-    public AddMockRuleRequest setNamespace(String namespace) {
-        this.namespace = namespace;
-        return this;
-    }
-    public String getNamespace() {
-        return this.namespace;
+    public String getSource() {
+        return this.source;
     }
 
 }

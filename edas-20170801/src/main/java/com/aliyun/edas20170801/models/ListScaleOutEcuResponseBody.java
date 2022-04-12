@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListScaleOutEcuResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("EcuInfoList")
     public ListScaleOutEcuResponseBodyEcuInfoList ecuInfoList;
 
@@ -13,12 +16,17 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static ListScaleOutEcuResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListScaleOutEcuResponseBody self = new ListScaleOutEcuResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListScaleOutEcuResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public ListScaleOutEcuResponseBody setEcuInfoList(ListScaleOutEcuResponseBodyEcuInfoList ecuInfoList) {
@@ -45,87 +53,55 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListScaleOutEcuResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public static class ListScaleOutEcuResponseBodyEcuInfoListEcuInfo extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
-        @NameInMap("IpAddr")
-        public String ipAddr;
-
         @NameInMap("AvailableCpu")
         public Integer availableCpu;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("EcuId")
-        public String ecuId;
-
-        @NameInMap("DockerEnv")
-        public Boolean dockerEnv;
-
-        @NameInMap("Online")
-        public Boolean online;
 
         @NameInMap("AvailableMem")
         public Integer availableMem;
 
-        @NameInMap("ZoneId")
-        public String zoneId;
+        @NameInMap("CreateTime")
+        public Long createTime;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("DockerEnv")
+        public Boolean dockerEnv;
+
+        @NameInMap("EcuId")
+        public String ecuId;
 
         @NameInMap("HeartbeatTime")
         public Long heartbeatTime;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("IpAddr")
+        public String ipAddr;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Online")
+        public Boolean online;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static ListScaleOutEcuResponseBodyEcuInfoListEcuInfo build(java.util.Map<String, ?> map) throws Exception {
             ListScaleOutEcuResponseBodyEcuInfoListEcuInfo self = new ListScaleOutEcuResponseBodyEcuInfoListEcuInfo();
             return TeaModel.build(map, self);
-        }
-
-        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setIpAddr(String ipAddr) {
-            this.ipAddr = ipAddr;
-            return this;
-        }
-        public String getIpAddr() {
-            return this.ipAddr;
         }
 
         public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setAvailableCpu(Integer availableCpu) {
@@ -136,44 +112,20 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             return this.availableCpu;
         }
 
+        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setAvailableMem(Integer availableMem) {
+            this.availableMem = availableMem;
+            return this;
+        }
+        public Integer getAvailableMem() {
+            return this.availableMem;
+        }
+
         public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
         public Long getCreateTime() {
             return this.createTime;
-        }
-
-        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setEcuId(String ecuId) {
-            this.ecuId = ecuId;
-            return this;
-        }
-        public String getEcuId() {
-            return this.ecuId;
         }
 
         public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setDockerEnv(Boolean dockerEnv) {
@@ -184,28 +136,36 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             return this.dockerEnv;
         }
 
-        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setOnline(Boolean online) {
-            this.online = online;
+        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setEcuId(String ecuId) {
+            this.ecuId = ecuId;
             return this;
         }
-        public Boolean getOnline() {
-            return this.online;
+        public String getEcuId() {
+            return this.ecuId;
         }
 
-        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setAvailableMem(Integer availableMem) {
-            this.availableMem = availableMem;
+        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setHeartbeatTime(Long heartbeatTime) {
+            this.heartbeatTime = heartbeatTime;
             return this;
         }
-        public Integer getAvailableMem() {
-            return this.availableMem;
+        public Long getHeartbeatTime() {
+            return this.heartbeatTime;
         }
 
-        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setZoneId(String zoneId) {
-            this.zoneId = zoneId;
+        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public String getZoneId() {
-            return this.zoneId;
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setIpAddr(String ipAddr) {
+            this.ipAddr = ipAddr;
+            return this;
+        }
+        public String getIpAddr() {
+            return this.ipAddr;
         }
 
         public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setName(String name) {
@@ -216,12 +176,52 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setHeartbeatTime(Long heartbeatTime) {
-            this.heartbeatTime = heartbeatTime;
+        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setOnline(Boolean online) {
+            this.online = online;
             return this;
         }
-        public Long getHeartbeatTime() {
-            return this.heartbeatTime;
+        public Boolean getOnline() {
+            return this.online;
+        }
+
+        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public ListScaleOutEcuResponseBodyEcuInfoListEcuInfo setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

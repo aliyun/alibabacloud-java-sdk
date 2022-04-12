@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListMethodsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class ListMethodsResponseBody extends TeaModel {
     @NameInMap("ServiceMethodList")
     public ListMethodsResponseBodyServiceMethodList serviceMethodList;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static ListMethodsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListMethodsResponseBody self = new ListMethodsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListMethodsResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public ListMethodsResponseBody setMessage(String message) {
@@ -45,12 +53,23 @@ public class ListMethodsResponseBody extends TeaModel {
         return this.serviceMethodList;
     }
 
-    public ListMethodsResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
+    public static class ListMethodsResponseBodyServiceMethodListServiceMethodInputParams extends TeaModel {
+        @NameInMap("InputParam")
+        public java.util.List<String> inputParam;
+
+        public static ListMethodsResponseBodyServiceMethodListServiceMethodInputParams build(java.util.Map<String, ?> map) throws Exception {
+            ListMethodsResponseBodyServiceMethodListServiceMethodInputParams self = new ListMethodsResponseBodyServiceMethodListServiceMethodInputParams();
+            return TeaModel.build(map, self);
+        }
+
+        public ListMethodsResponseBodyServiceMethodListServiceMethodInputParams setInputParam(java.util.List<String> inputParam) {
+            this.inputParam = inputParam;
+            return this;
+        }
+        public java.util.List<String> getInputParam() {
+            return this.inputParam;
+        }
+
     }
 
     public static class ListMethodsResponseBodyServiceMethodListServiceMethodParamTypes extends TeaModel {
@@ -72,40 +91,21 @@ public class ListMethodsResponseBody extends TeaModel {
 
     }
 
-    public static class ListMethodsResponseBodyServiceMethodListServiceMethodInputParams extends TeaModel {
-        @NameInMap("InputParam")
-        public java.util.List<String> inputParam;
-
-        public static ListMethodsResponseBodyServiceMethodListServiceMethodInputParams build(java.util.Map<String, ?> map) throws Exception {
-            ListMethodsResponseBodyServiceMethodListServiceMethodInputParams self = new ListMethodsResponseBodyServiceMethodListServiceMethodInputParams();
-            return TeaModel.build(map, self);
-        }
-
-        public ListMethodsResponseBodyServiceMethodListServiceMethodInputParams setInputParam(java.util.List<String> inputParam) {
-            this.inputParam = inputParam;
-            return this;
-        }
-        public java.util.List<String> getInputParam() {
-            return this.inputParam;
-        }
-
-    }
-
     public static class ListMethodsResponseBodyServiceMethodListServiceMethod extends TeaModel {
-        @NameInMap("MethodName")
-        public String methodName;
-
-        @NameInMap("ParamTypes")
-        public ListMethodsResponseBodyServiceMethodListServiceMethodParamTypes paramTypes;
+        @NameInMap("AppName")
+        public String appName;
 
         @NameInMap("InputParams")
         public ListMethodsResponseBodyServiceMethodListServiceMethodInputParams inputParams;
 
-        @NameInMap("AppName")
-        public String appName;
+        @NameInMap("MethodName")
+        public String methodName;
 
         @NameInMap("Output")
         public String output;
+
+        @NameInMap("ParamTypes")
+        public ListMethodsResponseBodyServiceMethodListServiceMethodParamTypes paramTypes;
 
         @NameInMap("ServiceName")
         public String serviceName;
@@ -113,30 +113,6 @@ public class ListMethodsResponseBody extends TeaModel {
         public static ListMethodsResponseBodyServiceMethodListServiceMethod build(java.util.Map<String, ?> map) throws Exception {
             ListMethodsResponseBodyServiceMethodListServiceMethod self = new ListMethodsResponseBodyServiceMethodListServiceMethod();
             return TeaModel.build(map, self);
-        }
-
-        public ListMethodsResponseBodyServiceMethodListServiceMethod setMethodName(String methodName) {
-            this.methodName = methodName;
-            return this;
-        }
-        public String getMethodName() {
-            return this.methodName;
-        }
-
-        public ListMethodsResponseBodyServiceMethodListServiceMethod setParamTypes(ListMethodsResponseBodyServiceMethodListServiceMethodParamTypes paramTypes) {
-            this.paramTypes = paramTypes;
-            return this;
-        }
-        public ListMethodsResponseBodyServiceMethodListServiceMethodParamTypes getParamTypes() {
-            return this.paramTypes;
-        }
-
-        public ListMethodsResponseBodyServiceMethodListServiceMethod setInputParams(ListMethodsResponseBodyServiceMethodListServiceMethodInputParams inputParams) {
-            this.inputParams = inputParams;
-            return this;
-        }
-        public ListMethodsResponseBodyServiceMethodListServiceMethodInputParams getInputParams() {
-            return this.inputParams;
         }
 
         public ListMethodsResponseBodyServiceMethodListServiceMethod setAppName(String appName) {
@@ -147,12 +123,36 @@ public class ListMethodsResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public ListMethodsResponseBodyServiceMethodListServiceMethod setInputParams(ListMethodsResponseBodyServiceMethodListServiceMethodInputParams inputParams) {
+            this.inputParams = inputParams;
+            return this;
+        }
+        public ListMethodsResponseBodyServiceMethodListServiceMethodInputParams getInputParams() {
+            return this.inputParams;
+        }
+
+        public ListMethodsResponseBodyServiceMethodListServiceMethod setMethodName(String methodName) {
+            this.methodName = methodName;
+            return this;
+        }
+        public String getMethodName() {
+            return this.methodName;
+        }
+
         public ListMethodsResponseBodyServiceMethodListServiceMethod setOutput(String output) {
             this.output = output;
             return this;
         }
         public String getOutput() {
             return this.output;
+        }
+
+        public ListMethodsResponseBodyServiceMethodListServiceMethod setParamTypes(ListMethodsResponseBodyServiceMethodListServiceMethodParamTypes paramTypes) {
+            this.paramTypes = paramTypes;
+            return this;
+        }
+        public ListMethodsResponseBodyServiceMethodListServiceMethodParamTypes getParamTypes() {
+            return this.paramTypes;
         }
 
         public ListMethodsResponseBodyServiceMethodListServiceMethod setServiceName(String serviceName) {

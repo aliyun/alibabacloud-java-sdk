@@ -4,6 +4,15 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class AbortChangeOrderResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public AbortChangeOrderResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,18 +22,33 @@ public class AbortChangeOrderResponseBody extends TeaModel {
     @NameInMap("TraceId")
     public String traceId;
 
-    @NameInMap("Data")
-    public AbortChangeOrderResponseBodyData data;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Code")
-    public Integer code;
-
     public static AbortChangeOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AbortChangeOrderResponseBody self = new AbortChangeOrderResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AbortChangeOrderResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public AbortChangeOrderResponseBody setData(AbortChangeOrderResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public AbortChangeOrderResponseBodyData getData() {
+        return this.data;
+    }
+
+    public AbortChangeOrderResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public AbortChangeOrderResponseBody setMessage(String message) {
@@ -49,30 +73,6 @@ public class AbortChangeOrderResponseBody extends TeaModel {
     }
     public String getTraceId() {
         return this.traceId;
-    }
-
-    public AbortChangeOrderResponseBody setData(AbortChangeOrderResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public AbortChangeOrderResponseBodyData getData() {
-        return this.data;
-    }
-
-    public AbortChangeOrderResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public AbortChangeOrderResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public static class AbortChangeOrderResponseBodyData extends TeaModel {

@@ -10,11 +10,11 @@ public class UpdateK8sServiceRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("ServicePorts")
+    public java.util.Map<String, ?> servicePorts;
+
     @NameInMap("Type")
     public String type;
-
-    @NameInMap("ServicePorts")
-    public String servicePorts;
 
     public static UpdateK8sServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateK8sServiceRequest self = new UpdateK8sServiceRequest();
@@ -37,20 +37,20 @@ public class UpdateK8sServiceRequest extends TeaModel {
         return this.name;
     }
 
+    public UpdateK8sServiceRequest setServicePorts(java.util.Map<String, ?> servicePorts) {
+        this.servicePorts = servicePorts;
+        return this;
+    }
+    public java.util.Map<String, ?> getServicePorts() {
+        return this.servicePorts;
+    }
+
     public UpdateK8sServiceRequest setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
-    }
-
-    public UpdateK8sServiceRequest setServicePorts(String servicePorts) {
-        this.servicePorts = servicePorts;
-        return this;
-    }
-    public String getServicePorts() {
-        return this.servicePorts;
     }
 
 }

@@ -4,14 +4,14 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetServiceConsumersPageResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("Code")
+    public Integer code;
 
     @NameInMap("Data")
     public GetServiceConsumersPageResponseBodyData data;
 
-    @NameInMap("Code")
-    public Integer code;
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("Success")
     public Boolean success;
@@ -21,12 +21,12 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetServiceConsumersPageResponseBody setMessage(String message) {
-        this.message = message;
+    public GetServiceConsumersPageResponseBody setCode(Integer code) {
+        this.code = code;
         return this;
     }
-    public String getMessage() {
-        return this.message;
+    public Integer getCode() {
+        return this.code;
     }
 
     public GetServiceConsumersPageResponseBody setData(GetServiceConsumersPageResponseBodyData data) {
@@ -37,12 +37,12 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
         return this.data;
     }
 
-    public GetServiceConsumersPageResponseBody setCode(Integer code) {
-        this.code = code;
+    public GetServiceConsumersPageResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public String getMessage() {
+        return this.message;
     }
 
     public GetServiceConsumersPageResponseBody setSuccess(Boolean success) {
@@ -57,11 +57,11 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
         @NameInMap("EdasAppName")
         public String edasAppName;
 
-        @NameInMap("Ip")
-        public String ip;
-
         @NameInMap("EdassAppId")
         public String edassAppId;
+
+        @NameInMap("Ip")
+        public String ip;
 
         public static GetServiceConsumersPageResponseBodyDataContent build(java.util.Map<String, ?> map) throws Exception {
             GetServiceConsumersPageResponseBodyDataContent self = new GetServiceConsumersPageResponseBodyDataContent();
@@ -76,14 +76,6 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
             return this.edasAppName;
         }
 
-        public GetServiceConsumersPageResponseBodyDataContent setIp(String ip) {
-            this.ip = ip;
-            return this;
-        }
-        public String getIp() {
-            return this.ip;
-        }
-
         public GetServiceConsumersPageResponseBodyDataContent setEdassAppId(String edassAppId) {
             this.edassAppId = edassAppId;
             return this;
@@ -92,24 +84,40 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
             return this.edassAppId;
         }
 
+        public GetServiceConsumersPageResponseBodyDataContent setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
+        }
+
     }
 
     public static class GetServiceConsumersPageResponseBodyData extends TeaModel {
+        @NameInMap("Content")
+        public java.util.List<GetServiceConsumersPageResponseBodyDataContent> content;
+
         @NameInMap("Size")
         public Integer size;
-
-        @NameInMap("TotalPages")
-        public Integer totalPages;
 
         @NameInMap("TotalElements")
         public Integer totalElements;
 
-        @NameInMap("Content")
-        public java.util.List<GetServiceConsumersPageResponseBodyDataContent> content;
+        @NameInMap("TotalPages")
+        public Integer totalPages;
 
         public static GetServiceConsumersPageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetServiceConsumersPageResponseBodyData self = new GetServiceConsumersPageResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetServiceConsumersPageResponseBodyData setContent(java.util.List<GetServiceConsumersPageResponseBodyDataContent> content) {
+            this.content = content;
+            return this;
+        }
+        public java.util.List<GetServiceConsumersPageResponseBodyDataContent> getContent() {
+            return this.content;
         }
 
         public GetServiceConsumersPageResponseBodyData setSize(Integer size) {
@@ -120,14 +128,6 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
             return this.size;
         }
 
-        public GetServiceConsumersPageResponseBodyData setTotalPages(Integer totalPages) {
-            this.totalPages = totalPages;
-            return this;
-        }
-        public Integer getTotalPages() {
-            return this.totalPages;
-        }
-
         public GetServiceConsumersPageResponseBodyData setTotalElements(Integer totalElements) {
             this.totalElements = totalElements;
             return this;
@@ -136,12 +136,12 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
             return this.totalElements;
         }
 
-        public GetServiceConsumersPageResponseBodyData setContent(java.util.List<GetServiceConsumersPageResponseBodyDataContent> content) {
-            this.content = content;
+        public GetServiceConsumersPageResponseBodyData setTotalPages(Integer totalPages) {
+            this.totalPages = totalPages;
             return this;
         }
-        public java.util.List<GetServiceConsumersPageResponseBodyDataContent> getContent() {
-            return this.content;
+        public Integer getTotalPages() {
+            return this.totalPages;
         }
 
     }

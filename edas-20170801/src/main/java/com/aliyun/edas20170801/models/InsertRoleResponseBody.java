@@ -4,14 +4,14 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class InsertRoleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public Integer code;
 
     @NameInMap("RoleId")
     public Integer roleId;
@@ -19,6 +19,14 @@ public class InsertRoleResponseBody extends TeaModel {
     public static InsertRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InsertRoleResponseBody self = new InsertRoleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public InsertRoleResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public InsertRoleResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class InsertRoleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public InsertRoleResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public InsertRoleResponseBody setRoleId(Integer roleId) {

@@ -4,37 +4,21 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListAliyunRegionResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Integer code;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RegionEntityList")
     public ListAliyunRegionResponseBodyRegionEntityList regionEntityList;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ListAliyunRegionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAliyunRegionResponseBody self = new ListAliyunRegionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAliyunRegionResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListAliyunRegionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListAliyunRegionResponseBody setCode(Integer code) {
@@ -45,6 +29,14 @@ public class ListAliyunRegionResponseBody extends TeaModel {
         return this.code;
     }
 
+    public ListAliyunRegionResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public ListAliyunRegionResponseBody setRegionEntityList(ListAliyunRegionResponseBodyRegionEntityList regionEntityList) {
         this.regionEntityList = regionEntityList;
         return this;
@@ -53,24 +45,24 @@ public class ListAliyunRegionResponseBody extends TeaModel {
         return this.regionEntityList;
     }
 
-    public static class ListAliyunRegionResponseBodyRegionEntityListRegionEntity extends TeaModel {
-        @NameInMap("Name")
-        public String name;
+    public ListAliyunRegionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ListAliyunRegionResponseBodyRegionEntityListRegionEntity extends TeaModel {
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         public static ListAliyunRegionResponseBodyRegionEntityListRegionEntity build(java.util.Map<String, ?> map) throws Exception {
             ListAliyunRegionResponseBodyRegionEntityListRegionEntity self = new ListAliyunRegionResponseBodyRegionEntityListRegionEntity();
             return TeaModel.build(map, self);
-        }
-
-        public ListAliyunRegionResponseBodyRegionEntityListRegionEntity setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public ListAliyunRegionResponseBodyRegionEntityListRegionEntity setId(String id) {
@@ -79,6 +71,14 @@ public class ListAliyunRegionResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public ListAliyunRegionResponseBodyRegionEntityListRegionEntity setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

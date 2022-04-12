@@ -4,21 +4,37 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UnbindSlbResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public String data;
-
-    @NameInMap("Code")
-    public Integer code;
-
     public static UnbindSlbResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UnbindSlbResponseBody self = new UnbindSlbResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UnbindSlbResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public UnbindSlbResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public UnbindSlbResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class UnbindSlbResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UnbindSlbResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public UnbindSlbResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
 }

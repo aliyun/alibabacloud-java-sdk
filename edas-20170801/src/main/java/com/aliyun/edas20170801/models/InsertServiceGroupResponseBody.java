@@ -4,18 +4,26 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class InsertServiceGroupResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static InsertServiceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InsertServiceGroupResponseBody self = new InsertServiceGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public InsertServiceGroupResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public InsertServiceGroupResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class InsertServiceGroupResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public InsertServiceGroupResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
 }

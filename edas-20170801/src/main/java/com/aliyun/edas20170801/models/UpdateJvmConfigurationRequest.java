@@ -10,17 +10,17 @@ public class UpdateJvmConfigurationRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
-    @NameInMap("Options")
-    public String options;
-
-    @NameInMap("MinHeapSize")
-    public Integer minHeapSize;
+    @NameInMap("MaxHeapSize")
+    public Integer maxHeapSize;
 
     @NameInMap("MaxPermSize")
     public Integer maxPermSize;
 
-    @NameInMap("MaxHeapSize")
-    public Integer maxHeapSize;
+    @NameInMap("MinHeapSize")
+    public Integer minHeapSize;
+
+    @NameInMap("Options")
+    public String options;
 
     public static UpdateJvmConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateJvmConfigurationRequest self = new UpdateJvmConfigurationRequest();
@@ -43,20 +43,12 @@ public class UpdateJvmConfigurationRequest extends TeaModel {
         return this.groupId;
     }
 
-    public UpdateJvmConfigurationRequest setOptions(String options) {
-        this.options = options;
+    public UpdateJvmConfigurationRequest setMaxHeapSize(Integer maxHeapSize) {
+        this.maxHeapSize = maxHeapSize;
         return this;
     }
-    public String getOptions() {
-        return this.options;
-    }
-
-    public UpdateJvmConfigurationRequest setMinHeapSize(Integer minHeapSize) {
-        this.minHeapSize = minHeapSize;
-        return this;
-    }
-    public Integer getMinHeapSize() {
-        return this.minHeapSize;
+    public Integer getMaxHeapSize() {
+        return this.maxHeapSize;
     }
 
     public UpdateJvmConfigurationRequest setMaxPermSize(Integer maxPermSize) {
@@ -67,12 +59,20 @@ public class UpdateJvmConfigurationRequest extends TeaModel {
         return this.maxPermSize;
     }
 
-    public UpdateJvmConfigurationRequest setMaxHeapSize(Integer maxHeapSize) {
-        this.maxHeapSize = maxHeapSize;
+    public UpdateJvmConfigurationRequest setMinHeapSize(Integer minHeapSize) {
+        this.minHeapSize = minHeapSize;
         return this;
     }
-    public Integer getMaxHeapSize() {
-        return this.maxHeapSize;
+    public Integer getMinHeapSize() {
+        return this.minHeapSize;
+    }
+
+    public UpdateJvmConfigurationRequest setOptions(String options) {
+        this.options = options;
+        return this;
+    }
+    public String getOptions() {
+        return this.options;
     }
 
 }

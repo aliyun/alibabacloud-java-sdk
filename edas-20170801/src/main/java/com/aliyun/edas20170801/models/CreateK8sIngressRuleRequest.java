@@ -7,14 +7,14 @@ public class CreateK8sIngressRuleRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("Namespace")
-    public String namespace;
+    @NameInMap("IngressConf")
+    public java.util.Map<String, ?> ingressConf;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Rules")
-    public String rules;
+    @NameInMap("Namespace")
+    public String namespace;
 
     public static CreateK8sIngressRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateK8sIngressRuleRequest self = new CreateK8sIngressRuleRequest();
@@ -29,12 +29,12 @@ public class CreateK8sIngressRuleRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public CreateK8sIngressRuleRequest setNamespace(String namespace) {
-        this.namespace = namespace;
+    public CreateK8sIngressRuleRequest setIngressConf(java.util.Map<String, ?> ingressConf) {
+        this.ingressConf = ingressConf;
         return this;
     }
-    public String getNamespace() {
-        return this.namespace;
+    public java.util.Map<String, ?> getIngressConf() {
+        return this.ingressConf;
     }
 
     public CreateK8sIngressRuleRequest setName(String name) {
@@ -45,12 +45,12 @@ public class CreateK8sIngressRuleRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateK8sIngressRuleRequest setRules(String rules) {
-        this.rules = rules;
+    public CreateK8sIngressRuleRequest setNamespace(String namespace) {
+        this.namespace = namespace;
         return this;
     }
-    public String getRules() {
-        return this.rules;
+    public String getNamespace() {
+        return this.namespace;
     }
 
 }

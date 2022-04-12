@@ -10,14 +10,14 @@ public class UpdateK8sApplicationBaseInfoRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Email")
+    public String email;
+
     @NameInMap("Owner")
     public String owner;
 
     @NameInMap("PhoneNumber")
     public String phoneNumber;
-
-    @NameInMap("Email")
-    public String email;
 
     public static UpdateK8sApplicationBaseInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateK8sApplicationBaseInfoRequest self = new UpdateK8sApplicationBaseInfoRequest();
@@ -40,6 +40,14 @@ public class UpdateK8sApplicationBaseInfoRequest extends TeaModel {
         return this.description;
     }
 
+    public UpdateK8sApplicationBaseInfoRequest setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    public String getEmail() {
+        return this.email;
+    }
+
     public UpdateK8sApplicationBaseInfoRequest setOwner(String owner) {
         this.owner = owner;
         return this;
@@ -54,14 +62,6 @@ public class UpdateK8sApplicationBaseInfoRequest extends TeaModel {
     }
     public String getPhoneNumber() {
         return this.phoneNumber;
-    }
-
-    public UpdateK8sApplicationBaseInfoRequest setEmail(String email) {
-        this.email = email;
-        return this;
-    }
-    public String getEmail() {
-        return this.email;
     }
 
 }

@@ -4,17 +4,17 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetServiceListPageRequest extends TeaModel {
-    @NameInMap("region")
-    public String region;
-
     @NameInMap("namespace")
     public String namespace;
 
     @NameInMap("origin")
     public String origin;
 
-    @NameInMap("serviceType")
-    public String serviceType;
+    @NameInMap("page")
+    public Integer page;
+
+    @NameInMap("region")
+    public String region;
 
     @NameInMap("searchType")
     public String searchType;
@@ -22,11 +22,11 @@ public class GetServiceListPageRequest extends TeaModel {
     @NameInMap("searchValue")
     public String searchValue;
 
+    @NameInMap("serviceType")
+    public String serviceType;
+
     @NameInMap("side")
     public String side;
-
-    @NameInMap("page")
-    public Integer page;
 
     @NameInMap("size")
     public Integer size;
@@ -34,14 +34,6 @@ public class GetServiceListPageRequest extends TeaModel {
     public static GetServiceListPageRequest build(java.util.Map<String, ?> map) throws Exception {
         GetServiceListPageRequest self = new GetServiceListPageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetServiceListPageRequest setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
     }
 
     public GetServiceListPageRequest setNamespace(String namespace) {
@@ -60,12 +52,20 @@ public class GetServiceListPageRequest extends TeaModel {
         return this.origin;
     }
 
-    public GetServiceListPageRequest setServiceType(String serviceType) {
-        this.serviceType = serviceType;
+    public GetServiceListPageRequest setPage(Integer page) {
+        this.page = page;
         return this;
     }
-    public String getServiceType() {
-        return this.serviceType;
+    public Integer getPage() {
+        return this.page;
+    }
+
+    public GetServiceListPageRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
     public GetServiceListPageRequest setSearchType(String searchType) {
@@ -84,20 +84,20 @@ public class GetServiceListPageRequest extends TeaModel {
         return this.searchValue;
     }
 
+    public GetServiceListPageRequest setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+        return this;
+    }
+    public String getServiceType() {
+        return this.serviceType;
+    }
+
     public GetServiceListPageRequest setSide(String side) {
         this.side = side;
         return this;
     }
     public String getSide() {
         return this.side;
-    }
-
-    public GetServiceListPageRequest setPage(Integer page) {
-        this.page = page;
-        return this;
-    }
-    public Integer getPage() {
-        return this.page;
     }
 
     public GetServiceListPageRequest setSize(Integer size) {

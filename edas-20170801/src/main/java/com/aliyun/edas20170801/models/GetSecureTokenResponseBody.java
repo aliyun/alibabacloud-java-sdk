@@ -4,8 +4,8 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetSecureTokenResponseBody extends TeaModel {
-    @NameInMap("SecureToken")
-    public GetSecureTokenResponseBodySecureToken secureToken;
+    @NameInMap("Code")
+    public Integer code;
 
     @NameInMap("Message")
     public String message;
@@ -13,20 +13,20 @@ public class GetSecureTokenResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public Integer code;
+    @NameInMap("SecureToken")
+    public GetSecureTokenResponseBodySecureToken secureToken;
 
     public static GetSecureTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSecureTokenResponseBody self = new GetSecureTokenResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetSecureTokenResponseBody setSecureToken(GetSecureTokenResponseBodySecureToken secureToken) {
-        this.secureToken = secureToken;
+    public GetSecureTokenResponseBody setCode(Integer code) {
+        this.code = code;
         return this;
     }
-    public GetSecureTokenResponseBodySecureToken getSecureToken() {
-        return this.secureToken;
+    public Integer getCode() {
+        return this.code;
     }
 
     public GetSecureTokenResponseBody setMessage(String message) {
@@ -45,20 +45,20 @@ public class GetSecureTokenResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetSecureTokenResponseBody setCode(Integer code) {
-        this.code = code;
+    public GetSecureTokenResponseBody setSecureToken(GetSecureTokenResponseBodySecureToken secureToken) {
+        this.secureToken = secureToken;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public GetSecureTokenResponseBodySecureToken getSecureToken() {
+        return this.secureToken;
     }
 
     public static class GetSecureTokenResponseBodySecureToken extends TeaModel {
-        @NameInMap("SecretKey")
-        public String secretKey;
-
         @NameInMap("AccessKey")
         public String accessKey;
+
+        @NameInMap("AddressServerHost")
+        public String addressServerHost;
 
         @NameInMap("BelongRegion")
         public String belongRegion;
@@ -66,38 +66,30 @@ public class GetSecureTokenResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("RegionName")
-        public String regionName;
-
         @NameInMap("EdasId")
         public String edasId;
-
-        @NameInMap("AddressServerHost")
-        public String addressServerHost;
-
-        @NameInMap("UserId")
-        public String userId;
 
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("RegionName")
+        public String regionName;
+
+        @NameInMap("SecretKey")
+        public String secretKey;
+
         @NameInMap("TenantId")
         public String tenantId;
 
-        @NameInMap("RegionId")
-        public String regionId;
+        @NameInMap("UserId")
+        public String userId;
 
         public static GetSecureTokenResponseBodySecureToken build(java.util.Map<String, ?> map) throws Exception {
             GetSecureTokenResponseBodySecureToken self = new GetSecureTokenResponseBodySecureToken();
             return TeaModel.build(map, self);
-        }
-
-        public GetSecureTokenResponseBodySecureToken setSecretKey(String secretKey) {
-            this.secretKey = secretKey;
-            return this;
-        }
-        public String getSecretKey() {
-            return this.secretKey;
         }
 
         public GetSecureTokenResponseBodySecureToken setAccessKey(String accessKey) {
@@ -106,6 +98,14 @@ public class GetSecureTokenResponseBody extends TeaModel {
         }
         public String getAccessKey() {
             return this.accessKey;
+        }
+
+        public GetSecureTokenResponseBodySecureToken setAddressServerHost(String addressServerHost) {
+            this.addressServerHost = addressServerHost;
+            return this;
+        }
+        public String getAddressServerHost() {
+            return this.addressServerHost;
         }
 
         public GetSecureTokenResponseBodySecureToken setBelongRegion(String belongRegion) {
@@ -124,36 +124,12 @@ public class GetSecureTokenResponseBody extends TeaModel {
             return this.description;
         }
 
-        public GetSecureTokenResponseBodySecureToken setRegionName(String regionName) {
-            this.regionName = regionName;
-            return this;
-        }
-        public String getRegionName() {
-            return this.regionName;
-        }
-
         public GetSecureTokenResponseBodySecureToken setEdasId(String edasId) {
             this.edasId = edasId;
             return this;
         }
         public String getEdasId() {
             return this.edasId;
-        }
-
-        public GetSecureTokenResponseBodySecureToken setAddressServerHost(String addressServerHost) {
-            this.addressServerHost = addressServerHost;
-            return this;
-        }
-        public String getAddressServerHost() {
-            return this.addressServerHost;
-        }
-
-        public GetSecureTokenResponseBodySecureToken setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public GetSecureTokenResponseBodySecureToken setId(Long id) {
@@ -164,6 +140,30 @@ public class GetSecureTokenResponseBody extends TeaModel {
             return this.id;
         }
 
+        public GetSecureTokenResponseBodySecureToken setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public GetSecureTokenResponseBodySecureToken setRegionName(String regionName) {
+            this.regionName = regionName;
+            return this;
+        }
+        public String getRegionName() {
+            return this.regionName;
+        }
+
+        public GetSecureTokenResponseBodySecureToken setSecretKey(String secretKey) {
+            this.secretKey = secretKey;
+            return this;
+        }
+        public String getSecretKey() {
+            return this.secretKey;
+        }
+
         public GetSecureTokenResponseBodySecureToken setTenantId(String tenantId) {
             this.tenantId = tenantId;
             return this;
@@ -172,12 +172,12 @@ public class GetSecureTokenResponseBody extends TeaModel {
             return this.tenantId;
         }
 
-        public GetSecureTokenResponseBodySecureToken setRegionId(String regionId) {
-            this.regionId = regionId;
+        public GetSecureTokenResponseBodySecureToken setUserId(String userId) {
+            this.userId = userId;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
+        public String getUserId() {
+            return this.userId;
         }
 
     }

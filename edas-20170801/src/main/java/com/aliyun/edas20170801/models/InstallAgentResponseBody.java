@@ -4,21 +4,37 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class InstallAgentResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("ExecutionResultList")
+    public InstallAgentResponseBodyExecutionResultList executionResultList;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ExecutionResultList")
-    public InstallAgentResponseBodyExecutionResultList executionResultList;
-
-    @NameInMap("Code")
-    public Integer code;
-
     public static InstallAgentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InstallAgentResponseBody self = new InstallAgentResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public InstallAgentResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public InstallAgentResponseBody setExecutionResultList(InstallAgentResponseBodyExecutionResultList executionResultList) {
+        this.executionResultList = executionResultList;
+        return this;
+    }
+    public InstallAgentResponseBodyExecutionResultList getExecutionResultList() {
+        return this.executionResultList;
     }
 
     public InstallAgentResponseBody setMessage(String message) {
@@ -37,29 +53,7 @@ public class InstallAgentResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public InstallAgentResponseBody setExecutionResultList(InstallAgentResponseBodyExecutionResultList executionResultList) {
-        this.executionResultList = executionResultList;
-        return this;
-    }
-    public InstallAgentResponseBodyExecutionResultList getExecutionResultList() {
-        return this.executionResultList;
-    }
-
-    public InstallAgentResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public static class InstallAgentResponseBodyExecutionResultListExecutionResult extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Success")
-        public Boolean success;
-
         @NameInMap("FinishedTime")
         public String finishedTime;
 
@@ -69,25 +63,15 @@ public class InstallAgentResponseBody extends TeaModel {
         @NameInMap("InvokeRecordStatus")
         public String invokeRecordStatus;
 
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Success")
+        public Boolean success;
+
         public static InstallAgentResponseBodyExecutionResultListExecutionResult build(java.util.Map<String, ?> map) throws Exception {
             InstallAgentResponseBodyExecutionResultListExecutionResult self = new InstallAgentResponseBodyExecutionResultListExecutionResult();
             return TeaModel.build(map, self);
-        }
-
-        public InstallAgentResponseBodyExecutionResultListExecutionResult setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public InstallAgentResponseBodyExecutionResultListExecutionResult setSuccess(Boolean success) {
-            this.success = success;
-            return this;
-        }
-        public Boolean getSuccess() {
-            return this.success;
         }
 
         public InstallAgentResponseBodyExecutionResultListExecutionResult setFinishedTime(String finishedTime) {
@@ -112,6 +96,22 @@ public class InstallAgentResponseBody extends TeaModel {
         }
         public String getInvokeRecordStatus() {
             return this.invokeRecordStatus;
+        }
+
+        public InstallAgentResponseBodyExecutionResultListExecutionResult setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public InstallAgentResponseBodyExecutionResultListExecutionResult setSuccess(Boolean success) {
+            this.success = success;
+            return this;
+        }
+        public Boolean getSuccess() {
+            return this.success;
         }
 
     }

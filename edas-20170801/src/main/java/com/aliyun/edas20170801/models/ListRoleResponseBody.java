@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListRoleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class ListRoleResponseBody extends TeaModel {
     @NameInMap("RoleList")
     public ListRoleResponseBodyRoleList roleList;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static ListRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRoleResponseBody self = new ListRoleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListRoleResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public ListRoleResponseBody setMessage(String message) {
@@ -45,23 +53,15 @@ public class ListRoleResponseBody extends TeaModel {
         return this.roleList;
     }
 
-    public ListRoleResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public static class ListRoleResponseBodyRoleListRoleItemActionListAction extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
         @NameInMap("Description")
         public String description;
 
         @NameInMap("GroupId")
         public String groupId;
-
-        @NameInMap("Code")
-        public String code;
 
         @NameInMap("Name")
         public String name;
@@ -69,6 +69,14 @@ public class ListRoleResponseBody extends TeaModel {
         public static ListRoleResponseBodyRoleListRoleItemActionListAction build(java.util.Map<String, ?> map) throws Exception {
             ListRoleResponseBodyRoleListRoleItemActionListAction self = new ListRoleResponseBodyRoleListRoleItemActionListAction();
             return TeaModel.build(map, self);
+        }
+
+        public ListRoleResponseBodyRoleListRoleItemActionListAction setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public ListRoleResponseBodyRoleListRoleItemActionListAction setDescription(String description) {
@@ -85,14 +93,6 @@ public class ListRoleResponseBody extends TeaModel {
         }
         public String getGroupId() {
             return this.groupId;
-        }
-
-        public ListRoleResponseBodyRoleListRoleItemActionListAction setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
         }
 
         public ListRoleResponseBodyRoleListRoleItemActionListAction setName(String name) {
@@ -125,43 +125,27 @@ public class ListRoleResponseBody extends TeaModel {
     }
 
     public static class ListRoleResponseBodyRoleListRoleItemRole extends TeaModel {
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
-        @NameInMap("IsDefault")
-        public Boolean isDefault;
-
         @NameInMap("AdminUserId")
         public String adminUserId;
 
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("Id")
+        public Integer id;
+
+        @NameInMap("IsDefault")
+        public Boolean isDefault;
+
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Id")
-        public Integer id;
+        @NameInMap("UpdateTime")
+        public Long updateTime;
 
         public static ListRoleResponseBodyRoleListRoleItemRole build(java.util.Map<String, ?> map) throws Exception {
             ListRoleResponseBodyRoleListRoleItemRole self = new ListRoleResponseBodyRoleListRoleItemRole();
             return TeaModel.build(map, self);
-        }
-
-        public ListRoleResponseBodyRoleListRoleItemRole setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public ListRoleResponseBodyRoleListRoleItemRole setIsDefault(Boolean isDefault) {
-            this.isDefault = isDefault;
-            return this;
-        }
-        public Boolean getIsDefault() {
-            return this.isDefault;
         }
 
         public ListRoleResponseBodyRoleListRoleItemRole setAdminUserId(String adminUserId) {
@@ -180,6 +164,22 @@ public class ListRoleResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public ListRoleResponseBodyRoleListRoleItemRole setId(Integer id) {
+            this.id = id;
+            return this;
+        }
+        public Integer getId() {
+            return this.id;
+        }
+
+        public ListRoleResponseBodyRoleListRoleItemRole setIsDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
+            return this;
+        }
+        public Boolean getIsDefault() {
+            return this.isDefault;
+        }
+
         public ListRoleResponseBodyRoleListRoleItemRole setName(String name) {
             this.name = name;
             return this;
@@ -188,12 +188,12 @@ public class ListRoleResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListRoleResponseBodyRoleListRoleItemRole setId(Integer id) {
-            this.id = id;
+        public ListRoleResponseBodyRoleListRoleItemRole setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public Integer getId() {
-            return this.id;
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
     }

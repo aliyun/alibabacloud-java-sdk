@@ -4,37 +4,21 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ApplicationList")
     public ListApplicationResponseBodyApplicationList applicationList;
 
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ListApplicationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListApplicationResponseBody self = new ListApplicationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListApplicationResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListApplicationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListApplicationResponseBody setApplicationList(ListApplicationResponseBodyApplicationList applicationList) {
@@ -53,24 +37,28 @@ public class ListApplicationResponseBody extends TeaModel {
         return this.code;
     }
 
-    public static class ListApplicationResponseBodyApplicationListApplication extends TeaModel {
-        @NameInMap("ClusterType")
-        public Integer clusterType;
+    public ListApplicationResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
 
+    public ListApplicationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class ListApplicationResponseBodyApplicationListApplication extends TeaModel {
         @NameInMap("AppId")
         public String appId;
 
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
         @NameInMap("ApplicationType")
         public String applicationType;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("RunningInstanceCount")
-        public Integer runningInstanceCount;
 
         @NameInMap("BuildPackageId")
         public Long buildPackageId;
@@ -78,20 +66,24 @@ public class ListApplicationResponseBody extends TeaModel {
         @NameInMap("ClusterId")
         public String clusterId;
 
+        @NameInMap("ClusterType")
+        public Integer clusterType;
+
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("RunningInstanceCount")
+        public Integer runningInstanceCount;
 
         public static ListApplicationResponseBodyApplicationListApplication build(java.util.Map<String, ?> map) throws Exception {
             ListApplicationResponseBodyApplicationListApplication self = new ListApplicationResponseBodyApplicationListApplication();
             return TeaModel.build(map, self);
-        }
-
-        public ListApplicationResponseBodyApplicationListApplication setClusterType(Integer clusterType) {
-            this.clusterType = clusterType;
-            return this;
-        }
-        public Integer getClusterType() {
-            return this.clusterType;
         }
 
         public ListApplicationResponseBodyApplicationListApplication setAppId(String appId) {
@@ -102,36 +94,12 @@ public class ListApplicationResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public ListApplicationResponseBodyApplicationListApplication setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
         public ListApplicationResponseBodyApplicationListApplication setApplicationType(String applicationType) {
             this.applicationType = applicationType;
             return this;
         }
         public String getApplicationType() {
             return this.applicationType;
-        }
-
-        public ListApplicationResponseBodyApplicationListApplication setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListApplicationResponseBodyApplicationListApplication setRunningInstanceCount(Integer runningInstanceCount) {
-            this.runningInstanceCount = runningInstanceCount;
-            return this;
-        }
-        public Integer getRunningInstanceCount() {
-            return this.runningInstanceCount;
         }
 
         public ListApplicationResponseBodyApplicationListApplication setBuildPackageId(Long buildPackageId) {
@@ -150,12 +118,44 @@ public class ListApplicationResponseBody extends TeaModel {
             return this.clusterId;
         }
 
+        public ListApplicationResponseBodyApplicationListApplication setClusterType(Integer clusterType) {
+            this.clusterType = clusterType;
+            return this;
+        }
+        public Integer getClusterType() {
+            return this.clusterType;
+        }
+
+        public ListApplicationResponseBodyApplicationListApplication setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public ListApplicationResponseBodyApplicationListApplication setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListApplicationResponseBodyApplicationListApplication setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public ListApplicationResponseBodyApplicationListApplication setRunningInstanceCount(Integer runningInstanceCount) {
+            this.runningInstanceCount = runningInstanceCount;
+            return this;
+        }
+        public Integer getRunningInstanceCount() {
+            return this.runningInstanceCount;
         }
 
     }

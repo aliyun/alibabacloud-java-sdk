@@ -4,14 +4,14 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetAccountMockRuleResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Data")
     public GetAccountMockRuleResponseBodyData data;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("Success")
     public Boolean success;
@@ -21,12 +21,12 @@ public class GetAccountMockRuleResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetAccountMockRuleResponseBody setMessage(String message) {
-        this.message = message;
+    public GetAccountMockRuleResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getMessage() {
-        return this.message;
+    public String getCode() {
+        return this.code;
     }
 
     public GetAccountMockRuleResponseBody setData(GetAccountMockRuleResponseBodyData data) {
@@ -37,12 +37,12 @@ public class GetAccountMockRuleResponseBody extends TeaModel {
         return this.data;
     }
 
-    public GetAccountMockRuleResponseBody setCode(String code) {
-        this.code = code;
+    public GetAccountMockRuleResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getMessage() {
+        return this.message;
     }
 
     public GetAccountMockRuleResponseBody setSuccess(Boolean success) {
@@ -54,84 +54,36 @@ public class GetAccountMockRuleResponseBody extends TeaModel {
     }
 
     public static class GetAccountMockRuleResponseBodyDataResultDubboMockItems extends TeaModel {
-        @NameInMap("MethodName")
-        public String methodName;
-
-        @NameInMap("ParamTypes")
-        public java.util.List<String> paramTypes;
-
-        @NameInMap("Value")
-        public String value;
-
-        @NameInMap("Oper")
-        public String oper;
+        @NameInMap("ExceptionClassName")
+        public String exceptionClassName;
 
         @NameInMap("ExecuteCondition")
         public String executeCondition;
 
-        @NameInMap("Version")
-        public String version;
+        @NameInMap("Group")
+        public String group;
 
-        @NameInMap("ExceptionClassName")
-        public String exceptionClassName;
+        @NameInMap("MethodName")
+        public String methodName;
+
+        @NameInMap("Oper")
+        public String oper;
+
+        @NameInMap("ParamTypes")
+        public java.util.List<String> paramTypes;
 
         @NameInMap("ServiceName")
         public String serviceName;
 
-        @NameInMap("Group")
-        public String group;
+        @NameInMap("Value")
+        public String value;
+
+        @NameInMap("Version")
+        public String version;
 
         public static GetAccountMockRuleResponseBodyDataResultDubboMockItems build(java.util.Map<String, ?> map) throws Exception {
             GetAccountMockRuleResponseBodyDataResultDubboMockItems self = new GetAccountMockRuleResponseBodyDataResultDubboMockItems();
             return TeaModel.build(map, self);
-        }
-
-        public GetAccountMockRuleResponseBodyDataResultDubboMockItems setMethodName(String methodName) {
-            this.methodName = methodName;
-            return this;
-        }
-        public String getMethodName() {
-            return this.methodName;
-        }
-
-        public GetAccountMockRuleResponseBodyDataResultDubboMockItems setParamTypes(java.util.List<String> paramTypes) {
-            this.paramTypes = paramTypes;
-            return this;
-        }
-        public java.util.List<String> getParamTypes() {
-            return this.paramTypes;
-        }
-
-        public GetAccountMockRuleResponseBodyDataResultDubboMockItems setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-        public GetAccountMockRuleResponseBodyDataResultDubboMockItems setOper(String oper) {
-            this.oper = oper;
-            return this;
-        }
-        public String getOper() {
-            return this.oper;
-        }
-
-        public GetAccountMockRuleResponseBodyDataResultDubboMockItems setExecuteCondition(String executeCondition) {
-            this.executeCondition = executeCondition;
-            return this;
-        }
-        public String getExecuteCondition() {
-            return this.executeCondition;
-        }
-
-        public GetAccountMockRuleResponseBodyDataResultDubboMockItems setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
         }
 
         public GetAccountMockRuleResponseBodyDataResultDubboMockItems setExceptionClassName(String exceptionClassName) {
@@ -142,12 +94,12 @@ public class GetAccountMockRuleResponseBody extends TeaModel {
             return this.exceptionClassName;
         }
 
-        public GetAccountMockRuleResponseBodyDataResultDubboMockItems setServiceName(String serviceName) {
-            this.serviceName = serviceName;
+        public GetAccountMockRuleResponseBodyDataResultDubboMockItems setExecuteCondition(String executeCondition) {
+            this.executeCondition = executeCondition;
             return this;
         }
-        public String getServiceName() {
-            return this.serviceName;
+        public String getExecuteCondition() {
+            return this.executeCondition;
         }
 
         public GetAccountMockRuleResponseBodyDataResultDubboMockItems setGroup(String group) {
@@ -158,44 +110,15 @@ public class GetAccountMockRuleResponseBody extends TeaModel {
             return this.group;
         }
 
-    }
-
-    public static class GetAccountMockRuleResponseBodyDataResultScMockItems extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
-        @NameInMap("Oper")
-        public String oper;
-
-        @NameInMap("ExecuteCondition")
-        public String executeCondition;
-
-        @NameInMap("Path")
-        public String path;
-
-        @NameInMap("Method")
-        public String method;
-
-        @NameInMap("ExceptionClassName")
-        public String exceptionClassName;
-
-        @NameInMap("ServiceName")
-        public String serviceName;
-
-        public static GetAccountMockRuleResponseBodyDataResultScMockItems build(java.util.Map<String, ?> map) throws Exception {
-            GetAccountMockRuleResponseBodyDataResultScMockItems self = new GetAccountMockRuleResponseBodyDataResultScMockItems();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAccountMockRuleResponseBodyDataResultScMockItems setValue(String value) {
-            this.value = value;
+        public GetAccountMockRuleResponseBodyDataResultDubboMockItems setMethodName(String methodName) {
+            this.methodName = methodName;
             return this;
         }
-        public String getValue() {
-            return this.value;
+        public String getMethodName() {
+            return this.methodName;
         }
 
-        public GetAccountMockRuleResponseBodyDataResultScMockItems setOper(String oper) {
+        public GetAccountMockRuleResponseBodyDataResultDubboMockItems setOper(String oper) {
             this.oper = oper;
             return this;
         }
@@ -203,28 +126,65 @@ public class GetAccountMockRuleResponseBody extends TeaModel {
             return this.oper;
         }
 
-        public GetAccountMockRuleResponseBodyDataResultScMockItems setExecuteCondition(String executeCondition) {
-            this.executeCondition = executeCondition;
+        public GetAccountMockRuleResponseBodyDataResultDubboMockItems setParamTypes(java.util.List<String> paramTypes) {
+            this.paramTypes = paramTypes;
             return this;
         }
-        public String getExecuteCondition() {
-            return this.executeCondition;
+        public java.util.List<String> getParamTypes() {
+            return this.paramTypes;
         }
 
-        public GetAccountMockRuleResponseBodyDataResultScMockItems setPath(String path) {
-            this.path = path;
+        public GetAccountMockRuleResponseBodyDataResultDubboMockItems setServiceName(String serviceName) {
+            this.serviceName = serviceName;
             return this;
         }
-        public String getPath() {
-            return this.path;
+        public String getServiceName() {
+            return this.serviceName;
         }
 
-        public GetAccountMockRuleResponseBodyDataResultScMockItems setMethod(String method) {
-            this.method = method;
+        public GetAccountMockRuleResponseBodyDataResultDubboMockItems setValue(String value) {
+            this.value = value;
             return this;
         }
-        public String getMethod() {
-            return this.method;
+        public String getValue() {
+            return this.value;
+        }
+
+        public GetAccountMockRuleResponseBodyDataResultDubboMockItems setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
+    public static class GetAccountMockRuleResponseBodyDataResultScMockItems extends TeaModel {
+        @NameInMap("ExceptionClassName")
+        public String exceptionClassName;
+
+        @NameInMap("ExecuteCondition")
+        public String executeCondition;
+
+        @NameInMap("Method")
+        public String method;
+
+        @NameInMap("Oper")
+        public String oper;
+
+        @NameInMap("Path")
+        public String path;
+
+        @NameInMap("ServiceName")
+        public String serviceName;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetAccountMockRuleResponseBodyDataResultScMockItems build(java.util.Map<String, ?> map) throws Exception {
+            GetAccountMockRuleResponseBodyDataResultScMockItems self = new GetAccountMockRuleResponseBodyDataResultScMockItems();
+            return TeaModel.build(map, self);
         }
 
         public GetAccountMockRuleResponseBodyDataResultScMockItems setExceptionClassName(String exceptionClassName) {
@@ -235,6 +195,38 @@ public class GetAccountMockRuleResponseBody extends TeaModel {
             return this.exceptionClassName;
         }
 
+        public GetAccountMockRuleResponseBodyDataResultScMockItems setExecuteCondition(String executeCondition) {
+            this.executeCondition = executeCondition;
+            return this;
+        }
+        public String getExecuteCondition() {
+            return this.executeCondition;
+        }
+
+        public GetAccountMockRuleResponseBodyDataResultScMockItems setMethod(String method) {
+            this.method = method;
+            return this;
+        }
+        public String getMethod() {
+            return this.method;
+        }
+
+        public GetAccountMockRuleResponseBodyDataResultScMockItems setOper(String oper) {
+            this.oper = oper;
+            return this;
+        }
+        public String getOper() {
+            return this.oper;
+        }
+
+        public GetAccountMockRuleResponseBodyDataResultScMockItems setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
         public GetAccountMockRuleResponseBodyDataResultScMockItems setServiceName(String serviceName) {
             this.serviceName = serviceName;
             return this;
@@ -243,32 +235,40 @@ public class GetAccountMockRuleResponseBody extends TeaModel {
             return this.serviceName;
         }
 
+        public GetAccountMockRuleResponseBodyDataResultScMockItems setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class GetAccountMockRuleResponseBodyDataResult extends TeaModel {
-        @NameInMap("DubboMockItems")
-        public java.util.List<GetAccountMockRuleResponseBodyDataResultDubboMockItems> dubboMockItems;
-
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("ConsumerAppId")
+        public String consumerAppId;
 
         @NameInMap("ConsumerAppName")
         public String consumerAppName;
 
-        @NameInMap("ConsumerAppId")
-        public String consumerAppId;
+        @NameInMap("DubboMockItems")
+        public java.util.List<GetAccountMockRuleResponseBodyDataResultDubboMockItems> dubboMockItems;
+
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
 
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        @NameInMap("Region")
-        public String region;
+        @NameInMap("Id")
+        public Integer id;
 
-        @NameInMap("ScMockItems")
-        public java.util.List<GetAccountMockRuleResponseBodyDataResultScMockItems> scMockItems;
-
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("ProviderAppId")
         public String providerAppId;
@@ -276,42 +276,18 @@ public class GetAccountMockRuleResponseBody extends TeaModel {
         @NameInMap("ProviderAppName")
         public String providerAppName;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Region")
+        public String region;
 
-        @NameInMap("Id")
-        public Integer id;
+        @NameInMap("ScMockItems")
+        public java.util.List<GetAccountMockRuleResponseBodyDataResultScMockItems> scMockItems;
 
-        @NameInMap("Enable")
-        public Boolean enable;
+        @NameInMap("Status")
+        public Integer status;
 
         public static GetAccountMockRuleResponseBodyDataResult build(java.util.Map<String, ?> map) throws Exception {
             GetAccountMockRuleResponseBodyDataResult self = new GetAccountMockRuleResponseBodyDataResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetAccountMockRuleResponseBodyDataResult setDubboMockItems(java.util.List<GetAccountMockRuleResponseBodyDataResultDubboMockItems> dubboMockItems) {
-            this.dubboMockItems = dubboMockItems;
-            return this;
-        }
-        public java.util.List<GetAccountMockRuleResponseBodyDataResultDubboMockItems> getDubboMockItems() {
-            return this.dubboMockItems;
-        }
-
-        public GetAccountMockRuleResponseBodyDataResult setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public GetAccountMockRuleResponseBodyDataResult setConsumerAppName(String consumerAppName) {
-            this.consumerAppName = consumerAppName;
-            return this;
-        }
-        public String getConsumerAppName() {
-            return this.consumerAppName;
         }
 
         public GetAccountMockRuleResponseBodyDataResult setConsumerAppId(String consumerAppId) {
@@ -322,28 +298,28 @@ public class GetAccountMockRuleResponseBody extends TeaModel {
             return this.consumerAppId;
         }
 
-        public GetAccountMockRuleResponseBodyDataResult setGmtModified(String gmtModified) {
-            this.gmtModified = gmtModified;
+        public GetAccountMockRuleResponseBodyDataResult setConsumerAppName(String consumerAppName) {
+            this.consumerAppName = consumerAppName;
             return this;
         }
-        public String getGmtModified() {
-            return this.gmtModified;
+        public String getConsumerAppName() {
+            return this.consumerAppName;
         }
 
-        public GetAccountMockRuleResponseBodyDataResult setRegion(String region) {
-            this.region = region;
+        public GetAccountMockRuleResponseBodyDataResult setDubboMockItems(java.util.List<GetAccountMockRuleResponseBodyDataResultDubboMockItems> dubboMockItems) {
+            this.dubboMockItems = dubboMockItems;
             return this;
         }
-        public String getRegion() {
-            return this.region;
+        public java.util.List<GetAccountMockRuleResponseBodyDataResultDubboMockItems> getDubboMockItems() {
+            return this.dubboMockItems;
         }
 
-        public GetAccountMockRuleResponseBodyDataResult setScMockItems(java.util.List<GetAccountMockRuleResponseBodyDataResultScMockItems> scMockItems) {
-            this.scMockItems = scMockItems;
+        public GetAccountMockRuleResponseBodyDataResult setEnable(Boolean enable) {
+            this.enable = enable;
             return this;
         }
-        public java.util.List<GetAccountMockRuleResponseBodyDataResultScMockItems> getScMockItems() {
-            return this.scMockItems;
+        public Boolean getEnable() {
+            return this.enable;
         }
 
         public GetAccountMockRuleResponseBodyDataResult setGmtCreate(String gmtCreate) {
@@ -352,6 +328,30 @@ public class GetAccountMockRuleResponseBody extends TeaModel {
         }
         public String getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        public GetAccountMockRuleResponseBodyDataResult setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
+        public GetAccountMockRuleResponseBodyDataResult setId(Integer id) {
+            this.id = id;
+            return this;
+        }
+        public Integer getId() {
+            return this.id;
+        }
+
+        public GetAccountMockRuleResponseBodyDataResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public GetAccountMockRuleResponseBodyDataResult setProviderAppId(String providerAppId) {
@@ -370,64 +370,48 @@ public class GetAccountMockRuleResponseBody extends TeaModel {
             return this.providerAppName;
         }
 
-        public GetAccountMockRuleResponseBodyDataResult setName(String name) {
-            this.name = name;
+        public GetAccountMockRuleResponseBodyDataResult setRegion(String region) {
+            this.region = region;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getRegion() {
+            return this.region;
         }
 
-        public GetAccountMockRuleResponseBodyDataResult setId(Integer id) {
-            this.id = id;
+        public GetAccountMockRuleResponseBodyDataResult setScMockItems(java.util.List<GetAccountMockRuleResponseBodyDataResultScMockItems> scMockItems) {
+            this.scMockItems = scMockItems;
             return this;
         }
-        public Integer getId() {
-            return this.id;
+        public java.util.List<GetAccountMockRuleResponseBodyDataResultScMockItems> getScMockItems() {
+            return this.scMockItems;
         }
 
-        public GetAccountMockRuleResponseBodyDataResult setEnable(Boolean enable) {
-            this.enable = enable;
+        public GetAccountMockRuleResponseBodyDataResult setStatus(Integer status) {
+            this.status = status;
             return this;
         }
-        public Boolean getEnable() {
-            return this.enable;
+        public Integer getStatus() {
+            return this.status;
         }
 
     }
 
     public static class GetAccountMockRuleResponseBodyData extends TeaModel {
-        @NameInMap("Result")
-        public java.util.List<GetAccountMockRuleResponseBodyDataResult> result;
-
-        @NameInMap("TotalSize")
-        public Integer totalSize;
-
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        @NameInMap("Result")
+        public java.util.List<GetAccountMockRuleResponseBodyDataResult> result;
+
+        @NameInMap("TotalSize")
+        public Integer totalSize;
+
         public static GetAccountMockRuleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAccountMockRuleResponseBodyData self = new GetAccountMockRuleResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetAccountMockRuleResponseBodyData setResult(java.util.List<GetAccountMockRuleResponseBodyDataResult> result) {
-            this.result = result;
-            return this;
-        }
-        public java.util.List<GetAccountMockRuleResponseBodyDataResult> getResult() {
-            return this.result;
-        }
-
-        public GetAccountMockRuleResponseBodyData setTotalSize(Integer totalSize) {
-            this.totalSize = totalSize;
-            return this;
-        }
-        public Integer getTotalSize() {
-            return this.totalSize;
         }
 
         public GetAccountMockRuleResponseBodyData setPageNumber(Integer pageNumber) {
@@ -444,6 +428,22 @@ public class GetAccountMockRuleResponseBody extends TeaModel {
         }
         public Integer getPageSize() {
             return this.pageSize;
+        }
+
+        public GetAccountMockRuleResponseBodyData setResult(java.util.List<GetAccountMockRuleResponseBodyDataResult> result) {
+            this.result = result;
+            return this;
+        }
+        public java.util.List<GetAccountMockRuleResponseBodyDataResult> getResult() {
+            return this.result;
+        }
+
+        public GetAccountMockRuleResponseBodyData setTotalSize(Integer totalSize) {
+            this.totalSize = totalSize;
+            return this;
+        }
+        public Integer getTotalSize() {
+            return this.totalSize;
         }
 
     }

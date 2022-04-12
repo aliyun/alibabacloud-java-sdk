@@ -13,17 +13,17 @@ public class UpdateK8sApplicationConfigRequest extends TeaModel {
     @NameInMap("CpuLimit")
     public String cpuLimit;
 
-    @NameInMap("MemoryLimit")
-    public String memoryLimit;
+    @NameInMap("CpuRequest")
+    public String cpuRequest;
 
     @NameInMap("McpuLimit")
     public String mcpuLimit;
 
-    @NameInMap("CpuRequest")
-    public String cpuRequest;
-
     @NameInMap("McpuRequest")
     public String mcpuRequest;
+
+    @NameInMap("MemoryLimit")
+    public String memoryLimit;
 
     @NameInMap("MemoryRequest")
     public String memoryRequest;
@@ -60,12 +60,12 @@ public class UpdateK8sApplicationConfigRequest extends TeaModel {
         return this.cpuLimit;
     }
 
-    public UpdateK8sApplicationConfigRequest setMemoryLimit(String memoryLimit) {
-        this.memoryLimit = memoryLimit;
+    public UpdateK8sApplicationConfigRequest setCpuRequest(String cpuRequest) {
+        this.cpuRequest = cpuRequest;
         return this;
     }
-    public String getMemoryLimit() {
-        return this.memoryLimit;
+    public String getCpuRequest() {
+        return this.cpuRequest;
     }
 
     public UpdateK8sApplicationConfigRequest setMcpuLimit(String mcpuLimit) {
@@ -76,20 +76,20 @@ public class UpdateK8sApplicationConfigRequest extends TeaModel {
         return this.mcpuLimit;
     }
 
-    public UpdateK8sApplicationConfigRequest setCpuRequest(String cpuRequest) {
-        this.cpuRequest = cpuRequest;
-        return this;
-    }
-    public String getCpuRequest() {
-        return this.cpuRequest;
-    }
-
     public UpdateK8sApplicationConfigRequest setMcpuRequest(String mcpuRequest) {
         this.mcpuRequest = mcpuRequest;
         return this;
     }
     public String getMcpuRequest() {
         return this.mcpuRequest;
+    }
+
+    public UpdateK8sApplicationConfigRequest setMemoryLimit(String memoryLimit) {
+        this.memoryLimit = memoryLimit;
+        return this;
+    }
+    public String getMemoryLimit() {
+        return this.memoryLimit;
     }
 
     public UpdateK8sApplicationConfigRequest setMemoryRequest(String memoryRequest) {

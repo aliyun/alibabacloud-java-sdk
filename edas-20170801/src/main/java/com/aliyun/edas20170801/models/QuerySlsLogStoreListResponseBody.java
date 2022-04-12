@@ -4,24 +4,32 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class QuerySlsLogStoreListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TotalSize")
-    public Integer totalSize;
-
-    @NameInMap("Code")
-    public Integer code;
-
     @NameInMap("Result")
     public java.util.List<QuerySlsLogStoreListResponseBodyResult> result;
+
+    @NameInMap("TotalSize")
+    public Integer totalSize;
 
     public static QuerySlsLogStoreListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySlsLogStoreListResponseBody self = new QuerySlsLogStoreListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySlsLogStoreListResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public QuerySlsLogStoreListResponseBody setMessage(String message) {
@@ -40,22 +48,6 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QuerySlsLogStoreListResponseBody setTotalSize(Integer totalSize) {
-        this.totalSize = totalSize;
-        return this;
-    }
-    public Integer getTotalSize() {
-        return this.totalSize;
-    }
-
-    public QuerySlsLogStoreListResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public QuerySlsLogStoreListResponseBody setResult(java.util.List<QuerySlsLogStoreListResponseBodyResult> result) {
         this.result = result;
         return this;
@@ -64,18 +56,26 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
         return this.result;
     }
 
+    public QuerySlsLogStoreListResponseBody setTotalSize(Integer totalSize) {
+        this.totalSize = totalSize;
+        return this;
+    }
+    public Integer getTotalSize() {
+        return this.totalSize;
+    }
+
     public static class QuerySlsLogStoreListResponseBodyResult extends TeaModel {
-        @NameInMap("Link")
-        public String link;
+        @NameInMap("ConsumerSide")
+        public String consumerSide;
 
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("Link")
+        public String link;
+
         @NameInMap("Logstore")
         public String logstore;
-
-        @NameInMap("ConsumerSide")
-        public String consumerSide;
 
         @NameInMap("Project")
         public String project;
@@ -88,12 +88,12 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QuerySlsLogStoreListResponseBodyResult setLink(String link) {
-            this.link = link;
+        public QuerySlsLogStoreListResponseBodyResult setConsumerSide(String consumerSide) {
+            this.consumerSide = consumerSide;
             return this;
         }
-        public String getLink() {
-            return this.link;
+        public String getConsumerSide() {
+            return this.consumerSide;
         }
 
         public QuerySlsLogStoreListResponseBodyResult setCreateTime(String createTime) {
@@ -104,20 +104,20 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public QuerySlsLogStoreListResponseBodyResult setLink(String link) {
+            this.link = link;
+            return this;
+        }
+        public String getLink() {
+            return this.link;
+        }
+
         public QuerySlsLogStoreListResponseBodyResult setLogstore(String logstore) {
             this.logstore = logstore;
             return this;
         }
         public String getLogstore() {
             return this.logstore;
-        }
-
-        public QuerySlsLogStoreListResponseBodyResult setConsumerSide(String consumerSide) {
-            this.consumerSide = consumerSide;
-            return this;
-        }
-        public String getConsumerSide() {
-            return this.consumerSide;
         }
 
         public QuerySlsLogStoreListResponseBodyResult setProject(String project) {

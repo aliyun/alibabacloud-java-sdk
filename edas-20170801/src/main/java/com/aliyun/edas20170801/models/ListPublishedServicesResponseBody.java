@@ -4,21 +4,29 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListPublishedServicesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PublishedServicesList")
     public ListPublishedServicesResponseBodyPublishedServicesList publishedServicesList;
 
-    @NameInMap("Code")
-    public Integer code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListPublishedServicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPublishedServicesResponseBody self = new ListPublishedServicesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListPublishedServicesResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public ListPublishedServicesResponseBody setMessage(String message) {
@@ -29,14 +37,6 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ListPublishedServicesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListPublishedServicesResponseBody setPublishedServicesList(ListPublishedServicesResponseBodyPublishedServicesList publishedServicesList) {
         this.publishedServicesList = publishedServicesList;
         return this;
@@ -45,12 +45,12 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         return this.publishedServicesList;
     }
 
-    public ListPublishedServicesResponseBody setCode(Integer code) {
-        this.code = code;
+    public ListPublishedServicesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListPublishedServicesResponseBodyPublishedServicesListListPublishedServicesGroups extends TeaModel {
@@ -92,23 +92,17 @@ public class ListPublishedServicesResponseBody extends TeaModel {
     }
 
     public static class ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices extends TeaModel {
-        @NameInMap("DockerApplication")
-        public Boolean dockerApplication;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Groups")
-        public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServicesGroups groups;
-
-        @NameInMap("Version")
-        public String version;
-
         @NameInMap("AppId")
         public String appId;
 
+        @NameInMap("DockerApplication")
+        public Boolean dockerApplication;
+
         @NameInMap("Group2Ip")
         public String group2Ip;
+
+        @NameInMap("Groups")
+        public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServicesGroups groups;
 
         @NameInMap("Ips")
         public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServicesIps ips;
@@ -116,41 +110,15 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Version")
+        public String version;
+
         public static ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices build(java.util.Map<String, ?> map) throws Exception {
             ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices self = new ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices();
             return TeaModel.build(map, self);
-        }
-
-        public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices setDockerApplication(Boolean dockerApplication) {
-            this.dockerApplication = dockerApplication;
-            return this;
-        }
-        public Boolean getDockerApplication() {
-            return this.dockerApplication;
-        }
-
-        public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices setGroups(ListPublishedServicesResponseBodyPublishedServicesListListPublishedServicesGroups groups) {
-            this.groups = groups;
-            return this;
-        }
-        public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServicesGroups getGroups() {
-            return this.groups;
-        }
-
-        public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
         }
 
         public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices setAppId(String appId) {
@@ -161,12 +129,28 @@ public class ListPublishedServicesResponseBody extends TeaModel {
             return this.appId;
         }
 
+        public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices setDockerApplication(Boolean dockerApplication) {
+            this.dockerApplication = dockerApplication;
+            return this;
+        }
+        public Boolean getDockerApplication() {
+            return this.dockerApplication;
+        }
+
         public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices setGroup2Ip(String group2Ip) {
             this.group2Ip = group2Ip;
             return this;
         }
         public String getGroup2Ip() {
             return this.group2Ip;
+        }
+
+        public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices setGroups(ListPublishedServicesResponseBodyPublishedServicesListListPublishedServicesGroups groups) {
+            this.groups = groups;
+            return this;
+        }
+        public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServicesGroups getGroups() {
+            return this.groups;
         }
 
         public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices setIps(ListPublishedServicesResponseBodyPublishedServicesListListPublishedServicesIps ips) {
@@ -183,6 +167,22 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }

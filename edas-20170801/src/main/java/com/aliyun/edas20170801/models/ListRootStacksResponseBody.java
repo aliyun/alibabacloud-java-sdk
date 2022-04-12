@@ -4,21 +4,37 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListRootStacksResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public ListRootStacksResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public ListRootStacksResponseBodyData data;
-
-    @NameInMap("Code")
-    public Integer code;
-
     public static ListRootStacksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRootStacksResponseBody self = new ListRootStacksResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListRootStacksResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public ListRootStacksResponseBody setData(ListRootStacksResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListRootStacksResponseBodyData getData() {
+        return this.data;
     }
 
     public ListRootStacksResponseBody setMessage(String message) {
@@ -37,22 +53,6 @@ public class ListRootStacksResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListRootStacksResponseBody setData(ListRootStacksResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListRootStacksResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListRootStacksResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public static class ListRootStacksResponseBodyDataResultChildren extends TeaModel {
         @NameInMap("Comment")
         public String comment;
@@ -60,11 +60,11 @@ public class ListRootStacksResponseBody extends TeaModel {
         @NameInMap("Icon")
         public String icon;
 
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("Name")
+        public String name;
 
         public static ListRootStacksResponseBodyDataResultChildren build(java.util.Map<String, ?> map) throws Exception {
             ListRootStacksResponseBodyDataResultChildren self = new ListRootStacksResponseBodyDataResultChildren();
@@ -87,14 +87,6 @@ public class ListRootStacksResponseBody extends TeaModel {
             return this.icon;
         }
 
-        public ListRootStacksResponseBodyDataResultChildren setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public ListRootStacksResponseBodyDataResultChildren setId(Long id) {
             this.id = id;
             return this;
@@ -103,26 +95,26 @@ public class ListRootStacksResponseBody extends TeaModel {
             return this.id;
         }
 
-    }
-
-    public static class ListRootStacksResponseBodyDataResultRoot extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public Long id;
-
-        public static ListRootStacksResponseBodyDataResultRoot build(java.util.Map<String, ?> map) throws Exception {
-            ListRootStacksResponseBodyDataResultRoot self = new ListRootStacksResponseBodyDataResultRoot();
-            return TeaModel.build(map, self);
-        }
-
-        public ListRootStacksResponseBodyDataResultRoot setName(String name) {
+        public ListRootStacksResponseBodyDataResultChildren setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+    }
+
+    public static class ListRootStacksResponseBodyDataResultRoot extends TeaModel {
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static ListRootStacksResponseBodyDataResultRoot build(java.util.Map<String, ?> map) throws Exception {
+            ListRootStacksResponseBodyDataResultRoot self = new ListRootStacksResponseBodyDataResultRoot();
+            return TeaModel.build(map, self);
         }
 
         public ListRootStacksResponseBodyDataResultRoot setId(Long id) {
@@ -131,6 +123,14 @@ public class ListRootStacksResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListRootStacksResponseBodyDataResultRoot setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }
@@ -169,14 +169,14 @@ public class ListRootStacksResponseBody extends TeaModel {
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
         @NameInMap("Result")
         public java.util.List<ListRootStacksResponseBodyDataResult> result;
 
         @NameInMap("TotalSize")
         public Integer totalSize;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
 
         public static ListRootStacksResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListRootStacksResponseBodyData self = new ListRootStacksResponseBodyData();
@@ -189,6 +189,14 @@ public class ListRootStacksResponseBody extends TeaModel {
         }
         public Integer getCurrentPage() {
             return this.currentPage;
+        }
+
+        public ListRootStacksResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
         }
 
         public ListRootStacksResponseBodyData setResult(java.util.List<ListRootStacksResponseBodyDataResult> result) {
@@ -205,14 +213,6 @@ public class ListRootStacksResponseBody extends TeaModel {
         }
         public Integer getTotalSize() {
             return this.totalSize;
-        }
-
-        public ListRootStacksResponseBodyData setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
         }
 
     }

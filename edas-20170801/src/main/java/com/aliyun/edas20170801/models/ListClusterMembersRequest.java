@@ -10,11 +10,11 @@ public class ListClusterMembersRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("EcsList")
     public String ecsList;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static ListClusterMembersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListClusterMembersRequest self = new ListClusterMembersRequest();
@@ -37,20 +37,20 @@ public class ListClusterMembersRequest extends TeaModel {
         return this.currentPage;
     }
 
-    public ListClusterMembersRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public ListClusterMembersRequest setEcsList(String ecsList) {
         this.ecsList = ecsList;
         return this;
     }
     public String getEcsList() {
         return this.ecsList;
+    }
+
+    public ListClusterMembersRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

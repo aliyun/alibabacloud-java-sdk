@@ -7,14 +7,14 @@ public class SwitchAdvancedMonitoringResponseBody extends TeaModel {
     @NameInMap("AdvancedMonitoringEnabled")
     public Boolean advancedMonitoringEnabled;
 
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public Integer code;
 
     public static SwitchAdvancedMonitoringResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SwitchAdvancedMonitoringResponseBody self = new SwitchAdvancedMonitoringResponseBody();
@@ -27,6 +27,14 @@ public class SwitchAdvancedMonitoringResponseBody extends TeaModel {
     }
     public Boolean getAdvancedMonitoringEnabled() {
         return this.advancedMonitoringEnabled;
+    }
+
+    public SwitchAdvancedMonitoringResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public SwitchAdvancedMonitoringResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class SwitchAdvancedMonitoringResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public SwitchAdvancedMonitoringResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
 }

@@ -4,17 +4,17 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class SynchronizeResourceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public String data;
-
-    @NameInMap("Code")
-    public Integer code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class SynchronizeResourceResponseBody extends TeaModel {
     public static SynchronizeResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SynchronizeResourceResponseBody self = new SynchronizeResourceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SynchronizeResourceResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public SynchronizeResourceResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public SynchronizeResourceResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class SynchronizeResourceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public SynchronizeResourceResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public SynchronizeResourceResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public SynchronizeResourceResponseBody setSuccess(Boolean success) {

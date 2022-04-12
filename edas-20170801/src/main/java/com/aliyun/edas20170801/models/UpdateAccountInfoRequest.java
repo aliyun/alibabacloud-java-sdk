@@ -4,18 +4,26 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateAccountInfoRequest extends TeaModel {
+    @NameInMap("Email")
+    public String email;
+
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Telephone")
     public String telephone;
 
-    @NameInMap("Email")
-    public String email;
-
     public static UpdateAccountInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAccountInfoRequest self = new UpdateAccountInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAccountInfoRequest setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    public String getEmail() {
+        return this.email;
     }
 
     public UpdateAccountInfoRequest setName(String name) {
@@ -32,14 +40,6 @@ public class UpdateAccountInfoRequest extends TeaModel {
     }
     public String getTelephone() {
         return this.telephone;
-    }
-
-    public UpdateAccountInfoRequest setEmail(String email) {
-        this.email = email;
-        return this;
-    }
-    public String getEmail() {
-        return this.email;
     }
 
 }

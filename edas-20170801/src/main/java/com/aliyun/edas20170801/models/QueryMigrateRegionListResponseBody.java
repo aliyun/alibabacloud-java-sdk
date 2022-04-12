@@ -4,37 +4,21 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class QueryMigrateRegionListResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Integer code;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RegionEntityList")
     public QueryMigrateRegionListResponseBodyRegionEntityList regionEntityList;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static QueryMigrateRegionListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMigrateRegionListResponseBody self = new QueryMigrateRegionListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryMigrateRegionListResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public QueryMigrateRegionListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryMigrateRegionListResponseBody setCode(Integer code) {
@@ -45,12 +29,28 @@ public class QueryMigrateRegionListResponseBody extends TeaModel {
         return this.code;
     }
 
+    public QueryMigrateRegionListResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public QueryMigrateRegionListResponseBody setRegionEntityList(QueryMigrateRegionListResponseBodyRegionEntityList regionEntityList) {
         this.regionEntityList = regionEntityList;
         return this;
     }
     public QueryMigrateRegionListResponseBodyRegionEntityList getRegionEntityList() {
         return this.regionEntityList;
+    }
+
+    public QueryMigrateRegionListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class QueryMigrateRegionListResponseBodyRegionEntityListRegionEntity extends TeaModel {

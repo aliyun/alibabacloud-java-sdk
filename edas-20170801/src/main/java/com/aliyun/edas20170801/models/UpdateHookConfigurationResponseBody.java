@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateHookConfigurationResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("HooksConfiguration")
     public java.util.List<UpdateHookConfigurationResponseBodyHooksConfiguration> hooksConfiguration;
 
@@ -13,12 +16,17 @@ public class UpdateHookConfigurationResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static UpdateHookConfigurationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateHookConfigurationResponseBody self = new UpdateHookConfigurationResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateHookConfigurationResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public UpdateHookConfigurationResponseBody setHooksConfiguration(java.util.List<UpdateHookConfigurationResponseBodyHooksConfiguration> hooksConfiguration) {
@@ -43,14 +51,6 @@ public class UpdateHookConfigurationResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UpdateHookConfigurationResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public static class UpdateHookConfigurationResponseBodyHooksConfiguration extends TeaModel {

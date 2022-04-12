@@ -4,21 +4,37 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteClusterResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public Boolean data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public Boolean data;
-
-    @NameInMap("Code")
-    public Integer code;
-
     public static DeleteClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteClusterResponseBody self = new DeleteClusterResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteClusterResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public DeleteClusterResponseBody setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
     }
 
     public DeleteClusterResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class DeleteClusterResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteClusterResponseBody setData(Boolean data) {
-        this.data = data;
-        return this;
-    }
-    public Boolean getData() {
-        return this.data;
-    }
-
-    public DeleteClusterResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
 }

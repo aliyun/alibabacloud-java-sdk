@@ -4,14 +4,14 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListSlbResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public Integer code;
 
     @NameInMap("SlbList")
     public ListSlbResponseBodySlbList slbList;
@@ -19,6 +19,14 @@ public class ListSlbResponseBody extends TeaModel {
     public static ListSlbResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSlbResponseBody self = new ListSlbResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListSlbResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public ListSlbResponseBody setMessage(String message) {
@@ -37,14 +45,6 @@ public class ListSlbResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListSlbResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public ListSlbResponseBody setSlbList(ListSlbResponseBodySlbList slbList) {
         this.slbList = slbList;
         return this;
@@ -54,23 +54,17 @@ public class ListSlbResponseBody extends TeaModel {
     }
 
     public static class ListSlbResponseBodySlbListSlbEntity extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
+        @NameInMap("Address")
+        public String address;
 
-        @NameInMap("SlbId")
-        public String slbId;
-
-        @NameInMap("VswitchId")
-        public String vswitchId;
+        @NameInMap("AddressType")
+        public String addressType;
 
         @NameInMap("Expired")
         public Boolean expired;
 
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("AddressType")
-        public String addressType;
+        @NameInMap("GroupId")
+        public Integer groupId;
 
         @NameInMap("NetworkType")
         public String networkType;
@@ -78,11 +72,8 @@ public class ListSlbResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        @NameInMap("GroupId")
-        public Integer groupId;
-
-        @NameInMap("Address")
-        public String address;
+        @NameInMap("SlbId")
+        public String slbId;
 
         @NameInMap("SlbName")
         public String slbName;
@@ -90,33 +81,34 @@ public class ListSlbResponseBody extends TeaModel {
         @NameInMap("SlbStatus")
         public String slbStatus;
 
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("VswitchId")
+        public String vswitchId;
+
         public static ListSlbResponseBodySlbListSlbEntity build(java.util.Map<String, ?> map) throws Exception {
             ListSlbResponseBodySlbListSlbEntity self = new ListSlbResponseBodySlbListSlbEntity();
             return TeaModel.build(map, self);
         }
 
-        public ListSlbResponseBodySlbListSlbEntity setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public ListSlbResponseBodySlbListSlbEntity setAddress(String address) {
+            this.address = address;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
+        public String getAddress() {
+            return this.address;
         }
 
-        public ListSlbResponseBodySlbListSlbEntity setSlbId(String slbId) {
-            this.slbId = slbId;
+        public ListSlbResponseBodySlbListSlbEntity setAddressType(String addressType) {
+            this.addressType = addressType;
             return this;
         }
-        public String getSlbId() {
-            return this.slbId;
-        }
-
-        public ListSlbResponseBodySlbListSlbEntity setVswitchId(String vswitchId) {
-            this.vswitchId = vswitchId;
-            return this;
-        }
-        public String getVswitchId() {
-            return this.vswitchId;
+        public String getAddressType() {
+            return this.addressType;
         }
 
         public ListSlbResponseBodySlbListSlbEntity setExpired(Boolean expired) {
@@ -127,20 +119,12 @@ public class ListSlbResponseBody extends TeaModel {
             return this.expired;
         }
 
-        public ListSlbResponseBodySlbListSlbEntity setUserId(String userId) {
-            this.userId = userId;
+        public ListSlbResponseBodySlbListSlbEntity setGroupId(Integer groupId) {
+            this.groupId = groupId;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public ListSlbResponseBodySlbListSlbEntity setAddressType(String addressType) {
-            this.addressType = addressType;
-            return this;
-        }
-        public String getAddressType() {
-            return this.addressType;
+        public Integer getGroupId() {
+            return this.groupId;
         }
 
         public ListSlbResponseBodySlbListSlbEntity setNetworkType(String networkType) {
@@ -159,20 +143,12 @@ public class ListSlbResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public ListSlbResponseBodySlbListSlbEntity setGroupId(Integer groupId) {
-            this.groupId = groupId;
+        public ListSlbResponseBodySlbListSlbEntity setSlbId(String slbId) {
+            this.slbId = slbId;
             return this;
         }
-        public Integer getGroupId() {
-            return this.groupId;
-        }
-
-        public ListSlbResponseBodySlbListSlbEntity setAddress(String address) {
-            this.address = address;
-            return this;
-        }
-        public String getAddress() {
-            return this.address;
+        public String getSlbId() {
+            return this.slbId;
         }
 
         public ListSlbResponseBodySlbListSlbEntity setSlbName(String slbName) {
@@ -189,6 +165,30 @@ public class ListSlbResponseBody extends TeaModel {
         }
         public String getSlbStatus() {
             return this.slbStatus;
+        }
+
+        public ListSlbResponseBodySlbListSlbEntity setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public ListSlbResponseBodySlbListSlbEntity setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public ListSlbResponseBodySlbListSlbEntity setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
         }
 
     }

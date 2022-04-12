@@ -4,34 +4,18 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListComponentsResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("Code")
+    public Integer code;
 
     @NameInMap("ComponentList")
     public ListComponentsResponseBodyComponentList componentList;
 
-    @NameInMap("Code")
-    public Integer code;
+    @NameInMap("Message")
+    public String message;
 
     public static ListComponentsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListComponentsResponseBody self = new ListComponentsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListComponentsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListComponentsResponseBody setComponentList(ListComponentsResponseBodyComponentList componentList) {
-        this.componentList = componentList;
-        return this;
-    }
-    public ListComponentsResponseBodyComponentList getComponentList() {
-        return this.componentList;
     }
 
     public ListComponentsResponseBody setCode(Integer code) {
@@ -42,60 +26,44 @@ public class ListComponentsResponseBody extends TeaModel {
         return this.code;
     }
 
+    public ListComponentsResponseBody setComponentList(ListComponentsResponseBodyComponentList componentList) {
+        this.componentList = componentList;
+        return this;
+    }
+    public ListComponentsResponseBodyComponentList getComponentList() {
+        return this.componentList;
+    }
+
+    public ListComponentsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public static class ListComponentsResponseBodyComponentListComponent extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("ComponentId")
+        public String componentId;
 
         @NameInMap("ComponentKey")
         public String componentKey;
 
-        @NameInMap("Version")
-        public String version;
+        @NameInMap("Desc")
+        public String desc;
 
         @NameInMap("Expired")
         public Boolean expired;
 
-        @NameInMap("ComponentId")
-        public String componentId;
+        @NameInMap("Type")
+        public String type;
 
-        @NameInMap("Desc")
-        public String desc;
+        @NameInMap("Version")
+        public String version;
 
         public static ListComponentsResponseBodyComponentListComponent build(java.util.Map<String, ?> map) throws Exception {
             ListComponentsResponseBodyComponentListComponent self = new ListComponentsResponseBodyComponentListComponent();
             return TeaModel.build(map, self);
-        }
-
-        public ListComponentsResponseBodyComponentListComponent setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public ListComponentsResponseBodyComponentListComponent setComponentKey(String componentKey) {
-            this.componentKey = componentKey;
-            return this;
-        }
-        public String getComponentKey() {
-            return this.componentKey;
-        }
-
-        public ListComponentsResponseBodyComponentListComponent setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
-        }
-
-        public ListComponentsResponseBodyComponentListComponent setExpired(Boolean expired) {
-            this.expired = expired;
-            return this;
-        }
-        public Boolean getExpired() {
-            return this.expired;
         }
 
         public ListComponentsResponseBodyComponentListComponent setComponentId(String componentId) {
@@ -106,12 +74,44 @@ public class ListComponentsResponseBody extends TeaModel {
             return this.componentId;
         }
 
+        public ListComponentsResponseBodyComponentListComponent setComponentKey(String componentKey) {
+            this.componentKey = componentKey;
+            return this;
+        }
+        public String getComponentKey() {
+            return this.componentKey;
+        }
+
         public ListComponentsResponseBodyComponentListComponent setDesc(String desc) {
             this.desc = desc;
             return this;
         }
         public String getDesc() {
             return this.desc;
+        }
+
+        public ListComponentsResponseBodyComponentListComponent setExpired(Boolean expired) {
+            this.expired = expired;
+            return this;
+        }
+        public Boolean getExpired() {
+            return this.expired;
+        }
+
+        public ListComponentsResponseBodyComponentListComponent setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ListComponentsResponseBodyComponentListComponent setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }

@@ -4,27 +4,51 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateMockRuleRequest extends TeaModel {
+    @NameInMap("DubboMockItemJson")
+    public String dubboMockItemJson;
+
+    @NameInMap("ExtraJson")
+    public String extraJson;
+
+    @NameInMap("Id")
+    public String id;
+
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Region")
     public String region;
 
-    @NameInMap("ExtraJson")
-    public String extraJson;
-
     @NameInMap("ScMockItemJson")
     public String scMockItemJson;
-
-    @NameInMap("DubboMockItemJson")
-    public String dubboMockItemJson;
-
-    @NameInMap("Id")
-    public String id;
 
     public static UpdateMockRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMockRuleRequest self = new UpdateMockRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateMockRuleRequest setDubboMockItemJson(String dubboMockItemJson) {
+        this.dubboMockItemJson = dubboMockItemJson;
+        return this;
+    }
+    public String getDubboMockItemJson() {
+        return this.dubboMockItemJson;
+    }
+
+    public UpdateMockRuleRequest setExtraJson(String extraJson) {
+        this.extraJson = extraJson;
+        return this;
+    }
+    public String getExtraJson() {
+        return this.extraJson;
+    }
+
+    public UpdateMockRuleRequest setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
     public UpdateMockRuleRequest setName(String name) {
@@ -43,36 +67,12 @@ public class UpdateMockRuleRequest extends TeaModel {
         return this.region;
     }
 
-    public UpdateMockRuleRequest setExtraJson(String extraJson) {
-        this.extraJson = extraJson;
-        return this;
-    }
-    public String getExtraJson() {
-        return this.extraJson;
-    }
-
     public UpdateMockRuleRequest setScMockItemJson(String scMockItemJson) {
         this.scMockItemJson = scMockItemJson;
         return this;
     }
     public String getScMockItemJson() {
         return this.scMockItemJson;
-    }
-
-    public UpdateMockRuleRequest setDubboMockItemJson(String dubboMockItemJson) {
-        this.dubboMockItemJson = dubboMockItemJson;
-        return this;
-    }
-    public String getDubboMockItemJson() {
-        return this.dubboMockItemJson;
-    }
-
-    public UpdateMockRuleRequest setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class InsertOrUpdateRegionResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
     @NameInMap("UserDefineRegionEntity")
     public InsertOrUpdateRegionResponseBodyUserDefineRegionEntity userDefineRegionEntity;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static InsertOrUpdateRegionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InsertOrUpdateRegionResponseBody self = new InsertOrUpdateRegionResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public InsertOrUpdateRegionResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public InsertOrUpdateRegionResponseBody setMessage(String message) {
@@ -45,35 +53,27 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
         return this.userDefineRegionEntity;
     }
 
-    public InsertOrUpdateRegionResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public static class InsertOrUpdateRegionResponseBodyUserDefineRegionEntity extends TeaModel {
         @NameInMap("BelongRegion")
         public String belongRegion;
 
-        @NameInMap("RegionName")
-        public String regionName;
-
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("DebugEnable")
         public Boolean debugEnable;
 
-        @NameInMap("UserId")
-        public String userId;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("RegionName")
+        public String regionName;
+
+        @NameInMap("UserId")
+        public String userId;
 
         public static InsertOrUpdateRegionResponseBodyUserDefineRegionEntity build(java.util.Map<String, ?> map) throws Exception {
             InsertOrUpdateRegionResponseBodyUserDefineRegionEntity self = new InsertOrUpdateRegionResponseBodyUserDefineRegionEntity();
@@ -88,22 +88,6 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
             return this.belongRegion;
         }
 
-        public InsertOrUpdateRegionResponseBodyUserDefineRegionEntity setRegionName(String regionName) {
-            this.regionName = regionName;
-            return this;
-        }
-        public String getRegionName() {
-            return this.regionName;
-        }
-
-        public InsertOrUpdateRegionResponseBodyUserDefineRegionEntity setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
         public InsertOrUpdateRegionResponseBodyUserDefineRegionEntity setDebugEnable(Boolean debugEnable) {
             this.debugEnable = debugEnable;
             return this;
@@ -112,12 +96,12 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
             return this.debugEnable;
         }
 
-        public InsertOrUpdateRegionResponseBodyUserDefineRegionEntity setUserId(String userId) {
-            this.userId = userId;
+        public InsertOrUpdateRegionResponseBodyUserDefineRegionEntity setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public String getDescription() {
+            return this.description;
         }
 
         public InsertOrUpdateRegionResponseBodyUserDefineRegionEntity setId(Long id) {
@@ -134,6 +118,22 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public InsertOrUpdateRegionResponseBodyUserDefineRegionEntity setRegionName(String regionName) {
+            this.regionName = regionName;
+            return this;
+        }
+        public String getRegionName() {
+            return this.regionName;
+        }
+
+        public InsertOrUpdateRegionResponseBodyUserDefineRegionEntity setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

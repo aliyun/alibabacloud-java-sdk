@@ -4,18 +4,26 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class AddLogPathResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static AddLogPathResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddLogPathResponseBody self = new AddLogPathResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AddLogPathResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public AddLogPathResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class AddLogPathResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public AddLogPathResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
 }

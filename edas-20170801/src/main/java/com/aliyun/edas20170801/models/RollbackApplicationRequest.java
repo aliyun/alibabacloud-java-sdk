@@ -7,17 +7,17 @@ public class RollbackApplicationRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    @NameInMap("HistoryVersion")
-    public String historyVersion;
-
-    @NameInMap("GroupId")
-    public String groupId;
-
     @NameInMap("Batch")
     public Integer batch;
 
     @NameInMap("BatchWaitTime")
     public Integer batchWaitTime;
+
+    @NameInMap("GroupId")
+    public String groupId;
+
+    @NameInMap("HistoryVersion")
+    public String historyVersion;
 
     public static RollbackApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         RollbackApplicationRequest self = new RollbackApplicationRequest();
@@ -30,22 +30,6 @@ public class RollbackApplicationRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
-    }
-
-    public RollbackApplicationRequest setHistoryVersion(String historyVersion) {
-        this.historyVersion = historyVersion;
-        return this;
-    }
-    public String getHistoryVersion() {
-        return this.historyVersion;
-    }
-
-    public RollbackApplicationRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
     }
 
     public RollbackApplicationRequest setBatch(Integer batch) {
@@ -62,6 +46,22 @@ public class RollbackApplicationRequest extends TeaModel {
     }
     public Integer getBatchWaitTime() {
         return this.batchWaitTime;
+    }
+
+    public RollbackApplicationRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public RollbackApplicationRequest setHistoryVersion(String historyVersion) {
+        this.historyVersion = historyVersion;
+        return this;
+    }
+    public String getHistoryVersion() {
+        return this.historyVersion;
     }
 
 }

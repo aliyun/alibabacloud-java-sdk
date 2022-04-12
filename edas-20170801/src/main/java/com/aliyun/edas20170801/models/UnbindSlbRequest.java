@@ -7,6 +7,9 @@ public class UnbindSlbRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("DeleteListener")
+    public String deleteListener;
+
     @NameInMap("SlbId")
     public String slbId;
 
@@ -24,6 +27,14 @@ public class UnbindSlbRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public UnbindSlbRequest setDeleteListener(String deleteListener) {
+        this.deleteListener = deleteListener;
+        return this;
+    }
+    public String getDeleteListener() {
+        return this.deleteListener;
     }
 
     public UnbindSlbRequest setSlbId(String slbId) {

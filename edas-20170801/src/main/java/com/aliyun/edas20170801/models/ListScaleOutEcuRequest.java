@@ -4,46 +4,30 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListScaleOutEcuRequest extends TeaModel {
-    @NameInMap("LogicalRegionId")
-    public String logicalRegionId;
+    @NameInMap("AppId")
+    public String appId;
 
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("AppId")
-    public String appId;
+    @NameInMap("Cpu")
+    public Integer cpu;
 
     @NameInMap("GroupId")
     public String groupId;
 
-    @NameInMap("Cpu")
-    public Integer cpu;
+    @NameInMap("InstanceNum")
+    public Integer instanceNum;
+
+    @NameInMap("LogicalRegionId")
+    public String logicalRegionId;
 
     @NameInMap("Mem")
     public Integer mem;
 
-    @NameInMap("InstanceNum")
-    public Integer instanceNum;
-
     public static ListScaleOutEcuRequest build(java.util.Map<String, ?> map) throws Exception {
         ListScaleOutEcuRequest self = new ListScaleOutEcuRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListScaleOutEcuRequest setLogicalRegionId(String logicalRegionId) {
-        this.logicalRegionId = logicalRegionId;
-        return this;
-    }
-    public String getLogicalRegionId() {
-        return this.logicalRegionId;
-    }
-
-    public ListScaleOutEcuRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     public ListScaleOutEcuRequest setAppId(String appId) {
@@ -54,12 +38,12 @@ public class ListScaleOutEcuRequest extends TeaModel {
         return this.appId;
     }
 
-    public ListScaleOutEcuRequest setGroupId(String groupId) {
-        this.groupId = groupId;
+    public ListScaleOutEcuRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
         return this;
     }
-    public String getGroupId() {
-        return this.groupId;
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public ListScaleOutEcuRequest setCpu(Integer cpu) {
@@ -70,12 +54,12 @@ public class ListScaleOutEcuRequest extends TeaModel {
         return this.cpu;
     }
 
-    public ListScaleOutEcuRequest setMem(Integer mem) {
-        this.mem = mem;
+    public ListScaleOutEcuRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public Integer getMem() {
-        return this.mem;
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public ListScaleOutEcuRequest setInstanceNum(Integer instanceNum) {
@@ -84,6 +68,22 @@ public class ListScaleOutEcuRequest extends TeaModel {
     }
     public Integer getInstanceNum() {
         return this.instanceNum;
+    }
+
+    public ListScaleOutEcuRequest setLogicalRegionId(String logicalRegionId) {
+        this.logicalRegionId = logicalRegionId;
+        return this;
+    }
+    public String getLogicalRegionId() {
+        return this.logicalRegionId;
+    }
+
+    public ListScaleOutEcuRequest setMem(Integer mem) {
+        this.mem = mem;
+        return this;
+    }
+    public Integer getMem() {
+        return this.mem;
     }
 
 }
