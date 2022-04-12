@@ -10,6 +10,9 @@ public class ServiceInvokeResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    @NameInMap("IdToken")
+    public String idToken;
+
     @NameInMap("Message")
     public String message;
 
@@ -38,6 +41,14 @@ public class ServiceInvokeResponseBody extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public ServiceInvokeResponseBody setIdToken(String idToken) {
+        this.idToken = idToken;
+        return this;
+    }
+    public String getIdToken() {
+        return this.idToken;
     }
 
     public ServiceInvokeResponseBody setMessage(String message) {
