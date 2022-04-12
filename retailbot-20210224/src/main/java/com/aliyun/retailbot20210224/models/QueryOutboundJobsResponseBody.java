@@ -4,45 +4,50 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class QueryOutboundJobsResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
+    // BaseResult<List<OutboundJobDTO>>
+    @NameInMap("Content")
+    public QueryOutboundJobsResponseBodyContent content;
 
-    @NameInMap("Data")
-    public java.util.List<QueryOutboundJobsResponseBodyData> data;
+    @NameInMap("First")
+    public Boolean first;
 
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("Last")
+    public Boolean last;
 
     public static QueryOutboundJobsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryOutboundJobsResponseBody self = new QueryOutboundJobsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QueryOutboundJobsResponseBody setCode(String code) {
-        this.code = code;
+    public QueryOutboundJobsResponseBody setContent(QueryOutboundJobsResponseBodyContent content) {
+        this.content = content;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public QueryOutboundJobsResponseBodyContent getContent() {
+        return this.content;
     }
 
-    public QueryOutboundJobsResponseBody setData(java.util.List<QueryOutboundJobsResponseBodyData> data) {
-        this.data = data;
+    public QueryOutboundJobsResponseBody setFirst(Boolean first) {
+        this.first = first;
         return this;
     }
-    public java.util.List<QueryOutboundJobsResponseBodyData> getData() {
-        return this.data;
+    public Boolean getFirst() {
+        return this.first;
     }
 
-    public QueryOutboundJobsResponseBody setMessage(String message) {
-        this.message = message;
+    public QueryOutboundJobsResponseBody setLast(Boolean last) {
+        this.last = last;
         return this;
     }
-    public String getMessage() {
-        return this.message;
+    public Boolean getLast() {
+        return this.last;
     }
 
-    public static class QueryOutboundJobsResponseBodyData extends TeaModel {
+    public static class QueryOutboundJobsResponseBodyContentData extends TeaModel {
+        // appCode
+        @NameInMap("AppCode")
+        public String appCode;
+
         // 应用ID
         @NameInMap("AppId")
         public String appId;
@@ -83,9 +88,13 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
         @NameInMap("RunType")
         public Integer runType;
 
-        // saas实例ID
+        // saas Id
         @NameInMap("SaasId")
         public String saasId;
+
+        // shop Id
+        @NameInMap("ShopId")
+        public Long shopId;
 
         @NameInMap("StartTime")
         public String startTime;
@@ -93,16 +102,28 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        // tenant Id
+        @NameInMap("TenantId")
+        public Long tenantId;
+
         // 版本
         @NameInMap("Version")
         public String version;
 
-        public static QueryOutboundJobsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            QueryOutboundJobsResponseBodyData self = new QueryOutboundJobsResponseBodyData();
+        public static QueryOutboundJobsResponseBodyContentData build(java.util.Map<String, ?> map) throws Exception {
+            QueryOutboundJobsResponseBodyContentData self = new QueryOutboundJobsResponseBodyContentData();
             return TeaModel.build(map, self);
         }
 
-        public QueryOutboundJobsResponseBodyData setAppId(String appId) {
+        public QueryOutboundJobsResponseBodyContentData setAppCode(String appCode) {
+            this.appCode = appCode;
+            return this;
+        }
+        public String getAppCode() {
+            return this.appCode;
+        }
+
+        public QueryOutboundJobsResponseBodyContentData setAppId(String appId) {
             this.appId = appId;
             return this;
         }
@@ -110,7 +131,7 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public QueryOutboundJobsResponseBodyData setConfig(String config) {
+        public QueryOutboundJobsResponseBodyContentData setConfig(String config) {
             this.config = config;
             return this;
         }
@@ -118,7 +139,7 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
             return this.config;
         }
 
-        public QueryOutboundJobsResponseBodyData setCrowdConfig(String crowdConfig) {
+        public QueryOutboundJobsResponseBodyContentData setCrowdConfig(String crowdConfig) {
             this.crowdConfig = crowdConfig;
             return this;
         }
@@ -126,7 +147,7 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
             return this.crowdConfig;
         }
 
-        public QueryOutboundJobsResponseBodyData setCrowdType(Integer crowdType) {
+        public QueryOutboundJobsResponseBodyContentData setCrowdType(Integer crowdType) {
             this.crowdType = crowdType;
             return this;
         }
@@ -134,7 +155,7 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
             return this.crowdType;
         }
 
-        public QueryOutboundJobsResponseBodyData setEndTime(String endTime) {
+        public QueryOutboundJobsResponseBodyContentData setEndTime(String endTime) {
             this.endTime = endTime;
             return this;
         }
@@ -142,7 +163,7 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public QueryOutboundJobsResponseBodyData setGmtCreate(String gmtCreate) {
+        public QueryOutboundJobsResponseBodyContentData setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
@@ -150,7 +171,7 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public QueryOutboundJobsResponseBodyData setGmtModified(String gmtModified) {
+        public QueryOutboundJobsResponseBodyContentData setGmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
             return this;
         }
@@ -158,7 +179,7 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public QueryOutboundJobsResponseBodyData setId(Long id) {
+        public QueryOutboundJobsResponseBodyContentData setId(Long id) {
             this.id = id;
             return this;
         }
@@ -166,7 +187,7 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
             return this.id;
         }
 
-        public QueryOutboundJobsResponseBodyData setJobName(String jobName) {
+        public QueryOutboundJobsResponseBodyContentData setJobName(String jobName) {
             this.jobName = jobName;
             return this;
         }
@@ -174,7 +195,7 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
             return this.jobName;
         }
 
-        public QueryOutboundJobsResponseBodyData setRunConfig(String runConfig) {
+        public QueryOutboundJobsResponseBodyContentData setRunConfig(String runConfig) {
             this.runConfig = runConfig;
             return this;
         }
@@ -182,7 +203,7 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
             return this.runConfig;
         }
 
-        public QueryOutboundJobsResponseBodyData setRunType(Integer runType) {
+        public QueryOutboundJobsResponseBodyContentData setRunType(Integer runType) {
             this.runType = runType;
             return this;
         }
@@ -190,7 +211,7 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
             return this.runType;
         }
 
-        public QueryOutboundJobsResponseBodyData setSaasId(String saasId) {
+        public QueryOutboundJobsResponseBodyContentData setSaasId(String saasId) {
             this.saasId = saasId;
             return this;
         }
@@ -198,7 +219,15 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
             return this.saasId;
         }
 
-        public QueryOutboundJobsResponseBodyData setStartTime(String startTime) {
+        public QueryOutboundJobsResponseBodyContentData setShopId(Long shopId) {
+            this.shopId = shopId;
+            return this;
+        }
+        public Long getShopId() {
+            return this.shopId;
+        }
+
+        public QueryOutboundJobsResponseBodyContentData setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -206,7 +235,7 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public QueryOutboundJobsResponseBodyData setStatus(Integer status) {
+        public QueryOutboundJobsResponseBodyContentData setStatus(Integer status) {
             this.status = status;
             return this;
         }
@@ -214,12 +243,72 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public QueryOutboundJobsResponseBodyData setVersion(String version) {
+        public QueryOutboundJobsResponseBodyContentData setTenantId(Long tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public Long getTenantId() {
+            return this.tenantId;
+        }
+
+        public QueryOutboundJobsResponseBodyContentData setVersion(String version) {
             this.version = version;
             return this;
         }
         public String getVersion() {
             return this.version;
+        }
+
+    }
+
+    public static class QueryOutboundJobsResponseBodyContent extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("Data")
+        public java.util.List<QueryOutboundJobsResponseBodyContentData> data;
+
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("Success")
+        public Boolean success;
+
+        public static QueryOutboundJobsResponseBodyContent build(java.util.Map<String, ?> map) throws Exception {
+            QueryOutboundJobsResponseBodyContent self = new QueryOutboundJobsResponseBodyContent();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryOutboundJobsResponseBodyContent setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public QueryOutboundJobsResponseBodyContent setData(java.util.List<QueryOutboundJobsResponseBodyContentData> data) {
+            this.data = data;
+            return this;
+        }
+        public java.util.List<QueryOutboundJobsResponseBodyContentData> getData() {
+            return this.data;
+        }
+
+        public QueryOutboundJobsResponseBodyContent setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public QueryOutboundJobsResponseBodyContent setSuccess(Boolean success) {
+            this.success = success;
+            return this;
+        }
+        public Boolean getSuccess() {
+            return this.success;
         }
 
     }
